@@ -1,121 +1,340 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     Flex,
     Image,
     Link,
     Button,
     HStack,
-    Divider,
     Menu,
     MenuButton,
     MenuList,
     MenuItem,
     Show,
     Hide,
+    Box,
+    IconButton,
+    Drawer,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
+    DrawerHeader,
+    DrawerBody,
+    VStack,
+    Text,
+    useDisclosure,
+    Container,
+    useBreakpointValue,
 } from "@chakra-ui/react";
-import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { HamburgerIcon } from "@chakra-ui/icons";
 
 const dropdownItems = {
-    organization: ["About Us", "Team", "Careers"],
+    organization: ["Our Serving", "Team", "Careers"],
     solutions: ["Enterprise", "Government", "AI Solutions"],
     about: ["Mission", "Vision", "Contact"],
 };
 
 const Navbar = () => {
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const [activeLink, setActiveLink] = useState("Home"); // State to track active link
+
+    // Responsive values
+    const logoHeight = useBreakpointValue({ base: "30px", md: "40px" });
+    const fontSize = useBreakpointValue({ base: "14px", md: "16px" });
+    const contactBtnSize = useBreakpointValue({ base: "120px", md: "146px" });
+    const contactBtnHeight = useBreakpointValue({ base: "40px", md: "50px" });
+
+    // Function to handle link clicks
+    const handleLinkClick = (link) => {
+        setActiveLink(link);
+    };
+
     return (
-        <Flex>
-            <Flex justify="space-between" align="center" bg="white" borderRadius="20px">
-                {/* Logo on the leftmost side */}
-                <Flex align="center" ml="12px">
-                    <Image src="/assets/logo.svg" alt="VMukti Logo" h="40px" />
+        <Container maxW="100%" px={{ base: 4, md: 6 }} py={2}>
+            <Flex align="center">
+                {/* Main Navbar */}
+                <Flex
+                    justify="space-between"
+                    align="center"
+                    bg="white"
+                    borderRadius="20px"
+                    flex="1"
+                    px={4}
+                    py={2}
+                >
+                    {/* Logo */}
+                    <Flex align="center">
+                        <Image src="/assets/logo.svg" alt="VMukti Logo" h={logoHeight} />
+                    </Flex>
+
+                    {/* Navigation Links (Desktop) */}
+                    <Show above="md">
+                        <HStack spacing={{ base: 3, md: 6 }} align="center" fontSize={fontSize} fontWeight="400">
+                            <Link
+                                href="#"
+                                color={activeLink === "Home" ? "#3182ce" : "#4a5568"}
+                                fontWeight={activeLink === "Home" ? "500" : "400"}
+                                borderBottom={activeLink === "Home" ? "2px solid #3182ce" : "none"}
+                                pb={1}
+                                onClick={() => handleLinkClick("Home")}
+                            >
+                                Home
+                            </Link>
+                            <Box w="2px" h="16px" bg="#8F8F8F" />
+                            <Link
+                                href="#"
+                                color={activeLink === "Technology" ? "#3182ce" : "#4a5568"}
+                                fontWeight={activeLink === "Technology" ? "500" : "400"}
+                                borderBottom={activeLink === "Technology" ? "2px solid #3182ce" : "none"}
+                                pb={1}
+                                onClick={() => handleLinkClick("Technology")}
+                            >
+                                Technology
+                            </Link>
+                            <Box w="2px" h="16px" bg="#8F8F8F" />
+                            {/* <Link
+                                href="#"
+                                color={activeLink === "Offerings" ? "#3182ce" : "#4a5568"}
+                                fontWeight={activeLink === "Offerings" ? "500" : "400"}
+                                borderBottom={activeLink === "Offerings" ? "2px solid #3182ce" : "none"}
+                                pb={1}
+                                onClick={() => handleLinkClick("Offerings")}
+                            >
+                                Offerings
+                            </Link> */}
+                            {/* <Box w="2px" h="16px" bg="#8F8F8F" /> */}
+                            <Menu>
+                                <MenuButton
+                                    as={Button}
+                                    rightIcon={<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
+                                        <path d="M6 6L12 0L0 -5.24537e-07L6 6Z" fill="#3F77A5" />
+                                    </svg>}
+                                    variant="ghost"
+                                    color={activeLink === "Solutions" ? "#3182ce" : "#4a5568"}
+                                    fontWeight={activeLink === "Solutions" ? "500" : "400"}
+                                    borderBottom={activeLink === "Solutions" ? "2px solid #3182ce" : "none"}
+                                    pb={1}
+                                    onClick={() => handleLinkClick("Solutions")}
+                                >
+                                    Solutions
+                                </MenuButton>
+                                <MenuList>
+                                    {dropdownItems.organization.map((item, index) => (
+                                        <MenuItem key={index} fontWeight="400">{item}</MenuItem>
+                                    ))}
+                                </MenuList>
+                            </Menu>
+                            <Box w="2px" h="16px" bg="#8F8F8F" />
+                            <Menu>
+                                <MenuButton
+                                    as={Button}
+                                    rightIcon={<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
+                                        <path d="M6 6L12 0L0 -5.24537e-07L6 6Z" fill="#3F77A5" />
+                                    </svg>}
+                                    variant="ghost"
+                                    color={activeLink === "Industries" ? "#3182ce" : "#4a5568"}
+                                    fontWeight={activeLink === "Industries" ? "500" : "400"}
+                                    borderBottom={activeLink === "Industries" ? "2px solid #3182ce" : "none"}
+                                    pb={1}
+                                    onClick={() => handleLinkClick("Industries")}
+                                >
+                                    Industries
+                                </MenuButton>
+                                <MenuList>
+                                    {dropdownItems.solutions.map((item, index) => (
+                                        <MenuItem key={index} fontWeight="400">{item}</MenuItem>
+                                    ))}
+                                </MenuList>
+                            </Menu>
+                            <Box w="2px" h="16px" bg="#8F8F8F" />
+                            <Menu>
+                                <MenuButton
+                                    as={Button}
+                                    rightIcon={<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
+                                        <path d="M6 6L12 0L0 -5.24537e-07L6 6Z" fill="#3F77A5" />
+                                    </svg>}
+                                    variant="ghost"
+                                    color={activeLink === "Our Serving" ? "#3182ce" : "#4a5568"}
+                                    fontWeight={activeLink === "Our Serving" ? "500" : "400"}
+                                    borderBottom={activeLink === "Our Serving" ? "2px solid #3182ce" : "none"}
+                                    pb={1}
+                                    onClick={() => handleLinkClick("Our Serving")}
+                                >
+                                    Our Serving
+                                </MenuButton>
+                                <MenuList>
+                                    {dropdownItems.about.map((item, index) => (
+                                        <MenuItem key={index} fontWeight="400">{item}</MenuItem>
+                                    ))}
+                                </MenuList>
+                            </Menu>
+                            <Box w="2px" h="16px" bg="#8F8F8F" />
+
+                            <Menu>
+                                <MenuButton
+                                    as={Button}
+                                    rightIcon={<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
+                                        <path d="M6 6L12 0L0 -5.24537e-07L6 6Z" fill="#3F77A5" />
+                                    </svg>}
+                                    variant="ghost"
+                                    color={activeLink === "Who we are" ? "#3182ce" : "#4a5568"}
+                                    fontWeight={activeLink === "Who we are" ? "500" : "400"}
+                                    borderBottom={activeLink === "Who we are" ? "2px solid #3182ce" : "none"}
+                                    pb={1}
+                                    onClick={() => handleLinkClick("Who we are")}
+                                >
+                                    Who we are
+                                </MenuButton>
+                                <MenuList>
+                                    {dropdownItems.about.map((item, index) => (
+                                        <MenuItem key={index} fontWeight="400">{item}</MenuItem>
+                                    ))}
+                                </MenuList>
+                            </Menu>
+                        </HStack>
+                    </Show>
+
+                    {/* Mobile Menu Button */}
+                    <Hide above="lg">
+                        <IconButton
+                            onClick={onOpen}
+                            icon={<HamburgerIcon w={6} h={6} />}
+                            variant="ghost"
+                            aria-label="Open menu"
+                        />
+                    </Hide>
                 </Flex>
 
-                {/* Navigation Links (Center) */}
-                <Show above="md" >
-                    <HStack spacing="24px" fontWeight="700" fontSize="16px" pl="334px" alignContent="center" alignItems="center" mr="15px">
-                        <Link href="#" color="#4a5568" borderBottom="2px solid #3182ce">
-                            Home
-                        </Link>
-                        <Divider orientation="vertical" h="20px" borderColor="#cbd5e0" />
-                        <Link href="#" color="#4a5568">
-                            Technology
-                        </Link>
-                        <Divider orientation="vertical" h="20px" borderColor="#cbd5e0" />
-                        <Link href="#" color="#4a5568">
-                            Offerings
-                        </Link>
-                        <Divider orientation="vertical" h="20px" borderColor="#cbd5e0" />
-                        <Menu>
-                            <MenuButton as={Button} rightIcon={<ChevronDownIcon />} variant="ghost" color="#4a5568">
-                                Organization
-                            </MenuButton>
-                            <MenuList>
-                                {dropdownItems.organization.map((item, index) => (
-                                    <MenuItem key={index}>{item}</MenuItem>
-                                ))}
-                            </MenuList>
-                        </Menu>
-                        <Divider orientation="vertical" h="20px" borderColor="#cbd5e0" />
-                        <Menu>
-                            <MenuButton as={Button} rightIcon={<ChevronDownIcon />} variant="ghost" color="#4a5568">
-                                Solutions
-                            </MenuButton>
-                            <MenuList>
-                                {dropdownItems.solutions.map((item, index) => (
-                                    <MenuItem key={index}>{item}</MenuItem>
-                                ))}
-                            </MenuList>
-                        </Menu>
-                        <Divider orientation="vertical" h="20px" borderColor="#cbd5e0" />
-                        <Menu>
-                            <MenuButton as={Button} rightIcon={<ChevronDownIcon />} variant="ghost" color="#4a5568">
-                                About Us
-                            </MenuButton>
-                            <MenuList>
-                                {dropdownItems.about.map((item, index) => (
-                                    <MenuItem key={index}>{item}</MenuItem>
-                                ))}
-                            </MenuList>
-                        </Menu>
-                    </HStack>
+                {/* Contact Us Button */}
+                <Show above="sm">
+                    <Button
+                        width={contactBtnSize}
+                        height={contactBtnHeight}
+                        background="#3F77A5"
+                        color="white"
+                        fontSize={fontSize}
+                        fontWeight="400"
+                        borderRadius="20px"
+                        ml={4}
+                    >
+                        Contact Us
+                    </Button>
                 </Show>
-
-                {/* Hamburger Menu for Mobile */}
-                <Hide above="md">
-                    <Menu>
-                        <MenuButton as={Button} variant="ghost">
-                            <HamburgerIcon />
-                        </MenuButton>
-                        <MenuList>
-                            <MenuItem>Home</MenuItem>
-                            <MenuItem>Technology</MenuItem>
-                            <MenuItem>Offerings</MenuItem>
-                            <MenuItem>Organization</MenuItem>
-                            <MenuItem>Solutions</MenuItem>
-                            <MenuItem>About Us</MenuItem>
-                        </MenuList>
-                    </Menu>
-                </Hide>
             </Flex>
-            <Flex borderRadius="20px" ml="15px">
-                <Button
 
-                    width="146px"
-                    height="50px"
-                    justify-content="center"
-                    align-items="center"
-                    gap="10px"
-                    borderRadius={'20px'}
-                    // border-radius="20px"
-                    background="#3F77A5"
-                    color="White"
-                // flex-shrink: 0;
-                >
-                    Contact Us
-                </Button>
-            </Flex>
-        </Flex>
+            {/* Mobile Drawer */}
+            <Drawer isOpen={isOpen} placement="right" onClose={onClose} size="full">
+                <DrawerOverlay />
+                <DrawerContent>
+                    <DrawerCloseButton />
+                    <DrawerHeader borderBottomWidth="1px" fontWeight="400">Menu</DrawerHeader>
+                    <DrawerBody>
+                        <VStack spacing={4} align="stretch">
+                            <Link
+                                href="#"
+                                color={activeLink === "Home" ? "#3182ce" : "#4a5568"}
+                                fontSize="lg"
+                                fontWeight={activeLink === "Home" ? "500" : "400"}
+                                borderBottom={activeLink === "Home" ? "2px solid #3182ce" : "none"}
+                                pb={1}
+                                onClick={() => handleLinkClick("Home")}
+                            >
+                                Home
+                            </Link>
+                            <Link
+                                href="#"
+                                color={activeLink === "Technology" ? "#3182ce" : "#4a5568"}
+                                fontSize="lg"
+                                fontWeight={activeLink === "Technology" ? "500" : "400"}
+                                borderBottom={activeLink === "Technology" ? "2px solid #3182ce" : "none"}
+                                pb={1}
+                                onClick={() => handleLinkClick("Technology")}
+                            >
+                                Technology
+                            </Link>
+                            {/* <Link
+                                href="#"
+                                color={activeLink === "Offerings" ? "#3182ce" : "#4a5568"}
+                                fontSize="lg"
+                                fontWeight={activeLink === "Offerings" ? "500" : "400"}
+                                borderBottom={activeLink === "Offerings" ? "2px solid #3182ce" : "none"}
+                                pb={1}
+                                onClick={() => handleLinkClick("Offerings")}
+                            >
+                                Offerings
+                            </Link> */}
+                            <Box>
+                                <Text fontSize="lg" fontWeight="400">Solutions</Text>
+                                {dropdownItems.organization.map((item, index) => (
+                                    <Link
+                                        key={index}
+                                        href="#"
+                                        color={activeLink === item ? "#3182ce" : "#4a5568"}
+                                        pl={4}
+                                        fontSize="lg"
+                                        fontWeight={activeLink === item ? "500" : "400"}
+                                        borderBottom={activeLink === item ? "2px solid #3182ce" : "none"}
+                                        pb={1}
+                                        onClick={() => handleLinkClick(item)}
+                                    >
+                                        {item}
+                                    </Link>
+                                ))}
+                            </Box>
+                            <Box>
+                                <Text fontSize="lg" fontWeight="400">Industries</Text>
+                                {dropdownItems.solutions.map((item, index) => (
+                                    <Link
+                                        key={index}
+                                        href="#"
+                                        color={activeLink === item ? "#3182ce" : "#4a5568"}
+                                        pl={4}
+                                        fontSize="lg"
+                                        fontWeight={activeLink === item ? "500" : "400"}
+                                        borderBottom={activeLink === item ? "2px solid #3182ce" : "none"}
+                                        pb={1}
+                                        onClick={() => handleLinkClick(item)}
+                                    >
+                                        {item}
+                                    </Link>
+                                ))}
+                            </Box>
+                            <Box>
+                                <Text fontSize="lg" fontWeight="400">Our Serving</Text>
+                                {dropdownItems.about.map((item, index) => (
+                                    <Link
+                                        key={index}
+                                        href="#"
+                                        color={activeLink === item ? "#3182ce" : "#4a5568"}
+                                        pl={4}
+                                        fontSize="lg"
+                                        fontWeight={activeLink === item ? "500" : "400"}
+                                        borderBottom={activeLink === item ? "2px solid #3182ce" : "none"}
+                                        pb={1}
+                                        onClick={() => handleLinkClick(item)}
+                                    >
+                                        {item}
+                                    </Link>
+                                ))}
+                            </Box>
 
+                            {/* Contact Us button in Mobile */}
+                            <Hide above="sm">
+                                <Button
+                                    w="100%"
+                                    background="#3F77A5"
+                                    color="white"
+                                    borderRadius="20px"
+                                    fontSize="lg"
+                                    fontWeight="400"
+                                >
+                                    Contact Us
+                                </Button>
+                            </Hide>
+                        </VStack>
+                    </DrawerBody>
+                </DrawerContent>
+            </Drawer>
+        </Container>
     );
 };
 
