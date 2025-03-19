@@ -1,0 +1,227 @@
+/* General Styles */
+.container {
+    min-height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    width: 1285px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #FFF;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 20px;
+  }
+
+  .contact-container{
+   
+    margin: 20px;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-svg {
+    height: 40px;
+    width: auto;
+  }
+  
+  .nav-links {
+    font-size: 16px;
+    display: flex;
+    font-family: "Wix Madefor Display";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.24px;
+    gap: 24px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    font-weight: 500;
+    color: #4a5568;
+  }
+  
+  .nav-link.active {
+    color: #3182ce;
+    border-bottom: 2px solid #3182ce;
+    padding-bottom: 4px;
+  }
+  
+  .separator {
+    color: #cbd5e0;
+  }
+  
+  .dropdown-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+  }
+  .nav-container{
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-button {
+    /* top: 100px; */
+    border:none;
+    width: 146px;
+    height: 50px;
+    padding: 12px 24px 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #3F77A5;
+    color: #FFF;
+  }
+  
+  /* Main Content */
+  .main-content {
+    padding: 34px;
+    display: flex;
+  }
+  
+  .left-content {
+    margin: 20px ;
+  }
+  
+  .main-heading {
+    font-size: 3.75rem;
+    font-weight: bold;
+    line-height: 1.25;
+  }
+  
+  .text-black {
+    color: #000;
+    font-family: "Wix Madefor Display";
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.5px;
+  }
+  
+  .text-blue {
+    color: #3F77A5;
+    font-family: "Wix Madefor Display";
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.5px;
+  }
+  
+  .text-orange {
+    color: #DB7B3A;
+    font-family: "Wix Madefor Display";
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.5px;
+  }
+  
+  .description {
+    margin-top: 32px;
+  }
+  
+  .description-content {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .icon {
+    margin-right: 8px;
+  }
+  
+  .icon-svg {
+    color: #3182ce;
+  }
+  
+  .description-text {
+    color: #4a5568;
+    max-width: 384px;
+  }
+  
+  .image-container {
+    box-sizing: border-box;
+    /* margin: 297px -109px 41px ; */
+    top:397px;
+    margin-left:-60px;
+    margin-top: -60px;
+
+    
+  }
+  
+  .robotic-hand {
+    width: 644px;
+    height: 644px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+  }
+  
+  .demo-button-container {
+    position: absolute;
+    bottom: 48px;
+    left: 390px;
+    top:700px
+  }
+  
+  .demo-button {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 12px 24px 12px 24px;
+    border-radius: 9999px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #3182ce;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .demo-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+  }
+  
+  .right-content {
+    width: 50%;
+  }
+  
+  .dashboard-image-container {
+    width: 1196.845px;
+    height: 1130.732px;
+    transform: rotate(0.516deg);
+    flex-shrink: 0;
+    
+  }
+  
+  .dashboard-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+  }

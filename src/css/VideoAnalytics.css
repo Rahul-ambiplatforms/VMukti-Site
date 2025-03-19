@@ -1,0 +1,233 @@
+            /* Reset and base styles */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+
+            body {
+                background-color: #f5f5f5;
+            }
+
+            /* Main container */
+            .main-container {
+                width: 1446px;
+                height: 856px;
+                flex-shrink: 0;
+                border-radius: 20px;
+                background: #3F77A5;
+                margin-left:33px;
+                margin-right:33px;
+            }
+
+            /* Content container */
+            .content-container {
+                display: flex;
+                height: 100%;
+                padding: 40px;
+                position: relative;
+            }
+
+            /* Left section with text content */
+            .left-section {
+                flex: 0 0 40%;
+                color: white;
+                padding-top: 20px;
+            }
+
+            .title {
+                color: #FFF;
+                font-family: "Wix Madefor Display";
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                letter-spacing: -0.54px;
+                width: 515px;
+            }
+
+            .divider {
+                width: 100%;
+                border: 1px solid gray; /* Solid gray border */
+                background-image: url("../../public/assets/border.svg"); /* Correct syntax */
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                margin: 30px 0;
+            }
+            
+            
+
+            /* Navigation buttons */
+            .nav-buttons {
+                width: 64px;
+                height: 30.769px;
+                flex-shrink: 0;
+                margin-left:472px;
+                /* margin-top:196px; */
+                display:flex;
+            }
+
+            .nav-btn {
+                width: 40px;
+                height: 40px;
+                aspect-ratio: 1/1;
+                background-color: white;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 10px;
+                cursor: pointer;
+                color: #4682B4;
+            }
+
+            /* Menu items */
+            .menu-items {
+                margin-top: 20px;
+                
+            }
+
+            .menu-item {
+                padding: 10px 0;
+                font-size: 15px;
+                color: rgba(255, 255, 255, 0.9);
+            }
+
+            .menu-item.active {
+                position: relative;
+                font-weight: bold;
+            }
+
+            .menu-item.active::before {
+                content: "▶";
+                position: absolute;
+                left: -20px;
+                font-size: 12px;
+            }
+
+            /* Right section with feature card and devices */
+            .right-section {
+                flex: 0 0 60%;
+                position: relative;
+                margin-top:250px;
+            }
+
+            /* Feature card */
+            .feature-card {
+                width: 469px;
+                height: 511px;
+                flex-shrink: 0;
+                border-radius: 24px 0px 0px 24px;
+                background: #FFF;
+                padding:25px;
+            }
+
+            .feature-title {
+                color: #000;
+                font-family: "Wix Madefor Display";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: -0.24px;
+            }
+
+            .feature-description {
+                width: 219px;
+                color: #696969;
+                font-family: "Wix Madefor Display";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                letter-spacing: -0.21px;
+            }
+
+            /* Device mockups */
+            .device-container {
+                width: 542.343px;
+                height: 511px;
+                flex-shrink: 0;
+                position: absolute;
+                right: 0;
+                bottom: 15px;
+                display: flex;
+                border-radius: 24px;
+                background: #F3F3F3;                
+            }
+            .device-container img {
+                margin-top:-80px;
+            }
+
+            /* Responsive styles */
+            @media screen and (max-width: 1200px) {
+                .device-container {
+                    transform: scale(0.9);
+                    transform-origin: bottom right;
+                }
+            }
+
+            @media screen and (max-width: 992px) {
+                .content-container {
+                    flex-direction: column;
+                    padding: 30px;
+                }
+
+                .left-section {
+                    flex: 0 0 auto;
+                    margin-bottom: 40px;
+                }
+
+                .right-section {
+                    flex: 1;
+                    margin-top: 20px;
+                    min-height: 500px;
+                }
+
+                .feature-card {
+                    width: 80%;
+                    top: 0;
+                    left: 0;
+                    transform: none;
+                }
+
+                .device-container {
+                    right: 0;
+                    bottom: 0;
+                    transform: scale(0.8);
+                    transform-origin: bottom right;
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                .content-container {
+                    padding: 20px;
+                }
+
+                .title {
+                    font-size: 28px;
+                }
+
+                .feature-card {
+                    width: 100%;
+                }
+
+                .device-container {
+                    transform: scale(0.7);
+                }
+            }
+
+            @media screen and (max-width: 576px) {
+                .device-container {
+                    flex-direction: column;
+                    align-items: center;
+                    right: 50%;
+                    bottom: 50px;
+                    transform: translateX(50%) scale(0.6);
+                }
+
+                
+            }
+    

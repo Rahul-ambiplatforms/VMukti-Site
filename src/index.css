@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family:'WixMadeforDisplay',sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('../public/assets/Wix_Madefor_Display/WixMadeforDisplay-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
