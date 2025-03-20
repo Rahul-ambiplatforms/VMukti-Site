@@ -25,13 +25,12 @@ const Diagram = () => {
 
     return (
         <Flex
-            width={containerWidth}
             height={containerHeight}
             borderRadius="20px"
-            marginLeft={{ base: "0", md: "33px" }}
-            marginRight={{ base: "0", md: "33px" }}
+            mx="2%"
             overflow="hidden"
             bg="#f5f5f5"
+            mt="2%" 
             direction={{ base: "column", md: "row" }} // Stack vertically on small screens
         >
             {/* Left Panel */}

@@ -9,7 +9,7 @@ import {
 
 import Navbar from '../../components/Navbar';
 import AdvancedComputerVision from '../../components/AdvancedComputerVision ';
-import NewsletterSubscription from './NewsletterSubscription';
+
 import VideoAnalytics from './VideoAnalytics';
 import Achieved from './Achieved'
 import Diagram from './Diagram'
