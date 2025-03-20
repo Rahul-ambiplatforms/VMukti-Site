@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
     Flex,
     Image,
-    Link,
     Button,
     HStack,
     Menu,
@@ -26,6 +25,7 @@ import {
     useBreakpointValue,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const dropdownItems = {
     organization: ["Our Serving", "Team", "Careers"],
@@ -49,7 +49,7 @@ const Navbar = () => {
     };
 
     return (
-        <Container maxW="100%" px={{ base: 4, md: 6 }} py={2}>
+        <Container maxW="100%">
             <Flex align="center">
                 {/* Main Navbar */}
                 <Flex
@@ -70,38 +70,35 @@ const Navbar = () => {
                     <Show above="md">
                         <HStack spacing={{ base: 3, md: 6 }} align="center" fontSize={fontSize} fontWeight="400">
                             <Link
-                                href="#"
-                                color={activeLink === "Home" ? "#3182ce" : "#4a5568"}
-                                fontWeight={activeLink === "Home" ? "500" : "400"}
-                                borderBottom={activeLink === "Home" ? "2px solid #3182ce" : "none"}
-                                pb={1}
+                                to="/" // Use "to" instead of "href"
+                                style={{
+                                    color: activeLink === "Home" ? "#3182ce" : "#4a5568",
+                                    fontWeight: activeLink === "Home" ? "500" : "400",
+                                    borderBottom: activeLink === "Home" ? "2px solid #3182ce" : "none",
+                                    paddingBottom: "4px",
+                                    textDecoration: "none", // Remove default underline
+                                }}
                                 onClick={() => handleLinkClick("Home")}
                             >
                                 Home
                             </Link>
                             <Box w="2px" h="16px" bg="#8F8F8F" />
                             <Link
-                                href="#"
-                                color={activeLink === "Technology" ? "#3182ce" : "#4a5568"}
-                                fontWeight={activeLink === "Technology" ? "500" : "400"}
-                                borderBottom={activeLink === "Technology" ? "2px solid #3182ce" : "none"}
-                                pb={1}
+                                to="/technology" // Use "to" instead of "href"
+                                style={{
+                                    color: activeLink === "Technology" ? "#3182ce" : "#4a5568",
+                                    fontWeight: activeLink === "Technology" ? "500" : "400",
+                                    borderBottom: activeLink === "Technology" ? "2px solid #3182ce" : "none",
+                                    paddingBottom: "4px",
+                                    textDecoration: "none", // Remove default underline
+                                }}
                                 onClick={() => handleLinkClick("Technology")}
                             >
                                 Technology
                             </Link>
                             <Box w="2px" h="16px" bg="#8F8F8F" />
-                            {/* <Link
-                                href="#"
-                                color={activeLink === "Offerings" ? "#3182ce" : "#4a5568"}
-                                fontWeight={activeLink === "Offerings" ? "500" : "400"}
-                                borderBottom={activeLink === "Offerings" ? "2px solid #3182ce" : "none"}
-                                pb={1}
-                                onClick={() => handleLinkClick("Offerings")}
-                            >
-                                Offerings
-                            </Link> */}
-                            {/* <Box w="2px" h="16px" bg="#8F8F8F" /> */}
+
+                            {/* Dropdown for Solutions */}
                             <Menu>
                                 <MenuButton
                                     as={Button}
@@ -124,6 +121,8 @@ const Navbar = () => {
                                 </MenuList>
                             </Menu>
                             <Box w="2px" h="16px" bg="#8F8F8F" />
+
+                            {/* Dropdown for Industries */}
                             <Menu>
                                 <MenuButton
                                     as={Button}
@@ -146,6 +145,8 @@ const Navbar = () => {
                                 </MenuList>
                             </Menu>
                             <Box w="2px" h="16px" bg="#8F8F8F" />
+
+                            {/* Dropdown for Our Serving */}
                             <Menu>
                                 <MenuButton
                                     as={Button}
@@ -160,29 +161,6 @@ const Navbar = () => {
                                     onClick={() => handleLinkClick("Our Serving")}
                                 >
                                     Our Serving
-                                </MenuButton>
-                                <MenuList>
-                                    {dropdownItems.about.map((item, index) => (
-                                        <MenuItem key={index} fontWeight="400">{item}</MenuItem>
-                                    ))}
-                                </MenuList>
-                            </Menu>
-                            <Box w="2px" h="16px" bg="#8F8F8F" />
-
-                            <Menu>
-                                <MenuButton
-                                    as={Button}
-                                    rightIcon={<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
-                                        <path d="M6 6L12 0L0 -5.24537e-07L6 6Z" fill="#3F77A5" />
-                                    </svg>}
-                                    variant="ghost"
-                                    color={activeLink === "Who we are" ? "#3182ce" : "#4a5568"}
-                                    fontWeight={activeLink === "Who we are" ? "500" : "400"}
-                                    borderBottom={activeLink === "Who we are" ? "2px solid #3182ce" : "none"}
-                                    pb={1}
-                                    onClick={() => handleLinkClick("Who we are")}
-                                >
-                                    Who we are
                                 </MenuButton>
                                 <MenuList>
                                     {dropdownItems.about.map((item, index) => (
@@ -230,106 +208,34 @@ const Navbar = () => {
                     <DrawerBody>
                         <VStack spacing={4} align="stretch">
                             <Link
-                                href="#"
-                                color={activeLink === "Home" ? "#3182ce" : "#4a5568"}
-                                fontSize="lg"
-                                fontWeight={activeLink === "Home" ? "500" : "400"}
-                                borderBottom={activeLink === "Home" ? "2px solid #3182ce" : "none"}
-                                pb={1}
+                                to="/" // Use "to" instead of "href"
+                                style={{
+                                    color: activeLink === "Home" ? "#3182ce" : "#4a5568",
+                                    fontSize: "lg",
+                                    fontWeight: activeLink === "Home" ? "500" : "400",
+                                    borderBottom: activeLink === "Home" ? "2px solid #3182ce" : "none",
+                                    paddingBottom: "4px",
+                                    textDecoration: "none", // Remove default underline
+                                }}
                                 onClick={() => handleLinkClick("Home")}
                             >
                                 Home
                             </Link>
                             <Link
-                                href="#"
-                                color={activeLink === "Technology" ? "#3182ce" : "#4a5568"}
-                                fontSize="lg"
-                                fontWeight={activeLink === "Technology" ? "500" : "400"}
-                                borderBottom={activeLink === "Technology" ? "2px solid #3182ce" : "none"}
-                                pb={1}
+                                to="/technology" // Use "to" instead of "href"
+                                style={{
+                                    color: activeLink === "Technology" ? "#3182ce" : "#4a5568",
+                                    fontSize: "lg",
+                                    fontWeight: activeLink === "Technology" ? "500" : "400",
+                                    borderBottom: activeLink === "Technology" ? "2px solid #3182ce" : "none",
+                                    paddingBottom: "4px",
+                                    textDecoration: "none", // Remove default underline
+                                }}
                                 onClick={() => handleLinkClick("Technology")}
                             >
                                 Technology
                             </Link>
-                            {/* <Link
-                                href="#"
-                                color={activeLink === "Offerings" ? "#3182ce" : "#4a5568"}
-                                fontSize="lg"
-                                fontWeight={activeLink === "Offerings" ? "500" : "400"}
-                                borderBottom={activeLink === "Offerings" ? "2px solid #3182ce" : "none"}
-                                pb={1}
-                                onClick={() => handleLinkClick("Offerings")}
-                            >
-                                Offerings
-                            </Link> */}
-                            <Box>
-                                <Text fontSize="lg" fontWeight="400">Solutions</Text>
-                                {dropdownItems.organization.map((item, index) => (
-                                    <Link
-                                        key={index}
-                                        href="#"
-                                        color={activeLink === item ? "#3182ce" : "#4a5568"}
-                                        pl={4}
-                                        fontSize="lg"
-                                        fontWeight={activeLink === item ? "500" : "400"}
-                                        borderBottom={activeLink === item ? "2px solid #3182ce" : "none"}
-                                        pb={1}
-                                        onClick={() => handleLinkClick(item)}
-                                    >
-                                        {item}
-                                    </Link>
-                                ))}
-                            </Box>
-                            <Box>
-                                <Text fontSize="lg" fontWeight="400">Industries</Text>
-                                {dropdownItems.solutions.map((item, index) => (
-                                    <Link
-                                        key={index}
-                                        href="#"
-                                        color={activeLink === item ? "#3182ce" : "#4a5568"}
-                                        pl={4}
-                                        fontSize="lg"
-                                        fontWeight={activeLink === item ? "500" : "400"}
-                                        borderBottom={activeLink === item ? "2px solid #3182ce" : "none"}
-                                        pb={1}
-                                        onClick={() => handleLinkClick(item)}
-                                    >
-                                        {item}
-                                    </Link>
-                                ))}
-                            </Box>
-                            <Box>
-                                <Text fontSize="lg" fontWeight="400">Our Serving</Text>
-                                {dropdownItems.about.map((item, index) => (
-                                    <Link
-                                        key={index}
-                                        href="#"
-                                        color={activeLink === item ? "#3182ce" : "#4a5568"}
-                                        pl={4}
-                                        fontSize="lg"
-                                        fontWeight={activeLink === item ? "500" : "400"}
-                                        borderBottom={activeLink === item ? "2px solid #3182ce" : "none"}
-                                        pb={1}
-                                        onClick={() => handleLinkClick(item)}
-                                    >
-                                        {item}
-                                    </Link>
-                                ))}
-                            </Box>
-
-                            {/* Contact Us button in Mobile */}
-                            <Hide above="sm">
-                                <Button
-                                    w="100%"
-                                    background="#3F77A5"
-                                    color="white"
-                                    borderRadius="20px"
-                                    fontSize="lg"
-                                    fontWeight="400"
-                                >
-                                    Contact Us
-                                </Button>
-                            </Hide>
+                            {/* Add other links similarly */}
                         </VStack>
                     </DrawerBody>
                 </DrawerContent>
