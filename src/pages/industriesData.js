@@ -9,34 +9,36 @@ import {
   useBreakpointValue,
   SimpleGrid,
 } from '@chakra-ui/react'
-import healthcare from './assets/healthcare.svg'
-import education from './assets/education.svg'
-import defense from './assets/defense.svg'
-import election from './assets/election.svg'
-import transport from './assets/transport.svg'
-import monitoring from './assets/monitoring.svg'
-import warehousing from './assets/warehousing.svg'
-import arrow from './assets/Vector287.svg'
-import frame from './assets/frame.png'
-import image7 from './assets/image7.png'
-
 const industriesData = [
-  { name: 'Healthcare Industry', img: healthcare, className: 'light-blue' },
-  { name: 'Education Industry', img: education, className: 'white' },
-  { name: 'Defense', img: defense, className: 'light-blue' },
   {
-    name: 'Election',
-    img: election,
-    className: 'election-box',
-    width: '720px',
-  },
-  { name: 'Transportation Industry', img: transport, className: 'dark-blue' },
-  { name: 'City Monitoring', img: monitoring, className: 'white' },
-  {
-    name: 'Warehousing & Logistic Industry',
-    img: warehousing,
+    name: 'Healthcare Industry',
+    img: './assets/health.svg',
     className: 'light-blue',
   },
+  {
+    name: 'Education Industry',
+    img: './assets/education.svg',
+    className: 'white',
+  },
+  { name: 'Defense', img: '/assets/defense.svg', className: 'light-blue' },
+  {
+    name: 'Election',
+    img: '/assets/election.svg',
+    className: 'election-box',
+    width: { base: '100%', sm: '100%', md: '720px' },
+  },
+  {
+    name: 'Transportation Industry',
+    img: '/assets/transport.svg',
+    className: 'dark-blue',
+  },
+  { name: 'City Monitoring', img: './assets/monitor.svg', className: 'white' },
+  {
+    name: 'Warehousing & Logistic Industry',
+    img: './assets/warehouse.svg',
+    className: 'light-blue',
+  },
+  { name: 'New Industry', img: '', className: 'red' }, // Added at the end
 ]
 
 const Industries = () => {
@@ -52,7 +54,7 @@ const Industries = () => {
   })
 
   const titleFontSize = useBreakpointValue({
-    base: '26px',
+    base: '24px',
     sm: '32px',
     md: '40px',
     lg: '48px',
@@ -102,7 +104,7 @@ const Industries = () => {
             left: '24px',
             width: '100%',
             height: '100%',
-            backgroundImage: `url(${image7})`,
+            backgroundImage: `url('/assets/image7.png')`,
             backgroundPosition: 'left top',
             backgroundRepeat: 'no-repeat',
             backgroundSize: '1138px',
@@ -116,7 +118,7 @@ const Industries = () => {
             marginBottom="20px"
             paddingLeft="40px"
             lineHeight="normal"
-            textAlign="left"
+            textAlign="center"
           >
             Crafting Unique{' '}
             <Text as="span" color="#db7b3a">
@@ -172,15 +174,18 @@ const Industries = () => {
                   industry.className === 'election-box' ? 'span 3' : ''
                 }
                 marginLeft={
-                  index === 1 ||
-                  index === 2 ||
-                  index === 4 ||
-                  index === 5 ||
-                  index === 6
+                  index === 7
+                    ? '1126px'
+                    : index === 1 ||
+                      index === 2 ||
+                      index === 4 ||
+                      index === 5 ||
+                      index === 6
                     ? '456px'
                     : '0'
                 }
                 marginRight={index === 0 || index === 6 ? '15px' : ''}
+                marginTop={index === 7 ? '-1015px' : '0'}
               >
                 <Image
                   src={industry.img || '/placeholder.svg'}
@@ -259,7 +264,7 @@ const Industries = () => {
           >
             All Industries
             <Image
-              src={arrow || '/placeholder.svg'}
+              src={'./assets/arrowuprb.svg' || '/placeholder.svg'}
               alt="Arrow"
               width="14px"
               height="14px"
@@ -286,7 +291,7 @@ const Industries = () => {
             left: '0',
             width: '100%',
             height: '100%',
-            backgroundImage: `url(${image7})`,
+            backgroundImage: `url('/assets/image7.svg')`,
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
@@ -471,7 +476,7 @@ const Industries = () => {
             >
               All Industries
               <Image
-                src={arrow || '/placeholder.svg'}
+                src={'./assets/arrowuprb.svg' || '/placeholder.svg'}
                 alt="Arrow"
                 width="14px"
                 height="14px"
