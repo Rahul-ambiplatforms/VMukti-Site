@@ -96,6 +96,7 @@ const Industries = () => {
           maxWidth="1512px"
           height="1338px"
           position="relative"
+          mt="5%"
           fontFamily="'Wix Madefor Display', sans-serif"
           _before={{
             content: '""',
@@ -277,6 +278,7 @@ const Industries = () => {
           textAlign="center"
           backgroundColor="#f3f3f3"
           maxWidth="100%"
+          mt="5%"
           minWidth="320px"
           height="auto"
           position="relative"

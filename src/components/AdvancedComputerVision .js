@@ -41,25 +41,24 @@ const AdvancedComputerVision = ({
   };
 
   return (
-    <Box
-      width={{ base: "100%", md: "1446px" }}
+    <Flex
       height={{ base: "auto", md: "856px" }}
       flexShrink={0}
+      direction={"column"}
       borderRadius="20px"
       bgColor="white"
-      marginLeft={{ base: "0", md: "33px" }}
-      marginRight={{ base: "0", md: "33px" }}
+      mx="2%"
       position="relative"
       overflow="hidden"
       p={{ base: "4", md: "0" }}
-      mt={{ base: "20px", md: "40px" }} // Added top margin to push the box lower
+      mt="-50px" // Added top margin to push the box lower
     >
       {/* Random dots background */}
       <Box
         position="absolute"
         top="0"
         right="0"
-        width={{ base: "100%", md: "1050px" }}
+        maxWidth={{ base: "100%", md: "1050px" }}
         height={{ base: "50%", md: "525px" }}
         flexShrink={0}
         aspectRatio="16/9"
@@ -108,15 +107,19 @@ const AdvancedComputerVision = ({
       <Flex
         marginBottom={{ base: "4", md: "30px" }}
         position="relative"
+        width="100%"
         zIndex="1"
+        
       >
         {/* Cards */}
         <Flex
           width="100%"
           gap={{ base: "2", md: "15px" }}
-          marginLeft={{ base: "4", md: "70px" }}
+          px={{ base: "4", md: "70px" }}
           position="relative"
+          justifyContent={"space-evenly"}
           zIndex="2"
+          
         >
           {cards.map((card, index) => (
             <Box
@@ -230,13 +233,14 @@ const AdvancedComputerVision = ({
       </Flex>
 
       {/* Info Section */}
-      <Box
-        position="relative"
-        marginLeft={{ base: "4", md: "70px" }}
+      <Flex
+        // position="relative"
+        mx={{ base: "4", md: "70px" }}
         zIndex="1"
         marginTop={{ base: "4", md: "20px" }}
+        justifyContent={"space-between"}
       >
-        <Text
+        <Flex direction={"column"}><Text
           color="black"
           fontSize={{ base: "14px", md: "16px" }} // Adjusted font size for small screens
           fontWeight="700"
@@ -247,25 +251,25 @@ const AdvancedComputerVision = ({
         >
           {subtitle}
         </Text>
-        <Text
-          color="#696969"
-          fontSize={{ base: "12px", md: "14px" }} // Adjusted font size for small screens
-          fontWeight="500"
-          lineHeight="normal"
-          letterSpacing={{ base: "-0.18px", md: "-0.21px" }}
-          whiteSpace="normal" // Allow text wrapping
-          maxWidth={{ base: "50%", md: "100%" }} // Ensure text doesn't overflow
-        >
-          {description}
-        </Text>
+          <Text
+            color="#696969"
+            fontSize={{ base: "12px", md: "14px" }} // Adjusted font size for small screens
+            fontWeight="500"
+            lineHeight="normal"
+            letterSpacing={{ base: "-0.18px", md: "-0.21px" }}
+            whiteSpace="normal" // Allow text wrapping
+            maxWidth={{ base: "50%", md: "100%" }} // Ensure text doesn't overflow
+          >
+            {description}
+          </Text></Flex>
 
         {/* Navigation buttons */}
         <Flex
           width="64px"
           height="30.769px"
-          position="absolute"
-          top="0px" // Fixed position at the top
-          right="73px" // Fixed position from the right
+          // position="absolute"
+          // top="0px" // Fixed position at the top
+          // right="73px" // Fixed position from the right
           justifyContent="space-between"
         >
           <Button
@@ -315,8 +319,8 @@ const AdvancedComputerVision = ({
             />
           </Button>
         </Flex>
-      </Box>
-    </Box>
+      </Flex>
+    </Flex>
   );
 };
 

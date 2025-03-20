@@ -51,9 +51,9 @@ const AdvancedSurveillance = () => {
                 {`@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;600&display=swap');`}
             </style>
 
-            <Box
+            <Flex
                 backgroundColor="#f3f3f3"
-                width="1512px"
+                mx="2%"
                 height="758px"
                 fontFamily="'Wix Madefor Display', sans-serif"
                 fontWeight="600"
@@ -63,7 +63,7 @@ const AdvancedSurveillance = () => {
             >
                 {/* White Box */}
                 <Box
-                    width="1446px"
+                    width="100%"
                     height="758px"
                     borderRadius="20px"
                     bgColor="white"
@@ -72,6 +72,7 @@ const AdvancedSurveillance = () => {
                 >
                     {/* Title Section */}
                     <Box
+
                         marginRight="70px"
                         marginTop="55px"
                         position="relative"
@@ -95,6 +96,7 @@ const AdvancedSurveillance = () => {
                     {/* Ellipses */}
                     <Box
                         position="absolute"
+                        
                         top="37px"
                         left="933px"
                         opacity="1"
@@ -134,7 +136,7 @@ const AdvancedSurveillance = () => {
                         {cards.map((card, index) => (
                             <Box
                                 key={index}
-                                width={activeCard === index ? '978px' : '146px'}
+                                width={activeCard === index ? '80%' : '20%'}
                                 height="439px"
                                 borderRadius="24px"
                                 bgColor="#f3f3f3"
@@ -142,6 +144,7 @@ const AdvancedSurveillance = () => {
                                 transition="width 0.3s ease"
                                 position="relative"
                                 onClick={() => setActiveCard(index)}
+                                
                             >
                                 {activeCard === index ? (
                                     // Expanded Card Content
@@ -201,7 +204,7 @@ const AdvancedSurveillance = () => {
                                     <Box
                                         position="absolute"
                                         bottom="28%" // Adjust this value to control vertical positioning
-                                        right="20px" // Adjust this value to control horizontal positioning
+                                        right="10%" // Adjust this value to control horizontal positioning
                                         transform="rotate(-90deg)" // Rotate the text vertically
                                         transformOrigin="bottom right" // Rotate around the bottom-right corner
                                         display="flex"
@@ -309,7 +312,7 @@ const AdvancedSurveillance = () => {
                         <Image src="./assets/arrowdb.svg" alt="Arrow" width="14px" height="14px" />
                     </Button>
                 </Box>
-            </Box>
+            </Flex>
         </>
     )
 }
