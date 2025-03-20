@@ -38,11 +38,11 @@ const VMuktiHomepage = () => {
 
 
   return (
-    <Box minH="100vh" bg="#f4f4f4" overflow="hidden">
+    <Box minH="100vh" bg="#f4f4f4" overflow="hidden" pt="5%">
       {/* Navigation Bar */}
-      <Flex p={{ base: "10px", md: "20px" }}>
-        {/* <Navbar /> */}
-      </Flex>
+      {/* <Flex p={{ base: "10px", md: "20px" }}> */}
+      {/* <Navbar /> */}
+      {/* </Flex> */}
 
       {/* Main Content */}
       <Flex
