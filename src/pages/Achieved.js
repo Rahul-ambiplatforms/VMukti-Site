@@ -6,8 +6,9 @@ import {
   useBreakpointValue,
   Flex,
 } from '@chakra-ui/react'
-import ellipse38 from './assets/Ellipse38.svg'
-import ellipse39 from './assets/Ellipse39.svg'
+// import ellipse38 from '../assets/Ellipse38.png' //assets/Ellipse38.png'
+// import ellipse38 from '../public/assets/Ellipse38.png'
+// import ellipse39 from '../assets/Ellipse39.png'
 
 const achievementsData = [
   { value: '18+', label: 'No. of Years of Innovation', isBlack: false },
@@ -72,8 +73,8 @@ const Achieved = () => {
 
   // Responsive font sizes
   const valueFontSize = useBreakpointValue({
-    base: 'clamp(50px, 8vw, 50px)',
-    md: 'clamp(50px, 6vw, 64px)',
+    base: 'clamp(45px, 8vw, 45px)',
+    md: 'clamp(64px, 6vw, 64px)',
     lg: '64px',
   })
 
@@ -134,7 +135,7 @@ const Achieved = () => {
         </Text>
 
         <Image
-          src={ellipse38 || '/placeholder.svg'}
+          src={'/assets/Ellipse38.png' || '/placeholder.svg'}
           alt="ellipse38"
           position="absolute"
           left={{ base: '50%', md: '70%', lg: '1081px' }}
@@ -151,7 +152,7 @@ const Achieved = () => {
           zIndex="0"
         />
         <Image
-          src={ellipse39 || '/placeholder.svg'}
+          src={'/assets/Ellipse39.png' || '/placeholder.svg'}
           alt="ellipse39"
           position="absolute"
           left={{ base: '50%', md: '30%', lg: '45px' }}
