@@ -44,63 +44,141 @@ const VMuktiHomepage = () => {
     lg: '408px',
   })
   return (
-    <Box minHeight="100vh" overflow="hidden" > {/* Remove background color here */}
-      {/* Page content goes here */}
-      <Box minH="100vh">
-        {/* Main Content */}
-        <Flex
-          pl={{ base: "10px", md: "20px" }}
-          direction={{ base: "column", md: "row" }}
-          align="center"
-          justify="center"
-          h="100vh" // Ensure the content fits within the viewport
-        >
-          {/* Left Side */}
-          <Box
-            flex="1"
-            bgImage="url('/assets/tablet.png')"
-            bgRepeat="no-repeat"
-            bgSize="contain"
-            bgPosition={{ base: "center", md: "right" }}
-            minH={{ base: "40vh", md: "80vh" }}
-          >
-            <Text
-              fontSize={{ base: "25px", md: "50px", lg: "80px" }} // Reduced font sizes
-              fontWeight="600"
-              // letterSpacing="-0.px"
-              textAlign={{ base: "center", md: "left" }}
-              mt={{ base: "20px", md: "80px" }} // Added top margin to push the text lower
-            >
-              <Text as="span" color="#000">Unlocking the </Text>
-              <Text as="span" color="#3F77A5">Power of</Text>
-              <br />
-              <Text as="span" color="#3F77A5">Data</Text>
-              <Text as="span" color="#000"> with </Text>
-              <Text as="span" color="#DB7B3A">AI.</Text>
-            </Text>
-            <Flex mt="16px" align="flex-start" direction={{ base: "column", md: "row" }}>
-              <Box>
-                <img src="/assets/arrowdb.svg" alt="Arrow Up" width="40px" height="40px" /> {/* Reduced size */}
-              </Box>
-              {/* <Flex mt="16px" align="flex-start" direction={{ base: "column", md: "row" }}> */}
-              <Text
-                color="#4a5568"
-                maxW={{ base: "90%", md: "400px" }} // Reduced max width
-                ml={{ base: "0", md: "8px" }}
-                fontSize={{ base: "14px", md: "16px" }} // Reduced font size
-              >
-                We harness AI to optimize operations, drive efficiency, and deliver real-time insights across industries.
-              </Text>
-              {/* </Flex> */}
-            </Flex>
+    <Box minH="100vh" bg="#f4f4f4" overflow="hidden" position="relative">
+      {/* Background Boxes */}
+      <Image
+        src={'/assets/Ellipse38.png' || '/placeholder.svg'}
+        alt="ellipse38"
+        position="absolute"
+        left="0"   // Align to the left edge of the screen
+        top="0"    // Align to the top edge of the screen
+        transform="none"  // Remove unwanted translations
+        width={ellipseSize}
+        opacity="1"
+        pointerEvents="none"
+        zIndex="0"
+      />
 
-            <Box position="relative" mt={{ base: "10px", md: "-40px" }} ml={{ base: "0", md: "-40px" }}>
-              <Image
-                src="/assets/robohand.png"
-                alt="Robotic Hand"
-                w={{ base: "80%", md: "500px" }} // Reduced image size
-                h={{ base: "auto", md: "500px" }}
-              />
+      <Flex
+        position="absolute"
+        top="4%"
+        left="35%"
+        transform="translateX(-50%)"
+        gap={4}
+        zIndex={0}
+        width="100%"
+        justifyContent="center"
+        pt="10vh"
+      >
+        <Box
+          height={{ base: "80px", md: "140px", lg: "188px" }} minHeight="50px"
+          aspectRatio="1/1"
+          bg="#BECEDC"
+          borderRadius="24px"
+          opacity="0.7"
+          mt={{ base: "80px", md: "160px", lg: "240px" }}
+
+        />
+        <Box
+          height={{ base: "80px", md: "140px", lg: "188px" }} minHeight="50px"
+          aspectRatio="1/1"
+          bg="#EAEAEA"
+          borderRadius="24px"
+          opacity="0.7"
+          mt={{ base: "40px", md: "80px", lg: "120px" }}
+        />
+        <Box
+          height={{ base: "80px", md: "140px", lg: "188px" }} minHeight="50px"
+          aspectRatio="1/1"
+          bg="#3F77A5"
+          borderRadius="24px"
+          opacity="0.7"
+        />
+      </Flex>
+
+      {/* Main Content */}
+      <Flex
+        pl={{ base: '1%', md: '2.5%' }}
+        direction={{ base: 'column', md: 'row' }}
+        align="center"
+        justify="center"
+        h="100%" // Ensure the content fits within the viewport
+        position="relative"
+        zIndex={1}
+      >
+        {/* Left Side */}
+        <Image src="/assets/tablet.png" position="absolute" right="0px" zIndex={1} />
+        <Box
+          flex="1"
+          bgRepeat="no-repeat"
+          bgSize="contain"
+          bgPosition={{ base: "center", md: "right" }}
+          minH={{ base: "40vh", md: "80vh" }}
+          zIndex={1}
+        >
+
+
+          <Box
+            fontSize={{ base: "24px", md: "48px", lg: "75px" }} // Reduced font sizes
+            fontWeight="550"
+            textStyle="normal"
+            // letterSpacing="-1px"
+            textAlign={{ base: "center", md: "left" }}
+            zIndex={1}
+            mt={{ base: "20px", md: "40px" }} // Added top margin to push the text lower
+          >
+            <Text as="span" color="#000">
+              Unlocking the{' '}
+            </Text>
+            <Text as="span" color="#3F77A5">
+              Power of
+            </Text>
+            <br />
+            <Text as="span" color="#3F77A5">Data</Text>
+            <Text as="span" color="#000"> with </Text>
+            <Text as="span" color="#DB7B3A">AI.</Text>
+          </Box>
+          <Flex mt="16px" align="flex-start" direction={{ base: "column", md: "row" }}>
+            <Box>
+              {/* <img
+                src="/assets/arrowdb.svg"
+                alt="Arrow Up"
+                width="40px"
+                height="40px"
+              />{' '} */}
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 33 33"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
+                  fill="#3F77A5"
+                />
+              </svg>
+              {/* Reduced size */}
+            </Box>
+            <Text
+              color="#4a5568"
+              maxW={{ base: '90%', md: '400px' }} // Reduced max width
+              ml={{ base: '0', md: '8px' }}
+              fontSize={{ base: '14px', md: '16px' }} // Reduced font size
+            >
+              We harness AI to optimize operations, drive efficiency, and
+              deliver real-time insights across industries.
+            </Text>
+            {/* </Flex> */}
+          </Flex>
+
+          <Flex position="relative" mt={{ base: "10px", md: "-40px" }} ml={{ base: "0", md: "-40px" }} alignItems="center">
+            <Image
+              src="/assets/robohand.png"
+              alt="Robotic Hand"
+              w={{ base: '80%', md: '500px' }} // Reduced image size
+              h={{ base: 'auto', md: '500px' }}
+            />
 
             {/* Book Demo Button */}
             <Button
@@ -154,42 +232,5 @@ const VMuktiHomepage = () => {
     </Box>
   )
 }
-              {/* Book Demo Button */}
-              <Button
-                position="absolute"
-                top={{ base: "10px", md: "180px" }} // Moved the button upward
-                left={{ base: "50%", md: "300px" }} // Adjusted position
-                transform={{ base: "translateX(-50%)", md: "none" }}
-                bg="white"
-                boxShadow="0 4px 8px rgba(0, 0, 0, 0.1)"
-                borderRadius="full"
-                px="16px" // Reduced padding
-                py="8px"
-                color="#3182ce"
-                fontWeight="500"
-                gap="2"
-                fontSize={{ base: "12px", md: "14px" }} // Reduced font size
-              >
-                Book Demo
-                <img src="/assets/arrowuprb.svg" alt="Arrow Up" width="12px" height="12px" /> {/* Reduced size */}
-              </Button>
-            </Box>
-          </Box>
-        </Flex>
-        <AdvancedComputerVision />
-        <VideoAnalytics />
-        <AdvancedComputerVision {...customData} />
-        <Diagram />
-        <Industries />
-        <AdvancedSurveillance />
-        <Achieved />
-        {/* <NewsletterSubscription /> */}
-        {/* <TechnologyDashboard /> */}
-
-      </Box>
-    </Box>
-
-  );
-};
 
 export default VMuktiHomepage

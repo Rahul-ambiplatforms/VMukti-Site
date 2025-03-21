@@ -134,12 +134,18 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
                             ml={{ base: "5px", md: "10px", lg: "15px" }}
                         >
                             {isSubscribed ? "Subscribed!" : "Subscribe"}
-                            <Image
-                                src="/assets/arrowupr.svg"
-                                alt="Arrow Up"
-                                width={{ base: "12px", md: "13px", lg: "14px" }}
-                                height={{ base: "12px", md: "13px", lg: "14px" }}
-                            />
+                            <svg
+                                width="14"
+                                height="14"
+                                viewBox="0 0 18 18"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M17.5 2C17.5 1.17157 16.8284 0.499999 16 0.499999L2.5 0.5C1.67157 0.5 0.999999 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5L14.5 3.5L14.5 15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM3.06066 17.0607L17.0607 3.06066L14.9393 0.939339L0.93934 14.9393L3.06066 17.0607Z"
+                                    fill="white"
+                                />
+                            </svg>
                         </Button>
                     </Flex>
                 </Flex>
