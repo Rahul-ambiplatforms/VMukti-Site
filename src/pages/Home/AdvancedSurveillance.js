@@ -117,7 +117,7 @@ const AdvancedSurveillance = () => {
                         zIndex="2"
                     >
                         <Image
-                            // src='./assets/Ellipse36.svg'
+                            src='./assets/Ellipse36.svg'
                             alt="Ellipse 36"
                             width="408px"
                             height="408px"

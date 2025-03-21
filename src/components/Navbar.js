@@ -28,7 +28,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const dropdownItems = {
-    organization: ["Our Serving", "Team", "Careers"],
+    organization: ["Solution", "Team", "Careers"],
     solutions: ["Enterprise", "Government", "AI Solutions"],
     about: ["Mission", "Vision", "Contact"],
 };
@@ -74,13 +74,20 @@ const Navbar = () => {
                                 style={{
                                     color: activeLink === "Home" ? "#3182ce" : "#4a5568",
                                     fontWeight: activeLink === "Home" ? "500" : "400",
-                                    borderBottom: activeLink === "Home" ? "2px solid #3182ce" : "none",
                                     paddingBottom: "4px",
                                     textDecoration: "none", // Remove default underline
                                 }}
                                 onClick={() => handleLinkClick("Home")}
                             >
                                 Home
+                                {/* Conditionally render the SVG divider */}
+                                {activeLink === "Home" && (
+                                    <Box mt={1} display="flex" justifyContent="left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="2" viewBox="0 0 17 2" fill="none">
+                                            <path d="M16 1L1 0.999999" stroke="#3F77A5" strokeWidth="2" strokeLinecap="round" />
+                                        </svg>
+                                    </Box>
+                                )}
                             </Link>
                             <Box w="2px" h="16px" bg="#8F8F8F" />
                             <Link
@@ -88,13 +95,20 @@ const Navbar = () => {
                                 style={{
                                     color: activeLink === "Technology" ? "#3182ce" : "#4a5568",
                                     fontWeight: activeLink === "Technology" ? "500" : "400",
-                                    borderBottom: activeLink === "Technology" ? "2px solid #3182ce" : "none",
                                     paddingBottom: "4px",
                                     textDecoration: "none", // Remove default underline
                                 }}
                                 onClick={() => handleLinkClick("Technology")}
                             >
                                 Technology
+                                {/* Conditionally render the SVG divider */}
+                                {activeLink === "Technology" && (
+                                    <Box mt={1} display="flex" justifyContent="left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="2" viewBox="0 0 17 2" fill="none">
+                                            <path d="M16 1L1 0.999999" stroke="#3F77A5" strokeWidth="2" strokeLinecap="round" />
+                                        </svg>
+                                    </Box>
+                                )}
                             </Link>
                             <Box w="2px" h="16px" bg="#8F8F8F" />
 
@@ -108,15 +122,30 @@ const Navbar = () => {
                                     variant="ghost"
                                     color={activeLink === "Solutions" ? "#3182ce" : "#4a5568"}
                                     fontWeight={activeLink === "Solutions" ? "500" : "400"}
-                                    borderBottom={activeLink === "Solutions" ? "2px solid #3182ce" : "none"}
                                     pb={1}
                                     onClick={() => handleLinkClick("Solutions")}
                                 >
                                     Solutions
+                                    {/* Conditionally render the SVG divider */}
+                                    {activeLink === "Solutions" && (
+                                        <Box mt={1} display="flex" justifyContent="left">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="2" viewBox="0 0 17 2" fill="none">
+                                                <path d="M16 1L1 0.999999" stroke="#3F77A5" strokeWidth="2" strokeLinecap="round" />
+                                            </svg>
+                                        </Box>
+                                    )}
                                 </MenuButton>
                                 <MenuList>
                                     {dropdownItems.organization.map((item, index) => (
-                                        <MenuItem key={index} fontWeight="400">{item}</MenuItem>
+                                        <MenuItem
+                                            key={index}
+                                            fontWeight="400"
+                                            as={Link} // Use Link component for navigation
+                                            to={`/${item.toLowerCase().replace(/\s+/g, '-')}`} // Convert item to a valid route
+                                            onClick={() => handleLinkClick(item)} // Update active link
+                                        >
+                                            {item}
+                                        </MenuItem>
                                     ))}
                                 </MenuList>
                             </Menu>
@@ -132,11 +161,18 @@ const Navbar = () => {
                                     variant="ghost"
                                     color={activeLink === "Industries" ? "#3182ce" : "#4a5568"}
                                     fontWeight={activeLink === "Industries" ? "500" : "400"}
-                                    borderBottom={activeLink === "Industries" ? "2px solid #3182ce" : "none"}
                                     pb={1}
                                     onClick={() => handleLinkClick("Industries")}
                                 >
                                     Industries
+                                    {/* Conditionally render the SVG divider */}
+                                    {activeLink === "Industries" && (
+                                        <Box mt={1} display="flex" justifyContent="left">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="2" viewBox="0 0 17 2" fill="none">
+                                                <path d="M16 1L1 0.999999" stroke="#3F77A5" strokeWidth="2" strokeLinecap="round" />
+                                            </svg>
+                                        </Box>
+                                    )}
                                 </MenuButton>
                                 <MenuList>
                                     {dropdownItems.solutions.map((item, index) => (
@@ -156,11 +192,18 @@ const Navbar = () => {
                                     variant="ghost"
                                     color={activeLink === "Our Serving" ? "#3182ce" : "#4a5568"}
                                     fontWeight={activeLink === "Our Serving" ? "500" : "400"}
-                                    borderBottom={activeLink === "Our Serving" ? "2px solid #3182ce" : "none"}
                                     pb={1}
                                     onClick={() => handleLinkClick("Our Serving")}
                                 >
                                     Our Serving
+                                    {/* Conditionally render the SVG divider */}
+                                    {activeLink === "Our Serving" && (
+                                        <Box mt={1} display="flex" justifyContent="left">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="2" viewBox="0 0 17 2" fill="none">
+                                                <path d="M16 1L1 0.999999" stroke="#3F77A5" strokeWidth="2" strokeLinecap="round" />
+                                            </svg>
+                                        </Box>
+                                    )}
                                 </MenuButton>
                                 <MenuList>
                                     {dropdownItems.about.map((item, index) => (
@@ -213,13 +256,20 @@ const Navbar = () => {
                                     color: activeLink === "Home" ? "#3182ce" : "#4a5568",
                                     fontSize: "lg",
                                     fontWeight: activeLink === "Home" ? "500" : "400",
-                                    borderBottom: activeLink === "Home" ? "2px solid #3182ce" : "none",
                                     paddingBottom: "4px",
                                     textDecoration: "none", // Remove default underline
                                 }}
                                 onClick={() => handleLinkClick("Home")}
                             >
                                 Home
+                                {/* Conditionally render the SVG divider */}
+                                {activeLink === "Home" && (
+                                    <Box mt={1} display="flex" justifyContent="left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="2" viewBox="0 0 17 2" fill="none">
+                                            <path d="M16 1L1 0.999999" stroke="#3F77A5" strokeWidth="2" strokeLinecap="round" />
+                                        </svg>
+                                    </Box>
+                                )}
                             </Link>
                             <Link
                                 to="/technology" // Use "to" instead of "href"
@@ -227,13 +277,20 @@ const Navbar = () => {
                                     color: activeLink === "Technology" ? "#3182ce" : "#4a5568",
                                     fontSize: "lg",
                                     fontWeight: activeLink === "Technology" ? "500" : "400",
-                                    borderBottom: activeLink === "Technology" ? "2px solid #3182ce" : "none",
                                     paddingBottom: "4px",
                                     textDecoration: "none", // Remove default underline
                                 }}
                                 onClick={() => handleLinkClick("Technology")}
                             >
                                 Technology
+                                {/* Conditionally render the SVG divider */}
+                                {activeLink === "Technology" && (
+                                    <Box mt={1} display="flex" justifyContent="left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="2" viewBox="0 0 17 2" fill="none">
+                                            <path d="M16 1L1 0.999999" stroke="#3F77A5" strokeWidth="2" strokeLinecap="round" />
+                                        </svg>
+                                    </Box>
+                                )}
                             </Link>
                             {/* Add other links similarly */}
                         </VStack>

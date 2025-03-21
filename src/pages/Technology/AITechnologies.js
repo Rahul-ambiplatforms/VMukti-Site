@@ -140,7 +140,7 @@ const AITechnologies = () => {
                 ))}
 
                 {/* Right Dots (Indicate more slides on the right) */}
-                {visibleSlideRange.end < slides.length - 1 && (
+                {/* {visibleSlideRange.end < slides.length - 1 && (
                     <Flex gap={1} align="center">
                         {[...Array(slides.length - visibleSlideRange.end - 1)].map((_, index) => (
                             <Box
@@ -152,22 +152,23 @@ const AITechnologies = () => {
                             />
                         ))}
                     </Flex>
-                )}
+                )} */}
 
                 {/* Slider Controls */}
                 <Flex position="absolute" right={{ base: 4, md: 10 }} top="50%" transform="translateY(-50%)" align="center" gap={2}>
-                    <Flex gap={1}>
-                        {slides.map((_, index) => (
-                            <Box
-                                key={index}
-                                w="8px"
-                                h="8px"
-                                borderRadius="full"
-                                bg={currentSlide === index ? "blue.600" : "gray.300"}
-                                display={index >= visibleSlideRange.start && index <= visibleSlideRange.end ? "none" : "block"} // Hide dots for visible slides
-                            />
-                        ))}
-                    </Flex>
+                    {visibleSlideRange.end < slides.length - 1 && (
+                        <Flex gap={1} align="center">
+                            {[...Array(slides.length - visibleSlideRange.end - 1)].map((_, index) => (
+                                <Box
+                                    key={index}
+                                    w="8px"
+                                    h="8px"
+                                    borderRadius="full"
+                                    bg="#3F77A5;"
+                                />
+                            ))}
+                        </Flex>
+                    )}
                     <IconButton
                         aria-label="Previous slide"
                         icon={<ChevronLeftIcon />}

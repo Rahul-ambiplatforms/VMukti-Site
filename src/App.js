@@ -1,17 +1,23 @@
 import React from 'react';
-import { ChakraProvider, Flex } from '@chakra-ui/react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import routing components
+import { ChakraProvider, Flex, Box } from '@chakra-ui/react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './css/fonts.css';
+import './css/scrollbar.css';
 import VMuktiHomepage from './pages/Home/VMuktiHomepage';
 import theme from './pages/Home/theme';
 import TechnologyDashboard from './pages/Technology/TechnologyDashboard';
 import Navbar from './components/Navbar';
 import NewsletterSubscription from './pages/Home/NewsletterSubscription';
+import SolutionsHome from './pages/Solutions/SolutionsHome';
 
 function App() {
+  // Assuming the Navbar height is 60px
+  const navbarHeight = '60px';
+
   return (
-    <ChakraProvider theme={theme} bg={'#F3F3F3'}>
-      <Router> {/* Wrap everything in Router */}
+    <ChakraProvider theme={theme}>
+      <Router>
+        {/* Navbar with transparent background */}
         <Flex
           p={{ base: "10px", md: "20px" }}
           bg={'transparent'}
@@ -20,13 +26,19 @@ function App() {
           left={0}
           right={0}
           zIndex={1000}
+          height={navbarHeight}
         >
-          <Navbar /> {/* Navbar will be visible on all pages */}
+          <Navbar />
         </Flex>
-        <Routes> {/* Define your routes here */}
-          <Route path="/" element={<VMuktiHomepage />} /> {/* Homepage */}
-          <Route path="/technology" element={<TechnologyDashboard />} /> {/* Technology Dashboard */}
-        </Routes>
+
+        {/* Page content with padding to account for Navbar height */}
+        <Box pt={navbarHeight} bg="#f3f3f3">  {/* Add padding-top equal to Navbar height */}
+          <Routes>
+            <Route path="/" element={<VMuktiHomepage />} />
+            <Route path="/technology" element={<TechnologyDashboard />} />
+            <Route path="/solution" element={<SolutionsHome />} />
+          </Routes>
+        </Box>
       </Router>
       <NewsletterSubscription />
     </ChakraProvider>
