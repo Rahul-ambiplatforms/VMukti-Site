@@ -5,29 +5,31 @@ import {
   Image,
   Text,
   Button,
+  useBreakpointValue,
 } from '@chakra-ui/react';
 
-import Navbar from '../../components/Navbar';
-import AdvancedComputerVision from '../../components/AdvancedComputerVision ';
+import Navbar from '../../components/Navbar'
+import AdvancedComputerVision from '../../components/AdvancedComputerVision '
 
-import VideoAnalytics from './VideoAnalytics';
+import VideoAnalytics from './VideoAnalytics'
 import Achieved from './Achieved'
 import Diagram from './Diagram'
-import Industries from './industriesData';
-import AdvancedSurveillance from './AdvancedSurveillance';
+import Industries from './industriesData'
+import AdvancedSurveillance from './AdvancedSurveillance'
 import TechnologyDashboard from '../Technology/TechnologyDashboard'
 
 const VMuktiHomepage = () => {
   const customData = {
-    title1: "IoT Integration & Secure Connectivity for",
-    title2: "Smart Surveillance",
-    subtitle: "Real-Time Monitoring",
-    description: "IoT-enabled cameras and sensors continuously track environmental changes and security events.",
+    title1: 'IoT Integration & Secure Connectivity for',
+    title2: 'Smart Surveillance',
+    subtitle: 'Real-Time Monitoring',
+    description:
+      'IoT-enabled cameras and sensors continuously track environmental changes and security events.',
     cards: [
       {
         type: 'image',
         label: 'Multi-Modal Recognition',
-        media: "/assets/car.png", // Dummy image URL
+        media: '/assets/car.png', // Dummy image URL
       },
       { type: 'text', label: 'Custom Scene Understanding' },
       { type: 'text', label: 'Custom Multi-Modal Recognition' },
@@ -36,7 +38,11 @@ const VMuktiHomepage = () => {
     backgroundImage: "/assets/VMukti Brochure O2 1.png",
   };
 
-
+  const ellipseSize = useBreakpointValue({
+    base: '200px',
+    md: '300px',
+    lg: '408px',
+  })
   return (
     <Box minHeight="100vh" overflow="hidden" > {/* Remove background color here */}
       {/* Page content goes here */}
@@ -96,6 +102,58 @@ const VMuktiHomepage = () => {
                 h={{ base: "auto", md: "500px" }}
               />
 
+            {/* Book Demo Button */}
+            <Button
+              position="absolute"
+              top={{ base: "35%", md: "180px" }} // Moved the button upward
+              left={{ base: "65%", md: "300px" }} // Adjusted position
+              transform={{ base: "translateX(-50%)", md: "none" }}
+              bg="white"
+              boxShadow="0 4px 8px rgba(0, 0, 0, 0.1)"
+              borderRadius="full"
+              px="16px" // Reduced padding
+              py="8px"
+              color="#3182ce"
+              fontWeight="500"
+              gap="2"
+              fontSize={{ base: '12px', md: '14px' }} // Reduced font size
+            >
+              Book Demo
+              {/* <img
+                src="/assets/arrowuprb.svg"
+                alt="Arrow Up"
+                width="12px"
+                height="12px"
+              />{' '} */}
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 17 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
+                  fill="#3F77A5"
+                />
+              </svg>
+              {/* Reduced size */}
+            </Button>
+          </Flex>
+        </Box>
+      </Flex>
+      <AdvancedComputerVision />
+      <VideoAnalytics />
+      <AdvancedComputerVision {...customData} />
+      <Diagram />
+      <Industries />
+      <AdvancedSurveillance />
+      <Achieved />
+      {/* <NewsletterSubscription /> */}
+      {/* <TechnologyDashboard /> */}
+    </Box>
+  )
+}
               {/* Book Demo Button */}
               <Button
                 position="absolute"
@@ -134,4 +192,4 @@ const VMuktiHomepage = () => {
   );
 };
 
-export default VMuktiHomepage;
+export default VMuktiHomepage

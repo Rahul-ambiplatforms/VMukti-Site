@@ -148,4 +148,4 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
     );
 };
 
-export default SubscriptionBanner;
+export default SubscriptionBanner
