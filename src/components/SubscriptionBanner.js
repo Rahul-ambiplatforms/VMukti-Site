@@ -1,10 +1,17 @@
 import { useState } from "react";
-import { Flex, Box, Text, Input, Button, Image } from "@chakra-ui/react";
+import { Flex, Box, Text, Input, Button, Image, useBreakpointValue } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
 
 const SubscriptionBanner = ({ bgColor = "white" }) => {
     const [email, setEmail] = useState("");
     const [isSubscribed, setIsSubscribed] = useState(false);
+
+    // Responsive values
+    const headingSize = useBreakpointValue({ base: "20px", md: "32px", lg: "48px" });
+    const inputWidth = useBreakpointValue({ base: "100%", md: "600px", lg: "800px" });
+    const buttonWidth = useBreakpointValue({ base: "120px", md: "130px", lg: "146px" });
+    const buttonHeight = useBreakpointValue({ base: "40px", md: "45px", lg: "50px" });
+    const imageSize = useBreakpointValue({ base: "150px", md: "250px", lg: "368px" });
 
     const handleSubscribe = () => {
         if (email.trim() !== "") {
@@ -18,45 +25,53 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
             bg={bgColor}
             borderRadius="15px"
             overflow="visible"
-            mb="20px"
+            mb={{ base: "10px", md: "15px", lg: "20px" }}
             boxShadow="lg"
             alignItems="center"
             _hover={{ boxShadow: "xl", transform: "scale(1.01)", transition: "all 0.3s ease" }}
-            p={{ base: "20px", md: "30px" }} // Responsive padding
-            direction={{ base: "column", md: "row" }} // Stack vertically on small screens
+            p={{ base: "15px", md: "20px", lg: "30px" }}
+            direction={{ base: "column", md: "row" }}
+            gap={{ base: "15px", md: "20px", lg: "30px" }}
         >
-            {/* Image Positioned Outside the Box */}
+            {/* Image Section */}
             <Box
-                position={{ base: "relative", md: "absolute" }} // Relative on small screens, absolute on larger screens
-                left={{ base: "0", md: "0px" }}
-                bottom={{ base: "0", md: "0px" }}
-                width={{ base: "200px", md: "368px" }} // Smaller image on small screens
-                height={{ base: "auto", md: "368px" }}
+                position={{ base: "relative", md: "absolute" }}
+                left={{ base: "0", md: "0" }}
+                bottom={{ base: "0", md: "0" }}
+                width={imageSize}
+                height={{ base: "auto", md: imageSize }}
                 flexShrink="0"
                 zIndex="1"
-                mb={{ base: "20px", md: "0" }} // Add margin at the bottom on small screens
+                mb={{ base: "10px", md: "0" }}
             >
-                <Image src="/assets/robot.png" alt="AI Robot" width="100%" height="auto" />
+                <Image
+                    src="./assets/robot.png"
+                    alt="AI Robot"
+                    width="100%"
+                    height="auto"
+                    objectFit="contain"
+                />
             </Box>
 
             {/* Content Section */}
             <Flex
                 flexGrow={1}
-                ml={{ base: "0", md: "auto" }} // No margin on small screens
-                pl={{ base: "0", md: "350px" }} // No padding on small screens
-                pr={{ base: "0", md: "20px" }} // No padding on small screens
+                ml={{ base: "0", md: "auto" }}
+                pl={{ base: "0", md: "300px", lg: "350px" }}
+                pr={{ base: "0", md: "15px", lg: "20px" }}
                 alignItems="center"
                 justifyContent="space-between"
-                direction={{ base: "column", md: "row" }} // Stack vertically on small screens
-                textAlign={{ base: "center", md: "left" }} // Center text on small screens
+                direction={{ base: "column", md: "row" }}
+                textAlign={{ base: "center", md: "left" }}
+                gap={{ base: "15px", md: "20px", lg: "30px" }}
             >
                 <Text
                     color="black"
                     fontFamily="'Wix Madefor Display', sans-serif"
-                    fontSize={{ base: "24px", md: "48px" }} // Smaller font size on small screens
+                    fontSize={headingSize}
                     fontWeight="400"
                     letterSpacing="-0.72px"
-                    mb={{ base: "20px", md: "0" }} // Add margin at the bottom on small screens
+                    mb={{ base: "10px", md: "0" }}
                 >
                     Subscribe to{" "}
                     <Text as="span" color="#3F77A5">
@@ -65,24 +80,32 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
                 </Text>
 
                 {/* Email Input Section */}
-                <Flex direction="column" width={{ base: "100%", md: "auto" }}>
+                <Flex
+                    direction="column"
+                    width={{ base: "100%", md: "auto" }}
+                    maxW={{ base: "100%", md: inputWidth }}
+                >
                     <Flex
-                        mt="20px"
-                        width={{ base: "100%", md: "611px" }} // Full width on small screens
-                        height="56px"
+                        mt={{ base: "10px", md: "15px", lg: "20px" }}
+                        width="100%"
+                        height={{ base: "45px", md: "50px", lg: "56px" }}
                         border="1px solid"
                         borderColor="gray.200"
                         borderRadius="20px"
                         bg="gray.50"
                         alignItems="center"
-
                         _hover={{ borderColor: "#3F77A5" }}
                     >
                         <Flex
-                            padding="12px 20px"
-                            width={{ base: "100%", md: "611px" }}
+                            padding={{ base: "8px 15px", md: "10px 25px", lg: "12px 30px" }}
+                            width="100%"
+                            flexGrow={1}
                         >
-                            <EmailIcon mr="10px" w="20px" h="auto" />
+                            <EmailIcon
+                                mr={{ base: "8px", md: "15px", lg: "20px" }}
+                                w={{ base: "16px", md: "20px" }}
+                                h="auto"
+                            />
                             <Input
                                 type="email"
                                 placeholder="Your Email"
@@ -92,12 +115,13 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
                                 width="100%"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
+                                fontSize={{ base: "14px", md: "15px" }}
+                                _placeholder={{ color: "gray.500" }}
                             />
                         </Flex>
                         <Button
-                            width={{ base: "154.639px", md: "146px" }} // Smaller button on small screens
-                            height={{ base: "33px", md: "50px" }}
-                            // display="flex"
+                            width={buttonWidth}
+                            height={buttonHeight}
                             justifyContent="space-between"
                             alignItems="center"
                             bg="#3F77A5"
@@ -105,11 +129,23 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
                             borderRadius="20px"
                             _hover={{ bg: "#2c5a7a" }}
                             onClick={handleSubscribe}
-
-
+                            px={{ base: "12px", md: "15px", lg: "20px" }}
+                            flexShrink={0}
+                            ml={{ base: "5px", md: "10px", lg: "15px" }}
                         >
                             {isSubscribed ? "Subscribed!" : "Subscribe"}
-                            <Image src="/assets/arrowupr.svg" alt="Arrow Up" width="14px" height="14px" />
+                            <svg
+                                width="14"
+                                height="14"
+                                viewBox="0 0 18 18"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M17.5 2C17.5 1.17157 16.8284 0.499999 16 0.499999L2.5 0.5C1.67157 0.5 0.999999 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5L14.5 3.5L14.5 15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM3.06066 17.0607L17.0607 3.06066L14.9393 0.939339L0.93934 14.9393L3.06066 17.0607Z"
+                                    fill="white"
+                                />
+                            </svg>
                         </Button>
                     </Flex>
                 </Flex>
@@ -118,4 +154,4 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
     );
 };
 
-export default SubscriptionBanner;
+export default SubscriptionBanner

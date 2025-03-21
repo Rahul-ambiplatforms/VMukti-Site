@@ -30,7 +30,7 @@ const Diagram = () => {
             mx="2%"
             overflow="hidden"
             bg="#f5f5f5"
-            mt="2%" 
+            mt="2%"
             direction={{ base: "column", md: "row" }} // Stack vertically on small screens
         >
             {/* Left Panel */}
@@ -74,8 +74,9 @@ const Diagram = () => {
                 bg="white"
                 position="relative"
             >
-                <Box width="90%" height="90%" position="relative">
-                    {/* Center Icon */}
+                <Image src="../assets/ai_implementation.png"/>
+                {/* <Box width="90%" height="90%" position="relative">
+                    {/* Center Icon 
                     <Box
                         position="absolute"
                         top="50%"
@@ -89,7 +90,7 @@ const Diagram = () => {
                         <Image src="./assets/leftgrp.png" height="100vh" alt="Layers icon" boxSize={12} />
                     </Box>
 
-                    {/* Middle Image */}
+                    {/* Middle Image 
                     <Box
                         position="absolute"
                         top="50%"
@@ -103,7 +104,7 @@ const Diagram = () => {
                         <Image src="./assets/layers.png" alt="Layers icon" boxSize={12} />
                     </Box>
 
-                    {/* Right Image */}
+                    {/* Right Image
                     <Box
                         position="absolute"
                         top="50%"
@@ -117,7 +118,7 @@ const Diagram = () => {
                         <Image src="./assets/leftgrp.png" alt="Layers icon" boxSize={12} />
                     </Box>
 
-                    {/* Nodes */}
+                    {/* Nodes 
                     {nodes.map((node, index) => (
                         <Box
                             key={index}
@@ -135,7 +136,7 @@ const Diagram = () => {
                             {node.label}
                         </Box>
                     ))}
-                </Box>
+                </Box> */}
             </Flex>
         </Flex>
     );
