@@ -41,7 +41,6 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
                 width={imageSize}
                 height={{ base: "auto", md: imageSize }}
                 flexShrink="0"
-                zIndex="1"
                 mb={{ base: "10px", md: "0" }}
             >
                 <Image
@@ -82,8 +81,7 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
                 {/* Email Input Section */}
                 <Flex
                     direction="column"
-                    width={{ base: "100%", md: "auto" }}
-                    maxW={{ base: "100%", md: inputWidth }}
+                    width="100%"
                 >
                     <Flex
                         mt={{ base: "10px", md: "15px", lg: "20px" }}

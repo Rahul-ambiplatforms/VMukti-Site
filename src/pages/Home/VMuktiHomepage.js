@@ -44,7 +44,7 @@ const VMuktiHomepage = () => {
     lg: '408px',
   })
   return (
-    <Box minH="100vh" bg="#f4f4f4" overflow="hidden" position="relative">
+    <Box minH="100vh" bg="#f3f3f3" overflow="hidden" position="relative">
       {/* Background Boxes */}
       <Image
         src={'/assets/Ellipse38.png' || '/placeholder.svg'}
