@@ -73,13 +73,13 @@ const Achieved = () => {
 
   // Responsive font sizes
   const valueFontSize = useBreakpointValue({
-    base: 'clamp(45px, 8vw, 45px)',
-    md: 'clamp(64px, 6vw, 64px)',
+    base: 'clamp(10%, 8vw, 45px)',
+    md: 'clamp(20%, 6vw, 64px)',
     lg: '64px',
   })
 
   const labelFontSize = useBreakpointValue({
-    base: 'clamp(14px, 2vw, 12px)',
+    base: 'clamp(12px, 2vw, 12px)',
     md: 'clamp(14px, 1.5vw, 16px)',
     lg: '16px',
   })
@@ -225,7 +225,7 @@ const Achieved = () => {
                 {item.value}
               </Text>
               <Text
-                fontSize={labelFontSize}
+                fontSize={{ base: '14px', md: '18px', lg: '18px' }}
                 fontWeight="700"
                 position="absolute"
                 bottom={labelBottomMargin}
