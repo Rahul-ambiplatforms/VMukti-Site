@@ -120,7 +120,6 @@ const Achieved = () => {
         maxWidth={containerWidth}
         minHeight={containerHeight}
         margin="0 auto"
-        overflow="hidden"
         fontFamily="'Wix Madefor Display', sans-serif"
       >
         <Text
@@ -134,23 +133,21 @@ const Achieved = () => {
           </Text>
         </Text>
 
-        <Image
-          src={'/assets/Ellipse38.png' || '/placeholder.svg'}
-          alt="ellipse38"
+        <Box
           position="absolute"
-          left={{ base: '50%', md: '70%', lg: '1081px' }}
-          top={{ base: 'auto', md: 'auto', lg: '630px' }}
-          bottom={{ base: '0', md: '0', lg: 'auto' }}
-          transform={{
-            base: 'translateX(-50%)',
-            md: 'translateX(-50%)',
-            lg: 'none',
-          }}
-          width={ellipseSize}
-          opacity="1"
-          pointerEvents="none"
-          zIndex="0"
+          top={{ base: "50%", md: "60%", lg: "70%" }} // Align center vertically
+          left={{ base: "60%", md: "70%", lg: "80%" }} // Responsive positioning like Image
+          transform="translate(-50%, -50%)" // Centering correction
+          width="408px"
+          height="408px"
+          flexShrink={0}
+          borderRadius="50%" // Ensure a circular shape
+          opacity="0.12"
+          background="#3F77A5"
+          filter="blur(56.6px)"
+          zIndex={3} // Behind content but above the Image
         />
+
         <Image
           src={'/assets/Ellipse39.png' || '/placeholder.svg'}
           alt="ellipse39"
