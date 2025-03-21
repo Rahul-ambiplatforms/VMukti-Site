@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Box, Flex, Text, Image, Button } from '@chakra-ui/react'
+import React, { useState } from 'react';
+import { Box, Flex, Text, Image, Button, CloseButton } from '@chakra-ui/react';
 
 const AdvancedComputerVision = ({
   title1 = 'Advanced Computer',
@@ -50,7 +50,8 @@ const AdvancedComputerVision = ({
       mx="2%"
       position="relative"
       overflow="hidden"
-      p={{ base: '4', md: '0' }}
+      p={{ base: "4", md: "0" }}
+      zIndex={1}
       mt="-50px" // Added top margin to push the box lower
     >
       {/* Random dots background */}
@@ -122,130 +123,88 @@ const AdvancedComputerVision = ({
           {cards.map((card, index) => (
             <Box
               key={index}
-              width={
-                activeCard === index
-                  ? { base: '123px', md: '814px' }
-                  : { base: '80px', md: '149px' }
-              } // Decreased card size for small screens
-              height={{ base: '295px', md: '439px' }} // Increased height for small screens
-              // flexShrink={0}
+              width={activeCard === index ? '80%' : '20%'}
+              height={{ base: "295px", md: "439px" }}
               borderRadius="24px"
-              bgColor={
-                activeCard === index
-                  ? card.type === 'video'
-                    ? '#f3f3f3'
-                    : '#a8c0d3'
-                  : '#becedc'
-              }
+              bgColor={index % 2 === 0 ? "#BECEDC" : "#EAEAEA"}
               _hover={{ bgColor: '#a8c0d3', cursor: 'pointer' }}
               transition="width 0.3s ease, background-color 0.3s ease"
-              onMouseEnter={() => setActiveCard(index)} // Trigger on hover
+              onMouseEnter={() => setActiveCard(index)}
               cursor="pointer"
               position="relative"
+            // bg="darkred"
             >
               {activeCard === index ? (
                 // Expanded Card Content
-                <Box
-                  width="100%"
-                  height="100%"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  overflow="hidden"
-                  borderRadius="24px"
-                >
-                  {card.type === 'video' ? (
-                    // Video placeholder
-                    <video
-                      src={card.media}
-                      autoPlay
-                      loop
-                      muted
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                      }}
-                    />
-                  ) : (
-                    // Image placeholder
-                    <Image
-                      src={card.media}
-                      alt={card.label}
-                      width="100%"
-                      height="100%"
-                      objectFit="cover"
-                    />
-                  )}
-                </Box>
+                <Flex width="100%" height="100%" borderRadius="24px">
+                  <Box
+                    width="100%"
+                    height="100%"
+                    flexDirection="column"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="flex-start"
+                    overflow="hidden"
+                    borderRadius="24px"
+                  >
+                    {card.type === 'video' ? (
+                      <video
+                        src={card.media}
+                        autoPlay
+                        loop
+                        muted
+                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                      />
+                    ) : (
+                      <Image
+                        src={card.media}
+                        alt={card.label}
+                        width="100%"
+                        height="100%"
+                        objectFit="cover"
+                      />
+                    )}
+                  </Box>
+                </Flex>
               ) : (
                 // Squeezed Card Content
                 <Box
-                  width="100%"
-                  height="100%"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  overflow="hidden"
-                  borderRadius="24px"
-                  position="relative" // Add position relative to contain the absolute positioned text
+                position="absolute"
+                bottom="38%" // Ensure the text is inside the card
+                right="20px"
+                // top={'10p'}
+                left="0px"
+                transform="rotate(-90deg)"
+                text-orientation="upright"
+                transformOrigin="bottom right"
+                display="flex"
+                flexDirection="column"
+                alignItems="flex-start" // Aligns dash with the start of the text
+                whiteSpace="normal"
                 >
-                  {/* Media (Image or Video) */}
-                  {card.type === 'video' ? (
-                    <video
-                      src={card.media}
-                      autoPlay
-                      loop
-                      muted
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                      }}
-                    />
-                  ) : (
-                    <Image
-                      src={card.media}
-                      alt={card.label}
-                      width="100%"
-                      height="100%"
-                      objectFit="cover"
-                    />
-                  )}
-
-                  {/* Rotated Text (Only for Squeezed Cards) */}
-                  {/* <Box
-                    position="absolute"
-                    bottom="28%" // Adjust this value to control vertical positioning
-                    right="20px" // Adjust this value to control horizontal positioning
-                    transform="rotate(-90deg)" // Rotate the text vertically
-                    transformOrigin="bottom right" // Rotate around the bottom-right corner
-                    display="flex"
-                    flexDirection="column"
-                    alignItems="flex-start" // Align dash with the start of the text
-                    whiteSpace="nowrap" // Ensure text stays in one line
+                  <Text
+                    fontSize="16px"
+                    fontWeight="700"
+                    letterSpacing="-0.24px"
+                    color="black"
+                    width="200%"
                   >
-                    <Text
-                      fontSize="16px"
-                      fontWeight="700"
-                      letterSpacing="-0.24px"
-                      color="black"
-                    >
-                      {card.label}
-                    </Text>
-                    <Box
-                      width="15px"
-                      height="2px"
-                      bgColor="#3f77a5"
-                      borderRadius="2px"
-                      marginTop="5px"
-                    />
-                  </Box> */}
+                    {card.label}
+                  </Text>
+                  <Box
+                    width="15px"
+                    height="2px"
+                    bgColor="#3f77a5"
+                    borderRadius="2px"
+                    marginTop="5px"
+                  />
                 </Box>
+
               )}
             </Box>
           ))}
         </Flex>
+
       </Flex>
 
       {/* Info Section */}
@@ -256,18 +215,17 @@ const AdvancedComputerVision = ({
         marginTop={{ base: '4', md: '20px' }}
         justifyContent={'space-between'}
       >
-        <Flex direction={'column'}>
-          <Text
-            color="black"
-            fontSize={{ base: '14px', md: '16px' }} // Adjusted font size for small screens
-            fontWeight="700"
-            lineHeight="normal"
-            letterSpacing={{ base: '-0.21px', md: '-0.24px' }}
-            whiteSpace="normal" // Allow text wrapping
-            maxWidth={{ base: '90%', md: '100%' }} // Ensure text doesn't overflow
-          >
-            {subtitle}
-          </Text>
+        <Flex direction={"column"}><Text
+          color="black"
+          fontSize={{ base: "14px", md: "16px" }} // Adjusted font size for small screens
+          fontWeight="700"
+          lineHeight="normal"
+          letterSpacing={{ base: "-0.21px", md: "-0.24px" }}
+          whiteSpace="normal" // Allow text wrapping
+          maxWidth={{ base: "90%", md: "100%" }} // Ensure text doesn't overflow
+        >
+          {cards[activeCard].label}
+        </Text>
           <Text
             color="#696969"
             fontSize={{ base: '12px', md: '14px' }} // Adjusted font size for small screens
