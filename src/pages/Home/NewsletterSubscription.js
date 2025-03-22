@@ -1,10 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import {
   Box,
   Flex,
-  Image,
-  Input,
-  Button,
   Text,
   Heading,
   List,
@@ -12,17 +9,22 @@ import {
   Link,
   Icon,
   Grid,
-} from '@chakra-ui/react'
-import { EmailIcon, ArrowForwardIcon, Divider } from '@chakra-ui/icons'
+  Button,
+  Divider,
+  useBreakpointValue
+} from '@chakra-ui/react';
 import {
   FaFacebookF,
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
   FaYoutube,
-} from 'react-icons/fa'
-import SubscriptionBanner from '../../components/SubscriptionBanner'
+} from 'react-icons/fa';
+import SubscriptionBanner from '../../components/SubscriptionBanner';
 
+
+
+// Custom PhoneIcon component
 const PhoneIcon = ({ mr = '10px', w = '21px', h = '21px' }) => (
   <Box
     as="svg"
@@ -38,29 +40,36 @@ const PhoneIcon = ({ mr = '10px', w = '21px', h = '21px' }) => (
       fill="#3F77A5"
     />
   </Box>
-)
+);
 
+// Main NewsletterSubscription component
 const NewsletterSubscription = () => {
-  const [email, setEmail] = useState('')
-  const [isSubscribed, setIsSubscribed] = useState(false)
+  const [email, setEmail] = useState('');
+  // const [isSubscribed, setIsSubscribed] = useState(false);
 
-  const handleSubscribe = () => {
-    if (email) {
-      setIsSubscribed(true)
-      console.log('Subscribed with email:', email)
-    } else {
-      alert('Please enter a valid email address.')
-    }
-  }
+  // Handle subscription logic
+  // const handleSubscribe = () => {
+  //   if (email) {
+  //     setIsSubscribed(true);
+  //     console.log('Subscribed with email:', email);
+  //   } else {
+  //     alert('Please enter a valid email address.');
+  //   }
+  // };
+  const buttonWidth = useBreakpointValue({ base: "120px", md: "130px", lg: "146px" });
+  const buttonHeight = useBreakpointValue({ base: "40px", md: "45px", lg: "50px" });
 
   return (
+
     <>
+      {/* Import custom font */}
       <style>
         {`
-      @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;600;700&display=swap');
-    `}
+          @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;600;700&display=swap');
+        `}
       </style>
 
+      {/* Main container */}
       <Box
         padding="4% 2% 1% 2%"
         fontFamily="'Wix Madefor Display', sans-serif"
@@ -72,7 +81,7 @@ const NewsletterSubscription = () => {
 
         {/* Information Section */}
         <Flex flexWrap="wrap" gap="20px" mb="30px" minW="250px">
-          {/* Who we are */}
+          {/* Who We Are Section */}
           <Box
             bg="white"
             borderRadius="24px"
@@ -85,20 +94,10 @@ const NewsletterSubscription = () => {
               transition: 'all 0.3s ease',
             }}
           >
-            <Heading
-              fontSize="18px"
-              fontWeight={700}
-              mb="20px"
-              fontFamily="'Wix Madefor Display', sans-serif"
-            >
+            <Heading fontSize="18px" fontWeight={700} mb="20px">
               Who we are
             </Heading>
-            <Divider
-              borderColor="blue.700"
-              borderWidth="1px"
-              w="30px"
-              mb="15px"
-            />
+            <Divider borderColor="blue.700" borderWidth="1px" w="30px" mb="15px" />
             <Flex mt="10%">
               <Box mr="30px">
                 <List spacing="10px">
@@ -111,10 +110,7 @@ const NewsletterSubscription = () => {
                     'Careers',
                     'Help Desk',
                   ].map((item, index) => (
-                    <ListItem
-                      key={index}
-                      _hover={{ color: '#3F77A5', cursor: 'pointer' }}
-                    >
+                    <ListItem key={index} _hover={{ color: '#3F77A5', cursor: 'pointer' }}>
                       {item}
                     </ListItem>
                   ))}
@@ -129,10 +125,7 @@ const NewsletterSubscription = () => {
                     'Warranty Policy',
                     'Privacy Policy',
                   ].map((item, index) => (
-                    <ListItem
-                      key={index}
-                      _hover={{ color: '#3F77A5', cursor: 'pointer' }}
-                    >
+                    <ListItem key={index} _hover={{ color: '#3F77A5', cursor: 'pointer' }}>
                       {item}
                     </ListItem>
                   ))}
@@ -141,8 +134,9 @@ const NewsletterSubscription = () => {
             </Flex>
           </Box>
 
-          {/* Contact Us & Our Servings */}
+          {/* Our Solutions and Contact Us Section */}
           <Flex flexDirection="column" flex="1" minW="250px">
+            {/* Our Solutions */}
             <Box
               bg="#BECEDC"
               borderRadius="15px"
@@ -155,33 +149,20 @@ const NewsletterSubscription = () => {
                 transition: 'all 0.3s ease',
               }}
             >
-              <Heading
-                fontSize="18px"
-                mb="10px"
-                fontWeight={700}
-                fontFamily="'Wix Madefor Display', sans-serif"
-              >
+              <Heading fontSize="18px" mb="10px" fontWeight={700}>
                 Our Solutions
               </Heading>
-              <Divider
-                borderColor="blue.700"
-                borderWidth="1px"
-                w="30px"
-                mb="15px"
-              />
+              <Divider borderColor="blue.700" borderWidth="1px" w="30px" mb="15px" />
               <List spacing="10px">
-                {['Enterprise', 'Government', 'And Beyond'].map(
-                  (item, index) => (
-                    <ListItem
-                      key={index}
-                      _hover={{ color: '#3F77A5', cursor: 'pointer' }}
-                    >
-                      {item}
-                    </ListItem>
-                  )
-                )}
+                {['Enterprise', 'Government', 'And Beyond'].map((item, index) => (
+                  <ListItem key={index} _hover={{ color: '#3F77A5', cursor: 'pointer' }}>
+                    {item}
+                  </ListItem>
+                ))}
               </List>
             </Box>
+
+            {/* Contact Us */}
             <Box
               bg="#BECEDC"
               borderRadius="15px"
@@ -195,60 +176,55 @@ const NewsletterSubscription = () => {
                 transition: 'all 0.3s ease',
               }}
             >
-              <Heading
-                fontSize="18px"
-                fontWeight={700}
-                fontFamily="'Wix Madefor Display', sans-serif"
-                mb="10px"
-              >
+              <Heading fontSize="18px" fontWeight={700} mb="10px">
                 Contact Us
               </Heading>
-              <Divider
-                borderColor="blue.700"
-                borderWidth="1px"
-                w="30px"
-                mb="15px"
-              />
+              <Divider borderColor="blue.700" borderWidth="1px" w="30px" mb="15px" />
               <Text fontSize="14px" lineHeight="1.6">
-                7, Avista@Eight corporate House, Near Satyam House, Behind
-                Rajpath Club, Bodakdev, Ahmedabad - 380054
+                7, Avista@Eight corporate House, Near Satyam House, Behind Rajpath Club, Bodakdev, Ahmedabad - 380054
               </Text>
               <Flex alignItems="center" mt="15px">
                 <PhoneIcon mr="10px" w="20px" h="auto" />
                 <Text>(+91) 000 000 0000</Text>
               </Flex>
-              <Button
-                width={{ base: "120px", md: "130px", lg: "146px" }}
-                height={{ base: "40px", md: "45px", lg: "50px" }}
-                justifyContent="space-between"
-                alignItems="center"
-                bg="#3F77A5"
-                color="white"
-                borderRadius="20px"
-                _hover={{ bg: "#2c5a7a" }}
-                onClick={handleSubscribe}
-                px={{ base: "12px", md: "15px", lg: "20px" }}
-                flexShrink={0}
-                ml={{ base: "5px", md: "10px", lg: "15px" }}
+              <Flex
+                width="100%"
+                height="100%"
               >
-                Book Demo
-                <svg
-                  width="25"
-                  height="25"
-                  viewBox="0 0 18 18"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                <Button
+                  width={buttonWidth}
+                  height={buttonHeight}
+                  justifyContent="space-between"
+                  alignItems="center"
+                  bg="white"
+                  color="#3F77A5"
+                  borderRadius="20px"
+                  _hover={{ bg: "#2c5a7a" }}
+                  // onClick={handleSubscribe}
+                  px={{ base: "12px", md: "15px", lg: "20px" }} 
+                  flexShrink={0}
+                  ml={{ base: "5px", md: "10px", lg: "15px" }}
+                  mt="20%"
                 >
-                  <path
-                    d="M17.5 2C17.5 1.17157 16.8284 0.499999 16 0.499999L2.5 0.5C1.67157 0.5 0.999999 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5L14.5 3.5L14.5 15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM3.06066 17.0607L17.0607 3.06066L14.9393 0.939339L0.93934 14.9393L3.06066 17.0607Z"
-                    fill="white"
-                  />
-                </svg>
-              </Button>
+                  Book Demo
+                  <svg
+                    width={{ base: "100%", md: "14" }}
+                    height={{ base: "100%", md: "14" }}
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.5 2C17.5 1.17157 16.8284 0.499999 16 0.499999L2.5 0.5C1.67157 0.5 0.999999 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5L14.5 3.5L14.5 15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM3.06066 17.0607L17.0607 3.06066L14.9393 0.939339L0.93934 14.9393L3.06066 17.0607Z"
+                      fill="#3F77A5"
+                    />
+                  </svg>
+                </Button>
+              </Flex>
             </Box>
           </Flex>
 
-          {/* Technologies */}
+          {/* Technologies Section */}
           <Box
             bg="#BECEDC"
             borderRadius="15px"
@@ -262,35 +238,20 @@ const NewsletterSubscription = () => {
               transition: 'all 0.3s ease',
             }}
           >
-            <Heading
-              fontSize="18px"
-              fontWeight={700}
-              fontFamily="'Wix Madefor Display', sans-serif"
-              mb="10px"
-            >
+            <Heading fontSize="18px" fontWeight={700} mb="10px">
               Technologies
             </Heading>
-            <Divider
-              borderColor="blue.700"
-              borderWidth="1px"
-              w="30px"
-              mb="15px"
-            />
+            <Divider borderColor="blue.700" borderWidth="1px" w="30px" mb="15px" />
             <List spacing="10px">
-              {['VMS', 'EMS', 'ICCC', 'AI Optimized Cloud Services'].map(
-                (item, index) => (
-                  <ListItem
-                    key={index}
-                    _hover={{ color: '#3F77A5', cursor: 'pointer' }}
-                  >
-                    {item}
-                  </ListItem>
-                )
-              )}
+              {['VMS', 'EMS', 'ICCC', 'AI Optimized Cloud Services'].map((item, index) => (
+                <ListItem key={index} _hover={{ color: '#3F77A5', cursor: 'pointer' }}>
+                  {item}
+                </ListItem>
+              ))}
             </List>
           </Box>
 
-          {/* Industries we serve */}
+          {/* Industries We Serve Section */}
           <Box
             bg="#BECEDC"
             borderRadius="15px"
@@ -304,20 +265,10 @@ const NewsletterSubscription = () => {
               transition: 'all 0.3s ease',
             }}
           >
-            <Heading
-              fontSize="18px"
-              fontWeight={700}
-              fontFamily="'Wix Madefor Display', sans-serif"
-              mb="10px"
-            >
+            <Heading fontSize="18px" fontWeight={700} mb="10px">
               Industries we serve
             </Heading>
-            <Divider
-              borderColor="blue.700"
-              borderWidth="1px"
-              w="30px"
-              mb="15px"
-            />
+            <Divider borderColor="blue.700" borderWidth="1px" w="30px" mb="15px" />
             <List spacing="10px">
               {[
                 'Healthcare Industry',
@@ -334,10 +285,7 @@ const NewsletterSubscription = () => {
                 'Sports & Entertainment Industry',
                 'Hospitality Industry',
               ].map((industry, index) => (
-                <ListItem
-                  key={index}
-                  _hover={{ color: '#3F77A5', cursor: 'pointer' }}
-                >
+                <ListItem key={index} _hover={{ color: '#3F77A5', cursor: 'pointer' }}>
                   {industry}
                 </ListItem>
               ))}
@@ -345,21 +293,18 @@ const NewsletterSubscription = () => {
           </Box>
         </Flex>
 
-        {/* Footer */}
+        {/* Footer Section */}
         <Box>
-          {/* Logo and Social Media Icons */}
           <Grid
             templateColumns={{ base: "1fr 1fr", md: "1fr 1fr 1fr" }}
-            alignItems="center" // Vertically center content
+            alignItems="center"
             padding="20px 0 0 0"
             borderTop="1px solid"
             borderColor="gray.200"
             gap={4}
           >
-
-            <Box justifySelf="start">{/* Logo */}
-              {/* <Image src="/assets/logo.svg" alt="VMukti" h="30px" /> */}
-
+            {/* Logo */}
+            <Box justifySelf="start">
               <svg
                 width="98"
                 height="30"
@@ -385,16 +330,16 @@ const NewsletterSubscription = () => {
                   d="M95.3696 6.53786H95.7073V5.35386H96.1742V5.07861H94.9027V5.35386H95.3696V6.53786ZM98 6.53786L97.9958 5.07861H97.7182L97.1808 5.98548L96.635 5.07861H96.3557V6.53786H96.6725V5.68113L97.0994 6.38363H97.2517L97.6807 5.6623L97.6828 6.53786H98Z"
                   fill="black"
                 />
-              </svg></Box>
+              </svg>
+            </Box>
 
             {/* Copyright Text */}
-
-            <Box justifySelf="center" gridColumn={{ base: "span 2", md: "span 1" }}
-              order={{ base: 3, md: 2 }} >
+            <Box justifySelf="center" gridColumn={{ base: "span 2", md: "span 1" }} order={{ base: 3, md: 2 }}>
               <Text fontSize="12px" color="gray.600">
                 Copyright © 2025, VMukti Solutions
               </Text>
             </Box>
+
             {/* Social Media Icons */}
             <Flex gap={4} justify="center" justifySelf="end" order={{ base: 2, md: 3 }}>
               {[
@@ -419,12 +364,10 @@ const NewsletterSubscription = () => {
               ))}
             </Flex>
           </Grid>
-
-
         </Box>
       </Box>
     </>
-  )
-}
+  );
+};
 
-export default NewsletterSubscription
+export default NewsletterSubscription;

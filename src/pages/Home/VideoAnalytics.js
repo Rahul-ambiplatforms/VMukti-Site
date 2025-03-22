@@ -80,7 +80,7 @@ const VideoAnalytics = () => {
 
             {/* Navigation Buttons */}
             <Flex
-              gap="1"
+              gap="0.5"
               mt={{ base: "10px", md: "25px" }}
               direction="row"
               justifyContent={{ base: "flex-end", md: "flex-end" }}
@@ -89,7 +89,7 @@ const VideoAnalytics = () => {
               <Button
                 width="40px"
                 height="40px"
-                bgColor="white"
+                bgColor="f3f3f3"
                 borderRadius="5px"
                 display="flex"
                 alignItems="center"
@@ -103,7 +103,7 @@ const VideoAnalytics = () => {
               <Button
                 width="40px"
                 height="40px"
-                bgColor="white"
+                bgColor="f3f3f3"
                 borderRadius="5px"
                 display="flex"
                 alignItems="center"
@@ -118,11 +118,12 @@ const VideoAnalytics = () => {
           </Flex>
 
           {/* Feature List */}
-          <Box mt={{ base: "15px", md: "25px" }}>
+          <Box >
             {features.map((feature, index) => (
               <Text
                 key={index}
                 padding="10px 0"
+
                 fontSize={{ base: "14px", md: "15px" }}
                 color={index === featureIndex ? "white" : "rgba(255, 255, 255, 0.6)"}
                 fontWeight={index === featureIndex ? "bold" : "normal"}

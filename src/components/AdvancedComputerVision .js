@@ -117,7 +117,7 @@ const AdvancedComputerVision = ({
           gap={{ base: '2', md: '15px' }}
           px={{ base: '4', md: '70px' }}
           position="relative"
-          justifyContent={'space-evenly'}
+          // justifyContent={'space-evenly'}
           zIndex="2"
         >
           {cards.map((card, index) => (
@@ -132,7 +132,7 @@ const AdvancedComputerVision = ({
               onMouseEnter={() => setActiveCard(index)}
               cursor="pointer"
               position="relative"
-            // bg="darkred"
+              overflow="hidden" // Ensure content doesn't overflow during transition
             >
               {activeCard === index ? (
                 // Expanded Card Content
@@ -169,18 +169,17 @@ const AdvancedComputerVision = ({
               ) : (
                 // Squeezed Card Content
                 <Box
-                position="absolute"
-                bottom="38%" // Ensure the text is inside the card
-                right="20px"
-                // top={'10p'}
-                left="0px"
-                transform="rotate(-90deg)"
-                text-orientation="upright"
-                transformOrigin="bottom right"
-                display="flex"
-                flexDirection="column"
-                alignItems="flex-start" // Aligns dash with the start of the text
-                whiteSpace="normal"
+                  position="absolute"
+                  bottom="38%"
+                  right="20px"
+                  left="0px"
+                  transform="rotate(-90deg)"
+                  transformOrigin="bottom right"
+                  display="flex"
+                  flexDirection="column"
+                  alignItems="flex-start"
+                  whiteSpace="normal"
+                  overflow="hidden" // Ensure text doesn't overflow during rotation
                 >
                   <Text
                     fontSize="16px"
@@ -188,6 +187,7 @@ const AdvancedComputerVision = ({
                     letterSpacing="-0.24px"
                     color="black"
                     width="200%"
+                    transition="transform 0.3s ease" // Smooth transition for rotation
                   >
                     {card.label}
                   </Text>
@@ -199,7 +199,6 @@ const AdvancedComputerVision = ({
                     marginTop="5px"
                   />
                 </Box>
-
               )}
             </Box>
           ))}

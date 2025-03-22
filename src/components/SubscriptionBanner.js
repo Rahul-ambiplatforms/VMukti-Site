@@ -4,7 +4,7 @@ import { EmailIcon } from "@chakra-ui/icons";
 
 const SubscriptionBanner = ({ bgColor = "white" }) => {
     const [email, setEmail] = useState("");
-    const [isSubscribed, setIsSubscribed] = useState(false);
+    // const [isSubscribed, setIsSubscribed] = useState(false);
 
     // Responsive values
     const headingSize = useBreakpointValue({ base: "20px", md: "32px", lg: "48px" });
@@ -13,11 +13,11 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
     const buttonHeight = useBreakpointValue({ base: "40px", md: "45px", lg: "50px" });
     const imageSize = useBreakpointValue({ base: "150px", md: "250px", lg: "368px" });
 
-    const handleSubscribe = () => {
-        if (email.trim() !== "") {
-            setIsSubscribed(true);
-        }
-    };
+    // const handleSubscribe = () => {
+    //     if (email.trim() !== "") {
+    //         setIsSubscribed(true);
+    //     }
+    // };
 
     return (
         <Flex
@@ -28,7 +28,7 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
             mb={{ base: "10px", md: "15px", lg: "20px" }}
             boxShadow="lg"
             alignItems="center"
-            _hover={{ boxShadow: "xl", transform: "scale(1.01)", transition: "all 0.3s ease" }}
+            // _hover={{ boxShadow: "xl", transform: "scale(1.01)", transition: "all 0.3s ease" }}
             p={{ base: "15px", md: "20px", lg: "30px" }}
             direction={{ base: "column", md: "row" }}
             gap={{ base: "15px", md: "20px", lg: "30px" }}
@@ -50,6 +50,7 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
                     height="auto"
                     objectFit="contain"
                 />
+
             </Box>
 
             {/* Content Section */}
@@ -64,6 +65,7 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
                 textAlign={{ base: "center", md: "left" }}
                 gap={{ base: "15px", md: "20px", lg: "30px" }}
             >
+
                 <Text
                     color="black"
                     fontFamily="'Wix Madefor Display', sans-serif"
@@ -79,6 +81,7 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
                 </Text>
 
                 {/* Email Input Section */}
+
                 <Flex
                     direction="column"
                     width="100%"
@@ -94,10 +97,31 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
                         alignItems="center"
                         _hover={{ borderColor: "#3F77A5" }}
                     >
+                        <Box
+                            position="absolute"
+                            top="-50%"
+                            right="-0.1%"
+                            width={{ base: "200px", md: "300px", lg: "400px" }}
+                            height={{ base: "200px", md: "300px", lg: "400px" }}
+                            opacity={0.8}
+                            transform="rotate(2deg)"
+                        // zIndex={1}
+                        >
+                            <Image
+                                src="/assets/VMukti Brochure O2 2.png"
+                                alt="VMukti Brochure"
+                                width="100%"
+                                height="100%"
+                                objectFit="contain"
+
+                            />
+                        </Box>
                         <Flex
                             padding={{ base: "8px 15px", md: "10px 25px", lg: "12px 30px" }}
                             width="100%"
                             flexGrow={1}
+                            zIndex={2}
+
                         >
                             <EmailIcon
                                 mr={{ base: "8px", md: "15px", lg: "20px" }}
@@ -126,12 +150,12 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
                             color="white"
                             borderRadius="20px"
                             _hover={{ bg: "#2c5a7a" }}
-                            onClick={handleSubscribe}
+                            // onClick={handleSubscribe}
                             px={{ base: "12px", md: "15px", lg: "20px" }}
                             flexShrink={0}
                             ml={{ base: "5px", md: "10px", lg: "15px" }}
                         >
-                            {isSubscribed ? "Subscribed!" : "Subscribe"}
+                            Subscribe
                             <svg
                                 width="14"
                                 height="14"
