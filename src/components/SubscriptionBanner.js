@@ -42,6 +42,7 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
                 height={{ base: "auto", md: imageSize }}
                 flexShrink="0"
                 mb={{ base: "10px", md: "0" }}
+                zIndex={4}
             >
                 <Image
                     src="./assets/robot.png"

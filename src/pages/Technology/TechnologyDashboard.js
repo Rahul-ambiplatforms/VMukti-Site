@@ -17,13 +17,13 @@ const TechnologyDashboard = () => {
 
                 <Box
                     position="absolute"
-                    top="30%"
-                    left="40%"
+                    top="9%"
+                    left="30%"
                     transform="translate(-50%, -50%)"
                     width="408px"
                     height="408px"
                     flexShrink={0}
-                    borderRadius="408px"
+                    borderRadius="full"
                     opacity="0.12"
                     background="#3F77A5"
                     filter="blur(56.6px)"
@@ -34,8 +34,8 @@ const TechnologyDashboard = () => {
                 <Flex
                     position="absolute"
                     right="-2%"
-                    // top="50%"
-                    // transform="translateY(-50%)"
+                    // top="-5%"
+                    transform="translateY(-4.8%)"
                     width="70%"
                     height="100%"
                     display={{ base: 'none', lg: 'flex' }}
@@ -44,10 +44,10 @@ const TechnologyDashboard = () => {
                     {/* Brochure Image behind Dashboard */}
                     <Box
                         position="absolute"
-                        top="60%"
+                        top="50%"
                         right="26"
                         transform="translateY(-50%) perspective(1000px)"
-                        width="1095px"
+                        width="100%"
                         height="62%"
                         opacity={"80%"}
                         zIndex={3}
@@ -66,7 +66,7 @@ const TechnologyDashboard = () => {
                     {/* White Box behind Dashboard */}
                     <Box
                         position="absolute"
-                        top="58%"
+                        top="55%"
                         // right="2"
                         transform="translateY(-50%) perspective(1000px)"
                         width="95%"
@@ -84,9 +84,9 @@ const TechnologyDashboard = () => {
                         position="absolute"
                         // top="10%"
                         right="16"
-                        transform="perspective(1095px)"
+                        // transform="perspective(1095px)"
                         w="100%"
-                        h="110%"
+                        h="120%"
                         objectFit="contain"
                         zIndex={3}
                     />
@@ -99,7 +99,8 @@ const TechnologyDashboard = () => {
                         align={{ base: "flex-start", lg: "center" }}
                         justify="flex-start"
                         minH={{ base: "auto", lg: "100vh" }}
-                        ml={{ base: "-2%", md: "2%", lg: "-4%" }}
+                        ml={{ base: "-2%", md: "-5%" }}
+                    // pl={{md:"-50%"}}
                     >
                         {/* Left Content */}
                         <Flex

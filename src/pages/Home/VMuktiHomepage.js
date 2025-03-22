@@ -8,7 +8,7 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react';
 
-import Navbar from '../../components/Navbar'
+
 import AdvancedComputerVision from '../../components/AdvancedComputerVision '
 
 import VideoAnalytics from './VideoAnalytics'
@@ -45,19 +45,7 @@ const VMuktiHomepage = () => {
   })
   return (
     <Box minH="100vh" bg="#f3f3f3" overflow="hidden" position="relative">
-      {/* Background Boxes */}
-      <Image
-        src={'/assets/Ellipse38.png' || '/placeholder.svg'}
-        alt="ellipse38"
-        position="absolute"
-        left="0"   // Align to the left edge of the screen
-        top="0"    // Align to the top edge of the screen
-        transform="none"  // Remove unwanted translations
-        width={ellipseSize}
-        opacity="1"
-        pointerEvents="none"
-        zIndex="0"
-      />
+      
 
       <Flex
         position="absolute"
@@ -119,8 +107,8 @@ const VMuktiHomepage = () => {
 
 
           <Box
-            fontSize={{ base: "24px", md: "48px", lg: "75px" }} // Reduced font sizes
-            fontWeight="550"
+            fontSize={{ base: "48px", md: "75px", lg: "100px" }} // Reduced font sizes
+            fontWeight="600"
             textStyle="normal"
             // letterSpacing="-1px"
             textAlign={{ base: "center", md: "left" }}
@@ -139,13 +127,10 @@ const VMuktiHomepage = () => {
             <Text as="span" color="#DB7B3A">AI.</Text>
           </Box>
           <Flex mt="16px" align="flex-start" direction={{ base: "column", md: "row" }}>
-            <Box>
-              {/* <img
-                src="/assets/arrowdb.svg"
-                alt="Arrow Up"
-                width="40px"
-                height="40px"
-              />{' '} */}
+            <Box
+              display="flex"
+              gap="10"
+            >
               <svg
                 width="40"
                 height="40"
@@ -159,20 +144,20 @@ const VMuktiHomepage = () => {
                 />
               </svg>
               {/* Reduced size */}
+              <Text
+                color="#4a5568"
+                maxW={{ base: '90%', md: '60%' }} // Reduced max width
+                ml={{ base: '0', md: '8px' }}
+                fontSize={{ base: '14px', md: '16px' }} // Reduced font size
+              >
+                We harness AI to optimize operations, drive efficiency, and
+                deliver real-time insights across industries.
+              </Text>
             </Box>
-            <Text
-              color="#4a5568"
-              maxW={{ base: '90%', md: '400px' }} // Reduced max width
-              ml={{ base: '0', md: '8px' }}
-              fontSize={{ base: '14px', md: '16px' }} // Reduced font size
-            >
-              We harness AI to optimize operations, drive efficiency, and
-              deliver real-time insights across industries.
-            </Text>
             {/* </Flex> */}
           </Flex>
 
-          <Flex position="relative" mt={{ base: "10px", md: "-40px" }} ml={{ base: "0", md: "-40px" }} alignItems="center">
+          <Flex position="relative" mt={{ base: "10px", md: "-8%" }} ml={{ base: "0", md: "-40px" }} alignItems="center">
             <Image
               src="/assets/robohand.png"
               alt="Robotic Hand"
@@ -227,8 +212,6 @@ const VMuktiHomepage = () => {
       <Industries />
       <AdvancedSurveillance />
       <Achieved />
-      {/* <NewsletterSubscription /> */}
-      {/* <TechnologyDashboard /> */}
     </Box>
   )
 }

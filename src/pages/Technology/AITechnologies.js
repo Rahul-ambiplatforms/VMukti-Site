@@ -133,7 +133,7 @@ const AITechnologies = () => {
                         {/* Conditionally render a divider */}
                         {currentSlide === index + visibleSlideRange.start && (
                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="2" viewBox="0 0 17 2" fill="none">
-                                <path d="M16 1L1 0.999999" stroke="#3F77A5" stroke-width="2" stroke-linecap="round" />
+                                <path d="M16 1L1 0.999999" stroke="#3F77A5" strokeWidth="2" strokeLinecap="round" />
                             </svg>
                         )}
                     </Box>
