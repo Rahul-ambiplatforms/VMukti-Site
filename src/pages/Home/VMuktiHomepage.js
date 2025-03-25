@@ -8,8 +8,8 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react';
 
-
-import AdvancedComputerVision from '../../components/AdvancedComputerVision '
+import Navbar from '../../components/Navbar'
+import AdvancedComputerVision from '../../components/AdvancedComputerVision'
 
 import VideoAnalytics from './VideoAnalytics'
 import Achieved from './Achieved'

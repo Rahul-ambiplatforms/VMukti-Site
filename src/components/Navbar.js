@@ -19,6 +19,7 @@ import {
     DrawerHeader,
     DrawerBody,
     VStack,
+    Text,
     useDisclosure,
     Container,
     useBreakpointValue,
@@ -39,39 +40,28 @@ const Navbar = () => {
     const [activeLink, setActiveLink] = useState('Home') // State to track active link
 
     // Responsive values
-    const logoHeight = useBreakpointValue({ base: '30px', md: '40px' })
+    const logoHeight = useBreakpointValue({ base: '25px', md: '25px' })
     const fontSize = useBreakpointValue({ base: '14px', md: '16px' })
     const contactBtnSize = useBreakpointValue({ base: '120px', md: '146px' })
     const contactBtnHeight = useBreakpointValue({ base: '40px', md: '50px' })
-
-
 
     // Function to handle link clicks
     const handleLinkClick = (link) => {
         setActiveLink(link)
     }
 
-    const ellipseSize = useBreakpointValue({
-        base: '200px',
-        md: '300px',
-        lg: '408px',
-    })
-    return (
+    // Define navigation items array to help with last item check
+    const navigationItems = [
+        { name: "Home", path: "/" },
+        { name: "Technology", path: "/technology" },
+        { name: "Solutions", path: "/solutions", hasDropdown: true, items: dropdownItems.solutions },
+        { name: "Industries", path: "/industries", hasDropdown: true, items: dropdownItems.solutions },
+        { name: "Our Serving", path: "/industries", hasDropdown: true, items: dropdownItems.solutions },
+        { name: "Who we are", path: "/industries", hasDropdown: true, items: dropdownItems.solutions },
+    ];
 
+    return (
         <Container maxW="100%">
-            <Image
-                src={'/assets/Ellipse38.png' || '/placeholder.svg'}
-                alt="ellipse38"
-                position="absolute"
-                left="0"   // Align to the left edge of the screen
-                top="0"    // Align to the top edge of the screen
-                transform="none"  // Remove unwanted translations
-                width={ellipseSize}
-                opacity="1"
-                pointerEvents="none"
-                zIndex="0"
-            />
-            {/* Background Boxes */}
             <Flex align="center">
                 {/* Main Navbar */}
                 <Flex
@@ -81,10 +71,10 @@ const Navbar = () => {
                     borderRadius="20px"
                     flex="1"
                     px={4}
-                    py={2}
+                    height="50px"
                 >
                     {/* Logo */}
-                    <Flex align="center">
+                    <Flex align="center" >
                         {/* <Image src="/assets/logo.svg" alt="VMukti Logo" h={logoHeight} /> */}
                         <svg
                             height={logoHeight}
@@ -97,8 +87,8 @@ const Navbar = () => {
                                 fill="#3F77A5"
                             />
                             <path
-                                fillRule="evenodd"
-                                clipRule="evenodd"
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
                                 d="M24.8675 0.332451H22.8937L23.8807 2.04206L25.1225 4.19297L26.1095 5.90284L27.0966 4.19297L29.3255 0.332451H24.8675Z"
                                 fill="#DB7B3A"
                             />
@@ -113,155 +103,78 @@ const Navbar = () => {
                         </svg>
                     </Flex>
 
-                    {/* Navigation Links (Desktop) */}
-                    <Show above="md">
-                        <HStack spacing={{ base: 3, md: 6 }} align="center" fontSize={fontSize} fontWeight="400">
-                            <Link
-                                to="/" // Use "to" instead of "href"
-                                style={{
-                                    color: activeLink === "Home" ? "#3182ce" : "#4a5568",
-                                    fontWeight: activeLink === "Home" ? "500" : "400",
-                                    paddingBottom: "4px",
-                                    textDecoration: "none", // Remove default underline
-                                }}
-                                onClick={() => handleLinkClick("Home")}
-                            >
-                                Home
-                                {/* Conditionally render the SVG divider */}
-                                {activeLink === "Home" && (
-                                    <Box mt={1} display="flex" justifyContent="left">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="2" viewBox="0 0 17 2" fill="none">
-                                            <path d="M16 1L1 0.999999" stroke="#3F77A5" strokeWidth="2" strokeLinecap="round" />
-                                        </svg>
-                                    </Box>
-                                )}
-                            </Link>
-                            <Box w="2px" h="16px" bg="#8F8F8F" />
-                            <Link
-                                to="/technology" // Use "to" instead of "href"
-                                style={{
-                                    color: activeLink === "Technology" ? "#3182ce" : "#4a5568",
-                                    fontWeight: activeLink === "Technology" ? "500" : "400",
-                                    paddingBottom: "4px",
-                                    textDecoration: "none", // Remove default underline
-                                }}
-                                onClick={() => handleLinkClick("Technology")}
-                            >
-                                Technology
-                                {/* Conditionally render the SVG divider */}
-                                {activeLink === "Technology" && (
-                                    <Box mt={1} display="flex" justifyContent="left">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="2" viewBox="0 0 17 2" fill="none">
-                                            <path d="M16 1L1 0.999999" stroke="#3F77A5" strokeWidth="2" strokeLinecap="round" />
-                                        </svg>
-                                    </Box>
-                                )}
-                            </Link>
-                            <Box w="2px" h="16px" bg="#8F8F8F" />
-
-                            {/* Dropdown for Solutions */}
-                            <Menu>
-                                <MenuButton
-                                    as={Button}
-                                    rightIcon={<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
-                                        <path d="M6 6L12 0L0 -5.24537e-07L6 6Z" fill="#3F77A5" />
-                                    </svg>}
-                                    variant="ghost"
-                                    color={activeLink === "Solutions" ? "#3182ce" : "#4a5568"}
-                                    fontWeight={activeLink === "Solutions" ? "500" : "400"}
-                                    pb={1}
-                                    onClick={() => handleLinkClick("Solutions")}
-                                >
-                                    Solutions
-                                    {/* Conditionally render the SVG divider */}
-                                    {activeLink === "Solutions" && (
-                                        <Box mt={1} display="flex" justifyContent="left">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="2" viewBox="0 0 17 2" fill="none">
-                                                <path d="M16 1L1 0.999999" stroke="#3F77A5" strokeWidth="2" strokeLinecap="round" />
-                                            </svg>
+                    {/* Navigation Links (Desktop) - Changed from md to lg */}
+                    <Show above="lg">
+                        <HStack spacing={2} align="center" fontSize={fontSize} fontWeight="400">
+                            {navigationItems.map((item, index) => (
+                                <Flex key={item.name} gap="4" align="center" position="relative" justifyContent="center">
+                                    {item.hasDropdown ? (
+                                        <Menu>
+                                            <MenuButton
+                                                as={Button}
+                                                rightIcon={<svg width="12" height="6" viewBox="0 0 12 6" fill="none">
+                                                    <path d="M6 6L12 0L0 0L6 6Z" fill="#3F77A5" />
+                                                </svg>}
+                                                variant="ghost"
+                                                // color={activeLink === item.name ? "#3182ce" : "#4a5568"}
+                                                fontWeight={activeLink === item.name ? "500" : "400"}
+                                                onClick={() => handleLinkClick(item.name)}
+                                                position="relative"
+                                            >
+                                                {item.name}
+                                            </MenuButton>
+                                            <MenuList>
+                                                {dropdownItems.organization.map((item, index) => (
+                                                    <MenuItem
+                                                        key={index}
+                                                        fontWeight="400"
+                                                        as={Link} // Use Link component for navigation
+                                                        to={`/${item.toLowerCase().replace(/\s+/g, '-')}`} // Convert item to a valid route
+                                                        onClick={() => handleLinkClick(item)} // Update active link
+                                                    >
+                                                        {item}
+                                                    </MenuItem>
+                                                ))}
+                                            </MenuList>
+                                        </Menu>
+                                    ) : (
+                                        <Box position="relative" px="8px">
+                                            <Link
+                                                to={item.path}
+                                                style={{
+                                                    color: activeLink === item.name ? "#3F77A5" : "#4a5568",
+                                                    fontWeight: activeLink === item.name ? "700" : "400",
+                                                    textDecoration: "none",
+                                                    position: "relative",
+                                                }}
+                                                onClick={() => handleLinkClick(item.name)}
+                                            >
+                                                {item.name}
+                                                {activeLink === item.name && (
+                                                    <Box
+                                                        position="absolute"
+                                                        bottom="-4px"
+                                                        // left="50%"
+                                                        // transform="translateX(-50%)"
+                                                        width="25%"
+                                                        height="2px"
+                                                        bg="#3F77A5"
+                                                    />
+                                                )}
+                                            </Link>
                                         </Box>
                                     )}
-                                </MenuButton>
-                                <MenuList>
-                                    {dropdownItems.organization.map((item, index) => (
-                                        <MenuItem
-                                            key={index}
-                                            fontWeight="400"
-                                            as={Link} // Use Link component for navigation
-                                            to={`/${item.toLowerCase().replace(/\s+/g, '-')}`} // Convert item to a valid route
-                                            onClick={() => handleLinkClick(item)} // Update active link
-                                        >
-                                            {item}
-                                        </MenuItem>
-                                    ))}
-                                </MenuList>
-                            </Menu>
-                            <Box w="2px" h="16px" bg="#8F8F8F" />
 
-                            {/* Dropdown for Industries */}
-                            <Menu>
-                                <MenuButton
-                                    as={Button}
-                                    rightIcon={<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
-                                        <path d="M6 6L12 0L0 -5.24537e-07L6 6Z" fill="#3F77A5" />
-                                    </svg>}
-                                    variant="ghost"
-                                    color={activeLink === "Industries" ? "#3182ce" : "#4a5568"}
-                                    fontWeight={activeLink === "Industries" ? "500" : "400"}
-                                    pb={1}
-                                    onClick={() => handleLinkClick("Industries")}
-                                >
-                                    Industries
-                                    {/* Conditionally render the SVG divider */}
-                                    {activeLink === "Industries" && (
-                                        <Box mt={1} display="flex" justifyContent="left">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="2" viewBox="0 0 17 2" fill="none">
-                                                <path d="M16 1L1 0.999999" stroke="#3F77A5" strokeWidth="2" strokeLinecap="round" />
-                                            </svg>
-                                        </Box>
-                                    )}
-                                </MenuButton>
-                                <MenuList>
-                                    {dropdownItems.solutions.map((item, index) => (
-                                        <MenuItem key={index} fontWeight="400">{item}</MenuItem>
-                                    ))}
-                                </MenuList>
-                            </Menu>
-                            <Box w="2px" h="16px" bg="#8F8F8F" />
-
-                            {/* Dropdown for Our Serving */}
-                            <Menu>
-                                <MenuButton
-                                    as={Button}
-                                    rightIcon={<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
-                                        <path d="M6 6L12 0L0 -5.24537e-07L6 6Z" fill="#3F77A5" />
-                                    </svg>}
-                                    variant="ghost"
-                                    color={activeLink === "Our Serving" ? "#3182ce" : "#4a5568"}
-                                    fontWeight={activeLink === "Our Serving" ? "500" : "400"}
-                                    pb={1}
-                                    onClick={() => handleLinkClick("Our Serving")}
-                                >
-                                    Our Serving
-                                    {/* Conditionally render the SVG divider */}
-                                    {activeLink === "Our Serving" && (
-                                        <Box mt={1} display="flex" justifyContent="left">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="2" viewBox="0 0 17 2" fill="none">
-                                                <path d="M16 1L1 0.999999" stroke="#3F77A5" strokeWidth="2" strokeLinecap="round" />
-                                            </svg>
-                                        </Box>
-                                    )}
-                                </MenuButton>
-                                <MenuList>
-                                    {dropdownItems.about.map((item, index) => (
-                                        <MenuItem key={index} fontWeight="400">{item}</MenuItem>
-                                    ))}
-                                </MenuList>
-                            </Menu>
+                                    {/* Consistent Divider */}
+                                    {index < navigationItems.length - 1 && <Box w="2px" h="16px" bg="#8F8F8F" />}
+                                </Flex>
+                            ))}
                         </HStack>
+
+
                     </Show>
 
-                    {/* Mobile Menu Button */}
+                    {/* Mobile Menu Button - Changed from lg to lg */}
                     <Hide above="lg">
                         <IconButton
                             onClick={onOpen}
@@ -272,24 +185,25 @@ const Navbar = () => {
                     </Hide>
                 </Flex>
 
-                {/* Contact Us Button */}
-                <Show above="sm">
+                {/* Contact Us Button - Changed from sm to lg */}
+                <Show above="lg">
                     <Button
                         width={contactBtnSize}
                         height={contactBtnHeight}
                         background="#3F77A5"
-                        color="white"
+                        color="#FFFFFF"
                         fontSize={fontSize}
-                        fontWeight="400"
+                        fontWeight="600"
                         borderRadius="20px"
                         ml={4}
+                        minWidth="fit-content"
                     >
                         Contact Us
                     </Button>
                 </Show>
             </Flex>
 
-            {/* Mobile Drawer */}
+            {/* Mobile/Tablet Drawer */}
             <Drawer isOpen={isOpen} placement="right" onClose={onClose} size="full">
                 <DrawerOverlay />
                 <DrawerContent>
@@ -297,49 +211,30 @@ const Navbar = () => {
                     <DrawerHeader borderBottomWidth="1px" fontWeight="400">Menu</DrawerHeader>
                     <DrawerBody>
                         <VStack spacing={4} align="stretch">
-                            <Link
-                                to="/" // Use "to" instead of "href"
-                                style={{
-                                    color: activeLink === "Home" ? "#3182ce" : "#4a5568",
-                                    fontSize: "lg",
-                                    fontWeight: activeLink === "Home" ? "500" : "400",
-                                    paddingBottom: "4px",
-                                    textDecoration: "none", // Remove default underline
-                                }}
-                                onClick={() => handleLinkClick("Home")}
-                            >
-                                Home
-                                {/* Conditionally render the SVG divider */}
-                                {activeLink === "Home" && (
-                                    <Box mt={1} display="flex" justifyContent="left">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="2" viewBox="0 0 17 2" fill="none">
-                                            <path d="M16 1L1 0.999999" stroke="#3F77A5" strokeWidth="2" strokeLinecap="round" />
-                                        </svg>
-                                    </Box>
-                                )}
-                            </Link>
-                            <Link
-                                to="/technology" // Use "to" instead of "href"
-                                style={{
-                                    color: activeLink === "Technology" ? "#3182ce" : "#4a5568",
-                                    fontSize: "lg",
-                                    fontWeight: activeLink === "Technology" ? "500" : "400",
-                                    paddingBottom: "4px",
-                                    textDecoration: "none", // Remove default underline
-                                }}
-                                onClick={() => handleLinkClick("Technology")}
-                            >
-                                Technology
-                                {/* Conditionally render the SVG divider */}
-                                {activeLink === "Technology" && (
-                                    <Box mt={1} display="flex" justifyContent="left">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="2" viewBox="0 0 17 2" fill="none">
-                                            <path d="M16 1L1 0.999999" stroke="#3F77A5" strokeWidth="2" strokeLinecap="round" />
-                                        </svg>
-                                    </Box>
-                                )}
-                            </Link>
-                            {/* Add other links similarly */}
+                            {navigationItems.map((item, index) => (
+                                <Link
+                                    key={item.name}
+                                    to={item.path}
+                                    style={{
+                                        color: activeLink === item.name ? "#3182ce" : "#4a5568",
+                                        fontSize: "lg",
+                                        fontWeight: activeLink === item.name ? "500" : "400",
+                                        paddingBottom: "4px",
+                                        textDecoration: "none",
+                                    }}
+                                    onClick={() => handleLinkClick(item.name)}
+                                >
+                                    {item.name}
+                                    {/* Only show divider if active and not the last item */}
+                                    {activeLink === item.name && index < navigationItems.length - 1 && (
+                                        <Box mt={1} display="flex" justifyContent="left">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="2" viewBox="0 0 17 2" fill="none">
+                                                <path d="M16 1L1 0.999999" stroke="#3F77A5" strokeWidth="2" strokeLinecap="round" />
+                                            </svg>
+                                        </Box>
+                                    )}
+                                </Link>
+                            ))}
                         </VStack>
                     </DrawerBody>
                 </DrawerContent>

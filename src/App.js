@@ -12,14 +12,14 @@ import SolutionsHome from './pages/Solutions/SolutionsHome';
 
 function App() {
   // Assuming the Navbar height is 60px
-  const navbarHeight = '60px';
+  const navbarHeight = '50px';
 
   return (
     <ChakraProvider theme={theme}>
       <Router>
         {/* Navbar with transparent background */}
         <Flex
-          p={{ base: "10px", md: "20px" }}
+          margin="2%"
           bg={'transparent'}
           position="fixed"
           top={0}
