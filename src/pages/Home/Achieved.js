@@ -73,16 +73,16 @@ const Achieved = () => {
 
   // Responsive font sizes
   const valueFontSize = useBreakpointValue({
-    base: 'clamp(10%, 8vw, 45px)',
-    md: 'clamp(20%, 6vw, 64px)',
-    lg: '64px',
-  })
+    base: 'clamp(32px, 8vw, 48px)',  // Min 32px, scales up to 48px for small screens
+    md: 'clamp(48px, 6vw, 64px)',   // Min 48px, scales up to 64px for medium+ screens
+  });
+  
 
   const labelFontSize = useBreakpointValue({
-    base: 'clamp(12px, 2vw, 12px)',
-    md: 'clamp(14px, 1.5vw, 16px)',
-    lg: '16px',
-  })
+    base: 'clamp(12px, 2vw, 12px)',  // Fixed at 12px for small screens
+    md: 'clamp(12px, 1.5vw, 16px)',  // Starts at 12px, scales up to 16px for medium+ screens
+  });
+  
 
   const labelBottomMargin = useBreakpointValue({
     base: '10px',
@@ -222,7 +222,7 @@ const Achieved = () => {
                 {item.value}
               </Text>
               <Text
-                fontSize={{ base: '14px', md: '18px', lg: '18px' }}
+                fontSize={labelFontSize}
                 fontWeight="700"
                 position="absolute"
                 bottom={labelBottomMargin}

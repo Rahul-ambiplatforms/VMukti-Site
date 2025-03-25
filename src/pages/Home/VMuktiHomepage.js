@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react';
 
 import Navbar from '../../components/Navbar'
-import AdvancedComputerVision from '../../components/AdvancedComputerVision '
+import AdvancedComputerVision from '../../components/AdvancedComputerVision'
 
 import VideoAnalytics from './VideoAnalytics'
 import Achieved from './Achieved'
@@ -119,8 +119,8 @@ const VMuktiHomepage = () => {
 
 
           <Box
-            fontSize={{ base: "24px", md: "48px", lg: "75px" }} // Reduced font sizes
-            fontWeight="550"
+            fontSize={{ base: "24px", md: "48px", lg: "100px" }} // Reduced font sizes
+            fontWeight="600"
             textStyle="normal"
             // letterSpacing="-1px"
             textAlign={{ base: "center", md: "left" }}

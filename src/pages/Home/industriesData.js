@@ -11,7 +11,6 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
-import image7 from './assets/image7.png'
 
 // Industry data with SVGs
 const industriesData = [
@@ -212,7 +211,7 @@ export default function IndustryGrid() {
         width="90%" // Change from 100% to avoid overflow
         maxWidth="1385px"
         mx="auto" // Center the grid properly
-        px={{ base: '10px', md: '30px' }}
+        // px={{ base: '10px', md: '30px' }}
         mt="50px"
       >
         {grid.slice(1).flatMap((row, rowIndex) =>
@@ -231,7 +230,7 @@ export default function IndustryGrid() {
                 <Box
                   width={{
                     base: '100%', // Full width on small screens
-                    md: '320px', // Full width on medium screens
+                    md: '100%', // Full width on medium screens
                     lg: industry.isWide ? '640px' : '100%', // Fixed width for isWide cards on large screens
                   }}
                   // maxWidth="640px" // Ensure it doesn’t exceed the container
@@ -323,7 +322,7 @@ export default function IndustryGrid() {
           left: '5%',
           width: '100%',
           height: '100%',
-          backgroundImage: `url(${image7})`,
+          backgroundImage: `./assets/image7.png`,
           backgroundPosition: 'left top',
           backgroundRepeat: 'no-repeat',
           backgroundSize: '1138px',
