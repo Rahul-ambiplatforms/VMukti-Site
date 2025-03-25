@@ -9,6 +9,7 @@ import TechnologyDashboard from './pages/Technology/TechnologyDashboard';
 import Navbar from './components/Navbar';
 import NewsletterSubscription from './pages/Home/NewsletterSubscription';
 import SolutionsHome from './pages/Solutions/SolutionsHome';
+import IndustryDashboard from './pages/IndustriesDashboard/industriesDashboard'
 
 function App() {
   // Assuming the Navbar height is 60px
@@ -37,6 +38,7 @@ function App() {
             <Route path="/" element={<VMuktiHomepage />} />
             <Route path="/technology" element={<TechnologyDashboard />} />
             <Route path="/solution" element={<SolutionsHome />} />
+            <Route path="/industries" element={<IndustryDashboard />} />
           </Routes>
         </Box>
       </Router>
