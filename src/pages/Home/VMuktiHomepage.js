@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import {
   Box,
   Flex,
@@ -6,7 +6,7 @@ import {
   Text,
   Button,
   useBreakpointValue,
-} from '@chakra-ui/react';
+} from '@chakra-ui/react'
 
 import Navbar from '../../components/Navbar'
 import AdvancedComputerVision from '../../components/AdvancedComputerVision '
@@ -35,14 +35,26 @@ const VMuktiHomepage = () => {
       { type: 'text', label: 'Custom Multi-Modal Recognition' },
       { type: 'text', label: 'Custom Automated Decision Making' },
     ],
-    backgroundImage: "/assets/VMukti Brochure O2 1.png",
-  };
+    backgroundImage: '/assets/VMukti Brochure O2 1.png',
+  }
 
   const ellipseSize = useBreakpointValue({
     base: '200px',
     md: '300px',
     lg: '408px',
   })
+
+  const buttonWidth = useBreakpointValue({
+    base: '120px',
+    md: '130px',
+    lg: '146px',
+  })
+  const buttonHeight = useBreakpointValue({
+    base: '40px',
+    md: '45px',
+    lg: '50px',
+  })
+
   return (
     <Box minH="100vh" bg="#f3f3f3" overflow="hidden" position="relative">
       {/* Background Boxes */}
@@ -50,9 +62,9 @@ const VMuktiHomepage = () => {
         src={'/assets/Ellipse38.png' || '/placeholder.svg'}
         alt="ellipse38"
         position="absolute"
-        left="0"   // Align to the left edge of the screen
-        top="0"    // Align to the top edge of the screen
-        transform="none"  // Remove unwanted translations
+        left="0" // Align to the left edge of the screen
+        top="0" // Align to the top edge of the screen
+        transform="none" // Remove unwanted translations
         width={ellipseSize}
         opacity="1"
         pointerEvents="none"
@@ -71,24 +83,26 @@ const VMuktiHomepage = () => {
         pt="10vh"
       >
         <Box
-          height={{ base: "80px", md: "140px", lg: "188px" }} minHeight="50px"
+          height={{ base: '80px', md: '140px', lg: '188px' }}
+          minHeight="50px"
           aspectRatio="1/1"
           bg="#BECEDC"
           borderRadius="24px"
           opacity="0.7"
-          mt={{ base: "80px", md: "160px", lg: "240px" }}
-
+          mt={{ base: '80px', md: '160px', lg: '240px' }}
         />
         <Box
-          height={{ base: "80px", md: "140px", lg: "188px" }} minHeight="50px"
+          height={{ base: '80px', md: '140px', lg: '188px' }}
+          minHeight="50px"
           aspectRatio="1/1"
           bg="#EAEAEA"
           borderRadius="24px"
           opacity="0.7"
-          mt={{ base: "40px", md: "80px", lg: "120px" }}
+          mt={{ base: '40px', md: '80px', lg: '120px' }}
         />
         <Box
-          height={{ base: "80px", md: "140px", lg: "188px" }} minHeight="50px"
+          height={{ base: '80px', md: '140px', lg: '188px' }}
+          minHeight="50px"
           aspectRatio="1/1"
           bg="#3F77A5"
           borderRadius="24px"
@@ -107,25 +121,28 @@ const VMuktiHomepage = () => {
         zIndex={1}
       >
         {/* Left Side */}
-        <Image src="/assets/tablet.png" position="absolute" right="0px" zIndex={1} />
+        <Image
+          src="/assets/tablet.png"
+          position="absolute"
+          right="0px"
+          zIndex={1}
+        />
         <Box
           flex="1"
           bgRepeat="no-repeat"
           bgSize="contain"
-          bgPosition={{ base: "center", md: "right" }}
-          minH={{ base: "40vh", md: "80vh" }}
+          bgPosition={{ base: 'center', md: 'right' }}
+          minH={{ base: '40vh', md: '80vh' }}
           zIndex={1}
         >
-
-
           <Box
-            fontSize={{ base: "24px", md: "48px", lg: "75px" }} // Reduced font sizes
+            fontSize={{ base: '24px', md: '48px', lg: '75px' }} // Reduced font sizes
             fontWeight="550"
             textStyle="normal"
             // letterSpacing="-1px"
-            textAlign={{ base: "center", md: "left" }}
+            textAlign={{ base: 'center', md: 'left' }}
             zIndex={1}
-            mt={{ base: "20px", md: "40px" }} // Added top margin to push the text lower
+            mt={{ base: '20px', md: '40px' }} // Added top margin to push the text lower
           >
             <Text as="span" color="#000">
               Unlocking the{' '}
@@ -134,11 +151,22 @@ const VMuktiHomepage = () => {
               Power of
             </Text>
             <br />
-            <Text as="span" color="#3F77A5">Data</Text>
-            <Text as="span" color="#000"> with </Text>
-            <Text as="span" color="#DB7B3A">AI.</Text>
+            <Text as="span" color="#3F77A5">
+              Data
+            </Text>
+            <Text as="span" color="#000">
+              {' '}
+              with{' '}
+            </Text>
+            <Text as="span" color="#DB7B3A">
+              AI.
+            </Text>
           </Box>
-          <Flex mt="16px" align="flex-start" direction={{ base: "column", md: "row" }}>
+          <Flex
+            mt="16px"
+            align="flex-start"
+            direction={{ base: 'column', md: 'row' }}
+          >
             <Box>
               {/* <img
                 src="/assets/arrowdb.svg"
@@ -172,7 +200,12 @@ const VMuktiHomepage = () => {
             {/* </Flex> */}
           </Flex>
 
-          <Flex position="relative" mt={{ base: "10px", md: "-40px" }} ml={{ base: "0", md: "-40px" }} alignItems="center">
+          <Flex
+            position="relative"
+            mt={{ base: '10px', md: '-40px' }}
+            ml={{ base: '0', md: '-40px' }}
+            alignItems="center"
+          >
             <Image
               src="/assets/robohand.png"
               alt="Robotic Hand"
@@ -180,42 +213,37 @@ const VMuktiHomepage = () => {
               h={{ base: 'auto', md: '500px' }}
             />
 
-            {/* Book Demo Button */}
             <Button
               position="absolute"
-              top={{ base: "35%", md: "180px" }} // Moved the button upward
-              left={{ base: "65%", md: "300px" }} // Adjusted position
-              transform={{ base: "translateX(-50%)", md: "none" }}
+              top={{ base: '35%', md: '180px' }} // Keeps the original position
+              left={{ base: '65%', md: '300px' }} // Keeps the original position
+              transform={{ base: 'translateX(-50%)', md: 'none' }}
+              width={buttonWidth} // Imported width
+              height={buttonHeight} // Imported height
+              justifyContent="space-between"
+              alignItems="center"
               bg="white"
-              boxShadow="0 4px 8px rgba(0, 0, 0, 0.1)"
-              borderRadius="full"
-              px="16px" // Reduced padding
-              py="8px"
-              color="#3182ce"
-              fontWeight="500"
-              gap="2"
-              fontSize={{ base: '12px', md: '14px' }} // Reduced font size
+              gap="4%"
+              color="#3F77A5"
+              borderRadius="20px"
+              _hover={{ bg: '#2c5a7a' }}
+              px={{ base: '12px', md: '15px', lg: '20px' }}
+              flexShrink={0}
+              ml={{ base: '5px', md: '10px', lg: '15px' }}
             >
               Book Demo
-              {/* <img
-                src="/assets/arrowuprb.svg"
-                alt="Arrow Up"
-                width="12px"
-                height="12px"
-              />{' '} */}
               <svg
-                width="14"
-                height="14"
-                viewBox="0 0 17 18"
+                width={{ base: '100%', md: '14' }}
+                height={{ base: '100%', md: '14' }}
+                viewBox="0 0 18 18"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
+                  d="M17.5 2C17.5 1.17157 16.8284 0.499999 16 0.499999L2.5 0.5C1.67157 0.5 0.999999 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5L14.5 3.5L14.5 15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM3.06066 17.0607L17.0607 3.06066L14.9393 0.939339L0.93934 14.9393L3.06066 17.0607Z"
                   fill="#3F77A5"
                 />
               </svg>
-              {/* Reduced size */}
             </Button>
           </Flex>
         </Box>

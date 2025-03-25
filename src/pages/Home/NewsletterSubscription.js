@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import {
   Box,
   Flex,
@@ -11,18 +11,16 @@ import {
   Grid,
   Button,
   Divider,
-  useBreakpointValue
-} from '@chakra-ui/react';
+  useBreakpointValue,
+} from '@chakra-ui/react'
 import {
   FaFacebookF,
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
   FaYoutube,
-} from 'react-icons/fa';
-import SubscriptionBanner from '../../components/SubscriptionBanner';
-
-
+} from 'react-icons/fa'
+import SubscriptionBanner from '../../components/SubscriptionBanner'
 
 // Custom PhoneIcon component
 const PhoneIcon = ({ mr = '10px', w = '21px', h = '21px' }) => (
@@ -40,11 +38,11 @@ const PhoneIcon = ({ mr = '10px', w = '21px', h = '21px' }) => (
       fill="#3F77A5"
     />
   </Box>
-);
+)
 
 // Main NewsletterSubscription component
 const NewsletterSubscription = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState('')
   // const [isSubscribed, setIsSubscribed] = useState(false);
 
   // Handle subscription logic
@@ -56,11 +54,18 @@ const NewsletterSubscription = () => {
   //     alert('Please enter a valid email address.');
   //   }
   // };
-  const buttonWidth = useBreakpointValue({ base: "120px", md: "130px", lg: "146px" });
-  const buttonHeight = useBreakpointValue({ base: "40px", md: "45px", lg: "50px" });
+  const buttonWidth = useBreakpointValue({
+    base: '120px',
+    md: '130px',
+    lg: '146px',
+  })
+  const buttonHeight = useBreakpointValue({
+    base: '40px',
+    md: '45px',
+    lg: '50px',
+  })
 
   return (
-
     <>
       {/* Import custom font */}
       <style>
@@ -70,12 +75,7 @@ const NewsletterSubscription = () => {
       </style>
 
       {/* Main container */}
-      <Box
-        padding="4% 2% 1% 2%"
-        fontFamily="'Wix Madefor Display', sans-serif"
-        fontWeight={600}
-        bg={'#f3f3f3'}
-      >
+      <Box padding="4% 2% 1% 2%" fontWeight={600} bg={'#f3f3f3'}>
         {/* Subscription Banner */}
         <SubscriptionBanner />
 
@@ -97,7 +97,12 @@ const NewsletterSubscription = () => {
             <Heading fontSize="18px" fontWeight={700} mb="20px">
               Who we are
             </Heading>
-            <Divider borderColor="blue.700" borderWidth="1px" w="30px" mb="15px" />
+            <Divider
+              borderColor="blue.700"
+              borderWidth="1px"
+              w="30px"
+              mb="15px"
+            />
             <Flex mt="10%">
               <Box mr="30px">
                 <List spacing="10px">
@@ -110,7 +115,10 @@ const NewsletterSubscription = () => {
                     'Careers',
                     'Help Desk',
                   ].map((item, index) => (
-                    <ListItem key={index} _hover={{ color: '#3F77A5', cursor: 'pointer' }}>
+                    <ListItem
+                      key={index}
+                      _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                    >
                       {item}
                     </ListItem>
                   ))}
@@ -125,7 +133,10 @@ const NewsletterSubscription = () => {
                     'Warranty Policy',
                     'Privacy Policy',
                   ].map((item, index) => (
-                    <ListItem key={index} _hover={{ color: '#3F77A5', cursor: 'pointer' }}>
+                    <ListItem
+                      key={index}
+                      _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                    >
                       {item}
                     </ListItem>
                   ))}
@@ -152,13 +163,23 @@ const NewsletterSubscription = () => {
               <Heading fontSize="18px" mb="10px" fontWeight={700}>
                 Our Solutions
               </Heading>
-              <Divider borderColor="blue.700" borderWidth="1px" w="30px" mb="15px" />
+              <Divider
+                borderColor="blue.700"
+                borderWidth="1px"
+                w="30px"
+                mb="15px"
+              />
               <List spacing="10px">
-                {['Enterprise', 'Government', 'And Beyond'].map((item, index) => (
-                  <ListItem key={index} _hover={{ color: '#3F77A5', cursor: 'pointer' }}>
-                    {item}
-                  </ListItem>
-                ))}
+                {['Enterprise', 'Government', 'And Beyond'].map(
+                  (item, index) => (
+                    <ListItem
+                      key={index}
+                      _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                    >
+                      {item}
+                    </ListItem>
+                  )
+                )}
               </List>
             </Box>
 
@@ -179,18 +200,21 @@ const NewsletterSubscription = () => {
               <Heading fontSize="18px" fontWeight={700} mb="10px">
                 Contact Us
               </Heading>
-              <Divider borderColor="blue.700" borderWidth="1px" w="30px" mb="15px" />
+              <Divider
+                borderColor="blue.700"
+                borderWidth="1px"
+                w="30px"
+                mb="15px"
+              />
               <Text fontSize="14px" lineHeight="1.6">
-                7, Avista@Eight corporate House, Near Satyam House, Behind Rajpath Club, Bodakdev, Ahmedabad - 380054
+                7, Avista@Eight corporate House, Near Satyam House, Behind
+                Rajpath Club, Bodakdev, Ahmedabad - 380054
               </Text>
               <Flex alignItems="center" mt="15px">
                 <PhoneIcon mr="10px" w="20px" h="auto" />
                 <Text>(+91) 000 000 0000</Text>
               </Flex>
-              <Flex
-                width="100%"
-                height="100%"
-              >
+              <Flex width="100%" height="100%">
                 <Button
                   width={buttonWidth}
                   height={buttonHeight}
@@ -199,17 +223,18 @@ const NewsletterSubscription = () => {
                   bg="white"
                   color="#3F77A5"
                   borderRadius="20px"
-                  _hover={{ bg: "#2c5a7a" }}
+                  _hover={{ bg: '#2c5a7a' }}
                   // onClick={handleSubscribe}
-                  px={{ base: "12px", md: "15px", lg: "20px" }} 
+                  px={{ base: '12px', md: '15px', lg: '20px' }}
                   flexShrink={0}
-                  ml={{ base: "5px", md: "10px", lg: "15px" }}
+                  ml={{ base: '5px', md: '10px', lg: '15px' }}
                   mt="20%"
+                  gap="4%"
                 >
                   Book Demo
                   <svg
-                    width={{ base: "100%", md: "14" }}
-                    height={{ base: "100%", md: "14" }}
+                    width={{ base: '100%', md: '14' }}
+                    height={{ base: '100%', md: '14' }}
                     viewBox="0 0 18 18"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -241,13 +266,23 @@ const NewsletterSubscription = () => {
             <Heading fontSize="18px" fontWeight={700} mb="10px">
               Technologies
             </Heading>
-            <Divider borderColor="blue.700" borderWidth="1px" w="30px" mb="15px" />
+            <Divider
+              borderColor="blue.700"
+              borderWidth="1px"
+              w="30px"
+              mb="15px"
+            />
             <List spacing="10px">
-              {['VMS', 'EMS', 'ICCC', 'AI Optimized Cloud Services'].map((item, index) => (
-                <ListItem key={index} _hover={{ color: '#3F77A5', cursor: 'pointer' }}>
-                  {item}
-                </ListItem>
-              ))}
+              {['VMS', 'EMS', 'ICCC', 'AI Optimized Cloud Services'].map(
+                (item, index) => (
+                  <ListItem
+                    key={index}
+                    _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                  >
+                    {item}
+                  </ListItem>
+                )
+              )}
             </List>
           </Box>
 
@@ -268,7 +303,12 @@ const NewsletterSubscription = () => {
             <Heading fontSize="18px" fontWeight={700} mb="10px">
               Industries we serve
             </Heading>
-            <Divider borderColor="blue.700" borderWidth="1px" w="30px" mb="15px" />
+            <Divider
+              borderColor="blue.700"
+              borderWidth="1px"
+              w="30px"
+              mb="15px"
+            />
             <List spacing="10px">
               {[
                 'Healthcare Industry',
@@ -285,7 +325,10 @@ const NewsletterSubscription = () => {
                 'Sports & Entertainment Industry',
                 'Hospitality Industry',
               ].map((industry, index) => (
-                <ListItem key={index} _hover={{ color: '#3F77A5', cursor: 'pointer' }}>
+                <ListItem
+                  key={index}
+                  _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                >
                   {industry}
                 </ListItem>
               ))}
@@ -296,7 +339,7 @@ const NewsletterSubscription = () => {
         {/* Footer Section */}
         <Box>
           <Grid
-            templateColumns={{ base: "1fr 1fr", md: "1fr 1fr 1fr" }}
+            templateColumns={{ base: '1fr 1fr', md: '1fr 1fr 1fr' }}
             alignItems="center"
             padding="20px 0 0 0"
             borderTop="1px solid"
@@ -334,14 +377,23 @@ const NewsletterSubscription = () => {
             </Box>
 
             {/* Copyright Text */}
-            <Box justifySelf="center" gridColumn={{ base: "span 2", md: "span 1" }} order={{ base: 3, md: 2 }}>
+            <Box
+              justifySelf="center"
+              gridColumn={{ base: 'span 2', md: 'span 1' }}
+              order={{ base: 3, md: 2 }}
+            >
               <Text fontSize="12px" color="gray.600">
                 Copyright © 2025, VMukti Solutions
               </Text>
             </Box>
 
             {/* Social Media Icons */}
-            <Flex gap={4} justify="center" justifySelf="end" order={{ base: 2, md: 3 }}>
+            <Flex
+              gap={4}
+              justify="center"
+              justifySelf="end"
+              order={{ base: 2, md: 3 }}
+            >
               {[
                 { icon: FaFacebookF, link: '#' },
                 { icon: FaTwitter, link: '#' },
@@ -367,7 +419,7 @@ const NewsletterSubscription = () => {
         </Box>
       </Box>
     </>
-  );
-};
+  )
+}
 
-export default NewsletterSubscription;
+export default NewsletterSubscription

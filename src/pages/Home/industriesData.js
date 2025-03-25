@@ -11,7 +11,7 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
-import image7 from './assets/image7.png'
+// import image7 from './assets/image7.png'
 
 // Industry data with SVGs
 const industriesData = [
@@ -323,7 +323,7 @@ export default function IndustryGrid() {
           left: '5%',
           width: '100%',
           height: '100%',
-          backgroundImage: `url(${image7})`,
+          backgroundImage: `url("./assets/image7.png")`,
           backgroundPosition: 'left top',
           backgroundRepeat: 'no-repeat',
           backgroundSize: '1138px',
