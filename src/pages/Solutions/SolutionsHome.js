@@ -20,7 +20,7 @@ const Hero = () => {
                 </VStack>
 
                 {/* Content Section */}
-                <Flex align="flex-start" mt={4}> {/* Reduced top margin to bring images closer to heading */}
+                <Flex align="flex-start" mt={4} position="relative"> {/* Added position relative */}
                     {/* Left Column (SVG + Text) */}
                     <VStack align="start" spacing={6} maxW="40%" mt={16}> {/* Added top margin to push SVG+text down */}
                         <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 33 33" fill="none">
@@ -34,10 +34,27 @@ const Hero = () => {
                             proactive threat detection, and seamless video management. Enhance safety and efficiency
                             with scalable, future-ready technology.
                         </Text>
+                        {/* New Box Below Text */}
+                        {/* <Box
+                            position="absolute"
+                            w="188px"
+                            h="188px"
+                            flexShrink={0}
+                            borderRadius="24px"
+                            bg="#BECEDC"
+                            top="73%"
+                        // mt="52%"
+                        >
+                        </Box> */}
                     </VStack>
 
+                    {/* Background Box Behind Images */}
+
+
                     {/* Right Column (Images) */}
-                    <Flex gap="38px" ml="auto" mt={0}> {/* No top margin to keep images up */}
+
+
+                    <Flex gap="38px" ml="auto" mt={0} position="relative" zIndex={1}> {/* Ensuring images stay above */}
                         {/* Card 1 */}
                         <Box borderRadius="lg" overflow="hidden" w="306px" h="594px">
                             <Image
@@ -62,7 +79,6 @@ const Hero = () => {
 
                         {/* Card 3 */}
                         <Box borderRadius="lg" overflow="hidden" w="306px" h="594px">
-
                             <Image
                                 src="./assets/sol3rd.png"
                                 alt="Surveillance Image 3"
@@ -71,6 +87,37 @@ const Hero = () => {
                                 objectFit="cover"
                             />
                         </Box>
+                    </Flex>
+
+                    {/* Background Box Behind Images */}
+
+
+                    <Flex
+                        position="absolute"
+                        top="65%"
+                        gap={2}
+                        alignItems="flex-end"
+                        right={0}
+                    >
+                        <Box
+                            w="188px"
+                            h="188px"
+                            flexShrink={0}
+                            borderRadius="24px"
+                            bg="#BECEDC"
+                        // mt="52%"
+                        >
+                        </Box>
+                        <Box
+                            w="1244px"
+                            h="239px"
+                            flexShrink={0}
+                            borderRadius="24px"
+                            bg="#FFF"
+                            // transform="translateX(-50%)"
+                            zIndex={0}
+                        ></Box>
+
                     </Flex>
                 </Flex>
             </Container>
