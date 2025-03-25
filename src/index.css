@@ -5,7 +5,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 @font-face {
-  font-family: 'MyCustomFont';
+  font-family: 'WixMadeforDisplay'; /* Match this with the name used in the body */
   src: url('../public/assets/Wix_Madefor_Display/WixMadeforDisplay-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
