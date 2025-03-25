@@ -1,7 +1,7 @@
 "use client"
 
-import { useState } from "react"
-import { Box, Flex, Text, Image, Button, Divider } from "@chakra-ui/react"
+import React, { useState } from "react"
+import { Box, Flex, Text, Image, Button, Divider, Grid } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 
 const MotionBox = motion(Box)
@@ -12,14 +12,6 @@ const VideoAnalytics = () => {
   // Example features
   const features = [
     {
-      title: "Conversational AI for Video",
-      description: "Enables natural language interaction with surveillance data.",
-    },
-    {
-      title: "Custom AI Queries",
-      description: "Generate customized video insights using AI-powered queries.",
-    },
-    {
       title: "Instant Reporting",
       description: "Quickly analyze video data and extract key information.",
     },
@@ -27,6 +19,17 @@ const VideoAnalytics = () => {
       title: "Contextual Video Analysis",
       description: "Understand video content with advanced AI context recognition.",
     },
+    
+    {
+      title: "Conversational AI for Video",
+      description: "Enables natural language interaction with surveillance data.",
+    },
+    {
+      title: "Custom AI Queries",
+      description: "Generate customized video insights using AI-powered queries.",
+    },
+    
+    
   ]
 
   // Handlers for navigation buttons
@@ -87,61 +90,93 @@ const VideoAnalytics = () => {
               width="100%"
             >
               <Button
-                width="40px"
-                height="40px"
-                bgColor="f3f3f3"
+                width={{ base: '25px', md: '30.769px' }}
+                height={{ base: '25px', md: '30.769px' }}
+                minWidth="31px"
+                minHeight="31px"
+                padding="0"
                 borderRadius="5px"
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
-                color="#4682B4"
-                _hover={{ bgColor: "#E0E0E0" }}
+                cursor="pointer"
+                bgColor="#f3f3f3"
+                _hover={{ bgColor: '#e0e0e0' }}
                 onClick={handlePrevious}
               >
-                &#9664;
+                <svg
+                  width="8"
+                  height="16"
+                  viewBox="0 0 8 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z"
+                    fill="#3F77A5"
+                  />
+                </svg>
               </Button>
               <Button
-                width="40px"
-                height="40px"
-                bgColor="f3f3f3"
+                width={{ base: '25px', md: '30.769px' }}
+                height={{ base: '25px', md: '30.769px' }}
+                minWidth="31px"
+                minHeight="31px"
+                padding="0"
                 borderRadius="5px"
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
-                color="#4682B4"
-                _hover={{ bgColor: "#E0E0E0" }}
+                cursor="pointer"
+                bgColor="#f3f3f3"
+                _hover={{ bgColor: '#e0e0e0' }}
                 onClick={handleNext}
               >
-                &#9654;
+                <svg
+                  width="8"
+                  height="16"
+                  viewBox="0 0 8 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z"
+                    fill="#3F77A5"
+                  />
+                </svg>
               </Button>
             </Flex>
           </Flex>
 
           {/* Feature List */}
-          <Box >
+          <Grid templateColumns="20px 1fr" gap="2">
             {features.map((feature, index) => (
-              <Text
-                key={index}
-                padding="10px 0"
+              <React.Fragment key={index}>
+                {/* Left Column - SVG Only Appears for Active Item */}
+                <Box display="flex" alignItems="center" justifyContent="center">
+                  {index === featureIndex && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="15" viewBox="0 0 8 15" fill="none">
+                      <path d="M7.38461 7.38462L0 0L-2.58233e-06 14.7692L7.38461 7.38462Z" fill="white" />
+                    </svg>
+                  )}
+                </Box>
 
-                fontSize={{ base: "14px", md: "15px" }}
-                color={index === featureIndex ? "white" : "rgba(255, 255, 255, 0.6)"}
-                fontWeight={index === featureIndex ? "bold" : "normal"}
-                position="relative"
-                cursor="pointer"
-                _hover={{ textDecoration: "underline" }}
-                onClick={() => setFeatureIndex(index)}
-                pl="20px"
-              >
-                {index === featureIndex && (
-                  <Box as="span" position="absolute" left="0" fontSize="12px">
-                    ▶
-                  </Box>
-                )}
-                {feature.title}
-              </Text>
+                {/* Right Column - Text */}
+                <Text
+                  padding="10px 0"
+                  fontSize={{ base: "14px", md: "15px" }}
+                  color={index === featureIndex ? "white" : "rgba(255, 255, 255, 0.6)"}
+                  fontWeight={index === featureIndex ? "bold" : "normal"}
+                  cursor="pointer"
+                  _hover={{ textDecoration: "underline" }}
+                  onClick={() => setFeatureIndex(index)}
+                >
+                  {feature.title}
+                </Text>
+              </React.Fragment>
             ))}
-          </Box>
+          </Grid>
+
         </Flex>
 
         {/* Right Section with Feature Card and Devices */}
