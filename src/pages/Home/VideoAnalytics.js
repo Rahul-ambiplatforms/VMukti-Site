@@ -98,7 +98,9 @@ const VideoAnalytics = () => {
                 _hover={{ bgColor: "#E0E0E0" }}
                 onClick={handlePrevious}
               >
-                &#9664;
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 8 16" fill="none">
+                  <path d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z" fill="#3F77A5" />
+                </svg>
               </Button>
               <Button
                 width="40px"
@@ -112,7 +114,9 @@ const VideoAnalytics = () => {
                 _hover={{ bgColor: "#E0E0E0" }}
                 onClick={handleNext}
               >
-                &#9654;
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 8 16" fill="none">
+                  <path d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z" fill="#3F77A5" />
+                </svg>
               </Button>
             </Flex>
           </Flex>
@@ -134,8 +138,10 @@ const VideoAnalytics = () => {
                 pl="20px"
               >
                 {index === featureIndex && (
-                  <Box as="span" position="absolute" left="0" fontSize="12px">
-                    ▶
+                  <Box as="span" position="absolute" left="0" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="15" viewBox="0 0 8 15" fill="none">
+                      <path d="M7.38461 7.38462L0 0L-2.58233e-06 14.7692L7.38461 7.38462Z" fill="white" />
+                    </svg>
                   </Box>
                 )}
                 {feature.title}

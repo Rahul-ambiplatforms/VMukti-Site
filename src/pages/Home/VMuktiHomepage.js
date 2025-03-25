@@ -45,7 +45,18 @@ const VMuktiHomepage = () => {
   })
   return (
     <Box minH="100vh" bg="#f3f3f3" overflow="hidden" position="relative">
-      
+      <Image
+        src={'/assets/Ellipse38.png' || '/placeholder.svg'}
+        alt="ellipse38"
+        position="absolute"
+        left="0"   // Align to the left edge of the screen
+        top="0"    // Align to the top edge of the screen
+        transform="none"  // Remove unwanted translations
+        width={ellipseSize}
+        opacity="1"
+        pointerEvents="none"
+        zIndex="0"
+      />
 
       <Flex
         position="absolute"
