@@ -53,7 +53,6 @@ const AdvancedSurveillance = () => {
 
       <Flex
         backgroundColor="#f3f3f3"
-        mx="2%"
         height="758px"
         fontFamily="'Wix Madefor Display', sans-serif"
         fontWeight="600"

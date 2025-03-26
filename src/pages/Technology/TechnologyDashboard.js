@@ -2,6 +2,7 @@ import React from 'react'
 import { Flex, Image, Text, Container, Heading, Box } from '@chakra-ui/react'
 import Navbar from '../../components/Navbar'
 import ComputerVisionPage from './AITechnologies'
+import PageContentWrapper from '../../components/PageContentWrapper'
 
 const TechnologyDashboard = () => {
   return (
@@ -104,7 +105,7 @@ const TechnologyDashboard = () => {
             align={{ base: 'flex-start', lg: 'flex-start' }}
             justify="flex-start"
             minH={{ base: 'auto', lg: '100vh' }}
-            // ml={{ base: '-2%', md: '2%', lg: '-4%' }}
+          // ml={{ base: '-2%', md: '2%', lg: '-4%' }}
           >
             {/* Left Content */}
             <Flex
@@ -115,8 +116,8 @@ const TechnologyDashboard = () => {
               zIndex={3}
               mt="4%"
               mx="4%"
-              // mt={{ base: 8, lg: 14 }}
-              // ml={{ base: "-2%", md: "-4%", lg: "-8%" }}
+            // mt={{ base: 8, lg: 14 }}
+            // ml={{ base: "-2%", md: "-4%", lg: "-8%" }}
             >
               <Heading
                 fontSize={{ base: '20px', sm: '30px', md: '40px', lg: '48px' }}
@@ -207,7 +208,9 @@ const TechnologyDashboard = () => {
           </Flex>
         </Box>
       </Flex>
-      <ComputerVisionPage />
+      <PageContentWrapper>
+        <ComputerVisionPage />
+      </PageContentWrapper>
     </Box>
   )
 }

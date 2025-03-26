@@ -10,6 +10,7 @@ import {
 
 import Navbar from '../../components/Navbar'
 import AdvancedComputerVision from '../../components/AdvancedComputerVision'
+import PageContentWrapper from '../../components/PageContentWrapper';
 
 import VideoAnalytics from './VideoAnalytics'
 import Achieved from './Achieved'
@@ -216,13 +217,29 @@ const VMuktiHomepage = () => {
           </Flex>
         </Box>
       </Flex>
-      <AdvancedComputerVision />
-      <VideoAnalytics />
-      <AdvancedComputerVision {...customData} />
-      <Diagram />
-      <Industries />
-      <AdvancedSurveillance />
-      <Achieved />
+      <PageContentWrapper>
+        <AdvancedComputerVision />
+      </PageContentWrapper>
+
+      <PageContentWrapper>
+        <VideoAnalytics />
+      </PageContentWrapper>
+
+      <PageContentWrapper>
+        <AdvancedComputerVision {...customData} />
+      </PageContentWrapper>
+
+      <PageContentWrapper>
+        <Diagram />
+      </PageContentWrapper>
+
+        <Industries />
+
+      <PageContentWrapper>
+        <AdvancedSurveillance />
+      </PageContentWrapper>
+
+        <Achieved />
     </Box>
   )
 }

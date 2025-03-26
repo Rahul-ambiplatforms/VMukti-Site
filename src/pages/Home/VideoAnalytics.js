@@ -42,7 +42,7 @@ const VideoAnalytics = () => {
   }
 
   return (
-    <Flex borderRadius="20px" bgColor="#3F77A5" mx="2%" overflow="hidden" position={"relative"} marginTop="-50px" zIndex={1}>
+    <Flex borderRadius="20px" bgColor="#3F77A5"  overflow="hidden" position={"relative"} marginTop="-50px" zIndex={1}>
       <Flex padding={{ base: "20px", md: "40px" }} gap={4} direction={{ base: "column", lg: "row" }} width="100%">
         {/* Left Section with Title and Menu */}
         <Flex

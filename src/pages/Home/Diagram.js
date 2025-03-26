@@ -27,7 +27,6 @@ const Diagram = () => {
         <Flex
             height={containerHeight}
             borderRadius="20px"
-            mx="2%"
             overflow="hidden"
             bg="#f5f5f5"
             mt="2%"
