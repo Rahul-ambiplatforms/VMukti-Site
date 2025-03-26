@@ -20,21 +20,8 @@ function App() {
     <ChakraProvider theme={theme}>
       <Router>
         {/* Navbar with transparent background */}
-        <Flex
-          my="2%"
-          bg={'transparent'}
-          position="fixed"
-          top={0}
-          left={0}
-          right={0}
-          zIndex={1000}
-          height={navbarHeight}
-          width="100%" // Added this
-        >
-          <PageContentWrapper>
+            
             <Navbar />
-          </PageContentWrapper>
-        </Flex>
 
         {/* Page content with padding to account for Navbar height */}
         <Box pt={navbarHeight} bg="#f3f3f3">  {/* Add padding-top equal to Navbar height */}
