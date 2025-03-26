@@ -64,7 +64,7 @@ const Navbar = () => {
             gap={4}
             position="fixed"
             // width="100%"
-            top="2%"
+            top="3%"
             right="2%"
             left="2%"
             zIndex={1000}
@@ -111,76 +111,75 @@ const Navbar = () => {
                         align="center"
                         fontSize={fontSize}
                         fontWeight="400"
-                        gap="1"
+                    // gap="1"
                     >
                         {navigationItems.map((item, index) => (
-                            <Flex
-                                key={item.name}
-                                align="center"
-                            >
-                                {/* Menu Item */}
-                                {item.hasDropdown ? (
-                                    <Menu>
-                                        <MenuButton
-                                            as={Button}
-                                            rightIcon={<svg width="12" height="6" viewBox="0 0 12 6" fill="none">
-                                                <path d="M6 6L12 0L0 0L6 6Z" fill="#3F77A5" />
-                                            </svg>}
-                                            variant="ghost"
-                                            // color={activeLink === item.name ? "#3182ce" : "#4a5568"}
-                                            fontWeight={activeLink === item.name ? "500" : "400"}
-                                            onClick={() => handleLinkClick(item.name)}
-                                            position="relative"
-                                        >
-                                            {item.name}
-                                        </MenuButton>
-                                        <MenuList>
-                                            {item.items.map((dropdownLabel, idx) => (
-                                                <MenuItem
-                                                    key={idx}
-                                                    fontWeight="400"
-                                                    as={Link}
-                                                    to={item.path} // Always use the parent's path
-                                                    onClick={() => handleLinkClick(item.name)}
-                                                >
-                                                    {dropdownLabel}
-                                                </MenuItem>
-                                            ))}
-                                        </MenuList>
-                                    </Menu>
-                                ) : (
-                                    <Box px="8px">
-                                        <Link
-                                            to={item.path}
-                                            style={{
-                                                color: activeLink === item.name ? "#3F77A5" : "#4a5568",
-                                                fontWeight: activeLink === item.name ? "700" : "400",
-                                                textDecoration: "none",
-                                                position: "relative",
-                                            }}
-                                            onClick={() => handleLinkClick(item.name)}
-                                        >
-                                            {item.name}
-                                            {activeLink === item.name && (
-                                                <Box
-                                                    position="absolute"
-                                                    bottom="-4px"
-                                                    // left="50%"
-                                                    // transform="translateX(-50%)"
-                                                    width="25%"
-                                                    height="2px"
-                                                    bg="#3F77A5"
-                                                />
-                                            )}
-                                        </Link>
-                                    </Box>
-                                )}
-
-                                {/* Divider */}
+                            <React.Fragment key={item.name}>
+                                <Flex
+                                    align="center"
+                                >
+                                    {/* Menu Item */}
+                                    {item.hasDropdown ? (
+                                        <Menu>
+                                            <MenuButton
+                                                as={Button}
+                                                rightIcon={<svg width="12" height="6" viewBox="0 0 12 6" fill="none">
+                                                    <path d="M6 6L12 0L0 0L6 6Z" fill="#3F77A5" />
+                                                </svg>}
+                                                variant="ghost"
+                                                // color={activeLink === item.name ? "#3182ce" : "#4a5568"}
+                                                fontWeight={activeLink === item.name ? "500" : "400"}
+                                                onClick={() => handleLinkClick(item.name)}
+                                                position="relative"
+                                            >
+                                                {item.name}
+                                            </MenuButton>
+                                            <MenuList>
+                                                {item.items.map((dropdownLabel, idx) => (
+                                                    <MenuItem
+                                                        key={idx}
+                                                        fontWeight="400"
+                                                        as={Link}
+                                                        to={item.path} // Always use the parent's path
+                                                        onClick={() => handleLinkClick(item.name)}
+                                                    >
+                                                        {dropdownLabel}
+                                                    </MenuItem>
+                                                ))}
+                                            </MenuList>
+                                        </Menu>
+                                    ) : (
+                                        <Box px="8px">
+                                            <Link
+                                                to={item.path}
+                                                style={{
+                                                    color: activeLink === item.name ? "#3F77A5" : "#4a5568",
+                                                    fontWeight: activeLink === item.name ? "700" : "400",
+                                                    textDecoration: "none",
+                                                    position: "relative",
+                                                }}
+                                                onClick={() => handleLinkClick(item.name)}
+                                            >
+                                                {item.name}
+                                                {activeLink === item.name && (
+                                                    <Box
+                                                        position="absolute"
+                                                        bottom="-4px"
+                                                        // left="50%"
+                                                        // transform="translateX(-50%)"
+                                                        width="25%"
+                                                        height="2px"
+                                                        bg="#3F77A5"
+                                                    />
+                                                )}
+                                            </Link>
+                                        </Box>
+                                    )}
+                                </Flex>
                                 {index < navigationItems.length - 1 && (
-                                    <Box w="2px" h="16px" bg="#8F8F8F" />
+                                    <Box w="2px" h="16px" bg="#8F8F8F" mx={2} />
                                 )}
-                            </Flex>
+                            </React.Fragment>
                         ))}
                     </HStack>
                 </Show>
