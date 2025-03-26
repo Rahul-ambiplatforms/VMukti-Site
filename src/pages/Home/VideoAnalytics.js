@@ -33,16 +33,18 @@ const VideoAnalytics = () => {
   ]
 
   // Handlers for navigation buttons
+  const [progress, setProgress] = useState(0);
   const handleNext = () => {
     setFeatureIndex((prevIndex) => (prevIndex + 1) % features.length)
+    setProgress((prev) => (prev + 25) % 100);
   }
 
   const handlePrevious = () => {
     setFeatureIndex((prevIndex) => (prevIndex - 1 + features.length) % features.length)
+    setProgress((prev) => (prev - 25 < 0 ? 75 : prev - 25));
   }
-
   return (
-    <Flex borderRadius="20px" bgColor="#3F77A5"  overflow="hidden" position={"relative"} marginTop="-50px" zIndex={1}>
+    <Flex borderRadius="20px" bgColor="#3F77A5" overflow="hidden" position={"relative"} marginTop="-50px" zIndex={1}>
       <Flex padding={{ base: "20px", md: "40px" }} gap={4} direction={{ base: "column", lg: "row" }} width="100%">
         {/* Left Section with Title and Menu */}
         <Flex
@@ -73,13 +75,21 @@ const VideoAnalytics = () => {
             justifyContent={{ base: "space-between", md: "flex-start" }}
             width="100%"
           >
-            <Divider
-              width="100%"
-              borderBottomWidth="0.5px"
-              borderColor="white"
-              mt={{ base: "20px", md: "38px" }}
-              display={{ base: "none", md: "block" }}
-            />
+            {/* Progress Bar Container */}
+            <Flex position="relative" bg="white" height="1px" width="100%" align="center" mt={{ base: "10px", md: "25px" }}>
+              {/* Progress Indicator */}
+              <Box
+                position="absolute"
+                height="3px"
+                width="25%" // Fixed width at 25%
+                bg="white"
+                transform={`translateX(${(progress * 400) / 100}%)`} // Corrected movement range
+                transition="transform 0.3s ease-in-out"
+              />
+            </Flex>
+
+
+
 
             {/* Navigation Buttons */}
             <Flex
@@ -90,8 +100,8 @@ const VideoAnalytics = () => {
               width="100%"
             >
               <Button
-                width={{ base: '25px', md: '30.769px' }}
-                height={{ base: '25px', md: '30.769px' }}
+                width={{ base: "25px", md: "30.769px" }}
+                height={{ base: "25px", md: "30.769px" }}
                 minWidth="31px"
                 minHeight="31px"
                 padding="0"
@@ -101,25 +111,16 @@ const VideoAnalytics = () => {
                 justifyContent="center"
                 cursor="pointer"
                 bgColor="#f3f3f3"
-                _hover={{ bgColor: '#e0e0e0' }}
+                _hover={{ bgColor: "#e0e0e0" }}
                 onClick={handlePrevious}
               >
-                <svg
-                  width="8"
-                  height="16"
-                  viewBox="0 0 8 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z"
-                    fill="#3F77A5"
-                  />
+                <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z" fill="#3F77A5" />
                 </svg>
               </Button>
               <Button
-                width={{ base: '25px', md: '30.769px' }}
-                height={{ base: '25px', md: '30.769px' }}
+                width={{ base: "25px", md: "30.769px" }}
+                height={{ base: "25px", md: "30.769px" }}
                 minWidth="31px"
                 minHeight="31px"
                 padding="0"
@@ -129,20 +130,11 @@ const VideoAnalytics = () => {
                 justifyContent="center"
                 cursor="pointer"
                 bgColor="#f3f3f3"
-                _hover={{ bgColor: '#e0e0e0' }}
+                _hover={{ bgColor: "#e0e0e0" }}
                 onClick={handleNext}
               >
-                <svg
-                  width="8"
-                  height="16"
-                  viewBox="0 0 8 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z"
-                    fill="#3F77A5"
-                  />
+                <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z" fill="#3F77A5" />
                 </svg>
               </Button>
             </Flex>
@@ -168,7 +160,6 @@ const VideoAnalytics = () => {
                   color={index === featureIndex ? "white" : "rgba(255, 255, 255, 0.6)"}
                   fontWeight={index === featureIndex ? "bold" : "normal"}
                   cursor="pointer"
-                  _hover={{ textDecoration: "underline" }}
                   onClick={() => setFeatureIndex(index)}
                 >
                   {feature.title}

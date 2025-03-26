@@ -29,7 +29,7 @@ const AdvancedComputerVision = ({
     },
   ],
   backgroundImage = "/assets/VMuktidot.png",
-  myMargin = "70px",
+  myMargin = "3%",
   myZIndex = "1",
 }) => {
   // activeCard is persistent (updated on click or navigation)
@@ -95,7 +95,7 @@ const AdvancedComputerVision = ({
       </Flex>
 
       {/* Cards Section */}
-      <Flex gap={{ base: "4", md: "8" }}>
+      <Flex gap={4}>
         {cards.map((card, index) => (
           // Parent container for each card with separate hover state
           <Flex
@@ -170,6 +170,7 @@ const AdvancedComputerVision = ({
             {/* Text below the card for the active card */}
             {effectiveCard === index && (
               <Box mt={3}>
+                
               <Text
                 whiteSpace="nowrap"
                 fontSize={{ base: "14px", md: "16px" }}
@@ -194,8 +195,7 @@ const AdvancedComputerVision = ({
       </Flex>
 
       {/* Navigation Buttons */}
-      <Flex mb={12} justifyContent="space-between" alignItems="center" zIndex={2} pointerEvents="auto">
-        <Box />
+      <Flex mb={12} justifyContent="flex-end" alignItems="center" zIndex={2} pointerEvents="auto">
         <Flex justifyContent="space-between" gap={1}>
           <Button
             width="31px"

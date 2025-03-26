@@ -61,7 +61,7 @@ const VMuktiHomepage = () => {
 
       <Flex
         position="absolute"
-        top="4%"
+        top="5.3%"
         left="35%"
         transform="translateX(-50%)"
         gap={4}
@@ -75,8 +75,7 @@ const VMuktiHomepage = () => {
           aspectRatio="1/1"
           bg="#BECEDC"
           borderRadius="24px"
-          opacity="0.7"
-          mt={{ base: "80px", md: "160px", lg: "240px" }}
+          mt={{ base: "80px", md: "160px", lg: "12%" }}
 
         />
         <Box
@@ -84,15 +83,13 @@ const VMuktiHomepage = () => {
           aspectRatio="1/1"
           bg="#EAEAEA"
           borderRadius="24px"
-          opacity="0.7"
-          mt={{ base: "40px", md: "80px", lg: "120px" }}
+          mt={{ base: "40px", md: "80px", lg: "6%" }}
         />
         <Box
           height={{ base: "80px", md: "140px", lg: "188px" }} minHeight="50px"
           aspectRatio="1/1"
           bg="#3F77A5"
           borderRadius="24px"
-          opacity="0.7"
         />
       </Flex>
 
@@ -107,7 +104,7 @@ const VMuktiHomepage = () => {
         zIndex={1}
       >
         {/* Left Side */}
-        <Image src="/assets/tablet.png" position="absolute" right="0px" zIndex={1} />
+        <Image src="/assets/tablet.png" position="absolute" right="0" top="1%" zIndex={1} />
         <Box
           flex="1"
           bgRepeat="no-repeat"
@@ -124,8 +121,9 @@ const VMuktiHomepage = () => {
             textStyle="normal"
             // letterSpacing="-1px"
             textAlign={{ base: "center", md: "left" }}
+            lineHeight="140%"
             zIndex={1}
-            mt={{ base: "20px", md: "40px" }} // Added top margin to push the text lower
+            mt={{ base: "20px", md: "4%" }} // Added top margin to push the text lower
           >
             <Text as="span" color="#000">
               Unlocking the{' '}
@@ -138,28 +136,21 @@ const VMuktiHomepage = () => {
             <Text as="span" color="#000"> with </Text>
             <Text as="span" color="#DB7B3A">AI.</Text>
           </Box>
-          <Flex mt="16px" align="flex-start" direction={{ base: "column", md: "row" }}>
+          <Flex mt="16px" direction={{ base: "column", md: "row" }}>
             <Box
-              display="flex"
-              gap="10"
+              display="flex" alignContent="end"
+              gap={10}
             >
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 33 33"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
-                  fill="#3F77A5"
-                />
+              <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z" fill="#3F77A5" />
               </svg>
+
               {/* Reduced size */}
               <Text
-                color="#4a5568"
+                // color="#"
+                fontWeight="500"
+                lineHeight="100%"
                 maxW={{ base: '90%', md: '60%' }} // Reduced max width
-                ml={{ base: '0', md: '8px' }}
                 fontSize={{ base: '14px', md: '16px' }} // Reduced font size
               >
                 We harness AI to optimize operations, drive efficiency, and
@@ -169,29 +160,29 @@ const VMuktiHomepage = () => {
             {/* </Flex> */}
           </Flex>
 
-          <Flex position="relative" mt={{ base: "10px", md: "-8%" }} ml={{ base: "0", md: "-40px" }} alignItems="center">
+          <Flex position="relative" mt={{ base: "10px", md: "-10%" }} ml={{ base: "0", md: "-40px" }} alignItems="center">
             <Image
               src="/assets/robohand.png"
               alt="Robotic Hand"
-              w={{ base: '80%', md: '500px' }} // Reduced image size
-              h={{ base: 'auto', md: '500px' }}
+            // w={{ base: '80%', md: '500px' }} // Reduced image size
+            // h={{ base: 'auto', md: '500px' }}
             />
 
             {/* Book Demo Button */}
             <Button
               position="absolute"
-              top={{ base: "35%", md: "180px" }} // Moved the button upward
-              left={{ base: "65%", md: "300px" }} // Adjusted position
+              top={{ base: "35%", md: "38%" }} // Moved the button upward
+              left={{ base: "22%", md: "22%" }} // Adjusted position
               transform={{ base: "translateX(-50%)", md: "none" }}
               bg="white"
-              boxShadow="0 4px 8px rgba(0, 0, 0, 0.1)"
-              borderRadius="full"
-              px="16px" // Reduced padding
-              py="8px"
-              color="#3182ce"
-              fontWeight="500"
+              height="50px"
+              borderRadius="20px"
+              // px="16px" // Reduced padding
+              // py="8px"
+              color="#3F77A5"
+              // fontWeight="700"
               gap="2"
-              fontSize={{ base: '12px', md: '14px' }} // Reduced font size
+              fontSize={{ base: '12px', md: '16px' }} // Reduced font size
             >
               Book Demo
               {/* <img
@@ -233,13 +224,13 @@ const VMuktiHomepage = () => {
         <Diagram />
       </PageContentWrapper>
 
-        <Industries />
+      <Industries />
 
       <PageContentWrapper>
         <AdvancedSurveillance />
       </PageContentWrapper>
 
-        <Achieved />
+      <Achieved />
     </Box>
   )
 }
