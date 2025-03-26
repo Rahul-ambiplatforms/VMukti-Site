@@ -1,8 +1,10 @@
 import { Box, Container, Heading, Text, Image, Flex, VStack } from '@chakra-ui/react';
+import SolutionEMS from './SolutionEMS';
 
 const Hero = () => {
     return (
-        <Box bg="#F3F3F3" py={10} px={8}>
+        <Box>
+        <Box bg="#F3F3F3" py={10} px={8} >
             <Container maxW="100%">
                 {/* Heading Section (above everything) */}
                 <VStack align="start" spacing={4}>
@@ -122,6 +124,9 @@ const Hero = () => {
                 </Flex>
             </Container>
         </Box>
+            <SolutionEMS/>
+        </Box>
+
     );
 };
 
