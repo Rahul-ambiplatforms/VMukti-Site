@@ -47,7 +47,6 @@ const AdvancedComputerVision = ({
       direction={'column'}
       borderRadius="20px"
       bgColor="white"
-      mx="2%"
       position="relative"
       overflow="hidden"
       p={{ base: "4", md: "0" }}
