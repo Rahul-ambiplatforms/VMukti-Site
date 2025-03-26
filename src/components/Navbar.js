@@ -25,12 +25,13 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom' // Import Link from react-router-dom
+import PageContentWrapper from './PageContentWrapper';
 
 const dropdownItems = {
     organization: ["Solution", "Team", "Careers"],
     solutions: ["Solutions", "Government", "AI Solutions"],
     industries: ["Industries", "Retail", "Education"],
-   
+
 };
 
 const Navbar = () => {
@@ -39,9 +40,9 @@ const Navbar = () => {
 
     // Responsive values
     const logoHeight = useBreakpointValue({ base: '25px', md: '25px' })
-    const fontSize = useBreakpointValue({ base: '14px', md: '16px' })
+    const fontSize = useBreakpointValue({ base: '16px', md: '16px' })
     const contactBtnSize = useBreakpointValue({ base: '120px', md: '146px' })
-    const contactBtnHeight = useBreakpointValue({ base: '40px', md: '50px' })
+    const contactBtnHeight = useBreakpointValue({ base: '50px', md: '50px' })
 
     // Function to handle link clicks
     const handleLinkClick = (link) => {
@@ -58,21 +59,26 @@ const Navbar = () => {
         { name: "Who we are", path: "/who", hasDropdown: true, items: dropdownItems.solutions },
     ];
 
-    return (    
-        <Flex 
-            width="100%" 
+    return (
+        <Flex
             gap={4}
+            position="fixed"
+            // width="100%"
+            top="2%"
+            right="2%"
+            left="2%"
+            zIndex={1000}
             align="center"
         >
             {/* Main Navigation Container */}
             <Flex
-                flex="1"
+                width="100%" // Ensure inner container spans full width
                 bg="white"
                 borderRadius="20px"
                 height="50px"
-                px={4}
                 align="center"
-                justify="space-between"
+                px={4}
+                justifyContent="space-between"
             >
                 {/* Logo Section */}
                 <Box flex="0 0 auto">
@@ -101,17 +107,15 @@ const Navbar = () => {
                 {/* Navigation Links - Desktop */}
                 <Show above="lg">
                     <HStack
-                        flex="1"
-                        spacing={2}
                         justify="center"
                         align="center"
                         fontSize={fontSize}
                         fontWeight="400"
-                        ml={8}
+                        gap="1"
                     >
                         {navigationItems.map((item, index) => (
-                            <Flex 
-                                key={item.name} 
+                            <Flex
+                                key={item.name}
                                 align="center"
                             >
                                 {/* Menu Item */}
@@ -174,7 +178,7 @@ const Navbar = () => {
 
                                 {/* Divider */}
                                 {index < navigationItems.length - 1 && (
-                                    <Box w="2px" h="16px" bg="#8F8F8F" mx={2} />
+                                    <Box w="2px" h="16px" bg="#8F8F8F" />
                                 )}
                             </Flex>
                         ))}
@@ -193,7 +197,7 @@ const Navbar = () => {
             </Flex>
 
             {/* Contact Button - Desktop */}
-            <Show above="lg">
+            <Show above="md">
                 <Button
                     width={contactBtnSize}
                     height={contactBtnHeight}
@@ -207,7 +211,6 @@ const Navbar = () => {
                     Contact Us
                 </Button>
             </Show>
-
             {/* Mobile Drawer */}
             <Drawer isOpen={isOpen} placement="right" onClose={onClose} size="full">
                 <DrawerOverlay />
