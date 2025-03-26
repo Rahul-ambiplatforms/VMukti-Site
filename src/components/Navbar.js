@@ -127,7 +127,7 @@ const Navbar = () => {
                                                     <path d="M6 6L12 0L0 0L6 6Z" fill="#3F77A5" />
                                                 </svg>}
                                                 variant="ghost"
-                                                // color={activeLink === item.name ? "#3182ce" : "#4a5568"}
+                                                // color={activeLink === item.name ? "#3182ce" : "black"}
                                                 fontWeight={activeLink === item.name ? "500" : "400"}
                                                 onClick={() => handleLinkClick(item.name)}
                                                 position="relative"
@@ -153,7 +153,7 @@ const Navbar = () => {
                                             <Link
                                                 to={item.path}
                                                 style={{
-                                                    color: activeLink === item.name ? "#3F77A5" : "#4a5568",
+                                                    color: activeLink === item.name ? "#3F77A5" : "black",
                                                     fontWeight: activeLink === item.name ? "700" : "400",
                                                     textDecoration: "none",
                                                     position: "relative",
@@ -177,7 +177,8 @@ const Navbar = () => {
                                     )}
                                 </Flex>
                                 {index < navigationItems.length - 1 && (
-                                    <Box w="2px" h="16px" bg="#8F8F8F" mx={2} />
+                                    // <Box w="2px" h="16px" bg="#8F8F8F" mx={2} />
+                                    <Text mx={2}>|</Text>
                                 )}
                             </React.Fragment>
                         ))}
@@ -223,7 +224,7 @@ const Navbar = () => {
                                     key={item.name}
                                     to={item.path}
                                     style={{
-                                        color: activeLink === item.name ? "#3182ce" : "#4a5568",
+                                        color: activeLink === item.name ? "#3182ce" : "black",
                                         fontSize: "lg",
                                         fontWeight: activeLink === item.name ? "500" : "400",
                                         paddingBottom: "4px",
