@@ -1,105 +1,250 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+"use client"
 
-const Timeline = () => {
-    const timelineItems = [
-        {
-            period: "1998 - 2000",
-            title: "Title",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non nunc eget magna dictum egestas. Nam sed tempor lectus, suscipit mollis erat. Aenean dignissim sem nec orci tempus lacinia."
-        },
-        {
-            period: "2000 - 2002",
-            title: "Title",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non nunc eget magna dictum egestas. Nam sed tempor lectus, suscipit mollis erat. Aenean dignissim sem nec orci tempus lacinia."
-        },
-        {
-            period: "2000 - 2002",
-            title: "Title",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non nunc eget magna dictum egestas. Nam sed tempor lectus, suscipit mollis erat. Aenean dignissim sem nec orci tempus lacinia."
-        },
-        {
-            period: "2000 - 2002",
-            title: "Title",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non nunc eget magna dictum egestas. Nam sed tempor lectus, suscipit mollis erat. Aenean dignissim sem nec orci tempus lacinia."
-        },
-        {
-            period: "2000 - 2002",
-            title: "Title",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non nunc eget magna dictum egestas. Nam sed tempor lectus, suscipit mollis erat. Aenean dignissim sem nec orci tempus lacinia."
-        }
-    ];
+import React, { useRef, useState, useEffect } from "react"
+import {
+  Grid,
+  Box,
+  Text,
+  Heading,
+  Flex,
+  Button,
+  useBreakpointValue,
+} from "@chakra-ui/react"
 
-    return (
-        <Box w="100%" h="480px" p={5} bf="#ffff" overflowX="auto">
-            <Flex h="100%">
-                {timelineItems.map((item, index) => (
-                    <Box
-                        key={index}
-                        maxW="300px"
-                        h="200px"
-                        p={5}
-                        flexShrink={0}
-                        flexGrow={0}
-                        alignSelf={index % 2 === 0 ? "flex-start" : "flex-end"}
-                        // bg="white"
-                        position="relative"
-                        // borderRadius="10px"
-                        mr={3}
-                        // boxShadow="0px 0px 2px 2px rgba(0, 0, 0, 0.2)"
-                        _before={{
-                            content: '""',
-                            position: "absolute",
-                            width: "calc(100% + 14px)",
-                            height: "4px",
-                            top: index % 2 === 0 ? "calc(100% + 10px)" : "-15px",
-                            bg: "white",
-                            left: "-7px",
-                            // borderRadius: "5px"
-                        }}
-                        _after={{
-                            content: '""',
-                            position: "absolute",
-                            width: "4px",
-                            height: "25px",
-                            top: index % 2 === 0 ? "100%" : "-25px",
-                            left: "calc(50% - 10px)",
-                            bg: "white"
-                        }}
-                    >
-                        <Text fontSize="1.5em" fontWeight="bold">
-                            {item.title}
-                        </Text>
-                        <Text>{item.content}</Text>
+const TimelineGrid = () => {
+  const timelineItems = [
+    {
+      year: "2007",
+      content: "Founded with a vision to revolutionize surveillance technology.",
+    },
+    {
+      year: "2010",
+      content:
+        "Developed proprietary video compression technology, reducing bandwidth usage by up to 96%.",
+    },
+    {
+      year: "2013",
+      content:
+        "Expanded into AI-driven analytics, integrating facial recognition, object detection, and real-time monitoring.",
+    },
+    {
+      year: "2016",
+      content:
+        "Played a crucial role in government projects, securing contracts across multiple states.",
+    },
+    {
+      year: "2019",
+      content:
+        "Launched cloud-based surveillance solutions with enhanced security features.",
+    },
+    {
+      year: "2022",
+      content:
+        "Introduced edge computing capabilities, enabling faster processing and reduced latency.",
+    },
+  ]
 
-                        <Box
-                            position="absolute"
-                            top={index % 2 === 0 ? "calc(100% + 25px)" : "-60px"}
-                            // bg="white"
-                            p={3}
-                            w="100px"
-                            textAlign="center"
-                            // borderRadius="10px"
-                            left="calc(50% - 60px)"
-                            // boxShadow="0px 0px 2px 2px rgba(0, 0, 0, 0.2)"
-                            _before={{
-                                content: '""',
-                                width: "15px",
-                                height: "15px",
-                                // bg: "white",
-                                // borderRadius: "50%",
-                                position: "absolute",
-                                top: index % 2 === 0 ? "-20px" : "calc(100% + 2px)",
-                                left: "calc(50% - 6px)",
-                                zIndex: 2
-                            }}
-                        >
-                            {item.period}
+  // Determine how many columns should be visible responsively.
+  // For example, on mobile show 1 column; on medium and above, show 4.
+  const visibleColumns = useBreakpointValue({ base: 1, md: 4 })
+
+  // Refs for the scrollable container and its parent container.
+  const scrollContainerRef = useRef(null)
+  const containerRef = useRef(null)
+
+  // Measure container width in pixels.
+  const [containerWidth, setContainerWidth] = useState(0)
+
+  useEffect(() => {
+    if (containerRef.current) {
+      setContainerWidth(containerRef.current.offsetWidth)
+    }
+    const handleResize = () => {
+      if (containerRef.current) {
+        setContainerWidth(containerRef.current.offsetWidth)
+      }
+    }
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [visibleColumns])
+
+  // Compute the width (in pixels) of a single column based on the container width.
+  const computedColumnWidth = containerWidth / visibleColumns
+
+  // Scroll the container by one column width on button clicks.
+  const handleNext = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: computedColumnWidth,
+        behavior: "smooth",
+      })
+    }
+  }
+
+  const handlePrev = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: -computedColumnWidth,
+        behavior: "smooth",
+      })
+    }
+  }
+
+  return (
+    <Flex py={10} px={4} direction="column">
+      <Heading
+        mb={10}
+        textAlign="left"
+        fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+      >
+        <Box as="span" color="#3182CE">
+          The VMukti
+        </Box>{" "}
+        Timeline: A History of Progress
+      </Heading>
+
+      <Flex align="center" direction={{ base: "column", md: "row" }} gap={4}>
+        {/* Parent container that sets the visible area for the grid, centered with mx="auto" */}
+        <Box
+          ref={containerRef}
+          width="100%"
+          maxW={{ base: "100%", md: "80%" }}
+          mx="auto"
+        >
+          {/* Scrollable container */}
+          <Box ref={scrollContainerRef} overflowX="hidden">
+            <Grid
+              templateRows="repeat(5, auto)"
+              // Each column uses a relative width based on visible columns.
+              templateColumns={`repeat(${timelineItems.length}, calc(100% / ${visibleColumns}))`}
+              gap={4}
+              // Overall grid width is set to fit all items
+              maxWidth={`calc(${timelineItems.length} * (100% / ${visibleColumns}))`}
+            >
+              {timelineItems.map((item, colIndex) => {
+                const isOddColumn = colIndex % 2 === 0
+                return (
+                  <React.Fragment key={colIndex}>
+                    {isOddColumn ? (
+                      <>
+                        {/* Row 1: empty */}
+                        <Box gridColumn={colIndex + 1} gridRow={1} />
+                        {/* Row 2: empty */}
+                        <Box gridColumn={colIndex + 1} gridRow={2} />
+                        {/* Row 3: year */}
+                        <Box gridColumn={colIndex + 1} gridRow={3}>
+                          <Text
+                            color="blue.500"
+                            fontWeight="bold"
+                            fontSize="xl"
+                          >
+                            {item.year}
+                          </Text>
                         </Box>
-                    </Box>
-                ))}
-            </Flex>
+                        {/* Row 4: vertical divider */}
+                        <Box
+                          gridColumn={colIndex + 1}
+                          gridRow={4}
+                          display="flex"
+                          justifyContent="flex-start"
+                        >
+                          <Box w="2px" h="20px" bg="blue.500" />
+                        </Box>
+                        {/* Row 5: item content */}
+                        <Box gridColumn={colIndex + 1} gridRow={5}>
+                          <Text color="gray.700" fontSize="md">
+                            {item.content}
+                          </Text>
+                        </Box>
+                      </>
+                    ) : (
+                      <>
+                        {/* Row 1: item content */}
+                        <Box gridColumn={colIndex + 1} gridRow={1}>
+                          <Text
+                            color="gray.700"
+                            fontSize="md"
+                            flexWrap={{ base: "wrap", md: "nowrap" }}
+                            maxWidth="50%"
+                          >
+                            {item.content}
+                          </Text>
+                        </Box>
+                        {/* Row 2: vertical divider */}
+                        <Box
+                          gridColumn={colIndex + 1}
+                          gridRow={2}
+                          display="flex"
+                          justifyContent="flex-start"
+                        >
+                          <Box w="2px" h="20px" bg="blue.500" />
+                        </Box>
+                        {/* Row 3: year */}
+                        <Box gridColumn={colIndex + 1} gridRow={3}>
+                          <Text
+                            color="blue.500"
+                            fontWeight="bold"
+                            fontSize="xl"
+                          >
+                            {item.year}
+                          </Text>
+                        </Box>
+                        {/* Row 4: empty */}
+                        <Box gridColumn={colIndex + 1} gridRow={4} />
+                        {/* Row 5: empty */}
+                        <Box gridColumn={colIndex + 1} gridRow={5} />
+                      </>
+                    )}
+                  </React.Fragment>
+                )
+              })}
+            </Grid>
+          </Box>
         </Box>
-    );
-};
 
-export default Timeline;
+        <Flex gap={1}>
+          <Button
+            width="31px"
+            height="31px"
+            borderRadius="5px"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            cursor="pointer"
+            bgColor="#f3f3f3"
+            _hover={{ bgColor: "#e0e0e0" }}
+            onClick={handlePrev}
+          >
+            <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
+              <path
+                d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z"
+                fill="#3F77A5"
+              />
+            </svg>
+          </Button>
+          <Button
+            width="31px"
+            height="31px"
+            borderRadius="5px"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            cursor="pointer"
+            bgColor="#f3f3f3"
+            _hover={{ bgColor: "#e0e0e0" }}
+            onClick={handleNext}
+          >
+            <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
+              <path
+                d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z"
+                fill="#3F77A5"
+              />
+            </svg>
+          </Button>
+        </Flex>
+      </Flex>
+    </Flex>
+  )
+}
+
+export default TimelineGrid
