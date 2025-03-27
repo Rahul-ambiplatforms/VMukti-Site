@@ -208,11 +208,11 @@ export default function IndustryGrid() {
           lg: 'repeat(4, 1fr)',
         }}
         gap={{ base: '10px', md: '15px' }}
-        width="90%" // Change from 100% to avoid overflow
-        maxWidth="1385px"
-        mx="auto" // Center the grid properly
+        // width="95%" // Change from 100% to avoid overflow
+        // maxWidth="1385px"
+        // mx="auto" // Center the grid properly
         // px={{ base: '10px', md: '30px' }}
-        mt="50px"
+        mt="3%"
       >
         {grid.slice(1).flatMap((row, rowIndex) =>
           row.slice(1).map((industry, colIndex) => {
@@ -385,8 +385,8 @@ export default function IndustryGrid() {
         <Flex
           justifyContent="flex-end" // Align to the right
           alignItems="center" // Vertically center
-          width="1325px" // Match the grid width
-          maxWidth="100%" // Ensure it doesn't exceed the screen width
+          // width="95%" // Match the grid width
+          // maxWidth="100%" // Ensure it doesn't exceed the screen width
           mx="auto" // Center the container horizontally
           mt="1%" // Margin top
           position="relative" // Use relative positioning
