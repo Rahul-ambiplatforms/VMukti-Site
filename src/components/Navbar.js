@@ -28,9 +28,10 @@ import PageContentWrapper from './PageContentWrapper';
 
 const dropdownItems = {
     organization: ["Solution", "Team", "Careers"],
-    solutions: ["Solutions", "Government", "AI Solutions"],
-    industries: ["Industries", "Retail", "Education"],
-    Whoweare: ["Who we are", "About Us", "Our Team"]
+    solutions: ["Video Management System (VMS)", "Integrated Command & Control Center (ICCC)", "AI-Optimized Cloud Services", "Generative AI in Video Surveillance", "AI-Powered Surveillance Cameras", "Flying Squad Vehicle (FSV)", "Live Webcasting & Streaming"],
+    industries: ["Retailer Industry", "Manufacturing Industry", "HealthCare Industry", "Education Industry", "Finance Industry", "Transportation Industry", "City Monitoring", "Agriculture Industry", "Logistic Industry", "Sports & Entertainment Industry", "Defense Industry", "Election Industry", "Hospitality Industry"],
+    ourServing: ["Enterprise", "Government", "General Consumers"],
+    Whoweare: ["About Us", "Event Spotlight", "Social Impact", "Achievements", "Blogs", "Carrers", "Help Desk", "Terms & Condition", "Warranty Policy", "Privacy Policy"],
 };
 
 const Navbar = () => {
@@ -54,7 +55,7 @@ const Navbar = () => {
         { name: "Technology", path: "/technology" },
         { name: "Solutions", path: "/solution", hasDropdown: true, items: dropdownItems.solutions },
         { name: "Industries", path: "/industries", hasDropdown: true, items: dropdownItems.industries },
-        { name: "Our Serving", path: "/serving", hasDropdown: true, items: dropdownItems.industries },
+        { name: "Our Serving", path: "/serving", hasDropdown: true, items: dropdownItems.ourServing },
         { name: "Who we are", path: "/whoweare", hasDropdown: true, items: dropdownItems.Whoweare },
     ];
 
