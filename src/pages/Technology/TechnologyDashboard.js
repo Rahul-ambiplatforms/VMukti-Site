@@ -252,17 +252,22 @@ const TechnologyDashboard = () => {
 
           {/* Background Images Section */}
           <Flex
+            // overflow="visible"
+            // bg="red"
             position="absolute"
             right="-2%"
-            // top="50%"
+            bottom="18%"
+            // top="10%"
             // transform="translateY(-50%)"
             width="70%"
-            height="100%"
+            // height="100%"
+            height="110%"
             display={{ base: 'none', lg: 'flex' }}
             zIndex={2} // Ensure it stays above the blurred ring
           >
             {/* Brochure Image behind Dashboard */}
             <Box
+              // bg="gray"
               position="absolute"
               top="70%"
               // right="26"
@@ -285,12 +290,13 @@ const TechnologyDashboard = () => {
             {/* White Box behind Dashboard */}
             <Box
               position="absolute"
-              top="47%"
+              top="70%"
               right="3%"
               transform="translateY(-50%) perspective(1000px)"
               width="100%"
               height={{ md: '40%', lg: '60%' }}
               bg="#FFFFFF"
+            // bg="red"
               borderRadius="20px"
               // boxShadow="0px 4px 20px rgba(0, 0, 0, 0.15)"
               zIndex={2}
@@ -298,6 +304,7 @@ const TechnologyDashboard = () => {
 
             {/* Dashboard Image */}
             <Image
+            //  overflow="visible"
               src="./assets/Dashboard.png"
               alt="AI Dashboard Interface"
               position="absolute"
@@ -306,9 +313,13 @@ const TechnologyDashboard = () => {
               right="16"
               transform="perspective(1095px)"
               w="100%"
-              h="100%"
+              // h="200px"  
+              // h="100%"
+              // h="110%"
               objectFit="cover"
               zIndex={3}
+            // bg="red"
+
             />
           </Flex>
 
