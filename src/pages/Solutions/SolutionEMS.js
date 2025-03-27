@@ -372,7 +372,7 @@ const SolutionEMS = () => {
                     <Box
                       p={8}
                       bg="#F3F3F3"
-                      bg="darkred"
+                      // bg="darkred"
                       w={cardContentWidth}
                       minW="562px"
                       minH="360px"
@@ -428,7 +428,7 @@ const SolutionEMS = () => {
                     <Box
                       p={8}
                       bg="#BECEDC"
-                      bg="darkblue"
+                      // bg="darkblue"
                       w={cardContentWidth}
                       // minW="39%"
                       // minH="40%"
