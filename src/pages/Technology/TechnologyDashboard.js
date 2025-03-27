@@ -8,7 +8,7 @@
 //   return (
 //     <Box>
 //       <Flex
-//         bg="#F3F3F3"
+//         bg="#E7E7E7"
 //         w="100%"
 //         position="relative"
 //         overflow="hidden"
@@ -228,12 +228,12 @@ const TechnologyDashboard = () => {
     <PageContentWrapper>
       <Box my={8}>
         <Flex
-          bg="#F3F3F3"
+          bg="#E7E7E7"
           w="100%"
           position="relative"
           overflow="hidden"
           direction="column"
-          // minH="100%"
+        // minH="100%"
         >
           <Box
             position="absolute"
@@ -296,7 +296,7 @@ const TechnologyDashboard = () => {
               width="100%"
               height={{ md: '40%', lg: '60%' }}
               bg="#FFFFFF"
-            // bg="red"
+              // bg="red"
               borderRadius="20px"
               // boxShadow="0px 4px 20px rgba(0, 0, 0, 0.15)"
               zIndex={2}
@@ -304,7 +304,7 @@ const TechnologyDashboard = () => {
 
             {/* Dashboard Image */}
             <Image
-            //  overflow="visible"
+              //  overflow="visible"
               src="./assets/Dashboard.png"
               alt="AI Dashboard Interface"
               position="absolute"
@@ -337,7 +337,7 @@ const TechnologyDashboard = () => {
               align={{ base: 'flex-start', lg: 'flex-start' }}
               justify="flex-start"
               minH={{ base: 'auto', lg: '100vh' }}
-              // ml={{ base: '-2%', md: '2%', lg: '-4%' }}
+            // ml={{ base: '-2%', md: '2%', lg: '-4%' }}
             >
               {/* Left Content */}
               <Flex
@@ -347,9 +347,9 @@ const TechnologyDashboard = () => {
                 position="relative"
                 zIndex={3}
                 mt="4%"
-                // mx="4%"
-                // mt={{ base: 8, lg: 14 }}
-                // ml={{ base: "-2%", md: "-4%", lg: "-8%" }}
+              // mx="4%"
+              // mt={{ base: 8, lg: 14 }}
+              // ml={{ base: "-2%", md: "-4%", lg: "-8%" }}
               >
                 <Heading
                   fontSize={{

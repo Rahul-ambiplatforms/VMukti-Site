@@ -40,19 +40,19 @@ const AdvancedSurveillance = () => {
           ? cards.length - 1
           : prev - 1
         : prev === cards.length - 1
-        ? 0
-        : prev + 1
+          ? 0
+          : prev + 1
     )
   }
 
   return (
     <>
-      
+
 
       <Flex
-        backgroundColor="#f3f3f3"
+        backgroundColor="#E7E7E7"
         height="758px"
-        
+
         fontWeight="600"
         display="flex"
         justifyContent="center"
@@ -118,36 +118,36 @@ const AdvancedSurveillance = () => {
               height="408px"
             />
           </Box>
-                    {/* Ellipses */}
-                    <Box
-                        position="absolute"
-                        
-                        top="37px"
-                        left="933px"
-                        opacity="1"
-                        zIndex="2"
-                    >
-                        <Image
-                            src='./assets/Ellipse33.svg'
-                            alt="Ellipse 33"
-                            width="408px"
-                            height="408px"
-                        />
-                    </Box>
-                    <Box
-                        position="absolute"
-                        top="336px"
-                        left="70px"
-                        opacity="1"
-                        zIndex="2"
-                    >
-                        <Image
-                            src='./assets/Ellipse36.svg'
-                            alt="Ellipse 36"
-                            width="408px"
-                            height="408px"
-                        />
-                    </Box>
+          {/* Ellipses */}
+          <Box
+            position="absolute"
+
+            top="37px"
+            left="933px"
+            opacity="1"
+            zIndex="2"
+          >
+            <Image
+              src='./assets/Ellipse33.svg'
+              alt="Ellipse 33"
+              width="408px"
+              height="408px"
+            />
+          </Box>
+          <Box
+            position="absolute"
+            top="336px"
+            left="70px"
+            opacity="1"
+            zIndex="2"
+          >
+            <Image
+              src='./assets/Ellipse36.svg'
+              alt="Ellipse 36"
+              width="408px"
+              height="408px"
+            />
+          </Box>
 
           {/* Cards Section */}
           <Flex
@@ -164,7 +164,7 @@ const AdvancedSurveillance = () => {
                 width={activeCard === index ? '80%' : '20%'}
                 height="439px"
                 borderRadius="24px"
-                bgColor="#f3f3f3"
+                bgColor="#E7E7E7"
                 _hover={{ cursor: 'pointer' }}
                 transition="width 0.3s ease"
                 position="relative"
@@ -276,7 +276,7 @@ const AdvancedSurveillance = () => {
               alignItems="center"
               justifyContent="center"
               cursor="pointer"
-              bgColor="#f3f3f3"
+              bgColor="#E7E7E7"
               _hover={{ bgColor: '#e0e0e0' }}
               onClick={() => handleNavigation('left')}
             >
@@ -311,7 +311,7 @@ const AdvancedSurveillance = () => {
               alignItems="center"
               justifyContent="center"
               cursor="pointer"
-              bgColor="#f3f3f3"
+              bgColor="#E7E7E7"
               _hover={{ bgColor: '#e0e0e0' }}
               onClick={() => handleNavigation('right')}
             >

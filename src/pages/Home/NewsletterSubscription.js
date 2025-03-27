@@ -70,7 +70,7 @@ const NewsletterSubscription = () => {
         padding="4% 2% 1% 2%"
         // fontFamily="'Wix Madefor Display', sans-serif"
         fontWeight={600}
-        bg={'#f3f3f3'}
+        bg={'#E7E7E7'}
       >
         {/* Subscription Banner */}
         <SubscriptionBanner />
@@ -83,18 +83,18 @@ const NewsletterSubscription = () => {
             borderRadius="24px"
             p="20px"
             flex="2"
-            // boxShadow="lg"
-            // _hover={{
-            //   boxShadow: 'xl',
-            //   transform: 'scale(1.01)',
-            //   transition: 'all 0.3s ease',
-            // }}
+          // boxShadow="lg"
+          // _hover={{
+          //   boxShadow: 'xl',
+          //   transform: 'scale(1.01)',
+          //   transition: 'all 0.3s ease',
+          // }}
           >
             <Heading
               fontSize="16px"
               fontWeight={700}
-              // mb="20px"
-            
+            // mb="20px"
+
             >
               Who we are
             </Heading>
@@ -161,18 +161,18 @@ const NewsletterSubscription = () => {
               borderRadius="15px"
               p="20px"
               mb="20px"
-              // boxShadow="lg"
-              // _hover={{
-              //   boxShadow: 'xl',
-              //   transform: 'scale(1.01)',
-              //   transition: 'all 0.3s ease',
-              // }}
+            // boxShadow="lg"
+            // _hover={{
+            //   boxShadow: 'xl',
+            //   transform: 'scale(1.01)',
+            //   transition: 'all 0.3s ease',
+            // }}
             >
               <Heading
                 fontSize="16px"
                 // mb="10px"
                 fontWeight={700}
-                // fontFamily="'Wix Madefor Display', sans-serif"
+              // fontFamily="'Wix Madefor Display', sans-serif"
               >
                 Our Servings
               </Heading>
@@ -204,18 +204,18 @@ const NewsletterSubscription = () => {
               p="20px"
               flex="1"
               minW="250px"
-              // boxShadow="lg"
-              // _hover={{
-              //   boxShadow: 'xl',
-              //   transform: 'scale(1.01)',
-              //   transition: 'all 0.3s ease',
-              // }}
+            // boxShadow="lg"
+            // _hover={{
+            //   boxShadow: 'xl',
+            //   transform: 'scale(1.01)',
+            //   transition: 'all 0.3s ease',
+            // }}
             >
               <Heading
                 fontSize="16px"
                 fontWeight={700}
-                // fontFamily="'Wix Madefor Display', sans-serif"
-                // mb="10px"
+              // fontFamily="'Wix Madefor Display', sans-serif"
+              // mb="10px"
               >
                 Contact Us
               </Heading>
@@ -280,17 +280,17 @@ const NewsletterSubscription = () => {
             flex="1"
             minW="250px"
             boxShadow="lg"
-            // _hover={{
-            //   boxShadow: 'xl',
-            //   transform: 'scale(1.01)',
-            //   transition: 'all 0.3s ease',
-            // }}
+          // _hover={{
+          //   boxShadow: 'xl',
+          //   transform: 'scale(1.01)',
+          //   transition: 'all 0.3s ease',
+          // }}
           >
             <Heading
               fontSize="16px"
               fontWeight={700}
-              // fontFamily="'Wix Madefor Display', sans-serif"
-              // mb="10px"
+            // fontFamily="'Wix Madefor Display', sans-serif"
+            // mb="10px"
             >
               Our Solutions
             </Heading>
@@ -332,18 +332,18 @@ const NewsletterSubscription = () => {
             p="20px"
             flex="1"
             minW="250px"
-            // boxShadow="lg"
-            // _hover={{
-            //   boxShadow: 'xl',
-            //   transform: 'scale(1.01)',
-            //   transition: 'all 0.3s ease',
-            // }}
+          // boxShadow="lg"
+          // _hover={{
+          //   boxShadow: 'xl',
+          //   transform: 'scale(1.01)',
+          //   transition: 'all 0.3s ease',
+          // }}
           >
             <Heading
               fontSize="16px"
               fontWeight={700}
-              // fontFamily="'Wix Madefor Display', sans-serif"
-              // mb="10px"
+            // fontFamily="'Wix Madefor Display', sans-serif"
+            // mb="10px"
             >
               Industries we serve
             </Heading>

@@ -180,7 +180,7 @@ const SolutionEMS = () => {
 
   return (
     <Box
-      bg=" #F3F3F3"
+      bg=" #E7E7E7"
       //   bg="darkblue"
       minH="100vh"
       overflowX="hidden"
@@ -371,7 +371,7 @@ const SolutionEMS = () => {
                   <Flex direction="column">
                     <Box
                       p={8}
-                      bg="#F3F3F3"
+                      bg="#E7E7E7"
                       // bg="darkred"
                       w={cardContentWidth}
                       minW="562px"

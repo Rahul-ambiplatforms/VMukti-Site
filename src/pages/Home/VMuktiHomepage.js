@@ -45,7 +45,7 @@ const VMuktiHomepage = () => {
     lg: '408px',
   })
   return (
-    <Box minH="100vh" bg="#f3f3f3" overflow="hidden" position="relative">
+    <Box minH="100vh" bg="#E7E7E7" overflow="hidden" position="relative">
       <Image
         src={'/assets/Ellipse38.png' || '/placeholder.svg'}
         alt="ellipse38"
@@ -188,8 +188,8 @@ const VMuktiHomepage = () => {
             <Image
               src="/assets/robohand.png"
               alt="Robotic Hand"
-              // w={{ base: '80%', md: '500px' }} // Reduced image size
-              // h={{ base: 'auto', md: '500px' }}
+            // w={{ base: '80%', md: '500px' }} // Reduced image size
+            // h={{ base: 'auto', md: '500px' }}
             />
 
             {/* Book Demo Button */}
