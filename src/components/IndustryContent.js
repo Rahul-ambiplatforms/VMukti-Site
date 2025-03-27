@@ -238,11 +238,7 @@ const IndustryContent = ({ props, content = {
   return (
     <>
       {/* Import the custom font */}
-      <style>
-        {`
-          @import 'https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600&display=swap');
-        `}
-      </style>
+      
 
       {/* Container Box with background and width */}
       {/* Main Container Box */}
@@ -250,7 +246,7 @@ const IndustryContent = ({ props, content = {
         <Box
           mt={{ base: '20px', md: '40px' }}
           as="section"
-          style={{ fontFamily: "'Wix Madefor Display', sans-serif" }}
+        
           backgroundColor="#F3F3F3"
           width="100%"
           display="flex"
@@ -523,7 +519,7 @@ const IndustryContent = ({ props, content = {
               color="#FFF"
               fontSize="36px"
               fontWeight="600"
-              fontFamily="'Wix Madefor Display', sans-serif"
+             
               textAlign={{ base: 'center', md: 'left' }}
               marginBottom={{ base: '16px', md: '0' }}
             >

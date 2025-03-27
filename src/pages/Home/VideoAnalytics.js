@@ -57,7 +57,7 @@ const VideoAnalytics = () => {
         >
           <Text
             color="#FFF"
-            fontFamily="'Wix Madefor Display', sans-serif"
+           
             fontSize={{ base: "24px", md: "36px" }}
             fontStyle="normal"
             fontWeight="500"

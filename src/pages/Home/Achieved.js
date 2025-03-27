@@ -102,11 +102,7 @@ const Achieved = () => {
 
   return (
     <>
-      <style>
-        {`
-          @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;600;700&display=swap');
-        `}
-      </style>
+     
 
       <Flex
         position="relative"
@@ -120,7 +116,7 @@ const Achieved = () => {
         maxWidth={containerWidth}
         minHeight={containerHeight}
         margin="0 auto"
-        fontFamily="'Wix Madefor Display', sans-serif"
+     
       >
         <Text
           fontSize={titleFontSize}

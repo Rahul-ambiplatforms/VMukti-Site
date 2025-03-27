@@ -108,7 +108,7 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
         >
           <Text
             color="black"
-            fontFamily="'Wix Madefor Display', sans-serif"
+          
             fontSize={headingSize}
             fontWeight="400"
             letterSpacing="-0.72px"

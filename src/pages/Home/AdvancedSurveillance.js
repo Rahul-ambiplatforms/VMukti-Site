@@ -47,14 +47,12 @@ const AdvancedSurveillance = () => {
 
   return (
     <>
-      <style>
-        {`@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;600&display=swap');`}
-      </style>
+      
 
       <Flex
         backgroundColor="#f3f3f3"
         height="758px"
-        fontFamily="'Wix Madefor Display', sans-serif"
+        
         fontWeight="600"
         display="flex"
         justifyContent="center"

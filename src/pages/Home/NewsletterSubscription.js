@@ -94,7 +94,7 @@ const NewsletterSubscription = () => {
               fontSize="16px"
               fontWeight={700}
               // mb="20px"
-              // fontFamily="'Wix Madefor Display', sans-serif"
+            
             >
               Who we are
             </Heading>

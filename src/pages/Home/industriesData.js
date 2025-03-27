@@ -300,11 +300,7 @@ export default function IndustryGrid() {
   })
   return (
     <>
-      <style>
-        {`
-      @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;600&display=swap');
-    `}
-      </style>
+     
       <Box
         textAlign="center"
         backgroundColor="#f3f3f3"
@@ -312,7 +308,7 @@ export default function IndustryGrid() {
         minHeight={{ base: 'auto', md: '1338px' }}
         position="relative"
         mx="auto"
-        fontFamily="'Wix Madefor Display', sans-serif"
+      
         pb={{ base: '50px', md: '0' }}
         overflow="hidden"
         _before={{
