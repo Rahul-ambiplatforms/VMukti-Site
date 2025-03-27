@@ -11,6 +11,7 @@ import NewsletterSubscription from './pages/Home/NewsletterSubscription';
 import SolutionsHome from './pages/Solutions/SolutionsHome';
 import IndustryDashboard from './pages/IndustriesDashboard/industriesDashboard'
 import IndustryDetails from './pages/IndustriesDashboard/industryDetails';
+import WhoWeare from './pages/Who/WhoDash';
 
 function App() {
   // Assuming the Navbar height is 60px
@@ -31,6 +32,7 @@ function App() {
             <Route path="/solution" element={<SolutionsHome />} />
             <Route path="/industries" element={<IndustryDashboard />} />
             <Route path="/industries/:name" element={<IndustryDetails />} />
+            <Route path="/whoweare" element={<WhoWeare />} />
           </Routes>
         </Box>
       </Router>

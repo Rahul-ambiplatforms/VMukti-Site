@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import {
     Flex,
-    Image,
     Button,
     HStack,
     Menu,
@@ -31,7 +30,7 @@ const dropdownItems = {
     organization: ["Solution", "Team", "Careers"],
     solutions: ["Solutions", "Government", "AI Solutions"],
     industries: ["Industries", "Retail", "Education"],
-
+    Whoweare: ["Who we are", "About Us", "Our Team"]
 };
 
 const Navbar = () => {
@@ -56,7 +55,7 @@ const Navbar = () => {
         { name: "Solutions", path: "/solution", hasDropdown: true, items: dropdownItems.solutions },
         { name: "Industries", path: "/industries", hasDropdown: true, items: dropdownItems.industries },
         { name: "Our Serving", path: "/serving", hasDropdown: true, items: dropdownItems.industries },
-        { name: "Who we are", path: "/who", hasDropdown: true, items: dropdownItems.solutions },
+        { name: "Who we are", path: "/whoweare", hasDropdown: true, items: dropdownItems.Whoweare },
     ];
 
     return (
