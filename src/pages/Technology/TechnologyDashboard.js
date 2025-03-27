@@ -226,16 +226,14 @@ import PageContentWrapper from '../../components/PageContentWrapper'
 const TechnologyDashboard = () => {
   return (
     <PageContentWrapper>
-      <Box
-        my={8}
-      >
+      <Box my={8}>
         <Flex
           bg="#F3F3F3"
           w="100%"
           position="relative"
           overflow="hidden"
           direction="column"
-        // minH="100%"
+          // minH="100%"
         >
           <Box
             position="absolute"
@@ -303,8 +301,8 @@ const TechnologyDashboard = () => {
               src="./assets/Dashboard.png"
               alt="AI Dashboard Interface"
               position="absolute"
-              // top="10%" 
-              // mt="10%"          
+              top="15%"
+              // mt="10%"
               right="16"
               transform="perspective(1095px)"
               w="100%"
@@ -328,7 +326,7 @@ const TechnologyDashboard = () => {
               align={{ base: 'flex-start', lg: 'flex-start' }}
               justify="flex-start"
               minH={{ base: 'auto', lg: '100vh' }}
-            // ml={{ base: '-2%', md: '2%', lg: '-4%' }}
+              // ml={{ base: '-2%', md: '2%', lg: '-4%' }}
             >
               {/* Left Content */}
               <Flex
@@ -338,12 +336,17 @@ const TechnologyDashboard = () => {
                 position="relative"
                 zIndex={3}
                 mt="4%"
-              // mx="4%"
-              // mt={{ base: 8, lg: 14 }}
-              // ml={{ base: "-2%", md: "-4%", lg: "-8%" }}
+                // mx="4%"
+                // mt={{ base: 8, lg: 14 }}
+                // ml={{ base: "-2%", md: "-4%", lg: "-8%" }}
               >
                 <Heading
-                  fontSize={{ base: '20px', sm: '30px', md: '40px', lg: '48px' }}
+                  fontSize={{
+                    base: '20px',
+                    sm: '30px',
+                    md: '40px',
+                    lg: '48px',
+                  }}
                   lineHeight={{ base: '1.2', lg: 'normal' }}
                   mb={12}
                   // mt={{ base: '5%', lg: '0' }}
@@ -432,11 +435,9 @@ const TechnologyDashboard = () => {
           </Box>
         </Flex>
 
-
         <ComputerVisionPage />
-      </Box >
-
-    </PageContentWrapper >
+      </Box>
+    </PageContentWrapper>
   )
 }
 
