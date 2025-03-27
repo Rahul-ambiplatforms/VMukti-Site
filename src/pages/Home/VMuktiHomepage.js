@@ -18,6 +18,7 @@ import Diagram from './Diagram'
 import Industries from './industriesData'
 import AdvancedSurveillance from './AdvancedSurveillance'
 import TechnologyDashboard from '../Technology/TechnologyDashboard'
+import ContactUs from '../ContactUs/Contactus'
 
 const VMuktiHomepage = () => {
   const customData = {
@@ -257,6 +258,9 @@ const VMuktiHomepage = () => {
       </PageContentWrapper>
 
       <Achieved />
+
+
+      <ContactUs />
     </Box>
   )
 }
