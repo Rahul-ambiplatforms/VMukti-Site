@@ -10,7 +10,7 @@ import Navbar from './components/Navbar';
 import NewsletterSubscription from './pages/Home/NewsletterSubscription';
 import SolutionsHome from './pages/Solutions/SolutionsHome';
 import IndustryDashboard from './pages/IndustriesDashboard/industriesDashboard'
-import PageContentWrapper from './components/PageContentWrapper';
+import IndustryDetails from './pages/IndustriesDashboard/industryDetails';
 
 function App() {
   // Assuming the Navbar height is 60px
@@ -30,6 +30,7 @@ function App() {
             <Route path="/technology" element={<TechnologyDashboard />} />
             <Route path="/solution" element={<SolutionsHome />} />
             <Route path="/industries" element={<IndustryDashboard />} />
+            <Route path="/industries/:name" element={<IndustryDetails />} />
           </Routes>
         </Box>
       </Router>
