@@ -26,7 +26,7 @@ function App() {
         <Navbar />
 
         {/* Page content with padding to account for Navbar height */}
-        <Box pt={navbarHeight} bg="#f3f3f3">  {/* Add padding-top equal to Navbar height */}
+        <Box pt={navbarHeight} bg="#E7E7E7">  {/* Add padding-top equal to Navbar height */}
           <Routes>
             <Route path="/" element={<VMuktiHomepage />} />
             <Route path="/technology" element={<TechnologyDashboard />} />

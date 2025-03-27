@@ -36,7 +36,7 @@ const AdvancedComputerVision = ({
   const [activeCard, setActiveCard] = useState(0);
   // hoverCard is temporary (updated on mouse enter/leave)
   const [hoverCard, setHoverCard] = useState(null);
-  
+
   // effectiveCard determines which card is visually expanded
   const effectiveCard = hoverCard !== null ? hoverCard : activeCard;
 
@@ -170,25 +170,25 @@ const AdvancedComputerVision = ({
             {/* Text below the card for the active card */}
             {effectiveCard === index && (
               <Box mt={3}>
-                
-              <Text
-                whiteSpace="nowrap"
-                fontSize={{ base: "14px", md: "16px" }}
-                fontWeight="700"
-              >
-                {card.label}
-                <Box
-                  width="15px"
-                  height="2px"
-                  bgColor="#3f77a5"
-                  borderRadius="2px"
-                  marginBottom="8px"
-                />
-              </Text>
-              <Text whiteSpace="nowrap" fontSize={{ base: "12px", md: "14px" }} color="#696969">
-                {description}
-              </Text>
-            </Box>
+
+                <Text
+                  whiteSpace="nowrap"
+                  fontSize={{ base: "14px", md: "16px" }}
+                  fontWeight="700"
+                >
+                  {card.label}
+                  <Box
+                    width="15px"
+                    height="2px"
+                    bgColor="#3f77a5"
+                    borderRadius="2px"
+                    marginBottom="8px"
+                  />
+                </Text>
+                <Text whiteSpace="nowrap" fontSize={{ base: "12px", md: "14px" }} color="#696969">
+                  {description}
+                </Text>
+              </Box>
             )}
           </Flex>
         ))}
@@ -205,7 +205,7 @@ const AdvancedComputerVision = ({
             alignItems="center"
             justifyContent="center"
             cursor="pointer"
-            bgColor="#f3f3f3"
+            bgColor="#E7E7E7"
             _hover={{ bgColor: "#e0e0e0" }}
             onClick={() => handleNavigation("left")}
           >
@@ -221,7 +221,7 @@ const AdvancedComputerVision = ({
             alignItems="center"
             justifyContent="center"
             cursor="pointer"
-            bgColor="#f3f3f3"
+            bgColor="#E7E7E7"
             _hover={{ bgColor: "#e0e0e0" }}
             onClick={() => handleNavigation("right")}
           >

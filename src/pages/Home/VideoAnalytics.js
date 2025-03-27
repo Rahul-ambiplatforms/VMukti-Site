@@ -57,7 +57,7 @@ const VideoAnalytics = () => {
         >
           <Text
             color="#FFF"
-           
+
             fontSize={{ base: "24px", md: "36px" }}
             fontStyle="normal"
             fontWeight="500"
@@ -110,7 +110,7 @@ const VideoAnalytics = () => {
                 alignItems="center"
                 justifyContent="center"
                 cursor="pointer"
-                bgColor="#f3f3f3"
+                bgColor="#E7E7E7"
                 _hover={{ bgColor: "#e0e0e0" }}
                 onClick={handlePrevious}
               >
@@ -129,7 +129,7 @@ const VideoAnalytics = () => {
                 alignItems="center"
                 justifyContent="center"
                 cursor="pointer"
-                bgColor="#f3f3f3"
+                bgColor="#E7E7E7"
                 _hover={{ bgColor: "#e0e0e0" }}
                 onClick={handleNext}
               >
@@ -219,7 +219,7 @@ const VideoAnalytics = () => {
             height="511px"
             borderRadius="24px"
             padding="25px"  // Fully rounded like left box
-            bgColor="#F3F3F3"
+            bgColor="#E7E7E7"
             zIndex={2}
             right={0}
           >

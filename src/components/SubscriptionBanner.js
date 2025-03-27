@@ -108,7 +108,7 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
         >
           <Text
             color="black"
-          
+
             fontSize={headingSize}
             fontWeight="400"
             letterSpacing="-0.72px"
@@ -139,7 +139,7 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
             width="100%"
             height="50px"
             borderRadius="20px"
-            background="#F3F3F3"
+            background="#E7E7E7"
             alignItems="center"
             px="12px"
             boxShadow="sm"

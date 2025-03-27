@@ -224,7 +224,7 @@ const AITechnologies = () => {
               alignItems="center"
               justifyContent="center"
               cursor="pointer"
-              bgColor="#f3f3f3"
+              bgColor="#E7E7E7"
               _hover={{ bgColor: '#e0e0e0' }}
               onClick={handlePrev}
               aria-label="Previous slide"
@@ -244,7 +244,7 @@ const AITechnologies = () => {
               alignItems="center"
               justifyContent="center"
               cursor="pointer"
-              bgColor="#f3f3f3"
+              bgColor="#E7E7E7"
               _hover={{ bgColor: '#e0e0e0' }}
               onClick={handleNext}
               aria-label="Next slide"

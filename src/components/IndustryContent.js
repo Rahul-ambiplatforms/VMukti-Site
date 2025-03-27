@@ -238,7 +238,7 @@ const IndustryContent = ({ props, content = {
   return (
     <>
       {/* Import the custom font */}
-      
+
 
       {/* Container Box with background and width */}
       {/* Main Container Box */}
@@ -246,8 +246,8 @@ const IndustryContent = ({ props, content = {
         <Box
           mt={{ base: '20px', md: '40px' }}
           as="section"
-        
-          backgroundColor="#F3F3F3"
+
+          backgroundColor="#E7E7E7"
           width="100%"
           display="flex"
           flexDirection="column"
@@ -460,7 +460,7 @@ const IndustryContent = ({ props, content = {
                   alt={card.image_alt}
                   width="100%"
                   height={{ base: '200px', md: '368px' }}
-                  backgroundColor="#F3F3F3"
+                  backgroundColor="#E7E7E7"
                   borderRadius="24px"
                   flexShrink="0"
                 // marginBottom="16px"
@@ -519,7 +519,7 @@ const IndustryContent = ({ props, content = {
               color="#FFF"
               fontSize="36px"
               fontWeight="600"
-             
+
               textAlign={{ base: 'center', md: 'left' }}
               marginBottom={{ base: '16px', md: '0' }}
             >

@@ -554,15 +554,15 @@ export default function IndustryDashboard() {
 
     return (
         <>
-           
+
             <Box
                 textAlign="center"
-                backgroundColor="#f3f3f3"
+                backgroundColor="#E7E7E7"
                 maxWidth="100%"
                 minHeight={{ base: 'auto', md: '1673px' }}
                 position="relative"
                 mx="auto"
-               
+
                 pb={{ base: '50px', md: '0' }}
                 overflow="hidden"
                 _before={{

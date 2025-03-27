@@ -76,13 +76,13 @@ const Achieved = () => {
     base: 'clamp(32px, 8vw, 48px)',  // Min 32px, scales up to 48px for small screens
     md: 'clamp(48px, 6vw, 64px)',   // Min 48px, scales up to 64px for medium+ screens
   });
-  
+
 
   const labelFontSize = useBreakpointValue({
     base: 'clamp(12px, 2vw, 12px)',  // Fixed at 12px for small screens
     md: 'clamp(12px, 1.5vw, 16px)',  // Starts at 12px, scales up to 16px for medium+ screens
   });
-  
+
 
   const labelBottomMargin = useBreakpointValue({
     base: '10px',
@@ -102,7 +102,7 @@ const Achieved = () => {
 
   return (
     <>
-     
+
 
       <Flex
         position="relative"
@@ -111,12 +111,12 @@ const Achieved = () => {
         direction={'column'}
         alignItems="center"
         padding={{ base: '20px', md: '40px 20px' }}
-        backgroundColor="#f3f3f3"
+        backgroundColor="#E7E7E7"
         width="100%"
         maxWidth={containerWidth}
         minHeight={containerHeight}
         margin="0 auto"
-     
+
       >
         <Text
           fontSize={titleFontSize}
