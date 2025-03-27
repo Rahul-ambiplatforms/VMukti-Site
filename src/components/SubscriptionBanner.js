@@ -75,7 +75,7 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
         zIndex={4}
       >
         <Image
-          src="./assets/robot.png"
+          src={`${process.env.PUBLIC_URL}/assets/robot.png`} // Use absolute path
           alt="AI Robot"
           ml="15%"
           width="100%"
