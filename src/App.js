@@ -12,6 +12,7 @@ import SolutionsHome from './pages/Solutions/SolutionsHome';
 import IndustryDashboard from './pages/IndustriesDashboard/industriesDashboard'
 import IndustryDetails from './pages/IndustriesDashboard/industryDetails';
 import WhoWeare from './pages/Who/WhoDash';
+import EventSpotlight from './pages/EventSpotlight/EventDashboard';
 
 function App() {
   // Assuming the Navbar height is 60px
@@ -33,6 +34,7 @@ function App() {
             <Route path="/industries" element={<IndustryDashboard />} />
             <Route path="/industries/:name" element={<IndustryDetails />} />
             <Route path="/whoweare" element={<WhoWeare />} />
+            <Route path="/eventspotlight" element={<EventSpotlight />} />
           </Routes>
         </Box>
       </Router>
