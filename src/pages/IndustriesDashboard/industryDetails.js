@@ -3,7 +3,7 @@ import IndustryContent from "../../components/IndustryContent";
 import React from "react";
 import PageContentWrapper from "../../components/PageContentWrapper";
 import { Box } from "@chakra-ui/react";
-import industriesData from "../../data/industriesData"; // Centralized data file
+import industriesData from "../../data/industriesConstData"; // Centralized data file
 
 const toCamelCase = (str) => {
     return str.replace(/-([a-z])/g, (match, letter) => letter.toUpperCase());
