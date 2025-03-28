@@ -23,7 +23,7 @@ import {
     useBreakpointValue,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { Link } from 'react-router-dom' // Import Link from react-router-dom
+import { Link, useLocation } from 'react-router-dom' // Import Link and useLocation from react-router-dom
 import PageContentWrapper from './PageContentWrapper';
 
 const dropdownItems = {
@@ -37,6 +37,27 @@ const dropdownItems = {
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [activeLink, setActiveLink] = useState('Home') // State to track active link
+    const location = useLocation(); // Use location hook
+    const pathToLinkName = {
+        '/': 'Home',
+        '/technology': 'Technology',
+        '/solution': 'Solutions',
+        '/industries': 'Industries',
+        '/serving': 'Our Serving',
+        '/whoweare': 'Who we are',
+    };
+
+    React.useEffect(() => {
+        const currentLink = pathToLinkName[location.pathname];
+        if (currentLink) {
+            setActiveLink(currentLink);
+        }
+    }, [location]);
+
+    // Helper function to check if the current path starts with the link’s base path
+    function isPathActive(path) {
+        return location.pathname === path || location.pathname.startsWith(path + '/');
+    }
 
     // Responsive values
     const logoHeight = useBreakpointValue({ base: '25px', md: '25px' })
@@ -127,12 +148,21 @@ const Navbar = () => {
                                                     <path d="M6 6L12 0L0 0L6 6Z" fill="#3F77A5" />
                                                 </svg>}
                                                 variant="ghost"
-                                                // color={activeLink === item.name ? "#3182ce" : "black"}
-                                                fontWeight={activeLink === item.name ? "500" : "400"}
+                                                fontWeight={isPathActive(item.path) ? "500" : "400"}
                                                 onClick={() => handleLinkClick(item.name)}
                                                 position="relative"
                                             >
                                                 {item.name}
+                                                {isPathActive(item.path) && (
+                                                    <Box
+                                                        position="absolute"
+                                                        bottom="6px"
+
+                                                        width="20px"
+                                                        height="1.5px"
+                                                        bg="#3F77A5"
+                                                    />
+                                                )}
                                             </MenuButton>
                                             <MenuList>
                                                 {item.items.map((dropdownLabel, idx) => (
@@ -153,21 +183,19 @@ const Navbar = () => {
                                             <Link
                                                 to={item.path}
                                                 style={{
-                                                    color: activeLink === item.name ? "#3F77A5" : "black",
-                                                    fontWeight: activeLink === item.name ? "700" : "400",
+                                                    color: isPathActive(item.path) ? "#3F77A5" : "black",
+                                                    fontWeight: isPathActive(item.path) ? "700" : "400",
                                                     textDecoration: "none",
                                                     position: "relative",
                                                 }}
                                                 onClick={() => handleLinkClick(item.name)}
                                             >
                                                 {item.name}
-                                                {activeLink === item.name && (
+                                                {isPathActive(item.path) && (
                                                     <Box
                                                         position="absolute"
                                                         bottom="-4px"
-                                                        // left="50%"
-                                                        // transform="translateX(-50%)"
-                                                        width="25%"
+                                                        width="20px"
                                                         height="2px"
                                                         bg="#3F77A5"
                                                     />
@@ -177,7 +205,6 @@ const Navbar = () => {
                                     )}
                                 </Flex>
                                 {index < navigationItems.length - 1 && (
-                                    // <Box w="2px" h="16px" bg="#8F8F8F" mx={2} />
                                     <Text mx={2}>|</Text>
                                 )}
                             </React.Fragment>
@@ -224,9 +251,9 @@ const Navbar = () => {
                                     key={item.name}
                                     to={item.path}
                                     style={{
-                                        color: activeLink === item.name ? "#3182ce" : "black",
+                                        color: isPathActive(item.path) ? "#3182ce" : "black",
                                         fontSize: "lg",
-                                        fontWeight: activeLink === item.name ? "500" : "400",
+                                        fontWeight: isPathActive(item.path) ? "500" : "400",
                                         paddingBottom: "4px",
                                         textDecoration: "none",
                                     }}
@@ -234,7 +261,7 @@ const Navbar = () => {
                                 >
                                     {item.name}
                                     {/* Only show divider if active and not the last item */}
-                                    {activeLink === item.name && index < navigationItems.length - 1 && (
+                                    {isPathActive(item.path) && index < navigationItems.length - 1 && (
                                         <Box mt={1} display="flex" justifyContent="left">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="2" viewBox="0 0 17 2" fill="none">
                                                 <path d="M16 1L1 0.999999" stroke="#3F77A5" strokeWidth="2" strokeLinecap="round" />
