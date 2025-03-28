@@ -6,8 +6,15 @@ import ServingsModelGrid from "./ServingsModelGrid";
 import ServingsAdvantages from "./ServingsAdvantages";
 
 const ServingsContent = ({ page: name }) => {
-    const data = servingsData[name];
-    console.log("data is ", data);
+    if (!name || typeof name !== 'string') {
+        return <Box mt="5%">Not found</Box>;
+    }
+
+    const data = servingsData[name.toLowerCase()];
+    if (!data || typeof data !== 'object') {
+        return <Box mt="5%">Not found</Box>;
+    }
+
     return (
         <>
             <PageContentWrapper>

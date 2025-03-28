@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Box, Flex, Text, Image, Button } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
 const AdvancedSurveillance = () => {
   const [activeCard, setActiveCard] = useState(0)
@@ -180,9 +181,9 @@ const AdvancedSurveillance = () => {
                       padding="20px"
                       display="flex"
                       flexDirection="column"
-                      justifyContent="flex-start" // Align content to the top
+                      justifyContent="space-between" // Align content to the top
                     >
-                      <Text
+                      <Box><Text
                         fontSize="16px"
                         fontWeight="700"
                         letterSpacing="-0.24px"
@@ -197,15 +198,26 @@ const AdvancedSurveillance = () => {
                           marginTop="5px"
                         />
                       </Text>
-                      <Text
-                        color="#696969"
-                        fontSize="14px"
-                        fontWeight="600"
-                        letterSpacing="-0.21px"
-                        marginTop="10px"
-                      >
-                        {card.description}
-                      </Text>
+                        <Text
+                          color="#696969"
+                          fontSize="14px"
+                          fontWeight="600"
+                          letterSpacing="-0.21px"
+                          marginTop="10px"
+                        >
+                          {card.description}
+                        </Text></Box>
+                      <Link to={`/serving/${card.label}`}>
+                        <Flex gap={2}>
+
+                          <Text fontSize={{ base: "12px", md: "14px" }} fontWeight={400}>Know more</Text>
+                          <Box>
+                            <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M20.9602 12.9601C21.546 12.3743 21.546 11.4245 20.9602 10.8388L11.4143 1.29281C10.8285 0.707026 9.87876 0.707026 9.29297 1.29281C8.70719 1.8786 8.70719 2.82835 9.29297 3.41413L17.7783 11.8994L9.29297 20.3847C8.70719 20.9705 8.70719 21.9202 9.29297 22.506C9.87876 23.0918 10.8285 23.0918 11.4143 22.506L20.9602 12.9601ZM0.100586 13.3994L19.8996 13.3994V10.3994L0.100586 10.3994V13.3994Z" fill="black" />
+                            </svg>
+                          </Box>
+                        </Flex>
+                      </Link>
                     </Box>
                     {/* Right Frame (Image) */}
                     <Box

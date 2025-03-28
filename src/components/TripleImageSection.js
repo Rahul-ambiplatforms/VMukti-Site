@@ -1,22 +1,28 @@
 import { Box, Container, Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
 
-const TripleImageSection = () => {
+const TripleImageSection = ({
+    heading = [
+        { text: "AI-Powered", color: "#000" },
+        { text: "Surveillance", color: "#3F77A5" },
+        { text: "\nSolutions", color: "#DB7B3A" },
+    ],
+    description = "Unlock smarter security with AI-driven surveillance solutions for real-time monitoring, proactive threat detection, and seamless video management. Enhance safety and efficiency with scalable, future-ready technology.",
+    images = ["./assets/sol1st.png", "./assets/sol2nd.png", "./assets/sol3rd.png"] }) => {
     return (<Box bg="#E7E7E7" py={10} px={8} >
         <Container maxW="100%">
-            {/* Heading Section (above everything) */}
-            <VStack align="start" spacing={4}>
-                <Heading as="h1" size="xl">
-                    <Text as="span" color="#000" fontSize="48px" fontWeight="600" lineHeight="normal">
-                        AI-Powered{' '}
-                    </Text>
-                    <Text as="span" color="#3F77A5" fontSize="48px" fontWeight="600" lineHeight="normal">
-                        Surveillance
-                    </Text>
-                </Heading>
-                <Heading as="h2" size="lg" color="#DB7B3A" fontSize="48px" fontWeight="600" lineHeight="normal">
-                    Solutions
-                </Heading>
-            </VStack>
+            {heading.map((item, index) => (
+                <Text
+                    key={index}
+                    as="span"
+                    color={item.color}
+                    fontSize="48px"
+                    fontWeight="600"
+                    lineHeight="normal"
+                    whiteSpace="pre-wrap"
+                >
+                    {item.text}{' '}
+                </Text>
+            ))}
 
             {/* Content Section */}
             <Flex align="flex-start" mt={4} position="relative"> {/* Added position relative */}
@@ -29,9 +35,7 @@ const TripleImageSection = () => {
                         fontStyle="normal"
                         fontWeight="500"
                         lineHeight="normal">
-                        Unlock smarter security with AI-driven surveillance solutions for real-time monitoring,
-                        proactive threat detection, and seamless video management. Enhance safety and efficiency
-                        with scalable, future-ready technology.
+                        {description}
                     </Text>
                     {/* New Box Below Text */}
                     {/* <Box
@@ -54,38 +58,23 @@ const TripleImageSection = () => {
 
 
                 <Flex gap="38px" ml="auto" mt={0} position="relative" zIndex={1}> {/* Ensuring images stay above */}
-                    {/* Card 1 */}
-                    <Box borderRadius="lg" overflow="hidden" w="306px" h="594px">
-                        <Image
-                            src="./assets/sol1st.png"
-                            alt="Surveillance Image 1"
-                            w="305px"
-                            h="552px"
-                            objectFit="cover"
-                        />
-                    </Box>
-
-                    {/* Card 2 */}
-                    <Box borderRadius="lg" overflow="hidden" w="306px" h="594px">
-                        <Image
-                            src="./assets/sol2nd.png"
-                            alt="Surveillance Image 2"
-                            w="305px"
-                            h="552px"
-                            objectFit="cover"
-                        />
-                    </Box>
-
+                    {
+                        images.map((image, index) => (
+                            <>
+                                <Box borderRadius="lg" overflow="hidden" w="306px" h="594px">
+                                    <Image
+                                        src={image}
+                                        alt="Surveillance Image 3"
+                                        w="305px"
+                                        h="552px"
+                                        objectFit="cover"
+                                    />
+                                </Box>
+                            </>
+                        ))
+                    }
                     {/* Card 3 */}
-                    <Box borderRadius="lg" overflow="hidden" w="306px" h="594px">
-                        <Image
-                            src="./assets/sol3rd.png"
-                            alt="Surveillance Image 3"
-                            w="305px"
-                            h="552px"
-                            objectFit="cover"
-                        />
-                    </Box>
+
                 </Flex>
 
                 {/* Background Box Behind Images */}
