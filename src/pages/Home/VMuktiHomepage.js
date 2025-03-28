@@ -19,7 +19,10 @@ import Industries from './industriesData'
 import AdvancedSurveillance from './AdvancedSurveillance'
 import TechnologyDashboard from '../Technology/TechnologyDashboard'
 import ContactUs from '../ContactUs/Contactus'
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
+const MotionBox = motion(Box);
 const VMuktiHomepage = () => {
   const customData = {
     title1: 'IoT Integration & Secure Connectivity for',
@@ -45,6 +48,9 @@ const VMuktiHomepage = () => {
     md: '300px',
     lg: '408px',
   })
+
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+
   return (
     <Box minH="100vh" bg="#E7E7E7" overflow="hidden" position="relative">
       <Image
@@ -122,7 +128,7 @@ const VMuktiHomepage = () => {
           minH={{ base: '40vh', md: '80vh' }}
           zIndex={1}
         >
-          <Box
+          {/* <Box
             fontSize={{ base: '48px', md: '75px', lg: '100px' }} // Reduced font sizes
             fontWeight="600"
             textStyle="normal"
@@ -149,7 +155,40 @@ const VMuktiHomepage = () => {
             <Text as="span" color="#DB7B3A">
               AI.
             </Text>
-          </Box>
+          </Box> */}
+
+<MotionBox
+      ref={ref}
+      fontSize={{ base: "48px", md: "75px", lg: "100px" }}
+      fontWeight="600"
+      textStyle="normal"
+      textAlign={{ base: "center", md: "left" }}
+      lineHeight="140%"
+      zIndex={1}
+      mt={{ base: "20px", md: "4%" }}
+      initial={{ scale: 0.8, opacity: 0 }}
+      animate={inView ? { scale: 1, opacity: 1 } : {}}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
+      <Text as="span" color="#000">
+        Unlocking the{" "}
+      </Text>
+      <Text as="span" color="#3F77A5">
+        Power of
+      </Text>
+      <br />
+      <Text as="span" color="#3F77A5">
+        Data
+      </Text>
+      <Text as="span" color="#000">
+        {" "}
+        with{" "}
+      </Text>
+      <Text as="span" color="#DB7B3A">
+        AI.
+      </Text>
+    </MotionBox>
+
           <Flex mt="16px" direction={{ base: 'column', md: 'row' }}>
             <Box display="flex" alignContent="end" gap={10}>
               <svg
