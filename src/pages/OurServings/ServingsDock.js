@@ -3,7 +3,6 @@ import ServingsContent from "../../components/ServingsContent";
 
 const ServingsDock = () => {
     const { name } = useParams();
-    console.log("name is ",name);
     return (
         <>
             {/* serving dock */}
