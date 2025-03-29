@@ -19,7 +19,7 @@ import Industries from './industriesData'
 import AdvancedSurveillance from './AdvancedSurveillance'
 import TechnologyDashboard from '../Technology/TechnologyDashboard'
 import ContactUs from '../ContactUs/Contactus'
-import VMuktiCareers from '../IndustriesDashboard/career/Career'
+import VMuktiCareers from '../career/Career'
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
