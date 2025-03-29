@@ -1,6 +1,7 @@
 import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import CulturalSection from "../../components/CulturalSection";
 
 const MotionBox = motion(Box);
 
@@ -103,8 +104,23 @@ const EventSpotlight = () => {
     center: { x: 0, opacity: 1, transition: { duration: 0.5 } },
     exit: (direction) => ({ x: direction < 0 ? "50%" : "-50%", opacity: 1, transition: { duration: 0.5 } }),
   };
-
+  const gridItems = [
+    { bgColor: "transparent" },
+    { title: "2025", description: "Participated in Gitex Technology Week Dubai 2017", bgColor: "white" },
+    { bgColor: "transparent" },
+    { title: "Attended Events", bgColor: "transparent" },
+    { title: "2024", description: "Participated in Gitex Technology Week Dubai 2017", bgColor: "white" },
+    { bgColor: "transparent" },
+    { title: "2019", description: "Participated in Gitex Technology Week Dubai 2017", bgColor: "#BECEDC" },
+    { title: "2019", description: "Participated in Gitex Technology Week Dubai 2017", bgColor: "white" },
+    { title: "2019", description: "Participated in Gitex Technology Week Dubai 2017", bgColor: "#3F77A5" },
+    { title: "2017", description: "Participated in Gitex Technology Week Dubai 2017", bgColor: "white" },
+    { bgColor: "transparent" },
+    {},
+  ];
   return (
+
+
     <Flex direction="column" position="relative" overflow="hidden" px={{ base: 4, md: 8 }}>
       {/* Title Section */}
       <Box pt={{ base: 8, md: 16 }} mb={{ base: 4, md: 8 }}>
@@ -184,7 +200,9 @@ const EventSpotlight = () => {
             <NavigationButton onClick={nextSlide} direction="right" />
           </Flex>
         </Box>
+        {/* <CulturalSection gridItems={gridItems} /> */}
       </Flex>
+      <CulturalSection gridItems={gridItems} />
     </Flex>
   );
 };

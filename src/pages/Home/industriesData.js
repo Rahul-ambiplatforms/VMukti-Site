@@ -208,10 +208,6 @@ export default function IndustryGrid() {
           lg: 'repeat(4, 1fr)',
         }}
         gap={{ base: '10px', md: '15px' }}
-        // width="95%" // Change from 100% to avoid overflow
-        // maxWidth="1385px"
-        // mx="auto" // Center the grid properly
-        // px={{ base: '10px', md: '30px' }}
         mt="3%"
       >
         {grid.slice(1).flatMap((row, rowIndex) =>
@@ -233,7 +229,6 @@ export default function IndustryGrid() {
                     md: '100%', // Full width on medium screens
                     lg: industry.isWide ? '640px' : '100%', // Fixed width for isWide cards on large screens
                   }}
-                  // maxWidth="640px" // Ensure it doesn’t exceed the container
                   height={{ base: '200px', md: '320px' }}
                   borderRadius="24px"
                   display="flex"
@@ -246,6 +241,15 @@ export default function IndustryGrid() {
                   color={industry.textColor}
                   zIndex={2}
                   overflow="hidden"
+                  style={{
+                    transformStyle: 'preserve-3d',
+                    transition: 'transform 0.6s ease-in-out',
+                  }}
+                  // transform="perspective(1000px)" // Enable 3D perspective
+                  // transition="transform 0.6s ease" // Smooth transition for the flip effect
+                  _hover={{
+                    transform: 'rotateY(180deg)', // Flip the box on hover
+                  }}
                 >
                   {/* Industry Icon */}
                   {industry.img && (
@@ -262,6 +266,7 @@ export default function IndustryGrid() {
                       left="20px"
                       width="33px"
                       height="33px"
+                      style={{ backfaceVisibility: 'hidden' }}
                     />
                   )}
                   {/* Industry Name & Line */}
@@ -275,6 +280,7 @@ export default function IndustryGrid() {
                     overflow="hidden" // Hide overflow
                     textOverflow="ellipsis" // Add ellipsis for overflow
                     maxWidth="90%" // Ensure text doesn't overflow the card
+                    style={{ backfaceVisibility: 'hidden' }}
                   >
                     {industry.name}
                     <Box
@@ -300,7 +306,6 @@ export default function IndustryGrid() {
   })
   return (
     <>
-
       <Box
         textAlign="center"
         backgroundColor="#E7E7E7"
@@ -308,7 +313,6 @@ export default function IndustryGrid() {
         minHeight={{ base: 'auto', md: '1338px' }}
         position="relative"
         mx="auto"
-
         pb={{ base: '50px', md: '0' }}
         overflow="hidden"
         _before={{
@@ -381,8 +385,6 @@ export default function IndustryGrid() {
         <Flex
           justifyContent="flex-end" // Align to the right
           alignItems="center" // Vertically center
-          // width="95%" // Match the grid width
-          // maxWidth="100%" // Ensure it doesn't exceed the screen width
           mx="auto" // Center the container horizontally
           mt="1%" // Margin top
           position="relative" // Use relative positioning
@@ -434,24 +436,6 @@ export default function IndustryGrid() {
             </svg>
           </Button>
         </Flex>
-        {/* Ellipse
-        <Box
-          position="relative"
-          left={{ base: '50%', md: '30%', lg: '15%' }}
-          top={{ base: '0', md: '0', lg: '50%' }}
-          transform={{
-            base: 'translateX(-50%)',
-            md: 'translateX(-50%)',
-            lg: 'none',
-          }}
-          width={ellipseSize}
-          height={ellipseSize}
-          zIndex={0}
-          borderRadius="50%"
-          opacity="1"
-          background="#3F77A5"
-          filter="blur(56.6px)"
-        /> */}
       </Box>
     </>
   )
