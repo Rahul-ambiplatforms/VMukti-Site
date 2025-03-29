@@ -4,7 +4,6 @@ import {
   Box,
   Text,
   Heading,
-  IconButton,
   useBreakpointValue,
   Button,
 } from '@chakra-ui/react'
@@ -104,18 +103,18 @@ const AITechnologies = () => {
   const cardContentWidth = useBreakpointValue({ base: '95%', md: '35%' })
 
   return (
-    <Box bg="#f9f9f9" minH="100vh" overflowX="hidden" borderRadius="24px">
+    <Box bg="white" minH="100vh" overflowX="visible" borderRadius="24px">
       {/* Navigation */}
       <Flex
         justify="space-between" // Changed from "center"
         align="center"
-        p={5}
+        p={8}
         position="relative"
         width="100%"
         minH="80px" // Ensure enough height for two-line titles
       >
         {/* Left Dots - Fixed width container */}
-        <Flex width="60px" justify="flex-start" align="center" flexShrink={0}>
+        {/* <Flex width="60px" justify="flex-start" align="center" flexShrink={0}>
           {visibleSlideRange.start > 0 && (
             <Flex gap={1}>
               {[...Array(visibleSlideRange.start)].map((_, index) => (
@@ -129,7 +128,7 @@ const AITechnologies = () => {
               ))}
             </Flex>
           )}
-        </Flex>
+        </Flex> */}
 
         {/* Center Titles - Constrained flexible container */}
         <Flex
@@ -181,7 +180,7 @@ const AITechnologies = () => {
                   <Box
                     width="17px"
                     height="2px"
-                    borderRadius="2px"
+                    borderRadius="24px"
                     mt="1%"
                     bg="#3F77A5"
                   />
@@ -215,45 +214,49 @@ const AITechnologies = () => {
             </Flex>
           )}
           {/* Custom Navigation Buttons */}
-          <Flex justifyContent="space-between" gap={1}>
+          <Flex
+            gap="0.5"
+            mt={{ base: "10px", md: "0" }}
+            direction="row"
+            justifyContent={{ base: "flex-end", md: "flex-end" }}
+            width="100%"
+          >
             <Button
-              width="31px"
-              height="31px"
+              width={{ base: "25px", md: "30.769px" }}
+              height={{ base: "25px", md: "30.769px" }}
+              minWidth="31px"
+              minHeight="31px"
+              padding="0"
               borderRadius="5px"
               display="flex"
               alignItems="center"
               justifyContent="center"
               cursor="pointer"
               bgColor="#E7E7E7"
-              _hover={{ bgColor: '#e0e0e0' }}
+              _hover={{ bgColor: "#e0e0e0" }}
               onClick={handlePrev}
-              aria-label="Previous slide"
             >
-              <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
-                <path
-                  d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z"
-                  fill="#3F77A5"
-                />
+              <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z" fill="#3F77A5" />
               </svg>
             </Button>
             <Button
-              width="31px"
-              height="31px"
+              width={{ base: "25px", md: "30.769px" }}
+              height={{ base: "25px", md: "30.769px" }}
+              minWidth="31px"
+              minHeight="31px"
+              padding="0"
               borderRadius="5px"
               display="flex"
               alignItems="center"
               justifyContent="center"
               cursor="pointer"
               bgColor="#E7E7E7"
-              _hover={{ bgColor: '#e0e0e0' }}
+              _hover={{ bgColor: "#e0e0e0" }}
               onClick={handleNext}
-              aria-label="Next slide"
             >
-              <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
-                <path
-                  d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z"
-                  fill="#3F77A5"
-                />
+              <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z" fill="#3F77A5" />
               </svg>
             </Button>
           </Flex>
@@ -271,7 +274,7 @@ const AITechnologies = () => {
             <Box key={index} minW={`${100 / slides.length}%`} p={0}>
               <Flex
                 bg="white"
-                borderRadius="lg"
+                borderRadius="24px"
                 overflow="hidden"
                 boxShadow="lg"
                 direction={cardDirection}
@@ -322,7 +325,7 @@ const AITechnologies = () => {
                     <Heading
                       fontSize="28px"
                       fontWeight="bold"
-                      mb={5}
+                      // mb={5}
                       color="black"
                     >
                       {slide.title}
@@ -335,7 +338,7 @@ const AITechnologies = () => {
                         fontSize="14px"
                         color="black"
                         lineHeight="1.6"
-                        mb={5}
+                      // mb={5}
                       >
                         {text}
                       </Text>

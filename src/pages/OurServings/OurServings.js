@@ -2,6 +2,7 @@ import PageContentWrapper from "../../components/PageContentWrapper";
 import TripleImageSection from "../../components/TripleImageSection";
 import AdvancedSurveillance from "../Home/AdvancedSurveillance";
 
+
 const OurServings = () => {
     const heading = [
         { text: "Customizable", color: "#3F77A5" },//blue
@@ -13,7 +14,9 @@ const OurServings = () => {
         "https://cdn-front.freepik.com/images/ai/image-generator/gallery/resource-tti-11.webp",
         "https://cdn-front.freepik.com/images/ai/image-generator/gallery/resource-tti-11.webp"]
     return <>
-        <TripleImageSection heading={heading} description={description} images={images} />
+    
+        <TripleImageSection mt heading={heading} description={description} images={images} />
+    
         <PageContentWrapper>
             <AdvancedSurveillance />
         </PageContentWrapper></>

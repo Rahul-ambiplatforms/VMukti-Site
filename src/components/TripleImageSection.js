@@ -8,7 +8,7 @@ const TripleImageSection = ({
     ],
     description = "Unlock smarter security with AI-driven surveillance solutions for real-time monitoring, proactive threat detection, and seamless video management. Enhance safety and efficiency with scalable, future-ready technology.",
     images = ["./assets/sol1st.png", "./assets/sol2nd.png", "./assets/sol3rd.png"] }) => {
-    return (<Box bg="#E7E7E7" py={10} px={8} >
+    return (<Box bg="#E7E7E7" py={10} pt={20} px={8} >
         <Container maxW="100%">
             {heading.map((item, index) => (
                 <Text
