@@ -16,6 +16,8 @@ import EventSpotlight from './pages/EventSpotlight/EventDashboard';
 import OurServings from './pages/OurServings/OurServings';
 import ServingsDock from './pages/OurServings/ServingsDock';
 import ScrollToTop from './components/ScrollToTop';
+import ContactUs from './pages/ContactUs/Contactus';
+import VMuktiCareers from './pages/IndustriesDashboard/career/Career';
 
 function App() {
   // Assuming the Navbar height is 60px
@@ -33,13 +35,16 @@ function App() {
           <Routes>
             <Route path="/" element={<VMuktiHomepage />} />
             <Route path="/technology" element={<TechnologyDashboard />} />
-            <Route path="/solution" element={<SolutionsHome />} />
+            <Route path="/solutions" element={<SolutionsHome />} />
             <Route path="/industries" element={<IndustryDashboard />} />
             <Route path="/industries/:name" element={<IndustryDetails />} />
             <Route path="/whoweare" element={<WhoWeare />} />
-            <Route path="/eventspotlight" element={<EventSpotlight />} />
+            <Route path="/whoweare/eventspotlight" element={<EventSpotlight />} />
+            <Route path="/whoweare/careers" element={<VMuktiCareers />} />
             <Route path="/serving" element={<OurServings />} />
             <Route path="/serving/:name" element={<ServingsDock />} />
+            <Route path="/contactus" element={<ContactUs />} />
+
           </Routes>
         </Box>
       </Router>
