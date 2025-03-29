@@ -7,7 +7,7 @@ import PageContentWrapper from '../../components/PageContentWrapper'
 const TechnologyDashboard = () => {
   return (
     <PageContentWrapper>
-      <Box my={8}>
+      <Box mt={14} h={"100%"}>
         <Flex
           bg="#E7E7E7"
           w="100%"
@@ -44,7 +44,7 @@ const TechnologyDashboard = () => {
             // height="100%"
             height="110%"
             display={{ base: 'none', lg: 'flex' }}
-            zIndex={2} // Ensure it stays above the blurred ring
+            zIndex={1} // Ensure it stays above the blurred ring
           >
             {/* Brochure Image behind Dashboard */}
             <Box
@@ -71,7 +71,7 @@ const TechnologyDashboard = () => {
             {/* White Box behind Dashboard */}
             <Box
               position="absolute"
-              top="70%"
+              top="80%"
               right="3%"
               transform="translateY(-50%) perspective(1000px)"
               width="100%"
@@ -85,22 +85,16 @@ const TechnologyDashboard = () => {
 
             {/* Dashboard Image */}
             <Image
-              //  overflow="visible"
+              overflow="visible"
               src="./assets/Dashboard.png"
               alt="AI Dashboard Interface"
               position="absolute"
-              top="15%"
-              // mt="10%"
-              right="16"
-              transform="perspective(1095px)"
-              w="100%"
-              // h="200px"  
-              // h="100%"
-              // h="110%"
+              top="12%"
+              right="10%"
+              w={{ base: '90%', md: '80%', lg: '990px' }} // Responsive width
+              h={{ base: '100%', md: '90%', lg: '1119px' }} // Responsive height
               objectFit="cover"
               zIndex={3}
-            // bg="red"
-
             />
           </Flex>
 
@@ -124,10 +118,10 @@ const TechnologyDashboard = () => {
               <Flex
                 direction="column"
                 maxW={{ base: '100%', lg: '70%' }}
-                pr={{ base: 0, lg: 8 }}
+                pr={{ base: 0 }}
                 position="relative"
                 zIndex={3}
-                mt="4%"
+              // mt="1%"
               // mx="4%"
               // mt={{ base: 8, lg: 14 }}
               // ml={{ base: "-2%", md: "-4%", lg: "-8%" }}
@@ -169,8 +163,8 @@ const TechnologyDashboard = () => {
                 {/* Icon & Description */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="25"
+                  width="30"
+                  height="30"
                   viewBox="0 0 33 33"
                   fill="none"
                 >
@@ -202,7 +196,7 @@ const TechnologyDashboard = () => {
                   flexShrink={0}
                   borderRadius="20px"
                   background="#BECEDC"
-                  mt={4}
+                  mt={8}
                   display={{ base: 'none', lg: 'block' }} // Hide on small screens
                 />
               </Flex>
@@ -226,8 +220,7 @@ const TechnologyDashboard = () => {
             </Flex>
           </Box>
         </Flex>
-
-        <ComputerVisionPage />
+          <ComputerVisionPage />
       </Box>
     </PageContentWrapper>
   )

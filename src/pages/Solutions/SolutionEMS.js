@@ -4,10 +4,10 @@ import {
   Box,
   Text,
   Heading,
-  IconButton,
+
   useBreakpointValue,
 } from "@chakra-ui/react";
-import { ChevronLeftIcon, ChevronRightIcon, Button } from "@chakra-ui/icons";
+import {Button } from "@chakra-ui/icons";
 
 const SolutionEMS = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -185,7 +185,7 @@ const SolutionEMS = () => {
       minH="100vh"
       overflowX="hidden"
       borderRadius="24px"
-      mb="5%"
+      // mb="5%"
     >
       {/* Navigation */}
       <Flex
