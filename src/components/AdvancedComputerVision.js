@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
+import { motion,useInView } from "framer-motion";
+import { useRef } from "react";
 
-const AdvancedComputerVision = ({
+const MotionFlex = motion(Flex);
+
+  
+const AdvancedComputerVision = ({ 
   title1 = "Advanced Computer",
   title2 = "Vision & Image Intelligence",
   subtitle = "AI-Powered Visual Processing",
@@ -32,6 +37,10 @@ const AdvancedComputerVision = ({
   myMargin = "3%",
   myZIndex = "1",
 }) => {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.1}); // Triggers at 10% visibility
+
   // activeCard is persistent (updated on click or navigation)
   const [activeCard, setActiveCard] = useState(0);
   // hoverCard is temporary (updated on mouse enter/leave)
@@ -85,14 +94,20 @@ const AdvancedComputerVision = ({
       />
 
       {/* Title Section */}
-      <Flex direction="column">
-        <Text fontSize={{ base: "20px", md: "36px" }} fontWeight="500">
-          {title1}
-        </Text>
-        <Text fontSize={{ base: "20px", md: "36px" }} fontWeight="500" color="#3f77a5">
-          {title2}
-        </Text>
-      </Flex>
+      <MotionFlex
+      ref={ref}
+      direction="column"
+      initial={{ opacity: 0, x: -50 }}
+      animate={isInView ? { opacity: 1, x: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      <Text fontSize={{ base: "20px", md: "36px" }} fontWeight="500">
+        {title1}
+      </Text>
+      <Text fontSize={{ base: "20px", md: "36px" }} fontWeight="500" color="#3f77a5">
+        {title2}
+      </Text>
+    </MotionFlex>
 
       {/* Cards Section */}
       <Flex gap={4}>

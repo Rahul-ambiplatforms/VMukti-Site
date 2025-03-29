@@ -10,9 +10,12 @@ import {
     Image,
     useBreakpointValue,
 } from '@chakra-ui/react'
-import { useEffect, useState } from 'react'
+import { motion, useInView } from "framer-motion";
+import { useEffect, useState,useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import IndustryContent from '../../components/IndustryContent' // Import IndustryContent
+
+const MotionText = motion(Text);
 
 // Industry data with SVGs
 const industriesData = [
@@ -334,6 +337,8 @@ export default function IndustryDashboard() {
     }, [])
 
     // Create a grid layout based on the industry data
+    const ref = useRef(null);
+    const inView = useInView(ref, { threshold: 0.1 });
     const renderIndustryCards = () => {
         // Create a 4x4 grid (rows x columns) to place cards
         const grid = Array(6) // 4 to 6
@@ -350,6 +355,7 @@ export default function IndustryDashboard() {
                 grid[row][col] = industry
             }
         })
+        
         // Render the grid
         return (
             <Grid
@@ -381,22 +387,26 @@ export default function IndustryDashboard() {
                     zIndex={2} // Ensure it is on top of other elements
                 >
                     {/* Title */}
-                    <Text
+                    <MotionText
+                        ref={ref}
                         fontSize={titleFontSize}
                         fontWeight="600"
                         marginBottom="40px"
                         lineHeight="normal"
                         width="100%"
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                        Transforming{' '}
+                        Transforming{" "}
                         <Text as="span" color="#3F77A5">
                             Industries
-                        </Text>{' '}
-                        with {<br />}
+                        </Text>{" "}
+                        with <br />
                         <Text as="span" color="#db7b3a">
                             AI-Powered Intelligence
                         </Text>
-                    </Text>
+                    </MotionText>
 
                     {/* Arrow */}
                     <Box mb="8px" align="left">
