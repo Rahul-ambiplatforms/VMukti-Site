@@ -223,75 +223,84 @@ export default function IndustryGrid() {
                 }}
                 rowSpan={1}
               >
-                <Box
-                  width={{
-                    base: '100%', // Full width on small screens
-                    md: '100%', // Full width on medium screens
-                    lg: industry.isWide ? '640px' : '100%', // Fixed width for isWide cards on large screens
-                  }}
-                  height={{ base: '200px', md: '320px' }}
-                  borderRadius="24px"
-                  display="flex"
-                  flexDirection="column"
-                  justifyContent="flex-end"
-                  alignItems="flex-start"
-                  padding={{ base: '10px', md: '20px' }}
-                  position="relative"
-                  backgroundColor={industry.bgColor}
-                  color={industry.textColor}
-                  zIndex={2}
-                  overflow="hidden"
-                  style={{
-                    transformStyle: 'preserve-3d',
-                    transition: 'transform 0.6s ease-in-out',
-                  }}
-                  // transform="perspective(1000px)" // Enable 3D perspective
-                  // transition="transform 0.6s ease" // Smooth transition for the flip effect
-                  _hover={{
-                    transform: 'rotateY(180deg)', // Flip the box on hover
-                  }}
-                >
-                  {/* Industry Icon */}
-                  {industry.img && (
-                    <Box
-                      dangerouslySetInnerHTML={{
-                        __html: decodeURIComponent(
-                          industry.img.split(
-                            'data:image/svg+xml;charset=utf-8,'
-                          )[1]
-                        ),
-                      }}
-                      position="absolute"
-                      bottom="55px"
-                      left="20px"
-                      width="33px"
-                      height="33px"
-                      style={{ backfaceVisibility: 'hidden' }}
-                    />
-                  )}
-                  {/* Industry Name & Line */}
-                  <Text
-                    fontSize="16px"
-                    fontWeight="600"
-                    position="absolute"
-                    bottom="20px"
-                    left="20px"
-                    whiteSpace="nowrap" // Prevent text wrapping
-                    overflow="hidden" // Hide overflow
-                    textOverflow="ellipsis" // Add ellipsis for overflow
-                    maxWidth="90%" // Ensure text doesn't overflow the card
-                    style={{ backfaceVisibility: 'hidden' }}
+                <Box 
+                sx={{
+                  perspective: "1000px", // Adjust the depth effect
+                }}>
+                  <Box
+                    width={{
+                      base: '100%', // Full width on small screens
+                      md: '100%', // Full width on medium screens
+                      lg: industry.isWide ? '640px' : '100%', // Fixed width for isWide cards on large screens
+                    }}
+                    height={{ base: '200px', md: '320px' }}
+                    borderRadius="24px"
+                    display="flex"
+                    flexDirection="column"
+                    justifyContent="flex-end"
+                    alignItems="flex-start"
+                    padding={{ base: '10px', md: '20px' }}
+                    position="relative"
+                    backgroundColor={industry.bgColor}
+                    color={industry.textColor}
+                    zIndex={2}
+                    overflow="hidden"
+                    style={{
+                      transformStyle: 'preserve-3d',
+                      transition: 'transform 0.6s ease-in-out',
+                    }}
+                    // transform="perspective(1000px)" // Enable 3D perspective
+                    // transition="transform 0.6s ease" // Smooth transition for the flip effect
+                    _hover={{
+                      transform: 'rotateY(180deg)', // Flip the box on hover
+                    }}
                   >
-                    {industry.name}
-                    <Box
-                      width="18px"
-                      height="3px"
-                      borderRadius="2px"
-                      marginTop="5px"
-                      backgroundColor={industry.dashColor}
-                    />
-                  </Text>{' '}
-                </Box>
+                    <Flex position="absolute" backfaceVisibility="hidden"> {/* front side */}
+                      {/* Industry Icon */}
+                      {industry.img && (
+                        <Box
+                          dangerouslySetInnerHTML={{
+                            __html: decodeURIComponent(
+                              industry.img.split(
+                                'data:image/svg+xml;charset=utf-8,'
+                              )[1]
+                            ),
+                          }}
+                          position="absolute"
+                          bottom="55px"
+                          left="20px"
+                          width="33px"
+                          height="33px"
+                          style={{ backfaceVisibility: 'hidden' }}
+                        />
+                      )}
+                      {/* Industry Name & Line */}
+                      <Text
+                        fontSize="16px"
+                        fontWeight="600"
+                        position="absolute"
+                        bottom="20px"
+                        left="20px"
+                        whiteSpace="nowrap" // Prevent text wrapping
+                        overflow="hidden" // Hide overflow
+                        textOverflow="ellipsis" // Add ellipsis for overflow
+                        maxWidth="90%" // Ensure text doesn't overflow the card
+                        style={{ backfaceVisibility: 'hidden' }}
+                      >
+                        {industry.name}
+                        <Box
+                          width="18px"
+                          height="3px"
+                          borderRadius="2px"
+                          marginTop="5px"
+                          backgroundColor={industry.dashColor}
+                        />
+                      </Text>{' '}
+                    </Flex>
+                    <Flex position="absolute" backfaceVisibility="hidden"> {/* back side */}
+                      dummy text
+                    </Flex>
+                  </Box></Box>
               </GridItem>
             )
           })
