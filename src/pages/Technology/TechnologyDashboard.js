@@ -1,10 +1,18 @@
-import React from 'react'
-import { Flex, Image, Text, Container, Heading, Box } from '@chakra-ui/react'
-import Navbar from '../../components/Navbar'
-import ComputerVisionPage from './AITechnologies'
-import PageContentWrapper from '../../components/PageContentWrapper'
+import React from "react";
+import { Flex, Image, Text, Container, Heading, Box } from "@chakra-ui/react";
+import Navbar from "../../components/Navbar";
+import ComputerVisionPage from "./AITechnologies";
+import PageContentWrapper from "../../components/PageContentWrapper";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
+const MotionHeading = motion(Heading);
+const MotionImage = motion(Image);
 
 const TechnologyDashboard = () => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { amount: 0.1, triggerOnce: false }); // Triggers at 10% visibility, repeats on scroll
+
   return (
     <PageContentWrapper>
       <Box mt={14} h={"100%"}>
@@ -14,7 +22,7 @@ const TechnologyDashboard = () => {
           position="relative"
           overflow="hidden"
           direction="column"
-        // minH="100%"
+          // minH="100%"
         >
           <Box
             position="absolute"
@@ -43,8 +51,8 @@ const TechnologyDashboard = () => {
             width="70%"
             // height="100%"
             height="110%"
-            display={{ base: 'none', lg: 'flex' }}
-            zIndex={1} // Ensure it stays above the blurred ring
+            display={{ base: "none", lg: "flex" }}
+            zIndex={2} // Ensure it stays above the blurred ring
           >
             {/* Brochure Image behind Dashboard */}
             <Box
@@ -55,8 +63,9 @@ const TechnologyDashboard = () => {
               // transform="translateY(-50%) perspective(1000px)"
               width="1095px"
               height="62%"
-              opacity={'80%'}
+              opacity={"80%"}
               zIndex={2}
+              // bg="red"
             >
               <Image
                 src="/assets/VMukti Brochure O2 1.png"
@@ -75,7 +84,7 @@ const TechnologyDashboard = () => {
               right="3%"
               transform="translateY(-50%) perspective(1000px)"
               width="100%"
-              height={{ md: '40%', lg: '60%' }}
+              height={{ md: "40%", lg: "60%" }}
               bg="#FFFFFF"
               // bg="red"
               borderRadius="20px"
@@ -84,18 +93,22 @@ const TechnologyDashboard = () => {
             />
 
             {/* Dashboard Image */}
-            <Image
-              overflow="visible"
-              src="./assets/Dashboard.png"
-              alt="AI Dashboard Interface"
-              position="absolute"
-              top="12%"
-              right="10%"
-              w={{ base: '90%', md: '80%', lg: '990px' }} // Responsive width
-              h={{ base: '100%', md: '90%', lg: '1119px' }} // Responsive height
-              objectFit="cover"
-              zIndex={3}
-            />
+            <MotionImage
+            src="./assets/Dashboard.png"
+            alt="AI Dashboard Interface"
+            position="absolute"
+            top="15%"
+            right="16"
+            transform="perspective(1095px)"
+            w="100%"
+            objectFit="cover"
+            zIndex={3}
+            // bg="red"
+            initial={{ scale: 0.8, opacity: 1 }} // Starts at 80% size, but fully visible
+            whileInView={{ scale: 1 }} // Pops to normal size
+            viewport={{ once: false, amount: 0.5 }} // Triggers animation when 20% visible
+            transition={{ duration: 0.3, ease: "easeOut" }} // Faster pop effect
+        />
           </Flex>
 
           {/* Content Section */}
@@ -106,59 +119,66 @@ const TechnologyDashboard = () => {
             flex="1"
             display="flex"
             alignItems="center"
+            // bg="red"
           >
             <Flex
-              direction={{ base: 'column', lg: 'row' }}
-              align={{ base: 'flex-start', lg: 'flex-start' }}
+              direction={{ base: "column", lg: "row" }}
+              align={{ base: "flex-start", lg: "flex-start" }}
               justify="flex-start"
-              minH={{ base: 'auto', lg: '100vh' }}
-            // ml={{ base: '-2%', md: '2%', lg: '-4%' }}
+              minH={{ base: "auto", lg: "100vh" }}
+              // ml={{ base: '-2%', md: '2%', lg: '-4%' }}
+              // bg="red"
             >
               {/* Left Content */}
               <Flex
                 direction="column"
-                maxW={{ base: '100%', lg: '70%' }}
-                pr={{ base: 0 }}
+                maxW={{ base: "100%", lg: "70%" }}
+                pr={{ base: 0, lg: 8 }}
                 position="relative"
                 zIndex={3}
-              // mt="1%"
-              // mx="4%"
-              // mt={{ base: 8, lg: 14 }}
-              // ml={{ base: "-2%", md: "-4%", lg: "-8%" }}
+                mt="4%"
+                // mx="4%"
+                // mt={{ base: 8, lg: 14 }}
+                // ml={{ base: "-2%", md: "-4%", lg: "-8%" }}
+                // bg="red"
               >
-                <Heading
+                <MotionHeading
+                  ref={ref}
                   fontSize={{
-                    base: '20px',
-                    sm: '30px',
-                    md: '40px',
-                    lg: '48px',
+                    base: "20px",
+                    sm: "30px",
+                    md: "40px",
+                    lg: "48px",
                   }}
-                  lineHeight={{ base: '1.2', lg: 'normal' }}
+                  lineHeight={{ base: "1.2", lg: "normal" }}
                   mb={12}
-                  // mt={{ base: '5%', lg: '0' }}
                   color="#000"
                   fontWeight="600"
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }} // Smooth animation only when visible
+                  viewport={{ once: false, amount: 0.2 }} // Triggers at 10% visibility
+                  transition={{ duration: 0.8, ease: "easeOut" }} 
                 >
-                  Breakthroughs in Visual AI:{' '}
+                  Breakthroughs in Visual AI:{" "}
                   <Text
                     as="span"
                     color="#3F77A5"
                     fontWeight="600"
                     fontSize={{
-                      base: '20px',
-                      sm: '30px',
-                      md: '40px',
-                      lg: '48px',
+                      base: "20px",
+                      sm: "30px",
+                      md: "40px",
+                      lg: "48px",
                     }}
                   >
                     Smarter Vision
-                  </Text>{' '}
-                  for a{' '}
+                  </Text>{" "}
+                  for a{" "}
                   <Text as="span" color="#DB7B3A" fontWeight="600">
                     Smarter World
                   </Text>
                   .
-                </Heading>
+                </MotionHeading>
 
                 {/* Icon & Description */}
                 <svg
@@ -173,12 +193,12 @@ const TechnologyDashboard = () => {
                     fill="#3F77A5"
                   />
                 </svg>
-                <Flex align="center" ml={{ base: '-1%', md: '5%', lg: '0%' }}>
+                <Flex align="center" ml={{ base: "-1%", md: "5%", lg: "0%" }}>
                   <Text
-                    fontSize={{ base: 'md', md: '16px' }}
+                    fontSize={{ base: "md", md: "16px" }}
                     color="#000"
                     lineHeight="normal"
-                    maxW={{ base: '90%', md: '60%', lg: '30%' }}
+                    maxW={{ base: "90%", md: "60%", lg: "30%" }}
                     m={3}
                     // ml={3}
                     fontWeight="500"
@@ -196,14 +216,14 @@ const TechnologyDashboard = () => {
                   flexShrink={0}
                   borderRadius="20px"
                   background="#BECEDC"
-                  mt={8}
-                  display={{ base: 'none', lg: 'block' }} // Hide on small screens
+                  mt={4}
+                  display={{ base: "none", lg: "block" }} // Hide on small screens
                 />
               </Flex>
 
               {/* Mobile Image (Shown only on small screens) */}
               <Flex
-                display={{ base: 'flex', lg: 'none' }}
+                display={{ base: "flex", lg: "none" }}
                 w="100%"
                 mt={8}
                 position="relative"
@@ -223,7 +243,7 @@ const TechnologyDashboard = () => {
           <ComputerVisionPage />
       </Box>
     </PageContentWrapper>
-  )
-}
+  );
+};
 
-export default TechnologyDashboard
+export default TechnologyDashboard;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import {
   Box,
   Flex,
@@ -6,27 +6,32 @@ import {
   Text,
   Button,
   useBreakpointValue,
-} from '@chakra-ui/react'
+} from "@chakra-ui/react";
 
-import Navbar from '../../components/Navbar'
-import AdvancedComputerVision from '../../components/AdvancedComputerVision'
-import PageContentWrapper from '../../components/PageContentWrapper'
+import Navbar from "../../components/Navbar";
+import AdvancedComputerVision from "../../components/AdvancedComputerVision";
+import PageContentWrapper from "../../components/PageContentWrapper";
 
-import VideoAnalytics from './VideoAnalytics'
-import Achieved from './Achieved'
-import Diagram from './Diagram'
-import Industries from './industriesData'
-import AdvancedSurveillance from './AdvancedSurveillance'
-import TechnologyDashboard from '../Technology/TechnologyDashboard'
-import ContactUs from '../ContactUs/Contactus'
-import VMuktiCareers from '../career/Career'
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import VideoAnalytics from "./VideoAnalytics";
+import Achieved from "./Achieved";
+import Diagram from "./Diagram";
+import Industries from "./industriesData";
+import AdvancedSurveillance from "./AdvancedSurveillance";
+import TechnologyDashboard from "../Technology/TechnologyDashboard";
+import ContactUs from "../ContactUs/Contactus";
+import VMuktiCareers from "../IndustriesDashboard/career/Career";
+import { motion, useInView } from "framer-motion";
+// import { useInView } from "react-intersection-observer";
+import { useRef } from "react";
 
+const MotionImage = motion(Image);
 const MotionBox = motion(Box);
 
 const StickySection = ({ children }) => (
-  <Box position="relative" height={`${children.length * 100}vh`} /* Dynamically set height */>
+  <Box
+    position="relative"
+    height={`${children.length * 100}vh`} /* Dynamically set height */
+  >
     {children.map((child, index) => (
       <Box
         key={index}
@@ -45,36 +50,38 @@ const StickySection = ({ children }) => (
 
 const VMuktiHomepage = () => {
   const customData = {
-    title1: 'IoT Integration & Secure Connectivity for',
-    title2: 'Smart Surveillance',
-    subtitle: 'Real-Time Monitoring',
+    title1: "IoT Integration & Secure Connectivity for",
+    title2: "Smart Surveillance",
+    subtitle: "Real-Time Monitoring",
     description:
-      'IoT-enabled cameras and sensors continuously track environmental changes and security events.',
+      "IoT-enabled cameras and sensors continuously track environmental changes and security events.",
     cards: [
       {
-        type: 'image',
-        label: 'Multi-Modal Recognition',
-        media: '/assets/car.png', // Dummy image URL
+        type: "image",
+        label: "Multi-Modal Recognition",
+        media: "/assets/car.png", // Dummy image URL
       },
-      { type: 'text', label: 'Custom Scene Understanding' },
-      { type: 'text', label: 'Custom Multi-Modal Recognition' },
-      { type: 'text', label: 'Custom Automated Decision Making' },
+      { type: "text", label: "Custom Scene Understanding" },
+      { type: "text", label: "Custom Multi-Modal Recognition" },
+      { type: "text", label: "Custom Automated Decision Making" },
     ],
-    backgroundImage: '/assets/VMukti Brochure O2 1.png',
-  }
+    backgroundImage: "/assets/VMukti Brochure O2 1.png",
+  };
 
   const ellipseSize = useBreakpointValue({
-    base: '200px',
-    md: '300px',
-    lg: '408px',
-  })
+    base: "200px",
+    md: "300px",
+    lg: "408px",
+  });
 
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  // const { ref, inView } = useInView({ threshold: 0.2 });
+  const ref = useRef(null);
+  const inView = useInView(ref, { amount: 0.2 }); // Triggers when 50% is visible
 
   return (
     <Box minH="100vh" bg="#E7E7E7" overflow="visible" position="relative">
       <Image
-        src={'/assets/Ellipse38.png' || '/placeholder.svg'}
+        src={"/assets/Ellipse38.png" || "/placeholder.svg"}
         alt="ellipse38"
         position="absolute"
         left="0" // Align to the left edge of the screen
@@ -98,23 +105,23 @@ const VMuktiHomepage = () => {
         pt="10vh"
       >
         <Box
-          height={{ base: '80px', md: '140px', lg: '188px' }}
+          height={{ base: "80px", md: "140px", lg: "188px" }}
           minHeight="50px"
           aspectRatio="1/1"
           bg="#BECEDC"
           borderRadius="24px"
-          mt={{ base: '80px', md: '160px', lg: '12%' }}
+          mt={{ base: "80px", md: "160px", lg: "12%" }}
         />
         <Box
-          height={{ base: '80px', md: '140px', lg: '188px' }}
+          height={{ base: "80px", md: "140px", lg: "188px" }}
           minHeight="50px"
           aspectRatio="1/1"
           bg="#EAEAEA"
           borderRadius="24px"
-          mt={{ base: '40px', md: '80px', lg: '6%' }}
+          mt={{ base: "40px", md: "80px", lg: "6%" }}
         />
         <Box
-          height={{ base: '80px', md: '140px', lg: '188px' }}
+          height={{ base: "80px", md: "140px", lg: "188px" }}
           minHeight="50px"
           aspectRatio="1/1"
           bg="#3F77A5"
@@ -124,8 +131,8 @@ const VMuktiHomepage = () => {
 
       {/* Main Content */}
       <Flex
-        pl={{ base: '1%', md: '2.5%' }}
-        direction={{ base: 'column', md: 'row' }}
+        pl={{ base: "1%", md: "2.5%" }}
+        direction={{ base: "column", md: "row" }}
         align="center"
         justify="center"
         h="100%" // Ensure the content fits within the viewport
@@ -133,19 +140,24 @@ const VMuktiHomepage = () => {
         zIndex={1}
       >
         {/* Left Side */}
-        <Image
-          src="/assets/tablet.png"
-          position="absolute"
-          right="0"
-          top="1%"
-          zIndex={1}
+        <MotionImage
+            src="/assets/tablet.png"
+            position="absolute"
+            right="0"
+            top="1%"
+            zIndex={1}
+            // bg="red"
+            initial={{ scale: 0.8, opacity: 1 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.2 }} // Triggers animation every time it enters 80% view
         />
         <Box
           flex="1"
           bgRepeat="no-repeat"
           bgSize="contain"
-          bgPosition={{ base: 'center', md: 'right' }}
-          minH={{ base: '40vh', md: '80vh' }}
+          bgPosition={{ base: "center", md: "right" }}
+          minH={{ base: "40vh", md: "80vh" }}
           zIndex={1}
         >
           {/* <Box
@@ -186,9 +198,9 @@ const VMuktiHomepage = () => {
             lineHeight="140%"
             zIndex={1}
             mt={{ base: "20px", md: "4%" }}
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={inView ? { scale: 1, opacity: 1 } : {}}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            initial={{ opacity: 0, x: -50 }} // Start from left
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }} // Moves in when visible, resets when out
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <Text as="span" color="#000">
               Unlocking the{" "}
@@ -209,8 +221,17 @@ const VMuktiHomepage = () => {
             </Text>
           </MotionBox>
 
-          <Flex mt="16px" direction={{ base: 'column', md: 'row' }}>
-            <Box display="flex" alignContent="end" gap={10}>
+          <Flex mt="16px" direction={{ base: "column", md: "row" }}>
+            <MotionBox
+              display="flex"
+              alignItems="center"
+              gap={3}
+              initial={{ opacity: 0, x: -80 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.9, ease: "easeOut" }}
+              ref={ref}
+              viewport={{ once: false }}
+            >
               <svg
                 width="33"
                 height="33"
@@ -224,40 +245,37 @@ const VMuktiHomepage = () => {
                 />
               </svg>
 
-              {/* Reduced size */}
               <Text
-                // color="#"
                 fontWeight="500"
                 lineHeight="100%"
-                maxW={{ base: '90%', md: '60%' }} // Reduced max width
-                fontSize={{ base: '14px', md: '16px' }} // Reduced font size
+                maxW={{ base: "90%", md: "60%" }} // Consistent width
+                fontSize={{ base: "14px", md: "16px" }} // Consistent font size
               >
                 We harness AI to optimize operations, drive efficiency, and
                 deliver real-time insights across industries.
               </Text>
-            </Box>
-            {/* </Flex> */}
+            </MotionBox>
           </Flex>
-
+          {/* </MotionBox> */}
           <Flex
             position="relative"
-            mt={{ base: '10px', md: '-10%' }}
-            ml={{ base: '0', md: '-40px' }}
+            mt={{ base: "10px", md: "-10%" }}
+            ml={{ base: "0", md: "-40px" }}
             alignItems="center"
           >
             <Image
               src="/assets/robohand.png"
               alt="Robotic Hand"
-            // w={{ base: '80%', md: '500px' }} // Reduced image size
-            // h={{ base: 'auto', md: '500px' }}
+              // w={{ base: '80%', md: '500px' }} // Reduced image size
+              // h={{ base: 'auto', md: '500px' }}
             />
 
             {/* Book Demo Button */}
             <Button
               position="absolute"
-              top={{ base: '35%', md: '38%' }} // Moved the button upward
-              left={{ base: '22%', md: '22%' }} // Adjusted position
-              transform={{ base: 'translateX(-50%)', md: 'none' }}
+              top={{ base: "35%", md: "38%" }} // Moved the button upward
+              left={{ base: "22%", md: "22%" }} // Adjusted position
+              transform={{ base: "translateX(-50%)", md: "none" }}
               bg="white"
               height="50px"
               borderRadius="20px"
@@ -266,7 +284,7 @@ const VMuktiHomepage = () => {
               color="#3F77A5"
               // fontWeight="700"
               gap="2"
-              fontSize={{ base: '12px', md: '16px' }} // Reduced font size
+              fontSize={{ base: "12px", md: "16px" }} // Reduced font size
             >
               Book Demo
               {/* <img
@@ -313,7 +331,7 @@ const VMuktiHomepage = () => {
 
       <Achieved />
     </Box>
-  )
-}
+  );
+};
 
-export default VMuktiHomepage
+export default VMuktiHomepage;
