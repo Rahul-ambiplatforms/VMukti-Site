@@ -24,6 +24,25 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const MotionBox = motion(Box);
+
+const StickySection = ({ children }) => (
+  <Box position="relative" height={`${children.length * 100}vh`} /* Dynamically set height */>
+    {children.map((child, index) => (
+      <Box
+        key={index}
+        position="sticky"
+        borderRadius="24px"
+        top="10%"
+        height="100vh"
+        zIndex={index + 1} // Dynamically set z-index in ascending order
+        bg="white" // Optional: Set background to avoid transparency issues
+      >
+        {child}
+      </Box>
+    ))}
+  </Box>
+);
+
 const VMuktiHomepage = () => {
   const customData = {
     title1: 'IoT Integration & Secure Connectivity for',
@@ -53,7 +72,7 @@ const VMuktiHomepage = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <Box minH="100vh" bg="#E7E7E7" overflow="hidden" position="relative">
+    <Box minH="100vh" bg="#E7E7E7" overflow="visible" position="relative">
       <Image
         src={'/assets/Ellipse38.png' || '/placeholder.svg'}
         alt="ellipse38"
@@ -158,37 +177,37 @@ const VMuktiHomepage = () => {
             </Text>
           </Box> */}
 
-<MotionBox
-      ref={ref}
-      fontSize={{ base: "48px", md: "75px", lg: "100px" }}
-      fontWeight="600"
-      textStyle="normal"
-      textAlign={{ base: "center", md: "left" }}
-      lineHeight="140%"
-      zIndex={1}
-      mt={{ base: "20px", md: "4%" }}
-      initial={{ scale: 0.8, opacity: 0 }}
-      animate={inView ? { scale: 1, opacity: 1 } : {}}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
-      <Text as="span" color="#000">
-        Unlocking the{" "}
-      </Text>
-      <Text as="span" color="#3F77A5">
-        Power of
-      </Text>
-      <br />
-      <Text as="span" color="#3F77A5">
-        Data
-      </Text>
-      <Text as="span" color="#000">
-        {" "}
-        with{" "}
-      </Text>
-      <Text as="span" color="#DB7B3A">
-        AI.
-      </Text>
-    </MotionBox>
+          <MotionBox
+            ref={ref}
+            fontSize={{ base: "48px", md: "75px", lg: "100px" }}
+            fontWeight="600"
+            textStyle="normal"
+            textAlign={{ base: "center", md: "left" }}
+            lineHeight="140%"
+            zIndex={1}
+            mt={{ base: "20px", md: "4%" }}
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={inView ? { scale: 1, opacity: 1 } : {}}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <Text as="span" color="#000">
+              Unlocking the{" "}
+            </Text>
+            <Text as="span" color="#3F77A5">
+              Power of
+            </Text>
+            <br />
+            <Text as="span" color="#3F77A5">
+              Data
+            </Text>
+            <Text as="span" color="#000">
+              {" "}
+              with{" "}
+            </Text>
+            <Text as="span" color="#DB7B3A">
+              AI.
+            </Text>
+          </MotionBox>
 
           <Flex mt="16px" direction={{ base: 'column', md: 'row' }}>
             <Box display="flex" alignContent="end" gap={10}>
@@ -274,17 +293,12 @@ const VMuktiHomepage = () => {
         </Box>
       </Flex>
       <PageContentWrapper>
-        <AdvancedComputerVision />
+        <StickySection>
+          <AdvancedComputerVision />
+          <VideoAnalytics />
+          <AdvancedComputerVision {...customData} />
+        </StickySection>
       </PageContentWrapper>
-
-      <PageContentWrapper>
-        <VideoAnalytics />
-      </PageContentWrapper>
-
-      <PageContentWrapper>
-        <AdvancedComputerVision {...customData} />
-      </PageContentWrapper>
-
       <PageContentWrapper>
         <Diagram />
       </PageContentWrapper>
