@@ -6,8 +6,10 @@ import PageContentWrapper from "../../components/PageContentWrapper";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
+const MotionText = motion(Text);
 const MotionHeading = motion(Heading);
 const MotionImage = motion(Image);
+
 
 const TechnologyDashboard = () => {
   const ref = useRef(null);
@@ -94,21 +96,21 @@ const TechnologyDashboard = () => {
 
             {/* Dashboard Image */}
             <MotionImage
-            src="./assets/Dashboard.png"
-            alt="AI Dashboard Interface"
-            position="absolute"
-            top="15%"
-            right="16"
-            transform="perspective(1095px)"
-            w="100%"
-            objectFit="cover"
-            zIndex={3}
-            // bg="red"
-            initial={{ scale: 0.8, opacity: 1 }} // Starts at 80% size, but fully visible
-            whileInView={{ scale: 1 }} // Pops to normal size
-            viewport={{ once: false, amount: 0.5 }} // Triggers animation when 20% visible
-            transition={{ duration: 0.3, ease: "easeOut" }} // Faster pop effect
-        />
+              src="./assets/Dashboard.png"
+              alt="AI Dashboard Interface"
+              position="absolute"
+              top="15%"
+              right="16"
+              transform="perspective(1095px)"
+              w="100%"
+              objectFit="cover"
+              zIndex={3}
+              // bg="red"
+              initial={{ scale: 0.8, opacity: 1 }} // Starts at 80% size, but fully visible
+              whileInView={{ scale: 1 }} // Pops to normal size
+              viewport={{ once: false, amount: 0.5 }} // Triggers animation when 20% visible
+              transition={{ duration: 0.3, ease: "easeOut" }} // Faster pop effect
+            />
           </Flex>
 
           {/* Content Section */}
@@ -157,7 +159,7 @@ const TechnologyDashboard = () => {
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }} // Smooth animation only when visible
                   viewport={{ once: false, amount: 0.2 }} // Triggers at 10% visibility
-                  transition={{ duration: 0.8, ease: "easeOut" }} 
+                  transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                   Breakthroughs in Visual AI:{" "}
                   <Text
@@ -194,19 +196,22 @@ const TechnologyDashboard = () => {
                   />
                 </svg>
                 <Flex align="center" ml={{ base: "-1%", md: "5%", lg: "0%" }}>
-                  <Text
+                  <MotionText
                     fontSize={{ base: "md", md: "16px" }}
                     color="#000"
                     lineHeight="normal"
                     maxW={{ base: "90%", md: "60%", lg: "30%" }}
                     m={3}
-                    // ml={3}
                     fontWeight="500"
+                    initial={{ opacity: 0, x: -50 }} // Start invisible and shifted left
+                    whileInView={{ opacity: 1, x: 0 }} // Fade in and move to original position
+                    viewport={{ once: false, amount: 0.2 }} // Triggers when 20% is visible
+                    transition={{ duration: 0.9, ease: "easeOut" }} // Smooth transition
                   >
                     VMukti is driving innovation with advanced AI technologies,
                     transforming surveillance, automation, and security for a
                     smarter, more connected world.
-                  </Text>
+                  </MotionText>
                 </Flex>
 
                 {/* Square Box (Hidden on smaller screens) */}
@@ -240,7 +245,7 @@ const TechnologyDashboard = () => {
             </Flex>
           </Box>
         </Flex>
-          <ComputerVisionPage />
+        <ComputerVisionPage />
       </Box>
     </PageContentWrapper>
   );

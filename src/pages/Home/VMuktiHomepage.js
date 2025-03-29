@@ -19,14 +19,15 @@ import Industries from "./industriesData";
 import AdvancedSurveillance from "./AdvancedSurveillance";
 import TechnologyDashboard from "../Technology/TechnologyDashboard";
 import ContactUs from "../ContactUs/Contactus";
-import VMuktiCareers from "../IndustriesDashboard/career/Career";
+// import VMuktiCareers from "../IndustriesDashboard/career/Career";
+
 import { motion, useInView } from "framer-motion";
 // import { useInView } from "react-intersection-observer";
 import { useRef } from "react";
 
 const MotionImage = motion(Image);
 const MotionBox = motion(Box);
-
+const MotionButton = motion(Button);
 const StickySection = ({ children }) => (
   <Box
     position="relative"
@@ -271,42 +272,35 @@ const VMuktiHomepage = () => {
             />
 
             {/* Book Demo Button */}
-            <Button
-              position="absolute"
-              top={{ base: "35%", md: "38%" }} // Moved the button upward
-              left={{ base: "22%", md: "22%" }} // Adjusted position
-              transform={{ base: "translateX(-50%)", md: "none" }}
-              bg="white"
-              height="50px"
-              borderRadius="20px"
-              // px="16px" // Reduced padding
-              // py="8px"
-              color="#3F77A5"
-              // fontWeight="700"
-              gap="2"
-              fontSize={{ base: "12px", md: "16px" }} // Reduced font size
-            >
-              Book Demo
-              {/* <img
-                src="/assets/arrowuprb.svg"
-                alt="Arrow Up"
-                width="12px"
-                height="12px"
-              />{' '} */}
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 17 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
-                  fill="#3F77A5"
-                />
-              </svg>
-              {/* Reduced size */}
-            </Button>
+            <MotionButton
+      position="absolute"
+      top={{ base: "35%", md: "38%" }}
+      left={{ base: "22%", md: "22%" }}
+      transform={{ base: "translateX(-50%)", md: "none" }}
+      bg="white"
+      height="50px"
+      borderRadius="20px"
+      color="#3F77A5"
+      gap="2"
+      fontSize={{ base: "12px", md: "16px" }}
+      initial={{ opacity: 1 }}
+      animate={{ opacity: [1, 0.6, 1] }} // Flicker effect
+      transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }} // Smooth loop
+    >
+      Book Demo
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 17 18"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
+          fill="#3F77A5"
+        />
+      </svg>
+    </MotionButton>
           </Flex>
         </Box>
       </Flex>

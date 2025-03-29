@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   Text,
   Box,
@@ -6,39 +6,47 @@ import {
   Image,
   Button,
   useBreakpointValue,
-} from '@chakra-ui/react' // Chakra UI components
-import PageContentWrapper from './PageContentWrapper'
+} from "@chakra-ui/react"; // Chakra UI components
+import PageContentWrapper from "./PageContentWrapper";
+import { motion } from "framer-motion";
 
+const MotionBox = motion(Box);
+const MotionText = motion(Text);
+const MotionButton = motion(Button);
 const IndustryContent = ({ props, content }) => {
-  const titleFontSize = '48px' // Font size for the title
+  const titleFontSize = "48px"; // Font size for the title
   const buttonWidth = useBreakpointValue({
-    base: '130px',
-    md: '130px',
-    lg: '146px',
-  })
+    base: "130px",
+    md: "130px",
+    lg: "146px",
+  });
   const buttonHeight = useBreakpointValue({
-    base: '40px',
-    md: '45px',
-    lg: '50px',
-  })
-  if (!content || !Array.isArray(content.title) || !Array.isArray(content.keyApplications)) {
-    return <Box mt="5%"><Text>Not found</Text></Box>;
+    base: "40px",
+    md: "45px",
+    lg: "50px",
+  });
+  if (
+    !content ||
+    !Array.isArray(content.title) ||
+    !Array.isArray(content.keyApplications)
+  ) {
+    return (
+      <Box mt="5%">
+        <Text>Not found</Text>
+      </Box>
+    );
   }
-
-
 
   return (
     <>
       {/* Import the custom font */}
 
-
       {/* Container Box with background and width */}
       {/* Main Container Box */}
       <PageContentWrapper>
         <Box
-          mt={{ base: '20px', md: '40px' }}
+          mt={{ base: "20px", md: "40px" }}
           as="section"
-
           backgroundColor="#E7E7E7"
           width="100%"
           display="flex"
@@ -49,44 +57,72 @@ const IndustryContent = ({ props, content }) => {
           {/* Title Container with relative positioning */}
           <Box position="relative" mb="20px">
             {/* Title Text (above the white rectangle) */}
-            <Text
-              fontSize={{ base: '24px', md: '48px' }}
-              fontWeight="600"
-              lineHeight="normal"
-              textAlign="left"
-              position="relative"
-              zIndex="1" // Ensures text stays above the rectangle
-            >
-              {content.title.map((part, index) => (
-                <Text as="span" color={part.color} display="inline" key={index}>
-                  {index !== 0 && ' '}
-                  {part.text}
-                </Text>
-              ))}
-              <Text as="span" color="#3F77A5" display="inline">
-                .
-              </Text>{' '}
-              {/* Static blue dot without space */}
-            </Text>
+            <MotionText
+      fontSize={{ base: "24px", md: "48px" }}
+      fontWeight="600"
+      lineHeight="normal"
+      textAlign="left"
+      position="relative"
+      zIndex="1"
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 0 }}
+      viewport={{ once: false, amount: 0.1 }}
+    >
+      {content.title.map((part, index) => (
+        <MotionText
+          as="span"
+          color={part.color}
+          display="inline"
+          key={index}
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.1 }}
+        >
+          {index !== 0 && " "}
+          {part.text}
+        </MotionText>
+      ))}
+
+      {/* Static blue dot with animation */}
+      <MotionText
+        as="span"
+        color="#3F77A5"
+        display="inline"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.9, ease: "easeOut", delay: content.title.length * 0.1 }}
+      >
+        .
+      </MotionText>
+    </MotionText>
           </Box>
 
           {/* Arrow & Description - Flex Container */}
           <Flex
-            flexDirection={{ base: 'column', md: 'row' }}
+            // bg="red"
+            flexDirection={{ base: "column", md: "row" }}
             alignItems="start"
-
             justifyContent="left"
-            mt="1%" // Adjust spacing as needed
+            mt="1%"
           >
-            {/* Left Section: Arrow & Description */}
+            {/* Left Section: Arrow, Description, Button */}
             <Box
               flex="1"
-              maxWidth={{ base: '100%', md: '30%' }}
-              textAlign={{ base: 'center', md: 'left' }}
-              position="relative" // Ensure child absolute positioning works inside
+              maxWidth={{ base: "100%", md: "30%" }}
+              textAlign={{ base: "center", md: "left" }}
+              position="relative"
             >
-              {/* Arrow */}
-              <Box mb="8px" display="flex" justifyContent="flex-start">
+              {/* Arrow Animation */}
+              <MotionBox
+                mb="8px"
+                display="flex"
+                justifyContent="flex-start"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut"}}
+                viewport={{ once: false, amount: 0.1 }}
+              >
                 <svg
                   width="40"
                   height="40"
@@ -99,22 +135,25 @@ const IndustryContent = ({ props, content }) => {
                     fill="#3F77A5"
                   />
                 </svg>
-              </Box>
+              </MotionBox>
 
-              {/* Description */}
-              <Text
+              {/* Description Animation */}
+              <MotionText
                 color="#000"
                 fontWeight="500"
-                textAlign={{ base: 'center', md: 'left' }}
-                fontSize={{ base: '14px', md: '16px' }}
+                textAlign={{ base: "center", md: "left" }}
+                fontSize={{ base: "14px", md: "16px" }}
                 maxW="100%"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+                viewport={{ once: false, amount: 0.1 }}
               >
-                {' '}
                 {content.para}
-              </Text>
+              </MotionText>
 
-              {/* Button Below the Description */}
-              <Button
+              {/* Button Animation */}
+              <MotionButton
                 marginTop="20px"
                 width={buttonWidth}
                 height={buttonHeight}
@@ -123,9 +162,13 @@ const IndustryContent = ({ props, content }) => {
                 bg="white"
                 color="#3F77A5"
                 borderRadius="20px"
-                _hover={{ bg: '#2c5a7a', color: 'white' }}
-                px={{ base: '12px', md: '15px', lg: '20px' }}
+                _hover={{ bg: "#2c5a7a", color: "white" }}
+                px={{ base: "12px", md: "15px", lg: "20px" }}
                 display="flex"
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7, ease: "easeOut"}}
+                viewport={{ once: false, amount: 0.1 }}
               >
                 Book Demo
                 <Box
@@ -147,7 +190,7 @@ const IndustryContent = ({ props, content }) => {
                     />
                   </svg>
                 </Box>
-              </Button>
+              </MotionButton>
             </Box>
           </Flex>
 
@@ -155,8 +198,8 @@ const IndustryContent = ({ props, content }) => {
           <Flex
             // justifyContent="space-between"
             alignItems="flex-end" // Changed to align bottoms
-            direction={{ base: 'column', md: 'row' }}
-            mt={{ base: '-5%', md: '-10%' }}
+            direction={{ base: "column", md: "row" }}
+            mt={{ base: "-5%", md: "-10%" }}
             gap="3"
             position="relative"
           >
@@ -165,7 +208,7 @@ const IndustryContent = ({ props, content }) => {
               flex="0 0 30%"
               src={content.small_image}
               alt={content.small_image_alt}
-              maxHeight={{ base: '180px', md: '336px' }} // Changed to minHeight
+              maxHeight={{ base: "180px", md: "336px" }} // Changed to minHeight
               backgroundColor="white"
               borderRadius="24px"
               flexShrink="0"
@@ -176,7 +219,7 @@ const IndustryContent = ({ props, content }) => {
               src={content.large_image}
               alt={content.large_image_alt}
               flex="0 0 68%"
-              maxHeight={{ base: '300px', md: '630px' }} // Changed to minHeight
+              maxHeight={{ base: "300px", md: "630px" }} // Changed to minHeight
               height="auto" // Prevent sudden jumps
               backgroundColor="white"
               borderRadius="24px"
@@ -208,7 +251,12 @@ const IndustryContent = ({ props, content }) => {
               width="70%" // SVG covers 70% of the background width
               zIndex="0"
             >
-              <Image src={"./assets/VMukti_Brochure_O2_1.png"} alt="" width="100%" opacity="0.8" />
+              <Image
+                src={"./assets/VMukti_Brochure_O2_1.png"}
+                alt=""
+                width="100%"
+                opacity="0.8"
+              />
             </Box>
             <Box
               position="absolute"
@@ -217,16 +265,21 @@ const IndustryContent = ({ props, content }) => {
               width="70%" // SVG covers 70% of the background width
               zIndex="0"
             >
-              <Image src={"./assets/VMukti_Brochure_O2_2.png"} alt="" width="100%" opacity="0.8" />
+              <Image
+                src={"./assets/VMukti_Brochure_O2_2.png"}
+                alt=""
+                width="100%"
+                opacity="0.8"
+              />
             </Box>
 
             <Text
-              fontSize={{ base: '20px', md: '36px' }}
+              fontSize={{ base: "20px", md: "36px" }}
               fontWeight="700"
               color="#000"
-              maxWidth={'90%'}
+              maxWidth={"90%"}
               textAlign="flex-start"
-              width={'100%'}
+              width={"100%"}
               mt="1%"
             >
               Key Applications
@@ -235,7 +288,7 @@ const IndustryContent = ({ props, content }) => {
             {content.keyApplications.map((card, index) => (
               <Box
                 key={index}
-                width={{ base: '100%', md: '48%' }} // Responsive: 1-column mobile, 2-column desktop
+                width={{ base: "100%", md: "48%" }} // Responsive: 1-column mobile, 2-column desktop
                 maxWidth="645px"
                 flexShrink="0"
                 gap="2"
@@ -251,17 +304,17 @@ const IndustryContent = ({ props, content }) => {
                   src={card.image}
                   alt={card.image_alt}
                   width="100%"
-                  height={{ base: '200px', md: '368px' }}
+                  height={{ base: "200px", md: "368px" }}
                   backgroundColor="#E7E7E7"
                   borderRadius="24px"
                   flexShrink="0"
-                // marginBottom="16px"
+                  // marginBottom="16px"
                 />
 
                 {/* Title */}
                 <Text
                   color="#000"
-                  fontSize={{ base: '12px', md: '16px' }}
+                  fontSize={{ base: "12px", md: "16px" }}
                   fontWeight="700"
                   textAlign="left"
                 >
@@ -281,10 +334,10 @@ const IndustryContent = ({ props, content }) => {
                 {/* Description */}
                 <Text
                   color="#696969"
-                  fontSize={{ base: '12px', md: '14px' }}
+                  fontSize={{ base: "12px", md: "14px" }}
                   fontWeight="500"
                   textAlign="left"
-                // marginTop="10px"
+                  // marginTop="10px"
                 >
                   {card.description}
                 </Text>
@@ -302,7 +355,7 @@ const IndustryContent = ({ props, content }) => {
             marginTop="40px"
             padding="24px"
             display="flex"
-            flexDirection={{ base: 'column', md: 'row' }}
+            flexDirection={{ base: "column", md: "row" }}
             alignItems="center"
             justifyContent="space-between"
           >
@@ -311,9 +364,8 @@ const IndustryContent = ({ props, content }) => {
               color="#FFF"
               fontSize="36px"
               fontWeight="600"
-
-              textAlign={{ base: 'center', md: 'left' }}
-              marginBottom={{ base: '16px', md: '0' }}
+              textAlign={{ base: "center", md: "left" }}
+              marginBottom={{ base: "16px", md: "0" }}
             >
               Key Benefits
             </Text>
@@ -330,7 +382,7 @@ const IndustryContent = ({ props, content }) => {
                 <Box
                   key={index}
                   textAlign="center"
-                  width={{ base: '50%', md: 'auto' }}
+                  width={{ base: "50%", md: "auto" }}
                   maxWidth="160px" // Controls text wrapping for two lines
                 >
                   {/* SVG Icon */}
@@ -342,7 +394,7 @@ const IndustryContent = ({ props, content }) => {
                     display="flex"
                     alignItems="center"
                     justifyContent="flex-start" // Aligns icon to the left
-                  // paddingLeft="8px" // Adds slight spacing from the edge
+                    // paddingLeft="8px" // Adds slight spacing from the edge
                   >
                     <Image src={benefit.svg} alt={benefit.title} />
                   </Box>
@@ -358,7 +410,7 @@ const IndustryContent = ({ props, content }) => {
                     overflowWrap="break-word"
                   >
                     {benefit.title}
-                  </Text>{' '}
+                  </Text>{" "}
                 </Box>
               ))}
             </Flex>
@@ -384,7 +436,7 @@ const IndustryContent = ({ props, content }) => {
 
             {/* Button */}
             <Button
-              height={{ base: '40px', md: '50px' }} // Responsive height
+              height={{ base: "40px", md: "50px" }} // Responsive height
               minWidth="146px" // Minimum width to fit content
               backgroundColor="white"
               color="#3F77A5"
@@ -397,15 +449,15 @@ const IndustryContent = ({ props, content }) => {
               p="8px 16px" // Padding for better spacing
               gap="8px" // Space between text and icon
               zIndex="2"
-              _hover={{ backgroundColor: '#f0f0f0' }}
+              _hover={{ backgroundColor: "#f0f0f0" }}
             >
               All Industries
               <svg
                 style={{
-                  width: '1em',
-                  height: '1em',
-                  minWidth: '14px',
-                  minHeight: '14px',
+                  width: "1em",
+                  height: "1em",
+                  minWidth: "14px",
+                  minHeight: "14px",
                   flexShrink: 0, // Prevent the icon from shrinking
                 }}
                 viewBox="0 0 18 18"
@@ -422,7 +474,7 @@ const IndustryContent = ({ props, content }) => {
         </Box>
       </PageContentWrapper>
     </>
-  )
-}
+  );
+};
 
-export default IndustryContent
+export default IndustryContent;

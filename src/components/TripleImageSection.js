@@ -57,9 +57,7 @@
 
 //                 {/* Background Box Behind Images */}
 
-
 //                 {/* Right Column (Images) */}
-
 
 //                 <Flex gap="38px" ml="auto" mt={0} position="relative" zIndex={1}> {/* Ensuring images stay above */}
 //                     {
@@ -82,7 +80,6 @@
 //                 </Flex>
 
 //                 {/* Background Box Behind Images */}
-
 
 //                 <Flex
 //                     position="absolute"
@@ -116,16 +113,13 @@
 //     </Box>)
 // }
 
-
 // export default TripleImageSection;
 
-
-
-
 import { Box, Container, Flex, Image, Text, VStack } from "@chakra-ui/react";
-import { motion,useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
+const MotionTextContainer = motion(VStack);
 const MotionImage = motion(Image);
 const MotionText = motion(Text);
 
@@ -136,11 +130,14 @@ const TripleImageSection = ({
     { text: "\nSolutions", color: "#DB7B3A" },
   ],
   description = "Unlock smarter security with AI-driven surveillance solutions for real-time monitoring, proactive threat detection, and seamless video management.",
-  images = ["./assets/sol1st.png", "./assets/sol2nd.png", "./assets/sol3rd.png"],
+  images = [
+    "./assets/sol1st.png",
+    "./assets/sol2nd.png",
+    "./assets/sol3rd.png",
+  ],
 }) => {
-
   const ref = useRef(null);
-  const inView = useInView(ref, { threshold: 0.1 }); // Triggers when 10% visible  
+  const inView = useInView(ref, { threshold: 0.1 }); // Triggers when 10% visible
 
   return (
     <Box bg="#E7E7E7" py={10} px={8}>
@@ -148,8 +145,8 @@ const TripleImageSection = ({
         {/* Heading Animation */}
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, x: -50 }} // Start invisible and shifted left
-          animate={ inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }} // Only animates when visible
+          initial={{ opacity: 0.5, x: -50 }} // Start invisible and shifted left
+          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }} // Only animates when visible
           transition={{ duration: 0.8, ease: "easeOut" }} // Smooth animation
         >
           {heading.map((item, index) => (
@@ -161,7 +158,7 @@ const TripleImageSection = ({
               fontWeight="600"
               lineHeight="normal"
               whiteSpace="pre-wrap"
-            //   z-index="20"
+              // bg="red"
             >
               {item.text}{" "}
             </MotionText>
@@ -170,34 +167,68 @@ const TripleImageSection = ({
 
         {/* Content Section */}
         <Flex align="flex-start" mt={4} position="relative">
-          {/* Left Column (SVG + Text) */}
-          <VStack align="start" spacing={6} maxW="40%" mt={16}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 33 33" fill="none">
-              <path d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z" fill="#3F77A5"/>
+          {/* Left Column (Animated Text & Icon) */}
+          <MotionTextContainer
+            align="start"
+            spacing={6}
+            maxW="40%"
+            mt={16}
+            initial={{ opacity: 0, x: -120 }} // Start faded and shifted left
+            whileInView={{ opacity: 1, x: 0 }} // Fade in and move right
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.1 }} // Trigger at 10% visibility
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25px"
+              height="25px"
+              viewBox="0 0 33 33"
+              fill="none"
+            >
+              <path
+                d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
+                fill="#3F77A5"
+              />
             </svg>
-            <Text color="#000" fontSize="16px" fontWeight="500" lineHeight="normal">
+            <MotionText
+              color="#000"
+              fontSize="16px"
+              fontWeight="500"
+              lineHeight="normal"
+              
+            >
               {description}
-            </Text>
-          </VStack>
+            </MotionText>
+          </MotionTextContainer>
 
-          {/* Right Column (Images) */}
+          {/* Right Column (Animated Images) */}
           <Flex gap="38px" ml="auto" mt={0} position="relative" zIndex={1}>
-      {images.map((image, index) => (
-        <Box key={index} borderRadius="lg" overflow="hidden" w="306px" h="594px">
-          <MotionImage
-            src={image}
-            alt="Surveillance Image"
-            w="305px"
-            h="552px"
-            objectFit="cover"
-            initial={{ scale: 0.8, opacity: 1 }} // Starts slightly smaller but fully visible
-            whileInView={{ scale: 1 }} // Pops to normal size
-            viewport={{ once: false, amount: 0.2 }} // Triggers when 20% is visible
-            transition={{ duration: 0.3, ease: "easeOut", delay: index * 0.2 }} // Adds delay for each image
-          />
-        </Box>
-      ))}
-    </Flex>
+            {images.map((image, index) => (
+              <Box
+                key={index}
+                borderRadius="lg"
+                overflow="hidden"
+                w="306px"
+                h="594px"
+              >
+                <MotionImage
+                  src={image}
+                  alt="Surveillance Image"
+                  w="305px"
+                  h="552px"
+                  objectFit="cover"
+                  initial={{ scale: 0.8, opacity: 1 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: false, amount: 0.2 }}
+                  transition={{
+                    duration: 0.3,
+                    ease: "easeOut",
+                    delay: index * 0.1,
+                  }} // Delay between images
+                />
+              </Box>
+            ))}
+          </Flex>
         </Flex>
       </Container>
     </Box>
