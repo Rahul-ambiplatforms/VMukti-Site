@@ -14,8 +14,8 @@ import {
 } from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import HeroSection from "./components/HeroSection";
-import PageContentWrapper from "../../../components/PageContentWrapper";
-import CulturalSection from "../../../components/CulturalSection"; // Import the new reusable component
+import PageContentWrapper from "../../components/PageContentWrapper";
+import CulturalSection from "../../components/CulturalSection"; // Import the new reusable component
 
 export default function VMuktiCareers() {
     const gridItems = [

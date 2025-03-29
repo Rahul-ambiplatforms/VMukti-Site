@@ -17,7 +17,7 @@ import OurServings from './pages/OurServings/OurServings';
 import ServingsDock from './pages/OurServings/ServingsDock';
 import ScrollToTop from './components/ScrollToTop';
 import ContactUs from './pages/ContactUs/Contactus';
-import VMuktiCareers from './pages/IndustriesDashboard/career/Career';
+import VMuktiCareers from './pages/career/Career';
 
 function App() {
   // Assuming the Navbar height is 60px

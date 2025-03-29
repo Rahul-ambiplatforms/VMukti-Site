@@ -89,7 +89,8 @@ export default function HeroSection() {
                     </Box>
                     <Box>
                         <Image
-                            src="./assets/career.png"
+                            src={`${process.env.PUBLIC_URL}/assets/career.png`}
+                            // src={${process.env.PUBLIC_URL} /assets/career.png}
                             alt="Team collaboration"
                             borderRadius="md"
                             width={{ base: "100%", md: "931px" }}
