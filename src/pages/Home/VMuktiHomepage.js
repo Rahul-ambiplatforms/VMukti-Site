@@ -312,7 +312,6 @@ const VMuktiHomepage = () => {
       </PageContentWrapper>
 
       <Achieved />
-      <VMuktiCareers />
     </Box>
   )
 }

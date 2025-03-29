@@ -27,21 +27,64 @@ import { Link, useLocation } from 'react-router-dom' // Import Link and useLocat
 import PageContentWrapper from './PageContentWrapper';
 
 const dropdownItems = {
-    organization: ["Solution", "Team", "Careers"],
-    solutions: ["Video Management System (VMS)", "Integrated Command & Control Center (ICCC)", "AI-Optimized Cloud Services", "Generative AI in Video Surveillance", "AI-Powered Surveillance Cameras", "Flying Squad Vehicle (FSV)", "Live Webcasting & Streaming"],
-    industries: ["Retailer Industry", "Manufacturing Industry", "HealthCare Industry", "Education Industry", "Finance Industry", "Transportation Industry", "City Monitoring", "Agriculture Industry", "Logistic Industry", "Sports & Entertainment Industry", "Defense Industry", "Election Industry", "Hospitality Industry"],
-    ourServing: ["Enterprise", "Government", "General Consumers"],
-    Whoweare: ["About Us", "Event Spotlight", "Social Impact", "Achievements", "Blogs", "Carrers", "Help Desk", "Terms & Condition", "Warranty Policy", "Privacy Policy"],
+    organization: [
+        { label: "Solution", path: "/organization/solution" },
+        { label: "Team", path: "/organization/team" },
+        { label: "Careers", path: "/organization/careers" },
+    ],
+    solutions: [
+        { label: "Video Management System (VMS)", path: "/solutions" },
+        { label: "Integrated Command & Control Center (ICCC)", path: "/solutions" },
+        { label: "AI-Optimized Cloud Services", path: "/solutions" },
+        { label: "Generative AI in Video Surveillance", path: "/solutions" },
+        { label: "AI-Powered Surveillance Cameras", path: "/solutions" },
+        { label: "Flying Squad Vehicle (FSV)", path: "/solutions" },
+        { label: "Live Webcasting & Streaming", path: "/solutions" },
+    ],
+    industries: [
+        { label: "Retailer Industry", path: "/industries/retailindustry" },
+        { label: "Manufacturing Industry", path: "/industries/manufacturingindustry" },
+        { label: "HealthCare Industry", path: "/industries/healthcareindustry" },
+        { label: "Education Industry", path: "/industries/educationindustry" },
+        { label: "Finance Industry", path: "/industries/financeindustry" },
+        { label: "Transportation Industry", path: "/industries/transportationindustry" },
+        { label: "City Monitoring", path: "/industries/citymonitoring" },
+        { label: "Agriculture Industry", path: "/industries/agricultureindustry" },
+        { label: "Logistic Industry", path: "/industries/warehousinglogisticIndustry" },
+        { label: "Sports & Entertainment Industry", path: "/industries/entertainmentindustry" },
+        { label: "Defense Industry", path: "/industries/defenseindustry" },
+        { label: "Election Industry", path: "/industries/election" },
+        { label: "Hospitality Industry", path: "/industries/hospitalityindustry" },
+    ],
+    ourServing: [
+        { label: "Enterprise", path: "/serving/enterprise" },
+        { label: "Government", path: "/serving/government" },
+        { label: "General Consumers", path: "/serving/generalconsumers" },
+    ],
+    Whoweare: [
+        { label: "About Us", path: "/whoweare" },
+        { label: "Event Spotlight", path: "/whoweare/eventspotlight" },
+        { label: "Social Impact", path: "/whoweare/social-impact" },
+        { label: "Achievements", path: "/whoweare/achievements" },
+        { label: "Blogs", path: "/whoweare/blogs" },
+        { label: "Careers", path: "/whoweare/careers" },
+        { label: "Help Desk", path: "/whoweare/help-desk" },
+        { label: "Terms & Condition", path: "/whoweare/terms" },
+        { label: "Warranty Policy", path: "/whoweare/warranty" },
+        { label: "Privacy Policy", path: "/whoweare/privacy" },
+    ],
 };
 
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [activeLink, setActiveLink] = useState('Home') // State to track active link
+    const [hoverTimeouts, setHoverTimeouts] = useState({}); // Track hover timeouts for each menu
+    const [menuOpenStates, setMenuOpenStates] = useState({}); // Track open state for each menu
     const location = useLocation(); // Use location hook
     const pathToLinkName = {
         '/': 'Home',
         '/technology': 'Technology',
-        '/solution': 'Solutions',
+        '/solutions': 'Solutions',
         '/industries': 'Industries',
         '/serving': 'Our Serving',
         '/whoweare': 'Who we are',
@@ -70,11 +113,23 @@ const Navbar = () => {
         setActiveLink(link)
     }
 
+    const handleMouseEnter = (menuName) => {
+        clearTimeout(hoverTimeouts[menuName]); // Clear any existing timeout for this menu
+        setMenuOpenStates((prev) => ({ ...prev, [menuName]: true })); // Open the menu
+    };
+
+    const handleMouseLeave = (menuName) => {
+        const timeout = setTimeout(() => {
+            setMenuOpenStates((prev) => ({ ...prev, [menuName]: false })); // Close the menu after delay
+        }, 300); // Set delay in milliseconds
+        setHoverTimeouts((prev) => ({ ...prev, [menuName]: timeout })); // Save timeout ID
+    };
+
     // Define navigation items array to help with last item check
     const navigationItems = [
         { name: "Home", path: "/" },
         { name: "Technology", path: "/technology" },
-        { name: "Solutions", path: "/solution", hasDropdown: true, items: dropdownItems.solutions },
+        { name: "Solutions", path: "/solutions", hasDropdown: true, items: dropdownItems.solutions },
         { name: "Industries", path: "/industries", hasDropdown: true, items: dropdownItems.industries },
         { name: "Our Serving", path: "/serving", hasDropdown: true, items: dropdownItems.ourServing },
         { name: "Who we are", path: "/whoweare", hasDropdown: true, items: dropdownItems.Whoweare },
@@ -141,42 +196,72 @@ const Navbar = () => {
                                 >
                                     {/* Menu Item */}
                                     {item.hasDropdown ? (
-                                        <Menu>
-                                            <MenuButton
-                                                as={Button}
-                                                rightIcon={<svg width="12" height="6" viewBox="0 0 12 6" fill="none">
-                                                    <path d="M6 6L12 0L0 0L6 6Z" fill="#3F77A5" />
-                                                </svg>}
-                                                variant="ghost"
-                                                fontWeight={isPathActive(item.path) ? "500" : "400"}
-                                                onClick={() => handleLinkClick(item.name)}
-                                                position="relative"
-                                            >
-                                                {item.name}
-                                                {isPathActive(item.path) && (
+                                        <Menu isOpen={menuOpenStates[item.name]}>
+                                            <>
+                                                {/* Styled Link */}
+                                                <Link
+                                                    to={item.path}
+                                                    style={{
+                                                        display: "flex",
+                                                        alignItems: "center",
+                                                        gap: "4px",
+                                                        padding: "8px 12px",
+                                                        fontWeight: isPathActive(item.path) ? "700" : "400",
+                                                        textDecoration: "none",
+                                                        color: isPathActive(item.path) ? "#3F77A5" : "black",
+                                                        position: "relative",
+                                                    }}
+                                                    onMouseEnter={() => handleMouseEnter(item.name)}
+                                                    onMouseLeave={() => handleMouseLeave(item.name)}
+                                                    onClick={() => handleLinkClick(item.name)} // Navigate to parent path
+                                                >
+                                                    {item.name}
+                                                    
+                                                    {isPathActive(item.path) && (
                                                     <Box
                                                         position="absolute"
-                                                        bottom="6px"
-
+                                                        bottom="8px"
                                                         width="20px"
-                                                        height="1.5px"
+                                                        height="2px"
                                                         bg="#3F77A5"
                                                     />
                                                 )}
-                                            </MenuButton>
-                                            <MenuList>
-                                                {item.items.map((dropdownLabel, idx) => (
-                                                    <MenuItem
-                                                        key={idx}
-                                                        fontWeight="400"
-                                                        as={Link}
-                                                        to={item.path} // Always use the parent's path
-                                                        onClick={() => handleLinkClick(item.name)}
+                                                </Link>
+                                                <MenuButton><svg
+                                                        width="12"
+                                                        height="6"
+                                                        viewBox="0 0 12 6"
+                                                        fill="none"
+                                                        style={{
+                                                            transform: menuOpenStates[item.name] ? "rotate(180deg)" : "rotate(0deg)",
+                                                            transition: "transform 0.2s ease",
+                                                        }}
                                                     >
-                                                        {dropdownLabel}
-                                                    </MenuItem>
-                                                ))}
-                                            </MenuList>
+                                                        <path d="M6 6L12 0L0 0L6 6Z" fill="#3F77A5" />
+                                                    </svg></MenuButton>
+
+                                                <MenuList
+                                                    placement="" // Ensure dropdown opens directly below the link
+                                                    onMouseEnter={() => handleMouseEnter(item.name)}
+                                                    onMouseLeave={() => handleMouseLeave(item.name)}
+                                                    
+                                                    style={{
+                                                        marginTop: "10px", // Adjust dropdown position
+                                                    }}
+                                                >
+                                                    {item.items.map((dropdownItem, idx) => (
+                                                        <MenuItem
+                                                            key={idx}
+                                                            fontWeight="400"
+                                                            as={Link}
+                                                            to={dropdownItem.path} // Use the path from dropdownItems
+                                                            onClick={() => handleLinkClick(item.name)}
+                                                        >
+                                                            {dropdownItem.label}
+                                                        </MenuItem>
+                                                    ))}
+                                                </MenuList>
+                                            </>
                                         </Menu>
                                     ) : (
                                         <Box px="8px">
@@ -234,6 +319,8 @@ const Navbar = () => {
                     fontWeight="600"
                     borderRadius="20px"
                     flexShrink={0}
+                    as={Link}
+                    to="/contactus"
                 >
                     Contact Us
                 </Button>
