@@ -6,6 +6,8 @@ import {
   useBreakpointValue,
   Flex,
 } from '@chakra-ui/react'
+import HeadingAnimation from '../../components/Animation/Text/HeadingAnimation'
+import ImagePop from '../../components/Animation/Image/ImagePop'
 // import ellipse38 from '../assets/Ellipse38.png' //assets/Ellipse38.png'
 // import ellipse38 from '../public/assets/Ellipse38.png'
 // import ellipse39 from '../assets/Ellipse39.png'
@@ -116,8 +118,9 @@ const Achieved = () => {
         maxWidth={containerWidth}
         minHeight={containerHeight}
         margin="0 auto"
-
       >
+        {/* In this we can try some new animation such that half part is come from left and another comes from right. */}
+        <HeadingAnimation>
         <Text
           fontSize={titleFontSize}
           fontWeight="600"
@@ -128,7 +131,7 @@ const Achieved = () => {
             achieved
           </Text>
         </Text>
-
+        </HeadingAnimation>
         <Box
           position="absolute"
           top={{ base: "50%", md: "60%", lg: "70%" }} // Align center vertically
@@ -159,8 +162,8 @@ const Achieved = () => {
           opacity="1"
           pointerEvents="none"
           zIndex="0"
+          // bg="red"
         />
-
         <Grid
           templateColumns={gridColumns}
           templateRows={{
@@ -182,6 +185,7 @@ const Achieved = () => {
           px={{ base: '2px', sm: '10px', md: '20px' }}
         >
           {achievementsData.map((item, index) => (
+            <ImagePop key={index} delay={index * 0.05}>
             <Box
               key={index}
               width={{
@@ -207,6 +211,7 @@ const Achieved = () => {
               position="relative"
               aspectRatio="1/1"
             >
+              
               <Text
                 fontSize={valueFontSize}
                 fontWeight="600"
@@ -243,6 +248,7 @@ const Achieved = () => {
                 />
               </Text>
             </Box>
+            </ImagePop>
           ))}
         </Grid>
       </Flex>

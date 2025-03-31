@@ -1,4 +1,6 @@
 import { Box, Flex, Text, Image, useBreakpointValue } from '@chakra-ui/react'
+import HeadingAnimation from '../../components/Animation/Text/HeadingAnimation'
+import SubHeadingAnimation from '../../components/Animation/Text/SubHeadingAnimation'
 
 const nodes = [
   { label: 'Image', position: '15%', side: 'left' },
@@ -46,6 +48,7 @@ const Diagram = () => {
         zIndex={1} // Bring forward
         borderRadius={'24px'}
       >
+        <HeadingAnimation>
         <Text
           fontSize={{ base: '18px', md: '36px' }}
           fontWeight="bold"
@@ -59,6 +62,8 @@ const Diagram = () => {
           </Text>{' '}
           Implementation
         </Text>
+        </HeadingAnimation>
+        <SubHeadingAnimation>
         <Flex
           align="flex-start"
           mt="10%"
@@ -93,6 +98,7 @@ const Diagram = () => {
             Unified Platform to Enhance Visual Intelligence
           </Text>
         </Flex>
+        </SubHeadingAnimation>
       </Box>
 
       {/* Right Panel */}

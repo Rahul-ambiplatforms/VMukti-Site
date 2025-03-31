@@ -11,6 +11,7 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
+import HeadingAnimation from '../../components/Animation/Text/HeadingAnimation'
 
 // Industry data with SVGs
 const industriesData = [
@@ -286,6 +287,7 @@ export default function IndustryGrid() {
                         textOverflow="ellipsis" // Add ellipsis for overflow
                         maxWidth="90%" // Ensure text doesn't overflow the card
                         style={{ backfaceVisibility: 'hidden' }}
+                        // bg="red"
                       >
                         {industry.name}
                         <Box
@@ -300,7 +302,7 @@ export default function IndustryGrid() {
                     <Flex position="absolute" backfaceVisibility="hidden"> {/* back side */}
                       dummy text
                     </Flex>
-                  </Box></Box>
+                  </Box></Box> {/* This is just useless things addedd if its nothing then remove. */}
               </GridItem>
             )
           })
@@ -357,6 +359,8 @@ export default function IndustryGrid() {
           zIndex: '1',
         }}
       >
+        {/* We can add some creativity here also. */}
+        <HeadingAnimation>
         <Text
           fontSize={useBreakpointValue({
             base: '24px',
@@ -384,7 +388,7 @@ export default function IndustryGrid() {
             .
           </Text>
         </Text>
-
+        </HeadingAnimation>
         {/* Industry Grid */}
         {renderIndustryCards()}
 

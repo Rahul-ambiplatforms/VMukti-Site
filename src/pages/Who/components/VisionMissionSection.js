@@ -1,5 +1,7 @@
 import React from "react";
 import { Box, Flex, Text, Image } from "@chakra-ui/react";
+import HeadingAnimation from "../../../components/Animation/Text/HeadingAnimation";
+import SubHeadingAnimation from "../../../components/Animation/Text/SubHeadingAnimation";
 
 const VisionMissionSection = () => {
     return (
@@ -29,13 +31,17 @@ const VisionMissionSection = () => {
                     </svg>
                 </Box>
                 <Flex direction="column" gap="50" mb="10">
+                <HeadingAnimation>
                     <Text color="#3F77A5" fontSize="36px" fontWeight="700">
                         Vision
                     </Text>
+                    </HeadingAnimation>
+                    <SubHeadingAnimation>
                     <Text maxW="90%" color="#000000" fontSize="16px" fontWeight="500">
                         To redefine visual intelligence with AI-driven solutions that ensure safety, optimize
                         operations, and drive innovation globally.
                     </Text>
+                    </SubHeadingAnimation>
                 </Flex>
             </Box>
             <Box
@@ -56,14 +62,18 @@ const VisionMissionSection = () => {
                     </svg>
                 </Box>
                 <Flex direction="column" gap="50" mb="1">
+                    <HeadingAnimation>
                     <Text color="#3F77A5" fontSize="36px" fontWeight="700">
                         Mission
                     </Text>
+                    </HeadingAnimation>
+                    <SubHeadingAnimation>
                     <Text maxW="90%" color="#000000" fontSize="16px" fontWeight="500">
                         To deliver cutting-edge surveillance and automation technologies that provide actionable
                         insights, seamless integration, and reliability, enhancing safety and efficiency across
                         industries.
                     </Text>
+                    </SubHeadingAnimation>
                 </Flex>
             </Box>
             <Box position="relative" width="fit-content">

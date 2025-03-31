@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Box, Flex, Text, Image, Button } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
+import HeadingAnimation from '../../components/Animation/Text/HeadingAnimation'
 
 const AdvancedSurveillance = () => {
   const [activeCard, setActiveCard] = useState(0)
@@ -77,6 +78,7 @@ const AdvancedSurveillance = () => {
             display="flex"
             justifyContent="flex-end" // Right-align the text
           >
+            <HeadingAnimation>
             <Text
               fontSize="36px"
               fontWeight="600"
@@ -88,6 +90,7 @@ const AdvancedSurveillance = () => {
                 Surveillance for All.
               </Text>
             </Text>
+            </HeadingAnimation>
           </Box>
 
           {/* Ellipses */}
