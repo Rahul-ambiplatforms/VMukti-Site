@@ -41,6 +41,57 @@ const PhoneIcon = ({ mr = '10px', w = '21px', h = '21px' }) => (
   </Box>
 )
 
+const whoWeAreLinks = [
+  { text: 'About Us', path: '/whoweare' },
+  { text: 'Event Spotlight', path: '/whoweare/eventspotlight' },
+  { text: 'Social Impact', path: '/whoweare/socialimpact' },
+  { text: 'Achievements', path: '/whoweare/achievements' },
+  { text: 'Blogs', path: '/whoweare/blogs' },
+  { text: 'Careers', path: '/whoweare/careers' },
+  { text: 'Help Desk', path: '/whoweare/helpdesk' },
+];
+
+const policyLinks = [
+  { text: 'Terms & Condition', path: '/whoweare/terms-and-condition' },
+  { text: 'Trademark Policy', path: '/whoweare/trademark-policy' },
+  { text: 'Warranty Service', path: '/whoweare/warranty-service' },
+  { text: 'Warranty Policy', path: '/whoweare/warranty-policy' },
+  { text: 'Privacy Policy', path: '/whoweare/privacy-policy' },
+];
+
+const ourServingsLinks = [
+  { text: 'Enterprise', path: '/serving/enterprise' },
+  { text: 'Government', path: '/serving/government' },
+  { text: 'General Consumers', path: '/serving/generalconsumers' },
+];
+
+const ourSolutionsLinks = [
+  { text: 'VMS', path: '/solutions/vms' },
+  { text: 'EMS', path: '/solutions/ems' },
+  { text: 'ICCC', path: '/solutions/iccc' },
+  { text: 'AI Optimized Cloud Services', path: '/solutions/ai-cloud-services' },
+  { text: 'Generative AI in Video Surveillance', path: '/solutions/generative-ai-surveillance' },
+  { text: 'AI-Powered Surveillance Cameras', path: '/solutions/ai-surveillance-cameras' },
+  { text: 'Flying Squad Vehicle (FSV)', path: '/solutions/flying-squad-vehicle' },
+  { text: 'Live Webcasting & Streaming', path: '/solutions/live-webcasting' },
+];
+
+const industriesWeServeLinks = [
+  { text: 'Healthcare Industry', path: '/industries/healthcareindustry' },
+  { text: 'Education Industry', path: '/industries/educationindustry' },
+  { text: 'Border Security Industry', path: '/industries/bordersecurityindustry' },
+  { text: 'Election Industry', path: '/industries/election' },
+  { text: 'Banking Industry', path: '/industries/bankingindustry' },
+  { text: 'Transportation Industry', path: '/industries/transportationindustry' },
+  { text: 'City Monitoring Industry', path: '/industries/citymonitoringindustry' },
+  { text: 'Retailer Industry', path: '/industries/retailindustry' },
+  { text: 'Manufacturing Industry', path: '/industries/manufacturingindustry' },
+  { text: 'Agriculture Industry', path: '/industries/agricultureindustry' },
+  { text: 'Warehousing & Logistic Industry', path: '/industries/warehousinglogisticindustry' },
+  { text: 'Sports & Entertainment Industry', path: '/industries/entertainmentindustry' },
+  { text: 'Hospitality Industry', path: '/industries/hospitalityindustry' },
+];
+
 const NewsletterSubscription = () => {
   const [email, setEmail] = useState('')
   const [isSubscribed, setIsSubscribed] = useState(false)
@@ -83,12 +134,6 @@ const NewsletterSubscription = () => {
             borderRadius="24px"
             p="20px"
             flex="2"
-          // boxShadow="lg"
-          // _hover={{
-          //   boxShadow: 'xl',
-          //   transform: 'scale(1.01)',
-          //   transition: 'all 0.3s ease',
-          // }}
           >
             <Heading
               fontSize="16px"
@@ -109,15 +154,7 @@ const NewsletterSubscription = () => {
             <Flex mt="5%">
               <Box mr="30px">
                 <List spacing="10px">
-                  {[
-                    'About Us',
-                    'Event Spotlight',
-                    'Social Impact',
-                    'Achievements',
-                    'Blogs',
-                    'Careers',
-                    'Help Desk',
-                  ].map((item, index) => (
+                  {whoWeAreLinks.map((item, index) => (
                     <ListItem
                       key={index}
                       _hover={{ color: '#3F77A5', cursor: 'pointer' }}
@@ -125,20 +162,15 @@ const NewsletterSubscription = () => {
                       fontSize="14px"
                       fontWeight="500"
                     >
-                      •&nbsp;&nbsp;{item}
+                      •&nbsp;&nbsp;
+                      <Link href={item.path}>{item.text}</Link>
                     </ListItem>
                   ))}
                 </List>
               </Box>
               <Box>
                 <List spacing="10px">
-                  {[
-                    'Terms & Condition',
-                    'Trademark Policy',
-                    'Warranty Service',
-                    'Warranty Policy',
-                    'Privacy Policy',
-                  ].map((item, index) => (
+                  {policyLinks.map((item, index) => (
                     <ListItem
                       key={index}
                       _hover={{ color: '#3F77A5', cursor: 'pointer' }}
@@ -146,7 +178,8 @@ const NewsletterSubscription = () => {
                       fontSize="14px"
                       fontWeight="500"
                     >
-                      •&nbsp;&nbsp;{item}
+                      •&nbsp;&nbsp;
+                      <Link href={item.path}>{item.text}</Link>
                     </ListItem>
                   ))}
                 </List>
@@ -161,12 +194,6 @@ const NewsletterSubscription = () => {
               borderRadius="15px"
               p="20px"
               mb="20px"
-            // boxShadow="lg"
-            // _hover={{
-            //   boxShadow: 'xl',
-            //   transform: 'scale(1.01)',
-            //   transition: 'all 0.3s ease',
-            // }}
             >
               <Heading
                 fontSize="16px"
@@ -184,18 +211,17 @@ const NewsletterSubscription = () => {
                 bg="#3F77A5"
               />
               <List spacing="10px" mt={'5%'}>
-                {['Enterprise', 'Government', 'And Beyond'].map(
-                  (item, index) => (
-                    <ListItem
-                      key={index}
-                      _hover={{ color: '#3F77A5', cursor: 'pointer' }}
-                      fontSize="14px"
-                      fontWeight="500"
-                    >
-                      •&nbsp;&nbsp;{item}
-                    </ListItem>
-                  )
-                )}
+                {ourServingsLinks.map((item, index) => (
+                  <ListItem
+                    key={index}
+                    _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                    fontSize="14px"
+                    fontWeight="500"
+                  >
+                    •&nbsp;&nbsp;
+                    <Link href={item.path}>{item.text}</Link>
+                  </ListItem>
+                ))}
               </List>
             </Box>
             <Box
@@ -204,12 +230,6 @@ const NewsletterSubscription = () => {
               p="20px"
               flex="1"
               minW="250px"
-            // boxShadow="lg"
-            // _hover={{
-            //   boxShadow: 'xl',
-            //   transform: 'scale(1.01)',
-            //   transition: 'all 0.3s ease',
-            // }}
             >
               <Heading
                 fontSize="16px"
@@ -245,14 +265,15 @@ const NewsletterSubscription = () => {
                 bg="white"
                 color="#3F77A5"
                 borderRadius="20px"
-                _hover={{ bg: '#2c5a7a' }}
-                // onClick={handleSubscribe}
-                // px={{ base: '12px', md: '15px', lg: '20px' }}
                 flexShrink={0}
                 // ml={{ base: '5px', md: '10px', lg: '15px' }}
                 mt="20%"
                 fontWeight={700}
                 gap="2"
+                _hover={{
+                  bg: "#E0F2FE",  // Light blue background on hover
+                  color: "#2C5E84",
+                }}
               >
                 Book Demo
                 <svg
@@ -279,12 +300,6 @@ const NewsletterSubscription = () => {
             // pt="20px"
             flex="1"
             minW="250px"
-            boxShadow="lg"
-          // _hover={{
-          //   boxShadow: 'xl',
-          //   transform: 'scale(1.01)',
-          //   transition: 'all 0.3s ease',
-          // }}
           >
             <Heading
               fontSize="16px"
@@ -303,23 +318,15 @@ const NewsletterSubscription = () => {
             />
 
             <List spacing="10px" mt="5%">
-              {[
-                'VMS',
-                'EMS',
-                'ICCC',
-                'AI Optimized Cloud Services',
-                'Generative AI in Video Surveillance',
-                'AI-Powered Surveillance Cameras',
-                'Flying Squad Vehicle (FSV)',
-                'Live Webcasting & Streaming',
-              ].map((item, index) => (
+              {ourSolutionsLinks.map((item, index) => (
                 <ListItem
                   key={index}
                   _hover={{ color: '#3F77A5', cursor: 'pointer' }}
                   fontSize="14px"
                   fontWeight="500"
                 >
-                  •&nbsp;&nbsp;{item}
+                  •&nbsp;&nbsp;
+                  <Link href={item.path}>{item.text}</Link>
                 </ListItem>
               ))}
             </List>
@@ -332,12 +339,6 @@ const NewsletterSubscription = () => {
             p="20px"
             flex="1"
             minW="250px"
-          // boxShadow="lg"
-          // _hover={{
-          //   boxShadow: 'xl',
-          //   transform: 'scale(1.01)',
-          //   transition: 'all 0.3s ease',
-          // }}
           >
             <Heading
               fontSize="16px"
@@ -356,28 +357,15 @@ const NewsletterSubscription = () => {
             />
 
             <List spacing="10px" mt="5%">
-              {[
-                'Healthcare Industry',
-                'Education Industry',
-                'Border Security Industry',
-                'Election Industry',
-                'Banking Industry',
-                'Transportation Industry',
-                'City Monitoring Industry',
-                'Retailer Industry',
-                'Manufacturing Industry',
-                'Agriculture Industry',
-                'Warehousing & Logistic Industry',
-                'Sports & Entertainment Industry',
-                'Hospitality Industry',
-              ].map((industry, index) => (
+              {industriesWeServeLinks.map((item, index) => (
                 <ListItem
                   key={index}
                   _hover={{ color: '#3F77A5', cursor: 'pointer' }}
                   fontSize="14px"
                   fontWeight="500"
                 >
-                  •&nbsp;&nbsp;{industry}
+                  •&nbsp;&nbsp;
+                  <Link href={item.path}>{item.text}</Link>
                 </ListItem>
               ))}
             </List>

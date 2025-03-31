@@ -8,9 +8,60 @@ import {
 } from '@chakra-ui/react'
 import HeadingAnimation from '../../components/Animation/Text/HeadingAnimation'
 import ImagePop from '../../components/Animation/Image/ImagePop'
-// import ellipse38 from '../assets/Ellipse38.png' //assets/Ellipse38.png'
-// import ellipse38 from '../public/assets/Ellipse38.png'
-// import ellipse39 from '../assets/Ellipse39.png'
+import { useEffect, useState, useRef } from 'react';
+
+// Custom hook for count-up animation with viewport detection
+const useCountUp = (target, duration = 1000) => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => {
+      if (ref.current) observer.unobserve(ref.current);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let start = 0;
+    const increment = target / (duration / 16); // Approx. 60fps
+    const interval = setInterval(() => {
+      start += increment;
+      if (start >= target) {
+        setCount(target);
+        clearInterval(interval);
+      } else {
+        setCount(Math.ceil(start));
+      }
+    }, 16);
+
+    return () => clearInterval(interval);
+  }, [isVisible, target, duration]);
+
+  return { count, ref };
+};
+
+// Component for animated count-up value
+const AnimatedValue = ({ value, suffix }) => {
+  const numericValue = parseInt(value.replace(/\D/g, '')); // Extract numeric value
+  const { count, ref } = useCountUp(numericValue, 500);
+
+  return (
+    <span ref={ref}>
+      {count}
+      {suffix}
+    </span>
+  );
+};
 
 const achievementsData = [
   { value: '18+', label: 'No. of Years of Innovation', isBlack: false },
@@ -104,8 +155,6 @@ const Achieved = () => {
 
   return (
     <>
-
-
       <Flex
         position="relative"
         textAlign="center"
@@ -220,7 +269,7 @@ const Achieved = () => {
                 left="50%"
                 transform="translate(-50%, -50%)"
               >
-                {item.value}
+                <AnimatedValue value={item.value} suffix={item.value.replace(/\d+/g, '')} />
               </Text>
               <Text
                 fontSize={labelFontSize}

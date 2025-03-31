@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 import HeadingAnimation from '../../components/Animation/Text/HeadingAnimation'
+import { Link } from 'react-router-dom'
 
 // Industry data with SVGs
 const industriesData = [
@@ -421,6 +422,8 @@ export default function IndustryGrid() {
             fontSize="14px"
             fontWeight="600"
             borderRadius="12px"
+            as={Link}
+            to="/industries"
             display="flex"
             alignItems="center"
             justifyContent="center"

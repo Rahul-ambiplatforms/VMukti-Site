@@ -162,6 +162,72 @@ const AdvancedSurveillance = () => {
             position="relative"
             zIndex="2"
           >
+            {/* Navigation Buttons */}
+            <Flex
+              position="absolute"
+              top="-50px" // Move buttons above the cards
+              right="0" // Align buttons to the right
+              gap="2px"
+              zIndex="2"
+            >
+              <Button
+                width="31px"
+                height="31px"
+                minWidth="31px"
+                minHeight="31px"
+                padding="0"
+                borderRadius="5px"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                cursor="pointer"
+                bgColor="#E7E7E7"
+                _hover={{ bgColor: '#e0e0e0' }}
+                onClick={() => handleNavigation('left')}
+              >
+                <svg
+                  width="8"
+                  height="16"
+                  viewBox="0 0 8 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z"
+                    fill="#3F77A5"
+                  />
+                </svg>
+              </Button>
+              <Button
+                width="31px"
+                height="31px"
+                minWidth="31px"
+                minHeight="31px"
+                padding="0"
+                borderRadius="5px"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                cursor="pointer"
+                bgColor="#E7E7E7"
+                _hover={{ bgColor: '#e0e0e0' }}
+                onClick={() => handleNavigation('right')}
+              >
+                <svg
+                  width="8"
+                  height="16"
+                  viewBox="0 0 8 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z"
+                    fill="#3F77A5"
+                  />
+                </svg>
+              </Button>
+            </Flex>
+
             {cards.map((card, index) => (
               <Box
                 key={index}
@@ -270,86 +336,6 @@ const AdvancedSurveillance = () => {
                 )}
               </Box>
             ))}
-          </Flex>
-
-          {/* Navigation Buttons */}
-          <Flex
-            position="absolute"
-            top="653px"
-            right="76px"
-            gap="2px"
-            zIndex="2"
-          >
-            <Button
-              width="31px"
-              height="31px"
-              minWidth="31px"
-              minHeight="31px"
-              padding="0"
-              borderRadius="5px"
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              cursor="pointer"
-              bgColor="#E7E7E7"
-              _hover={{ bgColor: '#e0e0e0' }}
-              onClick={() => handleNavigation('left')}
-            >
-              {/* <Image
-                src={'./assets/left.svg'}
-                alt="Left Arrow"
-                height="15px"
-                width="15px"
-                margin="0 auto"
-              /> */}
-              <svg
-                width="8"
-                height="16"
-                viewBox="0 0 8 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z"
-                  fill="#3F77A5"
-                />
-              </svg>
-            </Button>
-            <Button
-              width="31px"
-              height="31px"
-              minWidth="31px"
-              minHeight="31px"
-              padding="0"
-              borderRadius="5px"
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              cursor="pointer"
-              bgColor="#E7E7E7"
-              _hover={{ bgColor: '#e0e0e0' }}
-              onClick={() => handleNavigation('right')}
-            >
-              {/* <Image
-                src="./assets/right.svg"
-                alt="Right Arrow"
-                height="15px"
-                width="15px"
-                margin="0 auto"
-              /> */}
-              <svg
-                width="8"
-                height="16"
-                viewBox="0 0 8 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z"
-                  fill="#3F77A5"
-                />
-              </svg>
-            </Button>
           </Flex>
 
           {/* "Book Demo" Button */}

@@ -117,7 +117,7 @@ const VMuktiHomepage = () => {
           height={{ base: "80px", md: "140px", lg: "188px" }}
           minHeight="50px"
           aspectRatio="1/1"
-          bg="#EAEAEA"
+          bg="#FFFFFF"
           borderRadius="24px"
           mt={{ base: "40px", md: "80px", lg: "6%" }}
         />
@@ -142,16 +142,16 @@ const VMuktiHomepage = () => {
       >
         {/* Left Side */}
         <MotionImage
-            src="/assets/tablet.png"
-            position="absolute"
-            right="0"
-            top="1%"
-            zIndex={1}
-            // bg="red"
-            initial={{ scale: 0.8, opacity: 1 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.2 }} // Triggers animation every time it enters 80% view
+          src="/assets/tablet.png"
+          position="absolute"
+          right="0"
+          top="1%"
+          zIndex={1}
+          // bg="red"
+          initial={{ scale: 0.8, opacity: 1 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.2 }} // Triggers animation every time it enters 80% view
         />
         <Box
           flex="1"
@@ -267,46 +267,50 @@ const VMuktiHomepage = () => {
             <Image
               src="/assets/robohand.png"
               alt="Robotic Hand"
-              // w={{ base: '80%', md: '500px' }} // Reduced image size
-              // h={{ base: 'auto', md: '500px' }}
+            // w={{ base: '80%', md: '500px' }} // Reduced image size
+            // h={{ base: 'auto', md: '500px' }}
             />
 
             {/* Book Demo Button */}
             <MotionButton
-      position="absolute"
-      top={{ base: "35%", md: "38%" }}
-      left={{ base: "22%", md: "22%" }}
-      transform={{ base: "translateX(-50%)", md: "none" }}
-      bg="white"
-      height="50px"
-      borderRadius="20px"
-      color="#3F77A5"
-      gap="2"
-      fontSize={{ base: "12px", md: "16px" }}
-      animate={{
-        x: [0, 5, -5, 5, -5, 0], // Moves left-right
-        y: [0, -5, 5, -5, 5, 0], // Moves up-down
-      }}
-      transition={{
-        duration: 0.5,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
-    >
-      Book Demo
-      <svg
-        width="14"
-        height="14"
-        viewBox="0 0 17 18"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
-          fill="#3F77A5"
-        />
-      </svg>
-    </MotionButton>
+              position="absolute"
+              top={{ base: "35%", md: "38%" }}
+              left={{ base: "22%", md: "22%" }}
+              transform={{ base: "translateX(-50%)", md: "none" }}
+              bg="white"
+              height="50px"
+              borderRadius="20px"
+              color="#3F77A5"
+              gap="2"
+              _hover={{
+                bg: "#E0F2FE",  // Light blue background on hover
+                color: "#2C5E84",
+              }}
+              fontSize={{ base: "12px", md: "16px" }}
+              animate={{
+                x: [0, 5, -5, 5, -5, 0], // Moves left-right
+                y: [0, -5, 5, -5, 5, 0], // Moves up-down
+              }}
+              transition={{
+                duration: 0.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              Book Demo
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 17 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
+                  fill="#3F77A5"
+                />
+              </svg>
+            </MotionButton>
           </Flex>
         </Box>
       </Flex>
