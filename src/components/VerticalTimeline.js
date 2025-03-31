@@ -91,13 +91,13 @@ const TimelineGrid = () => {
   }
 
   return (
-    <Flex py={10} px={4} direction="column">
+    <Flex p="6%" direction="column" bg="#FFFFFF" borderRadius="24px">
       <Heading
         mb={10}
         textAlign="left"
-        fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+        fontSize={{ base: "24px", md: "36px"}}
       >
-        <Box as="span" color="#3182CE">
+        <Box as="span" color="#3F77A5">
           The VMukti
         </Box>{" "}
         Timeline: A History of Progress
@@ -134,9 +134,9 @@ const TimelineGrid = () => {
                         {/* Row 3: year */}
                         <Box gridColumn={colIndex + 1} gridRow={3}>
                           <Text
-                            color="blue.500"
-                            fontWeight="bold"
-                            fontSize="xl"
+                            color="#3F77A5"
+                            fontSize={{base:"24px",md:"36px"}}
+                            fontWeight="700"
                           >
                             {item.year}
                           </Text>
@@ -148,11 +148,11 @@ const TimelineGrid = () => {
                           display="flex"
                           justifyContent="flex-start"
                         >
-                          <Box w="2px" h="20px" bg="blue.500" />
+                          <Box w="2px" h="20px" bg="#3F77A5" />
                         </Box>
                         {/* Row 5: item content */}
                         <Box gridColumn={colIndex + 1} gridRow={5}>
-                          <Text color="gray.700" fontSize="md">
+                          <Text fontSize={{base:"14px",md:"16px"}} fontWeight="500">
                             {item.content}
                           </Text>
                         </Box>
@@ -161,12 +161,7 @@ const TimelineGrid = () => {
                       <>
                         {/* Row 1: item content */}
                         <Box gridColumn={colIndex + 1} gridRow={1}>
-                          <Text
-                            color="gray.700"
-                            fontSize="md"
-                            flexWrap={{ base: "wrap", md: "nowrap" }}
-                            maxWidth="50%"
-                          >
+                        <Text fontSize={{base:"14px",md:"16px"}} fontWeight="500">
                             {item.content}
                           </Text>
                         </Box>
@@ -177,14 +172,14 @@ const TimelineGrid = () => {
                           display="flex"
                           justifyContent="flex-start"
                         >
-                          <Box w="2px" h="20px" bg="blue.500" />
+                          <Box w="2px" h="20px" bg="#3F77A5" />
                         </Box>
                         {/* Row 3: year */}
                         <Box gridColumn={colIndex + 1} gridRow={3}>
-                          <Text
-                            color="blue.500"
-                            fontWeight="bold"
-                            fontSize="xl"
+                        <Text
+                            color="#3F77A5"
+                            fontSize={{base:"24px",md:"36px"}}
+                            fontWeight="700"
                           >
                             {item.year}
                           </Text>
