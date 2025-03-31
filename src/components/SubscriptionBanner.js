@@ -143,7 +143,7 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
             background="#E7E7E7"
             alignItems="center"
             px="12px"
-            boxShadow="sm"
+            // boxShadow="sm"
           >
             {/* Email Icon */}
             <Box display="flex" alignItems="center" justifyContent="center" mr="8px">

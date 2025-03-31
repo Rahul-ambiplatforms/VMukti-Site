@@ -14,10 +14,9 @@ const OurServings = () => {
         "https://cdn-front.freepik.com/images/ai/image-generator/gallery/resource-tti-11.webp",
         "https://cdn-front.freepik.com/images/ai/image-generator/gallery/resource-tti-11.webp"]
     return <>
-    
-        <TripleImageSection mt heading={heading} description={description} images={images} />
-    
+
         <PageContentWrapper>
+            <TripleImageSection mt heading={heading} description={description} images={images} />
             <AdvancedSurveillance />
         </PageContentWrapper></>
 }

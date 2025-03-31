@@ -1,6 +1,5 @@
 import React from "react";
 import { Flex, Image, Text, Container, Heading, Box } from "@chakra-ui/react";
-import Navbar from "../../components/Navbar";
 import ComputerVisionPage from "./AITechnologies";
 import PageContentWrapper from "../../components/PageContentWrapper";
 import { motion, useInView } from "framer-motion";

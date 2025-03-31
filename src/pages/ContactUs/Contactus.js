@@ -53,7 +53,7 @@ export default function ContactUs() {
                     width={{ base: "100%", lg: "50%" }} // Full width on smaller screens
                     // minH={"649px"}
                     borderRadius="24px"
-                    boxShadow="sm"
+                    // boxShadow="sm"
                     gap={6}
                 >
                     {/* Contact Form */}
