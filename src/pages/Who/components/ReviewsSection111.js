@@ -59,7 +59,7 @@ const ReviewsSection = () => {
                                 p={6}
                                 width="300px" // Fixed width for the cards
                                 mx={2}
-                                boxShadow="md"
+                                // boxShadow="md"
                                 border="1px solid #E2E8F0"
                                 _hover={{ boxShadow: "xl", transform: "scale(1.02)" }}
                                 transition="all 0.3s ease-in-out"

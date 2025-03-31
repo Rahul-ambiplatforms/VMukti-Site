@@ -302,7 +302,7 @@ const AITechnologies = () => {
                 bg="white"
                 borderRadius="24px"
                 overflow="hidden"
-                boxShadow="lg"
+                // boxShadow="lg"
                 direction={cardDirection}
                 position="relative"
                 h={{ base: "auto", md: "753px" }} // Adjust height as needed

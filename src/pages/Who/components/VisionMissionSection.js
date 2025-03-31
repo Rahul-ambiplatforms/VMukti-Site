@@ -20,7 +20,7 @@ const VisionMissionSection = () => {
                 display="flex"
                 flexDirection="column"
                 justifyContent="space-between"
-                boxShadow="md"
+                // boxShadow="md"
                 p="4"
                 mr={{ base: "0", md: "0.5%" }}
                 mb={{ base: "4", md: "0" }}
@@ -52,7 +52,7 @@ const VisionMissionSection = () => {
                 display="flex"
                 flexDirection="column"
                 justifyContent="space-between"
-                boxShadow="md"
+                // boxShadow="md"
                 p="4"
                 mb={{ base: "4", md: "0" }}
             >

@@ -179,16 +179,17 @@ const SolutionEMS = () => {
     <Box
       bg=" #E7E7E7"
       //   bg="darkblue"
-      minH="100vh"
+      // minH="50vh"
       overflowX="hidden"
       borderRadius="24px"
-      // mb="5%"
+      width="100%"
+    // mb="5%"
     >
       {/* Navigation */}
       <Flex
-        ml="2%"
+
         justify="center"
-        p={5}
+        // p={5}
         gap={{ base: 4, md: 12 }}
         position="relative"
       >
@@ -208,7 +209,7 @@ const SolutionEMS = () => {
         )}
 
         {/* Visible Slide Names */}
-        <Box display="flex" justifyContent="space-between" w="100%" mr="2%">
+        <Box display="flex" justifyContent="space-between" w="100%" pl="1" pb={8}>
           {slides
             .slice(visibleSlideRange.start, visibleSlideRange.end + 1)
             .map((slide, index) => {
@@ -269,10 +270,10 @@ const SolutionEMS = () => {
         {/* Slider Controls */}
         <Flex
           position="absolute"
-          right={{ base: 4, md: 10 }}
-          top="50%"
-          transform="translateY(-50%)"
-          align="center"
+          right={{ base: 4, md: 0 }}
+          top="20%"
+          // transform="translateY(-50%)"
+          align="spacwe-between"
           gap={2}
         >
           {visibleSlideRange.end < slides.length - 1 && (
@@ -344,123 +345,128 @@ const SolutionEMS = () => {
       </Flex>
 
       {/* Slider Container */}
-      <Box w="100%" overflow="hidden" p={5}>
+      <Box w="100%" overflow="hidden" >
         <Flex
           w={`${slides.length * 100}%`}
           transform={`translateX(-${currentSlide * (100 / slides.length)}%)`}
           transition="transform 0.5s ease"
         >
           {slides.map((slide, index) => (
-            <Box key={index} minW={`${100 / slides.length}%`} p={5}>
+            <Box key={index} minW={`${100 / slides.length}%`}>
               {/* Main Container */}
               <Flex
-                top="-3%"
+                // top="-3%"
                 bg="#FFFFFF"
-                borderRadius="24"
+                borderRadius="24px"
                 overflow="hidden"
-                boxShadow="lg"
+                // boxShadow="lg"
                 direction={cardDirection}
                 position="relative"
                 h={{ base: "auto", md: "753px" }}
               >
                 {/* Card Content */}
                 <Flex direction="column">
-                <Flex direction="column">
-  {/* First Box with 0.1s delay */}
-  <Box
-    as={motion.div}
-    initial={{ scale: 0.7, opacity: 0 }}
-    whileInView={{ scale: 1, opacity: 1 }}
-    viewport={{ once: false, amount: 0.1 }}
-    transition={{ duration: 0.8, ease: "easeOut" }}
-    p={8}
-    bg="#E7E7E7"
-    w={cardContentWidth}
-    minW="562px"
-    minH="360px"
-    m="2%"
-    mb="-0.5%"
-    borderRadius="24px"
-    zIndex={2}
-    backdropFilter="blur(2px)"
-  >
-    <HeadingAnimation>
-      <Heading
-        fontSize="36px"
-        fontWeight="500"
-        mb={3}
-        color="black"
-      >
-        {slide.title1}{" "}
-        <span style={{ color: "#DB7B3A" }}>
-          {slide.title2}
-        </span>
-      </Heading>
-    </HeadingAnimation>
-    <SubHeadingAnimation>
-      <Text fontSize="24px" color="blue.600" mb={3} mt="5%">
-        {/* SVG code remains unchanged */}
-      </Text>
-    </SubHeadingAnimation>
-    <SubHeadingAnimation>
-      <Box>
-        {slide.description.map((text, i) => (
-          <Text
-            key={i}
-            fontWeight="500"
-            fontSize="16px"
-            color="black"
-            lineHeight="1.6"
-            mb={2}
-          >
-            {text}
-          </Text>
-        ))}
-      </Box>
-    </SubHeadingAnimation>
-  </Box>
+                  <Flex direction="column">
+                    {/* First Box with 0.1s delay */}
+                    <Box
+                      as={motion.div}
+                      initial={{ scale: 0.7, opacity: 0 }}
+                      whileInView={{ scale: 1, opacity: 1 }}
+                      viewport={{ once: false, amount: 0.1 }}
+                      transition={{ duration: 0.8, ease: "easeOut" }}
+                      p={8}
+                      bg="#E7E7E7"
+                      w={cardContentWidth}
+                      minW="562px"
+                      minH="360px"
+                      m="1.5% 0 0 1.5%"
+                      // mb="-0.5%"
+                      borderRadius="24px"
+                      zIndex={2}
+                      backdropFilter="blur(2px)"
+                    >
+                      <HeadingAnimation>
+                        <Heading
+                          fontSize="36px"
+                          fontWeight="500"
+                          lineHeight="normal"
+                          fontStyle="normal"
+                          mb={3}
+                          color="black"
+                        >
+                          {slide.title1}{" "}
+                          <span style={{ color: "#DB7B3A" }}>
+                            {slide.title2}
+                          </span>
+                        </Heading>
+                      </HeadingAnimation>
+                      <SubHeadingAnimation>
+                        <Text fontSize="24px" color="blue.600" mb={3} mt="5%">
+                          {/* SVG code remains unchanged */}
+                          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                            <path d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C0 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z" fill="#3F77A5" />
+                          </svg>
+                        </Text>
+                      </SubHeadingAnimation>
+                      <SubHeadingAnimation>
+                        <Box>
+                          {slide.description.map((text, i) => (
+                            <Text
+                              key={i}
+                              fontWeight="500"
+                              fontSize="16px"
+                              color="black"
+                              lineHeight="1.6"
+                              mb={2}
+                            >
+                              {text}
+                            </Text>
+                          ))}
+                        </Box>
+                      </SubHeadingAnimation>
+                    </Box>
 
-  {/* Second Box with 0.3s delay (0.2s after first) */}
-  <Box
-    as={motion.div}
-    initial={{ scale: 0.7, opacity: 0 }}
-    whileInView={{ scale: 1, opacity: 1 }}
-    viewport={{ once: false, amount: 0.1 }}
-    transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-    p={8}
-    bg="#BECEDC"
-    w={cardContentWidth}
-    minW="562px"
-    minH="333px"
-    m="2%"
-    borderRadius="24px"
-    zIndex={2}
-    backdropFilter="blur(2px)"
-  >
-    <SubHeadingAnimation>
-      <Box>
-        {slide.description.map((text, i) => (
-          <Text
-            key={i}
-            fontWeight="500"
-            fontSize="16px"
-            color="black"
-            lineHeight="1.6"
-            mb={5}
-          >
-            {text}
-          </Text>
-        ))}
-      </Box>
-    </SubHeadingAnimation>
-  </Box>
-</Flex>
+                    {/* Second Box with 0.3s delay (0.2s after first) */}
+                    <Box
+                      as={motion.div}
+                      initial={{ scale: 0.7, opacity: 0 }}
+                      whileInView={{ scale: 1, opacity: 1 }}
+                      viewport={{ once: false, amount: 0.1 }}
+                      transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+                      p={8}
+                      bg="#BECEDC"
+                      w={cardContentWidth}
+                      minW="562px"
+                      minH="333px"
+                      m="1.5%"
+                      borderRadius="24px"
+                      zIndex={2}
+                      backdropFilter="blur(2px)"
+                    >
+                      <SubHeadingAnimation>
+                        <Box>
+                          {slide.description.map((text, i) => (
+                            <Text
+                              key={i}
+                              fontWeight="500"
+                              fontSize="16px"
+                              color="black"
+                              lineHeight="1.6"
+                              mb={5}
+                            >
+                              {text}
+                            </Text>
+                          ))}
+                        </Box>
+                      </SubHeadingAnimation>
+                    </Box>
+                  </Flex>
                   <Flex>
                     {/* Top right Image (positioned absolutely) */}
                     <Box
                       as={motion.div}
                       position="absolute"
-                      top="4%"
+                      top="3.5%"
                       right="4%"
                       width="630px"
                       height="360px"
@@ -486,7 +492,7 @@ const SolutionEMS = () => {
                     </Box>
                     {/* New Bottom Right Box for Benefits */}
                     {slide.benefits && (
-                        <Box
+                      <Box
                         position="absolute"
                         bottom="7%"
                         right="4%"
@@ -507,7 +513,7 @@ const SolutionEMS = () => {
                           letterSpacing="-1.5%"
                           position="absolute"
                           top="10px"
-                          left="10px"
+                        // left="10px"
                         >
                           {slide.benefits.title}
                         </Text>
@@ -517,9 +523,9 @@ const SolutionEMS = () => {
                           alignItems="center"
                         >
                           {slide.benefits.data.map((benefit, idx) => (
-                            <Box 
+                            <Box
                               as={motion.div}
-                              key={idx} 
+                              key={idx}
                               textAlign="left"
                               initial={{ scale: 0.7, opacity: 0 }}
                               whileInView={{ scale: 1, opacity: 1 }}
