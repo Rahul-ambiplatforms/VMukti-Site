@@ -98,7 +98,7 @@ const WhoWeare = () => {
           // px={{ base: 0, md: 8 }}
           bg="#E7E7E7"
           position="relative" // To position the background image
-          // bg="red"
+        // bg="red"
         >
           <HeadingAnimation>
             <Heading
@@ -136,7 +136,7 @@ const WhoWeare = () => {
               width="100%"
               height="100%"
               objectFit="contain"
-              // bg="blue"
+            // bg="blue"
             />
           </Box>
           <Image
@@ -150,7 +150,7 @@ const WhoWeare = () => {
             opacity="1"
             pointerEvents="none"
             zIndex="0"
-            // bg="red"
+          // bg="red"
           />
           <Box justifyContent="center" alignItems="center">
             <Flex
@@ -160,7 +160,7 @@ const WhoWeare = () => {
               justifyContent="center"
               maxW="1200px"
               mx="auto"
-              // bg="blue"
+            // bg="blue"
             >
               {certifications.map((cert, index) => (
                 <Flex
@@ -241,14 +241,13 @@ const WhoWeare = () => {
             </HeadingAnimation>
             <Box position="relative" mb="5%" py="1%">
               <Flex alignItems="center" justifyContent="space-between">
-                <Box mt={4} overflow="hidden" position="relative" width="70%">
+                <Box mt={4} overflow="hidden" position="relative" width="90%">
                   <Flex
-                    transform={`translateX(-${
-                      currentIndex * (100 / visibleCards)
-                    }%)`}
+                    transform={`translateX(-${currentIndex * (100 / visibleCards + 1)
+                      }%)`}
                     transition="transform 0.5s ease-in-out"
                     // width={`${(totalCards / visibleCards) * 100}`} // For APPROACH 1
-                    width={`${(extendedReviews.length / visibleCards) * 45}%`} // For APPROACH 2
+                    width={`${(extendedReviews.length / visibleCards) * 32}%`} // For APPROACH 2
                   >
                     {/* {reviews.map((review) => ( // For APPROACH 1 */}
                     {extendedReviews.map(
@@ -262,12 +261,15 @@ const WhoWeare = () => {
                           flex={`0 0 ${100 / visibleCards}%`}
                           bg="white"
                           borderRadius="24px"
-                          p={6}
+                          p="3% 3% 5% 3%"
                           minWidth="0"
+                          display="flex"
+                          flexDirection="column"
+                          justifyContent="space-between"
                           mx={2}
                           w="320px"
                           h="320px"
-                          // bg="red"
+                        // bg="red"
                         >
                           {/* ----------------Your card content ----------*/}
                           <Flex
@@ -275,19 +277,13 @@ const WhoWeare = () => {
                             mb={4}
                             direction="column"
                           >
-                            <Icon
-                              viewBox="0 0 24 24"
-                              boxSize={8}
-                              color="gray.500"
-                              mr={4}
-                            >
-                              <path
-                                fill="currentColor"
-                                fillRule="evenodd"
-                                d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                                clipRule="evenodd"
-                              />
-                            </Icon>
+                            <Box>
+                              <svg width="30" height="35" viewBox="0 0 30 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 28.0959C0 30.4975 0.147258 32.1041 2.06616 33.686C2.44831 34.001 2.96593 34.3163 3.43685 34.5029C4.10194 34.7663 4.91057 35.0002 5.81055 35.0002H23.379C24.2392 35.0002 25.1024 34.7904 25.706 34.5245C26.3465 34.2423 26.9501 33.922 27.4649 33.4122C29.2553 31.6391 29.1896 30.0952 29.1896 27.8224C29.1896 26.4325 28.9389 24.9415 28.67 23.7619C28.1064 21.2892 26.8769 18.7071 24.4974 17.5437C23.6063 17.1079 22.5462 16.8848 21.465 16.8848C19.9592 16.8848 16.6484 21.582 10.7314 18.5264C9.75665 18.0229 8.6286 16.8848 7.51957 16.8848C3.47777 16.8848 1.19481 20.3292 0.506878 23.8858C0.377601 24.5539 0.238506 25.1962 0.156145 25.8592C0.0646902 26.5941 0 27.3116 0 28.0957L0 28.0959Z" fill="#3F77A5" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.94747 7.99803C5.94747 9.07286 5.93052 9.54481 6.20602 10.6105C6.28518 10.9168 6.35121 11.0954 6.45063 11.3914L6.91772 12.4281C8.98181 16.2164 13.5564 17.9482 17.8137 16.1729C18.366 15.9425 19.3073 15.3571 19.739 14.9536C20.7055 14.0498 21.4631 13.2963 22.0581 12.009C23.7771 8.29058 22.5881 4.05089 19.3762 1.61054C18.5717 0.999288 17.582 0.527959 16.6125 0.272608C16.0281 0.118633 15.4037 0.0272815 14.7699 0H13.9592C12.8221 0.048776 11.696 0.30392 10.7545 0.773699C8.08514 2.10574 5.94747 4.94229 5.94747 7.99813V7.99803Z" fill="#3F77A5" />
+                              </svg>
+                            </Box>
+
                             <Text
                               fontSize="lg"
                               fontWeight="600"
@@ -295,6 +291,7 @@ const WhoWeare = () => {
                             >
                               Customer Reviews
                             </Text>
+                            <Box width="20px" height="2px" bg="#3F77A5" />
                           </Flex>
                           <Text fontSize="md" color="gray.700">
                             {review.text}
