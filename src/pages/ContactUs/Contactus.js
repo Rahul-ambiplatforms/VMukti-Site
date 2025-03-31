@@ -16,8 +16,51 @@ import SubHeadingAnimation from "../../components/Animation/Text/SubHeadingAnima
 import ImagePop from "../../components/Animation/Image/ImagePop";
 import { transform } from "framer-motion";
 import PageContentWrapper from "../../components/PageContentWrapper";
+import { motion } from "framer-motion";
+
+const MotionBox = motion(Box);
+
+const popAnimation = (index) => ({
+  hidden: { scale: 0.6, opacity: 0 },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: { duration: 0.5, ease: "easeOut", delay: index * 0.1 },
+  },
+});
 
 export default function ContactUs() {
+  const cards = [
+    {
+      title: "Connect For Sales",
+      phone: "(+91) 951 022 1902",
+      email: "sales@vmukti.com",
+      bg: "white",
+      color: "black",
+    },
+    {
+      title: "Connect For Partnership",
+      phone: "(+91) 951 022 1902",
+      email: "contact@vmukti.com",
+      bg: "#3F77A5",
+      color: "white",
+    },
+    {
+      title: "Connect For Support",
+      phone: "(+91) 951 022 2033",
+      email: "support@vmukti.com",
+      bg: "white",
+      color: "black",
+    },
+    {
+      title: "Connect For HR",
+      phone: "(+91) 951 022 2755",
+      email: "hr@vmukti.com",
+      bg: "#BECEDC",
+      color: "black",
+    },
+  ];
+
   return (
     <PageContentWrapper>
       <Box mt="5%">
@@ -60,6 +103,7 @@ export default function ContactUs() {
           position="relative"
           //   bg="red"
         >
+      
           <Flex
             direction="column"
             mt="1%"
@@ -73,6 +117,7 @@ export default function ContactUs() {
             justifyContent="center"
           >
             {/* Contact Form */}
+            <ImagePop>
             <Box w="100%" maxW="800px" mx="auto" p={{ base: 4, md: 6 }}>
               <Heading
                 fontSize={{ base: "24px", md: "36px" }}
@@ -164,6 +209,7 @@ export default function ContactUs() {
                 </Flex>
               </VStack>
             </Box>
+            </ImagePop>
           </Flex>
 
           {/* Contact Image */}
@@ -204,67 +250,44 @@ export default function ContactUs() {
 
         {/* Connection Cards */}
         <SimpleGrid
-          columns={{ base: 2, md: 2, lg: 4 }} // 2 cards per row on mobile/tablet, 4 on laptop/desktop
+          columns={{ base: 2, md: 2, lg: 4 }}
           spacing={{ base: 4, md: 6, lg: 8 }}
-          
         >
-          {[
-            {
-              title: "Connect For Sales",
-              phone: "(+91) 951 022 1902",
-              email: "sales@vmukti.com",
-              bg: "white",
-              color: "black",
-            },
-            {
-              title: "Connect For Partnership",
-              phone: "(+91) 951 022 1902",
-              email: "contact@vmukti.com",
-              bg: "#3F77A5",
-              color: "white",
-            },
-            {
-              title: "Connect For Support",
-              phone: "(+91) 951 022 2033",
-              email: "support@vmukti.com",
-              bg: "white",
-              color: "black",
-            },
-            {
-              title: "Connect For HR",
-              phone: "(+91) 951 022 2755",
-              email: "hr@vmukti.com",
-              bg: "#BECEDC",
-              color: "black",
-            },
-          ].map((card, index) => (
-            <Box
+          {cards.map((card, index) => (
+            <MotionBox
               key={index}
               bg={card.bg}
               color={card.color}
-              p={{ base: 4, md: 6, lg: 6 }} // Responsive padding
+              p={{ base: 4, md: 6, lg: 6 }}
               borderRadius="24px"
-              minH={{ base: "180px", md: "336px" }} // Adjusted height on mobile
-              // Optionally remove minW and allow the grid to determine the card width
+              minH={{ base: "180px", md: "336px" }}
               position="relative"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false }}
+              variants={popAnimation(index)}
             >
+              <HeadingAnimation>
               <Heading
-                fontSize={{ base: "20px", md: "36px" }} // Smaller heading size on mobile
+                fontSize={{ base: "20px", md: "36px" }}
                 fontWeight="700"
                 letterSpacing="-1.5%"
                 mb={4}
               >
                 {card.title}
               </Heading>
+              </HeadingAnimation>
               <Box position="absolute" bottom="16px">
+              <SubHeadingAnimation>
                 <Text fontWeight="700" fontSize={{ base: "12px", md: "16px" }}>
                   {card.phone}
                 </Text>
                 <Text fontWeight="500" fontSize={{ base: "12px", md: "16px" }}>
                   {card.email}
                 </Text>
+              </SubHeadingAnimation>
               </Box>
-            </Box>
+            </MotionBox>
           ))}
         </SimpleGrid>
       </Box>
