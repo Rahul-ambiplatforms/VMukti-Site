@@ -18,7 +18,7 @@ const TechnologyDashboard = () => {
 
   return (
     <PageContentWrapper>
-      <Box mt={14} h={"100%"}>
+      <Box mt="2%" h={"100%"}>
         <Flex
           bg="#E7E7E7"
           w="100%"
@@ -100,7 +100,7 @@ const TechnologyDashboard = () => {
               src="./assets/Dashboard.png"
               alt="AI Dashboard Interface"
               position="absolute"
-              top="15%"
+              top="25%"
               right="16"
               transform="perspective(1095px)"
               w="100%"

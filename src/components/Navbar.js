@@ -321,6 +321,10 @@ const Navbar = () => {
                     flexShrink={0}
                     as={Link}
                     to="/contactus"
+                    _hover={{
+                        background: "#1E4A6A", // Darker shade of blue for hover
+                        color: "#FFFFFF", // Keep text white
+                    }}
                 >
                     Contact Us
                 </Button>

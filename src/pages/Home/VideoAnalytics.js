@@ -10,7 +10,6 @@ const MotionBox = motion(Box)
 
 const VideoAnalytics = () => {
   const [featureIndex, setFeatureIndex] = useState(0)
-
   // Example features
   const features = [
     {
@@ -21,7 +20,6 @@ const VideoAnalytics = () => {
       title: "Contextual Video Analysis",
       description: "Understand video content with advanced AI context recognition.",
     },
-
     {
       title: "Conversational AI for Video",
       description: "Enables natural language interaction with surveillance data.",
@@ -30,8 +28,14 @@ const VideoAnalytics = () => {
       title: "Custom AI Queries",
       description: "Generate customized video insights using AI-powered queries.",
     },
+  ]
 
-
+  // Image paths for each feature
+  const featureImages = [
+    { image: "/assets/iphone_image.png", height: "100%", minWidth: "250px" },
+    { image: "/assets/LaptopMockup1.png", height: "100%", minWidth: "800px" },
+    { image: "/assets/WebPageMockup1.png", height: "100%", minWidth: "700px" },
+    { image: "/assets/iPadProMockup1.png", height: "100%", minWidth: "250px" },
   ]
 
   // Handlers for navigation buttons
@@ -79,13 +83,13 @@ const VideoAnalytics = () => {
             width="100%"
           >
             {/* Progress Bar Container */}
-            <Flex position="relative" bg="white" height="1px" width="100%" align="center" mt={{ base: "10px", md: "25px" }}>
+            <Flex position="relative" bg="white" height="0.5px" width="100%" align="center" mt={{ base: "10px", md: "25px" }}>
               {/* Progress Indicator */}
               <Box
                 position="absolute"
-                height="3px"
+                height="4px"
                 width="25%" // Fixed width at 25%
-                bg="white"
+                bg="#FFFFFF"
                 transform={`translateX(${(progress * 400) / 100}%)`} // Corrected movement range
                 transition="transform 0.3s ease-in-out"
               />
@@ -193,7 +197,7 @@ const VideoAnalytics = () => {
             height="511px"
             borderRadius="24px 0 0 24px" // Fully rounded on small screens
             bgColor="white"
-            padding="25px"
+            padding="25px 50px 25px 25px" // Fully rounded like left box
             zIndex={2}
             left={0}
             initial={{ opacity: 0, x: 50 }}
@@ -227,23 +231,19 @@ const VideoAnalytics = () => {
             right={0}
             // bg="red"
           >
-
+            <Image
+              src={featureImages[featureIndex].image} // Dynamically load image
+              alt={features[featureIndex].title}
+              objectFit="contain"
+              width="100%"  // Makes it responsive
+              maxWidth="542px"
+              minWidth={featureImages[featureIndex].minWidth}
+              position="absolute"
+              bottom={0}
+              right={0}
+              zIndex={3}
+            />
           </Box>
-          {/* <ImagePop> */}
-          <Image
-            src="/assets/ipad.png"
-            alt="iPad"
-            objectFit="contain"
-            width="100%"  // Makes it responsive
-            maxWidth="542px"
-            minWidth="250px"
-            position="absolute"
-            bottom={0}
-            right={0}
-            zIndex={3}
-            // bg="red"
-          />
-          {/* </ImagePop> */}
         </Flex>
       </Flex>
     </Flex>

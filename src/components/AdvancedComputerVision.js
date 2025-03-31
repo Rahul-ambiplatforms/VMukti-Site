@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
-import { motion,useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const MotionFlex = motion(Flex);
 
-  
-const AdvancedComputerVision = ({ 
+const AdvancedComputerVision = ({
   title1 = "Advanced Computer",
   title2 = "Vision & Image Intelligence",
   subtitle = "AI-Powered Visual Processing",
@@ -37,9 +36,8 @@ const AdvancedComputerVision = ({
   myMargin = "3%",
   myZIndex = "1",
 }) => {
-
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.1}); // Triggers at 10% visibility
+  const isInView = useInView(ref, { amount: 0.1 }); // Triggers at 10% visibility
 
   // activeCard is persistent (updated on click or navigation)
   const [activeCard, setActiveCard] = useState(0);
@@ -67,9 +65,8 @@ const AdvancedComputerVision = ({
       position="relative"
       overflow="hidden"
       px="5%"
-      pt="3%"
-      gap={5}
-      pb="5"
+      pt="2%"
+      pb="5%"
       zIndex={myZIndex}
       mt={myMargin}
     >
@@ -95,123 +92,32 @@ const AdvancedComputerVision = ({
 
       {/* Title Section */}
       <MotionFlex
-      ref={ref}
-      direction="column"
-      initial={{ opacity: 0, x: -50 }}
-      animate={isInView ? { opacity: 1, x: 0 } : {}}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-    >
-      <Text fontSize={{ base: "20px", md: "36px" }} fontWeight="500">
-        {title1}
-      </Text>
-      <Text fontSize={{ base: "20px", md: "36px" }} fontWeight="500" color="#3f77a5">
-        {title2}
-      </Text>
-    </MotionFlex>
+        ref={ref}
+        direction="column"
+        initial={{ opacity: 0, x: -50 }}
+        animate={isInView ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <Text fontSize={{ base: "20px", md: "36px" }} fontWeight="500">
+          {title1}
+        </Text>
+        <Text fontSize={{ base: "20px", md: "36px" }} fontWeight="500" color="#3f77a5">
+          {title2}
+        </Text>
+      </MotionFlex>
 
-      {/* Cards Section */}
-      <Flex gap={4}>
-        {cards.map((card, index) => (
-          // Parent container for each card with separate hover state
-          <Flex
-            key={index}
-            direction="column"
-            alignItems="flex-start"
-            width={effectiveCard === index ? "814px" : "149px"}
-            transition="width 0.5s ease, background-color 0.3s ease"
-            onMouseEnter={() => setHoverCard(index)}  // Set temporary hover state
-            onMouseLeave={() => setHoverCard(null)}     // Clear hover state
-            onClick={() => setActiveCard(index)}         // Update persistent active card on click
-            cursor="pointer"
-            position="relative"
-            overflow="hidden"
-          >
-            <Box
-              width="100%"
-              height="439px"
-              borderRadius="24px"
-              bgColor={index % 2 !== 0 ? "#BECEDC" : "#EAEAEA"}
-              display="flex"
-              overflow="hidden"
-              justifyContent="flex-start"
-              position="relative"
-            >
-              {effectiveCard === index ? (
-                card.type === "video" ? (
-                  <video
-                    src={card.media}
-                    autoPlay
-                    loop
-                    muted
-                    width="100%"
-                    height="100%"
-                    style={{ objectFit: "cover", borderRadius: "24px" }}
-                  />
-                ) : (
-                  <Image
-                    src={card.media}
-                    alt={card.label}
-                    width="100%"
-                    height="100%"
-                    style={{ objectFit: "cover", borderRadius: "24px" }}
-                  />
-                )
-              ) : (
-                // Inactive cards show vertical text overlay
-                <Text
-                  fontSize="1vw"
-                  fontWeight="700"
-                  sx={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
-                  position="absolute"
-                  bottom="5%"
-                  right="15%"
-                  height="100%"
-                >
-                  {card.label}
-                  <Box
-                    width="18px"
-                    height="2px"
-                    sx={{ writingMode: "vertical-rl", transform: "rotate(90deg)" }}
-                    bgColor="#3f77a5"
-                    borderRadius="2px"
-                    marginTop="6px"
-                    marginRight="-5px"
-                    marginLeft="-10px"
-                  />
-                </Text>
-              )}
-            </Box>
 
-            {/* Text below the card for the active card */}
-            {effectiveCard === index && (
-              <Box mt={3}>
 
-                <Text
-                  whiteSpace="nowrap"
-                  fontSize={{ base: "14px", md: "16px" }}
-                  fontWeight="700"
-                >
-                  {card.label}
-                  <Box
-                    width="15px"
-                    height="2px"
-                    bgColor="#3f77a5"
-                    borderRadius="2px"
-                    marginBottom="8px"
-                  />
-                </Text>
-                <Text whiteSpace="nowrap" fontSize={{ base: "12px", md: "14px" }} color="#696969">
-                  {description}
-                </Text>
-              </Box>
-            )}
-          </Flex>
-        ))}
-      </Flex>
-
-      {/* Navigation Buttons */}
-      <Flex mb={12} justifyContent="flex-end" alignItems="center" zIndex={2} pointerEvents="auto">
-        <Flex justifyContent="space-between" gap={1}>
+      <Flex direction="column">
+        {/* Navigation Buttons */}
+        <Flex
+          justifyContent="flex-end"
+          alignItems="center"
+          mb={4}
+          gap="1px"
+          zIndex={2}
+          pointerEvents="auto"
+        >
           <Button
             width="31px"
             height="31px"
@@ -245,7 +151,104 @@ const AdvancedComputerVision = ({
             </svg>
           </Button>
         </Flex>
-      </Flex>
+
+        <Flex justifyContent="space-between">{/* Cards Section */}
+          {cards.map((card, index) => (
+            // Parent container for each card with separate hover state
+            <Flex
+              key={index}
+              direction="column"
+              alignItems="flex-start"
+              width={effectiveCard === index ? "814px" : "149px"}
+              transition="width 0.5s ease, background-color 0.3s ease"
+              onMouseEnter={() => setHoverCard(index)} // Set temporary hover state
+              onMouseLeave={() => setHoverCard(null)} // Clear hover state
+              onClick={() => setActiveCard(index)} // Update persistent active card on click
+              cursor="pointer"
+              position="relative"
+              overflow="hidden"
+            >
+              <Box
+                width="100%"
+                height="439px"
+                borderRadius="24px"
+                bgColor={index % 2 !== 0 ? "#BECEDC" : "#EAEAEA"}
+                display="flex"
+                overflow="hidden"
+                justifyContent="flex-start"
+                position="relative"
+              >
+                {effectiveCard === index ? (
+                  card.type === "video" ? (
+                    <video
+                      src={card.media}
+                      autoPlay
+                      loop
+                      muted
+                      width="100%"
+                      height="100%"
+                      style={{ objectFit: "cover", borderRadius: "24px" }}
+                    />
+                  ) : (
+                    <Image
+                      src={card.media}
+                      alt={card.label}
+                      width="100%"
+                      height="100%"
+                      style={{ objectFit: "cover", borderRadius: "24px" }}
+                    />
+                  )
+                ) : (
+                  // Inactive cards show vertical text overlay
+                  <Text
+                    fontSize="1vw"
+                    fontWeight="700"
+                    sx={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+                    position="absolute"
+                    bottom="5%"
+                    right="15%"
+                    height="100%"
+                  >
+                    {card.label}
+                    <Box
+                      width="18px"
+                      height="2px"
+                      sx={{ writingMode: "vertical-rl", transform: "rotate(90deg)" }}
+                      bgColor="#3f77a5"
+                      borderRadius="2px"
+                      marginTop="6px"
+                      marginRight="-5px"
+                      marginLeft="-10px"
+                    />
+                  </Text>
+                )}
+              </Box>
+
+              {/* Text below the card for the active card */}
+              {effectiveCard === index && (
+                <Box mt={3}>
+                  <Text
+                    whiteSpace="nowrap"
+                    fontSize={{ base: "14px", md: "16px" }}
+                    fontWeight="700"
+                  >
+                    {card.label}
+                    <Box
+                      width="15px"
+                      height="2px"
+                      bgColor="#3f77a5"
+                      borderRadius="2px"
+                      marginBottom="8px"
+                    />
+                  </Text>
+                  <Text whiteSpace="nowrap" fontSize={{ base: "12px", md: "14px" }} color="#696969">
+                    {description}
+                  </Text>
+                </Box>
+              )}
+            </Flex>
+          ))}
+        </Flex></Flex>
     </Flex>
   );
 };
