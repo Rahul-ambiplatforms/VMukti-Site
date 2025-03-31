@@ -10,14 +10,27 @@ import {
   Image,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import { motion, useInView } from "framer-motion";
+import { motion, transform, useInView } from "framer-motion";
+import { keyframes } from "@emotion/react";
 import { useEffect, useState, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
+// import { keyframes } from "@emotion/react";
 import IndustryContent from "../../components/IndustryContent"; // Import IndustryContent
 
 const MotionBox = motion(Box);
 const MotionText = motion(Text);
 
+const floatAnimation = keyframes`
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+`;
 // Industry data with SVGs
 const industriesData = [
   {
@@ -339,6 +352,18 @@ export default function IndustryDashboard() {
   // Create a grid layout based on the industry data
   const ref = useRef(null);
   const inView = useInView(ref, { threshold: 0.1 });
+
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    // Start animation when the component mounts
+    const timeout = setTimeout(() => {
+      setAnimate(true);
+    }); // Convert delay to milliseconds
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   const renderIndustryCards = () => {
     // Create a 4x4 grid (rows x columns) to place cards
     const grid = Array(6) // 4 to 6
@@ -356,6 +381,7 @@ export default function IndustryDashboard() {
       }
     });
 
+    
     // Render the grid
     return (
       <Grid
@@ -395,7 +421,9 @@ export default function IndustryDashboard() {
             lineHeight="normal"
             width="100%"
             initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            // whileInView={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             Transforming{" "}
@@ -447,10 +475,12 @@ export default function IndustryDashboard() {
             </MotionText>
           </MotionBox>
         </GridItem>
-
+        {/* ----------------------------------------------------------------------- */}
         {grid.slice(1).flatMap((row, rowIndex) =>
           row.slice(1).map((industry, colIndex) => {
             if (!industry) return null;
+            const delay = (rowIndex + colIndex) * 0.5;
+
             return (
               <GridItem
                 key={`${rowIndex}-${colIndex}`}
@@ -463,22 +493,24 @@ export default function IndustryDashboard() {
                 <Box
                   width={{
                     base: "100%", // Full width on small screens
-                    md: "240px", // Full width on medium screens
+                    md: "240px", // Fixed width on medium screens
                     lg: industry.isWide ? "655px" : "100%", // Fixed width for isWide cards on large screens
                   }}
                   height={{ base: "200px", md: "320px" }}
                   borderRadius="24px"
                   display="flex"
                   flexDirection="column"
-                  justifyContent="space-between" // Changed to space-between
+                  justifyContent="space-between"
                   padding={{ base: "10px", md: "20px" }}
                   position="relative"
                   backgroundColor={industry.bgColor}
                   color={industry.textColor}
                   zIndex={2}
                   overflow="hidden"
+                  // Apply the keyframe animation with a 6s duration, easeInOut easing and infinite repetition
+                  animation={animate?`${floatAnimation} 2s ease-in-out ${delay}s 1`:"none"}
                 >
-                  {/* Industry Icon - Now at top left */}
+                  {/* Industry Icon */}
                   {industry.img && (
                     <Box
                       dangerouslySetInnerHTML={{
@@ -496,15 +528,15 @@ export default function IndustryDashboard() {
                     />
                   )}
 
-                  {/* Industry Name & Line - Now at top left */}
+                  {/* Industry Name & Description */}
                   <Box position="absolute" top="70px" left="20px" right="20px">
                     <Text
                       fontSize="16px"
                       fontWeight="700"
-                      wordBreak="break-word" // Allow text to wrap
-                      textAlign="left" // Explicitly set text alignment to left
-                      width="100%" // Ensure full width
-                      mt={"-2%"}
+                      wordBreak="break-word"
+                      textAlign="left"
+                      width="100%"
+                      mt="-2%"
                       noOfLines={{ base: 2 }}
                     >
                       {industry.name}
@@ -516,7 +548,6 @@ export default function IndustryDashboard() {
                         backgroundColor={industry.dashColor}
                       />
                     </Text>
-                    {/* Industry Description - Below Label and Dash */}
                     {industry.description && (
                       <Text
                         fontSize="16px"
@@ -524,21 +555,20 @@ export default function IndustryDashboard() {
                         wordBreak="break-word"
                         textAlign="left"
                         width="100%"
-                        mt="10px" // Adjust spacing from the label and dash
+                        mt="10px"
                         color={
                           industry.bgColor === "white"
                             ? "#696969"
                             : industry.textColor
-                        } // Change color if bg is white
-                        noOfLines={{ base: 1, md: 5, lg: 10 }} // Limit lines based on screen size
-                        // Adds ellipsis if the text exceeds the specified number of lines
+                        }
+                        noOfLines={{ base: 1, md: 5, lg: 10 }}
                       >
                         {industry.description}
                       </Text>
                     )}
                   </Box>
 
-                  {/* "Know More" with SVG Arrow - Bottom Right */}
+                  {/* "Know More" Link with SVG Arrow */}
                   {industry.name && (
                     <Link to={`/industries/${industry.link}`}>
                       <Flex
@@ -572,6 +602,7 @@ export default function IndustryDashboard() {
             );
           })
         )}
+        {/* ----------------------------------------------------------------------- */}
       </Grid>
     );
   };

@@ -4,6 +4,7 @@ import servingsData from "../data/servingsConstData";
 import ServingsDescriptionCard from "./ServingsDescriptionCard";
 import ServingsModelGrid from "./ServingsModelGrid";
 import ServingsAdvantages from "./ServingsAdvantages";
+import HeadingAnimation from "./Animation/Text/HeadingAnimation";
 
 const ServingsContent = ({ page: name }) => {
     if (!name || typeof name !== 'string') {
@@ -34,6 +35,7 @@ const ServingsContent = ({ page: name }) => {
                         {/* Title Container with relative positioning */}
                         <Box position="relative" mb="20px">
                             {/* Title Text (above the white rectangle) */}
+                            <HeadingAnimation>
                             <Text
                                 fontSize={{ base: '24px', md: '48px' }}
                                 fontWeight="600"
@@ -53,14 +55,12 @@ const ServingsContent = ({ page: name }) => {
                                 </Text>{' '}
                                 {/* Static blue dot without space */}
                             </Text>
+                            </HeadingAnimation>
                         </Box>
-
-
-
                     </Box>
 
                     {/* Description section backimage with left content */}
-                    <ServingsDescriptionCard description={data.description} keybenefits={data.keybenefits} image={data.image} />
+                    <ServingsDescriptionCard description={data.description} keybenefits={data.keybenefits} image={data.image}/>
 
                     {/* Deployment Model grid  */}
                     <ServingsModelGrid title={data.modelTitle} description={data.modelDescription} cards={data.cards} />
