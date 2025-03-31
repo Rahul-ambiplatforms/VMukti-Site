@@ -13,7 +13,7 @@ const ServingsAdvantages = ({ title, advantages }) => {
                     ))}
                     {/* <Text>{title}</Text> */}
                 </Flex>
-                <Grid gridTemplateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }} gap={6} rowGap="100px" >
+                <Grid gridTemplateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }} gap={6} rowGap="100px">
                     {
                         advantages.map((advantage, index) => (
                             <Flex direction="column" key={index} gap={2}>

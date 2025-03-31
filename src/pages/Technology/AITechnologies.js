@@ -318,7 +318,7 @@ const AITechnologies = () => {
                   bgSize="cover"
                   bgPosition="center"
                   zIndex={1} // Behind the text
-                  // bg="red"
+                  // bg="red" 
                 />
                 {/* Card Content */}
                 <Flex
