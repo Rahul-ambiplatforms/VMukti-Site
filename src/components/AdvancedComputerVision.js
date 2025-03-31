@@ -66,7 +66,6 @@ const AdvancedComputerVision = ({
       overflow="hidden"
       px="5%"
       pt="2%"
-      pb="5%"
       zIndex={myZIndex}
       mt={myMargin}
     >

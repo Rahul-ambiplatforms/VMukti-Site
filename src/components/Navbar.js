@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
     Flex,
     Button,
@@ -80,6 +80,7 @@ const Navbar = () => {
     const [activeLink, setActiveLink] = useState('Home') // State to track active link
     const [hoverTimeouts, setHoverTimeouts] = useState({}); // Track hover timeouts for each menu
     const [menuOpenStates, setMenuOpenStates] = useState({}); // Track open state for each menu
+    const [isNavbarVisible, setIsNavbarVisible] = useState(true); // State to track navbar visibility
     const location = useLocation(); // Use location hook
     const pathToLinkName = {
         '/': 'Home',
@@ -90,12 +91,30 @@ const Navbar = () => {
         '/whoweare': 'Who we are',
     };
 
-    React.useEffect(() => {
+    useEffect(() => {
         const currentLink = pathToLinkName[location.pathname];
         if (currentLink) {
             setActiveLink(currentLink);
         }
     }, [location]);
+
+    useEffect(() => {
+        let lastScrollY = window.scrollY;
+
+        const handleScroll = () => {
+            if (window.scrollY > lastScrollY) {
+                setIsNavbarVisible(false); // Hide navbar on scroll down
+            } else {
+                setIsNavbarVisible(true); // Show navbar on scroll up
+            }
+            lastScrollY = window.scrollY;
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     // Helper function to check if the current path starts with the link’s base path
     function isPathActive(path) {
@@ -139,12 +158,12 @@ const Navbar = () => {
         <Flex
             gap={4}
             position="fixed"
-            // width="100%"
-            top="3%"
+            top={isNavbarVisible ? "3%" : "-100px"} // Move navbar out of view when hidden
             right="2%"
             left="2%"
             zIndex={1000}
             align="center"
+            transition="top 0.3s ease-in-out" // Smooth transition for hiding/showing
         >
             {/* Main Navigation Container */}
             <Flex

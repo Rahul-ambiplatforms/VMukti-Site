@@ -31,15 +31,16 @@ const MotionButton = motion(Button);
 const StickySection = ({ children }) => (
   <Box
     position="relative"
-    height={`${children.length * 100}vh`} /* Dynamically set height */
+    mb="5%"
+    height={`${children.length * 120}dvh`} /* Dynamically set height */
   >
     {children.map((child, index) => (
       <Box
         key={index}
         position="sticky"
         borderRadius="24px"
-        top="10%"
-        height="100vh"
+        top="0%"
+        height="120dvh"
         zIndex={index + 1} // Dynamically set z-index in ascending order
         bg="white" // Optional: Set background to avoid transparency issues
       >
