@@ -283,9 +283,15 @@ const VMuktiHomepage = () => {
       color="#3F77A5"
       gap="2"
       fontSize={{ base: "12px", md: "16px" }}
-      initial={{ opacity: 1 }}
-      animate={{ opacity: [1, 0.6, 1] }} // Flicker effect
-      transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }} // Smooth loop
+      animate={{
+        x: [0, 5, -5, 5, -5, 0], // Moves left-right
+        y: [0, -5, 5, -5, 5, 0], // Moves up-down
+      }}
+      transition={{
+        duration: 0.5,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
     >
       Book Demo
       <svg

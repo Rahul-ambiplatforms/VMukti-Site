@@ -5,6 +5,7 @@ import ComputerVisionPage from "./AITechnologies";
 import PageContentWrapper from "../../components/PageContentWrapper";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import SubHeadingAnimation from "../../components/Animation/Text/SubHeadingAnimation";
 
 const MotionText = motion(Text);
 const MotionHeading = motion(Heading);
@@ -181,7 +182,9 @@ const TechnologyDashboard = () => {
                   </Text>
                   .
                 </MotionHeading>
-
+                <SubHeadingAnimation
+                  display="flex-column" 
+                >
                 {/* Icon & Description */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -196,23 +199,20 @@ const TechnologyDashboard = () => {
                   />
                 </svg>
                 <Flex align="center" ml={{ base: "-1%", md: "5%", lg: "0%" }}>
-                  <MotionText
+                  <Text
                     fontSize={{ base: "md", md: "16px" }}
                     color="#000"
                     lineHeight="normal"
                     maxW={{ base: "90%", md: "60%", lg: "30%" }}
                     m={3}
                     fontWeight="500"
-                    initial={{ opacity: 0, x: -50 }} // Start invisible and shifted left
-                    whileInView={{ opacity: 1, x: 0 }} // Fade in and move to original position
-                    viewport={{ once: false, amount: 0.2 }} // Triggers when 20% is visible
-                    transition={{ duration: 0.9, ease: "easeOut" }} // Smooth transition
                   >
                     VMukti is driving innovation with advanced AI technologies,
                     transforming surveillance, automation, and security for a
                     smarter, more connected world.
-                  </MotionText>
+                  </Text>
                 </Flex>
+                </SubHeadingAnimation>
 
                 {/* Square Box (Hidden on smaller screens) */}
                 <Box

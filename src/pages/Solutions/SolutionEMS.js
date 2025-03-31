@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
-import {
-  Flex,
-  Box,
-  Text,
-  Heading,
-
-  useBreakpointValue,
-} from "@chakra-ui/react";
-import {Button } from "@chakra-ui/icons";
-
+import { Flex, Box, Text, Heading, useBreakpointValue } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { Button } from "@chakra-ui/icons";
+import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation";
+import SubHeadingAnimation from "../../components/Animation/Text/SubHeadingAnimation";
+import ImagePop from "../../components/Animation/Image/ImagePop";
+import ImagePopBox from "../../components/Animation/Image/ImagePopBox";
 const SolutionEMS = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [visibleSlideRange, setVisibleSlideRange] = useState({
@@ -225,6 +222,7 @@ const SolutionEMS = () => {
                   flex="1"
                   textAlign="left"
                 >
+                  {/* <HeadingAnimation> */}
                   <Text
                     whiteSpace="normal"
                     wordBreak="break-word"
@@ -246,6 +244,7 @@ const SolutionEMS = () => {
                   >
                     {firstPart} <br /> {lastWord}
                   </Text>
+                  {/* </HeadingAnimation> */}
                   {currentSlide === index + visibleSlideRange.start && (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -291,8 +290,6 @@ const SolutionEMS = () => {
               )}
             </Flex>
           )}
-          {/* <IconButton aria-label="Previous slide" icon={<ChevronLeftIcon />} variant="ghost" onClick={handlePrev} /> */}
-          {/* <IconButton aria-label="Next slide" icon={<ChevronRightIcon />} variant="ghost" onClick={handleNext} /> */}
 
           <Flex
             justifyContent="space-between"
@@ -368,105 +365,114 @@ const SolutionEMS = () => {
               >
                 {/* Card Content */}
                 <Flex direction="column">
-                  <Flex direction="column">
-                    <Box
-                      p={8}
-                      bg="#E7E7E7"
-                      // bg="darkred"
-                      w={cardContentWidth}
-                      minW="562px"
-                      minH="360px"
-                      // minW="39%"
-                      // minH="45%"
-                      m="2%"
-                      mb="-0.5%"
-                      borderRadius="24px"
-                      zIndex={2}
-                      backdropFilter="blur(2px)"
-                    >
-                      <Heading
-                        fontSize="36px"
-                        fontWeight="500"
-                        mb={3}
-                        color="black"
-                      >
-                        {slide.title1}{" "}
-                        <span style={{ color: "#DB7B3A" }}>{slide.title2}</span>
-                      </Heading>
+                <Flex direction="column">
+  {/* First Box with 0.1s delay */}
+  <Box
+    as={motion.div}
+    initial={{ scale: 0.7, opacity: 0 }}
+    whileInView={{ scale: 1, opacity: 1 }}
+    viewport={{ once: false, amount: 0.1 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    p={8}
+    bg="#E7E7E7"
+    w={cardContentWidth}
+    minW="562px"
+    minH="360px"
+    m="2%"
+    mb="-0.5%"
+    borderRadius="24px"
+    zIndex={2}
+    backdropFilter="blur(2px)"
+  >
+    <HeadingAnimation>
+      <Heading
+        fontSize="36px"
+        fontWeight="500"
+        mb={3}
+        color="black"
+      >
+        {slide.title1}{" "}
+        <span style={{ color: "#DB7B3A" }}>
+          {slide.title2}
+        </span>
+      </Heading>
+    </HeadingAnimation>
+    <SubHeadingAnimation>
+      <Text fontSize="24px" color="blue.600" mb={3} mt="5%">
+        {/* SVG code remains unchanged */}
+      </Text>
+    </SubHeadingAnimation>
+    <SubHeadingAnimation>
+      <Box>
+        {slide.description.map((text, i) => (
+          <Text
+            key={i}
+            fontWeight="500"
+            fontSize="16px"
+            color="black"
+            lineHeight="1.6"
+            mb={2}
+          >
+            {text}
+          </Text>
+        ))}
+      </Box>
+    </SubHeadingAnimation>
+  </Box>
 
-                      <Text fontSize="24px" color="blue.600" mb={3} mt="5%">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="33"
-                          height="33"
-                          viewBox="0 0 33 33"
-                          fill="none"
-                        >
-                          <path
-                            d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C0 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
-                            fill="#3F77A5"
-                          />
-                        </svg>
-                      </Text>
-
-                      <Box>
-                        {slide.description.map((text, i) => (
-                          <Text
-                            key={i}
-                            fontWeight="500"
-                            fontSize="16px"
-                            color="black"
-                            lineHeight="1.6"
-                            mb={2}
-                          >
-                            {text}
-                          </Text>
-                        ))}
-                      </Box>
-                    </Box>
-
-                    <Box
-                      p={8}
-                      bg="#BECEDC"
-                      // bg="darkblue"
-                      w={cardContentWidth}
-                      // minW="39%"
-                      // minH="40%"
-                      minW="562px"
-                      minH="333px"
-                      m="2%"
-                      borderRadius="24px"
-                      zIndex={2}
-                      backdropFilter="blur(2px)"
-                    >
-                      <Box>
-                        {slide.description.map((text, i) => (
-                          <Text
-                            key={i}
-                            //   fontWeight="700" for the title
-                            fontWeight="500"
-                            fontSize="16px"
-                            color="black"
-                            lineHeight="1.6"
-                            mb={5}
-                          >
-                            {text}
-                          </Text>
-                        ))}
-                      </Box>
-                    </Box>
-                  </Flex>
-
+  {/* Second Box with 0.3s delay (0.2s after first) */}
+  <Box
+    as={motion.div}
+    initial={{ scale: 0.7, opacity: 0 }}
+    whileInView={{ scale: 1, opacity: 1 }}
+    viewport={{ once: false, amount: 0.1 }}
+    transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+    p={8}
+    bg="#BECEDC"
+    w={cardContentWidth}
+    minW="562px"
+    minH="333px"
+    m="2%"
+    borderRadius="24px"
+    zIndex={2}
+    backdropFilter="blur(2px)"
+  >
+    <SubHeadingAnimation>
+      <Box>
+        {slide.description.map((text, i) => (
+          <Text
+            key={i}
+            fontWeight="500"
+            fontSize="16px"
+            color="black"
+            lineHeight="1.6"
+            mb={5}
+          >
+            {text}
+          </Text>
+        ))}
+      </Box>
+    </SubHeadingAnimation>
+  </Box>
+</Flex>
                   <Flex>
                     {/* Top right Image (positioned absolutely) */}
                     <Box
+                      as={motion.div}
                       position="absolute"
                       top="4%"
                       right="4%"
-                      bg="darkred"
                       width="630px"
                       height="360px"
                       zIndex={3}
+                      initial={{ scale: 0.7, opacity: 0 }}
+                      whileInView={{ scale: 1, opacity: 1 }}
+                      viewport={{ once: false, amount: 0.1 }}
+                      transition={{
+                        duration: 0.6,
+                        ease: [0, 0.3, 0.5, 1],
+                        delay: 0.2, // Add delay if needed
+                      }}
                     >
                       <img
                         src={slide.image}
@@ -480,7 +486,7 @@ const SolutionEMS = () => {
                     </Box>
                     {/* New Bottom Right Box for Benefits */}
                     {slide.benefits && (
-                      <Box
+                        <Box
                         position="absolute"
                         bottom="7%"
                         right="4%"
@@ -490,7 +496,6 @@ const SolutionEMS = () => {
                         display="flex"
                         flexDirection="column"
                         borderRadius="12px"
-                        //   bg="red"
                         zIndex={3}
                         p={4}
                       >
@@ -512,7 +517,19 @@ const SolutionEMS = () => {
                           alignItems="center"
                         >
                           {slide.benefits.data.map((benefit, idx) => (
-                            <Box key={idx} textAlign="left">
+                            <Box 
+                              as={motion.div}
+                              key={idx} 
+                              textAlign="left"
+                              initial={{ scale: 0.7, opacity: 0 }}
+                              whileInView={{ scale: 1, opacity: 1 }}
+                              viewport={{ once: false, amount: 0.1 }}
+                              transition={{
+                                duration: 0.9,
+                                ease: [0.5, 1],
+                                delay: 0.5 * idx // Individual delay based on index
+                              }}
+                            >
                               <img
                                 src={benefit.image}
                                 alt={benefit.title}
@@ -548,5 +565,3 @@ const SolutionEMS = () => {
 };
 
 export default SolutionEMS;
-
-

@@ -22,7 +22,8 @@ import CertificationsSection from "./components/CertificationsSection";
 import ReviewsSection from "./components/ReviewsSection";
 import VerticalTimeline from "../../components/VerticalTimeline";
 import certifications from "../../data/certificationsConstData";
-
+import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation";
+import { easeIn, easeOut, motion } from "framer-motion";
 const WhoWeare = () => {
   const reviews = [
     {
@@ -99,18 +100,20 @@ const WhoWeare = () => {
           position="relative" // To position the background image
           // bg="red"
         >
-          <Heading
-            // as="h2"
-            textAlign="center"
-            mb={10}
-            fontSize={{ base: "2xl", md: "36px" }}
-            fontWeight="600"
-            lineHeight="normal"
-            color="#000"
-            zIndex={1}
-          >
-            Our Certifications
-          </Heading>
+          <HeadingAnimation>
+            <Heading
+              // as="h2"
+              textAlign="center"
+              mb={10}
+              fontSize={{ base: "2xl", md: "36px" }}
+              fontWeight="600"
+              lineHeight="normal"
+              color="#000"
+              zIndex={1}
+            >
+              Our Certifications
+            </Heading>
+          </HeadingAnimation>
           {/* Background Image in the Top Right Corner */}
           <Box
             position="absolute"
@@ -161,6 +164,7 @@ const WhoWeare = () => {
             >
               {certifications.map((cert, index) => (
                 <Flex
+                  as={motion.div}
                   key={index}
                   direction="column"
                   align="center"
@@ -174,9 +178,18 @@ const WhoWeare = () => {
                   flexBasis={{
                     base: "calc(50% - 10px)",
                     md: index < 5 ? "18%" : "20%",
-                  }} // Mobile: Exactly 2 per row
-                  m={{ base: "3px", md: "5px" }} // Reduced margin to prevent wrapping issues
+                  }}
+                  m={{ base: "3px", md: "5px" }}
                   zIndex="3"
+                  // Animation props
+                  initial={{ scale: 0.1, opacity: 0.5 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: false, amount: 0.1 }}
+                  transition={{
+                    duration: 1.9,
+                    ease: easeOut,
+                    delay: 0.3 * index, // Staggered delay based on index
+                  }}
                 >
                   <Box mb={3} color={cert.color}>
                     {cert.icon}
@@ -204,104 +217,6 @@ const WhoWeare = () => {
         </Box>
 
         {/* Reviews */}
-        {/* 
-        <Box pb="9%" maxW="100%">
-          <Box
-            maxW="container.xl"
-            mx="auto"
-            px={12}
-            py={8}
-            bg="#3F77A5"
-            borderRadius="24px"
-            // bg="green"
-          >
-            <Heading
-              color="white"
-              mt="2%"
-              mb="4%"
-              textAlign="left"
-              fontSize={{ base: "24px", md: "36px" }}
-              fontWeight="600"
-            >
-              What Our Clients Say
-            </Heading>
-
-            <Box position="relative" mb="5%" py="1%">
-              <Flex alignItems="center" justifyContent="space-between">
-                <Box
-                  mt={4}
-                  overflow="hidden"
-                  position="relative"
-                  width="70%"
-                  // height="100%"
-                  // bg="red"
-                >
-                  <Flex transition="transform 0.5s ease-in-out">
-                    {reviews.map((review) => (
-                      <Box
-                        key={review.id}
-                        // flex={`0 0 3 3.33%`}
-                        bg="white"
-                        borderRadius="24px"
-                        p={6}
-                        minWidth="0"
-                        mx={2}
-                      >
-                        
-                        <Flex alignItems="flex-start" mb={4}>
-                          <Icon
-                            viewBox="0 0 24 24"
-                            boxSize={8}
-                            color="gray.500"
-                            mr={4}
-                          >
-                            <path
-                              fill="currentColor"
-                              fillRule="evenodd"
-                              d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                              clipRule="evenodd"
-                            />
-                          </Icon>
-                          <Text fontSize="lg" fontWeight="600" color="gray.600">
-                            Customer Reviews
-                          </Text>
-                        </Flex>
-                        <Text fontSize="md" color="gray.700">
-                          {review.text}
-                        </Text>
-                      </Box>
-                    ))}
-                  </Flex>
-                </Box>
-
-                <Box align="left" zIndex="1">
-   
-                  <IconButton
-                    onClick={handlePrevious}
-                    aria-label="Previous review"
-                    icon={<ChevronLeftIcon />}
-                    variant="ghost"
-                    color="white"
-                    _hover={{ bg: "rgba(255,255,255,0.1)" }}
-                    size="lg"
-                    mr="5px"
-                  />
-
-                  <IconButton
-                    onClick={handleNext}
-                    aria-label="Next review"
-                    icon={<ChevronRightIcon />}
-                    variant="ghost"
-                    color="white"
-                    _hover={{ bg: "rgba(255,255,255,0.1)" }}
-                    size="lg"
-                    ml="5px"
-                  />
-                </Box>
-              </Flex>
-            </Box>
-          </Box>
-        </Box> */}
 
         <Box pb="9%" maxW="100%">
           <Box
@@ -312,17 +227,18 @@ const WhoWeare = () => {
             bg="#3F77A5"
             borderRadius="24px"
           >
-            <Heading
-              color="white"
-              mt="2%"
-              mb="4%"
-              textAlign="left"
-              fontSize={{ base: "24px", md: "36px" }}
-              fontWeight="600"
-            >
-              What Our Clients Say
-            </Heading>
-
+            <HeadingAnimation>
+              <Heading
+                color="white"
+                mt="2%"
+                mb="4%"
+                textAlign="left"
+                fontSize={{ base: "24px", md: "36px" }}
+                fontWeight="600"
+              >
+                What Our Clients Say
+              </Heading>
+            </HeadingAnimation>
             <Box position="relative" mb="5%" py="1%">
               <Flex alignItems="center" justifyContent="space-between">
                 <Box mt={4} overflow="hidden" position="relative" width="70%">
@@ -403,7 +319,10 @@ const WhoWeare = () => {
                     onClick={handlePrevious}
                   >
                     <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
-                      <path d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z" fill="#3F77A5" />
+                      <path
+                        d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z"
+                        fill="#3F77A5"
+                      />
                     </svg>
                   </Button>
                   <Button
@@ -419,7 +338,10 @@ const WhoWeare = () => {
                     onClick={handleNext}
                   >
                     <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
-                      <path d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z" fill="#3F77A5" />
+                      <path
+                        d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z"
+                        fill="#3F77A5"
+                      />
                     </svg>
                   </Button>
                 </Flex>

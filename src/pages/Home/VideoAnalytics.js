@@ -3,6 +3,8 @@
 import React, { useState } from "react"
 import { Box, Flex, Text, Image, Button, Divider, Grid } from "@chakra-ui/react"
 import { motion } from "framer-motion"
+import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation"
+import ImagePop from "../../components/Animation/Image/ImagePop"
 
 const MotionBox = motion(Box)
 
@@ -55,6 +57,7 @@ const VideoAnalytics = () => {
           minWidth={{ md: "250px" }}
           flexShrink={0}
         >
+          <HeadingAnimation>
           <Text
             color="#FFF"
 
@@ -68,7 +71,7 @@ const VideoAnalytics = () => {
             <br />
             Video Analytics & Insights
           </Text>
-
+          </HeadingAnimation>
           <Flex
             direction={{ base: "row", md: "column" }}
             alignItems="center"
@@ -222,9 +225,11 @@ const VideoAnalytics = () => {
             bgColor="#E7E7E7"
             zIndex={2}
             right={0}
+            // bg="red"
           >
 
           </Box>
+          {/* <ImagePop> */}
           <Image
             src="/assets/ipad.png"
             alt="iPad"
@@ -236,7 +241,9 @@ const VideoAnalytics = () => {
             bottom={0}
             right={0}
             zIndex={3}
+            // bg="red"
           />
+          {/* </ImagePop> */}
         </Flex>
       </Flex>
     </Flex>
