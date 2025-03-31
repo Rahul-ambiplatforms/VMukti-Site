@@ -23,7 +23,7 @@ const TripleImageSection = ({
     const inView = useInView(ref, { threshold: 0.1 }); // Triggers when 10% visible
 
     return (
-        <Box bg="#E7E7E7" py={{ base: 6, md: 10 }}>
+        <Box bg="#E7E7E7" py={{ base: 6, md: 10 }} mb={10} >
             {/* Heading Animation */}
             <motion.div
                 ref={ref}
@@ -123,6 +123,22 @@ const TripleImageSection = ({
                         </Box>
                     ))}
                 </Flex>
+                <Box
+                    position="absolute"
+                    top="40%"
+                    // left="40%"
+                    right="0"
+                    bottom="0"
+                    // opacity="0.8"
+                    width="1050px"
+                    height="525px"
+                    //rotate the image
+                    // transform="rotate(-20deg)"
+                    // bg={"red"} 
+                    zIndex="0"
+                    backgroundImage="url('/assets/VMukti Brochure O2 1.svg')"
+                    backgroundRepeat="no-repeat"
+                />
 
                 {/* Absolute Positioned Elements */}
                 <Flex
