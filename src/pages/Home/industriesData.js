@@ -28,6 +28,7 @@ const industriesData = [
     bgColor: '#BECEDC',
     textColor: 'black',
     dashColor: '#3F77A5',
+    image:"./assets/HealthcareIndustry.png"
   },
   {
     name: '',
@@ -50,6 +51,7 @@ const industriesData = [
     bgColor: 'white',
     textColor: 'black',
     dashColor: '#3F77A5',
+    image:"./assets/EducationIndustry.png"
   },
   {
     name: 'Defense',
@@ -63,6 +65,7 @@ const industriesData = [
     bgColor: '#BECEDC',
     textColor: 'black',
     dashColor: '#3F77A5',
+    image:"./assets/DefenseIndustry.png"
   },
   {
     name: 'Election',
@@ -77,6 +80,7 @@ const industriesData = [
     textColor: 'black',
     dashColor: '#3F77A5',
     isWide: true,
+    image:"./assets/ElectionIndustry.png"
   },
   {
     name: '',
@@ -104,6 +108,7 @@ const industriesData = [
     bgColor: 'white',
     textColor: 'black',
     dashColor: '#3F77A5',
+    image:"./assets/BankingIndustry.png"
   },
   {
     name: '',
@@ -126,6 +131,7 @@ const industriesData = [
     bgColor: '#3F77A5',
     textColor: 'white',
     dashColor: 'white',
+    image:"./assets/TransportationIndustry.png"
   },
   {
     name: 'City Monitoring',
@@ -139,6 +145,7 @@ const industriesData = [
     bgColor: 'white',
     textColor: 'black',
     dashColor: '#3F77A5',
+    image:"./assets/CityMonitoring.png"
   },
   {
     name: 'Warehousing & Logistic Industry',
@@ -152,6 +159,7 @@ const industriesData = [
     bgColor: '#BECEDC',
     textColor: 'black',
     dashColor: 'white',
+    image:"./assets/WarehousingLogisticIndustry.png"
   },
 ]
 
@@ -224,48 +232,61 @@ export default function IndustryGrid() {
                   md: industry.isWide ? 2 : 1,
                 }}
                 rowSpan={1}
-              >
-                <Box 
                 sx={{
                   perspective: "1000px", // Adjust the depth effect
-                }}>
+                }}
+              >
+                <Box
+                  width={{
+                    base: "100%",
+                    md: "100%",
+                    lg: industry.isWide ? "640px" : "100%",
+                  }}
+                  height={{ base: "200px", md: "320px" }}
+                  borderRadius="24px"
+                  position="relative"
+                  style={{
+                    transformStyle: "preserve-3d", // Ensure 3D depth is preserved
+                    transition: "transform 0.6s ease-in-out",
+                  }}
+                  _hover={{
+                    transform: "rotateY(180deg)", // Flip the card
+                  }}
+                >
+                  {/* Flip Container */}
                   <Box
-                    width={{
-                      base: '100%', // Full width on small screens
-                      md: '100%', // Full width on medium screens
-                      lg: industry.isWide ? '640px' : '100%', // Fixed width for isWide cards on large screens
-                    }}
-                    height={{ base: '200px', md: '320px' }}
+                    position="absolute"
+                    width="100%"
+                    height="100%"
                     borderRadius="24px"
-                    display="flex"
-                    flexDirection="column"
-                    justifyContent="flex-end"
-                    alignItems="flex-start"
-                    padding={{ base: '10px', md: '20px' }}
-                    position="relative"
-                    backgroundColor={industry.bgColor}
-                    color={industry.textColor}
-                    zIndex={2}
-                    overflow="hidden"
                     style={{
-                      transformStyle: 'preserve-3d',
-                      transition: 'transform 0.6s ease-in-out',
-                    }}
-                    // transform="perspective(1000px)" // Enable 3D perspective
-                    // transition="transform 0.6s ease" // Smooth transition for the flip effect
-                    _hover={{
-                      transform: 'rotateY(180deg)', // Flip the box on hover
+                      transformStyle: "preserve-3d",
                     }}
                   >
-                    <Flex position="absolute" backfaceVisibility="hidden"> {/* front side */}
+                    {/* Front Side */}
+                    <Box
+                      position="absolute"
+                      width="100%"
+                      height="100%"
+                      backgroundColor={industry.bgColor}
+                      color={industry.textColor}
+                      borderRadius="24px"
+                      display="flex"
+                      flexDirection="column"
+                      justifyContent="flex-end"
+                      alignItems="flex-start"
+                      padding={{ base: "10px", md: "20px" }}
+                      style={{
+                        transform: "rotateY(0deg)",
+                        backfaceVisibility: "hidden", // Ensures it hides when flipped
+                      }}
+                    >
                       {/* Industry Icon */}
                       {industry.img && (
                         <Box
                           dangerouslySetInnerHTML={{
                             __html: decodeURIComponent(
-                              industry.img.split(
-                                'data:image/svg+xml;charset=utf-8,'
-                              )[1]
+                              industry.img.split("data:image/svg+xml;charset=utf-8,")[1]
                             ),
                           }}
                           position="absolute"
@@ -273,7 +294,6 @@ export default function IndustryGrid() {
                           left="20px"
                           width="33px"
                           height="33px"
-                          style={{ backfaceVisibility: 'hidden' }}
                         />
                       )}
                       {/* Industry Name & Line */}
@@ -283,12 +303,10 @@ export default function IndustryGrid() {
                         position="absolute"
                         bottom="20px"
                         left="20px"
-                        whiteSpace="nowrap" // Prevent text wrapping
-                        overflow="hidden" // Hide overflow
-                        textOverflow="ellipsis" // Add ellipsis for overflow
-                        maxWidth="90%" // Ensure text doesn't overflow the card
-                        style={{ backfaceVisibility: 'hidden' }}
-                        // bg="red"
+                        whiteSpace="nowrap"
+                        overflow="hidden"
+                        textOverflow="ellipsis"
+                        maxWidth="90%"
                       >
                         {industry.name}
                         <Box
@@ -298,13 +316,34 @@ export default function IndustryGrid() {
                           marginTop="5px"
                           backgroundColor={industry.dashColor}
                         />
-                      </Text>{' '}
-                    </Flex>
-                    <Flex position="absolute" backfaceVisibility="hidden"> {/* back side */}
-                      dummy text
-                    </Flex>
-                  </Box></Box> {/* This is just useless things addedd if its nothing then remove. */}
+                      </Text>
+                    </Box>
+
+                    {/* Back Side */}
+                    <Box
+                      position="absolute"
+                      width="100%"
+                      height="100%"
+                      borderRadius="24px"
+                      padding="20px"
+                      bgImage={industry.image}
+                      bgSize="cover"
+                      bgPosition="center"
+
+                      display="flex"
+                      justifyContent="center"
+                      alignItems="center"
+                      textAlign="center"
+                      style={{
+                        transform: "rotateY(180deg)",
+                        backfaceVisibility: "hidden", // Ensures front side is not visible
+                      }}
+                    >
+                    </Box>
+                  </Box>
+                </Box>
               </GridItem>
+
             )
           })
         )}
@@ -362,33 +401,33 @@ export default function IndustryGrid() {
       >
         {/* We can add some creativity here also. */}
         <HeadingAnimation>
-        <Text
-          fontSize={useBreakpointValue({
-            base: '24px',
-            sm: '32px',
-            md: '40px',
-            lg: '48px',
-          })}
-          fontWeight="600"
-          marginBottom="10px"
-          padding="0"
-          lineHeight="normal"
-          textAlign="center"
-          position="relative"
-          zIndex="2"
-        >
-          Crafting Unique{' '}
-          <Text as="span" color="#db7b3a">
-            AI
-          </Text>{' '}
-          Solutions for {<br />}
-          <Text as="span" color="#3f77a5">
-            Every Industry
+          <Text
+            fontSize={useBreakpointValue({
+              base: '24px',
+              sm: '32px',
+              md: '40px',
+              lg: '48px',
+            })}
+            fontWeight="600"
+            marginBottom="10px"
+            padding="0"
+            lineHeight="normal"
+            textAlign="center"
+            position="relative"
+            zIndex="2"
+          >
+            Crafting Unique{' '}
+            <Text as="span" color="#db7b3a">
+              AI
+            </Text>{' '}
+            Solutions for {<br />}
+            <Text as="span" color="#3f77a5">
+              Every Industry
+            </Text>
+            <Text as="span" color="#db7b3a">
+              .
+            </Text>
           </Text>
-          <Text as="span" color="#db7b3a">
-            .
-          </Text>
-        </Text>
         </HeadingAnimation>
         {/* Industry Grid */}
         {renderIndustryCards()}
