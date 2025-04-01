@@ -9,6 +9,8 @@ import {
 } from "@chakra-ui/react"; // Chakra UI components
 import PageContentWrapper from "./PageContentWrapper";
 import { motion } from "framer-motion";
+import HeadingAnimation from "./Animation/Text/HeadingAnimation";
+import SubHeadingAnimation from "./Animation/Text/SubHeadingAnimation";
 
 const MotionBox = motion(Box);
 const MotionText = motion(Text);
@@ -21,7 +23,7 @@ const popAnimation1 = {
     scale: 1,
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.8,
       ease: "easeOut",
       delay: index * 0.1, // Delay increases for each card
     },
@@ -33,7 +35,7 @@ const popAnimation = {
   visible: {
     scale: 1,
     opacity: 1,
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: { duration: 0.7, ease: "easeOut" },
   },
 };
 const IndustryContent = ({ props, content }) => {
@@ -234,6 +236,7 @@ const IndustryContent = ({ props, content }) => {
             mt={{ base: "-5%", md: "-10%" }}
             gap="3"
             position="relative"
+            zIndex="1" // I added this code
           >
             {/* Small image (35% width) - Fixed height */}
             <Image
@@ -272,52 +275,63 @@ const IndustryContent = ({ props, content }) => {
             borderRadius="24px"
             backgroundColor="#FFF"
             px="2%"
-            py="2%"
+            pt="2%"
+            pb="4%"
             display="flex"
             flexWrap="wrap"
             justifyContent="center"
-            gap="10"
+            gap="5"
             marginTop="5%"
             position="relative" // Needed for absolute positioning inside
+            // bg="red"
+            overflow="hidden"
           >
             {/* SVG Positioned at Top Right */}
             <Box
               position="absolute"
-              top="0"
-              right="0"
+              top="-20%"
+              right="-20%"
               width="70%" // SVG covers 70% of the background width
               zIndex="0"
+              // overflow="hidden"
+              // bg="red"
             >
               <Image
-                src={"./assets/VMukti_Brochure_O2_1.png"}
+                // src={"./assets/VMukti_Brochure_O2_1.png"}
+                src={`${process.env.PUBLIC_URL}/assets/VMukti Brochure O2 1.png`}
                 alt=""
                 width="100%"
                 opacity="0.8"
+                // overflow="hidden"
               />
             </Box>
             <Box
               position="absolute"
-              bottom="10%"
-              left="0"
+              bottom="2%"
+              left="-10%"
               width="70%" // SVG covers 70% of the background width
               zIndex="0"
+              // overflow="hidden"
             >
               <Image
-                src={"./assets/VMukti_Brochure_O2_2.png"}
+                src={`${process.env.PUBLIC_URL}/assets/VMukti Brochure O2 2.png`}
                 alt=""
                 width="100%"
                 opacity="0.8"
+                // overflow="hidden"
+                // bg="red"
               />
             </Box>
 
             <Text
               fontSize={{ base: "20px", md: "36px" }}
-              fontWeight="700"
+              fontWeight="600"
               color="#000"
-              maxWidth={"90%"}
-              textAlign="flex-start"
+              maxWidth={"93%"}
+              textAlign="flex-end"
               width={"100%"}
-              mt="1%"
+              mt="2%"
+              pb="1%"
             >
               Key Applications
             </Text>
@@ -335,8 +349,10 @@ const IndustryContent = ({ props, content }) => {
                 initial="hidden"
                 whileInView="visible"
                 variants={popAnimation1}
-                custom={index} // Pass index for delay
+                custom={index}
                 viewport={{ once: false }} // Repeats animation on scroll
+                // bg="red"
+                // pb="4%"
               >
                 {/* Grey Placeholder */}
                 <Image
@@ -350,15 +366,18 @@ const IndustryContent = ({ props, content }) => {
                 />
 
                 {/* Title */}
-                <Text
-                  color="#000"
-                  fontSize={{ base: "12px", md: "16px" }}
-                  fontWeight="700"
-                  textAlign="left"
-                >
-                  {card.title}
-                </Text>
-
+                <HeadingAnimation>
+                  <Text
+                    color="#000"
+                    fontSize={{ base: "12px", md: "16px" }}
+                    fontWeight="700"
+                    textAlign="left"
+                    mt="5px"
+                    width="90%"
+                  >
+                    {card.title}
+                  </Text>
+                </HeadingAnimation>
                 {/* Blue Dash */}
                 <Box
                   width="18px"
@@ -366,17 +385,21 @@ const IndustryContent = ({ props, content }) => {
                   borderRadius="2px"
                   backgroundColor="#3F77A5"
                   alignSelf="flex-start"
+                  // bg="red"
                 />
 
                 {/* Description */}
-                <Text
-                  color="#696969"
-                  fontSize={{ base: "12px", md: "14px" }}
-                  fontWeight="500"
-                  textAlign="left"
-                >
-                  {card.description}
-                </Text>
+                <SubHeadingAnimation>
+                  <Text
+                    color="#696969"
+                    fontSize={{ base: "12px", md: "14px" }}
+                    fontWeight="500"
+                    textAlign="left"
+                    width="80%"
+                  >
+                    {card.description}
+                  </Text>
+                </SubHeadingAnimation>
               </MotionBox>
             ))}
             {/* </Box> */}
@@ -389,12 +412,13 @@ const IndustryContent = ({ props, content }) => {
             backgroundColor="#3F77A5"
             borderRadius="24px"
             flexShrink="0"
-            marginTop="40px"
-            padding="24px"
+            marginTop="15px"
+            padding="45px"
             display="flex"
             flexDirection={{ base: "column", md: "row" }}
             alignItems="center"
             justifyContent="space-between"
+            // bg="red"
           >
             {/* Key Benefits Title */}
             <Text
@@ -477,9 +501,9 @@ const IndustryContent = ({ props, content }) => {
               minWidth="146px" // Minimum width to fit content
               backgroundColor="white"
               color="#3F77A5"
-              fontSize="14px"
-              fontWeight="600"
-              borderRadius="12px"
+              fontSize="16px"
+              fontWeight="700"
+              borderRadius="20px"
               display="flex"
               alignItems="center"
               justifyContent="center"
@@ -491,8 +515,8 @@ const IndustryContent = ({ props, content }) => {
               All Industries
               <svg
                 style={{
-                  width: "1em",
-                  height: "1em",
+                  width: "14px",
+                  height: "14px",
                   minWidth: "14px",
                   minHeight: "14px",
                   flexShrink: 0, // Prevent the icon from shrinking
