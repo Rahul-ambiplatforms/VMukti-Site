@@ -12,7 +12,7 @@ const HeroSection = () => {
       bgImage="./assets/WhoDash.png"
       bgSize="cover"
       bgPosition="center"
-      mt="6%"
+      // mt="6%"
     >
       <Box
         position="absolute"

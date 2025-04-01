@@ -23,7 +23,7 @@ const TripleImageSection = ({
     const inView = useInView(ref, { threshold: 0.1 }); // Triggers when 10% visible
 
     return (
-        <Box bg="#E7E7E7" py={{ base: 6, md: 10 }} mb={10} >
+        <Box bg="#E7E7E7" mb={10} >
             {/* Heading Animation */}
             <motion.div
                 ref={ref}

@@ -17,7 +17,7 @@ const TechnologyDashboard = () => {
 
   return (
     <PageContentWrapper>
-      <Box mt="2%" h={"100%"}>
+      <Box >
         <Flex
           bg="#E7E7E7"
           w="100%"
@@ -135,10 +135,10 @@ const TechnologyDashboard = () => {
               <Flex
                 direction="column"
                 maxW={{ base: "100%", lg: "70%" }}
-                pr={{ base: 0, lg: 8 }}
+                // pr={{ base: 0, lg: 8 }}
                 position="relative"
                 zIndex={3}
-                mt="4%"
+                // mt="4%"
                 // mx="4%"
                 // mt={{ base: 8, lg: 14 }}
                 // ml={{ base: "-2%", md: "-4%", lg: "-8%" }}

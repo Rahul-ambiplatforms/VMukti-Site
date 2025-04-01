@@ -5,7 +5,7 @@ import ImagePop from "../../../components/Animation/Image/ImagePop";
 
 export default function HeroSection() {
     return (
-        <Box bg="#E7E7E7" minH="100vh" display="flex" mt="2%">
+        <Box bg="#E7E7E7" minH="100vh" display="flex">
             {/* <Container maxW="100%" px={{ base: 4, md: 0 }}> */}
                 <Flex direction={{ base: "column", md: "row" }} gap={{ base: 6, md: 8 }} >
                     <Box flex="1" textAlign={{ base: "center", md: "left" }} position="relative">

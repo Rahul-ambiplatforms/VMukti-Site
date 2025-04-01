@@ -22,7 +22,7 @@ const ServingsContent = ({ page: name }) => {
                 <Flex direction="column" gap={5}>
                     {/* Textual portion */}
                     <Box
-                        mt={{ base: '20px', md: '40px' }}
+                        // mt={{ base: '20px', md: '40px' }}
                         as="section"
 
                         backgroundColor="#E7E7E7"
