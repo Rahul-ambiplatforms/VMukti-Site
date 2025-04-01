@@ -229,7 +229,6 @@ const VideoAnalytics = () => {
             bgColor="#E7E7E7"
             zIndex={2}
             right={0}
-            // bg="red"
           >
             <Image
               src={featureImages[featureIndex].image} // Dynamically load image
@@ -242,6 +241,7 @@ const VideoAnalytics = () => {
               bottom={0}
               right={0}
               zIndex={3}
+              // bg="red"
             />
           </Box>
         </Flex>

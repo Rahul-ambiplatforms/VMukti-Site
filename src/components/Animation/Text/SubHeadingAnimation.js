@@ -13,6 +13,7 @@ const SubHeadingAnimation = ({ children, className }) => {
       viewport={{ once: false, amount: 0.2 }} // Triggers at 20% visibility
       transition={{ duration: 0.9, ease: "easeOut" }} // Smooth transition
       // display="flex-column"
+       display="block"
     >
       {children}
     </MotionText>

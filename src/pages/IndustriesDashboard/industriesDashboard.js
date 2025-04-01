@@ -381,7 +381,6 @@ export default function IndustryDashboard() {
       }
     });
 
-    
     // Render the grid
     return (
       <Grid
@@ -508,7 +507,11 @@ export default function IndustryDashboard() {
                   zIndex={2}
                   overflow="hidden"
                   // Apply the keyframe animation with a 6s duration, easeInOut easing and infinite repetition
-                  animation={animate?`${floatAnimation} 2s ease-in-out ${delay}s 1`:"none"}
+                  animation={
+                    animate
+                      ? `${floatAnimation} 2s ease-in-out ${delay}s 1`
+                      : "none"
+                  }
                 >
                   {/* Industry Icon */}
                   {industry.img && (
