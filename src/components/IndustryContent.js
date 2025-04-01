@@ -407,75 +407,81 @@ const IndustryContent = ({ props, content }) => {
           {/* </Flex> */}
 
           {/* Key Benefits Section */}
-          <Box
-            width="100%"
-            backgroundColor="#3F77A5"
-            borderRadius="24px"
-            flexShrink="0"
-            marginTop="15px"
-            padding="45px"
-            display="flex"
-            flexDirection={{ base: "column", md: "row" }}
-            alignItems="center"
-            justifyContent="space-between"
-            // bg="red"
-          >
-            {/* Key Benefits Title */}
-            <Text
-              color="#FFF"
-              fontSize="36px"
-              fontWeight="600"
-              textAlign={{ base: "center", md: "left" }}
-              marginBottom={{ base: "16px", md: "0" }}
-            >
-              Key Benefits
-            </Text>
-
-            {/* Benefits Grid */}
-            <Flex
-              flex="1"
-              justifyContent="space-evenly"
+            <Box
+              width="100%"
+              backgroundColor="#3F77A5"
+              borderRadius="24px"
+              flexShrink="0"
+              marginTop="15px"
+              padding="45px"
+              display="flex"
+              flexDirection={{ base: "column", md: "row" }}
               alignItems="center"
-              flexWrap="wrap"
-              gap="20px"
+              justifyContent="space-between"
+              // bg="red"
             >
-              {content.keyBenefits.map((benefit, index) => (
-                <Box
-                  key={index}
-                  textAlign="center"
-                  width={{ base: "50%", md: "auto" }}
-                  maxWidth="160px" // Controls text wrapping for two lines
-                >
-                  {/* SVG Icon */}
+              {/* Key Benefits Title */}
+              <Text
+                color="#FFF"
+                fontSize="36px"
+                fontWeight="600"
+                textAlign={{ base: "center", md: "left" }}
+                marginBottom={{ base: "16px", md: "0" }}
+              >
+                Key Benefits
+              </Text>
+
+              {/* Benefits Grid */}
+              <Flex
+              // ml=
+                flex="1"
+                justifyContent="space-evenly"
+                alignItems="center"
+                flexWrap="wrap"
+                gap="30px"
+                ml="5%"
+              >
+                {content.keyBenefits.map((benefit, index) => (
                   <Box
-                    // width="40px"
-                    // height="40px"
-                    // backgroundColor="white"
-                    // borderRadius="50%"
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="flex-start" // Aligns icon to the left
-                    // paddingLeft="8px" // Adds slight spacing from the edge
+                    key={index}
+                    textAlign="center"
+                    width={{ base: "50%", md: "250px" }}
+                    flexShrink="0"
+                    // maxWidth="160px" // Controls text wrapping for two lines
                   >
-                    <Image src={benefit.svg} alt={benefit.title} />
+                    {/* SVG Icon */}
+                    <Box
+                      // width="40px"
+                      // height="40px"
+                      // backgroundColor="white"
+                      // borderRadius="50%"
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="flex-start" // Aligns icon to the left
+                      // paddingLeft="8px" // Adds slight spacing from the edge
+                    >
+                      <Image src={benefit.svg} alt={benefit.title} />
+                    </Box>
+                    <Text
+                      color="#FFF"
+                      fontSize="16px"
+                      fontWeight="500"
+                      width="auto" // Allow text to take up necessary width
+                      minWidth="120px" // Prevents text from being too narrow
+                      maxWidth="420px" // Expands width if needed for longer text
+                       minHeight="3px"
+                      lineHeight="1.2"
+                      textAlign="left"
+                      mt="5%"
+                      wordBreak="break- " // or "break-all"
+                      overflowWrap="break-word"
+                    >
+                      {benefit.title}
+                    </Text>{" "}
                   </Box>
-                  <Text
-                    color="#FFF"
-                    fontSize="16px"
-                    fontWeight="500"
-                    width="190px"
-                    lineHeight="1.2"
-                    textAlign="left"
-                    mt="5%"
-                    wordBreak="break-word" // or "break-all"
-                    overflowWrap="break-word"
-                  >
-                    {benefit.title}
-                  </Text>{" "}
-                </Box>
-              ))}
-            </Flex>
-          </Box>
+                ))}
+              </Flex>
+            </Box>
 
           {/* Bottom elements */}
           <Flex
