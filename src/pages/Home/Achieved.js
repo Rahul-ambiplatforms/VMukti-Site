@@ -97,7 +97,7 @@ const Achieved = () => {
   const containerHeight = useBreakpointValue({
     base: 'auto',
     md: 'auto',
-    lg: '1038px',
+    lg: 'auto',
   })
   const titleFontSize = useBreakpointValue({
     base: '26px',
@@ -170,16 +170,16 @@ const Achieved = () => {
       >
         {/* In this we can try some new animation such that half part is come from left and another comes from right. */}
         <HeadingAnimation>
-        <Text
-          fontSize={titleFontSize}
-          fontWeight="600"
-          marginBottom={titleMarginBottom}
-        >
-          What we have{' '}
-          <Text as="span" color="#3f77a5">
-            achieved
+          <Text
+            fontSize={titleFontSize}
+            fontWeight="600"
+            marginBottom={titleMarginBottom}
+          >
+            What we have{' '}
+            <Text as="span" color="#3f77a5">
+              achieved
+            </Text>
           </Text>
-        </Text>
         </HeadingAnimation>
         <Box
           position="absolute"
@@ -211,7 +211,7 @@ const Achieved = () => {
           opacity="1"
           pointerEvents="none"
           zIndex="0"
-          // bg="red"
+        // bg="red"
         />
         <Grid
           templateColumns={gridColumns}
@@ -235,68 +235,68 @@ const Achieved = () => {
         >
           {achievementsData.map((item, index) => (
             <ImagePop key={index} delay={index * 0.05}>
-            <Box
-              key={index}
-              width={{
-                base: 'minmax(130px, 180px)',
-                sm: 'minmax(150px, 180px)',
-                md: 'minmax(200px, 250px)',
-                lg: '283px',
-              }}
-              height={{
-                base: 'minmax(130px, 180px)',
-                sm: 'minmax(150px, 180px)',
-                md: 'minmax(200px, 250px)',
-                lg: '283px',
-              }}
-              backgroundColor={item.isBlack ? 'white' : '#3f77a5'}
-              color={item.isBlack ? '#3f77a5' : 'white'}
-              display="flex"
-              flexDirection="column"
-              justifyContent="center"
-              alignItems="center"
-              padding={cardPadding}
-              borderRadius="24px"
-              position="relative"
-              aspectRatio="1/1"
-            >
-              
-              <Text
-                fontSize={valueFontSize}
-                fontWeight="600"
-                position="absolute"
-                top="50%"
-                left="50%"
-                transform="translate(-50%, -50%)"
+              <Box
+                key={index}
+                width={{
+                  base: 'minmax(130px, 180px)',
+                  sm: 'minmax(150px, 180px)',
+                  md: 'minmax(200px, 250px)',
+                  lg: '283px',
+                }}
+                height={{
+                  base: 'minmax(130px, 180px)',
+                  sm: 'minmax(150px, 180px)',
+                  md: 'minmax(200px, 250px)',
+                  lg: '283px',
+                }}
+                backgroundColor={item.isBlack ? 'white' : '#3f77a5'}
+                color={item.isBlack ? '#3f77a5' : 'white'}
+                display="flex"
+                flexDirection="column"
+                justifyContent="center"
+                alignItems="center"
+                padding={cardPadding}
+                borderRadius="24px"
+                position="relative"
+                aspectRatio="1/1"
               >
-                <AnimatedValue value={item.value} suffix={item.value.replace(/\d+/g, '')} />
-              </Text>
-              <Text
-                fontSize={labelFontSize}
-                fontWeight="700"
-                position="absolute"
-                bottom={labelBottomMargin}
-                left={labelLeftMargin}
-                color={item.isBlack ? 'black' : 'white'}
-                textAlign="left"
-                width="calc(100% - 20px)"
-                wordBreak={
-                  item.label === 'Number of minutes streamed'
-                    ? 'break-word'
-                    : 'normal'
-                }
-                lineHeight="1.2"
-              >
-                {item.label}
-                <Box
-                  width="15px"
-                  height="2px"
-                  borderRadius="2px"
-                  marginTop="3px"
-                  backgroundColor={item.isBlack ? '#3f77a5' : 'white'}
-                />
-              </Text>
-            </Box>
+
+                <Text
+                  fontSize={valueFontSize}
+                  fontWeight="600"
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                >
+                  <AnimatedValue value={item.value} suffix={item.value.replace(/\d+/g, '')} />
+                </Text>
+                <Text
+                  fontSize={labelFontSize}
+                  fontWeight="700"
+                  position="absolute"
+                  bottom={labelBottomMargin}
+                  left={labelLeftMargin}
+                  color={item.isBlack ? 'black' : 'white'}
+                  textAlign="left"
+                  width="calc(100% - 20px)"
+                  wordBreak={
+                    item.label === 'Number of minutes streamed'
+                      ? 'break-word'
+                      : 'normal'
+                  }
+                  lineHeight="1.2"
+                >
+                  {item.label}
+                  <Box
+                    width="15px"
+                    height="2px"
+                    borderRadius="2px"
+                    marginTop="3px"
+                    backgroundColor={item.isBlack ? '#3f77a5' : 'white'}
+                  />
+                </Text>
+              </Box>
             </ImagePop>
           ))}
         </Grid>
