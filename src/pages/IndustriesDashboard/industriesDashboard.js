@@ -323,8 +323,8 @@ export default function IndustryDashboard() {
   const titleFontSize = useBreakpointValue({
     base: "24px",
     sm: "24px",
-    md: "32px",
-    lg: "40px",
+    md: "48px",
+    lg: "48px",
   });
 
   useEffect(() => {
@@ -394,8 +394,8 @@ export default function IndustryDashboard() {
         maxWidth="1512px"
         mx="auto" // Center the grid properly
         px={{ base: "10px", md: "30px" }}
-        mt="50px"
-        mb="5%"
+        mt="5%"
+        // mb="5%"
       >
         <GridItem
           colSpan={2} // Span across two columns (1 and 2)
@@ -404,11 +404,12 @@ export default function IndustryDashboard() {
           display="flex"
           flexDirection="column"
           maxWidth="90%"
-          mx="auto"
+          // mx="auto"
           //   pl="5%"
           textAlign="left"
           pb={{ base: "40px", md: "0" }}
           zIndex={2} // Ensure it is on top of other elements
+          // bg="red"
         >
           {/* Title */}
           <MotionText
@@ -444,11 +445,12 @@ export default function IndustryDashboard() {
             {/* Animated SVG Box */}
             <MotionBox mb="8px" align="left">
               <svg
-                width="40"
-                height="40"
+                width="33"
+                height="33"
                 viewBox="0 0 33 33"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                // bg="red"
               >
                 <path
                   d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
@@ -459,7 +461,7 @@ export default function IndustryDashboard() {
 
             {/* Animated Text */}
             <MotionText
-              color="#4a5568"
+              color="black"
               fontWeight="500"
               textAlign="left"
               fontSize={{ base: "14px", md: "16px" }}
@@ -487,6 +489,7 @@ export default function IndustryDashboard() {
                   md: industry.isWide ? 2 : 1,
                 }}
                 rowSpan={1}
+                // ml="2%"---------------------
               >
                 <Box
                   width={{
@@ -614,6 +617,7 @@ export default function IndustryDashboard() {
       <Box
         textAlign="center"
         backgroundColor="#E7E7E7"
+        // bg="red"
         maxWidth="100%"
         minHeight={{ base: "auto", md: "1673px" }}
         position="relative"
@@ -623,8 +627,8 @@ export default function IndustryDashboard() {
         _before={{
           content: '""',
           position: "absolute",
-          top: "20%",
-          left: "20%",
+          top: "22%",
+          left: "-5%",
           width: "100%",
           height: "100%",
           backgroundImage: `url("./assets/image7.png")`,
@@ -633,12 +637,13 @@ export default function IndustryDashboard() {
           backgroundSize: "1138px",
           opacity: "1",
           zIndex: "0",
+          // bg: "red"
         }}
         _after={{
           content: '""',
           position: "absolute",
-          left: { lg: "40%" },
-          top: "10%",
+          left: { lg: "15%" },
+          top: "-5%",
           transform: {
             base: "translateX(-50%)",
             md: "translateX(-50%)",

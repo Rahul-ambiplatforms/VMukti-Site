@@ -240,10 +240,11 @@ const IndustryContent = ({ props, content }) => {
               flex="0 0 30%"
               src={content.small_image}
               alt={content.small_image_alt}
-              maxHeight={{ base: "180px", md: "336px" }} // Changed to minHeight
+              maxHeight={{ base: "180px", md: "336px" }}
               backgroundColor="white"
               borderRadius="24px"
               flexShrink="0"
+              // bg="red"
             />
 
             {/* Large image (60% width) - Will extend upward */}
