@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './css/fonts.css';
 import './css/scrollbar.css';
 import VMuktiHomepage from './pages/Home/VMuktiHomepage';
-import theme from './pages/Home/theme';
+import theme from './components/theme';
 import TechnologyDashboard from './pages/Technology/TechnologyDashboard';
 import Navbar from './components/Navbar';
 import NewsletterSubscription from './pages/Home/NewsletterSubscription';

@@ -302,16 +302,19 @@ const SolutionEMS = () => {
 
             <Flex justifyContent="space-between" gap={1}>
               <Button
-                width="31px"
-                height="31px"
-                borderRadius="5px"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                cursor="pointer"
-                bgColor="#FFFFFF"
-                _hover={{ bgColor: "#e0e0e0" }}
-                onClick={handlePrev} // Use handlePrev for left navigation
+               width="31px"
+               height="31px"
+               minWidth="31px"
+               minHeight="31px"
+               padding="0"
+               borderRadius="5px"
+               display="flex"
+               alignItems="center"
+               justifyContent="center"
+               cursor="pointer"
+               bgColor="white"
+               _hover={{ bgColor: '#e0e0e0' }}
+               onClick={handlePrev }// Use handlePrev for left navigation
               >
                 <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
                   <path
@@ -321,16 +324,19 @@ const SolutionEMS = () => {
                 </svg>
               </Button>
               <Button
-                width="31px"
-                height="31px"
-                borderRadius="5px"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                cursor="pointer"
-                bgColor="#FFFFFF"
-                _hover={{ bgColor: "#e0e0e0" }}
-                onClick={handleNext} // Use handleNext for right navigation
+              width="31px"
+              height="31px"
+              minWidth="31px"
+              minHeight="31px"
+              padding="0"
+              borderRadius="5px"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              cursor="pointer"
+              bgColor="white"
+              _hover={{ bgColor: '#e0e0e0' }}
+              onClick={handleNext} // Use handleNext for right navigation
               >
                 <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
                   <path
