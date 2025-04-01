@@ -1,29 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   Box,
   Text,
   Heading,
   Flex,
   Image,
-  IconButton,
-  Icon,
-  VStack,
+
   useBreakpointValue,
-  SimpleGrid,
-  Divider,
-  Link,
-  Grid,
+
   Button,
 } from "@chakra-ui/react";
 import PageContentWrapper from "../../components/PageContentWrapper";
 import HeroSection from "./components/HeroSection";
 import VisionMissionSection from "./components/VisionMissionSection";
-import CertificationsSection from "./components/CertificationsSection";
-import ReviewsSection from "./components/ReviewsSection";
+
 import VerticalTimeline from "../../components/VerticalTimeline";
 import certifications from "../../data/certificationsConstData";
 import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation";
-import { easeIn, easeOut, motion } from "framer-motion";
+import { easeOut, motion } from "framer-motion";
 const WhoWeare = () => {
   const reviews = [
     {

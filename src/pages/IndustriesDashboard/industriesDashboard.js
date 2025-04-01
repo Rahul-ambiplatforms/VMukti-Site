@@ -6,16 +6,15 @@ import {
   GridItem,
   Text,
   Flex,
-  Button,
-  Image,
+ 
   useBreakpointValue,
 } from "@chakra-ui/react";
-import { motion, transform, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { keyframes } from "@emotion/react";
 import { useEffect, useState, useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { keyframes } from "@emotion/react";
-import IndustryContent from "../../components/IndustryContent"; // Import IndustryContent
+
 
 const MotionBox = motion(Box);
 const MotionText = motion(Text);
@@ -351,7 +350,7 @@ export default function IndustryDashboard() {
 
   // Create a grid layout based on the industry data
   const ref = useRef(null);
-  const inView = useInView(ref, { threshold: 0.1 });
+  // const inView = useInView(ref, { threshold: 0.1 });
 
   const [animate, setAnimate] = useState(false);
 
