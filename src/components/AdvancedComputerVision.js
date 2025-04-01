@@ -120,13 +120,16 @@ const AdvancedComputerVision = ({
           <Button
             width="31px"
             height="31px"
+            minWidth="31px"
+            minHeight="31px"
+            padding="0"
             borderRadius="5px"
             display="flex"
             alignItems="center"
             justifyContent="center"
             cursor="pointer"
             bgColor="#E7E7E7"
-            _hover={{ bgColor: "#e0e0e0" }}
+            _hover={{ bgColor: '#e0e0e0' }}
             onClick={() => handleNavigation("left")}
           >
             <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
@@ -136,13 +139,16 @@ const AdvancedComputerVision = ({
           <Button
             width="31px"
             height="31px"
+            minWidth="31px"
+            minHeight="31px"
+            padding="0"
             borderRadius="5px"
             display="flex"
             alignItems="center"
             justifyContent="center"
             cursor="pointer"
             bgColor="#E7E7E7"
-            _hover={{ bgColor: "#e0e0e0" }}
+            _hover={{ bgColor: '#e0e0e0' }}
             onClick={() => handleNavigation("right")}
           >
             <svg width="8" height="16" viewBox="0 0 8 16" fill="none">

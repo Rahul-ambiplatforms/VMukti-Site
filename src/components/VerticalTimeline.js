@@ -95,7 +95,7 @@ const TimelineGrid = () => {
       <Heading
         mb={10}
         textAlign="left"
-        fontSize={{ base: "24px", md: "36px"}}
+        fontSize={{ base: "24px", md: "36px" }}
       >
         <Box as="span" color="#3F77A5">
           The VMukti
@@ -135,7 +135,7 @@ const TimelineGrid = () => {
                         <Box gridColumn={colIndex + 1} gridRow={3}>
                           <Text
                             color="#3F77A5"
-                            fontSize={{base:"24px",md:"36px"}}
+                            fontSize={{ base: "24px", md: "36px" }}
                             fontWeight="700"
                           >
                             {item.year}
@@ -152,7 +152,7 @@ const TimelineGrid = () => {
                         </Box>
                         {/* Row 5: item content */}
                         <Box gridColumn={colIndex + 1} gridRow={5}>
-                          <Text fontSize={{base:"14px",md:"16px"}} fontWeight="500">
+                          <Text fontSize={{ base: "14px", md: "16px" }} fontWeight="500">
                             {item.content}
                           </Text>
                         </Box>
@@ -161,7 +161,7 @@ const TimelineGrid = () => {
                       <>
                         {/* Row 1: item content */}
                         <Box gridColumn={colIndex + 1} gridRow={1}>
-                        <Text fontSize={{base:"14px",md:"16px"}} fontWeight="500">
+                          <Text fontSize={{ base: "14px", md: "16px" }} fontWeight="500">
                             {item.content}
                           </Text>
                         </Box>
@@ -176,9 +176,9 @@ const TimelineGrid = () => {
                         </Box>
                         {/* Row 3: year */}
                         <Box gridColumn={colIndex + 1} gridRow={3}>
-                        <Text
+                          <Text
                             color="#3F77A5"
-                            fontSize={{base:"24px",md:"36px"}}
+                            fontSize={{ base: "24px", md: "36px" }}
                             fontWeight="700"
                           >
                             {item.year}
@@ -201,13 +201,16 @@ const TimelineGrid = () => {
           <Button
             width="31px"
             height="31px"
+            minWidth="31px"
+            minHeight="31px"
+            padding="0"
             borderRadius="5px"
             display="flex"
             alignItems="center"
             justifyContent="center"
             cursor="pointer"
-            bgColor="#f3f3f3"
-            _hover={{ bgColor: "#e0e0e0" }}
+            bgColor="#E7E7E7"
+            _hover={{ bgColor: '#e0e0e0' }}
             onClick={handlePrev}
           >
             <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
@@ -220,13 +223,16 @@ const TimelineGrid = () => {
           <Button
             width="31px"
             height="31px"
+            minWidth="31px"
+            minHeight="31px"
+            padding="0"
             borderRadius="5px"
             display="flex"
             alignItems="center"
             justifyContent="center"
             cursor="pointer"
-            bgColor="#f3f3f3"
-            _hover={{ bgColor: "#e0e0e0" }}
+            bgColor="#E7E7E7"
+            _hover={{ bgColor: '#e0e0e0' }}
             onClick={handleNext}
           >
             <svg width="8" height="16" viewBox="0 0 8 16" fill="none">

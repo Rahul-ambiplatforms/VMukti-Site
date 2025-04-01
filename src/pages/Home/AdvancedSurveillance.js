@@ -79,17 +79,17 @@ const AdvancedSurveillance = () => {
             justifyContent="flex-end" // Right-align the text
           >
             <HeadingAnimation>
-            <Text
-              fontSize="36px"
-              fontWeight="600"
-              letterSpacing="-0.54px"
-              color="black"
-            >
-              Advanced{' '}
-              <Text as="span" color="#3F77A5">
-                Surveillance for All.
+              <Text
+                fontSize="36px"
+                fontWeight="600"
+                letterSpacing="-0.54px"
+                color="black"
+              >
+                Advanced{' '}
+                <Text as="span" color="#3F77A5">
+                  Surveillance for All.
+                </Text>
               </Text>
-            </Text>
             </HeadingAnimation>
           </Box>
 
