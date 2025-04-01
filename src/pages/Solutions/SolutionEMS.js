@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Flex, Box, Text, Heading, useBreakpointValue } from "@chakra-ui/react";
+import { Flex, Box, Text, Heading, useBreakpointValue, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Button } from "@chakra-ui/icons";
 import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation";
@@ -173,16 +173,17 @@ const SolutionEMS = () => {
 
   // Responsive styles
   const cardDirection = useBreakpointValue({ base: "column", md: "row" });
-  const cardContentWidth = useBreakpointValue({ base: "95%", md: "35%" });
+  const cardContentWidth = useBreakpointValue({ base: "100%", md: "100%" });
 
   return (
-    <Box
+    <Flex
+      direction="column"
       bg=" #E7E7E7"
       //   bg="darkblue"
       // minH="50vh"
       overflowX="hidden"
       borderRadius="24px"
-      width="100%"
+    // width="100%"
     // mb="5%"
     >
       {/* Navigation */}
@@ -302,19 +303,19 @@ const SolutionEMS = () => {
 
             <Flex justifyContent="space-between" gap={1}>
               <Button
-               width="31px"
-               height="31px"
-               minWidth="31px"
-               minHeight="31px"
-               padding="0"
-               borderRadius="5px"
-               display="flex"
-               alignItems="center"
-               justifyContent="center"
-               cursor="pointer"
-               bgColor="white"
-               _hover={{ bgColor: '#e0e0e0' }}
-               onClick={handlePrev }// Use handlePrev for left navigation
+                width="31px"
+                height="31px"
+                minWidth="31px"
+                minHeight="31px"
+                padding="0"
+                borderRadius="5px"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                cursor="pointer"
+                bgColor="white"
+                _hover={{ bgColor: '#e0e0e0' }}
+                onClick={handlePrev}// Use handlePrev for left navigation
               >
                 <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
                   <path
@@ -324,19 +325,19 @@ const SolutionEMS = () => {
                 </svg>
               </Button>
               <Button
-              width="31px"
-              height="31px"
-              minWidth="31px"
-              minHeight="31px"
-              padding="0"
-              borderRadius="5px"
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              cursor="pointer"
-              bgColor="white"
-              _hover={{ bgColor: '#e0e0e0' }}
-              onClick={handleNext} // Use handleNext for right navigation
+                width="31px"
+                height="31px"
+                minWidth="31px"
+                minHeight="31px"
+                padding="0"
+                borderRadius="5px"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                cursor="pointer"
+                bgColor="white"
+                _hover={{ bgColor: '#e0e0e0' }}
+                onClick={handleNext} // Use handleNext for right navigation
               >
                 <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
                   <path
@@ -351,228 +352,216 @@ const SolutionEMS = () => {
       </Flex>
 
       {/* Slider Container */}
-      <Box w="100%" overflow="hidden" >
-        <Flex
-          w={`${slides.length * 100}%`}
-          transform={`translateX(-${currentSlide * (100 / slides.length)}%)`}
-          transition="transform 0.5s ease"
-        >
-          {slides.map((slide, index) => (
-            <Box key={index} minW={`${100 / slides.length}%`}>
-              {/* Main Container */}
-              <Flex
-                // top="-3%"
-                bg="#FFFFFF"
-                borderRadius="24px"
-                overflow="hidden"
-                // boxShadow="lg"
-                direction={cardDirection}
-                position="relative"
-                h={{ base: "auto", md: "753px" }}
-              >
-                {/* Card Content */}
-                <Flex direction="column">
-                  <Flex direction="column">
-                    {/* First Box with 0.1s delay */}
-                    <Box
-                      as={motion.div}
-                      initial={{ scale: 0.7, opacity: 0 }}
-                      whileInView={{ scale: 1, opacity: 1 }}
-                      viewport={{ once: false, amount: 0.1 }}
-                      transition={{ duration: 0.8, ease: "easeOut" }}
-                      p={8}
-                      bg="#E7E7E7"
-                      w={cardContentWidth}
-                      minW="562px"
-                      minH="360px"
-                      m="1.5% 0 0 1.5%"
-                      // mb="-0.5%"
-                      borderRadius="24px"
-                      zIndex={2}
-                      backdropFilter="blur(2px)"
-                    >
-                      <HeadingAnimation>
-                        <Heading
-                          fontSize="36px"
-                          fontWeight="500"
-                          lineHeight="normal"
-                          fontStyle="normal"
-                          mb={3}
-                          color="black"
-                        >
-                          {slide.title1}{" "}
-                          <span style={{ color: "#DB7B3A" }}>
-                            {slide.title2}
-                          </span>
-                        </Heading>
-                      </HeadingAnimation>
-                      <SubHeadingAnimation>
-                        <Text fontSize="24px" color="blue.600" mb={3} mt="5%">
-                          {/* SVG code remains unchanged */}
-                          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
-                            <path d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C0 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z" fill="#3F77A5" />
-                          </svg>
-                        </Text>
-                      </SubHeadingAnimation>
-                      <SubHeadingAnimation>
-                        <Box>
-                          {slide.description.map((text, i) => (
-                            <Text
-                              key={i}
-                              fontWeight="500"
-                              fontSize="16px"
-                              color="black"
-                              lineHeight="1.6"
-                              mb={2}
-                            >
-                              {text}
-                            </Text>
-                          ))}
-                        </Box>
-                      </SubHeadingAnimation>
-                    </Box>
-
-                    {/* Second Box with 0.3s delay (0.2s after first) */}
-                    <Box
-                      as={motion.div}
-                      initial={{ scale: 0.7, opacity: 0 }}
-                      whileInView={{ scale: 1, opacity: 1 }}
-                      viewport={{ once: false, amount: 0.1 }}
-                      transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-                      p={8}
-                      bg="#BECEDC"
-                      w={cardContentWidth}
-                      minW="562px"
-                      minH="333px"
-                      m="1.5%"
-                      borderRadius="24px"
-                      zIndex={2}
-                      backdropFilter="blur(2px)"
-                    >
-                      <SubHeadingAnimation>
-                        <Box>
-                          {slide.description.map((text, i) => (
-                            <Text
-                              key={i}
-                              fontWeight="500"
-                              fontSize="16px"
-                              color="black"
-                              lineHeight="1.6"
-                              mb={5}
-                            >
-                              {text}
-                            </Text>
-                          ))}
-                        </Box>
-                      </SubHeadingAnimation>
-                    </Box>
-                  </Flex>
-                  <Flex>
-                    {/* Top right Image (positioned absolutely) */}
-                    <Box
-                      as={motion.div}
-                      position="absolute"
-                      top="3.5%"
-                      right="4%"
-                      width="630px"
-                      height="360px"
-                      zIndex={3}
-                      initial={{ scale: 0.7, opacity: 0 }}
-                      whileInView={{ scale: 1, opacity: 1 }}
-                      viewport={{ once: false, amount: 0.1 }}
-                      transition={{
-                        duration: 0.6,
-                        ease: [0, 0.3, 0.5, 1],
-                        delay: 0.2, // Add delay if needed
-                      }}
-                    >
-                      <img
-                        src={slide.image}
-                        alt="Solution Image"
-                        style={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                        }}
-                      />
-                    </Box>
-                    {/* New Bottom Right Box for Benefits */}
-                    {slide.benefits && (
-                      <Box
-                        position="absolute"
-                        bottom="7%"
-                        right="4%"
-                        width="650px"
-                        height="160px"
-                        color="white"
-                        display="flex"
-                        flexDirection="column"
-                        borderRadius="12px"
-                        zIndex={3}
-                        p={4}
+      <Flex
+        w={`${slides.length * 100}%`}
+        transform={`translateX(-${currentSlide * (100 / slides.length)}%)`}
+        transition="transform 0.5s ease"
+      >
+        {slides.map((slide, index) => (
+          <Box key={index} minW={`${100 / slides.length}%`}>
+            {/* Main Container */}
+            <Flex
+              // top="-3%"
+              bg="#FFFFFF"
+              borderRadius="24px"
+              overflow="hidden"
+              // boxShadow="lg"
+              direction={cardDirection}
+              position="relative"
+            >
+              {/* Card Content */}
+              <Flex p={5} justifyContent="space-between" gap={5} direction={{ base: "column", md: "row" }}>
+                {/* left portion of the content card */}
+                <Flex direction="column" gap={5} zIndex={1} width={{ base: "100%", md: "40%" }}>
+                  {/* First Box with 0.1s delay */}
+                  <Flex
+                    as={motion.div}
+                    initial={{ scale: 0.7, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: false, amount: 0.1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    p={8}
+                    direction="column"
+                    bg="#E7E7E7"
+                    // width="100%"
+                    // mb="-0.5%"
+                    borderRadius="24px"
+                    zIndex={2}
+                    backdropFilter="blur(2px)"
+                  >
+                    <HeadingAnimation>
+                      <Heading
+                        fontSize={{ base: "24px", md: "36px" }}
+                        fontWeight="500"
+                        lineHeight="normal"
+                        fontStyle="normal"
+                        color="black"
                       >
-                        <Text
-                          color="#000000"
-                          fontWeight="700"
-                          fontSize="16px"
-                          lineHeight="100%"
-                          letterSpacing="-1.5%"
-                          position="absolute"
-                          top="10px"
-                        // left="10px"
-                        >
-                          {slide.benefits.title}
-                        </Text>
-                        <Flex
-                          justifyContent="space-between"
-                          mt="30px"
-                          alignItems="center"
-                        >
-                          {slide.benefits.data.map((benefit, idx) => (
-                            <Box
-                              as={motion.div}
-                              key={idx}
-                              textAlign="left"
-                              initial={{ scale: 0.7, opacity: 0 }}
-                              whileInView={{ scale: 1, opacity: 1 }}
-                              viewport={{ once: false, amount: 0.1 }}
-                              transition={{
-                                duration: 0.9,
-                                ease: [0.5, 1],
-                                delay: 0.5 * idx // Individual delay based on index
-                              }}
-                            >
-                              <img
-                                src={benefit.image}
-                                alt={benefit.title}
-                                style={{
-                                  width: "60px",
-                                  height: "60px",
-                                  objectFit: "cover",
-                                  borderRadius: "8px",
-                                }}
-                              />
-                              <Text
-                                fontSize="16px"
-                                fontWeight="500"
-                                color="black"
-                                mt={2}
-                              >
-                                {benefit.title}
-                              </Text>
-                            </Box>
-                          ))}
-                        </Flex>
+                        {slide.title1}{" "}
+                        <span style={{ color: "#DB7B3A" }}>
+                          {slide.title2}
+                        </span>
+                      </Heading>
+                    </HeadingAnimation>
+                    <SubHeadingAnimation>
+                      <Text fontSize="24px" color="blue.600" mb={3} mt="5%">
+                        {/* SVG code remains unchanged */}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                          <path d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C0 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z" fill="#3F77A5" />
+                        </svg>
+                      </Text>
+                    </SubHeadingAnimation>
+                    <SubHeadingAnimation>
+                      <Box>
+                        {slide.description.map((text, i) => (
+                          <Text
+                            key={i}
+                            fontWeight="500"
+                            fontSize="16px"
+                            color="black"
+                            lineHeight="1.6"
+                            mb={2}
+                          >
+                            {text}
+                          </Text>
+                        ))}
                       </Box>
-                    )}
+                    </SubHeadingAnimation>
                   </Flex>
+
+                  {/* Second Box with 0.3s delay (0.2s after first) */}
+                  <Flex
+                    as={motion.div}
+                    initial={{ scale: 0.7, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: false, amount: 0.1 }}
+                    transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+                    p={8}
+                    direction="column"
+                    bg="#BECEDC"
+                    minH="333px"
+                    borderRadius="24px"
+                    zIndex={2}
+                    backdropFilter="blur(2px)"
+                  >
+                    <SubHeadingAnimation>
+                      <Box>
+                        {slide.description.map((text, i) => (
+                          <Text
+                            key={i}
+                            fontWeight="500"
+                            fontSize="16px"
+                            color="black"
+                            lineHeight="1.6"
+                            mb={5}
+                          >
+                            {text}
+                          </Text>
+                        ))}
+                      </Box>
+                    </SubHeadingAnimation>
+                  </Flex>
+
+                </Flex>
+                {/* Right portion (positioned absolutely) */}
+                <Flex direction="column" justifyContent={{ base: "center", md: "space-between" }} alignItems={{ base: "center" }} 
+                    width="100%"
+                    >
+                  {/* Top right Image (positioned absolutely) */}
+                  <Box
+                    as={motion.div}
+                    width="100%"        // Allow the box to take up available space
+                    maxWidth="630px"
+                    height="360px"
+                    zIndex={3}
+                    initial={{ scale: 0.7, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: false, amount: 0.1 }}
+                    transition={{
+                      duration: 0.6,
+                      ease: [0, 0.3, 0.5, 1],
+                      delay: 0.2, // Add delay if needed
+                    }}
+                  >
+                    <Image
+                      src={slide.image}
+                      alt="Solution"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </Box>
+                  {/* New Bottom Right Box for Benefits */}
+                  {slide.benefits && (
+                    <Box
+                      width="full"
+                      display="flex"
+                      flexDirection="column"
+                      borderRadius="12px"
+                      gap={4}
+                      maxWidth="630px"
+                      zIndex={3}
+                      p={4}
+                    >
+                      <Text
+                        color="#000000"
+                        fontWeight="700"
+                        fontSize="16px"
+                        lineHeight="100%"
+                        letterSpacing="-1.5%"
+                      >
+                        {slide.benefits.title}
+                      </Text>
+                      <Flex
+                        justifyContent="space-between"
+                        alignItems="center"
+                      >
+                        {slide.benefits.data.map((benefit, idx) => (
+                          <Box
+                            as={motion.div}
+                            key={idx}
+                            initial={{ scale: 0.7, opacity: 0 }}
+                            whileInView={{ scale: 1, opacity: 1 }}
+                            viewport={{ once: false, amount: 0.1 }}
+                            transition={{
+                              duration: 0.9,
+                              ease: [0.5, 1],
+                              delay: 0.5 * idx // Individual delay based on index
+                            }}
+                          >
+                            <Image
+                              src={benefit.image}
+                              alt={benefit.title}
+                              style={{
+                                width: "60px",
+                                height: "60px",
+                                objectFit: "cover",
+                                borderRadius: "8px",
+                              }}
+                            />
+                            <Text
+                              fontSize="16px"
+                              fontWeight="500"
+                              color="black"
+                              mt={2}
+                            >
+                              {benefit.title}
+                            </Text>
+                          </Box>
+                        ))}
+                      </Flex>
+                    </Box>
+                  )}
                 </Flex>
               </Flex>
-            </Box>
-          ))}
-        </Flex>
-      </Box>
-    </Box>
+
+            </Flex>
+          </Box>
+        ))}
+      </Flex>
+    </Flex >
   );
 };
 
