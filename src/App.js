@@ -21,7 +21,7 @@ import VMuktiCareers from './pages/career/Career';
 
 function App() {
   // Assuming the Navbar height is 60px
-  const navbarHeight = '50px';
+  const navbarHeight = '8%';
 
   return (
     <ChakraProvider theme={theme}>

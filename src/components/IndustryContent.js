@@ -70,7 +70,6 @@ const IndustryContent = ({ props, content }) => {
       {/* Main Container Box */}
       <PageContentWrapper>
         <Box
-          mt={{ base: "20px", md: "40px" }}
           as="section"
           backgroundColor="#E7E7E7"
           width="100%"

@@ -62,19 +62,19 @@ const VideoAnalytics = () => {
           flexShrink={0}
         >
           <HeadingAnimation>
-          <Text
-            color="#FFF"
+            <Text
+              color="#FFF"
 
-            fontSize={{ base: "24px", md: "36px" }}
-            fontStyle="normal"
-            fontWeight="500"
-            lineHeight="normal"
-            letterSpacing="-0.54px"
-          >
-            GPT-Powered
-            <br />
-            Video Analytics & Insights
-          </Text>
+              fontSize={{ base: "24px", md: "36px" }}
+              fontStyle="normal"
+              fontWeight="500"
+              lineHeight="normal"
+              letterSpacing="-0.54px"
+            >
+              GPT-Powered
+              <br />
+              Video Analytics & Insights
+            </Text>
           </HeadingAnimation>
           <Flex
             direction={{ base: "row", md: "column" }}
@@ -83,7 +83,7 @@ const VideoAnalytics = () => {
             width="100%"
           >
             {/* Progress Bar Container */}
-            <Flex position="relative" bg="white" height="0.5px" width="100%" align="center" mt={{ base: "10px", md: "25px" }}>
+            <Flex position="relative" bg="#fff" height="0.1px" width="100%" align="center" mt={{ base: "10px", md: "25px" }}>
               {/* Progress Indicator */}
               <Box
                 position="absolute"
@@ -94,10 +94,6 @@ const VideoAnalytics = () => {
                 transition="transform 0.3s ease-in-out"
               />
             </Flex>
-
-
-
-
             {/* Navigation Buttons */}
             <Flex
               gap="0.5"
@@ -241,7 +237,7 @@ const VideoAnalytics = () => {
               bottom={0}
               right={0}
               zIndex={3}
-              // bg="red"
+            // bg="red"
             />
           </Box>
         </Flex>
