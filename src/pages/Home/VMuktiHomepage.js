@@ -39,7 +39,7 @@ const StickySection = ({ children }) => (
         position="sticky"
         borderRadius="24px"
         top="0%"
-        height="120dvh"
+        height="110dvh"
         zIndex={index + 1}
         bg="white"
       >
@@ -261,9 +261,9 @@ const VMuktiHomepage = () => {
                 lineHeight="100%"
                 maxW={{ base: "90%", md: "60%" }}
                 fontSize={{ base: "14px", md: "16px" }}
+                width="50%"
               >
-                We harness AI to optimize operations, drive efficiency, and
-                deliver real-time insights across industries.
+                Got visuals piling up? Our AI turns them into answers—fast. It’s like giving your cameras a brain to spot what matters and fix your headaches on the spot.
               </Text>
             </MotionBox>
           </Flex>
