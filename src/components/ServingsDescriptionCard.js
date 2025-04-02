@@ -47,7 +47,7 @@ const ServingsDescriptionCard = ({ description, keybenefits, image }) => {
             justify="space-between"
             p={5}
             bg="rgba(255, 255, 255, 0.8)" // Semi-transparent background
-            w="30%"
+            w={{base:"100%",sm:"50%",md:"30%"}}
             gap={5}
             borderRadius="20px"
             zIndex={2} // Above the image

@@ -232,38 +232,45 @@ const IndustryContent = ({ props, content }) => {
             // justifyContent="space-between"
             alignItems="flex-end" // Changed to align bottoms
             direction={{ base: "column", md: "row" }}
-            mt={{ base: "-5%", md: "-10%" }}
+            mt={{ base: "5%", md: "-10%" }}
             gap="3"
+            width="100%"
             position="relative"
             zIndex="1" // I added this code
           >
             {/* Small image (35% width) - Fixed height */}
-            <Image
+            <Box
               flex="0 0 30%"
-              src={content.small_image}
-              alt={content.small_image_alt}
-              maxHeight={{ base: "180px", md: "336px" }}
+              display={{base:"none", md:"flex"}}
               backgroundColor="white"
+              height={{ base: "200px", md: "250px", lg: "336px" }}
+              width={{ base: "200px", md: "250px", lg: "336px" }}
+              aspectRatio={1}
               borderRadius="24px"
               flexShrink="0"
-            // bg="red"
             />
+            <Box
+              width="100%"
+              height="65%"
+              borderRadius="20px"
+            >
 
-            {/* Large image (60% width) - Will extend upward */}
-            <MotionImage
-              src={`${process.env.PUBLIC_URL}/assets/${content.large_image}`}
-              alt={content.large_image_alt}
-              flex="0 0 68%"
-              maxHeight={{ base: "300px", md: "630px" }}
-              height="auto"
-              backgroundColor="transparent"
-              borderRadius="24px"
-              flexShrink="1"
-              initial="hidden"
-              whileInView="visible"
-              variants={popAnimation}
-              viewport={{ once: false }} // Ensures animation runs every time the image enters the viewport
-            />
+              {/* Large image (60% width) - Will extend upward */}
+              <MotionImage
+                src={`${process.env.PUBLIC_URL}/assets/${content.large_image}`}
+                alt={content.large_image_alt}
+                // flex="0 0 68%"
+                width="100%"
+                height="65%"
+                backgroundColor="white"
+                borderRadius="24px"
+                flexShrink="1"
+                initial="hidden"
+                whileInView="visible"
+                variants={popAnimation}
+                viewport={{ once: false }} // Ensures animation runs every time the image enters the viewport
+              />
+            </Box>
           </Flex>
 
           {/* Key Applications Section */}
