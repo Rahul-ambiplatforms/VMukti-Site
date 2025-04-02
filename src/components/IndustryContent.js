@@ -144,7 +144,7 @@ const IndustryContent = ({ props, content }) => {
                 maxWidth={{ base: "100%", md: "30%" }}
                 textAlign={{ base: "center", md: "left" }}
                 position="relative"
-                // bg="red"
+              // bg="red"
               >
                 {/* Arrow Animation */}
                 <MotionBox
@@ -246,7 +246,7 @@ const IndustryContent = ({ props, content }) => {
               backgroundColor="white"
               borderRadius="24px"
               flexShrink="0"
-              // bg="red"
+            // bg="red"
             />
 
             {/* Large image (60% width) - Will extend upward */}
@@ -292,8 +292,8 @@ const IndustryContent = ({ props, content }) => {
               right="-20%"
               width="70%" // SVG covers 70% of the background width
               zIndex="0"
-              // overflow="hidden"
-              // bg="red"
+            // overflow="hidden"
+            // bg="red"
             >
               <Image
                 // src={"./assets/VMukti_Brochure_O2_1.png"}
@@ -301,7 +301,7 @@ const IndustryContent = ({ props, content }) => {
                 alt=""
                 width="100%"
                 opacity="0.8"
-                // overflow="hidden"
+              // overflow="hidden"
               />
             </Box>
             <Box
@@ -310,15 +310,15 @@ const IndustryContent = ({ props, content }) => {
               left="-10%"
               width="70%" // SVG covers 70% of the background width
               zIndex="0"
-              // overflow="hidden"
+            // overflow="hidden"
             >
               <Image
                 src={`${process.env.PUBLIC_URL}/assets/VMukti Brochure O2 2.png`}
                 alt=""
                 width="100%"
                 opacity="0.8"
-                // overflow="hidden"
-                // bg="red"
+              // overflow="hidden"
+              // bg="red"
               />
             </Box>
 
@@ -350,12 +350,12 @@ const IndustryContent = ({ props, content }) => {
                 variants={popAnimation1}
                 custom={index}
                 viewport={{ once: false }} // Repeats animation on scroll
-                // bg="red"
-                // pb="4%"
+              // bg="red"
+              // pb="4%"
               >
                 {/* Grey Placeholder */}
                 <Image
-                  src={card.image}
+                  src={`${process.env.PUBLIC_URL}/assets/${card.image}`}
                   alt={card.image_alt}
                   width="100%"
                   height={{ base: "200px", md: "368px" }}
@@ -384,7 +384,7 @@ const IndustryContent = ({ props, content }) => {
                   borderRadius="2px"
                   backgroundColor="#3F77A5"
                   alignSelf="flex-start"
-                  // bg="red"
+                // bg="red"
                 />
 
                 {/* Description */}
@@ -406,81 +406,81 @@ const IndustryContent = ({ props, content }) => {
           {/* </Flex> */}
 
           {/* Key Benefits Section */}
-            <Box
-              width="100%"
-              backgroundColor="#3F77A5"
-              borderRadius="24px"
-              flexShrink="0"
-              marginTop="15px"
-              padding="45px"
-              display="flex"
-              flexDirection={{ base: "column", md: "row" }}
-              alignItems="center"
-              justifyContent="space-between"
-              // bg="red"
+          <Box
+            width="100%"
+            backgroundColor="#3F77A5"
+            borderRadius="24px"
+            flexShrink="0"
+            marginTop="15px"
+            padding="45px"
+            display="flex"
+            flexDirection={{ base: "column", md: "row" }}
+            alignItems="center"
+            justifyContent="space-between"
+          // bg="red"
+          >
+            {/* Key Benefits Title */}
+            <Text
+              color="#FFF"
+              fontSize="36px"
+              fontWeight="600"
+              textAlign={{ base: "center", md: "left" }}
+              marginBottom={{ base: "16px", md: "0" }}
             >
-              {/* Key Benefits Title */}
-              <Text
-                color="#FFF"
-                fontSize="36px"
-                fontWeight="600"
-                textAlign={{ base: "center", md: "left" }}
-                marginBottom={{ base: "16px", md: "0" }}
-              >
-                Key Benefits
-              </Text>
+              Key Benefits
+            </Text>
 
-              {/* Benefits Grid */}
-              <Flex
+            {/* Benefits Grid */}
+            <Flex
               // ml=
-                flex="1"
-                justifyContent="space-evenly"
-                alignItems="center"
-                flexWrap="wrap"
-                gap="30px"
-                ml="5%"
-              >
-                {content.keyBenefits.map((benefit, index) => (
+              flex="1"
+              justifyContent="space-evenly"
+              alignItems="center"
+              flexWrap="wrap"
+              gap="30px"
+              ml="5%"
+            >
+              {content.keyBenefits.map((benefit, index) => (
+                <Box
+                  key={index}
+                  textAlign="center"
+                  width={{ base: "50%", md: "250px" }}
+                  flexShrink="0"
+                // maxWidth="160px" // Controls text wrapping for two lines
+                >
+                  {/* SVG Icon */}
                   <Box
-                    key={index}
-                    textAlign="center"
-                    width={{ base: "50%", md: "250px" }}
-                    flexShrink="0"
-                    // maxWidth="160px" // Controls text wrapping for two lines
+                    // width="40px"
+                    // height="40px"
+                    // backgroundColor="white"
+                    // borderRadius="50%"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="flex-start" // Aligns icon to the left
+                  // paddingLeft="8px" // Adds slight spacing from the edge
                   >
-                    {/* SVG Icon */}
-                    <Box
-                      // width="40px"
-                      // height="40px"
-                      // backgroundColor="white"
-                      // borderRadius="50%"
-                      display="flex"
-                      alignItems="center"
-                      justifyContent="flex-start" // Aligns icon to the left
-                      // paddingLeft="8px" // Adds slight spacing from the edge
-                    >
-                      <Image src={benefit.svg} alt={benefit.title} />
-                    </Box>
-                    <Text
-                      color="#FFF"
-                      fontSize="16px"
-                      fontWeight="500"
-                      width="auto" // Allow text to take up necessary width
-                      minWidth="120px" // Prevents text from being too narrow
-                      maxWidth="420px" // Expands width if needed for longer text
-                       minHeight="3px"
-                      lineHeight="1.2"
-                      textAlign="left"
-                      mt="5%"
-                      wordBreak="break- " // or "break-all"
-                      overflowWrap="break-word"
-                    >
-                      {benefit.title}
-                    </Text>{" "}
+                    <Image src={benefit.svg} alt={benefit.title} />
                   </Box>
-                ))}
-              </Flex>
-            </Box>
+                  <Text
+                    color="#FFF"
+                    fontSize="16px"
+                    fontWeight="500"
+                    width="auto" // Allow text to take up necessary width
+                    minWidth="120px" // Prevents text from being too narrow
+                    maxWidth="420px" // Expands width if needed for longer text
+                    minHeight="3px"
+                    lineHeight="1.2"
+                    textAlign="left"
+                    mt="5%"
+                    wordBreak="break- " // or "break-all"
+                    overflowWrap="break-word"
+                  >
+                    {benefit.title}
+                  </Text>{" "}
+                </Box>
+              ))}
+            </Flex>
+          </Box>
 
           {/* Bottom elements */}
           <Flex
