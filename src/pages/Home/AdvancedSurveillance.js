@@ -23,14 +23,14 @@ const AdvancedSurveillance = () => {
     {
       type: 'squeezed',
       label: 'Government',
-      description: 'Placeholder description for Government.',
-      image: './assets/rectangle2.svg',
+      description: 'Government.',
+      image: './assets/govsl.svg',
     },
     {
       type: 'squeezed',
-      label: 'And Beyond',
-      description: 'Placeholder description for And Beyond.',
-      image: './assets/rectangle3.svg',
+      label: 'Consumers',
+      description: 'General Consumer',
+      image: './assets/gensl.svg',
     },
   ]
 

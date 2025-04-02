@@ -51,16 +51,73 @@ const StickySection = ({ children }) => (
 
 const VMuktiHomepage = () => {
   const customData = {
-    title1: "IoT Integration & Secure Connectivity for",
-    title2: "Smart Surveillance",
-    subtitle: "Real-Time Monitoring",
-    description:
-      "IoT-enabled cameras and sensors continuously track environmental changes and security events.",
+    title1: "Neural Networks & Predictive",
+    title2: "Intelligence.",
     cards: [
-      { type: "image", label: "Multi-Modal Recognition", media: "/assets/car.png" },
-      { type: "text", label: "Custom Scene Understanding" },
-      { type: "text", label: "Custom Multi-Modal Recognition" },
-      { type: "text", label: "Custom Automated Decision Making" },
+      {
+        type: "image",
+        label: "Data-Driven Forecasting",
+        media: "/assets/ddf.png",
+        description:
+          "Guesses what’s around the corner—keeps you ready."
+      },
+      {
+        type: "image",
+        label: "Anomaly Detection",
+        media: "/assets/ad.png",
+        description:
+          "Catches weird stuff in our AI camera software before it’s a"
+      },
+      {
+        type: "image",
+        label: "Workflow Optimization",
+        media: "/assets/wo.png",
+        description:
+          "Cuts the fat from your day-to-day—runs leaner."
+      },
+      {
+        type: "image",
+        label: "High-Precision Decisioning",
+        media: "/assets/hpd.png",
+        description:
+          "Makes snap calls you can trust, no delays"
+      },
+    ],
+    backgroundImage: "/assets/VMukti Brochure O2 1.png",
+  };
+  const customData1 = {
+    title1: "How We Make",
+    title2: "It Work",
+    subtitle: "Real-Time Monitoring",
+    cards: [
+      {
+        type: "image",
+        label: "AI-Powered Visual Processing",
+        media: "/assets/ai1.png",
+        description:
+          "Digs into video live—grabs what’s happening, no waiting."
+      },
+      {
+        type: "image",
+        label: "Multi-Modal Recognition",
+        media: "/assets/mmr.png",
+        description:
+          "Ties together motion, images, and surroundings for the full picture."
+      },
+      {
+        type: "image",
+        label: "Scene Understanding",
+        media: "/assets/su.png",
+        description:
+          "Figures out what’s what—people, actions, where stuff is—so you’re never lost."
+      },
+      {
+        type: "image",
+        label: "Automated Decision-Making",
+        media: "/assets/su2.png",
+        description:
+          "Turns video chaos into clear info our AI CCTV software can act on right away."
+      },
     ],
     backgroundImage: "/assets/VMukti Brochure O2 1.png",
   };
@@ -268,7 +325,7 @@ const VMuktiHomepage = () => {
 
       {/* Page Content */}
       <PageContentWrapper>
-        <AdvancedComputerVision />
+        <AdvancedComputerVision {...customData1} />
         <Flex mt={"5%"} direction="column">
           <ObjectDescription
             description={`Catch Everything,\n Miss Nothing`}
@@ -279,18 +336,26 @@ const VMuktiHomepage = () => {
 
         </Flex>
         <Box mt={"5%"}><SurveillanceSoftware /></Box>
+
         <StickySection>
-          <AdvancedComputerVision />
-          <VideoAnalytics />
+
           <AdvancedComputerVision {...customData} />
+
+          <VideoAnalytics />
+          <AdvancedComputerVision />
+
         </StickySection>
+
       </PageContentWrapper>
+
       <PageContentWrapper>
         <Diagram />
       </PageContentWrapper>
+
       <PageContentWrapper>
         <Industries />
       </PageContentWrapper>
+
       <PageContentWrapper>
         <AdvancedSurveillance />
       </PageContentWrapper>

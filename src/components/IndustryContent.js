@@ -251,12 +251,12 @@ const IndustryContent = ({ props, content }) => {
 
             {/* Large image (60% width) - Will extend upward */}
             <MotionImage
-              src={content.large_image}
+              src={`${process.env.PUBLIC_URL}/assets/${content.large_image}`}
               alt={content.large_image_alt}
               flex="0 0 68%"
               maxHeight={{ base: "300px", md: "630px" }}
               height="auto"
-              backgroundColor="white"
+              backgroundColor="transparent"
               borderRadius="24px"
               flexShrink="1"
               initial="hidden"

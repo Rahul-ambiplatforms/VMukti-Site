@@ -8,7 +8,7 @@ const industriesData = {
         "para": "AI is transforming manufacturing with automation, predictive maintenance, and intelligent quality control, optimizing efficiency and reducing downtime.",
         small_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
         small_image_alt: "Closeup shot of a bee on a chamomile flower",
-        large_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+        large_image: "manfadash.png",
         large_image_alt: "Closeup shot of a bee on a chamomile flower",
         keyApplications: [
             {
