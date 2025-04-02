@@ -11,7 +11,7 @@ const SurveillanceSoftware = () => {
     return (
         <Flex direction="column" position="relative" alignItems="center" gap={4} width="100%" borderRadius="24px" height={imageHeight}>{/* main box */}
             {/* heading text */}
-            <Box fontSize={{ base: "24px", md: "48px" }} justifyContent="center">
+            <Box fontSize={{ base: "24px", md: "48px" }} justifyContent="center" textAlign={{ base: "left", md: "center" }}>
                 <Text as="span" color="#3F77A5">Deep Learning </Text>
                 <Text as="span">Algorithms & </Text>
                 <br />
@@ -24,7 +24,7 @@ const SurveillanceSoftware = () => {
             <Flex direction="column" alignItems="center" justifyContent="center" width="100%" gap={4} >
 
                 {/* first white box */}
-                <Flex direction="column" justifyContent="center" width="100%" bg="white" borderRadius="24px" p={{base:"5%",md:"2%"}}>
+                <Flex direction="column" justifyContent="center" width="100%" bg="white" borderRadius="24px" p={{ base: "5%", md: "2%" }}>
                     <Flex direction="column" gap={4}>
                         {/* box heading */}
                         <Flex direction="column">
@@ -37,7 +37,7 @@ const SurveillanceSoftware = () => {
                 </Flex>
 
                 {/* second white box */}
-                <Flex direction="column" justifyContent="center" width="100%" bg="white" borderRadius="24px" p={{base:"5%",md:"2%"}} gap={4}>
+                <Flex direction="column" justifyContent="center" width="100%" bg="white" borderRadius="24px" p={{ base: "5%", md: "2%" }} gap={4}>
                     {/* box heading */}
                     <Flex direction="column" width="100%">
                         <Text fontSize={{ base: "14px", md: "16px" }} fontWeight="700">How It Helps You Out</Text>
@@ -45,7 +45,7 @@ const SurveillanceSoftware = () => {
                     </Flex>
 
                     {/* box content */}
-                    <List spacing={1} fontWeight={500} fontSize={{ base: "12px", md: "14px" }} styleType="disc" ml={{base:"5%",md:"2%"}}>
+                    <List spacing={1} fontWeight={500} fontSize={{ base: "12px", md: "14px" }} styleType="disc" ml={{ base: "5%", md: "2%" }}>
                         <ListItem>Self-Improving AI</ListItem>
                         <ListItem>Pattern Discovery</ListItem>
                         <ListItem>Smart Adaptation</ListItem>

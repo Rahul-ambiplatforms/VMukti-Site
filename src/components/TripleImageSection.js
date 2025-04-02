@@ -14,9 +14,9 @@ const TripleImageSection = ({
     ],
     description = "Unlock smarter security with AI-driven surveillance solutions for real-time monitoring, proactive threat detection, and seamless video management.",
     images = [
-        "./assets/sol1st.png",
-        "./assets/sol2nd.png",
-        "./assets/sol3rd.png",
+        "./assets/speech_image.png",
+        "./assets/soldier_image.png",
+        "./assets/patient_image.png",
     ],
 }) => {
     const ref = useRef(null);
@@ -100,7 +100,7 @@ const TripleImageSection = ({
                     {images.map((image, index) => (
                         <Box
                             key={index}
-                            borderRadius="lg"
+                            borderRadius="20px"
                             overflow="hidden"
                             w={{ base: "150px", sm: "200px", md: "250px", lg: "306px" }}
                             h={{ base: "300px", sm: "400px", md: "500px", lg: "594px" }}

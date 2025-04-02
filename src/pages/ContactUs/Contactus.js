@@ -389,12 +389,12 @@ export default function ContactUs() {
               </HeadingAnimation>
               <Box position="absolute" bottom="16px">
                 <SubHeadingAnimation>
-                  <Text fontWeight="700" fontSize={{ base: "12px", md: "16px" }}>
+                  <Flex direction="column"><Text fontWeight="700" fontSize={{ base: "12px", md: "16px" }}>
                     {card.phone}
                   </Text>
                   <Text fontWeight="500" fontSize={{ base: "12px", md: "16px" }}>
                     {card.email}
-                  </Text>
+                  </Text></Flex>
                 </SubHeadingAnimation>
               </Box>
             </MotionBox>
