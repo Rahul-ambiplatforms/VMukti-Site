@@ -9,6 +9,7 @@ import {
   useBreakpointValue,
   Divider,
 } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 import { EmailIcon } from '@chakra-ui/icons'
 
 const SubscriptionBanner = ({ bgColor = 'white' }) => {
@@ -109,7 +110,7 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
         >
           <Text
             color="black"
-
+            // _disabled={true}
             fontSize={headingSize}
             fontWeight="400"
             letterSpacing="-0.72px"
@@ -198,6 +199,12 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
               display="flex"
               alignItems="center"
               gap="8px"
+              _disabled={{
+                opacity: 0.6,
+                cursor: "not-allowed",
+                bg: "#3F77A5" // Maintain same color when disabled
+              }}
+              isDisabled={true}
             >
               Subscribe
               <svg

@@ -9,7 +9,7 @@ import {
   Show,
 } from "@chakra-ui/react";
 import { motion, useInView } from "framer-motion";
-
+import { Link } from 'react-router-dom';
 import AdvancedComputerVision from "../../components/AdvancedComputerVision";
 import PageContentWrapper from "../../components/PageContentWrapper";
 import VideoAnalytics from "./VideoAnalytics";
@@ -289,6 +289,8 @@ const VMuktiHomepage = () => {
               height={{ base: "34px", sm: "50px" }}
               borderRadius="20px"
               color="#3F77A5"
+              as={Link}
+              to="/contactus"
               gap="2"
               _hover={{
                 bg: "#E0F2FE",

@@ -345,6 +345,8 @@ const AdvancedSurveillance = () => {
             left="70px"
             height="50px"
             width="146px"
+            as={Link}
+            to="/contactus"
             backgroundColor="white"
             color="#3F77A5"
             fontSize="16px"
