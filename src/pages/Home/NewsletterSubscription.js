@@ -267,7 +267,7 @@ const NewsletterSubscription = () => {
               <Flex alignItems="center" mt="15px">
                 <PhoneIcon mr="10px" w="20px" h="auto" />
                 <Text fontSize="14px" fontWeight="500">
-                  (+91) 000 000 0000
+                  (91+) 968 777 0000
                 </Text>
               </Flex>
               <Link href={"/contactus"}>
