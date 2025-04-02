@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { Flex, Box, Text, Heading, useBreakpointValue, Image } from "@chakra-ui/react";
+import {
+  Flex,
+  Box,
+  Text,
+  Heading,
+  useBreakpointValue,
+  Image,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Button } from "@chakra-ui/icons";
 import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation";
 import SubHeadingAnimation from "../../components/Animation/Text/SubHeadingAnimation";
 import ImagePop from "../../components/Animation/Image/ImagePop";
 import ImagePopBox from "../../components/Animation/Image/ImagePopBox";
-const SolutionEMS = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [visibleSlideRange, setVisibleSlideRange] = useState({
-    start: 0,
-    end: 3,
-  }); // Track visible slide names
 
+const SolutionEMS = () => {
   // Data for each slide
   const slides = [
     {
@@ -147,6 +149,21 @@ const SolutionEMS = () => {
       },
     },
   ];
+  const visibleSlides = useBreakpointValue({
+    base: 1, // Mobile view (1 box)
+    sm: 2, // Small screens (2 boxes)
+    md: 4, // Medium screens (3 boxes)
+    lg: 4, // Large screens (4 boxes)
+    xl: 5, // Extra large screens (5 boxes)
+  });
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const startIndex = currentSlide;
+  const endIndex = Math.min(startIndex + visibleSlides - 1, slides.length - 1);
+
+  const [visibleSlideRange, setVisibleSlideRange] = useState({
+    start: startIndex,
+    end: endIndex,
+  }); // Track visible slide names
 
   // Update the slider
   const updateSlider = (index) => {
@@ -164,12 +181,43 @@ const SolutionEMS = () => {
 
   // Update visible slide names based on the current slide
   useEffect(() => {
-    if (currentSlide < visibleSlideRange.start) {
-      setVisibleSlideRange({ start: currentSlide, end: currentSlide + 3 });
-    } else if (currentSlide > visibleSlideRange.end) {
-      setVisibleSlideRange({ start: currentSlide - 3, end: currentSlide });
-    }
-  }, [currentSlide]);
+    const updateVisibleSlides = () => {
+      const screenWidth = window.innerWidth;
+
+      // Dynamically determine the number of visible slides based on screen width
+      let newVisibleSlides;
+      if (screenWidth >= 1280) newVisibleSlides = 4; // xl
+      else if (screenWidth >= 1024) newVisibleSlides = 4; // lg
+      else if (screenWidth >= 768) newVisibleSlides = 3; // tablet (md)
+      else newVisibleSlides = 1; // base (mobile)
+
+      // Update visible slide range dynamically
+      if (newVisibleSlides == 1) {
+        setVisibleSlideRange({ start: currentSlide, end: currentSlide });
+      } else if (newVisibleSlides == 3) {
+        if (currentSlide < visibleSlideRange.start) {
+          setVisibleSlideRange({ start: currentSlide, end: currentSlide + 2 });
+        } else if (currentSlide > visibleSlideRange.end) {
+          setVisibleSlideRange({ start: currentSlide - 2, end: currentSlide });
+        }
+      }
+      else if (newVisibleSlides == 4) {
+        if (currentSlide < visibleSlideRange.start) {
+          setVisibleSlideRange({ start: currentSlide, end: currentSlide + 3 });
+        } else if (currentSlide > visibleSlideRange.end) {
+          setVisibleSlideRange({ start: currentSlide - 3, end: currentSlide });
+        }
+      }
+    };
+
+    // Run on mount and whenever screen size changes
+    updateVisibleSlides();
+    window.addEventListener("resize", updateVisibleSlides);
+
+    return () => {
+      window.removeEventListener("resize", updateVisibleSlides);
+    };
+  }, [currentSlide]); // Runs when currentSlide changes
 
   // Responsive styles
   const cardDirection = useBreakpointValue({ base: "column", md: "row" });
@@ -183,34 +231,24 @@ const SolutionEMS = () => {
       // minH="50vh"
       overflowX="hidden"
       borderRadius="24px"
-    // width="100%"
-    // mb="5%"
+      // width="100%"
+      // mb="5%"
     >
       {/* Navigation */}
       <Flex
-
         justify="center"
         // p={5}
         gap={{ base: 4, md: 12 }}
         position="relative"
       >
-        {/* Left Dots */}
-        {visibleSlideRange.start > 0 && (
-          <Flex gap={1} align="center">
-            {[...Array(visibleSlideRange.start)].map((_, index) => (
-              <Box
-                key={index}
-                w="8px"
-                h="8px"
-                borderRadius="full"
-                bg="#3F77A5;"
-              />
-            ))}
-          </Flex>
-        )}
-
         {/* Visible Slide Names */}
-        <Box display="flex" justifyContent="space-between" w="100%" pl="1" pb={8}>
+        <Box
+          display="flex"
+          justifyContent="space-between"
+          w="100%"
+          pl="1"
+          pb={8}
+        >
           {slides
             .slice(visibleSlideRange.start, visibleSlideRange.end + 1)
             .map((slide, index) => {
@@ -221,32 +259,37 @@ const SolutionEMS = () => {
               return (
                 <Box
                   key={index + visibleSlideRange.start}
-                  flex="1"
+                  flex={{ base: "0 0 100%", md: "1" }} // Single box in mobile, multiple in desktop
                   textAlign="left"
+                  // bg="orange"
                 >
                   {/* <HeadingAnimation> */}
-                  <Text
-                    whiteSpace="normal"
-                    wordBreak="break-word"
-                    py={2}
-                    cursor="pointer"
-                    color={
-                      currentSlide === index + visibleSlideRange.start
-                        ? "blue.600"
-                        : "gray.800"
-                    }
-                    fontWeight={
-                      currentSlide === index + visibleSlideRange.start
-                        ? "600"
-                        : "500"
-                    }
-                    onClick={() =>
-                      updateSlider(index + visibleSlideRange.start)
-                    }
-                  >
-                    {firstPart} <br /> {lastWord}
-                  </Text>
-                  {/* </HeadingAnimation> */}
+                  {/* I added this code */}
+                  <Box w={{ base: "60%", md: "100%" }}>
+                    <Text
+                      whiteSpace="normal"
+                      wordBreak="break-word"
+                      overflowWrap="break-word"
+                      hyphens="auto"
+                      py={2}
+                      cursor="pointer"
+                      color={
+                        currentSlide === index + visibleSlideRange.start
+                          ? "blue.600"
+                          : "gray.800"
+                      }
+                      fontWeight={
+                        currentSlide === index + visibleSlideRange.start
+                          ? "600"
+                          : "500"
+                      }
+                      onClick={() =>
+                        updateSlider(index + visibleSlideRange.start)
+                      }
+                    >
+                      {firstPart} <br /> {lastWord}
+                    </Text>
+                  </Box>
                   {currentSlide === index + visibleSlideRange.start && (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -271,11 +314,12 @@ const SolutionEMS = () => {
         {/* Slider Controls */}
         <Flex
           position="absolute"
-          right={{ base: 4, md: 0 }}
+          right={{ base: 1, md: 0 }}
           top="20%"
           // transform="translateY(-50%)"
-          align="spacwe-between"
+          align="space-between"
           gap={2}
+          // bg="green"
         >
           {visibleSlideRange.end < slides.length - 1 && (
             <Flex gap={1} align="center">
@@ -314,8 +358,8 @@ const SolutionEMS = () => {
                 justifyContent="center"
                 cursor="pointer"
                 bgColor="white"
-                _hover={{ bgColor: '#e0e0e0' }}
-                onClick={handlePrev}// Use handlePrev for left navigation
+                _hover={{ bgColor: "#e0e0e0" }}
+                onClick={handlePrev} // Use handlePrev for left navigation
               >
                 <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
                   <path
@@ -336,7 +380,7 @@ const SolutionEMS = () => {
                 justifyContent="center"
                 cursor="pointer"
                 bgColor="white"
-                _hover={{ bgColor: '#e0e0e0' }}
+                _hover={{ bgColor: "#e0e0e0" }}
                 onClick={handleNext} // Use handleNext for right navigation
               >
                 <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
@@ -370,9 +414,19 @@ const SolutionEMS = () => {
               position="relative"
             >
               {/* Card Content */}
-              <Flex p={5} justifyContent="space-between" gap={5} direction={{ base: "column", md: "row" }}>
+              <Flex
+                p={5}
+                justifyContent="space-between"
+                gap={5}
+                direction={{ base: "column", md: "row" }}
+              >
                 {/* left portion of the content card */}
-                <Flex direction="column" gap={5} zIndex={1} width={{ base: "100%", md: "40%" }}>
+                <Flex
+                  direction="column"
+                  gap={5}
+                  zIndex={1}
+                  width={{ base: "100%", md: "40%" }}
+                >
                   {/* First Box with 0.1s delay */}
                   <Flex
                     as={motion.div}
@@ -398,16 +452,23 @@ const SolutionEMS = () => {
                         color="black"
                       >
                         {slide.title1}{" "}
-                        <span style={{ color: "#DB7B3A" }}>
-                          {slide.title2}
-                        </span>
+                        <span style={{ color: "#DB7B3A" }}>{slide.title2}</span>
                       </Heading>
                     </HeadingAnimation>
                     <SubHeadingAnimation>
                       <Text fontSize="24px" color="blue.600" mb={3} mt="5%">
                         {/* SVG code remains unchanged */}
-                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
-                          <path d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C0 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z" fill="#3F77A5" />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="33"
+                          height="33"
+                          viewBox="0 0 33 33"
+                          fill="none"
+                        >
+                          <path
+                            d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C0 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
+                            fill="#3F77A5"
+                          />
                         </svg>
                       </Text>
                     </SubHeadingAnimation>
@@ -461,16 +522,18 @@ const SolutionEMS = () => {
                       </Box>
                     </SubHeadingAnimation>
                   </Flex>
-
                 </Flex>
                 {/* Right portion (positioned absolutely) */}
-                <Flex direction="column" justifyContent={{ base: "center", md: "space-between" }} alignItems={{ base: "center" }} 
-                    width="100%"
-                    >
+                <Flex
+                  direction="column"
+                  justifyContent={{ base: "center", md: "space-between" }}
+                  alignItems={{ base: "center" }}
+                  width="100%"
+                >
                   {/* Top right Image (positioned absolutely) */}
                   <Box
                     as={motion.div}
-                    width="100%"        // Allow the box to take up available space
+                    width="100%" // Allow the box to take up available space
                     maxWidth="630px"
                     height="360px"
                     zIndex={3}
@@ -514,10 +577,7 @@ const SolutionEMS = () => {
                       >
                         {slide.benefits.title}
                       </Text>
-                      <Flex
-                        justifyContent="space-between"
-                        alignItems="center"
-                      >
+                      <Flex justifyContent="space-between" alignItems="center">
                         {slide.benefits.data.map((benefit, idx) => (
                           <Box
                             as={motion.div}
@@ -528,7 +588,7 @@ const SolutionEMS = () => {
                             transition={{
                               duration: 0.9,
                               ease: [0.5, 1],
-                              delay: 0.5 * idx // Individual delay based on index
+                              delay: 0.5 * idx, // Individual delay based on index
                             }}
                           >
                             <Image
@@ -556,12 +616,11 @@ const SolutionEMS = () => {
                   )}
                 </Flex>
               </Flex>
-
             </Flex>
           </Box>
         ))}
       </Flex>
-    </Flex >
+    </Flex>
   );
 };
 
