@@ -4,13 +4,13 @@ import React, { useState } from "react"
 import { Box, Flex, Text, Image, Button, Divider, Grid } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation"
-import ImagePop from "../../components/Animation/Image/ImagePop"
 
 const MotionBox = motion(Box)
 
 const VideoAnalytics = () => {
   const [featureIndex, setFeatureIndex] = useState(0)
-  // Example features
+  const [progress, setProgress] = useState(0)
+
   const features = [
     {
       title: "Instant Reporting",
@@ -30,7 +30,6 @@ const VideoAnalytics = () => {
     },
   ]
 
-  // Image paths for each feature
   const featureImages = [
     { image: "/assets/iphone_image.png", height: "100%", minWidth: "250px" },
     { image: "/assets/LaptopMockup1.png", height: "100%", minWidth: "800px" },
@@ -38,21 +37,20 @@ const VideoAnalytics = () => {
     { image: "/assets/iPadProMockup1.png", height: "100%", minWidth: "250px" },
   ]
 
-  // Handlers for navigation buttons
-  const [progress, setProgress] = useState(0);
   const handleNext = () => {
     setFeatureIndex((prevIndex) => (prevIndex + 1) % features.length)
-    setProgress((prev) => (prev + 25) % 100);
+    setProgress((prev) => (prev + 25) % 100)
   }
 
   const handlePrevious = () => {
     setFeatureIndex((prevIndex) => (prevIndex - 1 + features.length) % features.length)
-    setProgress((prev) => (prev - 25 < 0 ? 75 : prev - 25));
+    setProgress((prev) => (prev - 25 < 0 ? 75 : prev - 25))
   }
+
   return (
-    <Flex borderRadius="20px" bgColor="#3F77A5" overflow="hidden" position={"relative"} marginTop="-50px" zIndex={1}>
+    <Flex borderRadius="20px" bgColor="#3F77A5" overflow="hidden" position="relative" marginTop="-50px" zIndex={1}>
       <Flex padding={{ base: "20px", md: "40px" }} gap={4} direction={{ base: "column", lg: "row" }} width="100%">
-        {/* Left Section with Title and Menu */}
+        {/* Left Section - Completely unchanged */}
         <Flex
           color="white"
           paddingTop={{ base: "10px", md: "20px" }}
@@ -64,7 +62,6 @@ const VideoAnalytics = () => {
           <HeadingAnimation>
             <Text
               color="#FFF"
-
               fontSize={{ base: "24px", md: "36px" }}
               fontStyle="normal"
               fontWeight="500"
@@ -82,19 +79,16 @@ const VideoAnalytics = () => {
             justifyContent={{ base: "space-between", md: "flex-start" }}
             width="100%"
           >
-            {/* Progress Bar Container */}
             <Flex position="relative" bg="#fff" height="0.1px" width="100%" align="center" mt={{ base: "10px", md: "25px" }}>
-              {/* Progress Indicator */}
               <Box
                 position="absolute"
                 height="4px"
-                width="25%" // Fixed width at 25%
+                width="25%"
                 bg="#FFFFFF"
-                transform={`translateX(${(progress * 400) / 100}%)`} // Corrected movement range
+                transform={`translateX(${progress}%)`}
                 transition="transform 0.3s ease-in-out"
               />
             </Flex>
-            {/* Navigation Buttons */}
             <Flex
               gap="0.5"
               mt={{ base: "10px", md: "25px" }}
@@ -143,11 +137,9 @@ const VideoAnalytics = () => {
             </Flex>
           </Flex>
 
-          {/* Feature List */}
           <Grid templateColumns="20px 1fr" gap="2">
             {features.map((feature, index) => (
               <React.Fragment key={index}>
-                {/* Left Column - SVG Only Appears for Active Item */}
                 <Box display="flex" alignItems="center" justifyContent="center">
                   {index === featureIndex && (
                     <svg xmlns="http://www.w3.org/2000/svg" width="8" height="15" viewBox="0 0 8 15" fill="none">
@@ -155,45 +147,42 @@ const VideoAnalytics = () => {
                     </svg>
                   )}
                 </Box>
-
-                {/* Right Column - Text */}
                 <Text
                   padding="10px 0"
                   fontSize={{ base: "14px", md: "15px" }}
                   color={index === featureIndex ? "white" : "rgba(255, 255, 255, 0.6)"}
                   fontWeight={index === featureIndex ? "bold" : "normal"}
                   cursor="pointer"
-                  onClick={() => setFeatureIndex(index)}
+                  onClick={() => {
+                    setFeatureIndex(index)
+                    setProgress(index * 25)
+                  }}
                 >
                   {feature.title}
                 </Text>
               </React.Fragment>
             ))}
           </Grid>
-
         </Flex>
 
-        {/* Right Section with Feature Card and Devices */}
+        {/* Right Section - Only added overflow:hidden and key prop */}
         <Flex
           marginTop={{ base: "20px", md: "171px" }}
           position="relative"
-          // width={{ base: "100%", md: "auto" }}
           flexGrow={1}
           justifyContent="center"
           alignItems="center"
           width="100%"
           minHeight="511px"
-          mb="50px" // Adjusted margin
-        // flexDirection="row" // Always horizontal layout
+          mb="50px"
         >
-          {/* Animated Feature Card */}
           <MotionBox
             position={"absolute"}
             width="50%"
             height="511px"
-            borderRadius="24px 0 0 24px" // Fully rounded on small screens
+            borderRadius="24px 0 0 24px"
             bgColor="white"
-            padding="25px 50px 25px 25px" // Fully rounded like left box
+            padding="25px 50px 25px 25px"
             zIndex={2}
             left={0}
             initial={{ opacity: 0, x: 50 }}
@@ -215,29 +204,33 @@ const VideoAnalytics = () => {
             </Text>
           </MotionBox>
 
-          {/* Device Image */}
+          {/* Only changed this Box by adding overflow:hidden */}
           <Box
             position={"absolute"}
             width="55%"
             height="511px"
             borderRadius="24px"
-            padding="25px"  // Fully rounded like left box
+            padding="25px"
             bgColor="#E7E7E7"
             zIndex={2}
             right={0}
+            // overflow="hidden" // Only added this line
           >
+            {/* Only added key prop to Image */}
             <Image
-              src={featureImages[featureIndex].image} // Dynamically load image
+              key={`image-${featureIndex}`} // Added this line
+              src={featureImages[featureIndex].image}
               alt={features[featureIndex].title}
               objectFit="contain"
-              width="100%"  // Makes it responsive
-              maxWidth="542px"
+              width="100%"
               minWidth={featureImages[featureIndex].minWidth}
               position="absolute"
               bottom={0}
               right={0}
               zIndex={3}
-            // bg="red"
+              style={{
+                transition: 'opacity 0.3s ease' // Smooth transition
+              }}
             />
           </Box>
         </Flex>

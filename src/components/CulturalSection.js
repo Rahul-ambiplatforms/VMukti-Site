@@ -25,6 +25,20 @@ export default function CulturalSection({ gridItems }) {
         px={{ base: 4, md: 0 }} // Original padding values
         position="relative"
       >
+        <Box
+          position="absolute"
+          top={{ base: "-8px", md: "5%" }} // Responsive top offset
+          right={{ base: "-8px", md: "10%" }} // Responsive right offset
+          width={{ base: "200px", sm: "300px", md: "408px" }} // Responsive size scaling
+          height={{ base: "200px", sm: "300px", md: "408px" }} // Maintain aspect ratio
+          flexShrink="0"
+          borderRadius="full" // Better than fixed px for circles
+          opacity="0.12"
+          background="#3F77A5"
+          filter="blur(56.6px)" // Fixed blur amount
+          zIndex="0"
+          transform={{ base: "scale(0.8)", md: "scale(1)" }} // Optional scaling
+        />
         {/* Background dots pattern - mobile optimized without affecting desktop */}
         <Box
           position="absolute"
@@ -103,6 +117,9 @@ export default function CulturalSection({ gridItems }) {
                               {item.subtitle}
                             </Text>
                           )}
+                          <Box height="2px" width="20px" bg="#3F77A5" />
+
+
                           <Text color={item.textColor} fontSize={{ base: "xs", lg: "md" }}>
                             {item.description}
                           </Text>

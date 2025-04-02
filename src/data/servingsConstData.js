@@ -353,7 +353,7 @@ const servingsData = {
             },
             {
                 image: "govs4.png",
-                title: "Security",
+                title: "AI-Integrated VMS",
                 description: "Advanced analytics optimize security operations.",
             },
         ],
