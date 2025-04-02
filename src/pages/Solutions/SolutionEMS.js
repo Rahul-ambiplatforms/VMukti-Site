@@ -21,27 +21,39 @@ const SolutionEMS = () => {
       title1: "Video Management System",
       title2: "(VMS)",
       description: [
-        "AI-powered computer vision analyzes and interprets visual data with unmatched accuracy, recognizing faces, objects, and patterns. It enhances surveillance, automates processes, and optimizes decision-making across industries like security, retail, healthcare, and manufacturing.",
+        "AI-Powered VMS: The Core of Modern SurveillanceAn AI-enabled Video Management System (VMS) is the core of modern surveillance, offering a centralized platform for video monitoring, real-time threat detection, and intelligent incident management. It enables organizations to efficiently oversee multiple cameras across locations, using AI-driven analytics to boost situational awareness and security.",
       ],
-      image: "./assets/holdingtab.png",
+      description2: [
+        <>
+          <h3 style={{ fontWeight: "bold", marginBottom: "8px" }}>
+            Key Features
+          </h3>
+          <ul style={{ paddingLeft: "20px" }}>
+            <li>24/7 AI-Powered Surveillance</li>
+            <li>Multi-Camera Integration</li>
+            <li>AI-Driven Video Analytics</li>
+            <li>Incident Detection & Alerts</li>
+            <li>Remote Access</li>
+            <li>Smart Search & Retrieval</li>
+            <li>Seamless Third-Party Integration</li>
+          </ul>
+        </>,
+      ],
+      image: "./assets/solution_1.png",
       benefits: {
         title: "Business Benefits",
         data: [
           {
-            title: "xyz1",
-            image: "./assets/holdingtab.png",
+            title: "Unified Security Control",
+            image: "./assets/solution_1_1.svg",
           },
           {
-            title: "xyz2",
-            image: "./assets/holdingtab.png",
+            title: "Proactive Threat Management",
+            image: "./assets/solution_1_2.svg",
           },
           {
-            title: "xyz3",
-            image: "./assets/holdingtab.png",
-          },
-          {
-            title: "xyz4",
-            image: "./assets/holdingtab.png",
+            title: "Scalability & Cost Efficiency",
+            image: "./assets/solution_1_3.svg",
           },
         ],
       },
@@ -50,16 +62,43 @@ const SolutionEMS = () => {
       title1: "Enterprise Management System",
       title2: "(EMS)",
       description: [
-        "Object detection algorithms identify and locate multiple objects within images or video streams with remarkable precision. These systems can distinguish between different object classes, track their movements, and analyze their behaviors in real-time.",
+        "EMS is a custom-built Video Management System (VMS) designed for large-scale enterprises, banks, manufacturing plants, and government institutions. Unlike generic VMS platforms, VMukti EMS provides complete ownership and control through a one-time deployment fee, allowing organizations to independently manage their security infrastructure.",
       ],
-      image: "./assets/holdingtab.png",
+      description2: [
+        <>
+          <h3 style={{ fontWeight: "bold", marginBottom: "8px" }}>
+            Key Features
+          </h3>
+          <ul style={{ paddingLeft: "20px" }}>
+            <li>Tailored Deployment</li>
+            <li>Advanced Admin Control</li>
+            <li>Comprehensive Camera & User Management</li>
+            <li>Flexible Storage & Recording Options</li>
+            <li>AI-Powered Surveillance</li>
+            <li>High-Security & Compliance</li>
+          </ul>
+        </>,
+      ],
+      image: "./assets/solution_2.png",
       benefits: {
         title: "Business Benefits",
         data: [
-          { title: "abc1", image: "./assets/holdingtab.png" },
-          { title: "abc2", image: "./assets/holdingtab.png" },
-          { title: "abc3", image: "./assets/holdingtab.png" },
-          { title: "abc4", image: "./assets/holdingtab.png" },
+          {
+            title: "Operational Efficiency",
+            image: "./assets/solution_2_1.svg",
+          },
+          {
+            title: "Cost-Effective Ownership",
+            image: "./assets/solution_2_2.svg",
+          },
+          {
+            title: " Enhanced Security & Compliance",
+            image: "./assets/solution_2_3.svg",
+          },
+          {
+            title: " Scalability & Adaptability",
+            image: "./assets/solution_2_4.svg",
+          },
         ],
       },
     },
@@ -67,110 +106,316 @@ const SolutionEMS = () => {
       title1: "Integrated Command & Control Center",
       title2: "(ICCC)",
       description: [
-        "Deep learning algorithms utilize multi-layered neural networks to process complex data sets and derive meaningful patterns. These sophisticated models can handle unstructured data types including images, text, and audio with unprecedented accuracy.",
+        "The ICCC is a centralized intelligence hub that integrates live video feeds, IoT sensors, and AI-powered analytics across security systems. Designed for smart city management, critical infrastructure monitoring, and emergency response, it ensures real-time situational awareness and security coordination.",
       ],
-      image: "./assets/holdingtab.png",
+      description2: [
+        <>
+          <h3 style={{ fontWeight: "bold", marginBottom: "8px" }}>
+            Key Features
+          </h3>
+          <ul style={{ paddingLeft: "20px" }}>
+            <li>Centralized Surveillance & Data Fusion</li>
+            <li>AI-Powered Insights & Heatmaps</li>
+            <li>Automated Threat Alerts & Response</li>
+            <li>Multi-Agency Collaboration</li>
+            <li>Scalable & Flexible Deployment</li>
+            <li>24/7 Monitoring & Health Diagnostics</li>
+          </ul>
+        </>,
+      ],
+      image: "./assets/solution_3.png",
       benefits: {
         title: "Business Benefits",
         data: [
-          { title: "xyz", image: "./assets/holdingtab.png" },
-          { title: "xyz", image: "./assets/holdingtab.png" },
-          { title: "xyz", image: "./assets/holdingtab.png" },
-          { title: "xyz", image: "./assets/holdingtab.png" },
+          {
+            title: "Faster Decision-Making",
+            image: "./assets/solution_3_1.svg",
+          },
+          {
+            title: "Reduced Operational Costs",
+            image: "./assets/solution_3_2.svg",
+          },
+          {
+            title: "Increased Public & Asset Safety",
+            image: "./assets/solution_3_3.svg",
+          },
+          {
+            title: "Future-Proof Infrastructure",
+            image: "./assets/solution_3_4.svg",
+          },
         ],
       },
     },
     {
-      title1: "AI-Optimized Cloud Services",
-      title2: "",
+      title1: "AI-Optimized Cloud",
+      title2: "Services",
       description: [
-        "Neural networks form the backbone of modern AI systems, mimicking the human brain's structure to process and learn from vast amounts of data. These interconnected layers of artificial neurons excel at pattern recognition and feature extraction.",
+        <>
+          <span style={{ fontWeight: "bold", marginBottom: "2%" }}>
+            Patented AI-Driven Storage for Surveillance
+          </span>
+          {"\n\n\n"}
+          Traditional storage can’t handle high-resolution surveillance
+          efficiently. Our AI-powered cloud storage optimizes bandwidth, reduces
+          costs, and ensures seamless video access.
+        </>,
       ],
-      image: "./assets/holdingtab.png",
+      description2: [
+        <>
+          <h3 style={{ fontWeight: "bold", marginBottom: "8px" }}>
+            Key Features
+          </h3>
+          <ul style={{ paddingLeft: "20px" }}>
+            <li>AI-Driven Compression</li>
+            <li>Unlimited Scalability</li>
+            <li>Smart Search & Indexing</li>
+            <li>Real-Time Video Access</li>
+            <li>Industry-Specific AI Models</li>
+          </ul>
+        </>,
+      ],
+      image: "./assets/solution_4.png",
       benefits: {
         title: "Business Benefits",
         data: [
-          { title: "xyz", image: "./assets/holdingtab.png" },
-          { title: "xyz", image: "./assets/holdingtab.png" },
-          { title: "xyz", image: "./assets/holdingtab.png" },
-          { title: "xyz", image: "./assets/holdingtab.png" },
+          {
+            title: "Faster Decision-Making",
+            image: "./assets/solution_4_1.svg",
+          },
+          {
+            title: "Reduced Operational Costs",
+            image: "./assets/solution_4_2.svg",
+          },
+          {
+            title: "Increased Public & Asset Safety",
+            image: "./assets/solution_4_3.svg",
+          },
+          {
+            title: "Future-Proof Infrastructure",
+            image: "./assets/solution_4_4.svg",
+          },
         ],
       },
     },
     {
-      title1: "AI-Driven Automation",
-      title2: "",
+      title1: "Generative AI in Video",
+      title2: "Surveillance",
       description: [
-        "AI-driven automation streamlines repetitive tasks, reducing human error and increasing efficiency in industries like manufacturing, logistics, and customer service.",
+        <>
+          <div style={{ fontWeight: "bold", marginBottom: "2%" }}>
+            India’s First AI-Powered Surveillance System
+          </div>
+          <br />
+          Transforming security with advanced AI-driven analytics, natural
+          language search, and real-time automation.
+        </>,
       ],
-      image: "./assets/holdingtab.png",
+      description2: [
+        <>
+          <h3 style={{ fontWeight: "bold", marginBottom: "8px" }}>
+            Key Features
+          </h3>
+          <ul style={{ paddingLeft: "20px" }}>
+            <li>Precision Object Tracking</li>
+            <li>GPT-Powered Interaction</li>
+            <li>Instant Video Retrieval</li>
+            <li>Real-Time Summaries</li>
+          </ul>
+        </>,
+      ],
+      image: "./assets/solution_5.png",
       benefits: {
         title: "Business Benefits",
         data: [
-          { title: "xyz", image: "./assets/holdingtab.png" },
-          { title: "xyz", image: "./assets/holdingtab.png" },
-          { title: "xyz", image: "./assets/holdingtab.png" },
-          { title: "xyz", image: "./assets/holdingtab.png" },
+          {
+            title: "Faster Decision-Making",
+            image: "./assets/solution_5_1.svg",
+          },
+          {
+            title: "Reduced Operational Costs",
+            image: "./assets/solution_5_2.svg",
+          },
+          {
+            title: "Increased Public & Asset Safety",
+            image: "./assets/solution_5_3.svg",
+          },
+          {
+            title: "Future-Proof Infrastructure",
+            image: "./assets/solution_4_4.svg",
+          }, //--------------
         ],
       },
     },
     {
-      title1: "GPT in Video Surveillance",
-      title2: "",
+      title1: "AI-Powered Surveillance",
+      title2: "Cameras",
       description: [
-        "GPT models enhance video surveillance by analyzing footage in real-time, detecting anomalies, and providing actionable insights for security teams.",
+        <>
+          <div style={{ fontWeight: "bold", marginBottom: "2%" }}>
+            Redefining Security with Intelligent Vision
+          </div>
+          <br />
+          Security is no longer just about recording—it’s about proactive
+          intelligence. Our AI-powered surveillance cameras provide real-time
+          alerts, data-driven insights, and advanced analytics for smarter
+          threat detection.
+        </>,
       ],
-      image: "./assets/holdingtab.png",
+      description2: [
+        <>
+          <h3 style={{ fontWeight: "bold", marginBottom: "8px" }}>
+            Key Features
+          </h3>
+          <ul style={{ paddingLeft: "20px" }}>
+            <li>Ultra-HD & Night Vision</li>
+            <li>AI-Driven Threat Detection</li>
+            <li>Edge AI Processing</li>
+            <li>Facial Recognition & Biometric Access</li>
+            <li>Smart Motion Tracking</li>
+            <li>Remote Access</li>
+            <li>Weatherproof Build</li>
+            <li>Seamless VMS Integration</li>
+          </ul>
+        </>,
+      ],
+      image: "./assets/solution_6.png",
       benefits: {
         title: "Business Benefits",
         data: [
-          { title: "xyz", image: "./assets/holdingtab.png" },
-          { title: "xyz", image: "./assets/holdingtab.png" },
-          { title: "xyz", image: "./assets/holdingtab.png" },
-          { title: "xyz", image: "./assets/holdingtab.png" },
+          { title: "Proactive Security", image: "./assets/solution_7_1.svg" }, //I have to add this-----
+          { title: "Cost Optimization", image: "./assets/solution_7_2.svg" }, //I have to add this-----
+          {
+            title: "Data-Driven Insights",
+            image: "./assets/sol_solution_7_3.svg",
+          }, //I have to add this-----
         ],
       },
     },
     {
-      title1: "Edge AI Computing",
-      title2: "",
+      title1: "Flying Squad Vehicle",
+      title2: "(FSV)",
       description: [
-        "Edge AI brings computation and data storage closer to the devices, enabling real-time processing and reducing latency for critical applications.",
+        <>
+          <div style={{ fontWeight: "bold", marginBottom: "2%" }}>
+            Mobile Surveillance for Rapid Deployment
+          </div>
+          <br />
+          Deploy AI-powered surveillance anywhere with real-time video
+          streaming, GPS tracking, and automated reporting.
+        </>,
       ],
-      image: "./assets/holdingtab.png",
+      description2: [
+        <>
+          <h3 style={{ fontWeight: "bold", marginBottom: "8px" }}>
+            Key Features
+          </h3>
+          <ul style={{ paddingLeft: "20px" }}>
+            <li>Live Area Monitoring</li>
+            <li>GPS Tracking & Route Logging</li>
+            <li>AI Anomaly Detection</li>
+            <li>Two-Way Communication</li>
+            <li>Night Vision & 360° Coverage</li>
+          </ul>
+        </>,
+      ],
+      // image: "",
       benefits: {
         title: "Business Benefits",
         data: [
-          { title: "xyz", image: "./assets/holdingtab.png" },
-          { title: "xyz", image: "./assets/holdingtab.png" },
-          { title: "xyz", image: "./assets/holdingtab.png" },
-          { title: "xyz", image: "./assets/holdingtab.png" },
+          { title: "Rapid Deployment", image: "./assets/solution_8_1.svg" },
+          {
+            title: "Real-Time Intelligence",
+            image: "./assets/solution_8_2.svg",
+          },
+          {
+            title: "Cost-Efficient Security",
+            image: "./assets/solution_8_3.svg",
+          },
+        ],
+      },
+    },
+    {
+      title1: "Live Webcasting &",
+      title2: "Streaming",
+      description: [
+        <>
+          <div style={{ fontWeight: "bold", marginBottom: "2%" }}>
+            Secure & High-Quality Video Broadcasting
+          </div>
+          <br />
+          Seamless, secure, and scalable live streaming for corporate events,
+          government briefings, and educational sessions.
+        </>,
+      ],
+      description2: [
+        <>
+          <h3 style={{ fontWeight: "bold", marginBottom: "8px" }}>
+            Key Features
+          </h3>
+          <ul style={{ paddingLeft: "20px" }}>
+            <li>Low Latency Streaming</li>
+            <li>Cloud-Scalable Infrastructure</li>
+            <li>Advanced Security</li>
+            <li>Multi-Platform Streaming</li>
+            <li>Interactive Features</li>
+          </ul>
+        </>,
+      ],
+      image: "./assets/solution_8.png",
+      benefits: {
+        title: "Business Benefits",
+        data: [
+          {
+            title: "Uninterrupted Streaming",
+            image: "./assets/sol_solution_9_1.svg",
+          },
+          { title: "Global Scalability", image: "./assets/solution_9_2.svg" },
+          {
+            title: "Enhanced Security",
+            image: "./assets/sol_solution_9_3.svg",
+          },
         ],
       },
     },
   ];
   const visibleSlides = useBreakpointValue({
-    base: 1, // Mobile view (1 box)
-    sm: 2, // Small screens (2 boxes)
-    md: 4, // Medium screens (3 boxes)
-    lg: 4, // Large screens (4 boxes)
-    xl: 5, // Extra large screens (5 boxes)
+    base: 1,
+    sm: 2,
+    md: 4,
+    lg: 4,
+    xl: 5,
   });
+
   const [currentSlide, setCurrentSlide] = useState(0);
-  const startIndex = currentSlide;
-  const endIndex = Math.min(startIndex + visibleSlides - 1, slides.length - 1);
-
   const [visibleSlideRange, setVisibleSlideRange] = useState({
-    start: startIndex,
-    end: endIndex,
-  }); // Track visible slide names
+    start: 0,
+    end: 0,
+  });
 
-  // Update the slider
-  const updateSlider = (index) => {
-    setCurrentSlide(index);
-  };
+  // Initialize visible range
+  useEffect(() => {
+    const initialEnd = Math.min((visibleSlides || 1) - 1, slides.length - 1);
+    setVisibleSlideRange({ start: 0, end: initialEnd });
+  }, [visibleSlides, slides.length]);
 
-  // Handle previous and next slide
+  // Update visible range when currentSlide changes
+  useEffect(() => {
+    if (!visibleSlides || !slides.length) return;
+
+    const N = visibleSlides;
+    let newStart = currentSlide; // Changed from visibleSlideRange.start
+    let newEnd = Math.min(currentSlide + N - 1, slides.length - 1);
+
+    // Adjust if we don't have enough slides at the end
+    if (newEnd - newStart + 1 < N) {
+      newStart = Math.max(newEnd - N + 1, 0);
+      newEnd = Math.min(newStart + N - 1, slides.length - 1);
+    }
+
+    setVisibleSlideRange({ start: newStart, end: newEnd });
+  }, [currentSlide, visibleSlides, slides.length]);
+
+  // Navigation handlers with loop
   const handlePrev = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
@@ -179,45 +424,10 @@ const SolutionEMS = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
-  // Update visible slide names based on the current slide
-  useEffect(() => {
-    const updateVisibleSlides = () => {
-      const screenWidth = window.innerWidth;
-
-      // Dynamically determine the number of visible slides based on screen width
-      let newVisibleSlides;
-      if (screenWidth >= 1280) newVisibleSlides = 4; // xl
-      else if (screenWidth >= 1024) newVisibleSlides = 4; // lg
-      else if (screenWidth >= 768) newVisibleSlides = 3; // tablet (md)
-      else newVisibleSlides = 1; // base (mobile)
-
-      // Update visible slide range dynamically
-      if (newVisibleSlides == 1) {
-        setVisibleSlideRange({ start: currentSlide, end: currentSlide });
-      } else if (newVisibleSlides == 3) {
-        if (currentSlide < visibleSlideRange.start) {
-          setVisibleSlideRange({ start: currentSlide, end: currentSlide + 2 });
-        } else if (currentSlide > visibleSlideRange.end) {
-          setVisibleSlideRange({ start: currentSlide - 2, end: currentSlide });
-        }
-      }
-      else if (newVisibleSlides == 4) {
-        if (currentSlide < visibleSlideRange.start) {
-          setVisibleSlideRange({ start: currentSlide, end: currentSlide + 3 });
-        } else if (currentSlide > visibleSlideRange.end) {
-          setVisibleSlideRange({ start: currentSlide - 3, end: currentSlide });
-        }
-      }
-    };
-
-    // Run on mount and whenever screen size changes
-    updateVisibleSlides();
-    window.addEventListener("resize", updateVisibleSlides);
-
-    return () => {
-      window.removeEventListener("resize", updateVisibleSlides);
-    };
-  }, [currentSlide]); // Runs when currentSlide changes
+  // Update slider position
+  const updateSlider = (index) => {
+    setCurrentSlide(index);
+  };
 
   // Responsive styles
   const cardDirection = useBreakpointValue({ base: "column", md: "row" });
@@ -507,7 +717,7 @@ const SolutionEMS = () => {
                   >
                     <SubHeadingAnimation>
                       <Box>
-                        {slide.description.map((text, i) => (
+                        {slide.description2.map((text, i) => (
                           <Text
                             key={i}
                             fontWeight="500"
@@ -533,9 +743,10 @@ const SolutionEMS = () => {
                   {/* Top right Image (positioned absolutely) */}
                   <Box
                     as={motion.div}
-                    width="100%" // Allow the box to take up available space
-                    maxWidth="630px"
-                    height="360px"
+                    width="90%" // Allow the box to take up available space
+                    // maxWidth="630px"
+                    // height="360px"
+                    height="90%"
                     zIndex={3}
                     initial={{ scale: 0.7, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
@@ -561,6 +772,8 @@ const SolutionEMS = () => {
                     <Box
                       width="full"
                       display="flex"
+                      // justifyContent="space-between"
+                      // bg="red"
                       flexDirection="column"
                       borderRadius="12px"
                       gap={4}
