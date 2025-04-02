@@ -236,7 +236,7 @@ const Navbar = () => {
                                                         textDecoration: "none",
                                                         color: isPathActive(item.path) ? "#3F77A5" : "black",
                                                         position: "relative",
-                                                        whiteSpace:"nowrap"
+                                                        whiteSpace: "nowrap"
                                                     }}
                                                     onMouseEnter={() => handleMouseEnter(item.name)}
                                                     onMouseLeave={() => handleMouseLeave(item.name)}
@@ -265,7 +265,8 @@ const Navbar = () => {
                                                     }}
                                                 >
                                                     <path d="M6 6L12 0L0 0L6 6Z" fill="#3F77A5" />
-                                                </svg></MenuButton>
+                                                </svg>
+                                                </MenuButton>
 
                                                 <MenuList
                                                     placement="" // Ensure dropdown opens directly below the link
@@ -278,15 +279,23 @@ const Navbar = () => {
                                                 >
                                                     {item.items.map((dropdownItem, idx) => (
                                                         <MenuItem
-                                                            key={idx}
-                                                            fontWeight="400"
-                                                            as={Link}
-                                                            to={dropdownItem.path} // Use the path from dropdownItems
-                                                            onClick={() => handleLinkClick(item.name)}
-                                                        >
-                                                            {dropdownItem.label}
-                                                        </MenuItem>
+                                                        key={idx}
+                                                        fontWeight="400"
+                                                        as={Link}
+                                                        to={dropdownItem.path}
+                                                        onClick={() => handleLinkClick(item.name)}
+                                                        width="100%" // Ensure MenuItem takes full width
+                                                        borderBottom="1px solid #BECEDC" // Divider between items
+                                                      >
+                                                        {/* <Flex direction="column" width="100%"> Ensures full width */}
+                                                          <Text>{dropdownItem.label}</Text>
+                                                          {/* <Box width="60%" height="2px" bg="#BECEDC" mt="4px" /> Full-width divider */}
+                                                        {/* </Flex> */}
+                                                      </MenuItem>
+                                                      
+
                                                     ))}
+
                                                 </MenuList>
                                             </>
                                         </Menu>
