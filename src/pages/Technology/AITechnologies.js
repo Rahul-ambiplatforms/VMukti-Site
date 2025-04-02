@@ -22,53 +22,49 @@ const AITechnologies = () => {
         "AI-powered computer vision analyzes and interprets visual data with unmatched accuracy, recognizing faces, objects, and patterns. It enhances surveillance, automates processes, and optimizes decision-making across industries like security, retail, healthcare, and manufacturing.",
         "Beyond simple recognition, AI-driven computer vision tracks movement, monitors crowd behavior, and predicts potential threats. Integrated with edge AI and cloud computing, it enables real-time responses, improving security and efficiency.",
       ],
-      image: "./assets/holdingtab.png",
+      image: "./assets/comvi.png",
     },
     {
       title: "Object\nDetection",
       description: [
-        "Object detection algorithms identify and locate multiple objects within images or video streams with remarkable precision. These systems can distinguish between different object classes, track their movements, and analyze their behaviors in real-time.",
-        "Modern object detection frameworks like YOLO, SSD, and R-CNN enable applications ranging from autonomous vehicles and robotics to retail analytics and medical imaging. These technologies continue to evolve with improved accuracy and reduced computational requirements.",
+        "AI-driven object detection identifies and classifies objects, people, and vehicles with high accuracy. It enables automated tracking, suspicious activity detection, and seamless security system integration.",
+        "In surveillance, real-time object detection triggers instant alerts for unauthorized access or unusual movement. Combined with predictive analytics, it enhances risk assessment and operational intelligence.",
       ],
-      image: "./assets/holdingtab.png",
+      image: "./assets/objd.png",
     },
     {
       title: "Deep Learning Algorithms",
       description: [
-        "Deep learning algorithms utilize multi-layered neural networks to process complex data sets and derive meaningful patterns. These sophisticated models can handle unstructured data types including images, text, and audio with unprecedented accuracy.",
-        "Through techniques like transfer learning and reinforcement learning, deep learning systems continue to improve their capabilities, enabling breakthroughs in natural language processing, image recognition, and predictive analytics across various domains.",
+        "Deep learning enables AI to analyse complex data, detect patterns, and make precise decisions. Neural networks process vast information efficiently, continuously learning and improving.",
+        "In video analytics, deep learning enhances facial recognition, behaviour analysis, and anomaly detection. These self-learning models adapt to threats, improving accuracy and reducing false alarms.",
       ],
-      image: "./assets/holdingtab.png",
+      image: "./assets/dla.png",
     },
     {
       title: "Neural Networks & Predictive Analytics",
       description: [
-        "Neural networks form the backbone of modern AI systems, mimicking the human brain's structure to process and learn from vast amounts of data. These interconnected layers of artificial neurons excel at pattern recognition and feature extraction.",
-        "When applied to predictive analytics, neural networks can forecast trends, identify anomalies, and make data-driven recommendations. This powerful combination enables businesses to anticipate market changes, optimize operations, and deliver personalized experiences.",
+        "Advanced neural networks process video data with precision, identifying threats and recognizing patterns. Unlike traditional surveillance, AI actively analyses movements, behaviours, and anomalies in real time.",
+        "Predictive analytics anticipates security threats by analysing historical patterns and real-time data. This proactive approach minimizes risks, optimizes response times, and enhances situational awareness.",
       ],
-      image: "./assets/holdingtab.png",
+      image: "./assets/npd.png",
     },
     {
       title: "AI-Driven\nAutomation",
       description: [
-        "AI-driven automation streamlines repetitive tasks, reducing human error and increasing efficiency in industries like manufacturing, logistics, and customer service.",
+        "AI-driven automation streamlines processes, reduces human intervention, and improves efficiency. Machine learning algorithms detect patterns, make intelligent decisions, and automate workflows.",
+        "In surveillance, AI minimizes false alarms and optimizes resource allocation. Automated monitoring of live feeds and video analysis ensures faster decision-making and cost savings.",
       ],
-      image: "./assets/holdingtab.png",
+      image: "./assets/aidr.png",
     },
     {
       title: "GPT in Video Surveillance",
       description: [
-        "GPT models enhance video surveillance by analyzing footage in real-time, detecting anomalies, and providing actionable insights for security teams.",
+        "AI-driven automation streamlines processes, reduces human intervention, and improves efficiency. Machine learning algorithms detect patterns, make intelligent decisions, and automate workflows.",
+        "In surveillance, AI minimizes false alarms and optimizes resource allocation. Automated monitoring of live feeds and video analysis ensures faster decision-making and cost savings.",
       ],
-      image: "./assets/holdingtab.png",
+      image: "./assets/gptr.png",
     },
-    {
-      title: "Edge AI Computing",
-      description: [
-        "Edge AI brings computation and data storage closer to the devices, enabling real-time processing and reducing latency for critical applications.",
-      ],
-      image: "./assets/holdingtab.png",
-    },
+   
   ];
 
   const visibleSlides = useBreakpointValue({
@@ -76,7 +72,7 @@ const AITechnologies = () => {
     sm: 2, 
     md: 4, 
     lg: 4, 
-    xl: 5, 
+    xl: 4, 
   });
   const [currentSlide, setCurrentSlide] = useState(0);
   const startIndex = currentSlide;
