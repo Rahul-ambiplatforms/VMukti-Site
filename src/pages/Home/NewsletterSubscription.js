@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import {
   Box,
   Flex,
@@ -13,18 +13,18 @@ import {
   Icon,
   Grid,
   useBreakpointValue,
-} from '@chakra-ui/react'
-import { EmailIcon, ArrowForwardIcon, Divider } from '@chakra-ui/icons'
+} from "@chakra-ui/react";
+import { EmailIcon, ArrowForwardIcon, Divider } from "@chakra-ui/icons";
 import {
   FaFacebookF,
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
   FaYoutube,
-} from 'react-icons/fa'
-import SubscriptionBanner from '../../components/SubscriptionBanner'
+} from "react-icons/fa";
+import SubscriptionBanner from "../../components/SubscriptionBanner";
 
-const PhoneIcon = ({ mr = '10px', w = '21px', h = '21px' }) => (
+const PhoneIcon = ({ mr = "10px", w = "21px", h = "21px" }) => (
   <Box
     as="svg"
     width={w}
@@ -39,81 +39,105 @@ const PhoneIcon = ({ mr = '10px', w = '21px', h = '21px' }) => (
       fill="#3F77A5"
     />
   </Box>
-)
+);
 
 const whoWeAreLinks = [
-  { text: 'About Us', path: '/whoweare' },
-  { text: 'Event Spotlight', path: '/whoweare/eventspotlight' },
-  { text: 'Social Impact', path: '/whoweare/socialimpact' },
-  { text: 'Achievements', path: '/whoweare/achievements' },
-  { text: 'Blogs', path: '/whoweare/blogs' },
-  { text: 'Careers', path: '/whoweare/careers' },
-  { text: 'Help Desk', path: '/whoweare/helpdesk' },
+  { text: "About Us", path: "/whoweare" },
+  { text: "Event Spotlight", path: "/whoweare/eventspotlight" },
+  { text: "Social Impact", path: "/whoweare/socialimpact" },
+  { text: "Achievements", path: "/whoweare/achievements" },
+  { text: "Blogs", path: "/whoweare/blogs" },
+  { text: "Careers", path: "/whoweare/careers" },
+  { text: "Help Desk", path: "/whoweare/helpdesk" },
 ];
 
 const policyLinks = [
-  { text: 'Terms & Condition', path: '/whoweare/terms-and-condition' },
-  { text: 'Trademark Policy', path: '/whoweare/trademark-policy' },
-  { text: 'Warranty Service', path: '/whoweare/warranty-service' },
-  { text: 'Warranty Policy', path: '/whoweare/warranty-policy' },
-  { text: 'Privacy Policy', path: '/whoweare/privacy-policy' },
+  { text: "Terms & Condition", path: "/whoweare/terms-and-condition" },
+  { text: "Trademark Policy", path: "/whoweare/trademark-policy" },
+  { text: "Warranty Service", path: "/whoweare/warranty-service" },
+  { text: "Warranty Policy", path: "/whoweare/warranty-policy" },
+  { text: "Privacy Policy", path: "/whoweare/privacy-policy" },
 ];
 
 const ourServingsLinks = [
-  { text: 'Enterprise', path: '/serving/enterprise' },
-  { text: 'Government', path: '/serving/government' },
-  { text: 'General Consumers', path: '/serving/generalconsumers' },
+  { text: "Enterprise", path: "/serving/enterprise" },
+  { text: "Government", path: "/serving/government" },
+  { text: "General Consumers", path: "/serving/generalconsumers" },
 ];
 
 const ourSolutionsLinks = [
-  { text: 'VMS', path: '/solutions/vms' },
-  { text: 'EMS', path: '/solutions/ems' },
-  { text: 'ICCC', path: '/solutions/iccc' },
-  { text: 'AI Optimized Cloud Services', path: '/solutions/ai-cloud-services' },
-  { text: 'Generative AI in Video Surveillance', path: '/solutions/generative-ai-surveillance' },
-  { text: 'AI-Powered Surveillance Cameras', path: '/solutions/ai-surveillance-cameras' },
-  { text: 'Flying Squad Vehicle (FSV)', path: '/solutions/flying-squad-vehicle' },
-  { text: 'Live Webcasting & Streaming', path: '/solutions/live-webcasting' },
+  { text: "VMS", path: "/solutions/vms" },
+  { text: "EMS", path: "/solutions/ems" },
+  { text: "ICCC", path: "/solutions/iccc" },
+  { text: "AI Optimized Cloud Services", path: "/solutions/ai-cloud-services" },
+  {
+    text: "Generative AI in Video Surveillance",
+    path: "/solutions/generative-ai-surveillance",
+  },
+  {
+    text: "AI-Powered Surveillance Cameras",
+    path: "/solutions/ai-surveillance-cameras",
+  },
+  {
+    text: "Flying Squad Vehicle (FSV)",
+    path: "/solutions/flying-squad-vehicle",
+  },
+  { text: "Live Webcasting & Streaming", path: "/solutions/live-webcasting" },
 ];
 
 const industriesWeServeLinks = [
-  { text: 'Healthcare Industry', path: '/industries/healthcareindustry' },
-  { text: 'Education Industry', path: '/industries/educationindustry' },
-  { text: 'Border Security Industry', path: '/industries/bordersecurityindustry' },
-  { text: 'Election Industry', path: '/industries/election' },
-  { text: 'Banking Industry', path: '/industries/bankingindustry' },
-  { text: 'Transportation Industry', path: '/industries/transportationindustry' },
-  { text: 'City Monitoring Industry', path: '/industries/citymonitoringindustry' },
-  { text: 'Retailer Industry', path: '/industries/retailindustry' },
-  { text: 'Manufacturing Industry', path: '/industries/manufacturingindustry' },
-  { text: 'Agriculture Industry', path: '/industries/agricultureindustry' },
-  { text: 'Warehousing & Logistic Industry', path: '/industries/warehousinglogisticindustry' },
-  { text: 'Sports & Entertainment Industry', path: '/industries/entertainmentindustry' },
-  { text: 'Hospitality Industry', path: '/industries/hospitalityindustry' },
+  { text: "Healthcare Industry", path: "/industries/healthcareindustry" },
+  { text: "Education Industry", path: "/industries/educationindustry" },
+  {
+    text: "Border Security Industry",
+    path: "/industries/bordersecurityindustry",
+  },
+  { text: "Election Industry", path: "/industries/election" },
+  { text: "Banking Industry", path: "/industries/bankingindustry" },
+  {
+    text: "Transportation Industry",
+    path: "/industries/transportationindustry",
+  },
+  {
+    text: "City Monitoring Industry",
+    path: "/industries/citymonitoringindustry",
+  },
+  { text: "Retailer Industry", path: "/industries/retailindustry" },
+  { text: "Manufacturing Industry", path: "/industries/manufacturingindustry" },
+  { text: "Agriculture Industry", path: "/industries/agricultureindustry" },
+  {
+    text: "Warehousing & Logistic Industry",
+    path: "/industries/warehousinglogisticindustry",
+  },
+  {
+    text: "Sports & Entertainment Industry",
+    path: "/industries/entertainmentindustry",
+  },
+  { text: "Hospitality Industry", path: "/industries/hospitalityindustry" },
 ];
 
 const NewsletterSubscription = () => {
-  const [email, setEmail] = useState('')
-  const [isSubscribed, setIsSubscribed] = useState(false)
+  const [email, setEmail] = useState("");
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
   const handleSubscribe = () => {
     if (email) {
-      setIsSubscribed(true)
-      console.log('Subscribed with email:', email)
+      setIsSubscribed(true);
+      console.log("Subscribed with email:", email);
     } else {
-      alert('Please enter a valid email address.')
+      alert("Please enter a valid email address.");
     }
-  }
+  };
   const buttonWidth = useBreakpointValue({
-    base: '120px',
-    md: '130px',
-    lg: '146px',
-  })
+    base: "120px",
+    md: "130px",
+    lg: "146px",
+  });
   const buttonHeight = useBreakpointValue({
-    base: '40px',
-    md: '45px',
-    lg: '50px',
-  })
+    base: "40px",
+    md: "45px",
+    lg: "50px",
+  });
 
   return (
     <>
@@ -121,7 +145,7 @@ const NewsletterSubscription = () => {
         padding="4% 2% 1% 2%"
         // fontFamily="'Wix Madefor Display', sans-serif"
         fontWeight={600}
-        bg={'#E7E7E7'}
+        bg={"#E7E7E7"}
       >
         {/* Subscription Banner */}
         <SubscriptionBanner />
@@ -129,17 +153,11 @@ const NewsletterSubscription = () => {
         {/* Information Section */}
         <Flex flexWrap="wrap" gap="20px" mb="30px" minW="250px">
           {/* Who we are */}
-          <Box
-            bg="white"
-            borderRadius="24px"
-            p="20px"
-            flex="2"
-          >
+          <Box bg="white" borderRadius="24px" p="20px" flex="2">
             <Heading
               fontSize="16px"
               fontWeight={700}
-            // mb="20px"
-
+              // mb="20px"
             >
               Who we are
             </Heading>
@@ -157,7 +175,7 @@ const NewsletterSubscription = () => {
                   {whoWeAreLinks.map((item, index) => (
                     <ListItem
                       key={index}
-                      _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                      _hover={{ color: "#3F77A5", cursor: "pointer" }}
                       color="#696969"
                       fontSize="14px"
                       fontWeight="500"
@@ -173,7 +191,7 @@ const NewsletterSubscription = () => {
                   {policyLinks.map((item, index) => (
                     <ListItem
                       key={index}
-                      _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                      _hover={{ color: "#3F77A5", cursor: "pointer" }}
                       color="#696969"
                       fontSize="14px"
                       fontWeight="500"
@@ -189,17 +207,12 @@ const NewsletterSubscription = () => {
 
           {/* Contact Us & Our Servings */}
           <Flex flexDirection="column" flex="1" minW="250px">
-            <Box
-              bg="#BECEDC"
-              borderRadius="15px"
-              p="20px"
-              mb="20px"
-            >
+            <Box bg="#BECEDC" borderRadius="15px" p="20px" mb="20px">
               <Heading
                 fontSize="16px"
                 // mb="10px"
                 fontWeight={700}
-              // fontFamily="'Wix Madefor Display', sans-serif"
+                // fontFamily="'Wix Madefor Display', sans-serif"
               >
                 Our Servings
               </Heading>
@@ -210,11 +223,11 @@ const NewsletterSubscription = () => {
                 mt="1%"
                 bg="#3F77A5"
               />
-              <List spacing="10px" mt={'5%'}>
+              <List spacing="10px" mt={"5%"}>
                 {ourServingsLinks.map((item, index) => (
                   <ListItem
                     key={index}
-                    _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                    _hover={{ color: "#3F77A5", cursor: "pointer" }}
                     fontSize="14px"
                     fontWeight="500"
                   >
@@ -234,8 +247,8 @@ const NewsletterSubscription = () => {
               <Heading
                 fontSize="16px"
                 fontWeight={700}
-              // fontFamily="'Wix Madefor Display', sans-serif"
-              // mb="10px"
+                // fontFamily="'Wix Madefor Display', sans-serif"
+                // mb="10px"
               >
                 Contact Us
               </Heading>
@@ -257,38 +270,40 @@ const NewsletterSubscription = () => {
                   (+91) 000 000 0000
                 </Text>
               </Flex>
-              <Button
-                width={buttonWidth}
-                height={buttonHeight}
-                justifyContent="space-between"
-                alignItems="center"
-                bg="white"
-                color="#3F77A5"
-                borderRadius="20px"
-                flexShrink={0}
-                // ml={{ base: '5px', md: '10px', lg: '15px' }}
-                mt="20%"
-                fontWeight={700}
-                gap="2"
-                _hover={{
-                  bg: "#E0F2FE",  // Light blue background on hover
-                  color: "#2C5E84",
-                }}
-              >
-                Book Demo
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 17 18"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+              <Link href={"/contactus"}>
+                <Button
+                  width={buttonWidth}
+                  height={buttonHeight}
+                  justifyContent="space-between"
+                  alignItems="center"
+                  bg="white"
+                  color="#3F77A5"
+                  borderRadius="20px"
+                  flexShrink={0}
+                  // ml={{ base: '5px', md: '10px', lg: '15px' }}
+                  mt="20%"
+                  fontWeight={700}
+                  gap="2"
+                  _hover={{
+                    bg: "#E0F2FE", // Light blue background on hover
+                    color: "#2C5E84",
+                  }}
                 >
-                  <path
-                    d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
-                    fill="#3F77A5"
-                  />
-                </svg>
-              </Button>
+                  Book Demo
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 17 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
+                      fill="#3F77A5"
+                    />
+                  </svg>
+                </Button>
+              </Link>
             </Box>
           </Flex>
 
@@ -304,8 +319,8 @@ const NewsletterSubscription = () => {
             <Heading
               fontSize="16px"
               fontWeight={700}
-            // fontFamily="'Wix Madefor Display', sans-serif"
-            // mb="10px"
+              // fontFamily="'Wix Madefor Display', sans-serif"
+              // mb="10px"
             >
               Our Solutions
             </Heading>
@@ -321,7 +336,7 @@ const NewsletterSubscription = () => {
               {ourSolutionsLinks.map((item, index) => (
                 <ListItem
                   key={index}
-                  _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                  _hover={{ color: "#3F77A5", cursor: "pointer" }}
                   fontSize="14px"
                   fontWeight="500"
                 >
@@ -333,18 +348,12 @@ const NewsletterSubscription = () => {
           </Box>
 
           {/* Industries we serve */}
-          <Box
-            bg="#BECEDC"
-            borderRadius="15px"
-            p="20px"
-            flex="1"
-            minW="250px"
-          >
+          <Box bg="#BECEDC" borderRadius="15px" p="20px" flex="1" minW="250px">
             <Heading
               fontSize="16px"
               fontWeight={700}
-            // fontFamily="'Wix Madefor Display', sans-serif"
-            // mb="10px"
+              // fontFamily="'Wix Madefor Display', sans-serif"
+              // mb="10px"
             >
               Industries we serve
             </Heading>
@@ -360,7 +369,7 @@ const NewsletterSubscription = () => {
               {industriesWeServeLinks.map((item, index) => (
                 <ListItem
                   key={index}
-                  _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                  _hover={{ color: "#3F77A5", cursor: "pointer" }}
                   fontSize="14px"
                   fontWeight="500"
                 >
@@ -376,7 +385,7 @@ const NewsletterSubscription = () => {
         <Box>
           {/* Logo and Social Media Icons */}
           <Grid
-            templateColumns={{ base: '1fr 1fr', md: '1fr 1fr 1fr' }}
+            templateColumns={{ base: "1fr 1fr", md: "1fr 1fr 1fr" }}
             alignItems="center" // Vertically center content
             padding="20px 0 0 0"
             gap={4}
@@ -417,7 +426,7 @@ const NewsletterSubscription = () => {
 
             <Box
               justifySelf="center"
-              gridColumn={{ base: 'span 2', md: 'span 1' }}
+              gridColumn={{ base: "span 2", md: "span 1" }}
               order={{ base: 3, md: 2 }}
             >
               <Text fontSize="12px" color="gray.600">
@@ -448,7 +457,7 @@ const NewsletterSubscription = () => {
                       />
                     </svg>
                   ),
-                  link: '#',
+                  link: "#",
                 },
                 {
                   svg: (
@@ -465,7 +474,7 @@ const NewsletterSubscription = () => {
                       />
                     </svg>
                   ),
-                  link: '#',
+                  link: "#",
                 },
                 {
                   svg: (
@@ -484,7 +493,7 @@ const NewsletterSubscription = () => {
                       />
                     </svg>
                   ),
-                  link: '#',
+                  link: "#",
                 },
                 {
                   svg: (
@@ -501,7 +510,7 @@ const NewsletterSubscription = () => {
                       />
                     </svg>
                   ),
-                  link: '#',
+                  link: "#",
                 },
                 {
                   svg: (
@@ -518,7 +527,7 @@ const NewsletterSubscription = () => {
                       />
                     </svg>
                   ),
-                  link: '#',
+                  link: "#",
                 },
               ].map((social, index) => (
                 <Link
@@ -526,9 +535,9 @@ const NewsletterSubscription = () => {
                   href={social.link}
                   color="blue.500"
                   _hover={{
-                    color: 'blue.700',
-                    transform: 'scale(1.2)',
-                    transition: 'all 0.3s ease',
+                    color: "blue.700",
+                    transform: "scale(1.2)",
+                    transition: "all 0.3s ease",
                   }}
                 >
                   {social.svg}
@@ -539,7 +548,7 @@ const NewsletterSubscription = () => {
         </Box>
       </Box>
     </>
-  )
-}
+  );
+};
 
-export default NewsletterSubscription
+export default NewsletterSubscription;

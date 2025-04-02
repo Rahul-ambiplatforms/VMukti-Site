@@ -11,7 +11,7 @@ import PageContentWrapper from "./PageContentWrapper";
 import { motion } from "framer-motion";
 import HeadingAnimation from "./Animation/Text/HeadingAnimation";
 import SubHeadingAnimation from "./Animation/Text/SubHeadingAnimation";
-
+import { Link } from "react-router-dom";
 const MotionBox = motion(Box);
 const MotionText = motion(Text);
 const MotionButton = motion(Button);
@@ -516,6 +516,8 @@ const IndustryContent = ({ props, content }) => {
               fontSize="16px"
               fontWeight="700"
               borderRadius="20px"
+              as={Link}
+              to="/industries"
               display="flex"
               alignItems="center"
               justifyContent="center"
