@@ -1,11 +1,12 @@
 import {
     Box,
     Button,
+    Center,
     Container,
     Flex,
     Heading,
     HStack,
-  
+
     Text,
     VStack,
 } from "@chakra-ui/react";
@@ -16,17 +17,17 @@ import CulturalSection from "../../components/CulturalSection"; // Import the ne
 
 export default function VMuktiCareers() {
     const gridItems = [
-        { title: "Life at VMukti", description: "A dynamic workplace where innovation thrives, collaboration is encouraged, and every contribution matters.", bgColor: "transparent", textColor: "blue.600" },
+        { title: "Life at VMukti", description: "A dynamic workplace where innovation thrives, collaboration is encouraged, and every contribution matters.", bgColor: "transparent", textColor: "blue.600", alignItems: "Center" },
         { bgColor: "#BECEDC" },
         {},
-        { title: "Growth", description: "Unlock your potential with continuous learning, mentorship, and career advancement opportunities.", bgColor: "transparent", textColor: "orange.500" },
+        { title: "Growth", description: "Unlock your potential with continuous learning, mentorship, and career advancement opportunities.", bgColor: "transparent", textColor: "orange.500", alignItems: "Center" },
         {},
-        { title: "Culture", description: "We foster a supportive, inclusive, and fast-paced environment that empowers creativity and teamwork.", bgColor: "transparent", textColor: "orange.500" },
+        { title: "Culture", description: "We foster a supportive, inclusive, and fast-paced environment that empowers creativity and teamwork.", bgColor: "transparent", textColor: "orange.500", alignItems: "Center" },
         { bgColor: "#BECEDC" },
         {},
         { bgColor: "transparent" },
         {},
-        { title: "Work-Life Balance", description: "We value flexibility and well-being, ensuring you excel at work while enjoying life.", bgColor: "transparent", textColor: "blue.600" },
+        { title: "Work-Life Balance", description: "We value flexibility and well-being, ensuring you excel at work while enjoying life.", bgColor: "transparent", textColor: "blue.600", alignItems: "Center" },
         {},
     ];
 

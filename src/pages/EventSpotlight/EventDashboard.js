@@ -1,6 +1,6 @@
 import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, color } from "framer-motion";
 import CulturalSection from "../../components/CulturalSection";
 import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation";
 import SubHeadingAnimation from "../../components/Animation/Text/SubHeadingAnimation";
@@ -158,34 +158,44 @@ const EventSpotlight = () => {
     { bgColor: "transparent" },
     {
       title: "2025",
+      subtitle: "Milestone", // Add this new field
       description: "Participated in Gitex Technology Week Dubai 2017",
       bgColor: "white",
+      textColor: "black" // Add if needed
     },
     { bgColor: "transparent" },
     { title: "Attended Events", bgColor: "transparent" },
     {
       title: "2024",
+      subtitle: "Milestone", // Add this new field
       description: "Participated in Gitex Technology Week Dubai 2017",
       bgColor: "white",
     },
     { bgColor: "transparent" },
     {
       title: "2019",
+      subtitle: "Milestone", // Add this new field
       description: "Participated in Gitex Technology Week Dubai 2017",
       bgColor: "#BECEDC",
+
     },
     {
       title: "2019",
+      subtitle: "Milestone", // Add this new field
+
       description: "Participated in Gitex Technology Week Dubai 2017",
       bgColor: "white",
     },
     {
       title: "2019",
+      subtitle: "Milestone", // Add this new field
+      textColor: "white",
       description: "Participated in Gitex Technology Week Dubai 2017",
       bgColor: "#3F77A5",
     },
     {
       title: "2017",
+      subtitle: "Milestone", // Add this new field
       description: "Participated in Gitex Technology Week Dubai 2017",
       bgColor: "white",
     },
@@ -203,7 +213,7 @@ const EventSpotlight = () => {
       >
         {/* Title Section */}
         {/* <Box pt={{ base: 8, md: 16 }} mb={{ base: 4, md: 8 }}>*/}
-        <Box>
+        <Box pt={{ base: 16, md: 0 }}>
           <HeadingAnimation>
             <Text
               fontSize={{ base: "20px", md: "32px", lg: "48px" }}
@@ -305,7 +315,7 @@ const EventSpotlight = () => {
             position="relative"
             overflow="hidden"
             borderRadius="24px"
-            height={{ base: "auto", md: "521px" }}
+            height={{ base: "700px", md: "521px" }}
             bg="white"
             py={6}
           >
