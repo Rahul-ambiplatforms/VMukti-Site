@@ -15,37 +15,37 @@ const industriesData = {
                 title: 'Automated Defect Detection',
                 description:
                     'AI-powered computer vision inspects products in real-time, reducing defects and ensuring top-quality output.',
-                image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "man1.png",
                 image_alt: "Automated Defect Detection"
             },
             {
                 "title": "Predictive Equipment Maintenance",
                 "description": "AI analyzes machine performance to predict failures, minimizing downtime and maintenance costs.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "man2.png",
                 "image_alt": "Predictive Equipment Maintenance"
             },
             {
                 "title": "Worker Safety & Compliance Monitoring",
                 "description": "AI detects safety violations and hazardous conditions, preventing workplace accidents.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "man3.png",
                 "image_alt": "Worker Safety & Compliance Monitoring"
             },
             {
                 "title": "Supply Chain Optimization",
                 "description": "AI forecasts demand and streamlines inventory management, preventing shortages and excess stock.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "man4.png",
                 "image_alt": "Supply Chain Optimization"
             },
             {
                 "title": "Smart Robotics & Process Automation",
                 "description": "AI-driven robots handle repetitive tasks with precision, increasing efficiency and reducing labor costs",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "man5.png",
                 "image_alt": "Smart Robotics & Process Automation"
             },
             {
                 "title": "Energy Efficiency & Waste Reduction",
                 "description": "AI optimizes energy usage, reducing power waste and enhancing sustainability.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "man6.png",
                 "image_alt": "Energy Efficiency & Waste Reduction"
             },
         ],
@@ -117,37 +117,37 @@ const industriesData = {
             {
                 "title": "Intrusion Detection & Perimeter Security",
                 "description": "AI scans borders for unauthorized movements, preventing illegal crossings with real-time alerts.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "def1.png",
                 "image_alt": "Intrusion Detection & Perimeter Security"
             },
             {
                 "title": "Facial Recognition for Entry Control",
                 "description": "AI enhances real-time identity verification, detecting high-risk travelers.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "def2.png",
                 "image_alt": "Facial Recognition for Entry Control"
             },
             {
                 "title": "Suspicious Object Detection in Cargo",
                 "description": "AI scans shipments for hidden compartments, preventing smuggling and improving customs security.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "def3.png",
                 "image_alt": "Suspicious Object Detection in Cargo"
             },
             {
                 "title": "Automated Weapon & Threat Detection",
                 "description": "AI detects firearms, explosives, and contraband, triggering instant security alerts.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "def4.png",
                 "image_alt": "Automated Weapon & Threat Detection"
             },
             {
                 "title": "Border Area Climate & Terrain Analysis",
                 "description": "AI analyzes satellite data to predict weather risks and ensure safe border operations.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "def5.png",
                 "image_alt": "Border Area Climate & Terrain Analysis"
             },
             {
                 "title": "Automated Checkpoint Security Screening",
                 "description": "AI enhances body scans, reducing wait times while improving screening accuracy.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "def6.png",
                 "image_alt": "Automated Checkpoint Security Screening"
             }
         ],
@@ -217,39 +217,38 @@ const industriesData = {
         keyApplications: [
             {
                 title: 'Patient Monitoring & Fall Detection',
-                description:
-                    'AI detects falls and sudden movements for quick medical intervention.',
-                image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                description: 'AI detects falls and sudden movements for quick medical intervention.',
+                image: "hel1.png",
                 image_alt: "Patient Monitoring & Fall Detection"
             },
             {
                 "title": "Smart ICU Surveillance",
                 "description": "AI ensures continuous ICU monitoring, minimizing human oversight errors.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "hel2.png",
                 "image_alt": "Smart ICU Surveillance"
             },
             {
                 "title": "AI-Assisted Diagnostics & Patient Insights",
                 "description": "AI enhances diagnosis accuracy and speeds up medical decisions.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "hel3.png",
                 "image_alt": "AI-Assisted Diagnostics & Patient Insights"
             },
             {
                 "title": "Hospital Security & Access Control",
                 "description": "AI strengthens security by monitoring access to restricted areas.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "hel4.png",
                 "image_alt": "Hospital Security & Access Control"
             },
             {
                 "title": "Emergency Room Triage Optimization",
                 "description": "AI prioritizes critical patients for faster emergency care.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "hel5.png",
                 "image_alt": "Emergency Room Triage Optimization"
             },
             {
                 "title": "Medication Dispensing & Tracking",
                 "description": "AI prevents prescription errors and improves drug management.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "hel6.png",
                 "image_alt": "Medication Dispensing & Tracking"
             },
         ],
@@ -315,7 +314,7 @@ const industriesData = {
     },
     retailindustry: {
         title: [
-            { text: 'Retails', color: 'black' },
+            { text: 'Revolutionizing', color: 'black' },
             { text: 'Retail with AI:', color: '#3F77A5' }, // Blue
             { text: 'Smarter Stores, Happier Customers,', color: 'black' },
             { text: 'Maximized Profits', color: '#db7b3a' }, // Orange
@@ -328,39 +327,39 @@ const industriesData = {
         keyApplications: [
             {
                 title: 'Smart Inventory Management',
-                description:
-                    'Computer Vision tracks stock in real-time, while Deep Learning predicts demand, preventing stockouts and excess inventory.',
-                image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
-                image_alt: "Smart Inventory Management"
+                description: 'Computer Vision tracks stock in real-time...',
+                image: "ret1.png", // Path from public folder
+                image_alt: "Smart Inventory Management",
+                bgColor: "white" // Add other props as needed
             },
             {
                 "title": "Automated Theft & Fraud Detection",
                 "description": "AI detects suspicious activity and unauthorized product removal, sending instant security alerts to prevent losses.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                "image": "ret2.png",
                 "image_alt": "Automated Theft & Fraud Detection"
             },
             {
                 "title": "Customer Behavior Analytics",
                 "description": "AI maps customer movement, analyzes purchase history, and predicts trends to optimize store layouts and marketing.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                "image": "ret3.png",
                 "image_alt": "Customer Behavior Analytics"
             },
             {
                 "title": "Personalized Shopping Assistance",
                 "description": "GPT-powered chatbots process queries and refine recommendations, improving customer satisfaction and sales.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                "image": "ret4.png",
                 "image_alt": "Personalized Shopping Assistance"
             },
             {
                 "title": "Automated Checkout & Billing",
                 "description": "AI recognizes products at self-checkouts, speeding up transactions and reducing errors.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                "image": "ret5.png",
                 "image_alt": "Automated Checkout & Billing"
             },
             {
                 "title": "Smart Supply Chain Optimization",
                 "description": "AI improves logistics, reduces delays, and cuts costs by optimizing distribution and warehouse management.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                "image": "ret6.png",
                 "image_alt": "Smart Supply Chain Optimization"
             },
         ],
@@ -435,38 +434,38 @@ const industriesData = {
                 title: 'Smart Attendance & Campus Security',
                 description:
                     'AI automates attendance tracking and prevents unauthorized access.',
-                image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "ed1.png",
                 image_alt: "Smart Attendance & Campus Security"
             },
             {
                 "title": "Personalized Learning & Student Engagement",
                 "description": "AI adapts study materials based on student performance for better retention.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "ed2.png",
                 "image_alt": "Personalized Learning & Student Engagement"
             },
             {
                 "title": "Cheating & Anomaly Detection in Exams",
                 "description": "AI detects suspicious behavior in exams to ensure academic integrity.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "ed3.png",
                 "image_alt": "Cheating & Anomaly Detection in Exams"
             },
             {
                 "title": "Automated Campus Announcements & Alerts",
                 "description": "AI delivers real-time notifications to students and staff.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "ed4.png",
                 "image_alt": "Automated Campus Announcements & Alerts"
             },
             {
-                "title": "Emergency Room Triage Optimization",
-                "description": "AI prioritizes critical patients for faster emergency care.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
-                "image_alt": "Emergency Room Triage Optimization"
+                "title": "AI-Powered Virtual Classrooms & Lecture Summaries",
+                "description": "AI transcribes lectures and provides instant answers to student queries.",
+                image: "ed5.png",
+                "image_alt": "AI-Powered Virtual Classrooms & Lecture Summaries"
             },
             {
-                "title": "Medication Dispensing & Tracking",
-                "description": "AI prevents prescription errors and improves drug management.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
-                "image_alt": "Medication Dispensing & Tracking"
+                "title": "Real-Time Behavioral Analysis for Student Well-being",
+                "description": "AI monitors student performance levels to identify those needing support.",
+                image: "ed6.png",
+                "image_alt": "Real-Time Behavioral Analysis for Student Well-being"
             },
         ],
         keyBenefits: [
@@ -537,37 +536,37 @@ const industriesData = {
                 title: 'Fraud Detection & Prevention',
                 description:
                     'AI monitors transactions and ATM footage to detect fraud in real time.',
-                image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "fin1.png",
                 image_alt: "Fraud Detection & Prevention"
             },
             {
                 "title": "Automated Risk Assessment",
                 "description": "AI analyzes financial trends to optimize loan approvals and investment decisions.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "fin2.png",
                 "image_alt": "Automated Risk Assessment"
             },
             {
                 "title": "Real-Time Market Analysis & Trading",
                 "description": "AI predicts market trends for smarter investment strategies.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "fin3.png",
                 "image_alt": "Real-Time Market Analysis & Trading"
             },
             {
                 "title": "ATM & Branch Security Management",
                 "description": "AI detects ATM tampering and enhances security with facial recognition.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "fin4.png",
                 "image_alt": "ATM & Branch Security Management"
             },
             {
                 "title": "Loan Default Prediction & Debt Collection Optimization",
                 "description": "AI forecasts defaults and improves debt recovery",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "fin5.png",
                 "image_alt": "Loan Default Prediction & Debt Collection Optimization"
             },
             {
                 "title": "Regulatory Compliance & Audit Automation",
                 "description": "AI ensures compliance by automating audits and risk assessments.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "fin6.png",
                 "image_alt": "Regulatory Compliance & Audit Automation"
             },
         ],
@@ -647,37 +646,37 @@ const industriesData = {
                 title: 'First Level Checking (FLC)',
                 description:
                     'AI-powered cameras detect anomalies in EVMs & VVPATs, ensuring integrity and preventing tampering.',
-                image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "el1.png",
                 image_alt: "First Level Checking (FLC)"
             },
             {
                 "title": "Webcasting of Elections",
                 "description": "Live AI streaming enables real-time polling booth monitoring, ensuring transparency and public trust.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "el2.png",
                 "image_alt": "Webcasting of Elections"
             },
             {
                 "title": "Flying Squad Vehicle (FSV) Monitoring",
                 "description": "AI-integrated PTZ cameras and GPS tracking detect violations and enable swift response.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "el3.png",
                 "image_alt": "Flying Squad Vehicle (FSV) Monitoring"
             },
             {
                 "title": "Check post Monitoring",
                 "description": "AI scans for suspicious activities, ensuring secure election zones and reducing malpractice.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "el4.png",
                 "image_alt": "Check post Monitoring"
             },
             {
                 "title": "Counting Process Surveillance",
                 "description": "Multi-camera setups prevent discrepancies, with encrypted cloud storage for tamper-proof records.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "el5.png",
                 "image_alt": "Counting Process Surveillance"
             },
             {
                 "title": "Optical Character Recognition (OCR)",
                 "description": "AI extracts and integrates election data for faster, error-free reporting.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "el6.png",
                 "image_alt": "Optical Character Recognition (OCR)"
             },
         ],
@@ -759,37 +758,37 @@ const industriesData = {
             {
                 "title": "Smart Guest Check-In & Facial Recognition",
                 "description": "AI enables contactless check-ins with facial recognition, enhancing security and convenience.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "hos1.png",
                 "image_alt": "Facial Recognition for Secure Check-In"
             },
             {
                 "title": "Personalized Guest Experience & AI Concierge",
                 "description": "AI processes preferences and past stays to offer tailored services and recommendations.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "hos2.png",
                 "image_alt": "AI Concierge for Personalized Services"
             },
             {
                 "title": "Automated Room Service & Housekeeping Monitoring",
                 "description": "AI schedules housekeeping and detects unclean areas, ensuring prompt service.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "hos3.png",
                 "image_alt": "AI for Efficient Housekeeping"
             },
             {
                 "title": "Energy Optimization & Smart Room Controls",
                 "description": "AI learns guest habits to optimize energy use, lowering costs and enhancing sustainability.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "hos4.png",
                 "image_alt": "Smart Energy Management in Rooms"
             },
             {
                 "title": "Food Safety & Quality Monitoring",
                 "description": "AI ensures hygiene compliance by detecting expired ingredients and improper food handling.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "hos5.png",
                 "image_alt": "AI-Powered Food Safety Monitoring"
             },
             {
                 "title": "Fraud Prevention & Secure Transactions",
                 "description": "AI detects suspicious payments and prevents fraud, ensuring secure financial operations.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "hos6.png",
                 "image_alt": "AI for Secure Financial Transactions"
             }
         ],
@@ -894,37 +893,37 @@ const industriesData = {
             {
                 "title": "Traffic Flow Optimization",
                 "description": "AI adjusts traffic signals in real-time to reduce congestion and delays.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "trs1.png",
                 "image_alt": "Traffic Flow Optimization"
             },
             {
                 "title": "Autonomous Vehicle Navigation",
                 "description": "AI enables self-driving cars to navigate safely and avoid obstacles.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "trs2.png",
                 "image_alt": "Autonomous Vehicle Navigation"
             },
             {
                 "title": "Accident Detection & Emergency Response",
                 "description": "AI detects crashes and instantly alerts emergency services.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "trs3.png",
                 "image_alt": "Accident Detection & Emergency Response"
             },
             {
                 "title": "Predictive Maintenance for Fleet Management",
                 "description": "AI forecasts vehicle breakdowns, preventing unexpected failures.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "trs4.png",
                 "image_alt": "Predictive Maintenance for Fleet Management"
             },
             {
                 "title": "Driver Monitoring & Fatigue Detection",
                 "description": "AI tracks driver behavior to prevent drowsy driving accidents.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "trs5.png",
                 "image_alt": "Driver Monitoring & Fatigue Detection"
             },
             {
                 "title": "Smart Parking & Space Optimization",
                 "description": "AI guides drivers to available parking spots, reducing congestion.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "trs6.png",
                 "image_alt": "Smart Parking & Space Optimization"
             }
         ],
@@ -1023,37 +1022,37 @@ const industriesData = {
             {
                 "title": "Real-Time Crime Detection & Prevention",
                 "description": "AI scans surveillance feeds to detect suspicious activities and prevent crimes.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "city1.png",
                 "image_alt": "Real-Time Crime Detection & Prevention"
             },
             {
                 "title": "Public Safety & Crowd Management",
                 "description": "AI monitors crowds and alerts authorities to potential risks.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "city2.png",
                 "image_alt": "Public Safety & Crowd Management"
             },
             {
                 "title": "License Plate & Vehicle Recognition",
                 "description": "AI identifies vehicles and detects stolen or unauthorized ones.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "city3.png",
                 "image_alt": "License Plate & Vehicle Recognition"
             },
             {
                 "title": "Waste Management & Smart City Hygiene",
                 "description": "AI predicts waste accumulation and optimizes sanitation.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "city4.png",
                 "image_alt": "Waste Management & Smart City Hygiene"
             },
             {
                 "title": "Smart Parking & Space Utilization",
                 "description": "AI helps drivers find parking spots, reducing congestion.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "city5.png",
                 "image_alt": "Smart Parking & Space Utilization"
             },
             {
                 "title": "Emergency Response & Disaster Management",
                 "description": "AI predicts disasters and coordinates emergency response.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "city6.png",
                 "image_alt": "Emergency Response & Disaster Management"
             }
         ],
@@ -1168,37 +1167,37 @@ const industriesData = {
             {
                 "title": "Automated Inventory Management",
                 "description": "AI tracks stock levels in real-time, reducing errors and improving accuracy.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "war1.png",
                 "image_alt": "Automated Inventory Management"
             },
             {
                 "title": "",
                 "description": "AI detects barcodes and optimizes sorting, ensuring faster, error-free distribution.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "war2.png",
                 "image_alt": "g"
             },
             {
                 "title": "Automated Irrigation Management",
                 "description": "AI inspects products for defects, ensuring compliance and reducing returns.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "war3.png",
                 "image_alt": "Automated Irrigation Management"
             },
             {
                 "title": "Livestock Health & Activity Tracking",
                 "description": "AI predicts inventory movement to maximize storage efficiency.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "war4.png",
                 "image_alt": "Livestock Health & Activity Tracking"
             },
             {
                 "title": "Supply Chain & Market Forecasting",
                 "description": "AI tracks vehicle conditions and alerts for maintenance to prevent breakdowns.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "war5.png",
                 "image_alt": "Supply Chain & Market Forecasting"
             },
             {
                 "title": "Farm Security & Intrusion Detection",
                 "description": "AI predicts accurate delivery times for better planning.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "war6.png",
                 "image_alt": "Farm Security & Intrusion Detection"
             }
         ],
@@ -1272,37 +1271,37 @@ const industriesData = {
             {
                 "title": "Automated Crop Health Monitoring",
                 "description": "AI processes crowd reactions and social media feedback to improve fan engagement.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "ent1.png",
                 "image_alt": "Automated Crop Health Monitoring"
             },
             {
                 "title": "",
                 "description": "AI tracks player movements and rule violations to assist referees in accurate decision-making.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "ent2.png",
                 "image_alt": "g"
             },
             {
                 "title": "Automated Irrigation Management",
                 "description": "AI analyzes fan preferences to deliver tailored sports highlights and recommendations.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "ent3.png",
                 "image_alt": "Automated Irrigation Management"
             },
             {
                 "title": "Livestock Health & Activity Tracking",
                 "description": "AI monitors player biomechanics to optimize training and reduce injury risks.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "ent4.png",
                 "image_alt": "Livestock Health & Activity Tracking"
             },
             {
                 "title": "Supply Chain & Market Forecasting",
                 "description": "AI predicts game outcomes and detects fraudulent betting activities.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "ent5.png",
                 "image_alt": "Supply Chain & Market Forecasting"
             },
             {
                 "title": "Farm Security & Intrusion Detection",
                 "description": "AI optimizes seating, monitors crowd density, and improves event security.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "ent6.png",
                 "image_alt": "Farm Security & Intrusion Detection"
             }
         ],
@@ -1386,37 +1385,37 @@ const industriesData = {
             {
                 "title": "Automated Crop Health Monitoring",
                 "description": "AI detects diseases and nutrient deficiencies in crops early to prevent losses.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "agr1.png",
                 "image_alt": "Automated Crop Health Monitoring"
             },
             {
                 "title": "Smart Pest & Weed Detection",
                 "description": "AI detects pests and weeds, enabling precise pesticide use and reducing waste.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "agr2.png",
                 "image_alt": "Smart Pest & Weed Detection"
             },
             {
                 "title": "Automated Irrigation Management",
                 "description": "AI adjusts water usage based on climate and soil conditions, conserving water",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "agr3.png",
                 "image_alt": "Automated Irrigation Management"
             },
             {
                 "title": "Livestock Health & Activity Tracking",
                 "description": "AI monitors animal health and behavior for early disease detection.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "agr4.png",
                 "image_alt": "Livestock Health & Activity Tracking"
             },
             {
                 "title": "Supply Chain & Market Forecasting",
                 "description": "AI predicts market trends to help farmers sell at the best prices.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "agr5.png",
                 "image_alt": "Supply Chain & Market Forecasting"
             },
             {
                 "title": "Farm Security & Intrusion Detection",
                 "description": "AI detects unauthorized intrusions and alerts farmers instantly.",
-                "image": "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+                image: "agr6.png",
                 "image_alt": "Farm Security & Intrusion Detection"
             }
         ],

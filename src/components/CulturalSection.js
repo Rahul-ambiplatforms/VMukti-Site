@@ -19,7 +19,7 @@ const floatingAnimation = {
 
 export default function CulturalSection({ gridItems }) {
   return (
-    <Box py={{ base: 6, md: 8 }} position="relative" overflow="hidden">
+    <Box py={{ base: 6, md: 0 }} position="relative" overflow="hidden">
       <Container
         maxW={{ base: "100%", lg: "100%" }} // Preserve original large screen width
         px={{ base: 4, md: 0 }} // Original padding values
