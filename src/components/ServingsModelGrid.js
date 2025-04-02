@@ -10,7 +10,7 @@ const popAnimation = {
     opacity: 1,
     transition: { duration: 0.5, ease: "easeOut" },
   },
-  viewport:{once:"false"}
+  viewport: { once: "false" }
 };
 const ServingsModelGrid = ({ title, description, cards }) => {
   return (
@@ -46,7 +46,7 @@ const ServingsModelGrid = ({ title, description, cards }) => {
             <>
               <Flex direction="column" gap={5}>
                 <motion.img
-                  src={card.image}
+                  src={`${process.env.PUBLIC_URL}/assets/${card.image}`}
                   alt={card.image_alt}
                   width="100%"
                   height={{ base: "200px", md: "368px" }}

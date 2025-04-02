@@ -9,27 +9,31 @@ const AdvancedComputerVision = ({
   title1 = "Advanced Computer",
   title2 = "Vision & Image Intelligence",
   subtitle = "AI-Powered Visual Processing",
-  description = "Extracts, analyzes, and interprets video data in real-time.",
+  // description = "Extracts, analyzes, and interprets video data in real-time.",
   cards = [
     {
-      type: "video",
-      label: "Video Placeholder",
-      media: "https://www.w3schools.com/html/mov_bbb.mp4",
+      type: "image",
+      label: "Real-Time Monitoring",
+      media: "/assets/car.png",
+      description: "IoT-enabled cameras and sensors continuously track environmental changes and security events.",
     },
     {
       type: "image",
-      label: "Scene Understanding",
-      media: "/assets/car.png",
+      label: "End-to-End Security",
+      media: "/assets/ete.png",
+      description: "Ensures encrypted data transmission and secure cloud or on-prem storage",
     },
     {
       type: "image",
-      label: "Multi-Modal Recognition",
-      media: "/assets/car.png",
+      label: "Seamless System Integration",
+      media: "/assets/ssi.png",
+      description: "Connects effortlessly with third-party platforms for enhanced situational awareness.",
     },
     {
       type: "image",
-      label: "Automated Decision Making",
-      media: "/assets/car.png",
+      label: "Automated Insights",
+      media: "/assets/ssi1.png",
+      description: "Transforms sensor data into actionable alerts for proactive decision-making",
     },
   ],
   backgroundImage = "/assets/VMuktidot.png",
@@ -248,7 +252,7 @@ const AdvancedComputerVision = ({
                     />
                   </Text>
                   <Text whiteSpace="nowrap" fontSize={{ base: "12px", md: "14px" }} color="#696969">
-                    {description}
+                    {card.description}
                   </Text>
                 </Box>
               )}
