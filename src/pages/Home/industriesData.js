@@ -158,7 +158,7 @@ const industriesData = [
     position: [3, 4],
     bgColor: '#BECEDC',
     textColor: 'black',
-    dashColor: 'white',
+    dashColor: '#3F77A5',
     image:"./assets/WarehousingLogisticIndustry.png"
   },
 ]

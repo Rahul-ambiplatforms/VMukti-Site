@@ -8,7 +8,7 @@ const industriesData = {
         "para": "AI is transforming manufacturing with automation, predictive maintenance, and intelligent quality control, optimizing efficiency and reducing downtime.",
         small_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
         small_image_alt: "Closeup shot of a bee on a chamomile flower",
-        large_image: "manfadash.png",
+        large_image: "manufacturing_mockup.png",
         large_image_alt: "Closeup shot of a bee on a chamomile flower",
         keyApplications: [
             {
@@ -111,7 +111,7 @@ const industriesData = {
         "para": "AI enhances border security by automating surveillance, detecting threats, and streamlining identity verification for stronger national protection.",
         small_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
         small_image_alt: "Closeup shot of a bee on a chamomile flower",
-        large_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+        large_image: "defense_mockup.png",
         large_image_alt: "Closeup shot of a bee on a chamomile flower",
         "keyApplications": [
             {
@@ -212,7 +212,7 @@ const industriesData = {
         "para": "AI enhances healthcare by enabling faster diagnostics, personalized treatments, and efficient patient monitoring, improving medical outcomes and reducing errors.",
         small_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
         small_image_alt: "Closeup shot of a bee on a chamomile flower",
-        large_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+        large_image: "healthcare_mockup.png",
         large_image_alt: "Closeup shot of a bee on a chamomile flower",
         keyApplications: [
             {
@@ -322,7 +322,7 @@ const industriesData = {
         para: 'VMukti is driving innovation with advanced AI technologies, transforming surveillance, automation, and security for a smarter, more connected world.',
         small_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
         small_image_alt: "Closeup shot of a bee on a chamomile flower",
-        large_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+        large_image: "retailer_mockup.png",
         large_image_alt: "Closeup shot of a bee on a chamomile flower",
         keyApplications: [
             {
@@ -427,7 +427,7 @@ const industriesData = {
         para: 'AI enhances education by personalizing learning, automating tasks, and improving engagement, making learning more accessible and efficient.',
         small_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
         small_image_alt: "Closeup shot of a bee on a chamomile flower",
-        large_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+        large_image: "education_mockup.png",
         large_image_alt: "Closeup shot of a bee on a chamomile flower",
         keyApplications: [
             {
@@ -529,7 +529,7 @@ const industriesData = {
         para: "AI enhances fraud detection, automates risk assessment, and personalizes banking experiences for more secure and efficient financial management.",
         small_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
         small_image_alt: "Closeup shot of a bee on a chamomile flower",
-        large_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+        large_image: "finance_mockup.png",
         large_image_alt: "Closeup shot of a bee on a chamomile flower",
         keyApplications: [
             {
@@ -639,7 +639,7 @@ const industriesData = {
         para: "AI enhances elections by improving voter verification, preventing fraud, and ensuring accurate ballot counting, leading to transparency, security, and efficiency.",
         small_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
         small_image_alt: "Closeup shot of a bee on a chamomile flower",
-        large_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+        large_image: "election_mockup.png",
         large_image_alt: "Closeup shot of a bee on a chamomile flower",
         keyApplications: [
             {
@@ -752,7 +752,7 @@ const industriesData = {
         "para": "AI enhances hospitality by personalizing guest experiences, optimizing operations, and ensuring security for a seamless and luxurious stay.",
         small_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
         small_image_alt: "Closeup shot of a bee on a chamomile flower",
-        large_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+        large_image: "hospitality_mockup.png",
         large_image_alt: "Closeup shot of a bee on a chamomile flower",
         "keyApplications": [
             {
@@ -887,7 +887,7 @@ const industriesData = {
         "para": "AI optimizes traffic flow, enhances vehicle safety, and improves logistics efficiency for a seamless and intelligent transit system.",
         small_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
         small_image_alt: "Closeup shot of a bee on a chamomile flower",
-        large_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+        large_image: "transportation_mockup.png",
         large_image_alt: "Closeup shot of a bee on a chamomile flower",
         "keyApplications": [
             {
@@ -1016,7 +1016,7 @@ const industriesData = {
         "para": "AI enhances urban safety, traffic flow, and sustainability through real-time surveillance, predictive analytics, and automated resource management.",
         small_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
         small_image_alt: "Closeup shot of a bee on a chamomile flower",
-        large_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+        large_image: "city_monitoring_mockup.png",
         large_image_alt: "Closeup shot of a bee on a chamomile flower",
         "keyApplications": [
             {
@@ -1161,7 +1161,7 @@ const industriesData = {
         "para": "AI enhances logistics by improving inventory management, automating processes, and optimizing deliveries for faster, more cost-effective operations.",
         small_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
         small_image_alt: "Closeup shot of a bee on a chamomile flower",
-        large_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+        large_image: "logistic_mockup.png",
         large_image_alt: "Closeup shot of a bee on a chamomile flower",
         "keyApplications": [
             {
@@ -1265,7 +1265,7 @@ const industriesData = {
         "para": "AI enhances sports and entertainment by optimizing player performance, automating refereeing, and delivering personalized fan experiences.",
         small_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
         small_image_alt: "Closeup shot of a bee on a chamomile flower",
-        large_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+        large_image: "entertainment_mockup.png",
         large_image_alt: "Closeup shot of a bee on a chamomile flower",
         "keyApplications": [
             {
@@ -1379,7 +1379,7 @@ const industriesData = {
         "para": "AI enhances farming by improving crop monitoring, optimizing resources, and increasing sustainability for better productivity.",
         small_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
         small_image_alt: "Closeup shot of a bee on a chamomile flower",
-        large_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
+        large_image: "agriculture_mockup.png",
         large_image_alt: "Closeup shot of a bee on a chamomile flower",
         "keyApplications": [
             {
