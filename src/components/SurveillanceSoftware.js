@@ -56,7 +56,7 @@ const SurveillanceSoftware = () => {
             </Flex>
 
             {/* background image */}
-            <Box position={{ base: "static", sm: "absolute" }} width="auto" mx="-2%" overflow="visible" top={{ sm: "50%", md: "25%", lg: "0%" }}>
+            <Box position={{ base: "static", sm: "absolute" }} width="auto" mx="-2%" overflow="visible" top={{ sm: "50%", md: "35%", lg: "20%", xl: "0%" }}>
                 <Image height="100%" src="../assets/surveillancemock.png" onLoad={handleImageLoad} />
             </Box>
         </Flex>

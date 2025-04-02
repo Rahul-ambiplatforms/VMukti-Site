@@ -14,7 +14,7 @@ const responsiveSizes = {
   ring: { base: "200px", md: "300px", lg: "408px" },
   headingFontSize: { base: "24px", sm: "30px", md: "36px", lg: "48px" },
   textFontSize: { base: "14px", md: "16px" },
-  squareBox: { base: "200px", md: "250px", lg: "336px" },
+  squareBox: { base: "120px", md: "200px", lg: "336px" }, // Only changed mobile size
 };
 
 const animations = {
@@ -61,7 +61,7 @@ const TechnologyDashboard = () => {
             zIndex={3}
           />
 
-          {/* Background Images Section */}
+          {/* Background Images Section - Desktop Only */}
           <Flex
             position="absolute"
             right={{ base: "-10%", md: "-5%", lg: "-2%" }}
@@ -116,20 +116,57 @@ const TechnologyDashboard = () => {
 
           {/* Content Section */}
           <Box
-            maxW="container.xl"
+            // maxW="container.xl"
+            // maxW="50vw"
             position="relative"
             zIndex={4}
             flex="1"
             display="flex"
             alignItems="center"
+            // bg="red"
           >
             <Flex
               direction={{ base: "column", lg: "row" }}
               align={{ base: "flex-start", lg: "flex-start" }}
               justify="flex-start"
-              minH={{ base: "auto", lg: "100vh" }}
+              minH={{ base: "auto", lg: "50vh" }}
+              // minW={{ base: "auto", lg: "auto" }}
+              // bg="red"
             >
-              {/* Left Content */}
+              {/* Mobile Layout - Blue Box and Image in same row */}
+              <Flex
+                display={{ base: "flex", lg: "none" }}
+                w="100%"
+                mt={8}
+                position="relative"
+                justify="space-between"
+                align="flex-end"
+              >
+                {/* Blue Box - now visible on mobile */}
+                <Box
+                  width={responsiveSizes.squareBox}
+                  height={responsiveSizes.squareBox}
+                  borderRadius="20px"
+                  background="#BECEDC"
+                  mb="10%"
+                  display={{ base: "block", lg: "block" }}
+                  zIndex="0"
+                  // bg="red"
+                />
+                
+                {/* Dashboard Image - reduced size for mobile */}
+                <MotionImage
+                  src="./assets/Dashboard.png"
+                  alt="AI Dashboard Interface"
+                  w={{ base: "60%", sm: "65%", lg:"%"}}
+                  h="auto"
+                  objectFit="contain"
+                  zIndex={3}
+                  {...animations.popIn}
+                />
+              </Flex>
+
+              {/* Left Content - appears after image on mobile */}
               <Flex
                 direction="column"
                 maxW={{ base: "100%", lg: "70%" }}
@@ -140,7 +177,7 @@ const TechnologyDashboard = () => {
                   ref={ref}
                   fontSize={responsiveSizes.headingFontSize}
                   lineHeight={{ base: "1.3", lg: "normal" }}
-                  mt={{ base: "5%", lg: "-22%" }}
+                  mt={{ base: "1px", lg: "-22%" }}
                   mb={12}
                   color="#000"
                   fontWeight="600"
@@ -166,7 +203,8 @@ const TechnologyDashboard = () => {
                   </Text>
                   .
                 </MotionHeading>
-                <SubHeadingAnimation display="flex-column">
+                <SubHeadingAnimation display="flex" flexDirection={{base:"row",md:"column"}}>
+                  <Box width={{md:"30px"}} height={{md:"30px"}}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="30"
@@ -179,7 +217,8 @@ const TechnologyDashboard = () => {
                       fill="#3F77A5"
                     />
                   </svg>
-                  <Flex align="center" ml={{ base: "-1%", md: "5%", lg: "0%" }}>
+                  </Box>
+                  <Flex align="center" ml={{ base: "-1px", md: "5%", lg: "0%" }}>
                     <Text
                       fontSize={responsiveSizes.textFontSize}
                       color="#000"
@@ -194,32 +233,18 @@ const TechnologyDashboard = () => {
                     </Text>
                   </Flex>
                 </SubHeadingAnimation>
-
                 <Box
                   width={responsiveSizes.squareBox}
                   height={responsiveSizes.squareBox}
                   borderRadius="20px"
                   background="#BECEDC"
-                  mt={10}
-                  display={{ base: "none", lg: "block" }}
+                  marginTop={{lg:"13%"}}
+                  // marginRight= {{lg:"100%"}}
+                  display={{ base: "none", md: "none", lg: "block" }}
+                  zIndex="0"
+                  // bg="green"
                 />
-              </Flex>
-
-              {/* Mobile Image */}
-              <Flex
-                display={{ base: "flex", lg: "none" }}
-                w="100%"
-                mt={8}
-                position="relative"
-                justify="center"
-              >
-                <Image
-                  src="./assets/Dashboard.png"
-                  alt="AI Dashboard Interface"
-                  w={{ base: "100%", sm: "120%" }}
-                  h="auto"
-                  objectFit="contain"
-                />
+                
               </Flex>
             </Flex>
           </Box>

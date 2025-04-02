@@ -14,12 +14,6 @@ import SubHeadingAnimation from "../../components/Animation/Text/SubHeadingAnima
 import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation";
 
 const AITechnologies = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [visibleSlideRange, setVisibleSlideRange] = useState({
-    start: 0,
-    end: 3,
-  }); // Track visible slide names
-
   // Data for each slide
   const slides = [
     {
@@ -77,6 +71,22 @@ const AITechnologies = () => {
     },
   ];
 
+  const visibleSlides = useBreakpointValue({
+    base: 1, // Mobile view (1 box)
+    sm: 2, // Small screens (2 boxes)
+    md: 4, // Medium screens (3 boxes)
+    lg: 4, // Large screens (4 boxes)
+    xl: 5, // Extra large screens (5 boxes)
+  });
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const startIndex = currentSlide;
+  const endIndex = Math.min(startIndex + visibleSlides - 1, slides.length - 1);
+
+  const [visibleSlideRange, setVisibleSlideRange] = useState({
+    start: startIndex,
+    end: endIndex,
+  }); // Track visible slide names
+
   // Update the slider
   const updateSlider = (index) => {
     setCurrentSlide(index);
@@ -93,14 +103,42 @@ const AITechnologies = () => {
 
   // Update visible slide names based on the current slide
   useEffect(() => {
-    if (currentSlide < visibleSlideRange.start) {
-      // Move the visible range left
-      setVisibleSlideRange({ start: currentSlide, end: currentSlide + 3 });
-    } else if (currentSlide > visibleSlideRange.end) {
-      // Move the visible range right
-      setVisibleSlideRange({ start: currentSlide - 3, end: currentSlide });
-    }
-  }, [currentSlide]);
+    const updateVisibleSlides = () => {
+      const screenWidth = window.innerWidth;
+
+      // Dynamically determine the number of visible slides based on screen width
+      let newVisibleSlides;
+      if (screenWidth >= 1280) newVisibleSlides = 4; // xl
+      else if (screenWidth >= 1024) newVisibleSlides = 4; // lg
+      else if (screenWidth >= 768) newVisibleSlides = 3; // tablet (md)
+      else newVisibleSlides = 1; // base (mobile)
+
+      // Update visible slide range dynamically
+      if (newVisibleSlides == 1) {
+        setVisibleSlideRange({ start: currentSlide, end: currentSlide });
+      } else if (newVisibleSlides == 3) {
+        if (currentSlide < visibleSlideRange.start) {
+          setVisibleSlideRange({ start: currentSlide, end: currentSlide + 2 });
+        } else if (currentSlide > visibleSlideRange.end) {
+          setVisibleSlideRange({ start: currentSlide - 2, end: currentSlide });
+        }
+      } else if (newVisibleSlides == 4) {
+        if (currentSlide < visibleSlideRange.start) {
+          setVisibleSlideRange({ start: currentSlide, end: currentSlide + 3 });
+        } else if (currentSlide > visibleSlideRange.end) {
+          setVisibleSlideRange({ start: currentSlide - 3, end: currentSlide });
+        }
+      }
+    };
+
+    // Run on mount and whenever screen size changes
+    updateVisibleSlides();
+    window.addEventListener("resize", updateVisibleSlides);
+
+    return () => {
+      window.removeEventListener("resize", updateVisibleSlides);
+    };
+  }, [currentSlide]); // Runs when currentSlide changes
 
   // Responsive styles
   const cardDirection = useBreakpointValue({ base: "column", md: "row" });
@@ -110,50 +148,40 @@ const AITechnologies = () => {
     <Box bg="white" minH="100vh" overflowX="visible" borderRadius="24px">
       {/* Navigation */}
       <Flex
-        justify="space-between" // Changed from "center"
+        justify="space-between"
         align="center"
         p={8}
         position="relative"
         width="100%"
-        minH="80px" // Ensure enough height for two-line titles
+        minH="80px"
         // bg="red"
       >
-        {/* Left Dots - Fixed width container */}
-        {/* <Flex width="60px" justify="flex-start" align="center" flexShrink={0}>
-          {visibleSlideRange.start > 0 && (
-            <Flex gap={1}>
-              {[...Array(visibleSlideRange.start)].map((_, index) => (
-                <Box
-                  key={index}
-                  w="8px"
-                  h="8px"
-                  borderRadius="full"
-                  bg="#3F77A5" // Removed semicolon
-                />
-              ))}
-            </Flex>
-          )}
-        </Flex> */}
-
-        {/* Center Titles - Constrained flexible container */}
+        {/* Center Titles - Modified for responsiveness only */}
         <Flex
           flex="1"
-          mx={{ base: 2, md: 12 }}
-          justify="space-between"
+          mx={{ base: 0, md: 12 }}
+          justify={{ base: "center", md: "space-between" }}
           align="center"
-          gap={{ base: 2, md: 3 }}
+          gap={{ base: 0, md: 3 }}
           height="72px"
-          wrap="wrap"
-          minWidth="0" // Allows text truncation
-          // bg="red"
+          wrap="nowrap"
+          minWidth="0"
+          overflowX={{ base: "hidden", md: "auto" }} // Hide overflow on mobile
+          // overflowX="auto"
+          css={{
+            "&::-webkit-scrollbar": { display: "none" },
+            "-ms-overflow-style": "none",
+            "scrollbar-width": "none",
+          }}
+          // bg="green"
         >
           {slides
             .slice(visibleSlideRange.start, visibleSlideRange.end + 1)
             .map((slide, index) => (
               <Box
                 key={index + visibleSlideRange.start}
-                flex="1 0 auto"
-                minW={{ base: "120px", md: "160px" }}
+                flex={{ base: "0 0 100%", md: "1 0 auto" }} // Mobile: Only one visible
+                minW={{ base: "100%", md: "160px" }} // Full width on mobile
                 maxW="170px"
                 textAlign="center"
                 px={1}
@@ -175,13 +203,11 @@ const AITechnologies = () => {
                   onClick={() => updateSlider(index + visibleSlideRange.start)}
                   noOfLines={2}
                   lineHeight="short"
-                  // wordBreak="break-word"
                   textAlign={"left"}
-                  whiteSpace="pre-line" // This makes \n work as line breaks
+                  whiteSpace="pre-line"
                 >
                   {slide.title}
                 </Text>
-                {/* Active indicator */}
                 {currentSlide === index + visibleSlideRange.start && (
                   <Box
                     width="17px"
@@ -195,14 +221,14 @@ const AITechnologies = () => {
             ))}
         </Flex>
 
-        {/* Right Controls - Fixed width container */}
+        {/* Right Controls - Completely unchanged */}
         <Flex
-          width="120px"
+          width={{ base: "80px", md: "120px" }}
           justify="flex-end"
-          align="center"
-          gap={2}
+          align="right"
+          gap={{ base: "0", md: "2" }}
           flexShrink={0}
-          ml="5%"
+          ml={{ base: "0", md: "5%" }}
           // bg="red"
         >
           {visibleSlideRange.end < slides.length - 1 && (
@@ -214,20 +240,18 @@ const AITechnologies = () => {
                     w="8px"
                     h="8px"
                     borderRadius="full"
-                    bg="#3F77A5" // Removed semicolon
+                    bg="#3F77A5"
                   />
                 )
               )}
             </Flex>
           )}
-          {/* Custom Navigation Buttons */}
           <Flex
             gap="0.5"
             mt={{ base: "10px", md: "0" }}
             direction="row"
             justifyContent={{ base: "flex-end", md: "flex-end" }}
             width="100%"
-            // bg="red"
           >
             <Button
               width={{ base: "25px", md: "30.769px" }}
@@ -243,6 +267,7 @@ const AITechnologies = () => {
               bgColor="#E7E7E7"
               _hover={{ bgColor: "#e0e0e0" }}
               onClick={handlePrev}
+              // bg="blue"
             >
               <svg
                 width="8"
@@ -318,7 +343,7 @@ const AITechnologies = () => {
                   bgSize="cover"
                   bgPosition="center"
                   zIndex={1} // Behind the text
-                  // bg="red" 
+                  // bg="red"
                 />
                 {/* Card Content */}
                 <Flex
