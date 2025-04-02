@@ -21,6 +21,11 @@ import {
     Text,
     useDisclosure,
     useBreakpointValue,
+    Accordion,
+    AccordionItem,
+    AccordionButton,
+    AccordionPanel,
+    AccordionIcon
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { Link, useLocation } from 'react-router-dom' // Import Link and useLocation from react-router-dom
@@ -235,35 +240,35 @@ const Navbar = () => {
                                                     onClick={() => handleLinkClick(item.name)} // Navigate to parent path
                                                 >
                                                     {item.name}
-                                                    
+
                                                     {isPathActive(item.path) && (
-                                                    <Box
-                                                        position="absolute"
-                                                        bottom="8px"
-                                                        width="20px"
-                                                        height="2px"
-                                                        bg="#3F77A5"
-                                                    />
-                                                )}
+                                                        <Box
+                                                            position="absolute"
+                                                            bottom="8px"
+                                                            width="20px"
+                                                            height="2px"
+                                                            bg="#3F77A5"
+                                                        />
+                                                    )}
                                                 </Link>
                                                 <MenuButton><svg
-                                                        width="12"
-                                                        height="6"
-                                                        viewBox="0 0 12 6"
-                                                        fill="none"
-                                                        style={{
-                                                            transform: menuOpenStates[item.name] ? "rotate(180deg)" : "rotate(0deg)",
-                                                            transition: "transform 0.2s ease",
-                                                        }}
-                                                    >
-                                                        <path d="M6 6L12 0L0 0L6 6Z" fill="#3F77A5" />
-                                                    </svg></MenuButton>
+                                                    width="12"
+                                                    height="6"
+                                                    viewBox="0 0 12 6"
+                                                    fill="none"
+                                                    style={{
+                                                        transform: menuOpenStates[item.name] ? "rotate(180deg)" : "rotate(0deg)",
+                                                        transition: "transform 0.2s ease",
+                                                    }}
+                                                >
+                                                    <path d="M6 6L12 0L0 0L6 6Z" fill="#3F77A5" />
+                                                </svg></MenuButton>
 
                                                 <MenuList
                                                     placement="" // Ensure dropdown opens directly below the link
                                                     onMouseEnter={() => handleMouseEnter(item.name)}
                                                     onMouseLeave={() => handleMouseLeave(item.name)}
-                                                    
+
                                                     style={{
                                                         marginTop: "10px", // Adjust dropdown position
                                                     }}
@@ -355,36 +360,85 @@ const Navbar = () => {
                     <DrawerCloseButton />
                     <DrawerHeader borderBottomWidth="1px" fontWeight="400">Menu</DrawerHeader>
                     <DrawerBody>
-                        <VStack spacing={4} align="stretch">
+                        <Accordion allowToggle>
                             {navigationItems.map((item, index) => (
-                                <Link
-                                    key={item.name}
-                                    to={item.path}
-                                    style={{
-                                        color: isPathActive(item.path) ? "#3182ce" : "black",
-                                        fontSize: "lg",
-                                        fontWeight: isPathActive(item.path) ? "500" : "400",
-                                        paddingBottom: "4px",
-                                        textDecoration: "none",
-                                    }}
-                                    onClick={() => handleLinkClick(item.name)}
-                                >
-                                    {item.name}
-                                    {/* Only show divider if active and not the last item */}
-                                    {isPathActive(item.path) && index < navigationItems.length - 1 && (
-                                        <Box mt={1} display="flex" justifyContent="left">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="2" viewBox="0 0 17 2" fill="none">
-                                                <path d="M16 1L1 0.999999" stroke="#3F77A5" strokeWidth="2" strokeLinecap="round" />
-                                            </svg>
-                                        </Box>
+                                <AccordionItem key={item.name}>
+                                    {item.hasDropdown ? (
+                                        <>
+                                            <h2>
+                                                <AccordionButton
+                                                    bg={isPathActive(item.path) ? "#F5F8FA" : "transparent"}
+                                                    color={isPathActive(item.path) ? "#3F77A5" : "black"}
+                                                    fontWeight={isPathActive(item.path) ? "600" : "400"}
+                                                    _hover={{ bg: "#F5F8FA" }}
+                                                >
+                                                    <Box flex="1" textAlign="left">
+                                                        {item.name}
+                                                    </Box>
+                                                    <AccordionIcon />
+                                                </AccordionButton>
+                                            </h2>
+                                            <AccordionPanel>
+                                                {item.items.map((dropdownItem, idx) => (
+                                                    <Box key={idx} mb={2}>
+                                                        <Link
+                                                            to={dropdownItem.path}
+                                                            style={{
+                                                                color: "black",
+                                                                fontSize: "lg",
+                                                                fontWeight: "400",
+                                                                textDecoration: "none",
+                                                            }}
+                                                            onClick={() => {
+                                                                handleLinkClick(item.name)
+                                                                onClose()
+                                                            }}
+                                                        >
+                                                            {dropdownItem.label}
+                                                        </Link>
+                                                    </Box>
+                                                ))}
+                                            </AccordionPanel>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <h2>
+                                                <Link
+                                                    to={item.path}
+                                                    style={{
+                                                        color: isPathActive(item.path) ? "#3F77A5" : "black",
+                                                        fontSize: "lg",
+                                                        fontWeight: isPathActive(item.path) ? "500" : "400",
+                                                        textDecoration: "none",
+                                                    }}
+                                                >
+                                                    <AccordionButton
+                                                        onClick={() => {
+                                                            handleLinkClick(item.name)
+                                                            onClose()
+                                                        }}
+                                                        bg={isPathActive(item.path) ? "#F5F8FA" : "transparent"}
+                                                        color={isPathActive(item.path) ? "#3F77A5" : "black"}
+                                                        fontWeight={isPathActive(item.path) ? "600" : "400"}
+                                                        _hover={{ bg: "#F5F8FA" }}
+                                                    >
+
+                                                        <Box flex="1" textAlign="left">
+                                                            {item.name}
+                                                        </Box>
+                                                        <AccordionIcon style={{ visibility: 'hidden' }} />
+                                                    </AccordionButton>
+                                                </Link>
+                                            </h2>
+                                        </>
                                     )}
-                                </Link>
+                                </AccordionItem>
                             ))}
-                        </VStack>
+                        </Accordion>
                     </DrawerBody>
                 </DrawerContent>
             </Drawer>
-        </Flex>
+        </Flex >
     );
 };
 
