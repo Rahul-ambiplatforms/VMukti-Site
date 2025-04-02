@@ -6,6 +6,7 @@ import {
   Text,
   Button,
   useBreakpointValue,
+  Show,
 } from "@chakra-ui/react";
 import { motion, useInView } from "framer-motion";
 
@@ -16,6 +17,8 @@ import Achieved from "./Achieved";
 import Diagram from "./Diagram";
 import Industries from "./industriesData";
 import AdvancedSurveillance from "./AdvancedSurveillance";
+import ServingsDescriptionCard from "../../components/ServingsDescriptionCard";
+import SurveillanceSoftware from "../../components/SurveillanceSoftware";
 
 // Motion components
 const MotionImage = motion(Image);
@@ -85,43 +88,44 @@ const VMuktiHomepage = () => {
         zIndex="0"
       />
 
-      {/* Decorative Boxes */}
-      <Flex
-        position="absolute"
-        top="5.3%"
-        left="35%"
-        transform="translateX(-50%)"
-        gap={4}
-        zIndex={0}
-        width="100%"
-        justifyContent="center"
-        pt="10vh"
-      >
-        <Box
-          height={{ base: "80px", md: "140px", lg: "188px" }}
-          minHeight="50px"
-          aspectRatio="1/1"
-          bg="#BECEDC"
-          borderRadius="24px"
-          mt={{ base: "80px", md: "160px", lg: "12%" }}
-        />
-        <Box
-          height={{ base: "80px", md: "140px", lg: "188px" }}
-          minHeight="50px"
-          aspectRatio="1/1"
-          bg="#FFFFFF"
-          borderRadius="24px"
-          mt={{ base: "40px", md: "80px", lg: "6%" }}
-        />
-        <Box
-          height={{ base: "80px", md: "140px", lg: "188px" }}
-          minHeight="50px"
-          aspectRatio="1/1"
-          bg="#3F77A5"
-          borderRadius="24px"
-        />
-      </Flex>
-
+      <Show above="md">
+        {/* Decorative Boxes */}
+        <Flex
+          position="absolute"
+          top="5.3%"
+          left="35%"
+          transform="translateX(-50%)"
+          gap={4}
+          zIndex={0}
+          width="100%"
+          justifyContent="center"
+          pt="10vh"
+        >
+          <Box
+            height={{ base: "80px", md: "140px", lg: "188px" }}
+            minHeight="50px"
+            aspectRatio="1/1"
+            bg="#BECEDC"
+            borderRadius="24px"
+            mt={{ base: "80px", md: "160px", lg: "12%" }}
+          />
+          <Box
+            height={{ base: "80px", md: "140px", lg: "188px" }}
+            minHeight="50px"
+            aspectRatio="1/1"
+            bg="#FFFFFF"
+            borderRadius="24px"
+            mt={{ base: "40px", md: "80px", lg: "6%" }}
+          />
+          <Box
+            height={{ base: "80px", md: "140px", lg: "188px" }}
+            minHeight="50px"
+            aspectRatio="1/1"
+            bg="#3F77A5"
+            borderRadius="24px"
+          />
+        </Flex>
+      </Show>
       {/* Main Content */}
       <Flex
         pl={{ base: "1%", md: "2.5%" }}
@@ -135,7 +139,7 @@ const VMuktiHomepage = () => {
         {/* Left Side */}
         <MotionImage
           src="/assets/tablet.png"
-          position="absolute"
+          position={{ base: "static", md: "absolute" }}
           right="0"
           zIndex={1}
           initial={{ scale: 0.8, opacity: 1 }}
@@ -156,7 +160,6 @@ const VMuktiHomepage = () => {
             ref={ref}
             fontSize={{ base: "48px", md: "75px", lg: "100px" }}
             fontWeight="600"
-            textAlign={{ base: "center", md: "left" }}
             lineHeight="140%"
             zIndex={1}
             initial={{ opacity: 0, x: -50 }}
@@ -164,7 +167,7 @@ const VMuktiHomepage = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <Text as="span" color="#000">Unlocking the </Text>
-            <Text as="span" color="#3F77A5">Power of</Text>
+            <Text as="span" color="#3F77A5">Power of </Text>
             <br />
             <Text as="span" color="#3F77A5">Data</Text>
             <Text as="span" color="#000"> with </Text>
@@ -212,15 +215,20 @@ const VMuktiHomepage = () => {
             position="relative"
             mt={{ base: "10px", md: "-10%" }}
             ml={{ base: "0", md: "-40px" }}
-            alignItems="center"
+            // alignItems={{ base: "flex-start", sm: "center" }}
+            // direction={{ base: "column", sm: "row" }}
+            width="fit-content"
           >
-            <Image src="/assets/robohand.png" alt="Robotic Hand" />
+
+            <Image src="/assets/robohand.png" alt="Robotic Hand" display={{ base: "none", md: "block" }} />
+            <Image src="/assets/robohand2.png" alt="Robotic Hand" display={{ base: "block", md: "none" }} height="auto" width="50%" />
             <MotionButton
+              // order="1"
               position="absolute"
-              top={{ base: "35%", md: "38%" }}
-              left={{ base: "22%", md: "22%" }}
+              top={{ base: "20%", sm: "20%", md: "35%" }}
+              right={{ base: "25%", sm: "35%", md: "0%" }}
               bg="white"
-              height="50px"
+              height={{ base: "34px", sm: "50px" }}
               borderRadius="20px"
               color="#3F77A5"
               gap="2"
@@ -228,7 +236,7 @@ const VMuktiHomepage = () => {
                 bg: "#E0F2FE",
                 color: "#2C5E84",
               }}
-              fontSize={{ base: "12px", md: "16px" }}
+              fontSize={{ base: "12px", sm: "16px" }}
               animate={{
                 x: [0, 5, -5, 5, -5, 0],
                 y: [0, -5, 5, -5, 5, 0],
@@ -259,6 +267,12 @@ const VMuktiHomepage = () => {
 
       {/* Page Content */}
       <PageContentWrapper>
+        <AdvancedComputerVision />
+        <Flex mt={"5%"} direction="column">
+          <Text>Object Detection & Real-Time Tracking.</Text>
+          <ServingsDescriptionCard description={'data.description'} keybenefits={[""]} image={"/assets/objectdetection.png"} />
+        </Flex>
+        <Box mt={"5%"}><SurveillanceSoftware /></Box>
         <StickySection>
           <AdvancedComputerVision />
           <VideoAnalytics />

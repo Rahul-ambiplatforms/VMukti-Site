@@ -63,6 +63,7 @@ const AdvancedComputerVision = ({
       borderRadius="20px"
       bgColor="white"
       position="relative"
+      height="100dvh"
       overflow="hidden"
       px="5%"
       pt="2%"

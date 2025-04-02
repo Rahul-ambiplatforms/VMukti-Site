@@ -164,6 +164,7 @@ const Achieved = () => {
         padding={{ base: '20px', md: '40px 20px' }}
         backgroundColor="#E7E7E7"
         width="100%"
+        overflow="hidden"
         maxWidth={containerWidth}
         minHeight={containerHeight}
         margin="0 auto"
