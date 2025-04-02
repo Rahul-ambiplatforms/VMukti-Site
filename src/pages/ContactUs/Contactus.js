@@ -16,9 +16,7 @@ import SubHeadingAnimation from "../../components/Animation/Text/SubHeadingAnima
 import ImagePop from "../../components/Animation/Image/ImagePop";
 import PageContentWrapper from "../../components/PageContentWrapper";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import emailjs from '@emailjs/browser';
-
+import { useState } from "react";
 
 const MotionBox = motion(Box);
 
@@ -41,14 +39,14 @@ export default function ContactUs() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
-  const id = process.env.REACT_APP_EMAILJS_USER_ID; // Replace with your actual EmailJS User ID
-  const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID; // Replace with your actual EmailJS Service ID
-  const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID; // Replace with your actual EmailJS Template ID
-  console.log("myprocessvalues", id, serviceId, templateId);
+  // const id = process.env.REACT_APP_EMAILJS_USER_ID; // Replace with your actual EmailJS User ID
+  // const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID; // Replace with your actual EmailJS Service ID
+  // const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID; // Replace with your actual EmailJS Template ID
+  // console.log("myprocessvalues", id, serviceId, templateId);
   // Initialize EmailJS when component mounts
-  useEffect(() => {
-    emailjs.init(id); // Replace with your actual EmailJS User ID
-  }, []);
+  // useEffect(() => {
+  //   emailjs.init(id); // Replace with your actual EmailJS User ID
+  // }, []);
 
   const cards = [
     {
@@ -91,8 +89,8 @@ export default function ContactUs() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Basic form validation
+  
+    // Basic form validation remains the same
     if (!formData.firstName || !formData.email || !formData.message) {
       toast({
         title: "Missing required fields",
@@ -103,23 +101,21 @@ export default function ContactUs() {
       });
       return;
     }
-
+  
     setIsLoading(true);
-
+  
     try {
-      const response = await emailjs.send(
-        serviceId,  // Service ID
-        templateId,  // Template ID
-        {
-          from_name: `${formData.firstName} ${formData.lastName}`,
-          from_email: formData.email,
-          phone: formData.phone || 'Not provided',
-          message: formData.message,
-          reply_to: formData.email,
-        }
-      );
-
-      if (response.status === 200) {
+      const response = await fetch('http://localhost:5000/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
         toast({
           title: "Message Sent!",
           description: "We'll get back to you soon.",
@@ -127,7 +123,7 @@ export default function ContactUs() {
           duration: 5000,
           isClosable: true,
         });
-
+  
         setFormData({
           firstName: '',
           lastName: '',
@@ -136,10 +132,10 @@ export default function ContactUs() {
           message: ''
         });
       } else {
-        throw new Error(`EmailJS returned status ${response.status}`);
+        throw new Error(data.error || 'Failed to send message');
       }
     } catch (error) {
-      console.error('EmailJS Error:', error);
+      console.error('Error:', error);
       toast({
         title: "Failed to send message",
         description: error.message || "Please try again later.",
