@@ -20,18 +20,16 @@ import ContactUs from './pages/ContactUs/Contactus';
 import VMuktiCareers from './pages/career/Career';
 
 function App() {
-  // Assuming the Navbar height is 60px
-  const navbarHeight = '8%';
 
   return (
     <ChakraProvider theme={theme}>
       <Router>
-        {/* Navbar with transparent background */}
 
+        {/* Navbar with transparent background */}
         <Navbar />
         <ScrollToTop />
         {/* Page content with padding to account for Navbar height */}
-        <Box pt={navbarHeight} bg="#E7E7E7">  {/* Add padding-top equal to Navbar height */}
+        <Box pt={{ base: "30%", sm: "15%", md: "10%" }} bg="#E7E7E7">  {/* Add padding-top equal to Navbar height */}
           <Routes>
             <Route path="/" element={<VMuktiHomepage />} />
             <Route path="/technology" element={<TechnologyDashboard />} />

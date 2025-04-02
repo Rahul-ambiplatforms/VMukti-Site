@@ -335,8 +335,7 @@ const VMuktiHomepage = () => {
 
 
         </Flex>
-        <Box mt={"5%"}><SurveillanceSoftware /></Box>
-
+        <Box mt="5%" ><SurveillanceSoftware /></Box>
         <StickySection>
 
           <AdvancedComputerVision {...customData} />
