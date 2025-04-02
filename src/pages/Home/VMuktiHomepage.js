@@ -19,6 +19,7 @@ import Industries from "./industriesData";
 import AdvancedSurveillance from "./AdvancedSurveillance";
 import ServingsDescriptionCard from "../../components/ServingsDescriptionCard";
 import SurveillanceSoftware from "../../components/SurveillanceSoftware";
+import ObjectDescription from "../../components/ObjectDescription";
 
 // Motion components
 const MotionImage = motion(Image);
@@ -269,8 +270,13 @@ const VMuktiHomepage = () => {
       <PageContentWrapper>
         <AdvancedComputerVision />
         <Flex mt={"5%"} direction="column">
-          <Text>Object Detection & Real-Time Tracking.</Text>
-          <ServingsDescriptionCard description={'data.description'} keybenefits={[""]} image={"/assets/objectdetection.png"} />
+          <ObjectDescription
+            description={`Catch Everything,\n Miss Nothing`}
+            image="../assets/objectdetection.png"
+            list={["Precision Tracking", "Automated Alerts", "AI-Powered Recognition", "Adaptive Learning"]}
+          />
+
+
         </Flex>
         <Box mt={"5%"}><SurveillanceSoftware /></Box>
         <StickySection>
