@@ -51,7 +51,8 @@ const WhoWeare = () => {
     lg: "408px",
   });
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleCards = 3;
+  const visibleCards = useBreakpointValue({ base: 1, md: 2, lg: 2.4, xl: 2.8 }); // 1 card on mobile, 3 on larger screens
+  const widthMultiplier = useBreakpointValue({ base: 13, md: 23 });
   const totalCards = reviews.length;
 
   // Choose either APPROACH 1 or APPROACH 2:
@@ -212,9 +213,8 @@ const WhoWeare = () => {
 
         {/* Reviews */}
 
-        <Box pb="9%" maxW="100%">
+        <Box>
           <Box
-            maxW="container.xl"
             mx="auto"
             px={12}
             py={8}
@@ -222,26 +222,74 @@ const WhoWeare = () => {
             borderRadius="24px"
           >
             <HeadingAnimation>
-              <Heading
-                color="white"
-                mt="2%"
-                mb="4%"
-                textAlign="left"
-                fontSize={{ base: "24px", md: "36px" }}
-                fontWeight="600"
-              >
-                What Our Clients Say
-              </Heading>
+              <Flex alignContent="center" justifyContent="space-between" mt="2%" mb="4%">
+                <Heading
+                  color="white"
+
+                  textAlign="left"
+                  fontSize={{ base: "24px", md: "36px" }}
+                  fontWeight="600"
+                >
+                  What Our Clients Say
+                </Heading>
+                <Flex display={{ base: "flex", md: "none" }} justifyContent="space-between" gap={1}>
+                  <Button
+                    width="31px"
+                    height="31px"
+                    minWidth="31px"
+                    minHeight="31px"
+                    padding="0"
+                    borderRadius="5px"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                    cursor="pointer"
+                    bgColor="#E7E7E7"
+                    _hover={{ bgColor: '#e0e0e0' }}
+                    onClick={handlePrevious}
+                  >
+                    <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
+                      <path
+                        d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z"
+                        fill="#3F77A5"
+                      />
+                    </svg>
+                  </Button>
+                  <Button
+                    width="31px"
+                    height="31px"
+                    minWidth="31px"
+                    minHeight="31px"
+                    padding="0"
+                    borderRadius="5px"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                    cursor="pointer"
+                    bgColor="#E7E7E7"
+                    _hover={{ bgColor: '#e0e0e0' }}
+                    onClick={handleNext}
+                  >
+                    <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
+                      <path
+                        d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z"
+                        fill="#3F77A5"
+                      />
+                    </svg>
+                  </Button>
+                </Flex>
+              </Flex>
             </HeadingAnimation>
             <Box position="relative" mb="5%" py="1%">
               <Flex alignItems="center" justifyContent="space-between">
                 <Box mt={4} overflow="hidden" position="relative" width="90%">
                   <Flex
-                    transform={`translateX(-${currentIndex * (100 / visibleCards + 1)
+                    transform={`translateX(-${currentIndex * (105 / visibleCards + 1)
                       }%)`}
                     transition="transform 0.5s ease-in-out"
                     // width={`${(totalCards / visibleCards) * 100}`} // For APPROACH 1
-                    width={`${(extendedReviews.length / visibleCards) * 32}%`} // For APPROACH 2
+                    // width={`${(extendedReviews.length / visibleCards) * 13}%`} // For APPROACH 2
+                    width={`${(extendedReviews.length / visibleCards) * widthMultiplier}%`}
                   >
                     {/* {reviews.map((review) => ( // For APPROACH 1 */}
                     {extendedReviews.map(
@@ -255,7 +303,7 @@ const WhoWeare = () => {
                           flex={`0 0 ${100 / visibleCards}%`}
                           bg="white"
                           borderRadius="24px"
-                          p="3% 3% 5% 3%"
+                          p="6%"
                           minWidth="0"
                           display="flex"
                           flexDirection="column"
@@ -296,7 +344,8 @@ const WhoWeare = () => {
                   </Flex>
                 </Box>
 
-                <Flex justifyContent="space-between" gap={1}>
+                {/* navigation buttons */}
+                <Flex display={{ base: "none", md: "flex" }} justifyContent="space-between" gap={1}>
                   <Button
                     width="31px"
                     height="31px"
