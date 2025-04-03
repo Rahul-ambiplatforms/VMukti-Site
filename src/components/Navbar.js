@@ -279,20 +279,20 @@ const Navbar = () => {
                                                 >
                                                     {item.items.map((dropdownItem, idx) => (
                                                         <MenuItem
-                                                        key={idx}
-                                                        fontWeight="400"
-                                                        as={Link}
-                                                        to={dropdownItem.path}
-                                                        onClick={() => handleLinkClick(item.name)}
-                                                        width="100%" // Ensure MenuItem takes full width
-                                                        borderBottom="1px solid #BECEDC" // Divider between items
-                                                      >
-                                                        {/* <Flex direction="column" width="100%"> Ensures full width */}
-                                                          <Text>{dropdownItem.label}</Text>
-                                                          {/* <Box width="60%" height="2px" bg="#BECEDC" mt="4px" /> Full-width divider */}
-                                                        {/* </Flex> */}
-                                                      </MenuItem>
-                                                      
+                                                            key={idx}
+                                                            fontWeight="400"
+                                                            as={Link}
+                                                            to={dropdownItem.path}
+                                                            onClick={() => handleLinkClick(item.name)}
+                                                            width="100%" // Ensure MenuItem takes full width
+                                                            borderBottom="1px solid #BECEDC" // Divider between items
+                                                        >
+                                                            {/* <Flex direction="column" width="100%"> Ensures full width */}
+                                                            <Text>{dropdownItem.label}</Text>
+                                                            {/* <Box width="60%" height="2px" bg="#BECEDC" mt="4px" /> Full-width divider */}
+                                                            {/* </Flex> */}
+                                                        </MenuItem>
+
 
                                                     ))}
 
@@ -337,7 +337,17 @@ const Navbar = () => {
                 <Hide above="lg">
                     <IconButton
                         onClick={onOpen}
-                        icon={<HamburgerIcon w={6} h={6} />}
+                        icon={<svg
+                            width="22"
+                            height="18"
+                            viewBox="0 0 22 18"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M15.9248 6.63574H0.776812C0.347614 6.63574 0 6.98336 0 7.41255V10.5198C0 10.949 0.347614 11.2966 0.776812 11.2966H15.9248C16.354 11.2966 16.7016 10.949 16.7016 10.5198V7.41255C16.7016 6.98336 16.354 6.63574 15.9248 6.63574Z" fill="#3F77A5" />
+                            <path d="M20.9742 0H0.777056C0.347858 0 0.000244141 0.347614 0.000244141 0.776812V3.88406C0.000244141 4.31326 0.347858 4.66087 0.777056 4.66087H20.9742C21.4034 4.66087 21.751 4.31326 21.751 3.88406V0.776812C21.751 0.347614 21.4034 0 20.9742 0Z" fill="#3F77A5" />
+                            <path d="M10.8756 13.2717H0.777056C0.347858 13.2717 0.000244141 13.6193 0.000244141 14.0485V17.1558C0.000244141 17.585 0.347858 17.9326 0.777056 17.9326H10.8756C11.3048 17.9326 11.6524 17.585 11.6524 17.1558V14.0485C11.6524 13.6203 11.3048 13.2717 10.8756 13.2717Z" fill="#3F77A5" />
+                        </svg>}
                         variant="ghost"
                         aria-label="Open menu"
                     />
@@ -372,81 +382,114 @@ const Navbar = () => {
                     <DrawerCloseButton />
                     <DrawerHeader borderBottomWidth="1px" fontWeight="400">Menu</DrawerHeader>
                     <DrawerBody>
-                        <Accordion allowToggle>
-                            {navigationItems.map((item, index) => (
-                                <AccordionItem key={item.name}>
-                                    {item.hasDropdown ? (
-                                        <>
-                                            <h2>
-                                                <AccordionButton
-                                                    bg={isPathActive(item.path) ? "#F5F8FA" : "transparent"}
-                                                    color={isPathActive(item.path) ? "#3F77A5" : "black"}
-                                                    fontWeight={isPathActive(item.path) ? "600" : "400"}
-                                                    _hover={{ bg: "#F5F8FA" }}
-                                                >
-                                                    <Box flex="1" textAlign="left">
-                                                        {item.name}
-                                                    </Box>
-                                                    <AccordionIcon />
-                                                </AccordionButton>
-                                            </h2>
-                                            <AccordionPanel>
-                                                {item.items.map((dropdownItem, idx) => (
-                                                    <Box key={idx} mb={2}>
-                                                        <Link
-                                                            to={dropdownItem.path}
-                                                            style={{
-                                                                color: "black",
-                                                                fontSize: "lg",
-                                                                fontWeight: "400",
-                                                                textDecoration: "none",
-                                                            }}
-                                                            onClick={() => {
-                                                                handleLinkClick(item.name)
-                                                                onClose()
-                                                            }}
-                                                        >
-                                                            {dropdownItem.label}
-                                                        </Link>
-                                                    </Box>
-                                                ))}
-                                            </AccordionPanel>
-                                        </>
-                                    ) : (
-                                        <>
-                                            <h2>
-                                                <Link
-                                                    to={item.path}
-                                                    style={{
-                                                        color: isPathActive(item.path) ? "#3F77A5" : "black",
-                                                        fontSize: "lg",
-                                                        fontWeight: isPathActive(item.path) ? "500" : "400",
-                                                        textDecoration: "none",
-                                                    }}
-                                                >
+                        <Flex direction="column" justifyContent="space-between" height="100%">
+                            <Accordion allowToggle>
+                                {navigationItems.map((item, index) => (
+                                    <AccordionItem key={item.name}>
+                                        {item.hasDropdown ? (
+                                            <>
+                                                <h2>
                                                     <AccordionButton
-                                                        onClick={() => {
-                                                            handleLinkClick(item.name)
-                                                            onClose()
-                                                        }}
                                                         bg={isPathActive(item.path) ? "#F5F8FA" : "transparent"}
                                                         color={isPathActive(item.path) ? "#3F77A5" : "black"}
                                                         fontWeight={isPathActive(item.path) ? "600" : "400"}
                                                         _hover={{ bg: "#F5F8FA" }}
                                                     >
-
                                                         <Box flex="1" textAlign="left">
                                                             {item.name}
                                                         </Box>
-                                                        <AccordionIcon style={{ visibility: 'hidden' }} />
+                                                        <AccordionIcon />
                                                     </AccordionButton>
-                                                </Link>
-                                            </h2>
-                                        </>
-                                    )}
+                                                </h2>
+                                                <AccordionPanel>
+                                                    {item.items.map((dropdownItem, idx) => (
+                                                        <Box key={idx} mb={2}>
+                                                            <Link
+                                                                to={dropdownItem.path}
+                                                                style={{
+                                                                    color: "black",
+                                                                    fontSize: "lg",
+                                                                    fontWeight: "400",
+                                                                    textDecoration: "none",
+                                                                }}
+                                                                onClick={() => {
+                                                                    handleLinkClick(item.name)
+                                                                    onClose()
+                                                                }}
+                                                            >
+                                                                {dropdownItem.label}
+                                                            </Link>
+                                                        </Box>
+                                                    ))}
+                                                </AccordionPanel>
+                                            </>
+                                        ) : (
+                                            <>
+                                                <h2>
+                                                    <Link
+                                                        to={item.path}
+                                                        style={{
+                                                            color: isPathActive(item.path) ? "#3F77A5" : "black",
+                                                            fontSize: "lg",
+                                                            fontWeight: isPathActive(item.path) ? "500" : "400",
+                                                            textDecoration: "none",
+                                                        }}
+                                                    >
+                                                        <AccordionButton
+                                                            onClick={() => {
+                                                                handleLinkClick(item.name)
+                                                                onClose()
+                                                            }}
+                                                            bg={isPathActive(item.path) ? "#F5F8FA" : "transparent"}
+                                                            color={isPathActive(item.path) ? "#3F77A5" : "black"}
+                                                            fontWeight={isPathActive(item.path) ? "600" : "400"}
+                                                            _hover={{ bg: "#F5F8FA" }}
+                                                        >
+
+                                                            <Box flex="1" textAlign="left">
+                                                                {item.name}
+                                                            </Box>
+                                                            <AccordionIcon style={{ visibility: 'hidden' }} />
+                                                        </AccordionButton>
+                                                    </Link>
+                                                </h2>
+                                            </>
+                                        )}
+                                    </AccordionItem>
+                                ))}
+                            </Accordion>
+                            <Accordion>
+                                <AccordionItem>
+                                    <h2>
+                                        <Link
+                                            to="/contactus"
+                                            style={{
+                                                color: isPathActive('/contactus') ? "#3F77A5" : "black",
+                                                fontSize: "lg",
+                                                fontWeight: isPathActive('/contactus') ? "500" : "400",
+                                                textDecoration: "none",
+                                            }}
+                                        >
+                                            <AccordionButton
+                                                onClick={() => {
+                                                    handleLinkClick('Contact Us')
+                                                    onClose()
+                                                }}
+                                                bg={isPathActive('/contactus') ? "#F5F8FA" : "transparent"}
+                                                color={isPathActive('/contactus') ? "#3F77A5" : "black"}
+                                                fontWeight={isPathActive('/contactus') ? "600" : "400"}
+                                                _hover={{ bg: "#F5F8FA" }}
+                                            >
+                                                <Box flex="1" textAlign="left">
+                                                    Contact Us
+                                                </Box>
+                                                <AccordionIcon style={{ visibility: 'hidden' }} />
+                                            </AccordionButton>
+                                        </Link>
+                                    </h2>
                                 </AccordionItem>
-                            ))}
-                        </Accordion>
+                            </Accordion>
+                        </Flex>
                     </DrawerBody>
                 </DrawerContent>
             </Drawer>

@@ -9,9 +9,9 @@ const SurveillanceSoftware = () => {
     }
 
     return (
-        <Flex direction="column" position="relative" alignItems="center" gap={4} width="100%" borderRadius="24px" height={imageHeight}>{/* main box */}
+        <Flex direction="column" position="relative" alignItems="center" gap={4} width="100%" borderRadius="24px" height={{ base: "fit-content", md: { imageHeight } }} mb={{ base: "0", md: "40%" }}>{/* main box */}
             {/* heading text */}
-            <Box fontSize={{ base: "24px", md: "48px" }} justifyContent="center" textAlign={{ base: "left", md: "center" }}>
+            <Box fontSize={{ base: "24px", md: "48px" }} justifyContent="center" textAlign="center" fontWeight="600" zIndex={1}>
                 <Text as="span" color="#3F77A5">Deep Learning </Text>
                 <Text as="span">Algorithms & </Text>
                 <br />
@@ -21,7 +21,7 @@ const SurveillanceSoftware = () => {
 
 
             {/* main content */}
-            <Flex direction="column" alignItems="center" justifyContent="center" width="100%" gap={4} >
+            <Flex order="2" direction="column" alignItems="center" justifyContent="center" width="100%" gap={4} zIndex={1}>
 
                 {/* first white box */}
                 <Flex direction="column" justifyContent="center" width="100%" bg="white" borderRadius="24px" p={{ base: "5%", md: "2%" }}>
@@ -56,9 +56,19 @@ const SurveillanceSoftware = () => {
             </Flex>
 
             {/* background image */}
-            <Box position={{ base: "static", sm: "absolute" }} width="auto" mx="-2%" overflow="visible" top={{ sm: "50%", md: "35%", lg: "20%", xl: "0%" }}>
-                <Image height="100%" src="../assets/surveillancemock.png" onLoad={handleImageLoad} />
+            <Box
+                order="1"
+                position={{ base: "static", md: "relative" }}
+                top={{ sm: "50%", md: "35%", lg: "20%", xl: "0%" }}
+            >
+                <Image
+                    height="100%"
+                    src="../assets/surveillancemock.png"
+                    onLoad={handleImageLoad}
+                    clipPath="inset(0)" // Ensures image does not affect layout
+                />
             </Box>
+
         </Flex>
     )
 }
