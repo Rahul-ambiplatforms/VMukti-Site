@@ -191,7 +191,7 @@ const VMuktiHomepage = () => {
         justify="center"
         h="100%"
         position="relative"
-        zIndex={1}
+        zIndex={1}  
       >
         {/* Left Side */}
         <MotionImage
