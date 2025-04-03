@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import HeadingAnimation from "../../../components/Animation/Text/HeadingAnimation";
 import SubHeadingAnimation from "../../../components/Animation/Text/SubHeadingAnimation";
 import ImagePop from "../../../components/Animation/Image/ImagePop";
