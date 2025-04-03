@@ -117,6 +117,11 @@ const industriesWeServeLinks = [
 ];
 
 const NewsletterSubscription = () => {
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isServingsOpen, setIsServingsOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
 
@@ -151,71 +156,47 @@ const NewsletterSubscription = () => {
         <SubscriptionBanner />
 
         {/* Information Section */}
-        <Flex flexWrap="wrap" gap="20px" mb="30px" minW="250px">
+        <Flex flexWrap="wrap" gap="20px" mb="30px" width={{ base: "100%" }} mt={{base:"5%", md:"0px"}}>
           {/* Who we are */}
-          <Box bg="white" borderRadius="24px" p="20px" flex="2">
-            <Heading
-              fontSize="16px"
-              fontWeight={700}
-              // mb="20px"
-            >
-              Who we are
-            </Heading>
+          <Box
+            position="relative"
+            flex={{ base: "0 0 100%", md: "2" }}
+            width={{ base: "100%" }}
+          >
+            {/* Main "Who we are" box */}
             <Box
-              width="17px"
-              height="2px"
-              borderRadius="2px"
-              mt="1%"
-              bg="#3F77A5"
-            />
-
-            <Flex mt="5%">
-              <Box mr="30px">
-                <List spacing="10px">
-                  {whoWeAreLinks.map((item, index) => (
-                    <ListItem
-                      key={index}
-                      _hover={{ color: "#3F77A5", cursor: "pointer" }}
-                      color="#696969"
-                      fontSize="14px"
-                      fontWeight="500"
-                    >
-                      •&nbsp;&nbsp;
-                      <Link href={item.path}>{item.text}</Link>
-                    </ListItem>
-                  ))}
-                </List>
-              </Box>
-              <Box>
-                <List spacing="10px">
-                  {policyLinks.map((item, index) => (
-                    <ListItem
-                      key={index}
-                      _hover={{ color: "#3F77A5", cursor: "pointer" }}
-                      color="#696969"
-                      fontSize="14px"
-                      fontWeight="500"
-                    >
-                      •&nbsp;&nbsp;
-                      <Link href={item.path}>{item.text}</Link>
-                    </ListItem>
-                  ))}
-                </List>
-              </Box>
-            </Flex>
-          </Box>
-
-          {/* Contact Us & Our Servings */}
-          <Flex flexDirection="column" flex="1" minW="250px">
-            <Box bg="#BECEDC" borderRadius="15px" p="20px" mb="20px">
-              <Heading
-                fontSize="16px"
-                // mb="10px"
-                fontWeight={700}
-                // fontFamily="'Wix Madefor Display', sans-serif"
-              >
-                Our Servings
-              </Heading>
+              bg="white"
+              borderRadius="24px"
+              p="20px"
+              height={{ md: "100%" }}
+              width={{ base: "100%" }}
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              cursor={{ base: "pointer", md: "default" }}
+            >
+              <Flex justify="space-between" align="center">
+                <Heading fontSize="16px" fontWeight={700}>
+                  Who we are
+                </Heading>
+                <Box
+                  display={{ base: "block", md: "none" }}
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  cursor="pointer"
+                >
+                  <svg
+                    width="15"
+                    height="9"
+                    viewBox="0 0 15 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    transform={isDropdownOpen ? "rotate(180)" : ""}
+                  >
+                    <path
+                      d="M7.38461 8.077L14.7692 0.692383L-2.86102e-06 0.692382L7.38461 8.077Z"
+                      fill="#3F77A5"
+                    />
+                  </svg>
+                </Box>
+              </Flex>
               <Box
                 width="17px"
                 height="2px"
@@ -223,26 +204,198 @@ const NewsletterSubscription = () => {
                 mt="1%"
                 bg="#3F77A5"
               />
-              <List spacing="10px" mt={"5%"}>
-                {ourServingsLinks.map((item, index) => (
-                  <ListItem
-                    key={index}
-                    _hover={{ color: "#3F77A5", cursor: "pointer" }}
-                    fontSize="14px"
-                    fontWeight="500"
-                  >
-                    •&nbsp;&nbsp;
-                    <Link href={item.path}>{item.text}</Link>
-                  </ListItem>
-                ))}
-              </List>
+
+              {/* Desktop content - two columns with bullet points */}
+              <Box display={{ base: "none", md: "block" }} mt="5%">
+                <Flex direction="row">
+                  <Box mr="30px">
+                    <List spacing="10px">
+                      {whoWeAreLinks.map((item, index) => (
+                        <ListItem
+                          key={index}
+                          _hover={{ color: "#3F77A5", cursor: "pointer" }}
+                          color="#696969"
+                          fontSize="14px"
+                          fontWeight="500"
+                        >
+                          •&nbsp;&nbsp;
+                          <Link href={item.path}>{item.text}</Link>
+                        </ListItem>
+                      ))}
+                    </List>
+                  </Box>
+                  <Box>
+                    <List spacing="10px">
+                      {policyLinks.map((item, index) => (
+                        <ListItem
+                          key={index}
+                          _hover={{ color: "#3F77A5", cursor: "pointer" }}
+                          color="#696969"
+                          fontSize="14px"
+                          fontWeight="500"
+                        >
+                          •&nbsp;&nbsp;
+                          <Link href={item.path}>{item.text}</Link>
+                        </ListItem>
+                      ))}
+                    </List>
+                  </Box>
+                </Flex>
+              </Box>
             </Box>
+
+            {/* Mobile dropdown content - single column without bullet points */}
+            {isDropdownOpen && (
+              <Box
+                position={{ base: "relative", md: "absolute" }}
+                width="100%"
+                bg="white"
+                borderRadius="10px"
+                mt="10px"
+                p="15px"
+                boxShadow="sm"
+                zIndex="1"
+                // onClick={(e) => e.stopPropagation()} // Prevent container click from bubbling
+              >
+                {[...whoWeAreLinks, ...policyLinks].map(
+                  (item, index, array) => (
+                    <Box key={index}>
+                      <Link href={item.path}>
+                        <Flex
+                          align="center"
+                          py="10px"
+                          _hover={{ color: "#3F77A5", cursor: "pointer" }}
+                        >
+                          <Text
+                            fontSize="14px"
+                            fontWeight="500"
+                            color="#696969"
+                          >
+                            {item.text} {/* Removed bullet point for mobile */}
+                          </Text>
+                        </Flex>
+                      </Link>
+                      {index !== array.length - 1 && (
+                        <Box height="1px" bg="#3F77A5" opacity="0.2" my="5px" w="60%"/>
+                      )}
+                    </Box>
+                  )
+                )}
+              </Box>
+            )}
+          </Box>
+
+          {/* Contact Us & Our Servings */}
+          <Flex
+            flexDirection="column"
+            flex={{ base: "0 0 100%", md: "1" }}
+            minW="250px"
+            gap={4}
+          >
+            {/* Our Servings Box with Dropdown */}
+            <Box position="relative">
+              {/* Main "Our Servings" box */}
+              <Box
+                bg="#BECEDC"
+                borderRadius="15px"
+                p="20px"
+                width={{ base: "100%" }}
+                onClick={() => setIsServingsOpen(!isServingsOpen)}
+                cursor={{ base: "pointer", md: "default" }}
+              >
+                <Flex justify="space-between" align="center">
+                  <Heading fontSize="16px" fontWeight={700}>
+                    Our Servings
+                  </Heading>
+                  <Box
+                    display={{ base: "block", md: "none" }}
+                    onClick={() => setIsServingsOpen(!isServingsOpen)}
+                    cursor="pointer"
+                  >
+                    <svg
+                      width="15"
+                      height="9"
+                      viewBox="0 0 15 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      transform={isServingsOpen ? "rotate(180)" : ""}
+                    >
+                      <path
+                        d="M7.38461 8.077L14.7692 0.692383L-2.86102e-06 0.692382L7.38461 8.077Z"
+                        fill="#3F77A5"
+                      />
+                    </svg>
+                  </Box>
+                </Flex>
+                <Box
+                  width="17px"
+                  height="2px"
+                  borderRadius="2px"
+                  mt="1%"
+                  bg="#3F77A5"
+                />
+
+                {/* Desktop content - always visible */}
+                <Box display={{ base: "none", md: "block" }} mt="5%">
+                  <List spacing="10px">
+                    {ourServingsLinks.map((item, index) => (
+                      <ListItem
+                        key={index}
+                        _hover={{ color: "#3F77A5", cursor: "pointer" }}
+                        fontSize="14px"
+                        fontWeight="500"
+                      >
+                        •&nbsp;&nbsp;
+                        <Link href={item.path}>{item.text}</Link>
+                      </ListItem>
+                    ))}
+                  </List>
+                </Box>
+              </Box>
+
+              {/* Mobile dropdown content - appears outside main box */}
+              {isServingsOpen && (
+                <Box
+                  position={{ base: "relative", md: "absolute" }}
+                  width="100%"
+                  bg="white"
+                  borderRadius="10px"
+                  mt="10px" // Adjust to overlap slightly with main box
+                  p="15px"
+                  boxShadow="sm"
+                  zIndex="1"
+                >
+                  {ourServingsLinks.map((item, index) => (
+                    <Box key={index}>
+                      <Link href={item.path}>
+                        <Flex
+                          align="center"
+                          py="10px"
+                          _hover={{ color: "#3F77A5", cursor: "pointer" }}
+                        >
+                          <Text fontSize="14px" fontWeight="500">
+                            {item.text} {/* Removed bullet point */}
+                          </Text>
+                        </Flex>
+                      </Link>
+                      {index !== ourServingsLinks.length - 1 && (
+                        <Box height="1px" bg="#3F77A5" opacity="0.2" my="5px" w="60%"/>
+                      )}
+                    </Box>
+                  ))}
+                </Box>
+              )}
+            </Box>
+
+            {/* Contact Us Box with Dropdown */}
             <Box
               bg="#BECEDC"
               borderRadius="15px"
               p="20px"
               flex="1"
               minW="250px"
+              order="4"
+              display={{ base: "none", md: "block" }}
             >
               <Heading
                 fontSize="16px"
@@ -308,13 +461,206 @@ const NewsletterSubscription = () => {
           </Flex>
 
           {/* Technologies */}
+          <Box position="relative" flex="1" minW="250px">
+            {/* Main "Our Solutions" box */}
+            <Box
+              bg="#BECEDC"
+              borderRadius="15px"
+              p="20px"
+              height={{ md: "100%" }}
+              width={{ base: "100%" }}
+              onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
+              cursor={{ base: "pointer", md: "default" }}
+            >
+              <Flex justify="space-between" align="center">
+                <Heading fontSize="16px" fontWeight={700}>
+                  Our Solutions
+                </Heading>
+                <Box
+                  display={{ base: "block", md: "none" }}
+                  onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
+                  cursor="pointer"
+                >
+                  <svg
+                    width="15"
+                    height="9"
+                    viewBox="0 0 15 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    transform={isSolutionsOpen ? "rotate(180)" : ""}
+                  >
+                    <path
+                      d="M7.38461 8.077L14.7692 0.692383L-2.86102e-06 0.692382L7.38461 8.077Z"
+                      fill="#3F77A5"
+                    />
+                  </svg>
+                </Box>
+              </Flex>
+              <Box
+                width="17px"
+                height="2px"
+                borderRadius="2px"
+                mt="1%"
+                bg="#3F77A5"
+              />
+
+              {/* Desktop content - always visible */}
+              <Box display={{ base: "none", md: "block" }} mt="5%">
+                <List spacing="10px">
+                  {ourSolutionsLinks.map((item, index) => (
+                    <ListItem
+                      key={index}
+                      _hover={{ color: "#3F77A5", cursor: "pointer" }}
+                      fontSize="14px"
+                      fontWeight="500"
+                    >
+                      •&nbsp;&nbsp;
+                      <Link href={item.path}>{item.text}</Link>
+                    </ListItem>
+                  ))}
+                </List>
+              </Box>
+            </Box>
+
+            {/* Mobile dropdown content - appears outside main box */}
+            {isSolutionsOpen && (
+              <Box
+                position={{ base: "relative", md: "absolute" }}
+                width="100%"
+                bg="white"
+                borderRadius="10px"
+                mt="10px"
+                p="15px"
+                boxShadow="sm"
+                zIndex="1"
+              >
+                {ourSolutionsLinks.map((item, index) => (
+                  <Box key={index}>
+                    <Link href={item.path}>
+                      <Flex
+                        align="center"
+                        py="10px"
+                        _hover={{ color: "#3F77A5", cursor: "pointer" }}
+                      >
+                        <Text fontSize="14px" fontWeight="500">
+                          {item.text}
+                        </Text>
+                      </Flex>
+                    </Link>
+                    {index !== ourSolutionsLinks.length - 1 && (
+                      <Box height="1px" bg="#3F77A5" opacity="0.2" my="5px" w="60%"/>
+                    )}
+                  </Box>
+                ))}
+              </Box>
+            )}
+          </Box>
+
+          {/* Industries we serve */}
+          <Box position="relative" flex="1" minW="250px">
+            {/* Main "Industries we serve" box */}
+            <Box
+              bg="#BECEDC"
+              borderRadius="15px"
+              p="20px"
+              height={{ md: "100%" }}
+              width={{ base: "100%" }}
+              onClick={() => setIsIndustriesOpen(!isIndustriesOpen)}
+              cursor={{ base: "pointer", md: "default" }}
+            >
+              <Flex justify="space-between" align="center">
+                <Heading fontSize="16px" fontWeight={700}>
+                  Industries we serve
+                </Heading>
+                <Box
+                  display={{ base: "block", md: "none" }}
+                  onClick={() => setIsIndustriesOpen(!isIndustriesOpen)}
+                  cursor="pointer"
+                >
+                  <svg
+                    width="15"
+                    height="9"
+                    viewBox="0 0 15 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    transform={isIndustriesOpen ? "rotate(180)" : ""}
+                  >
+                    <path
+                      d="M7.38461 8.077L14.7692 0.692383L-2.86102e-06 0.692382L7.38461 8.077Z"
+                      fill="#3F77A5"
+                    />
+                  </svg>
+                </Box>
+              </Flex>
+              <Box
+                width="17px"
+                height="2px"
+                borderRadius="2px"
+                mt="1%"
+                bg="#3F77A5"
+              />
+
+              {/* Desktop content - always visible */}
+              <Box display={{ base: "none", md: "block" }} mt="5%">
+                <List spacing="10px">
+                  {industriesWeServeLinks.map((item, index) => (
+                    <ListItem
+                      key={index}
+                      _hover={{ color: "#3F77A5", cursor: "pointer" }}
+                      fontSize="14px"
+                      fontWeight="500"
+                    >
+                      •&nbsp;&nbsp;
+                      <Link href={item.path}>{item.text}</Link>
+                    </ListItem>
+                  ))}
+                </List>
+              </Box>
+            </Box>
+
+            {/* Mobile dropdown content - appears outside main box */}
+            {isIndustriesOpen && (
+              <Box
+                position={{ base: "relative", md: "absolute" }}
+                width="100%"
+                bg="white"
+                borderRadius="10px"
+                mt="10px"
+                p="15px"
+                boxShadow="sm"
+                zIndex="1"
+              >
+                {industriesWeServeLinks.map((item, index) => (
+                  <Box key={index}>
+                    <Link href={item.path}>
+                      <Flex
+                        align="center"
+                        py="10px"
+                        _hover={{ color: "#3F77A5", cursor: "pointer" }}
+                      >
+                        <Text fontSize="14px" fontWeight="500">
+                          {item.text}
+                        </Text>
+                      </Flex>
+                    </Link>
+                    {index !== industriesWeServeLinks.length - 1 && (
+                      <Box height="1px" bg="#3F77A5" opacity="0.2" my="5px" w="60%"/>
+                    )}
+                  </Box>
+                ))}
+              </Box>
+            )}
+          </Box>
+
+          {/* hide in desktop view */}
           <Box
             bg="#BECEDC"
+            display={{ base: "block", md: "none" }}
             borderRadius="15px"
             p="20px"
-            // pt="20px"
             flex="1"
             minW="250px"
+            order="4"
           >
             <Heading
               fontSize="16px"
@@ -322,7 +668,7 @@ const NewsletterSubscription = () => {
               // fontFamily="'Wix Madefor Display', sans-serif"
               // mb="10px"
             >
-              Our Solutions
+              Contact Us
             </Heading>
             <Box
               width="17px"
@@ -332,52 +678,50 @@ const NewsletterSubscription = () => {
               bg="#3F77A5"
             />
 
-            <List spacing="10px" mt="5%">
-              {ourSolutionsLinks.map((item, index) => (
-                <ListItem
-                  key={index}
-                  _hover={{ color: "#3F77A5", cursor: "pointer" }}
-                  fontSize="14px"
-                  fontWeight="500"
+            <Text fontSize="14px" fontWeight="500" lineHeight="1.6" mt="5%">
+              7, Arista@Eight corporate House, Near Satyam House, Behind Rajpath
+              Club, Bodakdev, Ahmedabad - 380054
+            </Text>
+            <Flex alignItems="center" mt="15px">
+              <PhoneIcon mr="10px" w="20px" h="auto" />
+              <Text fontSize="14px" fontWeight="500">
+                (91+) 968 777 0000
+              </Text>
+            </Flex>
+            <Link href={"/contactus"}>
+              <Button
+                width={buttonWidth}
+                height={buttonHeight}
+                justifyContent="space-between"
+                alignItems="center"
+                bg="white"
+                color="#3F77A5"
+                borderRadius="20px"
+                flexShrink={0}
+                // ml={{ base: '5px', md: '10px', lg: '15px' }}
+                mt="20%"
+                fontWeight={700}
+                gap="2"
+                _hover={{
+                  bg: "#E0F2FE", // Light blue background on hover
+                  color: "#2C5E84",
+                }}
+              >
+                Book Demo
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 17 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  •&nbsp;&nbsp;
-                  <Link href={item.path}>{item.text}</Link>
-                </ListItem>
-              ))}
-            </List>
-          </Box>
-
-          {/* Industries we serve */}
-          <Box bg="#BECEDC" borderRadius="15px" p="20px" flex="1" minW="250px">
-            <Heading
-              fontSize="16px"
-              fontWeight={700}
-              // fontFamily="'Wix Madefor Display', sans-serif"
-              // mb="10px"
-            >
-              Industries we serve
-            </Heading>
-            <Box
-              width="17px"
-              height="2px"
-              borderRadius="2px"
-              mt="1%"
-              bg="#3F77A5"
-            />
-
-            <List spacing="10px" mt="5%">
-              {industriesWeServeLinks.map((item, index) => (
-                <ListItem
-                  key={index}
-                  _hover={{ color: "#3F77A5", cursor: "pointer" }}
-                  fontSize="14px"
-                  fontWeight="500"
-                >
-                  •&nbsp;&nbsp;
-                  <Link href={item.path}>{item.text}</Link>
-                </ListItem>
-              ))}
-            </List>
+                  <path
+                    d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
+                    fill="#3F77A5"
+                  />
+                </svg>
+              </Button>
+            </Link>
           </Box>
         </Flex>
 
