@@ -8,9 +8,6 @@ import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation"
 const MotionBox = motion(Box)
 
 const VideoAnalytics = () => {
-  const [featureIndex, setFeatureIndex] = useState(0)
-  const [progress, setProgress] = useState(0)
-
   const features = [
     {
       title: "Instant Reporting",
@@ -37,20 +34,25 @@ const VideoAnalytics = () => {
     { image: "/assets/iPadProMockup1.png", height: "100%", minWidth: "250px" },
   ]
 
+  const [featureIndex, setFeatureIndex] = useState(0)
+  const progress = (featureIndex / (features.length - 1)) * 100
+
   const handleNext = () => {
     setFeatureIndex((prevIndex) => (prevIndex + 1) % features.length)
-    setProgress((prev) => (prev + 25) % 100)
   }
 
   const handlePrevious = () => {
     setFeatureIndex((prevIndex) => (prevIndex - 1 + features.length) % features.length)
-    setProgress((prev) => (prev - 25 < 0 ? 75 : prev - 25))
+  }
+
+  const handleFeatureClick = (index) => {
+    setFeatureIndex(index)
   }
 
   return (
-    <Flex borderRadius="20px" bgColor="#3F77A5" overflow="hidden" position="relative" marginTop="-50px" zIndex={1}>
+    <Flex borderRadius="24px" bgColor="#3F77A5" overflow="hidden" position="relative" marginTop="-50px" zIndex={1}>
       <Flex padding={{ base: "20px", md: "40px" }} gap={4} direction={{ base: "column", lg: "row" }} width="100%">
-        {/* Left Section - Modified for mobile */}
+        {/* Left Section */}
         <Flex
           color="white"
           paddingTop={{ base: "10px", md: "20px" }}
@@ -75,26 +77,25 @@ const VideoAnalytics = () => {
             </Text>
           </HeadingAnimation>
 
-          {/* Mobile view - moved feature boxes here */}
+          {/* Mobile View */}
           <Box display={{ base: "block", md: "none" }} mt="20px">
-            {/* Image section with updated objectFit for containment */}
             <Box
               width="100%"
-              height="200px" // Adjusted height for mobile view
-              borderRadius="12px"
+              height="200px"
+              borderRadius="20px"
               padding="15px"
               bgColor="#E7E7E7"
               position="relative"
               overflow="hidden"
-              mb="15px" // Added margin-bottom for spacing
+              mb="15px"
             >
               <Image
                 key={`mobile-image-${featureIndex}`}
                 src={featureImages[featureIndex].image}
                 alt={features[featureIndex].title}
-                objectFit="contain" // Ensures the image fits within the box
+                objectFit="contain"
                 width="100%"
-                height="100%" // Ensures the image scales properly
+                height="100%"
                 position="absolute"
                 top="0"
                 left="0"
@@ -103,17 +104,17 @@ const VideoAnalytics = () => {
 
             <MotionBox
               width="100%"
-              borderRadius="12px"
+              borderRadius="20px"
               bgColor="white"
               padding="15px"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              mt={{ base: "-10%", md: "0" }}
-              height={{ base: "150px", md: "auto" }} // Increased height for mobile view
+              mt={{ base: "-14%", md: "0" }}
+              height={{ base: "180px", md: "auto" }}
               display="flex"
               flexDirection="column"
-              justifyContent={{ base: "flex-end", md: "flex-start" }} // Align text to the bottom in mobile view
+              justifyContent={{ base: "flex-end", md: "flex-start" }}
             >
               <Text color="black" fontSize="16px" fontWeight="700" letterSpacing="-0.24px">
                 {features[featureIndex].title}
@@ -131,24 +132,27 @@ const VideoAnalytics = () => {
             </MotionBox>
           </Box>
 
+          {/* Progress Bar and Navigation */}
           <Flex
             direction={{ base: "row", md: "column" }}
             alignItems="center"
             justifyContent={{ base: "space-between", md: "flex-start" }}
             width="100%"
             mt={{ base: "20px", md: "25px" }}
+            display={{ base: "none", md: "flex" }} // Hide progress bar in mobile view
           >
-            <Flex position="relative" bg="#fff" height="0.1px" width="100%" align="center" mt={{ base: "0", md: "25px" }}>
+            <Box position="relative" width="100%" height="4px" bg="rgba(255,255,255,0.2)" mt={{ base: "0", md: "25px" }}>
               <Box
                 position="absolute"
-                height="4px"
-                width="25%"
+                height="100%"
+                width={`${100 / features.length}%`}
                 bg="#FFFFFF"
-                transform={`translateX(${progress}%)`}
-                transition="transform 0.3s ease-in-out"
+                left={`${progress}%`}
+                transform="translateX(-100%)"
+                transition="left 0.3s ease-in-out"
               />
-            </Flex>
-            {/* Hide arrows in mobile view */}
+            </Box>
+
             <Flex
               gap="0.5"
               mt={{ base: "10px", md: "25px" }}
@@ -198,6 +202,7 @@ const VideoAnalytics = () => {
             </Flex>
           </Flex>
 
+          {/* Feature List */}
           <Grid templateColumns="20px 1fr" gap="2" mt={{ base: "20px", md: "0" }}>
             {features.map((feature, index) => (
               <React.Fragment key={index}>
@@ -214,10 +219,7 @@ const VideoAnalytics = () => {
                   color={index === featureIndex ? "white" : "rgba(255, 255, 255, 0.6)"}
                   fontWeight={index === featureIndex ? "bold" : "normal"}
                   cursor="pointer"
-                  onClick={() => {
-                    setFeatureIndex(index)
-                    setProgress(index * 25)
-                  }}
+                  onClick={() => handleFeatureClick(index)}
                 >
                   {feature.title}
                 </Text>
@@ -226,7 +228,7 @@ const VideoAnalytics = () => {
           </Grid>
         </Flex>
 
-        {/* Right Section - Hidden in mobile view */}
+        {/* Desktop View - Right Section */}
         <Flex
           marginTop={{ base: "0", md: "171px" }}
           position="relative"
