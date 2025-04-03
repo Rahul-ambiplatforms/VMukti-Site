@@ -58,8 +58,10 @@ const SurveillanceSoftware = () => {
             {/* background image */}
             <Box
                 order="1"
-                position={{ base: "static", md: "relative" }}
+                position={{ base: "static", md: "absolute" }}
                 top={{ sm: "50%", md: "35%", lg: "20%", xl: "0%" }}
+                mx="-5%"
+                zIndex={2}
             >
                 <Image
                     height="100%"
