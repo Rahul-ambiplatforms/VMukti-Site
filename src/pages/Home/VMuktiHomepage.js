@@ -31,7 +31,7 @@ const StickySection = ({ children }) => (
   <Box
     position="relative"
     mb="5%"
-    height={`${children.length * 120}dvh`}
+    height={`${children.length * 100}dvh`}
   >
     {children.map((child, index) => (
       <Box
@@ -39,9 +39,8 @@ const StickySection = ({ children }) => (
         position="sticky"
         borderRadius="24px"
         top="0%"
-        height="110dvh"
+        // height="fit-content"  //check out why this is not working
         zIndex={index + 1}
-        bg="white"
       >
         {child}
       </Box>

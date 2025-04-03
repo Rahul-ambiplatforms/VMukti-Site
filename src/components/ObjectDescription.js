@@ -15,12 +15,21 @@ const popAnimation = {
 
 const ObjectDescription = ({ description, image, list }) => {
     return <>
-        <Box>
+        <Flex direction="column" gap="4">
+            <Box fontSize={{ base: "24px", md: "48px" }} fontWeight="500" letterSpacing="0%">
+                <Text as="span">Object </Text>
+                <Text as="span" color="#3F77A5">Detection </Text>
+                <Text as="span">& Real-Time</Text>
+                <Text as="span" color="#db7b3a"> Tracking.</Text>
+
+            </Box>
             <Flex
                 bg="white"
                 borderRadius="20px"
                 overflow="hidden"
-                p="1%"
+                p={{ base: "5%", md: "1%" }}
+                minHeight="600px"
+                alignItems={{ base: "end", md: "center" }}
                 position="relative"
                 h={{ base: "auto", md: "753px" }} // Adjust height as needed
             >
@@ -28,14 +37,15 @@ const ObjectDescription = ({ description, image, list }) => {
                 <Box
                     position="absolute"
                     top="0"
-                    left="0"
+                    right="0"
                     w="100%"
                     h="100%"
                     bgImage={`${process.env.PUBLIC_URL}/${image}`}
                     bgSize="cover"
-                    bgPosition="center"
+                    bgPosition="right" // Show right side on mobile, center on larger screens
                     zIndex={1} // Behind the text
                 />
+
 
                 {/* Card Content */}
                 <Flex
@@ -49,6 +59,7 @@ const ObjectDescription = ({ description, image, list }) => {
                     p={5}
                     bg="rgba(255, 255, 255, 0.8)" // Semi-transparent background
                     w={{ base: "100%", md: "30%" }}
+                    height={{ base: "40%", md: "100%" }}
                     gap={5}
                     borderRadius="20px"
                     zIndex={2} // Above the image
@@ -71,7 +82,7 @@ const ObjectDescription = ({ description, image, list }) => {
                                         />
                                     </svg>
                                 </Text>
-                                <Heading fontSize="36px" fontWeight="500" mb={5} color="black">
+                                <Heading fontSize={{ base: "20px", md: "36px" }} fontWeight="500" mb={5} color="black">
                                     {description.split("\n").map((line, index) => (
                                         <React.Fragment key={index}>
                                             {line}
@@ -84,15 +95,15 @@ const ObjectDescription = ({ description, image, list }) => {
                     </Flex>
 
                     <Flex direction="column" justifyContent="space-between" gap={5}>
-                        <Flex direction="column" justifyContent="center" width="100%" borderRadius="24px" p={{ base: "5%", md: "2%" }} gap={4}>
+                        <Flex direction="column" justifyContent="center" width="100%" borderRadius="24px" gap={4}>
                             {/* box heading */}
                             <Flex direction="column" width="100%">
                                 <Text fontSize={{ base: "14px", md: "16px" }} fontWeight="700">What It Does for You</Text>
-                                <Box width="20px" height="2px" bg="#3F77A5" />
+                                {/* <Box width="20px" height="2px" bg="#3F77A5" /> */}
                             </Flex>
 
                             {/* box content */}
-                            <List spacing={1} fontWeight={500} fontSize={{ base: "12px", md: "14px" }} styleType="disc" ml={{ base: "5%", md: "10%" }}>
+                            <List  ml={{ base: "5%", md: "10%" }} px={{ base: "5%", md: "2%" }} spacing={1} fontWeight={500} fontSize={{ base: "12px", md: "14px" }} styleType="disc">
                                 {
                                     list.map((item, index) => (
                                         <ListItem key={index}>{item}</ListItem>
@@ -103,7 +114,7 @@ const ObjectDescription = ({ description, image, list }) => {
                     </Flex>
                 </Flex>
             </Flex>
-        </Box>
+        </Flex>
     </>
 }
 
