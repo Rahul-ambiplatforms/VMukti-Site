@@ -17,7 +17,6 @@ import Achieved from "./Achieved";
 import Diagram from "./Diagram";
 import Industries from "./industriesData";
 import AdvancedSurveillance from "./AdvancedSurveillance";
-import ServingsDescriptionCard from "../../components/ServingsDescriptionCard";
 import SurveillanceSoftware from "../../components/SurveillanceSoftware";
 import ObjectDescription from "../../components/ObjectDescription";
 
@@ -58,14 +57,14 @@ const VMuktiHomepage = () => {
         label: "Data-Driven Forecasting",
         media: "/assets/ddf.png",
         description:
-          "Guesses what’s around the corner—keeps you ready."
+          "Guesses what's around the corner—keeps you ready."
       },
       {
         type: "image",
         label: "Anomaly Detection",
         media: "/assets/ad.png",
         description:
-          "Catches weird stuff in our AI camera software before it’s a"
+          "Catches weird stuff in our AI camera software before it's a"
       },
       {
         type: "image",
@@ -94,7 +93,7 @@ const VMuktiHomepage = () => {
         label: "AI-Powered Visual Processing",
         media: "/assets/ai1.png",
         description:
-          "Digs into video live—grabs what’s happening, no waiting."
+          "Digs into video live—grabs what's happening, no waiting."
       },
       {
         type: "image",
@@ -108,7 +107,7 @@ const VMuktiHomepage = () => {
         label: "Scene Understanding",
         media: "/assets/su.png",
         description:
-          "Figures out what’s what—people, actions, where stuff is—so you’re never lost."
+          "Figures out what's what—people, actions, where stuff is—so you're never lost."
       },
       {
         type: "image",
@@ -149,7 +148,7 @@ const VMuktiHomepage = () => {
         {/* Decorative Boxes */}
         <Flex
           position="absolute"
-          top="5.3%"
+          top="3.3%"
           left="35%"
           transform="translateX(-50%)"
           gap={4}
@@ -186,36 +185,84 @@ const VMuktiHomepage = () => {
       {/* Main Content */}
       <Flex
         pl={{ base: "1%", md: "2.5%" }}
-        direction={{ base: "column", md: "row" }}
+        direction={{ base: "column-reverse", md: "row" }}
         align="center"
         justify="center"
         h="100%"
         position="relative"
         zIndex={1}  
       >
-        {/* Left Side */}
-        <MotionImage
-          src="/assets/tablet.png"
-          position={{ base: "static", md: "absolute" }}
-          right="0"
-          zIndex={1}
-          initial={{ scale: 0.8, opacity: 1 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.2 }}
-        />
+        {/* Left Side - Mobile View */}
+        {useBreakpointValue({ base: true, md: false }) && (
+          <Flex
+            mt="16px"
+            direction="column"
+            align="center"
+            justify="center"
+          >
+            <MotionImage
+              src="/assets/tablet.png"
+              position="static"
+              zIndex={1}
+              initial={{ scale: 0.8, opacity: 1 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              viewport={{ once: false, amount: 0.2 }}
+            />
+            <Box 
+              width="13px" 
+              height="13px"
+              alignSelf="flex-start" 
+              ml="35%"
+            >
+              <svg
+                viewBox="0 0 33 33"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ display: 'block' }}
+              >
+                <path
+                  d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
+                  fill="#3F77A5"
+                />
+              </svg>
+            </Box>
+            <Text
+              fontWeight="500"
+              lineHeight="100%"
+              maxW={{ base: "90%", md: "60%" }}
+              fontSize={{ base: "12px", md: "16px" }}
+              width={{ base: "60%", md: "50%" }}
+              alignSelf="flex-end"
+            >
+              Got visuals piling up? Our AI turns them into answers—fast. It's like giving your cameras a brain to spot what matters and fix your headaches on the spot.
+            </Text>
+          </Flex>
+        )}
+        {!useBreakpointValue({ base: true, md: false }) && (
+          <MotionImage
+            src="/assets/tablet.png"
+            position="absolute"
+            right="0"
+            zIndex={1}
+            initial={{ scale: 0.8, opacity: 1 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.2 }}
+          />
+        )}
         <Box
           flex="1"
           bgRepeat="no-repeat"
           bgSize="contain"
           bgPosition={{ base: "center", md: "right" }}
-          minH={{ base: "40vh", md: "80vh" }}
+          minH={{ base: "20vh", md: "80vh" }}
           zIndex={1}
         >
           {/* Animated Heading */}
           <MotionBox
             ref={ref}
-            fontSize={{ base: "48px", md: "75px", lg: "100px" }}
+            fontSize={{ base: "32px", md: "48px", lg: "100px" }}
             fontWeight="600"
             lineHeight="140%"
             zIndex={1}
@@ -223,67 +270,66 @@ const VMuktiHomepage = () => {
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <Text as="span" color="#000">Unlocking the </Text>
-            <Text as="span" color="#3F77A5">Power of </Text>
+            <Text as="span" color="#3F77A5">Advanced </Text>
+            <Text as="span" color="#000">Computer Vision &  </Text>
             <br />
-            <Text as="span" color="#3F77A5">Data</Text>
-            <Text as="span" color="#000"> with </Text>
-            <Text as="span" color="#DB7B3A">AI.</Text>
+            <Text as="span" color="#DB7B3A">Intelligence</Text>
+            <Text as="span" color="#3F77A5"> . </Text>
           </MotionBox>
-
-          {/* Subtext */}
-          <Flex mt="16px" direction={{ base: "column", md: "row" }}>
-            <MotionBox
-              display="flex"
-              alignItems="center"
-              gap={3}
-              initial={{ opacity: 0, x: -80 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.9, ease: "easeOut" }}
-              ref={ref}
-              viewport={{ once: false }}
-            >
-              <svg
-                width="33"
-                height="33"
-                viewBox="0 0 33 33"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+          {/* Subtext - Desktop View */}
+          {!useBreakpointValue({ base: true, md: false }) && (
+            <Flex mt="16px" direction={{ base: "column", md: "row" }}>
+              <MotionBox
+                display="flex"
+                alignItems="center"
+                gap={3}
+                initial={{ opacity: 0, x: -80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.9, ease: "easeOut" }}
+                ref={ref}
+                viewport={{ once: false }}
               >
-                <path
-                  d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
-                  fill="#3F77A5"
-                />
-              </svg>
-              <Text
-                fontWeight="500"
-                lineHeight="100%"
-                maxW={{ base: "90%", md: "60%" }}
-                fontSize={{ base: "14px", md: "16px" }}
-                width="50%"
-              >
-                Got visuals piling up? Our AI turns them into answers—fast. It’s like giving your cameras a brain to spot what matters and fix your headaches on the spot.
-              </Text>
-            </MotionBox>
-          </Flex>
-
+                <Box width="33px" height="33px">
+                  <svg
+                    viewBox="0 0 33 33"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style={{ display: 'block' }}
+                  >
+                    <path
+                      d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
+                      fill="#3F77A5"
+                    />
+                  </svg>
+                </Box>
+                <Text
+                  fontWeight="500"
+                  lineHeight="100%"
+                  maxW={{ base: "220px", md: "60%" }}
+                  fontSize={{ base: "12px", md: "16px" }}
+                  width="50%"
+                >
+                  Got visuals piling up? Our AI turns them into answers—fast. It's like giving your cameras a brain to spot what matters and fix your headaches on the spot.
+                </Text>
+              </MotionBox>
+            </Flex>
+          )}
           {/* Robotic Hand and Button */}
           <Flex
             position="relative"
-            mt={{ base: "10px", md: "-10%" }}
+            mt={{ base: "0", md: "-10%" }}
             ml={{ base: "0", md: "-40px" }}
-            // alignItems={{ base: "flex-start", sm: "center" }}
-            // direction={{ base: "column", sm: "row" }}
             width="fit-content"
           >
-
-            <Image src="/assets/robohand.png" alt="Robotic Hand" display={{ base: "none", md: "block" }} />
-            <Image src="/assets/robohand2.png" alt="Robotic Hand" display={{ base: "block", md: "none" }} height="auto" width="50%" />
+            <Image
+              src="/assets/robohand.png"
+              alt="Robotic Hand"
+              display={{ base: "none", md: "block" }}
+            />
             <MotionButton
-              // order="1"
               position="absolute"
-              top={{ base: "20%", sm: "20%", md: "35%" }}
-              right={{ base: "25%", sm: "35%", md: "0%" }}
+              top={{ base: "20%", sm: "20%", md: "37%" }}
+              right={{ base: "", sm: "", md: "8%" }}
               bg="white"
               height={{ base: "34px", sm: "50px" }}
               borderRadius="20px"
@@ -291,11 +337,12 @@ const VMuktiHomepage = () => {
               as={Link}
               to="/contactus"
               gap="2"
+              display="flex"
               _hover={{
                 bg: "#E0F2FE",
                 color: "#2C5E84",
               }}
-              fontSize={{ base: "12px", sm: "16px" }}
+              fontSize={{ base: "14px", sm: "16px" }}
               animate={{
                 x: [0, 5, -5, 5, -5, 0],
                 y: [0, -5, 5, -5, 5, 0],
@@ -333,19 +380,13 @@ const VMuktiHomepage = () => {
             image="../assets/objectdetection.png"
             list={["Precision Tracking", "Automated Alerts", "AI-Powered Recognition", "Adaptive Learning"]}
           />
-
-
         </Flex>
         <Box mt="5%" ><SurveillanceSoftware /></Box>
         <StickySection>
-
           <AdvancedComputerVision {...customData} />
-
           <VideoAnalytics />
           <AdvancedComputerVision />
-
         </StickySection>
-
       </PageContentWrapper>
 
       <PageContentWrapper>

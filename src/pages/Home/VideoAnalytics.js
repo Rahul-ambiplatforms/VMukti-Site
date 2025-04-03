@@ -50,7 +50,7 @@ const VideoAnalytics = () => {
   return (
     <Flex borderRadius="20px" bgColor="#3F77A5" overflow="hidden" position="relative" marginTop="-50px" zIndex={1}>
       <Flex padding={{ base: "20px", md: "40px" }} gap={4} direction={{ base: "column", lg: "row" }} width="100%">
-        {/* Left Section - Completely unchanged */}
+        {/* Left Section - Modified for mobile */}
         <Flex
           color="white"
           paddingTop={{ base: "10px", md: "20px" }}
@@ -58,6 +58,7 @@ const VideoAnalytics = () => {
           width={{ base: "100%", md: "auto" }}
           minWidth={{ md: "250px" }}
           flexShrink={0}
+          order={{ base: 1, md: 0 }}
         >
           <HeadingAnimation>
             <Text
@@ -73,13 +74,71 @@ const VideoAnalytics = () => {
               Video Analytics & Insights
             </Text>
           </HeadingAnimation>
+
+          {/* Mobile view - moved feature boxes here */}
+          <Box display={{ base: "block", md: "none" }} mt="20px">
+            {/* Image section with updated objectFit for containment */}
+            <Box
+              width="100%"
+              height="200px" // Adjusted height for mobile view
+              borderRadius="12px"
+              padding="15px"
+              bgColor="#E7E7E7"
+              position="relative"
+              overflow="hidden"
+              mb="15px" // Added margin-bottom for spacing
+            >
+              <Image
+                key={`mobile-image-${featureIndex}`}
+                src={featureImages[featureIndex].image}
+                alt={features[featureIndex].title}
+                objectFit="contain" // Ensures the image fits within the box
+                width="100%"
+                height="100%" // Ensures the image scales properly
+                position="absolute"
+                top="0"
+                left="0"
+              />
+            </Box>
+
+            <MotionBox
+              width="100%"
+              borderRadius="12px"
+              bgColor="white"
+              padding="15px"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              mt={{ base: "-10%", md: "0" }}
+              height={{ base: "150px", md: "auto" }} // Increased height for mobile view
+              display="flex"
+              flexDirection="column"
+              justifyContent={{ base: "flex-end", md: "flex-start" }} // Align text to the bottom in mobile view
+            >
+              <Text color="black" fontSize="16px" fontWeight="700" letterSpacing="-0.24px">
+                {features[featureIndex].title}
+              </Text>
+              <Text
+                width="100%"
+                color="#696969"
+                fontSize="14px"
+                fontWeight="500"
+                letterSpacing="-0.21px"
+                marginTop="8px"
+              >
+                {features[featureIndex].description}
+              </Text>
+            </MotionBox>
+          </Box>
+
           <Flex
             direction={{ base: "row", md: "column" }}
             alignItems="center"
             justifyContent={{ base: "space-between", md: "flex-start" }}
             width="100%"
+            mt={{ base: "20px", md: "25px" }}
           >
-            <Flex position="relative" bg="#fff" height="0.1px" width="100%" align="center" mt={{ base: "10px", md: "25px" }}>
+            <Flex position="relative" bg="#fff" height="0.1px" width="100%" align="center" mt={{ base: "0", md: "25px" }}>
               <Box
                 position="absolute"
                 height="4px"
@@ -89,12 +148,14 @@ const VideoAnalytics = () => {
                 transition="transform 0.3s ease-in-out"
               />
             </Flex>
+            {/* Hide arrows in mobile view */}
             <Flex
               gap="0.5"
               mt={{ base: "10px", md: "25px" }}
               direction="row"
               justifyContent={{ base: "flex-end", md: "flex-end" }}
               width="100%"
+              display={{ base: "none", md: "flex" }}
             >
               <Button
                 width={{ base: "25px", md: "30.769px" }}
@@ -137,7 +198,7 @@ const VideoAnalytics = () => {
             </Flex>
           </Flex>
 
-          <Grid templateColumns="20px 1fr" gap="2">
+          <Grid templateColumns="20px 1fr" gap="2" mt={{ base: "20px", md: "0" }}>
             {features.map((feature, index) => (
               <React.Fragment key={index}>
                 <Box display="flex" alignItems="center" justifyContent="center">
@@ -165,9 +226,9 @@ const VideoAnalytics = () => {
           </Grid>
         </Flex>
 
-        {/* Right Section - Only added overflow:hidden and key prop */}
+        {/* Right Section - Hidden in mobile view */}
         <Flex
-          marginTop={{ base: "20px", md: "171px" }}
+          marginTop={{ base: "0", md: "171px" }}
           position="relative"
           flexGrow={1}
           justifyContent="center"
@@ -175,6 +236,7 @@ const VideoAnalytics = () => {
           width="100%"
           minHeight="511px"
           mb="50px"
+          display={{ base: "none", md: "flex" }}
         >
           <MotionBox
             position={"absolute"}
@@ -204,7 +266,6 @@ const VideoAnalytics = () => {
             </Text>
           </MotionBox>
 
-          {/* Only changed this Box by adding overflow:hidden */}
           <Box
             position={"absolute"}
             width="55%"
@@ -214,11 +275,9 @@ const VideoAnalytics = () => {
             bgColor="#E7E7E7"
             zIndex={2}
             right={0}
-            // overflow="hidden" // Only added this line
           >
-            {/* Only added key prop to Image */}
             <Image
-              key={`image-${featureIndex}`} // Added this line
+              key={`desktop-image-${featureIndex}`}
               src={featureImages[featureIndex].image}
               alt={features[featureIndex].title}
               objectFit="contain"
@@ -229,7 +288,7 @@ const VideoAnalytics = () => {
               right={0}
               zIndex={3}
               style={{
-                transition: 'opacity 0.3s ease' // Smooth transition
+                transition: 'opacity 0.3s ease'
               }}
             />
           </Box>
