@@ -67,6 +67,7 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
     >
       {/* Image Section */}
       <Box
+        display={{ base: "none", md: "block" }} //Added this line
         position={{ base: 'relative', md: 'absolute' }}
         left={{ base: '0', md: '0' }}
         bottom={{ base: '0', md: '0' }}
