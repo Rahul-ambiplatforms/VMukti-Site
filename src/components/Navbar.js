@@ -272,27 +272,30 @@ const Navbar = () => {
                                                     placement="" // Ensure dropdown opens directly below the link
                                                     onMouseEnter={() => handleMouseEnter(item.name)}
                                                     onMouseLeave={() => handleMouseLeave(item.name)}
-
-                                                    style={{
-                                                        marginTop: "10px", // Adjust dropdown position
+                                                    py="0"
+                                                    style={{    
+                                                        marginTop: "20px", // Adjust dropdown position
                                                     }}
                                                 >
                                                     {item.items.map((dropdownItem, idx) => (
-                                                        <MenuItem
+                                                        <><MenuItem
                                                             key={idx}
                                                             fontWeight="400"
                                                             as={Link}
                                                             to={dropdownItem.path}
                                                             onClick={() => handleLinkClick(item.name)}
                                                             width="100%" // Ensure MenuItem takes full width
+                                                            direction="column"
+                                                            display="flex"
                                                         // borderBottom="1px solid #BECEDC" // Divider between items
                                                         >
                                                             <Flex direction="column" width="100%"> {/*Ensures full width*/}
                                                                 <Text>{dropdownItem.label}</Text>
-                                                                <Box width="60%" height="2px" bg="#BECEDC" mt="4px" /> {/*Full-width divider*/}
+
                                                             </Flex>
                                                         </MenuItem>
 
+                                                            <Box width="100%" height="2px" bg="#BECEDC"/> {/*Full-width divider*/}</>
 
                                                     ))}
 
@@ -389,45 +392,69 @@ const Navbar = () => {
                                             {item.hasDropdown ? (
                                                 <>
                                                     <h2>
-                                                        <AccordionButton
-                                                            color={isPathActive(item.path) ? "#3F77A5" : "black"}
-                                                            fontWeight={isPathActive(item.path) ? "600" : "400"}
-                                                            _hover={{ bg: "transparent" }}
-                                                            bg="transparent"
-                                                            pr="0"
-                                                        >
-                                                            <Box flex="1" textAlign="left" fontSize="16px" fontWeight="400">
+                                                        <Flex align="center" justify="space-between" pl="16px" py="8px">
+                                                            <Link
+                                                                to={item.path}
+                                                                style={{
+                                                                    color: isPathActive(item.path) ? "#3F77A5" : "black",
+                                                                    fontSize: "16px",
+                                                                    fontWeight: isPathActive(item.path) ? "600" : "400",
+                                                                    textDecoration: "none",
+                                                                    flex: 1,
+                                                                }}
+                                                                onClick={() => {
+                                                                    handleLinkClick(item.name);
+                                                                    onClose();
+                                                                }}
+                                                            >
                                                                 {item.name}
-                                                            </Box>
-                                                            <Box>
-                                                                <svg width="12" height="6" viewBox="0 0 12 6" fill="no</AccordionPanel>ne" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M6 6L12 0L0 -5.24537e-07L6 6Z" fill="#3F77A5" />
-                                                                </svg>
-                                                            </Box>
-                                                        </AccordionButton>
+                                                            </Link>
+                                                            <AccordionButton
+                                                                onClick={(e) => {
+                                                                    e.stopPropagation(); // Prevent link redirection
+                                                                }}
+                                                                color={isPathActive(item.path) ? "#3F77A5" : "black"}
+                                                                fontWeight={isPathActive(item.path) ? "600" : "400"}
+                                                                _hover={{ bg: "transparent" }}
+                                                                bg="transparent"
+                                                                pr="0"
+                                                                width="fit-content"
+                                                            >
+                                                                {/* <Box flex="1" textAlign="left" fontSize="16px" fontWeight="400">
+                                                                    {item.name}
+                                                                </Box> */}
+                                                                <Box>
+                                                                    <svg width="12" height="6" viewBox="0 0 12 6" fill="no</AccordionPanel>ne" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M6 6L12 0L0 -5.24537e-07L6 6Z" fill="#3F77A5" />
+                                                                    </svg>
+                                                                </Box>
+                                                            </AccordionButton>
+                                                        </Flex>
                                                     </h2>
                                                     <AccordionPanel borderRadius="24px" bg="white" py="2%">
                                                         {item.items.map((dropdownItem, idx) => (
-                                                            <Box key={idx} mb={2}>
-                                                                <Link
-                                                                    to={dropdownItem.path}
-                                                                    style={{
-                                                                        color: "black",
-                                                                        fontSize: "12px",
-                                                                        fontWeight: "400",
-                                                                        textDecoration: "none",
-                                                                    }}
-                                                                    onClick={() => {
-                                                                        handleLinkClick(item.name);
-                                                                        onClose();
-                                                                    }}
-                                                                >
+                                                            <Link
+                                                                to={dropdownItem.path}
+                                                                style={{
+                                                                    color: "black",
+                                                                    fontSize: "12px",
+                                                                    fontWeight: "400",
+                                                                    textDecoration: "none",
+                                                                }}
+                                                                onClick={() => {
+                                                                    handleLinkClick(item.name);
+                                                                    onClose();
+                                                                }}
+                                                            >
+                                                                <Box key={idx} mb={2}>
+
                                                                     {dropdownItem.label}
-                                                                </Link>
-                                                                {idx < item.items.length - 1 && (
-                                                                    <Box width="60%" height="1px" bg="#BECEDC" mt="4px" />
-                                                                )}
-                                                            </Box>
+                                                                    {idx < item.items.length - 1 && (
+                                                                        <Box width="60%" height="1px" bg="#BECEDC" mt="4px" />
+                                                                    )}
+                                                                </Box>
+                                                            </Link>
+
                                                         ))}
                                                     </AccordionPanel>
                                                 </>

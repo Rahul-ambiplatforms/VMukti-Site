@@ -7,21 +7,21 @@ const VisionMissionSection = () => {
   return (
     <Flex
       justifyContent="space-between"
-      alignItems="center"
+      alignItems="left"
       mt="1%"
       direction={{ base: "column", md: "row" }}
       gap={{ base: "4", md: "0" }}
     >
       <Box
-        width="392px"
-        height="392px"
+        width={{base:"250px",md:"392px"}}
+        height={{base:"250px",md:"392px"}}
         borderRadius="24px"
         bg="#FFF"
         display="flex"
         flexDirection="column"
         justifyContent="space-between"
         // boxShadow="md"
-        p="4"
+        p="6"
         mr={{ base: "0", md: "0.5%" }}
         mb={{ base: "4", md: "0" }}
       >
@@ -113,14 +113,14 @@ const VisionMissionSection = () => {
             />
           </svg>
         </Box>
-        <Flex direction="column" gap="50" mb="10">
+        <Flex direction="column" gap={{base:"5",md:"50"}} mb="10">
           <HeadingAnimation>
-            <Text color="#3F77A5" fontSize="36px" fontWeight="700">
+            <Text color="#3F77A5" fontSize={{base:"20px",md:"36px"}} fontWeight="700">
               Vision
             </Text>
           </HeadingAnimation>
           <SubHeadingAnimation>
-            <Text maxW="90%" color="#000000" fontSize="16px" fontWeight="500">
+            <Text maxW="90%" color="#000000" fontSize={{base:"12px",md:"16px"}} fontWeight="500">
               To redefine visual intelligence with AI-driven solutions that
               ensure safety, optimize operations, and drive innovation globally.
             </Text>
@@ -128,16 +128,18 @@ const VisionMissionSection = () => {
         </Flex>
       </Box>
       <Box
-        width="392px"
-        height="392px"
+        width={{base:"250px",md:"392px"}}
+        height={{base:"250px",md:"392px"}}
         borderRadius="24px"
+        alignSelf={"flex-end"}
         bg="#C8D6E5"
         display="flex"
         flexDirection="column"
         justifyContent="space-between"
         // boxShadow="md"
         p="6"
-        mb={{ base: "4", md: "0" }}
+        mb={{ base: "-15%", md: "0" }}
+        zIndex={2}
       >
         <Box top="9%" left="9%">
           <svg
@@ -185,14 +187,14 @@ const VisionMissionSection = () => {
             />
           </svg>
         </Box>
-        <Flex direction="column" gap="50" mb="1">
+        <Flex direction="column" gap={{base:"5",md:"50"}} mb="1">
           <HeadingAnimation>
-            <Text color="#3F77A5" fontSize="36px" fontWeight="700">
+            <Text color="#3F77A5" fontSize={{base:"20px",md:"36px"}} fontWeight="700">
               Mission
             </Text>
           </HeadingAnimation>
           <SubHeadingAnimation>
-            <Text maxW="90%" color="#000000" fontSize="16px" fontWeight="500">
+            <Text maxW="100%" color="#000000" fontSize={{base:"12px",md:"16px"}} fontWeight="500">
               To deliver cutting-edge surveillance and automation technologies
               that provide actionable insights, seamless integration, and
               reliability, enhancing safety and efficiency across industries.
