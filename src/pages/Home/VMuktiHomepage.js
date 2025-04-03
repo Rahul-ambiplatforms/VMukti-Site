@@ -148,7 +148,7 @@ const VMuktiHomepage = () => {
         {/* Decorative Boxes */}
         <Flex
           position="absolute"
-          top="3.3%"
+          top="4.3%"
           left="35%"
           transform="translateX(-50%)"
           gap={4}
@@ -190,16 +190,27 @@ const VMuktiHomepage = () => {
         justify="center"
         h="100%"
         position="relative"
-        zIndex={1}  
+        zIndex={1}
       >
         {/* Left Side - Mobile View */}
         {useBreakpointValue({ base: true, md: false }) && (
           <Flex
-            mt="16px"
+            mt={{ base: "-10%", sm: "-15%" }}
             direction="column"
             align="center"
             justify="center"
+            position="relative"
           >
+            <Box
+              position="absolute"
+              top="5"
+              right="0"
+              width="100px"
+              height="100px"
+              bg="#BECEDC"
+              borderRadius="24px"
+              zIndex={0}
+            />
             <MotionImage
               src="/assets/tablet.png"
               position="static"
@@ -209,10 +220,10 @@ const VMuktiHomepage = () => {
               transition={{ duration: 0.3, ease: "easeOut" }}
               viewport={{ once: false, amount: 0.2 }}
             />
-            <Box 
-              width="13px" 
+            <Box
+              width="13px"
               height="13px"
-              alignSelf="flex-start" 
+              alignSelf="flex-start"
               ml="35%"
             >
               <svg
@@ -264,7 +275,8 @@ const VMuktiHomepage = () => {
             ref={ref}
             fontSize={{ base: "32px", md: "48px", lg: "100px" }}
             fontWeight="600"
-            lineHeight="140%"
+            fontStyle="normal"
+            lineHeight="normal"
             zIndex={1}
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -272,6 +284,7 @@ const VMuktiHomepage = () => {
           >
             <Text as="span" color="#3F77A5">Advanced </Text>
             <Text as="span" color="#000">Computer Vision &  </Text>
+            <Text as="span" color="#000">image</Text>
             <br />
             <Text as="span" color="#DB7B3A">Intelligence</Text>
             <Text as="span" color="#3F77A5"> . </Text>
@@ -328,10 +341,12 @@ const VMuktiHomepage = () => {
             />
             <MotionButton
               position="absolute"
+              padding="24px"
               top={{ base: "20%", sm: "20%", md: "37%" }}
               right={{ base: "", sm: "", md: "8%" }}
               bg="white"
               height={{ base: "34px", sm: "50px" }}
+
               borderRadius="20px"
               color="#3F77A5"
               as={Link}

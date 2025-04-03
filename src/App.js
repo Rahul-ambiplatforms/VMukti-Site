@@ -29,7 +29,7 @@ function App() {
         <Navbar />
         <ScrollToTop />
         {/* Page content with padding to account for Navbar height */}
-        <Box pt={{ base: "30%", sm: "15%", md: "10%" }} bg="#E7E7E7">  {/* Add padding-top equal to Navbar height */}
+        <Box pt={{ base: "20%", sm: "20%", md: "8%" }} bg="#E7E7E7">  {/* Add padding-top equal to Navbar height */}
           <Routes>
             <Route path="/" element={<VMuktiHomepage />} />
             <Route path="/technology" element={<TechnologyDashboard />} />
