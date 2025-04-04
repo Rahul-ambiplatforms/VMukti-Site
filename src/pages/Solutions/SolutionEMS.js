@@ -13,7 +13,6 @@ import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation";
 import SubHeadingAnimation from "../../components/Animation/Text/SubHeadingAnimation";
 import ImagePop from "../../components/Animation/Image/ImagePop";
 import ImagePopBox from "../../components/Animation/Image/ImagePopBox";
-
 const SolutionEMS = () => {
   // Data for each slide
   const slides = [
@@ -431,18 +430,16 @@ const SolutionEMS = () => {
 
   // Responsive styles
   const cardDirection = useBreakpointValue({ base: "column", md: "row" });
-  const cardContentWidth = useBreakpointValue({ base: "100%", md: "100%" });
 
   return (
     <Flex
       direction="column"
       bg=" #E7E7E7"
-      //   bg="darkblue"
       // minH="50vh"
       overflowX="hidden"
       borderRadius="24px"
-      // width="100%"
-      // mb="5%"
+    // width="100%"
+    // mb="5%"
     >
       {/* Navigation */}
       <Flex
@@ -471,10 +468,9 @@ const SolutionEMS = () => {
                   key={index + visibleSlideRange.start}
                   flex={{ base: "0 0 100%", md: "1" }} // Single box in mobile, multiple in desktop
                   textAlign="left"
-                  // bg="orange"
+                // bg="orange"
                 >
                   {/* <HeadingAnimation> */}
-                  {/* I added this code */}
                   <Box w={{ base: "60%", md: "100%" }}>
                     <Text
                       whiteSpace="normal"
@@ -529,7 +525,7 @@ const SolutionEMS = () => {
           // transform="translateY(-50%)"
           align="space-between"
           gap={2}
-          // bg="green"
+        // bg="green"
         >
           {visibleSlideRange.end < slides.length - 1 && (
             <Flex gap={1} align="center">
@@ -554,7 +550,7 @@ const SolutionEMS = () => {
             pointerEvents="auto"
           >
             {/* <Box /> */}
-
+            {/* navigation buttons */}
             <Flex justifyContent="space-between" gap={1}>
               <Button
                 width="31px"
@@ -610,30 +606,34 @@ const SolutionEMS = () => {
         w={`${slides.length * 100}%`}
         transform={`translateX(-${currentSlide * (100 / slides.length)}%)`}
         transition="transform 0.5s ease"
+        height="auto" // Change from fit-content to auto
+        alignItems="stretch" // Ensure children stretch to fill the height
       >
         {slides.map((slide, index) => (
-          <Box key={index} minW={`${100 / slides.length}%`}>
+          <Box key={index} minW={`${100 / slides.length}%`} height="auto"> {/* Change from fit-content to auto */}
             {/* Main Container */}
             <Flex
-              // top="-3%"
               bg="#FFFFFF"
               borderRadius="24px"
               overflow="hidden"
-              // boxShadow="lg"
               direction={cardDirection}
               position="relative"
+              height="100%" // Ensure it fills the parent's height
             >
               {/* Card Content */}
               <Flex
                 p={5}
                 justifyContent="space-between"
                 gap={5}
+                height="100%"
                 direction={{ base: "column", md: "row" }}
               >
                 {/* left portion of the content card */}
                 <Flex
+                  order={{ base: "2", md: "1" }}
                   direction="column"
                   gap={5}
+                  // height="100%"
                   zIndex={1}
                   width={{ base: "100%", md: "40%" }}
                 >
@@ -709,8 +709,8 @@ const SolutionEMS = () => {
                     transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
                     p={8}
                     direction="column"
+                    height='100%'
                     bg="#BECEDC"
-                    minH="333px"
                     borderRadius="24px"
                     zIndex={2}
                     backdropFilter="blur(2px)"
@@ -735,6 +735,7 @@ const SolutionEMS = () => {
                 </Flex>
                 {/* Right portion (positioned absolutely) */}
                 <Flex
+                  order={{ base: "1", md: "2" }}
                   direction="column"
                   justifyContent={{ base: "center", md: "space-between" }}
                   alignItems={{ base: "center" }}
@@ -746,7 +747,8 @@ const SolutionEMS = () => {
                     width="90%" // Allow the box to take up available space
                     // maxWidth="630px"
                     // height="360px"
-                    height="90%"
+                    height="90%" // Height set to 90%
+                    maxHeight="50%"
                     zIndex={3}
                     initial={{ scale: 0.7, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
@@ -771,12 +773,12 @@ const SolutionEMS = () => {
                   {slide.benefits && (
                     <Box
                       width="full"
-                      display="flex"
                       // justifyContent="space-between"
                       // bg="red"
                       flexDirection="column"
                       borderRadius="12px"
                       gap={4}
+                      display={{ base: "none", md: "flex" }}
                       maxWidth="630px"
                       zIndex={3}
                       p={4}

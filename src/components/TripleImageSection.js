@@ -1,11 +1,14 @@
 import { Box, Container, Flex, Image, Text, VStack } from "@chakra-ui/react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 const MotionTextContainer = motion(VStack);
 const MotionImage = motion(Image);
 const MotionText = motion(Text);
-
 const TripleImageSection = ({
     heading = [
         { text: "AI-Powered", color: "#000" },
@@ -89,6 +92,7 @@ const TripleImageSection = ({
 
                 {/* Right Column (Animated Images) */}
                 <Flex
+                    display={{ base: "none", md: "flex" }}
                     gap={{ base: "16px", md: "24px", lg: "38px" }}
                     ml={{ base: 0, md: "auto" }}
                     mt={{ base: 6, md: 0 }}
@@ -123,6 +127,40 @@ const TripleImageSection = ({
                         </Box>
                     ))}
                 </Flex>
+
+                {/* image carousel */}
+                <Box display={{ base: 'block', md: 'none' }} w="100%">
+                    <Swiper
+                        spaceBetween={1} // Adjust spacing as needed
+                        slidesPerView={1.8} // Controls the number of slides visible
+                        centeredSlides={true}
+                        style={{ paddingRight: "5px" }}
+                    >
+                        {images.map((image, index) => (
+                            <SwiperSlide key={index}>
+                                <Box
+                                    borderRadius="20px"
+                                    overflow="hidden"
+                                    mx="auto"
+                                    w={{ base: "170px", sm: "200px" }}
+                                    h={{ base: "350px", sm: "450px" }}
+                                >
+                                    <Image
+                                        src={image}
+                                        alt={`Surveillance Image ${index + 1}`}
+                                        w="100%"
+                                        h="100%"
+                                        objectFit="cover"
+                                    />
+                                </Box>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </Box>
+
+
+
+
                 <Box
                     position="absolute"
                     top="40%"

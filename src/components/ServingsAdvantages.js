@@ -4,19 +4,20 @@ const ServingsAdvantages = ({ title, advantages }) => {
     return (
         <>
             <Flex direction="column" bg="white" color={"#3F77A5"} h={{ base: 'auto', md: '753px' }} p="2%" gap={10} borderRadius="24px" padding="5%">
-                <Flex>
+                <Flex direction={{base:"column",md:"row"}}>
                     {title.map((part, index) => (
                         <Text as="span" color={part.color} display="inline" key={index} fontSize={{ base: "28px", md: "36px" }} fontWeight="600">
                             {index !== 0 && ' '}
                             {part.text}
+                            {' '}
                         </Text>
                     ))}
                     {/* <Text>{title}</Text> */}
                 </Flex>
-                <Grid gridTemplateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }} gap={6} rowGap="100px">
+                <Grid gridTemplateColumns={{ base: "repeat(1, 1fr)", md: "repeat(4, 1fr)" }} gap="5%" rowGap={{base:"40px",md:"80px"}}>
                     {
                         advantages.map((advantage, index) => (
-                            <Flex direction="column" key={index} gap={2}>
+                            <Flex direction="column" key={index} gap="1%">
                                 <Box
                                     display="flex"
                                     alignItems="center"

@@ -7,7 +7,7 @@ const Hero = () => {
     return (
         <Box>
             <PageContentWrapper>
-            <TripleImageSection />
+                <TripleImageSection />
                 <SolutionEMS />
             </PageContentWrapper>
         </Box>

@@ -27,12 +27,12 @@ const ServingsModelGrid = ({ title, description, cards }) => {
       >
         <Flex direction="column" gap={5}>
           <HeadingAnimation>
-            <Text fontWeight="600" fontSize={{ base: "28px", md: "36px" }}>
+            <Text fontWeight="600" fontSize={{ base: "20px", md: "36px" }} width="80%">
               {title}
             </Text>
           </HeadingAnimation>
           <SubHeadingAnimation>
-            <Text fontSize={{ base: "14px", md: "16px" }} fontWeight="500">
+            <Text fontSize={{ base: "12px", md: "16px" }} fontWeight="500">
               {description}
             </Text>
           </SubHeadingAnimation>

@@ -113,7 +113,7 @@ const servingsData = {
             },
         ],
         advantagesTitle: [
-            { "text": "AI-Powered Surveillance", "color": "black" },
+            { "text": "AI-Powered Surveillance ", "color": "black" },
             { "text": "Advantages", "color": "#3F77A5" },
         ],
         advantages: [
