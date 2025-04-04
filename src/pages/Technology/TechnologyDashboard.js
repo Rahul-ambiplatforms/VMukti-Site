@@ -13,7 +13,7 @@ const MotionImage = motion(Image);
 const responsiveSizes = {
   ring: { base: "200px", md: "300px", lg: "408px" },
   headingFontSize: { base: "24px", sm: "30px", md: "36px", lg: "48px" },
-  textFontSize: { base: "14px", md: "16px" },
+  textFontSize: { base: "16px", md: "16px" },
   squareBox: { base: "120px", md: "200px", lg: "336px" }, // Only changed mobile size
 };
 
@@ -116,51 +116,69 @@ const TechnologyDashboard = () => {
 
           {/* Content Section */}
           <Box
-            // maxW="container.xl"
-            // maxW="50vw"
             position="relative"
             zIndex={4}
             flex="1"
             display="flex"
             alignItems="center"
-            // bg="red"
           >
             <Flex
               direction={{ base: "column", lg: "row" }}
               align={{ base: "flex-start", lg: "flex-start" }}
               justify="flex-start"
+              w={{ base: "339px", md: "auto" }}
               minH={{ base: "auto", lg: "50vh" }}
-              // minW={{ base: "auto", lg: "auto" }}
-              // bg="red"
             >
-              {/* Mobile Layout - Blue Box and Image in same row */}
+              {/* Heading - Topmost in mobile view */}
+              <MotionHeading
+                ref={ref}
+                fontSize={responsiveSizes.headingFontSize}
+                lineHeight={{ base: "1.3", lg: "normal" }}
+                mt={{ base: "1px", lg: "-22%" }}
+                // mb={12}
+                color="#000"
+                fontWeight="600"
+                display={{ base: "block", lg: "none" }}
+                {...animations.fadeInLeft}
+              >
+                Breakthroughs in Visual AI:{" "}
+                <Text
+                  as="span"
+                  color="#3F77A5"
+                  fontWeight="600"
+                  fontSize={{
+                    base: "20px",
+                    sm: "30px",
+                    md: "40px",
+                    lg: "48px",
+                  }}
+                >
+                  Smarter Vision
+                </Text>{" "}
+                for a{" "}
+                <Text as="span" color="#DB7B3A" fontWeight="600">
+                  Smarter World
+                </Text>
+                .
+              </MotionHeading>
+
+              {/* Mobile Layout - Image in same row */}
               <Flex
                 display={{ base: "flex", lg: "none" }}
-                w="100%"
-                mt={8}
+                w="538px"
+                h="556px"
+                mt={-16}
                 position="relative"
-                justify="space-between"
-                align="flex-end"
+                justify="center" // Center the image
+                align="center"
               >
-                {/* Blue Box - now visible on mobile */}
-                <Box
-                  width={responsiveSizes.squareBox}
-                  height={responsiveSizes.squareBox}
-                  borderRadius="20px"
-                  background="#BECEDC"
-                  mb="10%"
-                  display={{ base: "block", lg: "block" }}
-                  zIndex="0"
-                  // bg="red"
-                />
-                
-                {/* Dashboard Image - reduced size for mobile */}
+                {/* Dashboard Image - increased size for mobile */}
                 <MotionImage
                   src="./assets/Dashboard.png"
                   alt="AI Dashboard Interface"
-                  w={{ base: "60%", sm: "65%", lg:"%"}}
+                  w="100%" // Full width for mobile
                   h="auto"
-                  objectFit="contain"
+                  objectFit="cover"
                   zIndex={3}
                   {...animations.popIn}
                 />
@@ -173,6 +191,7 @@ const TechnologyDashboard = () => {
                 position="relative"
                 zIndex={3}
               >
+                {/* Heading - Desktop view */}
                 <MotionHeading
                   ref={ref}
                   fontSize={responsiveSizes.headingFontSize}
@@ -181,6 +200,7 @@ const TechnologyDashboard = () => {
                   mb={12}
                   color="#000"
                   fontWeight="600"
+                  display={{ base: "none", lg: "block" }}
                   {...animations.fadeInLeft}
                 >
                   Breakthroughs in Visual AI:{" "}
@@ -203,20 +223,20 @@ const TechnologyDashboard = () => {
                   </Text>
                   .
                 </MotionHeading>
-                <SubHeadingAnimation display="flex" flexDirection={{base:"row",md:"column"}}>
-                  <Box width={{md:"30px"}} height={{md:"30px"}}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 33 33"
-                    fill="none"
-                  >
-                    <path
-                      d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
-                      fill="#3F77A5"
-                    />
-                  </svg>
+                <SubHeadingAnimation display="flex" flexDirection={{ base: "row", md: "column" }} >
+                  <Box width={{ md: "30px" }} >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="33"
+                      height="30"
+                      viewBox="0 0 33 33"
+                      fill="none"
+                    >
+                      <path
+                        d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
+                        fill="#3F77A5"
+                      />
+                    </svg>
                   </Box>
                   <Flex align="center" ml={{ base: "-1px", md: "5%", lg: "0%" }}>
                     <Text
@@ -238,13 +258,11 @@ const TechnologyDashboard = () => {
                   height={responsiveSizes.squareBox}
                   borderRadius="20px"
                   background="#BECEDC"
-                  marginTop={{lg:"13%"}}
-                  // marginRight= {{lg:"100%"}}
+                  marginTop={{ lg: "13%" }}
                   display={{ base: "none", md: "none", lg: "block" }}
                   zIndex="0"
-                  // bg="green"
                 />
-                
+
               </Flex>
             </Flex>
           </Box>
