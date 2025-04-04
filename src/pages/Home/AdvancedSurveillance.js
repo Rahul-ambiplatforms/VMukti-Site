@@ -1,91 +1,96 @@
-import React, { useState } from 'react'
-import { Box, Flex, Text, Image, Button } from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
-import HeadingAnimation from '../../components/Animation/Text/HeadingAnimation'
+import React, { useState } from "react";
+import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation";
 
 const AdvancedSurveillance = () => {
-  const [activeCard, setActiveCard] = useState(0)
+  const [activeCard, setActiveCard] = useState(0);
 
   // Data for the component
-  const title1 = 'Advanced Surveillance for All.'
-  const subtitle = 'Enterprise'
+  const title1 = "Advanced Surveillance for All.";
+  const subtitle = "Enterprise";
   const description =
-    'Explore innovative, scalable solutions designed to meet the urban security and operational needs of enterprises.'
+    "Explore innovative, scalable solutions designed to meet the urban security and operational needs of enterprises.";
 
   const cards = [
     {
-      type: 'open',
-      label: 'Enterprise',
+      type: "open",
+      label: "Enterprise",
       description:
-        'Explore innovative, scalable solutions designed to meet the urban security and operational needs of enterprises.',
-      image: './assets/rectangle1.svg',
+        "Explore innovative, scalable solutions designed to meet the urban security and operational needs of enterprises.",
+      image: "./assets/rectangle1.svg",
     },
     {
-      type: 'squeezed',
-      label: 'Government',
-      description: 'Government.',
-      image: './assets/govsl.svg',
+      type: "squeezed",
+      label: "Government",
+      description: "Explore innovative, scalable solutions designed to meet the urban security and operational needs of enterprises.",
+      image: "./assets/govsl.svg",
     },
     {
-      type: 'squeezed',
-      label: 'Consumers',
-      description: 'General Consumer',
-      image: './assets/gensl.svg',
+      type: "squeezed",
+      label: "Consumers",
+      description: "Explore innovative, scalable solutions designed to meet the urban security and operational needs of enterprises.",
+      image: "./assets/gensl.svg",
     },
-  ]
+  ];
 
   // Handle navigation
   const handleNavigation = (direction) => {
     setActiveCard((prev) =>
-      direction === 'left'
+      direction === "left"
         ? prev === 0
           ? cards.length - 1
           : prev - 1
         : prev === cards.length - 1
-          ? 0
-          : prev + 1
-    )
-  }
+        ? 0
+        : prev + 1
+    );
+  };
 
   return (
     <>
-
-
       <Flex
         backgroundColor="#E7E7E7"
         height="758px"
-
+        h="auto"
         fontWeight="600"
         display="flex"
         justifyContent="center"
         alignItems="center"
+        minH="auto"
+        // bg="red"
       >
         {/* White Box */}
         <Box
           width="100%"
           height="758px"
+          h="auto"
           borderRadius="20px"
           bgColor="white"
           position="relative"
           overflow="hidden"
+          // minH="auto"
+          // mb="2%"
         >
           {/* Title Section */}
           <Box
-            marginRight="70px"
-            marginTop="55px"
+            marginRight={{ md: "70px" }}
+            marginTop={{ base: "5%", md: "55px" }}
+            ml={{base:"5%" }}
+            // width={{ base: "70%" , md:"100%"}}
             position="relative"
             zIndex="2"
             display="flex"
-            justifyContent="flex-end" // Right-align the text
+            justifyContent={{md:"flex-end"}} // Right-align the text
           >
             <HeadingAnimation>
               <Text
-                fontSize="36px"
-                fontWeight="600"
+                fontSize={{base:"20px",md:"36px"}}
+                fontWeight={{base:"500",md:"600"}}
                 letterSpacing="-0.54px"
                 color="black"
               >
-                Advanced{' '}
+                Advanced{" "}
                 <Text as="span" color="#3F77A5">
                   Surveillance for All.
                 </Text>
@@ -96,8 +101,8 @@ const AdvancedSurveillance = () => {
           {/* Ellipses */}
           <Box
             position="absolute"
-            top="37px"
-            left="933px"
+            top="-100px"
+            left="980px"
             opacity="1"
             zIndex="2"
           >
@@ -106,9 +111,10 @@ const AdvancedSurveillance = () => {
               alt="Ellipse 33"
               width="408px"
               height="408px"
+              // bg="red"
             />
           </Box>
-          <Box
+          {/* <Box
             position="absolute"
             top="336px"
             left="70px"
@@ -121,46 +127,52 @@ const AdvancedSurveillance = () => {
               width="408px"
               height="408px"
             />
-          </Box>
+          </Box> */}
           {/* Ellipses */}
-          <Box
+          {/* <Box
             position="absolute"
-
             top="37px"
             left="933px"
             opacity="1"
             zIndex="2"
           >
             <Image
-              src='./assets/Ellipse33.svg'
+              src="./assets/Ellipse33.svg"
               alt="Ellipse 33"
               width="408px"
               height="408px"
+              bg="blue"
             />
-          </Box>
+          </Box> */}
           <Box
             position="absolute"
-            top="336px"
-            left="70px"
+            top="450px"
+            left="50px"
             opacity="1"
             zIndex="2"
-          >
+            >
             <Image
-              src='./assets/Ellipse36.svg'
+           
+              src={`${process.env.PUBLIC_URL}./assets/Ellipse36.svg`}
               alt="Ellipse 36"
               width="408px"
               height="408px"
+              // bg="red"
             />
           </Box>
 
           {/* Cards Section */}
           <Flex
-            marginTop="70px"
-            marginLeft="70px"
-            marginRight="70px"
+            marginTop={{ base: "10px", md: "70px" }}
+            marginLeft={{ base: "10px", md: "70px" }} // Smaller margin on mobile
+            marginRight={{ base: "10px", md: "70px" }}
             gap="15px"
             position="relative"
             zIndex="2"
+            direction={{ base: "column", md: "row" }} // Column for mobile, row for desktop
+            overflow={"visible"} // Hide overflow to prevent scrollbars
+            minH="auto"
+            mb={{base:"3%",md:"10%"}}
           >
             {/* Navigation Buttons */}
             <Flex
@@ -169,6 +181,7 @@ const AdvancedSurveillance = () => {
               right="0" // Align buttons to the right
               gap="2px"
               zIndex="2"
+              display={{ base: "none", md: "flex" }} // Hide on mobile
             >
               <Button
                 width="31px"
@@ -182,8 +195,8 @@ const AdvancedSurveillance = () => {
                 justifyContent="center"
                 cursor="pointer"
                 bgColor="#E7E7E7"
-                _hover={{ bgColor: '#e0e0e0' }}
-                onClick={() => handleNavigation('left')}
+                _hover={{ bgColor: "#e0e0e0" }}
+                onClick={() => handleNavigation("left")}
               >
                 <svg
                   width="8"
@@ -210,8 +223,8 @@ const AdvancedSurveillance = () => {
                 justifyContent="center"
                 cursor="pointer"
                 bgColor="#E7E7E7"
-                _hover={{ bgColor: '#e0e0e0' }}
-                onClick={() => handleNavigation('right')}
+                _hover={{ bgColor: "#e0e0e0" }}
+                onClick={() => handleNavigation("right")}
               >
                 <svg
                   width="8"
@@ -231,42 +244,58 @@ const AdvancedSurveillance = () => {
             {cards.map((card, index) => (
               <Box
                 key={index}
-                width={activeCard === index ? '80%' : '20%'}
-                height="439px"
+                width={{
+                  base: "100%",
+                  md: activeCard === index ? "80%" : "20%",
+                }} // Full width on mobile
+                height={{
+                  base: activeCard === index ? "auto" : "80px",
+                  md: "439px",
+                }} // Compact height for inactive cards on mobile
                 borderRadius="24px"
                 bgColor="#E7E7E7"
-                _hover={{ cursor: 'pointer' }}
+                _hover={{ cursor: "pointer" }}
                 transition="width 0.3s ease"
                 position="relative"
                 onClick={() => setActiveCard(index)}
+                mb={{ base: "5px", md: "0" }} // Add margin between stacked cards on mobile
+                word-wrap="break-word"
+                overflow-wrap="break-word"
               >
                 {activeCard === index ? (
                   // Expanded Card Content
-                  <Flex>
+                  <Flex
+                    direction={{ base: "column", md: "row" }}
+                    word-wrap="break-word"
+                    overflow-wrap="break-word"
+                  >
                     {/* Left Frame (Description) */}
                     <Box
-                      width="272px"
-                      height="439px"
+                      width={{ base: "100%", md: "272px" }}
+                      height={{ base: "auto", md: "439px" }}
                       padding="20px"
-                      display="flex"
                       flexDirection="column"
-                      justifyContent="space-between" // Align content to the top
+                      justifyContent={{ base: "flex-end", md: "space-between" }} // Align content to the top
+                      display={{ base: "flex", md: "flex" }} // Hide on mobile
+                      order={{ base: 1, md: 0 }} // Ensure this is on top in mobile view
+                      // bg="red"
                     >
-                      <Box><Text
-                        fontSize="16px"
-                        fontWeight="700"
-                        letterSpacing="-0.24px"
-                        color="black"
-                      >
-                        {card.label}
-                        <Box
-                          width="15px"
-                          height="2px"
-                          bgColor="#3f77a5"
-                          borderRadius="2px"
-                          marginTop="5px"
-                        />
-                      </Text>
+                      <Box>
+                        <Text
+                          fontSize="16px"
+                          fontWeight="700"
+                          letterSpacing="-0.24px"
+                          color="black"
+                        >
+                          {card.label}
+                          <Box
+                            width="15px"
+                            height="2px"
+                            bgColor="#3f77a5"
+                            borderRadius="2px"
+                            marginTop="5px"
+                          />
+                        </Text>
                         <Text
                           color="#696969"
                           fontSize="14px"
@@ -275,14 +304,30 @@ const AdvancedSurveillance = () => {
                           marginTop="10px"
                         >
                           {card.description}
-                        </Text></Box>
-                      <Link to={`/serving/${card.label}`}>
-                        <Flex gap={2}>
 
-                          <Text fontSize={{ base: "12px", md: "14px" }} fontWeight={400}>Know more</Text>
+                          {card.description}
+                        </Text>
+                      </Box>
+                      <Link to={`/serving/${card.label}`}>
+                        <Flex gap={2} mt={{ base: "5%" }}>
+                          <Text
+                            fontSize={{ base: "14px", md: "14px" }}
+                            fontWeight={400}
+                          >
+                            Know more
+                          </Text>
                           <Box>
-                            <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M20.9602 12.9601C21.546 12.3743 21.546 11.4245 20.9602 10.8388L11.4143 1.29281C10.8285 0.707026 9.87876 0.707026 9.29297 1.29281C8.70719 1.8786 8.70719 2.82835 9.29297 3.41413L17.7783 11.8994L9.29297 20.3847C8.70719 20.9705 8.70719 21.9202 9.29297 22.506C9.87876 23.0918 10.8285 23.0918 11.4143 22.506L20.9602 12.9601ZM0.100586 13.3994L19.8996 13.3994V10.3994L0.100586 10.3994V13.3994Z" fill="black" />
+                            <svg
+                              width="22"
+                              height="23"
+                              viewBox="0 0 22 23"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M20.9602 12.9601C21.546 12.3743 21.546 11.4245 20.9602 10.8388L11.4143 1.29281C10.8285 0.707026 9.87876 0.707026 9.29297 1.29281C8.70719 1.8786 8.70719 2.82835 9.29297 3.41413L17.7783 11.8994L9.29297 20.3847C8.70719 20.9705 8.70719 21.9202 9.29297 22.506C9.87876 23.0918 10.8285 23.0918 11.4143 22.506L20.9602 12.9601ZM0.100586 13.3994L19.8996 13.3994V10.3994L0.100586 10.3994V13.3994Z"
+                                fill="black"
+                              />
                             </svg>
                           </Box>
                         </Flex>
@@ -290,10 +335,11 @@ const AdvancedSurveillance = () => {
                     </Box>
                     {/* Right Frame (Image) */}
                     <Box
-                      width="706px"
-                      height="439px"
-                      overflow="hidden"
+                      width={{ base: "100%", md: "706px" }}
+                      height={{ md: "439px" }}
                       borderRadius="24px"
+                      border={{ md: 2 }}
+                      // bg="green"
                     >
                       <Image
                         src={card.image}
@@ -309,9 +355,10 @@ const AdvancedSurveillance = () => {
                   <Box
                     position="absolute"
                     bottom="28%" // Adjust this value to control vertical positioning
-                    right="10%" // Adjust this value to control horizontal positioning
-                    transform="rotate(-90deg)" // Rotate the text vertically
-                    transformOrigin="bottom right" // Rotate around the bottom-right corner
+                    right={{ base: "auto", md: "10%" }}
+                    left={{ base: "5%", md: "auto" }}
+                    transform={{ md: "rotate(-90deg)" }} // Rotate the text vertically
+                    transformOrigin={{ md: "bottom right" }} // Rotate around the bottom-right corner
                     display="flex"
                     flexDirection="column"
                     alignItems="flex-start" // Align dash with the start of the text
@@ -352,12 +399,13 @@ const AdvancedSurveillance = () => {
             fontSize="16px"
             fontWeight="600"
             borderRadius="12px"
-            display="flex"
+            display={{ base: "none", md: "flex" }}
             alignItems="center"
             justifyContent="center"
             gap="8px"
             zIndex="2"
-            _hover={{ backgroundColor: '#f0f0f0' }}
+            _hover={{ backgroundColor: "#f0f0f0" }}
+            mb="2%"
           >
             Book Demo
             {/* <Image src="./assets/arrowdb.svg" alt="Arrow" width="14px" height="14px" /> */}
@@ -377,7 +425,7 @@ const AdvancedSurveillance = () => {
         </Box>
       </Flex>
     </>
-  )
-}
+  );
+};
 
-export default AdvancedSurveillance
+export default AdvancedSurveillance;

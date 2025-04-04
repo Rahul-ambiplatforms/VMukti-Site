@@ -66,7 +66,7 @@ const ObjectDescription = ({ description, image, list }) => {
                     backdropFilter="blur(2px)" // Blur effect
                 >
                     <Flex gap={1} direction="column">
-                        <SubHeadingAnimation>
+                        {/* <SubHeadingAnimation> */}
                             <motion.div variants={popAnimation}>
                                 <Text fontSize="24px" color="blue.600" mb={5}>
                                     <svg
@@ -91,7 +91,7 @@ const ObjectDescription = ({ description, image, list }) => {
                                     ))}
                                 </Heading>
                             </motion.div>
-                        </SubHeadingAnimation>
+                        {/* </SubHeadingAnimation> */}
                     </Flex>
 
                     <Flex direction="column" justifyContent="space-between" gap={5}>

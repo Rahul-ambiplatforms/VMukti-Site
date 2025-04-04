@@ -191,7 +191,6 @@ const AdvancedComputerVision = ({
         {/* Card Contents */}
         <Flex
           justifyContent="space-between"
-          // bg="red"
           direction={{ base: "column",md:"row", lg: "row" }}
           gap={{ base: 4, lg: 0 }}
           width="100%"
@@ -250,9 +249,9 @@ const AdvancedComputerVision = ({
                       src={card.media}
                       alt={card.label}
                       width={{ base: "100%", md: "100%", lg: "100%" }}
-                      height={{ base: "100%", md: "100%", lg: "100%" }}
-                      objectFit={{ base: "", md: "cover" }}
-                      style={{  borderRadius: "24px" }}
+                      height={{ base: "", md: "100%", lg: "100%" }}
+                      objectFit={{ base: "fit", md: "cover" }}
+                      borderRadius={{ base: "24px", md: "24px" }}
                     />
                   )
                 ) : (
@@ -319,7 +318,7 @@ const AdvancedComputerVision = ({
                     />
                   </Text>
                   <Text
-                    whiteSpace="nowrap"
+                    whiteSpace="wrap"
                     fontSize={{ base: "12px", md: "14px" }}
                     color="#696969"
                   >
