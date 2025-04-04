@@ -317,7 +317,7 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-      // image: "",
+      image: "",
       benefits: {
         title: "Business Benefits",
         data: [
@@ -382,7 +382,7 @@ const SolutionEMS = () => {
     sm: 2,
     md: 4,
     lg: 4,
-    xl: 5,
+    xl: 4,
   });
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -653,51 +653,47 @@ const SolutionEMS = () => {
                     zIndex={2}
                     backdropFilter="blur(2px)"
                   >
-                    <HeadingAnimation>
-                      <Heading
-                        fontSize={{ base: "24px", md: "36px" }}
-                        fontWeight="500"
-                        lineHeight="normal"
-                        fontStyle="normal"
-                        color="black"
+                    <Heading
+                      fontSize={{ base: "24px", md: "36px" }}
+                      fontWeight="500"
+                      lineHeight="normal"
+                      fontStyle="normal"
+                      color="black"
+                    >
+                      {slide.title1}{" "}
+                      <span style={{ color: "#DB7B3A" }}>{slide.title2}</span>
+                    </Heading>
+
+                    <Text fontSize="24px" color="blue.600" mb={3} mt="5%">
+                      {/* SVG code remains unchanged */}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="33"
+                        height="33"
+                        viewBox="0 0 33 33"
+                        fill="none"
                       >
-                        {slide.title1}{" "}
-                        <span style={{ color: "#DB7B3A" }}>{slide.title2}</span>
-                      </Heading>
-                    </HeadingAnimation>
-                    <SubHeadingAnimation>
-                      <Text fontSize="24px" color="blue.600" mb={3} mt="5%">
-                        {/* SVG code remains unchanged */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="33"
-                          height="33"
-                          viewBox="0 0 33 33"
-                          fill="none"
+                        <path
+                          d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C0 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
+                          fill="#3F77A5"
+                        />
+                      </svg>
+                    </Text>
+
+                    <Box>
+                      {slide.description.map((text, i) => (
+                        <Text
+                          key={i}
+                          fontWeight="500"
+                          fontSize="16px"
+                          color="black"
+                          lineHeight="1.6"
+                          mb={2}
                         >
-                          <path
-                            d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C0 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
-                            fill="#3F77A5"
-                          />
-                        </svg>
-                      </Text>
-                    </SubHeadingAnimation>
-                    <SubHeadingAnimation>
-                      <Box>
-                        {slide.description.map((text, i) => (
-                          <Text
-                            key={i}
-                            fontWeight="500"
-                            fontSize="16px"
-                            color="black"
-                            lineHeight="1.6"
-                            mb={2}
-                          >
-                            {text}
-                          </Text>
-                        ))}
-                      </Box>
-                    </SubHeadingAnimation>
+                          {text}
+                        </Text>
+                      ))}
+                    </Box>
                   </Flex>
 
                   {/* Second Box with 0.3s delay (0.2s after first) */}
@@ -715,22 +711,20 @@ const SolutionEMS = () => {
                     zIndex={2}
                     backdropFilter="blur(2px)"
                   >
-                    <SubHeadingAnimation>
-                      <Box>
-                        {slide.description2.map((text, i) => (
-                          <Text
-                            key={i}
-                            fontWeight="500"
-                            fontSize="16px"
-                            color="black"
-                            lineHeight="1.6"
-                            mb={5}
-                          >
-                            {text}
-                          </Text>
-                        ))}
-                      </Box>
-                    </SubHeadingAnimation>
+                    <Box>
+                      {slide.description2.map((text, i) => (
+                        <Text
+                          key={i}
+                          fontWeight="500"
+                          fontSize="16px"
+                          color="black"
+                          lineHeight="1.6"
+                          mb={5}
+                        >
+                          {text}
+                        </Text>
+                      ))}
+                    </Box>
                   </Flex>
                 </Flex>
                 {/* Right portion (positioned absolutely) */}
@@ -781,7 +775,7 @@ const SolutionEMS = () => {
                       display={{ base: "none", md: "flex" }}
                       maxWidth="630px"
                       zIndex={3}
-                      p={4}
+                      p={6}
                     >
                       <Text
                         color="#000000"
@@ -792,11 +786,18 @@ const SolutionEMS = () => {
                       >
                         {slide.benefits.title}
                       </Text>
-                      <Flex justifyContent="space-between" alignItems="center">
+                      <Flex
+                        justifyContent="space-between"
+                        alignItems="center"
+                        // bg="green"
+                        gap={4}
+                      >
                         {slide.benefits.data.map((benefit, idx) => (
                           <Box
                             as={motion.div}
                             key={idx}
+                            // bg="red"
+                            // width="100%"
                             initial={{ scale: 0.7, opacity: 0 }}
                             whileInView={{ scale: 1, opacity: 1 }}
                             viewport={{ once: false, amount: 0.1 }}
@@ -810,8 +811,8 @@ const SolutionEMS = () => {
                               src={benefit.image}
                               alt={benefit.title}
                               style={{
-                                width: "60px",
-                                height: "60px",
+                                width: "35px",
+                                height: "35px",
                                 objectFit: "cover",
                                 borderRadius: "8px",
                               }}
@@ -822,7 +823,15 @@ const SolutionEMS = () => {
                               color="black"
                               mt={2}
                             >
-                              {benefit.title}
+                              {benefit.title.split(" ").slice(0, -1).join(" ")}
+                            </Text>
+                            <Text
+                              fontSize="16px"
+                              fontWeight="500"
+                              color="black"
+                              mt={1}
+                            >
+                              {benefit.title.split(" ").slice(-1)}
                             </Text>
                           </Box>
                         ))}

@@ -64,6 +64,7 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
       p={{ base: '15px', md: '20px', lg: '30px' }}
       direction={{ base: 'column', md: 'row' }}
       gap={{ base: '15px', md: '20px', lg: '30px' }}
+      // bg="green"
     >
       {/* Image Section */}
       <Box
@@ -87,6 +88,27 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
         />
       </Box>
 
+      <Box
+        display={{ base: "none", md: "block" }} //Added this line
+        position={{ base: 'relative', md: 'absolute' }}
+        left={{ base: '0', md: '68%' }}
+        bottom={{ base: '0', md: '0' }}
+        width="404px"
+        height="202px"
+        flexShrink="0"
+        mb={{ base: '10px', md: '0' }}
+        zIndex={0}
+      >
+        <Image
+          src={`${process.env.PUBLIC_URL}/assets/Vmukti Brochure O2 2.png`} // Use absolute path
+          alt="Connections and Dots"
+          ml="15%"
+          width="100%"
+          height="100%"
+          objectFit="contain"
+        />
+      </Box>
+
       {/* Content Section */}
       <Flex
         flexGrow={1}
@@ -99,6 +121,7 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
         direction={{ base: 'column', md: 'row' }}
         textAlign={{ base: 'left', md: 'left' }} // Align text left on mobile
       // gap={{ base: '15px', md: '20px', lg: '30px' }}
+      // bg="green"
 
       >
         <Flex
