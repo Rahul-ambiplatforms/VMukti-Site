@@ -29,16 +29,16 @@ const MotionButton = motion(Button);
 const StickySection = ({ children }) => (
   <Box
     position="relative"
-    mb="5%"
-    height={`${children.length * 100}dvh`}
+    // mb="5%"
+    height={`${children.length}%`}
   >
     {children.map((child, index) => (
       <Box
         key={index}
         position="sticky"
         borderRadius="24px"
-        top="0%"
-        // height="fit-content"  //check out why this is not working
+        top="1%"
+        height="fit-content"  //check out why this is not working
         zIndex={index + 1}
       >
         {child}
@@ -49,8 +49,12 @@ const StickySection = ({ children }) => (
 
 const VMuktiHomepage = () => {
   const customData = {
-    title1: "Neural Networks & Predictive",
-    title2: "Intelligence.",
+    title: [
+      { text: "Neural  ", color: "black" },
+      { text: "Networks ", color: "#3F77A5" },
+      { text: " & Predictive", color: "black" },
+      { text: "Intelligence", color: "#DB7B3A" },
+    ],
     cards: [
       {
         type: "image",
@@ -84,8 +88,7 @@ const VMuktiHomepage = () => {
     backgroundImage: "/assets/VMukti Brochure O2 1.png",
   };
   const customData1 = {
-    title1: "How We Make",
-    title2: "It Work",
+    title: [{ text: "How We Make\n", color: "black" }, { text: "It Work" ,color: "#3F77A5"}],
     subtitle: "Real-Time Monitoring",
     cards: [
       {

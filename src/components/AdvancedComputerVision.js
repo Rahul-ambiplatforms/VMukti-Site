@@ -8,8 +8,18 @@ import { useRef } from "react";
 const MotionFlex = motion(Flex);
 
 const AdvancedComputerVision = ({
-  title1 = "Advanced Computer",
-  title2 = "Vision & Image Intelligence",
+  // text: [
+  //   {
+  //     title1 = "Advanced Computer",
+  //   },
+  //   {
+  //     title2 = "Vision & Image Intelligence",
+  //   }
+  // ],
+  title = [
+    { text: "IoT & Secure Connectivity for", color: "black" },
+    { text: "Smart Surveillance.", color: "#3F77A5" },
+  ],
   subtitle = "AI-Powered Visual Processing",
   // description = "Extracts, analyzes, and interprets video data in real-time.",
   cards = [
@@ -73,10 +83,11 @@ const AdvancedComputerVision = ({
       borderRadius="20px"
       bgColor="white"
       position="relative"
-      height="100dvh"
+      height="100%"
       overflow="hidden"
       px="5%"
-      pt="2%"
+      pb="4%"
+      pt="1.5%"
       zIndex={myZIndex}
       mt={myMargin}
     >
@@ -119,7 +130,7 @@ const AdvancedComputerVision = ({
         animate={isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <Text fontSize={{ base: "20px", md: "36px" }} fontWeight="500">
+        {/* <Text fontSize={{ base: "20px", md: "36px" }} fontWeight="500">
           {title1}
         </Text>
         <Text
@@ -128,7 +139,16 @@ const AdvancedComputerVision = ({
           color="#3f77a5"
         >
           {title2}
-        </Text>
+        </Text> */}
+        <Flex flexWrap="wrap">
+          {title.map((item, index) => (
+            <Text as="span" color={item.color} display="inline" key={index} fontSize={{ base: "20px", md: "36px" }} fontWeight="500">
+              {index !== 0 && ' '}
+              {item.text}
+              &nbsp;
+            </Text>
+          ))}
+        </Flex>
       </MotionFlex>
 
       <Flex direction="column">
@@ -140,7 +160,7 @@ const AdvancedComputerVision = ({
           gap="1px"
           zIndex={2}
           pointerEvents="auto"
-          // display={{ base: "none", md: "flex" }} 
+        // display={{ base: "none", md: "flex" }} 
         >
           <Button
             width="31px"
@@ -149,7 +169,7 @@ const AdvancedComputerVision = ({
             minHeight="31px"
             padding="0"
             borderRadius="5px"
-            display={{ base: "none", md: "flex" }} 
+            display={{ base: "none", md: "flex" }}
             alignItems="center"
             justifyContent="center"
             cursor="pointer"
@@ -171,7 +191,7 @@ const AdvancedComputerVision = ({
             minHeight="31px"
             padding="0"
             borderRadius="5px"
-            display={{ base: "none", md: "flex" }} 
+            display={{ base: "none", md: "flex" }}
             alignItems="center"
             justifyContent="center"
             cursor="pointer"
@@ -191,7 +211,7 @@ const AdvancedComputerVision = ({
         {/* Card Contents */}
         <Flex
           justifyContent="space-between"
-          direction={{ base: "column",md:"row", lg: "row" }}
+          direction={{ base: "column", md: "row", lg: "row" }}
           gap={{ base: 4, lg: 0 }}
           width="100%"
         >
@@ -214,12 +234,12 @@ const AdvancedComputerVision = ({
               cursor="pointer"
               position="relative"
               overflow="hidden"
-              // bg="blue"
+            // bg="blue"
             >
               <Box
                 // gap={{base:"2",md:"8", lg:"8"}}
                 width="100%"
-                borderRadius={{base:"20px",md:"24px"}}
+                borderRadius={{ base: "20px", md: "24px" }}
                 bgColor={index % 2 !== 0 ? "#BECEDC" : "#EAEAEA"}
                 display="flex"
                 overflow="hidden"
@@ -231,7 +251,7 @@ const AdvancedComputerVision = ({
                   md: "439px", // Original desktop height
                   lg: "439px",
                 }}
-                // bg="red"
+              // bg="red"
               >
                 {effectiveCard === index ? (
                   card.type === "video" ? (
@@ -286,15 +306,15 @@ const AdvancedComputerVision = ({
                           md: "vertical-rl",
                         },
                         transform: { base: "", md: "rotate(90deg)" },
-                        mt:{md:"6px"},
-                        mr:{md:"-5px"},
-                        ml:{md:"-10px"}
+                        mt: { md: "6px" },
+                        mr: { md: "-5px" },
+                        ml: { md: "-10px" }
                         // left: { base: "0px", md: "auto" },
                       }}
                       borderRadius="2px"
-                      // marginTop="6px"
-                      // marginRight="-5px"
-                      // marginLeft="-10px"
+                    // marginTop="6px"
+                    // marginRight="-5px"
+                    // marginLeft="-10px"
                     />
                   </Text>
                 )}
