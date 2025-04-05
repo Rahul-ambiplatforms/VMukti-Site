@@ -114,17 +114,17 @@ const VisionMissionSection = () => {
           </svg>
         </Box>
         <Flex direction="column" gap={{base:"5",md:"50"}} mb="10">
-          <HeadingAnimation>
+          {/* <HeadingAnimation> */}
             <Text color="#3F77A5" fontSize={{base:"20px",md:"36px"}} fontWeight="700">
               Vision
             </Text>
-          </HeadingAnimation>
-          <SubHeadingAnimation>
+          {/* </HeadingAnimation> */}
+          {/* <SubHeadingAnimation> */}
             <Text maxW="90%" color="#000000" fontSize={{base:"12px",md:"16px"}} fontWeight="500">
               To redefine visual intelligence with AI-driven solutions that
               ensure safety, optimize operations, and drive innovation globally.
             </Text>
-          </SubHeadingAnimation>
+          {/* </SubHeadingAnimation> */}
         </Flex>
       </Box>
       <Box
@@ -188,18 +188,18 @@ const VisionMissionSection = () => {
           </svg>
         </Box>
         <Flex direction="column" gap={{base:"5",md:"50"}} mb="1">
-          <HeadingAnimation>
+          {/* <HeadingAnimation> */}
             <Text color="#3F77A5" fontSize={{base:"20px",md:"36px"}} fontWeight="700">
               Mission
             </Text>
-          </HeadingAnimation>
-          <SubHeadingAnimation>
+          {/* </HeadingAnimation> */}
+          {/* <SubHeadingAnimation> */}
             <Text maxW="100%" color="#000000" fontSize={{base:"12px",md:"16px"}} fontWeight="500">
               To deliver cutting-edge surveillance and automation technologies
               that provide actionable insights, seamless integration, and
               reliability, enhancing safety and efficiency across industries.
             </Text>
-          </SubHeadingAnimation>
+          {/* </SubHeadingAnimation> */}
         </Flex>
       </Box>
       <Box position="relative" width="fit-content">

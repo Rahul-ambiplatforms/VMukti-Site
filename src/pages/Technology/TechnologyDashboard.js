@@ -21,14 +21,14 @@ const animations = {
   fadeInLeft: {
     initial: { opacity: 0, x: -50 },
     whileInView: { opacity: 1, x: 0 },
-    viewport: { once: false, amount: 0.2 },
+    viewport: { once: false, amount: 0.6 },
     transition: { duration: 0.8, ease: "easeOut" },
   },
   popIn: {
     initial: { scale: 0.8, opacity: 1 },
     whileInView: { scale: 1 },
     viewport: { once: false, amount: 0.5 },
-    transition: { duration: 0.3, ease: "easeOut" },
+    transition: { duration: 0.5, ease: "easeOut" },
   },
 };
 
@@ -202,6 +202,7 @@ const TechnologyDashboard = () => {
                   fontWeight="600"
                   display={{ base: "none", lg: "block" }}
                   {...animations.fadeInLeft}
+                  // w="100%"
                 >
                   Breakthroughs in Visual AI:{" "}
                   <Text
@@ -218,13 +219,26 @@ const TechnologyDashboard = () => {
                     Smarter Vision
                   </Text>{" "}
                   for a{" "}
-                  <Text as="span" color="#DB7B3A" fontWeight="600">
+                  <Text
+                    as="span"
+                    color="#DB7B3A"
+                    fontWeight="600"
+                    fontSize={{
+                      base: "20px",
+                      sm: "30px",
+                      md: "40px",
+                      lg: "48px",
+                    }}
+                  >
                     Smarter World
                   </Text>
                   .
                 </MotionHeading>
-                <SubHeadingAnimation display="flex" flexDirection={{ base: "row", md: "column" }} >
-                  <Box width={{ md: "30px" }} >
+                <SubHeadingAnimation
+                  display="flex"
+                  flexDirection={{ base: "row", md: "column" }}
+                >
+                  <Box width={{ md: "30px" }}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="33"
@@ -238,7 +252,10 @@ const TechnologyDashboard = () => {
                       />
                     </svg>
                   </Box>
-                  <Flex align="center" ml={{ base: "-1px", md: "5%", lg: "0%" }}>
+                  <Flex
+                    align="center"
+                    ml={{ base: "-1px", md: "5%", lg: "0%" }}
+                  >
                     <Text
                       fontSize={responsiveSizes.textFontSize}
                       color="#000"
@@ -247,9 +264,9 @@ const TechnologyDashboard = () => {
                       m={3}
                       fontWeight="500"
                     >
-                      VMukti is driving innovation with advanced AI technologies,
-                      transforming surveillance, automation, and security for a
-                      smarter, more connected world.
+                      VMukti is driving innovation with advanced AI
+                      technologies, transforming surveillance, automation, and
+                      security for a smarter, more connected world.
                     </Text>
                   </Flex>
                 </SubHeadingAnimation>
@@ -262,7 +279,6 @@ const TechnologyDashboard = () => {
                   display={{ base: "none", md: "none", lg: "block" }}
                   zIndex="0"
                 />
-
               </Flex>
             </Flex>
           </Box>

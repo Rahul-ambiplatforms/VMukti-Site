@@ -317,7 +317,7 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-      image: "",
+      
       benefits: {
         title: "Business Benefits",
         data: [
@@ -753,15 +753,17 @@ const SolutionEMS = () => {
                       delay: 0.2, // Add delay if needed
                     }}
                   >
-                    <Image
-                      src={slide.image}
-                      alt="Solution"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
+                    {slide.image ? (
+                      <Image
+                        src={slide.image}
+                        alt={slide.title1}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
+                    ) : null}
                   </Box>
                   {/* New Bottom Right Box for Benefits */}
                   {slide.benefits && (
