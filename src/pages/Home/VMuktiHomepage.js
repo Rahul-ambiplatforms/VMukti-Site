@@ -1,3 +1,5 @@
+//Gptttt
+
 import React, { useState, useRef } from "react";
 import {
   Box,
@@ -135,22 +137,28 @@ const VMuktiHomepage = () => {
   return (
     <Box minH="100vh" bg="#E7E7E7" overflow="visible" position="relative">
       {/* Background Ellipse */}
-      <Image
-        src="/assets/Ellipse38.png"
-        alt="ellipse38"
+
+      <Box
         position="absolute"
-        left="0"
         top="0"
+        left="15%"
+        transform="translateX(-50%)"
         width={ellipseSize}
-        opacity="1"
-        pointerEvents="none"
-        zIndex="0"
+        height={ellipseSize}
+        bg="#3F77A5"
+        borderRadius="50%"
+        zIndex={0}
+        opacity={0.12}
+        filter="blur(100px)"
+        display={{ base: "none", md: "block" }}
       />
+
 
       <Show above="md">
         {/* Decorative Boxes */}
         <Flex
           position="absolute"
+
           top="4.3%"
           left="35%"
           transform="translateX(-50%)"
@@ -187,7 +195,8 @@ const VMuktiHomepage = () => {
       </Show>
       {/* Main Content */}
       <Flex
-        pl={{ base: "1%", md: "2.5%" }}
+        pl={{ base: "0", md: "2.5%" }}
+        // ml={{ base: "2.5%", md: "0" }}
         direction={{ base: "column-reverse", md: "row" }}
         align="center"
         justify="center"
@@ -198,26 +207,36 @@ const VMuktiHomepage = () => {
         {/* Left Side - Mobile View */}
         {useBreakpointValue({ base: true, md: false }) && (
           <Flex
-            mt={{ base: "-10%", sm: "-15%" }}
+            // ml={{ base: "2", md: "0" }}
+            mt={{ base: "-30%" }}
             direction="column"
             align="center"
             justify="center"
             position="relative"
+
           >
             <Box
               position="absolute"
-              top="5"
-              right="0"
-              width="100px"
-              height="100px"
+              top="10%"
+              // overflow="visible"
+              // pl="90%"
+              right={"0"}
+              width="170px"
+              height="188px"
               bg="#BECEDC"
-              borderRadius="24px"
+              borderRadius="24px 0 0 0"
               zIndex={0}
             />
             <MotionImage
+              pl="22%"
+              overflow="visible"
               src="/assets/tablet.png"
+              alt="Tablet"
               position="static"
               zIndex={1}
+              width="675.12px"
+              height="637.8252584690653px"
+              objectFit="cover"
               initial={{ scale: 0.8, opacity: 1 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
@@ -227,13 +246,15 @@ const VMuktiHomepage = () => {
               width="13px"
               height="13px"
               alignSelf="flex-start"
-              ml="35%"
+              ml="40%"
+              mt="-25%"
             >
               <svg
                 viewBox="0 0 33 33"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 style={{ display: 'block' }}
+
               >
                 <path
                   d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
@@ -243,11 +264,16 @@ const VMuktiHomepage = () => {
             </Box>
             <Text
               fontWeight="500"
-              lineHeight="100%"
-              maxW={{ base: "90%", md: "60%" }}
+              lineHeight="normal"
+              maxW={{ base: "220px", md: "60%" }}
               fontSize={{ base: "12px", md: "16px" }}
               width={{ base: "60%", md: "50%" }}
-              alignSelf="flex-end"
+              // alignSelf="flex-start"
+              textAlign="justify"
+              fontStyle="normal"
+              ml="37%"
+              mt={"1%"}
+            // mt="0"
             >
               Got visuals piling up? Our AI turns them into answers—fast. It's like giving your cameras a brain to spot what matters and fix your headaches on the spot.
             </Text>
@@ -255,15 +281,19 @@ const VMuktiHomepage = () => {
         )}
         {!useBreakpointValue({ base: true, md: false }) && (
           <MotionImage
-            src="/assets/tablet.png"
+            src="/assets/tablet1.png"
             position="absolute"
             right="0"
+            width="1050.778px"
+            height="992.733px"
+            bottom="-5%"
             zIndex={1}
             initial={{ scale: 0.8, opacity: 1 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.2 }}
           />
+
         )}
         <Box
           flex="1"
@@ -277,6 +307,7 @@ const VMuktiHomepage = () => {
           <MotionBox
             ref={ref}
             fontSize={{ base: "32px", md: "48px", lg: "100px" }}
+            ml={{ base: "4%", md: "0" }}
             fontWeight="600"
             fontStyle="normal"
             lineHeight="normal"
@@ -334,7 +365,7 @@ const VMuktiHomepage = () => {
           <Flex
             position="relative"
             mt={{ base: "0", md: "-10%" }}
-            ml={{ base: "0", md: "-40px" }}
+            ml={{ base: "4%", md: "-40px" }}
             width="fit-content"
           >
             <Image

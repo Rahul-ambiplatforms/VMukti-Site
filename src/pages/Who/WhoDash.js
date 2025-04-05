@@ -45,11 +45,7 @@ const WhoWeare = () => {
       text: "Final review showing how amazing this product is for all our security needs.",
     },
   ];
-  const ellipseSize = useBreakpointValue({
-    base: "200px",
-    md: "300px",
-    lg: "408px",
-  });
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const visibleCards = useBreakpointValue({ base: 1, md: 2, lg: 2.4, xl: 2.8 }); // 1 card on mobile, 3 on larger screens
   const widthMultiplier = useBreakpointValue({ base: 13, md: 23 });
@@ -134,18 +130,28 @@ const WhoWeare = () => {
             // bg="blue"
             />
           </Box>
-          <Image
-            src={"/assets/Ellipse38.png" || "/placeholder.svg"}
-            alt="ellipse38"
+          <Box
             position="absolute"
-            left="12%" // Align to the left edge of the screen
-            top="9%" // Align to the top edge of the screen
-            transform="none" // Remove unwanted translations
-            width={ellipseSize}
-            opacity="1"
+            left={{ base: "50%", md: "20%", lg: "12%" }} // responsive left positioning
+            top={{ base: "5%", md: "7%", lg: "9%" }}     // responsive top positioning
+            transform={{ base: "translateX(-50%)", md: "none", lg: "none" }}
+            width={{
+              base: "200px",
+              md: "300px",
+              lg: "408px",
+            }}
+            height={{
+              base: "200px",
+              md: "300px",
+              lg: "408px",
+            }}
+            borderRadius="408px"
+            opacity="0.12"
+            background="#3F77A5"
+            filter="blur(56.6px)"
+            flexShrink={0}
             pointerEvents="none"
             zIndex="0"
-          // bg="red"
           />
           <Box justifyContent="center" alignItems="center">
             <Flex

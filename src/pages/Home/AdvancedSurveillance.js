@@ -42,8 +42,8 @@ const AdvancedSurveillance = () => {
           ? cards.length - 1
           : prev - 1
         : prev === cards.length - 1
-        ? 0
-        : prev + 1
+          ? 0
+          : prev + 1
     );
   };
 
@@ -58,7 +58,7 @@ const AdvancedSurveillance = () => {
         justifyContent="center"
         alignItems="center"
         minH="auto"
-        // bg="red"
+      // bg="red"
       >
         {/* White Box */}
         <Box
@@ -69,24 +69,24 @@ const AdvancedSurveillance = () => {
           bgColor="white"
           position="relative"
           overflow="hidden"
-          // minH="auto"
-          // mb="2%"
+        // minH="auto"
+        // mb="2%"
         >
           {/* Title Section */}
           <Box
             marginRight={{ md: "70px" }}
             marginTop={{ base: "5%", md: "55px" }}
-            ml={{base:"5%" }}
+            ml={{ base: "5%" }}
             // width={{ base: "70%" , md:"100%"}}
             position="relative"
             zIndex="2"
             display="flex"
-            justifyContent={{md:"flex-end"}} // Right-align the text
+            justifyContent={{ md: "flex-end" }} // Right-align the text
           >
             <HeadingAnimation>
               <Text
-                fontSize={{base:"20px",md:"36px"}}
-                fontWeight={{base:"500",md:"600"}}
+                fontSize={{ base: "20px", md: "36px" }}
+                fontWeight={{ base: "500", md: "600" }}
                 letterSpacing="-0.54px"
                 color="black"
               >
@@ -106,12 +106,15 @@ const AdvancedSurveillance = () => {
             opacity="1"
             zIndex="2"
           >
-            <Image
-              src="./assets/Ellipse33.svg"
-              alt="Ellipse 33"
+            <Box
               width="408px"
               height="408px"
-              // bg="red"
+              flexShrink={0}
+              borderRadius="408px"
+              border="1px solid #000"
+              opacity="0.12"
+              background="#3F77A5"
+              filter="blur(56.6px)"
             />
           </Box>
           {/* <Box
@@ -146,20 +149,19 @@ const AdvancedSurveillance = () => {
           </Box> */}
           <Box
             position="absolute"
-            top="450px"
-            left="50px"
-            opacity="1"
+            top={{ base: "300px", md: "400px", lg: "450px" }}
+            left={{ base: "50%", md: "40%", lg: "50px" }}
+            transform={{ base: "translateX(-50%)", md: "translateX(-50%)", lg: "none" }}
+            width={{ base: "255px", md: "320px", lg: "408px" }}
+            height={{ base: "255px", md: "320px", lg: "408px" }}
+            borderRadius="408px"
+            bg="#3F77A5"
+            opacity="0.12"
+            filter="blur(56.6px)"
+            flexShrink={0}
             zIndex="2"
-            >
-            <Image
-           
-              src={`${process.env.PUBLIC_URL}./assets/Ellipse36.svg`}
-              alt="Ellipse 36"
-              width="408px"
-              height="408px"
-              // bg="red"
-            />
-          </Box>
+            pointerEvents="none"
+          />
 
           {/* Cards Section */}
           <Flex
@@ -172,7 +174,7 @@ const AdvancedSurveillance = () => {
             direction={{ base: "column", md: "row" }} // Column for mobile, row for desktop
             overflow={"visible"} // Hide overflow to prevent scrollbars
             minH="auto"
-            mb={{base:"3%",md:"10%"}}
+            mb={{ base: "3%", md: "10%" }}
           >
             {/* Navigation Buttons */}
             <Flex
@@ -278,7 +280,7 @@ const AdvancedSurveillance = () => {
                       justifyContent={{ base: "flex-end", md: "space-between" }} // Align content to the top
                       display={{ base: "flex", md: "flex" }} // Hide on mobile
                       order={{ base: 1, md: 0 }} // Ensure this is on top in mobile view
-                      // bg="red"
+                    // bg="red"
                     >
                       <Box>
                         <Text
@@ -339,7 +341,7 @@ const AdvancedSurveillance = () => {
                       height={{ md: "439px" }}
                       borderRadius="24px"
                       border={{ md: 2 }}
-                      // bg="green"
+                    // bg="green"
                     >
                       <Image
                         src={card.image}

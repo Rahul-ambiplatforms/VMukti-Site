@@ -350,11 +350,7 @@ export default function IndustryGrid() {
       </Grid>
     )
   }
-  const ellipseSize = useBreakpointValue({
-    base: '200px',
-    md: '300px',
-    lg: '408px',
-  })
+ 
   return (
     <>
       <Box
