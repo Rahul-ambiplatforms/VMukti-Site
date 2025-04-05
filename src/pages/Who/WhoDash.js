@@ -158,7 +158,7 @@ const WhoWeare = () => {
               zIndex="3"
               gap={{ sm: "-10px", base: "5px", md: "50px" }}
               flexWrap="wrap"
-              justifyContent="center"
+              justifyContent={{md:"center"}}
               maxW="1200px"
               mx="auto"
             // bg="blue"
@@ -189,7 +189,7 @@ const WhoWeare = () => {
                   transition={{
                     duration: 1.9,
                     ease: easeOut,
-                    delay: 0.3 * index, // Staggered delay based on index
+                    delay: 0.1 * index, // Staggered delay based on index
                   }}
                 >
                   <Box mb={3} color={cert.color}>

@@ -19,52 +19,51 @@ const AITechnologies = () => {
     {
       title: "Computer\nVision",
       description: [
-        "AI-powered computer vision analyzes and interprets visual data with unmatched accuracy, recognizing faces, objects, and patterns. It enhances surveillance, automates processes, and optimizes decision-making across industries like security, retail, healthcare, and manufacturing.",
-        "Beyond simple recognition, AI-driven computer vision tracks movement, monitors crowd behavior, and predicts potential threats. Integrated with edge AI and cloud computing, it enables real-time responses, improving security and efficiency.",
+        "AI-powered computer vision analyzes and interprets visual data with unmatched accuracy, recognizing faces, objects, and patterns. It enhances surveillance, automates processes, and optimizes decision-making across industries like security, retail, healthcare, and manufacturing.\n\n Beyond simple recognition, AI-driven computer vision tracks movement, monitors crowd behavior, and predicts potential threats. Integrated with edge AI and cloud computing, it enables real-time responses, improving security and efficiency.",
+        // "Beyond simple recognition, AI-driven computer vision tracks movement, monitors crowd behavior, and predicts potential threats. Integrated with edge AI and cloud computing, it enables real-time responses, improving security and efficiency.",
       ],
       image: "./assets/comvi.png",
     },
     {
       title: "Object\nDetection",
       description: [
-        "AI-driven object detection identifies and classifies objects, people, and vehicles with high accuracy. It enables automated tracking, suspicious activity detection, and seamless security system integration.",
-        "In surveillance, real-time object detection triggers instant alerts for unauthorized access or unusual movement. Combined with predictive analytics, it enhances risk assessment and operational intelligence.",
+        "AI-driven object detection identifies and classifies objects, people, and vehicles with high accuracy. It enables automated tracking, suspicious activity detection, and seamless security system integration.\n\nIn surveillance, real-time object detection triggers instant alerts for unauthorized access or unusual movement. Combined with predictive analytics, it enhances risk assessment and operational intelligence.",
+        // "In surveillance, real-time object detection triggers instant alerts for unauthorized access or unusual movement. Combined with predictive analytics, it enhances risk assessment and operational intelligence.",
       ],
       image: "./assets/objd.png",
     },
     {
       title: "Deep Learning Algorithms",
       description: [
-        "Deep learning enables AI to analyse complex data, detect patterns, and make precise decisions. Neural networks process vast information efficiently, continuously learning and improving.",
-        "In video analytics, deep learning enhances facial recognition, behaviour analysis, and anomaly detection. These self-learning models adapt to threats, improving accuracy and reducing false alarms.",
+        "Deep learning enables AI to analyse complex data, detect patterns, and make precise decisions. Neural networks process vast information efficiently, continuously learning and improving.\n\nIn video analytics, deep learning enhances facial recognition, behaviour analysis, and anomaly detection. These self-learning models adapt to threats, improving accuracy and reducing false alarms.",
+        // "In video analytics, deep learning enhances facial recognition, behaviour analysis, and anomaly detection. These self-learning models adapt to threats, improving accuracy and reducing false alarms.",
       ],
       image: "./assets/dla.png",
     },
     {
       title: "Neural Networks & Predictive Analytics",
       description: [
-        "Advanced neural networks process video data with precision, identifying threats and recognizing patterns. Unlike traditional surveillance, AI actively analyses movements, behaviours, and anomalies in real time.",
-        "Predictive analytics anticipates security threats by analysing historical patterns and real-time data. This proactive approach minimizes risks, optimizes response times, and enhances situational awareness.",
+        "Advanced neural networks process video data with precision, identifying threats and recognizing patterns. Unlike traditional surveillance, AI actively analyses movements, behaviours, and anomalies in real time.\n\nPredictive analytics anticipates security threats by analysing historical patterns and real-time data. This proactive approach minimizes risks, optimizes response times, and enhances situational awareness.",
+        // "Predictive analytics anticipates security threats by analysing historical patterns and real-time data. This proactive approach minimizes risks, optimizes response times, and enhances situational awareness.",
       ],
       image: "./assets/npd.png",
     },
     {
       title: "AI-Driven\nAutomation",
       description: [
-        "AI-driven automation streamlines processes, reduces human intervention, and improves efficiency. Machine learning algorithms detect patterns, make intelligent decisions, and automate workflows.",
-        "In surveillance, AI minimizes false alarms and optimizes resource allocation. Automated monitoring of live feeds and video analysis ensures faster decision-making and cost savings.",
+        "AI-driven automation streamlines processes, reduces human intervention, and improves efficiency. Machine learning algorithms detect patterns, make intelligent decisions, and automate workflows.\n\nIn surveillance, AI minimizes false alarms and optimizes resource allocation. Automated monitoring of live feeds and video analysis ensures faster decision-making and cost savings.",
+        // "In surveillance, AI minimizes false alarms and optimizes resource allocation. Automated monitoring of live feeds and video analysis ensures faster decision-making and cost savings.",
       ],
       image: "./assets/aidr.png",
     },
     {
       title: "GPT in Video Surveillance",
       description: [
-        "AI-driven automation streamlines processes, reduces human intervention, and improves efficiency. Machine learning algorithms detect patterns, make intelligent decisions, and automate workflows.",
-        "In surveillance, AI minimizes false alarms and optimizes resource allocation. Automated monitoring of live feeds and video analysis ensures faster decision-making and cost savings.",
+        "AI-driven automation streamlines processes, reduces human intervention, and improves efficiency. Machine learning algorithms detect patterns, make intelligent decisions, and automate workflows.\n\nIn surveillance, AI minimizes false alarms and optimizes resource allocation. Automated monitoring of live feeds and video analysis ensures faster decision-making and cost savings.",
+        // "In surveillance, AI minimizes false alarms and optimizes resource allocation. Automated monitoring of live feeds and video analysis ensures faster decision-making and cost savings.",
       ],
       image: "./assets/gptr.png",
     },
-
   ];
 
   const visibleSlides = useBreakpointValue({
@@ -106,10 +105,9 @@ const AITechnologies = () => {
       if (visibleSlides === 1) {
         setVisibleSlideRange({
           start: currentSlide,
-          end: currentSlide
+          end: currentSlide,
         });
-      }
-      else if (visibleSlides === 3) {
+      } else if (visibleSlides === 3) {
         let newStart = currentSlide;
         let newEnd = currentSlide + 2;
 
@@ -120,8 +118,7 @@ const AITechnologies = () => {
         }
 
         setVisibleSlideRange({ start: newStart, end: newEnd });
-      }
-      else if (visibleSlides === 4) {
+      } else if (visibleSlides === 4) {
         let newStart = currentSlide;
         let newEnd = currentSlide + 3;
 
@@ -132,8 +129,7 @@ const AITechnologies = () => {
         }
 
         setVisibleSlideRange({ start: newStart, end: newEnd });
-      }
-      else if (visibleSlides === 5) {
+      } else if (visibleSlides === 5) {
         let newStart = currentSlide;
         let newEnd = currentSlide + 4;
 
@@ -160,11 +156,11 @@ const AITechnologies = () => {
       <Flex
         justify="space-between"
         align="center"
-        p={8}
+        p={{base: 4, md: 8}}
         position="relative"
         width="100%"
         minH="80px"
-      // bg="red"
+        // bg="red"
       >
         {/* Center Titles - Modified for responsiveness only */}
         <Flex
@@ -183,7 +179,7 @@ const AITechnologies = () => {
             "-ms-overflow-style": "none",
             "scrollbar-width": "none",
           }}
-        // bg="red"
+          // bg="red"
         >
           {slides
             .slice(visibleSlideRange.start, visibleSlideRange.end + 1)
@@ -239,7 +235,7 @@ const AITechnologies = () => {
           gap={{ base: "0", md: "2" }}
           flexShrink={0}
           ml={{ base: "0", md: "5%" }}
-        // bg="red"
+          // bg="red"
         >
           {visibleSlideRange.end < slides.length - 1 && showCircles && (
             <Flex gap={1} align="center">
@@ -277,7 +273,7 @@ const AITechnologies = () => {
               bgColor="#E7E7E7"
               _hover={{ bgColor: "#e0e0e0" }}
               onClick={handlePrev}
-            // bg="blue"
+              // bg="blue"
             >
               <svg
                 width="8"
@@ -359,8 +355,8 @@ const AITechnologies = () => {
                   as={motion.div}
                   initial={{ scale: 0.5, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
-                  viewport={{ once: false, amount: 0.1 }}
-                  transition={{ duration: 0.3, ease: "easeOut" }}
+                  viewport={{ once: false, amount: 0.2 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
                   direction="column"
                   justify="space-between"
                   p={{ base: "0", md: "8" }}
@@ -371,6 +367,7 @@ const AITechnologies = () => {
                   borderRadius={"20px"}
                   zIndex={2}
                   backdropFilter="blur(2px)"
+                  // bg="green"
                 >
                   <Flex
                     // gap={1}
@@ -380,10 +377,10 @@ const AITechnologies = () => {
                     // p={{ base: "10px", md: "0" }} // Padding for mobile
                     borderRadius={{ base: "20px", md: "0" }} // Rounded corners for mobile
                     mt={{ base: "-10%", md: "0" }}
-
+                    // bg="red"
                   >
-                    <SubHeadingAnimation>
-                      <Box
+                    {/* <SubHeadingAnimation> */}
+                    {/* <Box
                         as={motion.div}
                         initial={{ scale: 0.8, opacity: 0 }}
                         whileInView={{ scale: 1, opacity: 1 }}
@@ -393,60 +390,67 @@ const AITechnologies = () => {
                           ease: "easeOut",
                           delay: 0.2,
                         }}
+                      > */}
+                    <Text
+                      fontSize="24px"
+                      color="blue.600"
+                      m={5}
+                      width={{ base: "20px", md: "30" }}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={{ base: "13px", md: "30" }}
+                        height="33"
+                        viewBox="0 0 33 33"
+                        fill="none"
                       >
-                        <Text fontSize="24px" color="blue.600" m={5} width={{ base: "20px", md: "30" }}>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width={{ base: "13px", md: "30" }}
-                            height="33"
-                            viewBox="0 0 33 33"
-                            fill="none"
-                          >
-                            <path
-                              d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C0 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
-                              fill="#3F77A5"
-                            />
-                          </svg>
-                        </Text>
-                      </Box>
-                    </SubHeadingAnimation>
+                        <path
+                          d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C0 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
+                          fill="#3F77A5"
+                        />
+                      </svg>
+                    </Text>
+                    {/* </Box> */}
+                    {/* </SubHeadingAnimation> */}
 
-                    <HeadingAnimation>
-                      <Heading
-                        ml={5}
-                        as={motion.div}
-                        initial={{ y: 20, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once: false }}
-                        transition={{
-                          duration: 0.5,
-                          ease: "easeOut",
-                          delay: 0.3,
-                        }}
-                        fontSize={{ base: "20px", md: "36px" }}
-                        fontWeight="bold"
-                        width={{ base: "217px", md: "auto" }}
-                        color="black"
-                      >
-                        {slide.title}
-                      </Heading>
-                    </HeadingAnimation>
+                    {/* <HeadingAnimation> */}
+                    <Heading
+                      ml={5}
+                      // as={motion.div}
+                      // initial={{ y: 20, opacity: 0 }}
+                      // whileInView={{ y: 0, opacity: 1 }}
+                      // viewport={{ once: false }}
+                      // transition={{
+                      //   duration: 0.5,
+                      //   ease: "easeOut",
+                      //   delay: 0.3,
+                      // }}
+                      fontSize={{ base: "20px", md: "36px" }}
+                      fontWeight="bold"
+                      width={{ base: "217px", md: "auto" }}
+                      color="black"
+                    >
+                      {slide.title}
+                    </Heading>
+                    {/* </HeadingAnimation> */}
                   </Flex>
 
-                  <SubHeadingAnimation>
+                  {/* <SubHeadingAnimation> */}
+                   <Flex>  {/*//If it affects remove this and comment out SubHeadingAnimation. */}
                     <Box
-                      as={motion.div}
-                      initial={{ y: 10, opacity: 0 }}
-                      whileInView={{ y: 0, opacity: 1 }}
-                      viewport={{ once: false }}
+                      // as={motion.div}
+                      // initial={{ y: 10, opacity: 0 }}
+                      // whileInView={{ y: 0, opacity: 1 }}
+                      // viewport={{ once: false }}
                       mb={{ base: "10%", md: "auto" }}
                       width={{ base: "312.731px", md: "auto" }}
-                      p={{ base: "2%", md: "0" }}
-                      transition={{
-                        duration: 0.5,
-                        ease: "easeOut",
-                        delay: 0.4,
-                      }}
+                      pl={{ base: "5%", md: "0" }}
+                      pt={{ base: "5%", md: "0" }}
+                      // transition={{
+                      //   duration: 0.5,
+                      //   ease: "easeOut",
+                      //   delay: 0.4,
+                      // }}
                       bg={{ base: "white", md: "transparent" }} // Background for description in mobile
                       // p={{ base: "10px", md: "0" }} // Padding for mobile
                       borderRadius={{ base: "10px", md: "0" }} // Rounded corners for mobile
@@ -455,14 +459,17 @@ const AITechnologies = () => {
                         <Text
                           key={i}
                           fontSize="14px"
+                          fontWeight="500"
                           color="black"
                           lineHeight="1.6"
+                          whiteSpace="pre-line" 
                         >
                           {text}
                         </Text>
                       ))}
                     </Box>
-                  </SubHeadingAnimation>
+                  </Flex>
+                  {/* </SubHeadingAnimation> */}
                 </Flex>
               </Flex>
             </Box>

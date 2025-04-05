@@ -77,6 +77,7 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
         flexShrink="0"
         mb={{ base: '10px', md: '0' }}
         zIndex={4}
+        overflow="visible"
       >
         <Image
           src={`${process.env.PUBLIC_URL}/assets/robot.png`} // Use absolute path
@@ -91,18 +92,21 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
       <Box
         display={{ base: "none", md: "block" }} //Added this line
         position={{ base: 'relative', md: 'absolute' }}
-        left={{ base: '0', md: '68%' }}
-        bottom={{ base: '0', md: '0' }}
-        width="404px"
-        height="202px"
+        right={{ base: '0', md: '-5px' }}
+        // left={{ base: '0', md: '500px' }}
+        top={{ base: '0', md: '-2' }}
+        width="454px"
+        height="252px"
         flexShrink="0"
         mb={{ base: '10px', md: '0' }}
         zIndex={0}
+        // bg="red"
+        overflow="hidden"
       >
         <Image
           src={`${process.env.PUBLIC_URL}/assets/Vmukti Brochure O2 2.png`} // Use absolute path
           alt="Connections and Dots"
-          ml="15%"
+          // ml="15%"
           width="100%"
           height="100%"
           objectFit="contain"
