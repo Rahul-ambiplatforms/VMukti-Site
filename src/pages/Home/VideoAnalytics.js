@@ -50,8 +50,8 @@ const VideoAnalytics = () => {
   }
 
   return (
-    <Flex borderRadius="24px" bgColor="#3F77A5" overflow="hidden" position="relative" marginTop="-50px" zIndex={1}>
-      <Flex padding={{ base: "20px", md: "40px" }} gap={4} direction={{ base: "column", lg: "row" }} width="100%">
+    <Flex borderRadius="24px" px="5%" pb="4%" pt="1.5%" bgColor="#3F77A5" overflow="hidden" position="relative" mt="3%" zIndex={1}>
+      <Flex gap={4} direction={{ base: "column", lg: "row" }} width="100%">
         {/* Left Section */}
         <Flex
           color="white"
@@ -65,23 +65,29 @@ const VideoAnalytics = () => {
           <HeadingAnimation>
             <Text
               color="#FFF"
-              fontSize={{ base: "24px", md: "36px" }}
+              fontSize={{ base: "20px", md: "36px" }}
               fontStyle="normal"
               fontWeight="500"
               lineHeight="normal"
               letterSpacing="-0.54px"
             >
-              GPT-Powered
-              <br />
-              Video Analytics & Insights
+              <Box display={{ base: "none", md: "block" }}>
+                GPT-Powered
+                <br />
+                Video Analytics & Insights
+              </Box>
+              <Text display={{ base: "block", md: "none" }}>
+                GPT-Powered
+                Video Analytics & Insights
+              </Text>
             </Text>
           </HeadingAnimation>
 
           {/* Mobile View */}
-          <Box display={{ base: "block", md: "none" }} mt="20px">
+          <Box display={{ base: "block", lg: "none" }} mt="20px">
             <Box
               width="100%"
-              height="200px"
+              height={{ base: "250px", md: "200px" }}
               borderRadius="20px"
               padding="15px"
               bgColor="#E7E7E7"
@@ -111,18 +117,22 @@ const VideoAnalytics = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               mt={{ base: "-14%", md: "0" }}
-              height={{ base: "180px", md: "auto" }}
+              height={{ base: "130px", md: "auto" }}
               display="flex"
+              gap={2}
               flexDirection="column"
               justifyContent={{ base: "flex-end", md: "flex-start" }}
             >
-              <Text color="black" fontSize="16px" fontWeight="700" letterSpacing="-0.24px">
-                {features[featureIndex].title}
-              </Text>
+              <Flex direction="column">
+                <Text color="black" fontSize={{ base: "14px", md: "16px" }} fontWeight="700" letterSpacing="-0.24px">
+                  {features[featureIndex].title}
+                </Text>
+                <Box width="20px" height="2px" bg="#3F77A5" borderRadius="2px" />
+              </Flex>
               <Text
                 width="100%"
                 color="#696969"
-                fontSize="14px"
+                fontSize={{ base: "12px", md: "14px" }}
                 fontWeight="500"
                 letterSpacing="-0.21px"
                 marginTop="8px"
@@ -203,7 +213,7 @@ const VideoAnalytics = () => {
           </Flex>
 
           {/* Feature List */}
-          <Grid templateColumns="20px 1fr" gap="2" mt={{ base: "20px", md: "0" }}>
+          <Grid templateColumns="20px 1fr" mt={{ base: "20px", md: "0" }} rowGap={3}>
             {features.map((feature, index) => (
               <React.Fragment key={index}>
                 <Box display="flex" alignItems="center" justifyContent="center">
@@ -214,8 +224,10 @@ const VideoAnalytics = () => {
                   )}
                 </Box>
                 <Text
-                  padding="10px 0"
-                  fontSize={{ base: "14px", md: "15px" }}
+                  fontSize={{
+                    base: index === featureIndex ? "14px" : "12px",
+                    md: index === featureIndex ? "16px" : "14px",
+                  }}
                   color={index === featureIndex ? "white" : "rgba(255, 255, 255, 0.6)"}
                   fontWeight={index === featureIndex ? "bold" : "normal"}
                   cursor="pointer"
@@ -238,7 +250,7 @@ const VideoAnalytics = () => {
           width="100%"
           minHeight="511px"
           mb="50px"
-          display={{ base: "none", md: "flex" }}
+          display={{ base: "none", lg: "flex" }}
         >
           <MotionBox
             position={"absolute"}
