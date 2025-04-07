@@ -24,7 +24,7 @@ const SolutionEMS = () => {
       ],
       description2: [
         <>
-          <h3 style={{ fontWeight: "bold", marginBottom: "8px" }}>
+          <h3 style={{ fontWeight: "bold", marginBottom: "16px" }}>
             Key Features
           </h3>
           <ul style={{ paddingLeft: "20px" }}>
@@ -65,7 +65,7 @@ const SolutionEMS = () => {
       ],
       description2: [
         <>
-          <h3 style={{ fontWeight: "bold", marginBottom: "8px" }}>
+          <h3 style={{ fontWeight: "bold", marginBottom: "16px" }}>
             Key Features
           </h3>
           <ul style={{ paddingLeft: "20px" }}>
@@ -109,7 +109,7 @@ const SolutionEMS = () => {
       ],
       description2: [
         <>
-          <h3 style={{ fontWeight: "bold", marginBottom: "8px" }}>
+          <h3 style={{ fontWeight: "bold", marginBottom: "16px" }}>
             Key Features
           </h3>
           <ul style={{ paddingLeft: "20px" }}>
@@ -150,10 +150,10 @@ const SolutionEMS = () => {
       title2: "Services",
       description: [
         <>
-          <span style={{ fontWeight: "bold", marginBottom: "2%" }}>
+          <div style={{ fontWeight: "bold", marginBottom: "2%" }}>
             Patented AI-Driven Storage for Surveillance
-          </span>
-          {"\n\n\n"}
+          </div>
+          <br />
           Traditional storage can’t handle high-resolution surveillance
           efficiently. Our AI-powered cloud storage optimizes bandwidth, reduces
           costs, and ensures seamless video access.
@@ -161,7 +161,7 @@ const SolutionEMS = () => {
       ],
       description2: [
         <>
-          <h3 style={{ fontWeight: "bold", marginBottom: "8px" }}>
+          <h3 style={{ fontWeight: "bold", marginBottom: "16px" }}>
             Key Features
           </h3>
           <ul style={{ paddingLeft: "20px" }}>
@@ -211,7 +211,7 @@ const SolutionEMS = () => {
       ],
       description2: [
         <>
-          <h3 style={{ fontWeight: "bold", marginBottom: "8px" }}>
+          <h3 style={{ fontWeight: "bold", marginBottom: "16px" }}>
             Key Features
           </h3>
           <ul style={{ paddingLeft: "20px" }}>
@@ -262,7 +262,7 @@ const SolutionEMS = () => {
       ],
       description2: [
         <>
-          <h3 style={{ fontWeight: "bold", marginBottom: "8px" }}>
+          <h3 style={{ fontWeight: "bold", marginBottom: "16px" }}>
             Key Features
           </h3>
           <ul style={{ paddingLeft: "20px" }}>
@@ -305,7 +305,7 @@ const SolutionEMS = () => {
       ],
       description2: [
         <>
-          <h3 style={{ fontWeight: "bold", marginBottom: "8px" }}>
+          <h3 style={{ fontWeight: "bold", marginBottom: "16px" }}>
             Key Features
           </h3>
           <ul style={{ paddingLeft: "20px" }}>
@@ -317,7 +317,7 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-      
+
       benefits: {
         title: "Business Benefits",
         data: [
@@ -348,7 +348,7 @@ const SolutionEMS = () => {
       ],
       description2: [
         <>
-          <h3 style={{ fontWeight: "bold", marginBottom: "8px" }}>
+          <h3 style={{ fontWeight: "bold", marginBottom: "16px" }}>
             Key Features
           </h3>
           <ul style={{ paddingLeft: "20px" }}>
@@ -377,6 +377,9 @@ const SolutionEMS = () => {
       },
     },
   ];
+
+  const isDesktop = useBreakpointValue({ base: false, md: true });
+
   const visibleSlides = useBreakpointValue({
     base: 1,
     sm: 2,
@@ -431,30 +434,55 @@ const SolutionEMS = () => {
   // Responsive styles
   const cardDirection = useBreakpointValue({ base: "column", md: "row" });
 
+  // Add state to track touch start position
+  const [touchStartX, setTouchStartX] = useState(null);
+
+  // Handle touch start
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  // Handle touch move
+  const handleTouchMove = (e) => {
+    if (!touchStartX) return;
+
+    const touchEndX = e.touches[0].clientX;
+    const diffX = touchStartX - touchEndX;
+
+    if (diffX > 50) {
+      handleNext(); // Swipe left
+      setTouchStartX(null);
+    } else if (diffX < -50) {
+      handlePrev(); // Swipe right
+      setTouchStartX(null);
+    }
+  };
+
   return (
     <Flex
       direction="column"
       bg=" #E7E7E7"
       // minH="50vh"
       overflowX="hidden"
-      borderRadius="24px"
-    // width="100%"
-    // mb="5%"
+      // width="100%"
+      mt="8%"
     >
       {/* Navigation */}
       <Flex
-        justify="center"
         // p={5}
-        gap={{ base: 4, md: 12 }}
+        // gap={{ base: 4, md: 12 }}
         position="relative"
+        alignItems="flex-start"
+        // bg="gray"
+        pb={8}
       >
         {/* Visible Slide Names */}
         <Box
           display="flex"
           justifyContent="space-between"
+          // bg="green"
           w="100%"
           pl="1"
-          pb={8}
         >
           {slides
             .slice(visibleSlideRange.start, visibleSlideRange.end + 1)
@@ -468,16 +496,17 @@ const SolutionEMS = () => {
                   key={index + visibleSlideRange.start}
                   flex={{ base: "0 0 100%", md: "1" }} // Single box in mobile, multiple in desktop
                   textAlign="left"
-                // bg="orange"
+                  // alignItems={{base:"flex-start"}}
+                  // bg="orange"
                 >
                   {/* <HeadingAnimation> */}
-                  <Box w={{ base: "60%", md: "100%" }}>
+                  <Box w={{ base: "80%", md: "100%" }}>
                     <Text
                       whiteSpace="normal"
                       wordBreak="break-word"
                       overflowWrap="break-word"
                       hyphens="auto"
-                      py={2}
+                      // py={2}
                       cursor="pointer"
                       color={
                         currentSlide === index + visibleSlideRange.start
@@ -493,7 +522,7 @@ const SolutionEMS = () => {
                         updateSlider(index + visibleSlideRange.start)
                       }
                     >
-                      {firstPart} <br /> {lastWord}
+                      {firstPart} {isDesktop ? <br /> : " "} {lastWord}
                     </Text>
                   </Box>
                   {currentSlide === index + visibleSlideRange.start && (
@@ -519,16 +548,16 @@ const SolutionEMS = () => {
 
         {/* Slider Controls */}
         <Flex
-          position="absolute"
+          // position="absolute"
           right={{ base: 1, md: 0 }}
           top="20%"
           // transform="translateY(-50%)"
           align="space-between"
           gap={2}
-        // bg="green"
+          // bg="green"
         >
           {visibleSlideRange.end < slides.length - 1 && (
-            <Flex gap={1} align="center">
+            <Flex gap={1} align="center" display={{ base: "none", md: "flex" }}>
               {[...Array(slides.length - visibleSlideRange.end - 1)].map(
                 (_, index) => (
                   <Box
@@ -563,8 +592,10 @@ const SolutionEMS = () => {
                 alignItems="center"
                 justifyContent="center"
                 cursor="pointer"
-                bgColor="white"
-                _hover={{ bgColor: "#e0e0e0" }}
+                bgColor={"white"}
+                _hover={{
+                  background: { base: "white", md: "#e0e0e0" }, // White for mobile, gray for desktop
+                }}
                 onClick={handlePrev} // Use handlePrev for left navigation
               >
                 <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
@@ -575,6 +606,7 @@ const SolutionEMS = () => {
                 </svg>
               </Button>
               <Button
+                variant={"solid"}
                 width="31px"
                 height="31px"
                 minWidth="31px"
@@ -585,8 +617,10 @@ const SolutionEMS = () => {
                 alignItems="center"
                 justifyContent="center"
                 cursor="pointer"
-                bgColor="white"
-                _hover={{ bgColor: "#e0e0e0" }}
+                bgColor={"white"}
+                _hover={{
+                  background: { base: "white", md: "#e0e0e0" }, // White for mobile, gray for desktop
+                }}
                 onClick={handleNext} // Use handleNext for right navigation
               >
                 <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
@@ -608,23 +642,32 @@ const SolutionEMS = () => {
         transition="transform 0.5s ease"
         height="auto" // Change from fit-content to auto
         alignItems="stretch" // Ensure children stretch to fill the height
+        onTouchStart={handleTouchStart} // Add touch start handler
+        onTouchMove={handleTouchMove} // Add touch move handler
+        // borderRadius="5px"
+        // overflow="hidden"
+        // bg="blue"
       >
         {slides.map((slide, index) => (
-          <Box key={index} minW={`${100 / slides.length}%`} height="auto"> {/* Change from fit-content to auto */}
+          <Box key={index} minW={`${100 / slides.length}%`} height="auto">
+            {" "}
+            {/* Change from fit-content to auto */}
             {/* Main Container */}
             <Flex
               bg="#FFFFFF"
+              // bg="blue"
               borderRadius="24px"
               overflow="hidden"
               direction={cardDirection}
               position="relative"
               height="100%" // Ensure it fills the parent's height
+              // bg="red"
             >
               {/* Card Content */}
               <Flex
                 p={5}
-                justifyContent="space-between"
-                gap={5}
+                justifyContent={{ md: "space-between" }}
+                gap={3}
                 height="100%"
                 direction={{ base: "column", md: "row" }}
               >
@@ -635,7 +678,7 @@ const SolutionEMS = () => {
                   gap={5}
                   // height="100%"
                   zIndex={1}
-                  width={{ base: "100%", md: "40%" }}
+                  width={{ base: "100%", md: "50%" }}
                 >
                   {/* First Box with 0.1s delay */}
                   <Flex
@@ -643,8 +686,8 @@ const SolutionEMS = () => {
                     initial={{ scale: 0.7, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: false, amount: 0.1 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    p={8}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    p={{ base: "4", md: "8" }}
                     direction="column"
                     bg="#E7E7E7"
                     // width="100%"
@@ -652,6 +695,7 @@ const SolutionEMS = () => {
                     borderRadius="24px"
                     zIndex={2}
                     backdropFilter="blur(2px)"
+                    // bg="red"
                   >
                     <Heading
                       fontSize={{ base: "24px", md: "36px" }}
@@ -664,7 +708,13 @@ const SolutionEMS = () => {
                       <span style={{ color: "#DB7B3A" }}>{slide.title2}</span>
                     </Heading>
 
-                    <Text fontSize="24px" color="blue.600" mb={3} mt="5%">
+                    <Text
+                      fontSize="24px"
+                      color="blue.600"
+                      mb={3}
+                      mt="5%"
+                      display={{ base: "none", md: "flex" }}
+                    >
                       {/* SVG code remains unchanged */}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -679,7 +729,27 @@ const SolutionEMS = () => {
                         />
                       </svg>
                     </Text>
-
+                    <Text
+                      fontSize="24px"
+                      color="blue.600"
+                      mb={3}
+                      mt="5%"
+                      display={{ base: "flex", md: "none" }}
+                    >
+                      {/* SVG code remains unchanged */}
+                      <svg
+                        width="17"
+                        height="17"
+                        viewBox="0 0 17 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15 16.5C15.8284 16.5 16.5 15.8284 16.5 15V1.5C16.5 0.671573 15.8284 -2.38419e-07 15 -2.38419e-07C14.1716 -2.38419e-07 13.5 0.671573 13.5 1.5V13.5H1.5C0.671573 13.5 -2.38419e-07 14.1716 -4.76837e-07 15C-4.76837e-07 15.8284 0.671573 16.5 1.5 16.5H15ZM0.93934 3.06066L13.9393 16.0607L16.0607 13.9393L3.06066 0.93934L0.93934 3.06066Z"
+                          fill="#3F77A5"
+                        />
+                      </svg>
+                    </Text>
                     <Box>
                       {slide.description.map((text, i) => (
                         <Text
@@ -687,7 +757,8 @@ const SolutionEMS = () => {
                           fontWeight="500"
                           fontSize="16px"
                           color="black"
-                          lineHeight="1.6"
+                          // lineHeight={{base:"100%",md:"1.6"}}
+                          lineHeight="1"
                           mb={2}
                         >
                           {text}
@@ -703,13 +774,14 @@ const SolutionEMS = () => {
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: false, amount: 0.1 }}
                     transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-                    p={8}
+                    p={{ base: "4", md: "8" }}
                     direction="column"
-                    height='100%'
+                    height="100%"
                     bg="#BECEDC"
                     borderRadius="24px"
                     zIndex={2}
                     backdropFilter="blur(2px)"
+                    // bg="red"
                   >
                     <Box>
                       {slide.description2.map((text, i) => (
@@ -718,7 +790,8 @@ const SolutionEMS = () => {
                           fontWeight="500"
                           fontSize="16px"
                           color="black"
-                          lineHeight="1.6"
+                          // lineHeight={{base:"100%",md:"1.6"}}
+                          lineHeight="1"
                           mb={5}
                         >
                           {text}
@@ -734,15 +807,14 @@ const SolutionEMS = () => {
                   justifyContent={{ base: "center", md: "space-between" }}
                   alignItems={{ base: "center" }}
                   width="100%"
+                  // bg="blue"
                 >
                   {/* Top right Image (positioned absolutely) */}
                   <Box
                     as={motion.div}
-                    width="90%" // Allow the box to take up available space
-                    // maxWidth="630px"
-                    // height="360px"
-                    height="90%" // Height set to 90%
-                    maxHeight="50%"
+                    width={{ base: "100%", md: "80%" }} // Allow the box to take up available space
+                    height={{ base: "100%", md: "60%" }} // Height remains in percentage
+                    minHeight={{ base: "200px", md: "0" }} // Ensure a minimum height for mobile view
                     zIndex={3}
                     initial={{ scale: 0.7, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
@@ -752,6 +824,12 @@ const SolutionEMS = () => {
                       ease: [0, 0.3, 0.5, 1],
                       delay: 0.2, // Add delay if needed
                     }}
+                    overflow="hidden"
+                    bg="white" // Ensure white background is always present
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="space-between"
+                    // bg="red"
                   >
                     {slide.image ? (
                       <Image
@@ -760,10 +838,16 @@ const SolutionEMS = () => {
                         style={{
                           width: "100%",
                           height: "100%",
-                          objectFit: "cover",
+                          objectFit: "contain",
                         }}
                       />
-                    ) : null}
+                    ) : (
+                      <Box
+                        width="100%"
+                        height="100%"
+                        bg="white" // White background for empty image
+                      />
+                    )}
                   </Box>
                   {/* New Bottom Right Box for Benefits */}
                   {slide.benefits && (
