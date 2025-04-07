@@ -577,7 +577,10 @@ const Navbar = () => {
                                         fontWeight="700"
                                         borderRadius="20px"
                                         flexShrink={0}
-                                        onClick={() => navigateTo("/contactus", "Contact Us")}
+                                        onClick={() => {
+                                            navigateTo("/contactus", "Contact Us"); // Navigation and tracking
+                                            onClose(); // Close modal/menu
+                                          }}
                                         _hover={{
                                             background: "#1E4A6A",
                                             color: "#FFFFFF",
