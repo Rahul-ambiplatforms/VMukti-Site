@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import {
   Box,
   Text,
@@ -13,7 +13,10 @@ import {
 import PageContentWrapper from "../../components/PageContentWrapper";
 import HeroSection from "./components/HeroSection";
 import VisionMissionSection from "./components/VisionMissionSection";
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import VerticalTimeline from "../../components/VerticalTimeline";
 import certifications from "../../data/certificationsConstData";
 import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation";
@@ -47,10 +50,10 @@ const WhoWeare = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleCards = useBreakpointValue({ base: 1, md: 2, lg: 2.4, xl: 2.8 }); // 1 card on mobile, 3 on larger screens
+  const visibleCards = useBreakpointValue({ sm: 1, md: 2, lg: 3 }); // 1 card on mobile, 3 on larger screens
   const widthMultiplier = useBreakpointValue({ base: 13, md: 23 });
   const totalCards = reviews.length;
-
+  const swiperRef = useRef(null); // Initialize with null
   // Choose either APPROACH 1 or APPROACH 2:
 
   // APPROACH 1: Simple wrapping
@@ -71,9 +74,16 @@ const WhoWeare = () => {
   // APPROACH 2: Continuous looping
 
   const extendedReviews = [...reviews, ...reviews.slice(0, visibleCards)];
-  const handleNext = () => setCurrentIndex((prev) => (prev + 1) % totalCards);
-  const handlePrevious = () =>
-    setCurrentIndex((prev) => (prev - 1 + totalCards) % totalCards);
+  const handleNext = () => {
+    // setCurrentIndex((prev) => (prev + 1) % totalCards)
+    if (swiperRef.current) swiperRef.current.slideNext();
+
+  };
+  const handlePrevious = () => {
+    // setCurrentIndex((prev) => (prev - 1 + totalCards) % totalCards)
+    if (swiperRef.current) swiperRef.current.slidePrev();
+    
+  };
 
   return (
     <Box>
@@ -158,7 +168,7 @@ const WhoWeare = () => {
               zIndex="3"
               gap={{ sm: "-10px", base: "5px", md: "50px" }}
               flexWrap="wrap"
-              justifyContent={{md:"center"}}
+              justifyContent={{ md: "center" }}
               maxW="1200px"
               mx="auto"
             // bg="blue"
@@ -221,9 +231,10 @@ const WhoWeare = () => {
 
         <Box>
           <Box
-            mx="auto"
-            px={12}
-            py={8}
+            // mx="auto"
+            // px={12}
+            // py={8}
+            p="5%"
             bg="#3F77A5"
             borderRadius="24px"
           >
@@ -286,44 +297,59 @@ const WhoWeare = () => {
                 </Flex>
               </Flex>
             </HeadingAnimation>
-            <Box position="relative" mb="5%" py="1%">
-              <Flex alignItems="center" justifyContent="space-between">
-                <Box mt={4} overflow="hidden" position="relative" width="90%">
-                  <Flex
-                    transform={`translateX(-${currentIndex * (105 / visibleCards + 1)
-                      }%)`}
-                    transition="transform 0.5s ease-in-out"
-                    // width={`${(totalCards / visibleCards) * 100}`} // For APPROACH 1
-                    // width={`${(extendedReviews.length / visibleCards) * 13}%`} // For APPROACH 2
-                    width={`${(extendedReviews.length / visibleCards) * widthMultiplier}%`}
-                  >
-                    {/* {reviews.map((review) => ( // For APPROACH 1 */}
-                    {extendedReviews.map(
-                      (
-                        review,
-                        index // For APPROACH 2
-                      ) => (
+
+            {/* slider portion start */}
+            <Flex position="relative" alignItems="center" justifyContent="space-between" mb="5%" py="1%">
+              <Flex width={{ base: "100%", sm: "100%", md: "80%" }}>
+                <Swiper
+                  onSwiper={(swiper) => {
+                    swiperRef.current = swiper; // Assign the Swiper instance
+                  }}
+                  spaceBetween={1} // Adjust spacing as needed
+                  // slidesPerView={visibleCards}
+                  breakpoints={{
+                    0: {
+                      slidesPerView: 1, // sm: 1 card
+                    },
+                    768: {
+                      // px (md)
+                      slidesPerView: 2, // md: 2 cards
+                    },
+                    992: {
+                      // px (lg)
+                      slidesPerView: 3, // lg: 3 cards
+                    },
+                  }}
+                >
+                  {extendedReviews.map(
+                    (
+                      review,
+                      index // For APPROACH 2
+                    ) => (
+                      <SwiperSlide key={index}>
                         <Box
                           // key={review.id} // For APPROACH 1
                           key={`${review.id}-${index}`} // For APPROACH 2
-                          flex={`0 0 ${100 / visibleCards}%`}
+                          // flex={`0 0 ${100 / visibleCards}%`}
                           bg="white"
                           borderRadius="24px"
                           p="6%"
-                          minWidth="0"
                           display="flex"
                           flexDirection="column"
-                          justifyContent="space-between"
                           mx={2}
-                          w="320px"
-                          h="320px"
+                          // w="320px"
+                          // h="320px"
+                          maxWidth={{ base: "100%", md: "320px" }}
+                          height="320px"
+                        // aspectRatio={1/1}
                         // bg="red"
                         >
                           {/* ----------------Your card content ----------*/}
                           <Flex
                             alignItems="flex-start"
-                            mb={4}
+                            mb="25%"
                             direction="column"
+
                           >
                             <Box>
                               <svg width="30" height="35" viewBox="0 0 30 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -333,72 +359,72 @@ const WhoWeare = () => {
                             </Box>
 
                             <Text
-                              fontSize="lg"
-                              fontWeight="600"
-                              color="gray.600"
+                              fontSize="16px"
+                              fontWeight="700"
                             >
                               Customer Reviews
                             </Text>
                             <Box width="20px" height="2px" bg="#3F77A5" />
                           </Flex>
-                          <Text fontSize="md" color="gray.700">
+                          <Text fontSize="16px" fontWeight="500" color="gray.700">
                             {review.text}
                           </Text>
                         </Box>
-                      )
-                    )}
-                  </Flex>
-                </Box>
+                      </SwiperSlide>
+                    )
+                  )}
+                </Swiper>
 
-                {/* navigation buttons */}
-                <Flex display={{ base: "none", md: "flex" }} justifyContent="space-between" gap={1}>
-                  <Button
-                    width="31px"
-                    height="31px"
-                    minWidth="31px"
-                    minHeight="31px"
-                    padding="0"
-                    borderRadius="5px"
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                    cursor="pointer"
-                    bgColor="#E7E7E7"
-                    _hover={{ bgColor: '#e0e0e0' }}
-                    onClick={handlePrevious}
-                  >
-                    <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
-                      <path
-                        d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z"
-                        fill="#3F77A5"
-                      />
-                    </svg>
-                  </Button>
-                  <Button
-                    width="31px"
-                    height="31px"
-                    minWidth="31px"
-                    minHeight="31px"
-                    padding="0"
-                    borderRadius="5px"
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                    cursor="pointer"
-                    bgColor="#E7E7E7"
-                    _hover={{ bgColor: '#e0e0e0' }}
-                    onClick={handleNext}
-                  >
-                    <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
-                      <path
-                        d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z"
-                        fill="#3F77A5"
-                      />
-                    </svg>
-                  </Button>
-                </Flex>
               </Flex>
-            </Box>
+              {/* slider portion end */}
+              {/* navigation buttons */}
+              <Flex display={{ base: "none", md: "flex" }} justifyContent="space-between" gap={1}>
+                <Button
+                  width="31px"
+                  height="31px"
+                  minWidth="31px"
+                  minHeight="31px"
+                  padding="0"
+                  borderRadius="5px"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  cursor="pointer"
+                  bgColor="#E7E7E7"
+                  _hover={{ bgColor: '#e0e0e0' }}
+                  onClick={handlePrevious}
+                >
+                  <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
+                    <path
+                      d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z"
+                      fill="#3F77A5"
+                    />
+                  </svg>
+                </Button>
+                <Button
+                  width="31px"
+                  height="31px"
+                  minWidth="31px"
+                  minHeight="31px"
+                  padding="0"
+                  borderRadius="5px"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  cursor="pointer"
+                  bgColor="#E7E7E7"
+                  _hover={{ bgColor: '#e0e0e0' }}
+                  onClick={handleNext}
+                >
+                  <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
+                    <path
+                      d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z"
+                      fill="#3F77A5"
+                    />
+                  </svg>
+                </Button>
+              </Flex>
+            </Flex>
           </Box>
         </Box>
       </PageContentWrapper>
