@@ -1,3 +1,7 @@
+//updated industry content
+
+// Industry Content.js
+
 import React from "react";
 import {
   Text,
@@ -90,7 +94,7 @@ const IndustryContent = ({ props, content }) => {
                 position="relative"
                 zIndex="1"
                 initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                  animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0 }}
                 viewport={{ once: false, amount: 0.1 }}
               >
@@ -101,7 +105,7 @@ const IndustryContent = ({ props, content }) => {
                     display="inline"
                     key={index}
                     initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
                     transition={{
                       duration: 0.8,
                       ease: "easeOut",
@@ -119,7 +123,7 @@ const IndustryContent = ({ props, content }) => {
                   color="#3F77A5"
                   display="inline"
                   initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
                   transition={{
                     duration: 0.9,
                     ease: "easeOut",
@@ -152,7 +156,7 @@ const IndustryContent = ({ props, content }) => {
                   display="flex"
                   justifyContent="flex-start"
                   initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
                   transition={{ duration: 0.8, ease: "easeOut" }}
                   viewport={{ once: false, amount: 0.1 }}
                 >
@@ -178,7 +182,7 @@ const IndustryContent = ({ props, content }) => {
                   fontSize={{ base: "14px", md: "16px" }}
                   maxW="100%"
                   initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
                   transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
                   viewport={{ once: false, amount: 0.1 }}
                 >
@@ -199,7 +203,7 @@ const IndustryContent = ({ props, content }) => {
                   px={{ base: "12px", md: "15px", lg: "20px" }}
                   display="flex"
                   initial={{ opacity: 0, x: -40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
                   transition={{ duration: 0.7, ease: "easeOut" }}
                   viewport={{ once: false, amount: 0.1 }}
                 >
@@ -266,7 +270,7 @@ const IndustryContent = ({ props, content }) => {
                 borderRadius="24px"
                 flexShrink="1"
                 initial="hidden"
-                whileInView="visible"
+                animate="visible" // Changed from whileInView to animate
                 variants={popAnimation}
                 viewport={{ once: false }} // Ensures animation runs every time the image enters the viewport
               />
@@ -353,7 +357,7 @@ const IndustryContent = ({ props, content }) => {
                 flexDirection="column"
                 zIndex={1}
                 initial="hidden"
-                whileInView="visible"
+                animate="visible" // Changed from whileInView to animate
                 variants={popAnimation1}
                 custom={index}
                 viewport={{ once: false }} // Repeats animation on scroll

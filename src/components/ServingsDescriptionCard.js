@@ -54,7 +54,7 @@ const ServingsDescriptionCard = ({ description, keybenefits, image }) => {
           backdropFilter="blur(2px)" // Blur effect
         >
           <Flex direction="column" display={{ base: "none", md: "flex" }}>
-            <SubHeadingAnimation>
+            {/* <SubHeadingAnimation> */}
               <motion.div variants={popAnimation}>
                 <Text fontSize="24px" color="blue.600" mb={5}>
                   <svg
@@ -79,18 +79,18 @@ const ServingsDescriptionCard = ({ description, keybenefits, image }) => {
                   {description}
                 </Heading>
               </motion.div>
-            </SubHeadingAnimation>
+            {/* </SubHeadingAnimation> */}
           </Flex>
 
           <Flex direction="column" justifyContent="space-between" gap={7}
           >
-            <HeadingAnimation>
+            {/* <HeadingAnimation> */}
               <motion.div variants={popAnimation}>
                 <Text fontSize="16px" color="black" fontWeight="700">
                   Key Benefits
                 </Text>
               </motion.div>
-            </HeadingAnimation>
+            {/* </HeadingAnimation> */}
 
             <Grid
               gridTemplateColumns={{ base: "repeat(3, 1fr)", md: "1fr" }}
@@ -105,7 +105,7 @@ const ServingsDescriptionCard = ({ description, keybenefits, image }) => {
                   key={index}
                   gap={2}
                 >
-                  <SubHeadingAnimation>
+                  {/* <SubHeadingAnimation> */}
                     <motion.div variants={popAnimation}>
                       <Box
                         display="flex"
@@ -115,13 +115,13 @@ const ServingsDescriptionCard = ({ description, keybenefits, image }) => {
                         <Image src={benefit.svg} />
                       </Box>
                     </motion.div>
-                  </SubHeadingAnimation>
+                  {/* </SubHeadingAnimation> */}
 
-                  <HeadingAnimation>
+                  {/* <HeadingAnimation> */}
                     <motion.div variants={popAnimation}>
                       <Text fontSize={{ base: "12px", md: "16px" }} fontWeight={500}>{benefit.title}</Text>
                     </motion.div>
-                  </HeadingAnimation>
+                  {/* </HeadingAnimation> */}
                 </Flex>
               ))}
             </Grid>
