@@ -45,7 +45,11 @@ const ServingsContent = ({ page: name }) => {
                         {/* Title Container with relative positioning */}
                         <Flex direction="column" position="relative" mb={{ base: "0px", md: "20px" }} gap="2">
                             {/* Title Text (above the white rectangle) */}
-                            <HeadingAnimation>
+                            <motion.div
+                                initial={{ opacity: 0, x: -50 }} // Initial animation state
+                                animate={{ opacity: 1, x: 0 }} // Animate on mount
+                                transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
+                            >
                                 <Text
                                     fontSize={{ base: '24px', md: '48px' }}
                                     fontWeight="600"
@@ -66,9 +70,9 @@ const ServingsContent = ({ page: name }) => {
                                     </Text>{' '}
                                     {/* Static blue dot without space */}
                                 </Text>
-                            </HeadingAnimation>
+                            </motion.div>
                             <Flex gap={1} direction="column" display={{ base: "flex", md: "none" }}>
-                                <SubHeadingAnimation>
+                                {/* <SubHeadingAnimation> */}
                                     <motion.div variants={popAnimation}>
                                         <Box mb={2} display={{ base: "none", md: "block" }}>
                                             <svg
@@ -99,7 +103,7 @@ const ServingsContent = ({ page: name }) => {
                                             {data.description}
                                         </Heading>
                                     </motion.div>
-                                </SubHeadingAnimation>
+                                {/* </SubHeadingAnimation> */}
                             </Flex>
                         </Flex>
                     </Box>

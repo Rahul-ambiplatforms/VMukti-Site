@@ -170,7 +170,6 @@ const AdvancedComputerVision = ({
             padding="0"
             borderRadius="5px"
             display={{ base: "none", md: "flex" }}
-            display={{ base: "none", md: "flex" }}
             alignItems="center"
             justifyContent="center"
             cursor="pointer"
@@ -192,7 +191,6 @@ const AdvancedComputerVision = ({
             minHeight="31px"
             padding="0"
             borderRadius="5px"
-            display={{ base: "none", md: "flex" }}
             display={{ base: "none", md: "flex" }}
             alignItems="center"
             justifyContent="center"
@@ -241,7 +239,6 @@ const AdvancedComputerVision = ({
               <Box
                 // gap={{base:"2",md:"8", lg:"8"}}
                 width="100%"
-                borderRadius={{ base: "20px", md: "24px" }}
                 borderRadius={{ base: "20px", md: "24px" }}
                 bgColor={index % 2 !== 0 ? "#BECEDC" : "#EAEAEA"}
                 display="flex"

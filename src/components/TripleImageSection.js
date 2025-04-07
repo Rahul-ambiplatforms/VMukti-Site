@@ -23,16 +23,17 @@ const TripleImageSection = ({
   ],
 }) => {
   const ref = useRef(null);
-  const inView = useInView(ref, { threshold: 0.1 }); // Triggers when 10% visible
+  const inView = useInView(ref, { threshold: 0.1, triggerOnce: false });
+
 
   return (
     <Box bg="#E7E7E7" mb={10}>
       {/* Heading Animation */}
       <motion.div
         ref={ref}
-        initial={{ opacity: 0.5, x: -50 }}
+        initial={{ opacity: 0, x: -50 }}
         animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 1, ease: "easeInOut" }} // Smoother transition
       >
         {heading.map((item, index) => (
           <MotionText
@@ -60,14 +61,15 @@ const TripleImageSection = ({
       >
         {/* Left Column (Animated Text & Icon) */}
         <MotionTextContainer
+
           align="start"
           spacing={6}
           maxW={{ base: "100%", md: "50%", lg: "40%" }}
           mt={{ base: 8, md: 16 }}
-          initial={{ opacity: 0, x: -120 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.1 }}
+          initial={{ opacity: 0, x: -50 }}
+          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+          transition={{ duration: 1, ease: "easeInOut" }} // Smoother transition
+          viewport={{ once: false, amount: 0.1 }} // Trigger animation
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -116,14 +118,13 @@ const TripleImageSection = ({
                 w="100%"
                 h="100%"
                 objectFit="cover"
-                initial={{ scale: 0.8, opacity: 1 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: false, amount: 0.1 }}
+                initial={{ scale: 0.8, opacity: 0.8 }} // Initial state for animation
+                animate={inView? { scale: 1, opacity: 1 }:{ scale: 0.8, opacity: 0.8 }} // Trigger animation immediately
                 transition={{
-                  duration: 0.3,
-                  ease: "easeOut",
+                  duration: 0.7,
+                  ease: "easeInOut",
                   delay: index * 0.1,
-                }}
+                }} // Smoother transition
               />
             </Box>
           ))}
@@ -153,7 +154,8 @@ const TripleImageSection = ({
                     h="100%"
                     objectFit="cover"
                   />
-                </Box>
+
+              </Box>
               </SwiperSlide>
             ))}
           </Swiper>

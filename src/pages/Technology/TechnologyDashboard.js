@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Flex, Image, Text, Heading, Box, useBreakpointValue } from "@chakra-ui/react";
 import ComputerVisionPage from "./AITechnologies";
 import PageContentWrapper from "../../components/PageContentWrapper";
@@ -20,13 +20,13 @@ const animations = {
   fadeInLeft: {
     initial: { opacity: 0, x: -50 },
     whileInView: { opacity: 1, x: 0 },
-    viewport: { once: false, amount: 0.6 },
-    transition: { duration: 0.8, ease: "easeOut" },
+    viewport: { once: false, amount: 0.1 },
+    transition: { duration: 0.5, ease: "easeOut" },
   },
   popIn: {
     initial: { scale: 0.8, opacity: 1 },
     whileInView: { scale: 1 },
-    viewport: { once: false, amount: 0.5 },
+    viewport: { once: false, amount: 0.1 },
     transition: { duration: 0.5, ease: "easeOut" },
   },
 };
@@ -100,7 +100,7 @@ const DesktopBackgroundImages = () => (
   </Flex>
 );
 
-const HeadingSection = ({ refProp, display }) => (
+const HeadingSection = ({ refProp, display, isAnimationTriggered }) => (
   <MotionHeading
     ref={refProp}
     fontSize={responsiveSizes.headingFontSize}
@@ -111,7 +111,9 @@ const HeadingSection = ({ refProp, display }) => (
     color="#000"
     fontWeight="600"
     display={display}
-    {...animations.fadeInLeft}
+    initial={{ opacity: 0, x: -50 }}
+    animate={isAnimationTriggered ? { opacity: 1, x: 0 } : {}}
+    transition={{ duration: 0.5, ease: "easeOut" }}
   >
     Breakthroughs in Visual AI:{" "}
     <Text
@@ -148,6 +150,12 @@ const HeadingSection = ({ refProp, display }) => (
 const TechnologyDashboard = () => {
   const ref = useRef(null);
   const svgSize = useBreakpointValue({ base: "13px", md: "33px" });
+  const [isAnimationTriggered, setIsAnimationTriggered] = useState(false);
+
+  useEffect(() => {
+    // Trigger animation on page load
+    setIsAnimationTriggered(true);
+  }, []);
 
   return (
     <Box mx={{ base: "0", md: "2%" }}>
@@ -169,7 +177,11 @@ const TechnologyDashboard = () => {
             w={{ base: "339px", md: "auto" }}
             minH={{ base: "auto", lg: "50vh" }}
           >
-            <HeadingSection refProp={ref} display={{ base: "block", lg: "none" }} />
+            <HeadingSection
+              refProp={ref}
+              display={{ base: "block", lg: "none" }}
+              isAnimationTriggered={isAnimationTriggered}
+            />
             <Flex
               display={{ base: "flex", lg: "none" }}
               w="538px"
@@ -190,8 +202,18 @@ const TechnologyDashboard = () => {
               />
             </Flex>
             <Flex direction="column" maxW={{ base: "100%", lg: "70%" }} position="relative" zIndex={3}>
-              <HeadingSection refProp={ref} display={{ base: "none", lg: "block" }} />
-              <SubHeadingAnimation display="flex" flexDirection={{ base: "row", md: "column" }}>
+              <HeadingSection
+                refProp={ref}
+                display={{ base: "none", lg: "block" }}
+                isAnimationTriggered={isAnimationTriggered}
+              />
+              <SubHeadingAnimation
+                display="flex"
+                flexDirection={{ base: "row", md: "column" }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isAnimationTriggered ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+              >
                 <Box width={{ md: "30px" }} ml={{ base: "6%", md: "0" }}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

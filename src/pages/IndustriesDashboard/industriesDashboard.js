@@ -351,18 +351,7 @@ export default function IndustryDashboard() {
 
   // Create a grid layout based on the industry data
   const ref = useRef(null);
-  // const inView = useInView(ref, { threshold: 0.1 });
-
-  const [animate, setAnimate] = useState(false);
-
-  useEffect(() => {
-    // Start animation when the component mounts
-    const timeout = setTimeout(() => {
-      setAnimate(true);
-    }); // Convert delay to milliseconds
-
-    return () => clearTimeout(timeout);
-  }, []);
+  const inView = useInView(ref, { threshold: 0.1 });
 
   const renderIndustryCards = () => {
     // Create a 4x4 grid (rows x columns) to place cards
@@ -426,9 +415,7 @@ export default function IndustryDashboard() {
               lineHeight="normal"
               width="100%"
               initial={{ opacity: 0, x: -50 }}
-              // whileInView={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: false }}
+              animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               Transforming{" "}
@@ -444,9 +431,8 @@ export default function IndustryDashboard() {
             {/* Arrow */}
             <MotionBox
               initial={{ opacity: 0, x: -100 }} // Start faded and shifted left
-              whileInView={{ opacity: 1, x: 0 }} // Fade in and move right
+              animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }} // Fade in and move right
               transition={{ duration: 0.8, ease: "easeOut" }}
-              viewport={{ once: false, amount: 0.1 }} // Triggers at 10% visibility
             >
               {/* Animated SVG Box */}
               <MotionBox mb="8px" align="left">
@@ -516,7 +502,7 @@ export default function IndustryDashboard() {
                     overflow="hidden"
                     // Apply the keyframe animation with a 6s duration, easeInOut easing and infinite repetition
                     animation={
-                      animate
+                      inView
                         ? `${floatAnimation} 2s ease-in-out ${delay}s 1`
                         : "none"
                     }
