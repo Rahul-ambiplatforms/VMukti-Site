@@ -14,9 +14,7 @@ import {
     Drawer,
     DrawerOverlay,
     DrawerContent,
-    DrawerHeader,
     DrawerBody,
-    VStack,
     Text,
     useDisclosure,
     useBreakpointValue,
@@ -25,11 +23,9 @@ import {
     AccordionButton,
     AccordionPanel,
     Image,
-    DrawerCloseButton
 } from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
-import { Link, useLocation } from 'react-router-dom' // Import Link and useLocation from react-router-dom
-import PageContentWrapper from './PageContentWrapper';
+
+import { useNavigate, useLocation } from 'react-router-dom'
 
 const dropdownItems = {
     organization: [
@@ -38,13 +34,13 @@ const dropdownItems = {
         { label: "Careers", path: "/organization/careers" },
     ],
     solutions: [
-        { label: "Video Management System (VMS)", path: "/solutions" },
-        { label: "Integrated Command & Control Center (ICCC)", path: "/solutions" },
-        { label: "AI-Optimized Cloud Services", path: "/solutions" },
-        { label: "Generative AI in Video Surveillance", path: "/solutions" },
-        { label: "AI-Powered Surveillance Cameras", path: "/solutions" },
-        { label: "Flying Squad Vehicle (FSV)", path: "/solutions" },
-        { label: "Live Webcasting & Streaming", path: "/solutions" },
+        { label: "Video Management System (VMS)", path: "/solutions", sliderId: "vms" },
+        { label: "Integrated Command & Control Center (ICCC)", path: "/solutions", sliderId: "icc" },
+        { label: "AI-Optimized Cloud Services", path: "/solutions", sliderId: "opt" },
+        { label: "Generative AI in Video Surveillance", path: "/solutions", sliderId: "gav" },
+        { label: "AI-Powered Surveillance Cameras", path: "/solutions", sliderId: "asc" },
+        { label: "Flying Squad Vehicle (FSV)", path: "/solutions", sliderId: "fsv" },
+        { label: "Live Webcasting & Streaming", path: "/solutions", sliderId: "lws" },
     ],
     industries: [
         { label: "Retailer Industry", path: "/industries/retailindustry" },
@@ -82,11 +78,25 @@ const dropdownItems = {
 
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const [activeLink, setActiveLink] = useState('Home') // State to track active link
-    const [hoverTimeouts, setHoverTimeouts] = useState({}); // Track hover timeouts for each menu
-    const [menuOpenStates, setMenuOpenStates] = useState({}); // Track open state for each menu
-    const [isNavbarVisible, setIsNavbarVisible] = useState(true); // State to track navbar visibility
-    const location = useLocation(); // Use location hook
+    const [activeLink, setActiveLink] = useState('Home')
+    const [hoverTimeouts, setHoverTimeouts] = useState({});
+    const [menuOpenStates, setMenuOpenStates] = useState({});
+    const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const navigateTo = (path, linkName, sliderId = null) => {
+        setActiveLink(linkName);
+        const state = sliderId ? { scrollTo: sliderId } : undefined;
+
+        if (location.pathname === path) {
+            // Avoid unnecessary refresh by replacing the state
+            navigate(path, { state, replace: true });
+        } else {
+            navigate(path, { state });
+        }
+    };
+
     const pathToLinkName = {
         '/': 'Home',
         '/technology': 'Technology',
@@ -108,9 +118,9 @@ const Navbar = () => {
 
         const handleScroll = () => {
             if (window.scrollY > lastScrollY) {
-                setIsNavbarVisible(false); // Hide navbar on scroll down
+                setIsNavbarVisible(false);
             } else {
-                setIsNavbarVisible(true); // Show navbar on scroll up
+                setIsNavbarVisible(true);
             }
             lastScrollY = window.scrollY;
         };
@@ -121,35 +131,31 @@ const Navbar = () => {
         };
     }, []);
 
-    // Helper function to check if the current path starts with the link’s base path
     function isPathActive(path) {
         return location.pathname === path || location.pathname.startsWith(path + '/');
     }
 
-    // Responsive values
     const logoHeight = useBreakpointValue({ base: '25px', md: '25px' })
     const fontSize = useBreakpointValue({ base: '16px', md: '16px' })
     const contactBtnSize = useBreakpointValue({ base: '120px', md: '146px' })
     const contactBtnHeight = useBreakpointValue({ base: '50px', md: '50px' })
 
-    // Function to handle link clicks
     const handleLinkClick = (link) => {
         setActiveLink(link)
     }
 
     const handleMouseEnter = (menuName) => {
-        clearTimeout(hoverTimeouts[menuName]); // Clear any existing timeout for this menu
-        setMenuOpenStates((prev) => ({ ...prev, [menuName]: true })); // Open the menu
+        clearTimeout(hoverTimeouts[menuName]);
+        setMenuOpenStates((prev) => ({ ...prev, [menuName]: true }));
     };
 
     const handleMouseLeave = (menuName) => {
         const timeout = setTimeout(() => {
-            setMenuOpenStates((prev) => ({ ...prev, [menuName]: false })); // Close the menu after delay
-        }, 300); // Set delay in milliseconds
-        setHoverTimeouts((prev) => ({ ...prev, [menuName]: timeout })); // Save timeout ID
+            setMenuOpenStates((prev) => ({ ...prev, [menuName]: false }));
+        }, 300);
+        setHoverTimeouts((prev) => ({ ...prev, [menuName]: timeout }));
     };
 
-    // Define navigation items array to help with last item check
     const navigationItems = [
         { name: "Home", path: "/" },
         { name: "Technology", path: "/technology" },
@@ -163,16 +169,15 @@ const Navbar = () => {
         <Flex
             gap={4}
             position="fixed"
-            top={isNavbarVisible ? "3%" : "-100px"} // Move navbar out of view when hidden
+            top={isNavbarVisible ? "3%" : "-100px"}
             right={{ base: "4.7%", md: "2%" }}
             left={{ base: "4%", md: "2%" }}
             zIndex={1000}
             align="center"
-            transition="top 0.3s ease-in-out" // Smooth transition for hiding/showing
+            transition="top 0.3s ease-in-out"
         >
-            {/* Main Navigation Container */}
             <Flex
-                width="100%" // Ensure inner container spans full width
+                width="100%"
                 bg="white"
                 borderRadius="20px"
                 height="50px"
@@ -180,17 +185,16 @@ const Navbar = () => {
                 px={4}
                 justifyContent="space-between"
             >
-                {/* Logo Section */}
                 <Box flex="0 0 auto">
-                    <Link to={"/"}>
+                    <div style={{ cursor: "pointer" }} onClick={() => navigateTo("/", "Home")}>
                         <svg height={logoHeight} viewBox="0 0 98 26" fill="none">
                             <path
                                 d="M2.06965 3.91725L12.479 21.9466L14.5487 25.7302L24.3879 8.68842L22.7459 5.64474L21.7486 3.91725L19.6789 0.332451H15.5395L17.6093 3.91725L20.2486 8.48946L14.5487 18.3617L6.20904 3.91725H9.75994L16.3242 15.2864L18.3938 11.7021L13.8996 3.91725L11.8297 0.332451H7.69029H4.13939H0L2.06965 3.91725Z"
                                 fill="#3F77A5"
                             />
                             <path
-                                fill-rule="evenodd"
-                                clip-rule="evenodd"
+                                fillRule="evenodd"
+                                clipRule="evenodd"
                                 d="M24.8675 0.332451H22.8937L23.8807 2.04206L25.1225 4.19297L26.1095 5.90284L27.0966 4.19297L29.3255 0.332451H24.8675Z"
                                 fill="#DB7B3A"
                             />
@@ -203,30 +207,23 @@ const Navbar = () => {
                                 fill="black"
                             />
                         </svg>
-                    </Link>
+                    </div>
                 </Box>
 
-                {/* Navigation Links - Desktop */}
                 <Show above="lg">
                     <HStack
                         justify="center"
                         align="center"
                         fontSize={fontSize}
                         fontWeight="400"
-                    // gap="1"
                     >
                         {navigationItems.map((item, index) => (
                             <React.Fragment key={item.name}>
-                                <Flex
-                                    align="center"
-                                >
-                                    {/* Menu Item */}
+                                <Flex align="center">
                                     {item.hasDropdown ? (
                                         <Menu isOpen={menuOpenStates[item.name]}>
                                             <>
-                                                {/* Styled Link */}
-                                                <Link
-                                                    to={item.path}
+                                                <div
                                                     style={{
                                                         display: "flex",
                                                         alignItems: "center",
@@ -236,14 +233,14 @@ const Navbar = () => {
                                                         textDecoration: "none",
                                                         color: isPathActive(item.path) ? "#3F77A5" : "black",
                                                         position: "relative",
-                                                        whiteSpace: "nowrap"
+                                                        whiteSpace: "nowrap",
+                                                        cursor: "pointer"
                                                     }}
                                                     onMouseEnter={() => handleMouseEnter(item.name)}
                                                     onMouseLeave={() => handleMouseLeave(item.name)}
-                                                    onClick={() => handleLinkClick(item.name)} // Navigate to parent path
+                                                    onClick={() => navigateTo(item.path, item.name)}
                                                 >
                                                     {item.name}
-
                                                     {isPathActive(item.path) && (
                                                         <Box
                                                             position="absolute"
@@ -253,66 +250,64 @@ const Navbar = () => {
                                                             bg="#3F77A5"
                                                         />
                                                     )}
-                                                </Link>
-                                                <MenuButton><svg
-                                                    width="12"
-                                                    height="6"
-                                                    viewBox="0 0 12 6"
-                                                    fill="none"
-                                                    style={{
-                                                        transform: menuOpenStates[item.name] ? "rotate(180deg)" : "rotate(0deg)",
-                                                        transition: "transform 0.2s ease",
-                                                    }}
-                                                >
-                                                    <path d="M6 6L12 0L0 0L6 6Z" fill="#3F77A5" />
-                                                </svg>
+                                                </div>
+                                                <MenuButton>
+                                                    <svg
+                                                        width="12"
+                                                        height="6"
+                                                        viewBox="0 0 12 6"
+                                                        fill="none"
+                                                        style={{
+                                                            transform: menuOpenStates[item.name] ? "rotate(180deg)" : "rotate(0deg)",
+                                                            transition: "transform 0.2s ease",
+                                                        }}
+                                                    >
+                                                        <path d="M6 6L12 0L0 0L6 6Z" fill="#3F77A5" />
+                                                    </svg>
                                                 </MenuButton>
-
                                                 <MenuList
-                                                    placement="" // Ensure dropdown opens directly below the link
                                                     onMouseEnter={() => handleMouseEnter(item.name)}
                                                     onMouseLeave={() => handleMouseLeave(item.name)}
                                                     py="0"
-                                                    style={{    
-                                                        marginTop: "20px", // Adjust dropdown position
+                                                    style={{
+                                                        marginTop: "20px",
                                                     }}
                                                 >
                                                     {item.items.map((dropdownItem, idx) => (
-                                                        <><MenuItem
-                                                            key={idx}
-                                                            fontWeight="400"
-                                                            as={Link}
-                                                            to={dropdownItem.path}
-                                                            onClick={() => handleLinkClick(item.name)}
-                                                            width="100%" // Ensure MenuItem takes full width
-                                                            direction="column"
-                                                            display="flex"
-                                                        // borderBottom="1px solid #BECEDC" // Divider between items
-                                                        >
-                                                            <Flex direction="column" width="100%"> {/*Ensures full width*/}
-                                                                <Text>{dropdownItem.label}</Text>
-
-                                                            </Flex>
-                                                        </MenuItem>
-
-                                                            <Box width="100%" height="2px" bg="#BECEDC"/> {/*Full-width divider*/}</>
-
+                                                        <>
+                                                            <MenuItem
+                                                                key={idx}
+                                                                fontWeight="400"
+                                                                onClick={() => navigateTo(
+                                                                    `${dropdownItem.path}${dropdownItem.sliderId ? `?slider=${dropdownItem.sliderId}` : ''}`,
+                                                                    item.name,
+                                                                    dropdownItem.sliderId
+                                                                )}
+                                                                width="100%"
+                                                                direction="column"
+                                                                display="flex"
+                                                            >
+                                                                <Flex direction="column" width="100%">
+                                                                    <Text>{dropdownItem.label}</Text>
+                                                                </Flex>
+                                                            </MenuItem>
+                                                            <Box width="100%" height="2px" bg="#BECEDC" />
+                                                        </>
                                                     ))}
-
                                                 </MenuList>
                                             </>
                                         </Menu>
                                     ) : (
                                         <Box px="8px">
-                                            <Link
-                                                to={item.path}
+                                            <div
                                                 style={{
                                                     color: isPathActive(item.path) ? "#3F77A5" : "black",
                                                     fontWeight: isPathActive(item.path) ? "700" : "400",
                                                     textDecoration: "none",
                                                     position: "relative",
+                                                    cursor: "pointer"
                                                 }}
-                                                onClick={() => handleLinkClick(item.name)}
+                                                onClick={() => navigateTo(item.path, item.name)}
                                             >
                                                 {item.name}
                                                 {isPathActive(item.path) && (
@@ -324,7 +319,7 @@ const Navbar = () => {
                                                         bg="#3F77A5"
                                                     />
                                                 )}
-                                            </Link>
+                                            </div>
                                         </Box>
                                     )}
                                 </Flex>
@@ -336,7 +331,6 @@ const Navbar = () => {
                     </HStack>
                 </Show>
 
-                {/* Mobile Menu Button */}
                 <Hide above="lg">
                     <IconButton
                         onClick={onOpen}
@@ -357,7 +351,6 @@ const Navbar = () => {
                 </Hide>
             </Flex>
 
-            {/* Contact Button - Desktop */}
             <Show above="md">
                 <Button
                     width={contactBtnSize}
@@ -368,17 +361,15 @@ const Navbar = () => {
                     fontWeight="600"
                     borderRadius="20px"
                     flexShrink={0}
-                    as={Link}
-                    to="/contactus"
+                    onClick={() => navigateTo("/contactus", "Contact Us")}
                     _hover={{
-                        background: "#1E4A6A", // Darker shade of blue for hover
-                        color: "#FFFFFF", // Keep text white
+                        background: "#1E4A6A",
+                        color: "#FFFFFF",
                     }}
                 >
                     Contact Us
                 </Button>
             </Show>
-            {/* Mobile Drawer */}
             <Drawer isOpen={isOpen} placement="right" onClose={onClose} size="full">
                 <DrawerOverlay />
                 <DrawerContent bg="#E7E7E7">
@@ -388,31 +379,25 @@ const Navbar = () => {
                                 <Accordion allowToggle>
                                     {navigationItems.map((item, index) => (
                                         <AccordionItem key={item.name}>
-
                                             {item.hasDropdown ? (
                                                 <>
                                                     <h2>
                                                         <Flex align="center" justify="space-between" pl="16px" py="8px">
-                                                            <Link
-                                                                to={item.path}
+                                                            <div
                                                                 style={{
                                                                     color: isPathActive(item.path) ? "#3F77A5" : "black",
                                                                     fontSize: "16px",
                                                                     fontWeight: isPathActive(item.path) ? "600" : "400",
                                                                     textDecoration: "none",
                                                                     flex: 1,
+                                                                    cursor: "pointer"
                                                                 }}
-                                                                onClick={() => {
-                                                                    handleLinkClick(item.name);
-                                                                    onClose();
-                                                                }}
+                                                                onClick={() => { navigateTo(item.path, item.name); onClose(); }}
                                                             >
                                                                 {item.name}
-                                                            </Link>
+                                                            </div>
                                                             <AccordionButton
-                                                                onClick={(e) => {
-                                                                    e.stopPropagation(); // Prevent link redirection
-                                                                }}
+                                                                onClick={(e) => { e.stopPropagation(); }}
                                                                 color={isPathActive(item.path) ? "#3F77A5" : "black"}
                                                                 fontWeight={isPathActive(item.path) ? "600" : "400"}
                                                                 _hover={{ bg: "transparent" }}
@@ -420,12 +405,9 @@ const Navbar = () => {
                                                                 pr="0"
                                                                 width="fit-content"
                                                             >
-                                                                {/* <Box flex="1" textAlign="left" fontSize="16px" fontWeight="400">
-                                                                    {item.name}
-                                                                </Box> */}
                                                                 <Box>
-                                                                    <svg width="12" height="6" viewBox="0 0 12 6" fill="no</AccordionPanel>ne" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path d="M6 6L12 0L0 -5.24537e-07L6 6Z" fill="#3F77A5" />
+                                                                    <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M6 6L12 0L0 0L6 6Z" fill="#3F77A5" />
                                                                     </svg>
                                                                 </Box>
                                                             </AccordionButton>
@@ -433,28 +415,24 @@ const Navbar = () => {
                                                     </h2>
                                                     <AccordionPanel borderRadius="24px" bg="white" py="2%">
                                                         {item.items.map((dropdownItem, idx) => (
-                                                            <Link
-                                                                to={dropdownItem.path}
+                                                            <div
+                                                                key={idx}
                                                                 style={{
                                                                     color: "black",
                                                                     fontSize: "12px",
                                                                     fontWeight: "400",
                                                                     textDecoration: "none",
+                                                                    cursor: "pointer"
                                                                 }}
-                                                                onClick={() => {
-                                                                    handleLinkClick(item.name);
-                                                                    onClose();
-                                                                }}
+                                                                onClick={() => { navigateTo(dropdownItem.path, item.name, dropdownItem.sliderId); onClose(); }}
                                                             >
-                                                                <Box key={idx} mb={2}>
-
+                                                                <Box mb={2}>
                                                                     {dropdownItem.label}
                                                                     {idx < item.items.length - 1 && (
                                                                         <Box width="60%" height="1px" bg="#BECEDC" mt="4px" />
                                                                     )}
                                                                 </Box>
-                                                            </Link>
-
+                                                            </div>
                                                         ))}
                                                     </AccordionPanel>
                                                 </>
@@ -462,9 +440,7 @@ const Navbar = () => {
                                                 <>
                                                     {index === 0 ? (
                                                         <h2 style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "8px" }}>
-                                                            {/* Clickable Link */}
-                                                            <Link
-                                                                to={item.path}
+                                                            <div
                                                                 style={{
                                                                     color: isPathActive(item.path) ? "#3F77A5" : "black",
                                                                     fontSize: "16px",
@@ -472,14 +448,12 @@ const Navbar = () => {
                                                                     textDecoration: "none",
                                                                     display: "flex",
                                                                     alignItems: "center",
-                                                                    gap: "8px", // Ensures spacing between text and SVG
+                                                                    gap: "8px",
+                                                                    cursor: "pointer"
                                                                 }}
+                                                                onClick={() => { navigateTo(item.path, item.name); onClose(); }}
                                                             >
                                                                 <AccordionButton
-                                                                    onClick={() => {
-                                                                        handleLinkClick(item.name);
-                                                                        onClose();
-                                                                    }}
                                                                     color={isPathActive(item.path) ? "#3F77A5" : "black"}
                                                                     fontWeight={isPathActive(item.path) ? "700" : "400"}
                                                                     _hover={{ bg: "transparent" }}
@@ -487,8 +461,7 @@ const Navbar = () => {
                                                                 >
                                                                     <Box flex="1" textAlign="left">{item.name}</Box>
                                                                 </AccordionButton>
-                                                            </Link>
-
+                                                            </div>
                                                             <Box pl="1%" cursor="pointer" onClick={() => onClose()}>
                                                                 <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M5.82621 6.63574H20.9742C21.4034 6.63574 21.751 6.98336 21.751 7.41255V10.5198C21.751 10.949 21.4034 11.2966 20.9742 11.2966H5.82621C5.39702 11.2966 5.0494 10.949 5.0494 10.5198V7.41255C5.0494 6.98336 5.39702 6.63574 5.82621 6.63574Z" fill="#3F77A5" />
@@ -497,35 +470,31 @@ const Navbar = () => {
                                                                 </svg>
                                                             </Box>
                                                         </h2>
-
-                                                    ) : (<h2>
-                                                        <Link
-                                                            to={item.path}
-                                                            style={{
-                                                                color: isPathActive(item.path) ? "#3F77A5" : "black",
-                                                                fontSize: "16px",
-                                                                fontWeight: isPathActive(item.path) ? "500" : "400",
-                                                                textDecoration: "none",
-                                                            }}
-                                                        >
-                                                            <AccordionButton
-                                                                onClick={() => {
-                                                                    handleLinkClick(item.name);
-                                                                    onClose();
+                                                    ) : (
+                                                        <h2>
+                                                            <div
+                                                                style={{
+                                                                    color: isPathActive(item.path) ? "#3F77A5" : "black",
+                                                                    fontSize: "16px",
+                                                                    fontWeight: isPathActive(item.path) ? "500" : "400",
+                                                                    textDecoration: "none",
+                                                                    cursor: "pointer"
                                                                 }}
-                                                                color={isPathActive(item.path) ? "#3F77A5" : "black"}
-                                                                fontWeight={isPathActive(item.path) ? "700" : "400"}
-                                                                _hover={{ bg: "transparent" }}
-                                                                bg="transparent"
+                                                                onClick={() => { navigateTo(item.path, item.name); onClose(); }}
                                                             >
-                                                                <Box flex="1" textAlign="left">
-                                                                    {item.name}
-                                                                </Box>
-
-                                                            </AccordionButton>
-                                                        </Link>
-                                                    </h2>)}
-
+                                                                <AccordionButton
+                                                                    color={isPathActive(item.path) ? "#3F77A5" : "black"}
+                                                                    fontWeight={isPathActive(item.path) ? "700" : "400"}
+                                                                    _hover={{ bg: "transparent" }}
+                                                                    bg="transparent"
+                                                                >
+                                                                    <Box flex="1" textAlign="left">
+                                                                        {item.name}
+                                                                    </Box>
+                                                                </AccordionButton>
+                                                            </div>
+                                                        </h2>
+                                                    )}
                                                 </>
                                             )}
                                             {index < navigationItems.length - 1 && (
@@ -535,29 +504,27 @@ const Navbar = () => {
                                     ))}
                                 </Accordion>
                             </Box>
-                            <Box border-radius="408px"
+                            <Box borderRadius="408px"
                                 opacity="0.12"
                                 position="absolute"
-                                background=" #3F77A5"
+                                background="#3F77A5"
                                 filter="blur(56.599998474121094px)"
                                 width="408px"
                                 top="40%"
                                 left="0"
                                 height="408px"
-                                flex-shrink='0'
+                                flexShrink='0'
                             />
-                            {/* Fixed height bottom section */}
                             <Flex
                                 position="absolute"
                                 bottom="0"
                                 left="0"
                                 right="0"
-                                height="300px" // Fixed height instead of percentage
+                                height="300px"
                                 overflow="hidden"
                             >
-
                                 <Image
-                                    src={`${process.env.PUBLIC_URL}/assets/robot.png`} // Use absolute path
+                                    src={`${process.env.PUBLIC_URL}/assets/robot.png`}
                                     alt="AI Robot"
                                     width="100%"
                                     height="auto"
@@ -570,15 +537,15 @@ const Navbar = () => {
                                 />
                                 <Flex direction="column" alignItems="flex-end" gap={4} position="absolute" bottom="30%" right="5%" zIndex={1}>
                                     <Box flex="0 0 auto">
-                                        <Link to={"/"}>
+                                        <div style={{ cursor: "pointer" }} onClick={() => navigateTo("/", "Home")}>
                                             <svg height={logoHeight} viewBox="0 0 98 26" fill="none">
                                                 <path
                                                     d="M2.06965 3.91725L12.479 21.9466L14.5487 25.7302L24.3879 8.68842L22.7459 5.64474L21.7486 3.91725L19.6789 0.332451H15.5395L17.6093 3.91725L20.2486 8.48946L14.5487 18.3617L6.20904 3.91725H9.75994L16.3242 15.2864L18.3938 11.7021L13.8996 3.91725L11.8297 0.332451H7.69029H4.13939H0L2.06965 3.91725Z"
                                                     fill="#3F77A5"
                                                 />
                                                 <path
-                                                    fill-rule="evenodd"
-                                                    clip-rule="evenodd"
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
                                                     d="M24.8675 0.332451H22.8937L23.8807 2.04206L25.1225 4.19297L26.1095 5.90284L27.0966 4.19297L29.3255 0.332451H24.8675Z"
                                                     fill="#DB7B3A"
                                                 />
@@ -591,7 +558,7 @@ const Navbar = () => {
                                                     fill="black"
                                                 />
                                             </svg>
-                                        </Link>
+                                        </div>
                                     </Box>
                                     <Button
                                         width="146px"
@@ -602,11 +569,10 @@ const Navbar = () => {
                                         fontWeight="700"
                                         borderRadius="20px"
                                         flexShrink={0}
-                                        as={Link}
-                                        to="/contactus"
+                                        onClick={() => navigateTo("/contactus", "Contact Us")}
                                         _hover={{
-                                            background: "#1E4A6A", // Darker shade of blue for hover
-                                            color: "#FFFFFF", // Keep text white
+                                            background: "#1E4A6A",
+                                            color: "#FFFFFF",
                                         }}
                                     >
                                         Contact Us
@@ -617,8 +583,7 @@ const Navbar = () => {
                     </DrawerBody>
                 </DrawerContent>
             </Drawer>
-
-        </Flex >
+        </Flex>
     );
 };
 
