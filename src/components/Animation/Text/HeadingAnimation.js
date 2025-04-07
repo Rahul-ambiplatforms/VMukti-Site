@@ -10,7 +10,7 @@ const HeadingAnimation = ({ children, className }) => {
       className={className} // Allows external styling
       initial={{ opacity: 0, x: -50 }} // Starts hidden and shifted left
       whileInView={{ opacity: 1, x: 0 }} // Fades in and moves to position
-      viewport={{ once: false, amount: 0.2 }} // Triggers at 20% visibility
+      viewport={{ once: false, amount: 0.3 }} // Adjusted visibility threshold to 30%
       transition={{ duration: 0.8, ease: "easeOut" }} // Smooth animation
     >
       {children}

@@ -1,6 +1,4 @@
-//Gptttt
-
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import {
   Box,
   Flex,
@@ -237,10 +235,10 @@ const VMuktiHomepage = () => {
               width="675.12px"
               height="637.8252584690653px"
               objectFit="cover"
-              initial={{ scale: 0.8, opacity: 1 }}
+              initial={{ scale: 0.6, opacity: 1 }}
               whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: false, amount: 0.1 }}
             />
             <Box
               width="13px"
@@ -290,7 +288,7 @@ const VMuktiHomepage = () => {
             zIndex={1}
             initial={{ scale: 0.8, opacity: 1 }}
             whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.2 }}
           />
 
@@ -314,7 +312,7 @@ const VMuktiHomepage = () => {
             zIndex={1}
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <Text as="span" color="#3F77A5">Advanced </Text>
             <Text as="span" color="#000">Computer Vision &  </Text>
