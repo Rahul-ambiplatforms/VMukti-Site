@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ImagePop from "../../components/Animation/Image/ImagePop";
 import { motion } from "framer-motion";
 import {
   Flex,
@@ -9,9 +8,6 @@ import {
   useBreakpointValue,
   Button,
 } from "@chakra-ui/react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
-import SubHeadingAnimation from "../../components/Animation/Text/SubHeadingAnimation";
-import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation";
 
 const AITechnologies = () => {
   // Data for each slide
@@ -83,6 +79,10 @@ const AITechnologies = () => {
     end: endIndex,
   });
 
+  // Add state for touch positions
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [touchEndX, setTouchEndX] = useState(0);
+
   // Update the slider
   const updateSlider = (index) => {
     setCurrentSlide(index);
@@ -95,6 +95,24 @@ const AITechnologies = () => {
 
   const handleNext = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX - touchEndX > 50) {
+      handleNext(); // Swipe left
+    } else if (touchEndX - touchStartX > 50) {
+      handlePrev(); // Swipe right
+    }
+    setTouchStartX(0);
+    setTouchEndX(0);
   };
 
   useEffect(() => {
@@ -149,18 +167,18 @@ const AITechnologies = () => {
   // Responsive styles
   const cardDirection = useBreakpointValue({ base: "column", md: "row" });
   const cardContentWidth = useBreakpointValue({ base: "100%", md: "35%" });
-
+  const svgSize = useBreakpointValue({ base: "13px", md: "33px" });
   return (
     <Box bg="white" minH="50vh" overflowX="visible" borderRadius="24px">
       {/* Navigation */}
       <Flex
         justify="space-between"
         align="center"
-        p={{base: 4, md: 8}}
+        p={{ base: 4, md: 8 }}
         position="relative"
         width="100%"
         minH="80px"
-        // bg="red"
+      // bg="red"
       >
         {/* Center Titles - Modified for responsiveness only */}
         <Flex
@@ -179,7 +197,7 @@ const AITechnologies = () => {
             "-ms-overflow-style": "none",
             "scrollbar-width": "none",
           }}
-          // bg="red"
+        // bg="red"
         >
           {slides
             .slice(visibleSlideRange.start, visibleSlideRange.end + 1)
@@ -235,7 +253,7 @@ const AITechnologies = () => {
           gap={{ base: "0", md: "2" }}
           flexShrink={0}
           ml={{ base: "0", md: "5%" }}
-          // bg="red"
+        // bg="red"
         >
           {visibleSlideRange.end < slides.length - 1 && showCircles && (
             <Flex gap={1} align="center">
@@ -273,7 +291,7 @@ const AITechnologies = () => {
               bgColor="#E7E7E7"
               _hover={{ bgColor: "#e0e0e0" }}
               onClick={handlePrev}
-              // bg="blue"
+            // bg="blue"
             >
               <svg
                 width="8"
@@ -321,7 +339,14 @@ const AITechnologies = () => {
       </Flex>
 
       {/* Slider Container */}
-      <Box w="100%" overflow="hidden" p={0}>
+      <Box
+        w="100%"
+        overflow="hidden"
+        p={0}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <Flex
           w={`${slides.length * 100}%`}
           transform={`translateX(-${currentSlide * (100 / slides.length)}%)`}
@@ -367,7 +392,7 @@ const AITechnologies = () => {
                   borderRadius={"20px"}
                   zIndex={2}
                   backdropFilter="blur(2px)"
-                  // bg="green"
+                // bg="green"
                 >
                   <Flex
                     // gap={1}
@@ -377,7 +402,7 @@ const AITechnologies = () => {
                     // p={{ base: "10px", md: "0" }} // Padding for mobile
                     borderRadius={{ base: "20px", md: "0" }} // Rounded corners for mobile
                     mt={{ base: "-10%", md: "0" }}
-                    // bg="red"
+                  // bg="red"
                   >
                     {/* <SubHeadingAnimation> */}
                     {/* <Box
@@ -399,8 +424,8 @@ const AITechnologies = () => {
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width={{ base: "13px", md: "30" }}
-                        height="33"
+                        width={svgSize}
+                        height={svgSize}
                         viewBox="0 0 33 33"
                         fill="none"
                       >
@@ -436,7 +461,7 @@ const AITechnologies = () => {
                   </Flex>
 
                   {/* <SubHeadingAnimation> */}
-                   <Flex>  {/*//If it affects remove this and comment out SubHeadingAnimation. */}
+                  <Flex>  {/*//If it affects remove this and comment out SubHeadingAnimation. */}
                     <Box
                       // as={motion.div}
                       // initial={{ y: 10, opacity: 0 }}
@@ -462,7 +487,7 @@ const AITechnologies = () => {
                           fontWeight="500"
                           color="black"
                           lineHeight="1.6"
-                          whiteSpace="pre-line" 
+                          whiteSpace="pre-line"
                         >
                           {text}
                         </Text>
