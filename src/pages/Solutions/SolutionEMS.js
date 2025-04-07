@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import {
   Flex,
   Box,
@@ -9,14 +10,13 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Button } from "@chakra-ui/icons";
-import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation";
-import SubHeadingAnimation from "../../components/Animation/Text/SubHeadingAnimation";
-import ImagePop from "../../components/Animation/Image/ImagePop";
-import ImagePopBox from "../../components/Animation/Image/ImagePopBox";
+
 const SolutionEMS = () => {
+  const location = useLocation();
   // Data for each slide
   const slides = [
     {
+      id: "vms",
       title1: "Video Management System",
       title2: "(VMS)",
       description: [
@@ -58,6 +58,7 @@ const SolutionEMS = () => {
       },
     },
     {
+      id: "ems",
       title1: "Enterprise Management System",
       title2: "(EMS)",
       description: [
@@ -102,6 +103,7 @@ const SolutionEMS = () => {
       },
     },
     {
+      id: "icc",
       title1: "Integrated Command & Control Center",
       title2: "(ICCC)",
       description: [
@@ -146,6 +148,7 @@ const SolutionEMS = () => {
       },
     },
     {
+      id: "opt",
       title1: "AI-Optimized Cloud",
       title2: "Services",
       description: [
@@ -197,6 +200,7 @@ const SolutionEMS = () => {
       },
     },
     {
+      id: "gav",
       title1: "Generative AI in Video",
       title2: "Surveillance",
       description: [
@@ -246,6 +250,7 @@ const SolutionEMS = () => {
       },
     },
     {
+      id: "asc",
       title1: "AI-Powered Surveillance",
       title2: "Cameras",
       description: [
@@ -291,6 +296,7 @@ const SolutionEMS = () => {
       },
     },
     {
+      id: "fsv",
       title1: "Flying Squad Vehicle",
       title2: "(FSV)",
       description: [
@@ -334,6 +340,7 @@ const SolutionEMS = () => {
       },
     },
     {
+      id: "lws",
       title1: "Live Webcasting &",
       title2: "Streaming",
       description: [
@@ -417,6 +424,20 @@ const SolutionEMS = () => {
     setVisibleSlideRange({ start: newStart, end: newEnd });
   }, [currentSlide, visibleSlides, slides.length]);
 
+
+  // Handle URL changes to set the correct slide
+  useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    const sliderParam = queryParams.get('slider');
+
+    if (sliderParam) {
+      const slideIndex = slides.findIndex(slide => slide.id === sliderParam);
+      if (slideIndex >= 0) {
+        setCurrentSlide(slideIndex);
+      }
+    }
+  }, [location.search]);
+
   // Navigation handlers with loop
   const handlePrev = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
@@ -429,6 +450,8 @@ const SolutionEMS = () => {
   // Update slider position
   const updateSlider = (index) => {
     setCurrentSlide(index);
+    const newUrl = `${location.pathname}?slider=${slides[index].id}`;
+    window.history.replaceState({}, '', newUrl);
   };
 
   // Responsive styles
@@ -496,8 +519,8 @@ const SolutionEMS = () => {
                   key={index + visibleSlideRange.start}
                   flex={{ base: "0 0 100%", md: "1" }} // Single box in mobile, multiple in desktop
                   textAlign="left"
-                  // alignItems={{base:"flex-start"}}
-                  // bg="orange"
+                // alignItems={{base:"flex-start"}}
+                // bg="orange"
                 >
                   {/* <HeadingAnimation> */}
                   <Box w={{ base: "80%", md: "100%" }}>
@@ -554,7 +577,7 @@ const SolutionEMS = () => {
           // transform="translateY(-50%)"
           align="space-between"
           gap={2}
-          // bg="green"
+        // bg="green"
         >
           {visibleSlideRange.end < slides.length - 1 && (
             <Flex gap={1} align="center" display={{ base: "none", md: "flex" }}>
@@ -644,9 +667,9 @@ const SolutionEMS = () => {
         alignItems="stretch" // Ensure children stretch to fill the height
         onTouchStart={handleTouchStart} // Add touch start handler
         onTouchMove={handleTouchMove} // Add touch move handler
-        // borderRadius="5px"
-        // overflow="hidden"
-        // bg="blue"
+      // borderRadius="5px"
+      // overflow="hidden"
+      // bg="blue"
       >
         {slides.map((slide, index) => (
           <Box key={index} minW={`${100 / slides.length}%`} height="auto">
@@ -661,7 +684,7 @@ const SolutionEMS = () => {
               direction={cardDirection}
               position="relative"
               height="100%" // Ensure it fills the parent's height
-              // bg="red"
+            // bg="red"
             >
               {/* Card Content */}
               <Flex
@@ -695,7 +718,7 @@ const SolutionEMS = () => {
                     borderRadius="24px"
                     zIndex={2}
                     backdropFilter="blur(2px)"
-                    // bg="red"
+                  // bg="red"
                   >
                     <Heading
                       fontSize={{ base: "24px", md: "36px" }}
@@ -781,7 +804,7 @@ const SolutionEMS = () => {
                     borderRadius="24px"
                     zIndex={2}
                     backdropFilter="blur(2px)"
-                    // bg="red"
+                  // bg="red"
                   >
                     <Box>
                       {slide.description2.map((text, i) => (
@@ -807,7 +830,7 @@ const SolutionEMS = () => {
                   justifyContent={{ base: "center", md: "space-between" }}
                   alignItems={{ base: "center" }}
                   width="100%"
-                  // bg="blue"
+                // bg="blue"
                 >
                   {/* Top right Image (positioned absolutely) */}
                   <Box
@@ -829,7 +852,7 @@ const SolutionEMS = () => {
                     display="flex"
                     alignItems="center"
                     justifyContent="space-between"
-                    // bg="red"
+                  // bg="red"
                   >
                     {slide.image ? (
                       <Image

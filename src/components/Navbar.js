@@ -35,6 +35,7 @@ const dropdownItems = {
     ],
     solutions: [
         { label: "Video Management System (VMS)", path: "/solutions", sliderId: "vms" },
+        { label: "Enterprise Management System (EMS)", path: "/solutions", sliderId: "ems" },
         { label: "Integrated Command & Control Center (ICCC)", path: "/solutions", sliderId: "icc" },
         { label: "AI-Optimized Cloud Services", path: "/solutions", sliderId: "opt" },
         { label: "Generative AI in Video Surveillance", path: "/solutions", sliderId: "gav" },

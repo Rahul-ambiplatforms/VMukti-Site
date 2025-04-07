@@ -5,21 +5,17 @@ import SolutionEMS from './SolutionEMS';
 import TripleImageSection from '../../components/TripleImageSection';
 import PageContentWrapper from '../../components/PageContentWrapper';
 
+
 const Hero = () => {
     const location = useLocation();
-    const sectionRefs = {
-        vms: useRef(null),
-        icc: useRef(null),
-        opt: useRef(null),
-        gav: useRef(null),
-        asc: useRef(null),
-        fsv: useRef(null),
-        lws: useRef(null),
-    };
 
     useEffect(() => {
-        if (location.state?.scrollTo && sectionRefs[location.state.scrollTo]) {
-            sectionRefs[location.state.scrollTo].current?.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the slider section when a specific slide is requested
+        if (location.search.includes('slider=')) {
+            const sliderSection = document.getElementById('solutions-slider');
+            if (sliderSection) {
+                sliderSection.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     }, [location]);
 
@@ -27,7 +23,7 @@ const Hero = () => {
         <Box>
             <PageContentWrapper>
                 <TripleImageSection />
-                <Box ref={sectionRefs.vms}>
+                <Box id="solutions-slider"> {/* Add this ID */}
                     <SolutionEMS />
                 </Box>
             </PageContentWrapper>
