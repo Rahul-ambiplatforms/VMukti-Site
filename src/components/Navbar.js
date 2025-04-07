@@ -425,7 +425,14 @@ const Navbar = () => {
                                                                     textDecoration: "none",
                                                                     cursor: "pointer"
                                                                 }}
-                                                                onClick={() => { navigateTo(dropdownItem.path, item.name, dropdownItem.sliderId); onClose(); }}
+                                                                onClick={() => {
+                                                                    navigateTo(
+                                                                        `${dropdownItem.path}${dropdownItem.sliderId ? `?slider=${dropdownItem.sliderId}` : ''}`,
+                                                                        item.name,
+                                                                        dropdownItem.sliderId
+                                                                    );
+                                                                    onClose();
+                                                                }}
                                                             >
                                                                 <Box mb={2}>
                                                                     {dropdownItem.label}
