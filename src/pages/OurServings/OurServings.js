@@ -225,16 +225,17 @@ const OurServings = () => {
                             </Box>
                         </Flex>
                     </Flex>
-                    
+
                     <Flex
                         // justifyContent="space-between"
                         alignItems="flex-end" // Changed to align bottoms
                         direction={{ base: "column", md: "row" }}
                         mt={{ base: "5%", md: "-10%" }}
+                        mb={{base:"25%",md:"0%"}}
                         gap="3"
                         width="100%"
                         position="relative"
-                        zIndex="1" // I added this code
+                        // zIndex="1" // I added this code
                     >
                         {/* Small image (35% width) - Fixed height */}
                         <Box
@@ -247,30 +248,31 @@ const OurServings = () => {
                             borderRadius="24px"
                             flexShrink="0"
                         />
-                        <Box
+                        {/* large image start*/}
+                        <Flex
                             width="100%"
-                            height="65%"
+                            position="relative"
+                            justifyContent="center"
+                            backgroundColor="white"
                             borderRadius="20px"
+                            overflow="visible"
+                            paddingTop="56.25%" // Aspect ratio of 16:9 (height = 56.25% of width)
                         >
-
-                            {/* Large image (60% width) - Will extend upward */}
                             <MotionImage
+                                position="absolute"
+                                top={{base:"0",md:"-5%"}}
                                 src={`${process.env.PUBLIC_URL}/assets/${image}`}
-                                // error may occur
-                                // set the alt text
-                                alt="alt text"
-                                // flex="0 0 68%"
-                                width="100%"
-                                height="65%"
-                                backgroundColor="white"
+                                alt="Responsive screen mockup"
+                                width={{ base: "100%", md: "100%" }}
+                                // maxWidth="800px" // Optional: Limit the maximum width for better scaling
                                 borderRadius="24px"
-                                flexShrink="1"
                                 initial="hidden"
                                 whileInView="visible"
                                 variants={popAnimation}
-                                viewport={{ once: false }} // Ensures animation runs every time the image enters the viewport
+                                viewport={{ once: false }}
                             />
-                        </Box>
+                        </Flex>
+                        {/* large image end*/}
                     </Flex>
                 </Box>
                 <AdvancedSurveillance />

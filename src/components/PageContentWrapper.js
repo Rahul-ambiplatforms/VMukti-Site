@@ -4,7 +4,8 @@ const PageContentWrapper = ({ children, noPadding }) => {
   return (
     <Box
       mx={{ base: noPadding ? "0" : "4%", md: noPadding ? "0" : "auto" }}
-      maxWidth="1465px"
+      px={{md: "2%" }}
+      maxWidth="1565px"
       // width="auto"
       // mx="auto"
     // width={noPadding ? "100%" : "auto"}
