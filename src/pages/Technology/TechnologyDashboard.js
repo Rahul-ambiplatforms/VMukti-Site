@@ -158,106 +158,108 @@ const TechnologyDashboard = () => {
   }, []);
 
   return (
-    <Box mx={{ base: "0", md: "2%" }}>
-      <Flex
-        bg="#E7E7E7"
-        w="100%"
-        position="relative"
-        overflow="hidden"
-        direction="column"
-        pt={{ base: "5%", md: "10%", lg: "15%" }}
-      >
-        <BackgroundRing />
-        <DesktopBackgroundImages />
-        <Box position="relative" zIndex={4} flex="1" display="flex" alignItems="center">
-          <Flex
-            direction={{ base: "column", lg: "row" }}
-            align={{ base: "flex-start", lg: "flex-start" }}
-            justify="flex-start"
-            w={{ base: "339px", md: "auto" }}
-            minH={{ base: "auto", lg: "50vh" }}
-          >
-            <HeadingSection
-              refProp={ref}
-              display={{ base: "block", lg: "none" }}
-              isAnimationTriggered={isAnimationTriggered}
-            />
+    <PageContentWrapper>
+      <Box mx={{ base: "0", md: "2%" }}>
+        <Flex
+          bg="#E7E7E7"
+          w="100%"
+          position="relative"
+          overflow="hidden"
+          direction="column"
+          pt={{ base: "5%", md: "10%", lg: "15%" }}
+        >
+          <BackgroundRing />
+          <DesktopBackgroundImages />
+          <Box position="relative" zIndex={4} flex="1" display="flex" alignItems="center">
             <Flex
-              display={{ base: "flex", lg: "none" }}
-              w="538px"
-              h="556px"
-              mt={-16}
-              position="relative"
-              justify="center"
-              align="center"
+              direction={{ base: "column", lg: "row" }}
+              align={{ base: "flex-start", lg: "flex-start" }}
+              justify="flex-start"
+              w={{ base: "339px", md: "auto" }}
+              minH={{ base: "auto", lg: "50vh" }}
             >
-              <MotionImage
-                src="./assets/Dashboard.png"
-                alt="AI Dashboard Interface"
-                w="100%"
-                h="auto"
-                objectFit="cover"
-                zIndex={3}
-                {...animations.popIn}
-              />
-            </Flex>
-            <Flex direction="column" maxW={{ base: "100%", lg: "70%" }} position="relative" zIndex={3}>
               <HeadingSection
                 refProp={ref}
-                display={{ base: "none", lg: "block" }}
+                display={{ base: "block", lg: "none" }}
                 isAnimationTriggered={isAnimationTriggered}
               />
-              <SubHeadingAnimation
-                display="flex"
-                flexDirection={{ base: "row", md: "column" }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isAnimationTriggered ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, ease: "easeOut" }}
+              <Flex
+                display={{ base: "flex", lg: "none" }}
+                w="538px"
+                h="556px"
+                mt={-16}
+                position="relative"
+                justify="center"
+                align="center"
               >
-                <Box width={{ md: "30px" }} ml={{ base: "6%", md: "0" }}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={svgSize}
-                    height={svgSize}
-                    viewBox="0 0 33 33"
-                    fill="none"
-                  >
-                    <path
-                      d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
-                      fill="#3F77A5"
-                    />
-                  </svg>
-                </Box>
-                <Flex align="center" ml={{ base: "-1px", md: "5%", lg: "0%" }}>
-                  <Text
-                    fontSize={responsiveSizes.textFontSize}
-                    color="#000"
-                    lineHeight="normal"
-                    maxW={{ base: "90%", md: "60%", lg: "30%" }}
-                    m={3}
-                    fontWeight="500"
-                  >
-                    VMukti is driving innovation with advanced AI technologies, transforming surveillance, automation, and security for a smarter, more connected world.
-                  </Text>
-                </Flex>
-              </SubHeadingAnimation>
-              <Box
-                width={responsiveSizes.squareBox}
-                height={responsiveSizes.squareBox}
-                borderRadius="20px"
-                background="#BECEDC"
-                marginBottom={{ lg: "13%" }}
-                display={{ base: "none", md: "none", lg: "block" }}
-                zIndex="0"
-              />
+                <MotionImage
+                  src="./assets/Dashboard.png"
+                  alt="AI Dashboard Interface"
+                  w="100%"
+                  h="auto"
+                  objectFit="cover"
+                  zIndex={3}
+                  {...animations.popIn}
+                />
+              </Flex>
+              <Flex direction="column" maxW={{ base: "100%", lg: "70%" }} position="relative" zIndex={3}>
+                <HeadingSection
+                  refProp={ref}
+                  display={{ base: "none", lg: "block" }}
+                  isAnimationTriggered={isAnimationTriggered}
+                />
+                <SubHeadingAnimation
+                  display="flex"
+                  flexDirection={{ base: "row", md: "column" }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isAnimationTriggered ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                >
+                  <Box width={{ md: "30px" }} ml={{ base: "6%", md: "0" }}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width={svgSize}
+                      height={svgSize}
+                      viewBox="0 0 33 33"
+                      fill="none"
+                    >
+                      <path
+                        d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
+                        fill="#3F77A5"
+                      />
+                    </svg>
+                  </Box>
+                  <Flex align="center" ml={{ base: "-1px", md: "5%", lg: "0%" }}>
+                    <Text
+                      fontSize={responsiveSizes.textFontSize}
+                      color="#000"
+                      lineHeight="normal"
+                      maxW={{ base: "90%", md: "60%", lg: "30%" }}
+                      m={3}
+                      fontWeight="500"
+                    >
+                      VMukti is driving innovation with advanced AI technologies, transforming surveillance, automation, and security for a smarter, more connected world.
+                    </Text>
+                  </Flex>
+                </SubHeadingAnimation>
+                <Box
+                  width={responsiveSizes.squareBox}
+                  height={responsiveSizes.squareBox}
+                  borderRadius="20px"
+                  background="#BECEDC"
+                  marginBottom={{ lg: "13%" }}
+                  display={{ base: "none", md: "none", lg: "block" }}
+                  zIndex="0"
+                />
+              </Flex>
             </Flex>
-          </Flex>
-        </Box>
-      </Flex>
-      <PageContentWrapper>
+          </Box>
+        </Flex>
+        {/* <PageContentWrapper> */}
         <ComputerVisionPage />
-      </PageContentWrapper>
-    </Box>
+        {/* </PageContentWrapper> */}
+      </Box>
+    </PageContentWrapper>
   );
 };
 

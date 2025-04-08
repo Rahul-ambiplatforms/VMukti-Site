@@ -20,14 +20,12 @@ const Hero = () => {
     }, [location]);
 
     return (
-        <Box>
-            <PageContentWrapper>
-                <TripleImageSection />
-                <Box id="solutions-slider"> {/* Add this ID */}
-                    <SolutionEMS />
-                </Box>
-            </PageContentWrapper>
-        </Box>
+        <PageContentWrapper>
+            <TripleImageSection />
+            <Box id="solutions-slider"> {/* Add this ID */}
+                <SolutionEMS />
+            </Box>
+        </PageContentWrapper>
     );
 };
 

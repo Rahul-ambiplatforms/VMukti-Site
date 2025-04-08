@@ -375,8 +375,6 @@ export default function IndustryDashboard() {
 
 
     return (
-      <PageContentWrapper>
-
         <Grid
           templateColumns={{
             base: "repeat(2, 1fr)",
@@ -601,14 +599,12 @@ export default function IndustryDashboard() {
           )}
           {/* ----------------------------------------------------------------------- */}
         </Grid>
-      </PageContentWrapper>
-
     );
 
   };
 
   return (
-    <>
+    <PageContentWrapper>
       <Box
         textAlign="center"
         backgroundColor="#E7E7E7"
@@ -657,6 +653,6 @@ export default function IndustryDashboard() {
         {renderIndustryCards()}
         {/* Bottom elements */}
       </Box>
-    </>
+    </PageContentWrapper>
   );
 }
