@@ -614,7 +614,7 @@ export default function IndustryDashboard() {
         position="relative"
         mx="auto"
         pb={{ base: "50px", md: "0" }}
-        overflow="hidden"
+        // overflow="hidden"
         _before={{
           content: '""',
           position: "absolute",
