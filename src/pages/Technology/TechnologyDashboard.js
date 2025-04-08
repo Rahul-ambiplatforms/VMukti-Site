@@ -82,7 +82,7 @@ const DesktopBackgroundImages = () => (
       transform="translateY(-50%) perspective(1000px)"
       width={{ base: "90%", md: "100%", lg: "109%" }}
       height={{ base: "30%", md: "40%", lg: "50%" }}
-      bg="#FFFF"
+      bg="#FFF"
       borderRadius="20px"
       zIndex={2}
     />

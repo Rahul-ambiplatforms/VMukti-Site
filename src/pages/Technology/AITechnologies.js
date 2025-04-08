@@ -169,7 +169,7 @@ const AITechnologies = () => {
   const cardContentWidth = useBreakpointValue({ base: "100%", md: "35%" });
   const svgSize = useBreakpointValue({ base: "13px", md: "33px" });
   return (
-    <Box bg="white" minH="50vh" overflowX="visible" borderRadius="24px">
+    <Box bg="white" overflowX="visible" borderRadius="24px">
       {/* Navigation */}
       <Flex
         justify="space-between"

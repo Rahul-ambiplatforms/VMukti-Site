@@ -2,26 +2,17 @@ import React, { useState } from "react";
 import {
   Box,
   Flex,
-  Image,
-  Input,
+
   Button,
   Text,
   Heading,
   List,
   ListItem,
   Link,
-  Icon,
+ 
   Grid,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import { EmailIcon, ArrowForwardIcon, Divider } from "@chakra-ui/icons";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
-  FaYoutube,
-} from "react-icons/fa";
 import SubscriptionBanner from "../../components/SubscriptionBanner";
 
 const PhoneIcon = ({ mr = "10px", w = "21px", h = "21px" }) => (
@@ -66,23 +57,23 @@ const ourServingsLinks = [
 ];
 
 const ourSolutionsLinks = [
-  { text: "VMS", path: "/solutions/vms" },
-  { text: "EMS", path: "/solutions/ems" },
-  { text: "ICCC", path: "/solutions/iccc" },
-  { text: "AI Optimized Cloud Services", path: "/solutions/ai-cloud-services" },
+  { text: "VMS", path: "/solutions?slider=vms" },
+  { text: "EMS", path: "/solutions?slider=ems" },
+  { text: "ICCC", path: "/solutions?slider=icc" },
+  { text: "AI Optimized Cloud Services", path: "/solutions?slider=opt" },
   {
     text: "Generative AI in Video Surveillance",
-    path: "/solutions/generative-ai-surveillance",
+    path: "/solutions?slider=gav",
   },
   {
     text: "AI-Powered Surveillance Cameras",
-    path: "/solutions/ai-surveillance-cameras",
+    path: "/solutions?slider=asc",
   },
   {
     text: "Flying Squad Vehicle (FSV)",
-    path: "/solutions/flying-squad-vehicle",
+    path: "/solutions?slider=fsv",
   },
-  { text: "Live Webcasting & Streaming", path: "/solutions/live-webcasting" },
+  { text: "Live Webcasting & Streaming", path: "/solutions?slider=lws" },
 ];
 
 const industriesWeServeLinks = [
@@ -90,17 +81,17 @@ const industriesWeServeLinks = [
   { text: "Education Industry", path: "/industries/educationindustry" },
   {
     text: "Border Security Industry",
-    path: "/industries/bordersecurityindustry",
+    path: "/industries/defenseindustry",
   },
   { text: "Election Industry", path: "/industries/election" },
-  { text: "Banking Industry", path: "/industries/bankingindustry" },
+  { text: "Banking Industry", path: "/industries/financeindustry" },
   {
     text: "Transportation Industry",
     path: "/industries/transportationindustry",
   },
   {
     text: "City Monitoring Industry",
-    path: "/industries/citymonitoringindustry",
+    path: "/industries/citymonitoring",
   },
   { text: "Retailer Industry", path: "/industries/retailindustry" },
   { text: "Manufacturing Industry", path: "/industries/manufacturingindustry" },
@@ -120,19 +111,8 @@ const NewsletterSubscription = () => {
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isServingsOpen, setIsServingsOpen] = useState(false);
-  const [isContactOpen, setIsContactOpen] = useState(false);
+ 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [email, setEmail] = useState("");
-  const [isSubscribed, setIsSubscribed] = useState(false);
-
-  const handleSubscribe = () => {
-    if (email) {
-      setIsSubscribed(true);
-      console.log("Subscribed with email:", email);
-    } else {
-      alert("Please enter a valid email address.");
-    }
-  };
   const buttonWidth = useBreakpointValue({
     base: "120px",
     md: "130px",
@@ -156,7 +136,7 @@ const NewsletterSubscription = () => {
         <SubscriptionBanner />
 
         {/* Information Section */}
-        <Flex flexWrap="wrap" gap="20px" mb="30px" width={{ base: "100%" }} mt={{base:"5%", md:"0px"}}>
+        <Flex flexWrap="wrap" gap="20px" mb="30px" width={{ base: "100%" }} mt={{ base: "5%", md: "0px" }}>
           {/* Who we are */}
           <Box
             position="relative"
@@ -255,7 +235,7 @@ const NewsletterSubscription = () => {
                 p="15px"
                 boxShadow="sm"
                 zIndex="1"
-                // onClick={(e) => e.stopPropagation()} // Prevent container click from bubbling
+              // onClick={(e) => e.stopPropagation()} // Prevent container click from bubbling
               >
                 {[...whoWeAreLinks, ...policyLinks].map(
                   (item, index, array) => (
@@ -276,7 +256,7 @@ const NewsletterSubscription = () => {
                         </Flex>
                       </Link>
                       {index !== array.length - 1 && (
-                        <Box height="1px" bg="#3F77A5" opacity="0.2" my="5px" w="60%"/>
+                        <Box height="1px" bg="#3F77A5" opacity="0.2" my="5px" w="60%" />
                       )}
                     </Box>
                   )
@@ -379,7 +359,7 @@ const NewsletterSubscription = () => {
                         </Flex>
                       </Link>
                       {index !== ourServingsLinks.length - 1 && (
-                        <Box height="1px" bg="#3F77A5" opacity="0.2" my="5px" w="60%"/>
+                        <Box height="1px" bg="#3F77A5" opacity="0.2" my="5px" w="60%" />
                       )}
                     </Box>
                   ))}
@@ -400,8 +380,8 @@ const NewsletterSubscription = () => {
               <Heading
                 fontSize="16px"
                 fontWeight={700}
-                // fontFamily="'Wix Madefor Display', sans-serif"
-                // mb="10px"
+              // fontFamily="'Wix Madefor Display', sans-serif"
+              // mb="10px"
               >
                 Contact Us
               </Heading>
@@ -548,7 +528,7 @@ const NewsletterSubscription = () => {
                       </Flex>
                     </Link>
                     {index !== ourSolutionsLinks.length - 1 && (
-                      <Box height="1px" bg="#3F77A5" opacity="0.2" my="5px" w="60%"/>
+                      <Box height="1px" bg="#3F77A5" opacity="0.2" my="5px" w="60%" />
                     )}
                   </Box>
                 ))}
@@ -644,7 +624,7 @@ const NewsletterSubscription = () => {
                       </Flex>
                     </Link>
                     {index !== industriesWeServeLinks.length - 1 && (
-                      <Box height="1px" bg="#3F77A5" opacity="0.2" my="5px" w="60%"/>
+                      <Box height="1px" bg="#3F77A5" opacity="0.2" my="5px" w="60%" />
                     )}
                   </Box>
                 ))}
@@ -665,8 +645,8 @@ const NewsletterSubscription = () => {
             <Heading
               fontSize="16px"
               fontWeight={700}
-              // fontFamily="'Wix Madefor Display', sans-serif"
-              // mb="10px"
+            // fontFamily="'Wix Madefor Display', sans-serif"
+            // mb="10px"
             >
               Contact Us
             </Heading>
