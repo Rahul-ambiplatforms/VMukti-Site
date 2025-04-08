@@ -109,7 +109,8 @@ const ServingsContent = ({ page: name }) => {
                     </Box>
 
                     {/* Description section backimage with left content */}
-                    <ServingsDescriptionCard description={data.description} keybenefits={data.keybenefits} image={data.image} />
+                    {/* <ServingsDescriptionCard description={data.description} keybenefits={data.keybenefits} image={data.image} /> */}
+                    <ServingsDescriptionCard description={data.description} keybenefits={data.keybenefits} image={`${process.env.PUBLIC_URL}${data.image}`} />
 
                     {/* Deployment Model grid  */}
                     <ServingsModelGrid title={data.modelTitle} description={data.modelDescription} cards={data.cards} />

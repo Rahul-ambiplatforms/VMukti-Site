@@ -52,7 +52,8 @@ export default function CulturalSection({ gridItems }) {
           height={{ base: "300px", lg: "525px" }} // Smaller on mobile
           zIndex="0"
           backgroundRepeat="no-repeat"
-          backgroundImage="url('/assets/VMukti Brochure O2 4.svg')"
+          // backgroundImage="url('/assets/BannerBrochre4.svg')"
+          backgroundImage={`url(${process.env.PUBLIC_URL}/assets/BannerBrochre4.svg)`}
           backgroundPosition="center"
         />
 

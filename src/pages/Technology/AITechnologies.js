@@ -169,7 +169,7 @@ const AITechnologies = () => {
   const cardContentWidth = useBreakpointValue({ base: "100%", md: "35%" });
   const svgSize = useBreakpointValue({ base: "13px", md: "33px" });
   return (
-    <Box bg="white" minH="50vh" overflowX="visible" borderRadius="24px">
+    <Box bg="white" overflowX="visible" borderRadius="24px">
       {/* Navigation */}
       <Flex
         justify="space-between"
@@ -370,7 +370,8 @@ const AITechnologies = () => {
                   left={{ base: "0", md: "0" }}
                   w="100%"
                   h={{ base: "200px", md: "100%" }} // Adjust height for mobile
-                  bgImage={slide.image}
+                  // bgImage={slide.image}
+                  bgImage={`url(${process.env.PUBLIC_URL}${slide.image})`}
                   bgSize="cover"
                   bgPosition="center"
                   zIndex={1} // Behind the text

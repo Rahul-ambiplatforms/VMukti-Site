@@ -82,7 +82,7 @@ const DesktopBackgroundImages = () => (
       transform="translateY(-50%) perspective(1000px)"
       width={{ base: "90%", md: "100%", lg: "109%" }}
       height={{ base: "30%", md: "40%", lg: "50%" }}
-      bg="#FFFF"
+      bg="#FFF"
       borderRadius="20px"
       zIndex={2}
     />
@@ -193,12 +193,14 @@ const TechnologyDashboard = () => {
                 align="center"
               >
                 <MotionImage
-                  src="./assets/Dashboard.png"
+                  // src="./assets/Dashboard.png"
+                  src={`${process.env.PUBLIC_URL}/assets/Dashboard.png`}
                   alt="AI Dashboard Interface"
                   w="100%"
                   h="auto"
                   objectFit="cover"
                   zIndex={3}
+                  // bg="red"
                   {...animations.popIn}
                 />
               </Flex>

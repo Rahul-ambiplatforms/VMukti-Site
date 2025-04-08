@@ -10,7 +10,8 @@ const HeroSection = () => {
       minH={{ base: "40vh", md: "100vh" }}
       display="flex"
       borderRadius="24px"
-      bgImage="./assets/WhoDash.png"
+      // bgImage="./assets/WhoDash.png"
+      bgImage={`url(${process.env.PUBLIC_URL}/assets/WhoDash.png)`}
       bgSize="cover"
       bgPosition="center"
     // mt="6%"

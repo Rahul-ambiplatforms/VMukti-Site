@@ -856,7 +856,8 @@ const SolutionEMS = () => {
                   >
                     {slide.image ? (
                       <Image
-                        src={slide.image}
+                        // src={slide.image}
+                        src={`${process.env.PUBLIC_URL}${slide.image}`}
                         alt={slide.title1}
                         style={{
                           width: "100%",

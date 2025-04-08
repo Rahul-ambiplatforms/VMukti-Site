@@ -344,7 +344,8 @@ const AdvancedSurveillance = () => {
                     // bg="green"
                     >
                       <Image
-                        src={card.image}
+                        // src={card.image}
+                        src={`${process.env.PUBLIC_URL}${card.image}`}
                         alt={card.label}
                         width="100%"
                         height="100%"

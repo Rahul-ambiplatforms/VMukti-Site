@@ -136,6 +136,7 @@ const VideoAnalytics = () => {
                 fontWeight="500"
                 letterSpacing="-0.21px"
                 marginTop="8px"
+                // whiteSpace={{ base: "normal", md: "wrap" }}
               >
                 {features[featureIndex].description}
               </Text>
@@ -292,7 +293,8 @@ const VideoAnalytics = () => {
           >
             <Image
               key={`desktop-image-${featureIndex}`}
-              src={featureImages[featureIndex].image}
+              // src={featureImages[featureIndex].image}
+              src={`${process.env.PUBLIC_URL}${featureImages[featureIndex].image}`}
               alt={features[featureIndex].title}
               objectFit="contain"
               width="100%"

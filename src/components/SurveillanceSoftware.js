@@ -125,7 +125,8 @@ const SurveillanceSoftware = () => {
       >
         <Image
           height="100%"
-          src="../assets/surveillancemock.png"
+          // src="../assets/surveillancemock.png"
+          src={`${process.env.PUBLIC_URL}/assets/surveillancemock.png`}
           onLoad={handleImageLoad}
           clipPath="inset(0)" // Ensures image does not affect layout
         />

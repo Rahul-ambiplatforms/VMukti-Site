@@ -184,7 +184,7 @@ const OurServings = () => {
                                 </MotionText>
 
                                 {/* Button Animation */}
-                                <MotionButton
+                                {/* <MotionButton
                                     marginTop="20px"
                                     width={buttonWidth}
                                     height={buttonHeight}
@@ -221,7 +221,7 @@ const OurServings = () => {
                                             />
                                         </svg>
                                     </Box>
-                                </MotionButton>
+                                </MotionButton> */}
                             </Box>
                         </Flex>
                     </Flex>

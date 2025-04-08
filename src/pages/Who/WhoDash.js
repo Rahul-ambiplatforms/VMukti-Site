@@ -131,7 +131,8 @@ const WhoWeare = () => {
           >
             <Image
               // ml="2%"
-              src="/assets/VMukti Brochure O2 2.png"
+              // src="/assets/BannerBroucher.png"
+              src={`${process.env.PUBLIC_URL}/assets/BannerBroucher.png`}
               alt="VMukti Brochure"
               width="100%"
               height="100%"

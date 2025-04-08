@@ -110,7 +110,9 @@ const Diagram = () => {
         bg="white"
         position="relative"
       >
-        <Image src="../assets/ai_implementation.png" />
+        {/* <Image src="../assets/ai_implementation.png" /> */}
+        <Image src={`${process.env.PUBLIC_URL}/assets/ai_implementation.png`} />
+
         {/* <Box width="90%" height="90%" position="relative">
                     {/* Center Icon 
                     <Box
