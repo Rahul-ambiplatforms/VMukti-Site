@@ -1,10 +1,15 @@
 import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion, AnimatePresence, color } from "framer-motion";
 import CulturalSection from "../../components/CulturalSection";
 import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation";
 import SubHeadingAnimation from "../../components/Animation/Text/SubHeadingAnimation";
 import PageContentWrapper from "../../components/PageContentWrapper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const MotionBox = motion(Box);
 
@@ -41,8 +46,7 @@ const StyledText = ({ children, ...props }) => (
 
 const DashboardItem = ({ item }) => (
   <Box
-    px={6}
-    width={{ base: "100%", md: "50%" }}
+    // px={6}
     minHeight="300px"
     borderColor="gray.100"
   >
@@ -122,6 +126,7 @@ const dashboardItems = [
 ];
 
 const EventSpotlight = () => {
+  const swiperRef = useRef(null); // Initialize with null
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
@@ -133,15 +138,17 @@ const EventSpotlight = () => {
 
   // Handlers for navigation
   const nextSlide = () => {
-    setDirection(1);
-    setCurrentIndex((prev) => (prev + 1) % dashboardItems.length);
+    // setDirection(1);
+    // setCurrentIndex((prev) => (prev + 1) % dashboardItems.length);
+    if (swiperRef.current) swiperRef.current.slideNext();
   };
 
   const prevSlide = () => {
-    setDirection(-1);
-    setCurrentIndex(
-      (prev) => (prev - 1 + dashboardItems.length) % dashboardItems.length
-    );
+    // setDirection(-1);
+    // setCurrentIndex(
+    //   (prev) => (prev - 1 + dashboardItems.length) % dashboardItems.length
+    // );
+    if (swiperRef.current) swiperRef.current.slidePrev();
   };
 
   const variants = {
@@ -296,6 +303,7 @@ const EventSpotlight = () => {
               my={4}
               display="grid"
               placeItems="center"
+              justifySelf="flex-end"
               textAlign="center"
             >
               <Text
@@ -313,35 +321,60 @@ const EventSpotlight = () => {
             width={{ base: "100%", md: "75%" }}
             position="relative"
             overflow="hidden"
+            alignSelf={"flex-end"}
             borderRadius="24px"
-            height={{ base: "700px", md: "521px" }}
+            height={{ md: "521px" }}
             bg="white"
-            py={6}
+            p={6}
           >
-            <AnimatePresence custom={direction} initial={false}>
-              <MotionBox
-                key={currentIndex}
-                custom={direction}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                position="absolute"
-                width="100%"
-                display="flex"
-                flexDirection={{ base: "column", md: "row" }}
-              >
-                {visibleItems.map((item, index) => (
+            {/* <AnimatePresence custom={direction} initial={false}> */}
+            {/* <MotionBox
+              key={currentIndex}
+              custom={direction}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              position="absolute"
+              width="100%"
+              display="flex"
+              flexDirection={{ base: "column", md: "row" }}
+            >
+              {visibleItems.map((item, index) => (
+                <DashboardItem key={`${currentIndex}-${index}`} item={item} />
+              ))}
+            </MotionBox> */}
+            {/* </AnimatePresence> */}
+            <Swiper
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+              }}
+              modules={[Navigation, Pagination]}
+              spaceBetween={1}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                },
+                768: {
+                  slidesPerView: 2,
+                },
+              }}
+
+            >
+              {dashboardItems.map((item, index) => (
+                <SwiperSlide key={index}
+
+                  style={{ padding: "0 1% 0 1%" }}>
                   <DashboardItem key={`${currentIndex}-${index}`} item={item} />
-                ))}
-              </MotionBox>
-            </AnimatePresence>
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
             {/* Navigation Arrows */}
             <Flex
-              position="absolute"
-              bottom={4}
-              left={6}
+              position={{ base: "flex", md: "absolute" }}
+              bottom={10}
+              left={10}
               gap="0.5"
               justifyContent={{ base: "center", md: "flex-start" }}
               width="100%"
