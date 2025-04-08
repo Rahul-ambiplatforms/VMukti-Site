@@ -133,7 +133,8 @@ const VMuktiHomepage = () => {
   const inView = useInView(ref, { amount: 0.2 });
 
   return (
-    <Box minH="100vh" bg="#E7E7E7" overflow="visible" position="relative">
+    <PageContentWrapper>
+      <Box  bg="#E7E7E7" overflow="visible" position="relative">
       {/* Background Ellipse */}
 
       <Box
@@ -419,7 +420,7 @@ const VMuktiHomepage = () => {
       </Flex>
 
       {/* Page Content */}
-      <PageContentWrapper>
+      {/* <PageContentWrapper> */}
         <AdvancedComputerVision {...customData1} />
         <Flex mt={"5%"} direction="column">
           <ObjectDescription
@@ -434,21 +435,22 @@ const VMuktiHomepage = () => {
           <VideoAnalytics />
           <AdvancedComputerVision />
         </StickySection>
-      </PageContentWrapper>
+      {/* </PageContentWrapper> */}
 
-      <PageContentWrapper>
+      {/* <PageContentWrapper> */}
         <Diagram />
-      </PageContentWrapper>
+      {/* </PageContentWrapper> */}
 
-      <PageContentWrapper>
+      {/* <PageContentWrapper> */}
         <Industries />
-      </PageContentWrapper>
+      {/* </PageContentWrapper> */}
 
-      <PageContentWrapper>
+      {/* <PageContentWrapper> */}
         <AdvancedSurveillance />
-      </PageContentWrapper>
+      {/* </PageContentWrapper> */}
       <Achieved />
     </Box>
+    </PageContentWrapper>
   );
 };
 

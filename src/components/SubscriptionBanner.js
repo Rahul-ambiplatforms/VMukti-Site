@@ -7,10 +7,8 @@ import {
   Button,
   Image,
   useBreakpointValue,
-  Divider,
 } from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
-import { EmailIcon } from '@chakra-ui/icons'
+
 
 const SubscriptionBanner = ({ bgColor = 'white' }) => {
   const [email, setEmail] = useState('')
@@ -22,21 +20,6 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
     md: '28px',
     lg: '36px',
     xl: '48px',
-  })
-  const inputWidth = useBreakpointValue({
-    base: '100%',
-    md: '600px',
-    lg: '800px',
-  })
-  const buttonWidth = useBreakpointValue({
-    base: '120px',
-    md: '130px',
-    lg: '146px',
-  })
-  const buttonHeight = useBreakpointValue({
-    base: '40px',
-    md: '45px',
-    lg: '50px',
   })
   const imageSize = useBreakpointValue({
     base: '150px',
@@ -64,7 +47,7 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
       p={{ base: '15px', md: '20px', lg: '30px' }}
       direction={{ base: 'column', md: 'row' }}
       gap={{ base: '15px', md: '20px', lg: '30px' }}
-      // bg="green"
+    // bg="green"
     >
       {/* Image Section */}
       <Box
@@ -104,7 +87,7 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
         overflow="hidden"
       >
         <Image
-          src={`${process.env.PUBLIC_URL}/assets/Vmukti Brochure O2 2.png`} // Use absolute path
+          src={`${process.env.PUBLIC_URL}/assets/BannerBroucher.png`} // Use absolute path
           alt="Connections and Dots"
           // ml="15%"
           width="100%"
@@ -138,7 +121,7 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
           minWidth="fit-content"
           width={{ base: '100%', md: 'auto' }} // Full width on mobile
           pl={{ base: '5px', md: '0' }}
-          // bg="green"
+        // bg="green"
         >
           <Text
             color="black"
@@ -176,8 +159,8 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
             background="#E7E7E7"
             alignItems="center"
             px="12px"
-            // boxShadow="sm"
-            // bg="red"
+          // boxShadow="sm"
+          // bg="red"
           >
             {/* Email Icon */}
             <Box display={{ base: "none", md: "flex" }} alignItems="center" justifyContent="center" mr="8px">
@@ -196,8 +179,8 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
             </Box>
 
             {/* Divider */}
-            <Box height="20px" display={{ base: "none", md: "block" }} width="2px" bg="#3F77A5" mx="8px"/>
-            
+            <Box height="20px" display={{ base: "none", md: "block" }} width="2px" bg="#3F77A5" mx="8px" />
+
 
             {/* Input Field */}
             <Input

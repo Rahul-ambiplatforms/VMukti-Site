@@ -86,7 +86,6 @@ const WhoWeare = () => {
   };
 
   return (
-    <Box>
       <PageContentWrapper>
         <HeroSection />
         <VisionMissionSection />
@@ -428,7 +427,6 @@ const WhoWeare = () => {
           </Box>
         </Box>
       </PageContentWrapper>
-    </Box>
   );
 };
 
