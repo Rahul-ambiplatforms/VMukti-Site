@@ -158,8 +158,11 @@ const VideoAnalytics = () => {
                 height="100%"
                 width={`${100 / features.length}%`}
                 bg="#FFFFFF"
-                left={`${progress}%`}
-                transform="translateX(-100%)"
+                // left={`${progress}%`}
+                // transform="translateX(-100%)"
+                // transition="left 0.3s ease-in-out"
+                left={`${(featureIndex / features.length) * 100}%`} // Adjusted calculation for initial position
+                transform="translateX(0)" // Removed "-100%" to fix the initial position
                 transition="left 0.3s ease-in-out"
               />
             </Box>
@@ -214,7 +217,7 @@ const VideoAnalytics = () => {
           </Flex>
 
           {/* Feature List */}
-          <Grid templateColumns="20px 1fr" mt={{ base: "20px", md: "0" }} rowGap={3}>
+          <Grid templateColumns="20px 1fr" mt={{ base: "20px", md: "0" }} rowGap={{base:"3",md:"6"}}>
             {features.map((feature, index) => (
               <React.Fragment key={index}>
                 <Box display="flex" alignItems="center" justifyContent="center">

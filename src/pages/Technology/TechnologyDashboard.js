@@ -159,7 +159,7 @@ const TechnologyDashboard = () => {
 
   return (
     <PageContentWrapper>
-      <Box mx={{ base: "0", md: "2%" }}>
+      <Box>
         <Flex
           bg="#E7E7E7"
           w="100%"
@@ -176,7 +176,7 @@ const TechnologyDashboard = () => {
               align={{ base: "flex-start", lg: "flex-start" }}
               justify="flex-start"
               w={{ base: "339px", md: "auto" }}
-              minH={{ base: "auto", lg: "50vh" }}
+              // minH={{ base: "auto", lg: "50vh" }}
             >
               <HeadingSection
                 refProp={ref}

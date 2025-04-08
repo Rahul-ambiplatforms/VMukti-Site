@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Flex,
-
   Button,
   Text,
   Heading,
   List,
   ListItem,
   Link,
- 
   Grid,
   useBreakpointValue,
 } from "@chakra-ui/react";
@@ -111,8 +109,20 @@ const NewsletterSubscription = () => {
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isServingsOpen, setIsServingsOpen] = useState(false);
- 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsIndustriesOpen(false);
+      setIsSolutionsOpen(false);
+      setIsServingsOpen(false);
+      setIsDropdownOpen(false);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const buttonWidth = useBreakpointValue({
     base: "120px",
     md: "130px",
@@ -127,7 +137,7 @@ const NewsletterSubscription = () => {
   return (
     <>
       <Box
-        padding="4% 2% 1% 2%"
+        padding={{base:"4% 4% 1% 4%",md:"4% 2% 1% 2%"}}
         // fontFamily="'Wix Madefor Display', sans-serif"
         fontWeight={600}
         bg={"#E7E7E7"}
@@ -227,6 +237,7 @@ const NewsletterSubscription = () => {
             {/* Mobile dropdown content - single column without bullet points */}
             {isDropdownOpen && (
               <Box
+                display={{ base: "block", md: "none" }}
                 position={{ base: "relative", md: "absolute" }}
                 width="100%"
                 bg="white"
@@ -336,7 +347,8 @@ const NewsletterSubscription = () => {
               {/* Mobile dropdown content - appears outside main box */}
               {isServingsOpen && (
                 <Box
-                  position={{ base: "relative", md: "absolute" }}
+                  display={{ base: "block", md: "none" }}
+                  position={{ base: "relative"}}
                   width="100%"
                   bg="white"
                   borderRadius="10px"
@@ -505,6 +517,7 @@ const NewsletterSubscription = () => {
             {/* Mobile dropdown content - appears outside main box */}
             {isSolutionsOpen && (
               <Box
+                display={{ base: "block", md: "none" }}
                 position={{ base: "relative", md: "absolute" }}
                 width="100%"
                 bg="white"
@@ -601,6 +614,7 @@ const NewsletterSubscription = () => {
             {/* Mobile dropdown content - appears outside main box */}
             {isIndustriesOpen && (
               <Box
+                display={{ base: "block", md: "none" }}
                 position={{ base: "relative", md: "absolute" }}
                 width="100%"
                 bg="white"

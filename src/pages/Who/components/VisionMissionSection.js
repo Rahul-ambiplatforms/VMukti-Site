@@ -131,7 +131,7 @@ const VisionMissionSection = () => {
         width={{base:"250px",md:"392px"}}
         height={{base:"250px",md:"392px"}}
         borderRadius="24px"
-        alignSelf={"flex-end"}
+        alignSelf={{base:"flex-end",md:"auto"}}
         bg="#C8D6E5"
         display="flex"
         flexDirection="column"
