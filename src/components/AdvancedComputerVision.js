@@ -338,7 +338,7 @@ const AdvancedComputerVision = ({
                     />
                   </Text>
                   <Text
-                    whiteSpace="wrap"
+                    whiteSpace={{base:"wrap",md:"nowrap"}}
                     fontSize={{ base: "12px", md: "14px" }}
                     color="#696969"
                   >
