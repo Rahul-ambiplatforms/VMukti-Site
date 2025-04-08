@@ -326,7 +326,8 @@ export default function IndustryGrid() {
                       height="100%"
                       borderRadius="24px"
                       padding="20px"
-                      bgImage={industry.image}
+                      // bgImage={industry.image}
+                      bgImage={`${process.env.PUBLIC_URL}${industry.image}`}
                       bgSize="cover"
                       bgPosition="center"
 

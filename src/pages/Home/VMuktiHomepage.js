@@ -280,7 +280,8 @@ const VMuktiHomepage = () => {
         )}
         {!useBreakpointValue({ base: true, md: false }) && (
           <MotionImage
-            src="/assets/tablet1.png"
+            // src="/assets/tablet1.png"
+            src={`${process.env.PUBLIC_URL}/assets/tablet1.png`}
             position="absolute"
             right="0"
             width="1050.778px"

@@ -370,7 +370,8 @@ const AITechnologies = () => {
                   left={{ base: "0", md: "0" }}
                   w="100%"
                   h={{ base: "200px", md: "100%" }} // Adjust height for mobile
-                  bgImage={slide.image}
+                  // bgImage={slide.image}
+                  bgImage={`url(${process.env.PUBLIC_URL}${slide.image})`}
                   bgSize="cover"
                   bgPosition="center"
                   zIndex={1} // Behind the text

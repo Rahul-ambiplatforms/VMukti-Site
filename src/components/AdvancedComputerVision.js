@@ -266,7 +266,8 @@ const AdvancedComputerVision = ({
                     />
                   ) : (
                     <Image
-                      src={card.media}
+                      // src={card.media}
+                      src={`${process.env.PUBLIC_URL}${card.media}`}
                       alt={card.label}
                       width={{ base: "100%", md: "100%", lg: "100%" }}
                       height={{ base: "", md: "100%", lg: "100%" }}

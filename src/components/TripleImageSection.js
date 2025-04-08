@@ -61,7 +61,6 @@ const TripleImageSection = ({
       >
         {/* Left Column (Animated Text & Icon) */}
         <MotionTextContainer
-
           align="start"
           spacing={6}
           maxW={{ base: "100%", md: "50%", lg: "40%" }}
@@ -113,13 +112,14 @@ const TripleImageSection = ({
               h={{ base: "300px", sm: "400px", md: "500px", lg: "594px" }}
             >
               <MotionImage
-                src={image}
+                // src={image}
+                src={`${process.env.PUBLIC_URL}${image}`}
                 alt="Surveillance Image"
                 w="100%"
                 h="100%"
                 objectFit="cover"
-                initial={{ scale: 0.8, opacity: 0.8 }} // Initial state for animation
-                animate={inView? { scale: 1, opacity: 1 }:{ scale: 0.8, opacity: 0.8 }} // Trigger animation immediately
+                initial={{ scale: 0.8, opacity: 0 }} // Initial state for animation
+                animate={inView? { scale: 1, opacity: 1 }:{ scale: 0.8, opacity: 0.9 }} // Trigger animation immediately
                 transition={{
                   duration: 0.7,
                   ease: "easeInOut",

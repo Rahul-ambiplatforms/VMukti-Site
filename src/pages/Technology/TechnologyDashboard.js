@@ -193,12 +193,14 @@ const TechnologyDashboard = () => {
                 align="center"
               >
                 <MotionImage
-                  src="./assets/Dashboard.png"
+                  // src="./assets/Dashboard.png"
+                  src={`${process.env.PUBLIC_URL}/assets/Dashboard.png`}
                   alt="AI Dashboard Interface"
                   w="100%"
                   h="auto"
                   objectFit="cover"
                   zIndex={3}
+                  // bg="red"
                   {...animations.popIn}
                 />
               </Flex>

@@ -164,7 +164,8 @@ export default function ContactUs() {
       >
         {/* Hero Banner */}
         <Box
-          bgImage="url('./assets/Contactus.png')"
+          // bgImage="url('./assets/Contactus.png')"
+          bgImage={`url(${process.env.PUBLIC_URL}/assets/Contactus.png)`}
           bgSize="cover"
           bgPosition="center"
           h={{ base: "300px", md: "410px" }}
@@ -470,7 +471,8 @@ export default function ContactUs() {
               left="0"
               right="0"
               bottom="0"
-              bgImage="url('./assets/VMukti Brochure O2 4.png')"
+              // bgImage="url('./assets/BannerBrochure6.png')"
+              bgImage={`url(${process.env.PUBLIC_URL}/assets/BannerBrochure6.png)`}
               bgSize="contain"
               bgRepeat="no-repeat"
               w="150%"
@@ -482,7 +484,8 @@ export default function ContactUs() {
               }}
             />
             <Image
-              src="./assets/robowho2.png"
+              // src="./assets/robowho2.png"
+              src={`${process.env.PUBLIC_URL}/assets/robowho2.png`}
               alt="Robot hand"
               mt={{ base: "0", md: "30%" }}
               maxH="55%"
