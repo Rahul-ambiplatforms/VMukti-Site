@@ -124,7 +124,7 @@ const SurveillanceSoftware = () => {
         zIndex={2}
       >
         <Image
-          height="100%"
+          // height="100%"
           // src="../assets/surveillancemock.png"
           src={`${process.env.PUBLIC_URL}/assets/surveillancemock.png`}
           onLoad={handleImageLoad}
