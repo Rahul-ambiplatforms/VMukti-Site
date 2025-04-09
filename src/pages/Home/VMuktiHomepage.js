@@ -18,7 +18,7 @@ const VMuktiHomepage = () => {
 
     return (
         <PageContentWrapper>
-                <HeroSection />
+            <HeroSection />
             <Box bg="#E7E7E7"  >
                 {/* Page Content Sections */}
                 <AdvancedComputerVision {...customData1} />

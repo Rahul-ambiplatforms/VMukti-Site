@@ -166,7 +166,7 @@ const HeroSection = () => {
                     <MotionImage
                         src="/assets/tablet1.png"
                         position="absolute"
-                        right="-40px"
+                        right="-30px"
                         width={"1050.778px"}
                         height="992.733px"
                         bottom="-5%"
