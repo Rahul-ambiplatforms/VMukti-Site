@@ -23,13 +23,13 @@ const AdvancedSurveillance = () => {
     {
       type: "squeezed",
       label: "Government",
-      description: "Explore innovative, scalable solutions designed to meet the urban security and operational needs of enterprises.",
+      description: "Explore innovative, secure solutions built to enhance government operations, security, and public safety.",
       image: "./assets/govsl.svg",
     },
     {
       type: "squeezed",
       label: "Consumers",
-      description: "Explore innovative, scalable solutions designed to meet the urban security and operational needs of enterprises.",
+      description: "AI is transforming everyday automation, security, and decision-making by bringing intelligent, real-time solutions to personal, small business, and creative applications.",
       image: "./assets/gensl.svg",
     },
   ];
@@ -305,8 +305,6 @@ const AdvancedSurveillance = () => {
                           letterSpacing="-0.21px"
                           marginTop="10px"
                         >
-                          {card.description}
-
                           {card.description}
                         </Text>
                       </Box>
