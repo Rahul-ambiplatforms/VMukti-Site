@@ -11,7 +11,7 @@ import {
   Grid,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import SubscriptionBanner from "../../components/SubscriptionBanner";
+import SubscriptionBanner from "./SubscriptionBanner";
 
 const PhoneIcon = ({ mr = "10px", w = "21px", h = "21px" }) => (
   <Box

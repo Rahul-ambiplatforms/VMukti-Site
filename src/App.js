@@ -7,10 +7,10 @@ import VMuktiHomepage from './pages/Home/VMuktiHomepage';
 import theme from './components/theme';
 import TechnologyDashboard from './pages/Technology/TechnologyDashboard';
 import Navbar from './components/Navbar';
-import NewsletterSubscription from './pages/Home/NewsletterSubscription';
+import NewsletterSubscription from './components/NewsletterSubscription';
 import SolutionsHome from './pages/Solutions/SolutionsHome';
 import IndustryDashboard from './pages/IndustriesDashboard/industriesDashboard'
-import IndustryDetails from './pages/IndustriesDashboard/industryDetails';
+import IndustryDetails from './components/industryDetails';
 import WhoWeare from './pages/Who/WhoDash';
 import EventSpotlight from './pages/EventSpotlight/EventDashboard';
 import OurServings from './pages/OurServings/OurServings';
@@ -18,6 +18,7 @@ import ServingsDock from './pages/OurServings/ServingsDock';
 import ScrollToTop from './components/ScrollToTop';
 import ContactUs from './pages/ContactUs/Contactus';
 import VMuktiCareers from './pages/career/Career';
+
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
         <Box pt={{ base: "20%", sm: "20%", md: "8%" }} bg="#E7E7E7">  {/* Add padding-top equal to Navbar height */}
           <Routes>
             <Route path="/" element={<VMuktiHomepage />} />
+
             <Route path="/technology" element={<TechnologyDashboard />} />
             <Route path="/solutions" element={<SolutionsHome />} />
             <Route path="/industries" element={<IndustryDashboard />} />
