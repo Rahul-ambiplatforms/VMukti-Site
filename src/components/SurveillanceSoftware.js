@@ -16,7 +16,8 @@ const SurveillanceSoftware = () => {
       position="relative"
       alignItems="center"
       gap={4}
-      width="100%"
+
+      overflow="visible"
       borderRadius="24px"
       height={{ base: "fit-content", md: { imageHeight } }}
       mb={{ base: "0", md: "40%" }}
@@ -31,15 +32,15 @@ const SurveillanceSoftware = () => {
         zIndex={1}
       >
         <HeadingAnimation>
-        <Text as="span" color="#3F77A5">
-          Deep Learning{" "}
-        </Text>
-        <Text as="span">Algorithms & </Text>
-        <br />
-        <Text as="span">Adaptive AI </Text>
-        <Text as="span" color="#db7b3a">
-          Surveillance Software.
-        </Text>
+          <Text as="span" color="#3F77A5">
+            Deep Learning{" "}
+          </Text>
+          <Text as="span">Algorithms & </Text>
+          <br />
+          <Text as="span">Adaptive AI </Text>
+          <Text as="span" color="#db7b3a">
+            Surveillance Software.
+          </Text>
         </HeadingAnimation>
       </Box>
 
@@ -117,10 +118,11 @@ const SurveillanceSoftware = () => {
 
       {/* background image */}
       <Box
+        // bg="red"
         order="1"
         position={{ base: "static", md: "absolute" }}
         top={{ sm: "50%", md: "35%", lg: "20%", xl: "0%" }}
-        mx="-5%"
+        // mx="-5%"
         zIndex={2}
       >
         <Image

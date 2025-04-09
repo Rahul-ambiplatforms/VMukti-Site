@@ -6,8 +6,8 @@ import {
   useBreakpointValue,
   Flex,
 } from '@chakra-ui/react'
-import HeadingAnimation from '../../components/Animation/Text/HeadingAnimation'
-import ImagePop from '../../components/Animation/Image/ImagePop'
+import HeadingAnimation from '../../../components/Animation/Text/HeadingAnimation'
+import ImagePop from '../../../components/Animation/Image/ImagePop'
 import { useEffect, useState, useRef } from 'react';
 
 // Custom hook for count-up animation with viewport detection

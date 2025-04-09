@@ -3,7 +3,7 @@
 import React, { useState } from "react"
 import { Box, Flex, Text, Image, Button, Divider, Grid } from "@chakra-ui/react"
 import { motion } from "framer-motion"
-import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation"
+import HeadingAnimation from "../../../components/Animation/Text/HeadingAnimation"
 
 const MotionBox = motion(Box)
 
@@ -136,7 +136,7 @@ const VideoAnalytics = () => {
                 fontWeight="500"
                 letterSpacing="-0.21px"
                 marginTop="8px"
-                // whiteSpace={{ base: "normal", md: "wrap" }}
+              // whiteSpace={{ base: "normal", md: "wrap" }}
               >
                 {features[featureIndex].description}
               </Text>
@@ -217,7 +217,7 @@ const VideoAnalytics = () => {
           </Flex>
 
           {/* Feature List */}
-          <Grid templateColumns="20px 1fr" mt={{ base: "20px", md: "0" }} rowGap={{base:"3",md:"6"}}>
+          <Grid templateColumns="20px 1fr" mt={{ base: "20px", md: "0" }} rowGap={{ base: "3", md: "6" }}>
             {features.map((feature, index) => (
               <React.Fragment key={index}>
                 <Box display="flex" alignItems="center" justifyContent="center">

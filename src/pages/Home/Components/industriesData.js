@@ -7,11 +7,10 @@ import {
   Text,
   Flex,
   Button,
-  Image,
   useBreakpointValue,
 } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
-import HeadingAnimation from '../../components/Animation/Text/HeadingAnimation'
+import HeadingAnimation from '../../../components/Animation/Text/HeadingAnimation'
 import { Link } from 'react-router-dom'
 
 // Industry data with SVGs
@@ -28,7 +27,7 @@ const industriesData = [
     bgColor: '#BECEDC',
     textColor: 'black',
     dashColor: '#3F77A5',
-    image:"./assets/HealthcareIndustry.png"
+    image: "./assets/HealthcareIndustry.png"
   },
   {
     name: '',
@@ -51,7 +50,7 @@ const industriesData = [
     bgColor: 'white',
     textColor: 'black',
     dashColor: '#3F77A5',
-    image:"./assets/EducationIndustry.png"
+    image: "./assets/EducationIndustry.png"
   },
   {
     name: 'Defense',
@@ -65,7 +64,7 @@ const industriesData = [
     bgColor: '#BECEDC',
     textColor: 'black',
     dashColor: '#3F77A5',
-    image:"./assets/DefenseIndustry.png"
+    image: "./assets/DefenseIndustry.png"
   },
   {
     name: 'Election',
@@ -80,7 +79,7 @@ const industriesData = [
     textColor: 'black',
     dashColor: '#3F77A5',
     isWide: true,
-    image:"./assets/ElectionIndustry.png"
+    image: "./assets/ElectionIndustry.png"
   },
   {
     name: '',
@@ -108,7 +107,7 @@ const industriesData = [
     bgColor: 'white',
     textColor: 'black',
     dashColor: '#3F77A5',
-    image:"./assets/BankingIndustry.png"
+    image: "./assets/BankingIndustry.png"
   },
   {
     name: '',
@@ -131,7 +130,7 @@ const industriesData = [
     bgColor: '#3F77A5',
     textColor: 'white',
     dashColor: 'white',
-    image:"./assets/TransportationIndustry.png"
+    image: "./assets/TransportationIndustry.png"
   },
   {
     name: 'City Monitoring',
@@ -145,7 +144,7 @@ const industriesData = [
     bgColor: 'white',
     textColor: 'black',
     dashColor: '#3F77A5',
-    image:"./assets/CityMonitoring.png"
+    image: "./assets/CityMonitoring.png"
   },
   {
     name: 'Warehousing & Logistic Industry',
@@ -159,7 +158,7 @@ const industriesData = [
     bgColor: '#BECEDC',
     textColor: 'black',
     dashColor: '#3F77A5',
-    image:"./assets/WarehousingLogisticIndustry.png"
+    image: "./assets/WarehousingLogisticIndustry.png"
   },
 ]
 
@@ -351,7 +350,7 @@ export default function IndustryGrid() {
       </Grid>
     )
   }
- 
+
   return (
     <>
       <Box

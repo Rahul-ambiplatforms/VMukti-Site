@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation";
+import HeadingAnimation from "./Animation/Text/HeadingAnimation";
 
 const AdvancedSurveillance = () => {
   const [activeCard, setActiveCard] = useState(0);

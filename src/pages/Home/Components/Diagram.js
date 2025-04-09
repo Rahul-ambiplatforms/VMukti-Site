@@ -1,6 +1,6 @@
 import { Box, Flex, Text, Image, useBreakpointValue } from '@chakra-ui/react'
-import HeadingAnimation from '../../components/Animation/Text/HeadingAnimation'
-import SubHeadingAnimation from '../../components/Animation/Text/SubHeadingAnimation'
+import HeadingAnimation from '../../../components/Animation/Text/HeadingAnimation'
+import SubHeadingAnimation from '../../../components/Animation/Text/SubHeadingAnimation'
 
 const nodes = [
   { label: 'Image', position: '15%', side: 'left' },
@@ -49,55 +49,55 @@ const Diagram = () => {
         borderRadius={'24px'}
       >
         <HeadingAnimation>
-        <Text
-          fontSize={{ base: '18px', md: '36px' }}
-          fontWeight="bold"
-          ml="5%"
-          mt="5%"
-          lineHeight={{ base: '1.2', md: '1.3' }} // Adjusts vertical spacing
-        >
-          Accelerate Visual{' '}
-          <Text as="span" color="#DB7B3A">
-            AI
-          </Text>{' '}
-          Implementation
-        </Text>
+          <Text
+            fontSize={{ base: '18px', md: '36px' }}
+            fontWeight="bold"
+            ml="5%"
+            mt="5%"
+            lineHeight={{ base: '1.2', md: '1.3' }} // Adjusts vertical spacing
+          >
+            Accelerate Visual{' '}
+            <Text as="span" color="#DB7B3A">
+              AI
+            </Text>{' '}
+            Implementation
+          </Text>
         </HeadingAnimation>
         <SubHeadingAnimation>
-        <Flex
-          align="flex-start"
-          mt="10%"
-          ml="5%"
-          gap={10}
-          direction={{ base: 'column', md: 'row' }}
-        >
-          <Box>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="33"
-              height="33"
-              viewBox="0 0 33 33"
-              fill="none"
-              bg="red"
-            >
-              <path
-                d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
-                fill="white"
-              />
-            </svg>
-          </Box>
-
-          <Text
-            color="white"
-            maxW={{ base: '90%', md: '400px' }} // Reduced max width
-            fontSize={{ md: '16px' }}
-            // lineHeight={0}
-            mt="-1%"
+          <Flex
+            align="flex-start"
+            mt="10%"
+            ml="5%"
+            gap={10}
+            direction={{ base: 'column', md: 'row' }}
           >
-            Swiftly Prototype, Deploy, and Scale Computer Vision Tasks on a
-            Unified Platform to Enhance Visual Intelligence
-          </Text>
-        </Flex>
+            <Box>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="33"
+                height="33"
+                viewBox="0 0 33 33"
+                fill="none"
+                bg="red"
+              >
+                <path
+                  d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
+                  fill="white"
+                />
+              </svg>
+            </Box>
+
+            <Text
+              color="white"
+              maxW={{ base: '90%', md: '400px' }} // Reduced max width
+              fontSize={{ md: '16px' }}
+              // lineHeight={0}
+              mt="-1%"
+            >
+              Swiftly Prototype, Deploy, and Scale Computer Vision Tasks on a
+              Unified Platform to Enhance Visual Intelligence
+            </Text>
+          </Flex>
         </SubHeadingAnimation>
       </Box>
 
