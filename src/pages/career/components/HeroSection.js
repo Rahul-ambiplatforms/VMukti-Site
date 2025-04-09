@@ -5,13 +5,13 @@ import ImagePop from "../../../components/Animation/Image/ImagePop";
 
 export default function HeroSection() {
     return (
-        <Box bg="#E7E7E7" minH="100vh" display="flex">
+        <Box bg="#E7E7E7" display="flex">
             {/* <Container maxW="100%" px={{ base: 4, md: 0 }}> */}
             <Flex direction={{ base: "column", md: "row" }} gap={{ base: 6, md: 8 }} >
-                <Box flex="1" textAlign={{ base: "center", md: "left" }} position="relative">
+                <Box flex="1" textAlign="left" position="relative">
                     {/* Eclipse background */}
                     <Box
-                        position={{ base: "relative", lg: "absolute" }}
+                        position="absolute"
                         top={{ base: "20%", md: "30%", lg: "40%" }} // Adjust as needed
                         left={{ base: "60%", md: "80%", lg: "100%" }} // Adjust as needed
                         transform="translate(-50%, -50%)"
@@ -30,7 +30,7 @@ export default function HeroSection() {
                             color="blue.600"
                             mb={2}
                             mt={{ base: "0%", lg: "0" }}
-                            fontSize={{ base: "24px", lg: "48px" }}
+                            fontSize={{ base: "24px", sm: "32px", md: "40px", lg: "48px" }}
                             fontWeight="600"
                             lineHeight="normal"
                         >
@@ -44,7 +44,7 @@ export default function HeroSection() {
                             size="lg"
                             color="orange.500"
                             mb={6}
-                            fontSize={{ base: "20px", lg: "48px" }}
+                            fontSize={{ base: "24px", sm: "32px", md: "40px", lg: "48px" }}
                             fontWeight="600"
                             lineHeight="normal"
                         >
@@ -65,8 +65,8 @@ export default function HeroSection() {
                             fontSize={{ base: "14px", md: "16px" }}
                             fontWeight="500"
                             lineHeight="normal"
-                            maxW={{ base: "100%", md: "md" }}
-                            mx={{ base: "auto", md: "0" }}
+                            zIndex={1}
+
                         >
                             We are a company that values people as much as innovation. With a supportive culture, exciting
                             challenges, and endless opportunities for growth, we're building something meaningful. Join us and be
@@ -82,7 +82,7 @@ export default function HeroSection() {
                         flexShrink="0"
                         borderRadius="24px"
                         background="#BECEDC"
-                        display={{ base: "none", md: "block" }}
+                        display={{ base: "none", lg: "block" }}
                     />
                     <Box
                         position="absolute"
@@ -93,18 +93,19 @@ export default function HeroSection() {
                         flexShrink="0"
                         borderRadius="24px"
                         background="#FFF"
-                        display={{ base: "none", md: "block" }}
+                        display={{ base: "none", lg: "block" }}
                     />
                 </Box>
-                <Box>
+                <Box zIndex={1}>
                     <ImagePop>
                         <Image
                             src={`${process.env.PUBLIC_URL}/assets/career.png`}
                             // src={${process.env.PUBLIC_URL} /assets/career.png}
                             alt="Team collaboration"
                             borderRadius="md"
-                            width={{ base: "100%", md: "931px" }}
-                            height={{ base: "auto", md: "679px" }}
+                            aspectRatio={137 / 100}
+                            // width={{ base: "100%", md: "931px" }}
+                            // height={{ base: "auto", md: "679px" }}
                         />
                     </ImagePop>
                 </Box>
