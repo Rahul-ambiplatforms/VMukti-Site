@@ -1,27 +1,14 @@
-import { Box, Button, Flex, Text, useBreakpointValue, Image } from "@chakra-ui/react";
+import { Box, Flex, Text, Image } from "@chakra-ui/react";
 import PageContentWrapper from "../../components/PageContentWrapper";
-import TripleImageSection from "../../components/TripleImageSection";
-import AdvancedSurveillance from "../Home/AdvancedSurveillance";
+import AdvancedSurveillance from "../../components/AdvancedSurveillance";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const MotionBox = motion(Box);
 const MotionText = motion(Text);
-const MotionButton = motion(Button);
+
 const MotionImage = motion(Image);
 
-const popAnimation1 = {
-    hidden: { scale: 0.8, opacity: 0 },
-    visible: (index) => ({
-        scale: 1,
-        opacity: 1,
-        transition: {
-            duration: 0.8,
-            ease: "easeOut",
-            delay: index * 0.1, // Delay increases for each card
-        },
-    }),
-};
 
 const popAnimation = {
     hidden: { scale: 0.6, opacity: 0 },
@@ -39,17 +26,6 @@ const OurServings = () => {
         const timer = setTimeout(() => setIsLoaded(true), 100); // Delay to ensure smooth loading
         return () => clearTimeout(timer); // Cleanup timer on unmount
     }, []);
-
-    const buttonWidth = useBreakpointValue({
-        base: "130px",
-        md: "130px",
-        lg: "146px",
-    });
-    const buttonHeight = useBreakpointValue({
-        base: "40px",
-        md: "45px",
-        lg: "50px",
-    });
 
     const heading = [
         { text: "Customizable", color: "#3F77A5" },//blue
@@ -231,11 +207,11 @@ const OurServings = () => {
                         alignItems="flex-end" // Changed to align bottoms
                         direction={{ base: "column", md: "row" }}
                         mt={{ base: "5%", md: "-10%" }}
-                        mb={{base:"25%",md:"0%"}}
+                        mb={{ base: "25%", md: "0%" }}
                         gap="3"
                         width="100%"
                         position="relative"
-                        // zIndex="1" // I added this code
+                    // zIndex="1" // I added this code
                     >
                         {/* Small image (35% width) - Fixed height */}
                         <Box
@@ -260,7 +236,7 @@ const OurServings = () => {
                         >
                             <MotionImage
                                 position="absolute"
-                                top={{base:"0",md:"-5%"}}
+                                top={{ base: "0", md: "-5%" }}
                                 src={`${process.env.PUBLIC_URL}/assets/${image}`}
                                 alt="Responsive screen mockup"
                                 width={{ base: "100%", md: "100%" }}

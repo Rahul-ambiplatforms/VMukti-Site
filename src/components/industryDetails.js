@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import IndustryContent from "../../components/IndustryContent";
+import IndustryContent from "./IndustryContent";
 import React from "react";
-import PageContentWrapper from "../../components/PageContentWrapper";
+import PageContentWrapper from "./PageContentWrapper";
 import { Box } from "@chakra-ui/react";
-import industriesData from "../../data/industriesConstData"; // Centralized data file
+import industriesData from "../data/industriesConstData"; // Centralized data file
 
 const toCamelCase = (str) => {
     return str.replace(/-([a-z])/g, (match, letter) => letter.toUpperCase());
