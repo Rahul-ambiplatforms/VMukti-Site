@@ -137,13 +137,15 @@ const VisionMissionSection = () => {
         width={{ base: "250px", md: "392px" }}
         height={{ base: "250px", md: "392px" }}
         borderRadius="24px"
+        alignSelf={{ base: "flex-end", md: "auto" }}
         bg="#C8D6E5"
-        p="6"
-        ml={{ base: "0", md: "0.5%" }}
-        mb={{ base: "-15%", md: "0" }}
-        zIndex={2}
         display="flex"
         flexDirection="column"
+        justifyContent="space-between"
+        // boxShadow="md"
+        p="6"
+        mb={{ base: "-15%", md: "0" }}
+        zIndex={2}
       >
         {/* SVG Icon - top left */}
         <Box mb="4">
