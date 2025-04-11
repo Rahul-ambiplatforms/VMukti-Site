@@ -1,56 +1,65 @@
-import React from 'react';
-import { ChakraProvider, Flex, Box } from '@chakra-ui/react';
+import React, { Suspense, lazy } from 'react';
+import { ChakraProvider, Box, Spinner, Center } from '@chakra-ui/react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './css/fonts.css';
 import './css/scrollbar.css';
-import VMuktiHomepage from './pages/Home/VMuktiHomepage';
 import theme from './components/theme';
-import TechnologyDashboard from './pages/Technology/TechnologyDashboard';
 import Navbar from './components/Navbar';
 import NewsletterSubscription from './components/NewsletterSubscription';
-import SolutionsHome from './pages/Solutions/SolutionsHome';
-import IndustryDashboard from './pages/IndustriesDashboard/industriesDashboard'
-import IndustryDetails from './components/industryDetails';
-import WhoWeare from './pages/Who/WhoDash';
-import EventSpotlight from './pages/EventSpotlight/EventDashboard';
-import OurServings from './pages/OurServings/OurServings';
-import ServingsDock from './pages/OurServings/ServingsDock';
 import ScrollToTop from './components/ScrollToTop';
-import ContactUs from './pages/ContactUs/Contactus';
-import VMuktiCareers from './pages/career/Career';
+import ErrorBoundary from './components/ErrorBoundary';
 
+// Lazy load components
+const VMuktiHomepage = lazy(() => import('./pages/Home/VMuktiHomepage'));
+const TechnologyDashboard = lazy(() => import('./pages/Technology/TechnologyDashboard'));
+const SolutionsHome = lazy(() => import('./pages/Solutions/SolutionsHome'));
+const IndustryDashboard = lazy(() => import('./pages/IndustriesDashboard/industriesDashboard'));
+const IndustryDetails = lazy(() => import('./components/industryDetails'));
+const WhoWeare = lazy(() => import('./pages/Who/WhoDash'));
+const EventSpotlight = lazy(() => import('./pages/EventSpotlight/EventDashboard'));
+const OurServings = lazy(() => import('./pages/OurServings/OurServings'));
+const ServingsDock = lazy(() => import('./pages/OurServings/ServingsDock'));
+const ContactUs = lazy(() => import('./pages/ContactUs/Contactus'));
+const VMuktiCareers = lazy(() => import('./pages/career/Career'));
+const NotFound = lazy(() => import('./pages/NotFound/NotFound'));
+
+// Loading component
+const LoadingSpinner = () => (
+  <Center h="100vh">
+    <Spinner size="xl" color="blue.500" />
+  </Center>
+);
 
 function App() {
-
   return (
     <ChakraProvider theme={theme}>
       <Router>
-
-        {/* Navbar with transparent background */}
-        <Navbar />
-        <ScrollToTop />
-        {/* Page content with padding to account for Navbar height */}
-        <Box pt={{ base: "20%", sm: "20%", md: "8%" }} bg="#E7E7E7">  {/* Add padding-top equal to Navbar height */}
-          <Routes>
-            <Route path="/" element={<VMuktiHomepage />} />
-
-            <Route path="/technology" element={<TechnologyDashboard />} />
-            <Route path="/solutions" element={<SolutionsHome />} />
-            <Route path="/industries" element={<IndustryDashboard />} />
-            <Route path="/industries/:name" element={<IndustryDetails />} />
-            <Route path="/whoweare" element={<WhoWeare />} />
-            <Route path="/whoweare/eventspotlight" element={<EventSpotlight />} />
-            <Route path="/whoweare/careers" element={<VMuktiCareers />} />
-            <Route path="/serving" element={<OurServings />} />
-            <Route path="/serving/:name" element={<ServingsDock />} />
-            <Route path="/contactus" element={<ContactUs />} />
-
-          </Routes>
-        </Box>
+        <ErrorBoundary>
+          <Navbar />
+          <ScrollToTop />
+          <Box pt={{ base: "20%", sm: "20%", md: "8%" }} bg="#E7E7E7">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<VMuktiHomepage />} />
+                <Route path="/technology" element={<TechnologyDashboard />} />
+                <Route path="/solutions" element={<SolutionsHome />} />
+                <Route path="/industries" element={<IndustryDashboard />} />
+                <Route path="/industries/:name" element={<IndustryDetails />} />
+                <Route path="/whoweare" element={<WhoWeare />} />
+                <Route path="/whoweare/eventspotlight" element={<EventSpotlight />} />
+                <Route path="/whoweare/careers" element={<VMuktiCareers />} />
+                <Route path="/serving" element={<OurServings />} />
+                <Route path="/serving/:name" element={<ServingsDock />} />
+                <Route path="/contactus" element={<ContactUs />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+          </Box>
+        </ErrorBoundary>
       </Router>
       <NewsletterSubscription />
     </ChakraProvider>
   );
 }
 
-export default App;
+export default React.memo(App);
