@@ -376,24 +376,6 @@ export default function IndustryGrid() {
           opacity: '1',
           zIndex: '0',
         }}
-        _after={{
-          content: '""',
-          position: 'absolute',
-          left: { base: '50%', md: '30%', lg: '40%' },
-          top: { base: '0', md: '0', lg: '50%' },
-          transform: {
-            base: 'translateX(-50%)',
-            md: 'translateX(-50%)',
-            lg: 'none',
-          },
-          width: { base: '200px', md: '300px', lg: '408px' },
-          height: { base: '200px', md: '300px', lg: '408px' },
-          borderRadius: '50%',
-          opacity: '0.09',
-          background: '#3F77A5',
-          filter: 'blur(56.6px)',
-          zIndex: '1',
-        }}
       >
         {/* We can add some creativity here also. */}
         <HeadingAnimation>
