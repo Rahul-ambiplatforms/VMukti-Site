@@ -137,7 +137,7 @@ const NewsletterSubscription = () => {
   return (
     <>
       <Box
-        padding={{base:"4% 4% 1% 4%",md:"4% 2% 1% 2%"}}
+        // padding={{base:"4% 4% 1% 4%",md:"4% 2% 1% 2%"}}
         // fontFamily="'Wix Madefor Display', sans-serif"
         fontWeight={600}
         bg={"#E7E7E7"}

@@ -8,7 +8,7 @@ import Navbar from './components/Navbar';
 import NewsletterSubscription from './components/NewsletterSubscription';
 import ScrollToTop from './components/ScrollToTop';
 import ErrorBoundary from './components/ErrorBoundary';
-
+import PageContentWrapper from './components/PageContentWrapper';
 // Lazy load components
 const VMuktiHomepage = lazy(() => import('./pages/Home/VMuktiHomepage'));
 const TechnologyDashboard = lazy(() => import('./pages/Technology/TechnologyDashboard'));
@@ -37,7 +37,7 @@ function App() {
         <ErrorBoundary>
           <Navbar />
           <ScrollToTop />
-          <Box pt={{ base: "20%", sm: "20%", md: "8%" }} bg="#E7E7E7">
+          <Box pt={{ base: "20%", sm: "20%", md: "8%"}} bg="#E7E7E7">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<VMuktiHomepage />} />
@@ -57,7 +57,9 @@ function App() {
           </Box>
         </ErrorBoundary>
       </Router>
-      <NewsletterSubscription />
+      <PageContentWrapper>
+        <NewsletterSubscription />
+      </PageContentWrapper>
     </ChakraProvider>
   );
 }
