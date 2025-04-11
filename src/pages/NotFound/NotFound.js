@@ -13,7 +13,9 @@ const NotFound = () => {
                         display="inline-block"
                         as="h2"
                         size="2xl"
-                        bgGradient="linear(to-r, blue.400, blue.600)"
+                        // bgGradient="linear(to-r, blue.400, blue.600)"
+                        // color="#3F77A5"
+                        bg="#3F77A5"
                         backgroundClip="text">
                         404
                     </Heading>
@@ -25,7 +27,8 @@ const NotFound = () => {
                     </Text>
                     <Button
                         colorScheme="blue"
-                        bgGradient="linear(to-r, blue.400, blue.500, blue.600)"
+                        // bgGradient="linear(to-r, blue.400, blue.500, blue.600)"
+                        bg="#3F77A5"
                         color="white"
                         variant="solid"
                         onClick={() => navigate('/')}>
