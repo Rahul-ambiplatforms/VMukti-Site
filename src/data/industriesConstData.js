@@ -327,7 +327,7 @@ const industriesData = {
         keyApplications: [
             {
                 title: 'Smart Inventory Management',
-                description: 'Computer Vision tracks stock in real-time...',
+                description: 'Computer Vision tracks stock in real-time, while Deep Learning predicts demand, preventing stockouts and excess inventory.',
                 image: "ret1.png", // Path from public folder
                 image_alt: "Smart Inventory Management",
                 bgColor: "white" // Add other props as needed
@@ -1171,31 +1171,31 @@ const industriesData = {
                 "image_alt": "Automated Inventory Management"
             },
             {
-                "title": "",
+                "title": "Smart Package Sorting",
                 "description": "AI detects barcodes and optimizes sorting, ensuring faster, error-free distribution.",
                 image: "war2.png",
                 "image_alt": "g"
             },
             {
-                "title": "Automated Irrigation Management",
+                "title": "Automated Quality Control",
                 "description": "AI inspects products for defects, ensuring compliance and reducing returns.",
                 image: "war3.png",
                 "image_alt": "Automated Irrigation Management"
             },
             {
-                "title": "Livestock Health & Activity Tracking",
+                "title": "Warehouse Space Optimization",
                 "description": "AI predicts inventory movement to maximize storage efficiency.",
                 image: "war4.png",
                 "image_alt": "Livestock Health & Activity Tracking"
             },
             {
-                "title": "Supply Chain & Market Forecasting",
+                "title": "Real-Time Fleet Monitoring",
                 "description": "AI tracks vehicle conditions and alerts for maintenance to prevent breakdowns.",
                 image: "war5.png",
                 "image_alt": "Supply Chain & Market Forecasting"
             },
             {
-                "title": "Farm Security & Intrusion Detection",
+                "title": "Automated Shipment Tracking & ETA Prediction",
                 "description": "AI predicts accurate delivery times for better planning.",
                 image: "war6.png",
                 "image_alt": "Farm Security & Intrusion Detection"
@@ -1269,37 +1269,37 @@ const industriesData = {
         large_image_alt: "Closeup shot of a bee on a chamomile flower",
         "keyApplications": [
             {
-                "title": "Automated Crop Health Monitoring",
+                "title": "Audience Sentiment Analysis",
                 "description": "AI processes crowd reactions and social media feedback to improve fan engagement.",
                 image: "ent1.png",
                 "image_alt": "Automated Crop Health Monitoring"
             },
             {
-                "title": "",
+                "title": "Virtual Refereeing & Fair Play Monitoring",
                 "description": "AI tracks player movements and rule violations to assist referees in accurate decision-making.",
                 image: "ent2.png",
                 "image_alt": "g"
             },
             {
-                "title": "Automated Irrigation Management",
+                "title": "Smart Fan Engagement & Personalized Content",
                 "description": "AI analyzes fan preferences to deliver tailored sports highlights and recommendations.",
                 image: "ent3.png",
                 "image_alt": "Automated Irrigation Management"
             },
             {
-                "title": "Livestock Health & Activity Tracking",
+                "title": "Athlete Performance Tracking & Injury Prevention",
                 "description": "AI monitors player biomechanics to optimize training and reduce injury risks.",
                 image: "ent4.png",
                 "image_alt": "Livestock Health & Activity Tracking"
             },
             {
-                "title": "Supply Chain & Market Forecasting",
+                "title": "Real-Time Sports Betting & Fraud Detection",
                 "description": "AI predicts game outcomes and detects fraudulent betting activities.",
                 image: "ent5.png",
                 "image_alt": "Supply Chain & Market Forecasting"
             },
             {
-                "title": "Farm Security & Intrusion Detection",
+                "title": "Live Audience & Stadium Crowd Management",
                 "description": "AI optimizes seating, monitors crowd density, and improves event security.",
                 image: "ent6.png",
                 "image_alt": "Farm Security & Intrusion Detection"

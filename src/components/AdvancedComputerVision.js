@@ -232,9 +232,8 @@ const AdvancedComputerVision = ({
               onMouseLeave={() => setHoverCard(null)} // Clear hover state
               onClick={() => setActiveCard(index)} // Update persistent active card on click
               cursor="pointer"
-              position="relative"
-              overflow="hidden"
-            // bg="blue"
+              position="relative" 
+              overflow="hidden"       
             >
               <Box
                 // gap={{base:"2",md:"8", lg:"8"}}
