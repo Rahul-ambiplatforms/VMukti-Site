@@ -162,7 +162,7 @@ const HeadingSection = ({ refProp, display, isAnimationTriggered }) => (
 
 const TechnologyDashboard = () => {
   const ref = useRef(null);
-  const svgSize = useBreakpointValue({ base: "13px", md: "33px" });
+  const svgSize = useBreakpointValue({ base: "25px", md: "33px" });
   const [isAnimationTriggered, setIsAnimationTriggered] = useState(false);
 
   useEffect(() => {
@@ -189,7 +189,7 @@ const TechnologyDashboard = () => {
               align={{ base: "flex-start", lg: "flex-start" }}
               justify="flex-start"
               w={{ base: "339px", md: "auto" }}
-              // minH={{ base: "auto", lg: "50vh" }}
+            // minH={{ base: "auto", lg: "50vh" }}
             >
               <HeadingSection
                 refProp={ref}
