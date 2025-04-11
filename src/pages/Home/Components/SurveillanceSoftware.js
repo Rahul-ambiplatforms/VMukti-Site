@@ -39,7 +39,10 @@ const SurveillanceSoftware = () => {
           <br />
           <Text as="span">Adaptive AI </Text>
           <Text as="span" color="#db7b3a">
-            Surveillance Software.
+            Surveillance Software
+          </Text>
+          <Text as="span" color="#3F77A5">{/* I added this */}
+            .
           </Text>
         </HeadingAnimation>
       </Box>
