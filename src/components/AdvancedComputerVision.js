@@ -18,7 +18,7 @@ const AdvancedComputerVision = ({
   // ],
   title = [
     { text: "IoT Integration & Secure Connectivity for", color: "black" },
-    { text: "Smart Surveillance.", color: "#3F77A5" },
+    { text: "Smart Surveillance", color: "#3F77A5" },
   ],
   subtitle = "AI-Powered Visual Processing",
   // description = "Extracts, analyzes, and interprets video data in real-time.",
@@ -26,7 +26,7 @@ const AdvancedComputerVision = ({
     {
       type: "image",
       label: "Real-Time Monitoring",
-      media: "/assets/car.png",
+      media: "/assets/car.png", 
       description:
         "IoT-enabled cameras and sensors continuously track environmental changes and security events.",
     },
@@ -130,16 +130,6 @@ const AdvancedComputerVision = ({
         animate={isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        {/* <Text fontSize={{ base: "20px", md: "36px" }} fontWeight="500">
-          {title1}
-        </Text>
-        <Text
-          fontSize={{ base: "20px", md: "36px" }}
-          fontWeight="500"
-          color="#3f77a5"
-        >
-          {title2}
-        </Text> */}
         <Flex flexWrap="wrap">
           {title.map((item, index) => (
             <Text as="span" color={item.color} display="inline" key={index} fontSize={{ base: "20px", md: "36px" }} fontWeight="500">

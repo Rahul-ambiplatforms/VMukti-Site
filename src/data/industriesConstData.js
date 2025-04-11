@@ -1,8 +1,8 @@
 const industriesData = {
     manufacturingindustry: {
         "title": [
-            { "text": "AI-Powered Manufacturing:", "color": "#3F77A5" },
-            { "text": "Smarter Production, Higher Efficiency,", "color": "black" },
+            { "text": "AI-Powered Manufacturing", "color": "#3F77A5" },
+            { "text": ": Smarter Production, Higher Efficiency,", "color": "black" }, //I change this
             { "text": "Maximum Output", "color": "#db7b3a" }
         ],
         "para": "AI is transforming manufacturing with automation, predictive maintenance, and intelligent quality control, optimizing efficiency and reducing downtime.",
@@ -106,7 +106,7 @@ const industriesData = {
             { "text": "Enhanced", "color": "black" },
             { "text": "Border Security", "color": "#3F77A5" },
             { "text": "with AI-Powered", "color": "black" },
-            { "text": "Threat Detection.", "color": "#db7b3a" }
+            { "text": "Threat Detection", "color": "#db7b3a" }
         ],
         "para": "AI enhances border security by automating surveillance, detecting threats, and streamlining identity verification for stronger national protection.",
         small_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
@@ -315,8 +315,8 @@ const industriesData = {
     retailindustry: {
         title: [
             { text: 'Revolutionizing', color: 'black' },
-            { text: 'Retail with AI:', color: '#3F77A5' }, // Blue
-            { text: 'Smarter Stores, Happier Customers,', color: 'black' },
+            { text: 'Retail with AI', color: '#3F77A5' }, // Blue
+            { text: ': Smarter Stores, Happier Customers,', color: 'black' },
             { text: 'Maximized Profits', color: '#db7b3a' }, // Orange
         ],
         para: 'VMukti is driving innovation with advanced AI technologies, transforming surveillance, automation, and security for a smarter, more connected world.',
@@ -421,7 +421,7 @@ const industriesData = {
         title: [
             { text: 'AI in Education:', color: 'black' },
             { text: 'Smarter Learning', color: '#3F77A5' }, // Blue
-            { text: 'Personalized Growth,', color: 'black' },
+            { text: ', Personalized Growth,', color: 'black' },
             { text: 'Future-Ready Students', color: '#db7b3a' }, // Orange
         ],
         para: 'AI enhances education by personalizing learning, automating tasks, and improving engagement, making learning more accessible and efficient.',
@@ -523,8 +523,8 @@ const industriesData = {
         title: [
             { "text": "AI in Finance:", "color": "#3F77A5" }, // Blue
             { "text": "Smarter Decisions,", "color": "black" },
-            { "text": "Stronger Security,", "color": "black" },
-            { "text": "Maximum Efficiency", "color": "#db7b3a" } // Orange
+            { "text": "Stronger Security, Maximum", "color": "black" },
+            { "text": " Efficiency", "color": "#db7b3a" } // Orange
         ],
         para: "AI enhances fraud detection, automates risk assessment, and personalizes banking experiences for more secure and efficient financial management.",
         small_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
@@ -747,7 +747,7 @@ const industriesData = {
             { "text": "with", "color": "black" },
             { "text": "AI for Comfort", "color": "#3F77A5" },
             { "text": "and", "color": "black" },
-            { "text": "Seamless Service.", "color": "#db7b3a" }
+            { "text": "Seamless Service", "color": "#db7b3a" }
         ],
         "para": "AI enhances hospitality by personalizing guest experiences, optimizing operations, and ensuring security for a seamless and luxurious stay.",
         small_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
@@ -1008,8 +1008,8 @@ const industriesData = {
     },
     citymonitoring: {
         "title": [
-            { "text": "AI-Powered", "color": "#3F77A5" },
-            { "text": "City Monitoring", "color": "black" },
+            { "text": "AI-Powered", "color": "black" },
+            { "text": "City Monitoring", "color": "#3F77A5" },
             { "text": ": Safer Streets, Smarter Infrastructure,", "color": "black" },
             { "text": "Sustainable Living", "color": "#db7b3a" }
         ],
@@ -1153,9 +1153,8 @@ const industriesData = {
     },
     warehousinglogisticindustry: {
         "title": [
-            { "text": "AI in Logistics", "color": "#3F77A5" },
-            { "text": "", "color": "black" },
-            { "text": ":Faster Deliveries, Smarter Warehousing, Optimized", "color": "black" },
+            { "text": "AI in Logistics:", "color": "#3F77A5" },
+            { "text": "Faster Deliveries, Smarter Warehousing, Optimized", "color": "black" },
             { "text": "Operations", "color": "#db7b3a" }
         ],
         "para": "AI enhances logistics by improving inventory management, automating processes, and optimizing deliveries for faster, more cost-effective operations.",
@@ -1259,7 +1258,7 @@ const industriesData = {
         "title": [
             { "text": "Transforming", "color": "black" },
             { "text": "Sports & Entertainment", "color": "#3F77A5" },
-            { "text": ":with AI for Deeper Engagement & Peak", "color": "black" },
+            { "text": "with AI for Deeper Engagement & Peak", "color": "black" },
             { "text": "Performance", "color": "#db7b3a" }
         ],
         "para": "AI enhances sports and entertainment by optimizing player performance, automating refereeing, and delivering personalized fan experiences.",

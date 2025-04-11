@@ -51,13 +51,14 @@ const Diagram = () => {
         <HeadingAnimation>
           <Text
             fontSize={{ base: '18px', md: '36px' }}
-            fontWeight="bold"
+            // fontWeight="bold"
+            fontWeight="600"
             ml="5%"
             mt="5%"
             lineHeight={{ base: '1.2', md: '1.3' }} // Adjusts vertical spacing
           >
             Accelerate Visual{' '}
-            <Text as="span" color="#DB7B3A">
+            <Text as="span" color="#DB7B3A" fontSize={{ base: '18px', md: '36px' }} fontWeight="600">
               AI
             </Text>{' '}
             Implementation
