@@ -37,7 +37,7 @@ function App() {
         <ErrorBoundary>
           <Navbar />
           <ScrollToTop />
-          <Box pt={{ base: "20%", sm: "20%", md: "8%"}} bg="#E7E7E7">
+          <Box pt={{ base: "20%", sm: "20%", md: "100px" }} bg="#E7E7E7">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<VMuktiHomepage />} />
