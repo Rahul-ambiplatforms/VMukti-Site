@@ -225,7 +225,7 @@ const Navbar = () => {
                             >
                                 {navigationItems.map((item, index) => (
                                     <React.Fragment key={item.name}>
-                                        <Flex align="center">
+                                        <Flex align="center" position="relative">
                                             {item.hasDropdown ? (
                                                 <Menu isOpen={menuOpenStates[item.name]}>
                                                     <>
@@ -285,7 +285,12 @@ const Navbar = () => {
                                                             onMouseLeave={() => handleMouseLeave(item.name)}
                                                             py="0"
                                                             style={{
-                                                                marginTop: "20px",
+                                                                marginTop: "50px", // Slight spacing below the arrow
+                                                                position: "absolute", // Ensure it stays relative to the arrow
+                                                                left: "50%", // Align with the center of the arrow
+                                                                transform: "translateX(-50%)", // Center the dropdown relative to the arrow
+                                                                zIndex: 1000, // Ensure it appears above other elements
+                                                                whiteSpace: "nowrap", // Prevent text wrapping
                                                             }}
                                                         >
                                                             {item.items.map((dropdownItem, idx) => (
@@ -301,6 +306,9 @@ const Navbar = () => {
                                                                         width="100%"
                                                                         direction="column"
                                                                         display="flex"
+                                                                        style={{
+                                                                            whiteSpace: "nowrap", // Prevent text wrapping
+                                                                        }}
                                                                     >
                                                                         <Flex direction="column" width="100%">
                                                                             <Text>{dropdownItem.label}</Text>
