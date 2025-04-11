@@ -6,7 +6,6 @@ import {
   GridItem,
   Text,
   Flex,
-
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { motion, useInView } from "framer-motion";
@@ -15,7 +14,6 @@ import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import PageContentWrapper from "../../components/PageContentWrapper";
 // import { keyframes } from "@emotion/react";
-
 
 const MotionBox = motion(Box);
 const MotionText = motion(Text);
@@ -125,11 +123,13 @@ const industriesData = [
       "data:image/svg+xml;charset=utf-8," +
       encodeURIComponent(
         `<svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M26.2432 8.81782V31.9696C26.2432 32.5811 26.6621 33.0001 27.2736 33.0001H32.0139C32.6255 33.0001 33.0444 32.5811 33.0444 31.9696V8.81782C33.0444 8.28679 32.6459 7.78735 32.1513 7.78735H27.1363C26.6417 7.78735 26.2432 8.28679 26.2432 8.81782Z" fill="#3F77A5"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5186 16.3748V32.1757C17.5186 32.5883 18.0032 33.0001 18.4117 33.0001H23.2893C24.0806 33.0001 24.3198 32.333 24.3198 31.626V16.8556C24.3198 15.8726 23.9318 15.4817 22.9458 15.4817H18.8238C18.1768 15.4817 17.5186 15.7285 17.5186 16.3748Z" fill="#3F77A5"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.79346 18.367V31.9695C8.79346 32.581 9.21239 33 9.82393 33H14.5642C15.1758 33 15.5947 32.581 15.5947 31.9695V18.367C15.5947 17.9798 15.1583 17.4739 14.7703 17.4739H9.61782C9.20517 17.4739 8.79346 17.9586 8.79346 18.367Z" fill="#3F77A5"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 24.6186V31.6259C0 32.3337 0.24019 32.9999 1.03047 32.9999H5.90813C6.31656 32.9999 6.80124 32.5882 6.80124 32.1756V24.069C6.80124 23.6649 6.39078 23.2446 5.83945 23.2446H1.03047C0.266099 23.2446 0 23.8443 0 24.6186Z" fill="#3F77A5"/>
-      </svg>`
+<path fill-rule="evenodd" clip-rule="evenodd" d="M26.2432 8.81782V31.9696C26.2432 32.5811 26.6621 33.0001 27.2736 33.0001H32.0139C32.6255 33.0001 33.0444 32.5811 33.0444 31.9696V8.81782C33.0444 8.28679 32.6459 7.78735 32.1513 7.78735H27.1363C26.6417 7.78735 26.2432 8.28679 26.2432 8.81782Z" fill="#3F77A5"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.6556 2.90961C26.6556 3.26863 26.7942 3.65063 26.8617 3.94009C26.5815 4.35859 26.3111 4.47274 26.0537 4.7122C25.945 4.81336 25.8905 4.88889 25.7792 4.98721L24.3096 6.26568C23.8638 6.62156 22.759 7.72713 22.2588 8.06206C21.9945 8.00046 21.9485 7.91193 21.6668 7.82968C20.5826 7.51321 19.6999 7.86456 18.9501 8.46311C18.4327 8.87621 18.1729 9.51621 17.9995 10.2604C17.7288 10.2665 17.3507 10.3636 17.0667 10.4268C16.7168 10.5047 16.4705 10.56 16.1044 10.6324C15.7319 10.7062 15.5148 10.7653 15.143 10.8389C14.8308 10.9007 14.4496 11.0096 14.1523 11.0161C13.9017 10.6419 13.6413 10.3275 13.232 10.0816C10.5041 8.44239 8.10688 11.6341 8.93117 13.3519L5.64656 15.632C5.43395 15.7767 5.38191 15.8412 5.15267 15.9625C4.7703 15.7602 4.49427 15.5571 3.97388 15.4907C2.60906 15.3165 1.30117 15.9757 0.782616 17.2945C0.424552 18.2053 0.585414 19.1532 1.05069 19.9272C1.22878 20.2235 1.60136 20.6223 1.90045 20.7949C4.43471 22.2562 6.38925 19.9883 6.38925 18.7105L6.32057 17.5426C6.80599 17.2858 7.68911 16.5883 8.18833 16.2502C8.51698 16.0277 8.79863 15.8388 9.11787 15.5997L10.0303 14.9321C12.3258 16.4692 14.5304 14.4709 14.5645 12.9397C14.9154 12.9397 15.2058 12.8312 15.5548 12.7621C16.0852 12.6572 18.1281 12.184 18.4804 12.184C18.5706 12.5217 18.8799 12.7342 19.0762 12.8935C21.2072 14.6229 23.7703 12.6253 23.7703 11.0161V10.3979C23.7703 9.55738 23.1328 9.80137 24.7218 8.53274L28.167 5.45146C30.1659 6.50916 32.4951 5.08967 32.4951 2.90961C32.4951 0.408711 29.5258 -0.995084 27.5307 0.830561C27.2992 1.04229 27.1006 1.3978 26.9431 1.68565C26.8033 1.94103 26.6556 2.54089 26.6556 2.90961Z" fill="#3F77A5"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17.5186 16.3748V32.1757C17.5186 32.5883 18.0032 33.0001 18.4117 33.0001H23.2893C24.0806 33.0001 24.3198 32.333 24.3198 31.626V16.8556C24.3198 15.8726 23.9318 15.4817 22.9458 15.4817H18.8238C18.1768 15.4817 17.5186 15.7285 17.5186 16.3748Z" fill="#3F77A5"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.79346 18.367V31.9695C8.79346 32.581 9.21239 33 9.82393 33H14.5642C15.1758 33 15.5947 32.581 15.5947 31.9695V18.367C15.5947 17.9798 15.1583 17.4739 14.7703 17.4739H9.61782C9.20517 17.4739 8.79346 17.9586 8.79346 18.367Z" fill="#3F77A5"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 24.6186V31.6259C0 32.3337 0.24019 32.9999 1.03047 32.9999H5.90813C6.31656 32.9999 6.80124 32.5882 6.80124 32.1756V24.069C6.80124 23.6649 6.39078 23.2446 5.83945 23.2446H1.03047C0.266099 23.2446 0 23.8443 0 24.6186Z" fill="#3F77A5"/>
+</svg>
+`
       ),
     className: "light-blue",
     position: [2, 4],
@@ -372,235 +372,232 @@ export default function IndustryDashboard() {
 
     // Render the grid
 
-
-
     return (
-        <Grid
-          templateColumns={{
-            base: "repeat(2, 1fr)",
-            md: "repeat(3, 1fr)",
-            lg: "repeat(4, 1fr)",
-          }}
-          gap={{ base: "10px", md: "15px" }}
-          width="100%"
-          // Change from 100% to avoid overflow
-          maxWidth="1512px"
+      <Grid
+        templateColumns={{
+          base: "repeat(2, 1fr)",
+          md: "repeat(3, 1fr)",
+          lg: "repeat(4, 1fr)",
+        }}
+        gap={{ base: "10px", md: "15px" }}
+        width="100%"
+        // Change from 100% to avoid overflow
+        maxWidth="1512px"
         // mx="auto" // Center the grid properly
         // px={{ base: "10px", md: "30px" }}
         // mt="5%"
         // mb="5%"
-        >
-          <GridItem
-            colSpan={2} // Span across two columns (1 and 2)
-            gridColumn="1 / 3" // Make it span from column 1 to column 3
-            gridRow="1" // Position it in the first row (not making it span multiple rows)
-            display="flex"
-            flexDirection="column"
-            maxWidth="90%"
-            // mx="auto"
-            //   pl="5%"
-            textAlign="left"
-            pb={{ base: "40px", md: "0" }}
-            zIndex={2} // Ensure it is on top of other elements
+      >
+        <GridItem
+          colSpan={2} // Span across two columns (1 and 2)
+          gridColumn="1 / 3" // Make it span from column 1 to column 3
+          gridRow="1" // Position it in the first row (not making it span multiple rows)
+          display="flex"
+          flexDirection="column"
+          maxWidth="90%"
+          // mx="auto"
+          //   pl="5%"
+          textAlign="left"
+          pb={{ base: "40px", md: "0" }}
+          zIndex={2} // Ensure it is on top of other elements
           // bg="red"
+        >
+          {/* Title */}
+          <MotionText
+            ref={ref}
+            fontSize={titleFontSize}
+            fontWeight="600"
+            marginBottom="40px"
+            lineHeight="normal"
+            width="100%"
+            initial={{ opacity: 0, x: -50 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            {/* Title */}
-            <MotionText
-              ref={ref}
-              fontSize={titleFontSize}
-              fontWeight="600"
-              marginBottom="40px"
-              lineHeight="normal"
-              width="100%"
-              initial={{ opacity: 0, x: -50 }}
-              animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              Transforming{" "}
-              <Text as="span" color="#3F77A5">
-                Industries
-              </Text>{" "}
-              with <br />
-              <Text as="span" color="#db7b3a">
-                AI-Powered Intelligence
-              </Text>
-            </MotionText>
+            Transforming{" "}
+            <Text as="span" color="#3F77A5">
+              Industries
+            </Text>{" "}
+            with <br />
+            <Text as="span" color="#db7b3a">
+              AI-Powered Intelligence
+            </Text>
+          </MotionText>
 
-            {/* Arrow */}
-            <MotionBox
-              initial={{ opacity: 0, x: -100 }} // Start faded and shifted left
-              animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }} // Fade in and move right
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              {/* Animated SVG Box */}
-              <MotionBox mb="8px" align="left">
-                <svg
-                  width="33"
-                  height="33"
-                  viewBox="0 0 33 33"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+          {/* Arrow */}
+          <MotionBox
+            initial={{ opacity: 0, x: -100 }} // Start faded and shifted left
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }} // Fade in and move right
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            {/* Animated SVG Box */}
+            <MotionBox mb="8px" align="left">
+              <svg
+                width="33"
+                height="33"
+                viewBox="0 0 33 33"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
                 // bg="red"
-                >
-                  <path
-                    d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
-                    fill="#3F77A5"
-                  />
-                </svg>
-              </MotionBox>
-
-              {/* Animated Text */}
-              <MotionText
-                color="black"
-                fontWeight="500"
-                textAlign="left"
-                fontSize={{ base: "14px", md: "16px" }}
-                maxW="100%"
-                width="100%"
               >
-                We provide AI-driven solutions that revolutionize industries with
-                advanced security, automation, and intelligence. Enhancing
-                efficiency and innovation, our technology adapts to diverse
-                industry needs for a smarter future.
-              </MotionText>
+                <path
+                  d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
+                  fill="#3F77A5"
+                />
+              </svg>
             </MotionBox>
-          </GridItem>
-          {/* ----------------------------------------------------------------------- */}
-          {grid.slice(1).flatMap((row, rowIndex) =>
-            row.slice(1).map((industry, colIndex) => {
-              if (!industry) return null;
-              const delay = (rowIndex + colIndex) * 0.5;
 
-              return (
-                <GridItem
-                  key={`${rowIndex}-${colIndex}`}
-                  colSpan={{
-                    base: 1,
-                    md: industry.isWide ? 2 : 1,
-                  }}
-                  rowSpan={1}
+            {/* Animated Text */}
+            <MotionText
+              color="black"
+              fontWeight="500"
+              textAlign="left"
+              fontSize={{ base: "14px", md: "16px" }}
+              maxW="100%"
+              width="100%"
+            >
+              We provide AI-driven solutions that revolutionize industries with
+              advanced security, automation, and intelligence. Enhancing
+              efficiency and innovation, our technology adapts to diverse
+              industry needs for a smarter future.
+            </MotionText>
+          </MotionBox>
+        </GridItem>
+        {/* ----------------------------------------------------------------------- */}
+        {grid.slice(1).flatMap((row, rowIndex) =>
+          row.slice(1).map((industry, colIndex) => {
+            if (!industry) return null;
+            const delay = (rowIndex + colIndex) * 0.5;
+
+            return (
+              <GridItem
+                key={`${rowIndex}-${colIndex}`}
+                colSpan={{
+                  base: 1,
+                  md: industry.isWide ? 2 : 1,
+                }}
+                rowSpan={1}
                 // ml="2%"---------------------
+              >
+                <Box
+                  width={{
+                    base: "100%", // Full width on small screens
+                    md: "240px", // Fixed width on medium screens
+                    lg: industry.isWide ? "655px" : "100%", // Fixed width for isWide cards on large screens
+                  }}
+                  height={{ base: "200px", md: "320px" }}
+                  borderRadius="24px"
+                  display="flex"
+                  flexDirection="column"
+                  justifyContent="space-between"
+                  padding={{ base: "10px", md: "20px" }}
+                  position="relative"
+                  backgroundColor={industry.bgColor}
+                  color={industry.textColor}
+                  zIndex={2}
+                  overflow="hidden"
+                  // Apply the keyframe animation with a 6s duration, easeInOut easing and infinite repetition
+                  animation={
+                    inView
+                      ? `${floatAnimation} 2s ease-in-out ${delay}s 1`
+                      : "none"
+                  }
                 >
-                  <Box
-                    width={{
-                      base: "100%", // Full width on small screens
-                      md: "240px", // Fixed width on medium screens
-                      lg: industry.isWide ? "655px" : "100%", // Fixed width for isWide cards on large screens
-                    }}
-                    height={{ base: "200px", md: "320px" }}
-                    borderRadius="24px"
-                    display="flex"
-                    flexDirection="column"
-                    justifyContent="space-between"
-                    padding={{ base: "10px", md: "20px" }}
-                    position="relative"
-                    backgroundColor={industry.bgColor}
-                    color={industry.textColor}
-                    zIndex={2}
-                    overflow="hidden"
-                    // Apply the keyframe animation with a 6s duration, easeInOut easing and infinite repetition
-                    animation={
-                      inView
-                        ? `${floatAnimation} 2s ease-in-out ${delay}s 1`
-                        : "none"
-                    }
-                  >
-                    {/* Industry Icon */}
-                    {industry.img && (
-                      <Box
-                        dangerouslySetInnerHTML={{
-                          __html: decodeURIComponent(
-                            industry.img.split(
-                              "data:image/svg+xml;charset=utf-8,"
-                            )[1]
-                          ),
-                        }}
-                        position="absolute"
-                        top="20px"
-                        left="20px"
-                        width="33px"
-                        height="33px"
-                      />
-                    )}
+                  {/* Industry Icon */}
+                  {industry.img && (
+                    <Box
+                      dangerouslySetInnerHTML={{
+                        __html: decodeURIComponent(
+                          industry.img.split(
+                            "data:image/svg+xml;charset=utf-8,"
+                          )[1]
+                        ),
+                      }}
+                      position="absolute"
+                      top="20px"
+                      left="20px"
+                      width="33px"
+                      height="33px"
+                    />
+                  )}
 
-                    {/* Industry Name & Description */}
-                    <Box position="absolute" top="70px" left="20px" right="20px">
+                  {/* Industry Name & Description */}
+                  <Box position="absolute" top="70px" left="20px" right="20px">
+                    <Text
+                      fontSize="16px"
+                      fontWeight="700"
+                      wordBreak="break-word"
+                      textAlign="left"
+                      width="100%"
+                      mt="-2%"
+                      noOfLines={{ base: 2 }}
+                    >
+                      {industry.name}
+                      <Box
+                        width="18px"
+                        height="3px"
+                        borderRadius="2px"
+                        marginTop="5px"
+                        backgroundColor={industry.dashColor}
+                      />
+                    </Text>
+                    {industry.description && (
                       <Text
                         fontSize="16px"
-                        fontWeight="700"
+                        fontWeight="500"
                         wordBreak="break-word"
                         textAlign="left"
                         width="100%"
-                        mt="-2%"
-                        noOfLines={{ base: 2 }}
+                        mt="10px"
+                        color={
+                          industry.bgColor === "white"
+                            ? "#696969"
+                            : industry.textColor
+                        }
+                        noOfLines={{ base: 1, md: 5, lg: 10 }}
                       >
-                        {industry.name}
-                        <Box
-                          width="18px"
-                          height="3px"
-                          borderRadius="2px"
-                          marginTop="5px"
-                          backgroundColor={industry.dashColor}
-                        />
+                        {industry.description}
                       </Text>
-                      {industry.description && (
-                        <Text
-                          fontSize="16px"
-                          fontWeight="500"
-                          wordBreak="break-word"
-                          textAlign="left"
-                          width="100%"
-                          mt="10px"
-                          color={
-                            industry.bgColor === "white"
-                              ? "#696969"
-                              : industry.textColor
-                          }
-                          noOfLines={{ base: 1, md: 5, lg: 10 }}
-                        >
-                          {industry.description}
-                        </Text>
-                      )}
-                    </Box>
-
-                    {/* "Know More" Link with SVG Arrow */}
-                    {industry.name && (
-                      <Link to={`/industries/${industry.link}`}>
-                        <Flex
-                          alignItems="center"
-                          position="absolute"
-                          bottom="20px"
-                          right="20px"
-                          color={industry.textColor}
-                        >
-                          <Text
-                            fontSize="14px"
-                            fontWeight="600"
-                            marginRight="8px"
-                          >
-                            Know More
-                          </Text>
-                          <Box
-                            as="svg"
-                            width="22px"
-                            height="24px"
-                            viewBox="0 0 22 24"
-                            fill="currentColor"
-                          >
-                            <path d="M20.9602 13.0607C21.546 12.4749 21.546 11.5251 20.9602 10.9393L11.4143 1.3934C10.8285 0.807612 9.87876 0.807612 9.29297 1.3934C8.70719 1.97919 8.70719 2.92893 9.29297 3.51472L17.7783 12L9.29297 20.4853C8.70719 21.0711 8.70719 22.0208 9.29297 22.6066C9.87876 23.1924 10.8285 23.1924 11.4143 22.6066L20.9602 13.0607ZM0.100586 13.5L19.8996 13.5V10.5L0.100586 10.5V13.5Z" />
-                          </Box>
-                        </Flex>
-                      </Link>
                     )}
                   </Box>
-                </GridItem>
-              );
-            })
-          )}
-          {/* ----------------------------------------------------------------------- */}
-        </Grid>
-    );
 
+                  {/* "Know More" Link with SVG Arrow */}
+                  {industry.name && (
+                    <Link to={`/industries/${industry.link}`}>
+                      <Flex
+                        alignItems="center"
+                        position="absolute"
+                        bottom="20px"
+                        right="20px"
+                        color={industry.textColor}
+                      >
+                        <Text
+                          fontSize="14px"
+                          fontWeight="600"
+                          marginRight="8px"
+                        >
+                          Know More
+                        </Text>
+                        <Box
+                          as="svg"
+                          width="22px"
+                          height="24px"
+                          viewBox="0 0 22 24"
+                          fill="currentColor"
+                        >
+                          <path d="M20.9602 13.0607C21.546 12.4749 21.546 11.5251 20.9602 10.9393L11.4143 1.3934C10.8285 0.807612 9.87876 0.807612 9.29297 1.3934C8.70719 1.97919 8.70719 2.92893 9.29297 3.51472L17.7783 12L9.29297 20.4853C8.70719 21.0711 8.70719 22.0208 9.29297 22.6066C9.87876 23.1924 10.8285 23.1924 11.4143 22.6066L20.9602 13.0607ZM0.100586 13.5L19.8996 13.5V10.5L0.100586 10.5V13.5Z" />
+                        </Box>
+                      </Flex>
+                    </Link>
+                  )}
+                </Box>
+              </GridItem>
+            );
+          })
+        )}
+        {/* ----------------------------------------------------------------------- */}
+      </Grid>
+    );
   };
 
   return (

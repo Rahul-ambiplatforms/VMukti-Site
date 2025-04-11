@@ -83,10 +83,11 @@ const TripleImageSection = ({
             />
           </svg>
           <MotionText
-            color="#000"
+            color="#000000"
             fontSize={{ base: "14px", md: "16px", lg: "18px" }}
             fontWeight="500"
-            lineHeight="normal"
+            // lineHeight="normal"
+            lineHeight="1"
           >
             {description}
           </MotionText>

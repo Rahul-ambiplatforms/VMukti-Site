@@ -4,6 +4,7 @@ export const customData = {
         { text: "Networks ", color: "#3F77A5" },
         { text: " & Predictive", color: "black" },
         { text: "Intelligence", color: "#DB7B3A" },
+        { text: ".", color: "#3F77A5" }, //I added this
     ],
     cards: [
         {
@@ -35,7 +36,7 @@ export const customData = {
 };
 
 export const customData1 = {
-    title: [{ text: "How We Make\n", color: "black" }, { text: "It Work", color: "#3F77A5" }],
+    title: [{ text: "How We Make", color: "black" },{ text: "It Work", color: "#3F77A5" }],
     subtitle: "Real-Time Monitoring",
     cards: [
         {

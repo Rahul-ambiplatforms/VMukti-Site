@@ -143,7 +143,20 @@ const HeadingSection = ({ refProp, display, isAnimationTriggered }) => (
     >
       Smarter World
     </Text>
-    .
+    {/* I added this */}
+    <Text
+      as="span"
+      color="#3F77A5"
+      fontWeight="600"
+      fontSize={{
+        base: "20px",
+        sm: "30px",
+        md: "40px",
+        lg: "48px",
+      }}
+    >
+      .
+    </Text>
   </MotionHeading>
 );
 

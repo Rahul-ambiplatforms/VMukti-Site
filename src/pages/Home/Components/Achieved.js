@@ -194,7 +194,7 @@ const Achieved = () => {
           opacity="0.12"
           background="#3F77A5"
           filter="blur(56.6px)"
-          zIndex={3} // Behind content but above the Image
+          zIndex={0} // Behind content but above the Image
         />
 
         {/* //background use properties: width: 255px;height: 255px;flex-shrink: 0; fill: #3F77A5;opacity: 0.12;filter: blur(56.599998474121094px); */}
@@ -211,29 +211,13 @@ const Achieved = () => {
           height={ellipseSize}
           flexShrink={0}
           bg="#3F77A5"
-
+          // bg="red"
           opacity="0.12"
           filter="blur(56.6px)"
           pointerEvents="none"
           zIndex="0"
         />
-        {/* <Image
-          src={'/assets/Ellipse39.png' || '/placeholder.svg'}
-          alt="ellipse39"
-          position="absolute"
-          left={{ base: '50%', md: '30%', lg: '45px' }}
-          top={{ base: '0', md: '0', lg: '48px' }}
-          transform={{
-            base: 'translateX(-50%)',
-            md: 'translateX(-50%)',
-            lg: 'none',
-          }}
-          width={ellipseSize}
-          opacity="1"
-          pointerEvents="none"
-          zIndex="0"
-        // bg="red"
-        /> */}
+        
         <Grid
           templateColumns={gridColumns}
           templateRows={{
