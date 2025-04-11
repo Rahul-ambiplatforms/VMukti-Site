@@ -106,22 +106,26 @@ const dashboardItems = [
   {
     image: "./assets/EventSpot.png",
     title: "AI Surveillance",
-    description: "Advanced monitoring solutions",
+    description: "Convergence 2025",
   },
   {
     image: "./assets/EventSpot.png",
     title: "Smart Automation",
-    description: "Efficiency-driven systems",
+    description: "Convergence 2025",
   },
   {
     image: "./assets/EventSpot.png",
     title: "Security Systems",
-    description: "Next-gen protection",
+    // description: "Next-gen protection",
+    description: "Convergence 2025",
+
   },
   {
     image: "./assets/EventSpot.png",
     title: "Connected World",
-    description: "Seamless integration",
+    // description: "Seamless integration",
+    description: "Convergence 2025",
+
   },
 ];
 
