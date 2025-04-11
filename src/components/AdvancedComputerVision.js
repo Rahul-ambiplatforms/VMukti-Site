@@ -212,7 +212,7 @@ const AdvancedComputerVision = ({
         <Flex
           justifyContent="space-between"
           direction={{ base: "column", md: "row", lg: "row" }}
-          gap={{ base: 4, lg: 0 }}
+          gap={{ base: 4, lg: 2 }}
           width="100%"
         >
           {/* Cards Section */}
