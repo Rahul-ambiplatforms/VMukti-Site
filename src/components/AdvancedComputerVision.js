@@ -17,7 +17,7 @@ const AdvancedComputerVision = ({
   //   }
   // ],
   title = [
-    { text: "IoT & Secure Connectivity for", color: "black" },
+    { text: "IoT Integration & Secure Connectivity for", color: "black" },
     { text: "Smart Surveillance.", color: "#3F77A5" },
   ],
   subtitle = "AI-Powered Visual Processing",

@@ -15,7 +15,7 @@ const TripleImageSection = ({
     { text: "Surveillance", color: "#3F77A5" },
     { text: "\nSolutions", color: "#DB7B3A" },
   ],
-  description = "Unlock smarter security with AI-driven surveillance solutions for real-time monitoring, proactive threat detection, and seamless video management.",
+  description = "Unlock smarter security with AI-driven surveillance solutions for real-time monitoring, proactive threat detection, and seamless video management. Enhance safety and efficiency with scalable, future-ready technology.",
   images = [
     "./assets/speech_image.png",
     "./assets/soldier_image.png",

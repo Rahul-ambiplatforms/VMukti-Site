@@ -55,7 +55,7 @@ const AITechnologies = () => {
     {
       title: "GPT in Video Surveillance",
       description: [
-        "AI-driven automation streamlines processes, reduces human intervention, and improves efficiency. Machine learning algorithms detect patterns, make intelligent decisions, and automate workflows.\n\nIn surveillance, AI minimizes false alarms and optimizes resource allocation. Automated monitoring of live feeds and video analysis ensures faster decision-making and cost savings.",
+        "GPT-powered surveillance enhances security by analyzing footage, identifying patterns, and generating real-time alerts. Unlike rule-based systems, it adapts to new threats and improves response times.\n\nBy automating report generation and anomaly detection, GPT reduces human workload. It provides precise monitoring, summarizes long video recordings, and enhances security accuracy.",
         // "In surveillance, AI minimizes false alarms and optimizes resource allocation. Automated monitoring of live feeds and video analysis ensures faster decision-making and cost savings.",
       ],
       image: "./assets/gptr.png",

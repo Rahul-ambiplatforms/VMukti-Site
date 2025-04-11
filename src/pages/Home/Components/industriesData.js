@@ -100,7 +100,7 @@ const industriesData = [
     dashColor: '',
   },
   {
-    name: 'New Industry',
+    name: 'Banking Industry',
     img: '',
     className: 'white',
     position: [2, 4],
