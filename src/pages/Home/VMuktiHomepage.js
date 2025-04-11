@@ -8,7 +8,7 @@ import Achieved from "./Components/Achieved";
 import Diagram from "./Components/Diagram";
 import Industries from "./Components/industriesData";
 import AdvancedSurveillance from "../../components/AdvancedSurveillance";
-import SurveillanceSoftware from "../../components/SurveillanceSoftware";
+import SurveillanceSoftware from "./Components/SurveillanceSoftware";
 import ObjectDescription from "../../components/ObjectDescription";
 import StickySection from "./Data/StickySection";
 import HeroSection from "./Components/HeroSection";

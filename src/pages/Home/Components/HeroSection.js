@@ -126,11 +126,9 @@ const HeroSection = () => {
                         />
                         <Flex direction="column" alignContent="flex-end" justifyContent="flex-end" ml="18%" mt="-15%">
                             <Box
-                                width="13px"
-                                height="13px"
+                                width="25px"
+                                height="25px"
                                 alignSelf="flex-start"
-
-
                             >
                                 <svg
                                     viewBox="0 0 33 33"

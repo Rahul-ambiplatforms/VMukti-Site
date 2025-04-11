@@ -1,7 +1,7 @@
 import { Box, Flex, Image, List, ListItem, Text } from "@chakra-ui/react";
 import { useState } from "react";
-import HeadingAnimation from "./Animation/Text/HeadingAnimation";
-import ImagePop from "./Animation/Image/ImagePop";
+import HeadingAnimation from "../../../components/Animation/Text/HeadingAnimation";
+import ImagePop from "../../../components/Animation/Image/ImagePop";
 
 const SurveillanceSoftware = () => {
   const [imageHeight, setImageHeight] = useState("100dvh");
