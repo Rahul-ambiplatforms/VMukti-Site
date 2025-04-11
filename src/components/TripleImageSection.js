@@ -40,7 +40,7 @@ const TripleImageSection = ({
             key={index}
             as="span"
             color={item.color}
-            fontSize={{ base: "24px", md: "36px", lg: "48px" }}
+            fontSize={{ base: "32px", md: "32px", lg: "48px" }}
             fontWeight="600"
             lineHeight="normal"
             whiteSpace="pre-wrap"
@@ -57,7 +57,7 @@ const TripleImageSection = ({
         position="relative"
         flexDirection={{ base: "column", md: "row" }}
         gap={{ base: 6, md: 8 }}
-        // bg="red"
+      // bg="red"
       >
         {/* Left Column (Animated Text & Icon) */}
         <MotionTextContainer
@@ -83,10 +83,11 @@ const TripleImageSection = ({
             />
           </svg>
           <MotionText
-            color="#000"
+            color="#000000"
             fontSize={{ base: "14px", md: "16px", lg: "18px" }}
             fontWeight="500"
-            lineHeight="normal"
+            // lineHeight="normal"
+            lineHeight="1"
           >
             {description}
           </MotionText>
@@ -119,7 +120,7 @@ const TripleImageSection = ({
                 h="100%"
                 objectFit="cover"
                 initial={{ scale: 0.8, opacity: 0 }} // Initial state for animation
-                animate={inView? { scale: 1, opacity: 1 }:{ scale: 0.8, opacity: 0.9 }} // Trigger animation immediately
+                animate={inView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0.9 }} // Trigger animation immediately
                 transition={{
                   duration: 0.7,
                   ease: "easeInOut",
@@ -155,7 +156,7 @@ const TripleImageSection = ({
                     objectFit="cover"
                   />
 
-              </Box>
+                </Box>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -193,18 +194,18 @@ const TripleImageSection = ({
           <Box
             w={{ base: "80px", sm: "100px", md: "150px", lg: "204px" }}
             h={{ base: "80px", sm: "100px", md: "150px", lg: "204px" }}
-            display={{base: "none", md: "block"}}
+            display={{ base: "none", md: "block" }}
             borderRadius="24px"
             bg="#BECEDC"
           ></Box>
           <Box
-            w={{ base: "100%", md: "80%", lg: "1244px" }}
+            w={{ base: "100%", md: "80%" }}
             h={{ base: "150px", sm: "120px", md: "180px", lg: "239px" }}
             flexShrink={0}
-            borderRadius={{base:"20px 0 0 20px",md:"24px"}}
+            borderRadius={{ base: "20px 0 0 20px", md: "24px" }}
             bg="#FFF"
             zIndex={0}
-            // bg="red"
+          // bg="red"
           ></Box>
         </Flex>
       </Flex>
