@@ -26,7 +26,7 @@ import {
 } from '@chakra-ui/react'
 
 import { useNavigate, useLocation } from 'react-router-dom'
-
+import PageContentWrapper from './PageContentWrapper'
 const dropdownItems = {
     organization: [
         { label: "Solution", path: "/organization/solution" },
@@ -167,210 +167,226 @@ const Navbar = () => {
     ];
 
     return (
-        <Flex
-            gap={4}
+        <Box
             position="fixed"
-            top={isNavbarVisible ? "3%" : "-100px"}
-            right={{ base: "4.7%", md: "2%" }}
-            left={{ base: "4%", md: "2%" }}
+            top={isNavbarVisible ? "0" : "-100px"}
+            left="0"
+            right="0"
             zIndex={1000}
-            align="center"
             transition="top 0.3s ease-in-out"
+            width="100%"
         >
-            <Flex
-                width="100%"
-                bg="white"
-                borderRadius="20px"
-                height="50px"
-                align="center"
-                px={4}
-                justifyContent="space-between"
-            >
-                <Box flex="0 0 auto">
-                    <div style={{ cursor: "pointer" }} onClick={() => navigateTo("/", "Home")}>
-                        <svg height={logoHeight} viewBox="0 0 98 26" fill="none">
-                            <path
-                                d="M2.06965 3.91725L12.479 21.9466L14.5487 25.7302L24.3879 8.68842L22.7459 5.64474L21.7486 3.91725L19.6789 0.332451H15.5395L17.6093 3.91725L20.2486 8.48946L14.5487 18.3617L6.20904 3.91725H9.75994L16.3242 15.2864L18.3938 11.7021L13.8996 3.91725L11.8297 0.332451H7.69029H4.13939H0L2.06965 3.91725Z"
-                                fill="#3F77A5"
-                            />
-                            <path
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                                d="M24.8675 0.332451H22.8937L23.8807 2.04206L25.1225 4.19297L26.1095 5.90284L27.0966 4.19297L29.3255 0.332451H24.8675Z"
-                                fill="#DB7B3A"
-                            />
-                            <path
-                                d="M42.9423 7.88308L39.3612 16.1725L35.83 7.88308H32.9287L37.9355 19.4882H40.5881L45.6115 7.88308H42.9423ZM59.6509 19.4882L59.6177 7.88308H57.41L53.1354 15.0949L48.7946 7.88308H46.573V19.4882H49.093V12.6743L52.4889 18.2614H53.6992L57.1116 12.5252L57.1282 19.4882H59.6509ZM68.6228 10.5689V14.9788C68.6228 16.6201 67.7607 17.3827 66.567 17.3827C65.4231 17.3827 64.7599 16.7196 64.7599 15.2275V10.5689H62.1737V15.6088C62.1737 18.3609 63.7486 19.6209 65.9867 19.6209C67.081 19.6209 68.0757 19.2064 68.7555 18.4273V19.4882H71.2091V10.5689H68.6228ZM80.2611 19.4882H83.3945L79.3493 14.3488L83.063 10.5689H79.9793L76.1993 14.1499V7.18682H73.6131V19.4882H76.1993V17.217L77.4427 15.9901L80.2611 19.4882ZM89.6115 17.2335C89.3297 17.4491 88.9484 17.5651 88.5671 17.5651C87.8708 17.5651 87.4563 17.1506 87.4563 16.388V12.7573H89.6779V10.7678H87.4563V8.59597H84.87V10.7678H83.494V12.7573H84.87V16.4212C84.87 18.5433 86.0969 19.6209 88.2024 19.6209C88.9981 19.6209 89.7774 19.4385 90.3079 19.0572L89.6115 17.2335ZM93.06 9.32545C94.0215 9.32545 94.6681 8.69545 94.6681 7.83335C94.6681 7.03761 94.0215 6.44073 93.06 6.44073C92.0984 6.44073 91.4518 7.07073 91.4518 7.88308C91.4518 8.69544 92.0984 9.32545 93.06 9.32545ZM91.7668 19.4882H94.353V10.5689H91.7668V19.4882Z"
-                                fill="#3F77A5"
-                            />
-                            <path
-                                d="M95.3696 6.87052H95.7073V5.68652H96.1742V5.41127H94.9027V5.68652H95.3696V6.87052ZM98 6.87052L97.9958 5.41127H97.7182L97.1808 6.31814L96.635 5.41127H96.3557V6.87052H96.6725V6.01379L97.0994 6.71629H97.2517L97.6807 5.99496L97.6828 6.87052H98Z"
-                                fill="black"
-                            />
-                        </svg>
-                    </div>
-                </Box>
-
-                <Show above="lg">
-                    <HStack
-                        justify="center"
-                        align="center"
-                        fontSize={fontSize}
-                        fontWeight="400"
-                    >
-                        {navigationItems.map((item, index) => (
-                            <React.Fragment key={item.name}>
-                                <Flex align="center">
-                                    {item.hasDropdown ? (
-                                        <Menu isOpen={menuOpenStates[item.name]}>
-                                            <>
-                                                <div
-                                                    style={{
-                                                        display: "flex",
-                                                        alignItems: "center",
-                                                        gap: "4px",
-                                                        padding: "8px 12px",
-                                                        fontWeight: isPathActive(item.path) ? "700" : "400",
-                                                        textDecoration: "none",
-                                                        color: isPathActive(item.path) ? "#3F77A5" : "black",
-                                                        position: "relative",
-                                                        whiteSpace: "nowrap",
-                                                        cursor: "pointer"
-                                                    }}
-                                                    onMouseEnter={() => handleMouseEnter(item.name)}
-                                                    onMouseLeave={() => handleMouseLeave(item.name)}
-                                                    onClick={() => navigateTo(item.path, item.name)}
-                                                >
-                                                    {item.name}
-                                                    {isPathActive(item.path) && (
-                                                        <Box
-                                                            position="absolute"
-                                                            bottom="8px"
-                                                            width="20px"
-                                                            height="2px"
-                                                            bg="#3F77A5"
-                                                        />
-                                                    )}
-                                                </div>
-                                                <MenuButton>
-                                                    <svg
-                                                        width="12"
-                                                        height="6"
-                                                        viewBox="0 0 12 6"
-                                                        fill="none"
-                                                        style={{
-                                                            transform: menuOpenStates[item.name] ? "rotate(180deg)" : "rotate(0deg)",
-                                                            transition: "transform 0.2s ease",
-                                                        }}
-                                                    >
-                                                        <path d="M6 6L12 0L0 0L6 6Z" fill="#3F77A5" />
-                                                    </svg>
-                                                </MenuButton>
-                                                <MenuList
-                                                    onMouseEnter={() => handleMouseEnter(item.name)}
-                                                    onMouseLeave={() => handleMouseLeave(item.name)}
-                                                    py="0"
-                                                    style={{
-                                                        marginTop: "20px",
-                                                    }}
-                                                >
-                                                    {item.items.map((dropdownItem, idx) => (
-                                                        <>
-                                                            <MenuItem
-                                                                key={idx}
-                                                                fontWeight="400"
-                                                                onClick={() => navigateTo(
-                                                                    `${dropdownItem.path}${dropdownItem.sliderId ? `?slider=${dropdownItem.sliderId}` : ''}`,
-                                                                    item.name,
-                                                                    dropdownItem.sliderId
-                                                                )}
-                                                                width="100%"
-                                                                direction="column"
-                                                                display="flex"
-                                                            >
-                                                                <Flex direction="column" width="100%">
-                                                                    <Text>{dropdownItem.label}</Text>
-                                                                </Flex>
-                                                            </MenuItem>
-                                                            <Box width="100%" height="2px" bg="#BECEDC" />
-                                                        </>
-                                                    ))}
-                                                </MenuList>
-                                            </>
-                                        </Menu>
-                                    ) : (
-                                        <Box px="8px">
-                                            <div
-                                                style={{
-                                                    color: isPathActive(item.path) ? "#3F77A5" : "black",
-                                                    fontWeight: isPathActive(item.path) ? "700" : "400",
-                                                    textDecoration: "none",
-                                                    position: "relative",
-                                                    cursor: "pointer"
-                                                }}
-                                                onClick={() => navigateTo(item.path, item.name)}
-                                            >
-                                                {item.name}
-                                                {isPathActive(item.path) && (
-                                                    <Box
-                                                        position="absolute"
-                                                        bottom="-4px"
-                                                        width="20px"
-                                                        height="2px"
-                                                        bg="#3F77A5"
-                                                    />
-                                                )}
-                                            </div>
-                                        </Box>
-                                    )}
-                                </Flex>
-                                {index < navigationItems.length - 1 && (
-                                    <Text mx={2}>|</Text>
-                                )}
-                            </React.Fragment>
-                        ))}
-                    </HStack>
-                </Show>
-
-                <Hide above="lg">
-                    <IconButton
-                        onClick={onOpen}
-                        icon={<svg
-                            width="22"
-                            height="18"
-                            viewBox="0 0 22 18"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path d="M15.9248 6.63574H0.776812C0.347614 6.63574 0 6.98336 0 7.41255V10.5198C0 10.949 0.347614 11.2966 0.776812 11.2966H15.9248C16.354 11.2966 16.7016 10.949 16.7016 10.5198V7.41255C16.7016 6.98336 16.354 6.63574 15.9248 6.63574Z" fill="#3F77A5" />
-                            <path d="M20.9742 0H0.777056C0.347858 0 0.000244141 0.347614 0.000244141 0.776812V3.88406C0.000244141 4.31326 0.347858 4.66087 0.777056 4.66087H20.9742C21.4034 4.66087 21.751 4.31326 21.751 3.88406V0.776812C21.751 0.347614 21.4034 0 20.9742 0Z" fill="#3F77A5" />
-                            <path d="M10.8756 13.2717H0.777056C0.347858 13.2717 0.000244141 13.6193 0.000244141 14.0485V17.1558C0.000244141 17.585 0.347858 17.9326 0.777056 17.9326H10.8756C11.3048 17.9326 11.6524 17.585 11.6524 17.1558V14.0485C11.6524 13.6203 11.3048 13.2717 10.8756 13.2717Z" fill="#3F77A5" />
-                        </svg>}
-                        variant="ghost"
-                        aria-label="Open menu"
-                    />
-                </Hide>
-            </Flex>
-
-            <Show above="md">
-                <Button
-                    width={contactBtnSize}
-                    height={contactBtnHeight}
-                    background="#3F77A5"
-                    color="#FFFFFF"
-                    fontSize={fontSize}
-                    fontWeight="600"
-                    borderRadius="20px"
-                    flexShrink={0}
-                    onClick={() => navigateTo("/contactus", "Contact Us")}
-                    _hover={{
-                        background: "#1E4A6A",
-                        color: "#FFFFFF",
-                    }}
+            <PageContentWrapper>
+                <Flex
+                    gap={4}
+                    align="center"
+                    mt="2%"
                 >
-                    Contact Us
-                </Button>
-            </Show>
+                    <Flex
+                        width="100%"
+                        bg="white"
+                        borderRadius="20px"
+                        height="50px"
+                        align="center"
+                        px={4}
+                        justifyContent="space-between"
+                    >
+                        <Box flex="0 0 auto">
+                            <div style={{ cursor: "pointer" }} onClick={() => navigateTo("/", "Home")}>
+                                <svg height={logoHeight} viewBox="0 0 98 26" fill="none">
+                                    <path
+                                        d="M2.06965 3.91725L12.479 21.9466L14.5487 25.7302L24.3879 8.68842L22.7459 5.64474L21.7486 3.91725L19.6789 0.332451H15.5395L17.6093 3.91725L20.2486 8.48946L14.5487 18.3617L6.20904 3.91725H9.75994L16.3242 15.2864L18.3938 11.7021L13.8996 3.91725L11.8297 0.332451H7.69029H4.13939H0L2.06965 3.91725Z"
+                                        fill="#3F77A5"
+                                    />
+                                    <path
+                                        fillRule="evenodd"
+                                        clipRule="evenodd"
+                                        d="M24.8675 0.332451H22.8937L23.8807 2.04206L25.1225 4.19297L26.1095 5.90284L27.0966 4.19297L29.3255 0.332451H24.8675Z"
+                                        fill="#DB7B3A"
+                                    />
+                                    <path
+                                        d="M42.9423 7.88308L39.3612 16.1725L35.83 7.88308H32.9287L37.9355 19.4882H40.5881L45.6115 7.88308H42.9423ZM59.6509 19.4882L59.6177 7.88308H57.41L53.1354 15.0949L48.7946 7.88308H46.573V19.4882H49.093V12.6743L52.4889 18.2614H53.6992L57.1116 12.5252L57.1282 19.4882H59.6509ZM68.6228 10.5689V14.9788C68.6228 16.6201 67.7607 17.3827 66.567 17.3827C65.4231 17.3827 64.7599 16.7196 64.7599 15.2275V10.5689H62.1737V15.6088C62.1737 18.3609 63.7486 19.6209 65.9867 19.6209C67.081 19.6209 68.0757 19.2064 68.7555 18.4273V19.4882H71.2091V10.5689H68.6228ZM80.2611 19.4882H83.3945L79.3493 14.3488L83.063 10.5689H79.9793L76.1993 14.1499V7.18682H73.6131V19.4882H76.1993V17.217L77.4427 15.9901L80.2611 19.4882ZM89.6115 17.2335C89.3297 17.4491 88.9484 17.5651 88.5671 17.5651C87.8708 17.5651 87.4563 17.1506 87.4563 16.388V12.7573H89.6779V10.7678H87.4563V8.59597H84.87V10.7678H83.494V12.7573H84.87V16.4212C84.87 18.5433 86.0969 19.6209 88.2024 19.6209C88.9981 19.6209 89.7774 19.4385 90.3079 19.0572L89.6115 17.2335ZM93.06 9.32545C94.0215 9.32545 94.6681 8.69545 94.6681 7.83335C94.6681 7.03761 94.0215 6.44073 93.06 6.44073C92.0984 6.44073 91.4518 7.07073 91.4518 7.88308C91.4518 8.69544 92.0984 9.32545 93.06 9.32545ZM91.7668 19.4882H94.353V10.5689H91.7668V19.4882Z"
+                                        fill="#3F77A5"
+                                    />
+                                    <path
+                                        d="M95.3696 6.87052H95.7073V5.68652H96.1742V5.41127H94.9027V5.68652H95.3696V6.87052ZM98 6.87052L97.9958 5.41127H97.7182L97.1808 6.31814L96.635 5.41127H96.3557V6.87052H96.6725V6.01379L97.0994 6.71629H97.2517L97.6807 5.99496L97.6828 6.87052H98Z"
+                                        fill="black"
+                                    />
+                                </svg>
+                            </div>
+                        </Box>
+
+                        <Show above="lg">
+                            <HStack
+                                justify="center"
+                                align="center"
+                                fontSize={fontSize}
+                                fontWeight="400"
+                            >
+                                {navigationItems.map((item, index) => (
+                                    <React.Fragment key={item.name}>
+                                        <Flex align="center">
+                                            {item.hasDropdown ? (
+                                                <Menu isOpen={menuOpenStates[item.name]}>
+                                                    <>
+                                                        <div
+                                                            style={{
+                                                                display: "flex",
+                                                                alignItems: "center",
+                                                                gap: "4px",
+                                                                padding: "8px 12px",
+                                                                fontWeight: isPathActive(item.path) ? "700" : "400",
+                                                                textDecoration: "none",
+                                                                color: isPathActive(item.path) ? "#3F77A5" : "black",
+                                                                position: "relative",
+                                                                whiteSpace: "nowrap",
+                                                                cursor: "pointer"
+                                                            }}
+                                                            onClick={() => navigateTo(item.path, item.name)}
+                                                        >
+                                                            {item.name}
+                                                            {isPathActive(item.path) && (
+                                                                <Box
+                                                                    position="absolute"
+                                                                    bottom="8px"
+                                                                    width="20px"
+                                                                    height="2px"
+                                                                    bg="#3F77A5"
+                                                                />
+                                                            )}
+                                                        </div>
+                                                        <Box
+                                                            as="button"
+                                                            onMouseEnter={() => handleMouseEnter(item.name)}
+                                                            onMouseLeave={() => handleMouseLeave(item.name)}
+                                                            padding="5px"
+                                                            display="flex"
+                                                            alignItems="center"
+                                                            justifyContent="center"
+                                                            background="transparent"
+                                                            border="none"
+                                                            cursor="pointer"
+                                                        >
+                                                            <svg
+                                                                width="12"
+                                                                height="6"
+                                                                viewBox="0 0 12 6"
+                                                                fill="none"
+                                                                style={{
+                                                                    transform: menuOpenStates[item.name] ? "rotate(180deg)" : "rotate(0deg)",
+                                                                    transition: "transform 0.2s ease",
+                                                                }}
+                                                            >
+                                                                <path d="M6 6L12 0L0 0L6 6Z" fill="#3F77A5" />
+                                                            </svg>
+                                                        </Box>
+                                                        <MenuList
+                                                            onMouseEnter={() => handleMouseEnter(item.name)}
+                                                            onMouseLeave={() => handleMouseLeave(item.name)}
+                                                            py="0"
+                                                            style={{
+                                                                marginTop: "20px",
+                                                            }}
+                                                        >
+                                                            {item.items.map((dropdownItem, idx) => (
+                                                                <>
+                                                                    <MenuItem
+                                                                        key={idx}
+                                                                        fontWeight="400"
+                                                                        onClick={() => navigateTo(
+                                                                            `${dropdownItem.path}${dropdownItem.sliderId ? `?slider=${dropdownItem.sliderId}` : ''}`,
+                                                                            item.name,
+                                                                            dropdownItem.sliderId
+                                                                        )}
+                                                                        width="100%"
+                                                                        direction="column"
+                                                                        display="flex"
+                                                                    >
+                                                                        <Flex direction="column" width="100%">
+                                                                            <Text>{dropdownItem.label}</Text>
+                                                                        </Flex>
+                                                                    </MenuItem>
+                                                                    <Box width="100%" height="2px" bg="#BECEDC" />
+                                                                </>
+                                                            ))}
+                                                        </MenuList>
+                                                    </>
+                                                </Menu>
+                                            ) : (
+                                                <Box px="8px">
+                                                    <div
+                                                        style={{
+                                                            color: isPathActive(item.path) ? "#3F77A5" : "black",
+                                                            fontWeight: isPathActive(item.path) ? "700" : "400",
+                                                            textDecoration: "none",
+                                                            position: "relative",
+                                                            cursor: "pointer"
+                                                        }}
+                                                        onClick={() => navigateTo(item.path, item.name)}
+                                                    >
+                                                        {item.name}
+                                                        {isPathActive(item.path) && (
+                                                            <Box
+                                                                position="absolute"
+                                                                bottom="-4px"
+                                                                width="20px"
+                                                                height="2px"
+                                                                bg="#3F77A5"
+                                                            />
+                                                        )}
+                                                    </div>
+                                                </Box>
+                                            )}
+                                        </Flex>
+                                        {index < navigationItems.length - 1 && (
+                                            <Text mx={2}>|</Text>
+                                        )}
+                                    </React.Fragment>
+                                ))}
+                            </HStack>
+                        </Show>
+
+                        <Hide above="lg">
+                            <IconButton
+                                onClick={onOpen}
+                                icon={<svg
+                                    width="22"
+                                    height="18"
+                                    viewBox="0 0 22 18"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path d="M15.9248 6.63574H0.776812C0.347614 6.63574 0 6.98336 0 7.41255V10.5198C0 10.949 0.347614 11.2966 0.776812 11.2966H15.9248C16.354 11.2966 16.7016 10.949 16.7016 10.5198V7.41255C16.7016 6.98336 16.354 6.63574 15.9248 6.63574Z" fill="#3F77A5" />
+                                    <path d="M20.9742 0H0.777056C0.347858 0 0.000244141 0.347614 0.000244141 0.776812V3.88406C0.000244141 4.31326 0.347858 4.66087 0.777056 4.66087H20.9742C21.4034 4.66087 21.751 4.31326 21.751 3.88406V0.776812C21.751 0.347614 21.4034 0 20.9742 0Z" fill="#3F77A5" />
+                                    <path d="M10.8756 13.2717H0.777056C0.347858 13.2717 0.000244141 13.6193 0.000244141 14.0485V17.1558C0.000244141 17.585 0.347858 17.9326 0.777056 17.9326H10.8756C11.3048 17.9326 11.6524 17.585 11.6524 17.1558V14.0485C11.6524 13.6203 11.3048 13.2717 10.8756 13.2717Z" fill="#3F77A5" />
+                                </svg>}
+                                variant="ghost"
+                                aria-label="Open menu"
+                            />
+                        </Hide>
+                    </Flex>
+
+                    <Show above="md">
+                        <Button
+                            width={contactBtnSize}
+                            height={contactBtnHeight}
+                            background="#3F77A5"
+                            color="#FFFFFF"
+                            fontSize={fontSize}
+                            fontWeight="600"
+                            borderRadius="20px"
+                            flexShrink={0}
+                            onClick={() => navigateTo("/contactus", "Contact Us")}
+                            _hover={{
+                                background: "#1E4A6A",
+                                color: "#FFFFFF",
+                            }}
+                        >
+                            Contact Us
+                        </Button>
+                    </Show>
+                </Flex>
+            </PageContentWrapper>
             <Drawer isOpen={isOpen} placement="right" onClose={onClose} size="full">
                 <DrawerOverlay />
                 <DrawerContent bg="#E7E7E7">
@@ -580,7 +596,7 @@ const Navbar = () => {
                                         onClick={() => {
                                             navigateTo("/contactus", "Contact Us"); // Navigation and tracking
                                             onClose(); // Close modal/menu
-                                          }}
+                                        }}
                                         _hover={{
                                             background: "#1E4A6A",
                                             color: "#FFFFFF",
@@ -594,7 +610,7 @@ const Navbar = () => {
                     </DrawerBody>
                 </DrawerContent>
             </Drawer>
-        </Flex>
+        </Box>
     );
 };
 
