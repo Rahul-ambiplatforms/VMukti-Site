@@ -35,12 +35,22 @@ const TimelineGrid = () => {
     {
       year: "2019",
       content:
-        "Launched cloud-based surveillance solutions with enhanced security features.",
+        "Became the leading provider of election monitoring solutions across India.",
     },
     {
-      year: "2022",
+      year: "2021",
       content:
-        "Introduced edge computing capabilities, enabling faster processing and reduced latency.",
+        "Launched GenAI-powered video analytics, revolutionizing real-time surveillance.",
+    },
+    {
+      year: "2023",
+      content:
+        "Successfully deployed 4G-SIM-based intelligent monitoring across 23,000+ locations in Karnataka State Assembly Elections.",
+    },
+    {
+      year: "2024",
+      content:
+        "Pioneering the future of Edge AI, Cloud AI, and multimodal Generative AI solutions.",
     },
   ]
 

@@ -173,6 +173,7 @@ const SolutionEMS = () => {
             <li>Smart Search & Indexing</li>
             <li>Real-Time Video Access</li>
             <li>Industry-Specific AI Models</li>
+            <li>End-to-End Security & Compliance</li>
           </ul>
         </>,
       ],
