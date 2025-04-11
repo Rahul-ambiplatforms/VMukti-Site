@@ -207,7 +207,7 @@ const industriesData = {
             { "text": "AI in Healthcare:", "color": "black" },
             { "text": "Smarter Diagnostics,", "color": "#3F77A5" },
             { "text": "Better Care,", "color": "black" },
-            { "text": "Healthier Lives.", "color": "#db7b3a" }
+            { "text": "Healthier Lives", "color": "#db7b3a" }
         ],
         "para": "AI enhances healthcare by enabling faster diagnostics, personalized treatments, and efficient patient monitoring, improving medical outcomes and reducing errors.",
         small_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
@@ -882,7 +882,7 @@ const industriesData = {
         "title": [
             { "text": "AI in Transportation", "color": "#3F77A5" },
             { "text": ": Faster Routes, Safer Roads,", "color": "black" },
-            { "text": " Smarter Mobility.", "color": "#db7b3a" }
+            { "text": " Smarter Mobility", "color": "#db7b3a" }
         ],
         "para": "AI optimizes traffic flow, enhances vehicle safety, and improves logistics efficiency for a seamless and intelligent transit system.",
         small_image: "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
