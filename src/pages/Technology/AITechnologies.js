@@ -167,7 +167,7 @@ const AITechnologies = () => {
   // Responsive styles
   const cardDirection = useBreakpointValue({ base: "column", md: "row" });
   const cardContentWidth = useBreakpointValue({ base: "100%", md: "35%" });
-  const svgSize = useBreakpointValue({ base: "13px", md: "33px" });
+  const svgSize = useBreakpointValue({ base: "25px", md: "33px" });
   return (
     <Box bg="white" overflowX="visible" borderRadius="24px">
       {/* Navigation */}

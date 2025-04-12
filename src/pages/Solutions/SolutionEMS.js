@@ -413,8 +413,8 @@ const SolutionEMS = () => {
     if (!visibleSlides || !slides.length) return;
 
     const N = visibleSlides;
-    let newStart = currentSlide; // Changed from visibleSlideRange.start
-    let newEnd = Math.min(currentSlide + N - 1, slides.length - 1);
+    let newStart = Math.max(currentSlide - Math.floor(N / 2), 0);
+    let newEnd = Math.min(newStart + N - 1, slides.length - 1);
 
     // Adjust if we don't have enough slides at the end
     if (newEnd - newStart + 1 < N) {
@@ -424,7 +424,6 @@ const SolutionEMS = () => {
 
     setVisibleSlideRange({ start: newStart, end: newEnd });
   }, [currentSlide, visibleSlides, slides.length]);
-
 
   // Handle URL changes to set the correct slide
   useEffect(() => {

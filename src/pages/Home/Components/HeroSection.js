@@ -126,11 +126,9 @@ const HeroSection = () => {
                         />
                         <Flex direction="column" alignContent="flex-end" justifyContent="flex-end" ml="18%" mt="-15%">
                             <Box
-                                width="13px"
-                                height="13px"
+                                width="25px"
+                                height="25px"
                                 alignSelf="flex-start"
-
-
                             >
                                 <svg
                                     viewBox="0 0 33 33"
@@ -204,7 +202,7 @@ const HeroSection = () => {
                         <Text as="span" color="#000">image</Text>
                         <br />
                         <Text as="span" color="#DB7B3A">Intelligence</Text>
-                        <Text as="span" color="#3F77A5"> . </Text>
+                        <Text as="span" color="#3F77A5">.</Text> {/*Remove space*/}
                     </MotionBox>
 
                     {/* Desktop Subtext */}
@@ -275,15 +273,24 @@ const HeroSection = () => {
                                 color: "#2C5E84",
                             }}
                             fontSize={{ base: "14px", sm: "16px" }}
+                            // animate={{
+                            //     x: [0, 5, -5, 5, -5, 0],
+                            //     y: [0, -5, 5, -5, 5, 0],
+                            // }}
+                            // transition={{
+                            //     duration: 0.5,
+                            //     repeat: Infinity,
+                            //     ease: "easeInOut",
+                            // }}
                             animate={{
-                                x: [0, 5, -5, 5, -5, 0],
-                                y: [0, -5, 5, -5, 5, 0],
-                            }}
-                            transition={{
-                                duration: 0.5,
+                                x: [0, 5, 0, -5, 0],
+                                y: [0, 0, 5, 0, -5],
+                              }}
+                              transition={{
                                 repeat: Infinity,
-                                ease: "easeInOut",
-                            }}
+                                duration: 0.3,
+                                ease: "linear",
+                              }}
                         >
                             Book Demo
                             <svg

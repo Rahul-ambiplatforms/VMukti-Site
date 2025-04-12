@@ -29,7 +29,8 @@ class ErrorBoundary extends React.Component {
                             display="inline-block"
                             as="h2"
                             size="2xl"
-                            bgGradient="linear(to-r, blue.400, blue.600)"
+                            // bgGradient="linear(to-r, blue.400, blue.600)"
+                            bg="#3F77A5"
                             backgroundClip="text">
                             500
                         </Heading>
@@ -41,7 +42,8 @@ class ErrorBoundary extends React.Component {
                         </Text>
                         <Button
                             colorScheme="blue"
-                            bgGradient="linear(to-r, blue.400, blue.500, blue.600)"
+                            // bgGradient="linear(to-r, blue.400, blue.500, blue.600)"
+                            bg="#3F77A5"
                             color="white"
                             variant="solid"
                             onClick={() => window.location.reload()}>

@@ -10,7 +10,7 @@ const popAnimation = {
     opacity: 1,
     transition: { duration: 0.5, ease: "easeOut" },
   },
-  viewport: { once: "false" }
+  viewport: { once: "false" },
 };
 const ServingsModelGrid = ({ title, description, cards }) => {
   return (
@@ -27,7 +27,11 @@ const ServingsModelGrid = ({ title, description, cards }) => {
       >
         <Flex direction="column" gap={5}>
           <HeadingAnimation>
-            <Text fontWeight="600" fontSize={{ base: "20px", md: "36px" }} width="80%">
+            <Text
+              fontWeight="600"
+              fontSize={{ base: "20px", md: "36px" }}
+              width="80%"
+            >
               {title}
             </Text>
           </HeadingAnimation>
@@ -61,13 +65,17 @@ const ServingsModelGrid = ({ title, description, cards }) => {
                   variants={popAnimation}
                 />
                 <HeadingAnimation>
-                  <Flex position="relative" direction="column">
-                    <Text>{card.title}</Text>
-                    <Box width="20px" height="1px" bg="white" />
+                  <Flex position="relative" direction="column" mb="-1%">
+                    <Text fontSize={{ base: "14", md: "16" }} fontWeight="700">
+                      {card.title}
+                    </Text>
+                    <Box width="20px" height="2px" bg="white" /> {/* from 1 to 2 px height */}
                   </Flex>
                 </HeadingAnimation>
                 <SubHeadingAnimation>
-                  <Text>{card.description}</Text>
+                  <Text fontSize={{ base: "12", md: "14" }} fontWeight="500">
+                    {card.description}
+                  </Text>
                 </SubHeadingAnimation>
               </Flex>
             </>

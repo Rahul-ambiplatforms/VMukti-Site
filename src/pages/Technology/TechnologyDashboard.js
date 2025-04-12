@@ -143,13 +143,26 @@ const HeadingSection = ({ refProp, display, isAnimationTriggered }) => (
     >
       Smarter World
     </Text>
-    .
+    {/* I added this */}
+    <Text
+      as="span"
+      color="#3F77A5"
+      fontWeight="600"
+      fontSize={{
+        base: "20px",
+        sm: "30px",
+        md: "40px",
+        lg: "48px",
+      }}
+    >
+      .
+    </Text>
   </MotionHeading>
 );
 
 const TechnologyDashboard = () => {
   const ref = useRef(null);
-  const svgSize = useBreakpointValue({ base: "13px", md: "33px" });
+  const svgSize = useBreakpointValue({ base: "25px", md: "33px" });
   const [isAnimationTriggered, setIsAnimationTriggered] = useState(false);
 
   useEffect(() => {
@@ -176,7 +189,7 @@ const TechnologyDashboard = () => {
               align={{ base: "flex-start", lg: "flex-start" }}
               justify="flex-start"
               w={{ base: "339px", md: "auto" }}
-              // minH={{ base: "auto", lg: "50vh" }}
+            // minH={{ base: "auto", lg: "50vh" }}
             >
               <HeadingSection
                 refProp={ref}

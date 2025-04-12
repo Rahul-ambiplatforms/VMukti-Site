@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
+import { Box, Flex, Text, Image, Button, useBreakpointValue } from "@chakra-ui/react";
 import { useRef, useState } from "react";
 import { motion, AnimatePresence, color } from "framer-motion";
 import CulturalSection from "../../components/CulturalSection";
@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const MotionBox = motion(Box);
+
 
 // Reusable constants for styles
 const styles = {
@@ -130,6 +131,7 @@ const dashboardItems = [
 ];
 
 const EventSpotlight = () => {
+  const svgSize = useBreakpointValue({ base: "25px", md: "33px" });
   const swiperRef = useRef(null); // Initialize with null
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
@@ -175,7 +177,11 @@ const EventSpotlight = () => {
       textColor: "black" // Add if needed
     },
     { bgColor: "transparent" },
-    { title: "Attended Events", bgColor: "transparent" },
+    {
+      title: "Attended Events",
+      bgColor: "transparent",
+      alignItems: "Center" // Added to center this item in the grid
+    },
     {
       title: "2024",
       subtitle: "IFSEC", // Add this new field
@@ -209,8 +215,6 @@ const EventSpotlight = () => {
       description: "Participated in Vibrant Startup & Technology Summit",
       bgColor: "white",
     },
-    { bgColor: "transparent" },
-    {},
   ];
 
   return (
@@ -223,13 +227,13 @@ const EventSpotlight = () => {
       >
         {/* Title Section */}
         {/* <Box pt={{ base: 8, md: 16 }} mb={{ base: 4, md: 8 }}>*/}
-        <Box pt={{ base: 16, md: 0 }}>
+        <Box mb={{ base: "4", md: "" }} >
           <HeadingAnimation>
             <Text
-              fontSize={{ base: "20px", md: "32px", lg: "48px" }}
+              fontSize={{ base: "32px", md: "32px", lg: "48px" }}
               fontWeight="600"
               lineHeight="normal"
-              textAlign={{ base: "center", md: "left" }}
+              textAlign={{ base: "flex-start", md: "left" }}
             >
               <Text as="span" color="#3F77A5">
                 Event Spotlight:{" "}
@@ -255,20 +259,20 @@ const EventSpotlight = () => {
           direction={{ base: "column", md: "row" }}
           width="100%"
           mb={{ base: "4%", md: "8%" }}
-          alignItems={{ base: "center", md: "flex-start" }}
+          alignItems={{ base: "flex-start", md: "flex-start" }}
         >
           {/* Left Section */}
           <Flex
             direction="column"
             width={{ base: "100%", md: "25%" }}
             mb={{ base: 8, md: 0 }}
-            alignItems={{ base: "center", md: "flex-start" }}
+            alignItems={{ base: "flex-start", md: "flex-start" }}
           >
             <Box mb={4}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="33"
-                height="33"
+                width={svgSize}
+                height={svgSize}
                 viewBox="0 0 33 33"
                 fill="none"
               >
@@ -283,7 +287,7 @@ const EventSpotlight = () => {
               width={{ base: "90%", md: "331px" }}
               height="auto"
               mb={8}
-              textAlign={{ base: "center", md: "left" }}
+              textAlign={{ base: "left", md: "left" }}
             >
               <SubHeadingAnimation>
                 <Text
