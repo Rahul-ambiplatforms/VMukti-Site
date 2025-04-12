@@ -159,7 +159,7 @@ export default function ContactUs() {
   return (
     <PageContentWrapper>
       <Box
-        minH="100vh" // Ensure full viewport height in mobile view
+        // minH="100vh" // Ensure full viewport height in mobile view
         overflow="hidden" // Prevent unintended overflow
       >
         {/* Hero Banner */}
