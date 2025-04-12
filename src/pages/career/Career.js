@@ -70,12 +70,57 @@ export default function VMuktiCareers() {
                                     <Box as="span" color="#696969">Showing 1-5</Box>
                                 </Text>
                                 <HStack mt={{ base: 4, md: 0 }}>
-                                    <Button size="sm" variant="ghost" p={1}>
-                                        <ChevronLeftIcon />
-                                    </Button>
-                                    <Button size="sm" variant="ghost" p={1}>
-                                        <ChevronRightIcon />
-                                    </Button>
+                                    <Flex justifyContent="space-between" gap={1}>
+                                        <Button
+                                            width="31px"
+                                            height="31px"
+                                            minWidth="31px"
+                                            minHeight="31px"
+                                            padding="0"
+                                            borderRadius="5px"
+                                            display="flex"
+                                            alignItems="center"
+                                            justifyContent="center"
+                                            cursor="pointer"
+                                            bgColor={"e0e0e0"}
+                                            _hover={{
+                                                background: { base: "white", md: "#e0e0e0" }, // White for mobile, gray for desktop
+                                            }}
+                                            // onClick={handlePrev} // Use handlePrev for left navigation
+                                        >
+                                            <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
+                                                <path
+                                                    d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z"
+                                                    fill="#3F77A5"
+                                                />
+                                            </svg>
+                                        </Button>
+                                        <Button
+                                            variant={"solid"}
+                                            width="31px"
+                                            height="31px"
+                                            minWidth="31px"
+                                            minHeight="31px"
+                                            padding="0"
+                                            borderRadius="5px"
+                                            display="flex"
+                                            alignItems="center"
+                                            justifyContent="center"
+                                            cursor="pointer"
+                                            bgColor={"e0e0e0"}
+                                            _hover={{
+                                                background: { base: "white", md: "#e0e0e0" }, // White for mobile, gray for desktop
+                                            }}
+                                            // onClick={handleNext} // Use handleNext for right navigation
+                                        >
+                                            <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
+                                                <path
+                                                    d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z"
+                                                    fill="#3F77A5"
+                                                />
+                                            </svg>
+                                        </Button>
+                                    </Flex>
                                 </HStack>
                             </Flex>
                             <Box borderBottom="1px" borderColor="#3F77A5" />
