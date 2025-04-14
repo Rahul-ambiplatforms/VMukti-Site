@@ -353,8 +353,8 @@ const Navbar = () => {
                                 ))}
                             </HStack>
                         </Show>
-
-                        <Hide above="lg">
+                        {/* inside hamburger */}
+                        <Hide above="lg"><Hide below="md" >
                             <IconButton
                                 onClick={onOpen}
                                 icon={<svg
@@ -371,9 +371,27 @@ const Navbar = () => {
                                 variant="ghost"
                                 aria-label="Open menu"
                             />
-                        </Hide>
+                        </Hide></Hide>
                     </Flex>
-
+                    {/* outside hamburger */}
+                    <Show below="md">
+                        <IconButton
+                            onClick={onOpen}
+                            icon={<svg
+                                width="22"
+                                height="18"
+                                viewBox="0 0 22 18"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path d="M15.9248 6.63574H0.776812C0.347614 6.63574 0 6.98336 0 7.41255V10.5198C0 10.949 0.347614 11.2966 0.776812 11.2966H15.9248C16.354 11.2966 16.7016 10.949 16.7016 10.5198V7.41255C16.7016 6.98336 16.354 6.63574 15.9248 6.63574Z" fill="#3F77A5" />
+                                <path d="M20.9742 0H0.777056C0.347858 0 0.000244141 0.347614 0.000244141 0.776812V3.88406C0.000244141 4.31326 0.347858 4.66087 0.777056 4.66087H20.9742C21.4034 4.66087 21.751 4.31326 21.751 3.88406V0.776812C21.751 0.347614 21.4034 0 20.9742 0Z" fill="#3F77A5" />
+                                <path d="M10.8756 13.2717H0.777056C0.347858 13.2717 0.000244141 13.6193 0.000244141 14.0485V17.1558C0.000244141 17.585 0.347858 17.9326 0.777056 17.9326H10.8756C11.3048 17.9326 11.6524 17.585 11.6524 17.1558V14.0485C11.6524 13.6203 11.3048 13.2717 10.8756 13.2717Z" fill="#3F77A5" />
+                            </svg>}
+                            variant="ghost"
+                            aria-label="Open menu"
+                        />
+                    </Show>
                     <Show above="md">
                         <Button
                             width={contactBtnSize}
