@@ -58,7 +58,6 @@ const AdvancedSurveillance = () => {
         justifyContent="center"
         alignItems="center"
         minH="auto"
-      // bg="red"
       >
         {/* White Box */}
         <Box
@@ -69,15 +68,12 @@ const AdvancedSurveillance = () => {
           bgColor="white"
           position="relative"
           overflow="hidden"
-        // minH="auto"
-        // mb="2%"
         >
           {/* Title Section */}
           <Box
             marginRight={{ md: "70px" }}
             marginTop={{ base: "5%", md: "55px" }}
             ml={{ base: "5%" }}
-            // width={{ base: "70%" , md:"100%"}}
             position="relative"
             zIndex="2"
             display="flex"
@@ -117,36 +113,7 @@ const AdvancedSurveillance = () => {
               filter="blur(56.6px)"
             />
           </Box>
-          {/* <Box
-            position="absolute"
-            top="336px"
-            left="70px"
-            opacity="1"
-            zIndex="2"
-          >
-            <Image
-              // src='./assets/Ellipse36.svg'
-              alt="Ellipse 36"
-              width="408px"
-              height="408px"
-            />
-          </Box> */}
-          {/* Ellipses */}
-          {/* <Box
-            position="absolute"
-            top="37px"
-            left="933px"
-            opacity="1"
-            zIndex="2"
-          >
-            <Image
-              src="./assets/Ellipse33.svg"
-              alt="Ellipse 33"
-              width="408px"
-              height="408px"
-              bg="blue"
-            />
-          </Box> */}
+          
           <Box
             position="absolute"
             top={{ base: "300px", md: "400px", lg: "450px" }}
@@ -280,7 +247,6 @@ const AdvancedSurveillance = () => {
                       justifyContent={{ base: "flex-end", md: "space-between" }} // Align content to the top
                       display={{ base: "flex", md: "flex" }} // Hide on mobile
                       order={{ base: 1, md: 0 }} // Ensure this is on top in mobile view
-                    // bg="red"
                     >
                       <Box>
                         <Text
@@ -342,7 +308,6 @@ const AdvancedSurveillance = () => {
                     // bg="green"
                     >
                       <Image
-                        // src={card.image}
                         src={`${process.env.PUBLIC_URL}${card.image}`}
                         alt={card.label}
                         width="100%"
@@ -409,7 +374,6 @@ const AdvancedSurveillance = () => {
             mb="2%"
           >
             Book Demo
-            {/* <Image src="./assets/arrowdb.svg" alt="Arrow" width="14px" height="14px" /> */}
             <svg
               width="14"
               height="14"

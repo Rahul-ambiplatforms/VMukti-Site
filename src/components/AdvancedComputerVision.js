@@ -8,20 +8,11 @@ import { useRef } from "react";
 const MotionFlex = motion(Flex);
 
 const AdvancedComputerVision = ({
-  // text: [
-  //   {
-  //     title1 = "Advanced Computer",
-  //   },
-  //   {
-  //     title2 = "Vision & Image Intelligence",
-  //   }
-  // ],
   title = [
     { text: "IoT Integration & Secure Connectivity for", color: "black" },
     { text: "Smart Surveillance", color: "#3F77A5" },
   ],
   subtitle = "AI-Powered Visual Processing",
-  // description = "Extracts, analyzes, and interprets video data in real-time.",
   cards = [
     {
       type: "image",
@@ -150,7 +141,6 @@ const AdvancedComputerVision = ({
           gap="1px"
           zIndex={2}
           pointerEvents="auto"
-        // display={{ base: "none", md: "flex" }} 
         >
           <Button
             width="31px"
@@ -226,7 +216,6 @@ const AdvancedComputerVision = ({
               overflow="hidden"       
             >
               <Box
-                // gap={{base:"2",md:"8", lg:"8"}}
                 width="100%"
                 borderRadius={{ base: "20px", md: "24px" }}
                 bgColor={index % 2 !== 0 ? "#BECEDC" : "#EAEAEA"}
@@ -240,7 +229,6 @@ const AdvancedComputerVision = ({
                   md: "439px", // Original desktop height
                   lg: "439px",
                 }}
-              // bg="red"
               >
                 {effectiveCard === index ? (
                   card.type === "video" ? (
@@ -255,7 +243,6 @@ const AdvancedComputerVision = ({
                     />
                   ) : (
                     <Image
-                      // src={card.media}
                       src={`${process.env.PUBLIC_URL}${card.media}`}
                       alt={card.label}
                       width={{ base: "100%", md: "100%", lg: "100%" }}
@@ -275,7 +262,6 @@ const AdvancedComputerVision = ({
                       left: { base: "4%", md: "auto" }, // Left-aligned on mobile
                       right: { base: "auto", md: "15%" }, // Right-aligned on desktop
                       bottom: { base: "25%", md: "5%" },
-                      // Responsive sizing
                       width: { base: "90%", md: "auto" }, // Take more width on mobile
                       height: { base: "auto", md: "100%" },
                       textAlign: { base: "left", md: "inherit" }, // Force left alignment on mobile
@@ -299,12 +285,8 @@ const AdvancedComputerVision = ({
                         mt: { md: "6px" },
                         mr: { md: "-5px" },
                         ml: { md: "-10px" }
-                        // left: { base: "0px", md: "auto" },
                       }}
                       borderRadius="2px"
-                    // marginTop="6px"
-                    // marginRight="-5px"
-                    // marginLeft="-10px"
                     />
                   </Text>
                 )}

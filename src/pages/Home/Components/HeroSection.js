@@ -1,5 +1,5 @@
 // src/components/HeroSection/index.js
-import React from "react";
+    import React from "react";
 import {
     Box,
     Flex,
@@ -9,7 +9,7 @@ import {
     useBreakpointValue,
     Show,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { inView, motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 
 // Motion components
@@ -162,7 +162,7 @@ const HeroSection = () => {
                 {/* Desktop View */}
                 {!useBreakpointValue({ base: true, md: false }) && (
                     <MotionImage
-                        src="/assets/tablet1.png"
+                        src="/assets/tablet1.webp"
                         position="absolute"
                         right="-30px"
                         width={"1050.778px"}
@@ -187,6 +187,7 @@ const HeroSection = () => {
                 >
                     {/* Animated Heading */}
                     <MotionBox
+                        // ref={ref}
                         fontSize={{ base: "32px", md: "48px", lg: "100px" }}
                         fontWeight="600"
                         fontStyle="normal"
@@ -194,7 +195,7 @@ const HeroSection = () => {
                         zIndex={1}
                         initial={{ opacity: 0, x: -50 }}
                         // whileInView={{ opacity: 1, x: 0 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        animate={inView?{ opacity: 1, x: 0 }:{ opacity: 0.6, x: -50 }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
                     >
                         <Text as="span" color="#3F77A5">Advanced </Text>
