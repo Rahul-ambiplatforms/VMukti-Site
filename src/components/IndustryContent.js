@@ -148,7 +148,6 @@ const IndustryContent = ({ props, content }) => {
                 maxWidth={{ base: "100%", md: "30%" }}
                 textAlign={{ base: "center", md: "left" }}
                 position="relative"
-                // bg="red"
               >
                 {/* Arrow Animation */}
                 {/* Desktop View */}
@@ -229,10 +228,6 @@ const IndustryContent = ({ props, content }) => {
                   _hover={{ bg: "#2c5a7a", color: "white" }}
                   px={{ base: "12px", md: "15px", lg: "20px" }}
                   display="flex"
-                  // initial={{ opacity: 0, x: -40 }}
-                  // animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
-                  // transition={{ duration: 0.7, ease: "easeOut" }}
-                  // viewport={{ once: false, amount: 0.1 }}
                 >
                   Book Demo
                   <Box
@@ -285,7 +280,6 @@ const IndustryContent = ({ props, content }) => {
               <MotionImage
                 src={`${process.env.PUBLIC_URL}/assets/${content.large_image}`}
                 alt={content.large_image_alt}
-                // flex="0 0 68%"
                 width="100%"
                 height="65%"
                 backgroundColor="white"
@@ -300,10 +294,8 @@ const IndustryContent = ({ props, content }) => {
           </Flex>
 
           {/* Key Applications Section */}
-          {/* <Flex mx="2%"> */}
 
           <Flex
-            // flexShrink="0"
             borderRadius="24px"
             backgroundColor="#FFF"
             px="2%"
@@ -315,7 +307,6 @@ const IndustryContent = ({ props, content }) => {
             gap="5"
             marginTop="5%"
             position="relative" // Needed for absolute positioning inside
-            // bg="red"
             overflow="hidden"
           >
             {/* SVG Positioned at Top Right */}
@@ -325,16 +316,12 @@ const IndustryContent = ({ props, content }) => {
               right="-20%"
               width="70%" // SVG covers 70% of the background width
               zIndex="0"
-              // overflow="hidden"
-              // bg="red"
             >
               <Image
-                // src={"./assets/VMukti_Brochure_O2_1.png"}
                 src={`${process.env.PUBLIC_URL}/assets/VMukti Brochure O2 1.png`}
                 alt=""
                 width="100%"
                 opacity="0.8"
-                // overflow="hidden"
               />
             </Box>
             <Box
@@ -343,15 +330,12 @@ const IndustryContent = ({ props, content }) => {
               left="-10%"
               width="70%" // SVG covers 70% of the background width
               zIndex="0"
-              // overflow="hidden"
             >
               <Image
                 src={`${process.env.PUBLIC_URL}/assets/VMukti Brochure O2 2.png`}
                 alt=""
                 width="100%"
                 opacity="0.8"
-                // overflow="hidden"
-                // bg="red"
               />
             </Box>
 
@@ -367,7 +351,6 @@ const IndustryContent = ({ props, content }) => {
             >
               Key Applications
             </Text>
-            {/* <Box> */}
             {content.keyApplications.map((card, index) => (
               <MotionBox
                 key={index}
@@ -383,8 +366,6 @@ const IndustryContent = ({ props, content }) => {
                 variants={popAnimation1}
                 custom={index}
                 viewport={{ once: false }} // Repeats animation on scroll
-                // bg="red"
-                // pb="4%"
               >
                 {/* Grey Placeholder */}
                 <Image
@@ -417,7 +398,6 @@ const IndustryContent = ({ props, content }) => {
                   borderRadius="2px"
                   backgroundColor="#3F77A5"
                   alignSelf="flex-start"
-                  // bg="red"
                 />
 
                 {/* Description */}
@@ -434,9 +414,7 @@ const IndustryContent = ({ props, content }) => {
                 </SubHeadingAnimation>
               </MotionBox>
             ))}
-            {/* </Box> */}
           </Flex>
-          {/* </Flex> */}
 
           {/* Key Benefits Section */}
           <Box
@@ -450,7 +428,6 @@ const IndustryContent = ({ props, content }) => {
             flexDirection={{ base: "column", md: "row" }}
             alignItems="center"
             justifyContent="space-between"
-            // bg="red"
           >
             {/* Key Benefits Title */}
             <Text
@@ -471,7 +448,6 @@ const IndustryContent = ({ props, content }) => {
               flexWrap="wrap"
               gap="30px"
               ml={{base:"-10%",md:"5%"}}
-              // bg="red"
             >
               {content.keyBenefits.map((benefit, index) => (
                 <Box
@@ -479,18 +455,12 @@ const IndustryContent = ({ props, content }) => {
                   textAlign="center"
                   width={{ base: "60%", md: "250px" }}
                   flexShrink="0"
-                  // maxWidth="160px" // Controls text wrapping for two lines
                 >
                   {/* SVG Icon */}
                   <Box
-                    // width="40px"
-                    // height="40px"
-                    // backgroundColor="white"
-                    // borderRadius="50%"
                     display="flex"
                     alignItems="center"
                     justifyContent="flex-start" // Aligns icon to the left
-                    // paddingLeft="8px" // Adds slight spacing from the edge
                   >
                     <Image src={benefit.svg} alt={benefit.title} />
                   </Box>
@@ -505,7 +475,7 @@ const IndustryContent = ({ props, content }) => {
                     lineHeight="1.2"
                     textAlign="left"
                     mt="5%"
-                    wordBreak="break- " // or "break-all"
+                    wordBreak="break" // or "break-all"
                     overflowWrap="break-word"
                   >
                     {benefit.title}
