@@ -27,7 +27,7 @@ const SolutionEMS = () => {
           <h3 style={{ fontWeight: "bold", marginBottom: "16px" }}>
             Key Features
           </h3>
-          <ul style={{ paddingLeft: "20px" }}>
+          <ul className="custom-bullets" style={{ paddingLeft: "20px"}}>
             <li>24/7 AI-Powered Surveillance</li>
             <li>Multi-Camera Integration</li>
             <li>AI-Driven Video Analytics</li>
@@ -368,7 +368,7 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-      image: "./assets/solution_8.png",
+      image: "./assets/solution_1.png",
       benefits: {
         title: "Business Benefits",
         data: [
@@ -391,7 +391,7 @@ const SolutionEMS = () => {
   const visibleSlides = useBreakpointValue({
     base: 1,
     sm: 2,
-    md: 4,
+    md: 3,
     lg: 4,
     xl: 4,
   });
@@ -402,8 +402,10 @@ const SolutionEMS = () => {
     end: 0,
   });
 
-  // Initialize visible range
+  // Ensure visibleSlides is set correctly during the initial render
   useEffect(() => {
+    if (!visibleSlides || !slides.length) return;
+
     const initialEnd = Math.min((visibleSlides || 1) - 1, slides.length - 1);
     setVisibleSlideRange({ start: 0, end: initialEnd });
   }, [visibleSlides, slides.length]);
@@ -412,13 +414,16 @@ const SolutionEMS = () => {
   useEffect(() => {
     if (!visibleSlides || !slides.length) return;
 
-    const N = visibleSlides;
-    let newStart = Math.max(currentSlide - Math.floor(N / 2), 0);
-    let newEnd = Math.min(newStart + N - 1, slides.length - 1);
+    const N = visibleSlides; // Number of visible slides
+    let newStart = visibleSlideRange.start;
+    let newEnd = visibleSlideRange.end;
 
-    // Adjust if we don't have enough slides at the end
-    if (newEnd - newStart + 1 < N) {
-      newStart = Math.max(newEnd - N + 1, 0);
+    // Shift the visible range only when the active slide moves beyond the current range
+    if (currentSlide > visibleSlideRange.end) {
+      newStart = Math.min(currentSlide - N + 1, slides.length - N);
+      newEnd = Math.min(newStart + N - 1, slides.length - 1);
+    } else if (currentSlide < visibleSlideRange.start) {
+      newStart = Math.max(currentSlide, 0);
       newEnd = Math.min(newStart + N - 1, slides.length - 1);
     }
 
@@ -436,7 +441,11 @@ const SolutionEMS = () => {
         setCurrentSlide(slideIndex);
       }
     }
-  }, [location.search]);
+
+    // Ensure visibleSlides is updated after the initial render
+    const initialEnd = Math.min((visibleSlides || 1) - 1, slides.length - 1);
+    setVisibleSlideRange({ start: 0, end: initialEnd });
+  }, [location.search, visibleSlides, slides.length]);
 
   // Navigation handlers with loop
   const handlePrev = () => {
@@ -693,6 +702,7 @@ const SolutionEMS = () => {
                 gap={3}
                 height="100%"
                 direction={{ base: "column", md: "row" }}
+                // bg="blue"
               >
                 {/* left portion of the content card */}
                 <Flex
@@ -701,7 +711,8 @@ const SolutionEMS = () => {
                   gap={5}
                   // height="100%"
                   zIndex={1}
-                  width={{ base: "100%", md: "50%" }}
+                  width={{ base: "100%", md: "60%" }}
+                  // bg="blue"
                 >
                   {/* First Box with 0.1s delay */}
                   <Flex
@@ -813,8 +824,8 @@ const SolutionEMS = () => {
                           fontWeight="500"
                           fontSize="16px"
                           color="black"
-                          // lineHeight={{base:"100%",md:"1.6"}}
-                          lineHeight="1"
+                          lineHeight={{base:"100%",md:"1.2"}}
+                          // lineHeight="1"
                           mb={5}
                         >
                           {text}
@@ -835,8 +846,8 @@ const SolutionEMS = () => {
                   {/* Top right Image (positioned absolutely) */}
                   <Box
                     as={motion.div}
-                    width={{ base: "100%", md: "80%" }} // Allow the box to take up available space
-                    height={{ base: "100%", md: "60%" }} // Height remains in percentage
+                    width={{ base: "100%", md: "100%" }} // Allow the box to take up available space
+                    height={{ base: "100%", md: "100%" }} // Height remains in percentage
                     minHeight={{ base: "200px", md: "0" }} // Ensure a minimum height for mobile view
                     zIndex={3}
                     initial={{ scale: 0.7, opacity: 0 }}
@@ -852,6 +863,10 @@ const SolutionEMS = () => {
                     display="flex"
                     alignItems="center"
                     justifyContent="space-between"
+                    mt={{
+                      base: index === 0 || index === slides.length - 1 ? "-10%" : "0", // Mobile (default)
+                      md: index === 0 || index === slides.length - 1 ? "-20%" : "0" // Desktop
+                    }} // Apply margin-top for first and last slides
                   // bg="red"
                   >
                     {slide.image ? (

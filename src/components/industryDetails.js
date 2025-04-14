@@ -14,7 +14,6 @@ const IndustryDetails = () => {
     const camelCaseName = toCamelCase(name);
     // Fetch content directly from the centralized data file
     const content = industriesData[name.toLowerCase()];
-    // console.log("name is [", name, "], content is ", content);
 
 
     if (!content) {

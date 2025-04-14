@@ -62,22 +62,43 @@ const AITechnologies = () => {
     },
   ];
 
-  const visibleSlides = useBreakpointValue({
+  const visibleSlidesValue = useBreakpointValue({
     base: 1,
     sm: 2,
     md: 4,
     lg: 4,
     xl: 4,
   });
-  const showCircles = useBreakpointValue({ base: false, md: true });
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const startIndex = currentSlide;
-  const endIndex = Math.min(startIndex + visibleSlides - 1, slides.length - 1);
 
+  const showCircles = useBreakpointValue({ base: false, md: true });
+  const [visibleSlides, setVisibleSlides] = useState(1); // Default to 1
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [visibleSlideRange, setVisibleSlideRange] = useState({
-    start: startIndex,
-    end: endIndex,
+    start: 0,
+    end: Math.min(1 - 1, slides.length - 1), // Default range for 1 visible slide
   });
+
+  useEffect(() => {
+    if (visibleSlidesValue) {
+      setVisibleSlides(visibleSlidesValue);
+
+      // Adjust currentSlide to ensure it fits within the new visible range
+      const adjustedCurrentSlide = Math.min(
+        currentSlide,
+        slides.length - visibleSlidesValue
+      );
+
+      setCurrentSlide(adjustedCurrentSlide);
+
+      setVisibleSlideRange({
+        start: adjustedCurrentSlide,
+        end: Math.min(
+          adjustedCurrentSlide + visibleSlidesValue - 1,
+          slides.length - 1
+        ),
+      });
+    }
+  }, [visibleSlidesValue, slides.length]);
 
   // Add state for touch positions
   const [touchStartX, setTouchStartX] = useState(0);
@@ -90,11 +111,17 @@ const AITechnologies = () => {
 
   // Handle previous and next slide
   const handlePrev = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setCurrentSlide((prev) => {
+      const newSlide = prev - 1;
+      return newSlide < 0 ? slides.length - 1 : newSlide; // Wrap around to the last slide
+    });
   };
 
   const handleNext = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setCurrentSlide((prev) => {
+      const newSlide = prev + 1;
+      return newSlide >= slides.length ? 0 : newSlide; // Wrap around to the first slide
+    });
   };
 
   const handleTouchStart = (e) => {
@@ -119,46 +146,22 @@ const AITechnologies = () => {
     const updateVisibleSlides = () => {
       if (!visibleSlides || !slides.length) return;
 
-      // Base logic for all screen sizes
-      if (visibleSlides === 1) {
-        setVisibleSlideRange({
-          start: currentSlide,
-          end: currentSlide,
-        });
-      } else if (visibleSlides === 3) {
-        let newStart = currentSlide;
-        let newEnd = currentSlide + 2;
+      let newStart = visibleSlideRange.start;
+      let newEnd = visibleSlideRange.end;
 
-        // Handle overflow at end
-        if (newEnd >= slides.length) {
-          newEnd = slides.length - 1;
-          newStart = Math.max(newEnd - 2, 0);
-        }
-
-        setVisibleSlideRange({ start: newStart, end: newEnd });
-      } else if (visibleSlides === 4) {
-        let newStart = currentSlide;
-        let newEnd = currentSlide + 3;
-
-        // Handle overflow at end
-        if (newEnd >= slides.length) {
-          newEnd = slides.length - 1;
-          newStart = Math.max(newEnd - 3, 0);
-        }
-
-        setVisibleSlideRange({ start: newStart, end: newEnd });
-      } else if (visibleSlides === 5) {
-        let newStart = currentSlide;
-        let newEnd = currentSlide + 4;
-
-        // Handle overflow at end
-        if (newEnd >= slides.length) {
-          newEnd = slides.length - 1;
-          newStart = Math.max(newEnd - 4, 0);
-        }
-
-        setVisibleSlideRange({ start: newStart, end: newEnd });
+      // Adjust range only when the active slide reaches the last visible position
+      if (currentSlide > visibleSlideRange.end) {
+        newStart = currentSlide - (visibleSlides - 1);
+        newEnd = currentSlide;
+      } else if (currentSlide < visibleSlideRange.start) {
+        newStart = currentSlide;
+        newEnd = currentSlide + (visibleSlides - 1);
       }
+
+      setVisibleSlideRange({
+        start: Math.max(newStart, 0),
+        end: Math.min(newEnd, slides.length - 1),
+      });
     };
 
     updateVisibleSlides();
@@ -184,7 +187,7 @@ const AITechnologies = () => {
         <Flex
           flex="1"
           mx={{ base: 0, md: 12 }}
-          justify={{ base: "center", md: "space-between" }}
+          justify={{ base: "left", md: "space-between" }}
           align="center"
           gap={{ base: 0, md: 3 }}
           height="72px"
@@ -197,7 +200,6 @@ const AITechnologies = () => {
             "-ms-overflow-style": "none",
             "scrollbar-width": "none",
           }}
-        // bg="red"
         >
           {slides
             .slice(visibleSlideRange.start, visibleSlideRange.end + 1)
@@ -379,9 +381,9 @@ const AITechnologies = () => {
                 {/* Card Content */}
                 <Flex
                   as={motion.div}
-                  initial={{ scale: 0.5, opacity: 0 }}
+                  initial={{ scale: 0.7, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
-                  viewport={{ once: false, amount: 0.2 }}
+                  viewport={{ once: false }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
                   direction="column"
                   justify="space-between"
