@@ -124,8 +124,8 @@ const NewsletterSubscription = () => {
   }, []);
 
   const buttonWidth = useBreakpointValue({
-    base: "120px",
-    md: "130px",
+    base: "146px",
+    md: "146px",
     lg: "146px",
   });
   const buttonHeight = useBreakpointValue({
@@ -154,85 +154,116 @@ const NewsletterSubscription = () => {
             width={{ base: "100%" }}
           >
             {/* Main "Who we are" box */}
-            <Box
+            <Flex
+              direction="column"
               bg="white"
               borderRadius="24px"
               p="20px"
+              justifyContent="space-between"
               height={{ md: "100%" }}
               width={{ base: "100%" }}
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               cursor={{ base: "pointer", md: "default" }}
             >
-              <Flex justify="space-between" align="center">
-                <Heading fontSize="16px" fontWeight={700}>
-                  Who we are
-                </Heading>
-                <Box
-                  display={{ base: "block", md: "none" }}
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  cursor="pointer"
-                >
-                  <svg
-                    width="15"
-                    height="9"
-                    viewBox="0 0 15 9"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    transform={isDropdownOpen ? "rotate(180)" : ""}
+              <Box>
+                <Flex justify="space-between" align="center">
+                  <Heading fontSize="16px" fontWeight={700}>
+                    Who we are
+                  </Heading>
+                  <Box
+                    display={{ base: "block", md: "none" }}
+                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                    cursor="pointer"
                   >
-                    <path
-                      d="M7.38461 8.077L14.7692 0.692383L-2.86102e-06 0.692382L7.38461 8.077Z"
-                      fill="#3F77A5"
-                    />
-                  </svg>
-                </Box>
-              </Flex>
-              <Box
-                width="17px"
-                height="2px"
-                borderRadius="2px"
-                mt="1%"
-                bg="#3F77A5"
-              />
-
-              {/* Desktop content - two columns with bullet points */}
-              <Box display={{ base: "none", md: "block" }} mt="5%">
-                <Flex direction="row">
-                  <Box mr="30px">
-                    <List spacing="10px">
-                      {whoWeAreLinks.map((item, index) => (
-                        <ListItem
-                          key={index}
-                          _hover={{ color: "#3F77A5", cursor: "pointer" }}
-                          color="#696969"
-                          fontSize="14px"
-                          fontWeight="500"
-                        >
-                          •&nbsp;&nbsp;
-                          <Link href={item.path}>{item.text}</Link>
-                        </ListItem>
-                      ))}
-                    </List>
-                  </Box>
-                  <Box>
-                    <List spacing="10px">
-                      {policyLinks.map((item, index) => (
-                        <ListItem
-                          key={index}
-                          _hover={{ color: "#3F77A5", cursor: "pointer" }}
-                          color="#696969"
-                          fontSize="14px"
-                          fontWeight="500"
-                        >
-                          •&nbsp;&nbsp;
-                          <Link href={item.path}>{item.text}</Link>
-                        </ListItem>
-                      ))}
-                    </List>
+                    <svg
+                      width="15"
+                      height="9"
+                      viewBox="0 0 15 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      transform={isDropdownOpen ? "rotate(180)" : ""}
+                    >
+                      <path
+                        d="M7.38461 8.077L14.7692 0.692383L-2.86102e-06 0.692382L7.38461 8.077Z"
+                        fill="#3F77A5"
+                      />
+                    </svg>
                   </Box>
                 </Flex>
+                <Box
+                  width="17px"
+                  height="2px"
+                  borderRadius="2px"
+                  mt="1%"
+                  bg="#3F77A5"
+                />
+
+                {/* Desktop content - two columns with bullet points */}
+                <Box display={{ base: "none", md: "block" }} mt="5%">
+                  <Flex direction="row">
+                    <Box mr="30px">
+                      <List spacing="10px">
+                        {whoWeAreLinks.map((item, index) => (
+                          <ListItem
+                            key={index}
+                            _hover={{ color: "#3F77A5", cursor: "pointer" }}
+                            color="#696969"
+                            fontSize="14px"
+                            fontWeight="500"
+                          >
+                            •&nbsp;&nbsp;
+                            <Link href={item.path}>{item.text}</Link>
+                          </ListItem>
+                        ))}
+                      </List>
+                    </Box>
+                    <Box>
+                      <List spacing="10px">
+                        {policyLinks.map((item, index) => (
+                          <ListItem
+                            key={index}
+                            _hover={{ color: "#3F77A5", cursor: "pointer" }}
+                            color="#696969"
+                            fontSize="14px"
+                            fontWeight="500"
+                          >
+                            •&nbsp;&nbsp;
+                            <Link href={item.path}>{item.text}</Link>
+                          </ListItem>
+                        ))}
+                      </List>
+                    </Box>
+                  </Flex>
+                </Box>
               </Box>
-            </Box>
+
+              {/* ambicam link portion */}
+              <Flex gap={4} alignItems="center" display={{ base: "none", md: "flex" }}>
+                <Link href={"/Ambicam"} justifySelf={"flex-end"}>
+                  <Button
+                    width={buttonWidth}
+                    height={buttonHeight}
+                    background="#4CC9F0"
+                    color="#FFFFFF"
+                    fontSize={"16px"}
+                    fontWeight="600"
+                    borderRadius="20px"
+                    flexShrink={0}
+                    _hover={{
+                      background: "#3bb9e0",
+                      color: "#FFFFFF",
+                    }}
+                  >
+                    Ambicam
+                  </Button>
+                </Link>
+                <Link as="a" href="https://www.ambicam.com">
+                  <Text color="#4CC9F0" fontSize={{ base: "12px", md: "14px" }} lineHeight="30px">
+                    www.ambicam.com
+                  </Text>
+                </Link>
+              </Flex>
+            </Flex>
 
             {/* Mobile dropdown content - single column without bullet points */}
             {isDropdownOpen && (
@@ -348,7 +379,7 @@ const NewsletterSubscription = () => {
               {isServingsOpen && (
                 <Box
                   display={{ base: "block", md: "none" }}
-                  position={{ base: "relative"}}
+                  position={{ base: "relative" }}
                   width="100%"
                   bg="white"
                   borderRadius="10px"
@@ -682,40 +713,58 @@ const NewsletterSubscription = () => {
                 (91+) 968 777 0000
               </Text>
             </Flex>
-            <Link href={"/contactus"}>
-              <Button
-                width={buttonWidth}
-                height={buttonHeight}
-                justifyContent="space-between"
-                alignItems="center"
-                bg="white"
-                color="#3F77A5"
-                borderRadius="20px"
-                flexShrink={0}
-                // ml={{ base: '5px', md: '10px', lg: '15px' }}
-                mt="20%"
-                fontWeight={700}
-                gap="2"
-                _hover={{
-                  bg: "#E0F2FE", // Light blue background on hover
-                  color: "#2C5E84",
-                }}
-              >
-                Book Demo
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 17 18"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+            <Flex gap={4} mt="20%">
+              <Link href={"/contactus"}>
+                <Button
+                  width={buttonWidth}
+                  height={buttonHeight}
+                  justifyContent="space-between"
+                  alignItems="center"
+                  bg="white"
+                  color="#3F77A5"
+                  borderRadius="20px"
+                  flexShrink={0}
+                  fontWeight={700}
+                  gap="2"
+                  _hover={{
+                    bg: "#E0F2FE",
+                    color: "#2C5E84",
+                  }}
                 >
-                  <path
-                    d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
-                    fill="#3F77A5"
-                  />
-                </svg>
-              </Button>
-            </Link>
+                  Book Demo
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 17 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
+                      fill="#3F77A5"
+                    />
+                  </svg>
+                </Button>
+              </Link>
+              <Link href={"/Ambican"}>
+                <Button
+                  width={buttonWidth}
+                  height={buttonHeight}
+                  background="#4CC9F0"
+                  color="#FFFFFF"
+                  fontSize={"16px"}
+                  fontWeight="600"
+                  borderRadius="20px"
+                  flexShrink={0}
+                  _hover={{
+                    background: "#3bb9e0",
+                    color: "#FFFFFF",
+                  }}
+                >
+                  Ambicam
+                </Button>
+              </Link>
+            </Flex>
           </Box>
         </Flex>
 
