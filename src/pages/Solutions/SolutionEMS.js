@@ -864,8 +864,8 @@ const SolutionEMS = () => {
                     alignItems="center"
                     justifyContent="space-between"
                     mt={{
-                      base: index === 0 || index === slides.length - 1 ? "-10%" : "0", // Mobile (default)
-                      md: index === 0 || index === slides.length - 1 ? "-20%" : "0" // Desktop
+                      base:"0", // Mobile (default)
+                      md: index === 0 || index === slides.length - 1 ? "-10%" : "0" // Desktop
                     }} // Apply margin-top for first and last slides
                   // bg="red"
                   >

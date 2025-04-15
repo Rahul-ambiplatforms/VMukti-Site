@@ -9,6 +9,7 @@ import NewsletterSubscription from './components/NewsletterSubscription';
 import ScrollToTop from './components/ScrollToTop';
 import ErrorBoundary from './components/ErrorBoundary';
 import PageContentWrapper from './components/PageContentWrapper';
+import AmbicamLandingPage from './pages/Ambicam/AmbicamLandingPage';
 // Lazy load components
 const VMuktiHomepage = lazy(() => import('./pages/Home/VMuktiHomepage'));
 const TechnologyDashboard = lazy(() => import('./pages/Technology/TechnologyDashboard'));
@@ -37,7 +38,7 @@ function App() {
         <ErrorBoundary>
           <Navbar />
           <ScrollToTop />
-            <Box pt={{ base: "20%", sm: "20%", md: "100px" }} bg="#E7E7E7">
+          <Box pt={{ base: "20%", sm: "20%", md: "100px" }} bg="#E7E7E7">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<VMuktiHomepage />} />
@@ -51,6 +52,7 @@ function App() {
                 <Route path="/serving" element={<OurServings />} />
                 <Route path="/serving/:name" element={<ServingsDock />} />
                 <Route path="/contactus" element={<ContactUs />} />
+                <Route path="/Ambicam" element={<AmbicamLandingPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>

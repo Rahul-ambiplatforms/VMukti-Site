@@ -79,10 +79,12 @@ const dropdownItems = {
 
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const [isAccordionOpen, setIsAccordionOpen] = useState(false)
     const [activeLink, setActiveLink] = useState('Home')
     const [hoverTimeouts, setHoverTimeouts] = useState({});
     const [menuOpenStates, setMenuOpenStates] = useState({});
     const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+    const [openAccordion, setOpenAccordion] = useState(null); // Track the currently opened accordion
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -216,7 +218,7 @@ const Navbar = () => {
                             </div>
                         </Box>
 
-                        <Show above="lg">
+                        <Show above="xl">
                             <HStack
                                 justify="center"
                                 align="center"
@@ -354,24 +356,27 @@ const Navbar = () => {
                             </HStack>
                         </Show>
                         {/* inside hamburger */}
-                        <Hide above="lg"><Hide below="md" >
-                            <IconButton
-                                onClick={onOpen}
-                                icon={<svg
-                                    width="22"
-                                    height="18"
-                                    viewBox="0 0 22 18"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path d="M15.9248 6.63574H0.776812C0.347614 6.63574 0 6.98336 0 7.41255V10.5198C0 10.949 0.347614 11.2966 0.776812 11.2966H15.9248C16.354 11.2966 16.7016 10.949 16.7016 10.5198V7.41255C16.7016 6.98336 16.354 6.63574 15.9248 6.63574Z" fill="#3F77A5" />
-                                    <path d="M20.9742 0H0.777056C0.347858 0 0.000244141 0.347614 0.000244141 0.776812V3.88406C0.000244141 4.31326 0.347858 4.66087 0.777056 4.66087H20.9742C21.4034 4.66087 21.751 4.31326 21.751 3.88406V0.776812C21.751 0.347614 21.4034 0 20.9742 0Z" fill="#3F77A5" />
-                                    <path d="M10.8756 13.2717H0.777056C0.347858 13.2717 0.000244141 13.6193 0.000244141 14.0485V17.1558C0.000244141 17.585 0.347858 17.9326 0.777056 17.9326H10.8756C11.3048 17.9326 11.6524 17.585 11.6524 17.1558V14.0485C11.6524 13.6203 11.3048 13.2717 10.8756 13.2717Z" fill="#3F77A5" />
-                                </svg>}
-                                variant="ghost"
-                                aria-label="Open menu"
-                            />
-                        </Hide></Hide>
+                        <Hide above="xl" >
+                            {/* below="md" */}
+                            <Hide below="md" >
+                                <IconButton
+                                    onClick={onOpen}
+                                    icon={<svg
+                                        width="22"
+                                        height="18"
+                                        viewBox="0 0 22 18"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path d="M15.9248 6.63574H0.776812C0.347614 6.63574 0 6.98336 0 7.41255V10.5198C0 10.949 0.347614 11.2966 0.776812 11.2966H15.9248C16.354 11.2966 16.7016 10.949 16.7016 10.5198V7.41255C16.7016 6.98336 16.354 6.63574 15.9248 6.63574Z" fill="#3F77A5" />
+                                        <path d="M20.9742 0H0.777056C0.347858 0 0.000244141 0.347614 0.000244141 0.776812V3.88406C0.000244141 4.31326 0.347858 4.66087 0.777056 4.66087H20.9742C21.4034 4.66087 21.751 4.31326 21.751 3.88406V0.776812C21.751 0.347614 21.4034 0 20.9742 0Z" fill="#3F77A5" />
+                                        <path d="M10.8756 13.2717H0.777056C0.347858 13.2717 0.000244141 13.6193 0.000244141 14.0485V17.1558C0.000244141 17.585 0.347858 17.9326 0.777056 17.9326H10.8756C11.3048 17.9326 11.6524 17.585 11.6524 17.1558V14.0485C11.6524 13.6203 11.3048 13.2717 10.8756 13.2717Z" fill="#3F77A5" />
+                                    </svg>}
+                                    variant="ghost"
+                                    aria-label="Open menu"
+                                />
+                            </Hide>
+                        </Hide>
                     </Flex>
                     {/* outside hamburger */}
                     <Show below="md">
@@ -392,6 +397,26 @@ const Navbar = () => {
                             aria-label="Open menu"
                         />
                     </Show>
+                    {/* bg={{ base: "black", sm: "darkred", md: "darkorange", lg: "yellow", xl: "white" }} */}
+                    <Show above="md">
+                        <Button
+                            width={contactBtnSize}
+                            height={contactBtnHeight}
+                            background="#4CC9F0"
+                            color="#FFFFFF"
+                            fontSize={fontSize}
+                            fontWeight="600"
+                            borderRadius="20px"
+                            flexShrink={0}
+                            onClick={() => navigateTo("/Ambicam", "Ambicam")}
+                            _hover={{
+                                background: "#3bb9e0",
+                                color: "#FFFFFF",
+                            }}
+                        >
+                            Ambicam
+                        </Button>
+                    </Show>
                     <Show above="md">
                         <Button
                             width={contactBtnSize}
@@ -404,7 +429,7 @@ const Navbar = () => {
                             flexShrink={0}
                             onClick={() => navigateTo("/contactus", "Contact Us")}
                             _hover={{
-                                background: "#1E4A6A",
+                                background: "#35668E",
                                 color: "#FFFFFF",
                             }}
                         >
@@ -417,15 +442,15 @@ const Navbar = () => {
                 <DrawerOverlay />
                 <DrawerContent bg="#E7E7E7">
                     <DrawerBody padding="0">
-                        <Flex direction="column" height="100%" position="relative">
+                        <Flex direction="column" height="100dvh" position="relative" overflowX="hidden">
                             <Box padding="5%" width="100%" zIndex={2}>
                                 <Accordion allowToggle>
                                     {navigationItems.map((item, index) => (
-                                        <AccordionItem key={item.name}>
+                                        <AccordionItem key={item.name} borderColor="transparent">
                                             {item.hasDropdown ? (
                                                 <>
                                                     <h2>
-                                                        <Flex align="center" justify="space-between" pl="16px" py="8px">
+                                                        <Flex align="center" justify="space-between" py="8px">
                                                             <div
                                                                 style={{
                                                                     color: isPathActive(item.path) ? "#3F77A5" : "black",
@@ -433,14 +458,19 @@ const Navbar = () => {
                                                                     fontWeight: isPathActive(item.path) ? "600" : "400",
                                                                     textDecoration: "none",
                                                                     flex: 1,
-                                                                    cursor: "pointer"
+                                                                    cursor: "pointer",
+                                                                    position: "relative",
                                                                 }}
                                                                 onClick={() => { navigateTo(item.path, item.name); onClose(); }}
                                                             >
                                                                 {item.name}
+                                                                <Box display={isPathActive(item.path) ? "absolute" : "none"} width="20px" height="2px" borderRadius="2px" bg="#3F77A5" />
                                                             </div>
                                                             <AccordionButton
-                                                                onClick={(e) => { e.stopPropagation(); }}
+                                                                onClick={(e) => {
+                                                                    e.stopPropagation();
+                                                                    setOpenAccordion(openAccordion === item.name ? null : item.name); // Toggle accordion state
+                                                                }}
                                                                 color={isPathActive(item.path) ? "#3F77A5" : "black"}
                                                                 fontWeight={isPathActive(item.path) ? "600" : "400"}
                                                                 _hover={{ bg: "transparent" }}
@@ -448,7 +478,12 @@ const Navbar = () => {
                                                                 pr="0"
                                                                 width="fit-content"
                                                             >
-                                                                <Box>
+                                                                <Box
+                                                                    style={{
+                                                                        transform: openAccordion === item.name ? "rotate(180deg)" : "rotate(0deg)", // Rotate only the active accordion's icon
+                                                                        transition: "transform 0.3s ease", // Smooth transition
+                                                                    }}
+                                                                >
                                                                     <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                         <path d="M6 6L12 0L0 0L6 6Z" fill="#3F77A5" />
                                                                     </svg>
@@ -465,7 +500,7 @@ const Navbar = () => {
                                                                     fontSize: "12px",
                                                                     fontWeight: "400",
                                                                     textDecoration: "none",
-                                                                    cursor: "pointer"
+                                                                    cursor: "pointer",
                                                                 }}
                                                                 onClick={() => {
                                                                     navigateTo(
@@ -499,7 +534,8 @@ const Navbar = () => {
                                                                     display: "flex",
                                                                     alignItems: "center",
                                                                     gap: "8px",
-                                                                    cursor: "pointer"
+                                                                    cursor: "pointer",
+                                                                    position: "relative",
                                                                 }}
                                                                 onClick={() => { navigateTo(item.path, item.name); onClose(); }}
                                                             >
@@ -508,8 +544,13 @@ const Navbar = () => {
                                                                     fontWeight={isPathActive(item.path) ? "700" : "400"}
                                                                     _hover={{ bg: "transparent" }}
                                                                     bg="transparent"
+                                                                    padding="8px 0"
                                                                 >
-                                                                    <Box flex="1" textAlign="left">{item.name}</Box>
+                                                                    <Box flex="1" textAlign="left">
+                                                                        {item.name}
+                                                                        <Box display={isPathActive(item.path) ? "absolute" : "none"} width="20px" height="2px" borderRadius="2px" bg="#3F77A5" />
+                                                                    </Box>
+
                                                                 </AccordionButton>
                                                             </div>
                                                             <Box pl="1%" cursor="pointer" onClick={() => onClose()}>
@@ -528,7 +569,8 @@ const Navbar = () => {
                                                                     fontSize: "16px",
                                                                     fontWeight: isPathActive(item.path) ? "500" : "400",
                                                                     textDecoration: "none",
-                                                                    cursor: "pointer"
+                                                                    cursor: "pointer",
+                                                                    position: "relative",
                                                                 }}
                                                                 onClick={() => { navigateTo(item.path, item.name); onClose(); }}
                                                             >
@@ -537,9 +579,11 @@ const Navbar = () => {
                                                                     fontWeight={isPathActive(item.path) ? "700" : "400"}
                                                                     _hover={{ bg: "transparent" }}
                                                                     bg="transparent"
+                                                                    padding="8px 0"
                                                                 >
                                                                     <Box flex="1" textAlign="left">
                                                                         {item.name}
+                                                                        <Box display={isPathActive(item.path) ? "absolute" : "none"} width="20px" height="2px" borderRadius="2px" bg="#3F77A5" />
                                                                     </Box>
                                                                 </AccordionButton>
                                                             </div>
@@ -548,7 +592,7 @@ const Navbar = () => {
                                                 </>
                                             )}
                                             {index < navigationItems.length - 1 && (
-                                                <Box width="full" height="1px" bg="white" my={1} />
+                                                <Box width="full" height="1px" bg="white" />
                                             )}
                                         </AccordionItem>
                                     ))}
@@ -566,11 +610,11 @@ const Navbar = () => {
                                 flexShrink='0'
                             />
                             <Flex
-                                position="absolute"
-                                bottom="0"
-                                left="0"
-                                right="0"
-                                height="300px"
+                                position="relative"
+                                bottom="0dvh"
+                                height="full"
+                                minHeight="408px"
+                                
                                 overflow="hidden"
                             >
                                 <Image

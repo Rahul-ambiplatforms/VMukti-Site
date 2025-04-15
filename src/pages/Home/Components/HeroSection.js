@@ -1,5 +1,5 @@
 // src/components/HeroSection/index.js
-    import React from "react";
+import React from "react";
 import {
     Box,
     Flex,
@@ -46,8 +46,8 @@ const HeroSection = () => {
                 {/* Decorative Boxes */}
                 <Flex
                     position="absolute"
-                    top="30.9%"
-                    left="30%"
+                    top="10.9%"
+                    left="40%"
                     transform="translateX(-50%)"
                     gap={4}
                     zIndex={0}
@@ -61,7 +61,7 @@ const HeroSection = () => {
                         aspectRatio="1/1"
                         bg="#BECEDC"
                         borderRadius="24px"
-                        mt={{ base: "80px", md: "120px", lg: "12%" }}
+                        mt={{ base: "80px", md: "120px", lg: "15%" }}
                     />
                     <Box
                         height={{ base: "80px", md: "120px", lg: "188px" }}
@@ -69,7 +69,7 @@ const HeroSection = () => {
                         aspectRatio="1/1"
                         bg="#FFFFFF"
                         borderRadius="24px"
-                        mt={{ base: "40px", md: "06px", lg: "6%" }}
+                        mt={{ base: "40px", md: "06px", lg: "9%" }}
                     />
                     <Box
                         height={{ base: "80px", md: "120px", lg: "188px" }}
@@ -160,21 +160,6 @@ const HeroSection = () => {
                 </Box>
 
                 {/* Desktop View */}
-                {!useBreakpointValue({ base: true, md: false }) && (
-                    <MotionImage
-                        src="/assets/tablet1.webp"
-                        position="absolute"
-                        right="-30px"
-                        width={"1050.778px"}
-                        height="992.733px"
-                        bottom="-5%"
-                        zIndex={1}
-                        initial={{ scale: 0.8, opacity: 1 }}
-                        whileInView={{ scale: 1, opacity: 1 }}
-                        transition={{ duration: 0.5, ease: "easeOut" }}
-                        viewport={{ once: false, amount: 0.2 }}
-                    />
-                )}
 
                 {/* Content Section */}
                 <Box
@@ -195,119 +180,141 @@ const HeroSection = () => {
                         zIndex={1}
                         initial={{ opacity: 0, x: -50 }}
                         // whileInView={{ opacity: 1, x: 0 }}
-                        animate={inView?{ opacity: 1, x: 0 }:{ opacity: 0.6, x: -50 }}
+                        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0.6, x: -50 }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
                     >
                         <Text as="span" color="#3F77A5">Advanced </Text>
                         <Text as="span" color="#000">Computer Vision &  </Text>
                         <Text as="span" color="#000">image</Text>
-                        <br />
+                        &nbsp;
                         <Text as="span" color="#DB7B3A">Intelligence</Text>
                         <Text as="span" color="#3F77A5">.</Text> {/*Remove space*/}
                     </MotionBox>
 
-                    {/* Desktop Subtext */}
-                    {!useBreakpointValue({ base: true, md: false }) && (
-                        <Flex mt="16px" direction={{ base: "column", md: "row" }}>
-                            <MotionBox
-                                display="flex"
-                                alignItems="center"
-                                gap={2}
-                                initial={{ opacity: 0, x: -80 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.9, ease: "easeOut" }}
-                                viewport={{ once: false }}
+                    <Flex>
+                        <Flex direction="column" zIndex={1}>                    {/* Desktop Subtext */}
+                            {!useBreakpointValue({ base: true, md: false }) && (
+                                <Flex mt="16px" direction={{ base: "column", md: "row" }}>
+                                    <MotionBox
+                                        display="flex"
+                                        alignItems="center"
+                                        gap={2}
+                                        initial={{ opacity: 0, x: -80 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.9, ease: "easeOut" }}
+                                        viewport={{ once: false }}
+                                    >
+                                        <Box width="30px" height="33px">
+                                            <svg
+                                                viewBox="0 0 33 33"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                style={{ display: 'block' }}
+                                            >
+                                                <path
+                                                    d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
+                                                    fill="#3F77A5"
+                                                />
+                                            </svg>
+                                        </Box>
+                                        <Text
+                                            fontWeight="500"
+                                            lineHeight="100%"
+                                            maxW={{ base: "220px", md: "48%" }}
+                                            fontSize={{ base: "12px", md: "16px" }}
+                                            width="48%"
+                                        >
+                                            Got visuals piling up? Our AI turns them into answers—fast. It's like giving your cameras a brain to spot what matters and fix your headaches on the spot.
+                                        </Text>
+                                    </MotionBox>
+                                </Flex>
+                            )}
+
+                            {/* Robotic Hand and Button */}
+                            <Flex
+                                position="relative"
+                                mt={{ base: "1", md: "-10%" }}
+                                ml={{ base: "0", md: "-40px" }}
+                                width="fit-content"
                             >
-                                <Box width="30px" height="33px">
+                                <Image
+                                    src="/assets/robohand.png"
+                                    alt="Robotic Hand"
+                                    display={{ base: "none", md: "block" }}
+                                />
+                                <MotionButton
+                                    position="absolute"
+                                    padding="24px"
+                                    top={{ base: "20%", sm: "20%", md: "37%" }}
+                                    right={{ base: "", sm: "", md: "8%" }}
+                                    bg="white"
+                                    height={{ base: "34px", sm: "50px" }}
+                                    borderRadius="20px"
+                                    color="#3F77A5"
+                                    as={Link}
+                                    to="/contactus"
+                                    gap="2"
+                                    display="flex"
+                                    _hover={{
+                                        bg: "#E0F2FE",
+                                        color: "#2C5E84",
+                                    }}
+                                    fontSize={{ base: "14px", sm: "16px" }}
+                                    // animate={{
+                                    //     x: [0, 5, -5, 5, -5, 0],
+                                    //     y: [0, -5, 5, -5, 5, 0],
+                                    // }}
+                                    // transition={{
+                                    //     duration: 0.5,
+                                    //     repeat: Infinity,
+                                    //     ease: "easeInOut",
+                                    // }}
+                                    animate={{
+                                        x: [0, 5, 0, -5, 0],
+                                        y: [0, 0, 5, 0, -5],
+                                    }}
+                                    transition={{
+                                        repeat: Infinity,
+                                        duration: 0.3,
+                                        ease: "linear",
+                                    }}
+                                >
+                                    Book Demo
                                     <svg
-                                        viewBox="0 0 33 33"
+                                        width="14"
+                                        height="14"
+                                        viewBox="0 0 17 18"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        style={{ display: 'block' }}
                                     >
                                         <path
-                                            d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
+                                            d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
                                             fill="#3F77A5"
                                         />
                                     </svg>
-                                </Box>
-                                <Text
-                                    fontWeight="500"
-                                    lineHeight="100%"
-                                    maxW={{ base: "220px", md: "48%" }}
-                                    fontSize={{ base: "12px", md: "16px" }}
-                                    width="48%"
-                                >
-                                    Got visuals piling up? Our AI turns them into answers—fast. It's like giving your cameras a brain to spot what matters and fix your headaches on the spot.
-                                </Text>
-                            </MotionBox>
+                                </MotionButton>
+                            </Flex>
                         </Flex>
-                    )}
 
-                    {/* Robotic Hand and Button */}
-                    <Flex
-                        position="relative"
-                        mt={{ base: "1", md: "-10%" }}
-                        ml={{ base: "0", md: "-40px" }}
-                        width="fit-content"
-                    >
-                        <Image
-                            src="/assets/robohand.png"
-                            alt="Robotic Hand"
-                            display={{ base: "none", md: "block" }}
-                        />
-                        <MotionButton
-                            position="absolute"
-                            padding="24px"
-                            top={{ base: "20%", sm: "20%", md: "37%" }}
-                            right={{ base: "", sm: "", md: "8%" }}
-                            bg="white"
-                            height={{ base: "34px", sm: "50px" }}
-                            borderRadius="20px"
-                            color="#3F77A5"
-                            as={Link}
-                            to="/contactus"
-                            gap="2"
-                            display="flex"
-                            _hover={{
-                                bg: "#E0F2FE",
-                                color: "#2C5E84",
-                            }}
-                            fontSize={{ base: "14px", sm: "16px" }}
-                            // animate={{
-                            //     x: [0, 5, -5, 5, -5, 0],
-                            //     y: [0, -5, 5, -5, 5, 0],
-                            // }}
-                            // transition={{
-                            //     duration: 0.5,
-                            //     repeat: Infinity,
-                            //     ease: "easeInOut",
-                            // }}
-                            animate={{
-                                x: [0, 5, 0, -5, 0],
-                                y: [0, 0, 5, 0, -5],
-                              }}
-                              transition={{
-                                repeat: Infinity,
-                                duration: 0.3,
-                                ease: "linear",
-                              }}
-                        >
-                            Book Demo
-                            <svg
-                                width="14"
-                                height="14"
-                                viewBox="0 0 17 18"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
-                                    fill="#3F77A5"
-                                />
-                            </svg>
-                        </MotionButton>
+                        {!useBreakpointValue({ base: true, md: false }) && (
+                            <MotionImage
+                                src="/assets/tablet1.webp"
+                                position="absolute"
+                                bottom="-8%"
+                                // bg={{base:"black",sm:"darkred",md:"yellow",lg:"darkorange",xl:"blue"}}
+                                right={['-10px', '-20px', '-30px', '-30px']} // Adjust for breakpoints: [sm, md, lg, xl]
+                                width={['320px', '480px', '660px', '840px']} // Responsive widths
+                                // height="auto"
+                                // zIndex={1}
+                                initial={{ scale: 0.8, opacity: 1 }}
+                                whileInView={{ scale: 1, opacity: 1 }}
+                                transition={{ duration: 0.5, ease: 'easeOut' }}
+                                viewport={{ once: false, amount: 0.2 }}
+                            />
+
+                        )}
                     </Flex>
+
                 </Box>
             </Flex>
         </Box>
