@@ -14,6 +14,7 @@ import StickySection from "./Data/StickySection";
 import HeroSection from "./Components/HeroSection";
 import { customData, customData1 } from "./Data/customData";
 import AmbicamLandingPage from "../Ambicam/AmbicamLandingPage";
+import WhyAmbicamPage from "../Ambicam/whyambi";
 
 
 const VMuktiHomepage = () => {
@@ -41,8 +42,8 @@ const VMuktiHomepage = () => {
                 <Industries />
                 <AdvancedSurveillance />
                 <Achieved />
-                <AmbicamLandingPage />
             </Box>
+
         </PageContentWrapper>
     );
 };
