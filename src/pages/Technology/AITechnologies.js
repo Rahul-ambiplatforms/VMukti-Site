@@ -61,7 +61,9 @@ const AITechnologies = () => {
       image: "./assets/gptr.png",
     },
   ];
-
+  
+  const showCircles = useBreakpointValue({ base: false, md: true });
+  
   const visibleSlidesValue = useBreakpointValue({
     base: 1,
     sm: 2,
@@ -70,13 +72,12 @@ const AITechnologies = () => {
     xl: 4,
   });
 
-  const showCircles = useBreakpointValue({ base: false, md: true });
-  const [visibleSlides, setVisibleSlides] = useState(1); // Default to 1
   const [currentSlide, setCurrentSlide] = useState(0);
   const [visibleSlideRange, setVisibleSlideRange] = useState({
     start: 0,
     end: Math.min(1 - 1, slides.length - 1), // Default range for 1 visible slide
   });
+  const [visibleSlides, setVisibleSlides] = useState(1); // Default to 1
 
   useEffect(() => {
     if (visibleSlidesValue) {
@@ -99,48 +100,6 @@ const AITechnologies = () => {
       });
     }
   }, [visibleSlidesValue, slides.length]);
-
-  // Add state for touch positions
-  const [touchStartX, setTouchStartX] = useState(0);
-  const [touchEndX, setTouchEndX] = useState(0);
-
-  // Update the slider
-  const updateSlider = (index) => {
-    setCurrentSlide(index);
-  };
-
-  // Handle previous and next slide
-  const handlePrev = () => {
-    setCurrentSlide((prev) => {
-      const newSlide = prev - 1;
-      return newSlide < 0 ? slides.length - 1 : newSlide; // Wrap around to the last slide
-    });
-  };
-
-  const handleNext = () => {
-    setCurrentSlide((prev) => {
-      const newSlide = prev + 1;
-      return newSlide >= slides.length ? 0 : newSlide; // Wrap around to the first slide
-    });
-  };
-
-  const handleTouchStart = (e) => {
-    setTouchStartX(e.touches[0].clientX);
-  };
-
-  const handleTouchMove = (e) => {
-    setTouchEndX(e.touches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    if (touchStartX - touchEndX > 50) {
-      handleNext(); // Swipe left
-    } else if (touchEndX - touchStartX > 50) {
-      handlePrev(); // Swipe right
-    }
-    setTouchStartX(0);
-    setTouchEndX(0);
-  };
 
   useEffect(() => {
     const updateVisibleSlides = () => {
@@ -166,6 +125,45 @@ const AITechnologies = () => {
 
     updateVisibleSlides();
   }, [currentSlide, visibleSlides, slides.length]);
+
+  // Add state for touch positions
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [touchEndX, setTouchEndX] = useState(0);
+
+  
+
+  // Handle previous and next slide
+  const handlePrev = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const handleNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  // Update the slider
+  const updateSlider = (index) => {
+    setCurrentSlide(index);
+  };
+
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX - touchEndX > 50) {
+      handleNext(); // Swipe left
+    } else if (touchEndX - touchStartX > 50) {
+      handlePrev(); // Swipe right
+    }
+    setTouchStartX(0);
+    setTouchEndX(0);
+  };
+
 
   // Responsive styles
   const cardDirection = useBreakpointValue({ base: "column", md: "row" });

@@ -380,13 +380,13 @@ export default function IndustryDashboard() {
           lg: "repeat(4, 1fr)",
         }}
         gap={{ base: "10px", md: "15px" }}
-        width="100%"
-        // Change from 100% to avoid overflow
-        maxWidth="1512px"
-        // mx="auto" // Center the grid properly
-        // px={{ base: "10px", md: "30px" }}
-        // mt="5%"
-        // mb="5%"
+      // width="100%"
+      // Change from 100% to avoid overflow
+      // maxWidth="1512px"
+      // mx="auto" // Center the grid properly
+      // px={{ base: "10px", md: "30px" }}
+      // mt="5%"
+      // mb="5%"
       >
         <GridItem
           colSpan={2} // Span across two columns (1 and 2)
@@ -400,7 +400,7 @@ export default function IndustryDashboard() {
           textAlign="left"
           pb={{ base: "40px", md: "0" }}
           zIndex={2} // Ensure it is on top of other elements
-          // bg="red"
+        // bg="red"
         >
           {/* Title */}
           <MotionText
@@ -438,7 +438,7 @@ export default function IndustryDashboard() {
                 viewBox="0 0 33 33"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                // bg="red"
+              // bg="red"
               >
                 <path
                   d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
@@ -477,13 +477,13 @@ export default function IndustryDashboard() {
                   md: industry.isWide ? 2 : 1,
                 }}
                 rowSpan={1}
-                // ml="2%"---------------------
+              // ml="2%"---------------------
               >
                 <Box
                   width={{
                     base: "100%", // Full width on small screens
                     md: "240px", // Fixed width on medium screens
-                    lg: industry.isWide ? "655px" : "100%", // Fixed width for isWide cards on large screens
+                    lg: "100%", // Fixed width for isWide cards on large screens
                   }}
                   height={{ base: "200px", md: "320px" }}
                   borderRadius="24px"

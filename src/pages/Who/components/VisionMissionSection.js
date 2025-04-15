@@ -9,8 +9,9 @@ const VisionMissionSection = () => {
       justifyContent="space-between"
       alignItems="left"
       mt="1%"
+      mb="1%"
       direction={{ base: "column", md: "row" }}
-      gap={{ base: "4", md: "0" }}
+      gap={{ base: "4", md: "2" }}
     >
       {/* Vision Box */}
       <Box

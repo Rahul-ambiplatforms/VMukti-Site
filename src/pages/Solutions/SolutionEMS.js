@@ -447,7 +447,7 @@ const SolutionEMS = () => {
     setVisibleSlideRange({ start: 0, end: initialEnd });
   }, [location.search, visibleSlides, slides.length]);
 
-  // Navigation handlers with loop
+  // Handle previous and next slide
   const handlePrev = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
@@ -456,7 +456,7 @@ const SolutionEMS = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
-  // Update slider position
+  // Update slider
   const updateSlider = (index) => {
     setCurrentSlide(index);
     const newUrl = `${location.pathname}?slider=${slides[index].id}`;
