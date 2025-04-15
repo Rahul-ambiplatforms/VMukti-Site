@@ -98,7 +98,7 @@ const HeroSection = () => {
                         direction="column"
                         position="relative"
                         width="600px"
-                        
+
                     >
                         <Box
                             position="absolute"
@@ -298,20 +298,20 @@ const HeroSection = () => {
 
                         {!useBreakpointValue({ base: true, md: false }) && (
                             <MotionImage
-                            src="/assets/tablet1.webp"
-                            position="absolute"
-                            bottom="-8%"
-                            // bg={{base:"black",sm:"darkred",md:"yellow",lg:"darkorange",xl:"blue"}}
-                            right={['-10px', '-20px', '-30px', '-50px']} // Adjust for breakpoints: [sm, md, lg, xl]
-                            width={['320px', '480px', '660px', '840px']} // Responsive widths
-                            // height="auto"
-                            // zIndex={1}
-                            initial={{ scale: 0.8, opacity: 1 }}
-                            whileInView={{ scale: 1, opacity: 1 }}
-                            transition={{ duration: 0.5, ease: 'easeOut' }}
-                            viewport={{ once: false, amount: 0.2 }}
-                          />
-                          
+                                src="/assets/tablet1.webp"
+                                position="absolute"
+                                bottom="-8%"
+                                // bg={{base:"black",sm:"darkred",md:"yellow",lg:"darkorange",xl:"blue"}}
+                                right={['-10px', '-20px', '-30px', '-30px']} // Adjust for breakpoints: [sm, md, lg, xl]
+                                width={['320px', '480px', '660px', '840px']} // Responsive widths
+                                // height="auto"
+                                // zIndex={1}
+                                initial={{ scale: 0.8, opacity: 1 }}
+                                whileInView={{ scale: 1, opacity: 1 }}
+                                transition={{ duration: 0.5, ease: 'easeOut' }}
+                                viewport={{ once: false, amount: 0.2 }}
+                            />
+
                         )}
                     </Flex>
 
