@@ -1,7 +1,7 @@
 import { Box, Container, Heading, Text, Image, Flex, VStack } from '@chakra-ui/react';
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
-import SolutionEMS from './SolutionEMS';
+import SolutionEMS from './Components/SolutionEMS';
 import TripleImageSection from '../../components/TripleImageSection';
 import PageContentWrapper from '../../components/PageContentWrapper';
 
@@ -20,12 +20,16 @@ const Hero = () => {
     }, [location]);
 
     return (
-        <PageContentWrapper>
-            <TripleImageSection />
-            <Box id="solutions-slider"> {/* Add this ID */}
-                <SolutionEMS />
-            </Box>
-        </PageContentWrapper>
+        <>
+            <PageContentWrapper noPadding>
+                <TripleImageSection />
+            </PageContentWrapper>
+            <PageContentWrapper>
+                <Box id="solutions-slider"> {/* Add this ID */}
+                    <SolutionEMS />
+                </Box>
+            </PageContentWrapper>
+        </>
     );
 };
 
