@@ -20,9 +20,14 @@ import WhyAmbicamPage from "../Ambicam/whyambi";
 const VMuktiHomepage = () => {
 
     return (
-        <PageContentWrapper>
-            <HeroSection />
-            <Box bg="#E7E7E7"  >
+        <>
+
+
+            <PageContentWrapper noPadding>
+                <HeroSection />
+            </PageContentWrapper>
+
+            <PageContentWrapper>
                 {/* Page Content Sections */}
                 <AdvancedComputerVision {...customData1} />
                 <Flex mt={"5%"} direction="column">
@@ -42,9 +47,9 @@ const VMuktiHomepage = () => {
                 <Industries />
                 <AdvancedSurveillance />
                 <Achieved />
-            </Box>
 
-        </PageContentWrapper>
+            </PageContentWrapper>
+        </>
     );
 };
 

@@ -61,9 +61,9 @@ const AITechnologies = () => {
       image: "./assets/gptr.png",
     },
   ];
-  
+
   const showCircles = useBreakpointValue({ base: false, md: true });
-  
+
   const visibleSlidesValue = useBreakpointValue({
     base: 1,
     sm: 2,
@@ -130,7 +130,7 @@ const AITechnologies = () => {
   const [touchStartX, setTouchStartX] = useState(0);
   const [touchEndX, setTouchEndX] = useState(0);
 
-  
+
 
   // Handle previous and next slide
   const handlePrev = () => {
