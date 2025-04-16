@@ -44,16 +44,18 @@ const Diagram = () => {
         p={{ base: '4', md: '8' }} // Smaller padding on small screens
         display="flex"
         flexDirection="column"
-        textAlign={{ base: 'center', md: 'left' }} // Center text on small screens
+        textAlign={{ base: 'left', md: 'left' }} // Center text on small screens
         zIndex={1} // Bring forward
         borderRadius={'24px'}
+
       >
         <HeadingAnimation>
           <Text
-            fontSize={{ base: '18px', md: '36px' }}
+            w="80%"
+            fontSize={{ base: '20px', md: '36px' }}
             // fontWeight="bold"
             fontWeight="600"
-            ml="5%"
+            ml={{md:"5%"}}
             mt="5%"
             lineHeight={{ base: '1.2', md: '1.3' }} // Adjusts vertical spacing
           >
@@ -68,15 +70,16 @@ const Diagram = () => {
           <Flex
             align="flex-start"
             mt="10%"
-            ml="5%"
-            gap={10}
+            ml={{md:"5%"}}
+            gap={5}
             direction={{ base: 'column', md: 'row' }}
+            pb={{base:"25%"}}
           >
-            <Box>
+            <Box mb="5%">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="33"
-                height="33"
+                width="25"
+                height="25"
                 viewBox="0 0 33 33"
                 fill="none"
                 bg="red"
@@ -90,9 +93,10 @@ const Diagram = () => {
 
             <Text
               color="white"
+              fontWeight="500"
               maxW={{ base: '90%', md: '400px' }} // Reduced max width
               fontSize={{ md: '16px' }}
-              // lineHeight={0}
+              lineHeight="100%"
               mt="-1%"
             >
               Swiftly Prototype, Deploy, and Scale Computer Vision Tasks on a
@@ -106,6 +110,8 @@ const Diagram = () => {
       <Flex
         flex={1}
         p={rightPanelPadding}
+        py={{ base: '25%', md: '0' }} // Adjust padding for small screens
+        // p={{base:"10",md:rightPanelPadding}}
         justifyContent="center"
         alignItems="center"
         bg="white"
@@ -113,69 +119,6 @@ const Diagram = () => {
       >
         {/* <Image src="../assets/ai_implementation.png" /> */}
         <Image src={`${process.env.PUBLIC_URL}/assets/ai_implementation.png`} />
-
-        {/* <Box width="90%" height="90%" position="relative">
-                    {/* Center Icon 
-                    <Box
-                        position="absolute"
-                        top="50%"
-                        left={{ base: "50%", md: "40%" }} // Center on small screens
-                        transform="translate(-50%, -50%)"
-                        bg="white"
-                        p={4}
-                        borderRadius="md"
-                        boxShadow="md"
-                    >
-                        <Image src="./assets/leftgrp.png" height="100vh" alt="Layers icon" boxSize={12} />
-                    </Box>
-
-                    {/* Middle Image 
-                    <Box
-                        position="absolute"
-                        top="50%"
-                        left="50%"
-                        transform="translate(-50%, -50%)"
-                        bg="white"
-                        p={4}
-                        borderRadius="md"
-                        boxShadow="md"
-                    >
-                        <Image src="./assets/layers.png" alt="Layers icon" boxSize={12} />
-                    </Box>
-
-                    {/* Right Image
-                    <Box
-                        position="absolute"
-                        top="50%"
-                        left={{ base: "50%", md: "60%" }} // Center on small screens
-                        transform="translate(-50%, -50%)"
-                        bg="white"
-                        p={4}
-                        borderRadius="md"
-                        boxShadow="md"
-                    >
-                        <Image src="./assets/leftgrp.png" alt="Layers icon" boxSize={12} />
-                    </Box>
-
-                    {/* Nodes 
-                    {nodes.map((node, index) => (
-                        <Box
-                            key={index}
-                            position="absolute"
-                            bg="#f9f9f9"
-                            p={2}
-                            borderRadius="md"
-                            fontSize={nodeFontSize}
-                            fontWeight="bold"
-                            style={{
-                                top: node.position,
-                                [node.side]: nodePosition, // Use the responsive node position
-                            }}
-                        >
-                            {node.label}
-                        </Box>
-                    ))}
-                </Box> */}
       </Flex>
     </Flex>
   )

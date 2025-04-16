@@ -86,17 +86,17 @@ const SurveillanceSoftware = () => {
                 <Flex direction="column" gap={4}>
                   {/* box heading */}
                   <Flex direction="column">
-                    <Text fontSize={{ base: "14px", md: "16px" }} fontWeight="700">
+                    <Text fontSize={{ base: "14px", md: "16px" }} fontWeight="extrabold">
                       Security That Gets Smarter
                     </Text>
                     <Box width="20px" height="2px" bg="#3F77A5" />
                   </Flex>
                   {/* box content */}
                   <Text
-                    width={{ base: "100%", sm: "100%", md: "25%", lg: "20%", xl: "15%" }}
+                    width={{ base: "70%", sm: "100%", md: "25%", lg: "20%", xl: "15%" }}
                     fontWeight={500}
                     fontSize={{ base: "12px", md: "14px" }}
-                    lineHeight="100%"
+                    lineHeight={{base:"1.2",md:"100%"}}
                   >
                     Want a system that learns your world? Our AI video surveillance
                     keeps up, adapts, and stays ahead of trouble—all on its own.
@@ -115,7 +115,7 @@ const SurveillanceSoftware = () => {
               >
                 {/* box heading */}
                 <Flex direction="column" width="100%">
-                  <Text fontSize={{ base: "14px", md: "16px" }} fontWeight="700">
+                  <Text fontSize={{ base: "14px", md: "16px" }} fontWeight="extrabold ">
                     How It Helps You Out
                   </Text>
                   <Box width="20px" height="2px" bg="#3F77A5" />

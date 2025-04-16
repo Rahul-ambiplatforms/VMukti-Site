@@ -152,18 +152,17 @@ const VideoAnalytics = () => {
             mt={{ base: "20px", md: "25px" }}
             display={{ base: "none", md: "flex" }} // Hide progress bar in mobile view
           >
-            <Box position="relative" width="100%" height="4px" bg="rgba(255,255,255,0.2)" mt={{ base: "0", md: "25px" }}>
+            <Box position="relative" width="100%" height="1px" bg="rgba(255,255,255,0.2)" mt={{ base: "0", md: "25px" }}>
               <Box
                 position="absolute"
-                height="100%"
+                mt="-1px" //jenil
+                // height="100%"
                 width={`${100 / features.length}%`}
                 bg="#FFFFFF"
-                // left={`${progress}%`}
-                // transform="translateX(-100%)"
-                // transition="left 0.3s ease-in-out"
                 left={`${(featureIndex / features.length) * 100}%`} // Adjusted calculation for initial position
                 transform="translateX(0)" // Removed "-100%" to fix the initial position
                 transition="left 0.3s ease-in-out"
+                height="4px"
               />
             </Box>
 
@@ -272,6 +271,7 @@ const VideoAnalytics = () => {
             <Text color="black" fontSize={{ base: "14px", md: "18px" }} fontWeight="700" letterSpacing="-0.24px">
               {features[featureIndex].title}
             </Text>
+            <Box width="18px" height="2.5px" borderRadius="2px" bg="#3F77A5" />
             <Text
               width="100%"
               color="#696969"
