@@ -37,7 +37,7 @@ const VMuktiHomepage = () => {
                         list={["Precision Tracking", "Automated Alerts", "AI-Powered Recognition", "Adaptive Learning"]}
                     />
                 </Flex>
-                <Box mt="5%"><SurveillanceSoftware /></Box>
+                <Box mt="3%"><SurveillanceSoftware /></Box>
                 <StickySection>
                     <AdvancedComputerVision {...customData} />
                     <VideoAnalytics />
