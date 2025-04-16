@@ -1,10 +1,10 @@
 export const customData = {
     title: [
-        { text: "Neural  ", color: "black" },
-        { text: "Networks ", color: "#3F77A5" },
+        { text: "Neural", color: "black" },
+        { text: "Networks", color: "#3F77A5" },
         { text: " & Predictive", color: "black" },
         { text: "Intelligence", color: "#DB7B3A" },
-        { text: ".", color: "#3F77A5" }, //I added this
+        { text: ".", color: "#3F77A5" },
     ],
     cards: [
         {

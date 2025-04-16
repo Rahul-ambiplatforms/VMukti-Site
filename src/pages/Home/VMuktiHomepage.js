@@ -16,16 +16,12 @@ import { customData, customData1 } from "./Data/customData";
 import AmbicamLandingPage from "../Ambicam/AmbicamLandingPage";
 import WhyAmbicamPage from "../Ambicam/whyambi";
 
-
 const VMuktiHomepage = () => {
-
-    return (
-        <>
-
-
-            <PageContentWrapper noPadding>
-                <HeroSection />
-            </PageContentWrapper>
+  return (
+    <>
+      <PageContentWrapper noPadding>
+        <HeroSection />
+      </PageContentWrapper>
 
             <PageContentWrapper>
                 {/* Page Content Sections */}

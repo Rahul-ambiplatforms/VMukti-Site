@@ -96,6 +96,7 @@ const SurveillanceSoftware = () => {
                     width={{ base: "100%", sm: "100%", md: "25%", lg: "20%", xl: "15%" }}
                     fontWeight={500}
                     fontSize={{ base: "12px", md: "14px" }}
+                    lineHeight="100%"
                   >
                     Want a system that learns your world? Our AI video surveillance
                     keeps up, adapts, and stays ahead of trouble—all on its own.
