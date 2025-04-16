@@ -1,3 +1,5 @@
+import { color } from "framer-motion";
+
 export const customData = {
     title: [
         { text: "Neural", color: "black" },
@@ -72,7 +74,7 @@ export const customData1 = {
         },
     ],
     backgroundImage: "/assets/VMukti Brochure O2 1.png",
-    bgColor: "white", // Added bgColor
+
 };
 
 export const customData2 = {
@@ -84,32 +86,31 @@ export const customData2 = {
     cards: [
         {
             type: "image",
+            label: "Automation & Surveillance Technologies",
+            media: "/assets/about1.png",
+            // description: "Digs into video live—grabs what's happening, no waiting.",
+        },
+        {
+            type: "image",
             label: "AI-Powered Visual Processing",
-            media: "/assets/ai1.png",
-            description: "Digs into video live—grabs what's happening, no waiting.",
+            media: "/assets/about2.png",
+            // description:
+            //     "Ties together motion, images, and surroundings for the full picture.",
         },
         {
             type: "image",
-            label: "Multi-Modal Recognition",
-            media: "/assets/mmr.png",
-            description:
-                "Ties together motion, images, and surroundings for the full picture.",
+            label: "Edge & Cloud Integration",
+            media: "/assets/about3.png",
+            // description:
+            //     "Figures out what's what—people, actions, where stuff is—so you're never lost.",
         },
         {
             type: "image",
-            label: "Scene Understanding",
-            media: "/assets/su.png",
-            description:
-                "Figures out what's what—people, actions, where stuff is—so you're never lost.",
-        },
-        {
-            type: "image",
-            label: "Automated Decision-Making",
-            media: "/assets/su2.png",
-            description:
-                "Turns video chaos into clear info our AI CCTV software can act on right away.",
+            label: "Real-Time Video Analytics",
+            media: "/assets/about4.png",
+            // description:
+            //     "Turns video chaos into clear info our AI CCTV software can act on right away.",
         },
     ],
     backgroundImage: "/assets/VMukti Brochure O2 1.png",
-    bgColor: "#5887AE", // Added bgColor
 };
