@@ -36,7 +36,10 @@ export const customData = {
 };
 
 export const customData1 = {
-    title: [{ text: "How We Make", color: "black" },{ text: "It Work", color: "#3F77A5" }],
+    title: [
+        { text: "How We Make", color: "black" },
+        { text: "It Work", color: "#3F77A5" },
+    ],
     subtitle: "Real-Time Monitoring",
     cards: [
         {
