@@ -6,6 +6,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import PageContentWrapper from "./PageContentWrapper";
 const MotionTextContainer = motion(VStack);
 const MotionImage = motion(Image);
 const MotionText = motion(Text);
@@ -27,28 +28,31 @@ const TripleImageSection = ({
 
 
   return (
-    <Box bg="#E7E7E7" mb={10}>
+    <Box mb={10}>
       {/* Heading Animation */}
-      <motion.div
-        ref={ref}
-        initial={{ opacity: 0, x: -50 }}
-        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-        transition={{ duration: 1, ease: "easeInOut" }} // Smoother transition
-      >
-        {heading.map((item, index) => (
-          <MotionText
-            key={index}
-            as="span"
-            color={item.color}
-            fontSize={{ base: "32px", md: "32px", lg: "48px" }}
-            fontWeight="600"
-            lineHeight="normal"
-            whiteSpace="pre-wrap"
-          >
-            {item.text}{" "}
-          </MotionText>
-        ))}
-      </motion.div>
+      <Box px={{ base: "4%", md: "0%" }}>
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, x: -50 }}
+          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+          transition={{ duration: 1, ease: "easeInOut" }} // Smoother transition
+        >
+          {heading.map((item, index) => (
+            <MotionText
+              key={index}
+              as="span"
+              color={item.color}
+              fontSize={{ base: "32px", md: "32px", lg: "48px" }}
+              fontWeight="600"
+              lineHeight="normal"
+              whiteSpace="pre-wrap"
+            >
+              {item.text}{" "}
+            </MotionText>
+          ))}
+        </motion.div>
+      </Box>
+
 
       {/* Content Section */}
       <Flex
@@ -60,7 +64,9 @@ const TripleImageSection = ({
       // bg="red"
       >
         {/* Left Column (Animated Text & Icon) */}
+
         <MotionTextContainer
+          px={{ base: "4%", md: "0%" }}
           align="start"
           spacing={6}
           maxW={{ base: "100%", md: "50%", lg: "40%" }}
@@ -184,7 +190,7 @@ const TripleImageSection = ({
           w="full"
           position="absolute"
           top={{ base: "75%", md: "65%" }}
-          left={{ base: "54%", md: "auto" }}
+          left={{ base: "50%", md: "auto" }}
           bottom={{ base: "10%", md: "auto" }}
           gap={4}
           alignItems="flex-end"
@@ -192,24 +198,24 @@ const TripleImageSection = ({
           transform={{ base: "translateX(-50%)", md: "none" }}
         >
           <Box
-            w={{ base: "80px", sm: "100px", md: "150px", lg: "204px" }}
+            w={{ base: "80px", sm: "100px", md: "40%", lg: "204px" }}
             h={{ base: "80px", sm: "100px", md: "150px", lg: "204px" }}
             display={{ base: "none", md: "block" }}
             borderRadius="24px"
             bg="#BECEDC"
           ></Box>
           <Box
-            w={{ base: "100%", md: "80%" }}
+            w={{ base: "95%", md: "80%" }}
             h={{ base: "150px", sm: "120px", md: "180px", lg: "239px" }}
             flexShrink={0}
             borderRadius={{ base: "20px 0 0 20px", md: "24px" }}
-            bg="#FFF"
+            bg="#fff"
             zIndex={0}
           // bg="red"
           ></Box>
         </Flex>
       </Flex>
-    </Box>
+    </Box >
   );
 };
 
