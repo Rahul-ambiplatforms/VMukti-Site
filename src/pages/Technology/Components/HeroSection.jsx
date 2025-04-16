@@ -1,6 +1,13 @@
 // components/HeroSection/index.js
 import React, { useRef } from "react";
-import { Flex, Image, Text, Heading, Box, useBreakpointValue } from "@chakra-ui/react";
+import {
+  Flex,
+  Image,
+  Text,
+  Heading,
+  Box,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import SubHeadingAnimation from "../../../components/Animation/Text/SubHeadingAnimation";
 
@@ -16,7 +23,7 @@ const HeroSection = ({ isAnimationTriggered }) => {
     ring: { base: "200px", md: "300px", lg: "408px" },
     headingFontSize: { base: "24px", sm: "30px", md: "36px", lg: "48px" },
     textFontSize: { base: "16px", md: "16px" },
-    squareBox: { base: "120px", md: "200px", lg: "336px" },
+    squareBox: { base: "200px", md: "200px", lg: "336px" },
   };
 
   const animations = {
@@ -86,7 +93,7 @@ const HeroSection = ({ isAnimationTriggered }) => {
         src="./assets/Dashboard.png"
         alt="AI Dashboard Interface"
         position="absolute"
-        top={{ base: "20%", md: "25%", lg: "10%" }}
+        top={{ base: "10%", md: "25%", lg: "11%" }}
         right={{ base: "10%", md: "16", lg: "8" }}
         w={{ base: "90%", md: "100%" }}
         objectFit="contain"
@@ -166,7 +173,24 @@ const HeroSection = ({ isAnimationTriggered }) => {
     >
       <BackgroundRing />
       <DesktopBackgroundImages />
-      <Box position="relative" zIndex={4} flex="1" display="flex" alignItems="center">
+      <Box
+        position="relative"
+        zIndex={4}
+        flex="1"
+        display="flex"
+        alignItems="center"
+      >
+        <Box
+          width={responsiveSizes.squareBox}
+          height={responsiveSizes.squareBox}
+          borderRadius="20px"
+          background="#BECEDC"
+          display={{ base: "block", md: "none", lg: "none" }}
+          zIndex="0"
+          position="absolute"
+          bottom="30%"
+          left="2%"
+        />
         <Flex
           direction={{ base: "column", lg: "row" }}
           align={{ base: "flex-start", lg: "flex-start" }}
@@ -178,10 +202,12 @@ const HeroSection = ({ isAnimationTriggered }) => {
             display={{ base: "flex", lg: "none" }}
             w="538px"
             h="556px"
-            mt={-16}
+            mt="-40%"
+            // mb="100%"
             position="relative"
             justify="center"
             align="center"
+            // bg="red"
           >
             <MotionImage
               src={`${process.env.PUBLIC_URL}/assets/Dashboard.png`}
@@ -193,16 +219,33 @@ const HeroSection = ({ isAnimationTriggered }) => {
               {...animations.popIn}
             />
           </Flex>
-          <Flex direction="column" maxW={{ base: "100%", lg: "70%" }} position="relative" zIndex={3}>
+          <Flex
+            direction="column"
+            maxW={{ base: "100%", lg: "70%" }}
+            position="relative"
+            zIndex={3}
+          >
             <HeadingSection display={{ base: "none", lg: "block" }} />
             <SubHeadingAnimation
               display="flex"
-              flexDirection={{ base: "row", md: "column" }}
+              flexDirection="column"
               initial={{ opacity: 0, y: 20 }}
-              animate={isAnimationTriggered ? { opacity: 1, y: 0 } : {}}
+              animate={
+                isAnimationTriggered
+                  ? { opacity: 1, y: 0 }
+                  : { opacity: 1, y: -100 }
+              }
               transition={{ duration: 0.5, ease: "easeOut" }}
+              // direction={{ base: "column", lg: "row" }}
+              mb="2%"
+              mt={{base:"-10%"}}
+              // bg="red"
             >
-              <Box width={{ md: "30px" }} ml={{ base: "6%", md: "0" }}>
+              <Box
+                width={{ md: "30px" }}
+                ml={{ base: "6%", md: "0" }}
+                mt={{ md: "5%" }}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={svgSize}
@@ -216,16 +259,18 @@ const HeroSection = ({ isAnimationTriggered }) => {
                   />
                 </svg>
               </Box>
-              <Flex align="center" ml={{ base: "-1px", md: "5%", lg: "0%" }}>
+              <Flex align="center" ml={{ base: "2%", md: "5%", lg: "0%" }}>
                 <Text
                   fontSize={responsiveSizes.textFontSize}
                   color="#000"
                   lineHeight="normal"
-                  maxW={{ base: "90%", md: "60%", lg: "30%" }}
+                  maxW={{ base: "100%", md: "60%", lg: "33%" }}
                   m={3}
                   fontWeight="500"
                 >
-                  VMukti is driving innovation with advanced AI technologies, transforming surveillance, automation, and security for a smarter, more connected world.
+                  VMukti is driving innovation with advanced AI technologies,
+                  transforming surveillance, automation, and security for a
+                  smarter, more connected world.
                 </Text>
               </Flex>
             </SubHeadingAnimation>
@@ -237,6 +282,9 @@ const HeroSection = ({ isAnimationTriggered }) => {
               marginBottom={{ lg: "13%" }}
               display={{ base: "none", md: "none", lg: "block" }}
               zIndex="0"
+              position={{ base: "absolute", md: "relative" }}
+              // top="-150%"
+              // bottom="150%"
             />
           </Flex>
         </Flex>

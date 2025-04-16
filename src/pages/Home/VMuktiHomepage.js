@@ -15,16 +15,12 @@ import HeroSection from "./Components/HeroSection";
 import { customData, customData1 } from "../../data/AdvancedComputerVisionData";
 
 
-
 const VMuktiHomepage = () => {
-
-    return (
-        <>
-
-
-            <PageContentWrapper noPadding>
-                <HeroSection />
-            </PageContentWrapper>
+  return (
+    <>
+      <PageContentWrapper noPadding>
+        <HeroSection />
+      </PageContentWrapper>
 
             <PageContentWrapper>
                 {/* Page Content Sections */}
