@@ -1,7 +1,5 @@
 import React from "react";
 import { Box, Flex, Text, Image } from "@chakra-ui/react";
-import HeadingAnimation from "../../../components/Animation/Text/HeadingAnimation";
-import SubHeadingAnimation from "../../../components/Animation/Text/SubHeadingAnimation";
 
 const VisionMissionSection = () => {
   return (
@@ -208,7 +206,7 @@ const VisionMissionSection = () => {
             color="#3F77A5"
             fontSize={{ base: "20px", md: "36px" }}
             fontWeight="700"
-          > 
+          >
             Mission
           </Text>
           <Text
