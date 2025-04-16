@@ -713,7 +713,7 @@ const NewsletterSubscription = () => {
                 (91+) 968 777 0000
               </Text>
             </Flex>
-            <Flex gap={4} mt="20%">
+            <Flex gap={2} justifyContent="center" mt="20%">
               <Link href={"/contactus"}>
                 <Button
                   width={buttonWidth}
@@ -746,7 +746,7 @@ const NewsletterSubscription = () => {
                   </svg>
                 </Button>
               </Link>
-              <Link href={"/Ambican"}>
+              <Link href={"/Ambicam"}>
                 <Button
                   width={buttonWidth}
                   height={buttonHeight}
