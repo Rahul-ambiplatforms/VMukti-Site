@@ -167,10 +167,10 @@ const AITechnologies = () => {
 
   // Responsive styles
   const cardDirection = useBreakpointValue({ base: "column", md: "row" });
-  const cardContentWidth = useBreakpointValue({ base: "100%", md: "35%" });
-  const svgSize = useBreakpointValue({ base: "25px", md: "33px" });
+  const cardContentWidth = useBreakpointValue({ base: "100%", md: "30%" });
+  const svgSize = useBreakpointValue({ base: "15px", md: "33px" });
   return (
-    <Box bg="white" overflowX="visible" borderRadius="24px">
+    <Box bg="white" overflowX="visible" borderRadius="24px" mb="10%">
       {/* Navigation */}
       <Flex
         justify="space-between"
@@ -347,7 +347,7 @@ const AITechnologies = () => {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        <Flex
+        <Flex 
           w={`${slides.length * 100}%`}
           transform={`translateX(-${currentSlide * (100 / slides.length)}%)`}
           transition="transform 0.5s ease"
@@ -362,19 +362,21 @@ const AITechnologies = () => {
                 direction={cardDirection}
                 position="relative"
                 h={{ base: "auto", md: "753px" }} // Adjust height as needed
+                // bg="red"
               >
                 {/* Card Image (Background) */}
                 <Box
                   position={{ base: "relative", md: "absolute" }} // Relative for mobile
                   top={{ base: "0", md: "0" }}
                   left={{ base: "0", md: "0" }}
-                  w="100%"
-                  h={{ base: "200px", md: "100%" }} // Adjust height for mobile
+                  w={{base:"auto",md:"100%"}}
+                  h={{ base: "250px", md: "100%" }} // Adjust height for mobile
                   // bgImage={slide.image}
                   bgImage={`url(${process.env.PUBLIC_URL}${slide.image})`}
                   bgSize="cover"
                   bgPosition="center"
                   zIndex={1} // Behind the text
+                  // bg="red"
                 />
                 {/* Card Content */}
                 <Flex
@@ -385,10 +387,10 @@ const AITechnologies = () => {
                   transition={{ duration: 0.5, ease: "easeOut" }}
                   direction="column"
                   justify="space-between"
-                  p={{ base: "0", md: "8" }}
+                  p={{ base: "0", md: "2" }}
                   bg="rgba(255, 255, 255, 0.8)"
                   w={cardContentWidth}
-                  h="90%"
+                  h="92%"
                   m={{ base: "0", md: "2%" }} // Adjust margin for mobile
                   borderRadius={"20px"}
                   zIndex={2}
@@ -402,26 +404,18 @@ const AITechnologies = () => {
                     bg={{ base: "#f0f4ff", md: "transparent" }} // Background for heading in mobile
                     // p={{ base: "10px", md: "0" }} // Padding for mobile
                     borderRadius={{ base: "20px", md: "0" }} // Rounded corners for mobile
-                    mt={{ base: "-10%", md: "0" }}
+                    mt={{ base: "-5%", md: "0" }}
+                    // mb="2%"
                   // bg="red"
                   >
-                    {/* <SubHeadingAnimation> */}
-                    {/* <Box
-                        as={motion.div}
-                        initial={{ scale: 0.8, opacity: 0 }}
-                        whileInView={{ scale: 1, opacity: 1 }}
-                        viewport={{ once: false }}
-                        transition={{
-                          duration: 0.4,
-                          ease: "easeOut",
-                          delay: 0.2,
-                        }}
-                      > */}
+                    <Box m={{base:"4", md:"5"}}>
                     <Text
                       fontSize="24px"
                       color="blue.600"
-                      m={5}
-                      width={{ base: "20px", md: "30" }}
+                      mb={{base:"2%",md:"3%"}}
+                      // m={5}
+                      // mt="-1%"
+                      width={{ base: "20px", md: "30px" }}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -436,21 +430,10 @@ const AITechnologies = () => {
                         />
                       </svg>
                     </Text>
-                    {/* </Box> */}
-                    {/* </SubHeadingAnimation> */}
-
-                    {/* <HeadingAnimation> */}
                     <Heading
-                      ml={5}
-                      // as={motion.div}
-                      // initial={{ y: 20, opacity: 0 }}
-                      // whileInView={{ y: 0, opacity: 1 }}
-                      // viewport={{ once: false }}
-                      // transition={{
-                      //   duration: 0.5,
-                      //   ease: "easeOut",
-                      //   delay: 0.3,
-                      // }}
+                      // mt={{base:"-2%"}}
+                      // ml={5}
+                      mb={{base:"2%"}}
                       fontSize={{ base: "20px", md: "36px" }}
                       fontWeight="bold"
                       width={{ base: "217px", md: "auto" }}
@@ -458,37 +441,33 @@ const AITechnologies = () => {
                     >
                       {slide.title}
                     </Heading>
-                    {/* </HeadingAnimation> */}
+                    </Box>
                   </Flex>
 
                   {/* <SubHeadingAnimation> */}
-                  <Flex>  {/*//If it affects remove this and comment out SubHeadingAnimation. */}
+                  <Flex>
                     <Box
-                      // as={motion.div}
-                      // initial={{ y: 10, opacity: 0 }}
-                      // whileInView={{ y: 0, opacity: 1 }}
-                      // viewport={{ once: false }}
-                      mb={{ base: "10%", md: "auto" }}
+                      mb={{ base: "10%", md: "5%" }}
                       width={{ base: "312.731px", md: "auto" }}
-                      pl={{ base: "5%", md: "0" }}
+                      ml={{ base: "5%", md: "4%" }}
                       pt={{ base: "5%", md: "0" }}
-                      // transition={{
-                      //   duration: 0.5,
-                      //   ease: "easeOut",
-                      //   delay: 0.4,
-                      // }}
+                      mr={{ base: "0%", md: "5%" }}
+                      // m={{ base: "5%", md: "5%" }}
                       bg={{ base: "white", md: "transparent" }} // Background for description in mobile
                       // p={{ base: "10px", md: "0" }} // Padding for mobile
                       borderRadius={{ base: "10px", md: "0" }} // Rounded corners for mobile
+                      // bg="red"
                     >
                       {slide.description.map((text, i) => (
                         <Text
+
                           key={i}
-                          fontSize="14px"
+                          fontSize={{base:"14px",md:"16px"}}
                           fontWeight="500"
                           color="black"
-                          lineHeight="1.6"
+                          lineHeight={{base:"1.2",md:"1.4"}}
                           whiteSpace="pre-line"
+                          textAlign={{md:"justify"}}
                         >
                           {text}
                         </Text>

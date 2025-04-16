@@ -6,6 +6,7 @@ import {
   List,
   ListItem,
   Text,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import SubHeadingAnimation from "./Animation/Text/SubHeadingAnimation";
 import HeadingAnimation from "./Animation/Text/HeadingAnimation";
@@ -22,6 +23,9 @@ const popAnimation = {
 };
 
 const ObjectDescription = ({ description, image, list }) => {
+
+  const svgSize = useBreakpointValue({ base: "13px", md: "25px" });
+
   return (
     <>
       <Flex direction="column" gap="4" mt="-2%">
@@ -88,12 +92,12 @@ const ObjectDescription = ({ description, image, list }) => {
             <Flex gap={1} direction="column">
               {/* <SubHeadingAnimation> */}
               <motion.div variants={popAnimation}>
-                <Text fontSize="24px" color="blue.600" mb={5}>
+                <Text fontSize="24px" color="blue.600" mb={{base:"2",md:"5"}}>
                   {/* The size needs to be changed. In mobile view */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="33"
-                    height="33"
+                    width={svgSize}
+                    height={svgSize}
                     viewBox="0 0 33 33"
                     fill="none"
                   >

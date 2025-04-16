@@ -386,6 +386,8 @@ const SolutionEMS = () => {
     },
   ];
 
+  const svgSize = useBreakpointValue({ base: "13px", md: "25px" });
+
   const isDesktop = useBreakpointValue({ base: false, md: true });
 
   const visibleSlides = useBreakpointValue({
@@ -497,7 +499,9 @@ const SolutionEMS = () => {
       // minH="50vh"
       overflowX="hidden"
       // width="100%"
-      mt="8%"
+      mt={{base:"18%",md:"8%"}}
+      mb={{base:"0",md:"11%"}}
+      // bg="red"
     >
       {/* Navigation */}
       <Flex
@@ -747,39 +751,18 @@ const SolutionEMS = () => {
                       color="blue.600"
                       mb={3}
                       mt="5%"
-                      display={{ base: "none", md: "flex" }}
+                      // display={{ base: "none", md: "flex" }}
                     >
                       {/* SVG code remains unchanged */}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="33"
-                        height="33"
+                        width={svgSize}
+                        height={svgSize}
                         viewBox="0 0 33 33"
                         fill="none"
                       >
                         <path
                           d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C0 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
-                          fill="#3F77A5"
-                        />
-                      </svg>
-                    </Text>
-                    <Text
-                      fontSize="24px"
-                      color="blue.600"
-                      mb={3}
-                      mt="5%"
-                      display={{ base: "flex", md: "none" }}
-                    >
-                      {/* SVG code remains unchanged */}
-                      <svg
-                        width="17"
-                        height="17"
-                        viewBox="0 0 17 17"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M15 16.5C15.8284 16.5 16.5 15.8284 16.5 15V1.5C16.5 0.671573 15.8284 -2.38419e-07 15 -2.38419e-07C14.1716 -2.38419e-07 13.5 0.671573 13.5 1.5V13.5H1.5C0.671573 13.5 -2.38419e-07 14.1716 -4.76837e-07 15C-4.76837e-07 15.8284 0.671573 16.5 1.5 16.5H15ZM0.93934 3.06066L13.9393 16.0607L16.0607 13.9393L3.06066 0.93934L0.93934 3.06066Z"
                           fill="#3F77A5"
                         />
                       </svg>
@@ -810,7 +793,7 @@ const SolutionEMS = () => {
                     transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
                     p={{ base: "4", md: "8" }}
                     direction="column"
-                    height="100%"
+                    height={{base:"100%",md:"50%"}}
                     bg="#BECEDC"
                     borderRadius="24px"
                     zIndex={2}
