@@ -9,15 +9,6 @@ import {
   Container,
   Icon,
   useBreakpointValue,
-  Box,
-  Flex,
-  Heading,
-  Text,
-  Button,
-  Image,
-  Container,
-  Icon,
-  useBreakpointValue,
 } from "@chakra-ui/react";
 import WhyAmbicamPage from "./whyambi";
 import PageContentWrapper from "../../components/PageContentWrapper";
@@ -134,24 +125,7 @@ export default function AmbicamLandingPage() {
                         residential, commercial, and public infrastructures.
                       </strong>
                     </Text>
-                    <Text fontSize="16px" fontWeight="500" mb="4">
-                      Engineered to simplify security while enhancing
-                      intelligence, Ambicam offers a robust lineup of{" "}
-                      <strong>plug-and-play smart cameras </strong>
-                      tailored for modern surveillance demands across{" "}
-                      <strong>
-                        residential, commercial, and public infrastructures.
-                      </strong>
-                    </Text>
 
-                    <Text mb="4">
-                      From <strong>real-time remote monitoring</strong> to{" "}
-                      <strong>AI-driven analytics</strong>, Ambicam is built to
-                      empower individuals, enterprises, and smart cities with
-                      actionable insights and reliable protection—anytime,
-                      anywhere.
-                    </Text>
-                  </Box>
                     <Text mb="4">
                       From <strong>real-time remote monitoring</strong> to{" "}
                       <strong>AI-driven analytics</strong>, Ambicam is built to
