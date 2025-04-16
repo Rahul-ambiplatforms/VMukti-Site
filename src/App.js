@@ -1,7 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { ChakraProvider, Box, Spinner, Center } from '@chakra-ui/react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './css/fonts.css';
 import './css/scrollbar.css';
 import theme from './components/theme';
 import Navbar from './components/Navbar';
