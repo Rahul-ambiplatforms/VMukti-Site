@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import CertificationsData from "../../../data/certificationsConstData";
 import HeadingAnimation from "../../../components/Animation/Text/HeadingAnimation";
 import { easeOut } from "framer-motion";
-import { Import } from "lucide-react";
 
 const CertificationsSection = () => {
     return (
