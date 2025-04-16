@@ -18,6 +18,7 @@ const AdvancedComputerVision = ({
       type: "image",
       label: "Real-Time Monitoring",
       media: "/assets/car.png",
+      media: "/assets/car.png",
       description:
         "IoT-enabled cameras and sensors continuously track environmental changes and security events.",
     },
@@ -44,6 +45,7 @@ const AdvancedComputerVision = ({
     },
   ],
   backgroundImage = "/assets/VMuktidot.png",
+  bgColor = "white",
   myMargin = "3%",
   myZIndex = "1",
 }) => {
@@ -72,7 +74,7 @@ const AdvancedComputerVision = ({
     <Flex
       direction="column"
       borderRadius="20px"
-      bgColor="white"
+      bgColor={bgColor}
       position="relative"
       height="100%"
       overflow="hidden"
@@ -221,6 +223,8 @@ const AdvancedComputerVision = ({
               onMouseLeave={() => setHoverCard(null)} // Clear hover state
               onClick={() => setActiveCard(index)} // Update persistent active card on click
               cursor="pointer"
+              position="relative"
+              overflow="hidden"
               position="relative"
               overflow="hidden"
             >

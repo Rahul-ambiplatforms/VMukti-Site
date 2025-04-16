@@ -12,9 +12,8 @@ import SurveillanceSoftware from "./Components/SurveillanceSoftware";
 import ObjectDescription from "../../components/ObjectDescription";
 import StickySection from "./Data/StickySection";
 import HeroSection from "./Components/HeroSection";
-import { customData, customData1 } from "./Data/customData";
-import AmbicamLandingPage from "../Ambicam/AmbicamLandingPage";
-import WhyAmbicamPage from "../Ambicam/whyambi";
+import { customData, customData1 } from "../../data/AdvancedComputerVisionData";
+
 
 const VMuktiHomepage = () => {
   return (

@@ -1,4 +1,4 @@
-const Certifications = [
+const CertificationsData = [
   {
     name: "STQC",
     description: "Certified",
@@ -619,4 +619,4 @@ const Certifications = [
   // { name: 'RoHS', description: '', icon: <FaRecycle size={32} />, color: 'green.600' },
 ];
 
-export default Certifications;
+export default CertificationsData;
