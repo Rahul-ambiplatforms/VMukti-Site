@@ -12,17 +12,17 @@ import SurveillanceSoftware from "./Components/SurveillanceSoftware";
 import ObjectDescription from "../../components/ObjectDescription";
 import StickySection from "./Data/StickySection";
 import HeroSection from "./Components/HeroSection";
-import { customData, customData1 } from "./Data/customData";
-import AmbicamLandingPage from "../Ambicam/AmbicamLandingPage";
-import WhyAmbicamPage from "../Ambicam/whyambi";
+import { customData, customData1 } from "../../data/AdvancedComputerVisionData";
 
 
 const VMuktiHomepage = () => {
+  return (
+    <>
+      <PageContentWrapper noPadding>
+        <HeroSection />
+      </PageContentWrapper>
 
-    return (
-        <PageContentWrapper>
-            <HeroSection />
-            <Box bg="#E7E7E7"  >
+            <PageContentWrapper>
                 {/* Page Content Sections */}
                 <AdvancedComputerVision {...customData1} />
                 <Flex mt={"5%"} direction="column">
@@ -32,7 +32,7 @@ const VMuktiHomepage = () => {
                         list={["Precision Tracking", "Automated Alerts", "AI-Powered Recognition", "Adaptive Learning"]}
                     />
                 </Flex>
-                <Box mt="5%"><SurveillanceSoftware /></Box>
+                <Box mt="3%"><SurveillanceSoftware /></Box>
                 <StickySection>
                     <AdvancedComputerVision {...customData} />
                     <VideoAnalytics />
@@ -42,9 +42,9 @@ const VMuktiHomepage = () => {
                 <Industries />
                 <AdvancedSurveillance />
                 <Achieved />
-            </Box>
 
-        </PageContentWrapper>
+            </PageContentWrapper>
+        </>
     );
 };
 

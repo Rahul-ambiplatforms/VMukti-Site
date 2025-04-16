@@ -23,13 +23,15 @@ const AdvancedSurveillance = () => {
     {
       type: "squeezed",
       label: "Government",
-      description: "Explore innovative, secure solutions built to enhance government operations, security, and public safety.",
+      description:
+        "Explore innovative, secure solutions built to enhance government operations, security, and public safety.",
       image: "./assets/govsl.svg",
     },
     {
       type: "squeezed",
       label: "Consumers",
-      description: "AI is transforming everyday automation, security, and decision-making by bringing intelligent, real-time solutions to personal, small business, and creative applications.",
+      description:
+        "AI is transforming everyday automation, security, and decision-making by bringing intelligent, real-time solutions to personal, small business, and creative applications.",
       image: "./assets/gensl.svg",
     },
   ];
@@ -42,8 +44,8 @@ const AdvancedSurveillance = () => {
           ? cards.length - 1
           : prev - 1
         : prev === cards.length - 1
-          ? 0
-          : prev + 1
+        ? 0
+        : prev + 1
     );
   };
 
@@ -83,11 +85,16 @@ const AdvancedSurveillance = () => {
               <Text
                 fontSize={{ base: "20px", md: "36px" }}
                 fontWeight={{ base: "500", md: "600" }}
-                letterSpacing="-0.54px"
+                // letterSpacing="-0.54px"
                 color="black"
               >
                 Advanced{" "}
-                <Text as="span" color="#3F77A5">
+                <Text
+                  as="span"
+                  color="#3F77A5"
+                  fontSize={{ base: "20px", md: "36px" }}
+                  fontWeight={{ base: "500", md: "600" }}
+                >
                   Surveillance for All.
                 </Text>
               </Text>
@@ -113,12 +120,16 @@ const AdvancedSurveillance = () => {
               filter="blur(56.6px)"
             />
           </Box>
-          
+
           <Box
             position="absolute"
             top={{ base: "300px", md: "400px", lg: "450px" }}
             left={{ base: "50%", md: "40%", lg: "50px" }}
-            transform={{ base: "translateX(-50%)", md: "translateX(-50%)", lg: "none" }}
+            transform={{
+              base: "translateX(-50%)",
+              md: "translateX(-50%)",
+              lg: "none",
+            }}
             width={{ base: "255px", md: "320px", lg: "408px" }}
             height={{ base: "255px", md: "320px", lg: "408px" }}
             borderRadius="408px"
@@ -222,7 +233,8 @@ const AdvancedSurveillance = () => {
                   md: "439px",
                 }} // Compact height for inactive cards on mobile
                 borderRadius="24px"
-                bgColor="#E7E7E7"
+                // bgColor="#E7E7E7"
+                bgColor={index % 2 !== 0 ? "#E7E7E7" : "#BECEDC"}
                 _hover={{ cursor: "pointer" }}
                 transition="width 0.3s ease"
                 position="relative"
@@ -237,6 +249,9 @@ const AdvancedSurveillance = () => {
                     direction={{ base: "column", md: "row" }}
                     word-wrap="break-word"
                     overflow-wrap="break-word"
+                    borderRadius="24px"
+                    bgColor="#E7E7E7"
+                    // bg="red"
                   >
                     {/* Left Frame (Description) */}
                     <Box
@@ -248,7 +263,7 @@ const AdvancedSurveillance = () => {
                       display={{ base: "flex", md: "flex" }} // Hide on mobile
                       order={{ base: 1, md: 0 }} // Ensure this is on top in mobile view
                     >
-                      <Box>
+                      <Box w="90%">
                         <Text
                           fontSize="16px"
                           fontWeight="700"
@@ -267,15 +282,16 @@ const AdvancedSurveillance = () => {
                         <Text
                           color="#696969"
                           fontSize="14px"
-                          fontWeight="600"
+                          fontWeight="500"
                           letterSpacing="-0.21px"
                           marginTop="10px"
+                          // textAlign="justify"
                         >
                           {card.description}
                         </Text>
                       </Box>
                       <Link to={`/serving/${card.label}`}>
-                        <Flex gap={2} mt={{ base: "5%" }}>
+                        <Flex gap={4} mt={{ base: "5%" }}>
                           <Text
                             fontSize={{ base: "14px", md: "14px" }}
                             fontWeight={400}
@@ -305,7 +321,7 @@ const AdvancedSurveillance = () => {
                       height={{ md: "439px" }}
                       borderRadius="24px"
                       border={{ md: 2 }}
-                    // bg="green"
+                      // bg="green"
                     >
                       <Image
                         src={`${process.env.PUBLIC_URL}${card.image}`}
@@ -356,15 +372,15 @@ const AdvancedSurveillance = () => {
             position="absolute"
             top="653px"
             left="70px"
-            height="50px"
             width="146px"
+            height="50px"
             as={Link}
             to="/contactus"
             backgroundColor="white"
             color="#3F77A5"
             fontSize="16px"
             fontWeight="600"
-            borderRadius="12px"
+            borderRadius="20px"
             display={{ base: "none", md: "flex" }}
             alignItems="center"
             justifyContent="center"

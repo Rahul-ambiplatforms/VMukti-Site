@@ -17,7 +17,8 @@ const AdvancedComputerVision = ({
     {
       type: "image",
       label: "Real-Time Monitoring",
-      media: "/assets/car.png", 
+      media: "/assets/car.png",
+      media: "/assets/car.png",
       description:
         "IoT-enabled cameras and sensors continuously track environmental changes and security events.",
     },
@@ -44,6 +45,7 @@ const AdvancedComputerVision = ({
     },
   ],
   backgroundImage = "/assets/VMuktidot.png",
+  bgColor = "white",
   myMargin = "3%",
   myZIndex = "1",
 }) => {
@@ -72,11 +74,14 @@ const AdvancedComputerVision = ({
     <Flex
       direction="column"
       borderRadius="20px"
-      bgColor="white"
+      bgColor={bgColor}
       position="relative"
       height="100%"
       overflow="hidden"
-      px="5%"
+      // px="5%"
+      px={{ base: "6%", md: "5%" }} //jenil
+      pb={{base:"6%",md:"4%"}}
+      px={{ base: "6%", md: "5%" }} //jenil
       pb="4%"
       pt="1.5%"
       zIndex={myZIndex}
@@ -118,13 +123,22 @@ const AdvancedComputerVision = ({
         ref={ref}
         direction="column"
         initial={{ opacity: 0, x: -50 }}
-        animate={isInView ? { opacity: 1, x: 0 } : {}}
+        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0.8, x: -50 }}
+        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0.8, x: -50 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
+        mt={{base:"1%",md:"1%"}} //jenil
       >
         <Flex flexWrap="wrap">
           {title.map((item, index) => (
-            <Text as="span" color={item.color} display="inline" key={index} fontSize={{ base: "20px", md: "36px" }} fontWeight="500">
-              {index !== 0 && ' '}
+            <Text
+              as="span"
+              color={item.color}
+              display="inline"
+              key={index}
+              fontSize={{ base: "20px", md: "36px" }}
+              fontWeight="500"
+            >
+              {index !== 0 && " "}
               {item.text}
               &nbsp;
             </Text>
@@ -137,7 +151,7 @@ const AdvancedComputerVision = ({
         <Flex
           justifyContent="flex-end"
           alignItems="center"
-          mb={4}
+          mb={{ base: 4, md: 2 }}
           gap="1px"
           zIndex={2}
           pointerEvents="auto"
@@ -192,7 +206,7 @@ const AdvancedComputerVision = ({
         <Flex
           justifyContent="space-between"
           direction={{ base: "column", md: "row", lg: "row" }}
-          gap={{ base: 4, lg: 2 }}
+          gap={{ base: 4, lg: 1 }}
           width="100%"
         >
           {/* Cards Section */}
@@ -212,8 +226,10 @@ const AdvancedComputerVision = ({
               onMouseLeave={() => setHoverCard(null)} // Clear hover state
               onClick={() => setActiveCard(index)} // Update persistent active card on click
               cursor="pointer"
-              position="relative" 
-              overflow="hidden"       
+              position="relative"
+              overflow="hidden"
+              position="relative"
+              overflow="hidden"
             >
               <Box
                 width="100%"
@@ -284,7 +300,7 @@ const AdvancedComputerVision = ({
                         transform: { base: "", md: "rotate(90deg)" },
                         mt: { md: "6px" },
                         mr: { md: "-5px" },
-                        ml: { md: "-10px" }
+                        ml: { md: "-10px" },
                       }}
                       borderRadius="2px"
                     />
@@ -310,7 +326,8 @@ const AdvancedComputerVision = ({
                     />
                   </Text>
                   <Text
-                    whiteSpace={{base:"wrap",md:"nowrap"}}
+                    fontWeight="500"
+                    whiteSpace={{ base: "wrap", md: "nowrap" }}
                     fontSize={{ base: "12px", md: "14px" }}
                     color="#696969"
                   >

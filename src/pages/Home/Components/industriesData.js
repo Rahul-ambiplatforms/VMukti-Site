@@ -299,7 +299,7 @@ export default function IndustryGrid() {
                             ),
                           }}
                           position="absolute"
-                          bottom="55px"
+                          bottom="60px"
                           left="20px"
                           width="33px"
                           height="33px"
