@@ -9,54 +9,82 @@ import ReviewsSection from "./components/ReviewsSection";
 import AdvancedComputerVision from "../../components/AdvancedComputerVision";
 import { customData2 } from "../../data/AdvancedComputerVisionData";
 import CulturalSection from "../../components/CulturalSection";
+import StickySection from "../Home/Data/StickySection";
 
 const gridItems = [
-  { bgColor: "transparent" },
   {
-    title: "2025",
-    subtitle: "SmartTech ", // Add this new field
-    description: "Participated in Gitex Technology Week Dubai 2017",
+    description: (
+      <>
+        <b>18 + Years of</b>
+        <br /> Technology Leadership
+      </>
+    ),
     bgColor: "white",
-    textColor: "black" // Add if needed
+    textColor: "black", // Add if needed
+    alignItems: "Center"
   },
-  { bgColor: "transparent" },
   {
-    title: "Attended Events",
+    description: (
+      <>
+        End-to-End <b>OEM</b> &<br /> Customizable Solutions
+      </>
+    ),
+    bgColor: "white",
+    textColor: "black", // Add if needed
+    alignItems: "Center",
+  },
+  {
+    title: [
+      {
+        text: "Why ",
+        textColor: "black",
+        fontSize: "100px"
+      },
+      {
+        text: "VMukti?",
+        textColor: "#3F77A5",
+        fontSize: "100px",
+        fontWeight: "bold"
+      }
+    ],
     bgColor: "transparent",
-    alignItems: "Center" // Added to center this item in the grid
+    alignItems: "Center",
+    isWide: true,
   },
   {
-    title: "2024",
-    subtitle: "IFSEC", // Add this new field
-    description: "Visited Hong Kong for Global Sources Exhibition 2019",
-    bgColor: "white",
+    description: (
+      <>
+        <b> STQC-Certified VMS,</b>
+        <br /> <b>EMS & ICCC</b> Platforms
+      </>
+
+    ),
+    textColor: "white", // Add if needed
+    alignItems: "Center",
+    bgColor: "#3F77A5",
   },
   { bgColor: "transparent" },
   {
-    title: "2019",
-    subtitle: "Vibrant Startup & Technology Summit ", // Add this new field
-    description: "Participated in Vibrant Startup & Technology Summit",
+    description: (
+      <>
+        Deployed Across<br />
+        <b>1,42,000+</b> Locations
+      </>
+    ),
+    textColor: "black", // Add if needed
+    alignItems: "Center",
     bgColor: "#BECEDC",
 
   },
   {
-    title: "2019",
-    subtitle: "Indian Mobile Congress", // Add this new field
-    description: "Participated in the 2019 Indian Mobile Congress, New Delhi.",
+    description: (
+      <>
+        Trusted by Government &<br /> Enterprise Sectors
+      </>
+    ),
     bgColor: "white",
-  },
-  {
-    title: "2019",
-    subtitle: "Global Sources Exhibition", // Add this new field
-    textColor: "white",
-    description: "Participated in Gitex Technology Week Dubai 2017",
-    bgColor: "#3F77A5",
-  },
-  {
-    title: "2017",
-    subtitle: "Gitex Technology Week", // Add this new field
-    description: "Participated in Vibrant Startup & Technology Summit",
-    bgColor: "white",
+    textColor: "black", // Add if needed
+    alignItems: "Center"
   },
 ];
 
@@ -65,9 +93,13 @@ const WhoWeare = () => {
     <PageContentWrapper>
       <HeroSection />
       <VisionMissionSection />
-      <AdvancedComputerVision {...customData2} />
-      <VerticalTimeline />
-      <CulturalSection gridItems={gridItems} />
+      <StickySection>
+        <AdvancedComputerVision bgColor="#5887AE" {...customData2} />
+        <VerticalTimeline />
+      </StickySection>
+      <Box mt={"5%"}>
+        <CulturalSection gridItems={gridItems} />
+      </Box>
       <CertificationsSection />
       <ReviewsSection />
     </PageContentWrapper>

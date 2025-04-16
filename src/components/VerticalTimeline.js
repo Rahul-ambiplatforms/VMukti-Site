@@ -101,7 +101,7 @@ const TimelineGrid = () => {
   }
 
   return (
-    <Flex p="6%" direction="column" bg="#FFFFFF" borderRadius="24px">
+    <Flex p="6%" direction="column" bg="#FFFFFF" borderRadius="20px">
       <Heading
         mb={10}
         textAlign="left"

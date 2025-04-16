@@ -236,7 +236,7 @@ const VisionMissionSection = () => {
         />
         <Image
           zIndex={1}
-          left="5%"
+          left="4%"
           position="relative"
           // src="/assets/robowho3.png"
           src={`${process.env.PUBLIC_URL}/assets/robowho3.png`}
