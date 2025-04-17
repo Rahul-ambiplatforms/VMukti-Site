@@ -131,7 +131,7 @@ const dashboardItems = [
 ];
 
 const EventSpotlight = () => {
-  const svgSize = useBreakpointValue({ base: "25px", md: "33px" });
+  const svgSize = useBreakpointValue({ base: "13px", md: "25px" });
   const swiperRef = useRef(null); // Initialize with null
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
@@ -230,7 +230,7 @@ const EventSpotlight = () => {
         <Box mb={{ base: "4", md: "" }} >
           <HeadingAnimation>
             <Text
-              fontSize={{ base: "32px", md: "32px", lg: "48px" }}
+              fontSize={{ base: "30px", md: "32px", lg: "48px" }}
               fontWeight="600"
               lineHeight="normal"
               textAlign={{ base: "flex-start", md: "left" }}
@@ -259,16 +259,21 @@ const EventSpotlight = () => {
           direction={{ base: "column", md: "row" }}
           width="100%"
           mb={{ base: "4%", md: "8%" }}
+          mt={{base:"0",md:"2%"}}
           alignItems={{ base: "flex-start", md: "flex-start" }}
+          // bg="red"
+
         >
           {/* Left Section */}
           <Flex
             direction="column"
             width={{ base: "100%", md: "25%" }}
             mb={{ base: 8, md: 0 }}
-            alignItems={{ base: "flex-start", md: "flex-start" }}
+            // mt="20"
+            alignItems="flex-start"
+            // bg="red  "
           >
-            <Box mb={4}>
+            <Box mb={{base:"2",md:"4"}}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={svgSize}
@@ -284,7 +289,7 @@ const EventSpotlight = () => {
             </Box>
 
             <Box
-              width={{ base: "90%", md: "331px" }}
+              width={{ base: "80%", md: "331px" }}
               height="auto"
               mb={8}
               textAlign={{ base: "left", md: "left" }}
@@ -304,7 +309,7 @@ const EventSpotlight = () => {
 
             <Box
               borderRadius="24px"
-              width={{ base: "90%", md: "336px" }}
+              width={{ base: "100%", md: "336px" }}
               height={{ base: "auto", md: "336px" }}
               bg="#BECEDC"
               p={4}
@@ -326,6 +331,7 @@ const EventSpotlight = () => {
 
           {/* Right Section - Slider */}
           <Box
+            mt={{base:"-5%",md:"-10%"}}
             width={{ base: "100%", md: "75%" }}
             position="relative"
             overflow="hidden"
@@ -335,24 +341,6 @@ const EventSpotlight = () => {
             bg="white"
             p={6}
           >
-            {/* <AnimatePresence custom={direction} initial={false}> */}
-            {/* <MotionBox
-              key={currentIndex}
-              custom={direction}
-              variants={variants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              position="absolute"
-              width="100%"
-              display="flex"
-              flexDirection={{ base: "column", md: "row" }}
-            >
-              {visibleItems.map((item, index) => (
-                <DashboardItem key={`${currentIndex}-${index}`} item={item} />
-              ))}
-            </MotionBox> */}
-            {/* </AnimatePresence> */}
             <Swiper
               onSwiper={(swiper) => {
                 swiperRef.current = swiper;

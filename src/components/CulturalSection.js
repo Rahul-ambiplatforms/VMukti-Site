@@ -9,10 +9,10 @@ const floatingAnimation = {
     opacity: 1,
     y: ["0%", "15%", "0%"],
     transition: {
-      duration: 1.8,
+      duration: 3,
       ease: "easeInOut",
-      times: [0.2, 0.4, 0.6, 0.8, 1],
-      delay: index * 0.1,
+      // times: [0.2, 0.5, 1],
+      delay: index * 0.3,
     },
   }),
 };
@@ -39,7 +39,8 @@ export default function CulturalSection({ gridItems }) {
           filter="blur(56.6px)"
           zIndex="0"
           transform={{ base: "scale(0.8)", md: "scale(1)" }}
-        />
+          // bg="red"
+        />  
         <Box
           position="absolute"
           top={{ base: "30%", lg: "20%" }}
@@ -63,7 +64,8 @@ export default function CulturalSection({ gridItems }) {
             md: "repeat(2, 1fr)",
             lg: "repeat(4, 1fr)",
           }}
-          gap={{ base: "24px", lg: "34px" }}
+          // gap={{ base: "24px",md: "34px", lg: "34px" }}
+          gap={{ base: "20px", md: "24px", lg: "32px" }}
           position="relative"
           zIndex="1"
           justifyItems={{ base: "center", lg: "start" }}
@@ -82,11 +84,11 @@ export default function CulturalSection({ gridItems }) {
                 key={index}
                 bg={item.bgColor || "white"}
                 p={{ base: 4, lg: 6 }}
-                borderRadius="24px"
+                borderRadius={{ base: "20px", md: "24px" }}
                 width={{
                   base: "280px",
                   sm: "300px",
-                  lg: isWide ? "calc(672px + 34px)" : "336px"
+                  lg: isWide ? "calc(672px + 34px)" : "336px",
                 }}
                 height={{ lg: "336px" }}
                 aspectRatio="1/1"
@@ -107,13 +109,14 @@ export default function CulturalSection({ gridItems }) {
                   isCenteredGrid || !item.title
                     ? "center"
                     : isTimelineItem
-                      ? "left"
-                      : "left"
+                    ? "left"
+                    : "left"
                 }
                 position={isTimelineItem ? "relative" : "static"}
                 gridColumn={{
-                  lg: isWide ? "span 2" : undefined
+                  lg: isWide ? "span 2" : undefined,
                 }}
+                // bg="red" //------------------------------------------
               >
                 {item.title ? (
                   <>
@@ -122,16 +125,26 @@ export default function CulturalSection({ gridItems }) {
                       <>
                         <Heading
                           as="h3"
-                          size={{ base: "sm", lg: "lg" }}
+                          letterSpacing="-15"
+                          fontSize={{ base: "24px", md: "36px", lg: "36px" }}
+                          fontWeight="700"
                           color={item.textColor}
                           position="absolute"
-                          top="4"
-                          right="4"
+                          // p="6"
+                          top={{ base: "4", md: "6" }}
+                          right={{ base: "4", md: "6" }}
                           textAlign="right"
+                          // bg="blue"
                         >
                           {item.title}
                         </Heading>
-                        <Box position="absolute" bottom="4" left="4" right="4">
+                        <Box
+                          position="absolute"
+                          bottom="4"
+                          left="4"
+                          right="4"
+                          mb="2%"
+                        >
                           {item.subtitle && (
                             <Text
                               fontSize={{ base: "xs", lg: "sm" }}
@@ -141,7 +154,15 @@ export default function CulturalSection({ gridItems }) {
                               {item.subtitle}
                             </Text>
                           )}
-                          <Box height="2px" width="20px" bg="#3F77A5" />
+                          <Box
+                            height="2.5px"
+                            width="20px"
+                            bg={
+                              item.textColor === "white" ? "white" : "#3F77A5"
+                            }
+                            mb="2%"
+                            mt="1%"
+                          />
                           <Text
                             color={item.textColor}
                             fontSize={{ base: "xs", lg: "md" }}
@@ -155,7 +176,7 @@ export default function CulturalSection({ gridItems }) {
                       <>
                         <Heading
                           as="h3"
-                          size={{ base: "sm", lg: "lg" }}
+                          size={{ base: "lg", lg: "lg" }}
                           mb={{ base: 3, lg: 4 }}
                           textAlign={isCenteredGrid ? "center" : "left"}
                         >
@@ -165,7 +186,11 @@ export default function CulturalSection({ gridItems }) {
                               <Text
                                 as="span"
                                 key={i}
-                                color={titlePart.textColor || item.textColor || "inherit"}
+                                color={
+                                  titlePart.textColor ||
+                                  item.textColor ||
+                                  "inherit"
+                                }
                                 fontSize={titlePart.fontSize || "inherit"}
                                 fontWeight={titlePart.fontWeight || "inherit"}
                                 fontStyle={titlePart.fontStyle || "inherit"}

@@ -1,5 +1,5 @@
 // src/components/HeroSection/index.js
-import React from "react";
+import React, { useRef } from "react";
 import {
   Box,
   Flex,
@@ -9,7 +9,7 @@ import {
   useBreakpointValue,
   Show,
 } from "@chakra-ui/react";
-import { inView, motion } from "framer-motion";
+import { inView, motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 
 // Motion components
@@ -18,6 +18,10 @@ const MotionBox = motion(Box);
 const MotionButton = motion(Button);
 
 const HeroSection = () => {
+
+  const ref = useRef(null);
+  const inView = useInView(ref, { threshold: 0.9, triggerOnce: false });
+
   const ellipseSize = useBreakpointValue({
     base: "200px",
     md: "300px",
@@ -42,12 +46,14 @@ const HeroSection = () => {
         display={{ base: "none", md: "block" }}
       />
 
-      <Show above="md">
+      {/* above="md" */}
+      <Show above="md" >
         {/* Decorative Boxes */}
         <Flex
           position="absolute"
-          top="10.9%"
-          left="40%"
+          top={{md:"10.9%"}}
+          bottom={{base:"59%"}}
+          left={{base:"80%",md:"40%"}}
           transform="translateX(-50%)"
           gap={4}
           zIndex={0}
@@ -56,7 +62,8 @@ const HeroSection = () => {
           pt={{ base: "10vh", md: "8vh", lg: "20%" }}
         >
           <Box
-            height={{ base: "80px", md: "120px", lg: "188px" }}
+            display={{base:"none",md:"block",lg:"block"}}
+            height={{ base: "180px", md: "120px", lg: "188px" }}
             minHeight="50px"
             aspectRatio="1/1"
             bg="#BECEDC"
@@ -64,6 +71,7 @@ const HeroSection = () => {
             mt={{ base: "80px", md: "120px", lg: "15%" }}
           />
           <Box
+            display={{base:"none",md:"block",lg:"block"}}
             height={{ base: "80px", md: "120px", lg: "188px" }}
             minHeight="50px"
             aspectRatio="1/1"
@@ -72,6 +80,7 @@ const HeroSection = () => {
             mt={{ base: "40px", md: "06px", lg: "9%" }}
           />
           <Box
+            display={{base:"none",md:"block",lg:"block"}}
             height={{ base: "80px", md: "120px", lg: "188px" }}
             minHeight="50px"
             aspectRatio="1/1"
@@ -110,11 +119,13 @@ const HeroSection = () => {
               height="188px"
               bg="#BECEDC"
               borderRadius="24px 0 0 0"
-              zIndex={0}
+              zIndex={9}
             />
 
             <MotionImage
               // ml="-20%"
+              mt="2%"
+              // pb="5%"
               src="/assets/tablet.png"
               alt="Tablet"
               zIndex={1}
@@ -122,9 +133,9 @@ const HeroSection = () => {
               height="600px"
               objectFit="cover"
               initial={{ scale: 0.6, opacity: 1 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-              viewport={{ once: false, amount: 0.1 }}
+              animate={inView?{ scale: 1, opacity: 1 }:{ scale: 0.7, opacity: 0.7 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              viewport={{ once: false, amount: 0.9 }}
             />
             <Flex
               direction="column"
@@ -133,7 +144,7 @@ const HeroSection = () => {
               ml="16%"
               mt="-15%"
               mb="2%" // jenil
-            //   bg="red"
+              // bg="red"
             >
               <Box width="13px" height="13px" alignSelf="flex-start" ml="2%">
                 <svg
@@ -177,29 +188,30 @@ const HeroSection = () => {
           bgPosition={{ base: "center", md: "right" }}
           minH={{ base: "20vh" }}
           zIndex={1}
+          ml={{base:"5%",md:"0"}}
         >
           {/* Animated Heading */}
           <MotionBox
-            // ref={ref}
+            ref={ref}
             fontSize={{ base: "32px", md: "48px", lg: "100px" }}
             fontWeight="600"
             fontStyle="normal"
             lineHeight="normal"
             zIndex={1}
             initial={{ opacity: 0, x: -50 }}
-            // whileInView={{ opacity: 1, x: 0 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0.6, x: -50 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
+            // bg="red"
           >
             <Text as="span" color="#3F77A5">
               Advanced{" "}
             </Text>
             <Text as="span" color="#000">
-              Computer Vision &{" "}
+              Computer Vision & Image{" "}
             </Text>
-            <Text as="span" color="#000">
-              image
-            </Text>
+            {/* <Text as="span" color="#000">
+              Image
+            </Text> */}
             &nbsp;
             <Text as="span" color="#DB7B3A">
               Intelligence
@@ -222,7 +234,8 @@ const HeroSection = () => {
                     alignItems="center"
                     gap={8}
                     initial={{ opacity: 0, x: -80 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    // whileInView={{ opacity: 1, x: 0 }}
+                    animate={inView ? { opacity: 1, x: 0 } : { opacity: 0.6, x: -50 }}
                     transition={{ duration: 0.9, ease: "easeOut" }}
                     viewport={{ once: false }}
                   >
@@ -259,6 +272,7 @@ const HeroSection = () => {
                 position="relative"
                 mt={{ base: "1", md: "-10%" }}
                 ml={{ base: "0", md: "-40px" }}
+                // py={{base:"15%",md:"0"}}
                 width="fit-content"
               >
                 <Image
@@ -266,6 +280,7 @@ const HeroSection = () => {
                   alt="Robotic Hand"
                   display={{ base: "none", md: "block" }}
                 />
+          
                 <MotionButton
                   position="absolute"
                   padding="24px"
@@ -317,6 +332,7 @@ const HeroSection = () => {
                     />
                   </svg>
                 </MotionButton>
+                
               </Flex>
             </Flex>
 

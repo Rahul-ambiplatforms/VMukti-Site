@@ -8,13 +8,13 @@ import { easeOut } from "framer-motion";
 const CertificationsSection = () => {
     return (
         <Box
-            py={12}
+            py={{base:"6",md:"12"}}
             position="relative" // To position the background image
         >
             <HeadingAnimation>
                 <Heading
                     textAlign="center"
-                    mb={10}
+                    mb={{base:"4",md:"10"}}
                     fontSize={{ base: "2xl", md: "36px" }}
                     fontWeight="600"
                     lineHeight="normal"
