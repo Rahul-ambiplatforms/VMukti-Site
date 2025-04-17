@@ -23,6 +23,7 @@ import {
     AccordionButton,
     AccordionPanel,
     Image,
+    Divider,
 } from '@chakra-ui/react'
 
 import { useNavigate, useLocation } from 'react-router-dom'
@@ -285,7 +286,9 @@ const Navbar = () => {
                                                         <MenuList
                                                             onMouseEnter={() => handleMouseEnter(item.name)}
                                                             onMouseLeave={() => handleMouseLeave(item.name)}
-                                                            py="0"
+                                                            px="4"
+                                                            py="2"
+                                                            borderRadius="20px"
                                                             style={{
                                                                 marginTop: "50px", // Slight spacing below the arrow
                                                                 position: "absolute", // Ensure it stays relative to the arrow
@@ -299,7 +302,27 @@ const Navbar = () => {
                                                                 <>
                                                                     <MenuItem
                                                                         key={idx}
-                                                                        fontWeight="400"
+                                                                        // fontWeight={location.pathname === dropdownItem.path ? "700" : "400"} // Set active color
+
+                                                                        fontWeight={
+                                                                            dropdownItem.path === "/solutions"
+                                                                                ? (location.pathname === "/solutions" && location.search.includes(dropdownItem.sliderId))
+                                                                                    ? "700"
+                                                                                    : "400"
+                                                                                : location.pathname === dropdownItem.path
+                                                                                    ? "700"
+                                                                                    : "400"
+                                                                        }
+                                                                        fontSize="14px"
+                                                                        color={
+                                                                            dropdownItem.path === "/solutions"
+                                                                                ? (location.pathname === "/solutions" && location.search.includes(dropdownItem.sliderId))
+                                                                                    ? "#3F77A5"
+                                                                                    : "#696969"
+                                                                                : location.pathname === dropdownItem.path
+                                                                                    ? "#3F77A5"
+                                                                                    : "#696969"
+                                                                        }
                                                                         onClick={() => navigateTo(
                                                                             `${dropdownItem.path}${dropdownItem.sliderId ? `?slider=${dropdownItem.sliderId}` : ''}`,
                                                                             item.name,
@@ -308,6 +331,7 @@ const Navbar = () => {
                                                                         width="100%"
                                                                         direction="column"
                                                                         display="flex"
+                                                                        pl="0"
                                                                         style={{
                                                                             whiteSpace: "nowrap", // Prevent text wrapping
                                                                         }}
@@ -316,7 +340,11 @@ const Navbar = () => {
                                                                             <Text>{dropdownItem.label}</Text>
                                                                         </Flex>
                                                                     </MenuItem>
-                                                                    <Box width="100%" height="2px" bg="#BECEDC" />
+                                                                    {idx < item.items.length - 1 && (
+                                                                        <Divider width="60%" height="1px" bg="#BECEDC" />
+                                                                    )}
+
+                                                                    {/* <Box width="100%" height="2px" bg="#BECEDC" /> */}
                                                                 </>
                                                             ))}
                                                         </MenuList>
@@ -491,35 +519,42 @@ const Navbar = () => {
                                                             </AccordionButton>
                                                         </Flex>
                                                     </h2>
-                                                    <AccordionPanel borderRadius="24px" bg="white" py="2%">
+                                                    <AccordionPanel borderRadius="24px" bg="white" px="5%" py="2%" >
                                                         {item.items.map((dropdownItem, idx) => (
-                                                            <div
-                                                                key={idx}
-                                                                style={{
-                                                                    color: "black",
-                                                                    fontSize: "12px",
-                                                                    fontWeight: "400",
-                                                                    textDecoration: "none",
-                                                                    cursor: "pointer",
-                                                                }}
-                                                                onClick={() => {
-                                                                    navigateTo(
-                                                                        `${dropdownItem.path}${dropdownItem.sliderId ? `?slider=${dropdownItem.sliderId}` : ''}`,
-                                                                        item.name,
-                                                                        dropdownItem.sliderId
-                                                                    );
-                                                                    onClose();
-                                                                }}
-                                                            >
-                                                                <Box mb={2}>
-                                                                    {dropdownItem.label}
-                                                                    {idx < item.items.length - 1 && (
-                                                                        <Box width="60%" height="1px" bg="#BECEDC" mt="4px" />
-                                                                    )}
+                                                            <>
+                                                                <Box
+                                                                    key={idx}
+                                                                    style={{
+                                                                        color: "black",
+                                                                        fontSize: "12px",
+                                                                        fontWeight: "400",
+                                                                        textDecoration: "none",
+                                                                        cursor: "pointer",
+                                                                    }}
+                                                                    py={2}
+                                                                    onClick={() => {
+                                                                        navigateTo(
+                                                                            `${dropdownItem.path}${dropdownItem.sliderId ? `?slider=${dropdownItem.sliderId}` : ''}`,
+                                                                            item.name,
+                                                                            dropdownItem.sliderId
+                                                                        );
+                                                                        onClose();
+                                                                    }}
+                                                                >
+                                                                    <Box>
+                                                                        {dropdownItem.label}
+                                                                    </Box>
                                                                 </Box>
-                                                            </div>
+                                                                {
+                                                                    idx < item.items.length - 1 && (
+                                                                        // <Box width="60%" height="1px" bg="#BECEDC" />
+                                                                        <Divider width="60%" height="1px" bg="#BECEDC" />
+                                                                    )
+                                                                }
+                                                            </>
                                                         ))}
                                                     </AccordionPanel>
+
                                                 </>
                                             ) : (
                                                 <>
@@ -614,7 +649,7 @@ const Navbar = () => {
                                 bottom="0dvh"
                                 height="full"
                                 minHeight="408px"
-                                
+
                                 overflow="hidden"
                             >
                                 <Image
