@@ -12,6 +12,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import SubscriptionBanner from "./SubscriptionBanner";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const PhoneIcon = ({ mr = "10px", w = "21px", h = "21px" }) => (
   <Box
@@ -110,7 +111,18 @@ const NewsletterSubscription = () => {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isServingsOpen, setIsServingsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
+  const navigateTo = (path, linkName, sliderId = null) => {
+    if (location.pathname === path) {
+      // Avoid unnecessary refresh by replacing the state
+      navigate(path, { replace: true });
+    }
+    else {
+      navigate(path);
+    }
+  };
   useEffect(() => {
     const handleResize = () => {
       setIsIndustriesOpen(false);
@@ -157,7 +169,7 @@ const NewsletterSubscription = () => {
             <Flex
               direction="column"
               bg="white"
-              borderRadius={{base:"20px",md:"24px"}}
+              borderRadius={{ base: "20px", md: "24px" }}
               p="20px"
               justifyContent="space-between"
               height={{ md: "100%" }}
@@ -239,25 +251,24 @@ const NewsletterSubscription = () => {
 
               {/* ambicam link portion */}
               <Flex gap={4} alignItems="center" display={{ base: "none", md: "flex" }}>
-                <Link href={"/Ambicam"} justifySelf={"flex-end"}>
-                  <Button
-                    width={buttonWidth}
-                    height={buttonHeight}
-                    background="#4CC9F0"
-                    color="#FFFFFF"
-                    fontSize={"16px"}
-                    fontWeight="600"
-                    borderRadius="20px"
-                    flexShrink={0}
-                    _hover={{
-                      background: "#3bb9e0",
-                      color: "#FFFFFF",
-                    }}
-                  >
-                    Ambicam
-                  </Button>
-                </Link>
-                <Link as="a" href="https://www.ambicam.com">
+                <Button
+                  width={buttonWidth}
+                  height={buttonHeight}
+                  background="#4CC9F0"
+                  color="#FFFFFF"
+                  fontSize={"16px"}
+                  fontWeight="600"
+                  borderRadius="20px"
+                  flexShrink={0}
+                  onClick={() => navigateTo("/Ambicam", "Ambicam")}
+                  _hover={{
+                    background: "#3bb9e0",
+                    color: "#FFFFFF",
+                  }}
+                >
+                  Ambicam
+                </Button>
+                <Link as="a" href="https://www.ambicam.com" isExternal>
                   <Text color="#4CC9F0" fontSize={{ base: "12px", md: "14px" }} lineHeight="30px">
                     www.ambicam.com
                   </Text>
@@ -319,7 +330,7 @@ const NewsletterSubscription = () => {
               {/* Main "Our Servings" box */}
               <Box
                 bg="#BECEDC"
-                borderRadius={{base:"20px",md:"24px"}}
+                borderRadius={{ base: "20px", md: "24px" }}
                 p="20px"
                 width={{ base: "100%" }}
                 onClick={() => setIsServingsOpen(!isServingsOpen)}
@@ -446,40 +457,40 @@ const NewsletterSubscription = () => {
                   (91+) 968 777 0000
                 </Text>
               </Flex>
-              <Link href={"/contactus"}>
-                <Button
-                  width={buttonWidth}
-                  height={buttonHeight}
-                  justifyContent="space-between"
-                  alignItems="center"
-                  bg="white"
-                  color="#3F77A5"
-                  borderRadius="20px"
-                  flexShrink={0}
-                  // ml={{ base: '5px', md: '10px', lg: '15px' }}
-                  mt="20%"
-                  fontWeight={700}
-                  gap="2"
-                  _hover={{
-                    bg: "#E0F2FE", // Light blue background on hover
-                    color: "#2C5E84",
-                  }}
+              <Button
+                width={buttonWidth}
+                height={buttonHeight}
+                justifyContent="space-between"
+                alignItems="center"
+                bg="white"
+                color="#3F77A5"
+                borderRadius="20px"
+                flexShrink={0}
+                // ml={{ base: '5px', md: '10px', lg: '15px' }}
+                mt="20%"
+                onClick={() => navigateTo("/contactus", "contactus")}
+
+                fontWeight={700}
+                gap="2"
+                _hover={{
+                  bg: "#E0F2FE", // Light blue background on hover
+                  color: "#2C5E84",
+                }}
+              >
+                Book Demo
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 17 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  Book Demo
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 17 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
-                      fill="#3F77A5"
-                    />
-                  </svg>
-                </Button>
-              </Link>
+                  <path
+                    d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
+                    fill="#3F77A5"
+                  />
+                </svg>
+              </Button>
             </Box>
           </Flex>
 
@@ -488,7 +499,7 @@ const NewsletterSubscription = () => {
             {/* Main "Our Solutions" box */}
             <Box
               bg="#BECEDC"
-              borderRadius={{base:"20px",md:"24px"}}
+              borderRadius={{ base: "20px", md: "24px" }}
               p="20px"
               height={{ md: "100%" }}
               width={{ base: "100%" }}
@@ -585,7 +596,7 @@ const NewsletterSubscription = () => {
             {/* Main "Industries we serve" box */}
             <Box
               bg="#BECEDC"
-              borderRadius={{base:"20px",md:"24px"}}
+              borderRadius={{ base: "20px", md: "24px" }}
               p="20px"
               height={{ md: "100%" }}
               width={{ base: "100%" }}
@@ -681,7 +692,7 @@ const NewsletterSubscription = () => {
           <Box
             bg="#BECEDC"
             display={{ base: "block", md: "none" }}
-            borderRadius={{base:"20px",md:"24px"}}
+            borderRadius={{ base: "20px", md: "24px" }}
             p="20px"
             flex="1"
             minW="250px"
