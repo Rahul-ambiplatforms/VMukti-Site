@@ -57,10 +57,10 @@ function App() {
             </Suspense>
           </Box>
         </ErrorBoundary>
-      </Router>
       <PageContentWrapper>
         <NewsletterSubscription />
       </PageContentWrapper>
+      </Router>
     </ChakraProvider>
   );
 }
