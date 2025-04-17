@@ -12,42 +12,44 @@ import {
 } from "@chakra-ui/react";
 import WhyAmbicamPage from "./whyambi";
 import PageContentWrapper from "../../components/PageContentWrapper";
+import TrustedBy from "./TrustedBy";
+import Discover from "./Discover";
 
 export default function AmbicamLandingPage() {
 
   const svgSize = useBreakpointValue({ base: "25px", md: "33px" });
-    
+
   return (
     <PageContentWrapper>
-    <Box
-      bgImage="url('./assets/ambidash.png')"
-    // bgColor="red"
-      bgSize={{ base: "auto 50%", md: "cover" }} // Decrease bg image width in mobile view
-      w="100%"
-      h="100%"
-      bgPosition={{ base: "70% center", md: "center" }} // Adjust bg position for mobile view
-      bgRepeat="no-repeat"
-       // This is needed because the whole component shifts upwards, if mt is required then remove this
-    //   opacity={{ base: 0.6, md: 1 }} 
-    >
-      {/* Optional overlay to improve readability */}
       <Box
-        bg={{ base: "rgba(255, 255, 255, 0.7)", md: "transparent" }} // Semi-transparent white background for mobile
-        p={{ base: 4, md: 0 }} // Add padding for mobile view
-        borderRadius={{ base: "20px", md: "0" }} // Rounded corners for mobile
+        bgImage="url('./assets/ambidash.png')"
+        // bgColor="red"
+        bgSize={{ base: "auto 50%", md: "cover" }} // Decrease bg image width in mobile view
+        w="100%"
+        h="100%"
+        bgPosition={{ base: "70% center", md: "center" }} // Adjust bg position for mobile view
+        bgRepeat="no-repeat"
+      // This is needed because the whole component shifts upwards, if mt is required then remove this
+      //   opacity={{ base: 0.6, md: 1 }} 
+      >
+        {/* Optional overlay to improve readability */}
+        <Box
+          bg={{ base: "rgba(255, 255, 255, 0.7)", md: "transparent" }} // Semi-transparent white background for mobile
+          p={{ base: 4, md: 0 }} // Add padding for mobile view
+          borderRadius={{ base: "20px", md: "0" }} // Rounded corners for mobile
         // mx={{ base: "5%", md: "0" }} // Add horizontal margin for mobile
         // bg="red
-        
-      >
-        <Box>
-          {/* <Container maxW="100%"> */}
+
+        >
+          <Box>
+            {/* <Container maxW="100%"> */}
             <Flex
               direction={{ base: "column", lg: "row" }}
               align="center"
               justify="space-between"
               gap={8}
-             //This is needed because the heading needs to be alligned as per the image of camera
-              // bg="red"
+            //This is needed because the heading needs to be alligned as per the image of camera
+            // bg="red"
             >
               {/* Ellipse */}
               {/* <Box
@@ -70,11 +72,11 @@ export default function AmbicamLandingPage() {
                 />
               </Box> */}
               <Box w={{ base: "100%", md: "50%", lg: "60%" }}>
-                <Flex direction="column" gap={6} mb={{md:"50%"}}>
+                <Flex direction="column" gap={6} mb={{ md: "50%" }}>
                   <Heading
                     lineHeight="1.2"
                     fontWeight="600"
-                    fontSize={{base:"20px",md:"48px"}}
+                    fontSize={{ base: "20px", md: "48px" }}
                     mb="4"
                   >
                     <Text as="span" color="#3F77A5">
@@ -102,7 +104,7 @@ export default function AmbicamLandingPage() {
                     />
                   </svg>
 
-                  <Box w={{base:"100%",md:"60%"}} lineHeight="1.2">
+                  <Box w={{ base: "100%", md: "60%" }} lineHeight="1.2">
                     <Text fontWeight="700" fontSize="16px">
                       Ambicam,{" "}
                       <Text as="span" fontWeight="500">
@@ -193,11 +195,13 @@ export default function AmbicamLandingPage() {
                 </Flex>
               </Box>
             </Flex>
-          {/* </Container> */}
+            {/* </Container> */}
+          </Box>
         </Box>
       </Box>
-    </Box>
-      <WhyAmbicamPage/>
+      <WhyAmbicamPage />
+      <TrustedBy />
+      <Discover />
     </PageContentWrapper>
   );
 }
