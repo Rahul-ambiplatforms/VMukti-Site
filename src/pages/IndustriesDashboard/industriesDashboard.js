@@ -13,6 +13,8 @@ import { keyframes } from "@emotion/react";
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import PageContentWrapper from "../../components/PageContentWrapper";
+import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation";
+import SubHeadingAnimation from "../../components/Animation/Text/SubHeadingAnimation";
 // import { keyframes } from "@emotion/react";
 
 const MotionBox = motion(Box);
@@ -141,7 +143,7 @@ const industriesData = [
     link: "financeIndustry",
   },
   {
-    name: "Election",
+    name: "Election Industry",
     img:
       "data:image/svg+xml;charset=utf-8," +
       encodeURIComponent(
@@ -320,6 +322,7 @@ export default function IndustryDashboard() {
   const [isDesktop, setIsDesktop] = useState(true);
   const [columns, setColumns] = useState(4);
 
+  const svgSize = useBreakpointValue({ base: "13px", md: "25px" });
   // Breakpoint value hook for responsive design
   const titleFontSize = useBreakpointValue({
     base: "24px",
@@ -380,13 +383,14 @@ export default function IndustryDashboard() {
           lg: "repeat(4, 1fr)",
         }}
         gap={{ base: "10px", md: "15px" }}
-      // width="100%"
-      // Change from 100% to avoid overflow
-      // maxWidth="1512px"
-      // mx="auto" // Center the grid properly
-      // px={{ base: "10px", md: "30px" }}
-      // mt="5%"
-      // mb="5%"
+        pb="4%"
+        // bg="red"
+        // width="100%"
+        // Change from 100% to avoid overflow
+        // maxWidth="1512px"
+        // mx="auto" // Center the grid properly
+        // px={{ base: "10px", md: "30px" }}
+        // mt="5%"
       >
         <GridItem
           colSpan={2} // Span across two columns (1 and 2)
@@ -400,68 +404,74 @@ export default function IndustryDashboard() {
           textAlign="left"
           pb={{ base: "40px", md: "0" }}
           zIndex={2} // Ensure it is on top of other elements
-        // bg="red"
+          // bg="red"
         >
           {/* Title */}
-          <MotionText
-            ref={ref}
-            fontSize={titleFontSize}
-            fontWeight="600"
-            marginBottom="40px"
-            lineHeight="normal"
-            width="100%"
-            initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            Transforming{" "}
-            <Text as="span" color="#3F77A5">
-              Industries
-            </Text>{" "}
-            with <br />
-            <Text as="span" color="#db7b3a">
-              AI-Powered Intelligence
-            </Text>
-          </MotionText>
-
-          {/* Arrow */}
-          <MotionBox
-            initial={{ opacity: 0, x: -100 }} // Start faded and shifted left
-            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }} // Fade in and move right
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            {/* Animated SVG Box */}
-            <MotionBox mb="8px" align="left">
-              <svg
-                width="33"
-                height="33"
-                viewBox="0 0 33 33"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              // bg="red"
-              >
-                <path
-                  d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
-                  fill="#3F77A5"
-                />
-              </svg>
-            </MotionBox>
-
-            {/* Animated Text */}
-            <MotionText
-              color="black"
-              fontWeight="500"
-              textAlign="left"
-              fontSize={{ base: "14px", md: "16px" }}
-              maxW="100%"
+          <HeadingAnimation>
+            <Text
+              // ref={ref}
+              fontSize={titleFontSize}
+              fontWeight="600"
+              marginBottom="40px"
+              lineHeight="normal"
               width="100%"
+              // initial={{ opacity: 0, x: -50 }}
+              // animate={inView ? { opacity: 1, x: 0 } : { opacity: 0.8, x: -50 }}
+              // transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              We provide AI-driven solutions that revolutionize industries with
-              advanced security, automation, and intelligence. Enhancing
-              efficiency and innovation, our technology adapts to diverse
-              industry needs for a smarter future.
-            </MotionText>
-          </MotionBox>
+              Transforming{" "}
+              <Text as="span" color="#3F77A5">
+                Industries
+              </Text>{" "}
+              with <br />
+              <Text as="span" color="#db7b3a">
+                AI-Powered Intelligence
+              </Text>
+            </Text>
+          </HeadingAnimation>
+          {/* Arrow */}
+          {/* <SubHeadingAnimation> */}
+            <Box
+            // initial={{ opacity: 0, x: -100 }} // Start faded and shifted left
+            // animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }} // Fade in and move right
+            // transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              {/* Animated SVG Box */}
+              {/* <SubHeadingAnimation> */}
+              <Box mb="8px" align="left">
+                <svg
+                  width={svgSize}
+                  height={svgSize}
+                  viewBox="0 0 33 33"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  // bg="red"
+                >
+                  <path
+                    d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
+                    fill="#3F77A5"
+                  />
+                </svg>
+              </Box>
+              {/* </SubHeadingAnimation> */}
+              {/* Animated Text */}
+              {/* <SubHeadingAnimation> */}
+              <Text
+                color="black"
+                fontWeight="500"
+                textAlign="left"
+                fontSize={{ base: "14px", md: "16px" }}
+                // maxW="100%"
+                width="100%"
+              >
+                We provide AI-driven solutions that revolutionize industries
+                with advanced security, automation, and intelligence. Enhancing
+                efficiency and innovation, our technology adapts to diverse
+                industry needs for a smarter future.
+              </Text>
+              {/* </SubHeadingAnimation> */}
+            </Box>
+          {/* </SubHeadingAnimation> */}
         </GridItem>
         {/* ----------------------------------------------------------------------- */}
         {grid.slice(1).flatMap((row, rowIndex) =>
@@ -477,7 +487,7 @@ export default function IndustryDashboard() {
                   md: industry.isWide ? 2 : 1,
                 }}
                 rowSpan={1}
-              // ml="2%"---------------------
+                // ml="2%"---------------------
               >
                 <Box
                   width={{
@@ -496,11 +506,10 @@ export default function IndustryDashboard() {
                   color={industry.textColor}
                   zIndex={2}
                   overflow="hidden"
-                  // Apply the keyframe animation with a 6s duration, easeInOut easing and infinite repetition
                   animation={
                     inView
-                      ? `${floatAnimation} 2s ease-in-out ${delay}s 1`
-                      : "none"
+                      ? `${floatAnimation} 2s ease-in-out ${delay}s forwards`
+                      : "none" // Restart animation when inView changes
                   }
                 >
                   {/* Industry Icon */}
@@ -537,7 +546,7 @@ export default function IndustryDashboard() {
                         width="18px"
                         height="3px"
                         borderRadius="2px"
-                        marginTop="5px"
+                        marginTop="3px" //5px to 3px
                         backgroundColor={industry.dashColor}
                       />
                     </Text>
@@ -565,15 +574,16 @@ export default function IndustryDashboard() {
                   {industry.name && (
                     <Link to={`/industries/${industry.link}`}>
                       <Flex
+                        gap="2"
                         alignItems="center"
                         position="absolute"
-                        bottom="20px"
+                        bottom={{ base: "10px", md: "20px" }}
                         right="20px"
                         color={industry.textColor}
                       >
                         <Text
                           fontSize="14px"
-                          fontWeight="600"
+                          fontWeight={{ base: "600", md: "400" }}
                           marginRight="8px"
                         >
                           Know More

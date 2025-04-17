@@ -238,7 +238,7 @@ const HeroSection = ({ isAnimationTriggered }) => {
               transition={{ duration: 0.5, ease: "easeOut" }}
               // direction={{ base: "column", lg: "row" }}
               mb="2%"
-              mt={{base:"-10%"}}
+              mt={{base:"-10%",md:"4%"}}
               // bg="red"
             >
               <Box

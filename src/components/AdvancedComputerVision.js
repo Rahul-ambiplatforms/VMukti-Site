@@ -81,8 +81,7 @@ const AdvancedComputerVision = ({
       // px="5%"
       px={{ base: "6%", md: "5%" }} //jenil
       pb={{base:"6%",md:"4%"}}
-      px={{ base: "6%", md: "5%" }} //jenil
-      pb="4%"
+      // pb="4%"
       pt="1.5%"
       zIndex={myZIndex}
       mt={myMargin}
@@ -124,7 +123,7 @@ const AdvancedComputerVision = ({
         direction="column"
         initial={{ opacity: 0, x: -50 }}
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0.8, x: -50 }}
-        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0.8, x: -50 }}
+        // animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0.8, x: -50 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         mt={{base:"1%",md:"1%"}} //jenil
       >
@@ -228,8 +227,8 @@ const AdvancedComputerVision = ({
               cursor="pointer"
               position="relative"
               overflow="hidden"
-              position="relative"
-              overflow="hidden"
+              // position="relative"
+              // overflow="hidden"
             >
               <Box
                 width="100%"

@@ -122,7 +122,7 @@ const TripleImageSection = ({
           {images.map((image, index) => (
             <Box
               key={index}
-              borderRadius="20px"
+              // borderRadius="20px"
               overflow="hidden"
               w={{ base: "150px", sm: "200px", md: "250px", lg: "306px" }}
               h={{ base: "300px", sm: "400px", md: "500px", lg: "594px" }}
@@ -133,6 +133,7 @@ const TripleImageSection = ({
                 alt="Surveillance Image"
                 w="100%"
                 h="100%"
+              borderRadius="20px"
                 objectFit="cover"
                 initial={{ scale: 0.8, opacity: 0 }} // Initial state for animation
                 animate={
