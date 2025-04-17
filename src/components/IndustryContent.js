@@ -44,6 +44,9 @@ const popAnimation = {
 };
 const IndustryContent = ({ props, content }) => {
   const titleFontSize = "48px"; // Font size for the title
+
+  const svgSize = useBreakpointValue({ base: "13px", md: "25px" });
+
   const buttonWidth = useBreakpointValue({
     base: "130px",
     md: "130px",
@@ -84,6 +87,7 @@ const IndustryContent = ({ props, content }) => {
         >
           {/* Title Container with relative positioning */}
           <Flex direction="column" width="100%">
+            <HeadingAnimation>
             <Box position="relative" mb="20px">
               {/* Title Text (above the white rectangle) */}
               <MotionText
@@ -134,7 +138,7 @@ const IndustryContent = ({ props, content }) => {
                 </MotionText>
               </MotionText>
             </Box>
-
+            </HeadingAnimation>
             {/* Arrow & Description - Flex Container */}
             <Flex
               flexDirection={{ base: "column", md: "row" }}
@@ -148,22 +152,23 @@ const IndustryContent = ({ props, content }) => {
                 maxWidth={{ base: "100%", md: "30%" }}
                 textAlign={{ base: "center", md: "left" }}
                 position="relative"
-              // bg="red"
+                // bg="red"
               >
                 {/* Arrow Animation */}
                 {/* Desktop View */}
-                <MotionBox
-                  mb="8px"
-                  display={{ base: "none", md: "flex" }}
+                <SubHeadingAnimation>
+                <Box
+                  mb={{ base: "4px", md: "8px" }}
+                  display={{ base: "flex", md: "flex" }}
                   justifyContent="flex-start"
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                  viewport={{ once: false, amount: 0.1 }}
+                  // initial={{ opacity: 0, x: -50 }}
+                  // animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
+                  // transition={{ duration: 0.8, ease: "easeOut" }}
+                  // viewport={{ once: false, amount: 0.1 }}
                 >
                   <svg
-                    width="40"
-                    height="40"
+                    width={svgSize}
+                    height={svgSize}
                     viewBox="0 0 33 33"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -173,49 +178,27 @@ const IndustryContent = ({ props, content }) => {
                       fill="#3F77A5"
                     />
                   </svg>
-                </MotionBox>
-                {/* Mobile View */}
-                <MotionBox
-                  ml="4
-                  px"
-                  mb="4px"
-                  display={{ base: "flex", md: "none" }}
-                  justifyContent="flex-start"
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                  viewport={{ once: false, amount: 0.1 }}
-                >
-                  <svg
-                    width="17"
-                    height="17"
-                    viewBox="0 0 17 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15 16.5C15.8284 16.5 16.5 15.8284 16.5 15V1.5C16.5 0.671573 15.8284 -2.38419e-07 15 -2.38419e-07C14.1716 -2.38419e-07 13.5 0.671573 13.5 1.5V13.5H1.5C0.671573 13.5 -2.38419e-07 14.1716 -4.76837e-07 15C-4.76837e-07 15.8284 0.671573 16.5 1.5 16.5H15ZM0.93934 3.06066L13.9393 16.0607L16.0607 13.9393L3.06066 0.93934L0.93934 3.06066Z"
-                      fill="#3F77A5"
-                    />
-                  </svg>
-                </MotionBox>
-
+                </Box>
+                {/* </HeadingAnimation> */}
                 {/* Description Animation */}
-                <MotionText
+                {/* <HeadingAnimation> */}
+                <Text
+                  // ref="ref"
                   color="#000"
                   fontWeight="500"
                   // textAlign={{ base: "center", md: "left" }}
                   textAlign={{ base: "left", md: "left" }}
                   fontSize={{ base: "14px", md: "16px" }}
-                  maxW="80%"
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
-                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-                  viewport={{ once: false, amount: 0.1 }}
+                  maxW={{base:"80%",md:"70%"}}
+                  lineHeight="100%"
+                  // initial={{ opacity: 0, x: -50 }}
+                  // animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
+                  // transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+                  // viewport={{ once: false, amount: 0.1 }}
                 >
                   {content.para}
-                </MotionText>
-
+                </Text>
+                </SubHeadingAnimation>
                 {/* Button Animation */}
                 <MotionButton
                   marginTop="20px"
@@ -229,10 +212,10 @@ const IndustryContent = ({ props, content }) => {
                   _hover={{ bg: "#2c5a7a", color: "white" }}
                   px={{ base: "12px", md: "15px", lg: "20px" }}
                   display="flex"
-                // initial={{ opacity: 0, x: -40 }}
-                // animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
-                // transition={{ duration: 0.7, ease: "easeOut" }}
-                // viewport={{ once: false, amount: 0.1 }}
+                  // initial={{ opacity: 0, x: -40 }}
+                  // animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
+                  // transition={{ duration: 0.7, ease: "easeOut" }}
+                  // viewport={{ once: false, amount: 0.1 }}
                 >
                   Book Demo
                   <Box
@@ -281,11 +264,16 @@ const IndustryContent = ({ props, content }) => {
               borderRadius="24px"
               flexShrink="0"
             />
-            <Box position="relative" width="100%" height={{ xl: "630px" }} 
-            // display="flex"
-            // alignItems="center"
-            // justifyContent="center"
-            bg="white" borderRadius="20px">
+            <Box
+              position="relative"
+              width="100%"
+              height={{ xl: "630px" }}
+              // display="flex"
+              // alignItems="center"
+              // justifyContent="center"
+              bg="white"
+              borderRadius="20px"
+            >
               {/* Large image (60% width) - Will extend upward */}
               <MotionImage
                 src={`${process.env.PUBLIC_URL}/assets/${content.large_image}`}
@@ -298,7 +286,10 @@ const IndustryContent = ({ props, content }) => {
                 flexShrink="1"
                 initial="hidden"
                 animate="visible"
-                variants={{ hidden: { scale: 0.8 }, visible: { scale: 1, transition: { duration: 0.5 } } }}
+                variants={{
+                  hidden: { scale: 0.8 },
+                  visible: { scale: 1, transition: { duration: 0.5 } },
+                }}
                 // style={{ transform: "scale(1.1)" }}
                 viewport={{ once: false }}
               />
@@ -319,7 +310,6 @@ const IndustryContent = ({ props, content }) => {
                 // style={{ transform: "scale(1.1)" }}
                 viewport={{ once: false }}
               /> */}
-
             </Box>
           </Flex>
 
@@ -347,15 +337,15 @@ const IndustryContent = ({ props, content }) => {
               right="-20%"
               width="70%" // SVG covers 70% of the background width
               zIndex="0"
-            // overflow="hidden"
-            // bg="red"
+              // overflow="hidden"
+              // bg="red"
             >
               <Image
                 src={`${process.env.PUBLIC_URL}/assets/VMukti Brochure O2 1.png`}
                 alt=""
                 width="100%"
                 opacity="0.8"
-              // overflow="hidden"
+                // overflow="hidden"
               />
             </Box>
             <Box
@@ -364,15 +354,15 @@ const IndustryContent = ({ props, content }) => {
               left="-10%"
               width="70%" // SVG covers 70% of the background width
               zIndex="0"
-            // overflow="hidden"
+              // overflow="hidden"
             >
               <Image
                 src={`${process.env.PUBLIC_URL}/assets/VMukti Brochure O2 2.png`}
                 alt=""
                 width="100%"
                 opacity="0.8"
-              // overflow="hidden"
-              // bg="red"
+                // overflow="hidden"
+                // bg="red"
               />
             </Box>
 
@@ -403,8 +393,8 @@ const IndustryContent = ({ props, content }) => {
                 variants={popAnimation1}
                 custom={index}
                 viewport={{ once: false }} // Repeats animation on scroll
-              // bg="red"
-              // pb="4%"
+                // bg="red"
+                // pb="4%"
               >
                 {/* Grey Placeholder */}
                 <Image
@@ -431,15 +421,16 @@ const IndustryContent = ({ props, content }) => {
                   </Text>
                 </HeadingAnimation>
                 {/* Blue Dash */}
-                <Box
-                  width="18px"
-                  height="3px"
-                  borderRadius="2px"
-                  backgroundColor="#3F77A5"
-                  alignSelf="flex-start"
-                // bg="red"
-                />
-
+                <HeadingAnimation>
+                  <Box
+                    width="18px"
+                    height="3px"
+                    borderRadius="2px"
+                    backgroundColor="#3F77A5"
+                    alignSelf="flex-start"
+                    // bg="red"
+                  />
+                </HeadingAnimation>
                 {/* Description */}
                 <SubHeadingAnimation>
                   <Text
@@ -468,7 +459,7 @@ const IndustryContent = ({ props, content }) => {
             flexDirection={{ base: "column", md: "row" }}
             alignItems="center"
             justifyContent="space-between"
-          // bg="red"
+            // bg="red"
           >
             {/* Key Benefits Title */}
             <Text
@@ -489,7 +480,7 @@ const IndustryContent = ({ props, content }) => {
               flexWrap="wrap"
               gap="30px"
               ml={{ base: "0%", md: "5%" }}
-            // bg="red"
+              // bg="red"
             >
               {content.keyBenefits.map((benefit, index) => (
                 <Box
@@ -497,14 +488,14 @@ const IndustryContent = ({ props, content }) => {
                   textAlign="center"
                   width={{ base: "60%", md: "250px" }}
                   flexShrink="0"
-                // maxWidth="160px" // Controls text wrapping for two lines
+                  // maxWidth="160px" // Controls text wrapping for two lines
                 >
                   {/* SVG Icon */}
                   <Box
                     display="flex"
                     alignItems="center"
                     justifyContent="flex-start" // Aligns icon to the left
-                  // paddingLeft="8px" // Adds slight spacing from the edge
+                    // paddingLeft="8px" // Adds slight spacing from the edge
                   >
                     <Image src={benefit.svg} alt={benefit.title} />
                   </Box>

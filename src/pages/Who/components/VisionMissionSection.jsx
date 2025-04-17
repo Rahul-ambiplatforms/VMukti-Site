@@ -6,10 +6,11 @@ const VisionMissionSection = () => {
     <Flex
       justifyContent="space-between"
       alignItems="left"
-      mt="1%"
-      mb="1%"
+      mt={{base:"5%",md:"1%"}}
+      mb="-2%" //------------------------- 1 to -2
       direction={{ base: "column", md: "row" }}
-      gap={{ base: "4", md: "2" }}
+      gap={{ base: "4", md: "2" }} //----------------------------------------
+      // bg="red"
     >
       {/* Vision Box */}
       <Box
@@ -19,7 +20,7 @@ const VisionMissionSection = () => {
         bg="#FFF"
         p="6"
         mr={{ base: "0", md: "0.5%" }}
-        mb={{ base: "4", md: "0" }}
+        // mb={{ base: "4", md: "0" }} //----------------------------------
         display="flex"
         flexDirection="column"
       >
@@ -147,7 +148,7 @@ const VisionMissionSection = () => {
         justifyContent="space-between"
         // boxShadow="md"
         p="6"
-        mb={{ base: "-15%", md: "0" }}
+        mb={{ base: "-10%", md: "0" }} //-----------------------------------
         zIndex={2}
       >
         {/* SVG Icon - top left */}
