@@ -79,7 +79,7 @@ const AdvancedComputerVision = ({
       height="100%"
       overflow="hidden"
       // px="5%"
-      px={{ base: "6%", md: "5%" }} //jenil
+      px={{ base: "6%", md: "5%" }}
       pb={{base:"6%",md:"4%"}}
       // pb="4%"
       pt="1.5%"
@@ -125,7 +125,7 @@ const AdvancedComputerVision = ({
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0.8, x: -50 }}
         // animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0.8, x: -50 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        mt={{base:"1%",md:"1%"}} //jenil
+        mt={{base:"1%",md:"1%"}}
       >
         <Flex flexWrap="wrap">
           {title.map((item, index) => (

@@ -155,7 +155,7 @@ const VideoAnalytics = () => {
             <Box position="relative" width="100%" height="1px" bg="rgba(255,255,255,0.2)" mt={{ base: "0", md: "25px" }}>
               <Box
                 position="absolute"
-                mt="-1px" //jenil
+                mt="-1px"
                 // height="100%"
                 width={`${100 / features.length}%`}
                 bg="#FFFFFF"

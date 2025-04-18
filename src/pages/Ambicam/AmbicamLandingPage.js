@@ -152,7 +152,11 @@ export default function AmbicamLandingPage() {
                       bg="white"
                       color="#3F77A5"
                       borderRadius="20px"
-                      _hover={{ bg: "#2c5a7a", color: "white" }}
+                      // _hover={{ bg: "#2c5a7a", color: "white" }}
+                      _hover={{
+                        bg: "#E0F2FE",
+                        color: "#2C5E84",
+                      }}
                       px={{ base: "2px", md: "15px", lg: "20px" }}
                       py={{ base: "2%", md: "2%", lg: "3%" }}
                       display="flex"
