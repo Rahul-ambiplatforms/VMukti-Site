@@ -154,7 +154,7 @@ const TripleImageSection = ({
         {/* image carousel */}
         <Box display={{ base: "block", md: "none" }} w="100%">
           <Swiper
-            spaceBetween={-50} // Adjust spacing as needed
+            spaceBetween="20" // Adjust spacing as needed
             slidesPerView={1.8} // Controls the number of slides visible
             centeredSlides={true}
             style={{ paddingRight: "5px" }}

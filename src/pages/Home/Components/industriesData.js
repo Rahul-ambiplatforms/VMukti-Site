@@ -67,7 +67,7 @@ const industriesData = [
     image: "./assets/DefenseIndustry.png"
   },
   {
-    name: 'Election',
+    name: 'Election Industry',
     img:
       'data:image/svg+xml;charset=utf-8,' +
       encodeURIComponent(
