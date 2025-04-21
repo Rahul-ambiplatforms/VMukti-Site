@@ -27,7 +27,7 @@ const industriesData = [
     bgColor: '#BECEDC',
     textColor: 'black',
     dashColor: '#3F77A5',
-    image: "./assets/HealthcareIndustry.png"
+    image: './assets/HealthcareIndustry.png',
   },
   {
     name: '',
@@ -50,7 +50,7 @@ const industriesData = [
     bgColor: 'white',
     textColor: 'black',
     dashColor: '#3F77A5',
-    image: "./assets/EducationIndustry.png"
+    image: './assets/EducationIndustry.png',
   },
   {
     name: 'Defense',
@@ -64,7 +64,7 @@ const industriesData = [
     bgColor: '#BECEDC',
     textColor: 'black',
     dashColor: '#3F77A5',
-    image: "./assets/DefenseIndustry.png"
+    image: './assets/DefenseIndustry.png',
   },
   {
     name: 'Election Industry',
@@ -79,7 +79,7 @@ const industriesData = [
     textColor: 'black',
     dashColor: '#3F77A5',
     isWide: true,
-    image: "./assets/ElectionIndustry.png"
+    image: './assets/ElectionIndustry.png',
   },
   {
     name: '',
@@ -101,7 +101,8 @@ const industriesData = [
   },
   {
     name: 'Banking Industry',
-    img: "data:image/svg+xml;charset=utf-8," +
+    img:
+      'data:image/svg+xml;charset=utf-8,' +
       encodeURIComponent(
         `<svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M26.2432 8.81782V31.9696C26.2432 32.5811 26.6621 33.0001 27.2736 33.0001H32.0139C32.6255 33.0001 33.0444 32.5811 33.0444 31.9696V8.81782C33.0444 8.28679 32.6459 7.78735 32.1513 7.78735H27.1363C26.6417 7.78735 26.2432 8.28679 26.2432 8.81782Z" fill="#3F77A5"/>
@@ -117,7 +118,7 @@ const industriesData = [
     bgColor: 'white',
     textColor: 'black',
     dashColor: '#3F77A5',
-    image: "./assets/BankingIndustry.png"
+    image: './assets/BankingIndustry.png',
   },
   {
     name: '',
@@ -140,7 +141,7 @@ const industriesData = [
     bgColor: '#3F77A5',
     textColor: 'white',
     dashColor: 'white',
-    image: "./assets/TransportationIndustry.png"
+    image: './assets/TransportationIndustry.png',
   },
   {
     name: 'City Monitoring',
@@ -154,7 +155,7 @@ const industriesData = [
     bgColor: 'white',
     textColor: 'black',
     dashColor: '#3F77A5',
-    image: "./assets/CityMonitoring.png"
+    image: './assets/CityMonitoring.png',
   },
   {
     name: 'Warehousing & Logistic Industry',
@@ -168,7 +169,7 @@ const industriesData = [
     bgColor: '#BECEDC',
     textColor: 'black',
     dashColor: '#3F77A5',
-    image: "./assets/WarehousingLogisticIndustry.png"
+    image: './assets/WarehousingLogisticIndustry.png',
   },
 ]
 
@@ -242,24 +243,24 @@ export default function IndustryGrid() {
                 }}
                 rowSpan={1}
                 sx={{
-                  perspective: "1000px", // Adjust the depth effect
+                  perspective: '1000px', // Adjust the depth effect
                 }}
               >
                 <Box
                   width={{
-                    base: "100%",
-                    md: "100%",
-                    lg: industry.isWide ? "640px" : "100%",
+                    base: '100%',
+                    md: '100%',
+                    lg: industry.isWide ? '640px' : '100%',
                   }}
-                  height={{ base: "200px", md: "320px" }}
+                  height={{ base: '200px', md: '320px' }}
                   borderRadius="24px"
                   position="relative"
                   style={{
-                    transformStyle: "preserve-3d", // Ensure 3D depth is preserved
-                    transition: "transform 0.6s ease-in-out",
+                    transformStyle: 'preserve-3d', // Ensure 3D depth is preserved
+                    transition: 'transform 0.6s ease-in-out',
                   }}
                   _hover={{
-                    transform: "rotateY(180deg)", // Flip the card
+                    transform: 'rotateY(180deg)', // Flip the card
                   }}
                 >
                   {/* Flip Container */}
@@ -269,7 +270,7 @@ export default function IndustryGrid() {
                     height="100%"
                     borderRadius="24px"
                     style={{
-                      transformStyle: "preserve-3d",
+                      transformStyle: 'preserve-3d',
                     }}
                   >
                     {/* Front Side */}
@@ -284,10 +285,10 @@ export default function IndustryGrid() {
                       flexDirection="column"
                       justifyContent="flex-end"
                       alignItems="flex-start"
-                      padding={{ base: "10px", md: "20px" }}
+                      padding={{ base: '10px', md: '20px' }}
                       style={{
-                        transform: "rotateY(0deg)",
-                        backfaceVisibility: "hidden", // Ensures it hides when flipped
+                        transform: 'rotateY(0deg)',
+                        backfaceVisibility: 'hidden', // Ensures it hides when flipped
                       }}
                     >
                       {/* Industry Icon */}
@@ -295,7 +296,9 @@ export default function IndustryGrid() {
                         <Box
                           dangerouslySetInnerHTML={{
                             __html: decodeURIComponent(
-                              industry.img.split("data:image/svg+xml;charset=utf-8,")[1]
+                              industry.img.split(
+                                'data:image/svg+xml;charset=utf-8,'
+                              )[1]
                             ),
                           }}
                           position="absolute"
@@ -308,7 +311,7 @@ export default function IndustryGrid() {
                       {/* Industry Name & Line */}
                       <Text
                         fontSize="16px"
-                        fontWeight="600"
+                        fontWeight="700" // fontWeight="600"
                         position="absolute"
                         bottom="20px"
                         left="20px"
@@ -339,21 +342,18 @@ export default function IndustryGrid() {
                       bgImage={`${process.env.PUBLIC_URL}${industry.image}`}
                       bgSize="cover"
                       bgPosition="center"
-
                       display="flex"
                       justifyContent="center"
                       alignItems="center"
                       textAlign="center"
                       style={{
-                        transform: "rotateY(180deg)",
-                        backfaceVisibility: "hidden", // Ensures front side is not visible
+                        transform: 'rotateY(180deg)',
+                        backfaceVisibility: 'hidden', // Ensures front side is not visible
                       }}
-                    >
-                    </Box>
+                    ></Box>
                   </Box>
                 </Box>
               </GridItem>
-
             )
           })
         )}

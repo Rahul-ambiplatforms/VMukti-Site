@@ -1,74 +1,74 @@
 //Updated code.
 
-import React, { useState } from "react";
-import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import React, { useState } from 'react'
+import { Box, Flex, Text, Image, Button } from '@chakra-ui/react'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 
-const MotionFlex = motion(Flex);
+const MotionFlex = motion(Flex)
 
 const AdvancedComputerVision = ({
   title = [
-    { text: "IoT Integration & Secure Connectivity for", color: "black" },
-    { text: "Smart Surveillance", color: "#3F77A5" },
+    { text: 'IoT Integration & Secure Connectivity for', color: 'black' },
+    { text: 'Smart Surveillance', color: '#3F77A5' },
   ],
-  subtitle = "AI-Powered Visual Processing",
+  subtitle = 'AI-Powered Visual Processing',
   cards = [
     {
-      type: "image",
-      label: "Real-Time Monitoring",
-      media: "/assets/car.png",
-      media: "/assets/car.png",
+      type: 'image',
+      label: 'Real-Time Monitoring',
+      media: '/assets/car.png',
+      media: '/assets/car.png',
       description:
-        "IoT-enabled cameras and sensors continuously track environmental changes and security events.",
+        'IoT-enabled cameras and sensors continuously track environmental changes and security events.',
     },
     {
-      type: "image",
-      label: "End-to-End Security",
-      media: "/assets/ete.png",
+      type: 'image',
+      label: 'End-to-End Security',
+      media: '/assets/ete.png',
       description:
-        "Ensures encrypted data transmission and secure cloud or on-prem storage",
+        'Ensures encrypted data transmission and secure cloud or on-prem storage',
     },
     {
-      type: "image",
-      label: "Seamless System Integration",
-      media: "/assets/ssi.png",
+      type: 'image',
+      label: 'Seamless System Integration',
+      media: '/assets/ssi.png',
       description:
-        "Connects effortlessly with third-party platforms for enhanced situational awareness.",
+        'Connects effortlessly with third-party platforms for enhanced situational awareness.',
     },
     {
-      type: "image",
-      label: "Automated Insights",
-      media: "/assets/ssi1.png",
+      type: 'image',
+      label: 'Automated Insights',
+      media: '/assets/ssi1.png',
       description:
-        "Transforms sensor data into actionable alerts for proactive decision-making",
+        'Transforms sensor data into actionable alerts for proactive decision-making',
     },
   ],
-  backgroundImage = "/assets/VMuktidot.png",
-  bgColor = "white",
-  myMargin = "3%",
-  myZIndex = "1",
+  backgroundImage = '/assets/VMuktidot.png',
+  bgColor = 'white',
+  myMargin = '3%',
+  myZIndex = '1',
 }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.1 }); // Triggers at 10% visibility
+  const ref = useRef(null)
+  const isInView = useInView(ref, { amount: 0.1 }) // Triggers at 10% visibility
 
   // activeCard is persistent (updated on click or navigation)
-  const [activeCard, setActiveCard] = useState(0);
+  const [activeCard, setActiveCard] = useState(0)
   // hoverCard is temporary (updated on mouse enter/leave)
-  const [hoverCard, setHoverCard] = useState(null);
+  const [hoverCard, setHoverCard] = useState(null)
 
   // effectiveCard determines which card is visually expanded
-  const effectiveCard = hoverCard !== null ? hoverCard : activeCard;
+  const effectiveCard = hoverCard !== null ? hoverCard : activeCard
 
   const handleNavigation = (direction) => {
     // Clear any hover state when navigating
-    setHoverCard(null);
-    if (direction === "left") {
-      setActiveCard((prev) => (prev === 0 ? cards.length - 1 : prev - 1));
-    } else if (direction === "right") {
-      setActiveCard((prev) => (prev === cards.length - 1 ? 0 : prev + 1));
+    setHoverCard(null)
+    if (direction === 'left') {
+      setActiveCard((prev) => (prev === 0 ? cards.length - 1 : prev - 1))
+    } else if (direction === 'right') {
+      setActiveCard((prev) => (prev === cards.length - 1 ? 0 : prev + 1))
     }
-  };
+  }
 
   return (
     <Flex
@@ -79,8 +79,8 @@ const AdvancedComputerVision = ({
       height="100%"
       overflow="hidden"
       // px="5%"
-      px={{ base: "6%", md: "5%" }}
-      pb={{base:"6%",md:"4%"}}
+      px={{ base: '6%', md: '5%' }}
+      pb={{ base: '6%', md: '4%' }}
       // pb="4%"
       pt="1.5%"
       zIndex={myZIndex}
@@ -124,8 +124,8 @@ const AdvancedComputerVision = ({
         initial={{ opacity: 0, x: -50 }}
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0.8, x: -50 }}
         // animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0.8, x: -50 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        mt={{base:"1%",md:"1%"}}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        mt={{ base: '1%', md: '1%' }}
       >
         <Flex flexWrap="wrap">
           {title.map((item, index) => (
@@ -134,10 +134,10 @@ const AdvancedComputerVision = ({
               color={item.color}
               display="inline"
               key={index}
-              fontSize={{ base: "20px", md: "36px" }}
+              fontSize={{ base: '20px', md: '36px' }}
               fontWeight="500"
             >
-              {index !== 0 && " "}
+              {index !== 0 && ' '}
               {item.text}
               &nbsp;
             </Text>
@@ -162,13 +162,13 @@ const AdvancedComputerVision = ({
             minHeight="31px"
             padding="0"
             borderRadius="5px"
-            display={{ base: "none", md: "flex" }}
+            display={{ base: 'none', md: 'flex' }}
             alignItems="center"
             justifyContent="center"
             cursor="pointer"
             bgColor="#E7E7E7"
-            _hover={{ bgColor: "#e0e0e0" }}
-            onClick={() => handleNavigation("left")}
+            _hover={{ bgColor: '#e0e0e0' }}
+            onClick={() => handleNavigation('left')}
           >
             <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
               <path
@@ -184,13 +184,13 @@ const AdvancedComputerVision = ({
             minHeight="31px"
             padding="0"
             borderRadius="5px"
-            display={{ base: "none", md: "flex" }}
+            display={{ base: 'none', md: 'flex' }}
             alignItems="center"
             justifyContent="center"
             cursor="pointer"
             bgColor="#E7E7E7"
-            _hover={{ bgColor: "#e0e0e0" }}
-            onClick={() => handleNavigation("right")}
+            _hover={{ bgColor: '#e0e0e0' }}
+            onClick={() => handleNavigation('right')}
           >
             <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
               <path
@@ -204,7 +204,7 @@ const AdvancedComputerVision = ({
         {/* Card Contents */}
         <Flex
           justifyContent="space-between"
-          direction={{ base: "column", md: "row", lg: "row" }}
+          direction={{ base: 'column', md: 'row', lg: 'row' }}
           gap={{ base: 4, lg: 1 }}
           width="100%"
         >
@@ -216,9 +216,9 @@ const AdvancedComputerVision = ({
               direction="column"
               alignItems="flex-start"
               width={{
-                base: "100%", // Full width on mobile regardless of active state
-                md: effectiveCard === index ? "814px" : "149px", // Original behavior on desktop
-                lg: effectiveCard === index ? "814px" : "149px", // Original behavior on desktop
+                base: '100%', // Full width on mobile regardless of active state
+                md: effectiveCard === index ? '814px' : '149px', // Original behavior on desktop
+                lg: effectiveCard === index ? '814px' : '149px', // Original behavior on desktop
               }}
               transition="width 0.5s ease, background-color 0.3s ease"
               onMouseEnter={() => setHoverCard(index)} // Set temporary hover state
@@ -232,21 +232,21 @@ const AdvancedComputerVision = ({
             >
               <Box
                 width="100%"
-                borderRadius={{ base: "20px", md: "24px" }}
-                bgColor={index % 2 !== 0 ? "#BECEDC" : "#EAEAEA"}
+                borderRadius={{ base: '20px', md: '24px' }}
+                bgColor={index % 2 !== 0 ? '#BECEDC' : '#EAEAEA'}
                 display="flex"
                 overflow="hidden"
                 justifyContent="flex-start"
                 position="relative"
                 // flexShrink={0}
                 height={{
-                  base: effectiveCard === index ? "194px" : "54px", // Fixed height for mobile
-                  md: "439px", // Original desktop height
-                  lg: "439px",
+                  base: effectiveCard === index ? '194px' : '54px', // Fixed height for mobile
+                  md: '439px', // Original desktop height
+                  lg: '439px',
                 }}
               >
                 {effectiveCard === index ? (
-                  card.type === "video" ? (
+                  card.type === 'video' ? (
                     <video
                       src={card.media}
                       autoPlay
@@ -254,32 +254,32 @@ const AdvancedComputerVision = ({
                       muted
                       width="100%"
                       height="100%"
-                      style={{ objectFit: "cover", borderRadius: "24px" }}
+                      style={{ objectFit: 'cover', borderRadius: '24px' }}
                     />
                   ) : (
                     <Image
                       src={`${process.env.PUBLIC_URL}${card.media}`}
                       alt={card.label}
-                      width={{ base: "100%", md: "100%", lg: "100%" }}
-                      height={{ base: "", md: "100%", lg: "100%" }}
-                      objectFit={{ base: "fit", md: "cover" }}
-                      borderRadius={{ base: "20", md: "24px" }}
+                      width={{ base: '100%', md: '100%', lg: '100%' }}
+                      height={{ base: '', md: '100%', lg: '100%' }}
+                      objectFit={{ base: 'fit', md: 'cover' }}
+                      borderRadius={{ base: '20', md: '24px' }}
                     />
                   )
                 ) : (
                   // Inactive cards show vertical text overlay
                   <Text
-                    fontSize={{ base: "14px", md: "16px", lg: "18px" }}
+                    fontSize={{ base: '14px', md: '16px', lg: '18px' }}
                     fontWeight="700"
                     sx={{
-                      writingMode: { base: "horizontal-tb", md: "vertical-rl" },
-                      transform: { base: "", md: "rotate(180deg)" },
-                      left: { base: "4%", md: "auto" }, // Left-aligned on mobile
-                      right: { base: "auto", md: "15%" }, // Right-aligned on desktop
-                      bottom: { base: "25%", md: "5%" },
-                      width: { base: "90%", md: "auto" }, // Take more width on mobile
-                      height: { base: "auto", md: "100%" },
-                      textAlign: { base: "left", md: "inherit" }, // Force left alignment on mobile
+                      writingMode: { base: 'horizontal-tb', md: 'vertical-rl' },
+                      transform: { base: '', md: 'rotate(180deg)' },
+                      left: { base: '4%', md: 'auto' }, // Left-aligned on mobile
+                      right: { base: 'auto', md: '15%' }, // Right-aligned on desktop
+                      bottom: { base: '25%', md: '5%' },
+                      width: { base: '90%', md: 'auto' }, // Take more width on mobile
+                      height: { base: 'auto', md: '100%' },
+                      textAlign: { base: 'left', md: 'inherit' }, // Force left alignment on mobile
                     }}
                     position="absolute"
                     bottom="5%"
@@ -293,13 +293,13 @@ const AdvancedComputerVision = ({
                       bgColor="#3f77a5"
                       sx={{
                         writingMode: {
-                          base: "",
-                          md: "vertical-rl",
+                          base: '',
+                          md: 'vertical-rl',
                         },
-                        transform: { base: "", md: "rotate(90deg)" },
-                        mt: { md: "6px" },
-                        mr: { md: "-5px" },
-                        ml: { md: "-10px" },
+                        transform: { base: '', md: 'rotate(90deg)' },
+                        mt: { md: '6px' },
+                        mr: { md: '-5px' },
+                        ml: { md: '-10px' },
                       }}
                       borderRadius="2px"
                     />
@@ -312,7 +312,7 @@ const AdvancedComputerVision = ({
                 <Box mt={3}>
                   <Text
                     whiteSpace="nowrap"
-                    fontSize={{ base: "14px", md: "16px", lg: "18px" }}
+                    fontSize={{ base: '14px', md: '16px' }} // fontSize={{ base: '14px', md: '16px', lg: '18px' }}
                     fontWeight="700"
                   >
                     {card.label}
@@ -326,8 +326,8 @@ const AdvancedComputerVision = ({
                   </Text>
                   <Text
                     fontWeight="500"
-                    whiteSpace={{ base: "wrap", md: "nowrap" }}
-                    fontSize={{ base: "12px", md: "14px" }}
+                    whiteSpace={{ base: 'wrap', md: 'nowrap' }}
+                    fontSize={{ base: '12px', md: '14px' }}
                     color="#696969"
                   >
                     {card.description}
@@ -339,7 +339,7 @@ const AdvancedComputerVision = ({
         </Flex>
       </Flex>
     </Flex>
-  );
-};
+  )
+}
 
-export default AdvancedComputerVision;
+export default AdvancedComputerVision
