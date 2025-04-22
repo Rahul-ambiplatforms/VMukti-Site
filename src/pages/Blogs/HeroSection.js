@@ -4,7 +4,7 @@ import {
   Heading,
   Text,
   Flex,
-  Icon,
+  // Icon,
   useBreakpointValue,
 } from '@chakra-ui/react'
 // import { ExternalLink } from 'lucide-react';

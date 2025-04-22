@@ -2,34 +2,34 @@ import { Box, Flex, Text, Image, useBreakpointValue } from '@chakra-ui/react'
 import HeadingAnimation from '../../../components/Animation/Text/HeadingAnimation'
 import SubHeadingAnimation from '../../../components/Animation/Text/SubHeadingAnimation'
 
-const nodes = [
-  { label: 'Image', position: '15%', side: 'left' },
-  { label: 'Video', position: '30%', side: 'left' },
-  { label: 'Live links', position: '45%', side: 'left' },
-  { label: 'Data', position: '60%', side: 'left' },
-  { label: 'Text', position: '75%', side: 'left' },
-  { label: 'Image', position: '15%', side: 'right' },
-  { label: 'Video', position: '30%', side: 'right' },
-  { label: 'Text', position: '45%', side: 'right' },
-  { label: 'Data', position: '60%', side: 'right' },
-  { label: 'Text', position: '75%', side: 'right' },
-]
+// const nodes = [
+//   { label: 'Image', position: '15%', side: 'left' },
+//   { label: 'Video', position: '30%', side: 'left' },
+//   { label: 'Live links', position: '45%', side: 'left' },
+//   { label: 'Data', position: '60%', side: 'left' },
+//   { label: 'Text', position: '75%', side: 'left' },
+//   { label: 'Image', position: '15%', side: 'right' },
+//   { label: 'Video', position: '30%', side: 'right' },
+//   { label: 'Text', position: '45%', side: 'right' },
+//   { label: 'Data', position: '60%', side: 'right' },
+//   { label: 'Text', position: '75%', side: 'right' },
+// ]
 
 const Diagram = () => {
   // Responsive values
-  const containerWidth = useBreakpointValue({ base: '100%', md: '1446px' })
+  // const containerWidth = useBreakpointValue({ base: '100%', md: '1446px' })
   const containerHeight = useBreakpointValue({ base: 'auto', md: '656px' })
   const leftPanelWidth = useBreakpointValue({ base: '100%', md: '35%' }) // Full width on small screens
   const rightPanelPadding = useBreakpointValue({ base: '4', md: '8' }) // Smaller padding on small screens
-  const fontSize = useBreakpointValue({ base: 'xl', md: '2xl' }) // Smaller font size on small screens
-  const nodeFontSize = useBreakpointValue({ base: 'xs', md: 'sm' }) // Smaller font size for nodes on small screens
-  const nodePosition = useBreakpointValue({ base: '10%', md: '5%' }) // Adjust node position on small screens
+  // const fontSize = useBreakpointValue({ base: 'xl', md: '2xl' }) // Smaller font size on small screens
+  // const nodeFontSize = useBreakpointValue({ base: 'xs', md: 'sm' }) // Smaller font size for nodes on small screens
+  // const nodePosition = useBreakpointValue({ base: '10%', md: '5%' }) // Adjust node position on small screens
 
   return (
     <Flex
       height={containerHeight}
       borderRadius="24px"
-      overflow="hidden"
+      overflow="hidden" 
       bg="white"
       mt="2%"
       direction={{ base: 'column', md: 'row' }} // Stack vertically on small screens

@@ -1,6 +1,6 @@
 import {
   Box,
-  Container,
+  // Container,
   Flex,
   Image,
   Text,
@@ -10,11 +10,11 @@ import {
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination } from 'swiper/modules'
+// import { Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import PageContentWrapper from './PageContentWrapper'
+// import PageContentWrapper from './PageContentWrapper'
 const MotionTextContainer = motion(VStack)
 const MotionImage = motion(Image)
 const MotionText = motion(Text)

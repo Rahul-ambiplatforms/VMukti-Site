@@ -25,9 +25,9 @@ const useCountUp = (target, duration = 1000) => {
     if (ref.current) observer.observe(ref.current)
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current)
-    }
-  }, [])
+      if (ref.current) observer.unobserve(ref.current);//I have to solve the yarn build error here...
+    };
+  }, []);
 
   useEffect(() => {
     if (!isVisible) return
@@ -82,12 +82,12 @@ const Achieved = () => {
   })
 
   // Dynamic card size that scales with viewport width
-  const cardSize = useBreakpointValue({
-    base: 'minmax(130px, 180px)',
-    sm: 'minmax(150px, 180px)',
-    md: 'minmax(200px, 283px)',
-    lg: '283px',
-  })
+  // const cardSize = useBreakpointValue({
+  //   base: 'minmax(130px, 180px)',
+  //   sm: 'minmax(150px, 180px)',
+  //   md: 'minmax(200px, 283px)',
+  //   lg: '283px',
+  // })
 
   const containerWidth = useBreakpointValue({
     base: '100%',

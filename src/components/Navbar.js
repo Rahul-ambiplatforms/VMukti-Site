@@ -4,7 +4,7 @@ import {
     Button,
     HStack,
     Menu,
-    MenuButton,
+    // MenuButton,
     MenuList,
     MenuItem,
     Show,
@@ -80,8 +80,8 @@ const dropdownItems = {
 
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const [isAccordionOpen, setIsAccordionOpen] = useState(false)
-    const [activeLink, setActiveLink] = useState('Home')
+    // const [isAccordionOpen, setIsAccordionOpen] = useState(false)
+    const [activeLink, setActiveLink] = useState('Home') //I have to solve yarn build error here...
     const [hoverTimeouts, setHoverTimeouts] = useState({});
     const [menuOpenStates, setMenuOpenStates] = useState({});
     const [isNavbarVisible, setIsNavbarVisible] = useState(true);
@@ -115,7 +115,7 @@ const Navbar = () => {
         if (currentLink) {
             setActiveLink(currentLink);
         }
-    }, [location]);
+    }, [location]);//I have to solve the yarn build error here...
 
     useEffect(() => {
         let lastScrollY = window.scrollY;
@@ -144,9 +144,9 @@ const Navbar = () => {
     const contactBtnSize = useBreakpointValue({ base: '120px', md: '146px' })
     const contactBtnHeight = useBreakpointValue({ base: '50px', md: '50px' })
 
-    const handleLinkClick = (link) => {
-        setActiveLink(link)
-    }
+    // const handleLinkClick = (link) => { //I have to solve the yarn build error here...
+    //     setActiveLink(link) 
+    // }
 
     const handleMouseEnter = (menuName) => {
         clearTimeout(hoverTimeouts[menuName]);
