@@ -18,7 +18,6 @@ const AdvancedComputerVision = ({
       type: 'image',
       label: 'Real-Time Monitoring',
       media: '/assets/car.png',
-      media: '/assets/car.png',
       description:
         'IoT-enabled cameras and sensors continuously track environmental changes and security events.',
     },

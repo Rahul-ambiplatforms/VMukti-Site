@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {
   Box,
-  Container,
+  // Container,
   Flex,
   Heading,
   Text,
@@ -21,7 +21,7 @@ const BlogsOverviewDash = () => {
   );
 
   // For responsive design
-  const flexDirection = useBreakpointValue({ base: "column", md: "row" });
+  // const flexDirection = useBreakpointValue({ base: "column", md: "row" });
   const headingSize = useBreakpointValue({ base: "24px", md: "48px" });
 
   return (

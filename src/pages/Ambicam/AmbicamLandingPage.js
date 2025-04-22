@@ -6,8 +6,8 @@ import {
   Text,
   Button,
   Image,
-  Container,
-  Icon,
+  // Container,
+  // Icon,  
   useBreakpointValue,
 } from "@chakra-ui/react";
 import WhyAmbicamPage from "./whyambi";
@@ -51,26 +51,6 @@ export default function AmbicamLandingPage() {
             //This is needed because the heading needs to be alligned as per the image of camera
             // bg="red"
             >
-              {/* Ellipse */}
-              {/* <Box
-                position="absolute"
-                top="10px"
-                left="98px"
-                opacity="1"
-                zIndex="2"
-              >
-                <Box
-                  width="408px"
-                  height="408px"
-                  flexShrink={0}
-                  borderRadius="408px"
-                  border="1px solid #000"
-                  opacity="0.12"
-                  background="#3F77A5"
-                  filter="blur(56.6px)"
-                  bg="red"
-                />
-              </Box> */}
               <Box w={{ base: "100%", md: "50%", lg: "60%" }}>
                 <Flex direction="column" gap={6} mb={{ md: "50%" }}>
                   <Heading
@@ -198,6 +178,26 @@ export default function AmbicamLandingPage() {
                   </Flex>
                 </Flex>
               </Box>
+              {/* Ellipse */}
+               <Box
+                position="absolute"
+                top="10px"
+                left="20px"
+                opacity="1"
+                zIndex="2"
+                display={{base:"none",md:"block"}}
+              >
+                <Box
+                  width="408px"
+                  height="408px"
+                  flexShrink={0}
+                  borderRadius="408px"
+                  border="1px solid #000"
+                  opacity="0.12"
+                  background="#3F77A5"
+                  filter="blur(56.6px)"
+                />
+              </Box> 
             </Flex>
             {/* </Container> */}
           </Box>

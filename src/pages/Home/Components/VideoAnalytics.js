@@ -1,9 +1,9 @@
 'use client'
 
-import React, { useState } from 'react'
-import { Box, Flex, Text, Image, Button, Divider, Grid } from '@chakra-ui/react'
-import { motion } from 'framer-motion'
-import HeadingAnimation from '../../../components/Animation/Text/HeadingAnimation'
+import React, { useState } from "react"
+import { Box, Flex, Text, Image, Button, Grid } from "@chakra-ui/react"
+import { motion } from "framer-motion"
+import HeadingAnimation from "../../../components/Animation/Text/HeadingAnimation"
 
 const MotionBox = motion(Box)
 
@@ -38,7 +38,7 @@ const VideoAnalytics = () => {
   ]
 
   const [featureIndex, setFeatureIndex] = useState(0)
-  const progress = (featureIndex / (features.length - 1)) * 100
+  // const progress = (featureIndex / (features.length - 1)) * 100
 
   const handleNext = () => {
     setFeatureIndex((prevIndex) => (prevIndex + 1) % features.length)

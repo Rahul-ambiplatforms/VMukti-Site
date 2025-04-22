@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, Text } from "@chakra-ui/react";
 import HeadingAnimation from "./Animation/Text/HeadingAnimation";
 import SubHeadingAnimation from "./Animation/Text/SubHeadingAnimation";
 import { motion } from "framer-motion";
@@ -69,7 +69,8 @@ const ServingsModelGrid = ({ title, description, cards }) => {
                     <Text fontSize={{ base: "14", md: "16" }} fontWeight="700">
                       {card.title}
                     </Text>
-                    <Box width="20px" height="2px" bg="white" /> {/* from 1 to 2 px height */}
+                    <Box width="20px" height="2px" bg="white" />{" "}
+                    {/* from 1 to 2 px height */}
                   </Flex>
                 </HeadingAnimation>
                 <SubHeadingAnimation>

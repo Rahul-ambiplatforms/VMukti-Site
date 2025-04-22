@@ -1,4 +1,4 @@
-import { color } from 'framer-motion'
+// import { color } from 'framer-motion'
 
 export const customData = {
   title: [

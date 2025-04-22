@@ -1,7 +1,7 @@
-import { Box, Flex, Grid, Heading, Image, Text } from '@chakra-ui/react'
-import SubHeadingAnimation from './Animation/Text/SubHeadingAnimation'
-import HeadingAnimation from './Animation/Text/HeadingAnimation'
-import { motion } from 'framer-motion'
+import { Box, Flex, Grid, Heading, Image, Text } from "@chakra-ui/react";
+// import SubHeadingAnimation from "./Animation/Text/SubHeadingAnimation";
+// import HeadingAnimation from "./Animation/Text/HeadingAnimation";
+import { motion } from "framer-motion";
 
 const popAnimation = {
   hidden: { scale: 0.8, opacity: 0 },

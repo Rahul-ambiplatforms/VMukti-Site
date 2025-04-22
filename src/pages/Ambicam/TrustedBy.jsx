@@ -1,5 +1,5 @@
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';

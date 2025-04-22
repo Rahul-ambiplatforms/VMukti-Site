@@ -1,11 +1,10 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import { Text, Flex } from '@chakra-ui/react' // Changed from Text to Flex
+import React from "react";
+import { motion } from "framer-motion";
+import { Text } from "@chakra-ui/react"; // Changed from Text to Flex
 
-const MotionText = motion(Text) // Convert Chakra Flex to a motion component
-const MotionFlex = motion(Flex)
-const SubHeadingAnimation = ({ children, ...props }) => {
-  // Added props spread
+const MotionText = motion(Text); // Convert Chakra Flex to a motion component
+// const MotionFlex = motion(Flex);
+const SubHeadingAnimation = ({ children, ...props }) => { // Added props spread
   return (
     // <MotionFlex></MotionFlex>
     <MotionText

@@ -1,5 +1,5 @@
 // src/components/HeroSection/index.js
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import {
   Box,
   Flex,
@@ -9,10 +9,10 @@ import {
   useBreakpointValue,
   Show,
 } from "@chakra-ui/react";
-import { inView, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // Motion components
 const MotionImage = motion(Image);

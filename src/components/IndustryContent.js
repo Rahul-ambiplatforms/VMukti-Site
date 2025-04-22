@@ -34,16 +34,16 @@ const popAnimation1 = {
   }),
 };
 
-const popAnimation = {
-  hidden: { scale: 0.6, opacity: 0 },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    transition: { duration: 0.7, ease: "easeOut" },
-  },
-};
+// const popAnimation = {
+//   hidden: { scale: 0.6, opacity: 0 },
+//   visible: {
+//     scale: 1,
+//     opacity: 1,
+//     transition: { duration: 0.7, ease: "easeOut" },
+//   },
+// };
 const IndustryContent = ({ props, content }) => { 
-  const titleFontSize = "48px"; // Font size for the title
+  // const titleFontSize = "48px"; // Font size for the title
 
   const svgSize = useBreakpointValue({ base: "13px", md: "25px" });
 
