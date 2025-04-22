@@ -1,7 +1,7 @@
 import { Box, Flex, Image, List, ListItem, Text } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 import HeadingAnimation from "../../../components/Animation/Text/HeadingAnimation";
-import ImagePop from "../../../components/Animation/Image/ImagePop";
+// import ImagePop from "../../../components/Animation/Image/ImagePop";
 import PageContentWrapper from "../../../components/PageContentWrapper";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -12,10 +12,12 @@ const SurveillanceSoftware = () => {
   const [imageHeight, setImageHeight] = useState("100dvh");
   const imageRef = useRef(null); // Reference for the image
   const sectionRef = useRef(null); // Reference for the section containing the image
-
+  //I have to solve the yarn build error here...
   useEffect(() => {
+    const screenWidth = window.innerWidth;
+    const scaleValue = screenWidth < 768 ? 1.5 : 1.1; // Tailwind's md breakpoint is 768px
     const imageScaleAnimation = gsap.to(imageRef.current, {
-      scale: 1.3,
+      scale: scaleValue,
       scrollTrigger: {
         trigger: sectionRef.current, // Element triggering the animation
         start: "top center", // Start when the top of the trigger hits the center of the viewport
@@ -45,12 +47,14 @@ const SurveillanceSoftware = () => {
         {/* main box */}
         {/* heading text */}
         <Box zIndex={1}>
-          <PageContentWrapper>
+          {/* <PageContentWrapper> */}
             <Box
               fontSize={{ base: "24px", md: "48px" }}
               justifyContent="center"
               textAlign="center"
               fontWeight="600"
+              // w="100%"
+              // bg="red"
             >
               <HeadingAnimation>
                 <Text as="span" color="#3F77A5">
@@ -67,7 +71,7 @@ const SurveillanceSoftware = () => {
                 </Text>
               </HeadingAnimation>
             </Box>
-          </PageContentWrapper>
+          {/* </PageContentWrapper> */}
         </Box>
         {/* main content */}
         <Flex
@@ -174,7 +178,7 @@ const SurveillanceSoftware = () => {
             // src="../assets/surveillancemock.png"
             src={`${process.env.PUBLIC_URL}/assets/surveillancemock.png`}
             onLoad={handleImageLoad}
-            transform={{ base: "scale(1.9)", md: "scale(1)" }}
+            transform={{ base: "scale(1.2)", md: "scale(0.6)" }}
             clipPath="inset(0)" // Ensures image does not affect layout
           />
         </Box>

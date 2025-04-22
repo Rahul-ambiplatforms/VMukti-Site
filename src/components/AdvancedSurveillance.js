@@ -7,10 +7,6 @@ const AdvancedSurveillance = () => {
   const [activeCard, setActiveCard] = useState(0)
 
   // Data for the component
-  const title1 = 'Advanced Surveillance for All.'
-  const subtitle = 'Enterprise'
-  const description =
-    'Explore innovative, scalable solutions designed to meet the urban security and operational needs of enterprises.'
 
   const cards = [
     {
@@ -265,6 +261,7 @@ const AdvancedSurveillance = () => {
                     >
                       <Box w="90%">
                         <Text
+                          as="div"
                           fontSize="16px"
                           fontWeight="700"
                           letterSpacing="-0.24px"

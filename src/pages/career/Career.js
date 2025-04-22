@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Center,
   Container,
   Flex,
   Heading,
@@ -9,11 +8,6 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react'
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  ExternalLinkIcon,
-} from '@chakra-ui/icons'
 import HeroSection from './components/HeroSection'
 import PageContentWrapper from '../../components/PageContentWrapper'
 import CulturalSection from '../../components/CulturalSection' // Import the new reusable component
@@ -99,7 +93,7 @@ export default function VMuktiCareers() {
                 flexDirection={{ base: 'column', md: 'row' }}
                 textAlign={{ base: 'center', md: 'left' }}
               >
-                <Text fontSize={{ base: '14px', md: '16px' }}>
+                <Text as="div" fontSize={{ base: '14px', md: '16px' }}>
                   10 Jobs found{' '}
                   <Box as="span" mx={2} color="#3F77A5">
                     |

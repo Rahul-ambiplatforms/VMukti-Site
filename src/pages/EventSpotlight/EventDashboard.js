@@ -7,7 +7,7 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react'
 import { useRef, useState } from 'react'
-import { motion, AnimatePresence, color } from 'framer-motion'
+import { motion } from 'framer-motion' //AnimatePresence, color
 import CulturalSection from '../../components/CulturalSection'
 import HeadingAnimation from '../../components/Animation/Text/HeadingAnimation'
 import SubHeadingAnimation from '../../components/Animation/Text/SubHeadingAnimation'
@@ -18,7 +18,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
-const MotionBox = motion(Box)
+// const MotionBox = motion(Box)
 
 // Reusable constants for styles
 const styles = {
@@ -137,14 +137,14 @@ const dashboardItems = [
 const EventSpotlight = () => {
   const svgSize = useBreakpointValue({ base: '13px', md: '25px' })
   const swiperRef = useRef(null) // Initialize with null
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [direction, setDirection] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0) //I have to solve the yarn build error here...
+  // const [direction, setDirection] = useState(0)
 
   // Derived state for visible items
-  const visibleItems = [
-    dashboardItems[currentIndex % dashboardItems.length],
-    dashboardItems[(currentIndex + 1) % dashboardItems.length],
-  ]
+  // const visibleItems = [
+  //   dashboardItems[currentIndex % dashboardItems.length],
+  //   dashboardItems[(currentIndex + 1) % dashboardItems.length],
+  // ]
 
   // Handlers for navigation
   const nextSlide = () => {
@@ -161,15 +161,15 @@ const EventSpotlight = () => {
     if (swiperRef.current) swiperRef.current.slidePrev()
   }
 
-  const variants = {
-    enter: (direction) => ({ x: direction > 0 ? '50%' : '-50%', opacity: 1 }),
-    center: { x: 0, opacity: 1, transition: { duration: 0.5 } },
-    exit: (direction) => ({
-      x: direction < 0 ? '50%' : '-50%',
-      opacity: 1,
-      transition: { duration: 0.5 },
-    }),
-  }
+  // const variants = {
+  //   enter: (direction) => ({ x: direction > 0 ? '50%' : '-50%', opacity: 1 }),
+  //   center: { x: 0, opacity: 1, transition: { duration: 0.5 } },
+  //   exit: (direction) => ({
+  //     x: direction < 0 ? '50%' : '-50%',
+  //     opacity: 1,
+  //     transition: { duration: 0.5 },
+  //   }),
+  // }
 
   const gridItems = [
     { bgColor: 'transparent' },

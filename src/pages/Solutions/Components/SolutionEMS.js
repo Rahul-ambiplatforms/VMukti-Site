@@ -430,7 +430,7 @@ const SolutionEMS = () => {
     }
 
     setVisibleSlideRange({ start: newStart, end: newEnd })
-  }, [currentSlide, visibleSlides, slides.length])
+  }, [currentSlide, visibleSlides, slides.length]) //I have to solve the yarn build error here...
 
   // Handle URL changes to set the correct slide
   useEffect(() => {
@@ -447,7 +447,7 @@ const SolutionEMS = () => {
     // Ensure visibleSlides is updated after the initial render
     const initialEnd = Math.min((visibleSlides || 1) - 1, slides.length - 1)
     setVisibleSlideRange({ start: 0, end: initialEnd })
-  }, [location.search, visibleSlides, slides.length])
+  }, [location.search, visibleSlides, slides.length])//I have to solve the yarn build error here...
 
   // Handle previous and next slide
   const handlePrev = () => {
@@ -713,10 +713,10 @@ const SolutionEMS = () => {
                   order={{ base: '2', md: '1' }}
                   direction="column"
                   gap={5}
+                  justifyContent="space-between"
                   // height="100%"
                   zIndex={1}
                   width={{ base: '100%', md: '60%' }}
-                  // bg="blue"
                 >
                   {/* First Box with 0.1s delay */}
                   <Flex
@@ -728,6 +728,9 @@ const SolutionEMS = () => {
                     p={{ base: '4', md: '8' }}
                     direction="column"
                     bg="#E7E7E7"
+                    maxH={{md:"50%"}}
+                    h="50%"
+                    // justifyContent="space-between"
                     // width="100%"
                     // mb="-0.5%"
                     borderRadius="24px"
@@ -747,6 +750,7 @@ const SolutionEMS = () => {
                     </Heading>
 
                     <Text
+                      as="div"
                       fontSize="24px"
                       color="blue.600"
                       mb={3}
@@ -793,7 +797,9 @@ const SolutionEMS = () => {
                     transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
                     p={{ base: '4', md: '8' }}
                     direction="column"
-                    height={{ base: '100%', md: '50%' }}
+                    h="50%"
+                    maxH={{md:"50%"}}
+                    // height={{ base: '100%', md: '50%' }}
                     bg="#BECEDC"
                     borderRadius="24px"
                     zIndex={2}

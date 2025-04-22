@@ -4,8 +4,8 @@ import servingsData from '../data/servingsConstData'
 import ServingsDescriptionCard from './ServingsDescriptionCard'
 import ServingsModelGrid from './ServingsModelGrid'
 import ServingsAdvantages from './ServingsAdvantages'
-import SubHeadingAnimation from './Animation/Text/SubHeadingAnimation'
-import HeadingAnimation from './Animation/Text/HeadingAnimation'
+// import SubHeadingAnimation from './Animation/Text/SubHeadingAnimation'
+// import HeadingAnimation from './Animation/Text/HeadingAnimation'
 import { motion } from 'framer-motion'
 
 const popAnimation = {

@@ -18,7 +18,6 @@ const AdvancedComputerVision = ({
       type: 'image',
       label: 'Real-Time Monitoring',
       media: '/assets/car.png',
-      media: '/assets/car.png',
       description:
         'IoT-enabled cameras and sensors continuously track environmental changes and security events.',
     },
@@ -269,6 +268,7 @@ const AdvancedComputerVision = ({
                 ) : (
                   // Inactive cards show vertical text overlay
                   <Text
+                    as="div"
                     fontSize={{ base: '14px', md: '16px', lg: '18px' }}
                     fontWeight="700"
                     sx={{
@@ -311,6 +311,7 @@ const AdvancedComputerVision = ({
               {effectiveCard === index && (
                 <Box mt={3}>
                   <Text
+                    as="div"
                     whiteSpace="nowrap"
                     fontSize={{ base: '14px', md: '16px' }} // fontSize={{ base: '14px', md: '16px', lg: '18px' }}
                     fontWeight="700"

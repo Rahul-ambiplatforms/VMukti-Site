@@ -1,5 +1,5 @@
-import { Box, Container, Heading, Text, Image, Flex, VStack } from '@chakra-ui/react';
-import { useEffect, useRef } from 'react';
+import { Box } from '@chakra-ui/react';
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import SolutionEMS from './Components/SolutionEMS';
 import TripleImageSection from '../../components/TripleImageSection';

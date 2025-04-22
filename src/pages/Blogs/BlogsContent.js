@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {
   Box,
-  Container,
+  // Container,
   Heading,
   Text,
   Image,
@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
 // import { ChevronRightIcon, ChevronLeftIcon } from "lucide-react";
 
 export default function BlogsContent() {
-  const bgColor = useColorModeValue('gray.50', 'gray.900')
+  // const bgColor = useColorModeValue('gray.50', 'gray.900')
   const borderColor = useColorModeValue('gray.200', 'gray.700')
 
   const [currentPage, setCurrentPage] = useState(1);

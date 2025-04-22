@@ -2,14 +2,14 @@ import {
   Box,
   Flex,
   Heading,
-  Image,
+  // Image,
   List,
   ListItem,
   Text,
   useBreakpointValue,
 } from '@chakra-ui/react'
-import SubHeadingAnimation from './Animation/Text/SubHeadingAnimation'
-import HeadingAnimation from './Animation/Text/HeadingAnimation'
+// import SubHeadingAnimation from './Animation/Text/SubHeadingAnimation'
+// import HeadingAnimation from './Animation/Text/HeadingAnimation'
 import { motion } from 'framer-motion'
 import React from 'react'
 

@@ -11,7 +11,7 @@ const toCamelCase = (str) => {
 
 const IndustryDetails = () => {
     const { name } = useParams();
-    const camelCaseName = toCamelCase(name);
+    // const camelCaseName = toCamelCase(name);
     // Fetch content directly from the centralized data file
     const content = industriesData[name.toLowerCase()];
 

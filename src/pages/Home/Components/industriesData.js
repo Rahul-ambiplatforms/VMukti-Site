@@ -174,7 +174,7 @@ const industriesData = [
 ]
 
 export default function IndustryGrid() {
-  const [isDesktop, setIsDesktop] = useState(true)
+  const [isDesktop, setIsDesktop] = useState(true) //I have to solve the yarn build error here...
   const [columns, setColumns] = useState(4)
 
   useEffect(() => {
@@ -310,6 +310,7 @@ export default function IndustryGrid() {
                       )}
                       {/* Industry Name & Line */}
                       <Text
+                        as="div"
                         fontSize="16px"
                         fontWeight="700" // fontWeight="600"
                         position="absolute"

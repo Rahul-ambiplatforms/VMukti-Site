@@ -14,11 +14,11 @@ import { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import PageContentWrapper from '../../components/PageContentWrapper'
 import HeadingAnimation from '../../components/Animation/Text/HeadingAnimation'
-import SubHeadingAnimation from '../../components/Animation/Text/SubHeadingAnimation'
+// import SubHeadingAnimation from '../../components/Animation/Text/SubHeadingAnimation'
 // import { keyframes } from "@emotion/react";
 
-const MotionBox = motion(Box)
-const MotionText = motion(Text)
+// const MotionBox = motion(Box)
+// const MotionText = motion(Text)
 
 const floatAnimation = keyframes`
   0% {
@@ -319,7 +319,7 @@ const industriesData = [
 ]
 
 export default function IndustryDashboard() {
-  const [isDesktop, setIsDesktop] = useState(true)
+  const [isDesktop, setIsDesktop] = useState(true) //I have to solve the yarn build error here...
   const [columns, setColumns] = useState(4)
 
   const svgSize = useBreakpointValue({ base: '13px', md: '25px' })
@@ -337,7 +337,7 @@ export default function IndustryDashboard() {
       setIsDesktop(width >= 768)
       if (width >= 992) {
         setColumns(4)
-      } else if (992 > width >= 768) {
+      } else if ((992) > (width) >= (768)) {
         setColumns(3)
       } else {
         setColumns(2)
@@ -533,6 +533,7 @@ export default function IndustryDashboard() {
                   {/* Industry Name & Description */}
                   <Box position="absolute" top="70px" left="20px" right="20px">
                     <Text
+                      as="div"
                       fontSize="16px"
                       fontWeight="700"
                       wordBreak="break-word"

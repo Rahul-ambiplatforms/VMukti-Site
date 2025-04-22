@@ -1,6 +1,7 @@
 import React from "react";
-import PageContentWrapper from "../../components/PageContentWrapper";
-import { Box, Divider, Flex, Image, Text } from "@chakra-ui/react";
+// import PageContentWrapper from "../../components/PageContentWrapper";
+// Divider,
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 const Discover = () => {
@@ -10,8 +11,8 @@ const Discover = () => {
         bg="white"
         direction={{ base: "column", md: "row" }}
         borderRadius="24px"
-        p={{base:"5",md:"20"}}
-        py={{base:"8"}}
+        p={{ base: "5", md: "20" }}
+        py={{ base: "8" }}
         justifyContent="space-between"
         alignItems="center"
         gap={6} // 10 to 6
@@ -27,13 +28,18 @@ const Discover = () => {
             fontWeight="600"
             lineHeight="1"
             gap={2}
-            mb={{base:"5",md:"10"}}
+            mb={{ base: "5", md: "10" }}
             // bg="red"
           >
             <Text>Discover </Text>
             <Text color="#DB7B3A">Smarter Security</Text>
           </Flex>
-          <Text fontSize={{ base: "14px", md: "16px" }} fontWeight="400" mb={{base:"2%",md:"2%"}} w={{base:"90%"}}>
+          <Text
+            fontSize={{ base: "14px", md: "16px" }}
+            fontWeight="400"
+            mb={{ base: "2%", md: "2%" }}
+            w={{ base: "90%" }}
+          >
             Elevate your safety with Ambicam&apos;s innovative cameras and cloud
             platform.
           </Text>
@@ -43,30 +49,39 @@ const Discover = () => {
             fontSize={{ base: "16px", md: "16px" }}
             direction={{ base: "column", md: "row" }}
             fontWeight="400"
-            alignItems={{base:"left",md:"center"}}
+            alignItems={{ base: "left", md: "center" }}
             // bg="red"
           >
-            <Flex direction={{ base: "column", md: "row" }} mb={{base:"5%",md:"0"}}>
-              <Text color="black" fontWeight="600">Contact us:</Text>
+            <Flex
+              direction={{ base: "column", md: "row" }}
+              mb={{ base: "5%", md: "0" }}
+            >
+              <Text color="black" fontWeight="600">
+                Contact us:
+              </Text>
               <Link>
-                <Text color="#4CC9F0" _hover={{ textDecoration: "underline" }}>contact@ambicam.in</Text>
+                <Text color="#4CC9F0" _hover={{ textDecoration: "underline" }}>
+                  contact@ambicam.in
+                </Text>
               </Link>
             </Flex>
             <Box
-              display={{base:"none",md:"block"}}
+              display={{ base: "none", md: "block" }}
               height="15px"
               width="2px"
               mx={4}
               bg="#8F8F8F"
               borderRadius="2px"
             />
-            <Box  mb={{base:"5%",md:"0"}}>
-            <Link>
-              <Text color="#4CC9F0" _hover={{ textDecoration: "underline" }}>www.ambicam.in</Text>
-            </Link>
+            <Box mb={{ base: "5%", md: "0" }}>
+              <Link>
+                <Text color="#4CC9F0" _hover={{ textDecoration: "underline" }}>
+                  www.ambicam.in
+                </Text>
+              </Link>
             </Box>
             <Box
-              display={{base:"none",md:"block"}}
+              display={{ base: "none", md: "block" }}
               height="15px"
               width="2px"
               mx={4}
@@ -102,7 +117,7 @@ const Discover = () => {
         <Flex>
           <Image
             src="../assets/ambicam_logo.png"
-            height={{base:"30px",md:"45px"}}
+            height={{ base: "30px", md: "45px" }}
             width="auto"
             objectFit="contain"
           />
