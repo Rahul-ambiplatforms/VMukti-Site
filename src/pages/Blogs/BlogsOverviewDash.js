@@ -45,8 +45,8 @@ const BlogsOverviewDash = () => {
           >
             <Image
               // src={selectedPost.mainImage}
-              // src={`${process.env.PUBLIC_URL}/${selectedPost.mainImage}`}
-              src={selectedPost.mainImage.startsWith("/") ? selectedPost.mainImage : `/${selectedPost.mainImage}`}
+              src={`${process.env.PUBLIC_URL}/assets/${selectedPost.mainImage}`}
+              // src={selectedPost.mainImage.startsWith("/") ? selectedPost.mainImage : `/${selectedPost.mainImage}`}
               alt={selectedPost.heading}
               objectFit="cover"
               //   maxH="400px"
@@ -82,7 +82,7 @@ const BlogsOverviewDash = () => {
         <Box mt={8} borderRadius="24px">
           <Image
             // src={selectedPost.contents.miniImage}
-            src={`${process.env.PUBLIC_URL}/${selectedPost.contents.miniImage}`}
+            src={`${process.env.PUBLIC_URL}/assets/${selectedPost.contents.miniImage}`}
             alt="VMukti Metaverse"
             w="60%"
             h="100%"

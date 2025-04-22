@@ -22,12 +22,13 @@ const BlogsDashboard = () => {
       //   height="100%"
       backgroundImage={`url(${process.env.PUBLIC_URL}/assets/blogs_dashboard.png)`}
       bgSize={{ base: "cover", md: "contain" }}
-      bgPosition="center"
+      bgPosition={{base:"right",md:"center"}}
       bgRepeat="no-repeat"
       aspectRatio={{ base: "57 / 50", md: "16 / 9" }}
     >
       {/* Overlay with blur effect */}
       <Box
+        borderRadius="24px"
         position="absolute"
         top="0"
         left="0"

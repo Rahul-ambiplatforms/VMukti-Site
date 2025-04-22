@@ -2,8 +2,8 @@ const blogPosts = [
     {
       id: 1,
       url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
-      thumbnail: "./assets/blogs_content_thumbnail.png",
-      mainImage: "./assets/blogs_post_main.png",
+      thumbnail: "blogs_content_thumbnail.png",
+      mainImage: "blogs_post_main.png",
       heading:
         "Webcasting Industry with Metaverse: A Comparison of VMukti with Other Industry Players",
       description:
@@ -38,15 +38,15 @@ const blogPosts = [
             description: "Microsoft Teams is a collaboration platform that offers webcasting capabilities. The solution enables businesses to host virtual events and webinars, but it also lacks the metaverse capabilities that VMukti offers. Microsoft Teams is primarily designed for team collaboration, and while it has several features, it may not be the best option for businesses that require immersive virtual experiences.",
           },
         ],
-        miniImage:"./assets/blogs_post_main.png",
+        miniImage:"blogs_post_main.png",
         conclude:"The webcasting industry has become a crucial tool for businesses worldwide. With the introduction of metaverse technology, businesses can now create immersive and interactive virtual experiences for attendees. VMukti has emerged as a leader in the industry, offering webcasting services and metaverse capabilities that enable businesses to enhance their virtual events.While other industry players such as Zoom, Google Meet, and Microsoft Teams offer webcasting capabilities, they lack the metaverse capabilities that VMukti provides. VMukti metaverse solution enables businesses to create a virtual world that attendees can access from anywhere, making their virtual events more interactive and engaging.",
       },
     },
     {
       id: 2,
       url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
-      thumbnail: "./assets/blogs_content_thumbnail.png",
-      mainImage: "./assets/blogs_post_main.png",
+      thumbnail: "blogs_content_thumbnail.png",
+      mainImage: "blogs_post_main.png",
       heading:
         "Webcasting Industry with Metaverse: A Comparison of VMukti with Other Industry Players",
       description:
@@ -74,15 +74,15 @@ const blogPosts = [
             description: "Microsoft Teams is a collaboration platform that offers webcasting capabilities. The solution enables businesses to host virtual events and webinars, but it also lacks the metaverse capabilities that VMukti offers. Microsoft Teams is primarily designed for team collaboration, and while it has several features, it may not be the best option for businesses that require immersive virtual experiences.",
           },
         ],
-        miniImage:"./assets/blogs_post_main.png",
+        miniImage:"blogs_post_main.png",
         conclude:"The webcasting industry has become a crucial tool for businesses worldwide. With the introduction of metaverse technology, businesses can now create immersive and interactive virtual experiences for attendees. VMukti has emerged as a leader in the industry, offering webcasting services and metaverse capabilities that enable businesses to enhance their virtual events.While other industry players such as Zoom, Google Meet, and Microsoft Teams offer webcasting capabilities, they lack the metaverse capabilities that VMukti provides. VMukti metaverse solution enables businesses to create a virtual world that attendees can access from anywhere, making their virtual events more interactive and engaging.",
       },
     },
     {
       id: 3,
       url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
-      thumbnail: "./assets/blogs_content_thumbnail.png",
-      mainImage: "./assets/blogs_post_main.png",
+      thumbnail: "blogs_content_thumbnail.png",
+      mainImage: "blogs_post_main.png",
       heading:
         "Webcasting Industry with Metaverse: A Comparison of VMukti with Other Industry Players",
       description:
@@ -110,15 +110,15 @@ const blogPosts = [
             description: "Microsoft Teams is a collaboration platform that offers webcasting capabilities. The solution enables businesses to host virtual events and webinars, but it also lacks the metaverse capabilities that VMukti offers. Microsoft Teams is primarily designed for team collaboration, and while it has several features, it may not be the best option for businesses that require immersive virtual experiences.",
           },
         ],
-        miniImage:"./assets/blogs_post_main.png",
+        miniImage:"blogs_post_main.png",
         conclude:"The webcasting industry has become a crucial tool for businesses worldwide. With the introduction of metaverse technology, businesses can now create immersive and interactive virtual experiences for attendees. VMukti has emerged as a leader in the industry, offering webcasting services and metaverse capabilities that enable businesses to enhance their virtual events.While other industry players such as Zoom, Google Meet, and Microsoft Teams offer webcasting capabilities, they lack the metaverse capabilities that VMukti provides. VMukti metaverse solution enables businesses to create a virtual world that attendees can access from anywhere, making their virtual events more interactive and engaging.",
       },
     },
     {
       id: 4,
       url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
-      thumbnail: "./assets/blogs_content_thumbnail.png",
-      mainImage: "./assets/blogs_post_main.png",
+      thumbnail: "blogs_content_thumbnail.png",
+      mainImage: "blogs_post_main.png",
       heading:
         "Webcasting Industry with Metaverse: A Comparison of VMukti with Other Industry Players",
       description:
@@ -146,15 +146,15 @@ const blogPosts = [
             description: "Microsoft Teams is a collaboration platform that offers webcasting capabilities. The solution enables businesses to host virtual events and webinars, but it also lacks the metaverse capabilities that VMukti offers. Microsoft Teams is primarily designed for team collaboration, and while it has several features, it may not be the best option for businesses that require immersive virtual experiences.",
           },
         ],
-        miniImage:"./assets/blogs_post_main.png",
+        miniImage:"blogs_post_main.png",
         conclude:"The webcasting industry has become a crucial tool for businesses worldwide. With the introduction of metaverse technology, businesses can now create immersive and interactive virtual experiences for attendees. VMukti has emerged as a leader in the industry, offering webcasting services and metaverse capabilities that enable businesses to enhance their virtual events.While other industry players such as Zoom, Google Meet, and Microsoft Teams offer webcasting capabilities, they lack the metaverse capabilities that VMukti provides. VMukti metaverse solution enables businesses to create a virtual world that attendees can access from anywhere, making their virtual events more interactive and engaging.",
       },
     },
     {
       id: 5,
       url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
-      thumbnail: "./assets/blogs_content_thumbnail.png",
-      mainImage: "./assets/blogs_post_main.png",
+      thumbnail: "blogs_content_thumbnail.png",
+      mainImage: "blogs_post_main.png",
       heading:
         "Webcasting Industry with Metaverse: A Comparison of VMukti with Other Industry Players",
       description:
@@ -182,15 +182,15 @@ const blogPosts = [
             description: "Microsoft Teams is a collaboration platform that offers webcasting capabilities. The solution enables businesses to host virtual events and webinars, but it also lacks the metaverse capabilities that VMukti offers. Microsoft Teams is primarily designed for team collaboration, and while it has several features, it may not be the best option for businesses that require immersive virtual experiences.",
           },
         ],
-        miniImage:"./assets/blogs_post_main.png",
+        miniImage:"blogs_post_main.png",
         conclude:"The webcasting industry has become a crucial tool for businesses worldwide. With the introduction of metaverse technology, businesses can now create immersive and interactive virtual experiences for attendees. VMukti has emerged as a leader in the industry, offering webcasting services and metaverse capabilities that enable businesses to enhance their virtual events.While other industry players such as Zoom, Google Meet, and Microsoft Teams offer webcasting capabilities, they lack the metaverse capabilities that VMukti provides. VMukti metaverse solution enables businesses to create a virtual world that attendees can access from anywhere, making their virtual events more interactive and engaging.",
       },
     },
     {
       id: 6,
       url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
-      thumbnail: "./assets/blogs_content_thumbnail.png",
-      mainImage: "./assets/blogs_post_main.png",
+      thumbnail: "blogs_content_thumbnail.png",
+      mainImage: "blogs_post_main.png",
       heading:
         "Webcasting Industry with Metaverse: A Comparison of VMukti with Other Industry Players",
       description:
@@ -218,15 +218,15 @@ const blogPosts = [
             description: "Microsoft Teams is a collaboration platform that offers webcasting capabilities. The solution enables businesses to host virtual events and webinars, but it also lacks the metaverse capabilities that VMukti offers. Microsoft Teams is primarily designed for team collaboration, and while it has several features, it may not be the best option for businesses that require immersive virtual experiences.",
           },
         ],
-        miniImage:"./assets/blogs_post_main.png",
+        miniImage:"blogs_post_main.png",
         conclude:"The webcasting industry has become a crucial tool for businesses worldwide. With the introduction of metaverse technology, businesses can now create immersive and interactive virtual experiences for attendees. VMukti has emerged as a leader in the industry, offering webcasting services and metaverse capabilities that enable businesses to enhance their virtual events.While other industry players such as Zoom, Google Meet, and Microsoft Teams offer webcasting capabilities, they lack the metaverse capabilities that VMukti provides. VMukti metaverse solution enables businesses to create a virtual world that attendees can access from anywhere, making their virtual events more interactive and engaging.",
       },
     },
     {
       id: 7,
       url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
-      thumbnail: "./assets/blogs_content_thumbnail.png",
-      mainImage: "./assets/blogs_post_main.png",
+      thumbnail: "blogs_content_thumbnail.png",
+      mainImage: "blogs_post_main.png",
       heading:
         "Webcasting Industry with Metaverse: A Comparison of VMukti with Other Industry Players",
       description:
@@ -254,15 +254,15 @@ const blogPosts = [
             description: "Microsoft Teams is a collaboration platform that offers webcasting capabilities. The solution enables businesses to host virtual events and webinars, but it also lacks the metaverse capabilities that VMukti offers. Microsoft Teams is primarily designed for team collaboration, and while it has several features, it may not be the best option for businesses that require immersive virtual experiences.",
           },
         ],
-        miniImage:"./assets/blogs_post_main.png",
+        miniImage:"blogs_post_main.png",
         conclude:"The webcasting industry has become a crucial tool for businesses worldwide. With the introduction of metaverse technology, businesses can now create immersive and interactive virtual experiences for attendees. VMukti has emerged as a leader in the industry, offering webcasting services and metaverse capabilities that enable businesses to enhance their virtual events.While other industry players such as Zoom, Google Meet, and Microsoft Teams offer webcasting capabilities, they lack the metaverse capabilities that VMukti provides. VMukti metaverse solution enables businesses to create a virtual world that attendees can access from anywhere, making their virtual events more interactive and engaging.",
       },
     },
     {
       id: 8,
       url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
-      thumbnail: "./assets/blogs_content_thumbnail.png",
-      mainImage: "./assets/blogs_post_main.png",
+      thumbnail: "blogs_content_thumbnail.png",
+      mainImage: "blogs_post_main.png",
       heading:
         "Webcasting Industry with Metaverse: A Comparison of VMukti with Other Industry Players",
       description:
@@ -290,15 +290,15 @@ const blogPosts = [
             description: "Microsoft Teams is a collaboration platform that offers webcasting capabilities. The solution enables businesses to host virtual events and webinars, but it also lacks the metaverse capabilities that VMukti offers. Microsoft Teams is primarily designed for team collaboration, and while it has several features, it may not be the best option for businesses that require immersive virtual experiences.",
           },
         ],
-        miniImage:"./assets/blogs_post_main.png",
+        miniImage:"blogs_post_main.png",
         conclude:"The webcasting industry has become a crucial tool for businesses worldwide. With the introduction of metaverse technology, businesses can now create immersive and interactive virtual experiences for attendees. VMukti has emerged as a leader in the industry, offering webcasting services and metaverse capabilities that enable businesses to enhance their virtual events.While other industry players such as Zoom, Google Meet, and Microsoft Teams offer webcasting capabilities, they lack the metaverse capabilities that VMukti provides. VMukti metaverse solution enables businesses to create a virtual world that attendees can access from anywhere, making their virtual events more interactive and engaging.",
       },
     },
     {
       id: 9,
       url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
-      thumbnail: "./assets/blogs_content_thumbnail.png",
-      mainImage: "./assets/blogs_post_main.png",
+      thumbnail: "blogs_content_thumbnail.png",
+      mainImage: "blogs_post_main.png",
       heading:
         "Webcasting Industry with Metaverse: A Comparison of VMukti with Other Industry Players",
       description:
@@ -326,15 +326,15 @@ const blogPosts = [
             description: "Microsoft Teams is a collaboration platform that offers webcasting capabilities. The solution enables businesses to host virtual events and webinars, but it also lacks the metaverse capabilities that VMukti offers. Microsoft Teams is primarily designed for team collaboration, and while it has several features, it may not be the best option for businesses that require immersive virtual experiences.",
           },
         ],
-        miniImage:"./assets/blogs_post_main.png",
+        miniImage:"blogs_post_main.png",
         conclude:"The webcasting industry has become a crucial tool for businesses worldwide. With the introduction of metaverse technology, businesses can now create immersive and interactive virtual experiences for attendees. VMukti has emerged as a leader in the industry, offering webcasting services and metaverse capabilities that enable businesses to enhance their virtual events.While other industry players such as Zoom, Google Meet, and Microsoft Teams offer webcasting capabilities, they lack the metaverse capabilities that VMukti provides. VMukti metaverse solution enables businesses to create a virtual world that attendees can access from anywhere, making their virtual events more interactive and engaging.",
       },
     },
     {
       id: 10,
       url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
-      thumbnail: "./assets/blogs_content_thumbnail.png",
-      mainImage: "./assets/blogs_post_main.png",
+      thumbnail: "blogs_content_thumbnail.png",
+      mainImage: "blogs_post_main.png",
       heading:
         "Webcasting Industry with Metaverse: A Comparison of VMukti with Other Industry Players",
       description:
@@ -362,7 +362,7 @@ const blogPosts = [
             description: "Microsoft Teams is a collaboration platform that offers webcasting capabilities. The solution enables businesses to host virtual events and webinars, but it also lacks the metaverse capabilities that VMukti offers. Microsoft Teams is primarily designed for team collaboration, and while it has several features, it may not be the best option for businesses that require immersive virtual experiences.",
           },
         ],
-        miniImage:"./assets/blogs_post_main.png",
+        miniImage:"blogs_post_main.png",
         conclude:"The webcasting industry has become a crucial tool for businesses worldwide. With the introduction of metaverse technology, businesses can now create immersive and interactive virtual experiences for attendees. VMukti has emerged as a leader in the industry, offering webcasting services and metaverse capabilities that enable businesses to enhance their virtual events.While other industry players such as Zoom, Google Meet, and Microsoft Teams offer webcasting capabilities, they lack the metaverse capabilities that VMukti provides. VMukti metaverse solution enables businesses to create a virtual world that attendees can access from anywhere, making their virtual events more interactive and engaging.",
       },
     },
