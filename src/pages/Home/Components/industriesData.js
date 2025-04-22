@@ -310,6 +310,7 @@ export default function IndustryGrid() {
                       )}
                       {/* Industry Name & Line */}
                       <Text
+                        as="div"
                         fontSize="16px"
                         fontWeight="700" // fontWeight="600"
                         position="absolute"

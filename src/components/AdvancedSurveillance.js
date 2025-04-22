@@ -265,6 +265,7 @@ const AdvancedSurveillance = () => {
                     >
                       <Box w="90%">
                         <Text
+                          as="div"
                           fontSize="16px"
                           fontWeight="700"
                           letterSpacing="-0.24px"

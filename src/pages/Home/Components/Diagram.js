@@ -47,7 +47,6 @@ const Diagram = () => {
         textAlign={{ base: 'left', md: 'left' }} // Center text on small screens
         zIndex={1} // Bring forward
         borderRadius={'24px'}
-
       >
         <HeadingAnimation>
           <Text
@@ -55,12 +54,17 @@ const Diagram = () => {
             fontSize={{ base: '20px', md: '36px' }}
             // fontWeight="bold"
             fontWeight="600"
-            ml={{md:"5%"}}
+            ml={{ md: '5%' }}
             mt="5%"
             lineHeight={{ base: '1.2', md: '1.3' }} // Adjusts vertical spacing
           >
             Accelerate Visual{' '}
-            <Text as="span" color="#DB7B3A" fontSize={{ base: '18px', md: '36px' }} fontWeight="600">
+            <Text
+              as="span"
+              color="#DB7B3A"
+              fontSize={{ base: '18px', md: '36px' }}
+              fontWeight="600"
+            >
               AI
             </Text>{' '}
             Implementation
@@ -70,10 +74,10 @@ const Diagram = () => {
           <Flex
             align="flex-start"
             mt="10%"
-            ml={{md:"5%"}}
+            ml={{ md: '5%' }}
             gap={5}
             direction={{ base: 'column', md: 'row' }}
-            pb={{base:"25%"}}
+            pb={{ base: '25%' }}
           >
             <Box mb="5%">
               <svg

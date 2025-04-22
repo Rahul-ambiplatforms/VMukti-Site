@@ -747,6 +747,7 @@ const SolutionEMS = () => {
                     </Heading>
 
                     <Text
+                      as="div"
                       fontSize="24px"
                       color="blue.600"
                       mb={3}
