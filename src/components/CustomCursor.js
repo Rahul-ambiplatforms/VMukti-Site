@@ -31,7 +31,7 @@ const CustomCursor = () => {
                 left: 0,
                 width: "15px", // Customize size
                 height: "15px", // Customize size
-                backgroundColor: "white", // Customize color
+                backgroundColor: "#3F77A5", // Customize color
                 borderRadius: "50%",
                 pointerEvents: "none",
                 zIndex: 9999,

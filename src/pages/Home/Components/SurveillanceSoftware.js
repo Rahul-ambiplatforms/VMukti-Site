@@ -14,8 +14,10 @@ const SurveillanceSoftware = () => {
   const sectionRef = useRef(null); // Reference for the section containing the image
 
   useEffect(() => {
+    const screenWidth = window.innerWidth;
+    const scaleValue = screenWidth < 768 ? 1.5 : 1.1; // Tailwind's md breakpoint is 768px
     const imageScaleAnimation = gsap.to(imageRef.current, {
-      scale: 1.3,
+      scale: scaleValue,
       scrollTrigger: {
         trigger: sectionRef.current, // Element triggering the animation
         start: "top center", // Start when the top of the trigger hits the center of the viewport
@@ -174,7 +176,7 @@ const SurveillanceSoftware = () => {
             // src="../assets/surveillancemock.png"
             src={`${process.env.PUBLIC_URL}/assets/surveillancemock.png`}
             onLoad={handleImageLoad}
-            transform={{ base: "scale(1.9)", md: "scale(1)" }}
+            transform={{ base: "scale(1.2)", md: "scale(0.6)" }}
             clipPath="inset(0)" // Ensures image does not affect layout
           />
         </Box>
