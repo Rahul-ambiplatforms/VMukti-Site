@@ -407,6 +407,7 @@ const AITechnologies = () => {
                   >
                     <Box m={{ base: '4', md: '5' }}>
                       <Text
+                        as="div"
                         fontSize="24px"
                         color="blue.600"
                         mb={{ base: '2%', md: '3%' }}

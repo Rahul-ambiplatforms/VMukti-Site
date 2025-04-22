@@ -533,6 +533,7 @@ export default function IndustryDashboard() {
                   {/* Industry Name & Description */}
                   <Box position="absolute" top="70px" left="20px" right="20px">
                     <Text
+                      as="div"
                       fontSize="16px"
                       fontWeight="700"
                       wordBreak="break-word"
