@@ -143,7 +143,7 @@ export default function BlogsContent() {
             borderColor={borderColor}
           >
             <Image
-              src={`${process.env.PUBLIC_URL}/${post.thumbnail}`}
+              src={`${process.env.PUBLIC_URL}/assets/${post.thumbnail}`}
               alt={post.heading}
               borderRadius="24px"
               w="full"
