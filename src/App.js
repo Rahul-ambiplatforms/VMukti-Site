@@ -11,6 +11,7 @@ import PageContentWrapper from './components/PageContentWrapper';
 import AmbicamLandingPage from './pages/Ambicam/AmbicamLandingPage';
 import BlogsDashboard from './pages/Blogs/BlogsDashboard';
 import BlogsOverviewDash from './pages/Blogs/BlogsOverviewDash';
+import CustomCursor from './components/CustomCursor';
 // Lazy load components
 const VMuktiHomepage = lazy(() => import('./pages/Home/VMuktiHomepage'));
 const TechnologyDashboard = lazy(() => import('./pages/Technology/TechnologyDashboard'));
@@ -35,6 +36,7 @@ const LoadingSpinner = () => (
 function App() {
   return (
     <ChakraProvider theme={theme}>
+      <CustomCursor />
       <Router>
         <ErrorBoundary>
           <Navbar />
@@ -61,9 +63,35 @@ function App() {
             </Suspense>
           </Box>
         </ErrorBoundary>
-      <PageContentWrapper>
-        <NewsletterSubscription />
-      </PageContentWrapper>
+        <PageContentWrapper>
+          <NewsletterSubscription />
+        </PageContentWrapper>
+        <ErrorBoundary>
+          <Navbar />
+          <ScrollToTop />
+          <Box pt={{ base: "20%", sm: "20%", md: "100px" }} bg="#E7E7E7">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<VMuktiHomepage />} />
+                <Route path="/technology" element={<TechnologyDashboard />} />
+                <Route path="/solutions" element={<SolutionsHome />} />
+                <Route path="/industries" element={<IndustryDashboard />} />
+                <Route path="/industries/:name" element={<IndustryDetails />} />
+                <Route path="/whoweare" element={<WhoWeare />} />
+                <Route path="/whoweare/eventspotlight" element={<EventSpotlight />} />
+                <Route path="/whoweare/careers" element={<VMuktiCareers />} />
+                <Route path="/serving" element={<OurServings />} />
+                <Route path="/serving/:name" element={<ServingsDock />} />
+                <Route path="/contactus" element={<ContactUs />} />
+                <Route path="/Ambicam" element={<AmbicamLandingPage />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+          </Box>
+        </ErrorBoundary>
+        <PageContentWrapper>
+          <NewsletterSubscription />
+        </PageContentWrapper>
       </Router>
     </ChakraProvider>
   );

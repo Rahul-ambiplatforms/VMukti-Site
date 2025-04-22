@@ -1,11 +1,29 @@
 import { Box, Flex, Image, List, ListItem, Text } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import HeadingAnimation from "../../../components/Animation/Text/HeadingAnimation";
 import ImagePop from "../../../components/Animation/Image/ImagePop";
 import PageContentWrapper from "../../../components/PageContentWrapper";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const SurveillanceSoftware = () => {
   const [imageHeight, setImageHeight] = useState("100dvh");
+  const imageRef = useRef(null); // Reference for the image
+  const sectionRef = useRef(null); // Reference for the section containing the image
+
+  useEffect(() => {
+    const imageScaleAnimation = gsap.to(imageRef.current, {
+      scale: 1.3,
+      scrollTrigger: {
+        trigger: sectionRef.current, // Element triggering the animation
+        start: "top center", // Start when the top of the trigger hits the center of the viewport
+        end: "bottom top", // End when the bottom of the trigger hits the top of the viewport
+        scrub: true, // Sync the animation to the scroll position
+      },
+    });
+  }, []);
 
   const handleImageLoad = (event) => {
     setImageHeight(event.target.naturalHeight);
@@ -18,7 +36,7 @@ const SurveillanceSoftware = () => {
         position="relative"
         alignItems="center"
         gap={4}
-
+        ref={sectionRef}
         overflow={{ base: "hidden", md: "visible" }}
         borderRadius="24px"
         height={{ base: "fit-content", md: { imageHeight } }}
@@ -96,7 +114,7 @@ const SurveillanceSoftware = () => {
                     width={{ base: "70%", sm: "100%", md: "25%", lg: "20%", xl: "15%" }}
                     fontWeight={500}
                     fontSize={{ base: "12px", md: "14px" }}
-                    lineHeight={{base:"1.2",md:"100%"}}
+                    lineHeight={{ base: "1.2", md: "100%" }}
                   >
                     Want a system that learns your world? Our AI video surveillance
                     keeps up, adapts, and stays ahead of trouble—all on its own.
@@ -151,6 +169,7 @@ const SurveillanceSoftware = () => {
           zIndex={{ base: "1", md: "2" }}
         >
           <Image
+            ref={imageRef} // Apply ref to the image
             // height="100%"
             // src="../assets/surveillancemock.png"
             src={`${process.env.PUBLIC_URL}/assets/surveillancemock.png`}

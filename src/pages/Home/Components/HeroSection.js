@@ -1,5 +1,5 @@
 // src/components/HeroSection/index.js
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import {
   Box,
   Flex,
@@ -11,6 +11,8 @@ import {
 } from "@chakra-ui/react";
 import { inView, motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // Motion components
 const MotionImage = motion(Image);
@@ -19,8 +21,34 @@ const MotionButton = motion(Button);
 
 const HeroSection = () => {
 
+  const imageRef = useRef(null); // Reference for the image
+  const sectionRef = useRef(null); // Reference for the section containing the image
   const ref = useRef(null);
-  const inView = useInView(ref, { threshold: 0.9, triggerOnce: false });
+  const inView = useInView(ref, { threshold: 0.9, triggerOnce: false });
+
+  // useEffect(() => {
+  const imageScaleAnimation = () => {
+    console.log("inView");
+    gsap.to(imageRef.current, {
+      y: 40,
+      duration: 1,
+      repeat: -1,
+      yoyo: true,
+    });
+  }
+
+  const hoverOutAnimation = () => {
+    gsap.killTweensOf(imageRef.current);
+    gsap.to(imageRef.current, {
+      y: 0,
+    });
+  }
+
+  // Cleanup function
+  // return () => {
+  //   ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+  // };
+  // }, []);
 
   const ellipseSize = useBreakpointValue({
     base: "200px",
@@ -44,6 +72,7 @@ const HeroSection = () => {
         opacity={0.12}
         filter="blur(100px)"
         display={{ base: "none", md: "block" }}
+        ref={sectionRef}
       />
 
       {/* above="md" */}
@@ -51,9 +80,9 @@ const HeroSection = () => {
         {/* Decorative Boxes */}
         <Flex
           position="absolute"
-          top={{md:"10.9%"}}
-          bottom={{base:"59%"}}
-          left={{base:"80%",md:"40%"}}
+          top={{ md: "10.9%" }}
+          bottom={{ base: "59%" }}
+          left={{ base: "80%", md: "40%" }}
           transform="translateX(-50%)"
           gap={4}
           zIndex={0}
@@ -62,7 +91,7 @@ const HeroSection = () => {
           pt={{ base: "10vh", md: "8vh", lg: "20%" }}
         >
           <Box
-            display={{base:"none",md:"block",lg:"block"}}
+            display={{ base: "none", md: "block", lg: "block" }}
             height={{ base: "180px", md: "120px", lg: "188px" }}
             minHeight="50px"
             aspectRatio="1/1"
@@ -71,7 +100,7 @@ const HeroSection = () => {
             mt={{ base: "80px", md: "120px", lg: "15%" }}
           />
           <Box
-            display={{base:"none",md:"block",lg:"block"}}
+            display={{ base: "none", md: "block", lg: "block" }}
             height={{ base: "80px", md: "120px", lg: "188px" }}
             minHeight="50px"
             aspectRatio="1/1"
@@ -80,7 +109,7 @@ const HeroSection = () => {
             mt={{ base: "40px", md: "06px", lg: "9%" }}
           />
           <Box
-            display={{base:"none",md:"block",lg:"block"}}
+            display={{ base: "none", md: "block", lg: "block" }}
             height={{ base: "80px", md: "120px", lg: "188px" }}
             minHeight="50px"
             aspectRatio="1/1"
@@ -133,7 +162,7 @@ const HeroSection = () => {
               height="600px"
               objectFit="cover"
               initial={{ scale: 0.6, opacity: 1 }}
-              animate={inView?{ scale: 1, opacity: 1 }:{ scale: 0.7, opacity: 0.7 }}
+              animate={inView ? { scale: 1, opacity: 1 } : { scale: 0.7, opacity: 0.7 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.9 }}
             />
@@ -144,7 +173,7 @@ const HeroSection = () => {
               ml="16%"
               mt="-15%"
               mb="2%" // jenil
-              // bg="red"
+            // bg="red"
             >
               <Box width="13px" height="13px" alignSelf="flex-start" ml="2%">
                 <svg
@@ -188,7 +217,7 @@ const HeroSection = () => {
           bgPosition={{ base: "center", md: "right" }}
           minH={{ base: "20vh" }}
           zIndex={1}
-          ml={{base:"5%",md:"0"}}
+          ml={{ base: "5%", md: "0" }}
         >
           {/* Animated Heading */}
           <MotionBox
@@ -201,7 +230,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0.6, x: -50 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            // bg="red"
+          // bg="red"
           >
             <Text as="span" color="#3F77A5">
               Advanced{" "}
@@ -252,18 +281,18 @@ const HeroSection = () => {
                         />
                       </svg>
                     </Box>
-                        <Text
-                        fontWeight="500"
-                        lineHeight="100%"
-                        maxW={{ base: "220px", md: "45%" }}
-                        fontSize={{ base: "12px", md: "16px" }}
-                        width="45%"
-                        textAlign="justify" //jenil
-                        >
-                        Got visuals piling up? Our AI turns them into
-                        answers—fast. It's like giving your cameras a brain to
-                        spot what matters and fix your headaches on the spot.
-                        </Text>
+                    <Text
+                      fontWeight="500"
+                      lineHeight="100%"
+                      maxW={{ base: "220px", md: "45%" }}
+                      fontSize={{ base: "12px", md: "16px" }}
+                      width="45%"
+                      textAlign="justify" //jenil
+                    >
+                      Got visuals piling up? Our AI turns them into
+                      answers—fast. It's like giving your cameras a brain to
+                      spot what matters and fix your headaches on the spot.
+                    </Text>
                   </MotionBox>
                 </Flex>
               )}
@@ -276,12 +305,15 @@ const HeroSection = () => {
                 width="fit-content"
               >
                 <Image
+                  ref={imageRef}
                   src="/assets/robohand.png"
                   alt="Robotic Hand"
                   display={{ base: "none", md: "block" }}
                 />
-          
+
                 <MotionButton
+                  onMouseEnter={() => imageScaleAnimation()}
+                  onMouseLeave={() => hoverOutAnimation()}
                   position="absolute"
                   padding="24px"
                   top={{ base: "20%", sm: "20%", md: "37%" }}
@@ -332,7 +364,7 @@ const HeroSection = () => {
                     />
                   </svg>
                 </MotionButton>
-                
+
               </Flex>
             </Flex>
 
