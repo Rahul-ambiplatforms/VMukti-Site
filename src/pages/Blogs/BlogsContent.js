@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import {
   Box,
   Container,
@@ -13,133 +13,133 @@ import {
   IconButton,
   Link,
   useColorModeValue,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react'
 // import { ChevronRightIcon, ChevronLeftIcon } from "lucide-react";
 
 const blogPosts = [
   {
     id: 1,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
+    thumbnail: './assets/blogs_content_thumbnail.png',
     heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
+      'Webmasking Industry with Metaverse: A Comparison of TMark vs Others',
     description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 10, 2025",
+      'Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...',
+    author: 'Vmukti',
+    date: 'April 10, 2025',
   },
   {
     id: 2,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
+    thumbnail: './assets/blogs_content_thumbnail.png',
     heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
+      'Webmasking Industry with Metaverse: A Comparison of TMark vs Others',
     description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 7, 2025",
+      'Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...',
+    author: 'Vmukti',
+    date: 'April 7, 2025',
   },
   {
     id: 3,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
+    thumbnail: './assets/blogs_content_thumbnail.png',
     heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
+      'Webmasking Industry with Metaverse: A Comparison of TMark vs Others',
     description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 5, 2025",
+      'Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...',
+    author: 'Vmukti',
+    date: 'April 5, 2025',
   },
   {
     id: 4,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
+    thumbnail: './assets/blogs_content_thumbnail.png',
     heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
+      'Webmasking Industry with Metaverse: A Comparison of TMark vs Others',
     description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 3, 2025",
+      'Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...',
+    author: 'Vmukti',
+    date: 'April 3, 2025',
   },
   {
     id: 5,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
+    thumbnail: './assets/blogs_content_thumbnail.png',
     heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
+      'Webmasking Industry with Metaverse: A Comparison of TMark vs Others',
     description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 1, 2025",
+      'Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...',
+    author: 'Vmukti',
+    date: 'April 1, 2025',
   },
   {
     id: 6,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
+    thumbnail: './assets/blogs_content_thumbnail.png',
     heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
+      'Webmasking Industry with Metaverse: A Comparison of TMark vs Others',
     description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 10, 2025",
+      'Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...',
+    author: 'Vmukti',
+    date: 'April 10, 2025',
   },
   {
     id: 7,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
+    thumbnail: './assets/blogs_content_thumbnail.png',
     heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
+      'Webmasking Industry with Metaverse: A Comparison of TMark vs Others',
     description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 7, 2025",
+      'Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...',
+    author: 'Vmukti',
+    date: 'April 7, 2025',
   },
   {
     id: 8,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
+    thumbnail: './assets/blogs_content_thumbnail.png',
     heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
+      'Webmasking Industry with Metaverse: A Comparison of TMark vs Others',
     description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 5, 2025",
+      'Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...',
+    author: 'Vmukti',
+    date: 'April 5, 2025',
   },
   {
     id: 9,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
+    thumbnail: './assets/blogs_content_thumbnail.png',
     heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
+      'Webmasking Industry with Metaverse: A Comparison of TMark vs Others',
     description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 3, 2025",
+      'Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...',
+    author: 'Vmukti',
+    date: 'April 3, 2025',
   },
   {
     id: 10,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
+    thumbnail: './assets/blogs_content_thumbnail.png',
     heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
+      'Webmasking Industry with Metaverse: A Comparison of TMark vs Others',
     description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 1, 2025",
+      'Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...',
+    author: 'Vmukti',
+    date: 'April 1, 2025',
   },
-];
+]
 
 export default function BlogsContent() {
-  const bgColor = useColorModeValue("gray.50", "gray.900");
-  const borderColor = useColorModeValue("gray.200", "gray.700");
+  const bgColor = useColorModeValue('gray.50', 'gray.900')
+  const borderColor = useColorModeValue('gray.200', 'gray.700')
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 5; // Number of posts per page
-  const totalPages = Math.ceil(blogPosts.length / postsPerPage);
+  const [currentPage, setCurrentPage] = useState(1)
+  const postsPerPage = 5 // Number of posts per page
+  const totalPages = Math.ceil(blogPosts.length / postsPerPage)
 
   const handlePageChange = (page) => {
     if (page >= 1 && page <= totalPages) {
-      setCurrentPage(page);
+      setCurrentPage(page)
     }
-  };
+  }
 
   const paginatedPosts = blogPosts.slice(
     (currentPage - 1) * postsPerPage,
     currentPage * postsPerPage
-  );
+  )
 
   const renderPageNumbers = () => {
-    const pages = [];
+    const pages = []
     if (totalPages <= 5) {
       // Show all pages if total pages are 5 or less
       for (let i = 1; i <= totalPages; i++) {
@@ -148,12 +148,12 @@ export default function BlogsContent() {
             key={i}
             size="sm"
             onClick={() => handlePageChange(i)}
-            bg={currentPage === i ? "blue.500" : "gray.200"}
-            color={currentPage === i ? "white" : "black"}
+            bg={currentPage === i ? 'blue.500' : 'gray.200'}
+            color={currentPage === i ? 'white' : 'black'}
           >
             {i}
           </Button>
-        );
+        )
       }
     } else {
       // Show first two pages, ellipsis, and last two pages
@@ -162,60 +162,64 @@ export default function BlogsContent() {
           key={1}
           size="sm"
           onClick={() => handlePageChange(1)}
-          bg={currentPage === 1 ? "blue.500" : "gray.200"}
-          color={currentPage === 1 ? "white" : "black"}
+          bg={currentPage === 1 ? 'blue.500' : 'gray.200'}
+          color={currentPage === 1 ? 'white' : 'black'}
         >
           1
         </Button>
-      );
+      )
       pages.push(
         <Button
           key={2}
           size="sm"
           onClick={() => handlePageChange(2)}
-          bg={currentPage === 2 ? "blue.500" : "gray.200"}
-          color={currentPage === 2 ? "white" : "black"}
+          bg={currentPage === 2 ? 'blue.500' : 'gray.200'}
+          color={currentPage === 2 ? 'white' : 'black'}
         >
           2
         </Button>
-      );
-      pages.push(<Text key="ellipsis" fontSize="sm">...</Text>);
+      )
+      pages.push(
+        <Text key="ellipsis" fontSize="sm">
+          ...
+        </Text>
+      )
       pages.push(
         <Button
           key={totalPages - 1}
           size="sm"
           onClick={() => handlePageChange(totalPages - 1)}
-          bg={currentPage === totalPages - 1 ? "blue.500" : "gray.200"}
-          color={currentPage === totalPages - 1 ? "white" : "black"}
+          bg={currentPage === totalPages - 1 ? 'blue.500' : 'gray.200'}
+          color={currentPage === totalPages - 1 ? 'white' : 'black'}
         >
           {totalPages - 1}
         </Button>
-      );
+      )
       pages.push(
         <Button
           key={totalPages}
           size="sm"
           onClick={() => handlePageChange(totalPages)}
-          bg={currentPage === totalPages ? "blue.500" : "gray.200"}
-          color={currentPage === totalPages ? "white" : "black"}
+          bg={currentPage === totalPages ? 'blue.500' : 'gray.200'}
+          color={currentPage === totalPages ? 'white' : 'black'}
         >
           {totalPages}
         </Button>
-      );
+      )
     }
-    return pages;
-  };
+    return pages
+  }
 
   return (
     <Box m="1%">
       {/* Header */}
-      <Flex justify="center" align="center" mt={{ base: "5%", md: "0" }} mb={6}>
+      <Flex justify="center" align="center" mt={{ base: '5%', md: '0' }} mb={6}>
         <Heading
-          fontSize={{ base: "24px", md: "36px" }}
+          fontSize={{ base: '24px', md: '36px' }}
           fontWeight="600"
           color="#000000"
         >
-          Recent blog{" "}
+          Recent blog{' '}
           <Box as="span" color="#DB7B3A" display="inline">
             posts
           </Box>
@@ -225,9 +229,9 @@ export default function BlogsContent() {
       {/* Blog Grid */}
       <Grid
         templateColumns={{
-          base: "1fr",
-          md: "repeat(2, 1fr)",
-          lg: "repeat(2, 1fr)",
+          base: '1fr',
+          md: 'repeat(2, 1fr)',
+          lg: 'repeat(2, 1fr)',
         }}
         gap={6}
       >
@@ -278,7 +282,7 @@ export default function BlogsContent() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <g clip-path="url(#clip0_3786_465)">
+                      <g clipPath="url(#clip0_3786_465)">
                         <path
                           d="M8.50196 3.33259e-07C6.82085 3.40576e-07 5.17749 0.498497 3.77969 1.43245C2.38189 2.36641 1.29242 3.69388 0.649057 5.24701C0.00568854 6.80013 -0.162686 8.50916 0.165224 10.158C0.493134 11.8068 1.3026 13.3213 2.49127 14.5101C3.67994 15.6989 5.19442 16.5085 6.8432 16.8366C8.49199 17.1646 10.201 16.9964 11.7542 16.3532C13.3074 15.71 14.635 14.6206 15.5691 13.2229C16.5032 11.8252 17.0018 10.1819 17.002 8.50079C17.0024 7.3844 16.7828 6.27887 16.3558 5.24737C15.9288 4.21587 15.3027 3.27862 14.5133 2.48918C13.724 1.69973 12.7868 1.07357 11.7553 0.646463C10.7239 0.21936 9.61835 -0.000312313 8.50196 3.33259e-07ZM8.50196 15.3005C7.15695 15.3005 5.84215 14.9016 4.72381 14.1544C3.60548 13.4071 2.73385 12.3451 2.21914 11.1024C1.70442 9.85981 1.56975 8.49246 1.83215 7.17329C2.09455 5.85413 2.74223 4.6424 3.69329 3.69134C4.64436 2.74027 5.85609 2.09259 7.17525 1.83019C8.49441 1.5678 9.86176 1.70247 11.1044 2.21718C12.347 2.73189 13.4091 3.60353 14.1563 4.72186C14.9036 5.84019 15.3024 7.15499 15.3024 8.5C15.2972 10.302 14.579 12.0287 13.3048 13.3029C12.0306 14.5771 10.3039 15.2952 8.50196 15.3005Z"
                           fill="#3F77A5"
@@ -304,7 +308,7 @@ export default function BlogsContent() {
                 </Flex>
                 <Flex gap="4" align="center" justifyContent="flex-end">
                   <Text
-                    fontSize={{ base: "14px", md: "14px" }}
+                    fontSize={{ base: '14px', md: '14px' }}
                     fontWeight={400}
                   >
                     Know more
@@ -334,7 +338,7 @@ export default function BlogsContent() {
       <Flex justify="center" align="center" mt={6}>
         <HStack spacing={2}>
           <IconButton
-            icon={<Text>{"<"}</Text>}
+            icon={<Text>{'<'}</Text>}
             size="sm"
             onClick={() => handlePageChange(currentPage - 1)}
             isDisabled={currentPage === 1}
@@ -342,7 +346,7 @@ export default function BlogsContent() {
           />
           {renderPageNumbers()}
           <IconButton
-            icon={<Text>{">"}</Text>}
+            icon={<Text>{'>'}</Text>}
             size="sm"
             onClick={() => handlePageChange(currentPage + 1)}
             isDisabled={currentPage === totalPages}
@@ -351,5 +355,5 @@ export default function BlogsContent() {
         </HStack>
       </Flex>
     </Box>
-  );
+  )
 }
