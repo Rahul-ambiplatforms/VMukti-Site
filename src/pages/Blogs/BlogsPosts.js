@@ -46,7 +46,7 @@ const blogPosts = [
       id: 2,
       url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
       thumbnail: "blogs_content_thumbnail.png",
-      mainImage: "blogs_post_main.png",
+      mainImage: "tablet.png",
       heading:
         "Webcasting Industry with Metaverse: A Comparison of VMukti with Other Industry Players",
       description:

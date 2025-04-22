@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 
 export default function WhyAmbicamPage() {
+  const svgSize = useBreakpointValue({base:"18", md:"28"});
   const isMobile = useBreakpointValue({ base: true, md: false });
 
   // Feature card data
@@ -82,20 +83,24 @@ export default function WhyAmbicamPage() {
       backgroundSize="cover"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
+      overflow="hidden"
       py={10}
     >
       {/* Decorative image in corner - hidden on mobile */}
       {!isMobile && (
         <Box
           position="absolute"
-          bottom="0"
+          left="40%"
+          bottom="2%"
           right="0"
           width="1050px"
           height="525px"
-          backgroundImage="url('/assets/VMukti Brochure O2 1.svg')"
+          // backgroundImage="url('/assets/VMukti Brochure O2 1.svg')"
+          backgroundImage="url('/assets/VMukti Brochure O2 1.png')"
           backgroundSize="cover"
           backgroundRepeat="no-repeat"
           backgroundPosition="bottom right"
+          // overflow="hidden"
           zIndex="0"
           opacity="0.8"
         />
@@ -104,7 +109,8 @@ export default function WhyAmbicamPage() {
       <Box position="relative" zIndex={1}>
         <Heading
           as="h2"
-          size="2xl"
+          fontSize="48px"
+          fontWeight="600"
           mb={12}
           ml={8}
           textAlign={{ base: "center", md: "left" }}
@@ -158,7 +164,7 @@ export default function WhyAmbicamPage() {
                       {card.title}
                     </Heading>
                   )}
-                  <List spacing={3}>
+                  <List spacing={3} mt={{base:"0", md:"5"}}>
                     {card.items.map((item, i) => (
                       <ListItem
                         key={i}
@@ -166,9 +172,10 @@ export default function WhyAmbicamPage() {
                         alignItems="center"
                         gap={2}
                       >
+                        {/* ======================= */}
                         <svg
-                          width="28"
-                          height="28"
+                          width={svgSize}
+                          height={svgSize}
                           viewBox="0 0 28 28"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +190,6 @@ export default function WhyAmbicamPage() {
                             fill="white"
                           />
                         </svg>
-
                         {item}
                       </ListItem>
                     ))}
