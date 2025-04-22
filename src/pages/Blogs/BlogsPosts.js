@@ -1,7 +1,7 @@
 const blogPosts = [ 
     {
       id: 1,
-      url_name: "dummy1",
+      url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
       thumbnail: "./assets/blogs_content_thumbnail.png",
       mainImage: "./assets/blogs_post_main.png",
       heading:
@@ -44,7 +44,7 @@ const blogPosts = [
     },
     {
       id: 2,
-      url_name: "dummy2",
+      url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
       thumbnail: "./assets/blogs_content_thumbnail.png",
       mainImage: "./assets/blogs_post_main.png",
       heading:
@@ -80,7 +80,7 @@ const blogPosts = [
     },
     {
       id: 3,
-      url_name: "dummy3",
+      url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
       thumbnail: "./assets/blogs_content_thumbnail.png",
       mainImage: "./assets/blogs_post_main.png",
       heading:
@@ -116,7 +116,7 @@ const blogPosts = [
     },
     {
       id: 4,
-      url_name: "dummy4",
+      url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
       thumbnail: "./assets/blogs_content_thumbnail.png",
       mainImage: "./assets/blogs_post_main.png",
       heading:
@@ -152,7 +152,7 @@ const blogPosts = [
     },
     {
       id: 5,
-      url_name: "dummy5",
+      url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
       thumbnail: "./assets/blogs_content_thumbnail.png",
       mainImage: "./assets/blogs_post_main.png",
       heading:
@@ -188,7 +188,7 @@ const blogPosts = [
     },
     {
       id: 6,
-      url_name: "dummy6",
+      url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
       thumbnail: "./assets/blogs_content_thumbnail.png",
       mainImage: "./assets/blogs_post_main.png",
       heading:
@@ -224,7 +224,7 @@ const blogPosts = [
     },
     {
       id: 7,
-      url_name: "dummy7",
+      url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
       thumbnail: "./assets/blogs_content_thumbnail.png",
       mainImage: "./assets/blogs_post_main.png",
       heading:
@@ -260,7 +260,7 @@ const blogPosts = [
     },
     {
       id: 8,
-      url_name: "dummy8",
+      url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
       thumbnail: "./assets/blogs_content_thumbnail.png",
       mainImage: "./assets/blogs_post_main.png",
       heading:
@@ -296,7 +296,7 @@ const blogPosts = [
     },
     {
       id: 9,
-      url_name: "dummy9",
+      url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
       thumbnail: "./assets/blogs_content_thumbnail.png",
       mainImage: "./assets/blogs_post_main.png",
       heading:
@@ -332,7 +332,7 @@ const blogPosts = [
     },
     {
       id: 10,
-      url_name: "dummy10",
+      url_name: "webcasting-industry-with-metaverse-:-a-comparison-of-vmukti-with-other-industry-players",
       thumbnail: "./assets/blogs_content_thumbnail.png",
       mainImage: "./assets/blogs_post_main.png",
       heading:

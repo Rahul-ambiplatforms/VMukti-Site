@@ -45,10 +45,11 @@ const BlogsOverviewDash = () => {
           >
             <Image
               // src={selectedPost.mainImage}
-              src={`${process.env.PUBLIC_URL}/${selectedPost.mainImage}`}
+              // src={`${process.env.PUBLIC_URL}/${selectedPost.mainImage}`}
+              src={selectedPost.mainImage.startsWith("/") ? selectedPost.mainImage : `/${selectedPost.mainImage}`}
               alt={selectedPost.heading}
-              //   maxH="400px"
               objectFit="cover"
+              //   maxH="400px"
             />
           </Box>
         </Flex>
@@ -85,7 +86,6 @@ const BlogsOverviewDash = () => {
             alt="VMukti Metaverse"
             w="60%"
             h="100%"
-            // maxH="400px"
             objectFit="contain"
           />
         </Box>
