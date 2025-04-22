@@ -42,7 +42,7 @@ const popAnimation = {
     transition: { duration: 0.7, ease: "easeOut" },
   },
 };
-const IndustryContent = ({ props, content }) => {
+const IndustryContent = ({ props, content }) => { 
   const titleFontSize = "48px"; // Font size for the title
 
   const svgSize = useBreakpointValue({ base: "13px", md: "25px" });

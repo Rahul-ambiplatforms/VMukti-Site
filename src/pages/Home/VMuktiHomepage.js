@@ -13,8 +13,9 @@ import ObjectDescription from "../../components/ObjectDescription";
 import StickySection from "./Data/StickySection";
 import HeroSection from "./Components/HeroSection";
 import { customData, customData1 } from "../../data/AdvancedComputerVisionData";
-import BlogsDashboard from "../Blogs/BlogsDashboard";
+import BlogsDashboard from "../Blogs/HeroSection";
 import BlogsContent from "../Blogs/BlogsContent";
+import BlogsOverviewDash from "../Blogs/BlogsOverviewDash";
 
 
 const VMuktiHomepage = () => {
@@ -44,8 +45,6 @@ const VMuktiHomepage = () => {
                 <Industries />
                 <AdvancedSurveillance />
                 <Achieved />
-                <BlogsDashboard />
-                <BlogsContent />
             </PageContentWrapper>
         </>
     );
