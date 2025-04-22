@@ -11,120 +11,19 @@ import {
   Button,
   HStack,
   IconButton,
-  Link,
   useColorModeValue,
+  useBreakpointValue,
 } from "@chakra-ui/react";
+import blogPosts from './BlogsPosts';
+import { Link } from "react-router-dom";
 // import { ChevronRightIcon, ChevronLeftIcon } from "lucide-react";
-
-const blogPosts = [
-  {
-    id: 1,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
-    heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
-    description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 10, 2025",
-  },
-  {
-    id: 2,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
-    heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
-    description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 7, 2025",
-  },
-  {
-    id: 3,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
-    heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
-    description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 5, 2025",
-  },
-  {
-    id: 4,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
-    heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
-    description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 3, 2025",
-  },
-  {
-    id: 5,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
-    heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
-    description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 1, 2025",
-  },
-  {
-    id: 6,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
-    heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
-    description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 10, 2025",
-  },
-  {
-    id: 7,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
-    heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
-    description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 7, 2025",
-  },
-  {
-    id: 8,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
-    heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
-    description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 5, 2025",
-  },
-  {
-    id: 9,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
-    heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
-    description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 3, 2025",
-  },
-  {
-    id: 10,
-    thumbnail: "./assets/blogs_content_thumbnail.png",
-    heading:
-      "Webmasking Industry with Metaverse: A Comparison of TMark vs Others",
-    description:
-      "Webcasting industry with metaverse makes huge difference in upcoming days and VMukti metaverse solution enables businesses to create virtual...",
-    author: "Vmukti",
-    date: "April 1, 2025",
-  },
-];
 
 export default function BlogsContent() {
   const bgColor = useColorModeValue("gray.50", "gray.900");
   const borderColor = useColorModeValue("gray.200", "gray.700");
 
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 5; // Number of posts per page
+  const postsPerPage = useBreakpointValue({ base: 2, md: 5 }); // 2 for mobile, 5 for desktop
   const totalPages = Math.ceil(blogPosts.length / postsPerPage);
 
   const handlePageChange = (page) => {
@@ -240,7 +139,7 @@ export default function BlogsContent() {
             borderColor={borderColor}
           >
             <Image
-              src={post.thumbnail}
+              src={`${process.env.PUBLIC_URL}/${post.thumbnail}`}
               alt={post.heading}
               borderRadius="24px"
               w="full"
@@ -252,7 +151,8 @@ export default function BlogsContent() {
                 as="h3"
                 fontSize="16px"
                 fontWeight="700"
-                w="60%"
+                w={{base:"100%",md:"60%"}}
+                // -----------------------------------------
                 mb={2}
                 noOfLines={2}
               >
@@ -302,6 +202,7 @@ export default function BlogsContent() {
                     by {post.author}
                   </Text>
                 </Flex>
+                <Link to={`/whoweare/blogs/${post.url_name}`}>
                 <Flex gap="4" align="center" justifyContent="flex-end">
                   <Text
                     fontSize={{ base: "14px", md: "14px" }}
@@ -324,6 +225,7 @@ export default function BlogsContent() {
                     </svg>
                   </Box>
                 </Flex>
+                </Link>
               </Flex>
             </Box>
           </GridItem>
