@@ -6,56 +6,56 @@ import {
   Text,
   useBreakpointValue,
   VStack,
-} from "@chakra-ui/react";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import PageContentWrapper from "./PageContentWrapper";
-const MotionTextContainer = motion(VStack);
-const MotionImage = motion(Image);
-const MotionText = motion(Text);
+} from '@chakra-ui/react'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import PageContentWrapper from './PageContentWrapper'
+const MotionTextContainer = motion(VStack)
+const MotionImage = motion(Image)
+const MotionText = motion(Text)
 const TripleImageSection = ({
   heading = [
-    { text: "AI-Powered", color: "#000" },
-    { text: "Surveillance", color: "#3F77A5" },
-    { text: "\nSolutions", color: "#DB7B3A" },
+    { text: 'AI-Powered', color: '#000' },
+    { text: 'Surveillance', color: '#3F77A5' },
+    { text: '\nSolutions', color: '#DB7B3A' },
   ],
-  description = "Unlock smarter security with AI-driven surveillance solutions for real-time monitoring, proactive threat detection, and seamless video management. Enhance safety and efficiency with scalable, future-ready technology.",
+  description = 'Unlock smarter security with AI-driven surveillance solutions for real-time monitoring, proactive threat detection, and seamless video management. Enhance safety and efficiency with scalable, future-ready technology.',
   images = [
-    "./assets/speech_image.png",
-    "./assets/soldier_image.png",
-    "./assets/patient_image.png",
+    './assets/speech_image.png',
+    './assets/soldier_image.png',
+    './assets/patient_image.png',
   ],
 }) => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { threshold: 0.1, triggerOnce: false });
-  const svgSize = useBreakpointValue({ base: "13px", md: "25px" });
+  const ref = useRef(null)
+  const inView = useInView(ref, { threshold: 0.1, triggerOnce: false })
+  const svgSize = useBreakpointValue({ base: '13px', md: '25px' })
 
   return (
     <Box mb={10}>
       {/* Heading Animation */}
-      <Box px={{ base: "4%", md: "0%" }}>
+      <Box px={{ base: '4%', md: '0%' }}>
         <motion.div
           ref={ref}
           initial={{ opacity: 0, x: -50 }}
           animate={inView ? { opacity: 1, x: 0 } : { opacity: 0.5, x: -50 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }} // Smoother transition
+          transition={{ duration: 0.8, ease: 'easeInOut' }} // Smoother transition
         >
           {heading.map((item, index) => (
             <MotionText
               key={index}
               as="span"
               color={item.color}
-              fontSize={{ base: "24px", md: "32px", lg: "48px" }}
+              fontSize={{ base: '24px', md: '32px', lg: '48px' }}
               fontWeight="600"
               lineHeight="normal"
               whiteSpace="pre-wrap"
             >
-              {item.text}{" "}
+              {item.text}{' '}
             </MotionText>
           ))}
         </motion.div>
@@ -66,21 +66,21 @@ const TripleImageSection = ({
         align="flex-start"
         mt={4}
         position="relative"
-        flexDirection={{ base: "column", md: "row" }}
+        flexDirection={{ base: 'column', md: 'row' }}
         gap={{ base: 6, md: 8 }}
         // bg="red"
       >
         {/* Left Column (Animated Text & Icon) */}
 
         <MotionTextContainer
-          px={{ base: "4%", md: "0%" }}
+          px={{ base: '4%', md: '0%' }}
           align="start"
           spacing={2}
-          maxW={{ base: "100%", md: "50%", lg: "40%" }}
+          maxW={{ base: '100%', md: '50%', lg: '40%' }}
           mt={{ base: 0, md: 16 }}
           initial={{ opacity: 0, x: -50 }}
           animate={inView ? { opacity: 1, x: 0 } : { opacity: 0.7, x: -50 }}
-          transition={{ duration: 0.7, ease: "easeInOut" }} // Smoother transition
+          transition={{ duration: 0.7, ease: 'easeInOut' }} // Smoother transition
           viewport={{ once: false, amount: 0.1 }} // Trigger animation
           // bg="red"
         >
@@ -98,11 +98,11 @@ const TripleImageSection = ({
           </svg>
           <MotionText
             color="#000000"
-            fontSize={{ base: "12px", md: "16px", lg: "18px" }}
+            fontSize={{ base: '14px', md: '16px' }} // lg: '18px'
             fontWeight="500"
             // lineHeight="normal"
             lineHeight="1"
-            w={{ base: "90%", md: "100%" }}
+            w={{ base: '90%', md: '100%' }}
           >
             {description}
           </MotionText>
@@ -110,22 +110,22 @@ const TripleImageSection = ({
 
         {/* Right Column (Animated Images) */}
         <Flex
-          display={{ base: "none", md: "flex" }}
-          gap={{ base: "8px", md: "24px", lg: "38px" }}
-          ml={{ base: 0, md: "auto" }}
+          display={{ base: 'none', md: 'flex' }}
+          gap={{ base: '8px', md: '24px', lg: '38px' }}
+          ml={{ base: 0, md: 'auto' }}
           mt={{ base: 6, md: 0 }}
           position="relative"
           zIndex={1}
-          flexWrap={{ base: "wrap", md: "nowrap" }}
-          justifyContent={{ base: "center", md: "flex-start" }}
+          flexWrap={{ base: 'wrap', md: 'nowrap' }}
+          justifyContent={{ base: 'center', md: 'flex-start' }}
         >
           {images.map((image, index) => (
             <Box
               key={index}
               // borderRadius="20px"
               overflow="hidden"
-              w={{ base: "150px", sm: "200px", md: "250px", lg: "306px" }}
-              h={{ base: "300px", sm: "400px", md: "500px", lg: "594px" }}
+              w={{ base: '150px', sm: '200px', md: '250px', lg: '306px' }}
+              h={{ base: '300px', sm: '400px', md: '500px', lg: '594px' }}
             >
               <MotionImage
                 // src={image}
@@ -133,7 +133,7 @@ const TripleImageSection = ({
                 alt="Surveillance Image"
                 w="100%"
                 h="100%"
-              borderRadius="20px"
+                borderRadius="20px"
                 objectFit="cover"
                 initial={{ scale: 0.8, opacity: 0 }} // Initial state for animation
                 animate={
@@ -143,7 +143,7 @@ const TripleImageSection = ({
                 } // Trigger animation immediately
                 transition={{
                   duration: 0.7,
-                  ease: "easeInOut",
+                  ease: 'easeInOut',
                   delay: index * 0.1,
                 }} // Smoother transition
               />
@@ -152,12 +152,12 @@ const TripleImageSection = ({
         </Flex>
 
         {/* image carousel */}
-        <Box display={{ base: "block", md: "none" }} w="100%">
+        <Box display={{ base: 'block', md: 'none' }} w="100%">
           <Swiper
-            spaceBetween={-50} // Adjust spacing as needed
+            spaceBetween="20" // Adjust spacing as needed
             slidesPerView={1.8} // Controls the number of slides visible
             centeredSlides={true}
-            style={{ paddingRight: "5px" }}
+            style={{ paddingRight: '5px' }}
           >
             {images.map((image, index) => (
               <SwiperSlide key={index}>
@@ -165,8 +165,8 @@ const TripleImageSection = ({
                   borderRadius="20px"
                   overflow="hidden"
                   mx="auto"
-                  w={{ base: "170px", sm: "200px" }}
-                  h={{ base: "350px", sm: "450px" }}
+                  w={{ base: '170px', sm: '200px' }}
+                  h={{ base: '350px', sm: '450px' }}
                 >
                   <Image
                     src={image}
@@ -202,26 +202,26 @@ const TripleImageSection = ({
         <Flex
           w="full"
           position="absolute"
-          top={{ base: "75%", md: "65%" }}
-          left={{ base: "50%", md: "auto" }}
-          bottom={{ base: "10%", md: "auto" }}
+          top={{ base: '75%', md: '65%' }}
+          left={{ base: '50%', md: 'auto' }}
+          bottom={{ base: '10%', md: 'auto' }}
           gap={4}
           alignItems="flex-end"
-          flexDirection={{ base: "column", md: "row" }}
-          transform={{ base: "translateX(-50%)", md: "none" }}
+          flexDirection={{ base: 'column', md: 'row' }}
+          transform={{ base: 'translateX(-50%)', md: 'none' }}
         >
           <Box
-            w={{ base: "80px", sm: "100px", md: "40%", lg: "204px" }}
-            h={{ base: "80px", sm: "100px", md: "150px", lg: "204px" }}
-            display={{ base: "none", md: "block" }}
+            w={{ base: '80px', sm: '100px', md: '40%', lg: '204px' }}
+            h={{ base: '80px', sm: '100px', md: '150px', lg: '204px' }}
+            display={{ base: 'none', md: 'block' }}
             borderRadius="24px"
             bg="#BECEDC"
           ></Box>
           <Box
-            w={{ base: "95%", md: "80%" }}
-            h={{ base: "150px", sm: "120px", md: "180px", lg: "239px" }}
+            w={{ base: '95%', md: '80%' }}
+            h={{ base: '150px', sm: '120px', md: '180px', lg: '239px' }}
             flexShrink={0}
-            borderRadius={{ base: "20px 0 0 20px", md: "24px" }}
+            borderRadius={{ base: '20px 0 0 20px', md: '24px' }}
             bg="#fff"
             zIndex={0}
             // bg="red"
@@ -229,7 +229,7 @@ const TripleImageSection = ({
         </Flex>
       </Flex>
     </Box>
-  );
-};
+  )
+}
 
-export default TripleImageSection;
+export default TripleImageSection

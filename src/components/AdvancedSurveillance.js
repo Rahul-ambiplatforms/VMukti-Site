@@ -1,53 +1,53 @@
-import React, { useState } from "react";
-import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
-import HeadingAnimation from "./Animation/Text/HeadingAnimation";
+import React, { useState } from 'react'
+import { Box, Flex, Text, Image, Button } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
+import HeadingAnimation from './Animation/Text/HeadingAnimation'
 
 const AdvancedSurveillance = () => {
-  const [activeCard, setActiveCard] = useState(0);
+  const [activeCard, setActiveCard] = useState(0)
 
   // Data for the component
-  const title1 = "Advanced Surveillance for All.";
-  const subtitle = "Enterprise";
+  const title1 = 'Advanced Surveillance for All.'
+  const subtitle = 'Enterprise'
   const description =
-    "Explore innovative, scalable solutions designed to meet the urban security and operational needs of enterprises.";
+    'Explore innovative, scalable solutions designed to meet the urban security and operational needs of enterprises.'
 
   const cards = [
     {
-      type: "open",
-      label: "Enterprise",
+      type: 'open',
+      label: 'Enterprise',
       description:
-        "Explore innovative, scalable solutions designed to meet the urban security and operational needs of enterprises.",
-      image: "./assets/rectangle1.svg",
+        'Explore innovative, scalable solutions designed to meet the urban security and operational needs of enterprises.',
+      image: './assets/rectangle1.svg',
     },
     {
-      type: "squeezed",
-      label: "Government",
+      type: 'squeezed',
+      label: 'Government',
       description:
-        "Explore innovative, secure solutions built to enhance government operations, security, and public safety.",
-      image: "./assets/govsl.svg",
+        'Explore innovative, secure solutions built to enhance government operations, security, and public safety.',
+      image: './assets/govsl.svg',
     },
     {
-      type: "squeezed",
-      label: "Consumers",
+      type: 'squeezed',
+      label: 'Consumers',
       description:
-        "AI is transforming everyday automation, security, and decision-making by bringing intelligent, real-time solutions to personal, small business, and creative applications.",
-      image: "./assets/gensl.svg",
+        'AI is transforming everyday automation, security, and decision-making by bringing intelligent, real-time solutions to personal, small business, and creative applications.',
+      image: './assets/gensl.svg',
     },
-  ];
+  ]
 
   // Handle navigation
   const handleNavigation = (direction) => {
     setActiveCard((prev) =>
-      direction === "left"
+      direction === 'left'
         ? prev === 0
           ? cards.length - 1
           : prev - 1
         : prev === cards.length - 1
         ? 0
         : prev + 1
-    );
-  };
+    )
+  }
 
   return (
     <>
@@ -73,27 +73,27 @@ const AdvancedSurveillance = () => {
         >
           {/* Title Section */}
           <Box
-            marginRight={{ md: "70px" }}
-            marginTop={{ base: "5%", md: "55px" }}
-            ml={{ base: "5%" }}
+            marginRight={{ md: '70px' }}
+            marginTop={{ base: '5%', md: '55px' }}
+            ml={{ base: '5%' }}
             position="relative"
             zIndex="2"
             display="flex"
-            justifyContent={{ md: "flex-end" }} // Right-align the text
+            justifyContent={{ md: 'flex-end' }} // Right-align the text
           >
             <HeadingAnimation>
               <Text
-                fontSize={{ base: "20px", md: "36px" }}
-                fontWeight={{ base: "500", md: "600" }}
+                fontSize={{ base: '20px', md: '36px' }}
+                fontWeight={{ base: '500' }} // md: "600"
                 // letterSpacing="-0.54px"
                 color="black"
               >
-                Advanced{" "}
+                Advanced{' '}
                 <Text
                   as="span"
                   color="#3F77A5"
-                  fontSize={{ base: "20px", md: "36px" }}
-                  fontWeight={{ base: "500", md: "600" }}
+                  fontSize={{ base: '20px', md: '36px' }}
+                  fontWeight={{ base: '500' }} // md: "600"
                 >
                   Surveillance for All.
                 </Text>
@@ -123,15 +123,15 @@ const AdvancedSurveillance = () => {
 
           <Box
             position="absolute"
-            top={{ base: "300px", md: "400px", lg: "450px" }}
-            left={{ base: "50%", md: "40%", lg: "50px" }}
+            top={{ base: '300px', md: '400px', lg: '450px' }}
+            left={{ base: '50%', md: '40%', lg: '50px' }}
             transform={{
-              base: "translateX(-50%)",
-              md: "translateX(-50%)",
-              lg: "none",
+              base: 'translateX(-50%)',
+              md: 'translateX(-50%)',
+              lg: 'none',
             }}
-            width={{ base: "255px", md: "320px", lg: "408px" }}
-            height={{ base: "255px", md: "320px", lg: "408px" }}
+            width={{ base: '255px', md: '320px', lg: '408px' }}
+            height={{ base: '255px', md: '320px', lg: '408px' }}
             borderRadius="408px"
             bg="#3F77A5"
             opacity="0.12"
@@ -143,16 +143,16 @@ const AdvancedSurveillance = () => {
 
           {/* Cards Section */}
           <Flex
-            marginTop={{ base: "10px", md: "70px" }}
-            marginLeft={{ base: "10px", md: "70px" }} // Smaller margin on mobile
-            marginRight={{ base: "10px", md: "70px" }}
+            marginTop={{ base: '10px', md: '70px' }}
+            marginLeft={{ base: '10px', md: '70px' }} // Smaller margin on mobile
+            marginRight={{ base: '10px', md: '70px' }}
             gap="15px"
             position="relative"
             zIndex="2"
-            direction={{ base: "column", md: "row" }} // Column for mobile, row for desktop
-            overflow={"visible"} // Hide overflow to prevent scrollbars
+            direction={{ base: 'column', md: 'row' }} // Column for mobile, row for desktop
+            overflow={'visible'} // Hide overflow to prevent scrollbars
             minH="auto"
-            mb={{ base: "3%", md: "10%" }}
+            mb={{ base: '3%', md: '10%' }}
           >
             {/* Navigation Buttons */}
             <Flex
@@ -161,7 +161,7 @@ const AdvancedSurveillance = () => {
               right="0" // Align buttons to the right
               gap="2px"
               zIndex="2"
-              display={{ base: "none", md: "flex" }} // Hide on mobile
+              display={{ base: 'none', md: 'flex' }} // Hide on mobile
             >
               <Button
                 width="31px"
@@ -175,8 +175,8 @@ const AdvancedSurveillance = () => {
                 justifyContent="center"
                 cursor="pointer"
                 bgColor="#E7E7E7"
-                _hover={{ bgColor: "#e0e0e0" }}
-                onClick={() => handleNavigation("left")}
+                _hover={{ bgColor: '#e0e0e0' }}
+                onClick={() => handleNavigation('left')}
               >
                 <svg
                   width="8"
@@ -203,8 +203,8 @@ const AdvancedSurveillance = () => {
                 justifyContent="center"
                 cursor="pointer"
                 bgColor="#E7E7E7"
-                _hover={{ bgColor: "#e0e0e0" }}
-                onClick={() => handleNavigation("right")}
+                _hover={{ bgColor: '#e0e0e0' }}
+                onClick={() => handleNavigation('right')}
               >
                 <svg
                   width="8"
@@ -225,28 +225,28 @@ const AdvancedSurveillance = () => {
               <Box
                 key={index}
                 width={{
-                  base: "100%",
-                  md: activeCard === index ? "80%" : "20%",
+                  base: '100%',
+                  md: activeCard === index ? '80%' : '20%',
                 }} // Full width on mobile
                 height={{
-                  base: activeCard === index ? "auto" : "80px",
-                  md: "439px",
+                  base: activeCard === index ? 'auto' : '80px',
+                  md: '439px',
                 }} // Compact height for inactive cards on mobile
                 borderRadius="24px"
                 // bgColor="#E7E7E7"
-                bgColor={index % 2 !== 0 ? "#E7E7E7" : "#BECEDC"}
-                _hover={{ cursor: "pointer" }}
+                bgColor={index % 2 !== 0 ? '#E7E7E7' : '#BECEDC'}
+                _hover={{ cursor: 'pointer' }}
                 transition="width 0.3s ease"
                 position="relative"
                 onClick={() => setActiveCard(index)}
-                mb={{ base: "5px", md: "0" }} // Add margin between stacked cards on mobile
+                mb={{ base: '5px', md: '0' }} // Add margin between stacked cards on mobile
                 word-wrap="break-word"
                 overflow-wrap="break-word"
               >
                 {activeCard === index ? (
                   // Expanded Card Content
                   <Flex
-                    direction={{ base: "column", md: "row" }}
+                    direction={{ base: 'column', md: 'row' }}
                     word-wrap="break-word"
                     overflow-wrap="break-word"
                     borderRadius="24px"
@@ -255,12 +255,12 @@ const AdvancedSurveillance = () => {
                   >
                     {/* Left Frame (Description) */}
                     <Box
-                      width={{ base: "100%", md: "272px" }}
-                      height={{ base: "auto", md: "439px" }}
+                      width={{ base: '100%', md: '272px' }}
+                      height={{ base: 'auto', md: '439px' }}
                       padding="20px"
                       flexDirection="column"
-                      justifyContent={{ base: "flex-end", md: "space-between" }} // Align content to the top
-                      display={{ base: "flex", md: "flex" }} // Hide on mobile
+                      justifyContent={{ base: 'flex-end', md: 'space-between' }} // Align content to the top
+                      display={{ base: 'flex', md: 'flex' }} // Hide on mobile
                       order={{ base: 1, md: 0 }} // Ensure this is on top in mobile view
                     >
                       <Box w="90%">
@@ -291,9 +291,9 @@ const AdvancedSurveillance = () => {
                         </Text>
                       </Box>
                       <Link to={`/serving/${card.label}`}>
-                        <Flex gap={4} mt={{ base: "5%" }}>
+                        <Flex gap={4} mt={{ base: '5%' }}>
                           <Text
-                            fontSize={{ base: "14px", md: "14px" }}
+                            fontSize={{ base: '14px', md: '14px' }}
                             fontWeight={400}
                           >
                             Know more
@@ -317,8 +317,8 @@ const AdvancedSurveillance = () => {
                     </Box>
                     {/* Right Frame (Image) */}
                     <Box
-                      width={{ base: "100%", md: "706px" }}
-                      height={{ md: "439px" }}
+                      width={{ base: '100%', md: '706px' }}
+                      height={{ md: '439px' }}
                       borderRadius="24px"
                       border={{ md: 2 }}
                       // bg="green"
@@ -337,10 +337,10 @@ const AdvancedSurveillance = () => {
                   <Box
                     position="absolute"
                     bottom="28%" // Adjust this value to control vertical positioning
-                    right={{ base: "auto", md: "10%" }}
-                    left={{ base: "5%", md: "auto" }}
-                    transform={{ md: "rotate(-90deg)" }} // Rotate the text vertically
-                    transformOrigin={{ md: "bottom right" }} // Rotate around the bottom-right corner
+                    right={{ base: 'auto', md: '10%' }}
+                    left={{ base: '5%', md: 'auto' }}
+                    transform={{ md: 'rotate(-90deg)' }} // Rotate the text vertically
+                    transformOrigin={{ md: 'bottom right' }} // Rotate around the bottom-right corner
                     display="flex"
                     flexDirection="column"
                     alignItems="flex-start" // Align dash with the start of the text
@@ -381,12 +381,12 @@ const AdvancedSurveillance = () => {
             fontSize="16px"
             fontWeight="600"
             borderRadius="20px"
-            display={{ base: "none", md: "flex" }}
+            display={{ base: 'none', md: 'flex' }}
             alignItems="center"
             justifyContent="center"
             gap="8px"
             zIndex="2"
-            _hover={{ backgroundColor: "#f0f0f0" }}
+            _hover={{ backgroundColor: '#f0f0f0' }}
             mb="2%"
           >
             Book Demo
@@ -406,7 +406,7 @@ const AdvancedSurveillance = () => {
         </Box>
       </Flex>
     </>
-  );
-};
+  )
+}
 
-export default AdvancedSurveillance;
+export default AdvancedSurveillance

@@ -7,40 +7,39 @@ import {
   ListItem,
   Text,
   useBreakpointValue,
-} from "@chakra-ui/react";
-import SubHeadingAnimation from "./Animation/Text/SubHeadingAnimation";
-import HeadingAnimation from "./Animation/Text/HeadingAnimation";
-import { motion } from "framer-motion";
-import React from "react";
+} from '@chakra-ui/react'
+import SubHeadingAnimation from './Animation/Text/SubHeadingAnimation'
+import HeadingAnimation from './Animation/Text/HeadingAnimation'
+import { motion } from 'framer-motion'
+import React from 'react'
 
 const popAnimation = {
   hidden: { scale: 0.8, opacity: 0 },
   visible: {
     scale: 1,
     opacity: 1,
-    transition: { duration: 0.4, ease: "easeOut" },
+    transition: { duration: 0.4, ease: 'easeOut' },
   },
-};
+}
 
 const ObjectDescription = ({ description, image, list }) => {
-
-  const svgSize = useBreakpointValue({ base: "13px", md: "25px" });
+  const svgSize = useBreakpointValue({ base: '13px', md: '25px' })
 
   return (
     <>
       <Flex direction="column" gap="4" mt="-2%">
         <Box
-          fontSize={{ base: "24px", md: "48px" }}
+          fontSize={{ base: '24px', md: '48px' }}
           fontWeight="500"
           letterSpacing="0%"
         >
           <Text as="span">Object </Text>
           <Text as="span" color="#3F77A5">
-            Detection{" "}
+            Detection{' '}
           </Text>
           <Text as="span">& Real-Time</Text>
           <Text as="span" color="#db7b3a">
-            {" "}
+            {' '}
             Tracking
           </Text>
           <Text as="span" color="#3F77A5">
@@ -51,11 +50,11 @@ const ObjectDescription = ({ description, image, list }) => {
           bg="white"
           borderRadius="20px"
           overflow="hidden"
-          p={{ base: "5%", md: "1%" }}
+          p={{ base: '5%', md: '1%' }}
           minHeight="600px"
-          alignItems={{ base: "end", md: "center" }}
+          alignItems={{ base: 'end', md: 'center' }}
           position="relative"
-          h={{ base: "auto", md: "753px" }} // Adjust height as needed
+          h={{ base: 'auto', md: '753px' }} // Adjust height as needed
         >
           {/* Card Image (Background) */}
           <Box
@@ -80,19 +79,19 @@ const ObjectDescription = ({ description, image, list }) => {
             direction="column"
             justify="space-between"
             p={5}
-            pt={{md:10}}
+            pt={{ md: 10 }}
             bg="rgba(255, 255, 255, 0.8)" // Semi-transparent background
-            w={{ base: "100%", md: "30%" }}
-            height={{ base: "40%", md: "100%" }}
+            w={{ base: '100%', md: '30%' }}
+            height={{ base: '40%', md: '100%' }}
             gap={5}
-            borderRadius={{base:"20px",md:"24px"}}
+            borderRadius={{ base: '20px', md: '24px' }}
             zIndex={2} // Above the image
             backdropFilter="blur(2px)" // Blur effect
           >
             <Flex gap={1} direction="column">
               {/* <SubHeadingAnimation> */}
               <motion.div variants={popAnimation}>
-                <Text fontSize="24px" color="blue.600" mb={{base:"2",md:"5"}}>
+                <Box mb={{ base: '2', md: '5' }}>
                   {/* The size needs to be changed. In mobile view */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -106,14 +105,14 @@ const ObjectDescription = ({ description, image, list }) => {
                       fill="#3F77A5"
                     />
                   </svg>
-                </Text>
+                </Box>
                 <Heading
-                  fontSize={{ base: "20px", md: "36px" }}
+                  fontSize={{ base: '20px', md: '36px' }}
                   fontWeight="500"
                   mb={5}
                   color="black"
                 >
-                  {description.split("\n").map((line, index) => (
+                  {description.split('\n').map((line, index) => (
                     <React.Fragment key={index}>
                       {line}
                       <br />
@@ -135,7 +134,7 @@ const ObjectDescription = ({ description, image, list }) => {
                 {/* box heading */}
                 <Flex direction="column" width="100%">
                   <Text
-                    fontSize={{ base: "14px", md: "16px" }}
+                    fontSize={{ base: '14px', md: '16px' }}
                     fontWeight="700"
                   >
                     What It Does for You
@@ -145,11 +144,11 @@ const ObjectDescription = ({ description, image, list }) => {
 
                 {/* box content */}
                 <List
-                  ml={{ base: "2%", md: "5%" }}
-                  px={{ base: "5%", md: "2%" }}
+                  ml={{ base: '2%', md: '5%' }}
+                  px={{ base: '5%', md: '2%' }}
                   spacing={1}
                   fontWeight={500}
-                  fontSize={{ base: "12px", md: "14px" }}
+                  fontSize={{ base: '12px', md: '16px' }} // fontSize={{ base: "12px", md: "14px" }}
                   styleType="disc"
                 >
                   {list.map((item, index) => (
@@ -162,7 +161,7 @@ const ObjectDescription = ({ description, image, list }) => {
         </Flex>
       </Flex>
     </>
-  );
-};
+  )
+}
 
-export default ObjectDescription;
+export default ObjectDescription

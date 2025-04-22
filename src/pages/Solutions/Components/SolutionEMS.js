@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import {
   Flex,
   Box,
@@ -7,27 +7,27 @@ import {
   Heading,
   useBreakpointValue,
   Image,
-} from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import { Button } from "@chakra-ui/icons";
+} from '@chakra-ui/react'
+import { motion } from 'framer-motion'
+import { Button } from '@chakra-ui/icons'
 
 const SolutionEMS = () => {
-  const location = useLocation();
+  const location = useLocation()
   // Data for each slide
   const slides = [
     {
-      id: "vms",
-      title1: "Video Management System",
-      title2: "(VMS)",
+      id: 'vms',
+      title1: 'Video Management System',
+      title2: '(VMS)',
       description: [
-        "AI-Powered VMS: The Core of Modern SurveillanceAn AI-enabled Video Management System (VMS) is the core of modern surveillance, offering a centralized platform for video monitoring, real-time threat detection, and intelligent incident management. It enables organizations to efficiently oversee multiple cameras across locations, using AI-driven analytics to boost situational awareness and security.",
+        'AI-Powered VMS: The Core of Modern SurveillanceAn AI-enabled Video Management System (VMS) is the core of modern surveillance, offering a centralized platform for video monitoring, real-time threat detection, and intelligent incident management. It enables organizations to efficiently oversee multiple cameras across locations, using AI-driven analytics to boost situational awareness and security.',
       ],
       description2: [
         <>
-          <h3 style={{ fontWeight: "bold", marginBottom: "16px" }}>
+          <h3 style={{ fontWeight: 'bold', marginBottom: '16px' }}>
             Key Features
           </h3>
-          <ul className="custom-bullets" style={{ paddingLeft: "20px"}}>
+          <ul className="custom-bullets" style={{ paddingLeft: '20px' }}>
             <li>24/7 AI-Powered Surveillance</li>
             <li>Multi-Camera Integration</li>
             <li>AI-Driven Video Analytics</li>
@@ -38,38 +38,38 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-      image: "./assets/solution_1.png",
+      image: './assets/solution_1.png',
       benefits: {
-        title: "Business Benefits",
+        title: 'Business Benefits',
         data: [
           {
-            title: "Unified Security Control",
-            image: "./assets/solution_1_1.svg",
+            title: 'Unified Security Control',
+            image: './assets/solution_1_1.svg',
           },
           {
-            title: "Proactive Threat Management",
-            image: "./assets/solution_1_2.svg",
+            title: 'Proactive Threat Management',
+            image: './assets/solution_1_2.svg',
           },
           {
-            title: "Scalability & Cost Efficiency",
-            image: "./assets/solution_1_3.svg",
+            title: 'Scalability & Cost Efficiency',
+            image: './assets/solution_1_3.svg',
           },
         ],
       },
     },
     {
-      id: "ems",
-      title1: "Enterprise Management System",
-      title2: "(EMS)",
+      id: 'ems',
+      title1: 'Enterprise Management System',
+      title2: '(EMS)',
       description: [
-        "EMS is a custom-built Video Management System (VMS) designed for large-scale enterprises, banks, manufacturing plants, and government institutions. Unlike generic VMS platforms, VMukti EMS provides complete ownership and control through a one-time deployment fee, allowing organizations to independently manage their security infrastructure.",
+        'EMS is a custom-built Video Management System (VMS) designed for large-scale enterprises, banks, manufacturing plants, and government institutions. Unlike generic VMS platforms, VMukti EMS provides complete ownership and control through a one-time deployment fee, allowing organizations to independently manage their security infrastructure.',
       ],
       description2: [
         <>
-          <h3 style={{ fontWeight: "bold", marginBottom: "16px" }}>
+          <h3 style={{ fontWeight: 'bold', marginBottom: '16px' }}>
             Key Features
           </h3>
-          <ul style={{ paddingLeft: "20px" }}>
+          <ul style={{ paddingLeft: '20px' }}>
             <li>Tailored Deployment</li>
             <li>Advanced Admin Control</li>
             <li>Comprehensive Camera & User Management</li>
@@ -79,42 +79,42 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-      image: "./assets/solution_2.png",
+      image: './assets/solution_2.png',
       benefits: {
-        title: "Business Benefits",
+        title: 'Business Benefits',
         data: [
           {
-            title: "Operational Efficiency",
-            image: "./assets/solution_2_1.svg",
+            title: 'Operational Efficiency',
+            image: './assets/solution_2_1.svg',
           },
           {
-            title: "Cost-Effective Ownership",
-            image: "./assets/solution_2_2.svg",
+            title: 'Cost-Effective Ownership',
+            image: './assets/solution_2_2.svg',
           },
           {
-            title: " Enhanced Security & Compliance",
-            image: "./assets/solution_2_3.svg",
+            title: ' Enhanced Security & Compliance',
+            image: './assets/solution_2_3.svg',
           },
           {
-            title: " Scalability & Adaptability",
-            image: "./assets/solution_2_4.svg",
+            title: ' Scalability & Adaptability',
+            image: './assets/solution_2_4.svg',
           },
         ],
       },
     },
     {
-      id: "icc",
-      title1: "Integrated Command & Control Center",
-      title2: "(ICCC)",
+      id: 'icc',
+      title1: 'Integrated Command & Control Center',
+      title2: '(ICCC)',
       description: [
-        "The ICCC is a centralized intelligence hub that integrates live video feeds, IoT sensors, and AI-powered analytics across security systems. Designed for smart city management, critical infrastructure monitoring, and emergency response, it ensures real-time situational awareness and security coordination.",
+        'The ICCC is a centralized intelligence hub that integrates live video feeds, IoT sensors, and AI-powered analytics across security systems. Designed for smart city management, critical infrastructure monitoring, and emergency response, it ensures real-time situational awareness and security coordination.',
       ],
       description2: [
         <>
-          <h3 style={{ fontWeight: "bold", marginBottom: "16px" }}>
+          <h3 style={{ fontWeight: 'bold', marginBottom: '16px' }}>
             Key Features
           </h3>
-          <ul style={{ paddingLeft: "20px" }}>
+          <ul style={{ paddingLeft: '20px' }}>
             <li>Centralized Surveillance & Data Fusion</li>
             <li>AI-Powered Insights & Heatmaps</li>
             <li>Automated Threat Alerts & Response</li>
@@ -124,36 +124,36 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-      image: "./assets/solution_3.png",
+      image: './assets/solution_3.png',
       benefits: {
-        title: "Business Benefits",
+        title: 'Business Benefits',
         data: [
           {
-            title: "Faster Decision-Making",
-            image: "./assets/solution_3_1.svg",
+            title: 'Faster Decision-Making',
+            image: './assets/solution_3_1.svg',
           },
           {
-            title: "Reduced Operational Costs",
-            image: "./assets/solution_3_2.svg",
+            title: 'Reduced Operational Costs',
+            image: './assets/solution_3_2.svg',
           },
           {
-            title: "Increased Public & Asset Safety",
-            image: "./assets/solution_3_3.svg",
+            title: 'Increased Public & Asset Safety',
+            image: './assets/solution_3_3.svg',
           },
           {
-            title: "Future-Proof Infrastructure",
-            image: "./assets/solution_3_4.svg",
+            title: 'Future-Proof Infrastructure',
+            image: './assets/solution_3_4.svg',
           },
         ],
       },
     },
     {
-      id: "opt",
-      title1: "AI-Optimized Cloud",
-      title2: "Services",
+      id: 'opt',
+      title1: 'AI-Optimized Cloud',
+      title2: 'Services',
       description: [
         <>
-          <div style={{ fontWeight: "bold", marginBottom: "2%" }}>
+          <div style={{ fontWeight: 'bold', marginBottom: '2%' }}>
             Patented AI-Driven Storage for Surveillance
           </div>
           <br />
@@ -164,10 +164,10 @@ const SolutionEMS = () => {
       ],
       description2: [
         <>
-          <h3 style={{ fontWeight: "bold", marginBottom: "16px" }}>
+          <h3 style={{ fontWeight: 'bold', marginBottom: '16px' }}>
             Key Features
           </h3>
-          <ul style={{ paddingLeft: "20px" }}>
+          <ul style={{ paddingLeft: '20px' }}>
             <li>AI-Driven Compression</li>
             <li>Unlimited Scalability</li>
             <li>Smart Search & Indexing</li>
@@ -177,36 +177,36 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-      image: "./assets/solution_4.png",
+      image: './assets/solution_4.png',
       benefits: {
-        title: "Business Benefits",
+        title: 'Business Benefits',
         data: [
           {
-            title: "Faster Decision-Making",
-            image: "./assets/solution_4_1.svg",
+            title: 'Faster Decision-Making',
+            image: './assets/solution_4_1.svg',
           },
           {
-            title: "Reduced Operational Costs",
-            image: "./assets/solution_4_2.svg",
+            title: 'Reduced Operational Costs',
+            image: './assets/solution_4_2.svg',
           },
           {
-            title: "Increased Public & Asset Safety",
-            image: "./assets/solution_4_3.svg",
+            title: 'Increased Public & Asset Safety',
+            image: './assets/solution_4_3.svg',
           },
           {
-            title: "Future-Proof Infrastructure",
-            image: "./assets/solution_4_4.svg",
+            title: 'Future-Proof Infrastructure',
+            image: './assets/solution_4_4.svg',
           },
         ],
       },
     },
     {
-      id: "gav",
-      title1: "Generative AI in Video",
-      title2: "Surveillance",
+      id: 'gav',
+      title1: 'Generative AI in Video',
+      title2: 'Surveillance',
       description: [
         <>
-          <div style={{ fontWeight: "bold", marginBottom: "2%" }}>
+          <div style={{ fontWeight: 'bold', marginBottom: '2%' }}>
             India’s First AI-Powered Surveillance System
           </div>
           <br />
@@ -216,10 +216,10 @@ const SolutionEMS = () => {
       ],
       description2: [
         <>
-          <h3 style={{ fontWeight: "bold", marginBottom: "16px" }}>
+          <h3 style={{ fontWeight: 'bold', marginBottom: '16px' }}>
             Key Features
           </h3>
-          <ul style={{ paddingLeft: "20px" }}>
+          <ul style={{ paddingLeft: '20px' }}>
             <li>Precision Object Tracking</li>
             <li>GPT-Powered Interaction</li>
             <li>Instant Video Retrieval</li>
@@ -227,36 +227,36 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-      image: "./assets/solution_5.png",
+      image: './assets/solution_5.png',
       benefits: {
-        title: "Business Benefits",
+        title: 'Business Benefits',
         data: [
           {
-            title: "Faster Decision-Making",
-            image: "./assets/solution_5_1.svg",
+            title: 'Faster Decision-Making',
+            image: './assets/solution_5_1.svg',
           },
           {
-            title: "Reduced Operational Costs",
-            image: "./assets/solution_5_2.svg",
+            title: 'Reduced Operational Costs',
+            image: './assets/solution_5_2.svg',
           },
           {
-            title: "Increased Public & Asset Safety",
-            image: "./assets/solution_5_3.svg",
+            title: 'Increased Public & Asset Safety',
+            image: './assets/solution_5_3.svg',
           },
           {
-            title: "Future-Proof Infrastructure",
-            image: "./assets/solution_4_4.svg",
+            title: 'Future-Proof Infrastructure',
+            image: './assets/solution_4_4.svg',
           }, //--------------
         ],
       },
     },
     {
-      id: "asc",
-      title1: "AI-Powered Surveillance",
-      title2: "Cameras",
+      id: 'asc',
+      title1: 'AI-Powered Surveillance',
+      title2: 'Cameras',
       description: [
         <>
-          <div style={{ fontWeight: "bold", marginBottom: "2%" }}>
+          <div style={{ fontWeight: 'bold', marginBottom: '2%' }}>
             Redefining Security with Intelligent Vision
           </div>
           <br />
@@ -268,10 +268,10 @@ const SolutionEMS = () => {
       ],
       description2: [
         <>
-          <h3 style={{ fontWeight: "bold", marginBottom: "16px" }}>
+          <h3 style={{ fontWeight: 'bold', marginBottom: '16px' }}>
             Key Features
           </h3>
-          <ul style={{ paddingLeft: "20px" }}>
+          <ul style={{ paddingLeft: '20px' }}>
             <li>Ultra-HD & Night Vision</li>
             <li>AI-Driven Threat Detection</li>
             <li>Edge AI Processing</li>
@@ -283,26 +283,26 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-      image: "./assets/solution_6.png",
+      image: './assets/solution_6.png',
       benefits: {
-        title: "Business Benefits",
+        title: 'Business Benefits',
         data: [
-          { title: "Proactive Security", image: "./assets/solution_7_1.svg" }, //I have to add this-----
-          { title: "Cost Optimization", image: "./assets/solution_7_2.svg" }, //I have to add this-----
+          { title: 'Proactive Security', image: './assets/solution_7_1.svg' }, //I have to add this-----
+          { title: 'Cost Optimization', image: './assets/solution_7_2.svg' }, //I have to add this-----
           {
-            title: "Data-Driven Insights",
-            image: "./assets/sol_solution_7_3.svg",
+            title: 'Data-Driven Insights',
+            image: './assets/sol_solution_7_3.svg',
           }, //I have to add this-----
         ],
       },
     },
     {
-      id: "fsv",
-      title1: "Flying Squad Vehicle",
-      title2: "(FSV)",
+      id: 'fsv',
+      title1: 'Flying Squad Vehicle',
+      title2: '(FSV)',
       description: [
         <>
-          <div style={{ fontWeight: "bold", marginBottom: "2%" }}>
+          <div style={{ fontWeight: 'bold', marginBottom: '2%' }}>
             Mobile Surveillance for Rapid Deployment
           </div>
           <br />
@@ -312,10 +312,10 @@ const SolutionEMS = () => {
       ],
       description2: [
         <>
-          <h3 style={{ fontWeight: "bold", marginBottom: "16px" }}>
+          <h3 style={{ fontWeight: 'bold', marginBottom: '16px' }}>
             Key Features
           </h3>
-          <ul style={{ paddingLeft: "20px" }}>
+          <ul style={{ paddingLeft: '20px' }}>
             <li>Live Area Monitoring</li>
             <li>GPS Tracking & Route Logging</li>
             <li>AI Anomaly Detection</li>
@@ -326,27 +326,27 @@ const SolutionEMS = () => {
       ],
 
       benefits: {
-        title: "Business Benefits",
+        title: 'Business Benefits',
         data: [
-          { title: "Rapid Deployment", image: "./assets/solution_8_1.svg" },
+          { title: 'Rapid Deployment', image: './assets/solution_8_1.svg' },
           {
-            title: "Real-Time Intelligence",
-            image: "./assets/solution_8_2.svg",
+            title: 'Real-Time Intelligence',
+            image: './assets/solution_8_2.svg',
           },
           {
-            title: "Cost-Efficient Security",
-            image: "./assets/solution_8_3.svg",
+            title: 'Cost-Efficient Security',
+            image: './assets/solution_8_3.svg',
           },
         ],
       },
     },
     {
-      id: "lws",
-      title1: "Live Webcasting &",
-      title2: "Streaming",
+      id: 'lws',
+      title1: 'Live Webcasting &',
+      title2: 'Streaming',
       description: [
         <>
-          <div style={{ fontWeight: "bold", marginBottom: "2%" }}>
+          <div style={{ fontWeight: 'bold', marginBottom: '2%' }}>
             Secure & High-Quality Video Broadcasting
           </div>
           <br />
@@ -356,10 +356,10 @@ const SolutionEMS = () => {
       ],
       description2: [
         <>
-          <h3 style={{ fontWeight: "bold", marginBottom: "16px" }}>
+          <h3 style={{ fontWeight: 'bold', marginBottom: '16px' }}>
             Key Features
           </h3>
-          <ul style={{ paddingLeft: "20px" }}>
+          <ul style={{ paddingLeft: '20px' }}>
             <li>Low Latency Streaming</li>
             <li>Cloud-Scalable Infrastructure</li>
             <li>Advanced Security</li>
@@ -368,27 +368,27 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-      image: "./assets/solution_1.png",
+      image: './assets/solution_1.png',
       benefits: {
-        title: "Business Benefits",
+        title: 'Business Benefits',
         data: [
           {
-            title: "Uninterrupted Streaming",
-            image: "./assets/sol_solution_9_1.svg",
+            title: 'Uninterrupted Streaming',
+            image: './assets/sol_solution_9_1.svg',
           },
-          { title: "Global Scalability", image: "./assets/solution_9_2.svg" },
+          { title: 'Global Scalability', image: './assets/solution_9_2.svg' },
           {
-            title: "Enhanced Security",
-            image: "./assets/sol_solution_9_3.svg",
+            title: 'Enhanced Security',
+            image: './assets/sol_solution_9_3.svg',
           },
         ],
       },
     },
-  ];
+  ]
 
-  const svgSize = useBreakpointValue({ base: "13px", md: "25px" });
+  const svgSize = useBreakpointValue({ base: '13px', md: '25px' })
 
-  const isDesktop = useBreakpointValue({ base: false, md: true });
+  const isDesktop = useBreakpointValue({ base: false, md: true })
 
   const visibleSlides = useBreakpointValue({
     base: 1,
@@ -396,101 +396,101 @@ const SolutionEMS = () => {
     md: 3,
     lg: 4,
     xl: 4,
-  });
+  })
 
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0)
   const [visibleSlideRange, setVisibleSlideRange] = useState({
     start: 0,
     end: 0,
-  });
+  })
 
   // Ensure visibleSlides is set correctly during the initial render
   useEffect(() => {
-    if (!visibleSlides || !slides.length) return;
+    if (!visibleSlides || !slides.length) return
 
-    const initialEnd = Math.min((visibleSlides || 1) - 1, slides.length - 1);
-    setVisibleSlideRange({ start: 0, end: initialEnd });
-  }, [visibleSlides, slides.length]);
+    const initialEnd = Math.min((visibleSlides || 1) - 1, slides.length - 1)
+    setVisibleSlideRange({ start: 0, end: initialEnd })
+  }, [visibleSlides, slides.length])
 
   // Update visible range when currentSlide changes
   useEffect(() => {
-    if (!visibleSlides || !slides.length) return;
+    if (!visibleSlides || !slides.length) return
 
-    const N = visibleSlides; // Number of visible slides
-    let newStart = visibleSlideRange.start;
-    let newEnd = visibleSlideRange.end;
+    const N = visibleSlides // Number of visible slides
+    let newStart = visibleSlideRange.start
+    let newEnd = visibleSlideRange.end
 
     // Shift the visible range only when the active slide moves beyond the current range
     if (currentSlide > visibleSlideRange.end) {
-      newStart = Math.min(currentSlide - N + 1, slides.length - N);
-      newEnd = Math.min(newStart + N - 1, slides.length - 1);
+      newStart = Math.min(currentSlide - N + 1, slides.length - N)
+      newEnd = Math.min(newStart + N - 1, slides.length - 1)
     } else if (currentSlide < visibleSlideRange.start) {
-      newStart = Math.max(currentSlide, 0);
-      newEnd = Math.min(newStart + N - 1, slides.length - 1);
+      newStart = Math.max(currentSlide, 0)
+      newEnd = Math.min(newStart + N - 1, slides.length - 1)
     }
 
-    setVisibleSlideRange({ start: newStart, end: newEnd });
-  }, [currentSlide, visibleSlides, slides.length]);
+    setVisibleSlideRange({ start: newStart, end: newEnd })
+  }, [currentSlide, visibleSlides, slides.length])
 
   // Handle URL changes to set the correct slide
   useEffect(() => {
-    const queryParams = new URLSearchParams(location.search);
-    const sliderParam = queryParams.get('slider');
+    const queryParams = new URLSearchParams(location.search)
+    const sliderParam = queryParams.get('slider')
 
     if (sliderParam) {
-      const slideIndex = slides.findIndex(slide => slide.id === sliderParam);
+      const slideIndex = slides.findIndex((slide) => slide.id === sliderParam)
       if (slideIndex >= 0) {
-        setCurrentSlide(slideIndex);
+        setCurrentSlide(slideIndex)
       }
     }
 
     // Ensure visibleSlides is updated after the initial render
-    const initialEnd = Math.min((visibleSlides || 1) - 1, slides.length - 1);
-    setVisibleSlideRange({ start: 0, end: initialEnd });
-  }, [location.search, visibleSlides, slides.length]);
+    const initialEnd = Math.min((visibleSlides || 1) - 1, slides.length - 1)
+    setVisibleSlideRange({ start: 0, end: initialEnd })
+  }, [location.search, visibleSlides, slides.length])
 
   // Handle previous and next slide
   const handlePrev = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+  }
 
   const handleNext = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
+    setCurrentSlide((prev) => (prev + 1) % slides.length)
+  }
 
   // Update slider
   const updateSlider = (index) => {
-    setCurrentSlide(index);
-    const newUrl = `${location.pathname}?slider=${slides[index].id}`;
-    window.history.replaceState({}, '', newUrl);
-  };
+    setCurrentSlide(index)
+    const newUrl = `${location.pathname}?slider=${slides[index].id}`
+    window.history.replaceState({}, '', newUrl)
+  }
 
   // Responsive styles
-  const cardDirection = useBreakpointValue({ base: "column", md: "row" });
+  const cardDirection = useBreakpointValue({ base: 'column', md: 'row' })
 
   // Add state to track touch start position
-  const [touchStartX, setTouchStartX] = useState(null);
+  const [touchStartX, setTouchStartX] = useState(null)
 
   // Handle touch start
   const handleTouchStart = (e) => {
-    setTouchStartX(e.touches[0].clientX);
-  };
+    setTouchStartX(e.touches[0].clientX)
+  }
 
   // Handle touch move
   const handleTouchMove = (e) => {
-    if (!touchStartX) return;
+    if (!touchStartX) return
 
-    const touchEndX = e.touches[0].clientX;
-    const diffX = touchStartX - touchEndX;
+    const touchEndX = e.touches[0].clientX
+    const diffX = touchStartX - touchEndX
 
     if (diffX > 50) {
-      handleNext(); // Swipe left
-      setTouchStartX(null);
+      handleNext() // Swipe left
+      setTouchStartX(null)
     } else if (diffX < -50) {
-      handlePrev(); // Swipe right
-      setTouchStartX(null);
+      handlePrev() // Swipe right
+      setTouchStartX(null)
     }
-  };
+  }
 
   return (
     <Flex
@@ -499,8 +499,8 @@ const SolutionEMS = () => {
       // minH="50vh"
       overflowX="hidden"
       // width="100%"
-      mt={{base:"18%",md:"8%"}}
-      mb={{base:"0",md:"11%"}}
+      mt={{ base: '18%', md: '8%' }}
+      mb={{ base: '0', md: '11%' }}
       // bg="red"
     >
       {/* Navigation */}
@@ -523,20 +523,20 @@ const SolutionEMS = () => {
           {slides
             .slice(visibleSlideRange.start, visibleSlideRange.end + 1)
             .map((slide, index) => {
-              const fullTitle = `${slide.title1} ${slide.title2}`.trim();
-              const words = fullTitle.split(" ");
-              const firstPart = words.slice(0, -1).join(" ");
-              const lastWord = words[words.length - 1];
+              const fullTitle = `${slide.title1} ${slide.title2}`.trim()
+              const words = fullTitle.split(' ')
+              const firstPart = words.slice(0, -1).join(' ')
+              const lastWord = words[words.length - 1]
               return (
                 <Box
                   key={index + visibleSlideRange.start}
-                  flex={{ base: "0 0 100%", md: "1" }} // Single box in mobile, multiple in desktop
+                  flex={{ base: '0 0 100%', md: '1' }} // Single box in mobile, multiple in desktop
                   textAlign="left"
-                // alignItems={{base:"flex-start"}}
-                // bg="orange"
+                  // alignItems={{base:"flex-start"}}
+                  // bg="orange"
                 >
                   {/* <HeadingAnimation> */}
-                  <Box w={{ base: "80%", md: "100%" }}>
+                  <Box w={{ base: '80%', md: '100%' }}>
                     <Text
                       whiteSpace="normal"
                       wordBreak="break-word"
@@ -546,19 +546,19 @@ const SolutionEMS = () => {
                       cursor="pointer"
                       color={
                         currentSlide === index + visibleSlideRange.start
-                          ? "blue.600"
-                          : "gray.800"
+                          ? 'blue.600'
+                          : 'gray.800'
                       }
                       fontWeight={
                         currentSlide === index + visibleSlideRange.start
-                          ? "600"
-                          : "500"
+                          ? '700' // 600
+                          : '400' // 500
                       }
                       onClick={() =>
                         updateSlider(index + visibleSlideRange.start)
                       }
                     >
-                      {firstPart} {isDesktop ? <br /> : " "} {lastWord}
+                      {firstPart} {isDesktop ? <br /> : ' '} {lastWord}
                     </Text>
                   </Box>
                   {currentSlide === index + visibleSlideRange.start && (
@@ -578,7 +578,7 @@ const SolutionEMS = () => {
                     </svg>
                   )}
                 </Box>
-              );
+              )
             })}
         </Box>
 
@@ -590,10 +590,10 @@ const SolutionEMS = () => {
           // transform="translateY(-50%)"
           align="space-between"
           gap={2}
-        // bg="green"
+          // bg="green"
         >
           {visibleSlideRange.end < slides.length - 1 && (
-            <Flex gap={1} align="center" display={{ base: "none", md: "flex" }}>
+            <Flex gap={1} align="center" display={{ base: 'none', md: 'flex' }}>
               {[...Array(slides.length - visibleSlideRange.end - 1)].map(
                 (_, index) => (
                   <Box
@@ -628,9 +628,9 @@ const SolutionEMS = () => {
                 alignItems="center"
                 justifyContent="center"
                 cursor="pointer"
-                bgColor={"white"}
+                bgColor={'white'}
                 _hover={{
-                  background: { base: "white", md: "#e0e0e0" }, // White for mobile, gray for desktop
+                  background: { base: 'white', md: '#e0e0e0' }, // White for mobile, gray for desktop
                 }}
                 onClick={handlePrev} // Use handlePrev for left navigation
               >
@@ -642,7 +642,7 @@ const SolutionEMS = () => {
                 </svg>
               </Button>
               <Button
-                variant={"solid"}
+                variant={'solid'}
                 width="31px"
                 height="31px"
                 minWidth="31px"
@@ -653,9 +653,9 @@ const SolutionEMS = () => {
                 alignItems="center"
                 justifyContent="center"
                 cursor="pointer"
-                bgColor={"white"}
+                bgColor={'white'}
                 _hover={{
-                  background: { base: "white", md: "#e0e0e0" }, // White for mobile, gray for desktop
+                  background: { base: 'white', md: '#e0e0e0' }, // White for mobile, gray for desktop
                 }}
                 onClick={handleNext} // Use handleNext for right navigation
               >
@@ -680,13 +680,13 @@ const SolutionEMS = () => {
         alignItems="stretch" // Ensure children stretch to fill the height
         onTouchStart={handleTouchStart} // Add touch start handler
         onTouchMove={handleTouchMove} // Add touch move handler
-      // borderRadius="5px"
-      // overflow="hidden"
-      // bg="blue"
+        // borderRadius="5px"
+        // overflow="hidden"
+        // bg="blue"
       >
         {slides.map((slide, index) => (
           <Box key={index} minW={`${100 / slides.length}%`} height="auto">
-            {" "}
+            {' '}
             {/* Change from fit-content to auto */}
             {/* Main Container */}
             <Flex
@@ -697,25 +697,25 @@ const SolutionEMS = () => {
               direction={cardDirection}
               position="relative"
               height="100%" // Ensure it fills the parent's height
-            // bg="red"
+              // bg="red"
             >
               {/* Card Content */}
               <Flex
                 p={5}
-                justifyContent={{ md: "space-between" }}
+                justifyContent={{ md: 'space-between' }}
                 gap={3}
                 height="100%"
-                direction={{ base: "column", md: "row" }}
+                direction={{ base: 'column', md: 'row' }}
                 // bg="blue"
               >
                 {/* left portion of the content card */}
                 <Flex
-                  order={{ base: "2", md: "1" }}
+                  order={{ base: '2', md: '1' }}
                   direction="column"
                   gap={5}
                   // height="100%"
                   zIndex={1}
-                  width={{ base: "100%", md: "60%" }}
+                  width={{ base: '100%', md: '60%' }}
                   // bg="blue"
                 >
                   {/* First Box with 0.1s delay */}
@@ -724,8 +724,8 @@ const SolutionEMS = () => {
                     initial={{ scale: 0.7, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: false, amount: 0.1 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
-                    p={{ base: "4", md: "8" }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
+                    p={{ base: '4', md: '8' }}
                     direction="column"
                     bg="#E7E7E7"
                     // width="100%"
@@ -733,17 +733,17 @@ const SolutionEMS = () => {
                     borderRadius="24px"
                     zIndex={2}
                     backdropFilter="blur(2px)"
-                  // bg="red"
+                    // bg="red"
                   >
                     <Heading
-                      fontSize={{ base: "24px", md: "36px" }}
+                      fontSize={{ base: '24px', md: '36px' }}
                       fontWeight="500"
                       lineHeight="normal"
                       fontStyle="normal"
                       color="black"
                     >
-                      {slide.title1}{" "}
-                      <span style={{ color: "#DB7B3A" }}>{slide.title2}</span>
+                      {slide.title1}{' '}
+                      <span style={{ color: '#DB7B3A' }}>{slide.title2}</span>
                     </Heading>
 
                     <Text
@@ -790,15 +790,15 @@ const SolutionEMS = () => {
                     initial={{ scale: 0.7, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: false, amount: 0.1 }}
-                    transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-                    p={{ base: "4", md: "8" }}
+                    transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
+                    p={{ base: '4', md: '8' }}
                     direction="column"
-                    height={{base:"100%",md:"50%"}}
+                    height={{ base: '100%', md: '50%' }}
                     bg="#BECEDC"
                     borderRadius="24px"
                     zIndex={2}
                     backdropFilter="blur(2px)"
-                  // bg="red"
+                    // bg="red"
                   >
                     <Box>
                       {slide.description2.map((text, i) => (
@@ -807,7 +807,7 @@ const SolutionEMS = () => {
                           fontWeight="500"
                           fontSize="16px"
                           color="black"
-                          lineHeight={{base:"100%",md:"1.2"}}
+                          lineHeight={{ base: '100%', md: '1.2' }}
                           // lineHeight="1"
                           mb={5}
                         >
@@ -819,19 +819,19 @@ const SolutionEMS = () => {
                 </Flex>
                 {/* Right portion (positioned absolutely) */}
                 <Flex
-                  order={{ base: "1", md: "2" }}
+                  order={{ base: '1', md: '2' }}
                   direction="column"
-                  justifyContent={{ base: "center", md: "space-between" }}
-                  alignItems={{ base: "center" }}
+                  justifyContent={{ base: 'center', md: 'space-between' }}
+                  alignItems={{ base: 'center' }}
                   width="100%"
-                // bg="blue"
+                  // bg="blue"
                 >
                   {/* Top right Image (positioned absolutely) */}
                   <Box
                     as={motion.div}
-                    width={{ base: "100%", md: "100%" }} // Allow the box to take up available space
-                    height={{ base: "100%", md: "100%" }} // Height remains in percentage
-                    minHeight={{ base: "200px", md: "0" }} // Ensure a minimum height for mobile view
+                    width={{ base: '100%', md: '100%' }} // Allow the box to take up available space
+                    height={{ base: '100%', md: '100%' }} // Height remains in percentage
+                    minHeight={{ base: '200px', md: '0' }} // Ensure a minimum height for mobile view
                     zIndex={3}
                     initial={{ scale: 0.7, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
@@ -847,10 +847,13 @@ const SolutionEMS = () => {
                     alignItems="center"
                     justifyContent="space-between"
                     mt={{
-                      base:"0", // Mobile (default)
-                      md: index === 0 || index === slides.length - 1 ? "-10%" : "0" // Desktop
+                      base: '0', // Mobile (default)
+                      md:
+                        index === 0 || index === slides.length - 1
+                          ? '-10%'
+                          : '0', // Desktop
                     }} // Apply margin-top for first and last slides
-                  // bg="red"
+                    // bg="red"
                   >
                     {slide.image ? (
                       <Image
@@ -858,9 +861,9 @@ const SolutionEMS = () => {
                         src={`${process.env.PUBLIC_URL}${slide.image}`}
                         alt={slide.title1}
                         style={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "contain",
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'contain',
                         }}
                       />
                     ) : (
@@ -880,7 +883,7 @@ const SolutionEMS = () => {
                       flexDirection="column"
                       borderRadius="12px"
                       gap={4}
-                      display={{ base: "none", md: "flex" }}
+                      display={{ base: 'none', md: 'flex' }}
                       maxWidth="630px"
                       zIndex={3}
                       p={6}
@@ -919,10 +922,10 @@ const SolutionEMS = () => {
                               src={benefit.image}
                               alt={benefit.title}
                               style={{
-                                width: "35px",
-                                height: "35px",
-                                objectFit: "cover",
-                                borderRadius: "8px",
+                                width: '35px',
+                                height: '35px',
+                                objectFit: 'cover',
+                                borderRadius: '8px',
                               }}
                             />
                             <Text
@@ -931,7 +934,7 @@ const SolutionEMS = () => {
                               color="black"
                               mt={2}
                             >
-                              {benefit.title.split(" ").slice(0, -1).join(" ")}
+                              {benefit.title.split(' ').slice(0, -1).join(' ')}
                             </Text>
                             <Text
                               fontSize="16px"
@@ -939,7 +942,7 @@ const SolutionEMS = () => {
                               color="black"
                               mt={1}
                             >
-                              {benefit.title.split(" ").slice(-1)}
+                              {benefit.title.split(' ').slice(-1)}
                             </Text>
                           </Box>
                         ))}
@@ -953,7 +956,7 @@ const SolutionEMS = () => {
         ))}
       </Flex>
     </Flex>
-  );
-};
+  )
+}
 
-export default SolutionEMS;
+export default SolutionEMS

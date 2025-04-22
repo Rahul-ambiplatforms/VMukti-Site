@@ -9,6 +9,8 @@ import ScrollToTop from './components/ScrollToTop';
 import ErrorBoundary from './components/ErrorBoundary';
 import PageContentWrapper from './components/PageContentWrapper';
 import AmbicamLandingPage from './pages/Ambicam/AmbicamLandingPage';
+import BlogsDashboard from './pages/Blogs/BlogsDashboard';
+import BlogsOverviewDash from './pages/Blogs/BlogsOverviewDash';
 // Lazy load components
 const VMuktiHomepage = lazy(() => import('./pages/Home/VMuktiHomepage'));
 const TechnologyDashboard = lazy(() => import('./pages/Technology/TechnologyDashboard'));
@@ -48,6 +50,8 @@ function App() {
                 <Route path="/whoweare" element={<WhoWeare />} />
                 <Route path="/whoweare/eventspotlight" element={<EventSpotlight />} />
                 <Route path="/whoweare/careers" element={<VMuktiCareers />} />
+                <Route path="/whoweare/blogs" element={<BlogsDashboard />} />
+                <Route path="/whoweare/blogs/:url_name" element={<BlogsOverviewDash />} />
                 <Route path="/serving" element={<OurServings />} />
                 <Route path="/serving/:name" element={<ServingsDock />} />
                 <Route path="/contactus" element={<ContactUs />} />
