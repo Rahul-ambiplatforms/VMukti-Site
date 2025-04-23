@@ -719,7 +719,7 @@ const SolutionEMS = () => {
                   width={{ base: '100%', md: '60%' }}
                 >
                   {/* First Box with 0.1s delay */}
-                  <Flex
+                  <Flex 
                     as={motion.div}
                     initial={{ scale: 0.7, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
@@ -728,11 +728,8 @@ const SolutionEMS = () => {
                     p={{ base: '4', md: '8' }}
                     direction="column"
                     bg="#E7E7E7"
-                    maxH={{md:"50%"}}
-                    h="50%"
-                    // justifyContent="space-between"
-                    // width="100%"
-                    // mb="-0.5%"
+                    h={{base:"60%",md:"50%"}}
+                    maxH={{base:"60%",md:"50%"}}
                     borderRadius="24px"
                     zIndex={2}
                     backdropFilter="blur(2px)"
@@ -797,8 +794,8 @@ const SolutionEMS = () => {
                     transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
                     p={{ base: '4', md: '8' }}
                     direction="column"
-                    h="50%"
-                    maxH={{md:"50%"}}
+                    h={{base:"40%",md:"50%"}}
+                    maxH={{base:"40%",md:"50%"}}
                     // height={{ base: '100%', md: '50%' }}
                     bg="#BECEDC"
                     borderRadius="24px"

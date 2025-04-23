@@ -7,7 +7,7 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react'
 import { useRef, useState } from 'react'
-import { motion } from 'framer-motion' //AnimatePresence, color
+// import { motion } from 'framer-motion' //AnimatePresence, color
 import CulturalSection from '../../components/CulturalSection'
 import HeadingAnimation from '../../components/Animation/Text/HeadingAnimation'
 import SubHeadingAnimation from '../../components/Animation/Text/SubHeadingAnimation'
@@ -137,7 +137,8 @@ const dashboardItems = [
 const EventSpotlight = () => {
   const svgSize = useBreakpointValue({ base: '13px', md: '25px' })
   const swiperRef = useRef(null) // Initialize with null
-  const [currentIndex, setCurrentIndex] = useState(0) //I have to solve the yarn build error here...
+  // const [currentIndex, setCurrentIndex] = useState(0) //I have to solve the yarn build error here...
+  const [currentIndex] = useState(0) 
   // const [direction, setDirection] = useState(0)
 
   // Derived state for visible items

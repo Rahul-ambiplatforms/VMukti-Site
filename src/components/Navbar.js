@@ -78,10 +78,19 @@ const dropdownItems = {
     ],
 };
 
+const pathToLinkName = {
+    '/': 'Home',
+    '/technology': 'Technology',
+    '/solutions': 'Solutions',
+    '/industries': 'Industries',
+    '/serving': 'Our Serving',
+    '/whoweare': 'Who we are',
+};
+    
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     // const [isAccordionOpen, setIsAccordionOpen] = useState(false)
-    const [activeLink, setActiveLink] = useState('Home') //I have to solve yarn build error here...
+    const [activeLink, setActiveLink] = useState('Home') //I have to solve yarn build error here...(if any error uncomment 4 more lines which have setavtivelink)
     const [hoverTimeouts, setHoverTimeouts] = useState({});
     const [menuOpenStates, setMenuOpenStates] = useState({});
     const [isNavbarVisible, setIsNavbarVisible] = useState(true);
@@ -101,21 +110,12 @@ const Navbar = () => {
         }
     };
 
-    const pathToLinkName = {
-        '/': 'Home',
-        '/technology': 'Technology',
-        '/solutions': 'Solutions',
-        '/industries': 'Industries',
-        '/serving': 'Our Serving',
-        '/whoweare': 'Who we are',
-    };
-
     useEffect(() => {
         const currentLink = pathToLinkName[location.pathname];
         if (currentLink) {
             setActiveLink(currentLink);
         }
-    }, [location]);//I have to solve the yarn build error here...
+    }, [location, pathToLinkName]); // Add 'pathToLinkName' to the dependency array
 
     useEffect(() => {
         let lastScrollY = window.scrollY;
@@ -144,9 +144,9 @@ const Navbar = () => {
     const contactBtnSize = useBreakpointValue({ base: '120px', md: '146px' })
     const contactBtnHeight = useBreakpointValue({ base: '50px', md: '50px' })
 
-    // const handleLinkClick = (link) => { //I have to solve the yarn build error here...
-    //     setActiveLink(link) 
-    // }
+    const handleLinkClick = (link) => { //I have to solve the yarn build error here...
+        setActiveLink(link) 
+    }
 
     const handleMouseEnter = (menuName) => {
         clearTimeout(hoverTimeouts[menuName]);

@@ -2,7 +2,7 @@ import {
   Box,
   Grid,
   Text,
-  Image,
+  // Image,
   useBreakpointValue,
   Flex,
 } from '@chakra-ui/react'
