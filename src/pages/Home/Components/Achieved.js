@@ -24,9 +24,9 @@ const useCountUp = (target, duration = 1000) => {
 
     if (ref.current) observer.observe(ref.current)
 
-    return () => {
-      if (ref.current) observer.unobserve(ref.current);//I have to solve the yarn build error here...
-    };
+    // return () => {
+    //   if (ref.current) observer.unobserve(ref.current);//I have to solve the yarn build error here...
+    // };
   }, []);
 
   useEffect(() => {

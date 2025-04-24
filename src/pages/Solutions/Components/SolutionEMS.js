@@ -405,12 +405,12 @@ const SolutionEMS = () => {
   })
 
   // Ensure visibleSlides is set correctly during the initial render
-  useEffect(() => {
-    if (!visibleSlides || !slides.length) return
+  // useEffect(() => {
+  //   if (!visibleSlides || !slides.length) return
 
-    const initialEnd = Math.min((visibleSlides || 1) - 1, slides.length - 1)
-    setVisibleSlideRange({ start: 0, end: initialEnd })
-  }, [visibleSlides, slides.length])
+  //   const initialEnd = Math.min((visibleSlides || 1) - 1, slides.length - 1)
+  //   setVisibleSlideRange({ start: 0, end: initialEnd })
+  // }, [visibleSlides, slides.length])
 
   // Update visible range when currentSlide changes
   useEffect(() => {
@@ -430,7 +430,7 @@ const SolutionEMS = () => {
     }
 
     setVisibleSlideRange({ start: newStart, end: newEnd })
-  }, [currentSlide, visibleSlides, slides.length]) //I have to solve the yarn build error here...
+  }, [currentSlide, visibleSlides, slides.length])//+3 //I have to solve the yarn build error here...
 
   // Handle URL changes to set the correct slide
   useEffect(() => {
@@ -770,7 +770,7 @@ const SolutionEMS = () => {
                     </Text>
                     <Box>
                       {slide.description.map((text, i) => (
-                        <Text
+                        <Box
                           key={i}
                           fontWeight="500"
                           fontSize="16px"
@@ -780,7 +780,7 @@ const SolutionEMS = () => {
                           mb={2}
                         >
                           {text}
-                        </Text>
+                        </Box>
                       ))}
                     </Box>
                   </Flex>
@@ -805,17 +805,17 @@ const SolutionEMS = () => {
                   >
                     <Box>
                       {slide.description2.map((text, i) => (
-                        <Text
+                        <Box
                           key={i}
+                          as="div" // Render as a <div> instead of a <p>
                           fontWeight="500"
                           fontSize="16px"
                           color="black"
                           lineHeight={{ base: '100%', md: '1.2' }}
-                          // lineHeight="1"
                           mb={5}
                         >
                           {text}
-                        </Text>
+                        </Box>
                       ))}
                     </Box>
                   </Flex>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Heading, VStack, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
