@@ -8,7 +8,7 @@ import {
   Flex,
   useBreakpointValue,
 } from '@chakra-ui/react'
-import { motion, useInView } from 'framer-motion'
+import { useInView } from 'framer-motion'
 import { keyframes } from '@emotion/react'
 import { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
@@ -319,7 +319,7 @@ const industriesData = [
 ]
 
 export default function IndustryDashboard() {
-  const [isDesktop, setIsDesktop] = useState(true) //I have to solve the yarn build error here...
+  // const [isDesktop, setIsDesktop] = useState(true) //I have to solve the yarn build error here...
   const [columns, setColumns] = useState(4)
 
   const svgSize = useBreakpointValue({ base: '13px', md: '25px' })
@@ -334,10 +334,10 @@ export default function IndustryDashboard() {
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth
-      setIsDesktop(width >= 768)
+      // setIsDesktop(width >= 768)
       if (width >= 992) {
         setColumns(4)
-      } else if ((992) > (width) >= (768)) {
+      } else if ((width >= 768) && (width < 992)) {
         setColumns(3)
       } else {
         setColumns(2)
