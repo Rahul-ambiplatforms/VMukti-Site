@@ -174,13 +174,13 @@ const industriesData = [
 ]
 
 export default function IndustryGrid() {
-  const [isDesktop, setIsDesktop] = useState(true) //I have to solve the yarn build error here...
+  // const [isDesktop, setIsDesktop] = useState(true) //I have to solve the yarn build error here...
   const [columns, setColumns] = useState(4)
 
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth
-      setIsDesktop(width >= 768)
+      // setIsDesktop(width >= 768)
       if (width >= 992) {
         setColumns(4)
       } else if (width >= 768) {

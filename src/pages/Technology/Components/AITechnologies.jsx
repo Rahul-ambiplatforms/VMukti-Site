@@ -99,7 +99,7 @@ const AITechnologies = () => {
         ),
       })
     }
-  }, [visibleSlidesValue, slides.length]) //I have to solve the yarn build error here...
+  }, [setCurrentSlide,visibleSlidesValue, slides.length]) // I have to solve the yarn build error here...
 
   useEffect(() => {
     const updateVisibleSlides = () => {
@@ -124,7 +124,7 @@ const AITechnologies = () => {
     }
 
     updateVisibleSlides()
-  }, [currentSlide, visibleSlides, slides.length]) //I have to solve the yarn build error here...
+  }, [currentSlide, visibleSlides, slides.length,visibleSlideRange.end,visibleSlideRange.start]) //I have to solve the yarn build error here...
 
   // Add state for touch positions
   const [touchStartX, setTouchStartX] = useState(0)

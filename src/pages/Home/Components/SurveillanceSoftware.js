@@ -16,6 +16,7 @@ const SurveillanceSoftware = () => {
   useEffect(() => {
     const screenWidth = window.innerWidth;
     const scaleValue = screenWidth < 768 ? 1.5 : 1.1; // Tailwind's md breakpoint is 768px
+    // Build Error
     const imageScaleAnimation = gsap.to(imageRef.current, {
       scale: scaleValue,
       scrollTrigger: {
