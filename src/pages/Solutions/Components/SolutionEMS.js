@@ -773,7 +773,7 @@ const SolutionEMS = () => {
                     </Text>
                     <Box>
                       {slide.description.map((text, i) => (
-                        <Text
+                        <Box
                           key={i}
                           fontWeight="500"
                           fontSize="16px"
@@ -783,7 +783,7 @@ const SolutionEMS = () => {
                           mb={2}
                         >
                           {text}
-                        </Text>
+                        </Box>
                       ))}
                     </Box>
                   </Flex>
@@ -808,17 +808,17 @@ const SolutionEMS = () => {
                   >
                     <Box>
                       {slide.description2.map((text, i) => (
-                        <Text
+                        <Box
                           key={i}
+                          as="div" // Render as a <div> instead of a <p>
                           fontWeight="500"
                           fontSize="16px"
                           color="black"
                           lineHeight={{ base: '100%', md: '1.2' }}
-                          // lineHeight="1"
                           mb={5}
                         >
                           {text}
-                        </Text>
+                        </Box>
                       ))}
                     </Box>
                   </Flex>
