@@ -12,6 +12,8 @@ import AmbicamLandingPage from './pages/Ambicam/AmbicamLandingPage';
 import BlogsDashboard from './pages/Blogs/BlogsDashboard';
 import BlogsOverviewDash from './pages/Blogs/BlogsOverviewDash';
 import CustomCursor from './components/CustomCursor';
+import Particles from '@tsparticles/react';
+import ParticlesComponent from './components/Particles';
 // Lazy load components
 const VMuktiHomepage = lazy(() => import('./pages/Home/VMuktiHomepage'));
 const TechnologyDashboard = lazy(() => import('./pages/Technology/TechnologyDashboard'));
@@ -41,7 +43,8 @@ function App() {
         <ErrorBoundary>
           <Navbar />
           <ScrollToTop />
-          <Box pt={{ base: "20%", sm: "20%", md: "100px" }} bg="#E7E7E7">
+          <Box pt={{ base: "20%", sm: "20%", md: "100px" }} bg="#E7E7E7" style={{cursor: 'none'}}>
+            <ParticlesComponent />
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<VMuktiHomepage />} />
