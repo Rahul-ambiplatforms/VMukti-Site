@@ -50,7 +50,7 @@ const AITechnologies = () => {
         'AI-driven automation streamlines processes, reduces human intervention, and improves efficiency. Machine learning algorithms detect patterns, make intelligent decisions, and automate workflows.\n\nIn surveillance, AI minimizes false alarms and optimizes resource allocation. Automated monitoring of live feeds and video analysis ensures faster decision-making and cost savings.',
         // "In surveillance, AI minimizes false alarms and optimizes resource allocation. Automated monitoring of live feeds and video analysis ensures faster decision-making and cost savings.",
       ],
-      image: './assets/aidr.png',
+      image: './assets/objectdetection.png',
     },
     {
       title: 'GPT in Video Surveillance',
