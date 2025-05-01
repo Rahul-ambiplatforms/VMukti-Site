@@ -23,7 +23,10 @@ export default function AmbicamLandingPage() {
     <PageContentWrapper>
       <Box
         bgImage="url('./assets/ambidash1.png')"
-        // bgColor="red"
+        // bgImage={{
+          // base: "url('./assets/ambidash-mobile.png')", // Mobile view
+          // md: "url('./assets/ambidash1.png')"          // Desktop view
+        // }}
         bgSize={{ base: "auto 50%", md: "cover" }} // Decrease bg image width in mobile view
         w="100%"
         h="100%"
