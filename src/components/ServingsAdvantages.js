@@ -3,7 +3,7 @@ import { Box, Flex, Grid, Image, Text } from "@chakra-ui/react"
 const ServingsAdvantages = ({ title, advantages }) => {
     return (
         <>
-            <Flex direction="column" bg="white" color={"#3F77A5"} h={{ base: 'auto', md: '753px' }} p="2%" gap={10} borderRadius="24px" padding="5%">
+            <Flex direction="column" bg="white" color={"#3F77A5"} h={{ base: 'auto', md: 'fit-content' }} p="2%" gap={10} borderRadius="24px" padding="5%">
                 <Flex direction={{base:"column",md:"row"}}>
                     {title.map((part, index) => (
                         <Text as="span" color={part.color} display="inline" key={index} fontSize={{ base: "28px", md: "36px" }} fontWeight="600">
