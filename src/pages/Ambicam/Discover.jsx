@@ -57,7 +57,7 @@ const Discover = () => {
               mb={{ base: "5%", md: "0" }}
             >
               <Text color="black" fontWeight="600">
-                Contact us:
+                Contact us: &nbsp;
               </Text>
               <Link>
                 <Text
