@@ -20,7 +20,7 @@ const MotionBox = motion(Box);
 const MotionButton = motion(Button);
 
 const HeroSection = () => {
-
+  
   const imageRef = useRef(null); // Reference for the image
   const sectionRef = useRef(null); // Reference for the section containing the image
   const ref = useRef(null);
@@ -35,14 +35,14 @@ const HeroSection = () => {
       repeat: -1,
       yoyo: true,
     });
-  }
+  };
 
   const hoverOutAnimation = () => {
     gsap.killTweensOf(imageRef.current);
     gsap.to(imageRef.current, {
       y: 0,
     });
-  }
+  };
 
   // Cleanup function
   // return () => {
@@ -76,7 +76,7 @@ const HeroSection = () => {
       />
 
       {/* above="md" */}
-      <Show above="md" >
+      <Show above="md">
         {/* Decorative Boxes */}
         <Flex
           position="absolute"
@@ -150,7 +150,7 @@ const HeroSection = () => {
               borderRadius="24px 0 0 0"
               zIndex={9}
             />
-
+            {/* This is for Mobile */}
             <MotionImage
               // ml="-20%"
               mt="2%"
@@ -162,7 +162,9 @@ const HeroSection = () => {
               height="600px"
               objectFit="cover"
               initial={{ scale: 0.6, opacity: 1 }}
-              animate={inView ? { scale: 1, opacity: 1 } : { scale: 0.7, opacity: 0.7 }}
+              animate={
+                inView ? { scale: 1, opacity: 1 } : { scale: 0.7, opacity: 0.7 }
+              }
               transition={{ duration: 0.5, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.9 }}
             />
@@ -173,7 +175,7 @@ const HeroSection = () => {
               ml="16%"
               mt="-15%"
               mb="2%" // jenil
-            // bg="red"
+              // bg="red"
             >
               <Box width="13px" height="13px" alignSelf="flex-start" ml="2%">
                 <svg
@@ -230,7 +232,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0.6, x: -50 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-          // bg="red"
+            // bg="red"
           >
             <Text as="span" color="#3F77A5">
               Advanced{" "}
@@ -264,7 +266,9 @@ const HeroSection = () => {
                     gap={8}
                     initial={{ opacity: 0, x: -80 }}
                     // whileInView={{ opacity: 1, x: 0 }}
-                    animate={inView ? { opacity: 1, x: 0 } : { opacity: 0.6, x: -50 }}
+                    animate={
+                      inView ? { opacity: 1, x: 0 } : { opacity: 0.6, x: -50 }
+                    }
                     transition={{ duration: 0.9, ease: "easeOut" }}
                     viewport={{ once: false }}
                   >
@@ -287,7 +291,7 @@ const HeroSection = () => {
                       maxW={{ base: "220px", md: "45%" }}
                       fontSize={{ base: "12px", md: "16px" }}
                       width="45%"
-                      textAlign="justify" //jenil
+                      textAlign="justify"
                     >
                       Got visuals piling up? Our AI turns them into
                       answers—fast. It's like giving your cameras a brain to
@@ -364,7 +368,6 @@ const HeroSection = () => {
                     />
                   </svg>
                 </MotionButton>
-
               </Flex>
             </Flex>
 
