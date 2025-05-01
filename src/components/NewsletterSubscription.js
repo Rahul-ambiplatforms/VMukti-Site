@@ -281,7 +281,10 @@ const NewsletterSubscription = () => {
                     color="#4CC9F0"
                     fontSize={{ base: '12px', md: '14px' }}
                     lineHeight="30px"
-                    _hover={{ textDecoration: 'underline' }}
+                    sx={{
+                      textDecoration: "underline",
+                      // textUnderlineOffset: "2px",
+                    }}
                   >
                     www.ambicam.com
                   </Text>

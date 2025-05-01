@@ -60,7 +60,13 @@ const Discover = () => {
                 Contact us:
               </Text>
               <Link>
-                <Text color="#4CC9F0" _hover={{ textDecoration: "underline" }}>
+                <Text
+                  color="#4CC9F0"
+                  sx={{
+                    textDecoration: "underline",
+                    textUnderlineOffset: "2px",
+                  }}
+                >
                   contact@ambicam.in
                 </Text>
               </Link>
@@ -75,7 +81,13 @@ const Discover = () => {
             />
             <Box mb={{ base: "5%", md: "0" }}>
               <Link>
-                <Text color="#4CC9F0" _hover={{ textDecoration: "underline" }}>
+                <Text
+                  color="#4CC9F0"
+                  sx={{
+                    textDecoration: "underline",
+                    textUnderlineOffset: "2px",
+                  }}
+                >
                   www.ambicam.in
                 </Text>
               </Link>
