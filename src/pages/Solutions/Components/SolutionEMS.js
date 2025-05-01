@@ -324,7 +324,7 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-
+      image: './assets/sol_solution_8_1.png',//change here
       benefits: {
         title: 'Business Benefits',
         data: [

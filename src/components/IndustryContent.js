@@ -264,53 +264,31 @@ const IndustryContent = ({ props, content }) => {
               borderRadius="24px"
               flexShrink="0"
             />
-            <Box
-              position="relative"
-              width="100%"
-              height={{ xl: "630px" }}
-              // display="flex"
-              // alignItems="center"
-              // justifyContent="center"
-              bg="white"
-              borderRadius="20px"
-            >
-              {/* Large image (60% width) - Will extend upward */}
-              <MotionImage
-                src={`${process.env.PUBLIC_URL}/assets/${content.large_image}`}
-                alt={content.large_image_alt}
-                position={{ xl: "absolute" }}
-                // top="-18%"
-                bottom="0%"
-                // right="0"
-                left="0%"
-                flexShrink="1"
-                initial="hidden"
-                animate="visible"
-                variants={{
-                  hidden: { scale: 0.8 },
-                  visible: { scale: 1, transition: { duration: 0.5 } },
-                }}
-                // style={{ transform: "scale(1.1)" }}
-                viewport={{ once: false }}
-              />
+            <Box 
+  position="relative"
+  width="100%"
+  overflow={"hidden"}
+  height={{ xl: "630px" }}
+  borderRadius={"24px"}
+>
+  {/* Large image (will fill the entire box size) */}
+  <MotionImage
+    src={`${process.env.PUBLIC_URL}/assets/${content.large_image}`}
+    alt={content.large_image_alt}
+    width="100%"       // Ensures the image fills the width of the box
+    height="100%"      // Ensures the image fills the height of the box
+    objectFit="cover"  // Ensures the image scales correctly within the box (maintains aspect ratio)
+    initial="hidden"
+    animate="visible"
+    variants={{
+      hidden: { scale: 0.8 },
+      visible: { scale: 1, transition: { duration: 0.5 } },  // Scale it slightly larger
+    }}
+    viewport={{ once: false }}
+  />
+</Box>
 
-              {/* <MotionImage
-                src={`${process.env.PUBLIC_URL}/assets/${content.large_image}`}
-                alt={content.large_image_alt}
-                // top="-18%"
-                // bottom="0%"
-                // right="0"
-                // left="0%"
-                bg="darkred"
-                height="100%"
-                flexShrink="1"
-                initial="hidden"
-                animate="visible"
-                // variants={{ hidden: { scale: 0.8 }, visible: { scale: 1, transition: { duration: 0.5 } } }}
-                // style={{ transform: "scale(1.1)" }}
-                viewport={{ once: false }}
-              /> */}
-            </Box>
+
           </Flex>
 
           {/* Key Applications Section */}
