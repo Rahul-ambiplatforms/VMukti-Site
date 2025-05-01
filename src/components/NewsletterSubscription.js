@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Flex,
@@ -10,11 +10,11 @@ import {
   Link,
   Grid,
   useBreakpointValue,
-} from '@chakra-ui/react'
-import SubscriptionBanner from './SubscriptionBanner'
-import { useLocation, useNavigate } from 'react-router-dom'
+} from "@chakra-ui/react";
+import SubscriptionBanner from "./SubscriptionBanner";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const PhoneIcon = ({ mr = '10px', w = '21px', h = '21px' }) => (
+const PhoneIcon = ({ mr = "10px", w = "21px", h = "21px" }) => (
   <Box
     as="svg"
     width={w}
@@ -29,121 +29,121 @@ const PhoneIcon = ({ mr = '10px', w = '21px', h = '21px' }) => (
       fill="#3F77A5"
     />
   </Box>
-)
+);
 
 const whoWeAreLinks = [
-  { text: 'About Us', path: '/whoweare' },
-  { text: 'Event Spotlight', path: '/whoweare/eventspotlight' },
-  { text: 'Social Impact', path: '/whoweare/socialimpact' },
-  { text: 'Achievements', path: '/whoweare/achievements' },
-  { text: 'Blogs', path: '/whoweare/blogs' },
-  { text: 'Careers', path: '/whoweare/careers' },
-  { text: 'Help Desk', path: '/whoweare/helpdesk' },
-]
+  { text: "About Us", path: "/whoweare" },
+  { text: "Event Spotlight", path: "/whoweare/eventspotlight" },
+  { text: "Social Impact", path: "/whoweare/socialimpact" },
+  { text: "Achievements", path: "/whoweare/achievements" },
+  { text: "Blogs", path: "/whoweare/blogs" },
+  { text: "Careers", path: "/whoweare/careers" },
+  { text: "Help Desk", path: "/whoweare/helpdesk" },
+];
 
 const policyLinks = [
-  { text: 'Terms & Condition', path: '/whoweare/terms-and-condition' },
-  { text: 'Trademark Policy', path: '/whoweare/trademark-policy' },
-  { text: 'Warranty Service', path: '/whoweare/warranty-service' },
-  { text: 'Warranty Policy', path: '/whoweare/warranty-policy' },
-  { text: 'Privacy Policy', path: '/whoweare/privacy-policy' },
-]
+  { text: "Terms & Condition", path: "/whoweare/terms-and-condition" },
+  { text: "Trademark Policy", path: "/whoweare/trademark-policy" },
+  { text: "Warranty Service", path: "/whoweare/warranty-service" },
+  { text: "Warranty Policy", path: "/whoweare/warranty-policy" },
+  { text: "Privacy Policy", path: "/whoweare/privacy-policy" },
+];
 
 const ourServingsLinks = [
-  { text: 'Enterprise', path: '/serving/enterprise' },
-  { text: 'Government', path: '/serving/government' },
-  { text: 'General Consumers', path: '/serving/generalconsumers' },
-]
+  { text: "Enterprise", path: "/serving/enterprise" },
+  { text: "Government", path: "/serving/government" },
+  { text: "General Consumers", path: "/serving/generalconsumers" },
+];
 
 const ourSolutionsLinks = [
-  { text: 'VMS', path: '/solutions?slider=vms' },
-  { text: 'EMS', path: '/solutions?slider=ems' },
-  { text: 'ICCC', path: '/solutions?slider=icc' },
-  { text: 'AI Optimized Cloud Services', path: '/solutions?slider=opt' },
+  { text: "VMS", path: "/solutions?slider=vms" },
+  { text: "EMS", path: "/solutions?slider=ems" },
+  { text: "ICCC", path: "/solutions?slider=icc" },
+  { text: "AI Optimized Cloud Services", path: "/solutions?slider=opt" },
   {
-    text: 'Generative AI in Video Surveillance',
-    path: '/solutions?slider=gav',
+    text: "Generative AI in Video Surveillance",
+    path: "/solutions?slider=gav",
   },
   {
-    text: 'AI-Powered Surveillance Cameras',
-    path: '/solutions?slider=asc',
+    text: "AI-Powered Surveillance Cameras",
+    path: "/solutions?slider=asc",
   },
   {
-    text: 'Flying Squad Vehicle (FSV)',
-    path: '/solutions?slider=fsv',
+    text: "Flying Squad Vehicle (FSV)",
+    path: "/solutions?slider=fsv",
   },
-  { text: 'Live Webcasting & Streaming', path: '/solutions?slider=lws' },
-]
+  { text: "Live Webcasting & Streaming", path: "/solutions?slider=lws" },
+];
 
 const industriesWeServeLinks = [
-  { text: 'Healthcare Industry', path: '/industries/healthcareindustry' },
-  { text: 'Education Industry', path: '/industries/educationindustry' },
+  { text: "Healthcare Industry", path: "/industries/healthcareindustry" },
+  { text: "Education Industry", path: "/industries/educationindustry" },
   {
-    text: 'Border Security Industry',
-    path: '/industries/defenseindustry',
+    text: "Border Security Industry",
+    path: "/industries/defenseindustry",
   },
-  { text: 'Election Industry', path: '/industries/election' },
-  { text: 'Banking Industry', path: '/industries/financeindustry' },
+  { text: "Election Industry", path: "/industries/election" },
+  { text: "Banking Industry", path: "/industries/financeindustry" },
   {
-    text: 'Transportation Industry',
-    path: '/industries/transportationindustry',
-  },
-  {
-    text: 'City Monitoring Industry',
-    path: '/industries/citymonitoring',
-  },
-  { text: 'Retailer Industry', path: '/industries/retailindustry' },
-  { text: 'Manufacturing Industry', path: '/industries/manufacturingindustry' },
-  { text: 'Agriculture Industry', path: '/industries/agricultureindustry' },
-  {
-    text: 'Warehousing & Logistic Industry',
-    path: '/industries/warehousinglogisticindustry',
+    text: "Transportation Industry",
+    path: "/industries/transportationindustry",
   },
   {
-    text: 'Sports & Entertainment Industry',
-    path: '/industries/entertainmentindustry',
+    text: "City Monitoring Industry",
+    path: "/industries/citymonitoring",
   },
-  { text: 'Hospitality Industry', path: '/industries/hospitalityindustry' },
-]
+  { text: "Retailer Industry", path: "/industries/retailindustry" },
+  { text: "Manufacturing Industry", path: "/industries/manufacturingindustry" },
+  { text: "Agriculture Industry", path: "/industries/agricultureindustry" },
+  {
+    text: "Warehousing & Logistic Industry",
+    path: "/industries/warehousinglogisticindustry",
+  },
+  {
+    text: "Sports & Entertainment Industry",
+    path: "/industries/entertainmentindustry",
+  },
+  { text: "Hospitality Industry", path: "/industries/hospitalityindustry" },
+];
 
 const NewsletterSubscription = () => {
-  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false)
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
-  const [isServingsOpen, setIsServingsOpen] = useState(false)
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-  const location = useLocation()
-  const navigate = useNavigate()
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isServingsOpen, setIsServingsOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const navigateTo = (path, linkName, sliderId = null) => {
     if (location.pathname === path) {
       // Avoid unnecessary refresh by replacing the state
-      navigate(path, { replace: true })
+      navigate(path, { replace: true });
     } else {
-      navigate(path)
+      navigate(path);
     }
-  }
+  };
   useEffect(() => {
     const handleResize = () => {
-      setIsIndustriesOpen(false)
-      setIsSolutionsOpen(false)
-      setIsServingsOpen(false)
-      setIsDropdownOpen(false)
-    }
+      setIsIndustriesOpen(false);
+      setIsSolutionsOpen(false);
+      setIsServingsOpen(false);
+      setIsDropdownOpen(false);
+    };
 
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const buttonWidth = useBreakpointValue({
-    base: '146px',
-    md: '146px',
-    lg: '146px',
-  })
+    base: "146px",
+    md: "146px",
+    lg: "146px",
+  });
   const buttonHeight = useBreakpointValue({
-    base: '40px',
-    md: '45px',
-    lg: '50px',
-  })
+    base: "40px",
+    md: "45px",
+    lg: "50px",
+  });
 
   return (
     <>
@@ -151,7 +151,7 @@ const NewsletterSubscription = () => {
         // padding={{base:"4% 4% 1% 4%",md:"4% 2% 1% 2%"}}
         // fontFamily="'Wix Madefor Display', sans-serif"
         fontWeight={600}
-        bg={'#E7E7E7'}
+        bg={"#E7E7E7"}
       >
         {/* Subscription Banner */}
         <SubscriptionBanner />
@@ -160,26 +160,26 @@ const NewsletterSubscription = () => {
         <Flex
           flexWrap="wrap"
           gap="20px"
-          width={{ base: '100%' }}
-          mt={{ base: '5%', md: '0px' }}
+          width={{ base: "100%" }}
+          mt={{ base: "5%", md: "0px" }}
         >
           {/* Who we are */}
           <Box
             position="relative"
-            flex={{ base: '0 0 100%', md: '2' }}
-            width={{ base: '100%' }}
+            flex={{ base: "0 0 100%", md: "2" }}
+            width={{ base: "100%" }}
           >
             {/* Main "Who we are" box */}
             <Flex
               direction="column"
               bg="white"
-              borderRadius={{ base: '20px', md: '24px' }}
+              borderRadius={{ base: "20px", md: "24px" }}
               p="20px"
               justifyContent="space-between"
-              height={{ md: '100%' }}
-              width={{ base: '100%' }}
+              height={{ md: "100%" }}
+              width={{ base: "100%" }}
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              cursor={{ base: 'pointer', md: 'default' }}
+              cursor={{ base: "pointer", md: "default" }}
             >
               <Box>
                 <Flex justify="space-between" align="center">
@@ -187,7 +187,7 @@ const NewsletterSubscription = () => {
                     Who we are
                   </Heading>
                   <Box
-                    display={{ base: 'block', md: 'none' }}
+                    display={{ base: "block", md: "none" }}
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                     cursor="pointer"
                   >
@@ -197,7 +197,7 @@ const NewsletterSubscription = () => {
                       viewBox="0 0 15 9"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      transform={isDropdownOpen ? 'rotate(180)' : ''}
+                      transform={isDropdownOpen ? "rotate(180)" : ""}
                     >
                       <path
                         d="M7.38461 8.077L14.7692 0.692383L-2.86102e-06 0.692382L7.38461 8.077Z"
@@ -215,14 +215,14 @@ const NewsletterSubscription = () => {
                 />
 
                 {/* Desktop content - two columns with bullet points */}
-                <Box display={{ base: 'none', md: 'block' }} mt="5%">
+                <Box display={{ base: "none", md: "block" }} mt="5%">
                   <Flex direction="row">
                     <Box mr="30px">
                       <List spacing="10px">
                         {whoWeAreLinks.map((item, index) => (
                           <ListItem
                             key={index}
-                            _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                            _hover={{ color: "#3F77A5", cursor: "pointer" }}
                             color="#696969"
                             fontSize="14px"
                             fontWeight="500"
@@ -238,7 +238,7 @@ const NewsletterSubscription = () => {
                         {policyLinks.map((item, index) => (
                           <ListItem
                             key={index}
-                            _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                            _hover={{ color: "#3F77A5", cursor: "pointer" }}
                             color="#696969"
                             fontSize="14px"
                             fontWeight="500"
@@ -257,21 +257,21 @@ const NewsletterSubscription = () => {
               <Flex
                 gap={4}
                 alignItems="center"
-                display={{ base: 'none', md: 'flex' }}
+                display={{ base: "none", md: "flex" }}
               >
                 <Button
                   width={buttonWidth}
                   height={buttonHeight}
                   background="#4CC9F0"
                   color="#FFFFFF"
-                  fontSize={'16px'}
+                  fontSize={"16px"}
                   fontWeight="600"
                   borderRadius="20px"
                   flexShrink={0}
-                  onClick={() => navigateTo('/Ambicam', 'Ambicam')}
+                  onClick={() => navigateTo("/Ambicam", "Ambicam")}
                   _hover={{
-                    background: '#3bb9e0',
-                    color: '#FFFFFF',
+                    background: "#3bb9e0",
+                    color: "#FFFFFF",
                   }}
                 >
                   Ambicam
@@ -279,12 +279,9 @@ const NewsletterSubscription = () => {
                 <Link as="a" href="https://www.ambicam.com" isExternal>
                   <Text
                     color="#4CC9F0"
-                    fontSize={{ base: '12px', md: '14px' }}
+                    fontSize={{ base: "12px", md: "14px" }}
                     lineHeight="30px"
-                    sx={{
-                      textDecoration: "underline",
-                      // textUnderlineOffset: "2px",
-                    }}
+                    textDecoration="underline"
                   >
                     www.ambicam.com
                   </Text>
@@ -295,8 +292,8 @@ const NewsletterSubscription = () => {
             {/* Mobile dropdown content - single column without bullet points */}
             {isDropdownOpen && (
               <Box
-                display={{ base: 'block', md: 'none' }}
-                position={{ base: 'relative', md: 'absolute' }}
+                display={{ base: "block", md: "none" }}
+                position={{ base: "relative", md: "absolute" }}
                 width="100%"
                 bg="white"
                 borderRadius="10px"
@@ -313,7 +310,7 @@ const NewsletterSubscription = () => {
                         <Flex
                           align="center"
                           py="10px"
-                          _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                          _hover={{ color: "#3F77A5", cursor: "pointer" }}
                         >
                           <Text
                             fontSize="14px"
@@ -343,7 +340,7 @@ const NewsletterSubscription = () => {
           {/* Contact Us & Our Servings */}
           <Flex
             flexDirection="column"
-            flex={{ base: '0 0 100%', md: '1' }}
+            flex={{ base: "0 0 100%", md: "1" }}
             minW="250px"
             gap={4}
           >
@@ -352,18 +349,18 @@ const NewsletterSubscription = () => {
               {/* Main "Our Servings" box */}
               <Box
                 bg="#BECEDC"
-                borderRadius={{ base: '20px', md: '24px' }}
+                borderRadius={{ base: "20px", md: "24px" }}
                 p="20px"
-                width={{ base: '100%' }}
+                width={{ base: "100%" }}
                 onClick={() => setIsServingsOpen(!isServingsOpen)}
-                cursor={{ base: 'pointer', md: 'default' }}
+                cursor={{ base: "pointer", md: "default" }}
               >
                 <Flex justify="space-between" align="center">
                   <Heading fontSize="16px" fontWeight={700}>
                     Our Servings
                   </Heading>
                   <Box
-                    display={{ base: 'block', md: 'none' }}
+                    display={{ base: "block", md: "none" }}
                     onClick={() => setIsServingsOpen(!isServingsOpen)}
                     cursor="pointer"
                   >
@@ -373,7 +370,7 @@ const NewsletterSubscription = () => {
                       viewBox="0 0 15 9"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      transform={isServingsOpen ? 'rotate(180)' : ''}
+                      transform={isServingsOpen ? "rotate(180)" : ""}
                     >
                       <path
                         d="M7.38461 8.077L14.7692 0.692383L-2.86102e-06 0.692382L7.38461 8.077Z"
@@ -391,12 +388,12 @@ const NewsletterSubscription = () => {
                 />
 
                 {/* Desktop content - always visible */}
-                <Box display={{ base: 'none', md: 'block' }} mt="5%">
+                <Box display={{ base: "none", md: "block" }} mt="5%">
                   <List spacing="10px">
                     {ourServingsLinks.map((item, index) => (
                       <ListItem
                         key={index}
-                        _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                        _hover={{ color: "#3F77A5", cursor: "pointer" }}
                         fontSize="14px"
                         fontWeight="500"
                       >
@@ -411,8 +408,8 @@ const NewsletterSubscription = () => {
               {/* Mobile dropdown content - appears outside main box */}
               {isServingsOpen && (
                 <Box
-                  display={{ base: 'block', md: 'none' }}
-                  position={{ base: 'relative' }}
+                  display={{ base: "block", md: "none" }}
+                  position={{ base: "relative" }}
                   width="100%"
                   bg="white"
                   borderRadius="10px"
@@ -427,7 +424,7 @@ const NewsletterSubscription = () => {
                         <Flex
                           align="center"
                           py="10px"
-                          _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                          _hover={{ color: "#3F77A5", cursor: "pointer" }}
                         >
                           <Text fontSize="14px" fontWeight="500">
                             {item.text} {/* Removed bullet point */}
@@ -457,7 +454,7 @@ const NewsletterSubscription = () => {
               flex="1"
               minW="250px"
               order="4"
-              display={{ base: 'none', md: 'block' }}
+              display={{ base: "none", md: "block" }}
             >
               <Heading
                 fontSize="16px"
@@ -496,12 +493,12 @@ const NewsletterSubscription = () => {
                 flexShrink={0}
                 // ml={{ base: '5px', md: '10px', lg: '15px' }}
                 mt="20%"
-                onClick={() => navigateTo('/contactus', 'contactus')}
+                onClick={() => navigateTo("/contactus", "contactus")}
                 fontWeight={700}
                 gap="2"
                 _hover={{
-                  bg: '#E0F2FE', // Light blue background on hover
-                  color: '#2C5E84',
+                  bg: "#E0F2FE", // Light blue background on hover
+                  color: "#2C5E84",
                 }}
               >
                 Book Demo
@@ -526,19 +523,19 @@ const NewsletterSubscription = () => {
             {/* Main "Our Solutions" box */}
             <Box
               bg="#BECEDC"
-              borderRadius={{ base: '20px', md: '24px' }}
+              borderRadius={{ base: "20px", md: "24px" }}
               p="20px"
-              height={{ md: '100%' }}
-              width={{ base: '100%' }}
+              height={{ md: "100%" }}
+              width={{ base: "100%" }}
               onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
-              cursor={{ base: 'pointer', md: 'default' }}
+              cursor={{ base: "pointer", md: "default" }}
             >
               <Flex justify="space-between" align="center">
                 <Heading fontSize="16px" fontWeight={700}>
                   Our Solutions
                 </Heading>
                 <Box
-                  display={{ base: 'block', md: 'none' }}
+                  display={{ base: "block", md: "none" }}
                   onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
                   cursor="pointer"
                 >
@@ -548,7 +545,7 @@ const NewsletterSubscription = () => {
                     viewBox="0 0 15 9"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    transform={isSolutionsOpen ? 'rotate(180)' : ''}
+                    transform={isSolutionsOpen ? "rotate(180)" : ""}
                   >
                     <path
                       d="M7.38461 8.077L14.7692 0.692383L-2.86102e-06 0.692382L7.38461 8.077Z"
@@ -566,12 +563,12 @@ const NewsletterSubscription = () => {
               />
 
               {/* Desktop content - always visible */}
-              <Box display={{ base: 'none', md: 'block' }} mt="5%">
+              <Box display={{ base: "none", md: "block" }} mt="5%">
                 <List spacing="10px">
                   {ourSolutionsLinks.map((item, index) => (
                     <ListItem
                       key={index}
-                      _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                      _hover={{ color: "#3F77A5", cursor: "pointer" }}
                       fontSize="14px"
                       fontWeight="500"
                     >
@@ -586,8 +583,8 @@ const NewsletterSubscription = () => {
             {/* Mobile dropdown content - appears outside main box */}
             {isSolutionsOpen && (
               <Box
-                display={{ base: 'block', md: 'none' }}
-                position={{ base: 'relative', md: 'absolute' }}
+                display={{ base: "block", md: "none" }}
+                position={{ base: "relative", md: "absolute" }}
                 width="100%"
                 bg="white"
                 borderRadius="10px"
@@ -602,7 +599,7 @@ const NewsletterSubscription = () => {
                       <Flex
                         align="center"
                         py="10px"
-                        _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                        _hover={{ color: "#3F77A5", cursor: "pointer" }}
                       >
                         <Text fontSize="14px" fontWeight="500">
                           {item.text}
@@ -629,19 +626,19 @@ const NewsletterSubscription = () => {
             {/* Main "Industries we serve" box */}
             <Box
               bg="#BECEDC"
-              borderRadius={{ base: '20px', md: '24px' }}
+              borderRadius={{ base: "20px", md: "24px" }}
               p="20px"
-              height={{ md: '100%' }}
-              width={{ base: '100%' }}
+              height={{ md: "100%" }}
+              width={{ base: "100%" }}
               onClick={() => setIsIndustriesOpen(!isIndustriesOpen)}
-              cursor={{ base: 'pointer', md: 'default' }}
+              cursor={{ base: "pointer", md: "default" }}
             >
               <Flex justify="space-between" align="center">
                 <Heading fontSize="16px" fontWeight={700}>
                   Industries we serve
                 </Heading>
                 <Box
-                  display={{ base: 'block', md: 'none' }}
+                  display={{ base: "block", md: "none" }}
                   onClick={() => setIsIndustriesOpen(!isIndustriesOpen)}
                   cursor="pointer"
                 >
@@ -651,7 +648,7 @@ const NewsletterSubscription = () => {
                     viewBox="0 0 15 9"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    transform={isIndustriesOpen ? 'rotate(180)' : ''}
+                    transform={isIndustriesOpen ? "rotate(180)" : ""}
                   >
                     <path
                       d="M7.38461 8.077L14.7692 0.692383L-2.86102e-06 0.692382L7.38461 8.077Z"
@@ -669,12 +666,12 @@ const NewsletterSubscription = () => {
               />
 
               {/* Desktop content - always visible */}
-              <Box display={{ base: 'none', md: 'block' }} mt="5%">
+              <Box display={{ base: "none", md: "block" }} mt="5%">
                 <List spacing="10px">
                   {industriesWeServeLinks.map((item, index) => (
                     <ListItem
                       key={index}
-                      _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                      _hover={{ color: "#3F77A5", cursor: "pointer" }}
                       fontSize="14px"
                       fontWeight="500"
                     >
@@ -689,8 +686,8 @@ const NewsletterSubscription = () => {
             {/* Mobile dropdown content - appears outside main box */}
             {isIndustriesOpen && (
               <Box
-                display={{ base: 'block', md: 'none' }}
-                position={{ base: 'relative', md: 'absolute' }}
+                display={{ base: "block", md: "none" }}
+                position={{ base: "relative", md: "absolute" }}
                 width="100%"
                 bg="white"
                 borderRadius="10px"
@@ -705,7 +702,7 @@ const NewsletterSubscription = () => {
                       <Flex
                         align="center"
                         py="10px"
-                        _hover={{ color: '#3F77A5', cursor: 'pointer' }}
+                        _hover={{ color: "#3F77A5", cursor: "pointer" }}
                       >
                         <Text fontSize="14px" fontWeight="500">
                           {item.text}
@@ -730,8 +727,8 @@ const NewsletterSubscription = () => {
           {/* hide in desktop view */}
           <Box
             bg="#BECEDC"
-            display={{ base: 'block', md: 'none' }}
-            borderRadius={{ base: '20px', md: '24px' }}
+            display={{ base: "block", md: "none" }}
+            borderRadius={{ base: "20px", md: "24px" }}
             p="20px"
             flex="1"
             minW="250px"
@@ -764,7 +761,7 @@ const NewsletterSubscription = () => {
               </Text>
             </Flex>
             <Flex gap={2} justifyContent="center" mt="20%">
-              <Link href={'/contactus'}>
+              <Link href={"/contactus"}>
                 <Button
                   width={buttonWidth}
                   height={buttonHeight}
@@ -777,8 +774,8 @@ const NewsletterSubscription = () => {
                   fontWeight={700}
                   gap="2"
                   _hover={{
-                    bg: '#E0F2FE',
-                    color: '#2C5E84',
+                    bg: "#E0F2FE",
+                    color: "#2C5E84",
                   }}
                 >
                   Book Demo
@@ -796,19 +793,19 @@ const NewsletterSubscription = () => {
                   </svg>
                 </Button>
               </Link>
-              <Link href={'/Ambicam'}>
+              <Link href={"/Ambicam"}>
                 <Button
                   width={buttonWidth}
                   height={buttonHeight}
                   background="#4CC9F0"
                   color="#FFFFFF"
-                  fontSize={'16px'}
+                  fontSize={"16px"}
                   fontWeight="600"
                   borderRadius="20px"
                   flexShrink={0}
                   _hover={{
-                    background: '#3bb9e0',
-                    color: '#FFFFFF',
+                    background: "#3bb9e0",
+                    color: "#FFFFFF",
                   }}
                 >
                   Ambicam
@@ -862,7 +859,7 @@ const NewsletterSubscription = () => {
             {/* Copyright Text */}
 
             <Box justifySelf="center" textAlign="center">
-              <Text fontSize={{ base: '8px', md: '12px' }} color="gray.600">
+              <Text fontSize={{ base: "8px", md: "12px" }} color="gray.600">
                 Copyright © 2025, VMukti Solutions
               </Text>
             </Box>
@@ -874,7 +871,7 @@ const NewsletterSubscription = () => {
               justify="center"
               justifySelf="end"
               align="center" // Ensures vertical alignment
-              display={{ base: 'none', md: 'flex' }}
+              display={{ base: "none", md: "flex" }}
             >
               {[
                 {
@@ -892,7 +889,7 @@ const NewsletterSubscription = () => {
                       />
                     </svg>
                   ),
-                  link: '#',
+                  link: "#",
                 },
                 {
                   svg: (
@@ -909,7 +906,7 @@ const NewsletterSubscription = () => {
                       />
                     </svg>
                   ),
-                  link: '#',
+                  link: "#",
                 },
                 {
                   svg: (
@@ -928,7 +925,7 @@ const NewsletterSubscription = () => {
                       />
                     </svg>
                   ),
-                  link: '#',
+                  link: "#",
                 },
                 {
                   svg: (
@@ -945,7 +942,7 @@ const NewsletterSubscription = () => {
                       />
                     </svg>
                   ),
-                  link: '#',
+                  link: "#",
                 },
                 {
                   svg: (
@@ -962,7 +959,7 @@ const NewsletterSubscription = () => {
                       />
                     </svg>
                   ),
-                  link: '#',
+                  link: "#",
                 },
               ].map((social, index) => (
                 <Link
@@ -970,9 +967,9 @@ const NewsletterSubscription = () => {
                   href={social.link}
                   color="blue.500"
                   _hover={{
-                    color: 'blue.700',
-                    transform: 'scale(1.2)',
-                    transition: 'all 0.3s ease',
+                    color: "blue.700",
+                    transform: "scale(1.2)",
+                    transition: "all 0.3s ease",
                   }}
                 >
                   {social.svg}
@@ -987,7 +984,7 @@ const NewsletterSubscription = () => {
               width="100%"
               justifySelf="end"
               alignItems="center" // Ensures vertical alignment
-              display={{ base: 'flex', md: 'none' }}
+              display={{ base: "flex", md: "none" }}
             >
               {[
                 {
@@ -1005,7 +1002,7 @@ const NewsletterSubscription = () => {
                       />
                     </svg>
                   ),
-                  link: '#',
+                  link: "#",
                 },
                 {
                   svg: (
@@ -1022,7 +1019,7 @@ const NewsletterSubscription = () => {
                       />
                     </svg>
                   ),
-                  link: '#',
+                  link: "#",
                 },
                 {
                   svg: (
@@ -1041,7 +1038,7 @@ const NewsletterSubscription = () => {
                       />
                     </svg>
                   ),
-                  link: '#',
+                  link: "#",
                 },
                 {
                   svg: (
@@ -1058,7 +1055,7 @@ const NewsletterSubscription = () => {
                       />
                     </svg>
                   ),
-                  link: '#',
+                  link: "#",
                 },
                 {
                   svg: (
@@ -1075,7 +1072,7 @@ const NewsletterSubscription = () => {
                       />
                     </svg>
                   ),
-                  link: '#',
+                  link: "#",
                 },
               ].map((social, index) => (
                 <Link
@@ -1083,9 +1080,9 @@ const NewsletterSubscription = () => {
                   href={social.link}
                   color="blue.500"
                   _hover={{
-                    color: 'blue.700',
-                    transform: 'scale(1.2)',
-                    transition: 'all 0.3s ease',
+                    color: "blue.700",
+                    transform: "scale(1.2)",
+                    transition: "all 0.3s ease",
                   }}
                 >
                   {social.svg}
@@ -1096,7 +1093,7 @@ const NewsletterSubscription = () => {
         </Box>
       </Box>
     </>
-  )
-}
+  );
+};
 
-export default NewsletterSubscription
+export default NewsletterSubscription;
