@@ -53,8 +53,8 @@ const TrustedBy = () => {
                 <Flex width="100%" alignItems="center" justifyContent="center" zIndex={1} px={{ base: "16px", md: "0" }}>
                     <Swiper
                         spaceBetween={40}
-                        navigation
-                        pagination
+                        // navigation
+                        // pagination
                         autoplay={{
                             delay: 1000,
                             disableOnInteraction: false,
