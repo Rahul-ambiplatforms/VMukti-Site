@@ -31,10 +31,10 @@ const VideoAnalytics = () => {
   ]
 
   const featureImages = [
-    { image: '/assets/iphone_image.png', height: '100%', minWidth: '250px' },
-    { image: '/assets/LaptopMockup1.png', height: '100%', minWidth: '800px' },
-    { image: '/assets/WebPageMockup1.png', height: '100%', minWidth: '700px' },
-    { image: '/assets/iPadProMockup1.png', height: '100%', minWidth: '250px' },
+    { image: '/assets/iphone_image.1.png', height: '100%', minWidth: '350px', bottom:'10' }, //250px
+    { image: '/assets/LaptopMockup1.1.png', height: '100%', minWidth: '550px', bottom:'0' }, //800px
+    { image: '/assets/WebPageMockup1.1.png', height: '100%', minWidth: '600px', bottom:'0' }, //700px
+    { image: '/assets/iPadProMockup1.1.png', height: '100%', minWidth: '450px', bottom:'0' }, //250px
   ]
 
   const [featureIndex, setFeatureIndex] = useState(0)
@@ -120,6 +120,7 @@ const VideoAnalytics = () => {
                 position="absolute"
                 top="0"
                 left="0"
+                // bg="red"
               />
             </Box>
 
@@ -370,11 +371,11 @@ const VideoAnalytics = () => {
               // src={featureImages[featureIndex].image}
               src={`${process.env.PUBLIC_URL}${featureImages[featureIndex].image}`}
               alt={features[featureIndex].title}
-              objectFit="contain"
+              objectFit="cover"
               width="100%"
               minWidth={featureImages[featureIndex].minWidth}
               position="absolute"
-              bottom={0}
+              bottom={featureImages[featureIndex].bottom}
               right={0}
               zIndex={3}
               style={{
