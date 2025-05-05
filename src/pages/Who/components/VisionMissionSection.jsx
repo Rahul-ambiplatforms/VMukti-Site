@@ -128,6 +128,7 @@ const VisionMissionSection = () => {
           <Text
             fontSize={{ base: '12px', md: '16px' }}
             fontWeight="500"
+            lineHeight="1.2"
             mt={{ base: '2', md: '6' }} // ← Add margin top to push description downward
           >
             To redefine visual intelligence with AI-driven solutions that ensure
@@ -213,6 +214,7 @@ const VisionMissionSection = () => {
           <Text
             fontSize={{ base: '12px', md: '16px' }}
             fontWeight="500"
+            lineHeight="1.2"
             mt={{ base: '2', md: '6' }}
           >
             To deliver cutting-edge surveillance and automation technologies

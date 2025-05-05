@@ -135,7 +135,7 @@ const NewsletterSubscription = () => {
   }, []);
 
   const buttonWidth = useBreakpointValue({
-    base: "146px",
+    base: "130px",
     md: "146px",
     lg: "146px",
   });
@@ -487,7 +487,7 @@ const NewsletterSubscription = () => {
                 height={buttonHeight}
                 justifyContent="space-between"
                 alignItems="center"
-                bg="white"
+                bg="#E7E7E7"
                 color="#3F77A5"
                 borderRadius="20px"
                 flexShrink={0}
@@ -495,6 +495,7 @@ const NewsletterSubscription = () => {
                 mt="20%"
                 onClick={() => navigateTo("/contactus", "contactus")}
                 fontWeight={700}
+                // fontSize={{base:"12px",md:"16px"}}
                 gap="2"
                 _hover={{
                   bg: "#E0F2FE", // Light blue background on hover
@@ -771,6 +772,7 @@ const NewsletterSubscription = () => {
                   color="#3F77A5"
                   borderRadius="20px"
                   flexShrink={0}
+                  fontSize="14px"
                   fontWeight={700}
                   gap="2"
                   _hover={{

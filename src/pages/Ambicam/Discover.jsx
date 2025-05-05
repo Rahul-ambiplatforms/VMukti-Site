@@ -1,8 +1,8 @@
 import React from "react";
 // import PageContentWrapper from "../../components/PageContentWrapper";
 // Divider,
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Box, Flex, Image, Text, Link } from "@chakra-ui/react";
+// import { Link } from "react-router-dom";
 
 const Discover = () => {
   return (
@@ -59,12 +59,11 @@ const Discover = () => {
               <Text color="black" fontWeight="600">
                 Contact us: &nbsp;
               </Text>
-              <Link>
+              <Link href="mailto:contact@ambicam.in" isExternal>
                 <Text
                   color="#4CC9F0"
                   sx={{
-                    textDecoration: "underline",
-                    textUnderlineOffset: "2px",
+                    textDecoration: "underline"
                   }}
                 >
                   contact@ambicam.in
@@ -80,12 +79,11 @@ const Discover = () => {
               borderRadius="2px"
             />
             <Box mb={{ base: "5%", md: "0" }}>
-              <Link>
+              <Link href="https://www.ambicam.com" isExternal>
                 <Text
                   color="#4CC9F0"
                   sx={{
-                    textDecoration: "underline",
-                    textUnderlineOffset: "2px",
+                    textDecoration: "underline"
                   }}
                 >
                   www.ambicam.in

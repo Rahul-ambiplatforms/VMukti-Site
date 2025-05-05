@@ -127,7 +127,8 @@ const AdvancedComputerVision = ({
         mt={{ base: '1%', md: '1%' }}
       >
         <Flex flexWrap="wrap">
-          {title.map((item, index) => (
+          {title.map((item, index) =>
+          (
             <Text
               as="span"
               color={item.color}

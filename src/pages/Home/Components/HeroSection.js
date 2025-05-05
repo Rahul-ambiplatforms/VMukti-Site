@@ -80,7 +80,7 @@ const HeroSection = () => {
         {/* Decorative Boxes */}
         <Flex
           position="absolute"
-          top={{ md: "10.9%" }}
+          top={{ md: "20%" }}
           bottom={{ base: "59%" }}
           left={{ base: "80%", md: "40%" }}
           transform="translateX(-50%)"
@@ -227,7 +227,7 @@ const HeroSection = () => {
             fontSize={{ base: "32px", md: "48px", lg: "100px" }}
             fontWeight="600"
             fontStyle="normal"
-            lineHeight="normal"
+            lineHeight="1.2"
             zIndex={1}
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0.6, x: -50 }}
