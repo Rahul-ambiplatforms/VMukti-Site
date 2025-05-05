@@ -4,10 +4,12 @@ export const customData = {
   title: [
     { text: 'Neural', color: 'black' },
     { text: 'Networks', color: '#3F77A5' },
+    // { text: ' &', color: 'black' },
     { text: ' & Predictive', color: 'black' },
     { text: 'Intelligence', color: '#DB7B3A' },
     { text: '.', color: '#3F77A5' },
   ],
+// titlewidth: '60%',
   cards: [
     {
       type: 'image',
@@ -44,6 +46,7 @@ export const customData1 = {
     { text: 'How We Make', color: 'black' },
     { text: 'It Work', color: '#3F77A5' },
   ],
+  // titlewidth: '40%',
   subtitle: 'Real-Time Monitoring',
   cards: [
     {
@@ -85,6 +88,7 @@ export const customData2 = {
     },
     // { text: "It Work", color: "#3F77A5" },
   ],
+  // titlewidth: '75%',
   subtitle: 'Real-Time Monitoring',
   cards: [
     {

@@ -937,15 +937,16 @@ const SolutionEMS = () => {
                               color="black"
                               mt={2}
                             >
-                              {benefit.title.split(' ').slice(0, -1).join(' ')}
+                              {/* {benefit.title.split(' ').slice(0, -1).join(' ')} */}
+                              {benefit.title}
                             </Text>
                             <Text
                               fontSize="16px"
                               fontWeight="500"
                               color="black"
-                              mt={1}
+                              // mt={0.5}
                             >
-                              {benefit.title.split(' ').slice(-1)}
+                              {/* {benefit.title.split(' ').slice(-1)} */}
                             </Text>
                           </Box>
                         ))}

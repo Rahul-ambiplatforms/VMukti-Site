@@ -89,23 +89,23 @@ const HeroSection = () => {
                   fontWeight="500"
                   mb="5%"
                 >
-                  Welcome to VMukti Solutions, where innovation meets
-                  intelligence to create a smarter, safer world. Headquartered
-                  in Gujarat, India, VMukti is a leading Original Equipment
-                  Manufacturer (OEM) and System Integrator (SI) specializing in
-                  smart surveillance, visual intelligence, video analytics, and
-                  cloud-based security solutions.
+                  Welcome to <b>VMukti Solutions</b>, where <b>innovation meets
+                  intelligence</b> to create a smarter, safer world. Headquartered
+                  in <b>Gujarat, India</b>,VMukti is a leading <b>Original Equipment
+                  Manufacturer (OEM)</b> and <b>System Integrator (SI)</b> specializing in 
+                  <b> smart surveillance</b>, <b>visual intelligence</b>, <b>video analytics</b>, and
+                  <b>cloud-based security solutions</b>.
                 </Text>
                 <Text
                   fontSize={{ base: "12px", md: "14px", lg: "16px" }}
                   fontWeight="500"
                   maxW="100%" // Ensure text stays within the container
                 >
-                  Since our inception in 2007, we’ve been at the forefront of
+                  Since our inception in <b>2007</b>, we’ve been at the forefront of
                   AI-powered transformation—delivering scalable, robust, and
                   cost-effective technologies that empower a wide range of
-                  sectors including banking, education, healthcare, smart
-                  cities, infrastructure, retail, and telecom.
+                  sectors including <b>banking</b>, <b>education</b>, <b>healthcare</b>, <b>smart
+                  cities</b>, <b>infrastructure</b>, <b>retail</b>, and <b>telecom</b>.
                 </Text>
               </Flex>
             </motion.div>
