@@ -463,6 +463,7 @@ export default function IndustryDashboard() {
               fontSize={{ base: '14px', md: '16px' }}
               // maxW="100%"
               width="100%"
+              lineHeight="1.2"
             >
               We provide AI-driven solutions that revolutionize industries with
               advanced security, automation, and intelligence. Enhancing
@@ -555,6 +556,7 @@ export default function IndustryDashboard() {
                       <Text
                         fontSize="16px"
                         fontWeight="500"
+                        lineHeight="1.2"
                         wordBreak="break-word"
                         textAlign="left"
                         width="100%"

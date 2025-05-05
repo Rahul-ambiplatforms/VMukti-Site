@@ -140,6 +140,7 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
             fontSize={headingSize}
             fontWeight={'400'}
             mb={{ base: "10px", md: "0" }}
+            mt="-3" //remove this line if you want to keep the default margin
             whiteSpace="nowrap"
             textAlign="left"
           >

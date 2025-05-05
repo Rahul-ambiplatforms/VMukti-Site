@@ -100,7 +100,7 @@ const Diagram = () => {
               fontWeight="500"
               maxW={{ base: '90%', md: '400px' }} // Reduced max width
               fontSize={{ md: '16px' }}
-              lineHeight="100%"
+              lineHeight="1.1"
               mt="-1%"
             >
               Swiftly Prototype, Deploy, and Scale Computer Vision Tasks on a
