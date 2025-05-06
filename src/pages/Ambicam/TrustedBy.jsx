@@ -86,7 +86,7 @@ const TrustedBy = () => {
             loop={true}
             freeMode={true}
             // freeModeMomentum={true}
-            speed={1000} // 1s per slide shift, but since auto, it's smooth
+            speed={3000} // 1s per slide shift, but since auto, it's smooth
             autoplay={{
               delay: 0,
               disableOnInteraction: false,
