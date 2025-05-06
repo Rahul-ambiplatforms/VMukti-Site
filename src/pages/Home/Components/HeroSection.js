@@ -75,20 +75,20 @@ const HeroSection = () => {
         ref={sectionRef}
       />
 
-      {/* above="md" */}
       <Show above="md">
         {/* Decorative Boxes */}
         <Flex
           position="absolute"
-          top={{ md: "20%" }}
-          bottom={{ base: "59%" }}
-          left={{ base: "80%", md: "40%" }}
+          top={{ md: "15%" }}
+          bottom={{ base: "59%"}}
+          left={{ base: "80%", md: "32%" }} //40->33
           transform="translateX(-50%)"
           gap={4}
           zIndex={0}
           width="100%"
           justifyContent="center"
           pt={{ base: "10vh", md: "8vh", lg: "20%" }}
+
         >
           <Box
             display={{ base: "none", md: "block", lg: "block" }}
@@ -151,9 +151,9 @@ const HeroSection = () => {
               zIndex={9}
             />
             {/* This is for Mobile */}
-            <MotionImage
+            <Image
               // ml="-20%"
-              mt="2%"
+              mt="5%"
               // pb="5%"
               src="/assets/tablet.png"
               alt="Tablet"
@@ -161,12 +161,12 @@ const HeroSection = () => {
               width="500px"
               height="600px"
               objectFit="cover"
-              initial={{ scale: 0.6, opacity: 1 }}
+              initial={{ scale: 0.9, opacity: 1 }}
               animate={
-                inView ? { scale: 1, opacity: 1 } : { scale: 0.7, opacity: 0.7 }
+                inView ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 1 }
               }
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              viewport={{ once: false, amount: 0.9 }}
+              viewport={{ once: false, amount: 0.2 }}
             />
             <Flex
               direction="column"
@@ -373,12 +373,12 @@ const HeroSection = () => {
 
             {!useBreakpointValue({ base: true, md: false }) && (
               <MotionImage
-                src="/assets/tablet1.webp"
+                src="/assets/tablet1.webp" //------------desktop View
                 position="absolute"
-                bottom="-8%"
+                bottom="-6%" 
                 // bg={{base:"black",sm:"darkred",md:"yellow",lg:"darkorange",xl:"blue"}}
                 right={["-10px", "-20px", "-30px", "-30px"]} // Adjust for breakpoints: [sm, md, lg, xl]
-                width={["320px", "480px", "660px", "840px"]} // Responsive widths
+                width={["320px", "480px", "660px", "940px"]} // Responsive widths (840->940)
                 // height="auto"
                 // zIndex={1}
                 initial={{ scale: 0.8, opacity: 1 }}
