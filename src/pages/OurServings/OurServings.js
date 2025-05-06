@@ -53,7 +53,7 @@ const OurServings = () => {
             position="relative"
           >
             <Flex direction="column">
-              <Box position="relative" mb="20px">
+              <Box position="relative" mb="20px" w={{md:"55%"}}>
                 {/* Title Text (above the white rectangle) */}
                 <MotionText
                   fontSize={{ base: "24px", md: "48px" }}
@@ -148,10 +148,11 @@ const OurServings = () => {
 
                   {/* Description Animation */}
                   <MotionText
-                    color="#000"
+                    color="#000000"
                     fontWeight="500"
                     textAlign="left"
                     fontSize={{ base: "12px", md: "16px" }}
+                    lineHeight="1.2"
                     maxW={{ base: "90%", md: "70%" }}
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -161,46 +162,6 @@ const OurServings = () => {
                     {/* error may occur */}
                     {description}
                   </MotionText>
-
-                  {/* Button Animation */}
-                  {/* <MotionButton
-                                    marginTop="20px"
-                                    width={buttonWidth}
-                                    height={buttonHeight}
-                                    justifyContent="space-between"
-                                    alignItems="center"
-                                    bg="white"
-                                    color="#3F77A5"
-                                    borderRadius="20px"
-                                    _hover={{ bg: "#2c5a7a", color: "white" }}
-                                    px={{ base: "12px", md: "15px", lg: "20px" }}
-                                    display="flex"
-                                    initial={{ opacity: 0, x: -40 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.7, ease: "easeOut" }}
-                                    viewport={{ once: false, amount: 0.1 }}
-                                >
-                                    Book Demo
-                                    <Box
-                                        as="span"
-                                        display="flex"
-                                        alignItems="center"
-                                        marginLeft="8px"
-                                    >
-                                        <svg
-                                            width="14"
-                                            height="14"
-                                            viewBox="0 0 18 18"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <path
-                                                d="M17.5 2C17.5 1.17157 16.8284 0.499999 16 0.499999L2.5 0.5C1.67157 0.5 0.999999 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5L14.5 3.5L14.5 15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM3.06066 17.0607L17.0607 3.06066L14.9393 0.939339L0.93934 14.9393L3.06066 17.0607Z"
-                                                fill="#3F77A5"
-                                            />
-                                        </svg>
-                                    </Box>
-                                </MotionButton> */}
                 </Box>
               </Flex>
             </Flex>

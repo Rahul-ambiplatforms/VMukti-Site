@@ -17,7 +17,6 @@ import { customData, customData1 } from "../../data/AdvancedComputerVisionData";
 // import BlogsContent from "../Blogs/BlogsContent";
 // import BlogsOverviewDash from "../Blogs/BlogsOverviewDash";
 
-
 const VMuktiHomepage = () => {
   return (
     <>
@@ -25,29 +24,47 @@ const VMuktiHomepage = () => {
         <HeroSection />
       </PageContentWrapper>
 
-            <PageContentWrapper>
-                {/* Page Content Sections */}
-                <AdvancedComputerVision {...customData1} />
-                <Flex mt={"5%"} direction="column">
-                    <ObjectDescription
-                        description={`Catch Everything,\n Miss Nothing`}
-                        image="../assets/objectdetection.png"
-                        list={["Precision Tracking", "Automated Alerts", "AI-Powered Recognition", "Adaptive Learning"]}
-                    />
-                </Flex>
-                <Box mt="3%"><SurveillanceSoftware /></Box>
-                <StickySection>
-                    <AdvancedComputerVision {...customData} />
-                    <VideoAnalytics />
-                    <AdvancedComputerVision />
-                </StickySection>
-                <Diagram />
-                <Industries />
-                <AdvancedSurveillance />
-                <Achieved />
-            </PageContentWrapper>
-        </>
-    );
+      <PageContentWrapper>
+        {/* Page Content Sections */}
+        <AdvancedComputerVision
+          cardBgColor1="#BECEDC"
+          cardBgColor2="#EAEAEA"
+          {...customData1}
+        />
+        <Flex mt={"5%"} direction="column">
+          <ObjectDescription
+            description={`Catch Everything,\n Miss Nothing`}
+            image="../assets/objectdetection.png"
+            list={[
+              "Precision Tracking",
+              "Automated Alerts",
+              "AI-Powered Recognition",
+              "Adaptive Learning",
+            ]}
+          />
+        </Flex>
+        <Box mt="3%">
+          <SurveillanceSoftware />
+        </Box>
+        <StickySection>
+          <AdvancedComputerVision
+            cardBgColor1="#BECEDC"
+            cardBgColor2="#EAEAEA"
+            {...customData}
+          />
+          <VideoAnalytics />
+          <AdvancedComputerVision
+            cardBgColor1="#BECEDC"
+            cardBgColor2="#EAEAEA"
+          />
+        </StickySection>
+        <Diagram />
+        <Industries />
+        <AdvancedSurveillance />
+        <Achieved />
+      </PageContentWrapper>
+    </>
+  );
 };
 
 export default VMuktiHomepage;

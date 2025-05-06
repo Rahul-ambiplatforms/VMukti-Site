@@ -6,6 +6,7 @@ const servingsData = {
       { text: 'with AI', color: 'black' },
       { text: 'Vision', color: '#db7b3a' },
     ],
+    width: '80%',
     image: './assets/enterdash.png',
     description:
       'Modern enterprises generate vast visual data, but most remain untapped. AI transforms this data into actionable insights, enhancing efficiency, security, and decision-making.',
@@ -267,6 +268,7 @@ const servingsData = {
       { text: 'with AI-Powered', color: 'black' },
       { text: 'Visual Intelligence', color: '#db7b3a' },
     ],
+    width: '75%',
     image: './assets/govdash.png',
     description:
       'Governments manage vast surveillance data, but without AI, much of it goes unused. AI-driven visual intelligence transforms this data into actionable insights, enhancing national security, urban management, and public safety.',
@@ -493,6 +495,7 @@ const servingsData = {
       { text: 'Solutions for General', color: 'black' },
       { text: 'Consumers', color: '#db7b3a' },
     ],
+    width: '60%',
     image: './assets/consumerdash.png',
     description:
       'AI is transforming everyday automation, security, and decision-making by bringing intelligent, real-time solutions to personal, small business, and creative applications.',
