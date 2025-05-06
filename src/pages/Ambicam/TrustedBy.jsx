@@ -1,6 +1,6 @@
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, FreeMode } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/autoplay";
@@ -84,7 +84,7 @@ const TrustedBy = () => {
             spaceBetween={20}
             loop={true}
             freeMode={true}
-            freeModeMomentum={true}
+            // freeModeMomentum={true}
             speed={1000} // 1s per slide shift, but since auto, it's smooth
             autoplay={{
               delay: 0,
