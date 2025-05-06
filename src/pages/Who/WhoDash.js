@@ -94,7 +94,13 @@ const WhoWeare = () => {
       <HeroSection />
       <VisionMissionSection />
       <StickySection>
-        <AdvancedComputerVision bgColor="#5887AE" {...customData2} />
+        <AdvancedComputerVision 
+          bgColor="#5887AE" 
+          textColor="white" // New prop for text color
+          cardBgColor1="white" // New prop for card background color
+          cardBgColor2="white" // New prop for card background color
+          {...customData2} 
+        />
         <VerticalTimeline />
       </StickySection>
       <Box mt={"5%"}>

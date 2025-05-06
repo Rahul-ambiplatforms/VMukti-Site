@@ -83,7 +83,7 @@ export default function CulturalSection({ gridItems }) {
               <MotionBox
                 key={index}
                 bg={item.bgColor || 'white'}
-                p={{ base: 4, lg: 6 }}
+                p={{ base: 2, lg: 6 }}
                 borderRadius={{ base: '20px', md: '24px' }}
                 width={{
                   base: '280px',
@@ -91,8 +91,8 @@ export default function CulturalSection({ gridItems }) {
                   lg: isWide ? 'calc(672px + 34px)' : '336px',
                 }}
                 height={{ lg: '336px' }}
-                aspectRatio="1/1"
                 minHeight={{ base: '280px', lg: 'auto' }}
+                aspectRatio="1/1"
                 flexShrink="0"
                 initial="hidden"
                 animate="visible"
@@ -192,13 +192,17 @@ export default function CulturalSection({ gridItems }) {
                                   item.textColor ||
                                   'inherit'
                                 }
-                                fontSize={titlePart.fontSize || 'inherit'}
+                                fontSize={{
+                                  base: '36px', // Smaller size for mobile view
+                                  md: titlePart.fontSize || 'inherit', // Default size for larger screens
+                                }}
                                 fontWeight={titlePart.fontWeight || 'inherit'}
                                 fontStyle={titlePart.fontStyle || 'inherit'}
                                 display="inline"
                                 whiteSpace="pre"
+                                order={{ base: 1, md: 'unset' }} // Change order for mobile view
                               >
-                                {titlePart.text}
+                                {titlePart.text}  
                               </Text>
                             ))
                           ) : (
