@@ -40,6 +40,7 @@ const ServingsContent = ({ page: name }) => {
             flexDirection="column"
             alignItems="flex-start"
             position="relative"
+
           >
             {/* Title Container with relative positioning */}
             <Flex
@@ -61,6 +62,7 @@ const ServingsContent = ({ page: name }) => {
                   textAlign="left"
                   position="relative"
                   zIndex="1" // Ensures text stays above the rectangle
+                  w={{base:"100%",md:data.width}}
                 >
                   {data.title.map((part, index) => (
                     <Text

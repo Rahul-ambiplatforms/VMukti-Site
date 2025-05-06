@@ -33,7 +33,7 @@ const VideoAnalytics = () => {
   const featureImages = [
     { image: '/assets/iphone_image.1.png', height: '100%', minWidth: '350px', bottom:'10' }, //250px
     { image: '/assets/LaptopMockup1.1.png', height: '100%', minWidth: '550px', bottom:'0' }, //800px
-    { image: '/assets/WebPageMockup1.1.png', height: '100%', minWidth: '600px', bottom:'0' }, //700px
+    { image: '/assets/WebPageMockup1.1.png', height: '100%', minWidth: '600px', bottom:'-10' }, //700px
     { image: '/assets/iPadProMockup1.1.png', height: '100%', minWidth: '450px', bottom:'0' }, //250px
   ]
 
