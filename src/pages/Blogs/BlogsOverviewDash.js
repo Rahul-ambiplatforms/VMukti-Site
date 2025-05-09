@@ -1,166 +1,295 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import {
   Box,
-  // Container,
-  Flex,
+  Container,
   Heading,
   Text,
   Image,
-  useBreakpointValue,
   VStack,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  UnorderedList,
+  OrderedList,
+  ListItem,
+  Button,
+  Spinner,
+  Flex,
 } from "@chakra-ui/react";
-import blogPosts from "./BlogsPosts"; // Update with the correct path
-import { useParams } from "react-router-dom";
+import blogsData from "./VMukti.blogs[1].json"; // Adjust path if needed
 
-const BlogsOverviewDash = () => {
-  // const { id } = useParams();
-  // const [selectedPost] = useState(blogPosts[id]);
-  const { url_name } = useParams();
-  const [selectedPost] = useState(
-    blogPosts.find((post) => post.url_name === url_name)
-  );
+const renderSlateContent = (content) => {
+  return content.map((node, i) => {
+    if (!node) return null;
 
-  // For responsive design
-  // const flexDirection = useBreakpointValue({ base: "column", md: "row" });
-  const headingSize = useBreakpointValue({ base: "24px", md: "48px" });
+    if (typeof node === "object" && node.text !== undefined) {
+      let textElement = node.text;
+
+      if (node.bold) textElement = <strong key={i}>{textElement}</strong>;
+      if (node.italic) textElement = <em key={i}>{textElement}</em>;
+      if (node.underline) textElement = <u key={i}>{textElement}</u>;
+
+      return (
+        <span key={i} style={{ color: node.color || "inherit" }}>
+          {textElement}
+        </span>
+      );
+    } else if (node.type) {
+      const children = node.children ? renderSlateContent(node.children) : null;
+
+      switch (node.type) {
+        case "paragraph":
+          return (
+            <Box key={i} mb={2}>
+              <Text textAlign={node.align || "left"}>{children}</Text>
+            </Box>
+          );
+        case "bulleted-list":
+          return <UnorderedList key={i}>{children}</UnorderedList>;
+        case "numbered-list":
+          return <OrderedList key={i}>{children}</OrderedList>;
+        case "list-item":
+          return <ListItem key={i}>{children}</ListItem>;
+        case "link":
+          return (
+            <Box
+              as="a"
+              key={i}
+              href={node.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              color="blue.600"
+              textDecoration="underline"
+              _hover={{ color: "blue.700" }}
+              display="inline"
+            >
+              {children}
+            </Box>
+          );
+        default:
+          return <div key={i}>{children}</div>;
+      }
+    }
+
+    return null;
+  });
+};
+
+const getImageUrl = (image) => {
+  if (!image) return null;
+  if (typeof image === "string") return image;
+  if (image instanceof File) return URL.createObjectURL(image);
+  if (image.path) return image.path; // Handles relative paths
+  if (image.relativePath) return image.relativePath; // Handles relativePath field
+  return null;
+};
+
+const BlogsOverview = () => {
+  const params = useParams();
+  const urlWords = params.urlWords || ""; // Fallback to an empty string if undefined
+  const [blog, setBlog] = useState(null);
+
+  useEffect(() => {
+    console.log("Params from useParams:", params); // Debugging log
+    if (!urlWords) {
+      console.warn(
+        "URL Words is undefined or empty. Ensure the route includes a dynamic segment for 'urlWords'."
+      );
+      return;
+    }
+
+    console.log("URL Words from Params:", urlWords); // Debugging log
+    const matched = blogsData.find(
+      (post) =>
+        post.metadata?.urlWords?.toLowerCase() === urlWords?.toLowerCase()
+    );
+    if (!matched) {
+      console.warn("No blog found for the given URL Words:", urlWords); // Debugging log
+    }
+    setBlog(matched);
+  }, [urlWords]);
+
+  if (!blog) {
+    return (
+      <Box textAlign="center" py={10}>
+        <Spinner size="xl" />
+        <Text mt={4}>Loading Blog...</Text>
+      </Box>
+    );
+  }
+
+  // Adjusted destructuring to match the schema
+  const { metadata, content } = blog;
+  const { headingsAndImages = [], faqs = {}, schemas = [] } = content || {}; // Fallbacks for undefined properties
+  const faqComponents = faqs.items || []; // Fallback to an empty array if `items` is undefined
 
   return (
-    //   {/* Featured post with main image */}\
-
-    <Box mx={{ base: "2%", md: "0" }}>
-      <Flex direction="column" mb={{ base: "5%", md: "2%" }}>
-        <Box flex="1" p={{ base: 2, md: 10 }} mb="2%" color="black" w={{base:"100%",md:"65%"}}>
-          <Heading fontSize={headingSize} lineHeight="1.3">
-            <Text as="span">{selectedPost.heading}</Text>
-          </Heading>
-        </Box>
-        <Box
-          display={{base:"none",md:"block"}}
-          position="absolute"
-          // top="-100px"
-          left="180px"
-          opacity="1"
-          zIndex="2"
+    <Box w={{ base: "100%", md: "100%" }} p={{ base: "5%", md: "2%" }}>
+      <Box mb={8}>
+        <Heading
+          as="h1"
+          fontWeight="600"
+          fontSize={{ base: "24px", md: "48px" }}
+          w={{ base: "100%", md: "70%" }}
+          mb={4}
         >
-          <Box
-            width="408px"
-            height="408px"
-            flexShrink={0}
-            borderRadius="408px"
-            border="1px solid #000"
-            opacity="0.12"
-            background="#3F77A5"
-            filter="blur(56.6px)"
-          />
-        </Box>
-        {/* <Flex direction={flexDirection}> */}
-        <Box
-          flex="1"
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          w="100%"
-          px={{ base: "2%", md: "2%" }}
-          // borderRadius="24px"
-          // bg="red"
-        >
-          <Image
-            // src={selectedPost.mainImage}
-            src={`${process.env.PUBLIC_URL}/assets/${selectedPost.mainImage}`}
-            // src={selectedPost.mainImage.startsWith("/") ? selectedPost.mainImage : `/${selectedPost.mainImage}`}
-            alt={selectedPost.heading}
-            objectFit={{ base: "contain", md: "cover" }}
-            borderRadius={{ base: "20px", md: "24px" }}
-            //   maxH="400px"
-          />
-        </Box>
-        {/* </Flex> */}
-      </Flex>
+          {content.title || "Blog Title"}
+        </Heading>
 
-      {/* Blogs Content Starts from here */}
-      <Box bg="white" mx="2%" mt="2%" borderRadius="24px" pt="2%" px="3%">
-        <Box p={4} mt={4}>
-          <Heading
-            as="h2"
-            fontSize={{ base: "24px", md: "36px" }}
-            fontWeight="600"
-            w={{ base: "100%", md: "60%" }}
-          >
-            {selectedPost.contents.title}
-          </Heading>
-          <Text
-            color="#696969"
-            fontSize={{ base: "14px", md: "16px" }}
-            mt={3}
-            lineHeight="100%"
-            w={{ base: "90%", md: "86%" }}
-            align="justify"
-          >
-            {selectedPost.contents.description}
-          </Text>
-        </Box>
+        {content.mainImage && (
+          <Box mb={6}>
+            <Image
+              src={getImageUrl(content.mainImage) || "/placeholder.svg"}
+              alt={content.imageText || "Blog image"}
+              borderRadius="lg"
+              w="100%"
+              h="500px"
+              maxH="500px"
+              objectFit="cover"
+            />
+          </Box>
+        )}
 
-        {/* Comparison section - dynamically generated from contents.heading array */}
-        <VStack spacing={6} align="stretch" mt={2} px={4}>
-          {selectedPost.contents.heading.map((item, index) => (
-            <Box key={index}>
-              <Heading
-                as="h2"
-                fontWeight="600"
-                fontSize={{ base: "24px", md: "36px" }}
-                color="black"
-              >
-                {`${index + 1}. ${item.title}`}
-              </Heading>
-              <Text
-                mt={{ base: "2", md: "4" }}
-                fontSize={{ base: "14px", md: "16px" }}
-                color="black"
-                fontWeight="400"
-                w={{ base: "100%", md: "86%" }}
-                align="justify"
-              >
-                {item.description}
-              </Text>
-            </Box>
-          ))}
-        </VStack>
-
-        {/* Additional image - using the miniImage from contents */}
-        <Box mt={8} borderRadius="24px">
-          <Image
-            // src={selectedPost.contents.miniImage}
-            src={`${process.env.PUBLIC_URL}/assets/${selectedPost.contents.miniImage}`}
-            alt="VMukti Metaverse"
-            w={{ base: "100%", md: "60%" }}
-            h="100%"
-            objectFit="contain"
-          />
-        </Box>
-
-        {/* Conclusion - dynamically fetched from contents object */}
-        <Box mt={8} px={4}>
-          <Heading
-            as="h2"
-            fontSize={{ base: "24px", md: "36px" }}
-            color="#3F77A5"
-          >
-            Conclusion
-          </Heading>
-          <Text
-            mt={{ base: "2", md: "4" }}
-            pb={{ base: "10%", md: "5%" }}
-            fontSize={{ base: "14px", md: "16px" }}
-            color="black"
-            w={{ base: "100%", md: "86%" }}
-            align="justify"
-          >
-            {selectedPost.contents.conclude}
-          </Text>
-        </Box>
+        {content.brief && (
+          <Box mt={4} fontSize="16px">
+            {renderSlateContent(content.brief)}
+          </Box>
+        )}
       </Box>
+
+      <VStack spacing={8} align="stretch">
+        {headingsAndImages.map((component) => {
+          switch (component.type) {
+            case "h2":
+              return (
+                <Heading
+                  as="h2"
+                  key={component.id}
+                  fontSize="36px"
+                  fontWeight="600"
+                >
+                  {renderSlateContent(component.content.text || [])}
+                </Heading>
+              );
+            case "h3":
+              return (
+                <Heading
+                  as="h3"
+                  key={component.id}
+                  fontSize="20px"
+                  fontWeight="600"
+                  
+                >
+                  {renderSlateContent(component.content.text || [])}
+                </Heading>
+              );
+              case "h4":
+              return (
+                <Heading
+                  as="h3"
+                  key={component.id}
+                  fontSize="16px"
+                  fontWeight="600"
+                >
+                  {renderSlateContent(component.content.text || [])}
+                </Heading>
+              );
+            case "p":
+              return (
+                <Text key={component.id} fontSize="16px">
+                  {renderSlateContent(component.content.text || [])}
+                </Text>
+              );
+            case "imageVideo":
+              return (
+                <Box key={component.id} my={4}>
+                  <Image
+                    src={
+                      getImageUrl(component.content.url) || "/placeholder.svg"
+                    }
+                    alt={component.content.description || "Image"}
+                    borderRadius="md"
+                    h="250px"
+                    maxH="250px"
+                  />
+                </Box>
+              );
+            case "cta":
+              return (
+                <Box key={component.id} textAlign="center" bg="lightblue" p="4" borderRadius="24px">
+                  <Text mb={2}>
+                    {component.content.ctaText || "Call to Action"}
+                  </Text>
+                  <Button
+                    as="a"
+                    href={component.content.buttonLink || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    colorScheme="orange"
+                  >
+                    {component.content.buttonText || "Click Here"}
+                  </Button>
+                </Box>
+              );
+            default:
+              return null;
+          }
+        })}
+
+        {/* FAQ Section */}
+        {faqComponents.length > 0 && (
+          <Box mt={8}>
+            <Heading as="h2" fontSize="36px" mb={4}>
+              Frequently Asked Questions
+            </Heading>
+            <Accordion allowMultiple>
+              {faqComponents.map((faq, index) => (
+                <AccordionItem key={index}>
+                  <h3>
+                    <AccordionButton py={3}>
+                      <Box
+                        flex="1"
+                        textAlign="left"
+                        fontWeight="600"
+                        fontSize="16px"
+                      >
+                        {faq.question || "Question"}
+                      </Box>
+                      <AccordionIcon />
+                    </AccordionButton>
+                  </h3>
+                  <AccordionPanel pb={4} fontSize="14px" fontWeight="400">
+                    {renderSlateContent(faq.answer || [])}
+                  </AccordionPanel>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </Box>
+        )}
+      </VStack>
+
+      {/* Metadata Section */}
+      {/* <Box mt={12} p={4} bg="gray.50" borderRadius="md">
+        <Heading as="h3" size="sm" mb={2}>
+          Metadata Preview
+        </Heading>
+        <Text fontSize="sm">
+          <strong>URL:</strong> {metadata.urlWords || "example-blog-post"}
+        </Text>
+        <Text fontSize="sm">
+          <strong>Meta Title:</strong> {metadata.metaTitle || "Blog Post Title"}
+        </Text>
+        <Text fontSize="sm">
+          <strong>Meta Description:</strong>{" "}
+          {metadata.metaDescription ||
+            "Blog post description for SEO purposes."}
+        </Text>
+      </Box> */}
     </Box>
   );
 };
 
-export default BlogsOverviewDash;
+export default BlogsOverview;
