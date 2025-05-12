@@ -48,6 +48,7 @@ const AdvancedComputerVision = ({
   myMargin = '3%',
   myZIndex = '1',
   textColor,
+  lineColor="#3F77A5",
   cardBgColor1,
   cardBgColor2,
 }) => {
@@ -322,7 +323,7 @@ const AdvancedComputerVision = ({
                     <Box
                       width="15px"
                       height="2px"
-                      bgColor={textColor}
+                      bgColor={lineColor}
                       borderRadius="2px"
                       marginBottom="8px"
                     />

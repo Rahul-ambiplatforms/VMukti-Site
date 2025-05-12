@@ -58,10 +58,13 @@ const renderSlateContent = (content) => {
             <Box
               as="a"
               key={i}
-              href={node.url}
+              // href={node.url}
+              href={
+                node.url?.startsWith("http") ? node.url : `https://${node.url}`
+              }
               target="_blank"
               rel="noopener noreferrer"
-              color="blue.600"
+              color="#3F77A5"
               textDecoration="underline"
               _hover={{ color: "blue.700" }}
               display="inline"
@@ -140,27 +143,33 @@ const BlogsOverview = () => {
         </Heading>
 
         {content.mainImage && (
-          <Box mb={6}>
+          <Box mb={6} borderRadius="24px">
             <Image
-              src={getImageUrl(content.mainImage) || "/placeholder.svg"}
+              // src={getImageUrl(content.mainImage) || "/assets/blogs_post_main.png"}
+              src="/assets/blogs_post_main.png"
               alt={content.imageText || "Blog image"}
-              borderRadius="lg"
+              borderRadius="24px"
               w="100%"
-              h="500px"
-              maxH="500px"
+              h="auto"
+              // maxH="500px"
               objectFit="cover"
             />
           </Box>
         )}
 
-        {content.brief && (
+        {/* {content.brief && (
           <Box mt={4} fontSize="16px">
             {renderSlateContent(content.brief)}
           </Box>
-        )}
+        )} */}
       </Box>
 
-      <VStack spacing={8} align="stretch">
+      <VStack spacing={4} align="stretch" bg="white" borderRadius="24px" p="16">
+        {content.brief && (
+          <Box fontSize="16px">
+            {renderSlateContent(content.brief)}
+          </Box>
+        )}
         {headingsAndImages.map((component) => {
           switch (component.type) {
             case "h2":
@@ -181,12 +190,11 @@ const BlogsOverview = () => {
                   key={component.id}
                   fontSize="20px"
                   fontWeight="600"
-                  
                 >
                   {renderSlateContent(component.content.text || [])}
                 </Heading>
               );
-              case "h4":
+            case "h4":
               return (
                 <Heading
                   as="h3"
@@ -205,30 +213,38 @@ const BlogsOverview = () => {
               );
             case "imageVideo":
               return (
-                <Box key={component.id} my={4}>
+                <Box key={component.id}>
                   <Image
-                    src={
-                      getImageUrl(component.content.url) || "/placeholder.svg"
-                    }
+                    // src={
+                    // getImageUrl(component.content.url) || "/placeholder.svg"
+                    // }
+                    src="/assets/blogs_post_main.png"
                     alt={component.content.description || "Image"}
                     borderRadius="md"
-                    h="250px"
-                    maxH="250px"
+                    h="auto"
+                    maxH="500px"
                   />
                 </Box>
               );
             case "cta":
               return (
-                <Box key={component.id} textAlign="center" bg="lightblue" p="4" borderRadius="24px">
+                <Box
+                  key={component.id}
+                  textAlign="center"
+                  bg="lightblue"
+                  p="4"
+                  borderRadius="24px"
+                >
                   <Text mb={2}>
                     {component.content.ctaText || "Call to Action"}
                   </Text>
                   <Button
                     as="a"
-                    href={component.content.buttonLink || "#"}
+                    // href={component.content.buttonLink || "#"}
+                    href={`https://${component.content.buttonLink}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    colorScheme="orange"
+                    bg="#3F77A5"
                   >
                     {component.content.buttonText || "Click Here"}
                   </Button>

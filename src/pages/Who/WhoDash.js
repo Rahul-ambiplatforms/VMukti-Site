@@ -99,6 +99,7 @@ const WhoWeare = () => {
           textColor="white" // New prop for text color
           cardBgColor1="white" // New prop for card background color
           cardBgColor2="white" // New prop for card background color
+          lineColor="white" // New prop for line color
           {...customData2} 
         />
         <VerticalTimeline />
