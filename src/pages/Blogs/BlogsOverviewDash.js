@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import {
   Box,
   Container,
@@ -19,19 +17,20 @@ import {
   Spinner,
   Flex,
 } from "@chakra-ui/react";
-import blogsData from "./VMukti.blogs[1].json"; // Adjust path if needed
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { getBlogById } from "./blog";
 
+// Helper function to render Slate content
 const renderSlateContent = (content) => {
+  if (!content) return null;
   return content.map((node, i) => {
     if (!node) return null;
-
-    if (typeof node === "object" && node.text !== undefined) {
+    if (typeof node === 'object' && node.text !== undefined) {
       let textElement = node.text;
-
       if (node.bold) textElement = <strong key={i}>{textElement}</strong>;
       if (node.italic) textElement = <em key={i}>{textElement}</em>;
       if (node.underline) textElement = <u key={i}>{textElement}</u>;
-
       return (
         <span key={i} style={{ color: node.color || "inherit" }}>
           {textElement}
@@ -39,7 +38,6 @@ const renderSlateContent = (content) => {
       );
     } else if (node.type) {
       const children = node.children ? renderSlateContent(node.children) : null;
-
       switch (node.type) {
         case "paragraph":
           return (
@@ -58,13 +56,10 @@ const renderSlateContent = (content) => {
             <Box
               as="a"
               key={i}
-              // href={node.url}
-              href={
-                node.url?.startsWith("http") ? node.url : `https://${node.url}`
-              }
+              href={node.url}
               target="_blank"
               rel="noopener noreferrer"
-              color="#3F77A5"
+              color="blue.600"
               textDecoration="underline"
               _hover={{ color: "blue.700" }}
               display="inline"
@@ -76,209 +71,210 @@ const renderSlateContent = (content) => {
           return <div key={i}>{children}</div>;
       }
     }
-
     return null;
   });
 };
 
-const getImageUrl = (image) => {
-  if (!image) return null;
-  if (typeof image === "string") return image;
-  if (image instanceof File) return URL.createObjectURL(image);
-  if (image.path) return image.path; // Handles relative paths
-  if (image.relativePath) return image.relativePath; // Handles relativePath field
-  return null;
-};
-
-const BlogsOverview = () => {
-  const params = useParams();
-  const urlWords = params.urlWords || ""; // Fallback to an empty string if undefined
+const BlogsOverviewDash = () => {
+  const { _id } = useParams();
   const [blog, setBlog] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    console.log("Params from useParams:", params); // Debugging log
-    if (!urlWords) {
-      console.warn(
-        "URL Words is undefined or empty. Ensure the route includes a dynamic segment for 'urlWords'."
-      );
-      return;
-    }
+    const fetchBlog = async () => {
+      try {
+        setLoading(true);
+        const response = await getBlogById(_id);
+        if (response.status === "success") {
+          setBlog(response.data);
+        } else {
+          setError("Blog not found");
+        }
+      } catch (err) {
+        setError("Error fetching blog");
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchBlog();
+  }, [_id]);
 
-    console.log("URL Words from Params:", urlWords); // Debugging log
-    const matched = blogsData.find(
-      (post) =>
-        post.metadata?.urlWords?.toLowerCase() === urlWords?.toLowerCase()
-    );
-    if (!matched) {
-      console.warn("No blog found for the given URL Words:", urlWords); // Debugging log
-    }
-    setBlog(matched);
-  }, [urlWords]);
+  if (loading) return <Box p={10}><Spinner size="xl" /></Box>;
+  if (error) return <Box p={10} color="red.500">{error}</Box>;
+  if (!blog) return null;
 
-  if (!blog) {
-    return (
-      <Box textAlign="center" py={10}>
-        <Spinner size="xl" />
-        <Text mt={4}>Loading Blog...</Text>
-      </Box>
-    );
-  }
-
-  // Adjusted destructuring to match the schema
-  const { metadata, content } = blog;
-  const { headingsAndImages = [], faqs = {}, schemas = [] } = content || {}; // Fallbacks for undefined properties
-  const faqComponents = faqs.items || []; // Fallback to an empty array if `items` is undefined
+  const content = blog.content || {};
+  const components = content.headingsAndImages || [];
+  const faqComponents = content.faqs?.items || [];
+  const mainImageUrl = content.mainImage && typeof content.mainImage === 'string' && content.mainImage.startsWith('/uploads')
+    ? `http://localhost:5000${content.mainImage}`
+    : content.mainImage;
 
   return (
-    <Box w={{ base: "100%", md: "100%" }} p={{ base: "5%", md: "2%" }}>
+    <Box px="2%">
+      {/* Blog Header */}
       <Box mb={8}>
-        <Heading
-          as="h1"
-          fontWeight="600"
-          fontSize={{ base: "24px", md: "48px" }}
-          w={{ base: "100%", md: "70%" }}
-          mb={4}
-        >
+        <Heading as="h1" fontSize="48px" mt="8" mb="8">
           {content.title || "Blog Title"}
         </Heading>
-
-        {content.mainImage && (
-          <Box mb={6} borderRadius="24px">
+        {mainImageUrl && (
+          <Box mb={6}>
             <Image
-              // src={getImageUrl(content.mainImage) || "/assets/blogs_post_main.png"}
-              src="/assets/blogs_post_main.png"
+              src={mainImageUrl}
               alt={content.imageText || "Blog image"}
-              borderRadius="24px"
+              borderRadius="lg"
               w="100%"
-              h="auto"
-              // maxH="500px"
+              maxH="500px"
               objectFit="cover"
             />
           </Box>
         )}
-
         {/* {content.brief && (
           <Box mt={4} fontSize="16px">
             {renderSlateContent(content.brief)}
           </Box>
         )} */}
       </Box>
-
-      <VStack spacing={4} align="stretch" bg="white" borderRadius="24px" p="16">
+      {/* Blog Content */}
+      <VStack spacing={8} bg="white" borderRadius="24px" px="5%" py="4%" align="stretch">
         {content.brief && (
-          <Box fontSize="16px">
+          <Box mt={4} fontSize="16px">
             {renderSlateContent(content.brief)}
           </Box>
         )}
-        {headingsAndImages.map((component) => {
-          switch (component.type) {
-            case "h2":
-              return (
-                <Heading
-                  as="h2"
-                  key={component.id}
-                  fontSize="36px"
-                  fontWeight="600"
-                >
-                  {renderSlateContent(component.content.text || [])}
-                </Heading>
-              );
-            case "h3":
-              return (
-                <Heading
-                  as="h3"
-                  key={component.id}
-                  fontSize="20px"
-                  fontWeight="600"
-                >
-                  {renderSlateContent(component.content.text || [])}
-                </Heading>
-              );
-            case "h4":
-              return (
-                <Heading
-                  as="h3"
-                  key={component.id}
-                  fontSize="16px"
-                  fontWeight="600"
-                >
-                  {renderSlateContent(component.content.text || [])}
-                </Heading>
-              );
-            case "p":
-              return (
-                <Text key={component.id} fontSize="16px">
-                  {renderSlateContent(component.content.text || [])}
-                </Text>
-              );
-            case "imageVideo":
-              return (
-                <Box key={component.id}>
-                  <Image
-                    // src={
-                    // getImageUrl(component.content.url) || "/placeholder.svg"
-                    // }
-                    src="/assets/blogs_post_main.png"
-                    alt={component.content.description || "Image"}
-                    borderRadius="md"
-                    h="auto"
-                    maxH="500px"
-                  />
-                </Box>
-              );
-            case "cta":
-              return (
-                <Box
-                  key={component.id}
-                  textAlign="center"
-                  bg="lightblue"
-                  p="4"
-                  borderRadius="24px"
-                >
-                  <Text mb={2}>
-                    {component.content.ctaText || "Call to Action"}
-                  </Text>
-                  <Button
-                    as="a"
-                    // href={component.content.buttonLink || "#"}
-                    href={`https://${component.content.buttonLink}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    bg="#3F77A5"
-                  >
-                    {component.content.buttonText || "Click Here"}
-                  </Button>
-                </Box>
-              );
-            default:
-              return null;
+        {components.reduce((groups, component, index) => {
+          if (component.type === "faq") return groups;
+          if (component.type === "h2" || component.type === "h3" || component.type === "h4") {
+            groups.push({
+              id: component.id,
+              heading: component,
+              content: []
+            });
+          } else if (component.type === "p" && groups.length > 0) {
+            groups[groups.length - 1].content.push(component);
+          } else {
+            groups.push({
+              id: component.id,
+              content: [component]
+            });
           }
-        })}
-
-        {/* FAQ Section */}
+          return groups;
+        }, []).map((group) => (
+          <VStack key={group.id} spacing={0} align="stretch">
+            {group.heading && (
+              <Box>
+                {group.heading.type === "h2" && (
+                  <Heading as="h2" fontSize="36px">
+                    {renderSlateContent(group.heading.content.text)}
+                  </Heading>
+                )}
+                {group.heading.type === "h3" && (
+                  <Heading as="h3" fontSize="20px">
+                    {renderSlateContent(group.heading.content.text)}
+                  </Heading>
+                )}
+                {group.heading.type === "h4" && (
+                  <Heading as="h4" fontSize="16px">
+                    {renderSlateContent(group.heading.content.text)}
+                  </Heading>
+                )}
+              </Box>
+            )}
+            {group.content.map(component => {
+              switch (component.type) {
+                case "p":
+                  return (
+                    <Box as="p" key={component.id} fontSize="16px">
+                      {renderSlateContent(component.content.text)}
+                    </Box>
+                  );
+                case "imageVideo":
+                  return (
+                    <Box key={component.id} my={4}>
+                      {(component.content.file || component.content.url || component.content.imagePath) ? (
+                        <Image
+                          src={component.content.file || component.content.url || component.content.imagePath}
+                          alt={component.content.description || "Image"}
+                          borderRadius="md"
+                          maxH="250px"
+                        />
+                      ) : (
+                        <Box
+                          bg="gray.200"
+                          borderRadius="md"
+                          height="200px"
+                          display="flex"
+                          alignItems="center"
+                          justifyContent="center"
+                        >
+                          <Text color="gray.500">Image Placeholder</Text>
+                        </Box>
+                      )}
+                    </Box>
+                  );
+                case "cta":
+                  return (
+                    <Box
+                      key={component.id}
+                      bg="blue.50"
+                      p={6}
+                      borderRadius="lg"
+                      textAlign="center"
+                      my={6}
+                      border="1px"
+                      borderColor="blue.100"
+                    >
+                      <Text fontSize="xl" mb={4} fontWeight="medium">
+                        {component.content.ctaText || "Call to Action Text"}
+                      </Text>
+                      <Button
+                        as="a"
+                        href={component.content.buttonLink?.startsWith('http') ? component.content.buttonLink : `https://${component.content.buttonLink}`}
+                        colorScheme="blue"
+                        size="lg"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {component.content.buttonText || "Click Here"}
+                      </Button>
+                    </Box>
+                  );
+                case "schema":
+                  return (
+                    <Box key={component.id} p={4} bg="gray.50" borderRadius="md">
+                      <Text fontFamily="monospace" fontSize="sm">
+                        {component.content.schemaData || "Schema Content"}
+                      </Text>
+                    </Box>
+                  );
+                default:
+                  return null;
+              }
+            })}
+          </VStack>
+        ))}
+        {/* FAQ Section with title */}
         {faqComponents.length > 0 && (
           <Box mt={8}>
             <Heading as="h2" fontSize="36px" mb={4}>
-              Frequently Asked Questions
+              <Text fontSize="16px" mt={2} color="gray.500">
+                {content.faqs?.title || "Frequently Asked Questions"}
+              </Text>
             </Heading>
             <Accordion allowMultiple>
-              {faqComponents.map((faq, index) => (
-                <AccordionItem key={index}>
+              {faqComponents.map((faq, idx) => (
+                <AccordionItem key={faq.id || idx}>
                   <h3>
                     <AccordionButton py={3}>
-                      <Box
-                        flex="1"
-                        textAlign="left"
-                        fontWeight="600"
-                        fontSize="16px"
-                      >
+                      <Box flex="1" textAlign="left" fontWeight="600" fontSize="16px">
                         {faq.question || "Question"}
                       </Box>
                       <AccordionIcon />
                     </AccordionButton>
                   </h3>
                   <AccordionPanel pb={4} fontSize="14px" fontWeight="400">
-                    {renderSlateContent(faq.answer || [])}
+                    {renderSlateContent(faq.answer)}
                   </AccordionPanel>
                 </AccordionItem>
               ))}
@@ -286,26 +282,28 @@ const BlogsOverview = () => {
           </Box>
         )}
       </VStack>
-
-      {/* Metadata Section */}
+      {/* Metadata Preview (for reference) */}
       {/* <Box mt={12} p={4} bg="gray.50" borderRadius="md">
         <Heading as="h3" size="sm" mb={2}>
           Metadata Preview
         </Heading>
         <Text fontSize="sm">
-          <strong>URL:</strong> {metadata.urlWords || "example-blog-post"}
+          <strong>URL:</strong> {content.urlWords || "example-blog-post"}
         </Text>
         <Text fontSize="sm">
-          <strong>Meta Title:</strong> {metadata.metaTitle || "Blog Post Title"}
+          <strong>Meta Title:</strong> {content.metaTitle || "Blog Post Title"}
         </Text>
         <Text fontSize="sm">
-          <strong>Meta Description:</strong>{" "}
-          {metadata.metaDescription ||
-            "Blog post description for SEO purposes."}
+          <strong>Meta Description:</strong> {content.metaDescription || "Blog post description for SEO purposes."}
         </Text>
       </Box> */}
     </Box>
   );
 };
 
-export default BlogsOverview;
+export default BlogsOverviewDash;
+
+
+// URL
+// Partition as per the figma
+// FAQs
