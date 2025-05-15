@@ -4,8 +4,19 @@ import { gsap } from "gsap";
 
 const CustomCursor = () => {
     const cursorRef = useRef(null);
+    const [isDesktop, setIsDesktop] = React.useState(true);
 
     useEffect(() => {
+        const checkIsDesktop = () => {
+            setIsDesktop(window.innerWidth > 768);
+        };
+        checkIsDesktop();
+        window.addEventListener("resize", checkIsDesktop);
+        return () => window.removeEventListener("resize", checkIsDesktop);
+    }, []);
+
+    useEffect(() => {
+        if (!isDesktop) return;
         const handleMouseMove = (event) => {
             gsap.to(cursorRef.current, {
                 x: event.clientX,
@@ -20,7 +31,9 @@ const CustomCursor = () => {
         return () => {
             document.removeEventListener("mousemove", handleMouseMove);
         };
-    }, []);
+    }, [isDesktop]);
+
+    if (!isDesktop) return null;
 
     return (
         <div
