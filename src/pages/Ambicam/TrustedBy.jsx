@@ -59,6 +59,7 @@ const TrustedBy = () => {
           justifyContent="center"
           gap={4}
           mb={8}
+          px={{base:"10%",md:"0"}}
         >
           <Text fontSize={{ base: "36px", md: "48px" }} fontWeight="600">
             Trusted Across Sectors
@@ -75,7 +76,7 @@ const TrustedBy = () => {
           alignItems="center"
           justifyContent="center"
           zIndex={1}
-          px={{ base: 4, md: 0 }}
+          px={{ base: 2, md: 0 }}
           onMouseEnter={() => swiperRef.current?.autoplay?.stop()} // Use useRef's current
           onMouseLeave={() => swiperRef.current?.autoplay?.start()} // Use useRef's current
         >
