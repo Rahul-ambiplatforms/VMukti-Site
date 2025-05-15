@@ -19,14 +19,14 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getBlogById } from "./blog";
+import { getBlogs, getBlogById } from "./blog";
 
 // Helper function to render Slate content
 const renderSlateContent = (content) => {
   if (!content) return null;
   return content.map((node, i) => {
     if (!node) return null;
-    if (typeof node === 'object' && node.text !== undefined) {
+    if (typeof node === "object" && node.text !== undefined) {
       let textElement = node.text;
       if (node.bold) textElement = <strong key={i}>{textElement}</strong>;
       if (node.italic) textElement = <em key={i}>{textElement}</em>;
@@ -76,7 +76,7 @@ const renderSlateContent = (content) => {
 };
 
 const BlogsOverviewDash = () => {
-  const { _id } = useParams();
+  const { urlWords } = useParams();
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -85,11 +85,24 @@ const BlogsOverviewDash = () => {
     const fetchBlog = async () => {
       try {
         setLoading(true);
-        const response = await getBlogById(_id);
-        if (response.status === "success") {
-          setBlog(response.data);
+        // Fetch all blogs (first page, large limit for safety)
+        const blogsResponse = await getBlogs(1,6);
+        if (blogsResponse.status === "success") {
+          const found = blogsResponse.data.find(
+            (b) => b.metadata?.urlWords === urlWords
+          );
+          if (found) {
+            const response = await getBlogById(found._id);
+            if (response.status === "success") {
+              setBlog(response.data);
+            } else {
+              setError("Blog not found");
+            }
+          } else {
+            setError("Blog not found");
+          }
         } else {
-          setError("Blog not found");
+          setError("Error fetching blogs list");
         }
       } catch (err) {
         setError("Error fetching blog");
@@ -98,18 +111,31 @@ const BlogsOverviewDash = () => {
       }
     };
     fetchBlog();
-  }, [_id]);
+  }, [urlWords]);
 
-  if (loading) return <Box p={10}><Spinner size="xl" /></Box>;
-  if (error) return <Box p={10} color="red.500">{error}</Box>;
+  if (loading)
+    return (
+      <Box p={10} alignContent="center">
+        <Spinner size="xl" />
+      </Box>
+    );
+  if (error)
+    return (
+      <Box p={10} color="red.500">
+        {error}
+      </Box>
+    );
   if (!blog) return null;
 
   const content = blog.content || {};
   const components = content.headingsAndImages || [];
   const faqComponents = content.faqs?.items || [];
-  const mainImageUrl = content.mainImage && typeof content.mainImage === 'string' && content.mainImage.startsWith('/uploads')
-    ? `http://localhost:5000${content.mainImage}`
-    : content.mainImage;
+  const mainImageUrl =
+    content.mainImage &&
+    typeof content.mainImage === "string" &&
+    content.mainImage.startsWith("/uploads")
+      ? `http://localhost:5000${content.mainImage}`
+      : content.mainImage;
 
   return (
     <Box px="2%">
@@ -137,123 +163,151 @@ const BlogsOverviewDash = () => {
         )} */}
       </Box>
       {/* Blog Content */}
-      <VStack spacing={8} bg="white" borderRadius="24px" px="5%" py="4%" align="stretch">
+      <VStack
+        spacing={8}
+        bg="white"
+        borderRadius="24px"
+        px="5%"
+        py="4%"
+        align="stretch"
+      >
         {content.brief && (
           <Box mt={4} fontSize="16px">
             {renderSlateContent(content.brief)}
           </Box>
         )}
-        {components.reduce((groups, component, index) => {
-          if (component.type === "faq") return groups;
-          if (component.type === "h2" || component.type === "h3" || component.type === "h4") {
-            groups.push({
-              id: component.id,
-              heading: component,
-              content: []
-            });
-          } else if (component.type === "p" && groups.length > 0) {
-            groups[groups.length - 1].content.push(component);
-          } else {
-            groups.push({
-              id: component.id,
-              content: [component]
-            });
-          }
-          return groups;
-        }, []).map((group) => (
-          <VStack key={group.id} spacing={0} align="stretch">
-            {group.heading && (
-              <Box>
-                {group.heading.type === "h2" && (
-                  <Heading as="h2" fontSize="36px">
-                    {renderSlateContent(group.heading.content.text)}
-                  </Heading>
-                )}
-                {group.heading.type === "h3" && (
-                  <Heading as="h3" fontSize="20px">
-                    {renderSlateContent(group.heading.content.text)}
-                  </Heading>
-                )}
-                {group.heading.type === "h4" && (
-                  <Heading as="h4" fontSize="16px">
-                    {renderSlateContent(group.heading.content.text)}
-                  </Heading>
-                )}
-              </Box>
-            )}
-            {group.content.map(component => {
-              switch (component.type) {
-                case "p":
-                  return (
-                    <Box as="p" key={component.id} fontSize="16px">
-                      {renderSlateContent(component.content.text)}
-                    </Box>
-                  );
-                case "imageVideo":
-                  return (
-                    <Box key={component.id} my={4}>
-                      {(component.content.file || component.content.url || component.content.imagePath) ? (
-                        <Image
-                          src={component.content.file || component.content.url || component.content.imagePath}
-                          alt={component.content.description || "Image"}
-                          borderRadius="md"
-                          maxH="250px"
-                        />
-                      ) : (
-                        <Box
-                          bg="gray.200"
-                          borderRadius="md"
-                          height="200px"
-                          display="flex"
-                          alignItems="center"
-                          justifyContent="center"
-                        >
-                          <Text color="gray.500">Image Placeholder</Text>
-                        </Box>
-                      )}
-                    </Box>
-                  );
-                case "cta":
-                  return (
-                    <Box
-                      key={component.id}
-                      bg="blue.50"
-                      p={6}
-                      borderRadius="lg"
-                      textAlign="center"
-                      my={6}
-                      border="1px"
-                      borderColor="blue.100"
-                    >
-                      <Text fontSize="xl" mb={4} fontWeight="medium">
-                        {component.content.ctaText || "Call to Action Text"}
-                      </Text>
-                      <Button
-                        as="a"
-                        href={component.content.buttonLink?.startsWith('http') ? component.content.buttonLink : `https://${component.content.buttonLink}`}
-                        colorScheme="blue"
-                        size="lg"
-                        target="_blank"
-                        rel="noopener noreferrer"
+        {components
+          .reduce((groups, component, index) => {
+            if (component.type === "faq") return groups;
+            if (
+              component.type === "h2" ||
+              component.type === "h3" ||
+              component.type === "h4"
+            ) {
+              groups.push({
+                id: component.id,
+                heading: component,
+                content: [],
+              });
+            } else if (component.type === "p" && groups.length > 0) {
+              groups[groups.length - 1].content.push(component);
+            } else {
+              groups.push({
+                id: component.id,
+                content: [component],
+              });
+            }
+            return groups;
+          }, [])
+          .map((group) => (
+            <VStack key={group.id} spacing={0} align="stretch">
+              {group.heading && (
+                <Box>
+                  {group.heading.type === "h2" && (
+                    <Heading as="h2" fontSize="36px">
+                      {renderSlateContent(group.heading.content.text)}
+                    </Heading>
+                  )}
+                  {group.heading.type === "h3" && (
+                    <Heading as="h3" fontSize="20px">
+                      {renderSlateContent(group.heading.content.text)}
+                    </Heading>
+                  )}
+                  {group.heading.type === "h4" && (
+                    <Heading as="h4" fontSize="16px">
+                      {renderSlateContent(group.heading.content.text)}
+                    </Heading>
+                  )}
+                </Box>
+              )}
+              {group.content.map((component) => {
+                switch (component.type) {
+                  case "p":
+                    return (
+                      <Box as="p" key={component.id} fontSize="16px">
+                        {renderSlateContent(component.content.text)}
+                      </Box>
+                    );
+                  case "imageVideo":
+                    return (
+                      <Box key={component.id} my={4}>
+                        {component.content.file ||
+                        component.content.url ||
+                        component.content.imagePath ? (
+                          <Image
+                            src={
+                              component.content.file ||
+                              component.content.url ||
+                              component.content.imagePath
+                            }
+                            alt={component.content.description || "Image"}
+                            borderRadius="md"
+                            maxH="250px"
+                          />
+                        ) : (
+                          <Box
+                            bg="gray.200"
+                            borderRadius="md"
+                            height="200px"
+                            display="flex"
+                            alignItems="center"
+                            justifyContent="center"
+                          >
+                            <Text color="gray.500">Image Placeholder</Text>
+                          </Box>
+                        )}
+                      </Box>
+                    );
+                  case "cta":
+                    return (
+                      <Box
+                        key={component.id}
+                        bg="blue.50"
+                        p={6}
+                        borderRadius="lg"
+                        textAlign="center"
+                        my={6}
+                        border="1px"
+                        borderColor="blue.100"
                       >
-                        {component.content.buttonText || "Click Here"}
-                      </Button>
-                    </Box>
-                  );
-                case "schema":
-                  return (
-                    <Box key={component.id} p={4} bg="gray.50" borderRadius="md">
-                      <Text fontFamily="monospace" fontSize="sm">
-                        {component.content.schemaData || "Schema Content"}
-                      </Text>
-                    </Box>
-                  );
-                default:
-                  return null;
-              }
-            })}
-          </VStack>
-        ))}
+                        <Text fontSize="xl" mb={4} fontWeight="medium">
+                          {component.content.ctaText || "Call to Action Text"}
+                        </Text>
+                        <Button
+                          as="a"
+                          href={
+                            component.content.buttonLink?.startsWith("http")
+                              ? component.content.buttonLink
+                              : `https://${component.content.buttonLink}`
+                          }
+                          colorScheme="blue"
+                          size="lg"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {component.content.buttonText || "Click Here"}
+                        </Button>
+                      </Box>
+                    );
+                  case "schema":
+                    return (
+                      <Box
+                        key={component.id}
+                        p={4}
+                        bg="gray.50"
+                        borderRadius="md"
+                      >
+                        <Text fontFamily="monospace" fontSize="sm">
+                          {component.content.schemaData || "Schema Content"}
+                        </Text>
+                      </Box>
+                    );
+                  default:
+                    return null;
+                }
+              })}
+            </VStack>
+          ))}
         {/* FAQ Section with title */}
         {faqComponents.length > 0 && (
           <Box mt={8}>
@@ -267,7 +321,12 @@ const BlogsOverviewDash = () => {
                 <AccordionItem key={faq.id || idx}>
                   <h3>
                     <AccordionButton py={3}>
-                      <Box flex="1" textAlign="left" fontWeight="600" fontSize="16px">
+                      <Box
+                        flex="1"
+                        textAlign="left"
+                        fontWeight="600"
+                        fontSize="16px"
+                      >
                         {faq.question || "Question"}
                       </Box>
                       <AccordionIcon />
@@ -303,7 +362,5 @@ const BlogsOverviewDash = () => {
 
 export default BlogsOverviewDash;
 
-
 // URL
-// Partition as per the figma
-// FAQs
+// pagination

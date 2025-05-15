@@ -3,7 +3,7 @@ import axios from 'axios';
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
 // Get all blogs with pagination
-export const getBlogs = async (page = 1, limit = 10) => {
+export const getBlogs = async (page = 1, limit = 6) => {
   try {
     const response = await axios.get(`${API_URL}/blogs`, {
       params: { page, limit },

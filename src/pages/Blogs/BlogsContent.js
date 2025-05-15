@@ -10,6 +10,7 @@ import {
   useColorModeValue,
   useToast,
   Spinner,
+  Button,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { getBlogs } from "./blog"; // Adjust the path as per your project
@@ -17,7 +18,7 @@ import { getBlogs } from "./blog"; // Adjust the path as per your project
 export default function BlogsContent() {
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const blogsPerPage = 4;
+  const blogsPerPage = 6;
   const [totalPages, setTotalPages] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const borderColor = useColorModeValue("gray.200", "gray.700");
@@ -30,6 +31,7 @@ export default function BlogsContent() {
       if (response.status === "success") {
         setBlogs(response.data);
         setTotalPages(response.pagination.totalPages);
+        console.log('Total Pages:', response.pagination.totalPages);
       }
     } catch (error) {
       toast({
@@ -117,7 +119,7 @@ export default function BlogsContent() {
                     <Text fontSize="12px" color="#3F77A5">by VMukti</Text>
                   </Box>
                   <Box>
-                    <Link to={`/whoweare/blogs/${post._id}`}>
+                    <Link to={`/whoweare/blogs/${post.metadata.urlWords}`}>
                       <Flex align="center" gap={4}>
                         <Text fontSize="14px" fontWeight={500} color="#000000">
                           Learn More
@@ -137,6 +139,100 @@ export default function BlogsContent() {
           })}
         </Grid>
       )}
+      {/* Pagination Controls */}
+      <Flex justify="center" align="center" mt={8} gap={2}>
+        {/* Previous Arrow */}
+        <Button
+          size="sm"
+          variant="outline"
+          borderColor="#3F77A5"
+          bg="white"
+          color="#3F77A5"
+          _hover={{ bg: '#e6f0fa' }}
+          isDisabled={totalPages === 1}
+          onClick={() => {
+            setCurrentPage((prev) => prev === 1 ? totalPages : prev - 1);
+          }}
+          minW={8}
+          px={0}
+        >
+          <Box as="span" fontSize="20px">&#60;</Box>
+        </Button>
+
+        {/* Page Numbers with Ellipsis */}
+        {(() => {
+          const pages = [];
+          if (totalPages <= 5) {
+            for (let i = 1; i <= totalPages; i++) {
+              pages.push(i);
+            }
+          } else {
+            if (currentPage <= 3) {
+              pages.push(1, 2, 3, '...', totalPages);
+            } else if (currentPage >= totalPages - 2) {
+              pages.push(1, '...', totalPages - 2, totalPages - 1, totalPages);
+            } else {
+              pages.push(1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages);
+            }
+          }
+          return pages.map((page, idx) => {
+            if (page === '...') {
+              return (
+                <Button
+                  key={`ellipsis-${idx}`}
+                  size="sm"
+                  variant="outline"
+                  borderColor="#3F77A5"
+                  bg="white"
+                  color="#3F77A5"
+                  isDisabled
+                  minW={8}
+                  px={0}
+                >
+                  ...
+                </Button>
+              );
+            }
+            const isActive = page === currentPage;
+            return (
+              <Button
+                key={page}
+                size="sm"
+                variant="outline"
+                borderColor="#3F77A5"
+                bg={isActive ? "#3F77A5" : "white"}
+                color={isActive ? "white" : "#3F77A5"}
+                fontWeight={isActive ? "bold" : "normal"}
+                minW={8}
+                px={0}
+                _hover={isActive ? {} : { bg: '#e6f0fa' }}
+                onClick={() => setCurrentPage(page)}
+                isDisabled={totalPages === 1}
+              >
+                {page}
+              </Button>
+            );
+          });
+        })()}
+
+        {/* Next Arrow */}
+        <Button
+          size="sm"
+          variant="outline"
+          borderColor="#3F77A5"
+          bg="white"
+          color="#3F77A5"
+          _hover={{ bg: '#e6f0fa' }}
+          isDisabled={totalPages === 1}
+          onClick={() => {
+            setCurrentPage((prev) => prev === totalPages ? 1 : prev + 1);
+          }}
+          minW={8}
+          px={0}
+        >
+          <Box as="span" fontSize="20px">&#62;</Box>
+        </Button>
+      </Flex>
     </Box>
   );
 }
