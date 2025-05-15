@@ -81,12 +81,13 @@ const BlogsOverviewDash = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const IMAGE_BASE_URL = process.env.REACT_APP_IMAGE_BASE_URL
   useEffect(() => {
     const fetchBlog = async () => {
       try {
         setLoading(true);
         // Fetch all blogs (first page, large limit for safety)
-        const blogsResponse = await getBlogs(1,6);
+        const blogsResponse = await getBlogs(1, 6);
         if (blogsResponse.status === "success") {
           const found = blogsResponse.data.find(
             (b) => b.metadata?.urlWords === urlWords
@@ -131,11 +132,9 @@ const BlogsOverviewDash = () => {
   const components = content.headingsAndImages || [];
   const faqComponents = content.faqs?.items || [];
   const mainImageUrl =
-    content.mainImage &&
-    typeof content.mainImage === "string" &&
-    content.mainImage.startsWith("/uploads")
-      ? `http://localhost:5000${content.mainImage}`
-      : content.mainImage;
+    content.mainImage && typeof content.mainImage === "string"
+      ? `${IMAGE_BASE_URL}/${content.mainImage}`
+      : `${IMAGE_BASE_URL}/${content.mainImage}`;
 
   return (
     <Box px="2%">
@@ -238,7 +237,7 @@ const BlogsOverviewDash = () => {
                             src={
                               component.content.file ||
                               component.content.url ||
-                              component.content.imagePath
+                              `${IMAGE_BASE_URL}/${component.content.imagePath}`
                             }
                             alt={component.content.description || "Image"}
                             borderRadius="md"
