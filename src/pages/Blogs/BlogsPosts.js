@@ -368,4 +368,4 @@ const blogPosts = [
     },
   ];
 
-  export default blogPosts;
+  export default blogPosts; 

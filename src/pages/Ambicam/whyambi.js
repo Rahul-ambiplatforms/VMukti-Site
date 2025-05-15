@@ -115,7 +115,7 @@ export default function WhyAmbicamPage() {
             fontWeight="600"
             mb={12}
             ml={8}
-            textAlign={{ base: "center", md: "left" }}
+            textAlign={{ base: "left", md: "left" }}
           >
             <Text as="span">Why </Text>
             <Text as="span" color="#3F77A5">
