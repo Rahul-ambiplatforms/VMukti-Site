@@ -20,7 +20,7 @@ const MotionBox = motion(Box);
 const MotionButton = motion(Button);
 
 const HeroSection = () => {
-  
+
   const imageRef = useRef(null); // Reference for the image
   const sectionRef = useRef(null); // Reference for the section containing the image
   const ref = useRef(null);
@@ -57,7 +57,8 @@ const HeroSection = () => {
   });
 
   return (
-    <Box bg="#E7E7E7" position="relative">
+    <Box bg="#E7E7E7" position="relative"
+    >
       {/* Background Ellipse */}
       <Box
         position="absolute"
@@ -80,9 +81,10 @@ const HeroSection = () => {
         <Flex
           position="absolute"
           top={{ md: "15%" }}
-          bottom={{ base: "59%"}}
+          bottom={{ base: "59%" }}
           left={{ base: "80%", md: "32%" }} //40->33
           transform="translateX(-50%)"
+
           gap={4}
           zIndex={0}
           width="100%"
@@ -91,7 +93,7 @@ const HeroSection = () => {
 
         >
           <Box
-            display={{ base: "none", md: "block", lg: "block" }}
+            display={{ base: "none", md: "block" }}
             height={{ base: "180px", md: "120px", lg: "188px" }}
             minHeight="50px"
             aspectRatio="1/1"
@@ -100,16 +102,16 @@ const HeroSection = () => {
             mt={{ base: "80px", md: "120px", lg: "15%" }}
           />
           <Box
-            display={{ base: "none", md: "block", lg: "block" }}
+            display={{ base: "none", md: "block" }}
             height={{ base: "80px", md: "120px", lg: "188px" }}
             minHeight="50px"
             aspectRatio="1/1"
             bg="#FFFFFF"
             borderRadius="24px"
-            mt={{ base: "40px", md: "06px", lg: "9%" }}
+            mt={{ base: "40px", md: "60px", lg: "9%" }}
           />
           <Box
-            display={{ base: "none", md: "block", lg: "block" }}
+            display={{ base: "none", md: "block" }}
             height={{ base: "80px", md: "120px", lg: "188px" }}
             minHeight="50px"
             aspectRatio="1/1"
@@ -140,16 +142,6 @@ const HeroSection = () => {
             position="relative"
             width="600px"
           >
-            <Box
-              position="absolute"
-              top="10%"
-              right={"0"}
-              width="170px"
-              height="188px"
-              bg="#BECEDC"
-              borderRadius="24px 0 0 0"
-              zIndex={9}
-            />
             {/* This is for Mobile */}
             <Image
               // ml="-20%"
@@ -175,7 +167,7 @@ const HeroSection = () => {
               ml="16%"
               mt="-15%"
               mb="2%" // jenil
-              // bg="red"
+            // bg="red"
             >
               <Box width="13px" height="13px" alignSelf="flex-start" ml="2%">
                 <svg
@@ -232,7 +224,6 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0.6, x: -50 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            // bg="red"
           >
             <Text as="span" color="#3F77A5">
               Advanced{" "}
@@ -240,19 +231,15 @@ const HeroSection = () => {
             <Text as="span" color="#000">
               Computer Vision & Image{" "}
             </Text>
-            {/* <Text as="span" color="#000">
-              Image
-            </Text> */}
-            &nbsp;
-            <Text as="span" color="#DB7B3A">
-              Intelligence
-            </Text>
-            <Text as="span" color="#3F77A5">
-              .
-            </Text>{" "}
-            {/*Remove space*/}
+            <Box as="span" display={{ base: "block", md: "inline" }}>
+              <Text as="span" color="#DB7B3A">
+                Intelligence
+              </Text>
+              <Text as="span" color="#3F77A5">
+                .
+              </Text>
+            </Box>
           </MotionBox>
-
           <Flex>
             <Flex direction="column" zIndex={1}>
               {" "}
@@ -375,7 +362,7 @@ const HeroSection = () => {
               <MotionImage
                 src="/assets/tablet1.webp" //------------desktop View
                 position="absolute"
-                bottom="-6%" 
+                bottom="-6%"
                 // bg={{base:"black",sm:"darkred",md:"yellow",lg:"darkorange",xl:"blue"}}
                 right={["-10px", "-20px", "-30px", "-30px"]} // Adjust for breakpoints: [sm, md, lg, xl]
                 width={["320px", "480px", "660px", "940px"]} // Responsive widths (840->940)
