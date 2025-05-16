@@ -317,7 +317,7 @@ const NewsletterSubscription = () => {
                             fontWeight="500"
                             color="#696969"
                           >
-                            {item.text} {/* Removed bullet point for mobile */}
+                            {item.text}
                           </Text>
                         </Flex>
                       </Link>
@@ -333,6 +333,26 @@ const NewsletterSubscription = () => {
                     </Box>
                   )
                 )}
+                <Box align="center" mt="20px">
+                  <Link href={"/Ambicam"}>
+                    <Button
+                      width={buttonWidth}
+                      height={buttonHeight}
+                      background="#4CC9F0"
+                      color="#FFFFFF"
+                      fontSize={"16px"}
+                      fontWeight="600"
+                      borderRadius="20px"
+                      flexShrink={0}
+                      _hover={{
+                        background: "#3bb9e0",
+                        color: "#FFFFFF",
+                      }}
+                    >
+                      Ambicam
+                    </Button>
+                  </Link>
+                </Box>
               </Box>
             )}
           </Box>
@@ -761,7 +781,7 @@ const NewsletterSubscription = () => {
                 (91+) 968 777 0000
               </Text>
             </Flex>
-            <Flex gap={2} justifyContent="center" mt="20%">
+            <Flex gap={2} justifyContent="left" mt="20%">
               <Link href={"/contactus"}>
                 <Button
                   width={buttonWidth}
@@ -795,7 +815,7 @@ const NewsletterSubscription = () => {
                   </svg>
                 </Button>
               </Link>
-              <Link href={"/Ambicam"}>
+              {/* <Link href={"/Ambicam"}>
                 <Button
                   width={buttonWidth}
                   height={buttonHeight}
@@ -812,7 +832,7 @@ const NewsletterSubscription = () => {
                 >
                   Ambicam
                 </Button>
-              </Link>
+              </Link> */}
             </Flex>
           </Box>
         </Flex>
