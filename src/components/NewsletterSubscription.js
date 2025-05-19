@@ -333,7 +333,7 @@ const NewsletterSubscription = () => {
                     </Box>
                   )
                 )}
-                <Box align="center" mt="20px">
+                <Box align="left" mt="20px">
                   <Link href={"/Ambicam"}>
                     <Button
                       width={buttonWidth}

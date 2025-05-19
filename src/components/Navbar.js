@@ -207,7 +207,7 @@ const Navbar = () => {
   }
 
   const navigationItems = [
-    { name: 'Home', path: '/' },
+    // Removed Home button
     { name: 'Technology', path: '/technology' },
     {
       name: 'Solutions',
@@ -257,7 +257,10 @@ const Navbar = () => {
             pr={{ base: 0, md: 4 }}
             justifyContent="space-between"
           >
-            <Image src="./assets/vmuktilogo.png" alt="Logo" height={logoHeight} />
+            <Image src="./assets/vmuktilogo.png" alt="Logo" height={logoHeight} 
+              style={{ cursor: 'pointer' }}
+              onClick={() => navigateTo('/', 'Home')}
+            />
 
             <Show above="xl">
               <HStack
