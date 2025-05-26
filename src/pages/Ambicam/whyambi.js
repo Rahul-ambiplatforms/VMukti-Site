@@ -312,7 +312,7 @@ export default function WhyAmbicamPage() {
           </Box>
 
           {/* Navigation Buttons Section */}
-          <Flex justify="right" gap={1} position="relative" zIndex={2}>
+          <Flex justify="right" gap={1} position="relative" zIndex={2} mr="2">
             <Box
               as="button"
               onClick={handlePrev}

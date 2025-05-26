@@ -28,11 +28,9 @@ export default function BlogsContent() {
     try {
       setIsLoading(true);
       const response = await getBlogs(currentPage, blogsPerPage);
-      console.log("API Response:", response);
       if (response.status === "success") {
         setBlogs(response.data);
         setTotalPages(response.pagination.total);
-        console.log("Total Pages:", response.pagination.totalPages);
       }
     } catch (error) {
       toast({
@@ -79,7 +77,6 @@ export default function BlogsContent() {
           mb="14%"
         >
           {blogs.map((post, index) => {
-            // console.log('Blog post data:', post); // Log the entire post object
             return (
               <GridItem
                 key={index}
