@@ -34,19 +34,19 @@ const PhoneIcon = ({ mr = "10px", w = "21px", h = "21px" }) => (
 const whoWeAreLinks = [
   { text: "About Us", path: "/whoweare" },
   { text: "Event Spotlight", path: "/whoweare/eventspotlight" },
-  { text: "Social Impact", path: "/whoweare/socialimpact" },
-  { text: "Achievements", path: "/whoweare/achievements" },
-  { text: "Blogs", path: "/whoweare/blogs" },
+  // { text: "Social Impact", path: "/whoweare/socialimpact" },
+  // { text: "Achievements", path: "/whoweare/achievements" },
+  // { text: "Blogs", path: "/whoweare/blogs" },
   { text: "Careers", path: "/whoweare/careers" },
-  { text: "Help Desk", path: "/whoweare/helpdesk" },
+  // { text: "Help Desk", path: "/whoweare/helpdesk" },
 ];
 
 const policyLinks = [
-  { text: "Terms & Condition", path: "/whoweare/terms-and-condition" },
-  { text: "Trademark Policy", path: "/whoweare/trademark-policy" },
-  { text: "Warranty Service", path: "/whoweare/warranty-service" },
-  { text: "Warranty Policy", path: "/whoweare/warranty-policy" },
-  { text: "Privacy Policy", path: "/whoweare/privacy-policy" },
+  // { text: "Terms & Condition", path: "/whoweare/terms-and-condition" },
+  // { text: "Trademark Policy", path: "/whoweare/trademark-policy" },
+  // { text: "Warranty Service", path: "/whoweare/warranty-service" },
+  // { text: "Warranty Policy", path: "/whoweare/warranty-policy" },
+  // { text: "Privacy Policy", path: "/whoweare/privacy-policy" },
 ];
 
 const ourServingsLinks = [
