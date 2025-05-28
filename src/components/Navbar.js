@@ -257,7 +257,7 @@ const Navbar = () => {
             pr={{ base: 0, md: 4 }}
             justifyContent="space-between"
           >
-            <Image src="./assets/vmuktilogo.png" alt="Logo" height={logoHeight} 
+            <Image src="../assets/vmuktilogo.png" alt="Logo" height={logoHeight}
               style={{ cursor: 'pointer' }}
               onClick={() => navigateTo('/', 'Home')}
             />
