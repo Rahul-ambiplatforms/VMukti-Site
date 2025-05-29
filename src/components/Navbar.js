@@ -111,14 +111,14 @@ const dropdownItems = {
   Whoweare: [
     { label: 'About Us', path: '/whoweare' },
     { label: 'Event Spotlight', path: '/whoweare/eventspotlight' },
-    { label: 'Social Impact', path: '/whoweare/social-impact' },
-    { label: 'Achievements', path: '/whoweare/achievements' },
-    { label: 'Blogs', path: '/whoweare/blogs' },
+    // { label: 'Social Impact', path: '/whoweare/social-impact' },
+    // { label: 'Achievements', path: '/whoweare/achievements' },
+    // { label: 'Blogs', path: '/whoweare/blogs' },
     { label: 'Careers', path: '/whoweare/careers' },
-    { label: 'Help Desk', path: '/whoweare/help-desk' },
-    { label: 'Terms & Condition', path: '/whoweare/terms' },
-    { label: 'Warranty Policy', path: '/whoweare/warranty' },
-    { label: 'Privacy Policy', path: '/whoweare/privacy' },
+    // { label: 'Help Desk', path: '/whoweare/help-desk' },
+    // { label: 'Terms & Condition', path: '/whoweare/terms' },
+    // { label: 'Warranty Policy', path: '/whoweare/warranty' },
+    // { label: 'Privacy Policy', path: '/whoweare/privacy' },
   ],
 }
 
@@ -257,7 +257,7 @@ const Navbar = () => {
             pr={{ base: 0, md: 4 }}
             justifyContent="space-between"
           >
-            <Image src="./assets/vmuktilogo.png" alt="Logo" height={logoHeight} 
+            <Image src="../assets/vmuktilogo.png" alt="Logo" height={logoHeight}
               style={{ cursor: 'pointer' }}
               onClick={() => navigateTo('/', 'Home')}
             />

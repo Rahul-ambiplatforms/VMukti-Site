@@ -16,7 +16,7 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
 
   // Responsive values
   const headingSize = useBreakpointValue({
-    base: '20px',
+    base: '24px',
     md: '28px',
     lg: '36px',
     xl: '48px',
