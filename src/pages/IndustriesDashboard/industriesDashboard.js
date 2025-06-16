@@ -618,7 +618,6 @@ export default function IndustryDashboard() {
       <Box
         textAlign="center"
         backgroundColor="#E7E7E7"
-        // bg="red"
         maxWidth="100%"
         minHeight={{ base: 'auto', md: '1673px' }}
         position="relative"
@@ -638,7 +637,6 @@ export default function IndustryDashboard() {
           backgroundSize: '1138px',
           opacity: '1',
           zIndex: '0',
-          // bg: "red"
         }}
         _after={{
           content: '""',
