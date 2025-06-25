@@ -58,28 +58,28 @@ export default function ContactUs() {
   const cards = [
     {
       title: 'Connect For Sales',
-      phone: '(+91) 951 022 1902',
+      phone: '(91+) 968 777 0000',
       email: 'sales@vmukti.com',
       bg: 'white',
       color: 'black',
     },
     {
       title: 'Connect For Partnership',
-      phone: '(+91) 951 022 1902',
+      phone: '(91+) 968 777 0000',
       email: 'contact@vmukti.com',
       bg: '#3F77A5',
       color: 'white',
     },
     {
       title: 'Connect For Support',
-      phone: '(+91) 951 022 2033',
+      phone: '(91+) 968 777 0000',
       email: 'support@vmukti.com',
       bg: 'white',
       color: 'black',
     },
     {
       title: 'Connect For HR',
-      phone: '(+91) 951 022 2755',
+      phone: '(91+) 968 777 0000',
       email: 'hr@vmukti.com',
       bg: '#BECEDC',
       color: 'black',

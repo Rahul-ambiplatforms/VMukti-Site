@@ -130,8 +130,8 @@ const NewsletterSubscription = () => {
       setIsDropdownOpen(false);
     };
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    // window.addEventListener("resize", handleResize);
+    // return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const buttonWidth = useBreakpointValue({

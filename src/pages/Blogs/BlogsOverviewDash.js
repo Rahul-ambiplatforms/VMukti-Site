@@ -16,10 +16,18 @@ import {
   Button,
   Spinner,
   Flex,
+  SimpleGrid,
+  Input,
+  useToast,
+  Textarea,
+  useBreakpointValue,
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getBlogs, getBlogById } from "./blog";
+import { Helmet } from "react-helmet-async";
+import ContactUs from "../ContactUs/Contactus";
+import ImagePop from "../../components/Animation/Image/ImagePop";
 
 // Helper function to render Slate content
 const renderSlateContent = (content) => {
@@ -75,13 +83,224 @@ const renderSlateContent = (content) => {
   });
 };
 
+// Add TableOfContents component before BlogsOverviewDash
+const TableOfContents = ({ components }) => {
+  const mainHeadings = components.filter((comp) => comp.type === "h2");
+
+  const handleLinkClick = (e, targetId) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const elementTop =
+        targetElement.getBoundingClientRect().top + window.pageYOffset;
+      const elementHeight = targetElement.offsetHeight;
+      const windowHeight = window.innerHeight;
+
+      const scrollTo = elementTop - windowHeight / 4 + elementHeight / 4;
+
+      window.scrollTo({
+        top: scrollTo,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const enableScroll = mainHeadings.length > 3;
+
+  return (
+    <Box mb={{ base: "4", md: "0" }}>
+      <Text
+        textAlign="left"
+        fontSize={{ base: "24px", md: "32px" }}
+        fontWeight="600"
+        color="#3F77A5"
+        mb={4}
+        pl={{ base: "0", md: "2%" }}
+      >
+        Table of Contents
+      </Text>
+
+      <Box
+        pl={{ base: "0", md: "2%" }}
+        maxHeight={enableScroll ? { base: "none", md: "130px" } : "none"}
+        overflowY={enableScroll ? { base: "hidden", md: "auto" } : "hidden"}
+        pr={enableScroll ? { base: "0", md: "2" } : "0"}
+        sx={
+          enableScroll
+            ? {
+                "&::-webkit-scrollbar": {
+                  width: "6px",
+                },
+                "&::-webkit-scrollbar-track": {
+                  background: "transparent",
+                },
+                "&::-webkit-scrollbar-thumb": {
+                  background: "#3F77A5",
+                  borderRadius: "24px",
+                },
+                "&::-webkit-scrollbar-thumb:hover": {
+                  background: "#315b7e",
+                },
+              }
+            : {}
+        }
+      >
+        {mainHeadings.map((heading, index) => (
+          <Flex
+            key={heading.id || index}
+            as="a"
+            href={`#${heading.id}`}
+            onClick={(e) => handleLinkClick(e, heading.id)}
+            gap="2"
+            mb="3"
+            alignItems="flex-start"
+            _hover={{
+              textDecoration: "none",
+              color: "#315b7e",
+            }}
+            sx={{
+              fontWeight: 600,
+              fontSize: "16px",
+              textDecoration: "none",
+              color: "initial",
+            }}
+          >
+            <Box display="flex" pt="4px">
+              <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
+                <path
+                  d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z"
+                  fill="#3F77A5"
+                />
+              </svg>
+            </Box>
+
+            {/* --- START: Modified Text component --- */}
+            <Text
+              sx={{
+                display: "-webkit-box",
+                WebkitLineClamp: "2", // The number of lines to show
+                WebkitBoxOrient: "vertical",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+              }}
+            >
+              {renderSlateContent(heading.content.text)}
+            </Text>
+            {/* --- END: Modified Text component --- */}
+          </Flex>
+        ))}
+      </Box>
+    </Box>
+  );
+};
+
 const BlogsOverviewDash = () => {
   const { urlWords } = useParams();
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  // Add at the top of your component
+  const [currentUrl, setCurrentUrl] = useState("");
+  const [baseUrl, setBaseUrl] = useState("");
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const toast = useToast();
 
-  const IMAGE_BASE_URL = process.env.REACT_APP_IMAGE_BASE_URL
+  const sectionRef = useRef(null); // Reference for the section containing the image
+  const ellipseSize = useBreakpointValue({
+    base: "200px",
+    md: "300px",
+    lg: "408px",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!formData.firstName || !formData.email || !formData.message) {
+      toast({
+        title: "Missing required fields",
+        description: "Please fill in all required fields",
+        status: "warning",
+        duration: 5000,
+        isClosable: true,
+      });
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      const response = await fetch(
+        "https://vmukti.com/backend/api/send-email",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "We'll get back to you soon.",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+        });
+
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        throw new Error(data.error || "Failed to send message");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      toast({
+        title: "Failed to send message",
+        description: error.message || "Please try again later.",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // In useEffect (add after your existing useEffect or combine)
+  useEffect(() => {
+    const url = window.location.href;
+    setCurrentUrl(url);
+    // Extract base URL up to and including the first slash after the domain
+    const match = url.match(/^(https?:\/\/[^\/]+\/)/);
+    setBaseUrl(match ? match[1] : url);
+  }, []);
+  // const IMAGE_BASE_URL = process.env.REACT_APP_IMAGE_BASE_URL;
+  const IMAGE_BASE_URL = "https://vmukti.com/backend/uploads";
   useEffect(() => {
     const fetchBlog = async () => {
       try {
@@ -111,22 +330,45 @@ const BlogsOverviewDash = () => {
         setLoading(false);
       }
     };
-    fetchBlog();
-  }, [urlWords]);
+    // fetchBlog();
 
-  if (loading)
+    if (urlWords) {
+      // Only fetch if urlWords is present
+      fetchBlog();
+    } else {
+      setError("No urlWords parameter found.");
+      setLoading(false);
+    }
+  }, [urlWords]);
+  const [mainImageOg, setMainImageOg] = useState("");
+  useEffect(() => {
+    if (blog && blog.content && IMAGE_BASE_URL) {
+      const img = blog.content.mainImage;
+      if (img && typeof img === "string") {
+        setMainImageOg(`${IMAGE_BASE_URL}/${img}`);
+      } else {
+        setMainImageOg("");
+      }
+    }
+  }, [blog, IMAGE_BASE_URL]);
+
+  if (loading) {
     return (
       <Box p={10} alignContent="center">
         <Spinner size="xl" />
       </Box>
     );
-  if (error)
+  }
+  if (error) {
     return (
       <Box p={10} color="red.500">
         {error}
       </Box>
     );
-  if (!blog) return null;
+  }
+  if (!blog) {
+    return null;
+  }
 
   const content = blog.content || {};
   const components = content.headingsAndImages || [];
@@ -136,212 +378,580 @@ const BlogsOverviewDash = () => {
       ? `${IMAGE_BASE_URL}/${content.mainImage}`
       : `${IMAGE_BASE_URL}/${content.mainImage}`;
 
+  const colors = ["#3F77A5", "#000000", "#DB7B3A"];
+
+  const applyColorLogic = (title) => {
+    const words = title.split(" ");
+    const numWords = words.length;
+
+    let colorScheme = [];
+
+    if (numWords >= 5) {
+      // First 2 words - color 1
+      colorScheme.push(
+        <span style={{ color: colors[0] }}>
+          {words[0]} {words[1]} {}
+        </span>
+      );
+
+      // Middle words - color 2
+      for (let i = 2; i < numWords - 2; i++) {
+        colorScheme.push(
+          <span style={{ color: colors[1] }}>
+            {words[i]}
+            {"\n"}
+          </span>
+        );
+      }
+
+      // Last 2 words - color 3
+      colorScheme.push(
+        <span style={{ color: colors[2] }}>
+          {words[numWords - 2]} {words[numWords - 1]}
+        </span>
+      );
+    } else if (numWords === 3 || numWords === 4) {
+      // First word - color 1
+      colorScheme.push(<span style={{ color: colors[0] }}>{words[0]} </span>);
+
+      // Middle words - color 2
+      for (let i = 1; i < numWords - 1; i++) {
+        colorScheme.push(<span style={{ color: colors[1] }}>{words[i]} </span>);
+      }
+
+      // Last word - color 3
+      colorScheme.push(
+        <span style={{ color: colors[2] }}>{words[numWords - 1]}</span>
+      );
+    } else if (numWords === 1 || numWords === 2) {
+      // Single or two words - only color 2
+      for (let i = 0; i < numWords; i++) {
+        colorScheme.push(<span style={{ color: colors[1] }}>{words[i]} </span>);
+      }
+    }
+
+    return colorScheme;
+  };
+
   return (
-    <Box px="2%">
-      {/* Blog Header */}
-      <Box mb={8}>
-        <Heading as="h1" fontSize="48px" mt="8" mb="8">
-          {content.title || "Blog Title"}
-        </Heading>
-        {mainImageUrl && (
-          <Box mb={6}>
-            <Image
-              src={mainImageUrl}
-              alt={content.imageText || "Blog image"}
-              borderRadius="lg"
-              w="100%"
-              maxH="500px"
-              objectFit="cover"
-            />
+    <Box>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          {blog.content?.metaTitle ||
+            blog.metadata?.metaTitle ||
+            "Default Title my name is again defaulyt title"}
+        </title>
+        <meta
+          property="og:title"
+          content={
+            blog.content?.metaTitle ||
+            blog.metadata?.metaTitle ||
+            "Default OG Title"
+          }
+        />
+        <meta
+          name="description"
+          content={
+            blog.content?.metaDescription ||
+            blog.metadata?.metaDescription ||
+            "Default Description"
+          }
+        />
+        <meta
+          property="og:description"
+          content={
+            blog.content?.metaDescription ||
+            blog.metadata?.metaDescription ||
+            "Default OG Description"
+          }
+        />
+        <meta property="og:url" content={currentUrl} />
+        <meta property="og:type" content="article" />
+        {/* <meta property="og:type" content={currentUrl} /> */}
+        <meta property="og:site_name" content="Vmukti Solutions" />
+        <meta property="og:image" content={mainImageOg} />
+        <meta property="og:locale" content="en_US" />
+        <meta
+          name="twitter:card"
+          content={
+            blog.content?.metaDescription ||
+            blog.metadata?.metaDescription ||
+            "Default OG Description"
+          }
+        />
+        <meta name="twitter:site" content={`${baseUrl}`} />
+        <link rel="canonical" href={`${currentUrl}`} />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+      <Box px="2%">
+        {/* Blog Header */}
+        <Box mb={8}>
+          <Box
+            position="absolute"
+            top="0"
+            left="25%"
+            transform="translateX(-50%)"
+            width={ellipseSize}
+            height={ellipseSize}
+            bg="#3F77A5"
+            borderRadius="50%"
+            zIndex={0}
+            opacity={0.12}
+            filter="blur(100px)"
+            display={{ base: "none", md: "block" }}
+            ref={sectionRef}
+          />
+          <Heading
+            as="h1"
+            fontSize={{ base: "36px", md: "48px" }}
+            mt="8"
+            mb="4"
+          >
+            {applyColorLogic(content.title || "Blog Title")}
+          </Heading>
+
+          {/* Date */}
+          <Box
+            display="flex"
+            gap="2"
+            alignItems="center"
+            borderRadius={{ base: "12px", md: "15px" }}
+            bg="white"
+            px={{ base: "4%", md: "1%" }}
+            py="1%"
+            mb={{ base: "4%", md: "2%" }}
+            w="fit-content"
+          >
+            <svg
+              width="21"
+              height="21"
+              viewBox="0 0 21 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_5166_926)">
+                <path
+                  d="M10.502 4.11673e-07C8.42529 4.20711e-07 6.39527 0.61579 4.66857 1.7695C2.94188 2.92321 1.59607 4.56303 0.801316 6.4816C0.00656746 8.40016 -0.201425 10.5113 0.203641 12.5481C0.608706 14.5849 1.60864 16.4558 3.07699 17.9243C4.54534 19.3928 6.41617 20.3929 8.45291 20.7981C10.4896 21.2034 12.6008 20.9956 14.5195 20.201C16.4381 19.4064 18.078 18.0608 19.2319 16.3342C20.3858 14.6076 21.0018 12.5776 21.002 10.501C21.0025 9.12191 20.7312 7.75625 20.2038 6.48205C19.6763 5.20784 18.9029 4.05006 17.9278 3.07486C16.9527 2.09967 15.795 1.32617 14.5208 0.798572C13.2467 0.270974 11.881 -0.000385799 10.502 4.11673e-07ZM10.502 18.9006C8.84048 18.9006 7.21631 18.4079 5.83484 17.4848C4.45337 16.5618 3.37665 15.2498 2.74083 13.7148C2.10501 12.1798 1.93865 10.4907 2.26278 8.86113C2.58692 7.23157 3.387 5.73473 4.56184 4.55989C5.73669 3.38504 7.23353 2.58497 8.86308 2.26083C10.4926 1.93669 12.1817 2.10305 13.7167 2.73887C15.2517 3.37469 16.5637 4.45141 17.4868 5.83288C18.4099 7.21435 18.9025 8.83852 18.9025 10.5C18.8961 12.726 18.0089 14.859 16.4349 16.433C14.8609 18.007 12.7279 18.8941 10.502 18.9006Z"
+                  fill="#3F77A5"
+                />
+                <path
+                  d="M11.0265 5.25098H9.44922V11.5512L14.9618 14.8585L15.7455 13.5458L11.0206 10.7635L11.0265 5.25098Z"
+                  fill="#3F77A5"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_5166_926">
+                  <rect width="21" height="21" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <Text fontSize="16px" fontWeight="500" color="black">
+              {(() => {
+                const created = new Date(
+                  blog.createdAt?.$date || blog.createdAt
+                );
+                const updated = new Date(
+                  blog.updatedAt?.$date || blog.updatedAt
+                );
+
+                // Compare up to minutes
+                // const format = (d) =>
+                //   `${d.getFullYear()}-${d.getMonth()}-${d.getDate()} ${d.getHours()}:${d.getMinutes()}`;
+
+                const isSame = Math.abs(updated.getTime() - created.getTime()) <= 60000;
+
+                const displayDate = isSame ? created : updated;
+
+                const label = isSame ? "Published" : "Updated";
+
+                return (
+                  <>
+                    <span>{label}</span>
+                    <span style={{ color: "#3F77A5", padding: "0 4px" }}>
+                      ●
+                    </span>
+                    <span>
+                      {displayDate.toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </span>
+                  </>
+                );
+              })()}
+            </Text>
           </Box>
-        )}
-        {/* {content.brief && (
+
+          {mainImageUrl && (
+            <Box mb={6}>
+              <Image
+                src={mainImageUrl}
+                alt={content.imageText || "Blog image"}
+                borderRadius="24px"
+                w="100%"
+                h="auto"
+                // maxH="70vh"
+                objectFit="contain"
+              />
+            </Box>
+          )}
+          {/* {content.brief && (
           <Box mt={4} fontSize="16px">
             {renderSlateContent(content.brief)}
           </Box>
         )} */}
-      </Box>
-      {/* Blog Content */}
-      <VStack
-        spacing={8}
-        bg="white"
-        borderRadius="24px"
-        px="5%"
-        py="4%"
-        align="stretch"
-      >
-        {content.brief && (
-          <Box mt={4} fontSize="16px">
-            {renderSlateContent(content.brief)}
-          </Box>
-        )}
-        {components
-          .reduce((groups, component, index) => {
-            if (component.type === "faq") return groups;
-            if (
-              component.type === "h2" ||
-              component.type === "h3" ||
-              component.type === "h4"
-            ) {
-              groups.push({
-                id: component.id,
-                heading: component,
-                content: [],
-              });
-            } else if (component.type === "p" && groups.length > 0) {
-              groups[groups.length - 1].content.push(component);
-            } else {
-              groups.push({
-                id: component.id,
-                content: [component],
-              });
-            }
-            return groups;
-          }, [])
-          .map((group) => (
-            <VStack key={group.id} spacing={0} align="stretch">
-              {group.heading && (
-                <Box>
-                  {group.heading.type === "h2" && (
-                    <Heading as="h2" fontSize="36px">
-                      {renderSlateContent(group.heading.content.text)}
-                    </Heading>
-                  )}
-                  {group.heading.type === "h3" && (
-                    <Heading as="h3" fontSize="20px">
-                      {renderSlateContent(group.heading.content.text)}
-                    </Heading>
-                  )}
-                  {group.heading.type === "h4" && (
-                    <Heading as="h4" fontSize="16px">
-                      {renderSlateContent(group.heading.content.text)}
-                    </Heading>
-                  )}
+        </Box>
+
+        {/* Blog Content */}
+
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          align="start"
+          py={{ base: 0, md: 8 }}
+          gap={4}
+          // bg="red"
+        >
+          {/* Content Section */}
+          <Box width={{ base: "100%", md: "70%" }}>
+            <VStack
+              spacing={8}
+              bg="white"
+              borderRadius="24px"
+              px="5%"
+              py="4%"
+              align="stretch"
+            >
+              {content.brief && (
+                <Box mt={4} fontSize="16px">
+                  {renderSlateContent(content.brief)}
                 </Box>
               )}
-              {group.content.map((component) => {
-                switch (component.type) {
-                  case "p":
-                    return (
-                      <Box as="p" key={component.id} fontSize="16px">
-                        {renderSlateContent(component.content.text)}
-                      </Box>
-                    );
-                  case "imageVideo":
-                    return (
-                      <Box key={component.id} my={4}>
-                        {component.content.file ||
-                        component.content.url ||
-                        component.content.imagePath ? (
-                          <Image
-                            src={
-                              component.content.file ||
-                              component.content.url ||
-                              `${IMAGE_BASE_URL}/${component.content.imagePath}`
-                            }
-                            alt={component.content.description || "Image"}
-                            borderRadius="md"
-                            maxH="250px"
-                          />
-                        ) : (
-                          <Box
-                            bg="gray.200"
-                            borderRadius="md"
-                            height="200px"
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
+              <Box
+                // p="2%"
+                mb={{ base: "0", md: "4%" }}
+                bg="white"
+                borderRadius={{ base: "20px", md: "24px" }}
+                display={{ base: "block", md: "none" }}
+              >
+                <TableOfContents components={components} />
+              </Box>
+              {components
+                .reduce((groups, component, index) => {
+                  if (component.type === "faq") return groups;
+                  if (
+                    component.type === "h2" ||
+                    component.type === "h3" ||
+                    component.type === "h4"
+                  ) {
+                    groups.push({
+                      id: component.id,
+                      heading: component,
+                      content: [],
+                    });
+                  } else if (component.type === "p" && groups.length > 0) {
+                    groups[groups.length - 1].content.push(component);
+                  } else {
+                    groups.push({
+                      id: component.id,
+                      content: [component],
+                    });
+                  }
+                  return groups;
+                }, [])
+                .map((group) => (
+                  <VStack key={group.id} spacing={0} align="stretch">
+                    {group.heading && (
+                      <Box>
+                        {group.heading.type === "h2" && (
+                          <Heading
+                            as="h2"
+                            id={group.heading.id}
+                            fontSize="36px"
                           >
-                            <Text color="gray.500">Image Placeholder</Text>
-                          </Box>
+                            {renderSlateContent(group.heading.content.text)}
+                          </Heading>
+                        )}
+                        {group.heading.type === "h3" && (
+                          <Heading
+                            as="h3"
+                            id={group.heading.id}
+                            fontSize="20px"
+                          >
+                            {renderSlateContent(group.heading.content.text)}
+                          </Heading>
+                        )}
+                        {group.heading.type === "h4" && (
+                          <Heading
+                            as="h4"
+                            id={group.heading.id}
+                            fontSize="16px"
+                          >
+                            {renderSlateContent(group.heading.content.text)}
+                          </Heading>
                         )}
                       </Box>
-                    );
-                  case "cta":
-                    return (
-                      <Box
-                        key={component.id}
-                        bg="blue.50"
-                        p={6}
-                        borderRadius="lg"
-                        textAlign="center"
-                        my={6}
-                        border="1px"
-                        borderColor="blue.100"
-                      >
-                        <Text fontSize="xl" mb={4} fontWeight="medium">
-                          {component.content.ctaText || "Call to Action Text"}
-                        </Text>
-                        <Button
-                          as="a"
-                          href={
-                            component.content.buttonLink?.startsWith("http")
-                              ? component.content.buttonLink
-                              : `https://${component.content.buttonLink}`
-                          }
-                          colorScheme="blue"
-                          size="lg"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {component.content.buttonText || "Click Here"}
-                        </Button>
-                      </Box>
-                    );
-                  case "schema":
-                    return (
-                      <Box
-                        key={component.id}
-                        p={4}
-                        bg="gray.50"
-                        borderRadius="md"
-                      >
-                        <Text fontFamily="monospace" fontSize="sm">
-                          {component.content.schemaData || "Schema Content"}
-                        </Text>
-                      </Box>
-                    );
-                  default:
-                    return null;
-                }
-              })}
+                    )}
+                    {group.content.map((component) => {
+                      switch (component.type) {
+                        case "p":
+                          return (
+                            <Box as="p" key={component.id} fontSize="16px">
+                              {renderSlateContent(component.content.text)}
+                            </Box>
+                          );
+                        case "imageVideo":
+                          return (
+                            <Box key={component.id} my={4}>
+                              {component.content.file ||
+                              component.content.url ||
+                              component.content.imagePath ? (
+                                <Image
+                                  src={
+                                    component.content.file ||
+                                    component.content.url ||
+                                    `${IMAGE_BASE_URL}/${component.content.imagePath}`
+                                  }
+                                  alt={component.content.description || "Image"}
+                                  borderRadius="24px"
+                                  w="full"
+                                  h="auto"
+                                  // maxH="250px"
+                                />
+                              ) : (
+                                <Box
+                                  bg="gray.200"
+                                  borderRadius="md"
+                                  height="200px"
+                                  display="flex"
+                                  alignItems="center"
+                                  justifyContent="center"
+                                >
+                                  <Text color="gray.500">
+                                    Image Placeholder
+                                  </Text>
+                                </Box>
+                              )}
+                            </Box>
+                          );
+                        case "cta":
+                          return (
+                            <Box
+                              key={component.id}
+                              bg="blue.50"
+                              p={6}
+                              borderRadius="lg"
+                              textAlign="center"
+                              my={6}
+                              border="1px"
+                              borderColor="#3f77a5"
+                            >
+                              <Text fontSize="xl" mb={4} fontWeight="medium">
+                                {component.content.ctaText ||
+                                  "Call to Action Text"}
+                              </Text>
+                              <Button
+                                as="a"
+                                href={
+                                  component.content.buttonLink?.startsWith(
+                                    "http"
+                                  )
+                                    ? component.content.buttonLink
+                                    : `https://${component.content.buttonLink}`
+                                }
+                                colorScheme="blue"
+                                bg="#3f77a5"
+                                size="lg"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {component.content.buttonText || "Click Here"}
+                              </Button>
+                            </Box>
+                          );
+                        case "schema":
+                          return (
+                            <Box
+                              key={component.id}
+                              p={4}
+                              bg="gray.50"
+                              borderRadius="md"
+                            >
+                              <Text fontFamily="monospace" fontSize="sm">
+                                {component.content.schemaData ||
+                                  "Schema Content"}
+                              </Text>
+                            </Box>
+                          );
+                        default:
+                          return null;
+                      }
+                    })}
+                  </VStack>
+                ))}
+
+              {/* FAQ Section */}
+              {faqComponents.length > 0 && (
+                <Box mt={8}>
+                  <Heading as="h2" fontSize="36px" mb={4}>
+                    <Text fontSize="16px" mt={2} color="gray.500">
+                      {content.faqs?.title || "Frequently Asked Questions"}
+                    </Text>
+                  </Heading>
+                  <Accordion allowMultiple>
+                    {faqComponents.map((faq, idx) => (
+                      <AccordionItem key={faq.id || idx}>
+                        <h3>
+                          <AccordionButton py={3}>
+                            <Box
+                              flex="1"
+                              textAlign="left"
+                              fontWeight="600"
+                              fontSize="16px"
+                            >
+                              {faq.question || "Question"}
+                            </Box>
+                            <AccordionIcon />
+                          </AccordionButton>
+                        </h3>
+                        <AccordionPanel pb={4} fontSize="14px" fontWeight="400">
+                          {renderSlateContent(faq.answer)}
+                        </AccordionPanel>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </Box>
+              )}
             </VStack>
-          ))}
-        {/* FAQ Section with title */}
-        {faqComponents.length > 0 && (
-          <Box mt={8}>
-            <Heading as="h2" fontSize="36px" mb={4}>
-              <Text fontSize="16px" mt={2} color="gray.500">
-                {content.faqs?.title || "Frequently Asked Questions"}
-              </Text>
-            </Heading>
-            <Accordion allowMultiple>
-              {faqComponents.map((faq, idx) => (
-                <AccordionItem key={faq.id || idx}>
-                  <h3>
-                    <AccordionButton py={3}>
-                      <Box
-                        flex="1"
-                        textAlign="left"
-                        fontWeight="600"
-                        fontSize="16px"
-                      >
-                        {faq.question || "Question"}
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h3>
-                  <AccordionPanel pb={4} fontSize="14px" fontWeight="400">
-                    {renderSlateContent(faq.answer)}
-                  </AccordionPanel>
-                </AccordionItem>
-              ))}
-            </Accordion>
           </Box>
-        )}
-      </VStack>
-      {/* Metadata Preview (for reference) */}
-      {/* <Box mt={12} p={4} bg="gray.50" borderRadius="md">
+
+          {/* Sticky Part TOC and Contact Form */}
+          <Flex
+            direction={{ base: "column", md: "column" }}
+            width={{ base: "100%", md: "30%" }}
+            position={{ base: "relative", md: "sticky" }}
+            top={{ base: "20px", md: "20px" }} // Adjust the top value as needed
+            // bg="red"
+            // top="20px"
+            borderRadius={{ base: "20px", md: "24px" }}
+            boxShadow="sm"
+          >
+            <Box
+              p="2%"
+              mb="4%"
+              bg="white"
+              borderRadius={{ base: "20px", md: "24px" }}
+              display={{ base: "none", md: "block" }}
+            >
+              <TableOfContents components={components} />
+            </Box>
+            <Box bg="white" borderRadius={{ base: "20px", md: "24px" }}>
+              <Box
+                as="form"
+                onSubmit={handleSubmit}
+                w="100%"
+                maxW="800px"
+                mx="auto"
+                p={{ base: 4, md: 6 }}
+              >
+                <Heading
+                  fontSize={{ base: "20px", md: "36px" }}
+                  fontWeight="600"
+                  mb="5%"
+                  textAlign={{ base: "center", md: "left" }}
+                >
+                  Send Us a{" "}
+                  <Text as="span" color="#DB7B3A">
+                    Message
+                  </Text>
+                </Heading>
+
+                <VStack spacing={4} align="stretch">
+                  {/* Name Fields */}
+                  <SimpleGrid columns={1} spacing={4} width="100%">
+                    <Input
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      placeholder="Full name *"
+                      bg="#E7E7E7"
+                      border="none"
+                      borderRadius="10px"
+                      h="44px"
+                      required
+                    />
+                  </SimpleGrid>
+
+                  {/* Contact Fields */}
+                  <SimpleGrid columns={1} spacing={4} width="100%">
+                    <Input
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Email Address *"
+                      bg="#E7E7E7"
+                      border="none"
+                      borderRadius="10px"
+                      h="44px"
+                      required
+                    />
+                    <Input
+                      name="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="Phone Number"
+                      bg="#E7E7E7"
+                      border="none"
+                      borderRadius="10px"
+                      h="44px"
+                    />
+                  </SimpleGrid>
+
+                  {/* Message Field */}
+                  <Textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Write your message *"
+                    bg="#E7E7E7"
+                    border="none"
+                    resize="none"
+                    borderRadius="10px"
+                    h="88px"
+                    required
+                  />
+
+                  {/* Submit Button */}
+                  <Flex justify="center" w="100%">
+                    <Button
+                      type="submit"
+                      bg="#3F77A5"
+                      color="white"
+                      width="146px"
+                      height="50px"
+                      borderRadius="20px"
+                      fontSize="16px"
+                      fontWeight="700"
+                      isLoading={isLoading}
+                      loadingText="Sending..."
+                      _hover={{ bg: "#2c5a7d" }}
+                    >
+                      Submit
+                    </Button>
+                  </Flex>
+                </VStack>
+              </Box>
+            </Box>
+          </Flex>
+        </Flex>
+
+        {/* Metadata Preview (for reference) */}
+
+        {/* <Box mt={12} p={4} bg="gray.50" borderRadius="md">
         <Heading as="h3" size="sm" mb={2}>
           Metadata Preview
         </Heading>
@@ -355,11 +965,9 @@ const BlogsOverviewDash = () => {
           <strong>Meta Description:</strong> {content.metaDescription || "Blog post description for SEO purposes."}
         </Text>
       </Box> */}
+      </Box>
     </Box>
   );
 };
 
 export default BlogsOverviewDash;
-
-// URL
-// pagination
