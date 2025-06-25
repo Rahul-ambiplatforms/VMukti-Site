@@ -20,8 +20,9 @@ import {
   Input,
   useToast,
   Textarea,
+  useBreakpointValue,
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getBlogs, getBlogById } from "./blog";
 import { Helmet } from "react-helmet-async";
@@ -84,107 +85,112 @@ const renderSlateContent = (content) => {
 
 // Add TableOfContents component before BlogsOverviewDash
 const TableOfContents = ({ components }) => {
-  const headings = components.filter(
-    (comp) => comp.type === "h2" || comp.type === "h3" || comp.type === "h4"
-  );
+  const mainHeadings = components.filter((comp) => comp.type === "h2");
 
-  const groupedHeadings = headings.reduce((acc, heading) => {
-    if (heading.type === "h2") {
-      acc.push({
-        main: heading,
-        subHeadings: [],
-      });
-    } else if (heading.type === "h3" && acc.length > 0) {
-      acc[acc.length - 1].subHeadings.push(heading);
-    }
-    return acc;
-  }, []);
-
-  // --- START: Added smooth scroll handler ---
   const handleLinkClick = (e, targetId) => {
-    // 1. Prevent the default browser jump
     e.preventDefault();
-    // 2. Prevent the click from toggling the accordion
     e.stopPropagation();
-
     const targetElement = document.getElementById(targetId);
-
     if (targetElement) {
-      // 3. Use the scrollIntoView API for smooth scrolling
-      targetElement.scrollIntoView({
-        behavior: "smooth", // This enables the smooth scrolling
-        block: "start", // Aligns the top of the element to the top of the viewport
+      const elementTop =
+        targetElement.getBoundingClientRect().top + window.pageYOffset;
+      const elementHeight = targetElement.offsetHeight;
+      const windowHeight = window.innerHeight;
+
+      const scrollTo = elementTop - windowHeight / 4 + elementHeight / 4;
+
+      window.scrollTo({
+        top: scrollTo,
+        behavior: "smooth",
       });
     }
   };
-  // --- END: Added smooth scroll handler ---
+
+  const enableScroll = mainHeadings.length > 3;
 
   return (
-    <Box mb={{ base: "0", md: "1%" }}>
+    <Box mb={{ base: "4", md: "0" }}>
       <Text
         textAlign="left"
         fontSize={{ base: "24px", md: "32px" }}
-        fontWeight="bold"
+        fontWeight="600"
         color="#3F77A5"
-        mb={2}
+        mb={4}
         pl={{ base: "0", md: "2%" }}
       >
         Table of Contents
       </Text>
-      <UnorderedList styleType="none">
-        {groupedHeadings.map((group, index) => (
-          <ListItem key={group.main.id || index}>
-            <Accordion allowToggle>
-              <AccordionItem border="none">
-                {({ isExpanded }) => (
-                  <>
-                    <Flex align="center">
-                      <Flex
-                        flex="1"
-                        sx={{
-                          "*": {
-                            textAlign: "left !important",
-                          },
-                        }}
-                        gap="2"
-                        // Vertically align all items in the flex container
-                        alignItems="center"
-                      >
-                        {/* The 'mt' property is no longer needed due to alignItems on the parent Flex */}
-                        <Box display="flex">
-                          <svg
-                            width="8"
-                            height="16"
-                            viewBox="0 0 8 16"
-                            fill="none"
-                          >
-                            <path
-                              d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z"
-                              fill="#3F77A5"
-                            />
-                          </svg>
-                        </Box>
-                        <a
-                          href={`#${group.main.id}`}
-                          style={{
-                            fontWeight: 600,
-                            fontSize: "16px",
-                            textDecoration: "none",
-                          }}
-                          // --- Updated onClick handler ---
-                          onClick={(e) => handleLinkClick(e, group.main.id)}
-                        >
-                          {renderSlateContent(group.main.content.text)}
-                        </a>
-                      </Flex>
-                    </Flex>
-                  </>
-                )}
-              </AccordionItem>
-            </Accordion>
-          </ListItem>
+
+      <Box
+        pl={{ base: "0", md: "2%" }}
+        maxHeight={enableScroll ? { base: "none", md: "130px" } : "none"}
+        overflowY={enableScroll ? { base: "hidden", md: "auto" } : "hidden"}
+        pr={enableScroll ? { base: "0", md: "2" } : "0"}
+        sx={
+          enableScroll
+            ? {
+                "&::-webkit-scrollbar": {
+                  width: "6px",
+                },
+                "&::-webkit-scrollbar-track": {
+                  background: "transparent",
+                },
+                "&::-webkit-scrollbar-thumb": {
+                  background: "#3F77A5",
+                  borderRadius: "24px",
+                },
+                "&::-webkit-scrollbar-thumb:hover": {
+                  background: "#315b7e",
+                },
+              }
+            : {}
+        }
+      >
+        {mainHeadings.map((heading, index) => (
+          <Flex
+            key={heading.id || index}
+            as="a"
+            href={`#${heading.id}`}
+            onClick={(e) => handleLinkClick(e, heading.id)}
+            gap="2"
+            mb="3"
+            alignItems="flex-start"
+            _hover={{
+              textDecoration: "none",
+              color: "#315b7e",
+            }}
+            sx={{
+              fontWeight: 600,
+              fontSize: "16px",
+              textDecoration: "none",
+              color: "initial",
+            }}
+          >
+            <Box display="flex" pt="4px">
+              <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
+                <path
+                  d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z"
+                  fill="#3F77A5"
+                />
+              </svg>
+            </Box>
+
+            {/* --- START: Modified Text component --- */}
+            <Text
+              sx={{
+                display: "-webkit-box",
+                WebkitLineClamp: "2", // The number of lines to show
+                WebkitBoxOrient: "vertical",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+              }}
+            >
+              {renderSlateContent(heading.content.text)}
+            </Text>
+            {/* --- END: Modified Text component --- */}
+          </Flex>
         ))}
-      </UnorderedList>
+      </Box>
     </Box>
   );
 };
@@ -206,6 +212,13 @@ const BlogsOverviewDash = () => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
+
+  const sectionRef = useRef(null); // Reference for the section containing the image
+  const ellipseSize = useBreakpointValue({
+    base: "200px",
+    md: "300px",
+    lg: "408px",
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -286,7 +299,8 @@ const BlogsOverviewDash = () => {
     const match = url.match(/^(https?:\/\/[^\/]+\/)/);
     setBaseUrl(match ? match[1] : url);
   }, []);
-  const IMAGE_BASE_URL = process.env.REACT_APP_IMAGE_BASE_URL;
+  // const IMAGE_BASE_URL = process.env.REACT_APP_IMAGE_BASE_URL;
+  const IMAGE_BASE_URL = "https://vmukti.com/backend/uploads";
   useEffect(() => {
     const fetchBlog = async () => {
       try {
@@ -364,6 +378,61 @@ const BlogsOverviewDash = () => {
       ? `${IMAGE_BASE_URL}/${content.mainImage}`
       : `${IMAGE_BASE_URL}/${content.mainImage}`;
 
+  const colors = ["#3F77A5", "#000000", "#DB7B3A"];
+
+  const applyColorLogic = (title) => {
+    const words = title.split(" ");
+    const numWords = words.length;
+
+    let colorScheme = [];
+
+    if (numWords >= 5) {
+      // First 2 words - color 1
+      colorScheme.push(
+        <span style={{ color: colors[0] }}>
+          {words[0]} {words[1]} {}
+        </span>
+      );
+
+      // Middle words - color 2
+      for (let i = 2; i < numWords - 2; i++) {
+        colorScheme.push(
+          <span style={{ color: colors[1] }}>
+            {words[i]}
+            {"\n"}
+          </span>
+        );
+      }
+
+      // Last 2 words - color 3
+      colorScheme.push(
+        <span style={{ color: colors[2] }}>
+          {words[numWords - 2]} {words[numWords - 1]}
+        </span>
+      );
+    } else if (numWords === 3 || numWords === 4) {
+      // First word - color 1
+      colorScheme.push(<span style={{ color: colors[0] }}>{words[0]} </span>);
+
+      // Middle words - color 2
+      for (let i = 1; i < numWords - 1; i++) {
+        colorScheme.push(<span style={{ color: colors[1] }}>{words[i]} </span>);
+      }
+
+      // Last word - color 3
+      colorScheme.push(
+        <span style={{ color: colors[2] }}>{words[numWords - 1]}</span>
+      );
+    } else if (numWords === 1 || numWords === 2) {
+      // Single or two words - only color 2
+      for (let i = 0; i < numWords; i++) {
+        colorScheme.push(<span style={{ color: colors[1] }}>{words[i]} </span>);
+      }
+    }
+
+    return colorScheme;
+  };
+
   return (
     <Box>
       <Helmet>
@@ -418,13 +487,28 @@ const BlogsOverviewDash = () => {
       <Box px="2%">
         {/* Blog Header */}
         <Box mb={8}>
+          <Box
+            position="absolute"
+            top="0"
+            left="25%"
+            transform="translateX(-50%)"
+            width={ellipseSize}
+            height={ellipseSize}
+            bg="#3F77A5"
+            borderRadius="50%"
+            zIndex={0}
+            opacity={0.12}
+            filter="blur(100px)"
+            display={{ base: "none", md: "block" }}
+            ref={sectionRef}
+          />
           <Heading
             as="h1"
             fontSize={{ base: "36px", md: "48px" }}
             mt="8"
-            mb="8"
+            mb="4"
           >
-            {content.title || "Blog Title"}
+            {applyColorLogic(content.title || "Blog Title")}
           </Heading>
 
           {/* Date */}
@@ -432,11 +516,11 @@ const BlogsOverviewDash = () => {
             display="flex"
             gap="2"
             alignItems="center"
-            borderRadius="15px"
+            borderRadius={{ base: "12px", md: "15px" }}
             bg="white"
-            px="2%"
+            px={{ base: "4%", md: "1%" }}
             py="1%"
-            mb="2%"
+            mb={{ base: "4%", md: "2%" }}
             w="fit-content"
           >
             <svg
@@ -473,23 +557,30 @@ const BlogsOverviewDash = () => {
                 );
 
                 // Compare up to minutes
-                const format = (d) =>
-                  `${d.getFullYear()}-${d.getMonth()}-${d.getDate()} ${d.getHours()}:${d.getMinutes()}`;
+                // const format = (d) =>
+                //   `${d.getFullYear()}-${d.getMonth()}-${d.getDate()} ${d.getHours()}:${d.getMinutes()}`;
 
-                const isSame = format(created) === format(updated);
+                const isSame = Math.abs(updated.getTime() - created.getTime()) <= 60000;
 
                 const displayDate = isSame ? created : updated;
 
                 const label = isSame ? "Published" : "Updated";
 
-                return `${label} \u00A0 ${displayDate.toLocaleDateString(
-                  "en-US",
-                  {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  }
-                )}`;
+                return (
+                  <>
+                    <span>{label}</span>
+                    <span style={{ color: "#3F77A5", padding: "0 4px" }}>
+                      ●
+                    </span>
+                    <span>
+                      {displayDate.toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </span>
+                  </>
+                );
               })()}
             </Text>
           </Box>
@@ -499,10 +590,11 @@ const BlogsOverviewDash = () => {
               <Image
                 src={mainImageUrl}
                 alt={content.imageText || "Blog image"}
-                borderRadius="lg"
+                borderRadius="24px"
                 w="100%"
-                maxH="500px"
-                objectFit="cover"
+                h="auto"
+                // maxH="70vh"
+                objectFit="contain"
               />
             </Box>
           )}
@@ -518,8 +610,9 @@ const BlogsOverviewDash = () => {
         <Flex
           direction={{ base: "column", md: "row" }}
           align="start"
-          py={{ base: 4, md: 8 }}
+          py={{ base: 0, md: 8 }}
           gap={4}
+          // bg="red"
         >
           {/* Content Section */}
           <Box width={{ base: "100%", md: "70%" }}>
@@ -537,14 +630,14 @@ const BlogsOverviewDash = () => {
                 </Box>
               )}
               <Box
-              // p="2%"
-              mb="4%"
-              bg="white"
-              borderRadius={{ base: "20px", md: "24px" }}
-              display={{ base: "block", md: "none" }}
-            >
-              <TableOfContents components={components} />
-            </Box>
+                // p="2%"
+                mb={{ base: "0", md: "4%" }}
+                bg="white"
+                borderRadius={{ base: "20px", md: "24px" }}
+                display={{ base: "block", md: "none" }}
+              >
+                <TableOfContents components={components} />
+              </Box>
               {components
                 .reduce((groups, component, index) => {
                   if (component.type === "faq") return groups;
@@ -622,8 +715,10 @@ const BlogsOverviewDash = () => {
                                     `${IMAGE_BASE_URL}/${component.content.imagePath}`
                                   }
                                   alt={component.content.description || "Image"}
-                                  borderRadius="md"
-                                  maxH="250px"
+                                  borderRadius="24px"
+                                  w="full"
+                                  h="auto"
+                                  // maxH="250px"
                                 />
                               ) : (
                                 <Box
@@ -651,7 +746,7 @@ const BlogsOverviewDash = () => {
                               textAlign="center"
                               my={6}
                               border="1px"
-                              borderColor="blue.100"
+                              borderColor="#3f77a5"
                             >
                               <Text fontSize="xl" mb={4} fontWeight="medium">
                                 {component.content.ctaText ||
@@ -667,6 +762,7 @@ const BlogsOverviewDash = () => {
                                     : `https://${component.content.buttonLink}`
                                 }
                                 colorScheme="blue"
+                                bg="#3f77a5"
                                 size="lg"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -736,7 +832,7 @@ const BlogsOverviewDash = () => {
             direction={{ base: "column", md: "column" }}
             width={{ base: "100%", md: "30%" }}
             position={{ base: "relative", md: "sticky" }}
-            top={{ base: "20px", md: "20px" }}  // Adjust the top value as needed
+            top={{ base: "20px", md: "20px" }} // Adjust the top value as needed
             // bg="red"
             // top="20px"
             borderRadius={{ base: "20px", md: "24px" }}
@@ -875,6 +971,3 @@ const BlogsOverviewDash = () => {
 };
 
 export default BlogsOverviewDash;
-
-// URL
-// pagination

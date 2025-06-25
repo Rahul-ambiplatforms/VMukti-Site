@@ -17,20 +17,50 @@ import {
   IconButton,
   Select,
   Tooltip,
+  Icon,
 } from "@chakra-ui/react";
-import { CloseIcon } from "@chakra-ui/icons";
+import { CloseIcon, SearchIcon, InfoIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 import { getBlogs } from "./blog";
+
+// Helper component for the "No Results" UI
+const EmptyState = ({ searchTerm }) => {
+  return (
+    <Box
+      textAlign="center"
+      py={10}
+      px={6}
+      mt={8}
+      bg="gray.50"
+      borderRadius="md"
+    >
+      <Icon
+        as={searchTerm ? SearchIcon : InfoIcon}
+        boxSize={"50px"}
+        color={"blue.500"}
+      />
+      <Heading as="h2" size="xl" mt={6} mb={2}>
+        {searchTerm ? "No Results Found" : "No Blogs Yet"}
+      </Heading>
+      <Text color={"gray.500"}>
+        {searchTerm
+          ? `We couldn't find any blogs matching your search for "${searchTerm}". Try using different keywords.`
+          : "There are currently no blog posts. Please check back later!"}
+      </Text>
+    </Box>
+  );
+};
 
 export default function BlogsContent() {
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const blogsPerPage = 4;
+  const blogsPerPage = 6;
   const [totalPages, setTotalPages] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const borderColor = useColorModeValue("gray.200", "gray.700");
   const toast = useToast();
-  const IMAGE_BASE_URL = process.env.REACT_APP_IMAGE_BASE_URL;
+  // const IMAGE_BASE_URL = process.env.REACT_APP_IMAGE_BASE_URL;
+  const IMAGE_BASE_URL = "https://vmukti.com/backend/uploads";
 
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOrder, setSortOrder] = useState("latest");
@@ -91,7 +121,7 @@ export default function BlogsContent() {
   };
 
   return (
-    <Box m="1%">
+    <Box m="1%" mb="14%">
       {/* Header */}
       <Flex
         direction={{ base: "column", md: "row" }}
@@ -117,6 +147,7 @@ export default function BlogsContent() {
           flexWrap="wrap"
           alignItems="center"
           justifyContent="center"
+          w={{base:"100%",md:"auto"}}
         >
           {/* Search Functionality */}
           <Box
@@ -167,9 +198,12 @@ export default function BlogsContent() {
                 alignItems="center"
                 justifyContent="center"
                 cursor="pointer"
-                bgColor={sortOrder === "oldest" ? "#e0e0e0" : "white"}
+                // bgColor={sortOrder === "oldest" ? "#e0e0e0" : "white"}
+                bg="white"
+                _hover="white"
                 transform="rotate(90deg)"
                 onClick={() => handleSortChange("oldest")}
+                isDisabled={isLoading || blogs.length === 0}
               >
                 <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
                   <path
@@ -190,9 +224,12 @@ export default function BlogsContent() {
                 alignItems="center"
                 justifyContent="center"
                 cursor="pointer"
-                bgColor={sortOrder === "latest" ? "#e0e0e0" : "white"}
+                // bgColor={sortOrder === "latest" ? "#e0e0e0" : "white"}
+                bg="white"
+                _hover="white"
                 transform="rotate(90deg)"
                 onClick={() => handleSortChange("latest")}
+                isDisabled={isLoading || blogs.length === 0}
               >
                 <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
                   <path
@@ -211,16 +248,16 @@ export default function BlogsContent() {
         <Flex justify="center" align="center" minH="200px">
           <Spinner size="xl" />
         </Flex>
-      ) : (
+      ) : blogs.length > 0 ? (
         <Grid
           templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
           gap={6}
-          mb="14%"
+          mb="5%"
         >
           {blogs.map((post, index) => {
             return (
               <GridItem
-                key={index}
+                key={post._id || index}
                 bg="white"
                 borderRadius="24px"
                 overflow="hidden"
@@ -230,19 +267,15 @@ export default function BlogsContent() {
                 flexDirection="column"
               >
                 <Image
-                  src={
-                    post.content.mainImage
-                      ? `${IMAGE_BASE_URL}/${post.content.mainImage}`
-                      : post.content.image
-                  }
+                  src={`${IMAGE_BASE_URL}/${post.content.mainImage}`}
                   alt={post.content?.imageText || "Blog image"}
                   w="full"
-                  h="auto"
+                  // h="400px"
+                  aspectRatio="16/9"
                   borderRadius="24px"
                   objectFit="cover"
                 />
-
-                <Box mx="3%" mt="5%" mb="2%">
+                <Box mx="3%" mt="5%">
                   <Heading
                     fontSize="16px"
                     fontWeight="700"
@@ -252,23 +285,27 @@ export default function BlogsContent() {
                   >
                     {post.content?.title || "Untitled Blog"}
                   </Heading>
-
+                  <Box
+                    width="18px"
+                    height="2px"
+                    bg="#3f77a5"
+                    borderRadius="2px"
+                    marginBottom="8px"
+                  />
                   <Text
                     fontSize="14px"
                     color="#696969"
                     fontWeight="500"
                     w="80%"
-                    mb={3}
+                    // mb={3}
                     noOfLines={3}
                   >
                     {post.content?.brief?.[0]?.children?.[0]?.text ||
                       "No description available."}
                   </Text>
                 </Box>
-
                 <Box flex="1" />
-
-                <Flex justifyContent="space-between" p="5">
+                <Flex justifyContent="space-between" p={{base:"2",md:"5"}}>
                   <Box display="flex" gap="2" alignItems="center">
                     <svg
                       width="21"
@@ -293,41 +330,35 @@ export default function BlogsContent() {
                         </clipPath>
                       </defs>
                     </svg>
-
                     <Text fontSize="16px" fontWeight="500" color="black">
                       {(() => {
-                        const created = new Date(
-                          post.createdAt?.$date || post.createdAt
-                        );
-                        const updated = new Date(
-                          post.updatedAt?.$date || post.updatedAt
-                        );
-
-                        // Compare up to minutes
-                        const format = (d) =>
-                          `${d.getFullYear()}-${d.getMonth()}-${d.getDate()} ${d.getHours()}:${d.getMinutes()}`;
-
-                        const isSame = format(created) === format(updated);
-
-                        const displayDate = isSame ? created : updated;
-
-                        const label = isSame ? "Published" : "Updated";
-
-                        return `${label} \u00A0 ${displayDate.toLocaleDateString(
+                        const created = new Date(post.createdAt);
+                        const updated = new Date(post.updatedAt);
+                        const wasUpdated =
+                          updated.getTime() - created.getTime() > 60000;
+                        const displayDate = wasUpdated ? updated : created;
+                        const label = wasUpdated ? "Updated" : "Published";
+                        const formattedDate = displayDate.toLocaleDateString(
                           "en-US",
-                          {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric",
-                          }
-                        )}`;
+                          { year: "numeric", month: "long", day: "numeric" }
+                        );
+                        return (
+                          <>
+                            <span>{label}</span>
+                            <span
+                              style={{ color: "#3F77A5", padding: "0 4px" }}
+                            >
+                              ●
+                            </span>
+                            <span>{formattedDate}</span>
+                          </>
+                        );
                       })()}
                     </Text>
                   </Box>
-
-                  <Box>
+                  {/* <Box> */}
                     <Link to={`/whoweare/blogs/${post.metadata.urlWords}`}>
-                      <Flex align="center" gap={4}>
+                      <Flex align="center" gap="2">
                         <Text fontSize="14px" fontWeight={500} color="#000000">
                           Learn More
                         </Text>
@@ -345,119 +376,132 @@ export default function BlogsContent() {
                         </svg>
                       </Flex>
                     </Link>
-                  </Box>
+                  {/* </Box> */}
                 </Flex>
               </GridItem>
             );
           })}
         </Grid>
+      ) : (
+        <EmptyState searchTerm={searchTerm} />
       )}
-      {/* Pagination Controls */}
-      <Flex justify="center" align="center" mt={8} gap={2}>
-        {/* Previous Arrow */}
-        <Button
-          size="sm"
-          variant="outline"
-          borderColor="#3F77A5"
-          bg="white"
-          color="#3F77A5"
-          _hover={{ bg: "#e6f0fa" }}
-          isDisabled={totalPages === 1}
-          onClick={() => {
-            setCurrentPage((prev) => (prev === 1 ? totalPages : prev - 1));
-          }}
-          minW={8}
-          px={0}
-        >
-          <Box as="span" fontSize="20px">
-            &#60;
-          </Box>
-        </Button>
 
-        {/* Page Numbers with Ellipsis */}
-        {(() => {
-          const pages = [];
-          if (totalPages <= 5) {
-            for (let i = 1; i <= totalPages; i++) {
-              pages.push(i);
-            }
-          } else {
-            if (currentPage <= 3) {
-              pages.push(1, 2, 3, "...", totalPages);
-            } else if (currentPage >= totalPages - 2) {
-              pages.push(1, "...", totalPages - 2, totalPages - 1, totalPages);
+      {/* Pagination Controls */}
+      {!isLoading && blogs.length > 0 && (
+        <Flex justify="center" align="center" mt={0} gap={2}>
+          {/* Previous Arrow */}
+          <Button
+            size="sm"
+            variant="outline"
+            borderColor="#3F77A5"
+            bg="white"
+            color="#3F77A5"
+            _hover={{ bg: "#e6f0fa" }}
+            isDisabled={totalPages === 1}
+            onClick={() => {
+              setCurrentPage((prev) => (prev === 1 ? totalPages : prev - 1));
+            }}
+            minW={8}
+            px={0}
+          >
+            <Box as="span" fontSize="20px">
+              {" "}
+              {"<"}{" "}
+            </Box>
+          </Button>
+
+          {/* Page Numbers with Ellipsis (Your exact code, unchanged) */}
+          {(() => {
+            const pages = [];
+            if (totalPages <= 5) {
+              for (let i = 1; i <= totalPages; i++) {
+                pages.push(i);
+              }
             } else {
-              pages.push(
-                1,
-                "...",
-                currentPage - 1,
-                currentPage,
-                currentPage + 1,
-                "...",
-                totalPages
-              );
+              if (currentPage <= 3) {
+                pages.push(1, 2, 3, "...", totalPages);
+              } else if (currentPage >= totalPages - 2) {
+                pages.push(
+                  1,
+                  "...",
+                  totalPages - 2,
+                  totalPages - 1,
+                  totalPages
+                );
+              } else {
+                pages.push(
+                  1,
+                  "...",
+                  currentPage - 1,
+                  currentPage,
+                  currentPage + 1,
+                  "...",
+                  totalPages
+                );
+              }
             }
-          }
-          return pages.map((page, idx) => {
-            if (page === "...") {
+            return pages.map((page, idx) => {
+              if (page === "...") {
+                return (
+                  <Button
+                    key={`ellipsis-${idx}`}
+                    size="sm"
+                    variant="outline"
+                    borderColor="#3F77A5"
+                    bg="white"
+                    color="#3F77A5"
+                    isDisabled
+                    minW={8}
+                    px={0}
+                  >
+                    ...
+                  </Button>
+                );
+              }
+              const isActive = page === currentPage;
               return (
                 <Button
-                  key={`ellipsis-${idx}`}
+                  key={page}
                   size="sm"
                   variant="outline"
                   borderColor="#3F77A5"
-                  bg="white"
-                  color="#3F77A5"
-                  isDisabled
+                  bg={isActive ? "#3F77A5" : "white"}
+                  color={isActive ? "white" : "#3F77A5"}
+                  fontWeight={isActive ? "bold" : "normal"}
                   minW={8}
                   px={0}
+                  _hover={isActive ? {} : { bg: "#e6f0fa" }}
+                  onClick={() => setCurrentPage(page)}
+                  isDisabled={totalPages === 1}
                 >
-                  ...
+                  {page}
                 </Button>
               );
-            }
-            const isActive = page === currentPage;
-            return (
-              <Button
-                key={page}
-                size="sm"
-                variant="outline"
-                borderColor="#3F77A5"
-                bg={isActive ? "#3F77A5" : "white"}
-                color={isActive ? "white" : "#3F77A5"}
-                fontWeight={isActive ? "bold" : "normal"}
-                minW={8}
-                px={0}
-                _hover={isActive ? {} : { bg: "#e6f0fa" }}
-                onClick={() => setCurrentPage(page)}
-                isDisabled={totalPages === 1}
-              >
-                {page}
-              </Button>
-            );
-          });
-        })()}
+            });
+          })()}
 
-        {/* Next Arrow */}
-        <Button
-          size="sm"
-          variant="outline"
-          borderColor="#3F77A5"
-          bg="white"
-          color="#3F77A5"
-          _hover={{ bg: "#e6f0fa" }}
-          isDisabled={totalPages === 1}
-          onClick={() => {
-            setCurrentPage((prev) => (prev === totalPages ? 1 : prev + 1));
-          }}
-          minW={8}
-          px={0}
-        >
-          <Box as="span" fontSize="20px">
-            &#62;
-          </Box>
-        </Button>
-      </Flex>
+          {/* Next Arrow */}
+          <Button
+            size="sm"
+            variant="outline"
+            borderColor="#3F77A5"
+            bg="white"
+            color="#3F77A5"
+            _hover={{ bg: "#e6f0fa" }}
+            isDisabled={totalPages === 1}
+            onClick={() => {
+              setCurrentPage((prev) => (prev === totalPages ? 1 : prev + 1));
+            }}
+            minW={8}
+            px={0}
+          >
+            <Box as="span" fontSize="20px">
+              {" "}
+              {">"}{" "}
+            </Box>
+          </Button>
+        </Flex>
+      )}
     </Box>
   );
 }
