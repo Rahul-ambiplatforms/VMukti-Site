@@ -28,7 +28,6 @@ const HeroSection = () => {
 
   // useEffect(() => {
   const imageScaleAnimation = () => {
-    console.log("inView");
     gsap.to(imageRef.current, {
       y: 40,
       duration: 1,
@@ -82,15 +81,13 @@ const HeroSection = () => {
           position="absolute"
           top={{ md: "15%" }}
           bottom={{ base: "59%" }}
-          left={{ base: "80%", md: "32%" }} //40->33
+          left={{ base: "80%", md: "58%" }} //32->
           transform="translateX(-50%)"
-
           gap={4}
           zIndex={0}
           width="100%"
           justifyContent="center"
           pt={{ base: "10vh", md: "8vh", lg: "20%" }}
-
         >
           <Box
             display={{ base: "none", md: "block" }}
@@ -113,10 +110,11 @@ const HeroSection = () => {
           <Box
             display={{ base: "none", md: "block" }}
             height={{ base: "80px", md: "120px", lg: "188px" }}
+            width="900px"
             minHeight="50px"
             aspectRatio="1/1"
             bg="#3F77A5"
-            borderRadius="24px"
+            borderRadius="24px 0 0 24px"
           />
         </Flex>
       </Show>
@@ -322,15 +320,6 @@ const HeroSection = () => {
                     color: "#2C5E84",
                   }}
                   fontSize={{ base: "14px", sm: "16px" }}
-                  // animate={{
-                  //     x: [0, 5, -5, 5, -5, 0],
-                  //     y: [0, -5, 5, -5, 5, 0],
-                  // }}
-                  // transition={{
-                  //     duration: 0.5,
-                  //     repeat: Infinity,
-                  //     ease: "easeInOut",
-                  // }}
                   animate={{
                     x: [0, 5, 0, -5, 0],
                     y: [0, 0, 5, 0, -5],

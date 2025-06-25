@@ -5,7 +5,7 @@ import { Box, Flex, Text, Image, Button } from '@chakra-ui/react'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
-const MotionFlex = motion(Flex)
+const MotionFlex = motion.create(Flex)
 
 const AdvancedComputerVision = ({
   title = [
