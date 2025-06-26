@@ -118,7 +118,7 @@ const Discover = () => {
                 whiteSpace="nowrap"
                 fontWeight="500"
               >
-                (+91) 968 777 9999
+                (+91) 968 777 0000
               </Text>
             </Flex>
           </Flex>
