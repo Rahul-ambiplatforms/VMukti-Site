@@ -58,28 +58,28 @@ export default function ContactUs() {
   const cards = [
     {
       title: 'Connect For Sales',
-      phone: '(91+) 968 777 0000',
+      phone: '(+91) 968 777 0000',
       email: 'sales@vmukti.com',
       bg: 'white',
       color: 'black',
     },
     {
       title: 'Connect For Partnership',
-      phone: '(91+) 968 777 0000',
+      phone: '(+91) 968 777 0000',
       email: 'contact@vmukti.com',
       bg: '#3F77A5',
       color: 'white',
     },
     {
       title: 'Connect For Support',
-      phone: '(91+) 968 777 0000',
+      phone: '(+91) 968 777 0000',
       email: 'support@vmukti.com',
       bg: 'white',
       color: 'black',
     },
     {
       title: 'Connect For HR',
-      phone: '(91+) 968 777 0000',
+      phone: '(+91) 951 022 2755',
       email: 'hr@vmukti.com',
       bg: '#BECEDC',
       color: 'black',
@@ -172,6 +172,8 @@ export default function ContactUs() {
       <Box
         // minH="100vh" // Ensure full viewport height in mobile view
         overflow="hidden" // Prevent unintended overflow
+        // mb={{md:"14%"}}
+        mb="14%"
       >
         {/* Hero Banner */}
         <Box
@@ -415,8 +417,9 @@ export default function ContactUs() {
               </MotionBox>
               <Flex
                 position="absolute"
+                // top="350px"
                 bottom="-50px"
-                right="30"
+                right="10px"
                 gap="2px"
                 zIndex="2"
               >
