@@ -5,24 +5,26 @@ import {
   // Image,
   useBreakpointValue,
   Flex,
-} from '@chakra-ui/react'
-import HeadingAnimation from '../../../components/Animation/Text/HeadingAnimation'
-import ImagePop from '../../../components/Animation/Image/ImagePop'
-import { useEffect, useState, useRef } from 'react'
+  // keyframes,
+} from "@chakra-ui/react";
+import HeadingAnimation from "../../../components/Animation/Text/HeadingAnimation";
+import ImagePop from "../../../components/Animation/Image/ImagePop";
+import { useEffect, useState, useRef } from "react";
+import { keyframes } from "@emotion/react"; // ✅ Correct import
 
 // Custom hook for count-up animation with viewport detection
 const useCountUp = (target, duration = 1000) => {
-  const [count, setCount] = useState(0)
-  const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef()
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setIsVisible(entry.isIntersecting),
       { threshold: 0.1 }
-    )
+    );
 
-    if (ref.current) observer.observe(ref.current)
+    if (ref.current) observer.observe(ref.current);
 
     // return () => {
     //   if (ref.current) observer.unobserve(ref.current);//I have to solve the yarn build error here...
@@ -30,56 +32,61 @@ const useCountUp = (target, duration = 1000) => {
   }, []);
 
   useEffect(() => {
-    if (!isVisible) return
+    if (!isVisible) return;
 
-    let start = 0
-    const increment = target / (duration / 16) // Approx. 60fps
+    let start = 0;
+    const increment = target / (duration / 16); // Approx. 60fps
     const interval = setInterval(() => {
-      start += increment
+      start += increment;
       if (start >= target) {
-        setCount(target)
-        clearInterval(interval)
+        setCount(target);
+        clearInterval(interval);
       } else {
-        setCount(Math.ceil(start))
+        setCount(Math.ceil(start));
       }
-    }, 16)
+    }, 16);
 
-    return () => clearInterval(interval)
-  }, [isVisible, target, duration])
+    return () => clearInterval(interval);
+  }, [isVisible, target, duration]);
 
-  return { count, ref }
-}
+  return { count, ref };
+};
 
 // Component for animated count-up value
 const AnimatedValue = ({ value, suffix }) => {
-  const numericValue = parseInt(value.replace(/\D/g, '')) // Extract numeric value
-  const { count, ref } = useCountUp(numericValue, 500)
+  const numericValue = parseInt(value.replace(/\D/g, "")); // Extract numeric value
+  const { count, ref } = useCountUp(numericValue, 500);
 
   return (
     <span ref={ref}>
       {count}
       {suffix}
     </span>
-  )
-}
+  );
+};
 
 const achievementsData = [
-  { value: '18+', label: 'No. of Years of Innovation', isBlack: false },
-  { value: '1B+', label: 'Number of cameras feeds', isBlack: true },
-  { value: '200M+', label: 'Number of minutes streamed', isBlack: false },
-  { value: '3M+', label: 'No. of users served', isBlack: false },
-  { value: '1M+', label: 'No. of cameras supplied', isBlack: false },
-  { value: '900+', label: 'No. of projects completed', isBlack: true },
-]
+  { value: "18+", label: "No. of Years of Innovation", isBlack: false },
+  { value: "1B+", label: "Number of cameras feeds", isBlack: true },
+  { value: "200M+", label: "Number of minutes streamed", isBlack: false },
+  { value: "3M+", label: "No. of users served", isBlack: false },
+  { value: "1M+", label: "No. of cameras supplied", isBlack: false },
+  { value: "900+", label: "No. of projects completed", isBlack: true },
+];
+
+const marqueeScroll = keyframes`
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } 
+`;
 
 const Achieved = () => {
   // Responsive values with additional breakpoints for smoother transitions
   const gridColumns = useBreakpointValue({
-    base: 'repeat(2, minmax(130px, 1fr))',
-    sm: 'repeat(2, minmax(150px, 1fr))',
-    md: 'repeat(3, minmax(200px, 283px))',
-    lg: 'repeat(3, 283px)',
-  })
+    base: "repeat(2, minmax(130px, 1fr))",
+    sm: "repeat(2, minmax(150px, 1fr))",
+    md: "repeat(3, minmax(200px, 283px))",
+    lg: "repeat(3, 283px)",
+  });
 
   // Dynamic card size that scales with viewport width
   // const cardSize = useBreakpointValue({
@@ -88,68 +95,73 @@ const Achieved = () => {
   //   md: 'minmax(200px, 283px)',
   //   lg: '283px',
   // })
-
+  const cardColors = ["white", "#3f77a5", "#BECEDC"];
   const containerWidth = useBreakpointValue({
-    base: '100%',
-    md: '100%',
-    lg: '1512px',
-  })
+    base: "100%",
+    md: "100%",
+    lg: "1512px",
+  });
   const containerHeight = useBreakpointValue({
-    base: 'auto',
-    md: 'auto',
-    lg: 'auto',
-  })
+    base: "auto",
+    md: "auto",
+    lg: "auto",
+  });
   const titleFontSize = useBreakpointValue({
-    base: '26px',
-    md: '36px',
-    lg: '48px',
-  })
+    base: "26px",
+    md: "36px",
+    lg: "48px",
+  });
+  const descFontSize = useBreakpointValue({
+    base: "14px",
+    md: "16px",
+    lg: "16px",
+  });
 
   // Responsive gap that scales with viewport width
   const gap = useBreakpointValue({
-    base: '8px',
-    sm: 'clamp(8px, 2vw, 20px)',
-    md: 'clamp(20px, 4vw, 50px)',
-    lg: '76px',
-  })
+    base: "8px",
+    sm: "clamp(8px, 2vw, 20px)",
+    md: "clamp(20px, 4vw, 50px)",
+    lg: "76px",
+  });
 
   const ellipseSize = useBreakpointValue({
-    base: '200px',
-    md: '300px',
-    lg: '408px',
-  })
+    base: "200px",
+    md: "300px",
+    lg: "408px",
+  });
   const cardPadding = useBreakpointValue({
-    base: '10px',
-    md: '15px',
-    lg: '20px',
-  })
+    base: "10px",
+    md: "15px",
+    lg: "20px",
+  });
 
   // Responsive font sizes
   const valueFontSize = useBreakpointValue({
-    base: 'clamp(32px, 8vw, 48px)', // Min 32px, scales up to 48px for small screens
-    md: 'clamp(48px, 6vw, 64px)', // Min 48px, scales up to 64px for medium+ screens
-  })
+    base: "clamp(32px, 8vw, 48px)", // Min 32px, scales up to 48px for small screens
+    md: "clamp(48px, 6vw, 64px)", // Min 48px, scales up to 64px for medium+ screens
+  });
 
   const labelFontSize = useBreakpointValue({
-    base: 'clamp(12px, 2vw, 12px)', // Fixed at 12px for small screens
-    md: 'clamp(12px, 1.5vw, 16px)', // Starts at 12px, scales up to 16px for medium+ screens
-  })
+    base: "clamp(12px, 2vw, 12px)", // Fixed at 12px for small screens
+    md: "clamp(12px, 1.5vw, 16px)", // Starts at 12px, scales up to 16px for medium+ screens
+  });
 
   const labelBottomMargin = useBreakpointValue({
-    base: '10px',
-    md: '15px',
-    lg: '20px',
-  })
+    base: "10px",
+    md: "15px",
+    lg: "20px",
+  });
   const labelLeftMargin = useBreakpointValue({
-    base: '10px',
-    md: '15px',
-    lg: '20px',
-  })
+    base: "10px",
+    md: "15px",
+    lg: "20px",
+  });
   const titleMarginBottom = useBreakpointValue({
-    base: '20px',
-    md: '40px',
-    lg: '70px',
-  })
+    base: "20px",
+    md: "40px",
+    lg: "70px",
+  });
 
   return (
     <>
@@ -157,9 +169,9 @@ const Achieved = () => {
         position="relative"
         textAlign="center"
         justifyContent="center"
-        direction={'column'}
+        direction={"column"}
         alignItems="center"
-        padding={{ base: '20px', md: '40px 20px' }}
+        padding={{ base: "20px", md: "40px 20px" }} 
         backgroundColor="#E7E7E7"
         width="100%"
         overflow="hidden"
@@ -169,7 +181,7 @@ const Achieved = () => {
       >
         {/* In this we can try some new animation such that half part is come from left and another comes from right. */}
         <HeadingAnimation>
-          <Text
+          {/* <Text
             fontSize={titleFontSize}
             fontWeight="600"
             marginBottom={titleMarginBottom}
@@ -178,12 +190,29 @@ const Achieved = () => {
             <Text as="span" color="#3f77a5">
               achieved
             </Text>
+          </Text> */}
+          <Text
+            fontSize={titleFontSize}
+            fontWeight="600"
+            marginBottom={titleMarginBottom}
+          >
+            Milestones of Our Journey
+          </Text>
+          <Text
+            fontSize={descFontSize}
+            fontWeight="500"
+            marginBottom={titleMarginBottom}
+          >
+            Our journey is defined by innovation, impact, and measurable
+            success. We continue to set benchmarks in visual surveillance. Every
+            milestone reflects our commitment to solving real-world challenges
+            using our Computer Vision Systems.
           </Text>
         </HeadingAnimation>
         <Box
           position="absolute"
-          top={{ base: '50%', md: '60%', lg: '70%' }} // Align center vertically
-          left={{ base: '60%', md: '70%', lg: '80%' }} // Responsive positioning like Image
+          top={{ base: "50%", md: "60%", lg: "70%" }} // Align center vertically
+          left={{ base: "60%", md: "70%", lg: "80%" }} // Responsive positioning like Image
           transform="translate(-50%, -50%)" // Centering correction
           width="408px"
           height="408px"
@@ -198,12 +227,12 @@ const Achieved = () => {
         {/* //background use properties: width: 255px;height: 255px;flex-shrink: 0; fill: #3F77A5;opacity: 0.12;filter: blur(56.599998474121094px); */}
         <Box
           position="absolute"
-          left={{ base: '50%', md: '30%', lg: '45px' }}
-          top={{ base: '0', md: '0', lg: '48px' }}
+          left={{ base: "50%", md: "30%", lg: "45px" }}
+          top={{ base: "0", md: "0", lg: "48px" }}
           transform={{
-            base: 'translateX(-50%)',
-            md: 'translateX(-50%)',
-            lg: 'none',
+            base: "translateX(-50%)",
+            md: "translateX(-50%)",
+            lg: "none",
           }}
           width={ellipseSize}
           height={ellipseSize}
@@ -216,44 +245,33 @@ const Achieved = () => {
           zIndex="0"
         />
 
-        <Grid
-          templateColumns={gridColumns}
-          templateRows={{
-            base: 'repeat(3, auto)',
-            md: 'repeat(2, auto)',
-            lg: 'repeat(2, 283px)',
+        {/* This is the new Marquee Viewport */}
+        <Box
+          w="100%"
+          mx="auto"
+          overflow="hidden"
+          _hover={{
+            "& > div": {
+              animationPlayState: "paused",
+            },
           }}
-          columnGap={gap}
-          rowGap={{
-            base: '8px',
-            sm: 'clamp(8px, 2vw, 20px)',
-            md: 'clamp(20px, 5vw, 70px)',
-            lg: '105px',
-          }}
-          justifyContent="center"
-          alignItems="center"
-          width="100%"
-          maxWidth={{ base: '100%', lg: '1200px' }}
-          px={{ base: '2px', sm: '10px', md: '20px' }}
         >
-          {achievementsData.map((item, index) => (
-            <ImagePop key={index} delay={index * 0.05}>
+          {/* This is the scrolling container */}
+          <Flex
+            w="max-content"
+            // Apply the keyframe animation we defined earlier
+            animation={`${marqueeScroll} 15s linear infinite`}
+          >
+            {[...achievementsData, ...achievementsData].map((item, index) => (
               <Box
-                key={index}
                 width={{
-                  base: 'minmax(130px, 180px)',
-                  sm: 'minmax(150px, 180px)',
-                  md: 'minmax(200px, 250px)',
-                  lg: '283px',
+                  base: "200px",
+                  md: "280px",
                 }}
-                height={{
-                  base: 'minmax(130px, 180px)',
-                  sm: 'minmax(150px, 180px)',
-                  md: 'minmax(200px, 250px)',
-                  lg: '283px',
-                }}
-                backgroundColor={item.isBlack ? 'white' : '#3f77a5'}
-                color={item.isBlack ? '#3f77a5' : 'white'}
+                mx={4}
+                flexShrink={0}
+                backgroundColor={item.isBlack ? "white" : "#3f77a5"}
+                color={item.isBlack ? "#3f77a5" : "white"}
                 display="flex"
                 flexDirection="column"
                 justifyContent="center"
@@ -270,46 +288,56 @@ const Achieved = () => {
                   position="absolute"
                   top="50%"
                   left="50%"
+                  textAlign="center"
                   transform="translate(-50%, -50%)"
                 >
                   <AnimatedValue
                     value={item.value}
-                    suffix={item.value.replace(/\d+/g, '')}
+                    suffix={item.value.replace(/\d+/g, "")}
                   />
                 </Text>
+
                 <Text
                   as="div"
                   fontSize={labelFontSize}
                   fontWeight="700"
                   position="absolute"
-                  bottom={labelBottomMargin}
-                  left={labelLeftMargin}
-                  color={item.isBlack ? 'black' : 'white'}
-                  textAlign="left"
-                  width="calc(100% - 20px)"
+                  bottom={labelBottomMargin} // Correctly pins it to the bottom
+                  color={item.isBlack ? "black" : "white"}
+                  // 1. Center the text content (label and dash) within this box
+                  textAlign="center"
+                  // 2. Set the box width so it doesn't touch the edges
+                  width="calc(100% - 40px)" // Using 40px to account for padding
+                  // 3. Horizontally center the entire Text box itself
+                  left="50%"
+                  transform="translateX(-50%)"
                   wordBreak={
-                    item.label === 'Number of minutes streamed'
-                      ? 'break-word'
-                      : 'normal'
+                    item.label === "Number of minutes streamed"
+                      ? "break-word"
+                      : "normal"
                   }
                   lineHeight="1.2"
                 >
                   {item.label}
+                  {/* Underline Dash */}
                   <Box
-                    width="15px"
-                    height="2px"
-                    borderRadius="2px"
-                    marginTop="3px"
-                    backgroundColor={item.isBlack ? '#3f77a5' : 'white'}
+                    width="20px" // Slightly wider looks better
+                    height="3px"
+                    borderRadius="full" // A softer, pill shape looks modern
+                    marginTop="5px"
+                    backgroundColor={item.isBlack ? "#3f77a5" : "white"}
+                    // 4. Explicitly center the dash within the centered Text container
+                    mx="auto"
                   />
                 </Text>
               </Box>
-            </ImagePop>
-          ))}
-        </Grid>
+              // {/* </ImagePop> */}
+            ))}
+          </Flex>
+        </Box>
       </Flex>
     </>
-  )
-}
+  );
+};
 
-export default Achieved
+export default Achieved;

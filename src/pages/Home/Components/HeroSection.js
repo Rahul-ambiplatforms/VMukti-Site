@@ -20,7 +20,6 @@ const MotionBox = motion(Box);
 const MotionButton = motion(Button);
 
 const HeroSection = () => {
-
   const imageRef = useRef(null); // Reference for the image
   const sectionRef = useRef(null); // Reference for the section containing the image
   const ref = useRef(null);
@@ -56,8 +55,7 @@ const HeroSection = () => {
   });
 
   return (
-    <Box bg="#E7E7E7" position="relative"
-    >
+    <Box bg="#E7E7E7" position="relative" mt="6%">
       {/* Background Ellipse */}
       <Box
         position="absolute"
@@ -79,42 +77,42 @@ const HeroSection = () => {
         {/* Decorative Boxes */}
         <Flex
           position="absolute"
-          top={{ md: "15%" }}
+          top={{ md: "8%" }}
           bottom={{ base: "59%" }}
-          left={{ base: "80%", md: "58%" }} //32->
+          left={{ base: "80%", md: "32%" }}
           transform="translateX(-50%)"
-          gap={4}
+          gap={6}
           zIndex={0}
-          width="100%"
+          width="auto"
           justifyContent="center"
           pt={{ base: "10vh", md: "8vh", lg: "20%" }}
         >
           <Box
             display={{ base: "none", md: "block" }}
-            height={{ base: "180px", md: "120px", lg: "188px" }}
+            height={{ base: "180px", md: "120px", lg: "200px" }}
             minHeight="50px"
             aspectRatio="1/1"
             bg="#BECEDC"
             borderRadius="24px"
-            mt={{ base: "80px", md: "120px", lg: "15%" }}
+            mt={{ base: "80px", md: "120px", lg: "30%" }}
           />
           <Box
             display={{ base: "none", md: "block" }}
-            height={{ base: "80px", md: "120px", lg: "188px" }}
+            height={{ base: "80px", md: "120px", lg: "200px" }}
             minHeight="50px"
             aspectRatio="1/1"
             bg="#FFFFFF"
             borderRadius="24px"
-            mt={{ base: "40px", md: "60px", lg: "9%" }}
+            mt={{ base: "40px", md: "60px", lg: "15%" }}
           />
           <Box
             display={{ base: "none", md: "block" }}
-            height={{ base: "80px", md: "120px", lg: "188px" }}
-            width="900px"
+            height={{ base: "80px", md: "120px", lg: "200px" }}
             minHeight="50px"
+            width="100%"
             aspectRatio="1/1"
             bg="#3F77A5"
-            borderRadius="24px 0 0 24px"
+            borderRadius="24px"
           />
         </Flex>
       </Show>
@@ -164,8 +162,8 @@ const HeroSection = () => {
               justifyContent="flex-end"
               ml="16%"
               mt="-15%"
-              mb="2%" // jenil
-            // bg="red"
+              mb="2%"
+              // bg="red"
             >
               <Box width="13px" height="13px" alignSelf="flex-start" ml="2%">
                 <svg
@@ -182,18 +180,19 @@ const HeroSection = () => {
               </Box>
               <Text
                 fontWeight="500"
-                lineHeight="normal"
+                lineHeight="100%"
                 maxW={{ base: "50%", md: "50%" }}
-                fontSize={{ base: "12px", md: "16px" }}
-                width={{ base: "60%", md: "50%" }}
+                fontSize={{ base: "12px", md: "16px", lg: "16px" }}
+                width={{ base: "60%", md: "45%", lg: "40%" }}
                 textAlign="justify"
                 fontStyle="normal"
                 ml="10px"
                 mt={"1%"}
               >
-                Got visuals piling up? Our AI turns them into answers—fast. It's
-                like giving your cameras a brain to spot what matters and fix
-                your headaches on the spot.
+                With over 18 years of domain excellence, we safeguard 700+
+                districts through state-backed and enterprise-grade deployments
+                powered by proprietary visual intelligence and precision-tuned
+                computer vision frameworks for mission-critical surveillance.
               </Text>
             </Flex>
           </Flex>
@@ -214,27 +213,28 @@ const HeroSection = () => {
           {/* Animated Heading */}
           <MotionBox
             ref={ref}
-            fontSize={{ base: "32px", md: "48px", lg: "100px" }}
+            fontSize={{ base: "32px", md: "48px", lg: "64px" }}
             fontWeight="600"
-            fontStyle="normal"
+            letterSpacing="0%"
+            // fontStyle="normal"
             lineHeight="1.2"
             zIndex={1}
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0.6, x: -50 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
+            <Text as="span" color="#000">
+              Deliver Excellence Using{" "}
+            </Text>
             <Text as="span" color="#3F77A5">
-              Advanced{" "}
+              Computer Vision{" "}
             </Text>
             <Text as="span" color="#000">
-              Computer Vision & Image{" "}
+              Solution for{" "}
             </Text>
             <Box as="span" display={{ base: "block", md: "inline" }}>
               <Text as="span" color="#DB7B3A">
-                Intelligence
-              </Text>
-              <Text as="span" color="#3F77A5">
-                .
+                ELECTION
               </Text>
             </Box>
           </MotionBox>
@@ -243,12 +243,12 @@ const HeroSection = () => {
               {" "}
               {/* Desktop Subtext */}
               {!useBreakpointValue({ base: true, md: false }) && (
-                <Flex mt="16px" direction={{ base: "column", md: "row" }}>
+                <Flex mt="8px" direction={{ base: "column", md: "row" }}>
                   <MotionBox
-                    mt="2%"
+                    mt="1%"
                     display="flex"
-                    alignItems="center"
-                    gap={8}
+                    alignItems="flex-start"
+                    gap={2}
                     initial={{ opacity: 0, x: -80 }}
                     // whileInView={{ opacity: 1, x: 0 }}
                     animate={
@@ -257,8 +257,9 @@ const HeroSection = () => {
                     transition={{ duration: 0.9, ease: "easeOut" }}
                     viewport={{ once: false }}
                   >
+                    {/* Desktop View */}
                     <Box width="30px" height="33px">
-                      <svg
+                      <svg 
                         viewBox="0 0 33 33"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -273,14 +274,16 @@ const HeroSection = () => {
                     <Text
                       fontWeight="500"
                       lineHeight="100%"
-                      maxW={{ base: "220px", md: "45%" }}
-                      fontSize={{ base: "12px", md: "16px" }}
-                      width="45%"
+                      maxW={{ base: "220px", md: "40%" }}
+                      fontSize={{ base: "12px", md: "16px", lg: "16px" }}
+                      // width="50%"
                       textAlign="justify"
                     >
-                      Got visuals piling up? Our AI turns them into
-                      answers—fast. It's like giving your cameras a brain to
-                      spot what matters and fix your headaches on the spot.
+                      With over 18 years of domain excellence, we safeguard 700+
+                      districts through state-backed and enterprise-grade
+                      deployments powered by proprietary visual intelligence and
+                      precision-tuned computer vision frameworks for
+                      mission-critical surveillance.
                     </Text>
                   </MotionBox>
                 </Flex>
@@ -288,9 +291,9 @@ const HeroSection = () => {
               {/* Robotic Hand and Button */}
               <Flex
                 position="relative"
-                mt={{ base: "1", md: "-10%" }}
-                ml={{ base: "0", md: "-40px" }}
-                // py={{base:"15%",md:"0"}}
+                mt={{ base: "1", md: "" }}
+                ml={{ base: "0", md: "-30px" }}
+                mb={{base:"15%",md:"5%"}}
                 width="fit-content"
               >
                 <Image
@@ -305,8 +308,9 @@ const HeroSection = () => {
                   onMouseLeave={() => hoverOutAnimation()}
                   position="absolute"
                   padding="24px"
-                  top={{ base: "20%", sm: "20%", md: "37%" }}
-                  right={{ base: "", sm: "", md: "8%" }}
+                  top={{ base: "20%", sm: "20%", md: "25%" }}
+                  left="80%"
+                  // right={{ base: "", sm: "", md: "2%" }}
                   bg="white"
                   height={{ base: "34px", sm: "50px" }}
                   borderRadius="20px"
@@ -349,12 +353,13 @@ const HeroSection = () => {
 
             {!useBreakpointValue({ base: true, md: false }) && (
               <MotionImage
-                src="/assets/tablet1.webp" //------------desktop View
+                src="/assets/tablet1.webp" 
                 position="absolute"
-                bottom="-6%"
+                top="25%"
+                // bottom="-10%"
                 // bg={{base:"black",sm:"darkred",md:"yellow",lg:"darkorange",xl:"blue"}}
-                right={["-10px", "-20px", "-30px", "-30px"]} // Adjust for breakpoints: [sm, md, lg, xl]
-                width={["320px", "480px", "660px", "940px"]} // Responsive widths (840->940)
+                right={["-10px", "-20px", "-30px", "-45px"]} // Adjust for breakpoints: [sm, md, lg, xl]
+                width={["320px", "480px", "660px", "920px"]} // Responsive widths (840->940)
                 // height="auto"
                 // zIndex={1}
                 initial={{ scale: 0.8, opacity: 1 }}

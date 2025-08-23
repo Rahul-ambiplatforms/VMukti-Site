@@ -21,7 +21,7 @@ const CustomCursor = () => {
             gsap.to(cursorRef.current, {
                 x: event.clientX,
                 y: event.clientY,
-                duration: 0.2, // Smooth transition
+                duration: 0.5, // Smooth transition
                 ease: "power2.out",
             });
         };

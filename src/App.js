@@ -13,6 +13,7 @@ import BlogsDashboard from "./pages/Blogs/BlogsDashboard";
 import BlogsOverviewDash from "./pages/Blogs/BlogsOverviewDash";
 import CustomCursor from "./components/CustomCursor";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import SolutionDetails from "./components/SolutionDetails";
 // import Particles from '@tsparticles/react';
 // import ParticlesComponent from './components/Particles';
 // Lazy load components
@@ -57,6 +58,10 @@ function App() {
                   <Route path="/" element={<VMuktiHomepage />} />
                   <Route path="/technology" element={<TechnologyDashboard />} />
                   <Route path="/solutions" element={<SolutionsHome />} />
+                  <Route
+                    path="/solutions/:name"
+                    element={<SolutionDetails />}
+                  />
                   <Route path="/industries" element={<IndustryDashboard />} />
                   <Route
                     path="/industries/:name"

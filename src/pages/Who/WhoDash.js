@@ -4,7 +4,7 @@ import PageContentWrapper from "../../components/PageContentWrapper";
 import HeroSection from "./components/HeroSection";
 import VisionMissionSection from "./components/VisionMissionSection";
 import VerticalTimeline from "../../components/VerticalTimeline";
-import CertificationsSection from "./components/CertificationsSection";
+// import CertificationsSection from "./components/CertificationsSection";
 import ReviewsSection from "./components/ReviewsSection";
 import AdvancedComputerVision from "../../components/AdvancedComputerVision";
 import { customData2 } from "../../data/AdvancedComputerVisionData";
@@ -107,7 +107,7 @@ const WhoWeare = () => {
       <Box mt={"5%"}>
         <CulturalSection gridItems={gridItems} />
       </Box>
-      <CertificationsSection />
+      {/* <CertificationsSection /> */}
       <ReviewsSection />
     </PageContentWrapper>
   );

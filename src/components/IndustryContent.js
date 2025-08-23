@@ -1,8 +1,4 @@
-//updated industry content
-
-// Industry Content.js
-
-import React from "react";
+import React, { useRef } from "react";
 import {
   Text,
   Box,
@@ -10,12 +6,24 @@ import {
   Image,
   Button,
   useBreakpointValue,
+  Heading,
+  VStack,
 } from "@chakra-ui/react"; // Chakra UI components
 import PageContentWrapper from "./PageContentWrapper";
 import { motion } from "framer-motion";
 import HeadingAnimation from "./Animation/Text/HeadingAnimation";
 import SubHeadingAnimation from "./Animation/Text/SubHeadingAnimation";
 import { Link } from "react-router-dom";
+import CtaBanner from "./CtaBanner";
+import Trusted from "./Trusted";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Achieved from "../pages/Home/Components/Achieved";
+import Results from "../pages/Home/Components/Results";
+import FaqsSection from "./faqsSection";
+import faqsData from "../data/faqsData";
+
 const MotionBox = motion(Box);
 const MotionText = motion(Text);
 const MotionButton = motion(Button);
@@ -42,7 +50,157 @@ const popAnimation1 = {
 //     transition: { duration: 0.7, ease: "easeOut" },
 //   },
 // };
-const IndustryContent = ({ props, content }) => { 
+
+gsap.registerPlugin(ScrollTrigger);
+
+const FeatureCard = ({ feature }) => (
+  <Flex
+    direction="column"
+    w={{ base: "80vw", md: "65vw", lg: "85vw" }}
+    h="600px"
+    flexShrink={0}
+    mr={{ base: "20vw", md: "2vw" }}
+    align="center"
+    justify="center"
+  >
+    <Box
+      position="relative"
+      w="100%"
+      h={{ base: "300px", md: "450px", lg: "100%" }} // Responsive height
+      borderRadius="24px"
+      overflow="hidden"
+      // boxShadow="2xl"
+    >
+      <Image
+        src={`${process.env.PUBLIC_URL}/assets/${feature.image}`}
+        alt={feature.title}
+        objectFit="cover"
+        w="100%"
+        h="100%"
+      />
+      <Box
+        position="absolute"
+        bottom={{ base: 4, md: 8 }}
+        left={{ base: 4, md: 8 }}
+        p={{ base: 4, md: 5 }}
+        w={{ base: "85%", sm: "60%", md: "35%" }}
+        h="90%"
+        bg="rgba(255, 255, 255, 0.95)"
+        backdropFilter="blur(2px) saturate(120%)"
+        borderRadius="24px"
+        boxShadow="md"
+        display="flex"
+        flexDirection="column"
+        justifyContent="center" // Centers vertically on the main axis
+        alignItems="center"
+      >
+        <Heading as="h3" size={{ base: "sm", md: "md" }} color="gray.800">
+          {feature.title}
+        </Heading>
+        <Box
+          width="30px"
+          height="3px"
+          borderRadius="full"
+          bg="#3F77A5"
+          my={3}
+        />
+        <Text fontSize={{ base: "13px", md: "15px" }} color="gray.700">
+          {feature.description}
+        </Text>
+      </Box>
+    </Box>
+  </Flex>
+);
+
+// This component contains the main GSAP animation logic and is now properly constrained.
+const HorizontalScrollFeatures = ({ scrollData = [] }) => {
+  const mainContainerRef = useRef(null);
+
+  useGSAP(
+    () => {
+      const horizontalSections = gsap.utils.toArray(".horizontal-section");
+
+      horizontalSections.forEach((section) => {
+        const track = section.querySelector(".horizontal-track");
+        const scrollAmount = track.scrollWidth - section.offsetWidth;
+
+        gsap.to(track, {
+          x: -scrollAmount,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top 8% top", // Pin when the section's top hits the viewport's top
+            pin: true,
+            scrub: 1.5,
+            end: () => `+=${scrollAmount}`,
+            invalidateOnRefresh: true,
+          },
+        });
+      });
+    },
+    { scope: mainContainerRef, dependencies: [scrollData] }
+  );
+
+  if (!scrollData || scrollData.length === 0) {
+    return null;
+  }
+
+  return (
+    // The ref scopes our GSAP selectors to this component only.
+    <Box ref={mainContainerRef} width="100%">
+      {scrollData.map((sectionData) => (
+        // CRITICAL FIX: The main container no longer uses `100vw`.
+        // It's a standard Flexbox that will sit inside your PageContentWrapper.
+        <Flex
+          key={sectionData.id}
+          className="horizontal-section"
+          direction="column"
+          justify="center"
+          h="100vh"
+          w="100%"
+          position="relative"
+          overflow="hidden"
+          // p={{ base: 2, md: 4 }}
+          bg={sectionData.bgColor === "blue" ? "#3F77A5" : "white"}
+          borderRadius="24px"
+          mt="2%"
+          mb="-6%"
+          // Need to change here mb -6% wont work instead mt -x%
+        >
+          <Heading
+            as="h2"
+            size={{ base: "lg", md: "lg" }}
+            position="absolute"
+            top={{ base: "10%", md: "2%" }}
+            left="50%"
+            transform="translateX(-50%)"
+            w="90%"
+            textAlign="center"
+            zIndex={2}
+            // DYNAMIC TEXT COLOR
+            color={sectionData.bgColor === "blue" ? "white" : "gray.800"}
+          >
+            {sectionData.mainHeading}
+          </Heading>
+
+          <Flex
+            className="horizontal-track"
+            w="max-content"
+            h="100%"
+            align="center"
+            pl={{ base: "5vw", md: "7vw" }}
+          >
+            {sectionData.features.map((feature) => (
+              <FeatureCard key={feature.id} feature={feature} />
+            ))}
+          </Flex>
+        </Flex>
+      ))}
+    </Box>
+  );
+};
+
+const IndustryContent = ({ props, content }) => {
   // const titleFontSize = "48px"; // Font size for the title
 
   const svgSize = useBreakpointValue({ base: "13px", md: "25px" });
@@ -71,10 +229,6 @@ const IndustryContent = ({ props, content }) => {
 
   return (
     <>
-      {/* Import the custom font */}
-
-      {/* Container Box with background and width */}
-      {/* Main Container Box */}
       <PageContentWrapper>
         <Box
           as="section"
@@ -85,421 +239,196 @@ const IndustryContent = ({ props, content }) => {
           alignItems="center"
           position="relative"
         >
-          {/* Title Container with relative positioning */}
-          <Flex direction="column" width="100%">
-            <HeadingAnimation>
-            <Box position="relative" mb="20px">
-              {/* Title Text (above the white rectangle) */}
-              <MotionText
-                fontSize={{ base: "24px", md: "48px" }}
-                fontWeight="600"
-                lineHeight="normal"
-                textAlign="left"
-                position="relative"
-                zIndex="1"
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
-                transition={{ duration: 0.8, ease: "easeOut", delay: 0 }}
-                viewport={{ once: false, amount: 0.1 }}
-              >
-                {content.title.map((part, index) => (
-                  <MotionText
-                    as="span"
-                    color={part.color}
-                    display="inline"
-                    key={index}
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
-                    transition={{
-                      duration: 0.8,
-                      ease: "easeOut",
-                      delay: index * 0.1,
-                    }}
-                  >
-                    {index !== 0 && " "}
-                    {part.text}
-                  </MotionText>
-                ))}
-
-                {/* Static blue dot with animation */}
+          {/* Title Container with relative positioning image and description*/}
+          <Flex direction="column" width="100%" alignItems="center" gap={4}>
+            <Box width="100%">
+              <HeadingAnimation>
                 <MotionText
-                  as="span"
-                  color="#3F77A5"
-                  display="inline"
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
-                  transition={{
-                    duration: 0.9,
-                    ease: "easeOut",
-                    delay: content.title.length * 0.1,
-                  }}
+                  fontSize={{ base: "2rem", md: "2.5rem", lg: "3.2rem" }}
+                  fontWeight="600"
+                  lineHeight="1.1"
+                  // Title color should be dark now that it's on a light background
+                  color="gray.800"
+                  initial={{ opacity: 0, x: -30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+                  viewport={{ once: true }}
                 >
-                  .
+                  {content.title.map((part, index) => (
+                    <Text as="span" color={part.color} key={index}>
+                      {part.text}{" "}
+                    </Text>
+                  ))}
                 </MotionText>
-              </MotionText>
+              </HeadingAnimation>
             </Box>
-            </HeadingAnimation>
-            {/* Arrow & Description - Flex Container */}
-            <Flex
-              flexDirection={{ base: "column", md: "row" }}
-              alignItems="start"
-              justifyContent="left"
-              mt="1%"
-            >
-              {/* Left Section: Arrow, Description, Button */}
-              <Box
-                flex="1"
-                maxWidth={{ base: "100%", md: "30%" }}
-                textAlign={{ base: "center", md: "left" }}
-                position="relative"
-                // bg="red"
-              >
-                {/* Arrow Animation */}
-                {/* Desktop View */}
-                <SubHeadingAnimation>
-                <Box
-                  mb={{ base: "4px", md: "8px" }}
-                  display={{ base: "flex", md: "flex" }}
-                  justifyContent="flex-start"
-                  // initial={{ opacity: 0, x: -50 }}
-                  // animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
-                  // transition={{ duration: 0.8, ease: "easeOut" }}
-                  // viewport={{ once: false, amount: 0.1 }}
-                >
-                  <svg
-                    width={svgSize}
-                    height={svgSize}
-                    viewBox="0 0 33 33"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
-                      fill="#3F77A5"
-                    />
-                  </svg>
-                </Box>
-                {/* </HeadingAnimation> */}
-                {/* Description Animation */}
-                {/* <HeadingAnimation> */}
-                <Text
-                  // ref="ref"
-                  color="#000"
-                  fontWeight="500"
-                  // textAlign={{ base: "center", md: "left" }}
-                  textAlign={{ base: "left", md: "left" }}
-                  fontSize={{ base: "14px", md: "16px" }}
-                  maxW={{base:"80%",md:"70%"}}
-                  lineHeight="100%"
-                  // initial={{ opacity: 0, x: -50 }}
-                  // animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
-                  // transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-                  // viewport={{ once: false, amount: 0.1 }}
-                >
-                  {content.para}
-                </Text>
-                </SubHeadingAnimation>
-                {/* Button Animation */}
-                <MotionButton
-                  marginTop="20px"
-                  width={buttonWidth}
-                  height={buttonHeight}
-                  justifyContent="space-between"
-                  alignItems="center"
-                  bg="white"
-                  color="#3F77A5"
-                  borderRadius="20px"
-                  _hover={{ bg: "#2c5a7a", color: "white" }}
-                  px={{ base: "12px", md: "15px", lg: "20px" }}
-                  display="flex"
-                  // initial={{ opacity: 0, x: -40 }}
-                  // animate={{ opacity: 1, x: 0 }} // Changed from whileInView to animate
-                  // transition={{ duration: 0.7, ease: "easeOut" }}
-                  // viewport={{ once: false, amount: 0.1 }}
-                >
-                  Book Demo
-                  <Box
-                    as="span"
-                    display="flex"
-                    alignItems="center"
-                    marginLeft="8px"
-                  >
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M17.5 2C17.5 1.17157 16.8284 0.499999 16 0.499999L2.5 0.5C1.67157 0.5 0.999999 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5L14.5 3.5L14.5 15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM3.06066 17.0607L17.0607 3.06066L14.9393 0.939339L0.93934 14.9393L3.06066 17.0607Z"
-                        fill="#3F77A5"
-                      />
-                    </svg>
-                  </Box>
-                </MotionButton>
-              </Box>
-            </Flex>
-          </Flex>
-          {/* Two White Boxes Above Key Applications - Bottom Aligned */}
-          <Flex
-            // justifyContent="space-between"
-            alignItems="flex-end" // Changed to align bottoms
-            direction={{ base: "column", md: "row" }}
-            mt={{ base: "5%", md: "-10%" }}
-            gap="3"
-            width="100%"
-            position="relative"
-            zIndex="1" // I added this code
-          >
-            {/* Small image (35% width) - Fixed height */}
+
+            {/* 2. Main Image Container */}
             <Box
-              // flex="0 0 30%"
-              display={{ base: "none", md: "block" }}
-              bg="white"
-              height={{ base: "200px", md: "250px", lg: "336px" }}
-              width={{ base: "200px", md: "250px", lg: "336px" }}
-              // height="auto"
-              aspectRatio={1 / 1}
+              position="relative"
+              width="100%"
+              height={{ base: "450px", md: "600px", lg: "700px" }}
               borderRadius="24px"
-              flexShrink="0"
-            />
-            <Box 
-  position="relative"
-  width="100%"
-  overflow={"hidden"}
-  height={{ xl: "630px" }}
-  borderRadius={"24px"}
->
-  {/* Large image (will fill the entire box size) */}
-  <MotionImage
-    src={`${process.env.PUBLIC_URL}/assets/${content.large_image}`}
-    alt={content.large_image_alt}
-    width="100%"       // Ensures the image fills the width of the box
-    height="100%"      // Ensures the image fills the height of the box
-    objectFit="cover"  // Ensures the image scales correctly within the box (maintains aspect ratio)
-    initial="hidden"
-    animate="visible"
-    variants={{
-      hidden: { scale: 0.8 },
-      visible: { scale: 1, transition: { duration: 0.5 } },  // Scale it slightly larger
-    }}
-    viewport={{ once: false }}
-  />
-</Box>
-
-
-          </Flex>
-
-          {/* Key Applications Section */}
-
-          <Flex
-            borderRadius="24px"
-            backgroundColor="#FFF"
-            px="2%"
-            pt="2%"
-            pb="4%"
-            display="flex"
-            flexWrap="wrap"
-            zIndex="2"
-            justifyContent="center"
-            gap="5"
-            marginTop="3%"
-            position="relative" // Needed for absolute positioning inside
-            overflow="hidden"
-          >
-            {/* SVG Positioned at Top Right */}
-            <Box
-              position="absolute"
-              top="-20%"
-              right="-20%"
-              width="70%" // SVG covers 70% of the background width
-              zIndex="0"
-              // overflow="hidden"
-              // bg="red"
+              overflow="hidden"
+              boxShadow="lg"
             >
-              <Image
-                src={`${process.env.PUBLIC_URL}/assets/VMukti Brochure O2 1.png`}
-                alt=""
+              {/* Background Image - This part is the same */}
+              <MotionImage
+                src={`${process.env.PUBLIC_URL}/assets/${content.large_image}`}
+                alt={content.large_image_alt}
+                position="absolute"
+                top="0"
+                left="0"
                 width="100%"
-                opacity="0.8"
-                // overflow="hidden"
+                height="100%"
+                objectFit="cover"
+                zIndex="0"
+                initial={{ scale: 1.1, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
               />
-            </Box>
-            <Box
-              position="absolute"
-              bottom="2%"
-              left="-10%"
-              width="70%" // SVG covers 70% of the background width
-              zIndex="0"
-              // overflow="hidden"
-            >
-              <Image
-                src={`${process.env.PUBLIC_URL}/assets/VMukti Brochure O2 2.png`}
-                alt=""
-                width="100%"
-                opacity="0.8"
-                // overflow="hidden"
-                // bg="red"
-              />
-            </Box>
 
-            <Text
-              fontSize={{ base: "20px", md: "36px" }}
-              fontWeight="600"
-              color="#000"
-              maxWidth={"93%"}
-              textAlign="flex-end"
-              width={"100%"}
-              mt="2%"
-              pb="1%"
-            >
-              Key Applications
-            </Text>
-            {content.keyApplications.map((card, index) => (
-              <MotionBox
-                key={index}
-                width={{ base: "100%", md: "48%" }}
-                maxWidth="645px"
-                flexShrink="0"
-                gap="2"
-                display="flex"
-                flexDirection="column"
+              {/* Flex container for the Info Bar. We push it to the bottom. */}
+              <Flex
+                direction="column"
+                justifyContent="flex-end" // Pushes the child (the bar) to the bottom
+                h="100%"
+                // p={{ base: 4, sm: 6, md: 8, lg: 10 }}
+                position="relative"
                 zIndex={1}
-                initial="hidden"
-                animate="visible" // Changed from whileInView to animate
-                variants={popAnimation1}
-                custom={index}
-                viewport={{ once: false }} // Repeats animation on scroll
-                // bg="red"
-                // pb="4%"
+                bgGradient="linear(to-t, rgba(0,0,0,0.3), transparent 40%)" // Adjusted gradient
               >
-                {/* Grey Placeholder */}
-                <Image
-                  src={`${process.env.PUBLIC_URL}/assets/${card.image}`}
-                  alt={card.image_alt}
-                  width="100%"
-                  height={{ base: "200px", md: "368px" }}
-                  backgroundColor="#E7E7E7"
-                  borderRadius="24px"
-                  flexShrink="0"
-                />
-
-                {/* Title */}
-                <HeadingAnimation>
-                  <Text
-                    color="#000"
-                    fontSize={{ base: "12px", md: "16px" }}
-                    fontWeight="700"
-                    textAlign="left"
-                    mt="5px"
-                    width="90%"
-                  >
-                    {card.title}
-                  </Text>
-                </HeadingAnimation>
-                {/* Blue Dash */}
-                <HeadingAnimation>
-                  <Box
-                    width="18px"
-                    height="3px"
-                    borderRadius="2px"
-                    backgroundColor="#3F77A5"
-                    alignSelf="flex-start"
-                    // bg="red"
-                  />
-                </HeadingAnimation>
-                {/* Description */}
-                <SubHeadingAnimation>
-                  <Text
-                    color="#696969"
-                    fontSize={{ base: "12px", md: "14px" }}
-                    fontWeight="500"
-                    textAlign="left"
-                    width="80%"
-                  >
-                    {card.description}
-                  </Text>
-                </SubHeadingAnimation>
-              </MotionBox>
-            ))}
-          </Flex>
-
-          {/* Key Benefits Section */}
-          <Box
-            width="100%"
-            backgroundColor="#3F77A5"
-            borderRadius="24px"
-            flexShrink="0"
-            marginTop="15px"
-            padding="45px"
-            display="flex"
-            flexDirection={{ base: "column", md: "row" }}
-            alignItems="center"
-            justifyContent="space-between"
-            // bg="red"
-          >
-            {/* Key Benefits Title */}
-            <Text
-              color="#FFF"
-              fontSize="36px"
-              fontWeight="600"
-              textAlign={{ md: "left" }}
-              marginBottom={{ base: "16px", md: "0" }}
-            >
-              Key Benefits
-            </Text>
-
-            {/* Benefits Grid */}
-            <Flex
-              flex="1"
-              justifyContent={{ md: "space-evenly" }}
-              alignItems={{ base: "left", md: "center" }}
-              flexWrap="wrap"
-              gap="30px"
-              ml={{ base: "0%", md: "5%" }}
-              // bg="red"
-            >
-              {content.keyBenefits.map((benefit, index) => (
+                {/* 3. Bottom "Frosted Glass" Info Bar (Now the only direct child) */}
                 <Box
-                  key={index}
-                  textAlign="center"
-                  width={{ base: "60%", md: "250px" }}
-                  flexShrink="0"
-                  // maxWidth="160px" // Controls text wrapping for two lines
+                  py={{ base: 4, md: 8 }}
+                  px={{ base: 6, md: 10 }}
+                  borderRadius={{ base: "lg", md: "24px", lg: "24px" }}
+                  bg="rgba(255, 255, 255, 0.75)"
+                  backdropFilter="blur(10px) saturate(90%)"
+                  // border="1px solid rgba(255, 255, 255, 0.8)"
                 >
-                  {/* SVG Icon */}
-                  <Box
-                    display="flex"
+                  <Flex
+                    direction={{ base: "column", md: "row" }}
                     alignItems="center"
-                    justifyContent="flex-start" // Aligns icon to the left
-                    // paddingLeft="8px" // Adds slight spacing from the edge
+                    justifyContent="space-between"
+                    gap={4}
                   >
-                    <Image src={benefit.svg} alt={benefit.title} />
-                  </Box>
-                  <Text
-                    color="#FFF"
-                    fontSize="16px"
-                    fontWeight="500"
-                    width="auto" // Allow text to take up necessary width
-                    minWidth="120px" // Prevents text from being too narrow
-                    maxWidth="420px" // Expands width if needed for longer text
-                    minHeight="3px"
-                    lineHeight="1.2"
-                    textAlign="left"
-                    mt="5%"
-                    wordBreak="break" // or "break-all"
-                    overflowWrap="break-word"
-                  >
-                    {benefit.title}
-                  </Text>{" "}
+                    {/* Left Side: Arrow and Description */}
+                    <Flex
+                      alignItems="center"
+                      gap={4}
+                      width={{ base: "100%", md: "auto" }}
+                    >
+                      <Box
+                        display={{ base: "none", md: "block" }}
+                        flexShrink={0}
+                      >
+                        <svg
+                          width={svgSize}
+                          height={svgSize}
+                          viewBox="0 0 33 33"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
+                            fill="#3F77A5"
+                          />
+                        </svg>
+                      </Box>
+                      <Text
+                        color="#1A202C"
+                        fontWeight="500"
+                        textAlign="left"
+                        fontSize={{ base: "14px", md: "16px" }}
+                        lineHeight="1"
+                        w="90%"
+                      >
+                        {content.para}
+                      </Text>
+                    </Flex>
+
+                    {/* Right Side: Button */}
+                    <MotionButton
+                      width={{ base: "100%", md: buttonWidth }}
+                      height={buttonHeight}
+                      bg="#3F77A5"
+                      color="white"
+                      borderRadius="full"
+                      _hover={{ bg: "#2c5a7a" }}
+                      px={{ base: "16px", lg: "20px" }}
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="center"
+                      gap={2}
+                      flexShrink={0}
+                    >
+                      Book Demo
+                      <Box as="span">
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M17.5 2C17.5 1.17157 16.8284 0.499999 16 0.499999L2.5 0.5C1.67157 0.5 0.999999 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5L14.5 3.5L14.5 15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM3.06066 17.0607L17.0607 3.06066L14.9393 0.939339L0.93934 14.9393L3.06066 17.0607Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </Box>
+                    </MotionButton>
+                  </Flex>
                 </Box>
-              ))}
-            </Flex>
-          </Box>
+              </Flex>
+            </Box>
+          </Flex>
+          {/* -------------Features Start--------------- */}
+
+          <HorizontalScrollFeatures scrollData={content.keyApplications} />
+
+          {/* --------------Features End-------------- */}
+
+          <Achieved />
+          <Results data={content.keyBenefits} />
+
+          {/* Workflow */}
+          <VStack
+            w="100%"
+            spacing={{ base: 6, md: 8 }}
+            py={{ base: 10, md: 16 }}
+          >
+            <Heading
+              // as="h2"
+              fontSize={{ base: "24px", md: "48px", lg: "48px" }}
+              textAlign="center"
+              color="gray.800"
+              w="75%"
+            >
+              {content.workflow.heading}
+            </Heading>
+            <Image
+              src={`${process.env.PUBLIC_URL}/assets/${content.workflow.image}`}
+              alt={content.workflow.heading}
+              w="100%"
+              maxW="1200px"
+              objectFit="contain"
+            />
+          </VStack>
+          
+          {/* CTA */}
+          <CtaBanner href={content.cta.href}>
+            {content.cta.textLines.map((line, index) => (
+              <React.Fragment key={index}>
+                {line}
+                {index < content.cta.textLines.length - 1 && <br />}
+              </React.Fragment>
+            ))}
+          </CtaBanner>
 
           {/* Bottom elements */}
-          <Flex
+          {/* <Flex
             justifyContent="flex-end" // Align to the right
             alignItems="center" // Vertically center
             mt="2%" // Margin top
@@ -507,7 +436,6 @@ const IndustryContent = ({ props, content }) => {
             position="relative" // Use relative positioning
             zIndex="2" // Ensure it's above other elements
           >
-            {/* Line */}
             <Box
               width="30%" // Fixed width for the line
               height="1px"
@@ -516,7 +444,6 @@ const IndustryContent = ({ props, content }) => {
               marginRight="2%" // Space between line and button
             />
 
-            {/* Button */}
             <Button
               height={{ base: "40px", md: "50px" }} // Responsive height
               minWidth="146px" // Minimum width to fit content
@@ -554,8 +481,10 @@ const IndustryContent = ({ props, content }) => {
                 />
               </svg>
             </Button>
-          </Flex>
+          </Flex> */}
+          <FaqsSection faqsList={faqsData.manufacturing} />
         </Box>
+        {/* <Trusted /> */}
       </PageContentWrapper>
     </>
   );

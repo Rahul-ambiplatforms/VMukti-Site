@@ -13,6 +13,13 @@ import ObjectDescription from "../../components/ObjectDescription";
 import StickySection from "./Data/StickySection";
 import HeroSection from "./Components/HeroSection";
 import { customData, customData1 } from "../../data/AdvancedComputerVisionData";
+import ComputerVision from "./Components/ComputerVision";
+import Solutions from "../../components/Solutions";
+import Trusted from "../../components/Trusted";
+import Reviews from "./Components/Reviews";
+import Results from "./Components/Results";
+import CtaBanner from "../../components/CtaBanner";
+import { homeSolutions } from "../../data/solutionsContent";
 // import BlogsDashboard from "../Blogs/HeroSection";
 // import BlogsContent from "../Blogs/BlogsContent";
 // import BlogsOverviewDash from "../Blogs/BlogsOverviewDash";
@@ -26,12 +33,19 @@ const VMuktiHomepage = () => {
 
       <PageContentWrapper>
         {/* Page Content Sections */}
-        <AdvancedComputerVision
+        <Diagram />
+        <ComputerVision />
+        <Trusted />
+        {/* <Solutions /> */}
+        <Solutions data={homeSolutions} />
+        <Reviews />
+        {/* <AdvancedComputerVision
           cardBgColor1="#BECEDC"
           cardBgColor2="#EAEAEA"
           {...customData1}
-        />
-        <Flex mt={"5%"} direction="column">
+        /> */}
+
+        {/* <Flex mt={"5%"} direction="column">
           <ObjectDescription
             description={`Catch Everything,\n Miss Nothing`}
             image="../assets/objectdetection.png"
@@ -42,11 +56,11 @@ const VMuktiHomepage = () => {
               "Adaptive Learning",
             ]}
           />
-        </Flex>
-        <Box mt="3%">
+        </Flex> */}
+        {/* <Box mt="3%">
           <SurveillanceSoftware />
-        </Box>
-        <StickySection>
+        </Box> */}
+        {/* <StickySection>
           <AdvancedComputerVision
             cardBgColor1="#BECEDC"
             cardBgColor2="#EAEAEA"
@@ -57,11 +71,17 @@ const VMuktiHomepage = () => {
             cardBgColor1="#BECEDC"
             cardBgColor2="#EAEAEA"
           />
-        </StickySection>
-        <Diagram />
+        </StickySection> */}
+        {/* <Diagram /> */}
         <Industries />
-        <AdvancedSurveillance />
+        <Results />
+        {/* <AdvancedSurveillance /> */}
         <Achieved />
+        <CtaBanner href="/contact-us">
+          Join the AI-Powered Surveillance Revolution with
+          <br />
+          VMukti Solutions
+        </CtaBanner>
       </PageContentWrapper>
     </>
   );

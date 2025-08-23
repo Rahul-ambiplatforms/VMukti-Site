@@ -1,6 +1,6 @@
-import { Box, Flex, Text, Image, useBreakpointValue } from '@chakra-ui/react'
-import HeadingAnimation from '../../../components/Animation/Text/HeadingAnimation'
-import SubHeadingAnimation from '../../../components/Animation/Text/SubHeadingAnimation'
+import { Box, Flex, Text, Image, useBreakpointValue } from "@chakra-ui/react";
+import HeadingAnimation from "../../../components/Animation/Text/HeadingAnimation";
+import SubHeadingAnimation from "../../../components/Animation/Text/SubHeadingAnimation";
 
 // const nodes = [
 //   { label: 'Image', position: '15%', side: 'left' },
@@ -18,9 +18,9 @@ import SubHeadingAnimation from '../../../components/Animation/Text/SubHeadingAn
 const Diagram = () => {
   // Responsive values
   // const containerWidth = useBreakpointValue({ base: '100%', md: '1446px' })
-  const containerHeight = useBreakpointValue({ base: 'auto', md: '656px' })
-  const leftPanelWidth = useBreakpointValue({ base: '100%', md: '35%' }) // Full width on small screens
-  const rightPanelPadding = useBreakpointValue({ base: '4', md: '8' }) // Smaller padding on small screens
+  const containerHeight = useBreakpointValue({ base: "auto", md: "760px" });
+  const leftPanelWidth = useBreakpointValue({ base: "100%", md: "32%" }); // Full width on small screens
+  const rightPanelPadding = useBreakpointValue({ base: "4", md: "8" }); // Smaller padding on small screens
   // const fontSize = useBreakpointValue({ base: 'xl', md: '2xl' }) // Smaller font size on small screens
   // const nodeFontSize = useBreakpointValue({ base: 'xs', md: 'sm' }) // Smaller font size for nodes on small screens
   // const nodePosition = useBreakpointValue({ base: '10%', md: '5%' }) // Adjust node position on small screens
@@ -29,57 +29,50 @@ const Diagram = () => {
     <Flex
       height={containerHeight}
       borderRadius="24px"
-      overflow="hidden" 
+      overflow="hidden"
       bg="white"
-      mt="2%"
-      direction={{ base: 'column', md: 'row' }} // Stack vertically on small screens
+      mt="10%"
+      direction={{ base: "column", md: "row" }} // Stack vertically on small screens
       mb="4%"
+      position="relative"
+      zIndex={1}
     >
       {/* Left Panel */}
       <Box
         bg="#3F77A5"
         width={leftPanelWidth}
-        height={{ md: '100%' }}
+        height={{ md: "100%" }}
         color="white"
-        p={{ base: '4', md: '8' }} // Smaller padding on small screens
+        p={{ base: "4", md: "8" }} // Smaller padding on small screens
         display="flex"
         flexDirection="column"
-        textAlign={{ base: 'left', md: 'left' }} // Center text on small screens
+        textAlign={{ base: "left", md: "left" }} // Center text on small screens
         zIndex={1} // Bring forward
-        borderRadius={'24px'}
+        borderRadius={"24px"}
       >
         <HeadingAnimation>
           <Text
-            w="80%"
-            fontSize={{ base: '20px', md: '36px' }}
+            w="90%"
+            fontSize={{ base: "20px", md: "48px" }}
             // fontWeight="bold"
-            fontWeight="600"
-            ml={{ md: '5%' }}
-            mt="5%"
-            lineHeight={{ base: '1.2', md: '1.3' }} // Adjusts vertical spacing
+            fontWeight="500"
+            // ml={{ md: "5%" }}
+            // mt="5%"
+            lineHeight={{ base: "1.2", md: "1.2" }} // Adjusts vertical spacing
           >
-            Accelerate Visual{' '}
-            <Text
-              as="span"
-              color="#DB7B3A"
-              fontSize={{ base: '18px', md: '36px' }}
-              fontWeight="600"
-            >
-              AI
-            </Text>{' '}
-            Implementation
+            Power Your AI Models Using Our Computer Vision Platform
           </Text>
         </HeadingAnimation>
         <SubHeadingAnimation>
           <Flex
             align="flex-start"
-            mt="10%"
-            ml={{ md: '5%' }}
+            mt="5%"
+            // ml={{ md: "5%" }}
             gap={5}
-            direction={{ base: 'column', md: 'row' }}
-            pb={{ base: '25%' }}
+            direction={{ base: "column", md: "column" }}
+            pb={{ base: "25%" }}
           >
-            <Box mb="5%">
+            <Box>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -98,13 +91,13 @@ const Diagram = () => {
             <Text
               color="white"
               fontWeight="500"
-              maxW={{ base: '90%', md: '400px' }} // Reduced max width
-              fontSize={{ md: '16px' }}
+              maxW={{ base: "90%", md: "400px" }} // Reduced max width
+              fontSize={{ md: "16px" }}
               lineHeight="1.1"
               mt="-1%"
+              align="justify"
             >
-              Swiftly Prototype, Deploy, and Scale Computer Vision Tasks on a
-              Unified Platform to Enhance Visual Intelligence
+              Seamlessly deploy and scale your enterprise-grade computer vision with our AI-first platform. Engineered for performance, our API suite plugs directly into your ecosystem delivering real-time visual intelligence, automation, and precision decisioning at scale.
             </Text>
           </Flex>
         </SubHeadingAnimation>
@@ -114,7 +107,7 @@ const Diagram = () => {
       <Flex
         flex={1}
         p={rightPanelPadding}
-        py={{ base: '25%', md: '0' }} // Adjust padding for small screens
+        py={{ base: "25%", md: "0" }} // Adjust padding for small screens
         // p={{base:"10",md:rightPanelPadding}}
         justifyContent="center"
         alignItems="center"
@@ -125,7 +118,7 @@ const Diagram = () => {
         <Image src={`${process.env.PUBLIC_URL}/assets/ai_implementation.png`} />
       </Flex>
     </Flex>
-  )
-}
+  );
+};
 
-export default Diagram
+export default Diagram;
