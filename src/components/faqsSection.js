@@ -12,7 +12,6 @@ const FaqsSection = ({ faqsList }) => {
     return null;
   }
 
-  // Logic to split the title so we can style the last word differently
   const titleWords = faqsList.title ? faqsList.title.split(' ') : [];
   const lastWord = titleWords.pop() || ''; // Safely handle empty titles
   const firstWords = titleWords.join(' ');
@@ -25,17 +24,15 @@ const FaqsSection = ({ faqsList }) => {
       px={{ base: 4, md: 0 }}
     >
       <Heading as="h2" size="xl" textAlign="center" mb={8} color="gray.800">
-        {/* ✅ DYNAMIC TITLE: Renders the title from the data prop */}
-        {firstWords} <Text as="span" color="blue.500">{lastWord}</Text>
+        {firstWords} <Text as="span" color="#3F77A5">{lastWord}</Text>
       </Heading>
 
-      <Accordion allowMultiple={false} defaultIndex={[0]}> {/* `allowMultiple` lets users open more than one */}
+      <Accordion allowMultiple={false} defaultIndex={[0]}>
         {/* ✅ UPDATED MAPPING: Now maps over `faqsList.qa` */}
         {faqsList.qa.map((faq, index) => (
           <AccordionItem 
             key={index}
             borderBottom="1px solid black"
-            _last={{ borderBottom: "2px solid", borderColor: "black" }}
             py={1} 
           >
             {({ isExpanded }) => (

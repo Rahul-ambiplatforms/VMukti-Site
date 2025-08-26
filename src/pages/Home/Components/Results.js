@@ -14,31 +14,37 @@ const featuresData = [
     title: "Remote Monitoring",
     description:
       "Seamless remote access to live and archived feeds because visibility should never be limited.",
+    image: "./assets/result_home_1.png",
   },
   {
     title: "Custom-built Solutions",
     description:
       "Tailored Visual AI built for your ecosystem seamless access to critical footage, anytime, anywhere.",
+    image: "./assets/result_home_2.png",
   },
   {
     title: "Data Security",
     description:
       "Safeguard critical footage with enterprise-grade encryption and seamless access through secure cloud sync.",
+    image: "./assets/result_home_3.png",
   },
   {
     title: "Efficient Video Tech",
     description:
       "Precision imaging tech captures ultra-detailed visuals while optimizing bandwidth for leaner operations.",
+    image: "./assets/result_home_4.png",
   },
   {
     title: "Quad-HD Clarity",
     description:
       "Quad HD imaging delivers razor-sharp clarity every frame built for precision and absolute visibility.",
+    image: "./assets/result_home_5.png",
   },
   {
     title: "Reduced False Alarms",
     description:
       "Streamlined alerting. Every ping means something and you’re always in control.",
+    image: "./assets/result_home_6.png",
   },
 ];
 
@@ -75,7 +81,6 @@ const Results = ({ data }) => {
   const defaultSubheading =
     "Experience next-gen visual intelligence with secure remote access, precision detection, and proprietary tech that filters the noise. Designed for critical environments where accuracy isn’t optional just plug in and take full control of your surveillance command.";
 
-  // IF `data` is provided and has the correct structure...
   if (data && data.heading && data.benefits) {
     headingContent = (
       <Heading
@@ -128,24 +133,13 @@ const Results = ({ data }) => {
       >
         {featuresToRender.map((feature, index) => (
           <VStack key={index} spacing={4} textAlign="center">
-            <Box
-              p={4}
-              bg="#EBF8FF"
-              display="inline-flex"
-              alignItems="center"
-              justifyContent="center"
-              borderRadius="xl"
-              boxShadow="rgb(0 0 0 / 7%) 0px 4px 6px -1px"
-              boxSize={{ base: "60px", md: "72px" }}
-            >
-              {feature.image && (
-                <Image
-                  src={feature.image}
-                  alt={feature.title || feature.heading}
-                  boxSize="32px"
-                />
-              )}
-            </Box>
+            {feature.image && (
+              <Image
+                src={feature.image}
+                alt={feature.title || feature.heading}
+                boxSize="72px"
+              />
+            )}
 
             <Heading as="h3" fontSize="16px" fontWeight="bold" color="gray.800">
               {/* 

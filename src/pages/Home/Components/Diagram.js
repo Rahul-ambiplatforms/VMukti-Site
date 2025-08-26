@@ -97,7 +97,11 @@ const Diagram = () => {
               mt="-1%"
               align="justify"
             >
-              Seamlessly deploy and scale your enterprise-grade computer vision with our AI-first platform. Engineered for performance, our API suite plugs directly into your ecosystem delivering real-time visual intelligence, automation, and precision decisioning at scale.
+              Seamlessly deploy and scale your enterprise-grade computer vision
+              with our AI-first platform. Engineered for performance, our API
+              suite plugs directly into your ecosystem delivering real-time
+              visual intelligence, automation, and precision decisioning at
+              scale.
             </Text>
           </Flex>
         </SubHeadingAnimation>

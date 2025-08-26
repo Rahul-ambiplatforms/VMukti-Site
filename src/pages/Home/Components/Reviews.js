@@ -22,42 +22,42 @@ import "slick-carousel/slick/slick-theme.css";
 const testimonials = [
   {
     description:
-      "The VMS from VMukti Solutions has been a valuable addition to our operations. It's user-friendly, easy to set up, and offers fast alerts along with remote access. These features have greatly enhanced our ability to monitor in real-time and respond swiftly, making our daily tasks more efficient and streamlined.",
+      "VMukti’s VMS has made a real difference in how we manage surveillance. It’s easy to use, sends quick alerts and remote access has been a big plus for us, especially when handling multiple sites and responding on the go.",
     name: "Aniket Pandya",
     company: "BSNL",
     image: "/assets/client_1.png",
   },
   {
     description:
-      "VMukti Solutions has elevated our security with their custom visual surveillance systems. The AI-powered alerts are precisely tailored to our unique needs, providing intelligent monitoring and dependable protection around the clock.",
+      "VMukti really improved our security setup with a custom visual solution that fits exactly what we needed. The alerts are smart, reliable and make day-to-day monitoring much easier.",
     name: "Priya Sharma",
     company: "Tech Mahindra",
     image: "/assets/client_1.png",
   },
   {
     description:
-      "VMukti Solutions provided exceptional live webcasting services for our event. The seamless streaming, high-quality visuals, and reliable support ensured a smooth experience. Highly recommend their team for any live broadcasting needs!",
+      "We partnered with VMukti for live streaming our event and the experience was great. The video quality was top-notch, everything ran smoothly and their team was super supportive throughout. I would definitely recommend them!",
     name: "Rajesh Kumar",
     company: "Infosys",
     image: "/assets/client_1.png",
   },
   {
     description:
-      "Implementing their AI analytics has revolutionized our retail operations. We have seen a significant reduction in shrinkage and a noticeable improvement in customer flow analysis. A game-changer for our business.",
+      "With VMukti’s GenAI, we’ve taken our surveillance to the next level. Real-time insights, smart reports and easy control have helped us respond faster and get detailed day-to-day summaries.",
     name: "Sunita Rao",
     company: "Reliance Retail",
     image: "/assets/client_1.png",
   },
   {
     description:
-      "The support team is incredibly responsive and knowledgeable. They helped us integrate the system with our existing infrastructure seamlessly. Their dedication to client satisfaction is truly commendable.",
+      "Our team used VMukti’s VisualBot to simplify a complex video analysis project and the results were impressive. Easy integration, fast deployment and accurate insights made it a go-to tool for our workflows.",
     name: "Vikram Singh",
     company: "L&T",
     image: "/assets/client_1.png",
   },
   {
     description:
-      "We needed a robust solution for a large-scale public event, and VMukti delivered flawlessly. The crowd management and real-time alerts were instrumental in ensuring a safe and successful event for thousands of attendees.",
+      "VMukti’s surveillance system has been a game-changer for our campus. From automated attendance to real-time alerts, it’s helped us improve safety and streamline daily operations without disrupting the learning environment.",
     name: "Amitabh Desai",
     company: "Govt. of Gujarat",
     image: "/assets/client_1.png",

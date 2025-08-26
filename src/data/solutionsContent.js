@@ -8,57 +8,57 @@ export const homeSolutions = {
       heading1: "VMS",
       heading2: "Video Management System",
       content:
-        'A scalable AI surveillance software designed for your large-scale surveillance. VMS centralizes monitoring across multiple locations, supports "N" number of cameras and integrates with AI analytics and emergency systems.',
-      image: "./assets/solution_1.png", // Important: Update paths as needed (e.g., "/assets/solution_1.png")
+        'Elevate your security operations with our next-gen Video Management Software built for enterprises where precision and performance are non-negotiable. Powered by AI-native architecture, it delivers real-time situational awareness, intelligent analytics, and autonomous threat response at scale.',
+      image: "./assets/solution_1.png",
     },
     {
       heading1: "EVMS",
       heading2: "Enterprise Video Management System",
       content:
         'A scalable AI surveillance software designed for your large-scale surveillance. EVMS centralizes monitoring across multiple locations, supports "N" number of cameras and integrates with AI analytics and emergency systems to deliver smart and efficient video management to the globe.',
-      image: "./assets/solution_2.png", // Replace with actual image path
+      image: "./assets/solution_1.png",
     },
     {
       heading1: "ICCC",
       heading2: "Integrated Command & Control Center",
       content:
-        "A centralized hub for managing city-wide operations, from traffic management to emergency response, powered by real-time data and AI-driven insights for smarter, safer cities.",
-      image: "./assets/solution_3.png", // Replace with actual image path
+        "ICCC is your command nerve center unifying surveillance, emergency response, and citywide systems under one intelligent architecture. Powered by real-time analytics and multi-source data fusion, it empowers you to act decisively, secure proactively, and govern with unmatched situational clarity.",
+      image: "./assets/solution_1.png", // Replace with actual image path
     },
     {
       heading1: "Cloud AI",
-      heading2: "Cloud-Powered AI Analytics",
+      heading2: "Cloud AI",
       content:
-        "Leverage the power of the cloud for flexible, scalable, and powerful AI video analytics. Access advanced features and processing capabilities without the need for on-premise hardware.",
-      image: "./assets/solution_4.png", // Replace with actual image path
+        "Experience the power of over 30 proprietary AI analytics modules delivered via our secure, cloud-native architecture. We engineer tailored intelligence solutions that scale seamlessly with your enterprise. Precision-built. Performance-driven. Future-proof.",
+      image: "./assets/solution_1.png", // Replace with actual image path
     },
     {
       heading1: "Gen AI",
-      heading2: "Generative AI Solutions",
+      heading2: "Generative AI",
       content:
-        "Explore the next frontier of AI with our generative solutions. Create synthetic data, simulate scenarios, and enhance security with cutting-edge generative adversarial networks (GANs).",
-      image: "./assets/solution_5.png", // Replace with actual image path
+        "Our in-house Gen AI suite transforms complex video data into refined operational insights. With GPT-class contextual understanding and scalable visual analytics, it offers your enterprise clarity, speed and total control over every frame.",
+      image: "./assets/solution_1.png", 
     },
     {
       heading1: "Live Streaming",
       heading2: "Secure Live Streaming",
       content:
-        "Broadcast and monitor high-quality, low-latency video feeds from any location. Our secure streaming solutions are designed for reliability and performance in critical applications.",
-      image: "./assets/solution_6.png", // Replace with actual image path
+        "Stream CCTV feeds securely to your Command & Control Centre with ultra-HD clarity, dynamic quality adjustment, and multi-layer encryption. Designed for mission-critical use, it supports instant monitoring, remote control, and cloud-archived playback—keeping teams connected and responsive in real time.",
+      image: "./assets/solution_1.png", 
     },
     {
       heading1: "FSV",
-      heading2: "Forensic Search & Video",
+      heading2: "Flying Squad Vehicle",
       content:
-        "Rapidly search through hours of video footage for specific events, objects, or people. Our forensic search tools accelerate investigations and provide actionable intelligence from video data.",
-      image: "./assets/solution_7.png", // Replace with actual image path
+        "Experience seamless GPS tracking, geo-fencing, and precision PTZ control with fully integrated centralized command suite. Real-time visibility, secure footage access and dynamic user control engineered for organizations that don’t compromise.",
+      image: "./assets/solution_7.png", 
     },
     {
       heading1: "VisualBot",
-      heading2: "AI-Powered VisualBot",
+      heading2: "VisualBot",
       content:
-        "Automate visual inspection and monitoring tasks with our intelligent VisualBot. It can detect anomalies, read gauges, and perform quality control checks with superhuman accuracy.",
-      image: "./assets/solution_8.png", // Replace with actual image path
+        "Experience visual intelligence, redefined for the discerning enterprise. Our API suite operates quietly yet powerfully delivering high-fidelity insights from video and imagery, all in real time. Built for seamless integration and silent precision, it’s the intelligence layer your platform didn’t know it needed until now.",
+      image: "./assets/solution_8.png",
     },
   ]
 };
@@ -66,7 +66,6 @@ export const homeSolutions = {
 // src/data/solutionsContent.js
 
 export const solutionSolutions = {
-  // 1. The main heading for the component section
   heading: "End-to-End Smart Viewing Solutions for Any Application",
 
   // 2. The top-level description (This design doesn't have one, so we can use an empty string)
@@ -85,14 +84,14 @@ export const solutionSolutions = {
       heading1: "Gen AI",
       heading2: "Generative AI",
       content:
-        "Utilize the power of Generative AI to simulate complex security scenarios, create synthetic training data for robust model performance, and predict potential threats before they happen, enhancing proactive surveillance strategies.",
+        "We provide GenAI transformed surveillance with smart search, automated reports and visual summaries while integrating with VMS for direct access to camera settings and seamless monitoring.",
       image: "./assets/sol_solution_1.png", // Replace with your actual image path
     },
     {
       heading1: "VisualBot",
       heading2: "AI VisualBot",
       content:
-        "Deploy our autonomous VisualBot for automated monitoring of industrial sites, retail floors, or public spaces. It performs real-time quality control, anomaly detection, and compliance checks with unmatched accuracy.",
+        "Our AI-powered analytics turn video into instant insights. Provides API keys for easy integration so systems can quickly process footage and receive actionable results within seconds.",
       image: "./assets/sol_solution_1.png", // Replace with your actual image path
     },
   ]

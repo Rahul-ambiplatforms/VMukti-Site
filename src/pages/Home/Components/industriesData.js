@@ -28,6 +28,7 @@ const industriesData = [
     textColor: 'black',
     dashColor: '#3F77A5',
     image: './assets/HealthcareIndustry.png',
+    path: '/industries/manufacturingindustry',
   },
   {
     name: '',
@@ -431,7 +432,7 @@ export default function IndustryGrid() {
         {/* Bottom elements */}
 
         {/* Bottom elements */}
-        <Flex
+        {/* <Flex
           justifyContent="flex-end" // Align to the right
           alignItems="center" // Vertically center
           mx="auto" // Center the container horizontally
@@ -439,7 +440,6 @@ export default function IndustryGrid() {
           position="relative" // Use relative positioning
           zIndex="2" // Ensure it's above other elements
         >
-          {/* Line */}
           <Box
             width="466px" // Fixed width for the line
             height="1px"
@@ -448,7 +448,6 @@ export default function IndustryGrid() {
             marginRight="10px" // Space between line and button
           />
 
-          {/* Button */}
           <Button
             height={{ base: '40px', md: '50px' }} // Responsive height
             minWidth="146px" // Minimum width to fit content
@@ -486,7 +485,8 @@ export default function IndustryGrid() {
               />
             </svg>
           </Button>
-        </Flex>
+        </Flex> */}
+
       </Box>
     </>
   )

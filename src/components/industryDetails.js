@@ -11,10 +11,10 @@ import industriesData from "../data/industriesConstData"; // Centralized data fi
 
 const IndustryDetails = () => {     
     const { name } = useParams();
-    // const camelCaseName = toCamelCase(name);
-    // Fetch content directly from the centralized data file
-    const content = industriesData[name.toLowerCase()];
-
+    const solutionKey = name.replace(/-/g, "");
+    const content = industriesData[solutionKey.toLowerCase()];
+    // console.log("Industry Name: ", solutionKey);
+    
 
     if (!content) {
         return (

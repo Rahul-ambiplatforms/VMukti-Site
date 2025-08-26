@@ -31,12 +31,9 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-
-
-
 gsap.registerPlugin(ScrollTrigger);
 
-const FeatureCard = ({ feature }) => (
+const FeatureCard = ({ feature, bgColor }) => (
   <Flex
     direction="column"
     w={{ base: "80vw", md: "65vw", lg: "85vw" }}
@@ -64,7 +61,7 @@ const FeatureCard = ({ feature }) => (
       <Box
         position="absolute"
         bottom={{ base: 4, md: 8 }}
-        left={{ base: 4, md: 8 }}
+        left={{ base: 4, md: bgColor === "blue" ? "62%" : 8 }}
         p={{ base: 4, md: 5 }}
         w={{ base: "85%", sm: "60%", md: "35%" }}
         h="90%"
@@ -132,8 +129,6 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
     // The ref scopes our GSAP selectors to this component only.
     <Box ref={mainContainerRef} width="100%">
       {scrollData.map((sectionData) => (
-        // CRITICAL FIX: The main container no longer uses `100vw`.
-        // It's a standard Flexbox that will sit inside your PageContentWrapper.
         <Flex
           key={sectionData.id}
           className="horizontal-section"
@@ -152,7 +147,8 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
         >
           <Heading
             as="h2"
-            size={{ base: "lg", md: "lg" }}
+            // size={{ base: "lg", md: "lg" }}
+            fontSize="36px"
             position="absolute"
             top={{ base: "10%", md: "2%" }}
             left="50%"
@@ -160,8 +156,7 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
             w="90%"
             textAlign="center"
             zIndex={2}
-            // DYNAMIC TEXT COLOR
-            color={sectionData.bgColor === "blue" ? "white" : "gray.800"}
+            color={sectionData.bgColor === "blue" ? "white" : "black"}
           >
             {sectionData.mainHeading}
           </Heading>
@@ -174,7 +169,11 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
             pl={{ base: "5vw", md: "7vw" }}
           >
             {sectionData.features.map((feature) => (
-              <FeatureCard key={feature.id} feature={feature} />
+              <FeatureCard
+                key={feature.id}
+                feature={feature}
+                bgColor={sectionData.bgColor}
+              />
             ))}
           </Flex>
         </Flex>
@@ -186,7 +185,8 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
 // This component renders the main "dashboard" or hero section for a solution page.
 const SolutionContent = ({ content }) => {
   const { name } = useParams();
-  const solutionFaqs = faqsData[name];
+  const u_name = name.replace(/-/g, "");
+  const solutionFaqs = faqsData[u_name];
 
   // Responsive values for padding and font sizes.
   const heroPadding = useBreakpointValue({ base: 6, md: 10, lg: 16 });
@@ -423,17 +423,13 @@ const SolutionContent = ({ content }) => {
               //   p={contentPadding}
               p="8"
             >
-              {/* 
-            The Accordion is interactive. 
-            `allowToggle` lets users close an open item.
-            `defaultIndex={[0]}` opens the first item on page load, matching the image.
-          */}
               <Accordion allowMultiple={false} defaultIndex={[0]}>
                 {content.features.accordionItems.map((item, index) => (
                   <AccordionItem
                     key={index}
                     borderTopWidth={index === 0 ? 0 : "0.5px"}
                     borderColor="#444444"
+                    // Width Need to be decreased
                   >
                     {/* ✅ STEP 1: Get the `isExpanded` state by using a function as the child */}
                     {({ isExpanded }) => (
@@ -443,10 +439,9 @@ const SolutionContent = ({ content }) => {
                             <Box
                               flex="1"
                               textAlign="left"
-                              fontSize="lg"
-                              color="gray.800" // Explicitly set color for visibility
-                              // ✅ STEP 2: Apply the conditional font weight
-                              fontWeight={isExpanded ? "bold" : "medium"}
+                              fontSize="16px"
+                              color="black"
+                              fontWeight={isExpanded ? "700" : "400"}
                             >
                               {item.title}
                             </Box>
@@ -455,7 +450,7 @@ const SolutionContent = ({ content }) => {
                             <Box
                               as="span"
                               transform={isExpanded ? "rotate(180deg)" : "none"}
-                              transition="transform 0.2s" // Adds a smooth animation
+                              transition="transform 0.3s"
                             >
                               <svg
                                 width="24"
@@ -474,8 +469,9 @@ const SolutionContent = ({ content }) => {
                         </h2>
                         <AccordionPanel
                           pb={4}
-                          color="gray.600"
-                          lineHeight="tall"
+                          color="#444444"
+                          fontSize="14px"
+                          w="90%"
                         >
                           {item.content}
                         </AccordionPanel>

@@ -20,6 +20,8 @@ import Reviews from "./Components/Reviews";
 import Results from "./Components/Results";
 import CtaBanner from "../../components/CtaBanner";
 import { homeSolutions } from "../../data/solutionsContent";
+import FaqsSection from "../../components/faqsSection";
+import faqsData from "../../data/faqsData";
 // import BlogsDashboard from "../Blogs/HeroSection";
 // import BlogsContent from "../Blogs/BlogsContent";
 // import BlogsOverviewDash from "../Blogs/BlogsOverviewDash";
@@ -82,6 +84,7 @@ const VMuktiHomepage = () => {
           <br />
           VMukti Solutions
         </CtaBanner>
+        <FaqsSection faqsList={faqsData.homepage} />
       </PageContentWrapper>
     </>
   );

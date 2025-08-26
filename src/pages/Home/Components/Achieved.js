@@ -171,7 +171,7 @@ const Achieved = () => {
         justifyContent="center"
         direction={"column"}
         alignItems="center"
-        padding={{ base: "20px", md: "40px 20px" }} 
+        padding={{ base: "20px", md: "40px 20px" }}
         backgroundColor="#E7E7E7"
         width="100%"
         overflow="hidden"
@@ -179,18 +179,7 @@ const Achieved = () => {
         minHeight={containerHeight}
         margin="0 auto"
       >
-        {/* In this we can try some new animation such that half part is come from left and another comes from right. */}
         <HeadingAnimation>
-          {/* <Text
-            fontSize={titleFontSize}
-            fontWeight="600"
-            marginBottom={titleMarginBottom}
-          >
-            What we have{' '}
-            <Text as="span" color="#3f77a5">
-              achieved
-            </Text>
-          </Text> */}
           <Text
             fontSize={titleFontSize}
             fontWeight="600"

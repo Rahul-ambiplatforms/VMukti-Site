@@ -14,37 +14,36 @@ import {
 } from "@chakra-ui/react";
 import { FaArrowLeft, FaArrowRight, FaPlay } from "react-icons/fa";
 
-// --- DATA: Centralized object for easy updates ---
 const surveillanceData = [
   {
     title: "Video Management System",
     description:
-      "Our VMS provides a scalable and robust platform for monitoring, recording, and managing video feeds from an extensive network of cameras, ensuring comprehensive oversight.",
-    image: "/assets/WebPageMockup1.1.png", // <-- Replace with your image path
+      "Our centralized video controller monitors, manages, and secures all locations through one unified system. Offers real-time viewing, incident playback and remote access for efficient surveillance.",
+    image: "/assets/WebPageMockup1.1.png",
   },
   {
     title: "Enterprise Video Management System",
     description:
-      "Tailored for large-scale deployments, the EVMS integrates seamlessly across multiple sites, offering advanced analytics, centralized control, and high-availability performance for mission-critical operations.",
-    image: "/assets/WebPageMockup1.1.png", // <-- Replace with your image path
+      "We deliver enterprise-level video surveillance that is designed for scalability, intelligence and seamless control. Supporting advanced user management and integration with existing security systems.",
+    image: "/assets/WebPageMockup1.1.png",
   },
   {
     title: "Integrated Command and Control Centre",
     description:
-      "With our intelligent system, you continuously track machinery performance and behavioral patterns to detect anomalies early, prevent costly breakdowns, and maximize your operational efficiency and uptime.",
-    image: "/assets/WebPageMockup1.1.png", // <-- Replace with your image path
+      "With our Integrated command center solution combine real-time citywide surveillance live video feeds, automated alerts and emergency coordination to enhance urban safety and efficiency.",
+    image: "/assets/WebPageMockup1.1.png",
   },
   {
     title: "Live Streaming",
     description:
-      "Experience ultra-low latency, high-definition live streaming direct from any camera to your command center or mobile device, enabling real-time decision-making and rapid response.",
-    image: "/assets/WebPageMockup1.1.png", // <-- Replace with your image path
+      "With VMukti’s live streaming, this isn’t public broadcasting - it’s secure, real-time CCTV feed transmission to your Command and Control Centre. Built for mission-critical use, it ensures ultra-HD clarity, zero-latency, and instant remote response across locations.",
+    image: "/assets/WebPageMockup1.1.png",
   },
   {
     title: "Flying Squad Vehicle",
     description:
-      "Equip your on-ground teams with mobile surveillance units featuring GPS tracking, AI-powered alerts, and instant video access, extending your security perimeter and enhancing field operations.",
-    image: "/assets/WebPageMockup1.1.png", // <-- Replace with your image path
+      "Stay in control of a fast-moving vehicle with GPS tracking, AI surveillance & real-time command center powered by VMukti’s Intelligence, giving you crucial visibility at every second counts. it equips your teams with smart monitoring, remote access and live video access to act instantly.",
+    image: "/assets/WebPageMockup1.1.png",
   },
 ];
 
@@ -72,12 +71,10 @@ const AISurveillance = () => {
 
   return (
     <Box bg="#3F77A5" p="3%" borderRadius={{ base: "0", md: "24px" }}>
-      {/* 1. TOP HEADER SECTION */}
       <Flex justify="space-between" align="center" mb={8}>
         <Box color="white">
           <Heading as="h1" fontSize="48px" fontWeight="600">
             {" "}
-            {/* ✅ FIX: Corrected fontWeight */}
             Your All-in-One AI Surveillance
             <br />
             Ecosystem

@@ -14,32 +14,31 @@ const CtaBanner = ({ children, buttonText = "Let's talk", href = "#" }) => {
         direction={{ base: 'column', sm: 'row' }}
         align="center"
         justifyContent="space-between"
-        bg="#BECEDC" // The light blue background from your image
-        borderRadius="2xl" // Softer, more modern border radius
+        bg="#BECEDC" 
+        borderRadius="2xl"
         p={{ base: 5, md: 6 }}
         gap={4}
       >
         {/* The dynamic title text is passed as children */}
         <Heading
           as="h2"
-          size={titleFontSize}
-          fontWeight="medium"
-          color="gray.800"
+          // size={titleFontSize}
+          fontSize="36px"
+          fontWeight="500"
+          color="black"
           textAlign={{ base: 'center', sm: 'left' }}
         >
           {children}
         </Heading>
 
-        {/* The reusable button */}
         <Button
-          as="a" // Render as a link
+          as="a"
           href={href}
           size={buttonSize}
           bg="white"
-          color="#3F77A5" // A crisp blue for the text
-          borderRadius="full"
-          boxShadow="sm"
-          flexShrink={0} // Prevents the button from shrinking on smaller screens
+          color="#3F77A5"
+          borderRadius="24px"
+          flexShrink={0}
           rightIcon={<Icon as={LuArrowUpRight} />}
           _hover={{
             boxShadow: 'md',

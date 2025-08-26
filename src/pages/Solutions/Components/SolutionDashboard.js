@@ -81,7 +81,7 @@ const SolutionDashboard = () => {
             <Heading as="h2" fontSize="36px" fontWeight="500" color="black">
               Unified Surveillance Intelligence for Every Sector
             </Heading>
-            <Text fontSize="16px" fontWeight="500" lineHeight="tall" w="80%">
+            <Text fontSize="16px" fontWeight="500" w="80%">
               VMukti offers a unified surveillance solution with centralized
               video management, scalable enterprise VMS, and an integrated
               command center for real-time monitoring and response. Secure live

@@ -38,95 +38,105 @@ const dropdownItems = {
   solutions: [
     {
       label: "Video Management System (VMS)",
-      path: "/solutions/videomanagementsystem",
+      path: "/solutions/video-management-system",
     },
     {
       label: "Enterprise Video Management System (EMS)",
-      path: "/solutions/enterprisevideomanagementsystem",
+      path: "/solutions/enterprise-video-management-system",
     },
     {
       label: "Integrated Command & Control Center (ICCC)",
-      path: "/solutions",
-      sliderId: "icc",
-    },
-    {
-      label: "AI-Optimized Cloud Services",
-      path: "/solutions",
-      sliderId: "opt",
-    },
-    {
-      label: "Generative AI in Video Surveillance",
-      path: "/solutions",
-      sliderId: "gav",
-    },
-    {
-      label: "AI-Powered Surveillance Cameras",
-      path: "/solutions",
-      sliderId: "asc",
-    },
-    {
-      label: "Flying Squad Vehicle (FSV)",
-      path: "/solutions",
-      sliderId: "fsv",
+      path: "/solutions/integrated-command-control-center",
     },
     {
       label: "Live Webcasting & Streaming",
-      path: "/solutions",
-      sliderId: "lws",
+      path: "/solutions/live-streaming-solution",
+    },
+    {
+      label: "Flying Squad Vehicle (FSV)",
+      path: "/solutions/flying-squad-vehicle",
+    },
+    {
+      label: "AI-Optimized Cloud Services",
+      path: "/solutions/cloudai",
+    },
+    {
+      label: "Generative AI",
+      path: "/solutions/genai",
+    },
+    {
+      label: "Visual Bot",
+      path: "/solutions/visualbot",
     },
   ],
   industries: [
     {
-      label: "Retailer Industry",
-      path: "/industries/retailindustry",
+      label: "Manufacturing Industry",
+      path: "/industries/manufacturing",
     },
     {
-      label: "Manufacturing Industry",
-      path: "/industries/manufacturingindustry",
+      label: "Warehouse Industry",
+      path: "/industries/warehouse",
     },
     {
       label: "HealthCare Industry",
-      path: "/industries/healthcareindustry",
+      path: "/industries/healthcare",
     },
     {
-      label: "Education Industry",
-      path: "/industries/educationindustry",
-    },
-    {
-      label: "Finance Industry",
-      path: "/industries/financeindustry",
-    },
-    {
-      label: "Transportation Industry",
-      path: "/industries/transportationindustry",
-    },
-    {
-      label: "City Monitoring",
-      path: "/industries/citymonitoring",
-    },
-    {
-      label: "Agriculture Industry",
-      path: "/industries/agricultureindustry",
-    },
-    {
-      label: "Logistic Industry",
-      path: "/industries/warehousinglogisticIndustry",
-    },
-    {
-      label: "Sports & Entertainment Industry",
-      path: "/industries/entertainmentindustry",
-    },
-    {
-      label: "Defense Industry",
-      path: "/industries/defenseindustry",
+      label: "Oil & Gas Industry",
+      path: "/industries/oil-and-gas",
     },
     {
       label: "Election Industry",
       path: "/industries/election",
     },
     {
+      label: "Education Industry",
+      path: "/industries/education",
+    },
+    {
+      label: "Transportation Industry",
+      path: "/industries/transportation",
+    },
+    {
+      label: "Smart City Monitoring",
+      path: "/industries/smart-city",
+    },
+    {
+      label: "Pharma Industry",
+      path: "/industries/pharma",
+    },
+    {
+      label: "Logistics Industry",
+      path: "/industries/logistics",
+    },
+    {
+      label: "Banking Industry",
+      path: "/industries/banking",
+    },
+    {
+      label: "Sports & Entertainment Industry",
+      path: "/industries/sports-entertainment",
+    },
+    {
+      label: "Defense Industry",
+      path: "/industries/defense",
+    },
+    {
       label: "Hospitality Industry",
-      path: "/industries/hospitalityindustry",
+      path: "/industries/hospitality",
+    },
+    {
+      label: "Construction Industry",
+      path: "/industries/construction",
+    },
+    {
+      label: "Enterprise Industry",
+      path: "/industries/enterprise",
+    },
+    {
+      label: "Government",
+      path: "/industries/government",
     },
   ],
   ourServing: [

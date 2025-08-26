@@ -1,12 +1,19 @@
+// title: [
+//       { text: "Enhanced", color: "black" },
+//       { text: "Border Security", color: "#3F77A5" },
+//       { text: "with AI-Powered", color: "black" },
+//       { text: "Threat Detection", color: "#db7b3a" },
+//     ],
+
+//
+
 const industriesData = {
-  manufacturingindustry: {
+  manufacturing: {  
     title: [
-      // { text: "AI-Powered Manufacturing", color: "#3F77A5" },
       {
         text: "Modernize Production Using Computer Vision for Manufacturing Industry",
         color: "black",
       },
-      // { text: "Maximum Output", color: "#db7b3a" },
     ],
     para: "Keep your operations secure with our computer vision solution in manufacturing. Monitor every corner in real time, detect threats early and respond instantly. Simple to deploy and easy to use, it gives you full control and clear visibility anytime, anywhere.",
     large_image: "manufacturing_mockup.png",
@@ -20,159 +27,138 @@ const industriesData = {
         features: [
           {
             id: "feat1-1",
-            title: "Automated Defect Detection",
+            title: "Machine Operation Monitoring",
             description:
-              "AI-powered computer vision inspects products in real-time, reducing defects and ensuring top-quality output.",
+              "With our intelligent system, you continuously track machinery performance and behavioral patterns to detect anomalies early, prevent costly breakdowns and maximize your operational efficiency and uptime.",
             image: "man1.png",
           },
           {
             id: "feat1-2",
-            title: "Predictive Equipment Maintenance",
+            title: "Product Quality Screening",
             description:
-              "AI analyzes machine performance to predict failures, minimizing downtime and maintenance costs.",
+              "We integrate enterprise-grade computer vision to inspect each unit in real time, so your production line delivers nothing short of excellence, with zero compromise on quality or brand trust.",
             image: "man2.png",
           },
           {
             id: "feat1-3",
-            title: "Worker Safety & Compliance Monitoring",
+            title: "Inventory Management",
             description:
-              "AI detects safety violations and hazardous conditions, preventing workplace accidents.",
+              "Take full control over goods flow using computer vision which helps you with real-time visibility, automated accuracy and zero guesswork, perfectly aligning your supply chain with data-driven execution and reduced waste.",
             image: "man3.png",
           },
           {
             id: "feat1-4",
-            title: "Automated Defect Detection",
+            title: "Human Behaviour Monitoring",
             description:
-              "AI-powered computer vision inspects products in real-time, reducing defects and ensuring top-quality output.",
-            image: "man1.png",
+              "We deliver motion-intelligent surveillance that tracks subtle human activity patterns detecting deviations instantly and supporting precision-level safety across production environments where every action counts.",
+            image: "man4.png",
+          },
+          {
+            id: "feat1-5",
+            title: "Attendance Management",
+            description:
+              "Our facial recognition system captures attendance the moment anyone steps in, no cards, no codes just accurate face recognition. You get precision shift logs and zero tolerance for time theft, all without lifting a finger.",
+            image: "man5.png",
           },
         ],
       },
       {
         id: "section2",
-        mainHeading: "Enhancing Security & Supply Chain with AI",
+        mainHeading:
+          "Transforming Site Security with Continuous Visual Awareness",
         bgColor: "blue",
         features: [
           {
             id: "feat2-1",
-            title: "Supply Chain Optimization",
+            title: "Early Fire Alerting",
             description:
-              "AI forecasts demand and streamlines inventory management, preventing shortages and excess stock.",
-            image: "man4.png",
+              "We equip your infrastructure with intelligent visual systems that identify early fire or smoke indicators, triggering immediate alerts to help you prevent disruption, downtime and reputational risk before they ignite.",
+            image: "man6.png",
           },
           {
             id: "feat2-2",
-            title: "Smart Robotics & Process Automation",
+            title: "Restricted Area Control",
             description:
-              "AI-driven robots handle repetitive tasks with precision, increasing efficiency and reducing labor costs.",
-            image: "man5.png",
+              "Our advanced surveillance infrastructure secures your facility by instantly flagging unauthorized movement in high-risk zones ensuring compliance, visibility and complete operational command.",
+            image: "man7.png",
           },
           {
             id: "feat2-3",
-            title: "Energy Efficiency & Waste Reduction",
+            title: "Fall Incident Monitoring",
             description:
-              "AI optimizes energy usage, reducing power waste and enhancing sustainability.",
-            image: "man6.png",
+              "With VMukti, Sudden falls don’t go unnoticed. Our precision-trained intelligent vision models detect impact events instantly, delivering rapid alerts and accelerating response times in mission-critical areas.",
+            image: "man8.png",
           },
         ],
       },
       {
         id: "section3",
         mainHeading:
-          "Leveraging Computer Vision in Manufacturing for Smarter Operations",
+          "Ensuring Regulatory Compliance Through Intelligent Visual Oversight",
         bgColor: "white",
         features: [
           {
             id: "feat3-1",
-            title: "Automated Defect Detection",
+            title: "Employee Safety Compliance",
             description:
-              "AI-powered computer vision inspects products in real-time, reducing defects and ensuring top-quality output.",
-            image: "man1.png",
+              "Our system safeguards your compliance posture by continuously monitoring workforce adherence to safety protocols, ensuring regulatory alignment and helps in disciplining at every operational layer.",
+            image: "man9.png",
           },
           {
             id: "feat3-2",
-            title: "Predictive Equipment Maintenance",
+            title: "PPE Kit Policy",
             description:
-              "AI analyzes machine performance to predict failures, minimizing downtime and maintenance costs.",
-            image: "man2.png",
-          },
-          {
-            id: "feat3-3",
-            title: "Worker Safety & Compliance Monitoring",
-            description:
-              "AI detects safety violations and hazardous conditions, preventing workplace accidents.",
-            image: "man3.png",
+              "Using advanced visual recognition, our solution monitors PPE adherence scanning for helmets, gloves, and masks with precision. Instant alerts help you maintain regulatory compliance without manual checks.",
+            image: "man10.png",
           },
         ],
       },
     ],
+
     keyBenefits: {
       heading: "The Hidden Wins Behind Manufacturing Live Video Monitoring",
       description:
-        "A computer vision solution for manufacturing that provides real-time visibility into production processes, enabling manufacturers to uphold quality standards, enhance operational safety, and quickly address any anomalies on the factory floor through manufacturing live video surveillance.",
+        "Experience precision control with our computer vision solution real-time visual intelligence that empowers your manufacturing floor to enforce quality, elevate safety, and detect anomalies instantly. Stay ahead with surveillance built for speed, accuracy, and zero operational blind spots.",
       benefits: [
         {
-          image:
-            "data:image/svg+xml;charset=utf-8," +
-            encodeURIComponent(
-              `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3F77A5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zm-1.5 4a1.5 1.5 0 0 0 0 3h3a1.5 1.5 0 0 0 0-3h-3z"/></svg>`
-            ),
+          image: "../../assets/result_industry_man_1.png",
           heading: "Workforce Productivity Analytics",
           description:
-            "Computer vision tracks movement patterns to identify workflow bottlenecks, helping improve efficiency and boost operator productivity.",
+            "We deploy advanced computer vision to analyze movement patterns and reveal workflow friction points empowering you to optimize operations, enhance floor dynamics, and elevate team productivity at scale.",
         },
         {
-          image:
-            "data:image/svg+xml;charset=utf-8," +
-            encodeURIComponent(
-              `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3F77A5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93.01.01"/><path d="m19.07 19.07.01.01"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m4.93 19.07-.01.01"/><path d="m19.07 4.93-.01.01"/></svg>`
-            ),
+          image: "../../assets/result_industry_man_2.png",
           heading: "24/7 Real-Time Monitoring",
           description:
-            "Gain instant operational visibility and live alerts with Manufacturing Remote Video Surveillance for rapid incident response and uninterrupted production.",
+            "Stay ahead of disruption with enterprise-grade visual oversight. Our remote surveillance framework delivers instant situational awareness, live anomaly alerts, and continuous production visibility all in real time.",
         },
         {
-          image:
-            "data:image/svg+xml;charset=utf-8," +
-            encodeURIComponent(
-              `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3F77A5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`
-            ),
+          image: "../../assets/result_industry_man_3.png",
           heading: "Error Reduction",
           description:
-            "Automated visual inspection significantly reduces human errors by ensuring consistent quality control, leading to fewer defects and minimizing costly rework.",
+            "Our automated visual systems eliminate inconsistency at the source delivering precision-level inspection that drives down defect rates, slashes rework, and upholds your brand's quality promise at scale.",
         },
         {
-          image:
-            "data:image/svg+xml;charset=utf-8," +
-            encodeURIComponent(
-              `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3F77A5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9.5 22 2l-3.5 9.5-4-2-4 2L1 2l8.5 7.5Z"/><path d="M8 14v7l4-4 4 4v-7"/></svg>`
-            ),
+          image: "../../assets/result_industry_man_4.png",
           heading: "Rapid Scalability",
           description:
-            "Quickly expand your surveillance system to cover new production lines or buildings without spending a lot, and perfect for growing businesses.",
+            "Expand your surveillance footprint across new production lines, facilities, or zones without operational delays or capital strain. VMukti scales with your growth, delivering seamless control and precision deployment.",
         },
         {
-          image:
-            "data:image/svg+xml;charset=utf-8," +
-            encodeURIComponent(
-              `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3F77A5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`
-            ),
-          heading: "Stronger Security",
-          description:
-            "AI powered surveillance detects theft, unauthorized access, and safety violations in real time to protect assets and reduce shrinkage.",
-        },
-        {
-          image:
-            "data:image/svg+xml;charset=utf-8," +
-            encodeURIComponent(
-              `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3F77A5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>`
-            ),
+          image: "../../assets/result_industry_man_5.png",
           heading: "Seamless Connectivity",
           description:
-            "In manufacturing surveillance security integrates with VMS, BMS, and ICCC systems, creating a unified smart factory ecosystem for data-driven decisions.",
+            "Your surveillance network shouldn’t just be smart, it should be strategic. Seamlessly integrated with VMS, EMS, or ICCC, our system enables a unified command layer for faster, data-driven decisions across your factory floor.",
+        },
+        {
+          image: "../../assets/result_industry_man_6.png",
+          heading: "Stronger Security",
+          description:
+            "Our visual system locks in asset protection by identifying threats the instant they occur from unauthorized access to safety lapses so your environment stays secure, compliant, and always under control.",
         },
       ],
     },
+
     cta: {
       // Use an array for multi-line text. This is cleaner.
       textLines: [
@@ -187,1523 +173,3175 @@ const industriesData = {
       image: "manufacturing_workflow.png",
     },
   },
-  defenseindustry: {
+  //MockUp image is remaining from the this to the end
+  warehouse: {
     title: [
-      { text: "Enhanced", color: "black" },
-      { text: "Border Security", color: "#3F77A5" },
-      { text: "with AI-Powered", color: "black" },
-      { text: "Threat Detection", color: "#db7b3a" },
+      {
+        text: "Achieve Perfect Inventory Accuracy with Computer Vision for Warehousing",
+        color: "black",
+      },
     ],
-    para: "AI enhances border security by automating surveillance, detecting threats, and streamlining identity verification for stronger national protection.",
-    small_image:
-      "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
-    small_image_alt: "Closeup shot of a bee on a chamomile flower",
-    large_image: "defense_mockup_2.png",
-    large_image_alt: "Closeup shot of a bee on a chamomile flower",
-    //     keyApplications: [
-    //       {
-    //         title: "Intrusion Detection & Perimeter Security",
-    //         description:
-    //           "AI scans borders for unauthorized movements, preventing illegal crossings with real-time alerts.",
-    //         image: "def1.png",
-    //         image_alt: "Intrusion Detection & Perimeter Security",
-    //       },
-    //       {
-    //         title: "Facial Recognition for Entry Control",
-    //         description:
-    //           "AI enhances real-time identity verification, detecting high-risk travelers.",
-    //         image: "def2.png",
-    //         image_alt: "Facial Recognition for Entry Control",
-    //       },
-    //       {
-    //         title: "Suspicious Object Detection in Cargo",
-    //         description:
-    //           "AI scans shipments for hidden compartments, preventing smuggling and improving customs security.",
-    //         image: "def3.png",
-    //         image_alt: "Suspicious Object Detection in Cargo",
-    //       },
-    //       {
-    //         title: "Automated Weapon & Threat Detection",
-    //         description:
-    //           "AI detects firearms, explosives, and contraband, triggering instant security alerts.",
-    //         image: "def4.png",
-    //         image_alt: "Automated Weapon & Threat Detection",
-    //       },
-    //       {
-    //         title: "Border Area Climate & Terrain Analysis",
-    //         description:
-    //           "AI analyzes satellite data to predict weather risks and ensure safe border operations.",
-    //         image: "def5.png",
-    //         image_alt: "Border Area Climate & Terrain Analysis",
-    //       },
-    //       {
-    //         title: "Automated Checkpoint Security Screening",
-    //         description:
-    //           "AI enhances body scans, reducing wait times while improving screening accuracy.",
-    //         image: "def6.png",
-    //         image_alt: "Automated Checkpoint Security Screening",
-    //       },
-    //     ],
-    //     keyBenefits: [
-    //       {
-    //         title: "Intelligent Threat Detection",
-    //         svg:
-    //           "data:image/svg+xml;charset=utf-8," +
-    //           encodeURIComponent(`<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-    // <path fillRule="evenodd" clipRule="evenodd" d="M4.65562 2.32781L2.31028 4.63827C2.59459 5.16003 2.83666 5.75246 3.08777 6.30171C3.24828 6.65299 2.83094 7.12236 2.48833 7.91994L2.03575 9.23062C1.92321 9.63707 1.84075 9.58227 0.890582 9.91953C0.608484 10.0197 0.273057 10.2055 0 10.2282V13.5435C0.295012 13.6123 0.580244 13.7386 0.887249 13.8554C2.30364 14.3942 1.859 14.0735 2.15937 14.9816L2.86747 16.6718C3.01931 16.9687 3.24846 17.1185 3.08777 17.4698C2.83666 18.0192 2.5946 18.6116 2.32781 19.116L4.63809 21.4612C5.00524 21.2588 5.42406 21.0868 5.82479 20.9202C6.03272 20.8339 6.22146 20.7009 6.41001 20.6505C6.64986 20.5867 6.75061 20.7256 7.00596 20.8564C7.49377 21.1064 8.91531 21.7829 9.52268 21.7966C9.66456 22.4058 10.0852 23.1586 10.228 23.7717H13.2614C13.2614 22.7935 12.7619 21.9737 13.2791 19.8393C13.3309 19.6254 13.3959 19.5518 13.4023 19.2572C12.6202 19.3223 12.7038 19.3981 11.6389 19.3981C10.6138 19.3981 9.43781 19.0609 8.72233 18.7173C7.22273 17.9974 5.71003 16.5713 5.05782 15.0458C4.09788 12.8005 4.17335 10.9431 5.06835 8.73635C5.66132 7.27438 7.2744 5.66132 8.73636 5.06835C10.9404 4.17445 12.7536 4.1025 14.9955 5.03754C17.4227 6.04969 19.3981 8.85941 19.3981 11.6389C19.3981 12.3045 19.3583 13.391 19.116 13.8962C20.0978 13.8962 20.2898 13.4702 22.5756 13.8289C23.1241 13.915 23.1549 13.6872 23.7717 13.5435V10.2282C23.4093 10.1437 23.1054 10.0024 22.7848 9.8747C22.5021 9.76234 22.097 9.59279 21.7964 9.52268C21.7743 8.52731 20.5922 6.73288 20.6376 6.46019L21.4439 4.65562L19.1334 2.31046C18.6114 2.59477 18.0192 2.83665 17.4698 3.08775C17.0795 3.26616 16.679 2.81083 15.8622 2.47781L14.5408 2.03575C14.2584 1.95771 14.2944 2.02339 14.1822 1.75956L13.5435 0H10.228L9.58967 1.75992C9.48118 1.99719 9.57084 1.9317 9.28726 2.02173C8.32031 2.32892 8.07715 2.36784 7.09986 2.86765C6.803 3.01931 6.65318 3.24845 6.30171 3.08775C5.75227 2.83665 5.16004 2.59478 4.65562 2.32781Z" fill="white"/>
-    // <path fillRule="evenodd" clipRule="evenodd" d="M21.1615 27.0872C19.2577 27.0872 17.6242 26.0974 16.7878 24.8304C14.1379 20.8161 17.2535 16.436 21.0911 16.436C24.0997 16.436 26.452 18.9097 26.452 21.7263C26.452 24.6548 24.0714 27.0872 21.1615 27.0872ZM25.676 27.0872C25.9286 27.4643 26.3767 27.7494 26.7168 28.0924C27.0099 28.3881 27.5149 28.8239 27.7217 29.1329C27.1409 30.0003 27.8754 30.2425 28.4813 30.8421C29.0359 31.3908 30.1704 32.5836 30.6949 33.002C31.1016 33.3264 31.4527 34.0002 32.0246 34.0002C32.3973 34.0002 33.9997 32.4393 33.9997 31.9545C33.9997 31.3798 33.3705 31.0823 32.9934 30.7034C32.3499 30.0565 31.4672 29.1259 30.7757 28.5477C30.468 28.2905 29.9997 27.5811 29.5556 27.5811C29.2352 27.5811 29.1878 27.7317 28.9915 27.8632C28.5785 27.2466 27.1695 26.1865 26.8753 25.747C27.2385 25.0605 27.3262 25.126 27.661 24.205C28.1003 22.9962 28.0745 22.5526 28.0745 21.303C28.0745 18.0511 24.8369 14.8135 21.5848 14.8135C19.8811 14.8135 18.98 14.9122 17.4968 15.8042C14.165 17.8079 12.9929 22.4126 15.4775 25.8585C16.033 26.6287 16.8983 27.3924 17.7076 27.861C19.1677 28.7066 21.2043 28.9676 22.8796 28.5232C24.2093 28.1702 24.6242 27.7916 25.676 27.0872Z" fill="white"/>
-    // <path fillRule="evenodd" clipRule="evenodd" d="M11.357 13.6136C11.357 12.8461 12.4151 12.9518 12.4151 13.543C12.4151 14.3446 11.357 14.2365 11.357 13.6136ZM11.7096 8.6759C12.3658 8.6759 12.0878 8.66833 12.4151 8.88733L12.2798 11.9972C12.2428 12.3459 12.0695 12.5695 11.714 12.4151C11.3799 12.2703 11.5328 12.021 11.4782 11.5877C11.3967 10.9419 11.4546 10.196 11.3642 9.43843C11.3212 9.07737 11.3987 8.6759 11.7096 8.6759ZM7.97108 15.2359H15.7303C16.3526 15.2359 16.6473 14.7236 16.6473 14.3894C16.6473 13.966 13.4143 8.66059 12.8167 7.56873C12.4876 6.96689 12.376 6.8418 11.7802 6.8418C11.1773 6.8418 10.6734 8.09289 10.259 8.77719C9.80886 9.52053 9.42898 10.2133 8.98839 10.9628C8.77143 11.3319 7.16538 14.0243 7.14693 14.3267C7.11925 14.7868 7.49987 15.2359 7.97108 15.2359Z" fill="white"/>
-    // </svg>
-    // `),
-    //       },
-    //       {
-    //         title: "Predictive Risk Analysis",
-    //         svg:
-    //           "data:image/svg+xml;charset=utf-8," +
-    //           encodeURIComponent(`<svg width="37" height="34" viewBox="0 0 37 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-    // <path fillRule="evenodd" clipRule="evenodd" d="M10.3511 22.3644C10.3511 20.7518 12.4666 20.7973 12.4666 22.3644C12.4666 23.6347 10.3511 23.6347 10.3511 22.3644ZM11.3333 12.3911C13.1034 12.3911 12.6158 14.2059 12.6152 14.5796C12.6146 14.9706 12.6425 15.3851 12.586 15.7592C12.464 16.5639 12.6528 18.3175 12.2141 18.863C11.8485 19.3173 11.1202 19.404 10.6323 18.9098C10.2094 18.4816 10.2829 16.7401 10.2041 15.7872C10.1744 15.4311 10.2134 15.0181 10.2025 14.6552C10.1904 14.2487 10.0796 14.0063 10.1238 13.5249C10.1786 12.9302 10.674 12.3911 11.3333 12.3911ZM24.4044 0.680011V2.34218H22.2134C21.6043 2.34218 21.4233 2.99591 21.0002 3.69786L18.6478 7.76762C18.5211 7.97848 18.2606 8.39152 18.2088 8.61344H15.1112C14.8383 7.59155 12.1903 5.62167 9.36795 7.02575C8.29013 7.5617 7.87987 8.21564 7.32456 9.13793C5.54282 12.0969 3.73835 15.4823 1.96018 18.4312C1.24124 19.6236 0 21.5134 0 22.8177C0 24.5301 0.538906 25.6346 1.83549 26.649C3.0959 27.6349 4.61223 27.5023 6.19556 27.5023C9.67109 27.5023 13.1466 27.5023 16.6222 27.5023L17.8917 29.7083C18.1176 30.085 18.3165 30.412 18.5343 30.8033C18.7313 31.1573 18.9181 31.6578 19.4179 31.6578H24.4044C24.4044 32.4072 24.2014 34 24.9332 34H29.8445C30.2344 34 30.449 33.6854 30.449 33.32V28.7111C30.449 28.3457 30.2344 28.0311 29.8445 28.0311H24.9332C24.207 28.0311 24.4044 29.7032 24.4044 30.3733H19.8712C19.6204 30.3733 19.1673 29.3856 18.9219 28.9803C18.6177 28.4781 18.3638 27.9592 18.0579 27.5023C19.6104 27.5023 20.5654 27.0462 21.401 26.3122C22.8732 25.0188 23.1958 22.693 22.3158 20.9775L16.8451 11.4882C16.5411 10.957 16.2398 10.4602 15.9423 9.89776C16.6805 9.89776 18.5326 10.0657 18.9341 9.71635C19.0823 9.5875 19.3991 8.9573 19.5359 8.73142C19.8347 8.23816 22.3766 3.89902 22.4401 3.6267H24.4044C24.4044 4.29683 24.207 5.96889 24.9332 5.96889H29.8445C30.2344 5.96889 30.449 5.65428 30.449 5.28888V0.680011C30.449 0.314613 30.2344 0 29.8445 0H24.9332C24.6583 0 24.4044 0.368365 24.4044 0.680011Z" fill="white"/>
-    // <path fillRule="evenodd" clipRule="evenodd" d="M29.6174 11.2578V13.3733H19.3418C19.4335 13.7664 22.1446 18.3571 22.4547 18.8738L23.2191 20.225C23.3155 20.4254 23.3432 20.6267 23.573 20.6267H29.6174V22.7422C29.6174 23.6471 31.0073 22.2191 31.2219 22.0045L36.362 17.4735C36.9266 16.9568 36.9013 16.9793 35.9108 16.1465C35.7327 15.9969 35.6748 15.8991 35.4788 15.7475C35.2577 15.5764 35.2286 15.5446 35.0397 15.3556C34.8518 15.1675 34.7709 15.1426 34.5859 14.9782C34.403 14.8157 34.3455 14.731 34.1508 14.5824C33.4937 14.0804 31.6794 12.3279 31.0211 11.8186C30.7962 11.6447 30.7745 11.6084 30.5814 11.4272C30.5225 11.372 30.1735 11.0766 30.1231 11.0442C29.9079 10.9055 29.6174 10.9865 29.6174 11.2578Z" fill="white"/>
-    // </svg>
-    // `),
-    //       },
-    //       {
-    //         title: "Real-Time Vehicle & Cargo Inspection",
-    //         svg:
-    //           "data:image/svg+xml;charset=utf-8," +
-    //           encodeURIComponent(`<svg width="37" height="34" viewBox="0 0 37 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-    // <path fillRule="evenodd" clipRule="evenodd" d="M17.6111 27.8564C17.6111 26.3588 17.25 24.1874 18.9157 24.1874H26.7428C28.4086 24.1874 28.0474 26.3588 28.0474 27.8564C28.0474 28.6593 27.6109 29.324 26.8244 29.324H18.7526C18.1523 29.324 17.6111 28.7143 17.6111 27.8564ZM18.4264 21.5785H27.3135C28.2853 21.5785 28.1271 22.8012 27.5581 22.8012H18.1005C17.6 22.8012 17.2539 21.5785 18.4264 21.5785ZM3.01673 23.4535C2.27741 23.4535 2.03853 23.0514 2.03853 22.3937C2.03853 21.9095 3.54303 20.6037 3.93402 20.2127C4.29369 19.853 4.59351 19.553 4.95319 19.1936C6.16361 17.9832 6.22966 17.9832 7.44008 19.1936L9.55994 21.3134C10.0419 21.7954 10.8017 22.4102 10.2083 23.1441C9.91865 23.5026 9.60948 23.4535 9.21332 23.4535C8.81198 23.4535 7.59441 21.9408 7.17507 21.6598C7.17507 22.4147 7.32125 28.3098 7.04194 28.8647C6.73453 29.4756 5.20979 29.7978 5.21521 28.0226L5.2182 21.6598C4.65489 22.0372 3.74101 23.4535 3.01673 23.4535ZM0 31.3622H30.0041V12.4468C29.1627 12.4655 27.7938 13.1811 25.4392 12.1196C24.4406 11.6695 23.3043 10.8076 22.6981 9.88711C20.6286 6.74517 21.7456 4.94801 21.7692 3.88574H19.5681V13.425C18.9416 13.2793 15.3185 11.2237 15.0022 11.2237C14.8328 11.2237 13.0546 12.1566 12.7465 12.3107C12.2315 12.5683 10.8904 13.3192 10.4363 13.425V3.88574H0V31.3622Z" fill="white"/>
-    // <path fillRule="evenodd" clipRule="evenodd" d="M11.0889 12.4468C11.5351 12.2106 14.82 10.5268 15.0024 10.5268C15.1846 10.5268 18.4698 12.2106 18.916 12.4468V3.88574H11.0889V12.4468Z" fill="white"/>
-    // <path fillRule="evenodd" clipRule="evenodd" d="M23.5632 6.08697C23.5632 1.33278 29.9218 -0.25334 32.1257 3.96541C32.7778 5.21331 32.7983 6.81153 32.1534 8.07274C31.8583 8.65009 31.6337 8.89858 31.2077 9.32851C28.5018 12.0607 23.5632 9.98722 23.5632 6.08697ZM22.0957 5.76084C22.0957 7.80722 22.6674 9.20304 23.9488 10.4302C24.98 11.4176 26.8829 12.2042 28.1883 12.0985C30.8695 11.8815 32.5155 10.7039 33.5933 8.53422C35.0401 5.62131 33.6552 2.09405 30.6846 0.596421C29.8521 0.176839 29.3819 0.124572 28.245 0.0183201C25.35 -0.251623 22.0957 2.49958 22.0957 5.76084Z" fill="white"/>
-    // <path fillRule="evenodd" clipRule="evenodd" d="M31.7979 11.6309C32.0579 12.0192 32.8978 12.7716 33.2858 13.1599C33.8822 13.7559 34.3494 14.4847 35.2223 14.4847C36.1056 14.4847 36.5269 13.8279 36.5269 12.9355C36.5269 12.3579 35.5598 11.6016 35.2018 11.2436C34.8138 10.8556 34.0614 10.0157 33.6732 9.75586L32.7982 10.756C32.5157 11.0368 31.9712 11.3723 31.7979 11.6309Z" fill="white"/>
-    // <path fillRule="evenodd" clipRule="evenodd" d="M2.60938 33.1557C2.60938 33.5802 2.70821 33.9712 3.26165 33.9712H9.78416C10.5703 33.9712 10.9167 32.585 9.37643 32.585H3.66913C3.21307 32.585 2.60938 32.744 2.60938 33.1557Z" fill="white"/>
-    // <path fillRule="evenodd" clipRule="evenodd" d="M31.3086 16.8488V23.5345C31.3086 24.4097 32.6132 24.4097 32.6132 23.5345V16.8488C32.6132 16.1923 31.3086 16.1923 31.3086 16.8488Z" fill="white"/>
-    // <path fillRule="evenodd" clipRule="evenodd" d="M11.0889 33.1562C11.0889 34.2369 11.8196 33.9717 13.6978 33.9717C14.484 33.9717 14.8304 32.5855 13.2901 32.5855C12.6972 32.5855 11.0889 32.4395 11.0889 33.1562Z" fill="white"/>
-    // <path fillRule="evenodd" clipRule="evenodd" d="M31.3085 25.3283C31.3085 26.8143 31.0339 28.1005 31.9608 28.1005C32.8875 28.1005 32.6131 26.8143 32.6131 25.3283C32.6131 24.6718 31.3085 24.6718 31.3085 25.3283Z" fill="white"/>
-    // </svg>
-    // `),
-    //       },
-    //       {
-    //         title: "Cybersecurity & Secure Communications",
-    //         svg:
-    //           "data:image/svg+xml;charset=utf-8," +
-    //           encodeURIComponent(`<svg width="36" height="34" viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-    // <path fillRule="evenodd" clipRule="evenodd" d="M12.2113 22.3501V15.9637C12.2113 15.5975 12.4301 15.1708 12.6135 14.9624C12.9463 14.5843 13.0428 14.578 13.4744 14.3497C13.4744 13.3819 13.4782 12.9731 13.7276 12.2167C13.8652 11.7993 13.912 11.714 14.1018 11.3979C15.3149 9.37725 17.8358 8.57497 19.8958 9.61269C21.8913 10.6181 22.4575 12.2284 22.4575 14.3497C23.1104 14.6951 23.7207 15.089 23.7207 16.1042V22.3501C23.7207 23.3421 22.7773 24.1047 21.6153 24.1047H14.3166C13.1275 24.1047 12.2113 23.3164 12.2113 22.3501ZM35.9319 2.89692V3.72858C35.8407 4.37237 35.5294 5.01057 34.9331 5.56067C32.7911 7.53646 29.9352 5.62278 29.8263 4.3139H26.177C26.177 7.16488 25.8967 6.78328 26.9227 7.14746L29.4142 8.02447C29.9441 8.20143 30.6891 8.32525 30.9509 8.73348C31.4287 9.47835 31.253 11.843 31.1196 12.7656C31.0195 13.4585 31.0224 14.0853 30.879 14.7006C31.4819 14.7006 34.8899 14.5943 35.3057 14.7653C36.1854 15.1272 36.0889 16.4472 35.243 16.7486C34.7964 16.9077 31.0996 16.8059 30.458 16.8059C30.3861 17.6685 29.8134 18.8347 29.6158 19.6833C30.4577 19.6833 31.3011 19.6882 32.1427 19.6828C32.924 19.6777 33.5458 19.8547 33.5458 20.736C33.5458 21.8597 32.5075 21.7887 31.651 21.7887C30.6919 21.7886 29.7327 21.7887 28.7736 21.7887C27.9772 23.2939 27.303 24.6241 26.3593 26.0415C26.1886 26.2978 26.0654 26.4769 25.8963 26.7013C25.7689 26.8703 25.5322 27.1195 25.4752 27.3328H29.7561C30.0409 26.7947 30.3183 26.3068 30.7906 25.911C31.6829 25.1634 33.1488 25.0156 34.2025 25.5534C35.3648 26.1465 35.9308 27.1781 35.9319 28.5919V28.5978C35.9308 30.0654 34.4521 31.5436 32.9844 31.5436C32.1615 31.5436 31.2907 31.3286 30.755 30.8255C30.0207 30.136 29.8312 29.4383 29.6158 29.4383H23.7207C23.4477 29.4383 23.2055 29.9197 23.0288 30.0799C22.9084 30.189 22.826 30.2268 22.6842 30.3666C22.0787 30.964 18.8415 34 17.966 34C17.0671 34 13.8567 30.9449 13.2123 30.3319C13.0151 30.1442 12.3871 29.4383 12.2113 29.4383H6.31611C6.10069 29.4383 5.91126 30.136 5.17691 30.8255C4.64123 31.3286 3.77046 31.5436 2.94751 31.5436C1.47986 31.5436 0.00116934 30.0654 0 28.5978V28.2433C0.00116934 26.7683 1.38761 25.2275 2.87735 25.2275C4.66579 25.2275 5.40091 25.8684 6.17579 27.3328H10.4567C10.4006 27.1225 10.1505 26.8534 10.0055 26.6611C9.1984 25.5916 8.48705 24.4482 7.88354 23.2391C7.63201 22.7352 7.41048 22.2652 7.15829 21.7887C6.17579 21.7887 5.19329 21.7885 4.21078 21.7887C3.3586 21.7889 2.3861 21.8292 2.3861 20.736C2.3861 19.8048 3.06704 19.6795 3.85959 19.683C4.67813 19.6867 5.49757 19.6833 6.31611 19.6833C6.11992 18.8411 5.54474 17.6568 5.47393 16.8059C4.8152 16.8059 1.09593 16.921 0.639234 16.7281C-0.155526 16.3925 -0.255697 15.0586 0.676524 14.7454C1.12022 14.5964 4.434 14.7006 5.05297 14.7006C4.79494 13.5932 4.70203 11.7693 4.70203 10.56C4.70203 7.93001 5.27293 8.53716 8.29177 7.41252C8.59177 7.30078 8.81226 7.22074 9.11291 7.11069C9.19333 7.08133 9.41772 7.00688 9.52114 6.95738C9.66354 6.88969 9.755 6.89112 9.755 6.70013V4.3139H6.10563C6.05483 4.92365 5.48809 5.44725 5.04452 5.77934C3.82607 6.69181 2.0414 6.56319 0.962496 5.52702C0.246731 4.83958 0.00103941 4.06275 0 2.98774V2.97799C0.00116934 2.14348 0.54907 1.30454 0.998486 0.891113C2.32581 -0.330454 4.61901 -0.195723 5.68571 1.29505C5.83941 1.50982 6.07861 1.81398 6.10563 2.13841C6.90104 2.13841 7.69632 2.13841 8.49173 2.13841C9.41668 2.13841 11.0207 1.83386 11.6324 2.57691C11.8667 2.86158 11.8654 3.04478 11.8614 3.54097C11.8547 4.33586 11.8603 5.13296 11.8603 5.92811C12.1427 5.77856 12.4228 5.69956 12.725 5.52949C13.5174 5.08371 14.3131 4.67068 15.0747 4.15968C15.8248 3.6566 16.5832 3.14508 17.1521 2.44738C17.5702 1.93456 18.4254 1.99432 18.8097 2.48765C19.5197 3.39882 21.3157 4.54413 22.4331 5.11035L24.0716 5.92811C24.0716 5.13296 24.0772 4.33586 24.0706 3.54097C24.0646 2.80688 24.2883 2.23248 25.0603 2.14465C25.9724 2.04097 28.7165 2.13841 29.8263 2.13841C29.8692 1.62338 30.5396 0.933339 30.8874 0.672966C33.1501 -1.02114 35.6358 0.767162 35.9319 2.89692Z" fill="white"/>
-    // <path fillRule="evenodd" clipRule="evenodd" d="M16.913 19.3321C16.913 18.69 16.9357 17.7882 17.9656 17.7882C18.9955 17.7882 19.0183 18.69 19.0183 19.3321C19.0183 20.9992 16.913 20.9992 16.913 19.3321ZM14.2461 21.9989H21.6852V16.3145H14.2461V21.9989Z" fill="white"/>
-    // <path fillRule="evenodd" clipRule="evenodd" d="M15.72 14.2792H20.2116C20.4449 14.2792 20.4423 14.1098 20.4263 13.8696C20.1851 10.2556 16.0026 10.7445 15.598 13.1746C15.5175 13.6582 15.3615 14.2792 15.72 14.2792Z" fill="white"/>
-    // </svg>
-    // `),
-    //       },
-    //     ],
+    para: "Gain full control of your warehouse operations with our computer vision solution. Track inventory with precision, strengthen safety measures and monitor every activity in real time. From sack handling to fire detection and restricted zone alerts. Our system helps you respond instantly, minimize costly errors and protect every inch of your facility.",
+
+    large_image: "warehouse_mockup.png",
+    large_image_alt: "Warehouse surveillance monitoring illustration",
+
     keyApplications: [
       {
         id: "section1",
         mainHeading:
-          "Leveraging Computer Vision in Manufacturing for Smarter Operations",
+          "Improve Operational Efficiency for Your Warehouse Using Computer Vision Intelligence",
+        bgColor: "white",
         features: [
           {
             id: "feat1-1",
-            title: "Automated Defect Detection",
+            title: "Sack Loading & Unloading",
             description:
-              "AI-powered computer vision inspects products in real-time, reducing defects and ensuring top-quality output.",
-            image: "man1.png",
+              "Manual sack handling creates inefficiencies you can’t afford from misaligned loads to costly delays. Our vision-driven oversight across bays and belts turns every movement into a measured advantage.",
+            image: "../../assets/feat1_industry_wh_1.png",
           },
           {
             id: "feat1-2",
-            title: "Predictive Equipment Maintenance",
+            title: "Inventory Management",
             description:
-              "AI analyzes machine performance to predict failures, minimizing downtime and maintenance costs.",
-            image: "man2.png",
+              "Inventory discrepancies and blind spots aren’t just inefficiencies, they're liabilities. Our AI-driven visual system gives you full visibility over every pallet, SKU and movement. No guesswork, just control, precision and operational integrity.",
+            image: "../../assets/feat1_industry_wh_2.png",
           },
           {
             id: "feat1-3",
-            title: "Worker Safety & Compliance Monitoring",
+            title: "Attendance Management",
             description:
-              "AI detects safety violations and hazardous conditions, preventing workplace accidents.",
-            image: "man3.png",
+              "Leverage AI-driven facial authentication to streamline attendance tracking across multi-site operations. No manual inputs. Just secure, shift-wise workforce intelligence delivered with enterprise precision.",
+            image: "../../assets/feat1_industry_wh_3.png",
+          },
+          {
+            id: "feat1-4",
+            title: "Incident Detection",
+            description:
+              "Stay ahead of risk with real-time visual intelligence. Our system identifies behavioral anomalies like loitering or unsafe movement before they disrupt operations, ensuring your warehouse runs without any blind spots.",
+            image: "../../assets/feat1_industry_wh_4.png",
+          },
+          {
+            id: "feat1-5",
+            title: "Workers Monitoring",
+            description:
+              "Built for environments where milliseconds and millimeters matter. Our real-time visual intelligence flags any breaches and machine zone violations ensuring your workforce operates in sync with engineered safety protocols.",
+            image: "../../assets/feat1_industry_wh_5.png",
           },
         ],
       },
       {
         id: "section2",
-        mainHeading: "Enhancing Security & Supply Chain with AI",
+        mainHeading:
+          "Elevate Oversight with Advanced Warehouse Surveillance Solution",
+        bgColor: "blue",
         features: [
           {
             id: "feat2-1",
-            title: "Supply Chain Optimization",
+            title: "Fire Alerts",
             description:
-              "AI forecasts demand and streamlines inventory management, preventing shortages and excess stock.",
-            image: "man4.png",
+              "Deploy high-sensitivity detection across heat-prone zones storage, electrical or dock areas triggering instant alerts through smart edge analytics to safeguard your infrastructure at full scale.",
+            image: "../../assets/feat2_industry_wh_1.png",
           },
           {
             id: "feat2-2",
-            title: "Smart Robotics & Process Automation",
+            title: "Entry/Exit Monitoring",
             description:
-              "AI-driven robots handle repetitive tasks with precision, increasing efficiency and reducing labor costs.",
-            image: "man5.png",
+              "Experience seamless control over every access point, high-fidelity tracking, intelligent timestamping and compliance-grade logging that delivers confidence, clarity and uninterrupted oversight.",
+            image: "../../assets/feat2_industry_wh_2.png",
           },
           {
             id: "feat2-3",
-            title: "Energy Efficiency & Waste Reduction",
+            title: "Restricted Zone Monitoring",
             description:
-              "AI optimizes energy usage, reducing power waste and enhancing sustainability.",
-            image: "man6.png",
+              "In sensitive zones, precision is everything, Our surveillance tech delivers uninterrupted control and immediate breach awareness because when compliance matters, so does absolute visibility.",
+            image: "../../assets/feat2_industry_wh_3.png",
+          },
+          {
+            id: "feat2-4",
+            title: "Security Breach Identification",
+            description:
+              "Advanced Surveillance architecture secures restricted zones with precision. High-frequency motion analysis and behavioral mapping detect threats instantly because reaction time shouldn't be a variable.",
+            image: "../../assets/feat2_industry_wh_4.png",
+          },
+          {
+            id: "feat2-5",
+            title: "Asset Tracking",
+            description:
+              "Deploy intelligent asset tracking that locks down movement anomalies across your floor. High-accuracy surveillance ensures zero compromise, nothing skips the checks and the blind spots are covered in real-time.",
+            image: "../../assets/feat2_industry_wh_5.png",
+          },
+        ],
+      },
+      {
+        id: "section3",
+        mainHeading: "Command Compliance With a Fully Aligned Warehouse System",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat3-1",
+            title: "Gear Compliance",
+            description:
+              "Deploy high-fidelity video analytics to detect PPE lapses helmets, vests, boots, gloves in real time. Instant alerts keep your site aligned with compliance protocols, zero manual chasing required.",
+            image: "../../assets/feat3_industry_wh_1.png",
+          },
+          {
+            id: "feat3-2",
+            title: "Worker Safety Compliance",
+            description:
+              "VMukti's solution closes critical safety gaps in real time. With advanced behavior tracking, protocols stay enforced, teams stay protected and operations move forward without friction or downtime.",
+            image: "../../assets/feat3_industry_wh_2.png",
+          },
+          {
+            id: "feat3-3",
+            title: "Policy Enforcement",
+            description:
+              "We eliminate enforcement gaps with the help of high-precision detection that instantly flag and act on smoking violations across critical zones to maintain a safe, audit-ready and regulation-aligned facility.",
+            image: "../../assets/feat3_industry_wh_3.png",
+          },
+        ],
+      },
+      {
+        id: "section4",
+        mainHeading:
+          "Unleashing Next-Level Efficiency with Computer Vision in Warehouse Management",
+        bgColor: "blue",
+        features: [
+          {
+            id: "feat4-1",
+            title: "Asset Protection",
+            description:
+              "Our proactive surveillance doesn’t wait for losses to occur. It flags breaches the moment they happen, deters theft attempts before they escalate, and keeps critical zones in close monitoring with fast alerts.",
+            image: "../../assets/feat4_industry_wh_1.png",
+          },
+          {
+            id: "feat4-2",
+            title: "Centralized Management",
+            description:
+              "VMukti helps you oversee multi-site operations via a unified control interface, accelerate post-event analysis with edge-powered insights and slash your response time from hours to actionable minutes.",
+            image: "../../assets/feat4_industry_wh_2.png",
+          },
+          {
+            id: "feat4-3",
+            title: "Smarter Storage Control",
+            description:
+              "Using our solution, track assets in real time with system-level accuracy, validate every move, remove human error, and drive warehouse precision with smart spatial analytics engineered for scale and speed.",
+            image: "../../assets/feat4_industry_wh_3.png",
+          },
+          {
+            id: "feat4-4",
+            title: "Continuous Monitoring",
+            description:
+              "You get ultra-clear imaging in all conditions with intelligent bandwidth compression that slashes storage use by 70% and airtight protection across assets which means no compromises, no gaps, just performance.",
+            image: "../../assets/feat4_industry_wh_4.png",
+          },
+          {
+            id: "feat4-5",
+            title: "Improved Operational Efficiency",
+            description:
+              "We eliminate workflow friction with precision visual solution, real-time operational intelligence, and unified task orchestration built to keep your production agile, aligned and outperforming expectations.",
+            image: "../../assets/feat4_industry_wh_5.png",
+          },
+          {
+            id: "feat4-6",
+            title: "Behavior Monitoring for Safety",
+            description:
+              "VMukti delivers real-time hazard interception and predictive oversight so you don’t react to incidents, you prevent them. Every shift operates under intelligent, compliant automation built for zero compromise.",
+            image: "../../assets/feat4_industry_wh_6.png",
           },
         ],
       },
     ],
+
+    keyBenefits: {
+      heading: "Efficient Workflow for Your Warehouse Surveillance System",
+      description:
+        "VMukti empowers your warehouse with real-time computer vision intelligence streamlining inventory, strengthening security and enabling compliance-driven operations that scale with enterprise demands.",
+      benefits: [
+        {
+          image: "../../assets/result_industry_wh_1.png",
+          heading: "Inventory Accuracy",
+          description:
+            "Ensure precise inventory counts, eliminate discrepancies and maintain operational efficiency with AI-powered tracking.",
+        },
+        {
+          image: "../../assets/result_industry_wh_2.png",
+          heading: "Improved Security",
+          description:
+            "Advanced surveillance systems secure assets, detect breaches instantly and deter theft before it escalates.",
+        },
+        {
+          image: "../../assets/result_industry_wh_3.png",
+          heading: "Operational Efficiency",
+          description:
+            "Optimize workflows, reduce downtime and maximize throughput with intelligent oversight across every shift.",
+        },
+        {
+          image: "../../assets/result_industry_wh_4.png",
+          heading: "Cost Savings",
+          description:
+            "Automated oversight reduces operational overhead and prevents costly losses with proactive monitoring.",
+        },
+        {
+          image: "../../assets/result_industry_wh_5.png",
+          heading: "Compliance Assurance",
+          description:
+            "Maintain safety standards, enforce PPE compliance and meet regulatory requirements effortlessly.",
+        },
+        {
+          image: "../../assets/result_industry_wh_6.png",
+          heading: "Scalable Oversight",
+          description:
+            "Our solution grows with your operations delivering consistent intelligence across multi-site warehouses.",
+        },
+      ],
+    },
+
+    cta: {
+      textLines: [
+        "Optimize Your Facility with Warehouse Video",
+        "Surveillance Systems for Improved Management",
+      ],
+      href: "/warehouse",
+    },
+
+    workflow: {
+      heading:
+        "How We Provide Tailored Video Surveillance Solution for Warehouse",
+      image: "warehouse_workflow.png",
+    },
   },
-  healthcareindustry: {
+  healthcare: {
     title: [
-      { text: "AI in Healthcare:", color: "black" },
-      { text: "Smarter Diagnostics,", color: "#3F77A5" },
-      { text: "Better Care,", color: "black" },
-      { text: "Healthier Lives", color: "#db7b3a" },
-    ],
-    para: "AI enhances healthcare by enabling faster diagnostics, personalized treatments, and efficient patient monitoring, improving medical outcomes and reducing errors.",
-    small_image:
-      "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
-    small_image_alt: "Closeup shot of a bee on a chamomile flower",
-    large_image: "healthcare_mockup.png",
-    large_image_alt: "Closeup shot of a bee on a chamomile flower",
-    keyApplications: [
       {
-        title: "Patient Monitoring & Fall Detection",
-        description:
-          "AI detects falls and sudden movements for quick medical intervention.",
-        image: "hel1.png",
-        image_alt: "Patient Monitoring & Fall Detection",
-      },
-      {
-        title: "Smart ICU Surveillance",
-        description:
-          "AI ensures continuous ICU monitoring, minimizing human oversight errors.",
-        image: "hel2.png",
-        image_alt: "Smart ICU Surveillance",
-      },
-      {
-        title: "AI-Assisted Diagnostics & Patient Insights",
-        description:
-          "AI enhances diagnosis accuracy and speeds up medical decisions.",
-        image: "hel3.png",
-        image_alt: "AI-Assisted Diagnostics & Patient Insights",
-      },
-      {
-        title: "Hospital Security & Access Control",
-        description:
-          "AI strengthens security by monitoring access to restricted areas.",
-        image: "hel4.png",
-        image_alt: "Hospital Security & Access Control",
-      },
-      {
-        title: "Emergency Room Triage Optimization",
-        description:
-          "AI prioritizes critical patients for faster emergency care.",
-        image: "hel5.png",
-        image_alt: "Emergency Room Triage Optimization",
-      },
-      {
-        title: "Medication Dispensing & Tracking",
-        description:
-          "AI prevents prescription errors and improves drug management.",
-        image: "hel6.png",
-        image_alt: "Medication Dispensing & Tracking",
-      },
-    ],
-    keyBenefits: [
-      {
-        title: "Enhanced Safety & Compliance",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="41" height="34" viewBox="0 0 41 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M5.80957 21.7014L9.22708 30.5015C9.55228 30.4944 9.96978 30.3868 10.2665 30.3448C13.186 29.9311 15.6398 30.0769 18.5552 30.4008C19.3518 30.4894 20.1305 30.5817 20.8612 30.6581C24.448 31.0327 26.7891 30.7493 29.8537 28.9143L34.2611 26.4864C34.6363 26.293 34.9397 26.0782 35.3418 25.8586C36.3929 25.2847 40.0042 23.1245 40.5136 22.4863C41.6855 21.0188 40.4793 20.0781 39.8139 20.0781C39.0961 20.0781 38.478 20.5151 37.9627 20.7899C35.0413 22.3484 27.7142 25.9734 24.6914 25.9734C22.6934 25.9734 20.5175 25.8339 18.7453 25.1698C16.8025 24.4415 18.0749 23.7992 18.1435 23.7847L20.487 24.4534C21.8648 24.7817 27.7672 25.5693 27.7672 23.154C27.7672 22.6602 27.3974 22.223 27.0836 22.0433C26.6646 21.8031 24.9357 21.8915 23.7362 21.7167C20.6158 21.2624 19.4107 20.6819 16.587 19.5532C14.5478 18.7382 13.0601 18.1949 10.7929 19.2518L5.80957 21.7014Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M23.4959 17.9424C22.4535 17.9424 22.353 17.2947 21.7716 16.3345C21.3445 15.629 19.9076 13.3509 19.9076 12.7305C19.9076 12.3291 20.0672 12.0343 20.2692 11.8107C20.4706 11.5881 20.7893 11.449 21.1891 11.449C22.118 11.449 22.321 12.0902 22.678 12.6944C23.0401 13.307 23.3424 13.8263 23.6668 14.4393L28.1737 9.97516C28.6659 9.48296 29.709 8.02176 30.8277 9.07266C32.046 10.2173 30.5245 11.2983 29.6261 12.1966C28.9503 12.8726 28.337 13.4858 27.6612 14.1617L24.7135 17.1093C24.418 17.4049 24.0193 17.9424 23.4959 17.9424ZM17.7715 7.09165V14.6957C17.7715 16.886 18.3989 17.3211 19.2586 18.4207L21.0015 19.9242C21.8898 20.5162 25.2449 20.7295 26.5752 20.7585C27.371 20.7758 27.6181 21.0307 28.1096 21.3599L29.7209 20.2373C31.19 19.1277 33.3214 17.5482 33.3214 15.5502V7.09165C33.3214 6.77815 31.9349 6.44445 31.4096 6.26965C30.6609 6.02045 30.0665 5.78975 29.3545 5.50485L25.5631 3.81494L18.7447 6.61225C18.4067 6.72435 17.7715 6.76705 17.7715 7.09165Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M14.5244 4.61372V15.2936C14.5244 15.7652 14.6868 17.1455 14.8947 17.5721C15.0393 17.8694 15.1821 17.8438 15.4809 17.9257C16.1951 18.1212 17.7646 18.8529 18.113 18.882C18.0041 18.7193 17.9631 18.7048 17.8438 18.553C17.1283 17.6424 16.6604 16.5536 16.6604 15.2936V6.40802C16.6604 5.90452 18.1821 5.55032 18.797 5.38332C20.0454 5.04442 22.1974 4.06321 23.3367 3.60051C23.7476 3.43351 24.064 3.26091 24.436 3.07651C26.133 2.23481 25.1441 2.42031 27.7686 3.58731C28.5263 3.92441 29.2424 4.23912 30.0488 4.55372L33.6751 5.79762C34.1088 5.93882 34.517 6.02132 34.517 6.57892V14.8663C34.517 18.0363 32.7212 19.2832 30.7844 20.8737C30.4377 21.1587 29.1666 22.1143 28.7926 22.2141C28.7926 22.5673 28.8782 22.8135 28.8782 23.6665C29.3104 23.6305 31.3788 22.6923 31.87 22.4718C33.3918 21.7884 32.8884 21.8822 33.6878 21.2139C33.9486 20.9961 34.0538 20.9683 34.2738 20.6892C34.9241 19.8644 35.517 19.333 35.9945 18.2234C36.4473 17.1717 36.653 16.1697 36.653 14.6954V4.61372C36.653 4.27592 35.9317 4.22111 35.2675 4.03431L32.2705 3.10091C31.774 2.90431 31.3115 2.75081 30.8433 2.56331C29.2781 1.93611 27.6521 1.2323 26.214 0.357301C25.973 0.210501 25.7848 0.1265 25.5462 0C24.8023 0.498102 23.8968 0.951703 23.0684 1.3671C22.2076 1.79891 21.2587 2.19711 20.3352 2.56411C19.1621 3.03031 16.3518 3.96231 15.1725 4.23651C14.867 4.30751 14.5244 4.31252 14.5244 4.61372Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M0 22.9829C0 23.3861 2.84301 30.5671 3.23431 31.539C4.15682 33.8311 3.98941 34.434 5.77292 33.7112C6.12502 33.5685 6.45372 33.4572 6.76182 33.3331C8.88183 32.4799 8.78913 32.5399 7.94483 30.4167C7.69343 29.7843 7.44443 29.1685 7.20883 28.5044L4.60392 21.7964C4.09992 20.5058 3.05311 21.2787 1.58731 21.8361C1.2213 21.9753 0.912706 22.0688 0.595505 22.2113C0.325704 22.3328 0 22.6299 0 22.9829Z" fill="white"/>
-</svg>
-`),
-      },
-      {
-        title: "Early Risk Detection & Disease Prevention",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="32" height="34" viewBox="0 0 32 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M0 1.6696C0 2.1646 0.361208 2.3064 0.693008 2.5705L2.364 4.0111C2.9648 4.4873 4.0988 5.963 4.4531 6.6273C6.0793 9.6781 4.8634 10.0219 3.6965 12.7278C3.1658 13.9584 2.73211 15.7414 2.73211 17.3795C4.19131 17.3795 5.8494 17.9151 7.134 18.2144L7.3054 16.7162C7.592 15.3152 8.65171 15.7382 8.65171 16.3169C8.65171 16.4821 8.3481 17.1765 8.3481 18.2144C9.6469 18.1854 10.4076 16.4688 10.9285 16.4688C11.267 16.4688 11.6116 16.776 11.6116 17.076C11.6116 17.4195 10.5802 18.3998 10.3229 18.5953C7.8513 20.4737 5.55391 18.5937 2.80801 18.5937C2.80801 19.5861 3.12221 20.8693 3.38561 21.6589C3.8923 23.1771 4.54831 24.6663 5.43431 25.9853L6.5495 27.6022C6.7974 27.9083 7.15051 28.4195 7.43761 28.6116C7.88021 27.6889 7.8391 27.3635 8.7827 26.4656C10.202 25.1154 12.6601 24.0709 13.024 21.9795C13.1475 21.2695 13.0531 20.8705 13.8125 20.8705C14.8331 20.8705 13.9492 23.4763 13.074 24.382C12.8234 24.6416 12.563 24.8329 12.3705 25.1205C12.9653 25.1205 13.0901 25.0977 13.5584 24.9424C13.8684 24.8398 14.3703 24.5133 14.5713 24.5133C15.0241 24.5133 15.1025 24.9387 15.1025 25.2724C15.1025 25.6005 14.2388 25.9516 13.9196 26.0624C11.3773 26.9459 11.59 25.316 9.61801 27.3009C9.13731 27.7848 8.4241 28.764 8.4241 29.674C8.4241 30.0237 9.8208 31.0564 10.1506 31.3627C11.3555 32.4832 13.4164 34 15.1785 34H15.7857C16.6414 34 18.3401 33.3868 18.6696 32.9373C18.1207 32.1179 17.796 31.8666 17.3284 30.8634C14.9825 25.8309 19.3491 20.115 24.5989 20.7144C25.3038 20.7947 25.2721 21.2658 25.2721 17.9108C25.2721 16.8786 25.0503 16.083 24.9686 15.1028C23.899 15.0137 23.3646 14.8398 22.5174 16.2944C22.0557 17.0872 21.3257 16.8151 21.3257 16.1652C21.3257 15.8203 22.03 14.8618 22.2572 14.6679C24.2939 12.9281 26.4929 14.346 28.0958 15.8465C28.9721 16.667 29.4928 15.0335 29.8507 14.3687C30.1603 13.7936 31.5713 11.4751 31.5713 11.0044C31.5713 10.8188 31.5312 10.721 31.4378 10.6068C31.0541 10.1359 30.4228 10.5492 29.9017 10.5492C27.8789 10.5492 26.7472 10.2043 24.98 9.5512C24.7157 9.4535 23.9844 9.1072 23.6785 9.1072C22.5598 9.1072 21.0674 9.6506 20.2885 10.043C19.0065 10.6892 18.0914 11.378 17.3217 12.5405C16.8162 13.3042 15.2944 12.8195 17.0952 10.9482C17.2079 10.8312 17.2426 10.7646 17.3389 10.6605C19.0141 8.8488 21.5061 8.1925 23.9596 7.8704C25.8282 7.6251 25.4851 8.1173 25.8098 5.3191C25.8832 4.6872 26.1315 3.9141 25.5246 3.6881C25.1329 3.5421 22.4779 4.2346 21.7812 4.25C21.8902 4.0228 22.0848 3.3354 22.0848 3.0359C22.0848 2.4482 20.3654 2.3184 19.9163 2.2445C19.2064 2.1272 18.1118 1.6072 17.8768 2.6226C17.1092 5.9389 16.4415 4.7686 13.4912 7.1923L12.7179 7.8609C12.166 8.2878 11.7064 8.8396 11.2961 9.3988C11.0841 9.688 10.8787 9.9973 10.685 10.3057C10.5008 10.5994 10.3209 10.9783 10.1903 11.3287C10.0375 11.7385 10.0244 12.1428 9.4865 12.1428C7.8336 12.1428 10.3592 8.6317 10.8349 8.1028C10.9574 7.9663 11.0017 7.9429 11.124 7.785C11.5143 7.2811 12.3489 6.5973 12.8716 6.1932C13.0729 6.0376 13.9483 4.4914 14.5608 3.9359C14.6755 3.8317 14.7517 3.7966 14.8939 3.6619C15.7359 2.8647 16.0174 2.7931 14.8933 1.8032L13.4884 0.551899C13.261 0.332299 13.0722 0 12.6741 0C11.3399 0 10.0168 1.6692 9.46131 2.7068C9.26191 3.0793 9.1028 3.879 8.8036 4.0983C8.7166 3.773 8.39881 3.4547 8.17971 3.2043C8.05781 3.0655 8.06131 3.0435 7.94631 2.9065C7.77511 2.7023 7.6418 2.6196 7.4695 2.3966L5.3662 0.401799C4.5967 -0.260201 4.24681 0.0572005 3.39961 0.288L0.883701 0.9597C0.435101 1.0875 0 1.1233 0 1.6696Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M23.3752 30.6607C23.3752 30.1157 24.5136 29.6256 24.5136 30.8126C24.5136 31.4056 23.3752 31.4382 23.3752 30.6607ZM23.9824 28.8394C23.606 28.8394 23.3752 28.5407 23.3752 28.0806V25.2726C23.3752 24.4793 24.5895 24.2762 24.5895 25.4242V28.0046C24.5895 28.4284 24.3663 28.8394 23.9824 28.8394ZM23.6788 34.0002C25.5868 34.0002 27.1541 33.3774 28.2523 32.2746C28.7595 31.7654 29.1445 31.2858 29.474 30.6123C30.558 28.3975 30.1342 25.9334 28.602 23.9921C27.6408 22.7743 25.7908 21.8574 24.21 21.8574C22.274 21.8574 21.2985 22.2617 19.9359 23.4269C19.6821 23.6438 19.7734 23.5525 19.5564 23.8063C19.0534 24.3948 18.689 24.8155 18.376 25.5856C16.5836 29.993 20.0366 34.0002 23.6788 34.0002Z" fill="white"/>
-</svg>
-`),
-      },
-      {
-        title: "Increased Automation & Workforce Productivity",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M9.5625 28.0235V28.8204C9.5625 29.5509 10.2928 30.2813 11.0234 30.2813H14.3437V32.9376C13.1722 32.9376 12.1523 32.7195 12.1523 33.4688C12.1523 33.7901 12.3624 34.0001 12.6835 34.0001H21.25C21.9628 34.0001 21.9628 32.9376 21.25 32.9376H19.6563V30.2813H22.9766C23.7071 30.2813 24.4375 29.5509 24.4375 28.8204V28.0235C24.4375 27.293 23.7071 26.5625 22.9766 26.5625H11.0234C10.2928 26.5625 9.5625 27.293 9.5625 28.0235Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M9.03125 8.36724C9.03125 9.12043 9.42085 9.45993 10.162 9.89263C10.5586 10.1243 11.4193 10.4407 11.9388 10.5729C15.1676 11.3944 19.7699 11.443 22.9193 10.3022C23.5844 10.0612 24.9687 9.38703 24.9687 8.63284C24.9687 7.87974 24.579 7.54014 23.838 7.10734C21.8599 5.95235 18.6244 5.84375 16.2695 5.84375C14.7296 5.84375 13.2565 6.09805 11.9921 6.41415C11.1178 6.63265 9.03125 7.38854 9.03125 8.36724Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M15.4059 0.531296V2.19149C14.5952 2.19149 13.7309 2.37419 13.0646 2.50648C12.3389 2.65038 11.6099 2.88768 10.9842 3.14868C10.4127 3.38698 9.7336 3.82138 9.389 4.27607C8.8867 4.93857 9.0309 5.55777 9.0309 6.64066C9.5412 6.29886 10.0232 6.01897 10.6334 5.78617C11.6484 5.39877 13.5512 4.96227 14.6759 4.91457C15.4204 4.88297 16.2238 4.78137 16.9997 4.78137C18.4041 4.78137 20.1053 4.96797 21.4551 5.23987C22.8256 5.51596 23.8461 5.88916 24.9684 6.64066C24.9684 5.09787 25.2229 4.09838 23.0621 3.16808C22.019 2.71898 20.0422 2.19149 18.5934 2.19149C18.5934 0.520396 18.7673 0.0926995 18.0713 0H15.9629L15.9371 9.76557e-05C15.616 9.76557e-05 15.4059 0.210098 15.4059 0.531296Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M0 30.6797V33.4687C0 33.79 0.210001 34 0.5313 34H7.96878C8.29008 34 8.49998 33.79 8.49998 33.4687V30.6797C8.49998 29.9491 7.76958 29.2188 7.03908 29.2188H1.461C0.730499 29.2188 0 29.9491 0 30.6797Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M25.5 30.6797V33.4687C25.5 33.79 25.71 34 26.0312 34H33.4688C33.7883 34 33.9978 33.7921 34 33.4737V30.6764C33.9978 29.9469 33.2685 29.2188 32.539 29.2188H26.9609C26.2304 29.2188 25.5 29.9491 25.5 30.6797Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M19.6565 15.8047C19.6565 16.7911 19.7849 16.4777 19.922 17.0664C18.2803 18.1658 19.5532 19.4386 20.6526 17.7969C21.2413 17.9341 20.9278 18.0625 21.9141 18.0625C22.9664 18.0625 23.7764 16.9639 24.3546 16.3858C25.2403 15.5 26.0313 15.0585 26.0313 13.6797C26.0313 12.5985 25.0861 11.6875 23.8399 11.6875C22.7097 11.6875 21.9743 12.723 21.3663 13.3311C20.7832 13.9143 19.6565 14.7471 19.6565 15.8047Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M7.96875 13.6795C7.96875 15.0583 8.75975 15.4998 9.64554 16.3856C10.6109 17.3509 10.965 18.0623 12.418 18.0623C12.8192 18.0623 13.0217 17.8726 13.3477 17.7967C14.447 19.4384 15.7198 18.1656 14.0781 17.0662C14.2152 16.4775 14.3437 16.7909 14.3437 15.8045C14.3437 14.6787 12.6436 13.3474 11.6386 12.3338C10.2592 10.9425 7.96875 11.9699 7.96875 13.6795Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M11.1562 25.5001H22.8437C22.8437 24.8634 22.6299 24.3843 22.2322 23.9865C21.9291 23.6835 21.4387 23.375 20.8515 23.375H13.1484C12.1264 23.375 11.1562 24.2766 11.1562 25.5001Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M27.0938 19.457V19.8555C27.0938 21.0806 28.3256 22.3126 29.5507 22.3126H29.9492C31.1741 22.3126 32.4061 21.0806 32.4061 19.8555V19.457C32.4061 18.232 31.1741 17 29.9492 17H29.5507C28.3256 17 27.0938 18.232 27.0938 19.457Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M1.59375 19.457V19.8555C1.59375 21.0806 2.82575 22.3126 4.05084 22.3126H4.44924C5.67424 22.3126 6.90623 21.0806 6.90623 19.8555V19.457C6.90623 18.232 5.67424 17 4.44924 17H4.05084C2.82575 17 1.59375 18.232 1.59375 19.457Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M2.65625 28.1562H5.84374V22.9766C5.50954 23.1534 4.75294 23.375 4.24994 23.375C3.74705 23.375 2.99045 23.1534 2.65625 22.9766V28.1562Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M28.1562 28.1562H31.3437V22.9766C31.0094 23.1534 30.2528 23.375 29.7499 23.375C29.247 23.375 28.4903 23.1534 28.1562 22.9766V28.1562Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M25.0352 17.1992C25.1939 17.4361 25.406 17.6032 25.6163 17.8135C25.8222 18.0194 25.9998 18.3152 26.297 18.3945C26.5 17.523 27.6168 16.4062 28.4883 16.2031C28.4093 15.9071 27.9919 15.6071 27.7745 15.3896C27.5133 15.1285 27.2517 14.804 26.961 14.6094C26.6395 15.9893 25.5411 16.4438 25.0352 17.1992Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M5.51172 16.2031C6.38322 16.4062 7.50001 17.523 7.70311 18.3945C7.99021 18.3179 8.15211 18.0451 8.35061 17.8467C8.57121 17.6261 8.79801 17.4483 8.96481 17.1992C8.42421 16.3919 7.36711 16.0177 7.03901 14.6094C6.75031 14.8027 6.51552 15.0996 6.25882 15.3565C6.03552 15.5796 5.59232 15.9012 5.51172 16.2031Z" fill="white"/>
-</svg>
-`),
-      },
-      {
-        title: "Data-Driven Decision Making & Personalized Treatment",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M7.83788 30.2544C7.83788 29.8303 8.01828 29.4915 8.46208 29.4915H10.8205C11.6267 29.4915 11.7012 30.8787 10.8205 30.8787H8.46208C8.11928 30.8787 7.83788 30.5973 7.83788 30.2544ZM5.20219 14.7867H2.35829C2.02279 14.7867 1.80339 14.5674 1.80339 14.2318C1.80339 13.6295 2.44529 13.6743 3.05169 13.6767C3.67579 13.6792 4.30049 13.6769 4.92469 13.6769C4.95909 13.2632 5.17177 12.7861 5.28617 12.3738L6.06059 9.8187C6.19069 9.4183 6.24438 8.8215 6.72808 8.8215C7.24418 8.8215 7.27607 9.2537 7.39767 9.6779C7.51837 10.0988 7.62038 10.4472 7.72718 10.8744C8.22438 12.8624 8.88027 14.9646 9.37837 16.9224C9.42507 17.1058 9.48307 17.3054 9.54237 17.5214C9.62317 17.8163 9.58977 17.9767 9.77997 18.1161C9.79007 17.6631 10.7162 13.7812 10.8841 12.9776C11.1611 11.652 11.091 11.4573 11.7915 11.4573C12.0847 11.4573 12.2005 11.8845 12.2972 12.1308C12.4259 12.4589 12.5203 12.6914 12.6538 13.0228C12.7781 13.3312 12.8617 13.5792 12.9805 13.8751C13.0671 14.0907 13.2034 14.583 13.3869 14.7173C13.6894 13.4182 13.5905 13.6769 16.6468 13.6769C17.882 13.6769 17.5884 14.7867 16.9242 14.7867H14.4273C14.4197 15.1281 14.2311 15.7099 14.1498 16.0352C13.9854 16.6939 13.9948 17.0757 13.4561 17.0757C12.9331 17.0757 12.8531 16.4644 12.5246 15.649L11.8609 13.885C11.6377 14.0485 11.7644 13.9172 11.6886 14.2676L10.3514 20.3521C10.2697 20.7126 10.1998 20.9599 9.77997 20.9599C9.15067 20.9599 9.09986 19.916 8.78437 18.8343C8.61057 18.2383 6.80558 11.7503 6.79748 11.388H6.65867C6.65187 11.6963 6.00008 13.7545 5.85498 14.1911C5.74078 14.5344 5.63159 14.7867 5.20219 14.7867ZM0 2.16279V31.8498C0 32.8622 1.12939 34 2.15019 34H17.063C17.7946 34 18.4937 33.5271 18.7982 33.0995C19.2304 32.4929 19.3519 32.0434 19.3519 31.0174V14.5093C19.3519 14.1881 19.1056 14.104 18.6904 13.6448L17.3691 12.3303C17.3587 12.3206 17.3435 12.3067 17.3332 12.2968C16.5273 11.5177 15.745 10.8581 15.745 9.7233C15.745 8.4628 16.9016 7.4344 18.034 7.4344C18.5763 7.4344 18.947 7.6869 19.3519 7.7812C19.3519 6.1199 19.3747 4.4434 19.3547 2.7843C19.3362 1.2574 18.461 0.012594 17.063 0.012594C15.746 0.012594 15.9355 -0.0846056 15.7188 0.332994L14.9823 1.6081C14.6768 2.1789 14.2573 2.6483 13.3869 2.6483H5.89578C5.44868 2.6483 5.17818 2.52659 4.89338 2.33279C4.59858 2.13209 4.49319 1.89399 4.31299 1.59529C3.2018 -0.247406 3.7773 0.012594 2.2196 0.012594C1.09021 0.012594 0 1.13889 0 2.16279Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M16.7158 9.65377C16.7158 10.5603 17.0829 10.6798 17.9817 11.5786L21.7619 15.3589C21.92 15.5169 22.4729 15.9596 22.4729 16.1739V23.8037H30.4495V18.2547C30.4495 17.9184 30.6791 17.6304 31.0044 17.6304C31.7057 17.6304 31.5593 18.5269 31.5593 19.2257V25.6765C32.68 26.2695 33.7095 25.5164 33.7095 24.636V16.8675C33.7095 15.1332 32.5978 13.7422 31.2153 13.3966C30.0696 13.1101 26.8324 13.2552 25.3165 13.2609C23.2679 13.2685 22.4416 12.2236 21.4151 11.1971L19.1611 8.94247C18.7256 8.50137 18.6202 8.40527 17.9644 8.40527C17.314 8.40527 16.7158 9.00347 16.7158 9.65377Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M22.4736 34H25.9417V29.214C25.9417 28.4008 27.0515 28.3257 27.0515 29.3528V34H30.4502V24.9136H22.4736V34Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M23.9297 9.58456C23.9297 10.5147 24.2808 11.0172 24.6906 11.5287C25.778 12.8859 28.4431 12.7788 29.3405 10.7643C30.2549 8.71126 28.5334 6.81006 26.9816 6.81006H26.5655C25.1713 6.81006 23.9297 8.16176 23.9297 9.58456Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M5.68795 1.5387H13.5952C13.9101 1.5387 14.6113 0.103495 14.6356 0.0126953H4.64746C4.78766 0.277595 5.40275 1.5387 5.68795 1.5387Z" fill="white"/>
-</svg>
-`),
-      },
-    ],
-  },
-  retailindustry: {
-    title: [
-      { text: "Revolutionizing", color: "black" },
-      { text: "Retail with AI", color: "#3F77A5" }, // Blue
-      { text: ": Smarter Stores, Happier Customers,", color: "black" },
-      { text: "Maximized Profits", color: "#db7b3a" }, // Orange
-    ],
-    para: "VMukti is driving innovation with advanced AI technologies, transforming surveillance, automation, and security for a smarter, more connected world.",
-    large_image: "retailer_mockup.png",
-    large_image_alt: "Closeup shot of a bee on a chamomile flower",
-    keyApplications: [
-      {
-        title: "Smart Inventory Management",
-        description:
-          "Computer Vision tracks stock in real-time, while Deep Learning predicts demand, preventing stockouts and excess inventory.",
-        image: "ret1.png", // Path from public folder
-        image_alt: "Smart Inventory Management",
-        bgColor: "white", // Add other props as needed
-      },
-      {
-        title: "Automated Theft & Fraud Detection",
-        description:
-          "AI detects suspicious activity and unauthorized product removal, sending instant security alerts to prevent losses.",
-        image: "ret2.png",
-        image_alt: "Automated Theft & Fraud Detection",
-      },
-      {
-        title: "Customer Behavior Analytics",
-        description:
-          "AI maps customer movement, analyzes purchase history, and predicts trends to optimize store layouts and marketing.",
-        image: "ret3.png",
-        image_alt: "Customer Behavior Analytics",
-      },
-      {
-        title: "Personalized Shopping Assistance",
-        description:
-          "GPT-powered chatbots process queries and refine recommendations, improving customer satisfaction and sales.",
-        image: "ret4.png",
-        image_alt: "Personalized Shopping Assistance",
-      },
-      {
-        title: "Automated Checkout & Billing",
-        description:
-          "AI recognizes products at self-checkouts, speeding up transactions and reducing errors.",
-        image: "ret5.png",
-        image_alt: "Automated Checkout & Billing",
-      },
-      {
-        title: "Smart Supply Chain Optimization",
-        description:
-          "AI improves logistics, reduces delays, and cuts costs by optimizing distribution and warehouse management.",
-        image: "ret6.png",
-        image_alt: "Smart Supply Chain Optimization",
-      },
-    ],
-    keyBenefits: [
-      {
-        title: "Personalized Shopping & Insights",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="31" height="34" viewBox="0 0 31 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fillRule="evenodd" clipRule="evenodd" d="M10.7056 20.6552C10.7056 19.4495 10.7846 18.8886 11.2585 17.8237C11.8295 16.54 12.9574 15.5724 14.2039 14.9674C17.0668 13.5778 20.6997 15.1087 21.9418 17.7761C23.3667 20.8363 22.0631 24.4258 19.062 25.7653C17.564 26.434 15.8754 26.4679 14.3059 25.8264C12.2995 25.0063 10.7056 22.8392 10.7056 20.6552ZM8.84082 20.3098C8.84082 22.3415 9.6642 24.415 11.0327 25.7844C12.1355 26.8881 14.0635 28.1144 16.231 28.1144C18.1128 28.1144 19.0671 27.9146 20.6485 27.0066C21.0049 26.802 21.2902 26.5383 21.6182 26.3186C21.9972 26.5724 23.7858 28.328 23.9665 28.5978C23.9021 28.6941 23.5322 29.0369 23.8165 29.5042C23.9809 29.7744 26.5861 32.219 27.1609 32.7936C28.7697 34.4025 28.6275 34.3313 29.958 33.0008C31.4144 31.5445 31.1849 31.6399 29.8545 30.3072L28.6112 29.1331C28.1916 28.7134 27.8204 28.3457 27.4027 27.9242C27.3003 27.8209 27.2347 27.7445 27.1232 27.6512C26.4443 27.0838 26.4493 26.8711 25.9003 26.8711C25.5865 26.8711 25.5401 27.0187 25.3478 27.1474C24.872 26.4368 23.4435 25.4623 22.9995 24.7992C26.4759 19.6077 23.0148 12.7624 16.6366 12.6032C12.5923 12.5023 8.84082 15.9868 8.84082 20.3098Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M3.17734 11.5384C2.74885 11.5384 2.50408 11.4304 2.14131 11.4002L2.1333 21.6991C2.13706 22.2166 2.22539 22.1171 2.7605 22.1079L7.94293 22.1056C7.84707 20.9539 7.80477 21.31 7.80477 19.8955C7.80477 18.7807 8.22426 17.3889 8.61006 16.6257C9.5356 14.7947 10.7595 13.4296 12.6149 12.4807C13.4013 12.0785 14.7364 11.6073 15.8856 11.6073C15.6574 11.2959 15.4998 11.6603 14.2501 11.0328C13.9474 10.8808 13.8346 10.7965 13.5758 10.602C13.3338 10.4204 13.2117 10.1669 12.9157 10.0879C12.8219 10.4394 11.9686 10.9419 11.6507 11.1022C10.2552 11.8057 8.30945 11.6173 7.10217 10.6524C6.87122 10.4679 6.73494 10.2503 6.49253 10.0879C6.0684 10.3719 6.04548 10.623 5.13505 11.0787C4.59391 11.3494 3.9589 11.5384 3.17734 11.5384Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M19.8912 6.63441H25.7619L22.5886 0.552733C22.5331 0.454506 22.4882 0.332367 22.4214 0.236413C22.2718 0.021282 22.1052 0.000330621 21.7599 0.000132981C20.5619 -0.000855218 19.3628 0.00398831 18.1646 0.00398831L19.034 3.27858C19.1777 3.84986 19.8846 6.33785 19.8912 6.63441Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M17.4051 18.2375C17.4051 17.4172 18.5792 17.3907 18.5792 18.2375C18.5792 19.0163 17.4051 18.9647 17.4051 18.2375ZM12.5703 21.6909C12.5703 21.9974 12.9402 22.2097 13.2999 22.4809L15.3714 24.0699C16.1477 24.6744 16.379 24.0302 17.4647 22.5793C17.7456 22.2037 19.8915 19.5445 19.8915 19.2735C19.8915 18.7513 19.7032 18.0844 19.625 17.6061C19.3488 15.9197 18.7465 16.4749 17.1287 16.5108C16.1635 16.5323 16.2322 16.6884 15.4516 17.7345L12.9353 21.0199C12.7836 21.2208 12.5703 21.4044 12.5703 21.6909Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M0.276367 6.63469H6.07798L7.80467 0.00426907C6.6296 0.00426907 5.45424 0.0102942 4.27927 0.00130158C3.68289 -0.00314532 3.67379 -0.0147073 3.29126 0.73998C3.08364 1.14969 2.90755 1.56187 2.69064 1.93511C2.47512 2.30598 2.30287 2.64968 2.09516 3.0663C1.83269 3.59291 0.355917 6.29337 0.276367 6.63469Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M13.5371 6.63433H18.7862C18.7796 6.33757 18.0769 3.8559 17.9427 3.33384C17.8042 2.79458 17.6593 2.26856 17.5153 1.68918C17.3965 1.21109 17.1286 0.478934 17.1286 0.00390625H13.5371V6.63433Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M7.18311 6.63433H12.4322V0.00390625H8.90979L7.18311 6.63433Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M3.039 10.4334C4.00131 10.4334 4.75046 10.2737 5.44052 9.58876C5.89954 9.13301 6.40719 8.45965 6.42329 7.73975H0C0.110678 9.06917 1.52686 10.4334 3.039 10.4334Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M15.9545 10.4334C16.9706 10.4334 17.6611 10.3555 18.4942 9.58886C18.8996 9.21582 19.4194 8.43139 19.4769 7.73975H13.0537C13.0808 8.95592 14.5893 10.4334 15.9545 10.4334Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M22.5158 10.4334C23.4958 10.4334 24.2472 10.3219 24.9864 9.58876C25.2805 9.29685 25.3827 9.20208 25.6034 8.82439C25.7791 8.52378 25.9691 8.18424 25.9691 7.73975H19.5459C19.5988 8.37437 20.1416 9.25831 20.5323 9.58511C20.986 9.96458 21.7192 10.4334 22.5158 10.4334Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M9.46203 10.4334C10.5475 10.4334 11.1291 10.3522 11.9748 9.56188L12.1455 9.38717C12.2098 9.31701 12.2458 9.28055 12.3104 9.20683C12.6567 8.81204 12.8626 8.2628 12.9845 7.73975H6.49219C6.60672 7.97859 6.60406 8.27604 6.85902 8.75433C7.30983 9.60023 8.41533 10.4334 9.46203 10.4334Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M16.8525 11.5384C19.0605 11.5384 21.78 12.7797 23.1864 14.4595C23.3565 14.6626 23.6462 15.0769 23.8283 15.1989V11.4002C22.7716 11.6464 21.8411 11.5496 20.8802 11.1022C20.4761 10.9139 19.7656 10.4155 19.5462 10.0879C19.3434 10.2238 19.2115 10.3927 18.9846 10.5623C18.786 10.7106 18.577 10.8629 18.3701 10.9839C18.1737 11.0986 17.9039 11.2165 17.6502 11.2999C17.1861 11.4525 17.2583 11.3617 16.8989 11.5155C16.8885 11.52 16.8671 11.5291 16.8525 11.5384Z" fill="white"/>
-            </svg>`),
-      },
-      {
-        title: "AI-Powered Inventory & Demand Forecasting",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fillRule="evenodd" clipRule="evenodd" d="M9.3109 20.8315H19.0874C19.8472 20.8315 19.7193 21.8292 19.2204 21.8292H9.3109C8.62355 21.8292 8.62355 20.8315 9.3109 20.8315ZM3.40904 34H2.32327C1.77591 33.9819 1.30223 33.9067 0.892436 33.6395C0.297233 33.2514 0 32.6227 0 31.6722V5.9341C0 4.67431 0.692578 3.67285 1.86219 3.67285H4.5889V5.53503C4.5889 6.46962 5.52098 7.26422 6.51759 7.26422H16.2276C16.8805 7.26422 17.2907 7.08086 17.6508 6.75873L18.0918 6.20205C18.4023 5.53158 18.2893 4.57256 18.2893 3.67285H21.0826C21.9558 3.67285 22.8118 4.59522 22.8118 5.40204V23.4254C21.0268 23.4254 19.7777 23.6913 18.5383 24.938C17.3525 26.1309 16.9592 27.3162 16.9592 29.0119C16.9592 31.0312 18.4367 32.9617 20.1599 33.659C20.6085 33.8405 20.7369 33.8005 20.883 34H3.45828H3.40904ZM4.45591 22.6273C4.01898 22.6273 3.75476 22.2446 3.47283 21.9476C2.75023 21.1865 3.73257 20.4493 4.38942 21.4302C5.03648 20.9968 5.45681 20.0335 6.1851 20.0335C6.3194 20.0335 6.58408 20.2148 6.58408 20.499C6.58408 20.904 5.42818 21.8842 5.10446 22.2117C4.92596 22.3924 4.78103 22.6273 4.45591 22.6273ZM8.77884 16.2426C8.77884 15.906 9.13901 15.7106 9.51038 15.7106H18.9544C19.928 15.7106 19.665 16.7082 19.2869 16.7082H9.17791C8.98998 16.7082 8.77884 16.4308 8.77884 16.2426ZM4.45591 17.5727C4.13043 17.5727 3.15014 16.7078 3.21468 16.2648C3.24844 16.0335 3.43003 15.8436 3.65787 15.8436C4.12437 15.8436 4.07307 16.2069 4.45591 16.3091C4.80472 16.0755 5.69184 14.9125 6.05211 14.9125C6.33666 14.9125 6.58408 15.1175 6.58408 15.378C6.58408 15.7396 6.00221 16.1927 5.63644 16.5585C5.4251 16.7698 4.73897 17.5727 4.45591 17.5727ZM9.3109 10.6561H19.1539C19.8221 10.6561 19.7787 11.6536 19.0874 11.6536H9.44389C8.52889 11.6536 8.65582 10.6561 9.3109 10.6561ZM4.52241 12.4517C4.0616 12.4517 4.13593 12.3636 3.70767 11.9363C3.52236 11.7513 3.21757 11.5364 3.20899 11.2461C3.20078 10.9695 3.50156 10.7192 3.77276 10.7505C4.06039 10.7837 4.24048 11.1104 4.45591 11.2546C4.65606 10.9557 5.18309 10.4984 5.46996 10.2069C5.63756 10.0365 5.79079 9.8184 6.05939 9.80936C6.36277 9.7991 6.58408 10.0066 6.58408 10.39C6.58408 10.6456 4.77795 12.4517 4.52241 12.4517Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M21.615 30.4084C21.3473 30.4084 20.2194 29.2342 20.1779 29.0525C20.0685 28.5731 20.4852 28.4797 20.8168 28.4797C21.0449 28.4797 21.4188 29.0135 21.615 29.1449C22.0744 28.8372 23.397 27.3043 23.6463 27.1795C23.9932 27.0059 24.4082 27.2685 24.4082 27.6152C24.4082 27.8781 23.9625 28.2272 23.793 28.3967C23.4771 28.7125 21.9242 30.4084 21.615 30.4084ZM17.6245 28.3468C17.6245 29.7145 17.6804 30.4154 18.5643 31.5969C19.0404 32.2331 19.7141 32.7731 20.5215 33.0981C24.2989 34.6182 28.1534 30.9444 26.6231 26.9965C26.0222 25.4464 24.3102 24.0903 22.679 24.0903C21.6221 24.0903 21.2107 24.0563 20.218 24.5555C18.8477 25.2446 17.6245 26.746 17.6245 28.3468Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M12.1706 2.94134C10.3596 2.94134 10.3084 3.15827 10.3084 2.0102C10.3084 0.829962 12.5696 0.652298 12.5696 2.20969C12.5696 2.49918 12.4422 2.94134 12.1706 2.94134ZM9.1778 2.20969C9.1778 2.44052 9.26416 2.74129 9.31079 2.94134C8.84708 2.94134 5.88394 2.85526 5.59268 3.01409C4.94562 3.36671 5.12058 5.64158 5.47694 6.11013C5.66113 6.35233 6.04799 6.5992 6.45098 6.5992H16.294C16.7482 6.5992 16.9848 6.48738 17.2209 6.26233C17.4702 6.02461 17.6241 5.78511 17.6241 5.40208C17.6241 4.30904 17.8398 3.17319 17.1326 2.96727C16.9021 2.90002 13.9487 2.94134 13.5672 2.94134C13.6433 2.02718 13.8251 1.00511 12.4773 0.240261C11.7117 -0.19425 10.47 -0.0374755 9.79118 0.694917C9.49964 1.00949 9.1778 1.62904 9.1778 2.20969Z" fill="white"/>
-            </svg>`),
-      },
-      {
-        title: "Automated Checkout & Theft Prevention",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="32" height="34" viewBox="0 0 32 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fillRule="evenodd" clipRule="evenodd" d="M0.00449621 3.65232C0.00449621 5.97634 -0.262816 5.71091 3.32481 5.71091C3.45878 6.28602 3.68036 6.91778 3.86388 7.49602C4.75374 10.2993 5.74675 13.7089 6.65331 16.3941L7.77398 19.9883C7.37013 20.2586 6.44648 21.2833 6.03084 21.6982C5.40837 22.3197 4.85213 22.9387 4.85213 24.1055C4.85213 25.9388 6.30151 26.9609 8.10605 26.9609H27.3639C28.6539 26.9609 28.3599 26.091 28.3599 24.6367C28.3599 23.8613 26.6677 24.039 26.3677 24.039H7.77398C7.98574 23.7228 8.66985 23.11 8.98593 22.7939C9.4103 22.3695 9.79675 21.9959 10.2139 21.5649C10.565 21.2021 10.4286 21.2416 11.0932 21.2489L22.1842 21.2499C23.7791 21.2499 24.8736 21.3978 25.8646 19.95C26.1822 19.4861 26.4096 18.8378 26.6778 18.3061L30.6084 9.95159C30.859 9.33263 31.2154 8.89874 31.2154 8.03509C31.2154 6.66834 30.1915 5.64451 28.8248 5.64451C26.3428 5.64451 26.899 5.58833 26.899 8.23436C26.899 8.91731 26.7506 9.55624 26.6072 10.134C26.346 11.1864 25.8056 12.326 25.1542 13.1966C24.9894 13.4168 24.8447 13.6382 24.6592 13.8304C23.1275 15.4166 21.9275 16.2263 19.7411 16.7483L17.7349 17.0006C17.4549 17.0006 17.5278 16.9582 17.2662 16.9376C16.0099 16.8384 15.3578 16.7683 14.0624 16.2232C12.3769 15.5141 10.8324 14.1156 9.89584 12.5539C8.74576 10.6361 8.43164 8.92597 8.63474 6.70252C8.76043 5.32656 7.67239 5.64451 6.31305 5.64451C5.7583 4.48835 6.03474 2.78906 4.05527 2.78906H1.00055C0.379633 2.78906 0.00449621 3.03554 0.00449621 3.65232Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M16.4731 11.2891C15.6871 11.2891 15.0524 10.3665 14.3979 9.71197C14.1753 9.48937 13.7024 9.0749 13.5813 8.79721C13.397 8.37464 13.5472 7.83596 14.3481 7.83596C14.5831 7.83596 15.1824 8.50423 15.3607 8.68267C15.6334 8.95521 16.0801 9.33956 16.2739 9.62895C16.5843 9.42109 17.1763 8.75976 17.4858 8.45024L19.9096 6.02642C20.3066 5.62944 21.1845 4.4906 21.8005 5.23214C22.2859 5.81638 21.5331 6.39516 21.2378 6.69049L18.1166 9.81153C17.8647 10.0635 16.7607 11.2891 16.4731 11.2891ZM17.7348 15.6055C20.8463 15.6055 23.4271 13.8294 24.7965 11.1126C25.491 9.73483 25.733 7.74319 25.3868 6.22687C25.2623 5.68132 25.1292 5.23198 24.9261 4.76181C23.7683 2.08137 21.0071 0 18.0669 0C16.1381 0 14.5795 0.400574 13.1243 1.49884C12.9253 1.64896 12.7753 1.74204 12.6035 1.90784C11.2434 3.22138 10.5545 4.29039 10.0962 6.17389C9.48351 8.69157 10.4273 11.5085 12.2396 13.3313C12.9625 14.0585 13.6283 14.4444 14.5246 14.8977C15.3147 15.2972 16.5701 15.6055 17.7348 15.6055Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M8.70671 33.9998C10.0353 33.9977 11.3599 32.6722 11.3599 31.3435C11.3599 30.0454 10.8426 29.0701 9.58729 28.5341C7.31835 27.5653 4.96038 29.9315 5.87483 32.1802C6.07036 32.661 6.35975 33.0792 6.73832 33.3753C7.11705 33.6714 7.74218 33.9977 8.23412 33.9998H8.70671Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M25.7066 33.9998C27.0352 33.9977 28.3598 32.6722 28.3598 31.3435C28.3598 30.0454 27.8426 29.0701 26.5873 28.5341C24.3183 27.5653 21.9604 29.9315 22.8748 32.1802C23.2713 33.1553 24.2939 33.9977 25.2354 33.9998H25.7066Z" fill="white"/>
-            </svg>`),
-      },
-      {
-        title: "Store Layout & Customer Flow Analysis",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="33" height="34" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fillRule="evenodd" clipRule="evenodd" d="M17.7944 3.41592V15.3318C17.7944 15.9081 17.9084 16.4332 18.0597 16.8936C18.2261 17.3997 18.487 17.7039 18.8492 18.0107C19.5186 18.5777 20.7175 18.7476 21.9252 18.7476H28.1215C30.5705 18.7476 32.2524 18.0856 32.2524 15.3318V3.41592C32.2524 0.804483 30.7262 0 28.1215 0H21.9252C20.7427 0 19.5602 0.166519 18.8928 0.70119C18.1782 1.27389 17.7944 2.15894 17.7944 3.41592Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M0 18.6682V30.5841C0 33.1955 1.52622 34 4.13096 34H10.3272C12.776 34 14.458 33.3379 14.458 30.5841V18.6682C14.458 16.0568 12.9318 15.2524 10.3272 15.2524H4.13096C1.68196 15.2524 0 15.9144 0 18.6682Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M17.7944 25.5793C17.7944 27.2914 17.611 30.7809 18.0597 32.1459C18.5709 33.7006 20.2564 33.9999 21.9252 33.9999H28.1215C30.5705 33.9999 32.2524 33.3377 32.2524 30.5839V25.5793C32.2524 23.3088 31.1754 22.084 28.9159 22.084H21.131C18.8715 22.084 17.7944 23.3088 17.7944 25.5793Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M0 3.41592V8.42056C0 10.6911 1.07706 11.9159 3.33652 11.9159H11.1215C13.3809 11.9159 14.458 10.6911 14.458 8.42056C14.458 6.70845 14.6414 3.21895 14.1927 1.85401C14.0263 1.3479 13.7654 1.04385 13.4032 0.737032C12.7338 0.170018 11.5349 0 10.3272 0H4.13096C2.94827 0 1.76573 0.166519 1.09848 0.70119C0.383887 1.27389 0 2.15894 0 3.41592Z" fill="white"/>
-            </svg>`),
-      },
-    ],
-  },
-  educationindustry: {
-    title: [
-      { text: "AI in Education:", color: "black" },
-      { text: "Smarter Learning", color: "#3F77A5" }, // Blue
-      { text: ", Personalized Growth,", color: "black" },
-      { text: "Future-Ready Students", color: "#db7b3a" }, // Orange
-    ],
-    para: "AI enhances education by personalizing learning, automating tasks, and improving engagement, making learning more accessible and efficient.",
-    small_image:
-      "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
-    small_image_alt: "Closeup shot of a bee on a chamomile flower",
-    large_image: "education_mockup.png",
-    large_image_alt: "Closeup shot of a bee on a chamomile flower",
-    keyApplications: [
-      {
-        title: "Smart Attendance & Campus Security",
-        description:
-          "AI automates attendance tracking and prevents unauthorized access.",
-        image: "ed1.png",
-        image_alt: "Smart Attendance & Campus Security",
-      },
-      {
-        title: "Personalized Learning & Student Engagement",
-        description:
-          "AI adapts study materials based on student performance for better retention.",
-        image: "ed2.png",
-        image_alt: "Personalized Learning & Student Engagement",
-      },
-      {
-        title: "Cheating & Anomaly Detection in Exams",
-        description:
-          "AI detects suspicious behavior in exams to ensure academic integrity.",
-        image: "ed3.png",
-        image_alt: "Cheating & Anomaly Detection in Exams",
-      },
-      {
-        title: "Automated Campus Announcements & Alerts",
-        description:
-          "AI delivers real-time notifications to students and staff.",
-        image: "ed4.png",
-        image_alt: "Automated Campus Announcements & Alerts",
-      },
-      {
-        title: "AI-Powered Virtual Classrooms & Lecture Summaries",
-        description:
-          "AI transcribes lectures and provides instant answers to student queries.",
-        image: "ed5.png",
-        image_alt: "AI-Powered Virtual Classrooms & Lecture Summaries",
-      },
-      {
-        title: "Real-Time Behavioral Analysis for Student Well-being",
-        description:
-          "AI monitors student performance levels to identify those needing support.",
-        image: "ed6.png",
-        image_alt: "Real-Time Behavioral Analysis for Student Well-being",
-      },
-    ],
-    keyBenefits: [
-      {
-        title: "Personalized Learning & Adaptive Education",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="29" height="34" viewBox="0 0 29 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M8.86594 5.04318C8.86594 8.51246 10.6317 9.14347 11.1433 9.84221C10.941 9.93927 10.3428 10.0347 10.0388 10.1204C9.2109 10.3536 9.14036 10.4097 8.44884 10.7267L7.07583 11.5495C6.59589 11.8961 5.99443 12.4584 5.59246 12.9132C5.10042 13.4702 4.7962 14.0044 4.40656 14.6554C3.78673 15.6919 4.07768 15.4545 5.77494 15.4545C8.01313 15.4545 8.89667 15.3709 10.9314 16.0734C13.4966 16.9586 10.8139 17 15.5358 17C15.9296 17 16.6901 16.376 17.4763 16.0939C19.4412 15.3886 20.4349 15.4545 22.6121 15.4545C24.4529 15.4545 24.9464 15.913 23.5396 13.7949C23.3255 13.4725 23.1563 13.2458 22.9135 12.957C20.6313 10.243 17.8743 10.1057 17.3253 9.84221C17.9877 8.93771 19.6025 8.4943 19.6025 5.04318C19.6025 2.4826 17.2042 0 14.1528 0C11.2845 0 8.86594 2.51938 8.86594 5.04318Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M17 17.7323V33.0238C18.7578 32.0937 19.6881 32.1291 21.7175 32.1291H25.9472C27.4745 32.1301 27.1673 32.7108 27.1673 28.9569C26.3564 28.9569 25.9272 28.988 25.2135 28.6331C24.6451 28.3505 24.7292 28.4227 24.2893 28.0119C24.2769 28.0007 24.259 27.9846 24.2469 27.973L24.1652 27.892C22.7531 26.4307 22.868 23.1544 24.306 21.9473C26.0449 20.4872 27.1673 21.4646 27.1673 20.8229V17C27.1673 16.8127 27.1105 16.7561 26.9231 16.7561C24.9754 16.7561 20.2742 16.5718 18.6596 17.0331C17.8919 17.2521 17.6552 17.3855 17 17.7323Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M1.301 17C1.301 23.8506 0.922534 19.455 4.11549 21.9129C5.57766 23.0383 5.76388 26.4405 4.2626 27.933C3.35741 28.8331 2.54648 28.9569 1.301 28.9569C1.301 32.6908 1.00844 32.1315 2.43989 32.1291C3.91627 32.1268 8.38448 32.0423 9.40092 32.2444C10.1094 32.385 10.929 32.7385 11.4683 33.0239V17.7323C10.9157 17.4397 10.5005 17.203 9.81104 17.0305C7.96482 16.5694 3.70654 16.7561 1.54516 16.7561C1.3578 16.7561 1.301 16.8127 1.301 17Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M12.6895 34H15.7805V18.708H12.6895V34Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M0 23.3447V26.6794C0 28.3508 3.98548 28.0606 3.98548 25.7034V24.4018C3.98548 21.8741 0 21.7072 0 23.3447Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M24.4836 24.4018C24.4836 25.5049 24.3198 26.4871 25.2585 27.2059C26.3138 28.0138 28.4691 28.0171 28.4691 26.5167V23.3447C28.4691 21.7072 24.4836 21.8741 24.4836 24.4018Z" fill="white"/>
-</svg>
-`),
-      },
-      {
-        title: "Automated Administrative Tasks & Efficiency",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="33" height="34" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M16.7831 20.7617C17.2747 20.6471 17.6337 20.3025 17.9126 19.9379C18.2743 19.4646 18.3023 19.0996 18.3023 18.3021C19.7399 18.9919 22.0844 19.057 23.5107 18.3021C23.5107 19.4236 23.9889 20.5023 25.1022 20.7617C23.8983 22.5597 22.9081 23.2212 20.5448 23.2212C19.0076 23.2212 17.4805 22.0795 16.7831 20.7617ZM20.9788 17.6511C20.0394 17.6511 18.9458 17.3253 18.3421 16.9601C17.3059 16.3332 16.4475 15.4731 15.9855 14.3254C15.3622 12.7775 16.0049 12.6505 14.3925 12.5908C14.0827 12.5793 13.9918 12.5237 13.8299 12.3574C13.214 11.7256 13.5924 10.8389 14.4695 10.78C15.561 10.7066 15.3998 11.0641 16.1321 8.39139C16.4981 7.05622 16.5513 6.66652 17.434 7.30669C17.6302 7.44904 17.7306 7.51437 17.9544 7.65439C18.341 7.8961 18.6161 8.08123 19.0488 8.29611C22.5159 10.0181 25.3216 8.32489 26.2596 8.24671C26.2596 8.80812 26.1568 10.0861 26.3619 10.4595C26.6875 11.0524 27.6611 10.5386 28.1113 11.0975C28.5134 11.5967 28.3314 12.3415 27.7327 12.541C27.3949 12.6534 27.0044 12.5214 26.6665 12.6324C26.3141 12.7481 26.2474 12.9752 26.1677 13.3632C25.6667 15.7988 23.4639 17.6511 20.9788 17.6511ZM12.2981 4.99143V11.5022C12.2981 12.2363 12.5297 12.7561 12.893 13.1499C13.277 13.5662 13.7558 13.8171 14.5406 13.8171C14.7472 14.7036 15.0919 15.3356 15.5382 16.0024C15.7854 16.3717 15.9491 16.5654 16.2587 16.8734C17.2407 17.8514 17.0725 17.2213 17.0725 18.8085C17.0725 19.3563 16.6313 19.5358 16.2163 19.6884C15.343 20.0099 11.5506 21.3458 11.1249 21.6142C9.96165 22.3475 9.1875 23.4388 9.1875 25.0297V30.0937C9.1875 30.8456 10.0023 30.7447 10.4173 30.7447V26.6212C10.4173 25.9026 10.5514 25.411 10.89 24.9961C11.186 24.6332 11.7402 24.3063 12.3704 24.3063H29.5151C30.469 24.3063 31.3959 25.1265 31.3959 26.0424V30.7447C32.1697 30.7447 32.6981 30.8838 32.6981 29.8043V25.6808C32.6981 24.248 32.4878 23.3707 31.8422 22.5579C31.1295 21.661 30.4532 21.4679 29.3084 21.0405C28.746 20.8305 25.3186 19.6818 25.0073 19.3376C24.6415 18.9333 24.7405 18.3029 24.7405 17.5787C25.4431 17.3911 26.7283 15.5188 27.0462 14.6758C27.5392 13.3692 26.9665 14.0683 28.0555 13.7319C28.7316 13.523 29.5151 12.7681 29.5151 11.9362V5.64249C29.5151 2.96826 26.7067 0 23.7278 0H18.3023C16.74 0 15.951 1.43046 15.6804 1.50143C15.2374 1.61792 15.0256 1.48218 14.4965 1.6922C13.2387 2.19138 12.2981 3.27006 12.2981 4.99143Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M20.906 31.1065C20.519 31.1065 20.1103 30.7351 20.1103 30.3832C20.1103 29.5713 20.9545 29.2325 21.4704 29.6736C22.0069 30.1325 21.7224 31.1065 20.906 31.1065ZM11.5742 26.3319V34.0001H30.0933C30.26 34.0001 30.3104 33.9498 30.3104 33.7831V26.4043C30.3104 25.9284 30.0568 25.4639 29.587 25.4639H12.2976C11.8449 25.4639 11.5742 25.865 11.5742 26.3319Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M6.07653 15.6256C5.85407 15.7323 5.64793 15.7973 5.42547 15.9149C5.08458 15.4057 4.52045 14.8299 3.834 14.8299C3.18178 14.8299 2.79518 15.3985 2.44146 15.7522C1.86352 16.3301 0.847666 17.1842 1.86159 18.1769C2.09416 18.4046 2.27326 18.6353 2.53189 18.8085C2.41424 19.031 2.34929 19.2369 2.24253 19.4596C0.0474547 19.4596 0 19.6883 0 22.0638C0 23.7959 1.11952 23.6553 2.24253 23.6553C2.34929 23.8779 2.41424 24.0839 2.53189 24.3063C2.27326 24.4796 2.09416 24.7102 1.86159 24.9381C0.892392 25.8871 1.77797 26.6992 2.4053 27.3267C3.03263 27.9538 3.84488 28.8396 4.79385 27.8704C5.02156 27.6378 5.2524 27.4585 5.42547 27.1999C5.64035 27.3137 5.86185 27.3757 6.07653 27.4895C6.07653 28.1746 6.00087 28.6327 6.2667 29.1078C6.62704 29.7522 8.10223 29.9675 8.10223 29.515V25.1744C8.10223 24.7135 7.00488 25.1818 5.8033 24.001C3.77546 22.0088 4.81292 18.1575 8.39159 18.1575C9.6305 18.1575 11.053 19.2591 11.2852 20.2553C11.7258 20.2186 13.5849 19.3522 14.0341 19.3149C13.9849 19.1035 13.9077 18.9798 13.8171 18.8085C14.4253 18.4011 14.9021 17.8854 14.9021 17.1447C14.9021 17.0362 14.5399 16.5662 14.4537 16.4357C14.0908 15.8868 13.2407 14.8299 12.5149 14.8299C11.8287 14.8299 11.2644 15.4057 10.9235 15.9149C10.701 15.7973 10.4951 15.7323 10.2724 15.6256C10.2724 15.048 10.3319 14.3612 10.1003 13.989C9.6025 13.1888 8.51099 13.3831 7.37865 13.3831C5.93322 13.3831 6.07653 14.8044 6.07653 15.6256Z" fill="white"/>
-</svg>
-`),
-      },
-      {
-        title: "Enhanced Safety & Campus Security",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M20.1171 16.0909L20.0933 20.7421C19.9977 21.1841 19.5313 21.2713 19.1457 21.4237C18.771 21.5715 14.9206 23.2451 14.6628 23.2451C14.4635 23.2451 12.7531 22.5029 12.426 22.3652C11.6541 22.041 10.9554 21.7298 10.1799 21.4237C8.97266 20.9469 9.2085 20.9895 9.2085 19.2783C9.2085 18.2158 9.2085 17.1533 9.2085 16.0909C8.85739 16.009 8.54281 15.7583 8.14595 15.6658C8.14595 16.7283 8.14595 17.7909 8.14595 18.8534C8.14595 20.5272 8.47212 21.6159 7.43746 21.6159C7.20811 21.6159 7.01252 21.3082 7.01252 21.0494V14.8157C7.01252 14.3521 7.33123 14.2229 7.68999 14.0766C8.05268 13.9287 8.34154 13.7618 8.68891 13.588C9.36167 13.2512 9.97865 12.9785 10.6489 12.6435C10.9515 12.4921 14.4114 10.7782 14.6628 10.7782C15.0021 10.7782 20.6381 13.6391 21.504 13.9957C21.8111 14.1221 22.3131 14.304 22.3131 14.6741C22.3131 15.1876 21.7536 15.3433 21.3921 15.5242C21.0877 15.6762 20.4281 16.0182 20.1171 16.0909ZM3.39995 9.07803C3.39995 12.7951 3.34614 14.8883 4.32032 18.5706C4.82616 20.4832 5.60888 22.3061 6.51237 23.8162C7.45631 25.3936 8.5542 26.6739 9.89971 27.8669C10.0535 28.0029 10.2575 28.1575 10.412 28.2755C11.3573 28.9987 13.8174 30.6121 14.7337 30.6121C15.1364 30.6121 16.8342 29.6526 17.2354 29.4303C17.8204 29.1059 18.866 28.3391 19.388 27.8995C23.0023 24.8556 24.9352 20.2484 25.6219 15.5745C26.0122 12.9172 25.9257 11.7046 25.9257 9.07803C25.9257 7.96188 25.1213 8.35932 23.0736 7.96325C20.6176 7.48785 18.004 6.51838 15.9659 5.15422C13.9288 3.79065 14.9691 4.46478 12.1607 5.86762C9.98984 6.95197 8.81066 7.45506 6.3109 7.95128C4.26652 8.35677 3.39995 7.93949 3.39995 9.07803Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M1.20413 11.4865L1.27482 7.94444C1.30584 7.33786 1.48748 6.54945 1.48748 5.96133C1.89161 5.96133 1.97742 6.03221 2.40844 6.03221C4.69318 6.03221 6.422 5.89514 8.5414 5.08159C9.02053 4.8976 9.50065 4.71989 9.9411 4.49779C11.4036 3.76063 12.2824 3.27286 13.5605 2.30889C13.956 2.01061 14.2767 1.68641 14.6629 1.42779C15.198 1.78596 15.8997 2.44006 16.8872 3.09946C18.1277 3.92754 19.3361 4.51213 20.7337 5.06177C22.8324 5.8871 24.6469 6.03221 26.9175 6.03221C27.3485 6.03221 27.4343 5.96133 27.8384 5.96133C27.8384 6.20855 27.8997 6.63585 27.9399 6.92235C27.982 7.22004 28.014 7.64125 28.0407 7.88415C28.1514 8.89034 28.1218 10.4144 28.1218 11.4865C28.1218 14.2802 27.6587 16.8976 27.0885 19.1659C26.3674 22.0328 24.9691 24.9542 23.1857 27.1637C22.0481 28.5728 20.7089 29.8207 19.1967 30.8252C18.2121 31.4787 15.8311 32.8719 14.6629 32.8719C14.1047 32.8719 13.4262 32.6074 13.0101 32.4067C8.24782 30.1118 5.58233 27.4304 3.35337 22.442C2.01748 19.4525 1.20413 15.0211 1.20413 11.4865ZM0 10.6364C0 15.0162 0.675509 18.9027 2.16515 22.6384C2.99205 24.7128 3.89613 26.1055 5.18057 27.84L6.85361 29.7086C8.82082 31.4406 10.0613 32.3179 12.5616 33.4926C14.7201 34.5069 16.3281 33.8681 18.2787 32.7405C18.531 32.5946 18.7413 32.4935 19.0068 32.3352C19.2735 32.1762 19.4912 32.0387 19.7495 31.8738C24.3075 28.9644 26.9214 24.2543 28.3207 19.123C29.0013 16.6262 29.5386 11.5721 29.2656 9.13855C29.2371 8.88425 29.2609 8.62288 29.2581 8.36702L29.0427 6.17379C29.0131 5.90536 28.9942 5.77575 28.9534 5.48415C28.9173 5.22691 28.9184 5.03918 28.7162 4.87109C28.3602 4.57536 26.9208 4.96555 25.8455 4.83909C24.5622 4.68808 24.6449 4.87738 23.0068 4.48857C21.1825 4.05578 20.9231 3.80816 19.5199 3.22946C19.2259 3.10811 19.2515 3.10222 19.0064 2.96378C18.7986 2.84635 18.6551 2.79667 18.447 2.67315C17.5816 2.16044 15.9478 1.03447 15.2126 0.311641C14.6209 -0.269606 14.3965 0.0343668 13.7255 0.632109C12.4998 1.72391 11.8154 2.10938 10.4159 2.91861C8.90487 3.79205 6.83476 4.46874 5.07079 4.72794C4.52273 4.80845 4.10486 4.77467 3.55189 4.83849C2.57221 4.95141 1.00521 4.60462 0.649585 4.84007C0.354445 5.03545 0.34306 5.65421 0.295932 6.04478C0.135107 7.37537 0 9.32451 0 10.6364Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M8.9248 14.6741V14.8157C9.20149 14.8801 9.35505 15.0017 9.60875 15.1236C9.8764 15.2526 10.0959 15.3288 10.3418 15.4531L14.6625 17.5075C14.8783 17.5075 20.0156 14.9055 20.4001 14.8157V14.6741C20.0879 14.6013 14.8351 11.9438 14.6625 11.9438C14.5191 11.9438 9.26079 14.5958 8.9248 14.6741Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M10.3418 20.3406C10.9297 20.4777 14.4127 22.0775 14.6629 22.0775C14.9128 22.0775 18.3909 20.4788 18.9839 20.3406V16.728C18.3304 16.8802 14.9967 18.7115 14.6629 18.7115C14.4667 18.7115 12.8143 17.8544 12.5388 17.7187C12.1894 17.5467 11.8234 17.3982 11.4752 17.2239C11.2015 17.087 10.6642 16.7547 10.3418 16.728V20.3406Z" fill="white"/>
-</svg>
-`),
-      },
-      {
-        title: "Accessible & Inclusive Education",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M12.1822 4.95555C12.1822 3.71822 13.3566 2.47771 14.591 2.47771C15.4906 2.47771 16.104 2.55867 16.8109 3.35519C17.7235 4.38347 17.4818 6.06783 17.4818 7.70849H12.1822V4.95555ZM9.70448 5.16203V7.70849C9.15841 7.70849 8.00253 7.70592 7.77736 8.32795C7.46953 8.3023 7.17549 8.1504 6.94104 8.06309C6.62698 7.94599 6.41463 7.86418 6.082 7.75196C5.83644 7.66917 5.42139 7.57967 5.25984 7.40419L3.62358 4.46113C3.58854 4.09541 4.25073 3.48083 3.44799 2.6776C2.18502 1.4139 0.324322 3.33345 1.59767 4.59667C1.90392 4.90035 2.03385 4.95555 2.61545 4.95555C2.69556 5.25581 4.00297 7.50652 4.25318 7.92902C4.61975 8.54787 5.0116 8.5696 5.65169 8.80173C6.17822 8.99259 6.81722 9.30165 7.36439 9.42913V10.3927H4.06073C3.84631 10.3927 2.99424 9.461 2.76223 9.20897C2.38748 8.80186 2.97482 8.44688 2.4285 7.82657C1.43832 6.70219 0 7.54584 0 8.60331C0 9.29127 0.623733 9.97984 1.30767 9.97984C2.17903 9.97984 1.65397 9.67225 2.59823 10.6164C2.85014 10.8683 3.38926 11.5627 3.7855 11.5627H7.36439V13.5587H2.54658C2.44596 13.1271 2.02884 12.8516 1.53467 12.7796C0.491491 12.6278 -0.262289 13.7092 0.134809 14.6628C0.514445 15.5745 2.28905 15.7654 2.54658 14.6599H7.36439V16.6559H3.7855C3.28949 16.6559 2.53486 17.6971 2.15132 18.0504C2.10467 18.0934 1.92065 18.2362 1.87327 18.2549C1.52099 18.3934 1.08457 18.0042 0.43007 18.6C-0.450457 19.4015 0.198308 20.9231 1.37654 20.9231C1.83054 20.9231 2.12116 20.7078 2.36085 20.462C2.70276 20.1112 2.68811 19.9207 2.66369 19.2883C2.65233 18.9914 3.01841 18.7651 3.25201 18.5314C3.40892 18.3746 3.84814 17.8259 4.06073 17.8259H7.36439V18.9271L4.79473 19.7299C4.46626 19.8666 4.39751 20.0412 4.22717 20.3324C3.90663 20.88 2.7074 22.9185 2.61545 23.2631C2.12995 23.2631 1.8872 23.3371 1.60854 23.564C1.04599 24.0219 1.03634 25.0682 1.56336 25.5541C2.56807 26.4805 4.21032 25.4735 3.77182 24.1695C3.74777 24.0977 3.62688 23.8504 3.62346 23.7988C3.61039 23.6039 3.89174 23.2388 3.99504 23.0598C4.27833 22.569 4.55527 22.0899 4.8415 21.5661C5.3397 20.6542 5.18524 20.812 6.0654 20.5189C6.64273 20.3266 7.24668 20.0991 7.84623 19.9596C8.12549 20.3766 8.66619 20.5101 9.36038 20.5101C12.7986 20.5101 12.5405 20.7751 12.5275 19.8232C12.5156 18.9321 12.4447 15.8985 12.5513 15.3043C12.6469 14.771 12.9583 14.492 13.2146 14.1093C13.0887 13.569 12.9393 13.6304 12.9393 12.8704C12.9393 11.4199 14.9481 10.5032 16.1597 11.7148C16.7963 12.3514 16.8601 13.3933 16.3805 14.1093C16.7538 14.3593 17.1376 15.1256 17.1376 15.7611V20.0972C18.2191 20.0972 18.5117 20.5101 18.8583 20.5101C19.5805 20.5101 20.5344 20.5979 21.2107 20.3847C21.5099 20.2905 21.6627 20.1095 21.8866 19.9596C22.2106 20.035 24.2597 20.6293 24.4643 20.8231C24.5009 20.8578 24.8361 21.465 24.8913 21.5661C25.0345 21.8283 26.0899 23.5558 26.1092 23.7575C26.1197 23.8675 25.8785 24.2604 25.8785 24.6396C25.8785 25.319 26.565 25.8938 27.2003 25.9295C28.403 25.9971 29.0161 24.3632 28.162 23.5951C27.8922 23.3526 27.6217 23.2631 27.1173 23.2631C27.0264 22.9224 26.4766 22.1087 26.291 21.7494L25.4536 20.2468C25.2449 19.894 25.2342 19.8372 24.8381 19.6923L23.0654 19.1248C22.0584 18.7899 22.2997 18.8236 22.2997 17.8259H25.6721C25.9269 17.8259 26.5611 18.6179 26.7914 18.841C26.8515 18.8992 26.9232 18.9581 26.9706 19.0097C27.1783 19.2353 27.0683 19.0507 27.0725 19.2365C27.0861 19.8183 26.9776 20.0212 27.3043 20.3921C27.8171 20.9744 28.7261 21.1346 29.2988 20.5579C30.1311 19.7199 29.6201 18.2389 28.3563 18.2389C27.8482 18.2389 28.0275 18.401 27.6265 18.0748C25.518 16.3599 27.6594 16.6559 22.2997 16.6559V14.6599H27.1862C27.443 15.7621 29.169 15.5601 29.5767 14.7102C29.7991 14.2468 29.7311 13.6531 29.4398 13.3011C28.8197 12.5512 27.4152 12.5762 27.1862 13.5587H22.2997V11.5627H25.9473C26.3417 11.5627 26.8519 10.8991 27.1001 10.6508C28.1034 9.6477 27.5787 9.97984 28.3563 9.97984C28.6984 9.97984 29.0961 9.7808 29.2909 9.60679C30.6199 8.41916 28.6544 6.29361 27.3043 7.82657C26.9776 8.19741 27.0861 8.40036 27.0725 8.98209C27.0691 9.1346 26.9774 9.19932 26.827 9.34341C26.5928 9.5676 25.9285 10.3927 25.6721 10.3927H22.2997V9.42913C22.8686 9.38187 24.2043 8.75618 24.8376 8.52589C25.4044 8.31977 25.5905 7.71667 25.875 7.22323C26.1727 6.70671 27.0039 5.38036 27.1173 4.95555C28.6152 4.95555 28.918 3.41257 28.2048 2.69799C27.2188 1.71001 25.5182 2.73231 25.961 4.04925C26.1814 4.70485 26.1599 4.37248 25.3067 5.89786C25.1073 6.25417 24.7277 7.12762 24.4729 7.40419C24.2379 7.65952 22.4042 8.15932 21.9554 8.39682C21.5488 7.78957 20.7021 7.70849 19.8907 7.70849V4.68019C19.8907 3.66693 19.4708 2.84135 18.9559 2.10479C18.0951 0.872836 16.6312 0 15.0729 0C13.3715 0 12.2589 0.450948 11.0976 1.59963C10.3419 2.34706 9.70448 3.67352 9.70448 5.16203Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M13.5592 25.259C13.2759 25.0694 11.5942 22.794 11.2601 22.3962C10.5848 21.5921 9.0166 21.4653 9.0166 23.0567C9.0166 23.9636 10.6692 26.7506 11.1105 27.5013C11.8128 28.6961 12.3389 29.4107 12.8904 30.6767C13.0652 31.0785 13.1804 31.4912 13.2838 31.9351H22.4377C23.55 29.8328 23.5389 27.0126 23.5389 24.6395C23.5389 24.2609 23.3759 23.9656 23.1814 23.7583C22.6286 23.1692 21.769 23.2275 21.2866 23.8327L21.0612 24.1578C21.0612 23.5321 21.1004 23.2083 20.8278 22.8082C20.4381 22.2357 19.647 22.0451 19.0519 22.4926C18.9853 22.5427 18.8631 22.6632 18.8089 22.7314L18.5835 23.0567C18.5835 22.3251 18.5929 21.7202 17.965 21.335C17.0952 20.8015 16.5341 21.3937 16.1058 21.8866C16.1058 21.1823 16.163 15.9685 16.0559 15.5355C15.762 14.3463 14.3868 14.2626 13.8201 14.9896C13.5645 15.3175 13.5567 15.672 13.5589 16.2426L13.5592 25.259Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M13.3525 34.0002H22.0933V32.9678H13.3525V34.0002Z" fill="white"/>
-</svg>
-`),
-      },
-    ],
-  },
-  financeindustry: {
-    title: [
-      { text: "AI in Finance:", color: "#3F77A5" }, // Blue
-      { text: "Smarter Decisions,", color: "black" },
-      { text: "Stronger Security, Maximum", color: "black" },
-      { text: " Efficiency", color: "#db7b3a" }, // Orange
-    ],
-    para: "AI enhances fraud detection, automates risk assessment, and personalizes banking experiences for more secure and efficient financial management.",
-    small_image:
-      "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
-    small_image_alt: "Closeup shot of a bee on a chamomile flower",
-    large_image: "finance_mockup.png",
-    large_image_alt: "Closeup shot of a bee on a chamomile flower",
-    keyApplications: [
-      {
-        title: "Fraud Detection & Prevention",
-        description:
-          "AI monitors transactions and ATM footage to detect fraud in real time.",
-        image: "fin1.png",
-        image_alt: "Fraud Detection & Prevention",
-      },
-      {
-        title: "Automated Risk Assessment",
-        description:
-          "AI analyzes financial trends to optimize loan approvals and investment decisions.",
-        image: "fin2.png",
-        image_alt: "Automated Risk Assessment",
-      },
-      {
-        title: "Real-Time Market Analysis & Trading",
-        description:
-          "AI predicts market trends for smarter investment strategies.",
-        image: "fin3.png",
-        image_alt: "Real-Time Market Analysis & Trading",
-      },
-      {
-        title: "ATM & Branch Security Management",
-        description:
-          "AI detects ATM tampering and enhances security with facial recognition.",
-        image: "fin4.png",
-        image_alt: "ATM & Branch Security Management",
-      },
-      {
-        title: "Loan Default Prediction & Debt Collection Optimization",
-        description: "AI forecasts defaults and improves debt recovery",
-        image: "fin5.png",
-        image_alt: "Loan Default Prediction & Debt Collection Optimization",
-      },
-      {
-        title: "Regulatory Compliance & Audit Automation",
-        description:
-          "AI ensures compliance by automating audits and risk assessments.",
-        image: "fin6.png",
-        image_alt: "Regulatory Compliance & Audit Automation",
-      },
-    ],
-    keyBenefits: [
-      {
-        title: "Fraud Detection & Risk Mitigation",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="39" height="34" viewBox="0 0 39 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M12.495 21.4202H5.27013C4.95945 21.4202 4.59004 21.1856 4.59004 20.9101C4.59004 18.4983 4.2287 16.6004 5.8839 14.9789C7.57628 13.3209 10.3558 13.3026 12.178 15.1921C13.5836 16.6496 13.3451 18.5629 13.3451 20.6552C13.3451 21.1824 13.0384 21.4202 12.495 21.4202ZM8.92504 8.75501C10.5925 8.75501 11.7326 10.8345 10.3527 12.2226C8.48272 14.1036 5.62283 11.2414 7.49838 9.36834C7.79253 9.07464 8.37086 8.75501 8.92504 8.75501ZM0 20.2301C0 22.0689 1.80424 23.8001 3.9101 23.8001H16.6602C17.0654 23.8001 16.8881 23.3076 16.8562 23.0998C16.805 22.7647 16.8426 22.4371 16.8328 22.0973C16.8206 21.6695 16.7474 21.6272 16.7417 21.1685L16.8271 17.0821C16.9015 16.3398 17.7526 16.5153 18.955 16.2351C18.955 14.9552 19.4707 13.1842 20.241 12.166C23.1899 8.26819 28.3148 8.025 31.3865 11.1137C32.7407 12.4755 33.5753 14.2268 33.5753 16.2351C35.9799 16.7953 35.7852 15.701 35.7852 20.3152C35.7852 23.1808 35.2454 23.9658 36.4433 23.0983C36.9303 22.7456 37.1851 22.4806 37.5218 21.9667C37.7698 21.5882 38.0802 20.8162 38.0802 20.2301V6.20508H0V20.2301Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M20.1451 3.56999C20.1451 2.18141 19.8962 1.01991 20.6552 1.01991C21.5095 1.01991 21.2501 1.85652 21.2501 3.56999C21.2501 4.14466 20.1451 4.14466 20.1451 3.56999ZM14.96 3.40001C14.96 1.82168 14.7083 1.01991 15.6401 1.01991C16.3527 1.01991 16.1501 2.64423 16.1501 3.40001C16.1501 4.21641 14.96 4.21641 14.96 3.40001ZM27.7952 3.31494C27.7952 2.33031 27.5773 1.01991 28.3902 1.01991C29.223 1.01991 28.9852 1.97893 28.9852 3.40001C28.9852 4.23398 27.7952 4.21947 27.7952 3.31494ZM25.8401 3.99503C25.0075 3.99503 25.2451 3.03601 25.2451 1.61493C25.2451 0.761783 26.4351 0.829291 26.4351 1.69986C26.4351 2.82973 26.6591 3.99503 25.8401 3.99503ZM17.5101 3.31494C17.5101 2.33031 17.2922 1.01991 18.1051 1.01991C18.9378 1.01991 18.7001 1.97893 18.7001 3.40001C18.7001 4.25301 17.5101 4.18565 17.5101 3.31494ZM33.6602 3.99503C32.7498 3.99503 32.9802 3.57189 32.9802 1.61493C32.9802 0.82723 34.1701 0.692397 34.1701 1.87C34.1701 2.48449 34.3324 3.99503 33.6602 3.99503ZM23.3751 3.99503C22.4647 3.99503 22.6952 3.57189 22.6952 1.61493C22.6952 0.82723 23.8852 0.692397 23.8852 1.87C23.8852 2.48449 24.0473 3.99503 23.3751 3.99503ZM30.3452 2.97497C30.3452 2.24642 30.1947 1.01991 30.9401 1.01991C31.7944 1.01991 31.5351 1.85652 31.5351 3.56999C31.5351 4.01303 30.3452 4.50645 30.3452 2.97497ZM0 3.56999V5.01494H38.0802C38.0802 3.91831 38.1899 3.16954 37.7141 2.1511C37.4865 1.66413 37.3054 1.47702 36.9543 1.12578C36.281 0.452425 35.4813 0 34.4252 0H3.56999C1.7918 0 0 1.79166 0 3.56999Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M21.7606 26.4352V23.2051C21.7606 22.599 21.9622 22.4021 22.5256 22.3552C22.5256 20.6772 23.2216 19.3969 24.5344 18.754C25.6273 18.2189 26.9038 18.2189 27.9967 18.754C28.4956 18.9983 28.6899 19.2057 29.0511 19.5697C29.6875 20.2107 30.0055 21.105 30.0055 22.3552C30.4609 22.3931 30.7705 22.5439 30.7705 23.0352C30.7705 24.519 30.9516 27.1107 30.4038 28.2785C28.3903 32.57 21.7606 31.3164 21.7606 26.4352ZM17.9355 17.8502C17.9355 22.6887 17.7896 27.6942 21.1017 31.004C22.1354 32.0368 22.2001 32.0762 23.3918 32.794C23.9587 33.1354 25.8713 34.0002 26.2655 34.0002C26.4986 34.0002 27.9399 33.4198 28.1932 33.293C30.1023 32.3371 31.2961 31.5066 32.5389 29.6485C34.7472 26.3466 34.5956 22.0754 34.5956 17.8502C34.5956 17.4697 33.196 17.3779 32.4367 17.2041C31.6455 17.023 30.9896 16.8302 30.23 16.6059C29.5014 16.3906 28.8636 16.1368 28.171 15.8597C24.5019 14.3928 27.8395 14.9703 22.3011 16.6059C21.5415 16.8302 20.8856 17.023 20.0944 17.2041C19.6868 17.2974 19.354 17.3545 18.9626 17.4322C18.7691 17.4706 18.632 17.4901 18.39 17.5396C18.1115 17.5965 17.9355 17.565 17.9355 17.8502Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M20.4004 15.8949C21.5124 15.8024 24.0689 14.7317 25.2297 14.1792C26.9453 13.3627 25.6103 13.5772 29.0089 14.9363C29.6481 15.192 31.4459 15.838 32.1304 15.8949C32.1304 13.6987 30.4575 11.5416 28.6352 10.805C26.6002 9.98261 24.8248 10.1563 23.0175 11.287L22.2048 11.9194C21.9756 12.1292 21.7393 12.4366 21.5407 12.7C20.9322 13.5062 20.4004 14.8018 20.4004 15.8949Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M23.7148 22.1001V22.3552H28.8148C28.8148 19.5177 26.3356 19.1865 25.127 19.7723C24.2249 20.2094 23.7148 20.9678 23.7148 22.1001Z" fill="white"/>
-</svg>
-
-`),
-      },
-      {
-        title: "Enhanced Customer Experience & Personalization",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="33" height="34" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M11.7689 18.2144C11.7689 19.9558 12.6539 21.1828 13.8928 22.0103C14.3925 22.3442 14.619 22.3634 15.1022 22.5465L15.2601 22.6162C14.2721 22.8465 14.2214 22.5914 12.8093 23.2012C10.7362 24.0962 8.96094 26.4473 8.96094 28.6877V31.7235C8.96094 32.37 9.29121 32.92 9.62222 33.2631C9.93153 33.5837 10.5737 34.0001 11.1619 34.0001H21.3316C22.3852 34.0001 23.5325 32.853 23.5325 31.7992C23.5325 28.7307 23.8714 26.7972 21.5782 24.4946C21.0333 23.9472 20.4715 23.5535 19.7369 23.2242C19.3997 23.0729 19.0231 22.9257 18.6163 22.8268C18.2017 22.7262 17.6631 22.7163 17.2334 22.6162L17.5627 22.4902C22.526 20.8284 21.2439 13.7368 16.2467 13.7368C13.7862 13.7368 11.7689 15.7539 11.7689 18.2144Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M2.88935 17.9105C2.88935 19.1083 3.00325 19.7191 3.82161 20.6972C4.12233 21.0568 4.75684 21.4723 5.23111 21.6403C5.3306 21.6754 5.37342 21.6842 5.52023 21.7306C5.52621 21.7325 5.68145 21.7828 5.69173 21.7867L5.84919 21.857C4.7894 21.857 4.10905 21.9924 3.36904 22.3365C1.25974 23.3172 0.00544482 25.3399 0.00544482 27.8526C0.00544482 28.9492 -0.104894 29.9583 0.667839 30.7572C1.08113 31.1847 1.55466 31.5713 2.35825 31.5713H7.36717C7.36717 29.015 7.16313 27.6261 8.32728 25.3216C8.77948 24.4262 9.20774 24 9.85274 23.3559C10.0622 23.1465 10.3214 22.9969 10.4029 22.6918C10.1768 22.6314 9.99842 22.4758 9.7424 22.3657C9.49479 22.2593 9.25878 22.1667 9.02894 22.0927C8.38973 21.8862 8.04863 21.857 7.21531 21.857L7.3191 21.809C8.06658 21.5176 8.61472 21.4097 9.2083 20.7381C11.5286 18.1127 9.36894 14.5713 6.83586 14.5713C5.70556 14.5713 4.80118 14.7403 3.9299 15.6116C3.40495 16.1366 2.88935 17.1185 2.88935 17.9105Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M22.3176 17.9109C22.3176 19.1087 22.4315 19.7195 23.2497 20.6975C23.4447 20.9307 23.8853 21.2516 24.1408 21.4001C24.6382 21.6892 24.7546 21.6395 25.1737 21.8093C25.1881 21.8151 25.2144 21.828 25.226 21.8329C25.2374 21.8377 25.2614 21.8471 25.2774 21.8574C24.132 21.8574 23.7438 21.9539 22.8042 22.344C22.5308 22.4575 22.3109 22.6331 22.0898 22.6922C22.1678 22.9843 22.4046 23.126 22.6092 23.3112L22.7279 23.4202C24.1943 24.8866 25.1256 26.8014 25.1256 29.0672V31.5716H30.1345C31.447 31.5716 32.4873 30.3798 32.4873 28.9153C32.4873 26.6358 32.405 25.1435 30.8367 23.5838C29.6249 22.3787 28.5251 21.8574 26.6436 21.8574L26.7472 21.8093C27.4949 21.5179 28.043 21.41 28.6364 20.7385C29.6442 19.5983 29.9219 17.961 29.2516 16.5928C29.1028 16.2889 28.7854 15.8345 28.5629 15.612C28.3403 15.3894 27.8861 15.0721 27.582 14.9232C25.7844 14.0428 23.5483 14.7979 22.6692 16.5928C22.5112 16.9158 22.3176 17.469 22.3176 17.9109Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M10.9336 4.09814C10.9336 4.66721 12.0645 5.89924 12.4437 6.38322C12.8542 6.9076 12.6032 6.70805 12.6032 7.36165C12.6032 8.56749 12.3072 10.1696 13.5899 10.1696C13.7945 10.1696 14.6879 9.84964 14.924 9.75819C16.4127 9.18164 16.0487 9.17173 17.5254 9.72528C17.7642 9.81467 18.628 10.1696 18.9025 10.1696C20.1852 10.1696 19.8892 8.56749 19.8892 7.36165C19.8892 6.39798 19.4656 7.19953 20.5832 5.70288C21.0519 5.07528 22.1182 4.09794 21.1938 3.32466C20.8413 3.02955 19.0548 2.69257 18.5728 2.45469C17.9804 2.16202 17.2187 0 16.3981 0C15.4709 0 15.5429 0.307248 14.9347 1.117C13.7324 2.718 14.5188 2.26768 13.0493 2.72268C12.748 2.816 12.5011 2.89286 12.1742 2.98617C11.5795 3.15598 10.9336 3.33009 10.9336 4.09814Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M2.20665 11.8391C2.75459 11.8391 4.14932 11.1447 4.49604 11.1271C4.80237 11.1114 6.26198 11.8391 6.76018 11.8391C8.17511 11.8391 7.35114 9.37561 7.57574 8.86507C7.92265 8.07664 10.3089 6.42103 7.95875 5.78351C7.70947 5.716 6.57636 5.40445 6.44489 5.32404C5.77688 4.9158 5.53806 3.26318 4.40758 3.26318C3.66925 3.26318 3.16115 4.87333 2.6291 5.27952C2.04095 5.72834 0.328672 5.61015 0.0623675 6.5136C-0.161672 7.27436 1.2338 8.31657 1.4109 8.8402C1.51712 9.15438 1.44943 10.2933 1.44569 10.7028C1.44213 11.086 1.40473 11.2339 1.58052 11.4787C1.70919 11.6581 1.92052 11.8391 2.20665 11.8391Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M23.5322 6.67824C23.5322 7.17157 23.6214 7.15642 23.9006 7.52408C24.0727 7.75073 24.2057 7.94597 24.3906 8.17244C24.54 8.35552 24.7362 8.57059 24.861 8.76826C25.0717 9.10245 24.8984 9.26272 24.8984 9.71398C24.8984 10.4082 24.6586 11.839 25.7332 11.839C26.2243 11.839 27.6171 11.1424 27.9465 11.127C28.6756 11.0926 31.0632 12.918 31.049 10.7797C31.0357 8.82623 30.7765 9.11366 31.863 7.79917C32.1022 7.50968 32.5529 7.05131 32.4469 6.57051C32.2365 5.61676 30.5773 5.73625 29.9088 5.31062C29.0016 4.73294 28.4978 1.75668 26.9168 4.1433C26.7612 4.37819 26.2562 5.17093 26.0935 5.29305C25.4669 5.76301 23.5322 5.6106 23.5322 6.67824Z" fill="white"/>
-</svg>
-
-`),
-      },
-      {
-        title: "Automated Trading & Investment Strategies",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M0 13.059V31.6747C0 34.4562 2.70024 33.9647 5.02318 33.9647C6.44618 33.9647 7.31337 33.0977 7.31337 31.6747V13.059C7.31337 11.7407 6.46703 10.769 5.24479 10.769H2.06836C1.46191 10.769 0.866185 11.0796 0.571101 11.414C0.221805 11.8096 0 12.3402 0 13.059Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M26.668 18.0089V31.6752C26.668 34.4567 29.3682 33.9652 31.6913 33.9652C33.1143 33.9652 33.9813 33.0982 33.9813 31.6752V17.8611C33.9813 16.6252 33.101 15.645 32.1346 15.645H28.6627C27.4104 15.645 26.668 16.6629 26.668 18.0089Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M8.93848 17.5657V32.1184C8.93848 32.6963 9.30346 33.1363 9.62019 33.431C9.99332 33.7781 10.4576 33.9652 11.1546 33.9652H13.8878C15.1869 33.9652 16.1778 33.1763 16.1778 31.8968V17.6395C16.1778 16.5255 15.2266 15.645 14.331 15.645H10.7852C9.89422 15.645 8.93848 16.4784 8.93848 17.5657Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M1.47762 1.01815C1.47762 1.57258 1.45776 1.8085 2.0247 2.24398L11.2285 9.14415C12.1872 9.86598 12.1513 9.66125 13.6664 9.66125C14.6514 9.66125 15.6363 9.66125 16.6212 9.66125L20.701 14.8892C21.6629 15.9496 22.4641 15.0099 22.9187 14.5552C24.5683 12.9056 26.2782 10.974 27.979 9.27342L28.9747 8.20071C29.2699 7.90245 29.7565 7.35674 30.0658 7.14963C30.0658 7.62601 29.9973 8.26107 30.1475 8.6191C30.49 9.43565 31.6134 9.50378 32.13 8.91817C32.3374 8.68325 32.4331 8.48824 32.4337 8.03985L32.5036 3.89912C32.5036 2.53092 30.0573 2.86314 29.1776 2.86671C28.5108 2.86949 27.8597 2.68977 27.1263 2.80654C26.7347 2.86889 26.332 3.21185 26.2014 3.50674C25.8789 4.23492 26.332 4.89122 26.8029 5.09377C27.2413 5.28241 27.874 5.2288 28.5146 5.2288C28.2995 5.55009 27.9691 5.81122 27.6835 6.09678C27.5306 6.24968 27.4268 6.34896 27.2757 6.50167L23.4737 10.53C22.9036 11.1464 22.258 11.625 21.7922 12.3206C21.5767 12.1762 21.093 11.4927 20.8487 11.1955C20.6778 10.9873 20.5626 10.8162 20.3988 10.6112L18.0472 7.64409C17.6107 7.19491 17.1449 7.29718 16.3258 7.29738L13.1444 7.30215C12.5131 7.30036 11.9571 6.69848 11.1654 6.10473L3.94692 0.691102C3.60557 0.435136 3.12382 -0.034703 2.59998 0.00203387C2.09619 0.0373807 1.47762 0.460747 1.47762 1.01815Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M17.8027 22.5148V31.8966C17.8027 34.4394 20.8946 33.965 22.6782 33.965C24.0317 33.965 25.042 33.1667 25.042 32.1182V22.2932C25.042 21.6992 24.6546 21.2431 24.3224 20.9446C23.5187 20.2224 21.4752 20.4464 20.0927 20.4464C18.8026 20.4464 17.8027 21.2528 17.8027 22.5148Z" fill="white"/>
-</svg>
-
-`),
-      },
-      {
-        title: "Credit Scoring & Loan Approval Optimization",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="53" height="34" viewBox="0 0 53 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M20.1992 27.4128C20.1992 28.7486 20.2305 29.3106 20.8152 30.5067C22.812 34.5909 28.4542 35.3541 31.4043 31.404C31.8692 30.7816 32.9602 28.4237 33.3605 27.486L37.0998 19.4772C37.4571 18.7716 38.8522 15.9754 38.8522 15.3554C38.8522 14.678 38.5639 14.2392 38.0109 13.928C36.8878 13.2964 35.2385 14.7992 33.8225 15.6848C32.9339 16.2404 32.1126 16.792 31.2309 17.3183L23.4969 22.26C22.498 22.9273 22.0031 23.2561 21.2723 24.2606C20.7715 24.9488 20.1992 26.2743 20.1992 27.4128Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M0 25.7691C0.00656794 26.6638 0.120524 27.8245 1.6489 27.8245H10.8208C12.8235 27.8245 12.462 25.6677 12.6791 24.1181C12.745 23.6487 12.8774 23.058 13.0042 22.5881C13.542 20.5962 14.505 19.1994 15.5612 17.622L6.72414 8.73389C6.39717 9.31772 5.4789 10.2734 4.84394 11.2331C3.75455 12.8793 3.03917 13.7772 2.17842 15.8844C0.944713 18.9046 0 21.9524 0 25.4542V25.7691Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M41.4527 13.3192C41.7985 14.8853 41.84 13.8451 41.84 15.9735C41.84 17.0563 39.4697 21.3043 39.4697 21.5385C39.4697 21.8479 39.8107 22.81 39.9089 23.2635C40.0287 23.8163 40.1737 24.4271 40.1911 25.1453C40.2222 26.4278 40.3427 27.8248 41.943 27.8248H51.1149C52.6432 27.8248 52.7572 26.6641 52.7638 25.7694V25.4545C52.7638 21.0001 50.9734 15.7189 48.5605 12.1385C48.3419 11.8142 48.1849 11.633 47.9608 11.2955C47.3449 10.3678 46.3077 9.21792 46.0652 8.75977L41.4527 13.3192Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M8.96582 6.49247C9.08032 6.92134 10.6943 8.37551 11.1041 8.78538C11.9837 9.66495 17.4154 14.9953 17.7255 15.4582C18.874 14.6891 18.727 14.7096 19.9866 14.0094C20.1938 13.8942 20.1359 13.9135 20.3917 13.7962C20.5385 13.7289 20.6621 13.6774 20.8165 13.6025C21.6723 13.188 23.5846 12.5726 24.8363 12.5726V0C22.4542 0.0530758 17.9334 1.13696 15.8687 2.16245C12.5622 3.80478 12.2246 3.96738 9.41404 6.21929C9.14528 6.43461 9.32848 6.39555 8.96582 6.49247Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M27.9277 12.5726C29.613 12.5726 31.0972 13.3971 31.6377 13.3971C31.7808 13.3971 32.7408 12.7666 32.9368 12.6351C34.735 11.4262 36.3157 10.1927 38.7011 10.9711C39.4314 11.2095 39.0668 11.3785 40.3717 10.0736C40.9102 9.53484 43.6744 6.95613 43.7982 6.49247C43.4655 6.40354 43.6723 6.47366 43.4055 6.26668L41.4282 4.74009C39.4736 3.35301 39.0142 3.22964 36.9636 2.19724C36.3327 1.87967 35.6472 1.68281 34.9659 1.41246C33.4672 0.817977 29.6356 0.0379874 27.9277 0V12.5726Z" fill="white"/>
-</svg>
-
-`),
-      },
-    ],
-  },
-  election: {
-    title: [
-      { text: "Election Surveillance", color: "#3F77A5" }, // Blue
-      { text: "with Advanced,", color: "black" },
-      { text: "AI-Powered Monitoring", color: "#db7b3a" }, // Orange
-    ],
-    para: "AI enhances elections by improving voter verification, preventing fraud, and ensuring accurate ballot counting, leading to transparency, security, and efficiency.",
-    small_image:
-      "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
-    small_image_alt: "Closeup shot of a bee on a chamomile flower",
-    large_image: "election_mockup.png",
-    large_image_alt: "Closeup shot of a bee on a chamomile flower",
-    keyApplications: [
-      {
-        title: "First Level Checking (FLC)",
-        description:
-          "AI-powered cameras detect anomalies in EVMs & VVPATs, ensuring integrity and preventing tampering.",
-        image: "el1.png",
-        image_alt: "First Level Checking (FLC)",
-      },
-      {
-        title: "Webcasting of Elections",
-        description:
-          "Live AI streaming enables real-time polling booth monitoring, ensuring transparency and public trust.",
-        image: "el2.png",
-        image_alt: "Webcasting of Elections",
-      },
-      {
-        title: "Flying Squad Vehicle (FSV) Monitoring",
-        description:
-          "AI-integrated PTZ cameras and GPS tracking detect violations and enable swift response.",
-        image: "el3.png",
-        image_alt: "Flying Squad Vehicle (FSV) Monitoring",
-      },
-      {
-        title: "Check post Monitoring",
-        description:
-          "AI scans for suspicious activities, ensuring secure election zones and reducing malpractice.",
-        image: "el4.png",
-        image_alt: "Check post Monitoring",
-      },
-      {
-        title: "Counting Process Surveillance",
-        description:
-          "Multi-camera setups prevent discrepancies, with encrypted cloud storage for tamper-proof records.",
-        image: "el5.png",
-        image_alt: "Counting Process Surveillance",
-      },
-      {
-        title: "Optical Character Recognition (OCR)",
-        description:
-          "AI extracts and integrates election data for faster, error-free reporting.",
-        image: "el6.png",
-        image_alt: "Optical Character Recognition (OCR)",
-      },
-    ],
-    keyBenefits: [
-      {
-        title: "Enhanced Voter Verification",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="37" height="34" viewBox="0 0 37 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M20.5337 27.6275H28.6056C30.2875 27.6275 30.2875 29.7516 28.6056 29.7516H20.5337C18.8518 29.7516 18.8518 27.6275 20.5337 27.6275ZM20.5337 23.3791H28.6056C30.2875 23.3791 30.2875 25.5033 28.6056 25.5033H20.5337C18.8518 25.5033 18.8518 23.3791 20.5337 23.3791ZM27.7559 20.2636C27.7472 20.2072 27.8138 19.9233 27.8374 19.8494C28.1664 18.8219 29.7833 18.9536 29.8629 20.1355C29.9391 21.2659 28.3889 21.6334 27.899 20.6869C27.8819 20.6537 27.7585 20.2808 27.7559 20.2636ZM23.5076 20.2636C23.4988 20.2072 23.5655 19.9233 23.5891 19.8494C23.9181 18.8219 25.535 18.9536 25.6146 20.1355C25.6732 21.0042 24.5821 21.6249 23.8745 20.9587C23.6901 20.7852 23.547 20.5179 23.5076 20.2636ZM19.2592 20.2636C19.2505 20.2072 19.3171 19.9233 19.3407 19.8494C19.4635 19.4661 19.8351 19.1768 20.264 19.1479C20.8574 19.1079 21.3305 19.6061 21.3662 20.1355C21.4535 21.4304 19.4797 21.6887 19.2592 20.2636ZM12.5326 22.2462C12.8335 22.3265 13.3016 22.8062 13.5032 23.0458C14.9835 24.8065 14.8693 26.1544 14.8693 28.4771C14.8693 29.3115 14.4292 29.7516 13.5948 29.7516H5.52287C3.99854 29.7516 4.24837 28.4356 4.24837 27.1317C4.24837 25.2771 4.60097 24.3047 5.58298 23.0852C5.77898 22.8418 6.27618 22.3286 6.58489 22.2462C6.52629 22.0265 6.42664 21.9834 6.27072 21.7814C4.71735 19.7678 5.15869 17.1097 7.10977 15.6904C7.39504 15.4828 7.82027 15.263 8.18472 15.1368C9.48349 14.687 10.8848 14.8939 11.9669 15.6604C13.931 17.0518 14.4101 19.7304 12.8771 21.7411C12.7439 21.9158 12.5921 22.0235 12.5326 22.2462ZM0 11.4836V31.0261C0 32.5074 1.4926 34 2.97387 34H31.1546C32.598 34 33.728 32.7961 34.061 31.5251C34.2349 30.8614 34.1285 16.7657 34.1285 15.3779C32.6581 16.156 31.6092 16.8705 29.5261 16.9358C29.1703 16.9469 29.1494 17.0171 28.82 17.0092C28.5156 17.0019 28.484 16.9404 28.1103 16.9354C26.9484 16.9194 25.3913 16.4315 24.4512 15.9213C22.3012 14.7546 20.9327 13.1516 20.0166 11.0095C19.7946 10.4904 19.4157 9.17735 19.4008 8.50977H2.97387C1.4926 8.50977 0 10.0024 0 11.4836Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M27.7563 8.08506C28.0626 7.87994 28.5083 7.36855 28.8008 7.07605L30.8541 5.02275C31.1812 4.69564 31.5242 4.17335 32.1774 4.29574C32.6832 4.39047 33.1175 4.86696 33.0428 5.43845C32.9729 5.97301 32.4791 6.30067 32.164 6.61578C31.4505 7.32944 30.7888 7.99102 30.0753 8.70467C29.6213 9.15854 28.4509 10.5343 27.8712 10.6101C27.2556 10.6905 26.9218 10.1889 26.6057 9.87287C26.1837 9.45103 24.733 8.1648 24.6172 7.67781C24.4833 7.11518 24.846 6.59057 25.3455 6.44814C26.3638 6.15769 26.813 7.45333 27.7563 8.08506ZM36.253 6.93554V7.8659C36.1652 9.24931 35.6882 10.6105 34.8659 11.796C34.1428 12.8384 33.1329 13.6074 32.0051 14.1748C30.7209 14.8206 29.818 14.8825 28.3935 14.8825C26.2794 14.8825 23.906 13.4601 22.7423 11.7538C21.6528 10.1566 21.3838 8.98681 21.3838 7.0229C21.3838 5.37467 22.3902 3.23616 23.5587 2.11716C25.8104 -0.0394624 29.1869 -0.656069 32.0284 0.76837C32.2661 0.887493 32.4151 0.958646 32.6293 1.08786C32.8499 1.22061 32.9499 1.2953 33.1384 1.42846L34.1139 2.22307C34.5987 2.70788 35.2763 3.69221 35.5698 4.30746C35.972 5.151 36.1958 6.04088 36.253 6.93554Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M6.37305 26.3528V27.6273H12.7456V26.3528C12.7456 24.8715 11.253 23.3789 9.77172 23.3789H9.34689C7.86562 23.3789 6.37305 24.8715 6.37305 26.3528Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M7.43457 18.9187V19.3434C7.43457 20.2369 8.45284 21.2552 9.34626 21.2552H9.77109C10.6645 21.2552 11.6829 20.2369 11.6829 19.3434V18.9187C11.6829 18.0252 10.6645 17.0068 9.77109 17.0068H9.34626C8.45284 17.0068 7.43457 18.0252 7.43457 18.9187Z" fill="white"/>
-</svg>
-
-
-`),
-      },
-      {
-        title: "Predictive Voter Turnout & Resource Allocation",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M17.3931 9.7839C16.1761 9.7839 15.5715 9.59725 14.6997 8.73129C13.4384 7.47857 13.559 5.32582 14.7991 4.11266C16.6509 2.3008 20.1758 3.14809 20.4237 6.35276C20.565 8.17944 18.912 9.7839 17.3931 9.7839ZM13.4464 1.22141C13.1794 1.22141 12.8011 1.69937 12.6269 1.87352C12.1169 2.38362 11.9077 2.39434 11.9077 2.89372C11.9077 3.22596 12.2318 3.52427 12.2812 3.79155C12.3101 3.94908 12.045 4.48954 11.9709 4.6961C11.8555 5.01735 11.9951 4.90514 11.7036 5.03095C10.6193 5.49888 10.6368 4.91792 10.6368 7.04127C10.6368 7.74227 11.0847 7.7501 11.6198 7.93126C11.9955 8.05844 11.9122 8.10019 12.0336 8.45399C12.095 8.63308 12.3092 8.99581 12.3092 9.11489C12.3092 9.39219 11.9077 9.71069 11.9077 10.1852C11.9077 10.5879 13.1526 11.7239 13.3795 11.7239C14.0653 11.7239 14.2014 11.1589 14.6285 11.3382C15.6557 11.7696 15.5844 11.6391 15.7472 12.1657C15.9999 12.9839 16.0477 12.928 16.5904 12.928V13.5969H5.28519C4.32226 13.5969 4.54929 14.4598 4.54929 15.4031C4.54929 16.2504 4.54929 17.0976 4.54929 17.9451C4.19673 17.709 4.07078 17.2761 3.54599 17.2761C3.25962 17.2761 3.01074 17.4824 3.01074 17.7444C3.01074 18.199 3.62811 18.6628 3.89717 18.9317C5.15347 20.188 5.04125 20.2292 6.30538 18.9651C6.51909 18.7516 7.22519 18.1231 7.22519 17.8113C7.22519 17.518 7.00694 17.2761 6.62306 17.2761C6.21748 17.2761 5.96958 17.7555 5.68651 17.9451V14.7341H16.5904V18.0119C16.0535 17.6524 16.2063 17.2761 15.4533 17.2761C15.2816 17.2761 15.0518 17.4619 15.0518 17.8113C15.0518 18.1833 16.7535 19.8851 17.1256 19.8851C17.4977 19.8851 19.1994 18.1833 19.1994 17.8113C19.1994 17.2777 18.8413 17.2761 18.5304 17.2761C18.2933 17.2761 17.8696 17.8721 17.6608 18.0119V14.7341H28.5647V17.9451C28.468 17.8804 27.6722 16.8797 27.1756 17.4256C26.7111 17.9363 27.5189 18.4714 27.9458 18.8982C29.1761 20.1286 28.9848 20.3009 30.3206 18.9651C30.5534 18.7325 31.2404 18.1702 31.2404 17.8113C31.2404 17.4334 30.9971 17.2761 30.6383 17.2761C30.2329 17.2761 29.9848 17.7555 29.7019 17.9451C29.7019 17.0976 29.7019 16.2504 29.7019 15.4031C29.7019 14.4598 29.9289 13.5969 28.966 13.5969H17.6608V12.928C18.2259 12.928 18.2851 12.8661 18.4724 12.2679C18.7163 11.4892 18.5928 11.8608 19.4911 11.408C19.7376 11.2837 19.6933 11.2461 19.9137 11.3377C20.9378 11.7634 20.6918 12.0711 21.6912 11.0716C21.9865 10.7762 22.3435 10.5751 22.3435 10.1183C22.3435 9.77594 21.942 9.3617 21.942 9.11489C21.942 8.99581 22.1561 8.63308 22.2175 8.45399C22.339 8.10019 22.2557 8.05844 22.6314 7.93126C23.7351 7.55754 23.6143 7.69928 23.6143 5.97093C23.6143 5.49819 23.4844 5.33049 23.1074 5.20688C22.3903 4.97161 22.4306 5.0944 22.2968 4.74651C22.2266 4.56398 21.9578 3.9278 21.9632 3.83948C21.9842 3.49461 22.3435 3.42153 22.3435 2.69306C22.3435 2.48443 20.9894 1.22141 20.8717 1.22141C20.4661 1.22141 20.2745 1.46451 19.9804 1.60831C19.6464 1.77175 19.4377 1.50667 19.0394 1.38141C18.6016 1.24366 18.6816 1.32978 18.4734 0.676435C18.204 -0.168373 17.9211 0.0173144 16.4566 0.0173144C15.8027 0.0173144 15.8411 0.641542 15.6505 1.0842C15.5414 1.33719 15.5504 1.27622 15.2636 1.36618C14.7473 1.52838 14.6274 1.72546 14.3633 1.64855C14.0816 1.56642 13.7638 1.22141 13.4464 1.22141Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M14.3158 23.4308C14.3158 25.1257 15.4728 26.3743 16.9916 26.3743V26.4412C16.3488 26.4412 15.4079 26.4431 14.9147 26.5718C13.0881 27.0486 11.9745 28.5277 11.9745 30.4548C11.9745 31.7446 11.7473 33.2485 13.0889 33.8224C13.3147 33.9188 13.6195 34.0004 13.9144 34.0004H20.3364C20.8522 34.0004 21.4251 33.7656 21.7514 33.4085C22.4358 32.659 22.2762 31.6162 22.2762 30.4548C22.2762 29.019 21.7017 28.007 20.8929 27.3563C19.8529 26.5197 19.0628 26.4412 17.2591 26.4412V26.3743C18.7319 26.3743 19.9349 25.117 19.9349 23.5648C19.9349 22.0126 18.652 20.8435 17.1825 20.764C16.8816 20.7478 16.3274 20.8835 16.0818 20.9825C15.1594 21.3547 14.3158 22.3843 14.3158 23.4308Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M2.27443 23.5646C2.27443 24.2333 2.60105 25.0461 3.05868 25.523C3.50945 25.9927 4.11541 26.3741 5.01722 26.3741V26.441C3.2989 26.441 2.57207 26.4822 1.51025 27.2153C0.345286 28.0198 0.0591959 29.1066 0 30.289V32.1563V32.1939C0 33.2003 0.864588 34.0002 1.87311 34.0002H8.362C9.34951 34.0002 10.235 33.1475 10.235 32.2608C10.235 30.2554 10.5073 28.5643 8.75453 27.2525C7.7298 26.4856 6.94858 26.441 5.21789 26.441V26.3741C5.74626 26.3741 5.94102 26.3079 6.31199 26.1303C6.62074 25.9825 6.92838 25.7856 7.14333 25.5569C9.18703 23.3813 6.91685 19.8221 4.00142 21.0102C3.69651 21.1345 3.37705 21.3581 3.15894 21.5724C2.65118 22.0712 2.27443 22.8405 2.27443 23.5646Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M29.0325 26.3742V26.4411C27.3303 26.4411 26.5008 26.5006 25.4958 27.2527C23.7502 28.5592 24.0154 30.2428 24.0154 32.2609C24.0154 33.1476 24.9008 34.0003 25.8884 34.0003H32.3772C33.3815 34.0003 34.2504 33.1889 34.2504 32.1941V32.1566V30.2953C34.1921 29.1272 33.9125 28.0532 32.7798 27.2426C31.7592 26.5122 31.0102 26.4411 29.3 26.4411V26.3742C30.1397 26.3742 30.7335 25.9891 31.1583 25.5567C32.5805 24.1093 31.9671 21.7825 30.3434 21.0495C27.9202 19.9554 25.6113 22.3801 26.5174 24.6081C26.8985 25.5453 27.7491 26.3742 29.0325 26.3742Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M14.8506 6.37191C14.8506 9.56339 19.3995 9.56339 19.3995 6.37191C19.3995 5.77858 19.0784 5.23523 18.7824 4.91522C17.4367 3.45964 14.8506 4.43631 14.8506 6.37191Z" fill="white"/>
-</svg>
-
-
-`),
-      },
-      {
-        title: "Real-Time Election Monitoring & Anomaly Detection",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="36" height="34" viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M0 15.794C0 22.4852 5.46019 27.8008 12.0768 27.8008C13.5933 27.8008 15.3783 27.4203 16.4292 26.9572C17.0513 26.683 17.5841 26.439 18.1637 26.0938C18.9739 25.6114 19.1889 25.3548 19.7302 24.9922L21.8897 27.1862C21.3527 28.0075 21.1348 28.2592 22.1 29.2226L26.2076 33.3303C26.8246 33.9478 27.314 34.3805 28.1739 33.5061L29.6482 32.0314C30.7837 30.9036 30.0021 30.4543 28.9811 29.4333L26.1022 26.5544C25.2378 25.69 25.1277 25.2731 24.1538 25.2731C23.8331 25.2731 23.5901 25.5547 23.3815 25.6943L21.2221 23.5003C21.5091 23.0474 22.5156 21.9029 22.6793 21.2006H19.2388C18.8542 21.7749 18.4993 22.1639 17.9651 22.595C17.399 23.052 17.0798 23.3556 16.3608 23.7293C13.9181 24.9988 10.9383 25.2821 8.30833 24.0563C7.03499 23.463 5.96732 22.6548 5.07606 21.6012C4.19071 20.5544 3.50539 19.2161 3.2113 17.8488C2.84325 16.1365 2.86659 14.6621 3.43099 12.9759C5.50863 6.76955 13.0091 4.95025 17.5758 8.67993C17.7298 8.80587 17.9073 8.96088 18.0451 9.0533C18.4477 8.95955 18.9615 8.59255 19.3556 8.39767C19.7835 8.18611 20.3875 7.79517 20.7133 7.71929C20.6891 7.42875 20.6039 7.4249 20.4162 7.24405C17.5039 4.44033 13.5316 3.17393 9.36774 4.09724C6.5106 4.73088 3.82753 6.5106 2.18984 8.92604C1.98463 9.22854 1.78339 9.51157 1.61479 9.82558C0.644106 11.6322 0 13.3732 0 15.794Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M29.069 6.73604V19.1642H25.9092V12.4938C25.9092 10.8466 24.3591 11.1596 22.9602 11.1596C22.6576 11.1596 22.302 11.3087 22.134 11.4568C21.9937 11.5802 21.7666 11.9725 21.7666 12.2128V19.1642H18.607V16.1449C18.607 14.5636 17.1171 14.8109 15.8686 14.8109C15.1025 14.8109 14.4643 15.2495 14.4643 16.0045V19.1642H12.2174C11.2649 19.1642 11.3228 20.2174 12.0068 20.2174H35.1075C35.8552 20.2174 35.9118 19.1642 34.8968 19.1642H33.2116V7.01684C33.2116 6.61143 33.1215 6.2735 32.9174 6.04732C32.3422 5.41028 31.5123 5.61254 30.1923 5.61254C29.5769 5.61254 29.069 6.10668 29.069 6.73604Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M29.2095 1.89155C29.2095 2.22476 29.2881 2.39882 29.3499 2.66397L26.098 5.2399C25.896 5.40348 25.7484 5.52469 25.5487 5.6735C25.362 5.81243 25.1665 5.99076 24.9967 6.10458C24.63 6.0191 24.3632 5.7795 23.8674 5.76474C22.8993 5.7358 21.8795 6.57466 21.9113 7.78969C21.9122 7.82542 21.9198 7.93688 21.9195 7.95814C21.9164 8.27733 20.4156 8.8934 19.9187 9.17154C19.2338 9.55494 18.5875 9.88609 17.905 10.2472C15.879 8.48637 13.5133 11.1608 15.1471 12.8648C16.4864 14.2615 18.4666 13.0598 18.4666 11.5814C18.4666 11.317 18.4204 11.4487 18.3964 11.16L19.402 10.6209C19.9881 10.3281 22.1255 9.13359 22.4689 9.05357C22.8521 9.31031 23.193 9.61533 23.7328 9.61533C24.4587 9.61533 25.073 9.25332 25.3787 8.80378C25.9628 7.94529 25.6409 7.4333 25.6285 6.87687L26.8706 5.94234C27.2361 5.64471 29.7798 3.50947 30.0402 3.52719C30.4191 3.55302 30.113 3.78748 31.3159 3.78748C32.1328 3.78748 33.001 2.92588 33.001 2.10223C33.001 1.46238 32.9733 1.01565 32.4253 0.501438C31.2476 -0.603308 29.2095 0.231698 29.2095 1.89155Z" fill="white"/>
-</svg>
-
-
-`),
-      },
-      {
-        title: "Secure & Efficient Ballot Counting",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="39" height="34" viewBox="0 0 39 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M15.9352 21.3126V17.2344C15.9352 16.078 16.3155 15.3269 16.8619 14.6871C18.0082 13.345 20.4856 13.2509 21.7705 14.6466C22.4211 15.3535 22.7322 16.2168 22.7322 17.2344V21.3126C22.7322 24.2122 20.0019 25.5924 17.9218 24.6126C17.1389 24.2438 16.5474 23.642 16.2131 22.8473C16.051 22.462 15.9352 21.8345 15.9352 21.3126ZM6.8726 21.3126V17.2344C6.8726 15.7054 7.58155 14.5642 8.80838 13.9592C9.694 13.5223 10.7848 13.5114 11.683 13.9344C11.9799 14.0743 12.5058 14.4271 12.7077 14.6466C13.3585 15.3535 13.6695 16.2168 13.6695 17.2344V21.3126C13.6695 22.469 13.2894 23.2202 12.7429 23.8599C12.5506 24.085 12.0279 24.4426 11.7337 24.5878C10.4151 25.2383 8.72882 24.872 7.83436 23.9004C7.18357 23.1935 6.8726 22.3302 6.8726 21.3126ZM0 27.2034H27.2636V23.2006C26.8706 23.3056 26.1779 23.8049 24.9979 23.8049V21.5392C26.2995 21.5392 27.2636 20.5753 27.2636 19.2735H29.5292V27.2034H38.6674V11.3438H31.7948C31.7948 13.4736 32.0898 15.5578 29.8591 16.6581C28.5404 17.3084 26.8542 16.9422 25.9597 15.9705C24.7557 14.6627 24.9979 13.1742 24.9979 11.3438H0V27.2034Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M15.9352 3.26248V4.54638H4.15387C2.12688 4.54638 0 6.67822 0 8.70009V9.07775H38.6674C38.6674 8.24999 38.5742 7.86209 38.2375 7.09079C37.9388 6.40633 37.4049 5.84719 36.8236 5.40842C36.6201 5.25487 36.3892 5.10583 36.1775 4.9971C35.8491 4.82866 35.006 4.54638 34.5137 4.54638H22.7322C22.7322 3.06285 22.8678 2.15135 21.7319 1.0154C19.4911 -1.22531 15.9352 0.564063 15.9352 3.26248Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M0 29.8464C0 31.104 0.855993 32.389 1.84304 33.1389C2.41117 33.5703 3.4004 34.0001 4.15387 34.0001H34.5137C35.529 34.0001 36.9351 33.267 37.5676 32.4473C37.6732 32.3105 37.7041 32.2912 37.8059 32.1568C37.9372 31.9831 38.1216 31.6739 38.2102 31.5038C38.5455 30.8592 38.6674 30.23 38.6674 29.4688H0V29.8464Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M18.2012 16.8568V21.6903C18.2012 22.9943 20.4669 22.9943 20.4669 21.6903V16.8568C20.4669 15.5529 18.2012 15.5529 18.2012 16.8568Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M9.13867 16.8568V21.6903C9.13867 22.9943 11.4044 22.9943 11.4044 21.6903V16.8568C11.4044 15.5529 9.13867 15.5529 9.13867 16.8568Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M27.2637 13.7604C27.2637 15.0643 29.5292 15.0643 29.5292 13.7604V11.3438H27.2637V13.7604Z" fill="white"/>
-</svg>
-
-
-`),
-      },
-    ],
-  },
-  hospitalityindustry: {
-    title: [
-      { text: "Smart Hospitality", color: "black" },
-      { text: "with", color: "black" },
-      { text: "AI for Comfort", color: "#3F77A5" },
-      { text: "and", color: "black" },
-      { text: "Seamless Service", color: "#db7b3a" },
-    ],
-    para: "AI enhances hospitality by personalizing guest experiences, optimizing operations, and ensuring security for a seamless and luxurious stay.",
-    small_image:
-      "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
-    small_image_alt: "Closeup shot of a bee on a chamomile flower",
-    large_image: "hospitality_mockup.png",
-    large_image_alt: "Closeup shot of a bee on a chamomile flower",
-    keyApplications: [
-      {
-        title: "Smart Guest Check-In & Facial Recognition",
-        description:
-          "AI enables contactless check-ins with facial recognition, enhancing security and convenience.",
-        image: "hos1.png",
-        image_alt: "Facial Recognition for Secure Check-In",
-      },
-      {
-        title: "Personalized Guest Experience & AI Concierge",
-        description:
-          "AI processes preferences and past stays to offer tailored services and recommendations.",
-        image: "hos2.png",
-        image_alt: "AI Concierge for Personalized Services",
-      },
-      {
-        title: "Automated Room Service & Housekeeping Monitoring",
-        description:
-          "AI schedules housekeeping and detects unclean areas, ensuring prompt service.",
-        image: "hos3.png",
-        image_alt: "AI for Efficient Housekeeping",
-      },
-      {
-        title: "Energy Optimization & Smart Room Controls",
-        description:
-          "AI learns guest habits to optimize energy use, lowering costs and enhancing sustainability.",
-        image: "hos4.png",
-        image_alt: "Smart Energy Management in Rooms",
-      },
-      {
-        title: "Food Safety & Quality Monitoring",
-        description:
-          "AI ensures hygiene compliance by detecting expired ingredients and improper food handling.",
-        image: "hos5.png",
-        image_alt: "AI-Powered Food Safety Monitoring",
-      },
-      {
-        title: "Fraud Prevention & Secure Transactions",
-        description:
-          "AI detects suspicious payments and prevents fraud, ensuring secure financial operations.",
-        image: "hos6.png",
-        image_alt: "AI for Secure Financial Transactions",
-      },
-    ],
-    keyBenefits: [
-      {
-        title: "Personalized Guest Experiences",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M1.43458 18.9717C1.36887 18.9403 0 18.7033 0 19.1083V26.076C0 27.2527 1.15271 27.1689 1.91263 27.1689C1.81099 27.6056 0.478205 33.4684 0.478205 33.9999C1.22124 33.9999 1.02822 33.8798 1.40594 31.9905L2.26966 27.6625C2.39049 26.9715 2.21074 27.1689 4.3718 27.1689C4.26322 27.3952 4.0861 28.4956 4.01327 28.8596C3.85735 29.6394 3.00556 33.5328 3.00556 33.9999H3.55211L3.88797 32.2864C4.00334 31.7092 4.1172 31.1398 4.22959 30.5787L4.91835 27.1689H5.66963C5.67774 27.5271 6.25328 30.0484 6.3698 30.6357C6.4807 31.195 6.61114 31.7678 6.73395 32.3892C6.80149 32.7305 6.85149 32.8989 6.91671 33.2311C7.05326 33.9276 6.96155 33.9999 7.4457 33.9999C7.7645 33.9999 7.56125 33.5783 7.50861 33.3228L6.44943 28.0969C6.38918 27.7921 6.29085 27.4588 6.28439 27.1689H7.92391C7.97522 27.7842 9.22622 33.2314 9.29011 33.9999H9.83666C9.83666 33.6535 8.57324 27.3833 8.47045 27.1689C9.86349 27.1689 9.6316 27.427 9.6316 25.9393C9.6316 25.6134 9.07792 25.7344 8.47045 25.7344L2.73196 25.7349C2.18127 25.7385 1.86792 25.7329 1.62377 25.4084C1.2861 24.9599 1.43458 23.491 1.43458 22.7288H1.5028C1.5028 24.2258 3.02726 25.5978 4.64507 25.5978L9.90487 25.5294L11.2903 29.1991C12.0029 30.9738 12.0947 32.1555 13.6619 32.1555C14.4427 32.1555 15.233 31.3583 15.233 30.5843C15.233 30.1788 14.6703 28.9265 14.5105 28.5064L12.5092 23.3349C12.4218 23.1163 12.0694 22.5922 11.8177 22.5922H7.58242V19.9281H7.85569C7.85569 19.4033 7.90767 19.5716 7.33827 19.1474C6.67138 18.6506 4.0131 16.7428 3.73221 16.2641C3.0198 15.0498 4.03446 13.9168 4.91835 13.9168C5.41822 13.9168 5.60607 13.8892 6.01309 14.1881L7.212 15.1068C7.40582 15.2582 7.62512 15.4946 7.85569 15.5562C7.85569 14.0529 7.16728 12.9831 6.01293 12.4122C4.94266 11.883 3.68468 12.0138 2.75925 12.714C0.933534 14.0949 1.43458 16.4119 1.43458 18.9717Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M24.523 14.2581C23.6164 14.2581 23.1381 14.0773 22.4328 13.5478C21.6348 12.9485 22.0504 12.8988 21.0392 12.4137C21.0752 12.8444 21.5528 13.7935 20.2878 14.463C20.4076 14.9112 22.0056 15.9158 22.5697 16.1432C24.231 16.8131 25.1805 16.3038 25.9576 16.2391C25.988 16.5964 25.8924 16.3626 26.0941 16.444C26.2428 16.2412 27.2021 15.6957 27.4426 14.7869C27.6611 13.9615 27.9976 13.3019 29.0997 13.3019C29.9286 13.3019 30.6025 14.0891 30.6025 14.9412C30.6025 15.5176 30.2199 16.318 30.0109 16.7403C29.779 17.2087 29.3776 17.7675 29.0159 18.1361C28.3869 18.7774 26.744 19.8624 25.9576 19.9279C26.1029 20.1264 25.948 20.0567 26.299 20.0645V22.6602H22.2005C21.4911 22.6602 21.2509 23.6683 21.0099 24.2704C20.7593 24.8969 18.6484 30.1589 18.6484 30.4476C18.6484 32.3188 21.0862 32.8396 21.8117 31.0835C22.1017 30.3814 23.8844 25.8144 23.9082 25.5292L29.6206 25.5719C31.0944 25.3344 32.3787 24.115 32.3787 22.4553V15.2827C32.3787 12.5065 28.8186 11.0388 26.8269 13.1464C26.6768 13.3052 26.6061 13.4547 26.4391 13.5783C26.3221 13.6647 26.0175 13.8443 25.8856 13.9128C25.5382 14.0937 25.0459 14.2581 24.523 14.2581Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M16.668 7.08592H17.2144V8.1105H16.668V7.08592ZM18.6326 6.55558C18.7903 6.32816 18.8532 6.38758 18.9222 6.12936C19.1503 6.19044 19.1856 6.28843 19.3501 6.45296C19.5146 6.61749 19.6127 6.65274 19.6736 6.88083L19.3476 7.23803L18.6326 6.55558ZM14.5665 7.17033L14.1933 6.82803C14.3775 6.56055 14.664 6.29952 14.8236 6.06116L15.2493 6.45527L14.5665 7.17033ZM19.6054 4.14855H20.6299V4.69494H19.6054V4.14855ZM13.2525 4.14855H14.277V4.69494H13.2525V4.14855ZM16.3947 4.42166C16.3947 4.06065 16.668 3.93435 16.668 3.7387V2.71396H17.2144C17.2144 4.22419 17.0706 4.14855 18.5124 4.14855V4.69494H17.6242C17.298 4.69494 17.5913 4.96821 16.8046 4.96821C16.5833 4.96821 16.3947 4.67143 16.3947 4.42166ZM19.0068 2.73033L18.6356 2.31703L19.3158 1.60478L19.729 1.97588L19.0068 2.73033ZM14.5505 1.621C14.646 1.68506 15.2475 2.22317 15.3018 2.30411L14.9469 2.70121L14.2236 2.01593C14.2896 1.91016 14.4389 1.70261 14.5505 1.621ZM16.668 0.732966H17.2144V1.75772H16.668V0.732966ZM12.501 4.42166C12.501 8.08601 17.1088 10.5051 20.0667 7.54724C21.854 5.75992 21.7429 2.93294 20.0683 1.29476C18.8008 0.0546587 16.7377 -0.395244 15.1639 0.390329C13.5613 1.19014 12.501 2.58303 12.501 4.42166Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M31.6273 25.803H24.25V27.1692H25.4112C25.3026 27.3955 25.1253 28.4959 25.0525 28.8599C24.9442 29.4018 24.8287 29.9793 24.711 30.5676C24.6008 31.1188 24.4784 31.6615 24.3581 32.264C24.2624 32.7422 24.0449 33.5462 24.0449 34.0002H24.5915C24.6135 33.7351 24.6979 33.4341 24.7565 33.1407C24.8189 32.8293 24.872 32.5633 24.9273 32.2867L25.9577 27.1692H27.597L26.3846 33.266C26.2546 33.9052 26.0938 34.0002 26.6407 34.0002C26.9093 34.0002 27.0432 32.9152 27.1364 32.4466C27.2877 31.6862 28.2035 27.5455 28.212 27.1692H28.9633L30.1643 33.1407C30.2231 33.4341 30.3073 33.7351 30.3295 34.0002H30.8761L29.5098 27.1692H31.4906L32.7259 33.2431C32.8777 34.0169 32.7714 34.0002 33.4034 34.0002C33.4034 33.239 32.1055 27.737 32.1055 27.1692C32.6879 27.1692 33.9498 27.2265 33.9498 26.2812V18.9037C32.0857 18.9037 32.447 18.5442 32.447 20.6797L32.4497 24.6443C32.4516 25.1919 32.2712 25.803 31.6273 25.803Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M8.06055 21.9774C8.06055 22.1348 8.1082 22.1823 8.26561 22.1823H25.6162C25.9726 22.1823 25.8213 21.4591 25.8213 20.4746H8.06055V21.9774Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M1.84375 8.79331C1.84375 9.76509 1.98495 10.433 2.71226 11.1355C4.50735 12.8693 7.58192 11.5488 7.58192 9.06658C7.58192 7.41565 6.39991 6.31525 4.81123 6.16661C3.36125 6.03105 1.84375 7.38603 1.84375 8.79331Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M26.2998 8.86218C26.2998 10.4202 27.6197 11.7312 28.8955 11.7312H29.4421C30.7209 11.7312 32.038 10.4143 32.038 9.13545V8.65742C32.038 7.27481 30.6512 5.99316 29.2372 5.99316C27.6346 5.99316 26.2998 7.27465 26.2998 8.86218Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M20.6299 18.9718C20.6299 19.6758 21.3347 19.9964 21.9961 19.9964C25.2253 19.9964 28.4445 18.938 29.7389 16.2633C30.016 15.6908 30.3719 14.6678 29.8028 14.1023C29.2629 13.5653 28.324 13.7364 28.0306 14.4182C27.8642 14.8041 28.1908 16.3093 25.6944 17.2053C23.4439 18.0129 21.7644 17.7828 21.3165 17.9507C20.9525 18.0869 20.6299 18.4605 20.6299 18.9718Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M4.03027 15.4875C4.03027 16.164 4.5942 16.4566 5.00602 16.7658L8.19714 19.1762C9.0135 19.7626 9.22949 19.5107 10.1786 19.0401C10.558 18.8517 10.8809 18.6538 11.2937 18.4474C11.9485 18.1201 13.0471 17.7561 13.0471 16.8537C13.0471 16.3002 12.506 15.8289 11.9542 15.8289C11.6337 15.8289 10.7985 16.305 10.5196 16.4437L9.15336 17.1952L6.22561 14.9998C5.94273 14.7736 5.49828 14.3945 5.12321 14.3945C4.55745 14.3945 4.03027 14.9282 4.03027 15.4875Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M16.3944 32.2236C15.9837 32.2236 13.5938 32.5321 13.5938 32.9751V33.9997H20.288C20.288 32.7086 20.5727 32.7991 19.03 32.457C18.6351 32.3694 17.8902 32.2236 17.4873 32.2236V22.6602H16.3944V32.2236Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M19.742 13.849V12.346C20.1387 12.3791 20.4933 12.6114 20.4933 13.0293V13.1659C20.4933 13.5838 20.1387 13.8159 19.742 13.849ZM16.9412 11.9364C16.9412 12.7017 16.8594 14.4341 17.0095 15.0785H19.742V14.2588C20.0704 14.2515 20.3726 14.0792 20.5487 13.9043C21.2764 13.1816 20.7503 11.9587 19.742 11.9364C19.736 11.6679 19.7607 11.7761 19.6736 11.5947H17.0095C16.9739 11.748 16.9412 11.7518 16.9412 11.9364Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M13.3884 15.4879C13.1788 15.5052 13.06 15.5526 12.9102 15.6244C12.9683 15.7113 12.9974 15.7762 13.0929 15.854C13.2455 15.9781 13.1844 15.9407 13.3884 15.8977C13.3884 16.5614 13.6562 16.6187 13.4446 17.323L13.4565 18.63L15.6464 18.634C15.9366 18.6386 16.189 18.7017 16.189 18.4251V15.3511C16.189 15.0214 15.5877 15.1462 14.9593 15.1462C14.4585 15.1462 13.9576 15.1462 13.4565 15.1462C13.4203 15.302 13.4039 15.3033 13.3884 15.4879Z" fill="white"/>
-</svg>
-
-
-
-`),
-      },
-      {
-        title: "Contactless Services & Smart Assistants",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M3.98431 15.3399V11.4883C3.98431 11.2008 4.26172 11.1652 4.55023 11.1244C4.88026 11.0775 5.11986 11.0566 5.43379 11.012C5.97204 10.9356 6.56354 10.8477 7.10549 10.7578L9.5132 10.31C10.7923 10.0551 10.4854 10.1489 12.0472 10.4646C13.5305 10.7644 14.7154 10.9132 16.167 11.126C16.4623 11.1692 16.8008 11.1915 16.8008 11.4883C16.8008 15.3471 17.1967 18.029 14.7611 21.2689C14.6235 21.4519 14.5067 21.6326 14.36 21.7975C13.6096 22.641 12.7332 23.4037 11.7511 23.9698C10.4222 24.7359 10.385 24.7202 9.07583 23.9944C8.70252 23.7873 8.21448 23.4418 7.89314 23.1848C6.8992 22.3899 5.80615 21.1611 5.22301 20.0114C4.4994 18.5848 3.98431 17.1025 3.98431 15.3399ZM2.125 29.8164C2.125 29.9693 2.17118 30.0155 2.3242 30.0155H18.129C18.282 30.0155 18.3282 29.9693 18.3282 29.8164V2.125H2.125V29.8164Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M18.4609 30.8124H1.99222C1.65656 30.8124 1.32814 30.5728 1.32814 30.2146V1.92576C1.32814 1.59751 1.59751 1.32815 1.92577 1.32815H18.5274C18.8556 1.32815 19.125 1.59751 19.125 1.92576V30.1483C19.125 30.5213 18.8339 30.8124 18.4609 30.8124ZM0 1.79285V32.207C0 33.1311 0.970445 33.9999 1.92577 33.9999H18.4609C19.5646 33.9999 20.4531 33.1113 20.4531 32.0076V1.99221C20.4531 0.92812 19.5807 0 18.5274 0H1.92577C0.970445 0 0 0.86875 0 1.79285Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M6.57389 16.668C6.57389 16.1441 6.72032 15.508 6.88558 15.1203C7.07545 14.6749 7.29429 14.2837 7.64299 13.9519C8.86848 12.7859 10.3999 12.5124 11.9636 13.1377C12.4658 13.3387 12.7453 13.5754 13.0985 13.9285C14.5637 15.3938 14.5501 17.768 13.1662 19.2094C10.7236 21.7534 6.57389 19.9096 6.57389 16.668ZM4.78103 11.8868C4.78103 15.2681 4.49991 17.6871 6.50775 20.5194C6.9752 21.1788 7.56268 21.831 8.18717 22.3594C8.54649 22.663 10.0245 23.707 10.4254 23.707C10.7492 23.707 12.2392 22.6635 12.5971 22.3591C13.2557 21.7986 13.7831 21.2178 14.277 20.5194C16.2657 17.7064 16.0037 15.444 16.0037 12.086C16.0037 11.793 15.2201 11.8182 14.6865 11.7429C14.2413 11.6802 13.6913 11.5786 13.2621 11.5072L10.4254 10.957C10.2151 10.957 5.95777 11.8868 4.78103 11.8868Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M21.2496 16.4687C21.2496 17.2331 21.0861 17.0665 22.7105 17.0665L26.0329 17.0644C26.7418 17.0557 26.6359 17.063 26.9614 17.7959C27.1844 18.2981 29.0191 22.1989 29.0191 22.3789C29.0191 22.6329 28.8226 22.7773 28.5542 22.7773H21.2496V24.4375H24.57C24.8736 24.4375 25.3003 24.6396 24.9019 25.2344L22.0462 25.2341C21.0566 25.2285 21.2496 24.8938 21.2496 27.293H24.4372C25.7999 27.293 26.3324 29.4844 27.0933 29.4844H32.3393V27.7578C31.1438 27.7578 29.3535 27.9475 28.6352 27.2785C27.932 26.6234 27.9566 26.2036 27.9566 25.3007C27.9566 24.5483 28.57 24.1671 29.3487 24.1694C30.1907 24.172 31.0326 24.172 31.8746 24.172C31.2386 22.9698 30.2771 22.9143 30.0304 22.6295C29.8325 22.4008 29.6317 21.8103 29.4848 21.515L27.881 18.0054C27.8038 17.8151 27.7087 17.6504 27.6255 17.464C27.3487 16.8435 27.2226 16.2695 26.2301 16.2695H21.4488C21.2957 16.2695 21.2496 16.3159 21.2496 16.4687Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M21.25 21.7813C21.25 22.1095 22.1418 21.9805 22.7774 21.9805H27.9571L26.2984 18.3267C26.2165 18.1357 26.199 17.8633 25.9648 17.8633H21.25V21.7813Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M9.82838 18.1289C9.58573 18.1289 8.38937 16.9489 8.34222 16.7029C8.29717 16.468 8.493 16.2031 8.7659 16.2031C9.08434 16.2031 9.56416 16.8894 9.82838 17.0664C10.2667 16.7728 11.6211 15.0742 12.0198 15.0742C12.2087 15.0742 12.4182 15.201 12.4182 15.4726C12.4182 15.843 11.6182 16.5051 11.2396 16.8838C11.0025 17.1208 10.1087 18.1289 9.82838 18.1289ZM10.5589 13.6133C8.64425 13.6133 7.30048 15.0525 7.40186 16.6442C7.51594 18.4362 8.75736 19.5436 10.3634 19.5869C10.6635 19.5949 11.3395 19.4451 11.5762 19.3455C12.681 18.8807 13.2569 18.0066 13.3779 16.6971C13.5253 15.1014 12.0292 13.6133 10.5589 13.6133Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M21.2502 30.4805C21.2502 31.2679 21.1378 31.6759 21.4494 31.6759H32.4729C33.4056 31.6759 33.4587 30.2812 32.5394 30.2812H21.4494C21.2964 30.2812 21.2502 30.3274 21.2502 30.4805Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M28.7539 25.4336C28.7539 26.1332 28.988 26.8945 29.6836 26.8945H32.3398C32.3398 26.3135 32.4824 24.9688 32.0743 24.9688H29.2188C28.9087 24.9688 28.7539 25.1235 28.7539 25.4336Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M21.25 29.2852C21.25 29.4383 21.2962 29.4844 21.4492 29.4844H25.5664C25.9521 29.4844 25.5899 29.2096 25.2345 28.7539C25.1487 28.6442 25.0074 28.449 24.9136 28.3442C24.8014 28.2189 24.5934 28.0898 24.371 28.0898H21.25V29.2852Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M27.8242 33.6016C27.8242 33.8055 27.8857 34 28.0897 34H30.4858C30.6937 33.9865 30.8751 33.9654 31.0115 33.9336C31.1288 33.4301 31.0781 33.074 31.0781 32.4727H27.8242V33.6016Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M30.5469 21.848C30.8806 21.8405 31.5972 21.6123 31.9982 21.5063C32.3625 21.41 32.3398 21.4673 32.3398 20.9848C32.3398 20.6605 31.654 20.7852 31.3437 20.7856C30.9231 20.7857 30.5027 20.7856 30.082 20.7856C30.157 21.1074 30.4018 21.5737 30.5469 21.848Z" fill="white"/>
-</svg>
-
-
-
-`),
-      },
-      {
-        title: "Security & Access Control",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="29" height="34" viewBox="0 0 29 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M0 10.9622V22.2846C0 24.0466 1.19296 25.2063 2.995 25.2063H5.84367V21.9193C5.84367 20.8943 6.57679 21.1536 7.26603 20.9309C7.608 20.8205 7.49755 20.7661 7.60693 20.3955C7.86075 19.5363 8.22804 18.7874 8.61957 18.0479C7.525 16.4133 7.45809 16.9824 10.0621 14.3773C10.2761 14.1633 10.5934 13.738 10.957 13.738C11.3188 13.738 11.8764 14.3629 12.2718 14.4686L13.8359 13.6951C14.1402 13.5725 14.389 13.5052 14.7199 13.4103C15.0397 13.3185 14.9886 13.5495 15.151 12.6728C15.3666 11.5097 15.3918 11.7621 17.7503 11.7658C18.4563 11.7669 18.773 11.9271 18.773 11.4007C18.773 9.61951 17.7671 8.18652 15.9973 8.18652H2.77572C2.05038 8.18652 1.25793 8.4699 0.792422 8.97877C0.45382 9.34906 0 10.2709 0 10.9622Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M18.0425 30.9774C16.0417 30.9774 14.8365 30.7607 13.1914 29.6194C12.6454 29.2407 11.8145 28.4173 11.4258 27.879C8.97686 24.4868 9.74415 19.6542 13.1486 17.245C16.8727 14.6093 22.1644 15.7318 24.3734 20.1177C26.0027 23.3531 25.0078 27.2915 22.0184 29.5481C20.9648 30.3432 19.4022 30.9774 18.0425 30.9774ZM11.0299 15.0534L9.18591 16.8616C10.0104 18.3403 9.98222 17.6546 9.22643 19.1667C7.80884 22.0024 9.26094 21.615 7.01251 22.1389L7.00809 24.1885C6.99764 24.8084 6.91588 24.7008 7.72725 24.8574C8.83811 25.0718 8.08144 25.6799 9.49992 28.1249C9.97233 28.9392 9.94949 28.8414 9.20379 29.9549L11.012 31.799C12.9406 30.4359 11.7397 31.6374 15.5298 32.5405C16.5268 32.778 15.8551 33.8471 16.4353 33.9726C16.7265 34.0353 18.4131 33.9724 18.8459 33.9724C19.2624 32.1851 18.9489 32.838 20.5909 32.2842C23.2404 31.3903 22.3935 30.6347 24.1054 31.781L25.9494 29.9727C24.5991 28.062 25.779 29.3104 26.6918 25.4557C26.933 24.4363 27.9945 25.1443 28.1228 24.5494C28.1858 24.2583 28.1228 22.5718 28.1228 22.1389C26.3452 21.7247 27.1688 22.1771 26.1611 19.7179C26.0432 19.4299 25.9535 19.2375 25.7995 18.9837C25.7188 18.8506 25.6967 18.8077 25.614 18.6578C25.5119 18.4727 25.4797 18.4606 25.3942 18.2879C25.2276 17.9509 25.3172 17.7953 25.4903 17.5351C25.6377 17.3139 25.7846 17.0988 25.9316 16.8797L24.1233 15.0355C22.4303 16.2319 23.248 15.4621 20.5718 14.5693C18.945 14.0268 19.25 14.596 18.8459 12.862L16.7964 12.8577C16.1765 12.8473 16.2842 12.7655 16.1275 13.5767C15.9763 14.3599 15.7549 14.1693 14.8375 14.478C14.1277 14.7169 13.5111 14.9658 12.8587 15.3481C12.0192 15.8402 12.2524 15.872 11.0299 15.0534Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M17.7508 23.9643C16.835 23.9643 16.1753 23.7657 15.54 23.1802C13.96 21.724 14.4552 18.1937 17.7508 18.1937C19.1193 18.1937 20.4536 19.5278 20.4536 20.8963V21.2617C20.4536 22.6232 19.1163 23.9643 17.7508 23.9643ZM11.1035 23.3069C11.1035 24.5286 11.2915 25.2047 11.7073 26.1364C11.882 26.5281 12.0485 26.8326 12.2921 27.1586C12.4827 27.4138 12.7996 27.9082 13.0759 27.982C13.5047 27.0882 13.4961 26.591 14.6262 25.6608C17.0203 23.6906 20.5667 24.6764 21.7685 27.2514C21.8742 27.4777 21.9531 27.7579 22.0606 27.982C23.1941 27.2229 24.0327 25.0328 24.0327 23.38C24.0327 18.4709 18.7227 15.6793 14.9494 17.5107C14.3888 17.7827 13.9184 18.0208 13.4599 18.4316C13.2828 18.59 13.1808 18.6424 13.0187 18.7939C11.9455 19.7973 11.1035 21.7247 11.1035 23.3069Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M4.09082 5.11866V7.01787H6.5012C6.5012 5.34168 6.25715 4.18924 7.35703 3.12547C9.00048 1.53566 12.272 2.47286 12.272 5.26469V7.01787H14.6825C14.6825 4.60111 14.7636 3.56088 13.3057 1.74752C11.2696 -0.78518 6.3966 -0.741281 4.57633 3.04759C4.328 3.56425 4.09082 4.38606 4.09082 5.11866Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M14.0254 28.8586C15.7963 29.7959 17.4813 30.2378 19.5505 29.5629C19.8457 29.4665 21.038 29.0167 21.038 28.7857C21.038 27.2548 19.2841 25.7178 17.6047 25.7178C16.0492 25.7178 14.67 26.7352 14.204 28.1607C14.1224 28.41 14.1173 28.6675 14.0254 28.8586Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M15.7783 21.0432C15.7783 22.6807 17.6618 23.4233 18.7933 22.3782C19.9302 21.328 19.2248 19.29 17.5315 19.29C16.6095 19.29 15.7783 20.112 15.7783 21.0432Z" fill="white"/>
-</svg>
-
-
-
-`),
-      },
-      {
-        title: "Supply Chain & Inventory Optimization",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M5.91349 11.0866C6.04476 10.8388 6.12297 10.6431 6.50481 10.6431H19.2177C19.5995 10.6431 19.6778 10.8388 19.809 11.0866C19.6778 11.3345 19.5995 11.5302 19.2177 11.5302H6.50481C6.12297 11.5302 6.04476 11.3345 5.91349 11.0866ZM3.25293 30.7472H11.531V25.721H6.50481C6.12297 25.721 6.04476 25.5253 5.91349 25.2777C6.18623 24.7622 6.26683 24.8287 7.02181 24.8335L11.8265 24.8342C12.0093 24.0492 12.9609 23.5154 13.8507 23.3844C14.6914 23.2604 16.3611 23.356 17.2959 23.356C17.2186 23.0658 16.8302 22.791 16.7786 22.1733L6.9475 22.1745C6.22759 22.1808 6.17094 22.2156 5.91349 21.73C6.04476 21.4825 6.12297 21.2865 6.50481 21.2865H16.7046V18.6256H6.50481C6.12297 18.6256 6.04476 18.4299 5.91349 18.1823C6.04476 17.9345 6.12297 17.7388 6.50481 17.7388H16.7046V15.0779H6.50481C6.12297 15.0779 6.04476 14.8822 5.91349 14.6346C6.15326 14.1821 6.19252 14.1827 6.87257 14.189L17.0004 14.1908C17.2114 13.2847 18.4073 12.7129 19.5135 12.7129H22.4699V5.61719H19.4395C19.1203 6.98687 18.1726 7.68669 16.7046 7.68669H9.01788C7.56518 7.68669 6.38044 6.78487 6.28333 5.61719H3.25293V30.7472Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M0 4.95236V31.4124C0 32.7222 1.22132 34.0109 2.88142 34.0001L12.1215 33.9993C11.571 32.959 11.5302 33.0776 11.5302 31.6342H2.95635C2.59879 31.6342 2.36503 31.4004 2.36503 31.0429V5.32191C2.36503 4.96435 2.59879 4.73056 2.95635 4.73056H6.20852V2.36523H2.5871C1.31152 2.36523 0 3.67678 0 4.95236Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M17.5918 15.0781V21.878C17.5918 22.6194 18.3285 23.3561 19.07 23.3561H26.4612C27.2024 23.3561 27.9394 22.6194 27.9394 21.878V15.0781C27.9394 14.3366 27.2024 13.5996 26.4612 13.5996H24.983V16.7781C24.983 18.356 23.5558 18.0344 21.8046 18.0344C20.9705 18.0344 20.5481 17.6121 20.5481 16.7781V13.5996H19.07C18.3285 13.5996 17.5918 14.3366 17.5918 15.0781Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M12.417 25.7211V32.5209C12.417 33.2624 13.154 33.9991 13.8952 33.9991H21.2864C22.0279 33.9991 22.7646 33.2624 22.7646 32.5209V25.7211C22.7646 24.9799 22.0279 24.2432 21.2864 24.2432H19.8082V27.421C19.8082 28.999 18.381 28.6774 16.6301 28.6774C15.7957 28.6774 15.3737 28.2554 15.3737 27.421V24.2432H13.8952C13.154 24.2432 12.417 24.9799 12.417 25.7211Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M23.6514 25.7211V32.5209C23.6514 33.2624 24.3881 33.9991 25.1293 33.9991H32.5204C33.2619 33.9991 33.9989 33.2624 33.9989 32.5209V25.7211C33.9989 24.9799 33.2619 24.2432 32.5204 24.2432H31.0426V27.421C31.0426 28.999 29.6154 28.6774 27.8641 28.6774C27.0297 28.6774 26.6077 28.2554 26.6077 27.421V24.2432H25.1293C24.3881 24.2432 23.6514 24.9799 23.6514 25.7211Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M10.0511 2.36503H7.3165C7.21459 2.51759 7.09473 2.55715 7.09473 2.73458V5.3217C7.09473 6.06289 7.83169 6.79987 8.57318 6.79987H17.1468C17.8882 6.79987 18.625 6.06289 18.625 5.3217V2.73458C18.625 2.55715 18.5054 2.51759 18.4032 2.36503H15.6686C15.3668 1.07058 14.3067 0 13.1555 0C12.2498 0 11.68 0.0443515 10.8983 0.773251C10.4704 1.17217 10.2009 1.72245 10.0511 2.36503Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M19.5127 4.73056H22.7646C23.1221 4.73056 23.3559 4.96435 23.3559 5.32191V12.7131H25.7209V4.95236C25.7209 3.64951 24.3788 2.36523 23.1344 2.36523H19.5127V4.73056Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M21.4336 17.1476H24.0944V13.5996H21.4336V17.1476Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M16.2607 27.7909H18.9216V24.2432H16.2607V27.7909Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M27.4951 27.7909H30.156V24.2432H27.4951V27.7909Z" fill="white"/>
-</svg>
-
-
-
-`),
-      },
-    ],
-  },
-  transportationindustry: {
-    title: [
-      { text: "AI in Transportation", color: "#3F77A5" },
-      { text: ": Faster Routes, Safer Roads,", color: "black" },
-      { text: " Smarter Mobility", color: "#db7b3a" },
-    ],
-    para: "AI optimizes traffic flow, enhances vehicle safety, and improves logistics efficiency for a seamless and intelligent transit system.",
-    small_image:
-      "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
-    small_image_alt: "Closeup shot of a bee on a chamomile flower",
-    large_image: "transportation_mockup.png",
-    large_image_alt: "Closeup shot of a bee on a chamomile flower",
-    keyApplications: [
-      {
-        title: "Traffic Flow Optimization",
-        description:
-          "AI adjusts traffic signals in real-time to reduce congestion and delays.",
-        image: "trs1.png",
-        image_alt: "Traffic Flow Optimization",
-      },
-      {
-        title: "Autonomous Vehicle Navigation",
-        description:
-          "AI enables self-driving cars to navigate safely and avoid obstacles.",
-        image: "trs2.png",
-        image_alt: "Autonomous Vehicle Navigation",
-      },
-      {
-        title: "Accident Detection & Emergency Response",
-        description:
-          "AI detects crashes and instantly alerts emergency services.",
-        image: "trs3.png",
-        image_alt: "Accident Detection & Emergency Response",
-      },
-      {
-        title: "Predictive Maintenance for Fleet Management",
-        description:
-          "AI forecasts vehicle breakdowns, preventing unexpected failures.",
-        image: "trs4.png",
-        image_alt: "Predictive Maintenance for Fleet Management",
-      },
-      {
-        title: "Driver Monitoring & Fatigue Detection",
-        description:
-          "AI tracks driver behavior to prevent drowsy driving accidents.",
-        image: "trs5.png",
-        image_alt: "Driver Monitoring & Fatigue Detection",
-      },
-      {
-        title: "Smart Parking & Space Optimization",
-        description:
-          "AI guides drivers to available parking spots, reducing congestion.",
-        image: "trs6.png",
-        image_alt: "Smart Parking & Space Optimization",
-      },
-    ],
-    keyBenefits: [
-      {
-        title: "Improved Safety & Accident Prevention",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M28.9357 24.2789H25.366C23.5552 24.2789 25.4412 22.2213 26.125 21.1645C26.3355 20.8392 26.4169 20.6335 26.961 20.6335H31.3658C32.1108 20.6335 32.2187 21.0131 32.1337 21.6234C31.9902 22.6517 31.435 23.4549 30.5568 23.9254C30.1445 24.1466 29.5424 24.2789 28.9357 24.2789ZM9.56927 21.2411C9.56927 20.8567 9.98073 20.6335 10.4047 20.6335H23.6195C24.0434 20.6335 24.4549 20.8567 24.4549 21.2411C24.4549 21.4865 23.2165 23.2443 22.9363 23.6718C22.7599 23.9403 22.6125 24.2789 22.1764 24.2789H11.9997C11.4816 24.2789 11.3593 24.0892 11.1477 23.7638C10.8572 23.3169 9.56927 21.4879 9.56927 21.2411ZM2.65832 20.6335H7.06306C7.80129 20.6335 7.9701 21.331 8.70198 22.3364L9.36896 23.3457C9.59453 23.8056 9.33113 24.2789 8.80991 24.2789C7.40108 24.2789 4.55298 24.4685 3.51728 23.9513C3.03558 23.711 2.77542 23.4361 2.45295 23.0412C2.09498 22.6028 1.19572 20.6335 2.65832 20.6335ZM5.62004 13.4187C4.66869 12.9151 3.65321 13.0388 2.43043 13.0388C0.387665 13.0388 -0.00750231 15.5759 1.62222 16.2773C2.16961 16.513 3.38643 16.3804 4.10121 16.3804C3.95727 16.5954 3.78275 16.7384 3.5897 16.9322L0.657514 19.5441C0.381293 19.8777 0 20.5329 0 21.089V27.4686C0 28.9018 1.33189 30.2552 2.66039 30.3526C4.31487 30.4739 6.49043 30.3547 8.2023 30.3547C8.22406 30.0929 8.44766 29.6003 8.54988 29.3351L9.2744 27.3256C9.41795 26.9308 9.54257 26.7093 10.1011 26.7093H24.0751C24.5812 26.7093 24.7304 26.8752 24.866 27.2852C24.9903 27.6615 25.0822 27.9729 25.2142 28.304C25.4273 28.8385 25.7651 29.7859 25.8976 30.3547L31.4336 30.3464C32.7779 30.2004 34.0241 28.9135 34.0241 27.3927V21.165C34.0241 20.4837 33.7028 19.9795 33.4067 19.5799C33.0677 19.1218 31.5863 18.0134 31.0816 17.5001C30.7851 17.1991 30.2216 16.8264 29.9229 16.3804C30.6363 16.3804 31.7856 16.4999 32.3477 16.2992C34.0063 15.707 33.7405 13.0388 31.5937 13.0388C30.497 13.0388 29.3447 12.9208 28.4041 13.4187C27.6568 12.0066 26.9486 8.73072 25.7481 7.87239C25.1426 7.43927 24.6581 7.26709 23.6195 7.26709C23.5846 7.68414 23.4224 8.11117 23.3914 8.4821C25.3607 8.4821 25.4573 9.39419 25.9737 10.6845L27.3517 14.0912C27.4989 14.4598 27.6493 14.8297 27.8178 15.22C27.9692 15.5705 28.168 16.0195 28.2521 16.3804H5.77202C5.86945 15.9623 6.07219 15.5864 6.21781 15.2314C6.37756 14.8413 6.52619 14.4572 6.67246 14.0912L8.50468 9.54383C8.65368 9.21941 8.96397 8.90965 9.28657 8.73098C9.63612 8.53781 10.1222 8.4821 10.6327 8.4821C10.5988 8.07464 10.4148 7.71925 10.4047 7.26709C9.49696 7.26709 8.7805 7.41013 8.10692 8.00701C7.32555 8.69924 6.84035 10.3691 6.37963 11.5199L5.62004 13.4187Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M14.5057 6.05173C14.5057 5.3087 15.4223 5.1544 16.3283 6.50738C16.766 6.21432 18.4421 4.22895 18.7587 4.22895C19.0995 4.22895 19.5181 4.2822 19.5181 4.76054C19.5181 5.1759 18.8204 5.72406 18.3979 6.14655C17.9617 6.58291 17.5797 6.96253 17.1448 7.39966C16.2517 8.29777 16.1955 7.99628 15.0182 6.83025C14.8203 6.63409 14.5057 6.39972 14.5057 6.05173ZM11.5437 5.89975V6.8112C11.5437 9.03379 13.2531 10.5516 14.9863 11.419C16.7758 12.3142 17.2071 12.3186 18.9877 11.4452C20.7399 10.5854 22.4801 9.03768 22.4801 6.8112L22.4818 4.53096C22.484 3.99147 22.4004 3.74465 22.4036 3.16617C22.4137 1.30777 22.507 1.97696 19.1824 0.691727C17.1483 -0.0948279 17.2275 -0.184615 15.9595 0.290738C15.6288 0.414726 15.2611 0.533795 14.8963 0.67061C11.481 1.95079 11.6126 1.41453 11.6199 3.08999C11.6225 3.66744 11.5419 3.9495 11.5411 4.45426C11.5405 4.9357 11.5437 5.41817 11.5437 5.89975Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M9.41797 30.3547H24.6832L23.8478 27.9243H10.3294C10.1641 28.2368 9.99788 28.7636 9.86482 29.1305C9.74381 29.4644 9.56683 30.0447 9.41797 30.3547Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M30.6826 31.5695H26.126V32.3291C26.126 33.1645 26.9611 33.9999 27.7968 33.9999H31.746C32.4064 33.9999 32.9626 33.4878 33.2161 33.0395C33.5173 32.5066 33.4168 31.6088 33.4168 30.8101C32.6076 31.2381 31.9239 31.5695 30.6826 31.5695Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M2.27851 33.9999H6.22774C7.0634 33.9999 7.89852 33.1645 7.89852 32.3291V31.5695C6.46145 31.5695 2.97476 31.7137 1.8121 31.3525C1.56464 31.2756 1.41537 31.2161 1.21352 31.1156C1.0171 31.0179 0.811108 30.8643 0.607699 30.8101C0.607699 31.5897 0.514953 32.5103 0.807757 33.0406C1.05418 33.4865 1.62618 33.9999 2.27851 33.9999Z" fill="white"/>
-</svg>
-
-
-
-
-`),
-      },
-      {
-        title: "Traffic Flow Optimization & Congestion Reduction",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="24" height="34" viewBox="0 0 24 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M12.0718 30.5165C10.2591 30.5165 8.67356 28.9944 8.67356 27.4509C8.67356 26.365 8.82718 25.5854 9.625 24.7838C10.6269 23.7775 12.2708 23.5269 13.5303 24.174C16.3186 25.6065 15.8931 30.5165 12.0718 30.5165ZM12.0024 20.3443C10.2273 20.3443 8.67356 18.7663 8.67356 17.2787C8.67356 16.2409 8.82812 15.4107 9.62436 14.6109C9.8277 14.4066 10.2428 14.1153 10.5207 13.9786C11.404 13.544 12.6907 13.5218 13.5271 14.0052C16.415 15.6741 15.8218 20.3443 12.0024 20.3443ZM12.1412 10.1721C11.1039 10.1721 10.3093 9.83644 9.76488 9.28489C9.45713 8.97312 9.26042 8.82052 9.04197 8.40863C8.00843 6.46057 9.08327 3.48351 12.1412 3.48351C13.8623 3.48351 15.3313 5.09268 15.3313 6.82786C15.3313 7.77294 14.9534 8.77252 14.4841 9.25128C14.0021 9.74283 13.0845 10.1721 12.1412 10.1721ZM5.20606 1.74175C4.629 1.74175 1.01908 1.64561 0.645862 1.82857C0.343154 1.9769 0.00483055 2.35908 0.00483055 2.78688C0.00483055 3.49001 0.710555 4.0185 1.09709 4.40683L4.5646 7.89041C4.71498 8.04149 5.20606 8.42858 5.20606 8.6393V11.9139H0.975625C0.467131 11.9139 -0.599932 12.8274 0.437493 13.8481L4.5646 17.9929C4.71498 18.144 5.20606 18.531 5.20606 18.7418V22.0861H0.975625C0.499869 22.0861 0.00483055 22.6414 0.00483055 23.1311C0.00483055 23.7897 0.56845 24.1503 0.923684 24.5071C1.32202 24.9074 1.66955 25.2566 2.06788 25.6567C2.84771 26.4402 3.57675 27.1726 4.35658 27.9559C4.55747 28.1578 4.708 28.3156 4.91242 28.5122C5.26981 28.8557 5.21427 28.7457 5.20729 29.4005C5.17678 32.2045 4.81902 34 7.4946 34H16.5102C19.2176 34 18.8197 32.1453 18.7983 29.4708C18.7915 28.6346 18.6775 28.9313 19.6137 27.9908L23.0465 24.5421C23.3672 24.2199 24 23.7699 24 23.2008C24 22.6561 23.54 22.0861 23.0292 22.0861H18.7988V18.7418C18.7988 18.5125 21.2501 16.1746 21.4514 15.9724C21.9106 15.511 24 13.6288 24 13.0983C24 12.5095 23.5833 11.9139 23.0292 11.9139H18.7988V8.6393C18.7988 8.41 21.2501 6.07217 21.4514 5.86991C21.9439 5.37511 24 3.52803 24 2.92617C24 2.03813 23.4431 1.73394 22.6141 1.74081C17.2508 1.78527 19.324 1.91539 18.4253 0.723593C18.0042 0.165249 17.4464 0 16.5102 0H7.4946C6.80731 0 6.28197 0.0897786 5.88645 0.404877C5.42076 0.775637 5.35781 1.08719 5.20606 1.74175Z" fill="white"/>
-</svg>
-
-
-
-
-`),
-      },
-      {
-        title: "Predictive Maintenance for Vehicles & Infrastructure",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="38" height="34" viewBox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M18.8156 11.3334C19.3212 11.2912 22.657 9.32918 26.6537 11.1918C29.6007 12.5654 31.8406 15.6403 31.8406 18.9453C31.8406 20.5312 31.6864 21.7228 31.0236 23.0339C30.7425 23.5899 30.5803 23.8845 30.2513 24.3759C27.2923 28.7966 20.6792 29.5548 16.6368 25.5221C16.0722 24.9587 15.3798 23.9881 15.0253 23.2431C14.3051 21.7296 14.0793 20.649 14.0793 18.6916H8.24352C8.24352 21.2408 7.97024 21.2397 9.50136 21.7472C10.8009 22.1778 10.4678 21.9389 10.7312 22.8855C11.0496 24.0304 11.6451 25.2778 12.2187 26.1343L11.7112 27.0646C11.0433 28.4 11.0618 28.2338 12.4935 29.6655C12.8028 29.9748 13.6151 30.9553 14.0793 30.9553C14.8426 30.9553 15.8138 30.0641 16.2436 30.1439L20.018 31.6982C20.4224 31.8757 20.2242 32.1206 20.6846 33.3152C20.807 33.6327 21.0715 34 21.5222 34H24.4823C25.0603 34 25.1927 33.5353 25.3398 33.0813C25.4487 32.7448 25.7203 32.0855 25.751 31.7164C26.3469 31.6668 27.3862 31.2823 27.8902 31.0646C28.2187 30.9226 28.4973 30.7661 28.7958 30.6169L29.7261 30.1094C30.2837 30.1094 31.1533 30.9553 31.8406 30.9553C32.2541 30.9553 32.4384 30.6566 32.6654 30.4268C33.0807 30.0066 34.6316 28.6776 34.6316 28.1642C34.6316 27.374 33.9543 26.7729 33.7859 26.0497C34.2437 25.366 35.3699 23.1058 35.3928 22.0747L36.8823 21.6188C38.079 21.1565 37.761 20.3574 37.761 18.0995C37.761 17.0096 36.6987 16.7968 35.3928 16.4925C35.3715 15.5343 34.3312 13.3319 33.7859 12.5174C33.9543 11.7943 34.6316 11.1931 34.6316 10.4029C34.6316 9.98942 34.3329 9.80514 34.1032 9.57809C33.683 9.16282 32.354 7.6119 31.8406 7.6119C31.1996 7.6119 30.1982 8.45764 29.8107 8.45764C29.6924 8.45764 29.079 8.07576 28.9294 7.98573C28.3134 7.615 26.4646 6.91011 25.751 6.85075C25.7203 6.4817 25.4487 5.8224 25.3398 5.48581C25.1927 5.03189 25.0603 4.5671 24.4823 4.5671C20.8334 4.5671 21.0298 4.22797 20.4752 5.88842C20.1053 6.99573 20.4458 6.74252 19.2812 7.06251C18.6297 7.24145 18.8156 7.32398 18.8156 8.96511C18.8156 9.7545 18.8156 10.5439 18.8156 11.3334Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M20.1687 17.6765C20.1687 20.0626 21.1667 18.7507 18.4559 21.4614C17.9619 21.9554 16.7709 23.0291 16.4473 23.5124C16.854 24.2809 17.9623 25.3893 18.7308 25.7959C19.4543 25.3115 22.3596 21.9054 22.8751 21.9054C23.9961 21.9054 25.5634 22.7214 27.5067 20.7857C28.4526 19.8435 28.711 18.9407 28.711 17.5074C28.711 17.0226 28.5759 16.9025 28.5418 16.4924C27.9836 16.6415 26.5326 18.6915 26.089 18.6915H23.6363C23.6363 15.2747 23.248 16.32 25.2222 14.3569C25.4366 14.1437 25.667 14.0151 25.7508 13.7014C25.1781 13.6538 25.2464 13.5322 24.313 13.5322C22.1352 13.5322 20.1687 15.4776 20.1687 17.6765Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M0.039597 3.04488C0.039597 4.26389 -0.147976 5.15934 0.293373 5.15934H17.7162C17.7162 1.50279 18.1365 1.69167 14.8406 1.69167C14.8406 3.51015 13.9246 3.29866 12.6417 3.29866C12.29 3.29866 11.884 3.00381 11.7477 2.75481C11.0397 1.46181 13.6228 1.69167 6.21379 1.69167C6.21379 3.39939 5.64377 3.29866 4.18392 3.29866C3.79856 3.29866 3.4795 3.14804 3.28603 2.92784C2.9952 2.59669 2.9998 2.15993 2.9998 1.69167C2.0161 1.69167 0.803466 1.51873 0.325822 2.06249C0.119591 2.29733 0.039597 2.63523 0.039597 3.04488Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M0.0397671 11.3336C0.868258 11.5266 3.96529 11.4182 5.02983 11.4182C5.22472 11.4182 5.28362 11.3593 5.28362 11.1644V6.17432H0.293543C-0.0979123 6.17432 0.0382596 6.84947 0.0396664 7.27365L0.0397671 11.3336Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M6.29785 17.5919H11.5417V12.6864C11.5417 12.4915 11.4828 12.4326 11.2879 12.4326H6.29785V17.5919Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M12.5576 11.1644C12.5576 11.3593 12.6164 11.4182 12.8113 11.4182H17.4631C17.658 11.4182 17.7168 11.3593 17.7168 11.1644V6.17432H12.5576V11.1644Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M7.73576 8.20418C8.00492 8.20418 8.21405 8.43761 8.4969 8.62705C8.88648 8.36614 9.30505 7.61212 9.85022 7.61212C10.1858 7.61212 10.273 7.94111 10.273 8.20418C10.273 8.42317 8.90843 9.9798 8.51003 9.95664C8.1681 9.93675 7.73115 9.44035 7.49885 9.20101C7.35386 9.0518 7.20521 8.92369 7.25914 8.66109C7.3005 8.45946 7.52699 8.20418 7.73576 8.20418ZM6.29785 6.42809V11.1644C6.29785 11.3593 6.35674 11.4182 6.55163 11.4182H11.2879C11.4828 11.4182 11.5417 11.3593 11.5417 11.1644V6.42809C11.5417 6.23321 11.4828 6.17432 11.2879 6.17432H6.55163C6.35674 6.17432 6.29785 6.23321 6.29785 6.42809Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M1.13916 14.7163C1.13916 14.3333 1.40598 14.2088 1.73122 14.2088C2.04868 14.2088 1.98576 14.5189 2.40788 14.6317C2.91966 14.2889 3.15694 13.6167 3.76109 13.6167C4.00109 13.6167 4.18397 13.9087 4.18397 14.1242C4.18397 14.5032 3.47392 14.998 3.14896 15.3728C2.9703 15.5787 3.01391 15.621 2.79764 15.7868C2.39099 16.0986 2.13666 15.936 1.83383 15.6287C1.63313 15.425 1.13916 15.0384 1.13916 14.7163ZM0.0396426 12.6864C0.0396426 13.6482 -0.125142 16.648 0.27316 17.1893C0.410273 17.3756 0.754652 17.5919 1.05457 17.5919H5.2835V12.4326H0.293419C0.0985351 12.4326 0.0396426 12.4915 0.0396426 12.6864Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M14.8412 16.1541C14.5615 16.1541 14.0407 15.6396 13.8516 15.4515C13.6012 15.2026 13.3666 14.4625 14.08 14.4625C14.5047 14.4625 14.5708 14.7043 14.8412 14.8854C15.7253 14.2934 15.4649 13.7062 16.5328 13.955C16.7488 14.8825 16.5289 14.5849 15.8357 15.3724C15.5674 15.6769 15.3701 16.1541 14.8412 16.1541ZM12.5576 17.5919H16.7864C17.2807 17.5919 17.7168 17.1557 17.7168 16.6615V12.4326H12.5576V17.5919Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M4.09961 2.28356H4.94535C5.14024 2.28356 5.19913 2.22466 5.19913 2.02978V0H4.09961V2.28356Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M12.6416 2.02978C12.6416 2.36702 12.8812 2.28356 13.4873 2.28356C13.6822 2.28356 13.741 2.22466 13.741 2.02978V0H12.6416V2.02978Z" fill="white"/>
-</svg>
-
-
-
-
-`),
-      },
-      {
-        title: "AI-Powered Fleet & Logistics Management",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M2.42608 18.3745C2.39325 18.2047 2.54887 17.4838 2.60515 17.3405C2.71504 17.0607 2.89756 16.8074 3.08746 16.6097C3.74959 15.9208 4.74883 15.5886 5.73455 15.9758C6.01433 16.0858 6.26769 16.2682 6.46532 16.4581C6.91804 16.8932 7.18526 17.3365 7.26204 18.0926C7.41407 19.5911 5.72531 21.1595 3.96985 20.4699C3.69006 20.36 3.4367 20.1776 3.23908 19.9877C2.92308 19.6839 2.63592 19.3271 2.53438 18.8727C2.50962 18.762 2.51196 18.7153 2.49099 18.6128C2.43781 18.3519 2.45588 18.5283 2.42608 18.3745ZM2.42608 11.0962C2.33937 10.6479 2.64958 9.78709 3.08746 9.33141C4.62301 7.7335 7.0471 8.69666 7.26204 10.8143C7.28763 11.0669 7.18188 11.6165 7.09924 11.8269C6.20837 14.0948 2.9902 13.6334 2.53438 11.5944L2.42608 11.0962ZM0 1.08849V32.9311C0 33.2854 0.298958 33.6148 0.515692 33.7801C0.880042 34.0579 1.15051 33.9942 1.74367 33.9927L10.1593 33.9925L7.55527 32.5784C6.63391 32.1179 6.06524 31.4012 6.06524 30.0501V23.1509C6.06524 22.8119 9.05523 21.3526 9.50222 21.1291C10.5496 20.6055 12.2262 19.5289 13.3436 19.4359V10.8688C13.9104 10.5688 14.4485 10.2246 15.0364 9.90802L19.5328 7.58106C21.1663 6.79552 22.1464 8.00514 23.048 8.21519C23.048 5.91485 23.0601 3.61155 23.0521 1.31184C23.0469 -0.16784 21.6872 0.0270275 20.9251 0.0270965C19.7626 0.0270965 18.6001 0.0270965 17.4376 0.0270965L16.4974 3.86333C16.4028 4.24292 16.3264 4.95507 15.9213 4.95507H7.1267C6.65853 4.95507 6.42235 3.35074 6.24728 2.65025L5.61032 0.0270965C4.98364 0.0270965 1.10671 -0.0765097 0.700902 0.121462C0.410084 0.263284 0 0.685853 0 1.08849Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M12.7367 33.9925V27.0175L7.2925 24.335L7.27746 29.9749C7.26884 31.3141 7.7279 31.3999 9.60187 32.3509L11.4917 33.3422C11.7385 33.49 12.5108 33.9322 12.7367 33.9925Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M27.2934 33.9925V27.0175L21.8491 24.335L21.8341 29.9749C21.8254 31.3141 22.2845 31.3999 24.1585 32.3509L26.0483 33.3422C26.2952 33.49 27.0674 33.9322 27.2934 33.9925Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M20.0153 21.8622V14.8871L14.571 12.2046L14.556 17.8445C14.5509 18.637 14.5975 18.8703 15.0743 19.2216L18.7702 21.2119C19.0171 21.3596 19.7894 21.8019 20.0153 21.8622Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M28.5213 27.0463L28.5068 33.9924C28.6963 33.9418 29.5101 33.5025 29.7165 33.3825L32.178 32.0531C34.1619 30.8652 33.9655 31.7171 33.9655 28.1545C33.9655 26.891 33.9655 25.6274 33.9655 24.3638L28.5213 27.0463Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M13.9647 27.0463L13.9502 33.9924L18.8486 31.3851C19.3275 31.0269 19.4165 30.8365 19.41 30.0511L19.4089 24.3638L13.9647 27.0463Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M21.243 14.916L21.2285 21.8621L26.127 19.2547C26.6058 18.8965 26.6948 18.7061 26.6883 17.9207L26.6872 12.2334L21.243 14.916Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M7.73301 3.81763H15.3146C15.464 3.17653 16.2152 0.442458 16.2244 0.0268555H6.82324C6.8329 0.461634 7.15738 1.51578 7.26285 1.93752C7.42454 2.58407 7.58622 3.1875 7.73301 3.81763Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M22.3662 23.2266C22.5476 23.4743 24.6745 24.4567 25.0956 24.6671C25.4253 24.832 27.7337 26.0318 27.9008 26.0318C27.9016 26.0318 33.2159 23.5261 33.4353 23.2266C33.1022 23.1491 32.4441 22.7689 32.0959 22.5948C31.4101 22.2519 28.3465 20.6489 28.0524 20.6489C27.2233 20.6489 26.0658 21.4148 25.0704 21.9125C24.6185 22.1384 22.6738 23.155 22.3662 23.2266Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M15.0869 11.0963C15.2789 11.3582 16.0466 11.6519 16.401 11.8291C16.8989 12.078 17.3401 12.2986 17.8163 12.5368C18.146 12.7016 20.4544 13.9015 20.6215 13.9015C20.6223 13.9015 25.9367 11.3956 26.156 11.0963C25.823 11.0187 25.1648 10.6385 24.8166 10.4645C24.1308 10.1215 21.0673 8.51855 20.7731 8.51855C19.944 8.51855 18.7865 9.28436 17.7911 9.78212C17.3224 10.0164 16.9456 10.2048 16.4769 10.4392C16.1211 10.6171 15.4253 11.0174 15.0869 11.0963Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M7.80859 23.2266C8.02084 23.5164 13.3336 26.0318 13.3431 26.0318C13.5102 26.0318 15.8186 24.832 16.1483 24.6671C16.5871 24.4477 18.6955 23.4752 18.8777 23.2266C17.7735 22.9694 14.394 20.6489 13.1915 20.6489C12.8976 20.6489 9.87164 22.233 9.19853 22.5696C8.84274 22.7475 8.14694 23.1479 7.80859 23.2266Z" fill="white"/>
-</svg>
-
-
-
-
-`),
-      },
-    ],
-  },
-  citymonitoring: {
-    title: [
-      { text: "AI-Powered", color: "black" },
-      { text: "City Monitoring", color: "#3F77A5" },
-      { text: ": Safer Streets, Smarter Infrastructure,", color: "black" },
-      { text: "Sustainable Living", color: "#db7b3a" },
-    ],
-    para: "AI enhances urban safety, traffic flow, and sustainability through real-time surveillance, predictive analytics, and automated resource management.",
-    small_image:
-      "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
-    small_image_alt: "Closeup shot of a bee on a chamomile flower",
-    large_image: "city_monitoring_mockup.png",
-    large_image_alt: "Closeup shot of a bee on a chamomile flower",
-    keyApplications: [
-      {
-        title: "Real-Time Crime Detection & Prevention",
-        description:
-          "AI scans surveillance feeds to detect suspicious activities and prevent crimes.",
-        image: "city1.png",
-        image_alt: "Real-Time Crime Detection & Prevention",
-      },
-      {
-        title: "Public Safety & Crowd Management",
-        description:
-          "AI monitors crowds and alerts authorities to potential risks.",
-        image: "city2.png",
-        image_alt: "Public Safety & Crowd Management",
-      },
-      {
-        title: "License Plate & Vehicle Recognition",
-        description:
-          "AI identifies vehicles and detects stolen or unauthorized ones.",
-        image: "city3.png",
-        image_alt: "License Plate & Vehicle Recognition",
-      },
-      {
-        title: "Waste Management & Smart City Hygiene",
-        description: "AI predicts waste accumulation and optimizes sanitation.",
-        image: "city4.png",
-        image_alt: "Waste Management & Smart City Hygiene",
-      },
-      {
-        title: "Smart Parking & Space Utilization",
-        description:
-          "AI helps drivers find parking spots, reducing congestion.",
-        image: "city5.png",
-        image_alt: "Smart Parking & Space Utilization",
-      },
-      {
-        title: "Emergency Response & Disaster Management",
-        description:
-          "AI predicts disasters and coordinates emergency response.",
-        image: "city6.png",
-        image_alt: "Emergency Response & Disaster Management",
-      },
-    ],
-    keyBenefits: [
-      {
-        title: "Enhanced Public Safety & Crime Prevention",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="39" height="34" viewBox="0 0 39 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M10.2466 33.3016C10.2466 33.6023 10.3491 34.0002 10.7122 34.0002H27.6348C27.9979 34.0002 28.1004 33.6023 28.1004 33.3016C28.1004 31.3628 26.7193 28.6877 25.3247 27.4609L24.7741 27.0023C24.2252 26.5534 23.3887 26.0624 22.7435 25.7728C22.2728 25.5616 21.6563 25.3533 21.1097 25.2329C19.2502 24.8236 17.4039 24.9949 15.6577 25.7492C15.1317 25.9762 14.7089 26.2124 14.2518 26.5169C13.7575 26.8459 12.8917 27.513 12.5304 27.9781C12.3374 28.2267 12.2229 28.3352 12.0421 28.5767C11.1409 29.7803 10.2466 31.6349 10.2466 33.3016Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M18.3195 12.8085C17.3452 12.8085 17.1326 12.2815 16.3206 11.4694C15.7643 10.9131 14.9816 10.3179 14.9816 9.70348C14.9816 9.07037 15.48 8.53899 16.1459 8.53899C17.0494 8.53899 17.5646 9.61253 18.1642 10.014L20.6288 7.58816C20.8546 7.36236 21.0255 7.19463 21.2494 6.96678C21.5137 6.69788 21.5561 6.5633 22.0209 6.4943C22.8376 6.37321 23.3651 7.085 23.3651 7.52994C23.3651 8.34645 22.8025 8.67466 22.3754 9.10187L19.8138 11.6635C19.4868 11.9903 18.8592 12.8085 18.3195 12.8085ZM13.5067 4.58011C13.5067 6.04746 13.3442 9.67744 13.5752 10.7994C13.9593 12.6654 15.0468 13.469 16.3788 14.3609C18.1087 13.4457 20.238 13.4457 21.9679 14.3609C23.2723 13.4875 24.3779 12.663 24.758 10.8635C25.0044 9.69748 24.84 6.08386 24.84 4.58011L22.3449 3.4268C17.5024 1.62606 14.7712 4.24249 13.5067 4.58011Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M14.2832 19.717C14.2832 20.3457 14.5034 21.234 14.7219 21.6848C17.5428 27.508 25.8907 23.7989 23.6667 17.8633C23.0701 16.2711 21.1933 14.9043 19.4842 14.9043C17.8565 14.9043 17.1816 15.1312 16.0019 16.0794C15.8704 16.185 15.7791 16.2292 15.6602 16.3587C15.3547 16.6915 14.9066 17.3446 14.7356 17.763C14.5029 18.3329 14.2832 19.0518 14.2832 19.717Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M25.3062 25.8489C25.4591 26.0773 26.3384 26.6688 27.1254 27.678C27.684 28.394 28.1742 29.1277 28.5225 30.0068C28.8108 30.734 29.0248 31.7484 29.265 31.7484H37.8039C39.126 31.7484 37.7195 28.5486 37.5719 28.2544C36.9392 26.9929 36.0659 26.0245 34.9323 25.2272C32.8283 23.7475 29.9067 23.4213 27.5336 24.4279C26.9589 24.6715 25.5885 25.4271 25.3062 25.8489Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M0 31.0504C0 31.4191 0.0249748 31.749 0.543407 31.749H9.08225C9.36015 31.749 9.45002 30.8826 9.80223 30.0626C10.0812 29.4136 10.292 29.0003 10.6654 28.4416C11.787 26.7631 12.8704 26.1044 13.0411 25.8495C12.7662 25.4389 11.4014 24.6912 10.8676 24.4522C7.20078 22.8105 2.67113 24.6123 0.852795 28.0995C0.514764 28.748 0 30.083 0 31.0504Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M10.6348 3.18259V9.23742C10.6348 11.925 11.4604 14.1129 13.4172 15.6926C13.61 15.8483 13.9911 16.1664 14.2056 16.2237C14.548 15.9729 14.6524 15.5655 15.2923 15.1369C14.8615 14.4936 12.2649 13.6495 12.2649 9.47032V4.50226C12.2649 3.7962 12.7202 3.65016 13.3517 3.3379C15.7335 2.16004 16.6642 1.63015 19.717 1.63015C21.3285 1.63015 24.4901 2.88151 25.6984 3.72175C25.9557 3.90079 26.0823 4.07205 26.0823 4.50226V9.47032C26.0823 13.6495 23.4858 14.4936 23.0549 15.1369C23.8026 15.6376 23.7679 15.9499 24.1417 16.2237C24.9401 16.0106 26.3756 14.1353 26.7374 13.541C27.42 12.4197 27.7125 11.0035 27.7125 9.23742V3.18259C27.7125 2.75224 22.6393 0 19.717 0C17.2222 0 16.4455 0.184358 14.1723 1.13109C13.8635 1.25954 10.6348 2.79015 10.6348 3.18259Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M3.5708 19.1737C3.5708 22.9559 8.02383 24.8719 10.7717 22.3382C13.652 19.6825 11.5412 14.736 7.77949 14.9293C6.82607 14.9783 6.17755 15.1999 5.43659 15.6834C4.94133 16.0067 4.71266 16.282 4.37859 16.7213C3.92465 17.3183 3.5708 18.3206 3.5708 19.1737Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M26.2373 19.0183V19.4066C26.2373 22.2607 29.7303 24.8172 32.9104 22.7416C33.589 22.2986 34.0073 21.7235 34.3634 21.0119C35.2888 19.163 34.627 17.0173 33.0457 15.7808C30.3695 13.688 26.2373 15.734 26.2373 19.0183Z" fill="white"/>
-</svg>
-
-
-
-
-`),
-      },
-      {
-        title: "Smart Traffic & Crowd Management",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="63" height="34" viewBox="0 0 63 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M23.4175 18.6298C23.4175 19.3719 25.3644 20.6862 25.8114 17.9189L27.1976 10.1249H27.6025C27.3624 11.1554 27.2451 12.4174 27.0631 13.5002L25.4425 23.7596C26.2439 24.1839 26.7213 24.0297 28.0075 24.0297V32.6697C28.0075 34.5598 30.8424 34.2368 30.8424 32.9396V24.0297H31.3826V32.9396C31.3826 34.2368 34.2175 34.5598 34.2175 32.6697V24.0297C35.5036 24.0297 35.981 24.1839 36.7825 23.7596L34.6225 10.1249H35.0274C35.3877 11.6708 35.6773 13.6141 35.9342 15.1581C36.2169 16.858 36.3584 19.575 37.5926 19.575C39.6601 19.575 38.5404 16.8966 38.1894 14.9276C37.9179 13.4044 37.1911 8.59522 36.5734 7.63395C35.937 6.6433 35.0938 6.20996 33.5426 6.20996H28.6823C27.1328 6.20996 26.3524 6.62559 25.7061 7.55345C25.0526 8.49238 24.3131 13.3001 24.0356 14.7926C23.8228 15.934 23.4175 17.5015 23.4175 18.6298Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M39.4827 18.4951C39.4827 19.9485 38.3248 20.4428 36.9179 20.1152C36.9179 22.2901 38.2894 24.5276 36.3779 24.5701V31.1851C36.3779 32.1377 38.6875 32.7858 38.9321 30.9045C39.0152 30.2649 38.9427 29.0502 38.9427 28.35C38.9427 26.6402 38.9427 24.9302 38.9427 23.22H39.3479L39.3364 30.7914C39.3479 31.3771 39.3352 31.3958 39.6345 31.7086C40.5189 32.6322 41.9127 31.9344 41.9127 30.7801V23.22C44.9068 23.22 44.2998 24.1963 43.1847 16.9532C43.0134 15.8394 42.8583 14.9707 42.7156 13.9124C42.5811 12.9131 42.3181 11.9162 42.3181 10.8003L43.7885 17.6995C44.336 20.5304 45.9627 18.9297 45.9627 18.4951C45.9627 17.7019 44.6482 11.0234 44.4699 10.1331C43.7757 6.66946 41.2865 7.42523 37.3227 7.42523C37.4282 7.87728 37.6013 8.26816 37.6956 8.67251C37.8076 9.15254 37.8859 9.63398 37.9648 10.0236C38.1624 11.0026 38.3278 11.984 38.5045 12.8585C38.7249 13.9482 39.4827 17.6464 39.4827 18.4951Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M16.2627 18.4951C16.2627 18.9969 17.8992 20.4165 18.4147 17.8124L19.2131 13.2108C19.3444 12.4113 19.5738 11.566 19.6376 10.8003H19.9073C19.9073 12.6317 18.1526 21.4363 18.1526 22.9503C18.1526 23.3888 19.5382 23.22 20.3127 23.22V30.7801C20.3127 32.4138 22.7944 32.69 22.8879 30.9252L22.8775 23.22H23.2826C23.2826 24.2507 23.02 30.8409 23.5481 31.5947C24.3331 32.7162 25.8474 31.8446 25.8474 31.1851V24.5701C24.7082 24.5447 24.7497 23.7793 24.92 22.8366C25.0371 22.1883 25.3074 20.7926 25.3074 20.1152C23.9005 20.4428 22.7426 19.9485 22.7426 18.4951C22.7426 17.5423 23.9474 11.5799 24.2381 10.1357L24.9027 7.42523C20.9388 7.42523 18.4497 6.66946 17.7555 10.1331C17.5828 10.9942 16.2627 17.7134 16.2627 18.4951Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M46.6376 18.4946C46.6376 19.1973 45.8957 20.2064 44.3427 19.8445C44.3916 22.041 45.563 23.4845 43.8026 23.8945C43.8026 25.1096 43.8028 26.3247 43.8026 27.5397C43.802 29.3602 43.5442 30.2396 45.1528 30.2396C45.6318 30.2396 46.0466 29.674 46.0988 29.0259L46.3602 28.8971C46.4419 30.7861 48.6627 30.5512 48.6627 29.1596V22.4097H50.5525C50.5525 21.3295 50.3937 20.6947 50.2602 19.732L49.4149 14.3676C49.2609 13.4542 49.0677 12.5815 49.0677 11.6095H49.3376C49.3376 12.3496 49.842 14.7586 49.9934 15.6792C50.2252 17.0932 50.3005 19.0344 51.3626 19.0344C52.7836 19.0344 52.0699 16.9464 51.8237 15.7384C51.5436 14.3617 51.2976 13.1165 51.0746 11.7627C50.4259 7.82684 48.8866 8.63979 44.7476 8.63979C44.8575 9.11177 44.9296 9.07171 45.0554 9.68217L45.7717 13.4208C45.9744 14.4237 46.6376 17.6787 46.6376 18.4946Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M10.8626 19.0345C11.5825 19.0345 11.7421 18.4125 11.8677 17.7447L12.5806 13.733C12.6978 13.0597 12.8876 12.2663 12.8876 11.6096H13.1574C13.1574 13.356 11.6727 20.3818 11.6727 22.4098H13.5624V29.1596C13.5624 30.5625 15.7202 30.7253 15.8599 29.0272L16.1274 22.4098C16.1274 23.3256 15.8998 29.0765 16.3452 29.752C16.6552 30.2215 16.9361 30.2396 17.3425 30.2396C18.6516 30.2396 18.4233 28.9563 18.4225 27.6748C18.4217 26.4145 18.4225 25.1545 18.4225 23.8946C16.6622 23.4846 17.8336 22.0411 17.8825 19.8446C16.3339 20.2153 15.5876 19.1895 15.5876 18.4947C15.5876 17.6737 16.2373 14.49 16.4307 13.5329L17.1485 9.79553C17.2763 9.14905 17.3669 9.11523 17.4776 8.63983C16.3184 8.63983 13.6942 8.4301 12.8789 8.76623C11.6608 9.269 11.3863 10.3321 11.1506 11.7627L10.0315 17.6787C9.90008 18.3125 10.0581 19.0345 10.8626 19.0345Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M50.9579 19.7095C50.9579 21.5227 51.9023 22.7388 50.4175 23.0844L50.4267 27.5305C50.5076 27.9988 50.8206 28.3494 51.3627 28.3494C52.6778 28.3494 52.4435 26.9417 52.4427 25.6496C52.4419 24.3447 52.4427 23.0395 52.4427 21.7347H52.5777C52.5777 22.9946 52.5779 24.2546 52.5777 25.5145C52.5773 27.1233 52.3104 28.3494 53.7928 28.3494C54.1179 28.3494 54.6025 27.8646 54.6025 27.5397V21.5996H56.2226C56.2226 20.7607 56.0768 20.0345 55.9526 19.3045L55.2381 14.7542C55.1389 14.1574 54.9245 13.0416 54.8728 12.4196L55.8059 16.3464C55.8921 16.779 56.0326 17.9461 56.1755 18.2734C56.4647 18.935 57.2192 18.8422 57.5727 18.3597C57.8285 17.9328 56.7475 12.9699 56.5943 12.1829C56.0267 9.26431 54.9976 9.85463 51.3627 9.85463L52.9587 18.3326C52.8575 19.2133 52.0182 19.7095 50.9579 19.7095Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M7.08292 12.4204L6.29232 19.19C6.15787 19.9852 6.00289 20.722 6.00289 21.6004H7.62293V27.5405C7.62293 27.8128 7.99064 28.3502 8.56769 28.3502C9.8828 28.3502 9.64852 26.9425 9.64772 25.6504C9.64691 24.3455 9.64772 23.0403 9.64772 21.7354H9.78277C9.78277 22.9954 9.78297 24.2553 9.78277 25.5153C9.78217 27.1241 9.51548 28.3502 10.9978 28.3502C12.0201 28.3502 11.8094 26.6972 11.808 26.1906C11.8047 25.1556 11.808 24.1203 11.808 23.0852C10.3232 22.7396 11.2676 21.5235 11.2676 19.7102C8.27123 19.7102 9.51207 17.0305 9.76467 15.5073C10.0764 13.6274 10.4466 11.6419 10.8628 9.85541C5.33125 9.85541 6.23355 9.24516 4.91019 15.9179C4.80452 16.4499 4.43096 18.0186 4.63928 18.365C4.70348 18.4722 5.86804 19.5549 6.19913 17.6116L6.84965 13.8074C6.91546 13.4302 7.07205 12.9037 7.08292 12.4204Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M58.3824 18.0895C58.3824 18.9646 57.4926 19.3674 56.6273 19.4396C56.9049 20.6305 57.3012 21.9863 56.2222 22.2745V26.0544C56.5003 26.2406 56.5728 26.4595 56.8972 26.4595C58.094 26.4595 57.844 25.3165 57.8424 24.1645C57.8408 23.0846 57.8424 22.0044 57.8424 20.9244H57.9773C57.9773 21.9593 57.9785 22.9945 57.9773 24.0294C57.9742 26.2436 57.9881 26.6677 59.4624 26.3245C59.9378 25.333 59.7321 22.4333 59.7321 20.9244C61.6319 20.9244 61.1006 21.3607 60.5497 17.2723C60.4599 16.6077 60.0381 13.5854 59.8672 13.2296C60.2758 13.3944 60.0773 13.0545 60.3299 14.522C60.6906 16.6192 60.6016 18.2253 61.7573 18.4944C62.1303 18.1702 62.2887 18.0166 62.2082 17.5197C62.0303 16.4209 61.3788 12.147 60.7753 11.5113C60.7395 11.4733 60.3263 11.1823 60.304 11.1728C59.5103 10.8351 57.9891 11.0694 57.0323 11.0694C57.14 11.2938 58.3824 17.6646 58.3824 18.0895Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M0.467611 18.4944C1.58004 18.2352 1.38278 17.3462 1.60458 16.1215L1.99747 13.8143C2.15889 13.0778 1.97916 13.3822 2.35775 13.2296C2.1438 13.6756 1.82216 16.4495 1.7024 17.1644L1.20003 20.202C1.07001 21.0472 1.18193 20.9244 2.49281 20.9244C2.49281 22.4333 2.2871 25.333 2.7625 26.3245C4.27988 26.6876 4.25271 26.0657 4.24768 24.1645C4.24507 23.0846 4.24768 22.0044 4.24768 20.9244H4.38254C4.38254 21.9593 4.38334 22.9945 4.38254 24.0294C4.38173 25.6168 4.16476 26.4595 5.32771 26.4595C5.65216 26.4595 5.72462 26.2406 6.00277 26.0544V22.2745C4.92376 21.9863 5.32006 20.6305 5.59762 19.4396C3.27595 19.3879 3.90533 17.5664 4.23723 15.919L5.19266 11.0694C0.560594 11.0694 1.41821 10.2745 0.0403019 17.41C-0.076033 18.0114 0.0574195 18.138 0.467611 18.4944Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M28.4126 2.56479C28.4126 5.05351 31.4301 6.12286 33.0388 4.49116C34.4936 3.01544 33.797 0 30.9774 0C29.9726 0 29.046 0.685927 28.7018 1.5043C28.6479 1.6325 28.4126 2.46053 28.4126 2.56479Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M20.7173 4.0504C20.7173 7.6278 25.4423 6.9797 25.4423 4.59042V3.91535C25.4423 2.2442 23.0327 1.10239 21.4888 2.52658C21.1975 2.79528 20.7173 3.5911 20.7173 4.0504Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M36.7827 3.91484V4.5899C36.7827 5.52722 38.0747 6.61469 38.9426 6.61469C42.1812 6.61469 42.5471 1.88965 38.8077 1.88965C37.8573 1.88965 36.7827 2.96444 36.7827 3.91484Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M44.2075 5.53438C44.2075 8.9254 48.2575 8.11971 48.2575 6.0744C48.2575 4.83658 47.7781 3.7793 46.2327 3.7793C45.1889 3.7793 44.2075 4.56245 44.2075 5.53438Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M13.9678 5.53438C13.9678 8.9254 18.0178 8.11971 18.0178 6.0744C18.0178 4.83658 17.5383 3.7793 15.9926 3.7793C14.9492 3.7793 13.9678 4.56245 13.9678 5.53438Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M50.6875 7.42513C50.6875 9.51553 54.0767 9.93196 54.3007 7.53422C54.4599 5.83267 52.2629 5.06643 51.2124 6.19496C51.0381 6.38214 50.6875 7.10672 50.6875 7.42513Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M7.89258 7.42459C7.89258 7.7275 8.24864 8.47744 8.4161 8.65617C9.89504 10.2355 12.5675 8.12219 11.0761 6.26607C10.0846 5.03228 7.89258 5.82348 7.89258 7.42459Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M2.7627 9.04453C2.7627 10.5474 5.73287 11.5701 5.73287 8.63958C5.73287 7.26932 2.7627 7.0602 2.7627 9.04453Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M56.4927 8.64013C56.4927 12.2469 60.851 9.87271 59.0231 7.99968C58.0918 7.04505 56.4927 7.84934 56.4927 8.64013Z" fill="white"/>
-</svg>
-
-
-
-
-
-`),
-      },
-      {
-        title: "Disaster Preparedness & Emergency Response",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M12.3417 23.2716C12.2897 23.4667 12.0561 23.7427 11.903 23.8847C11.3779 24.3717 9.81233 24.457 9.95765 22.7106C8.77882 22.0869 8.22629 21.749 7.36272 20.6071C5.2921 17.8694 5.74678 13.9048 8.57092 11.5767C10.6024 9.90203 11.9694 10.5192 12.3743 9.9105L12.6313 9.53637C13.2012 8.85172 14.7259 8.80657 14.7259 10.5091C17.0291 11.0456 19.2139 13.8399 19.2139 16.5397C19.2139 17.793 19.0253 18.5596 18.5826 19.5547C18.4424 19.8698 18.1873 20.2698 17.9813 20.5665C17.3437 21.4848 16.2462 22.3484 15.2079 22.7718C14.2465 23.1638 13.68 23.2716 12.3417 23.2716ZM7.78379 7.70405C6.20774 7.70405 5.86708 6.65219 5.32942 6.65219C4.57538 6.65219 4.58052 6.87523 3.94448 7.51127C3.02487 8.43089 2.10947 9.0132 2.78629 9.82649C3.11861 10.2258 3.38706 10.5277 3.52366 11.1227C3.80685 12.356 3.34564 13.3063 2.61225 13.9627C1.55565 14.9087 0 14.2686 0 15.3476V18.0825C0 18.9724 1.32029 18.8331 1.76343 18.9837C2.39857 19.1995 2.94021 19.6762 3.24944 20.2326C4.452 22.3961 2.52451 23.5844 2.52451 24.1831C2.52451 24.6921 4.00412 25.9721 4.39993 26.375C5.30121 27.2919 5.58221 26.6307 6.27071 26.1763C7.91204 25.0933 10.3194 26.178 10.5081 28.1906C10.6492 29.6941 11.0471 29.3724 13.9546 29.3724C14.3753 29.3724 14.6563 29.068 14.7375 28.6826C14.9085 27.871 14.8664 26.6393 16.4592 25.9866C17.0726 25.7353 16.8763 25.7779 17.1938 25.2486L19.3757 21.4699C19.5676 21.1266 19.7406 20.8594 19.9152 20.5367L22.0742 16.8054C22.4917 16.1333 23.1985 15.7683 24.1926 15.7683C24.7338 15.7683 24.9237 15.9577 25.3146 16.0488C25.3146 13.922 24.5344 15.0342 23.1539 14.2826C22.7383 14.0564 22.3843 13.7407 22.1343 13.3388C20.7414 11.0991 22.7201 9.9931 22.7201 9.38707C22.7201 8.60841 22.2127 8.35381 21.6156 7.75663C20.9501 7.09122 20.3195 6.14787 19.4395 6.94795C18.1192 8.14808 16.2268 7.83449 15.2149 6.4439C14.6305 5.64086 14.9259 4.76253 14.5718 4.3521C14.4571 4.21935 14.1866 4.05762 13.9546 4.05762H11.36C10.861 4.05762 10.5575 4.48767 10.5217 4.9725C10.4704 5.66984 10.4108 5.91225 10.1135 6.38746C9.71653 7.02209 8.78216 7.70405 7.78379 7.70405Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M24.1224 31.6862C22.3987 31.6862 22.45 29.2318 24.1224 29.2318C25.6729 29.2318 25.6906 31.6862 24.1224 31.6862ZM24.1224 28.9513C23.5523 28.9513 22.8602 28.4495 22.8602 27.8995V21.7988C22.8602 20.4791 25.3146 20.271 25.3146 22.0091V27.6891C25.3146 28.4065 24.6602 28.9513 24.1224 28.9513ZM14.3052 32.4576C14.3052 33.5058 15.1614 34.0003 16.2686 34.0003H31.7659C34.0057 34.0003 34.0042 32.4333 33.631 31.7845L32.7513 30.2801C32.5598 29.9475 32.3824 29.616 32.1907 29.298L31.3145 27.7898C31.1987 27.5985 31.1489 27.4912 31.0348 27.2982L29.2635 24.231C28.8545 23.5501 28.5105 22.9088 28.1055 22.2335L25.7755 18.1821C25.4249 17.5893 25.0764 16.6797 24.0524 16.6797C23.1195 16.6797 22.7539 17.4899 22.3728 18.1558C21.319 19.9977 19.836 22.4569 18.8632 24.2531L14.7832 31.3229C14.6194 31.5931 14.3052 32.0656 14.3052 32.4576Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M9.0459 16.8197C9.5161 16.9292 12.1925 18.0051 12.4118 18.1521C12.318 18.5544 12.1518 18.9556 12.0166 19.3696L10.8691 23.0607C10.8691 23.1025 10.9659 23.2062 11.0093 23.2711C11.4015 23.1797 12.1353 22.0816 12.3815 21.7681C12.8308 21.1961 13.2347 20.6884 13.6902 20.1316C13.9196 19.8511 16.1942 17.0986 16.2686 16.8197C15.9342 16.3203 13.1831 15.4699 13.1831 15.0665C13.1831 14.0438 13.7442 11.3983 13.7442 10.2281C13.7442 9.59034 13.1728 10.4169 13.0848 10.5504L9.53674 15.8379C9.35743 16.1068 9.05488 16.4169 9.0459 16.8197Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M14.1648 14.6457C15.0901 15.1352 17.1802 15.7968 17.1802 16.6792C17.1802 17.2624 17.2039 17.2604 16.8001 17.7717L13.1831 22.2892C14.3958 22.2892 15.7461 21.5485 16.5683 20.7657C18.5018 18.9248 18.8063 15.7609 17.3501 13.6342C17.1729 13.3753 17.0042 13.1886 16.8303 12.962C16.5404 12.5845 15.868 12.0784 15.4278 11.84L14.5856 11.4199C14.5429 11.9335 14.43 12.4851 14.3695 13.027C14.3168 13.4984 14.1648 14.1631 14.1648 14.6457Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M7.01221 16.6796C7.01221 19.085 8.30814 20.7776 10.2378 21.7987C10.3344 21.5975 11.2196 18.8581 11.2196 18.7132C11.2196 18.2995 7.97402 18.1289 8.08163 16.6236C8.14935 15.676 11.2266 12.0832 11.43 11.21C10.7878 11.518 9.43888 11.6895 8.37304 13.0618C7.66056 13.979 7.01221 15.0969 7.01221 16.6796Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M22.5098 0.410769C22.5098 1.06053 23.3482 1.0622 24.3033 1.63244C25.9613 2.62235 27.1689 3.52877 28.3402 5.09892C28.9108 5.86399 29.3937 6.56929 29.7832 7.44249C30.2346 8.4542 30.5103 9.03214 30.7674 10.2451C30.9529 11.1211 31.0661 11.9186 31.0648 12.9629C31.0641 13.468 30.9654 14.0013 31.3059 14.2004C31.7048 14.4337 32.1166 14.0799 32.1166 13.6642C32.1166 9.91713 31.1161 7.07836 29.372 4.76827C28.2476 3.27904 26.6552 1.7044 24.9649 0.830689C24.4045 0.541078 23.1341 -0.274398 22.6836 0.0937083C22.6283 0.138856 22.5098 0.312009 22.5098 0.410769Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M21.3174 4.54788C21.3174 5.15121 21.9405 5.07464 22.9728 5.76763C24.7954 6.9911 25.9717 8.54779 26.5636 10.7319C27.041 12.4941 26.4367 13.8043 27.2779 13.8043C27.9681 13.8043 27.8388 13.0822 27.8388 12.5421C27.8388 9.62684 26.1903 6.87284 24.1224 5.31923C23.7348 5.02796 21.9842 3.69765 21.4556 4.19529C21.352 4.2929 21.3174 4.34753 21.3174 4.54788Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M23.772 22.0089V27.6888C23.772 28.1278 24.279 27.9118 24.333 27.8992L24.3367 22.2855C24.3418 21.8347 24.3635 21.8677 24.1225 21.6582C23.945 21.7057 23.772 21.7936 23.772 22.0089Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M23.772 30.424C23.772 30.7387 24.333 31.106 24.333 30.2837L24.0545 30.1396C23.9733 30.1965 23.772 30.3082 23.772 30.424Z" fill="white"/>
-</svg>
-
-
-
-
-
-`),
-      },
-      {
-        title: "Secure & Automated Access Control",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M5.02919 14.9462V29.042C5.02919 29.7463 4.90991 30.7208 5.1457 31.263C5.35743 31.7499 5.92177 32.2295 6.5875 32.2295H8.99579V19.6212C8.99579 19.2027 9.10176 18.9693 9.2531 18.6743C9.68837 17.8259 10.4794 17.3545 11.5458 17.3545H21.8874C23.321 17.3545 24.4375 18.4197 24.4375 19.5504V32.2295H26.8458C27.5061 32.2295 28.0513 31.7645 28.2655 31.3118C28.5018 30.8127 28.4041 29.8323 28.4041 29.1129V14.9462C28.1966 14.8908 27.9655 14.6381 27.6735 14.4018L26.2246 13.2299C23.317 10.8542 20.0081 8.11463 17.111 5.83935C16.947 5.71049 16.8604 5.62167 16.7166 5.52539L15.2693 6.69892C14.7558 7.10234 14.3229 7.47499 13.8216 7.87202L7.28646 13.166C7.00349 13.3915 5.27745 14.8798 5.02919 14.9462Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M0 13.3167C0 13.8774 1.05744 14.9037 1.41603 15.3715C2.24183 16.4489 2.72832 15.5987 4.10836 14.5209C6.13133 12.941 8.36549 11.0346 10.4033 9.41154L15.8052 5.03853C16.1051 4.79954 16.4076 4.52775 16.7167 4.32082C17.0556 4.54777 17.3068 4.7824 17.6283 5.03853C17.9391 5.28604 18.2271 5.49786 18.5365 5.75932L29.3245 14.5213C31.5883 16.2851 31.1097 16.513 32.9991 14.1574C33.9927 12.9188 33.1937 12.9054 31.576 11.4909C31.2331 11.1911 30.9263 10.953 30.5598 10.6653L18.1243 0.575741C17.6203 0.174022 17.4514 0 16.6459 0C16.0266 0 15.6914 0.242714 15.3524 0.548263L9.16744 5.55484C8.97414 5.70778 8.86136 5.81332 8.66401 5.97232C8.46262 6.13463 8.32108 6.25359 8.11522 6.41526C7.39176 6.98354 6.75723 7.52169 6.04325 8.09732L0.370304 12.6953C0.191703 12.8569 0 13.0104 0 13.3167Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M11.7582 31.804C11.7582 31.402 12.0769 31.3082 12.4665 31.3082H20.9665C21.9759 31.3082 21.8273 32.2999 21.179 32.2999H12.2541C11.9234 32.2999 11.7582 32.1347 11.7582 31.804ZM11.6874 25.2874C11.6874 24.2727 11.7838 23.7895 12.1614 22.9281C12.3583 22.4788 12.6256 22.1756 12.9006 21.8256C13.0061 21.6914 13.0579 21.5973 13.1944 21.4818C13.9762 20.8203 14.5568 20.4612 15.5956 20.1998C17.3664 19.7541 18.9141 20.3612 20.2387 21.4818C21.0242 22.1464 21.7457 23.7328 21.7457 24.9332C21.7457 26.3829 21.2432 27.8063 20.2428 28.7428C20.1059 28.8709 20.0706 28.8762 19.9265 28.9932C19.7691 29.1209 19.74 29.1522 19.5653 29.2694C19.2861 29.4569 19.0709 29.5757 18.748 29.7272C17.516 30.3046 15.9115 30.3021 14.6851 29.7272C13.6185 29.2272 12.6361 28.3753 12.1614 27.2925C11.9163 26.7334 11.6874 26.0582 11.6874 25.2874ZM9.9165 19.904V32.4415C9.9165 33.266 10.4557 33.9999 11.2623 33.9999H22.1708C22.9353 33.9999 23.5166 33.2856 23.5166 32.4415V19.904C23.5166 19.0641 22.9403 18.3457 22.1708 18.3457H11.2623C10.4557 18.3457 9.9165 19.0796 9.9165 19.904Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M12.6084 25.0749C12.6084 25.9581 13.0517 27.3518 13.671 27.7665C13.8592 26.9582 15.0795 25.9313 16.0084 25.854C15.8174 25.5932 15.5674 25.6759 15.1688 25.0645C14.5077 24.0506 15.1355 22.3123 16.7168 22.3123C18.361 22.3123 19.1754 24.3262 17.9057 25.4847C17.6884 25.683 17.5728 25.6524 17.4251 25.854C18.3505 25.9311 19.5766 26.9682 19.7626 27.7665C20.2985 27.4077 20.8251 26.0788 20.8251 25.1457C20.8251 23.8945 20.284 22.9938 19.7039 22.3003C19.5833 22.1561 19.3379 21.9817 19.1662 21.8463C17.5369 20.5617 15.0166 20.8794 13.7617 22.2614C13.6664 22.3664 13.6442 22.4202 13.5452 22.5408C12.981 23.2273 12.6084 24.1566 12.6084 25.0749Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M14.3794 28.4748C15.4404 29.0363 15.5663 29.1832 16.9293 29.1832C17.9172 29.1832 18.4228 28.809 19.0543 28.4748C18.8581 28.0658 18.7652 27.6392 18.2779 27.2679C17.0837 26.3575 15.5503 26.558 14.7217 27.7547C14.5431 28.0126 14.5085 28.2058 14.3794 28.4748Z" fill="white"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M15.8667 24.0828C15.8667 25.3178 17.5667 25.209 17.5667 24.1536C17.5667 22.8903 15.8667 23.0633 15.8667 24.0828Z" fill="white"/>
-</svg>
-
-
-
-
-
-`),
-      },
-    ],
-  },
-  warehousinglogisticindustry: {
-    title: [
-      { text: "AI in Logistics:", color: "#3F77A5" },
-      {
-        text: "Faster Deliveries, Smarter Warehousing, Optimized",
+        text: "The New Era of Clinical Excellence with Computer Vision in Healthcare",
         color: "black",
       },
-      { text: "Operations", color: "#db7b3a" },
     ],
-    para: "AI enhances logistics by improving inventory management, automating processes, and optimizing deliveries for faster, more cost-effective operations.",
-    small_image:
-      "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
-    small_image_alt: "Closeup shot of a bee on a chamomile flower",
-    large_image: "logistic_mockup.png",
-    large_image_alt: "Closeup shot of a bee on a chamomile flower",
+    para: "We understand what’s at stake: patient’s life, response delays, security breaches. Our solution ensures uninterrupted care, operational control, and brand trust at scale. VMukti Solutions is leveraging computer vision in the healthcare industry to provide intelligent surveillance that enhances safety, improves response times, and keeps your facility running smoothly.",
+
+    large_image: "healthcare_mockup.png",
+    large_image_alt: "Healthcare surveillance monitoring illustration",
+
     keyApplications: [
       {
-        title: "Automated Inventory Management",
-        description:
-          "AI tracks stock levels in real-time, reducing errors and improving accuracy.",
-        image: "war1.png",
-        image_alt: "Automated Inventory Management",
+        id: "section1",
+        mainHeading:
+          "Smarter Efficiency Powered by Computer Vision for Healthcare",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat1-1",
+            title: "Identity Verification",
+            description:
+              "We deliver advanced attendance automation, combining facial recognition with intelligent access protocols ensuring only authorized personnel enter high-security zones, without operational slowdowns.",
+            image: "../../assets/feat1_industry_heal_1.png",
+          },
+          {
+            id: "feat1-2",
+            title: "Staff Monitoring",
+            description:
+              "Our enterprise-grade surveillance gives you granular visibility into healthcare workflows optimizing staff performance, elevating accountability and driving precision across critical touchpoints.",
+            image: "../../assets/feat1_industry_heal_2.png",
+          },
+          {
+            id: "feat1-3",
+            title: "Crowd and Queue Management",
+            description:
+              "We equip your facility with precision video intelligence to monitor patient movement, manage density and streamline flow ensuring every second which enhances healthcare and operational excellence.",
+            image: "../../assets/feat1_industry_heal_3.png",
+          },
+          {
+            id: "feat1-4",
+            title: "Inventory and Asset Management",
+            description:
+              "Your critical medical assets deserve more than passive oversight. Our intelligent surveillance ecosystem safeguards equipment in real time minimizing loss, maximizing utilization and ensuring operational integrity.",
+            image: "../../assets/feat1_industry_heal_4.png",
+          },
+          {
+            id: "feat1-5",
+            title: "Vacant Parking System",
+            description:
+              "VMukti's solution helps with intelligent parking management which integrates with hospital infrastructure to deliver real-time slot detection streamlining emergency flow and reducing congestion with surgical accuracy.",
+            image: "../../assets/feat1_industry_heal_5.png",
+          },
+          {
+            id: "feat1-6",
+            title: "Staff Movement Tracking",
+            description:
+              "Our system continuously tracks postural shifts standing, sitting or falls within critical zones like ICUs or ERs, enabling your team to intervene instantly and uphold care standards without compromise.",
+            image: "../../assets/feat1_industry_heal_6.png",
+          },
+        ],
       },
       {
-        title: "Smart Package Sorting",
-        description:
-          "AI detects barcodes and optimizes sorting, ensuring faster, error-free distribution.",
-        image: "war2.png",
-        image_alt: "g",
+        id: "section2",
+        mainHeading:
+          "Precision Surveillance Built for Critical Healthcare Environments",
+        bgColor: "blue",
+        features: [
+          {
+            id: "feat2-1",
+            title: "Zone Breach Alert",
+            description:
+              "We secure your most sensitive spaces ICUs, pharmacies, ORs with surgical precision. Our system flags unauthorized access in real time, ensuring patient zones remain protected, compliant and under your command.",
+            image: "../../assets/feat2_industry_heal_1.png",
+          },
+          {
+            id: "feat2-2",
+            title: "Sensitive Area Control",
+            description:
+              "You control the healthcare space and we deliver vigilance. With computer vision securing restricted zones, unauthorized access is flagged in real time, keeping sensitive operations untouchable.",
+            image: "../../assets/feat2_industry_heal_2.png",
+          },
+          {
+            id: "feat2-3",
+            title: "Hazardous Event Alert",
+            description:
+              "VMukti equips your facility with precision-driven fire and smoke detection tailored for healthcare. Expect instant alerts, seamless integration and response time that protects what matters people and reputation.",
+            image: "../../assets/feat2_industry_heal_3.png",
+          },
+          {
+            id: "feat2-4",
+            title: "Fall Risk Monitoring",
+            description:
+              "Our computer vision system monitors patient behavior in real time detecting distress or falls instantly and triggering alerts, so your staff responds faster with zero compromise on patient safety.",
+            image: "../../assets/feat2_industry_heal_4.png",
+          },
+        ],
       },
       {
-        title: "Automated Quality Control",
-        description:
-          "AI inspects products for defects, ensuring compliance and reducing returns.",
-        image: "war3.png",
-        image_alt: "Automated Irrigation Management",
-      },
-      {
-        title: "Warehouse Space Optimization",
-        description:
-          "AI predicts inventory movement to maximize storage efficiency.",
-        image: "war4.png",
-        image_alt: "Livestock Health & Activity Tracking",
-      },
-      {
-        title: "Real-Time Fleet Monitoring",
-        description:
-          "AI tracks vehicle conditions and alerts for maintenance to prevent breakdowns.",
-        image: "war5.png",
-        image_alt: "Supply Chain & Market Forecasting",
-      },
-      {
-        title: "Automated Shipment Tracking & ETA Prediction",
-        description: "AI predicts accurate delivery times for better planning.",
-        image: "war6.png",
-        image_alt: "Farm Security & Intrusion Detection",
+        id: "section3",
+        mainHeading:
+          "Intelligent Visual Compliance That Adapts to Healthcare Protocols",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat3-1",
+            title: "PPE Adherence Check",
+            description:
+              "Our advanced visual intelligence platform enforces hygiene compliance, automates infection control protocols and delivers tamper-proof audit trails empowering your facility to meet the highest clinical standards effortlessly.",
+            image: "../../assets/feat3_industry_heal_1.png",
+          },
+          {
+            id: "feat3-2",
+            title: "Hand Wash Policy",
+            description:
+              "We bring intelligent oversight to your hygiene protocols. Through surgical-grade visual monitoring, you gain real-time enforcement of handwashing compliance minimizing infection risk and maximizing operational trust.",
+            image: "../../assets/feat3_industry_heal_2.png",
+          },
+          {
+            id: "feat3-3",
+            title: "No-Smoking Compliance",
+            description:
+              "We deploy real-time behavior analytics to flag smoking in restricted hospital zones. With VMukti, you gain precision alerts and automated compliance because risk has no place in your critical care spaces.",
+            image: "../../assets/feat3_industry_heal_3.png",
+          },
+        ],
       },
     ],
-    keyBenefits: [
-      {
-        title: "Faster & More Accurate Order Fulfillment",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="47" height="34" viewBox="0 0 47 34" fill="none">
-  <path fillRule="evenodd" clipRule="evenodd" d="M5.15438 26.4948C5.15438 26.1936 5.11265 25.5905 5.87777 25.5905H13.4735C14.4993 25.5905 14.3296 27.0374 13.6543 27.0374H5.69696C5.47923 27.0374 5.15438 26.7126 5.15438 26.4948ZM17.3618 7.86713H3.16504V29.7501H21.0692V2.26074C20.8116 2.44952 18.8816 6.07561 18.5198 6.67403C18.2447 7.12902 18.0424 7.86713 17.3618 7.86713Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M31.9205 22.7876C32.643 22.7876 34.7193 25.5547 35.7185 26.2238C36.1384 25.9425 39.6731 22.3142 40.3527 21.6346C40.6586 21.3287 41.1088 20.6579 41.6556 20.739C42.1454 20.8115 42.6336 21.4316 41.9848 22.091L36.2422 27.8339C35.6531 28.3825 35.216 27.9449 34.7911 27.5128L31.3594 24.0709C30.9457 23.5147 31.1901 22.7876 31.9205 22.7876ZM27.1279 24.0535C27.1279 26.334 27.606 28.2139 28.884 29.9837C29.0572 30.2235 29.1753 30.3749 29.3653 30.5875C30.0468 31.3506 30.2358 31.588 31.1446 32.2443C32.9144 33.5224 34.7942 34.0004 37.0748 34.0004C41.9125 34.0004 46.2982 29.6149 46.2982 24.7769C46.2982 22.4611 45.8566 20.667 44.5422 18.8469C44.3691 18.6071 44.2508 18.4557 44.0609 18.243L42.9323 17.1109C41.4713 15.8358 39.2325 14.8301 37.2557 14.8301C35.3035 14.8301 34.3226 14.9406 32.632 15.7226C32.1135 15.9624 31.6347 16.2388 31.1973 16.5484C29.8021 17.5362 28.7403 18.7874 28.0293 20.3432C27.5575 21.376 27.1279 22.5584 27.1279 24.0535Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M22.6064 29.7501H26.9469C24.6206 25.3537 25.3192 20.1189 28.8232 16.6158C31.6714 13.7683 35.6636 12.6047 39.5894 13.6714C39.8554 13.7436 40.1213 13.856 40.4203 13.9256V7.86713H26.314C25.5266 7.86713 25.2714 6.83338 24.7594 5.98551C24.6068 5.7328 24.4637 5.47467 24.3286 5.24065L23.0627 2.98003C22.8961 2.6898 22.8635 2.44904 22.6064 2.26074V29.7501Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M0 6.32978H17L20.5266 0H3.5266L0 6.32978Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M26.675 6.32978H43.675L40.1484 0H23.1484L26.675 6.32978Z" fill="white"/>
-</svg>`),
-      },
-      {
-        title: "Real-Time Inventory Management",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-  <path fillRule="evenodd" clipRule="evenodd" d="M5.86446 13.3347C5.86446 13.4912 5.91969 13.488 6.00406 13.614C4.99264 13.614 3.00198 13.9301 3.00198 12.9158V4.04935C3.00198 3.69643 3.25387 3.35114 3.63033 3.35114H24.4352C24.8721 3.35114 25.1335 3.73826 25.1335 4.18895V12.846C25.1335 13.4879 24.5641 13.6183 24.019 13.6166C23.3897 13.6147 22.7606 13.614 22.1314 13.614C22.1792 13.5288 22.2012 13.5394 22.2012 13.4045V6.28337H20.2464V8.51749C20.2464 9.41936 18.9944 9.21559 18.0821 9.21559C16.7913 9.21559 17.1047 8.3787 17.1047 6.28337H15.1498V13.4045C15.1498 13.6714 15.1284 13.4299 15.2197 13.614H12.9158C13.0871 12.8789 12.9855 7.47591 12.9855 6.28337H10.961V8.58734C10.961 9.41845 9.62486 9.21559 8.72684 9.21559C8.28814 9.21559 7.88913 9.0301 7.88913 8.58734V6.28337H5.86446V13.3347ZM0 1.67562V28.694C0 29.028 0.145797 29.3628 0.335553 29.6152C0.668057 30.0576 1.15834 30.3697 1.81512 30.3697H20.1766C20.6508 30.3697 20.2157 29.5751 20.1299 29.3691C19.9809 29.0114 19.8853 29.0292 19.5484 28.9034C18.3683 28.4626 18.6406 27.7417 18.6406 25.9015C18.6406 24.669 19.8135 25.0264 20.1097 24.3685C20.7376 22.9745 20.037 23.3776 20.037 22.4805C20.037 21.6238 21.4333 20.8957 21.4333 20.5257C21.4333 19.4428 21.7721 19.6879 19.4086 19.6879V21.9918C19.4086 22.864 18.1288 22.6201 16.965 22.6201C15.6438 22.6201 16.8302 19.6879 16.1273 19.6879H14.3121V26.8091C14.3121 27.076 14.2907 26.8345 14.3818 27.0185H12.078C12.1258 26.9333 12.1478 26.9438 12.1478 26.8091V19.6879H10.193V21.922C10.193 22.8801 9.00228 22.6201 7.67958 22.6201C7.33458 22.6201 7.05132 22.3369 7.05132 21.9918V19.6879H5.0965V27.0185C4.14305 27.0185 3.00198 27.2311 3.00198 26.3902V17.4538C3.00198 16.9349 3.51896 16.7557 4.04924 16.7557H24.0862C25.4052 16.7557 25.1335 17.6498 25.1335 18.9199C25.2961 18.811 25.4978 18.6406 25.7618 18.6406H28.1355V1.88507C28.1355 0.805522 27.33 0 26.2505 0H1.88497C0.917408 0 0 0.735266 0 1.67562Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M27.0186 30.1598C23.7143 30.1598 22.5602 26.672 24.418 24.5572C25.3597 23.4853 27.1309 23.2163 28.4171 23.8742C29.9166 24.6411 30.6629 26.6183 29.9288 28.183C29.4337 29.2382 28.3587 30.1598 27.0186 30.1598ZM25.4827 20.8744C25.1187 20.9591 24.9064 21.0306 24.5839 21.1625C23.6569 21.5417 23.8894 21.749 23.1087 21.3633C22.9008 21.2605 22.6822 21.1905 22.4806 21.0838L21.1379 22.464C21.2456 22.8728 21.5562 23.2951 21.6428 23.667C21.4259 23.991 20.9558 24.9111 20.9447 25.4124C20.5055 25.5147 20.197 25.7289 19.7578 25.8313V27.8558C19.9484 27.9003 20.6461 28.1341 20.7869 28.2231C21.0267 28.3746 21.0575 29.0093 21.4597 29.718C21.8404 30.3883 21.3652 30.3008 21.1541 31.207C21.2481 31.3474 22.4033 32.5335 22.4806 32.5335C22.8345 32.5335 23.3865 32.1146 23.5977 32.1146C23.7635 32.1146 24.5474 32.5173 25.1108 32.696C25.2456 32.7387 25.35 32.7587 25.4388 32.8567L25.9016 33.9996H27.8564L28.2283 32.9753C28.407 32.5895 28.9116 32.7345 29.695 32.2757C29.9594 32.1207 29.9162 32.0413 30.1634 32.1096C30.5355 32.2121 30.7617 32.4297 31.2075 32.5335L32.5877 31.1908C32.5271 31.0472 32.4743 30.8822 32.3944 30.7183C31.8628 29.6279 32.3289 29.9793 32.698 28.718C32.8657 28.1452 32.7136 28.3312 33.4217 28.0455C33.6344 27.9596 33.7672 27.8752 34.0002 27.8558V25.8313C32.4607 25.4726 32.8927 25.2701 32.5117 24.4574C32.3597 24.1333 32.0631 23.7954 32.1766 23.4575C32.3039 23.0785 32.5082 22.8206 32.6038 22.4103C32.3244 22.2233 31.4494 21.1537 31.2075 21.1537C30.8941 21.1537 30.3536 21.5725 30.0904 21.5725C29.9623 21.5725 29.565 21.3409 29.4168 21.2688C29.1889 21.1581 28.9151 21.0615 28.6586 20.9798C28.1959 20.8326 28.2929 20.8806 28.1338 20.4574C28.0553 20.2488 27.9053 19.8974 27.8564 19.6875H25.9016C25.7956 19.9083 25.5045 20.6116 25.4827 20.8744Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M17.0352 21.9224C18.0213 21.9224 18.7107 22.0725 18.7107 21.713V19.8977C18.7107 19.5382 18.0213 19.6883 17.0352 19.6883V21.9224Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M7.74902 19.897V21.9216H9.42464V19.6875H7.95847C7.79765 19.6875 7.74902 19.7361 7.74902 19.897Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M8.58691 8.44747H10.2625V6.2832H8.58691V8.44747Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M17.8721 8.44747H19.5476V6.2832H17.8721V8.44747Z" fill="white"/>
-</svg>`),
-      },
-      {
-        title: "Reduced Downtime & Equipment Maintenance",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="30" height="34" viewBox="0 0 30 34" fill="none">
-  <path fillRule="evenodd" clipRule="evenodd" d="M15.1632 23.0352C12.7864 23.0352 10.6681 22.1723 8.82562 20.7991C8.13939 20.2876 7.49529 19.563 6.98428 18.8851C5.9445 17.5054 5.0309 15.2719 5.0309 13.3986C5.0309 10.6033 5.46444 9.04367 6.98554 6.85064C7.1532 6.60896 7.36424 6.35518 7.56428 6.15404C8.30895 5.40527 8.57766 5.04999 9.56464 4.39897C10.7933 3.58844 12.6805 2.8381 14.1718 2.77069C15.4281 2.71412 16.2059 2.67184 17.5451 3.01001C18.9393 3.36215 19.8122 3.77669 20.9601 4.555C24.8506 7.19289 26.4897 12.7988 24.3755 17.0843C24.1004 17.642 23.8413 18.1725 23.4732 18.662C22.3437 20.1644 21.2147 21.2738 19.3429 22.1132C18.1552 22.6458 16.5502 23.0352 15.1632 23.0352ZM12.3999 25.586V26.7905H9.77819C8.21247 26.7905 9.95889 28.2501 10.5365 28.9371L13.1493 31.922C13.3221 32.1456 13.3658 32.177 13.5525 32.3692C15.1947 34.06 14.7475 34.7649 16.3467 32.8631L20.0731 28.5828C20.221 28.4063 21.1859 27.4225 21.1859 27.2865C21.1859 26.889 20.941 26.7905 20.5483 26.7905H17.8557V25.4443C20.6437 24.7946 22.9753 23.4412 24.8168 21.3517L25.418 20.6067C25.5316 20.453 25.6001 20.3383 25.7099 20.1902C26.9498 18.5179 27.9881 15.6666 27.9881 13.4695C27.9881 10.9806 27.7835 9.46654 26.7373 7.28042C26.563 6.91633 26.3936 6.61414 26.1875 6.27127C25.0892 4.445 23.3266 2.66054 21.4458 1.66004C16.7031 -0.862667 11.5823 -0.505339 7.29825 2.69935C5.75437 3.85416 4.38223 5.58426 3.556 7.31813C1.47251 11.6896 1.9975 16.9914 5.02099 20.7775C5.91385 21.8954 6.98663 22.9245 8.2054 23.6867C8.89617 24.1186 9.43767 24.3947 10.2051 24.7338C10.5557 24.8886 10.8896 25.003 11.2919 25.135C11.5196 25.2098 11.6851 25.2516 11.9054 25.3009C12.1447 25.3547 12.3999 25.3332 12.3999 25.586Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M15.2343 21.5469C14.4307 21.5469 14.6675 20.8489 14.6675 19.1379C14.6675 18.4683 15.6595 18.2957 15.6595 19.2796C15.6595 19.9529 15.8368 21.5469 15.2343 21.5469ZM11.1955 20.3425C10.1443 20.3425 10.8586 19.3712 10.9828 19.1377C11.5273 18.1139 12.0458 18.7172 12.0458 18.9254C12.0458 19.2764 12.0579 19.2023 11.9212 19.4385C11.7567 19.7226 11.4702 20.3425 11.1955 20.3425ZM18.6354 18.571C18.9478 18.571 19.0015 18.607 19.1494 18.8365C19.5548 19.4653 19.7938 19.7771 19.5565 20.2716C18.9121 20.4217 18.9112 20.3879 18.4457 19.54C18.3648 19.3924 18.2209 19.149 18.2301 19.0038C18.2402 18.8471 18.4313 18.571 18.6354 18.571ZM20.8319 16.3746C20.8319 16.1195 21.112 15.7427 21.8212 16.1646C21.9805 16.2594 22.2027 16.3642 22.3644 16.4718C22.6814 16.6827 22.9117 17.3666 22.0365 17.3666C22.0363 17.3666 20.8319 16.9311 20.8319 16.3746ZM8.14878 17.3666C7.72529 17.3666 7.23313 16.9057 8.18822 16.3431C8.34426 16.2512 8.78331 15.9493 8.9282 15.9493C9.46922 15.9493 9.62604 16.4776 9.28143 16.7966C9.15855 16.9104 8.36815 17.3666 8.14878 17.3666ZM20.9027 12.9735C20.9027 12.1694 21.3446 12.4066 23.4535 12.4066C23.9327 12.4066 23.9327 13.3278 23.4535 13.3278H21.2571C21.0918 13.3278 20.9027 13.1386 20.9027 12.9735ZM19.2731 16.5163C19.2731 16.7748 18.9192 17.2762 18.3331 16.7482L15.7126 14.1248C14.7954 13.2066 15.1422 13.8107 14.6832 13.4537C14.5412 13.3432 14.4128 13.066 14.4052 12.8941C14.3933 12.6232 14.5965 12.4447 14.6477 12.2451C14.901 11.2588 14.3694 8.53192 14.8631 8.13295C15.041 7.98932 15.2792 7.99671 15.4599 8.13829C15.9124 8.49264 15.511 11.5116 15.6755 12.2487L15.9116 12.9338C16.1059 13.4144 19.2731 16.0614 19.2731 16.5163ZM6.94416 12.4066H8.9282C9.60829 12.4066 9.5976 13.3278 8.9282 13.3278C8.23553 13.3278 7.22936 13.4059 6.58997 13.2569C6.42686 12.917 6.40298 12.4066 6.94416 12.4066ZM7.65271 8.8638C7.65271 7.82904 8.98743 8.69724 9.24262 8.90466C9.39741 9.03037 9.50174 9.18389 9.45806 9.39257C9.29291 10.1846 8.44452 9.55255 8.22311 9.42715C8.16089 9.39195 7.9126 9.25334 7.86467 9.21862C7.75499 9.13879 7.65271 9.05299 7.65271 8.8638ZM21.2571 9.78495C21.149 9.78495 20.2732 9.32798 21.3493 8.74343C21.5756 8.62039 21.8883 8.36772 22.1782 8.36772C22.4557 8.36772 23.2483 8.79764 21.8716 9.54924C21.6991 9.64352 21.4683 9.78495 21.2571 9.78495ZM14.6675 6.59644V4.68327C14.6675 4.02659 15.6595 3.91424 15.6595 4.89589V6.45471C15.6595 7.41624 14.6675 7.30671 14.6675 6.59644ZM10.6287 5.88775C10.6287 5.48406 10.8503 5.39181 11.1955 5.39181C11.4455 5.39181 11.592 5.75559 11.7051 5.9451C11.9342 6.32914 12.0458 6.36875 12.0458 6.8089C12.0458 7.13512 11.7127 7.16324 11.479 7.16324C11.1742 7.16324 10.6287 5.97983 10.6287 5.88775ZM18.7063 7.16324C17.7276 7.16324 18.5721 5.97967 18.7072 5.74711C19.1178 5.03998 20.0286 5.42182 19.4913 6.3183C19.2039 6.79789 19.101 7.16324 18.7063 7.16324ZM5.95215 12.8317C5.95215 14.3272 6.30053 15.4746 6.72071 16.5273C6.93238 17.0578 7.22041 17.5457 7.52416 17.991C9.09899 20.2993 11.9072 22.043 14.7384 22.043C16.5362 22.043 17.5739 21.8989 19.1561 21.1467C19.4473 21.0083 19.6076 20.8945 19.8868 20.7435C20.1475 20.6025 20.3402 20.4643 20.5695 20.2925C26.4978 15.8511 24.9921 7.28361 19.1082 4.56464C16.6336 3.42098 13.6324 3.35121 11.1713 4.58821C8.05105 6.15661 5.95215 9.24077 5.95215 12.8317Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M26.0039 21.4764C26.3086 21.5017 27.5461 22.0633 28.3192 20.6032C28.5452 20.1766 29.0507 19.1883 29.0507 18.713C29.0507 18.1074 28.6734 17.4221 28.2004 17.2959C28.1624 17.7541 27.4785 19.1495 27.2494 19.5334L26.0039 21.4764Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M0 12.8317C0 13.6809 0.651961 14.3735 1.41707 14.3905L1.3462 12.4066C1.3462 11.9354 1.41707 11.7932 1.41707 11.3438C0.665003 11.4063 0 12.0499 0 12.8317Z" fill="white"/>
-</svg>`),
-      },
-      {
-        title: "Enhanced Security & Loss Prevention",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="36" height="34" viewBox="0 0 36 34" fill="none">
-  <path fillRule="evenodd" clipRule="evenodd" d="M26.1081 30.8036C20.7994 30.8036 18.4414 24.4827 21.9841 20.94C25.5359 17.3881 31.8475 19.8143 31.8475 25.0642C31.8475 26.5779 31.1755 28.0791 30.1603 29.1165C29.953 29.3285 29.662 29.5666 29.4079 29.7442C28.5051 30.3751 27.3361 30.8036 26.1081 30.8036ZM20.5868 17.7992L18.8603 19.4872L19.497 20.9958C19.2096 21.4249 18.8437 22.1747 18.6986 22.7401C18.5651 23.2596 18.5893 23.2463 18.0723 23.4216C17.7663 23.5254 17.3839 23.7329 17.0996 23.7565V26.2993C17.4109 26.3717 17.6893 26.5001 18.0137 26.6203C18.572 26.8271 18.5178 26.6999 18.6735 27.2681C18.8355 27.8594 19.2054 28.6244 19.497 29.06L18.8432 30.5856L20.532 32.2388L22.0399 31.6027C23.9405 32.8755 24.0644 31.9784 24.4595 33.0334C24.5811 33.3581 24.7269 33.6843 24.8005 34.0001H27.3432C27.3672 33.7112 27.5581 33.3811 27.6605 33.0823C27.8359 32.5705 27.7955 32.5457 28.3013 32.4154C28.9262 32.2545 29.6444 31.9103 30.1039 31.6027L31.6294 32.2566L33.3175 30.5299C33.1874 30.2994 33.1371 30.1582 33.0307 29.9109C32.9253 29.666 32.8264 29.5134 32.7313 29.2566C32.6069 28.9203 32.691 28.9698 32.8592 28.6936L33.4012 27.4172C33.6328 26.6919 33.3886 26.9204 34.3378 26.5375C34.5856 26.4378 34.7835 26.3599 35.044 26.2993V23.7565C34.8655 23.7416 33.8544 23.3705 33.7057 23.2787C33.4563 23.1248 33.5212 23.0252 33.4187 22.6938C33.3362 22.4272 33.251 22.2119 33.1665 22.0016C32.6463 20.7078 32.4611 21.414 33.0086 20.1954C33.1144 19.96 33.1818 19.767 33.3004 19.5428L31.5391 17.817L30.3005 18.3684C29.9641 18.4928 30.0137 18.4087 29.7374 18.2405L28.4611 17.6984C28.1375 17.5951 27.9717 17.6383 27.821 17.3941C27.7292 17.2453 27.3581 16.2342 27.3432 16.0557H24.8005L24.3187 17.3902C24.177 17.6446 24.0692 17.5786 23.7377 17.6809C23.4711 17.7633 23.2558 17.8486 23.0455 17.9332C22.2208 18.2648 22.2318 18.5122 21.8431 18.3684L20.5868 17.7992Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M18.2626 2.0342C18.2626 2.28127 19.6636 3.09222 19.8609 3.19655C19.4091 3.87128 19.0035 4.46621 18.4908 5.09588C17.1963 6.68534 15.0912 8.70747 13.3814 9.86669C10.6611 11.7112 7.8257 12.9105 4.50991 13.273C4.17872 13.3092 3.87793 13.1993 3.87793 13.5129C3.87793 13.8386 4.5148 13.8451 4.82848 13.87C7.47702 14.0797 9.63141 13.8902 12.1327 13.0497C15.6432 11.8701 18.8966 9.80347 21.2515 6.91206C21.6871 6.37722 22.2246 5.6983 22.5489 5.08544C23.099 5.23238 23.6687 6.01604 24.2924 6.02988C24.3903 5.61023 24.1254 3.53058 24.0431 2.9374C23.9697 2.40881 23.9218 1.83666 23.8695 1.36735C23.835 1.05652 23.8017 0.841057 23.789 0.576216C23.7738 0.261853 23.8098 0 23.4933 0L19.4696 1.42502C19.0104 1.5843 18.2626 1.77275 18.2626 2.0342Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M9.83496 17.5816V27.8977H14.0487C14.0487 26.3931 14.1591 18.1496 13.9759 17.3635C13.273 17.1998 10.9961 17.2909 10.1256 17.2909C9.95558 17.2909 9.83496 17.4114 9.83496 17.5816Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M25.6721 26.2995C25.4751 26.2995 25.3589 26.236 25.2423 26.1481C25.1268 26.0612 25.2085 26.1244 25.0937 26.0061C24.5548 25.4502 24.437 25.5221 24.437 24.9919C24.437 24.652 24.8095 24.556 25.0908 24.556C25.3636 24.556 25.3094 24.8224 25.6721 24.9192C25.9011 24.7658 26.8529 23.7568 27.0523 23.7568C27.7292 23.7568 27.9852 24.4414 27.3552 24.9314C27.0457 25.1718 25.9475 26.2995 25.6721 26.2995ZM22.5481 22.5945C22.5481 24.9127 22.2161 27.3292 24.5844 28.6949C24.855 28.8511 25.6414 29.2055 26.0353 29.2055C26.9579 29.2055 28.1573 28.3721 28.5895 27.8366C29.832 26.2971 29.5952 24.8532 29.5952 22.7397C29.5952 22.1976 28.8392 22.0312 28.028 21.6914C26.0508 20.8635 26.4072 20.6968 25.2341 21.2121L23.3492 22.0151C23.0995 22.1242 22.5481 22.2739 22.5481 22.5945Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M0.0271279 29.3505C0.0271279 30.6577 -0.177194 31.3121 0.535649 31.3121H17.7535C18.1898 31.3121 17.7535 31.2992 17.7535 30.4402C17.7535 29.8772 18.1464 29.5769 18.1894 29.06L0.898304 29.0593C0.507285 29.056 0.0271279 28.9658 0.0271279 29.3505Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M25.3818 9.22617V14.8928C27.2335 14.8928 27.9334 14.6253 28.4238 15.8465C28.6024 16.291 28.6487 16.8333 29.5955 16.8543V9.44407C29.5955 9.19931 29.467 8.93555 29.2322 8.93555H25.6725C25.5023 8.93555 25.3818 9.05603 25.3818 9.22617Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M2.06152 21.7944V27.897H6.27521C6.27521 26.7846 6.37562 22.3193 6.2025 21.5765C5.65056 21.3117 3.5895 21.4312 2.71534 21.4312C2.42092 21.4312 2.06152 21.5095 2.06152 21.7944Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M17.6084 13.0773V19.2525C17.8316 19.1717 17.8707 18.9042 18.2067 18.5431C18.4952 18.2333 19.6266 17.0896 19.9508 16.8728C20.658 16.3997 21.4478 17.0419 21.822 17.0731L21.8262 13.5817C21.8264 13.1224 21.7601 12.8594 21.3134 12.8594H17.9716C17.8028 12.8594 17.7505 12.9785 17.6084 13.0773Z" fill="white"/>
-</svg>`),
-      },
-    ],
+
+    keyBenefits: {
+      heading:
+        "Improved Patient Safety and Monitoring with Computer Vision in Healthcare Industry",
+      description:
+        "Your healthcare facility demands more than surveillance, it requires intelligent oversight. Our advanced video intelligence accelerates response, optimizes workflows and safeguards patients with precision built for modern, high-acuity environments.",
+      benefits: [
+        {
+          image: "../../assets/result_industry_healthcare_1.png",
+          heading: "Data-Driven Decision Making",
+          description:
+            "With VMukti’s advanced computer vision, you get help with refining staff allocation, predicting resource demand and ensuring every square foot works harder for your patients and your bottom line.",
+        },
+        {
+          image: "../../assets/result_industry_healthcare_2.png",
+          heading: "Improved Patient Safety",
+          description:
+            "Our intelligent hospital surveillance ecosystem delivers 24/7 real-time visibility across critical zones empowering your staff to respond faster to falls, anomalies and emergencies with zero blind spots and full operational clarity.",
+        },
+        {
+          image: "../../assets/result_industry_healthcare_3.png",
+          heading: "Enhanced Security",
+          description:
+            "VMukti equips your facility with vision-enabled access systems that restrict unauthorized movement across critical medical zones safeguarding sensitive data, high-risk areas and every person under your care.",
+        },
+        {
+          image: "../../assets/result_industry_healthcare_4.png",
+          heading: "Faster Response Times",
+          description:
+            "Your care environment deserves more than static monitoring. Our edge-driven video analytics detect anomalies in real time, empowering swift clinical response and reducing harm before it escalates.",
+        },
+        {
+          image: "../../assets/result_industry_healthcare_5.png",
+          heading: "Increased Staff Efficiency",
+          description:
+            "We integrate enterprise-grade computer vision into your healthcare environment to reduce staff fatigue and elevate care delivery so your professionals focus on patients while the system handles precision-driven monitoring.",
+        },
+        {
+          image: "../../assets/result_industry_healthcare_6.png",
+          heading: "Smarter Resource & Hygiene Management",
+          description:
+            "Our vision-driven system brings asset traceability and hygiene compliance under one lens mitigating infection risk, optimizing resource use and ensuring operational integrity across healthcare facilities.",
+        },
+      ],
+    },
+
+    cta: {
+      textLines: [
+        "Safeguard Clinical Excellence – Partner with Our Healthcare Surveillance ",
+        "System",
+      ],
+      href: "/healthcare",
+    },
+
+    workflow: {
+      heading:
+        "Our Strategic Approach to Planning Video Surveillance for Healthcare",
+      image: "healthcare_workflow.png",
+    },
   },
-  entertainmentindustry: {
+  // Result image remaining, workflow remaining
+  oilandgas: {
     title: [
-      { text: "Transforming", color: "black" },
-      { text: "Sports & Entertainment", color: "#3F77A5" },
-      { text: "with AI for Deeper Engagement & Peak", color: "black" },
-      { text: "Performance", color: "#db7b3a" },
+      {
+        text: "Securing Every Site with Computer Vision in Power, Oil & Gas",
+        color: "black",
+      },
     ],
-    para: "AI enhances sports and entertainment by optimizing player performance, automating refereeing, and delivering personalized fan experiences.",
-    small_image:
-      "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
-    small_image_alt: "Closeup shot of a bee on a chamomile flower",
-    large_image: "entertainment_mockup.png",
-    large_image_alt: "Closeup shot of a bee on a chamomile flower",
+    para: "Your Oil and Gas sites deal with high-risk environments involving flammable materials, remote locations and complex operations. Manual monitoring often results in delayed detection of leaks, equipment faults or unauthorized access. VMukti Solution uses computer vision in power, oil & gas to offer smart surveillance with real-time alerts and safety violation tracking. Our visual intelligence system ensures faster responses, remote monitoring and better control to keep people and assets safe.",
+
+    large_image: "oilandgas_mockup.png",
+    large_image_alt: "Oil and gas site surveillance illustration",
+
     keyApplications: [
       {
-        title: "Audience Sentiment Analysis",
-        description:
-          "AI processes crowd reactions and social media feedback to improve fan engagement.",
-        image: "ent1.png",
-        image_alt: "Automated Crop Health Monitoring",
+        id: "section1",
+        mainHeading:
+          "Driving Operational Efficiency in Energy Sites with Visual Intelligence",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat1-1",
+            title: "Asset Failure Alert",
+            description:
+              "We empower your operations with intelligent vision tech that spots abnormal equipment behavior before it impacts production, ensuring smooth workflows and safeguarding your most critical assets.",
+            image: "../../assets/feat1_industry_oilgas_1.png",
+          },
+          {
+            id: "feat1-2",
+            title: "Remote Site Surveillance",
+            description:
+              "Your asset protection gets a major upgrade with our visual intelligence, offering non-stop surveillance at unmanned locations minimizing risks, cutting costs and giving you unparalleled control from anywhere.",
+            image: "../../assets/feat1_industry_oilgas_2.png",
+          },
+          {
+            id: "feat1-3",
+            title: "Worker Movement Tracking",
+            description:
+              "With cutting-edge computer vision, we monitor critical behaviors like standing, sitting and falling in oil & gas environments delivering instant alerts that empower your team to act swiftly and prevent incidents.",
+            image: "../../assets/feat1_industry_oilgas_3.png",
+          },
+          {
+            id: "feat1-4",
+            title: "Entry/Exit Monitoring",
+            description:
+              "Our computer vision locks down every high-security zone by precisely tracking every entry and exit with timestamp accuracy giving you airtight control and foolproof audit trails for total peace of mind.",
+            image: "../../assets/feat1_industry_oilgas_4.png",
+          },
+        ],
       },
       {
-        title: "Virtual Refereeing & Fair Play Monitoring",
-        description:
-          "AI tracks player movements and rule violations to assist referees in accurate decision-making.",
-        image: "ent2.png",
-        image_alt: "g",
+        id: "section2",
+        mainHeading:
+          "Simplifying Surveillance Operations with Computer Vision Solutions for Oil & Gas",
+        bgColor: "blue",
+        features: [
+          {
+            id: "feat2-1",
+            title: "Perimeter Breach Alert",
+            description:
+              "We deliver precision monitoring of safety boundaries with instant alerts the moment anyone crosses restricted zones, giving you unmatched control to prevent accidents and unauthorized access effortlessly.",
+            image: "../../assets/feat2_industry_oilgas_1.png",
+          },
+          {
+            id: "feat2-2",
+            title: "Foreign Object Monitoring",
+            description:
+              "We detect foreign or misplaced objects near vital infrastructure pipelines, control panels, fuel tanks ensuring you act fast and prevent costly disruptions before they happen. Precision matters.",
+            image: "../../assets/feat2_industry_oilgas_2.png",
+          },
+          {
+            id: "feat2-3",
+            title: "Personnel Presence Scan",
+            description:
+              "Your facility gains unmatched precision in detecting human presence in critical zones, ensuring strict safety compliance while minimizing manual checks and elevating operational excellence with advanced tech.",
+            image: "../../assets/feat2_industry_oilgas_3.png",
+          },
+          {
+            id: "feat2-4",
+            title: "Restricted Access Alert",
+            description:
+              "VMukti elevates your perimeter defense by delivering instant, AI-driven alerts on unauthorized entries in critical areas, ensuring your operations maintain uncompromised security and rapid incident response.",
+            image: "../../assets/feat2_industry_oilgas_4.png",
+          },
+          {
+            id: "feat2-5",
+            title: "Combustion Threat Alert",
+            description:
+              "With our advanced visual AI, fire and smoke are identified the moment they appear, giving your team real-time alerts to neutralize threats immediately and maintain uninterrupted, secure operations.",
+            image: "../../assets/feat2_industry_oilgas_5.png",
+          },
+          {
+            id: "feat2-6",
+            title: "Infrastructure Monitoring",
+            description:
+              "Our advanced surveillance solutions provide instant, precise monitoring across pipelines and refineries ensuring your operations remain secure, compliant and uninterrupted with intelligent, real-time threat detection.",
+            image: "../../assets/feat2_industry_oilgas_6.png",
+          },
+          {
+            id: "feat2-7",
+            title: "Emergency Response Management",
+            description:
+              "We empower your emergency teams with crystal-clear visual data from advanced surveillance, enabling rapid, informed decisions that minimize risks and safeguard operations in the most critical moments.",
+            image: "../../assets/feat2_industry_oilgas_7.png",
+          },
+        ],
       },
       {
-        title: "Smart Fan Engagement & Personalized Content",
-        description:
-          "AI analyzes fan preferences to deliver tailored sports highlights and recommendations.",
-        image: "ent3.png",
-        image_alt: "Automated Irrigation Management",
-      },
-      {
-        title: "Athlete Performance Tracking & Injury Prevention",
-        description:
-          "AI monitors player biomechanics to optimize training and reduce injury risks.",
-        image: "ent4.png",
-        image_alt: "Livestock Health & Activity Tracking",
-      },
-      {
-        title: "Real-Time Sports Betting & Fraud Detection",
-        description:
-          "AI predicts game outcomes and detects fraudulent betting activities.",
-        image: "ent5.png",
-        image_alt: "Supply Chain & Market Forecasting",
-      },
-      {
-        title: "Live Audience & Stadium Crowd Management",
-        description:
-          "AI optimizes seating, monitors crowd density, and improves event security.",
-        image: "ent6.png",
-        image_alt: "Farm Security & Intrusion Detection",
+        id: "section3",
+        mainHeading:
+          "Maintaining Safety Standards Through Automated Visual Compliance",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat3-1",
+            title: "Hazardous Behavior Alert",
+            description:
+              "Your restricted zones are fortified with cutting-edge computer vision, delivering real-time analytics that enforce strict safety protocols and proactively minimize fire risks because precision saves lives.",
+            image: "../../assets/feat3_industry_oilgas_1.png",
+          },
+          {
+            id: "feat3-2",
+            title: "Safety Gear Compliance",
+            description:
+              "We instantly pinpoint personnel lacking essential PPE helmets, vests, gloves, boots, empowering you to enforce safety protocols rigorously and slash workplace injury risks with precision and authority.",
+            image: "../../assets/feat3_industry_oilgas_2.png",
+          },
+        ],
       },
     ],
-    keyBenefits: [
-      {
-        title: "Enhanced Game & Player Performance Analysis",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
-  <path fillRule="evenodd" clipRule="evenodd" d="M22.2669 17.0663C21.7443 17.0663 20.6728 16.4787 20.3335 16.3996L19.2583 19.4578C19.1443 19.8012 19.0344 20.1344 18.895 20.4944C18.7571 20.8506 18.6527 21.2091 18.5425 21.5419C18.1742 22.6546 17.5571 23.6751 18.3407 24.7258C18.7663 25.2965 19.3734 25.5729 20.266 25.4672C21.0809 25.3708 21.9802 25.2659 22.7539 25.1534L26.4668 24.6663C26.9081 24.6184 27.2386 24.533 27.7335 24.533L27.8115 25.0644L29.3386 24.8048C29.5865 24.7548 29.8407 24.7187 30.0731 24.6725C30.3271 24.6221 30.6017 24.5389 30.8669 24.533L29.9867 21.0131C29.7499 20.0658 29.4066 19.333 30.3335 19.333C30.775 19.333 30.8943 20.3101 30.9868 20.6797C31.1294 21.2503 31.2615 21.7782 31.4002 22.333L33.0534 28.9464C33.1961 29.517 33.3281 30.0449 33.4669 30.5997C33.5843 31.0692 33.9173 31.933 33.1335 31.933C32.676 31.933 32.6253 31.5602 32.5327 31.2005C32.4419 30.8479 32.3493 30.4873 32.2668 30.133L29.2668 30.6663C29.2974 31.0341 29.7061 32.5612 29.8448 32.8884C30.598 34.6649 33.4275 34.1 33.4669 32.333C33.8631 32.3 34.1335 31.8541 34.1335 31.3996C34.1335 30.8389 31.6091 21.1619 31.2814 19.8517C30.8376 18.0767 29.2002 18.9166 29.2002 19.7996C29.2002 20.0529 29.2834 20.2509 29.3335 20.4663C28.555 20.4663 25.0805 20.9527 24.0964 21.0959L22.3335 21.333V20.9996L26.888 20.4207C27.2259 20.314 27.046 20.3021 27.3554 19.6882C27.4573 19.4862 27.49 19.3936 27.5809 19.1804L28.8449 16.4444C28.9455 16.2285 28.9813 16.1012 29.0887 15.8882C29.1938 15.6801 29.2434 15.5209 29.3335 15.333C28.1686 15.6044 27.0219 15.9627 25.8168 16.2162C25.1989 16.3462 22.6153 17.0663 22.2669 17.0663Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M20.0667 12.9338L21.4856 13.5148C22.2534 13.8199 22.1561 13.9285 23.0497 13.7167C23.5488 13.5984 24.1136 13.4553 24.6532 13.3203C24.9003 13.2586 25.1711 13.1937 25.4533 13.1199C25.4883 13.1107 25.8717 13.0098 25.8886 13.0092C26.1213 13.001 26.115 13.0461 26.1334 13.2671C25.0523 13.519 23.9712 13.7975 22.8802 14.0809C22.1376 14.2738 22.2409 14.1489 21.3429 13.7909C20.5204 13.463 14.4257 10.8671 14.0001 10.8671C13.3569 10.8671 12.7334 11.4521 12.7334 12.0671C12.7334 13.2019 13.7653 13.3258 14.5773 13.6898L19.5912 15.7426C19.9859 15.9043 20.3846 16.0748 20.8193 16.2479C22.5215 16.9257 21.911 16.8729 24.2801 16.2805C25.1054 16.0742 29.0652 15.2458 29.5169 14.8506C30.1181 14.3246 30.2365 13.1412 28.7901 12.6103L25.21 11.2571C23.0916 10.4743 23.0226 10.1245 21.4846 11.6183C21.3284 11.77 21.271 11.7822 21.1172 11.9176C20.9865 12.0328 20.9123 12.1326 20.7842 12.2513C20.5141 12.5016 20.2784 12.6177 20.0667 12.9338Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M19.7995 25.7997C19.7995 26.1809 19.8379 26.3701 19.8723 26.7269C19.8963 26.9744 19.9305 27.3393 19.9708 27.6285C20.0549 28.2338 20.1329 28.8368 20.1329 29.4664H19.6662L20.0908 32.1085C20.163 32.6319 20.0235 32.533 21.5329 32.533L25.2014 32.5313C25.6765 32.5266 25.9996 32.533 25.9996 32.9997C25.9996 33.311 25.8441 33.4663 25.5329 33.4663H13.7329C13.4683 33.4663 13.3995 33.207 13.3995 32.9997C13.3995 32.4848 13.8162 32.5254 14.333 32.5331C15.26 32.547 15.103 32.8392 14.7703 30.7623C14.7039 30.3477 14.5996 29.869 14.5996 29.4664H13.5996C12.7852 29.4664 11.8662 30.3351 11.8662 31.133C11.8662 32.004 11.8956 32.3146 12.6968 32.9691C13.0372 33.2472 13.0242 33.9997 13.9329 33.9997H25.4662C26.6763 33.9997 26.9155 32.3762 25.8051 32.0608C25.4387 31.9567 24.6266 31.9997 24.1329 31.9997C24.4336 30.709 23.5996 26.7852 23.5996 25.333L19.7995 25.7997Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M0 1.99999C0 2.22887 1.06376 2.98979 1.28224 3.18441L4.90514 6.29485C5.06339 6.41796 5.11376 6.49443 5.25685 6.60979L8.57183 9.42814C9.08016 9.8237 10.0783 10.784 10.6 11.1333C10.7218 10.9515 10.8568 10.7843 11.0167 10.6167C11.1883 10.4368 11.2731 10.3067 11.4499 10.1165C11.5673 9.9901 11.5618 9.97488 11.6569 9.85687L12.3334 9.06665C12.2561 8.96122 11.8395 8.61766 11.6949 8.50516C11.5461 8.3894 11.5145 8.33366 11.3801 8.21994L2.41994 0.580037C2.19053 0.385693 1.97307 0.160559 1.73332 0C1.00258 0.170212 0 1.33967 0 1.99999Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M29.4001 5.06681C29.4001 4.91407 29.4226 4.98925 29.4667 4.80014C29.8983 4.76425 30.2667 4.85711 30.2667 5.53347C30.2667 6.04166 29.4001 5.79463 29.4001 5.06681ZM24.5334 9.93349C25.0744 9.8074 25.0344 9.66682 25.8667 9.66682C26.6275 9.66682 26.7387 10.1968 27.2463 9.17964C27.8504 7.96905 27.2423 7.08781 28.4355 6.83555C29.368 6.63835 30.5174 6.81869 32.6 6.33348C32.5629 5.88762 32.1118 5.84038 31.6274 5.77275C30.743 5.64917 31.4963 5.68485 30.3813 4.35225C30.2188 4.15804 30.0478 4.05098 29.8468 3.88668C29.623 3.70383 29.4501 3.62287 29.1787 3.48807C27.0738 2.44267 24.5628 3.41513 23.694 5.49404C23.2281 6.60872 23.2294 7.97048 23.8686 9.06496C23.9901 9.27304 24.358 9.80495 24.5334 9.93349Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M28.0664 25.9337L28.5331 27.867C28.6142 28.1913 28.6861 28.4783 28.7729 28.8271C28.8485 29.1303 28.9935 29.5191 28.9997 29.8004C29.371 29.7921 30.1338 29.6187 30.4838 29.5511C30.7548 29.4988 30.9663 29.4495 31.2087 29.4093C31.4911 29.3625 31.7462 29.2881 31.9998 29.2671C31.9998 28.85 31.4789 26.9841 31.3196 26.3472C31.2641 26.1253 31.158 25.5913 31.0664 25.4004C30.4929 25.4004 28.68 25.8827 28.0664 25.9337Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M19.9337 16.2003L16.7986 14.9354C16.2927 14.7117 15.7729 14.5085 15.2385 14.2955L13.667 13.667L16.3722 17.1618C16.6596 17.53 16.6991 17.7004 17.1807 17.8884C17.6101 18.0559 17.9996 17.9449 18.3331 17.7331L19.1516 17.0182C19.5092 16.6709 19.8581 16.4834 19.9337 16.2003Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M15.9335 32.5335H19.2669C19.2669 32.1049 19.1104 31.4841 19.0376 31.0294L18.8001 29.4668H15.4668L15.8113 31.7224C15.8436 31.955 15.9278 32.2786 15.9335 32.5335Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M26.6664 10.1338C26.4005 10.1338 26.4702 10.0004 25.5331 10.0004C25.3032 10.0004 25.2749 10.0498 25.0664 10.0671C25.1625 10.427 25.7027 10.7571 26.0016 10.9319C26.9302 11.475 28.3823 11.4825 29.3222 10.9229C29.6236 10.7435 30.1745 10.4111 30.2664 10.0671C30.0601 10.019 29.8675 9.92136 29.625 9.84183C29.3481 9.75101 29.1888 9.68093 28.9414 9.59202C28.5349 9.44587 28.0336 9.23487 27.5997 9.13379C27.5146 9.4993 27.0922 10.1338 26.6664 10.1338Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M27.7334 8.86614C28.2341 8.90781 29.16 9.45481 29.6668 9.46609C29.7651 9.09766 30.0545 8.94907 30.0667 8.39948C29.3437 8.39948 28.6621 8.13281 27.8668 8.13281C27.8598 8.44224 27.7573 8.57853 27.7334 8.86614Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M11.2002 11.2003C12.2463 11.2003 11.8141 11.3882 12.4669 11.7337C12.632 11.3894 12.7348 10.9734 13.1335 10.867V10.667C12.5691 10.5163 12.5664 9.87446 12.4669 9.66699C12.3227 9.76352 11.2648 10.9584 11.2002 11.2003Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M27.9336 7.80001C28.1729 7.80538 30.0122 8.07511 30.1336 8.13336C30.1336 7.5277 30.1087 7.4653 30.0003 7C29.6508 7.00782 29.0949 7.10332 28.7307 7.13038C28.2171 7.16851 27.9457 7.25742 27.9336 7.80001Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M29.9336 9.6001C30.1152 9.69621 30.2748 9.77853 30.5336 9.80008C30.7172 9.4532 31.0003 9.06016 31.0003 8.53342C30.6652 8.53342 30.7018 8.47346 30.4003 8.4668C30.3608 8.94215 30.1099 9.26694 29.9336 9.6001Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M30.333 6.99955C30.4141 7.34759 30.4374 7.4537 30.4607 7.87195C30.4924 8.44221 30.6453 8.06419 31.0663 8.26622C31.0663 7.4917 31.2197 6.65539 30.333 6.99955Z" fill="white"/>
-</svg>`),
-      },
-      {
-        title: "Real-Time Automated Crop Health Monitoringnalization",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="49" height="17" viewBox="0 0 49 17" fill="none">
-  <path fillRule="evenodd" clipRule="evenodd" d="M33.8369 14.1179C33.8369 15.9721 34.9659 16.7695 36.8068 16.7695H46.0346C49.0021 16.7695 49.5158 14.5485 48.5684 12.2208C47.9408 10.6797 46.244 9.23926 44.3376 9.23926C44.2803 9.93089 43.5219 10.5524 43.0938 10.9648L41.3678 12.3149C41.2363 12.2006 41.1216 12.0987 40.969 11.9711C40.3056 11.419 39.4722 10.8123 38.9099 10.1062C38.4789 9.56504 38.5835 9.23926 38.1857 9.23926C37.1471 9.23926 35.892 10.0672 35.187 10.8014C34.5132 11.5033 33.8369 12.7909 33.8369 14.1179Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M16.9707 13.7998C16.9707 15.6742 17.4059 16.7695 20.0462 16.7695H28.9561C30.4658 16.7695 32.0317 16.2249 32.0317 14.5421C32.0317 12.3704 31.3126 10.753 29.3121 9.73187C28.7517 9.44598 28.2747 9.23926 27.4707 9.23926C27.36 9.71754 27.2173 9.8568 26.9162 10.1695C26.1746 10.9386 25.3871 11.7216 24.5011 12.3149C23.7101 11.785 21.7442 10.1525 21.5317 9.23926C19.2679 9.23926 16.9707 11.5101 16.9707 13.7998Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M0 14.1179C0 15.934 1.10192 16.7695 2.96993 16.7695H12.1977C16.5317 16.7695 15.7291 11.722 12.5803 9.81136C12.2479 9.60957 11.2899 9.23926 10.8188 9.23926C10.507 9.23926 10.556 9.36526 10.421 9.58353C10.2848 9.80304 10.2448 9.91733 10.0946 10.1062C9.61473 10.7086 8.96387 11.1794 8.45905 11.6521C8.18083 11.9118 7.85856 12.1413 7.53089 12.3149L6.31882 11.2995C6.107 11.1341 6.10871 11.1552 5.91075 10.9648C5.51284 10.5817 4.71902 9.86388 4.66695 9.23926C2.0843 9.23926 0 11.7664 0 14.1179Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M37.2314 4.14824C37.2314 5.52842 37.8732 6.90074 38.3908 7.76119C41.3498 12.6813 45.6108 8.00365 45.6108 4.14824C45.6108 2.02884 43.7781 0.0117188 41.6864 0.0117188H41.1559C39.0565 0.0117188 37.2314 2.02068 37.2314 4.14824Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M20.3643 3.83C20.3643 5.47188 20.6739 6.57233 21.572 7.9254C24.8175 12.8158 28.6375 7.39288 28.6375 4.5723V3.83C28.6375 1.9301 26.719 0.0117188 24.8192 0.0117188C23.4607 0.0117188 22.525 0.229064 21.5535 1.20042C21.003 1.75095 20.3643 2.76267 20.3643 3.83Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M3.3916 4.04139C3.3916 5.38182 4.02105 6.95007 4.55668 7.75538C6.4934 10.6668 8.95312 10.4997 10.5722 7.82763C12.2372 5.07991 12.2946 1.8499 9.51124 0.467256C6.51343 -1.02152 3.3916 1.28473 3.3916 4.04139Z" fill="white"/>
-</svg>`),
-      },
-      {
-        title: "Optimized Venue & Crowd Management",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="43" height="34" viewBox="0 0 43 34" fill="none">
-  <path fillRule="evenodd" clipRule="evenodd" d="M9.3797 32.7125C9.3797 33.6102 9.25499 33.9996 9.6554 33.9996H32.4563C32.6681 33.9996 32.7321 33.9358 32.7321 33.724C32.7321 31.2311 32.9192 29.4065 31.8136 27.1952C29.9652 23.4975 25.2661 22.6914 20.9638 22.6914C17.4319 22.6914 14.4466 23.3383 12.3602 24.8445C11.2198 25.6679 10.5799 26.534 9.99613 27.9046C9.48353 29.1081 9.3797 31.0178 9.3797 32.7125Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M20.5044 3.20061C20.5044 4.11402 20.2532 5.22319 21.1479 5.22319C21.8323 5.22319 21.6997 3.93092 21.6997 3.20061C22 3.34453 22.2531 3.25873 22.9072 3.46403C25.488 4.27348 27.5276 6.65924 27.5837 9.1764C26.6644 9.1764 25.5611 8.98167 25.5611 9.72817C25.5611 10.4914 26.5334 10.2798 27.5837 10.2798C27.5477 11.894 26.5769 13.4524 25.7222 14.3023C24.8447 15.1748 24.1751 15.5846 22.9762 15.9695C22.5435 16.1084 22.1474 16.1515 21.6997 16.2557C21.6997 15.4306 21.8659 14.2332 21.0561 14.2332C20.2873 14.2332 20.5044 15.4849 20.5044 16.2557C18.5492 16.0931 16.9128 15.0681 15.7611 13.5521C14.6721 12.1189 14.6555 10.5448 14.5283 10.2798H16.2752C16.6701 9.68991 16.6701 9.76644 16.2752 9.1764H14.5283C14.6674 8.88686 14.5891 8.92734 14.6461 8.5588C14.6699 8.40469 14.747 8.12339 14.7925 7.96954C15.3516 6.076 16.4384 4.83257 18.1519 3.88208C18.9181 3.45698 19.5865 3.4144 20.5044 3.20061ZM20.5044 0.62613V2.09719C19.1459 2.09719 17.6331 2.71975 16.6283 3.46155C14.9181 4.72404 13.4251 6.93494 13.4251 9.1764H11.9541C11.1468 9.1764 11.1468 10.2798 11.9541 10.2798H13.4251C13.4251 11.3054 13.8041 12.3165 14.1324 13.0661C14.4373 13.763 15.1046 14.5988 15.6188 15.1655C15.7864 15.3502 15.863 15.3542 16.068 15.5437C16.3006 15.7588 16.2911 15.7781 16.5675 15.9636C17.7123 16.7312 18.9244 17.3592 20.5044 17.3592C20.5044 18.3278 20.3011 19.4735 21.0561 19.4735C21.8798 19.4735 21.6997 18.1522 21.6997 17.3592C24.4245 17.3592 26.8316 15.3598 27.983 13.0693C28.6912 11.6602 28.4855 11.5393 28.779 10.2798H30.5257C30.9025 9.71708 30.9025 9.73914 30.5257 9.1764H28.779C28.6652 8.68835 28.6326 8.19795 28.4941 7.71448C27.6319 4.69962 24.8235 2.09719 21.6997 2.09719V0.902083C21.6997 -0.332724 20.5044 -0.174959 20.5044 0.62613Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M34.0196 33.9999H40.4554C42.3176 33.9999 42.3597 32.9257 42.0755 31.0926C41.8855 29.8658 41.1844 28.6123 40.4798 27.9076C38.4114 25.8389 36.4408 26.2771 32.5488 26.2771C32.6162 26.5298 32.7938 26.7492 32.9052 27.0238C33.3694 28.168 33.4711 28.3864 33.6686 29.7541C33.7685 30.4453 33.754 32.2014 33.7421 33.0822C33.7365 33.5073 33.6193 33.9999 34.0196 33.9999Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M0.00210487 31.9778C0.00210487 33.1714 -0.127975 34.0003 1.65705 34.0003H8.0927C8.48032 34.0003 8.37831 33.5856 8.37152 33.1762C8.34057 31.285 8.33365 29.6804 8.88609 27.8984C9.06906 27.3078 9.45275 26.7535 9.56363 26.2776C8.30727 26.2776 7.05014 26.282 5.79391 26.2774C4.42575 26.2721 3.57607 26.5279 2.70485 27.0497C2.05277 27.4401 1.70276 27.8443 1.26722 28.3701C0.543047 29.2442 0.00210487 30.6167 0.00210487 31.9778Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M3.86328 18.8296C3.86328 23.2933 8.19289 23.8733 9.78933 21.9057C11.5601 19.7231 11.0102 15.3359 7.81651 15.3359C6.95521 15.3359 6.43647 15.268 5.6376 15.6394C5.22334 15.8319 5.20832 15.884 4.88783 16.1767L4.7908 16.2637C4.24673 16.7807 3.86328 17.8221 3.86328 18.8296Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M31.3535 18.8305C31.3535 23.2448 35.5218 23.9444 37.304 21.8391C39.0082 19.826 38.5179 15.3369 35.2149 15.3369C34.0799 15.3369 33.0091 15.3647 32.1563 16.3238C31.6479 16.8957 31.3535 17.7786 31.3535 18.8305Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M17.5625 9.45262C17.5625 10.624 17.7338 11.4751 18.5937 12.2827C22.0107 15.4927 26.8365 10.4812 23.609 7.26745C22.5908 6.25335 21.2249 5.87514 19.7794 6.42914C18.6083 6.87774 17.5625 8.09192 17.5625 9.45262Z" fill="white"/>
-</svg>`),
-      },
-      {
-        title: "Injury Prevention & Recovery Monitoring",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="32" height="34" viewBox="0 0 32 34" fill="none">
-  <path fillRule="evenodd" clipRule="evenodd" d="M13.3029 23.0583L14.5264 21.0574C14.6831 20.8189 15.6792 19.2945 15.7376 19.0442C15.9688 19.106 16.6515 19.8238 16.7904 20.0313L16.286 21.172C15.7609 22.2229 16.2021 21.3281 15.4613 21.7928L13.3029 23.0583ZM15.2769 11.6085C15.1567 11.6085 14.5733 11.2836 14.4136 11.2216C13.9396 11.0376 12.1754 11.1728 12.1287 9.56319C12.0839 8.018 15.0131 6.69865 16.3127 7.87489C16.5773 8.11441 16.8562 8.77873 16.8562 9.04223C16.8562 9.92686 15.6539 11.6085 15.2769 11.6085ZM0.0105816 29.3754C0.341865 29.1326 1.42811 27.5926 1.69261 27.2408C4.29618 23.7795 6.48122 20.8484 8.75941 17.0672C9.34678 16.0922 9.97847 15.0847 10.4954 14.0653C10.7417 13.5796 11.2031 12.5914 11.5435 12.2181C12.517 11.1513 13.5981 11.8038 14.5455 12.1425C16.96 13.0056 16.4592 14.2804 15.5401 16.0831C14.5621 18.0018 13.7139 19.9225 12.5261 21.755C12.3796 21.9811 12.2751 22.1839 12.1312 22.4132L10.389 25.0138C9.60965 26.053 8.87691 27.1348 8.02391 28.1104C7.35142 28.8794 6.74258 29.7229 6.01612 30.4455C5.66249 30.7973 5.21408 31.2119 4.94582 31.6126C5.56545 31.6126 6.03206 31.751 6.4811 31.3712C6.81904 31.0854 7.12207 30.8598 7.46704 30.5805C8.5681 29.689 10.8954 27.9312 11.9369 26.9566C12.1226 26.7827 12.2385 26.7251 12.4315 26.5299C12.697 26.2613 13.0848 25.8146 13.3686 25.6246C13.5321 25.9335 13.7511 26.2537 13.948 26.5587C14.2008 26.9502 15.6532 29.1451 15.7376 29.5069C16.2243 29.377 16.9069 28.312 17.3827 27.9935L19.999 30.5756C19.866 29.8621 18.808 27.4769 18.4731 26.6398C18.3542 26.3424 17.9968 25.5594 17.9748 25.2955C17.5716 25.4032 16.0307 26.809 15.8691 26.809C15.54 26.809 13.9102 25.7099 13.5002 25.493C13.5697 25.2329 13.9794 24.8665 14.1582 24.6375L14.8349 23.7348C15.067 23.4248 15.2314 23.1671 15.4371 22.8235C15.5813 22.5826 15.9393 22.0383 16.0008 21.808C16.3227 21.9783 16.6483 22.2608 16.9597 22.4941C17.199 22.6735 17.7268 23.1236 17.9748 23.1898C18.03 22.528 19.7691 18.98 20.0148 17.9256L17.3985 20.5077L16.8695 20.0176C16.9406 19.6611 17.4081 18.4889 17.567 17.8468C17.768 17.0351 17.9201 16.2575 18.388 15.7065C19.3582 14.5642 20.7466 14.3931 22.4924 13.8887C22.7371 13.818 31.0783 11.4621 31.5962 11.2137V4.10701C31.0995 4.23957 30.4599 4.75137 29.9943 5.00557C29.6936 5.16977 29.4997 5.30548 29.2046 5.46628C28.3541 5.92963 24.4013 8.15885 23.6797 8.69324C23.4106 8.89259 23.2317 9.04976 22.9852 9.24885C22.2694 9.82656 21.8316 10.574 21.2858 11.3003C20.0607 12.9305 17.3827 11.9515 17.3827 9.83184C17.3827 8.164 18.2387 7.50068 19.4356 6.68634C20.9568 5.65132 22.398 4.43653 23.8975 3.38356C24.4427 3.00068 28.2013 0.281757 28.3718 0.0271748C27.7661 0.0271748 25.2297 -0.0491539 24.8453 0.0540346C24.4971 0.147557 14.6871 6.05717 13.4983 6.73719C13.3123 6.84351 13.1024 6.90527 12.9071 7.0013C12.7022 7.10211 12.503 7.18998 12.3014 7.3169C11.0387 8.11215 10.6097 9.23392 10.2108 10.688C9.72715 12.4508 8.65986 13.8815 7.75414 15.4039L4.33309 20.9978C4.20065 21.2211 4.11165 21.342 3.97933 21.5653L0.203149 27.7254C-0.0680046 28.162 0.0105816 28.8208 0.0105816 29.3754Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M18.4355 11.7404V12.4643C18.4355 12.9074 18.9794 13.4513 19.4225 13.4513C20.4853 13.4513 20.4259 13.0514 21.0394 12.2386C21.2672 11.9365 21.3542 11.8261 21.6117 11.5607L22.2361 10.9348C22.7232 10.4805 23.0762 10.2255 23.6712 9.86937L31.2482 5.47005C31.4223 5.37803 31.5961 5.36448 31.5961 5.16011V2.39636C29.8222 2.39636 30.3714 2.22175 28.7573 3.43992L24.1734 6.81816C22.823 7.73706 20.9725 9.252 19.5935 10.2005C19.1154 10.5293 18.4355 10.9869 18.4355 11.7404Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M7.18359 23.9796H8.36813C8.67908 23.9796 8.63113 24.1066 8.8945 24.1769C8.94245 23.9974 9.12071 23.8078 9.2244 23.6514C9.93392 22.581 11.0234 20.5489 11.5448 19.852C12.0323 19.2001 12.6205 18.59 13.2527 18.0723C13.6137 17.7766 13.8955 17.5919 14.3022 17.3452C14.5023 17.224 14.6502 17.1667 14.8575 17.045C15.2666 16.8047 15.2774 16.6506 15.2774 16.3464C15.2774 15.7662 14.6832 15.6608 14.281 15.5003C12.37 14.7379 12.5892 14.6478 11.2853 17.092C10.3428 18.8589 8.63539 21.6254 7.4732 23.3478C7.31867 23.5767 7.19075 23.6591 7.18359 23.9796Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M2.18164 33.9819C3.63796 33.9819 3.44589 34.1317 3.88288 33.5773C4.10256 33.2986 5.63533 31.8129 6.16784 31.1246C6.42832 30.788 6.68906 30.5429 6.95758 30.2034L9.22258 27.27C10.2403 25.9233 12.3482 22.5758 13.1937 20.91C13.5961 20.1174 13.9508 19.3482 14.3553 18.584C13.9129 18.7021 12.8682 19.8258 12.5578 20.2083C12.1611 20.6967 10.641 23.3327 9.92005 24.4141C8.1745 27.0324 7.30204 27.8038 5.54682 29.9772C5.4641 30.0797 5.41389 30.1194 5.33103 30.2219C5.19094 30.3949 5.07206 30.5281 4.94552 30.6919L2.59302 33.4721C2.47853 33.5951 2.26474 33.8579 2.18164 33.9819Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M0.0107422 33.521V33.9816C1.10565 33.9816 0.691386 34.1583 1.87366 32.7517L6.17935 27.6475C6.49507 27.2929 6.77074 26.9408 7.0724 26.5666C7.85748 25.5927 7.90707 25.72 7.90707 25.0324C7.04051 25.0324 6.90707 25.1347 6.45942 24.835L5.70923 25.9272C4.70508 27.3817 3.56285 28.863 2.47321 30.2585C2.17607 30.6392 1.92902 30.9632 1.64682 31.3403C1.52568 31.5022 0.0107422 33.3691 0.0107422 33.521Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M13.1709 11.8722C13.1709 12.0737 13.2122 12.2672 13.4678 12.365C13.6635 12.4399 14.1688 12.4135 14.6286 12.5861C14.848 12.6684 14.9245 12.742 15.145 12.7935C15.2939 12.2359 15.8031 12.1765 15.8031 11.3457C15.8031 10.9051 15.2632 10.8193 14.9476 10.8193C14.4722 10.8193 13.1709 11.2859 13.1709 11.8722Z" fill="white"/>
-</svg>`),
-      },
-    ],
+
+    keyBenefits: {
+      heading: "Impact of Computer Vision in Oil and Gas on Daily Operations",
+      description:
+        "VMukti empowers your oil and gas operations with elite computer vision tech providing real-time equipment status and site monitoring. This precision-driven insight accelerates your decisions, heightens control and eliminates delays, ensuring your team stays ahead in safety and operational excellence every day.",
+      benefits: [
+        {
+          image: "../../assets/result_industry_oilandgas_1.png",
+          heading: "Enhanced Safety",
+          description:
+            "Our cutting-edge visual intelligence leverages the latest in computer vision and industrial tech to preemptively detect site dangers, enabling your operations to maintain flawless safety standards across the workforce.",
+        },
+        {
+          image: "../../assets/result_industry_oilandgas_2.png",
+          heading: "Downtime Reduction",
+          description:
+            "For your oil and gas operations, we deliver cutting-edge video analytics that spot equipment anomalies instantly minimizing costly downtime and maximizing uptime with precision designed for mission-critical reliability.",
+        },
+        {
+          image: "../../assets/result_industry_oilandgas_3.png",
+          heading: "Theft Prevention",
+          description:
+            "With precision-driven video surveillance, we deliver instant, actionable alerts that safeguard your oil and gas assets stopping unauthorized access before it happens and ensuring uninterrupted, top-tier operational security.",
+        },
+        {
+          image: "../../assets/result_industry_oilandgas_4.png",
+          heading: "Regulatory Compliance",
+          description:
+            "You can leverage advanced computer vision, we deliver real-time surveillance that enforces compliance in high-risk areas empowering you to mitigate hazards and maintain seamless operational integrity.",
+        },
+        {
+          image: "../../assets/result_industry_oilandgas_5.png",
+          heading: "Operational Efficiency",
+          description:
+            "We transform your energy inspections with AI-powered vision that reduces errors and accelerates workflows. Experience the power of visual solution that focuses on what matters most, maximizing performance.",
+        },
+        {
+          image: "../../assets/result_industry_oilandgas_6.png",
+          heading: "Data-Driven Decisions",
+          description:
+            "Our advanced video intelligence platform transforms your surveillance into a strategic asset, providing real-time risk detection and operational clarity so you stay ahead in oil & gas with unmatched precision and control.",
+        },
+      ],
+    },
+
+    workflow: {
+      heading:
+        "Complete Setup Process for Computer Vision Oil and Gas Surveillance Solution",
+      image: "oilandgas_workflow.png",
+    },
+
+    cta: {
+      textLines: [
+        "Boost Safety And Monitoring With Computer Vision",
+        "Solutions For Oil & Gas Today",
+      ],
+      href: "/oilandgas",
+    },
   },
-  agricultureindustry: {
+  // Result image remaining
+  election: {
     title: [
-      { text: "AI in Agriculture:", color: "black" },
-      { text: "Smarter Farming", color: "#3F77A5" },
-      { text: ", Higher Yields,", color: "black" },
-      { text: "Sustainable Growth", color: "#db7b3a" },
+      {
+        text: "Ensuring Fairness and Safety with Computer Vision in Election Systems",
+        color: "black",
+      },
     ],
-    para: "AI enhances farming by improving crop monitoring, optimizing resources, and increasing sustainability for better productivity.",
-    small_image:
-      "https://img.freepik.com/free-photo/closeup-shot-bee-chamomile-flower_181624-31930.jpg?t=st=1743009290~exp=1743012890~hmac=72f6890268bc65dbc385554988b59a70687dedd1813d6e11fc30921b2e8e9603&w=1380",
-    small_image_alt: "Closeup shot of a bee on a chamomile flower",
-    large_image: "agriculture_mockup.png",
-    large_image_alt: "Closeup shot of a bee on a chamomile flower",
+    para: "Every vote matters in your elections because even a single flaw, like voter fraud or misinformation, can quickly escalate into distrust and damage the credibility of the entire process. VMukti Solutions enhances election security with its offering of real-time monitoring, fraud vote prevention and transparent evidence through the election surveillance system.",
+
+    large_image: "election_mockup.png",
+    large_image_alt: "Election surveillance monitoring illustration",
+
     keyApplications: [
       {
-        title: "Automated Crop Health Monitoring",
-        description:
-          "AI detects diseases and nutrient deficiencies in crops early to prevent losses.",
-        image: "agr1.png",
-        image_alt: "Automated Crop Health Monitoring",
+        id: "section1",
+        mainHeading:
+          "Improving Transparency with Computer Vision for Elections",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat1-1",
+            title: "Vehicle Tracking",
+            description:
+              "With precision GPS telemetry embedded into your election surveillance, you orchestrate movement with confidence ensuring route fidelity, faster threat response and airtight coordination at scale.",
+            image: "../../assets/feat1_industry_elec_1.png",
+          },
+          {
+            id: "feat1-2",
+            title: "Crowd Control",
+            description:
+              "We equip your election command with intelligent crowd analytics monitoring density, movement and flow in real time to preempt risk, optimize response and maintain absolute control at every polling site.",
+            image: "../../assets/feat1_industry_elec_2.png",
+          },
+          {
+            id: "feat1-3",
+            title: "Live Streaming",
+            description:
+              "Our advanced video solution delivers encrypted live streams of polling zones to ensure real-time transparency, instant anomaly alerts and centralized oversight for uncompromised electoral integrity.",
+            image: "../../assets/feat1_industry_elec_3.png",
+          },
+          {
+            id: "feat1-4",
+            title: "Pre Stampede Alert",
+            description:
+              "VMukti empowers your election command with intelligent crowd surveillance detecting pre-stampede patterns in real time to ensure voter safety, operational control, and an uninterrupted democratic process.",
+            image: "../../assets/feat1_industry_elec_4.png",
+          },
+        ],
       },
       {
-        title: "Smart Pest & Weed Detection",
-        description:
-          "AI detects pests and weeds, enabling precise pesticide use and reducing waste.",
-        image: "agr2.png",
-        image_alt: "Smart Pest & Weed Detection",
+        id: "section2",
+        mainHeading:
+          "Elevating Election Security with Real-Time Vision Intelligence",
+        bgColor: "blue",
+        features: [
+          {
+            id: "feat2-1",
+            title: "Weapons Identification",
+            description:
+              "Your election environments demand zero tolerance for threat. Our AI-powered video analytics detects visible weapons in real time ensuring proactive response and uncompromised voter and staff protection.",
+            image: "../../assets/feat2_industry_elec_1.png",
+          },
+          {
+            id: "feat2-2",
+            title: "Polling Station Security",
+            description:
+              "With precision-grade surveillance, you maintain full visual command over voting zones, detect anomalies instantly, enforce access protocols and safeguard electoral integrity without disruption.",
+            image: "../../assets/feat2_industry_elec_2.png",
+          },
+          {
+            id: "feat2-3",
+            title: "Voting Machine Monitoring",
+            description:
+              "We deploy precision-grade monitoring across every voting node, leveraging intelligent video analytics to detect anomalies instantly ensuring your elections stay protected, traceable and fully accountable.",
+            image: "../../assets/feat2_industry_elec_3.png",
+          },
+          {
+            id: "feat2-4",
+            title: "Multiple Area Monitoring",
+            description:
+              "Our integrated command and control centre fuses multi-source surveillance into a unified console delivering real-time election visibility, precision alerting and unmatched control during mission-critical moments.",
+            image: "../../assets/feat2_industry_elec_4.png",
+          },
+        ],
       },
       {
-        title: "Automated Irrigation Management",
-        description:
-          "AI adjusts water usage based on climate and soil conditions, conserving water",
-        image: "agr3.png",
-        image_alt: "Automated Irrigation Management",
-      },
-      {
-        title: "Livestock Health & Activity Tracking",
-        description:
-          "AI monitors animal health and behavior for early disease detection.",
-        image: "agr4.png",
-        image_alt: "Livestock Health & Activity Tracking",
-      },
-      {
-        title: "Supply Chain & Market Forecasting",
-        description:
-          "AI predicts market trends to help farmers sell at the best prices.",
-        image: "agr5.png",
-        image_alt: "Supply Chain & Market Forecasting",
-      },
-      {
-        title: "Farm Security & Intrusion Detection",
-        description:
-          "AI detects unauthorized intrusions and alerts farmers instantly.",
-        image: "agr6.png",
-        image_alt: "Farm Security & Intrusion Detection",
+        id: "section3",
+        mainHeading:
+          "Ensuring Protocol Adherence with Visual Intelligence at Every Booth",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat3-1",
+            title: "No-Smoke Zone Monitoring",
+            description:
+              "VMukti’s system flags smoking violations instantly, helping you maintain compliance with electoral health mandates, safeguard public air quality and ensure a clean, disciplined and trusted polling environment.",
+            image: "../../assets/feat3_industry_elec_1.png",
+          },
+        ],
       },
     ],
-    keyBenefits: [
+
+    keyBenefits: {
+      heading:
+        "Unveiling the Impact of Video Surveillance Systems on Election Security",
+      description:
+        "VMukti brings precision to election oversight with its computer vision modeled solution that delivers real-time surveillance, anomaly detection and rapid incident response so you maintain transparency, full control and trust without missing a single frame.",
+      benefits: [
+        {
+          image: "../../assets/result_election_1.png",
+          heading: "Customised ICCC",
+          description:
+            "Your election operations demand precision, our surveillance platform delivers live visual command, GPS-synced tracking and seamless system integration for secure, real-time oversight and swift electoral coordination.",
+        },
+        {
+          image: "../../assets/result_election_2.png",
+          heading: "Transparency and Trust",
+          description:
+            "We equip your election command with a real-time visual intelligence solution that gives you control, encrypted feeds and automated anomaly alerts ensuring every vote is watched, verified and protected without question.",
+        },
+        {
+          image: "../../assets/result_election_3.png",
+          heading: "Deterrence of Malpractices",
+          description:
+            "Our election monitoring infrastructure combines real-time video intelligence and encrypted oversight to visibly deter tampering, reinforce transparency, and uphold the integrity of every ballot cast.",
+        },
+        {
+          image: "../../assets/result_election_4.png",
+          heading: "Fraud Prevention",
+          description:
+            "Your command over election integrity starts with intelligent vision real-time analytics flag voter anomalies, unauthorized access and suspicious behavior, empowering you to act decisively before risks escalate.",
+        },
+        {
+          image: "../../assets/result_election_5.png",
+          heading: "Enhanced Voter Confidence",
+          description:
+            "We deliver election-grade video intelligence that ensures procedural integrity, deters tampering in real time and reinforces public trust because your democracy deserves uncompromised oversight.",
+        },
+        {
+          image: "../../assets/result_election_6.png",
+          heading: "Two-way Communication",
+          description:
+            "Our advanced visual platform transforms election oversight with dynamic live feeds, instant field updates and intelligent incident alerts giving your team unmatched speed, clarity and control from booth to command center.",
+        },
+      ],
+    },
+
+    cta: {
+      textLines: [
+        "Catch Election Irregularities Faster – Book a Demo for ",
+        "Our Election Solutions",
+      ],
+      href: "/election",
+    },
+
+    workflow: {
+      heading:
+        "Step-by-Step Plan for Delivering Security in Election Surveillance Solutions",
+      image: "election_workflow.png",
+    },
+  },
+  education: {
+    title: [
       {
-        title: "Precision Farming & Increased Crop Yields",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
-  <path fillRule="evenodd" clipRule="evenodd" d="M0 26.7295C0.195637 27.0216 0.612127 27.3749 0.883741 27.6466L6.85304 33.6161C7.02557 33.7906 7.1021 33.9744 7.40346 33.9995C7.49138 33.6701 9.39865 31.0389 9.73783 30.3979C12.6058 30.3979 15.4739 30.3979 18.3419 30.3979C21.1699 30.3979 22.574 30.7606 24.6021 29.1212L27.4616 26.5782C27.5989 26.4448 27.6226 26.4458 27.7561 26.3392L33.1996 21.5112C33.8611 20.8956 34.1492 20.8168 34.1492 19.993C34.1492 19.2734 32.9776 18.7925 32.215 18.7925C31.5322 18.7925 31.0714 19.0138 30.5915 19.2365C29.9119 19.5518 28.7211 20.5045 28.0694 20.9831C27.8531 21.142 27.6818 21.2774 27.4612 21.4421L25.6115 22.7939C25.1865 23.0924 24.8132 23.3729 24.3728 23.6895C23.9428 23.9987 23.5495 24.2901 23.1441 24.5953C22.9823 24.717 22.0029 25.4623 21.8768 25.4623H17.1413C16.9331 25.4623 16.0656 24.5147 15.9407 24.3284C17.5202 24.3284 19.2697 24.4191 20.739 24.2576C21.4659 24.1778 21.9519 23.8776 22.4128 23.5304C23.7926 22.4906 23.5364 19.3796 20.1429 19.3926C18.5373 19.3987 16.1936 19.5288 15.0072 18.9923C14.4015 18.7183 14.3226 18.66 13.6654 18.4666C10.8838 17.6482 8.20481 18.5397 6.21947 20.5432L2.51486 24.242C2.05789 24.624 0.190992 26.4442 0 26.7295Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M16.4077 4.85309C16.4077 5.5778 16.4517 6.10974 16.7208 6.74111C17.1082 7.65006 17.2722 7.85456 17.8084 7.85456C18.3288 7.85456 18.2818 6.78679 18.38 6.2919C18.7442 4.45784 19.774 3.51393 21.2766 2.71878C21.2248 2.91309 20.9884 3.16325 20.8128 3.45543C19.6902 5.32222 19.184 7.72771 18.8789 9.9255C18.8317 10.2662 18.7799 10.6655 18.7483 10.9955C18.6065 12.4757 18.4798 14.0369 18.4777 15.527C18.4766 16.2881 18.1986 16.91 18.6997 17.5682C19.0415 18.017 19.8074 18.139 20.2502 17.8331L20.4689 17.6517C20.9102 17.247 21.3027 15.8437 22.2771 15.1912C22.8895 15.6014 23.1527 16.0389 24.2728 16.1974C25.2577 16.3368 26.0202 16.0484 26.6141 15.5931C27.1946 15.148 27.6165 14.5832 28.0399 13.9508C28.2623 13.6185 28.4179 13.35 28.6402 13.017L29.2804 12.1232C27.8141 11.3474 25.5918 8.53801 22.9962 10.1743C22.3149 10.6039 21.5286 11.4006 21.7435 12.3232C22.8045 12.3232 22.7736 11.9898 24.6782 11.9898C25.1218 11.9898 25.2556 12.0565 25.6786 12.0565V12.1232C24.6397 12.1232 23.2773 12.5836 22.5891 12.9688C21.0082 13.8536 20.718 14.4984 20.4096 14.7244C20.4096 13.4997 20.659 10.3222 20.8765 9.38857C21.534 9.33383 22.2593 8.98879 22.706 8.68355C24.2239 7.64642 25.2118 5.48612 25.2118 3.58582C25.2118 2.32076 25.2163 2.17567 25.0318 0.897888C24.8464 -0.384313 25.0884 0.00209522 24.1698 0.276252C23.6351 0.435726 22.974 0.46105 22.3558 0.529728C20.2285 0.766063 17.9146 1.14042 16.8513 3.22905C16.6245 3.67441 16.4077 4.21619 16.4077 4.85309Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M9.73779 12.1229C9.96528 12.4626 10.1956 12.7116 10.4261 13.102C10.9496 13.989 11.1681 14.2798 11.7951 15.0679C13.168 16.7935 15.9813 16.416 16.8317 14.948C18.0353 12.8702 13.7683 12.1229 12.9393 12.1229V12.0562C14.2664 12.0562 14.7651 11.7679 16.5092 12.3551C16.6941 12.4174 16.6513 12.4321 16.8606 12.4776C17.049 12.5187 17.4081 12.4577 17.4081 12.0562C17.4081 11.307 16.1523 9.72168 14.54 9.72168C12.7347 9.72168 12.0164 10.4979 10.7765 11.4273C10.4032 11.7071 10.106 11.8763 9.73779 12.1229Z" fill="white"/>
-</svg>`),
-      },
-      {
-        title: "Smart Irrigation & Water Conservation",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="38" height="34" viewBox="0 0 38 34" fill="none">
-  <path fillRule="evenodd" clipRule="evenodd" d="M24.3174 31.0437C24.3174 30.2786 25.426 30.3651 25.426 30.8959V31.1915C25.426 31.7224 24.3174 31.8088 24.3174 31.0437ZM12.1217 31.1915V30.8959C12.1217 30.3651 13.2304 30.2786 13.2304 31.0437C13.2304 31.8088 12.1217 31.7224 12.1217 31.1915ZM30.4521 28.8264V28.5308C30.4521 27.9999 31.5608 27.9135 31.5608 28.6786C31.5608 29.4437 30.4521 29.3572 30.4521 28.8264ZM5.98695 28.6786C5.98695 27.9135 7.09561 27.9999 7.09561 28.5308V28.8264C7.09561 29.3572 5.98695 29.4437 5.98695 28.6786ZM18.1825 28.6786C18.1825 27.9318 19.3652 27.9318 19.3652 28.6786C19.3652 29.4253 18.1825 29.4253 18.1825 28.6786ZM0.221771 26.9046C0.119756 27.057 0 27.0965 0 27.2742V33.6307C0 33.803 0.197184 34.0003 0.369587 34.0003H37.1782C37.3506 34.0003 37.5477 33.803 37.5477 33.6307V27.2742C37.5477 27.0965 37.428 27.057 37.326 26.9046C34.3738 26.9046 33.7335 25.7221 31.6348 25.7221C29.832 25.7221 29.4572 25.6616 27.7389 26.3349C23.6083 27.9533 21.9597 25.7221 19.2913 25.7221C17.4693 25.7221 17.217 25.6937 15.4908 26.3564C11.3929 27.9293 9.72572 25.7221 7.09561 25.7221C5.27459 25.7221 4.94048 25.6814 3.17913 26.3881C2.36408 26.7151 1.36717 26.9046 0.221771 26.9046Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M0 15.3002C0 15.9766 0.407189 15.6579 0.733674 16.5622C0.9432 17.1423 0.402949 18.9509 2.77773 20.5051C4.74918 21.7953 4.31797 20.6319 5.15106 22.123C5.94085 23.5365 5.84154 22.9919 5.83315 24.3985C5.8291 25.0712 5.71302 24.835 6.79998 24.835C6.79998 23.1851 6.63857 23.5127 7.36801 22.2986C8.03062 21.1958 7.64445 21.5111 8.68021 21.0979C12.2748 19.6638 11.6856 17.0692 11.9049 16.4877C12.152 15.8322 13.4598 15.1855 11.9189 14.8378C10.5293 14.5242 9.18883 14.9351 8.21526 15.8285L8.06378 15.9728C8.05327 15.9838 8.03871 16.0001 8.0283 16.0111C6.1122 18.0615 7.18345 20.4918 7.06581 20.96C7.02049 21.1401 6.42769 21.9813 6.35653 22.248C6.18693 22.1238 5.59885 21.0726 5.57099 20.9587C5.45991 20.5038 6.69391 17.4772 4.01434 15.499C2.52578 14.3999 0 14.6673 0 15.3002Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M24.9087 15.4473C24.9087 15.7578 25.3512 15.7825 25.6056 16.4503C25.9527 17.3614 25.3156 18.3749 27.1433 20.0866C28.3016 21.1713 29.433 20.9923 29.8325 21.6843C30.9142 23.5583 30.7478 22.8966 30.7478 24.8342C32.0657 24.8342 31.6224 25.2961 31.7053 23.5743C31.7293 23.0736 32.4228 22.0906 32.6906 21.6031C32.9568 21.1186 33.4992 21.3015 34.6806 20.5626C37.0891 19.0562 36.6278 17.2352 36.7772 16.6724C37.019 15.7606 37.5478 15.9654 37.5478 15.2994C37.5478 14.6892 35.0755 14.3867 33.5755 15.4664C32.0568 16.5595 31.6413 18.038 31.8618 20.0246C31.9873 21.1547 32.1915 20.5528 31.6348 21.5821C31.5287 21.778 31.3548 22.1275 31.1913 22.2472C31.1208 21.9832 30.5273 21.1394 30.482 20.9592C30.4491 20.8283 31.9475 15.4709 26.8515 14.7575C26.5212 14.7113 24.9087 14.6867 24.9087 15.4473Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M15.9653 16.63V25.2778C17.1447 24.7119 20.4034 24.7119 21.5827 25.2778V16.63C21.4304 16.5281 21.3908 16.4082 21.2131 16.4082H16.3349C16.1632 16.4082 16.1099 16.5295 15.9653 16.63Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M17.1479 11.8263H16.2609C16.2609 11.0732 16.3899 10.6436 15.7435 10.6436C15.5712 10.6436 15.374 10.8408 15.374 11.0132V13.5263C15.374 14.0199 16.2609 14.0199 16.2609 13.5263V12.7132H17.1479V15.5219H20.4V12.7132H21.287C21.287 13.4663 21.158 13.8959 21.8044 13.8959C21.9767 13.8959 22.1739 13.6986 22.1739 13.5263V11.0132C22.1739 10.5196 21.287 10.5196 21.287 11.0132V11.8263H20.4V9.01758H17.1479V11.8263Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M15.5957 6.13521C15.5957 7.00118 15.412 8.13076 15.9652 8.13076H21.5826C22.1359 8.13076 21.9522 7.00118 21.9522 6.13521C21.9522 5.96281 21.755 5.76562 21.5826 5.76562H15.9652C15.7928 5.76562 15.5957 5.96281 15.5957 6.13521Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M12.1958 3.99123C12.1958 4.45685 13.5825 5.02604 13.674 5.02604C14.1651 5.02604 14.3963 4.48385 13.8406 4.12054C13.5381 3.92287 12.1958 3.03473 12.1958 3.99123Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M9.16504 11.6784C9.16504 11.8781 9.20033 11.8822 9.2389 12.048C9.86256 12.1933 9.71985 12.136 10.4528 11.7097C10.7152 11.557 11.0867 11.4584 11.0867 11.0871C11.0867 10.1161 9.72709 11.0406 9.40523 11.2534C9.23013 11.3692 9.16504 11.3785 9.16504 11.6784Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M26.4609 2.80912C26.4609 3.78009 27.8206 2.8556 28.1424 2.64279C28.4953 2.40945 28.4018 2.24794 28.3088 1.84818C27.6851 1.70287 27.8278 1.76014 27.0948 2.18652C26.8324 2.33916 26.4609 2.4378 26.4609 2.80912Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M29.5649 12.7871C29.5649 13.1687 29.7125 13.2495 30.1813 13.5012C30.5299 13.6884 30.72 13.8959 31.1171 13.8959C31.4104 13.8959 31.4866 13.6083 31.4866 13.3785C31.4866 13.0552 29.5649 11.8307 29.5649 12.7871Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M23.4302 4.58237C23.4302 4.78196 23.4655 4.78611 23.5041 4.95196C24.1277 5.09717 23.985 5.03999 24.718 4.61361C24.9804 4.46098 25.3519 4.36233 25.3519 3.99101C25.3519 3.15041 24.3425 3.76317 24.0447 3.94039C23.6022 4.20362 23.4302 4.1988 23.4302 4.58237Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M29.5649 0.960942C29.5649 1.95515 30.5628 1.25049 30.8178 1.10509C31.2924 0.834332 31.4866 0.793842 31.4866 0.369586C31.4866 0.189277 31.3153 0 31.0432 0C30.8101 0 29.5649 0.631854 29.5649 0.960942Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M6.06104 0.369586C6.06104 0.888432 6.46611 0.927089 7.06248 1.28992C7.52126 1.56897 7.98273 1.59839 7.98273 0.960942C7.98273 0.714295 7.56908 0.503416 7.3664 0.394652C7.01773 0.2074 6.82769 0 6.43053 0C6.25822 0 6.06104 0.19728 6.06104 0.369586Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M12.1958 9.90478C12.1958 10.7532 13.206 10.1206 13.5035 9.95598C14.1241 9.61272 14.2049 9.63624 14.0435 8.94384C13.42 8.79863 13.5627 8.85581 12.8297 9.28219C12.5673 9.43483 12.1958 9.53346 12.1958 9.90478Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M6.06104 13.3777C6.06104 14.6386 7.98273 13.1967 7.98273 12.9342C7.98273 12.3429 7.55153 12.3067 7.10712 12.576C6.7816 12.7733 6.06104 13.0761 6.06104 13.3777Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M9.2389 1.8473C9.16466 2.16645 9.05126 2.38187 9.35953 2.61366C9.45084 2.68232 9.66798 2.79252 9.77954 2.85886C10.0774 3.03608 11.0867 3.64885 11.0867 2.80824C11.0867 2.34339 9.72227 1.77344 9.60849 1.77344C9.49201 1.77344 9.32838 1.81259 9.2389 1.8473Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M26.4609 11.0869C26.4609 11.5517 27.8254 12.1216 27.9392 12.1216C28.1388 12.1216 28.1429 12.0863 28.3088 12.0478C28.4701 11.3554 28.3892 11.379 27.7686 11.0356C27.4712 10.8711 26.4609 10.2384 26.4609 11.0869Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M23.5041 8.94299C23.3393 9.65073 23.4131 9.5788 24.0447 9.95465C24.3425 10.1318 25.3519 10.7446 25.3519 9.90393C25.3519 9.43908 23.9874 8.86914 23.8736 8.86914C23.7572 8.86914 23.5935 8.90828 23.5041 8.94299Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M4.73047 6.87426C4.73047 7.5683 5.24256 7.39166 6.43039 7.39166C6.92397 7.39166 6.92397 6.50467 6.43039 6.50467C5.71089 6.50467 4.73047 6.34269 4.73047 6.87426Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M11.8262 6.87426C11.8262 7.5683 12.3384 7.39166 13.5262 7.39166C14.0198 7.39166 14.0198 6.50467 13.5262 6.50467C12.8066 6.50467 11.8262 6.34269 11.8262 6.87426Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M23.6523 6.87426C23.6523 7.5683 24.1644 7.39166 25.3523 7.39166C25.8458 7.39166 25.8458 6.50467 25.3523 6.50467C24.6328 6.50467 23.6523 6.34269 23.6523 6.87426Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M30.748 6.87426C30.748 7.5683 31.2602 7.39166 32.4481 7.39166C32.9417 7.39166 32.9417 6.50467 32.4481 6.50467C31.7285 6.50467 30.748 6.34269 30.748 6.87426Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M8.27832 6.87426C8.27832 7.5683 8.79052 7.39166 9.97834 7.39166C10.4719 7.39166 10.4719 6.50467 9.97834 6.50467C9.25884 6.50467 8.27832 6.34269 8.27832 6.87426Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M27.1997 6.87426C27.1997 7.5683 27.7119 7.39166 28.8997 7.39166C29.3933 7.39166 29.3933 6.50467 28.8997 6.50467C28.1802 6.50467 27.1997 6.34269 27.1997 6.87426Z" fill="white"/>
-</svg>`),
-      },
-      {
-        title: "Supply Chain & Market Forecasting",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
-  <path fillRule="evenodd" clipRule="evenodd" d="M12.503 9.52774C12.503 7.38511 13.0699 5.79357 14.5411 4.3233C15.0994 3.76551 15.8252 3.29476 16.5444 2.97211C19.159 1.79929 22.2516 2.44425 24.0343 4.24792C24.6734 4.89462 25.0033 5.25207 25.4382 6.12212C27.7067 10.6603 24.463 16.0841 19.3644 16.0841C15.6518 16.0841 12.503 13.003 12.503 9.52774ZM10.1396 8.99399C10.1396 10.8606 10.38 11.6023 10.9887 13.1004C11.4034 14.121 11.9653 14.7324 12.5973 15.4561C12.7451 15.6252 12.7151 15.6464 12.8734 15.79C12.9767 15.8836 13.0373 15.9029 13.1705 16.0265C13.5318 16.3615 13.6079 16.4673 14.0877 16.7865C17.3222 18.9385 21.1263 19.0118 24.3923 16.919L25.6745 15.914C27.1804 14.4251 28.5129 12.0832 28.5129 9.75641C28.5129 7.89262 28.4451 6.87633 27.5727 5.13138C27.2965 4.57913 27.0891 4.22677 26.7387 3.75441C23.7755 -0.240682 18.1156 -1.1912 14.1804 1.59917C13.4848 2.09234 13.5294 2.08483 12.9316 2.63754L12.8157 2.75026C12.7757 2.79199 12.7237 2.85592 12.6725 2.91199C11.1401 4.58538 10.1396 6.53113 10.1396 8.99399Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M20.8891 7.01196C23.3549 7.01196 23.0237 6.72791 23.0237 9.52787C23.0237 10.2088 22.2499 10.2943 21.9698 9.89562C21.8249 9.6895 21.8802 9.46881 21.8802 9.14661C21.5821 9.22627 20.8979 10.0145 20.6412 10.2711C20.2219 10.6905 19.7025 11.3576 19.288 11.3576C18.7659 11.3576 18.1668 10.4079 17.7633 10.1377C17.4107 10.3738 16.6295 11.4337 16.2386 11.4337C15.9151 11.4337 15.5947 11.0455 15.6705 10.7129C15.7395 10.4101 17.4829 8.68916 17.7633 8.68916C18.2855 8.68916 18.8846 9.63885 19.288 9.90902L20.984 8.25043C19.6655 8.202 19.8726 7.01196 20.8891 7.01196ZM13.6465 9.22291C13.6465 12.2532 16.2644 14.8645 18.9069 14.8645C20.2003 14.8645 20.7025 14.8816 21.9064 14.2808C25.9607 12.2578 26.1164 6.32283 21.9073 4.16413C18.2862 2.30693 13.6465 4.87719 13.6465 9.22291Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M29.0464 34.0001H34.3068V20.2773H29.0464V34.0001Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M0 24.7751C0 25.4722 0.980215 26.1746 1.69628 26.8907C4.06943 29.2638 3.05556 29.4576 7.18535 25.3278L9.70117 22.812C10.9878 21.5254 10.7784 21.8689 7.79517 18.8858C6.59622 17.6867 6.96166 17.699 5.01255 19.6481L0.819525 23.8411C0.641608 24.019 0 24.5372 0 24.7751Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M19.5166 33.7707C19.5166 33.9464 19.5695 33.9994 19.7453 33.9994H24.6244C24.8001 33.9994 24.8532 33.9464 24.8532 33.7707V24.6222C24.8532 24.4465 24.8001 24.3936 24.6244 24.3936H19.5166V33.7707Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M9.98682 33.7712C9.98682 33.9469 10.0399 33.9999 10.2155 33.9999H15.0947C15.2703 33.9999 15.3234 33.9469 15.3234 33.7712V27.291H9.98682V33.7712Z" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M8.67236 18.0477L10.4625 19.8783L12.9791 17.3992C12.5382 17.0977 12.3846 16.919 12.0266 16.5608L11.1307 15.627L8.67236 18.0477Z" fill="white"/>
-</svg>`),
-      },
-      {
-        title: "Livestock Health Monitoring & Management",
-        svg:
-          "data:image/svg+xml;charset=utf-8," +
-          encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
-  <path fillRule="evenodd" clipRule="evenodd" d="M13.5156 16.3794H8.98438C7.23959 16.3794 7.10505 14.3963 8.31312 13.973C9.05274 13.7138 11.9144 13.8622 12.9687 13.8622C12.995 13.5437 14.6916 9.39983 15.0094 8.60117C15.1488 8.25101 15.3046 7.94565 15.6531 7.75446C16.3119 7.39296 17.1323 7.61081 17.4545 8.55889C17.7105 9.31232 17.8921 10.0769 18.1154 10.8041C18.3551 11.5849 18.5621 12.2968 18.8001 13.1038C19.0288 13.8791 19.2555 14.5632 19.4697 15.3402C19.5736 15.7171 19.9857 17.3759 20.2344 17.5594C20.3219 17.1812 20.494 16.8276 20.6362 16.4694C21.8546 13.3998 21.1976 13.8622 26.0156 13.8622C27.5999 13.8622 27.7769 15.3982 27.0771 16.0323C26.4041 16.6421 24.4669 16.3794 23.2813 16.3794C23.2549 16.6979 21.5585 20.8418 21.2406 21.6404C20.682 23.0438 19.2215 22.9366 18.7955 21.6827C18.0403 19.4598 17.2181 16.1739 16.4356 13.754C16.3163 13.3851 16.2808 12.8779 16.0156 12.6823C15.9281 13.0605 15.7561 13.414 15.6138 13.7723C15.4522 14.1797 14.8879 15.7289 14.6647 15.9632C14.4172 16.2228 14.0001 16.3794 13.5156 16.3794ZM0 9.61442C0 12.0036 0.0744047 12.8339 0.702829 15.1212C1.26674 17.1737 2.70109 20.1912 3.99545 21.9533L7.40239 26.1533C8.24623 27.0024 8.99845 27.8876 9.93348 28.6392C10.1872 28.8432 10.3025 29.0076 10.5917 29.2351C12.029 30.3659 12.4488 30.8016 14.1856 32.0668C15.1198 32.7473 16.7038 34 17.6562 34C18.2614 34 21.4367 31.6175 22.2098 31.0332L25.6446 28.12C25.8713 27.8904 26.0735 27.6609 26.3092 27.4519C27.2897 26.5825 26.926 26.8216 27.5582 26.1924C27.7687 25.9828 27.9944 25.7836 28.1801 25.5598L28.7952 24.8419C29.9126 23.3897 30.3629 22.9781 31.4998 21.1934L32.8907 18.7394C34.3137 15.8826 35 13.3416 35 9.61442C35 4.67642 30.373 0.0174407 25.4688 0.0174407C22.6927 0.0174407 20.9998 0.499927 18.8718 2.10658L18.1842 2.67291C17.9555 2.87575 17.6612 3.08657 17.5782 3.4C17.3269 3.23064 17.1591 3.01196 16.9351 2.78876C16.7803 2.63451 16.7689 2.63734 16.5958 2.50114C15.9004 1.9539 15.625 1.62892 14.6624 1.14402C11.7354 -0.330518 8.6858 -0.367356 5.70407 0.962372C2.56164 2.36367 0 6.08034 0 9.61442Z" fill="white"/>
-</svg>`),
+        text: "Enhancing Campus Safety Through Computer Vision in Education",
+        color: "black",
       },
     ],
+    para: "In a world where campus environments face rising complexity and risk, your institution needs more than just surveillance, it needs strategic visual intelligence. VMukti delivers intelligent video infrastructure with real-time situational awareness, proactive threat detection and seamless oversight ensuring your campus stays secure, compliant and future-ready without disrupting the learning experience.",
+
+    large_image: "education_mockup.png",
+    large_image_alt: "Education surveillance monitoring illustration",
+
+    keyApplications: [
+      {
+        id: "section1",
+        mainHeading:
+          "Reinforcing Learning Space with Computer Vision in Education Industry",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat1-1",
+            title: "FR Based Attendance",
+            description:
+              "Our intelligent attendance system eliminates manual tracking leveraging facial authentication to ensure secure, frictionless student check-ins and real-time visibility across your campus infrastructure.",
+            image: "../../assets/feat1_industry_edu_1.png",
+          },
+          {
+            id: "feat1-2",
+            title: "Exam Monitoring",
+            description:
+              "Designed for high-stakes assessments, our proctoring framework integrates real-time invigilation, behavioral analytics and secure access protocols to guarantee integrity without operational friction.",
+            image: "../../assets/feat1_industry_edu_2.png",
+          },
+          {
+            id: "feat1-3",
+            title: "Asset Loss Alert",
+            description:
+              "We deploy precision-driven object tracking to flag missing items instantly in educational premises, giving you full situational awareness and control over your environment without relying on human intervention.",
+            image: "../../assets/feat1_industry_edu_3.png",
+          },
+          {
+            id: "feat1-4",
+            title: "Queue Monitoring",
+            description:
+              "Our intelligent queue orchestration system optimizes student movement with real-time pathing and congestion prediction built for campuses that prioritize order, safety and operational excellence.",
+            image: "../../assets/feat1_industry_edu_4.png",
+          },
+          {
+            id: "feat1-5",
+            title: "Bus Monitoring System",
+            description:
+              "VMukti equips you with advanced education-grade transit monitoring offering live video, intelligent anomaly detection and GPS-integrated oversight to secure every journey with unmatched operational clarity.",
+            image: "../../assets/feat1_industry_edu_5.png",
+          },
+          {
+            id: "feat1-6",
+            title: "Student Behaviour Analysis",
+            description:
+              "Your campus deserves more than passive surveillance. With our intelligent visual systems, you gain actionable insight into student behavior elevating response, safeguarding culture and reinforcing a truly secure environment.",
+            image: "../../assets/feat1_industry_edu_6.png",
+          },
+          {
+            id: "feat1-7",
+            title: "Parking Slot Availability",
+            description:
+              "We deploy precision-guided visual analytics to identify available parking in real time minimizing idle loops and ensuring seamless space access for your staff and guests the moment they arrive.",
+            image: "../../assets/feat1_industry_edu_7.png",
+          },
+        ],
+      },
+      {
+        id: "section2",
+        mainHeading:
+          "Elevating Campus Safety with Intelligent Video Surveillance",
+        bgColor: "blue",
+        features: [
+          {
+            id: "feat2-1",
+            title: "Parking Violation Alert",
+            description:
+              "Gain precise oversight for your campus with smart vehicle detection that alerts you to violations in real time ensuring your traffic flows seamlessly and your access parking zones stay strictly enforced.",
+            image: "../../assets/feat2_industry_edu_1.png",
+          },
+          {
+            id: "feat2-2",
+            title: "Restricted Zone Breach",
+            description:
+              "Our system leverages behavioral mapping and line cross detection to detect unauthorized movement across restricted areas delivering real-time visibility where your student safety begins.",
+            image: "../../assets/feat2_industry_edu_2.png",
+          },
+          {
+            id: "feat2-3",
+            title: "Weapon Threat Alert",
+            description:
+              "VMukti's advanced weapon detection to help you identify concealed threats like knives and guns in real time so your campus stays protected, your response is immediate, and escalation never occurs.",
+            image: "../../assets/feat2_industry_edu_3.png",
+          },
+          {
+            id: "feat2-4",
+            title: "Sensitive Zone Monitoring",
+            description:
+              "We secure your critical zones, electrical bays, storage units and high-risk areas by controlling access with precision authentication, protecting infrastructure and operational integrity without compromise.",
+            image: "../../assets/feat2_industry_edu_4.png",
+          },
+          {
+            id: "feat2-5",
+            title: "Early Fire Monitoring",
+            description:
+              "Our system delivers early fire and smoke detection using advanced vision intelligence enabling you to act before danger escalates and protecting both critical infrastructure and operational continuity.",
+            image: "../../assets/feat2_industry_edu_5.png",
+          },
+        ],
+      },
+      {
+        id: "section3",
+        mainHeading: "Ensuring Regulatory Excellence in Learning Environments",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat3-1",
+            title: "Hand Wash Compliance",
+            description:
+              "We equip your campus with intelligent hygiene compliance tech that detects handwashing lapses in real time ensuring kitchen zones remain safe, audit-ready and aligned with institutional health mandates.",
+            image: "../../assets/feat3_industry_edu_1.png",
+          },
+          {
+            id: "feat3-2",
+            title: "On-Campus Smoking Alert",
+            description:
+              "Your spaces stay uncompromised. Our real-time smoke detection pinpoints violations instantly across corridors and open zones empowering your team to act fast, enforce rules and maintain control at scale.",
+            image: "../../assets/feat3_industry_edu_2.png",
+          },
+        ],
+      },
+    ],
+
+    keyBenefits: {
+      heading:
+        "Rethinking Education Video Surveillance for a Safer Academic Environment",
+      description:
+        "We bring precision to campus surveillance with edge-enabled video intelligence, encrypted multi-feed visibility and instant alerting giving you full command over student safety, staff compliance and rapid incident resolution without operational friction.",
+      benefits: [
+        {
+          image: "../../assets/result_industry_education_1.png",
+          heading: "Better Safety",
+          description:
+            "Your campus demands more than visibility, it needs command. Our real-time surveillance architecture safeguards every corridor, blending AI precision with zero-delay response to keep your students and staff secure at all times.",
+        },
+        {
+          image: "../../assets/result_industry_education_2.png",
+          heading: "Quick Alerts",
+          description:
+            "VMukti deploys intelligent threat detection that identifies fire, intrusion or unauthorized presence in real time delivering decisive alerts to your Educational command center before risk becomes disruption.",
+        },
+        {
+          image: "../../assets/result_industry_education_3.png",
+          heading: "Clear Insights",
+          description:
+            "Our solution monitors student behavior using high-fidelity analytics, empowering your leadership to create safer, smarter environments without guesswork and only sharp, data-backed decisions.",
+        },
+        {
+          image: "../../assets/result_industry_education_4.png",
+          heading: "Fair Exams",
+          description:
+            "We help you safeguard the integrity of your examinations with AI-powered vigilance, eliminating malpractice, preserving academic standards and delivering trust you can measure, every single session.",
+        },
+        {
+          image: "../../assets/result_industry_education_5.png",
+          heading: "24/7 Real-Time Monitoring",
+          description:
+            "We equip your campus with edge-optimized video intelligence that reacts before you do real-time alerts, zero lag and smart visibility that redefines how you protect students and secure every corner.",
+        },
+        {
+          image: "../../assets/result_industry_education_6.png",
+          heading: "Safe Assets",
+          description:
+            "Your institution deserves intelligent asset visibility. Our advanced object recognition system safeguards school property, reduces loss and reinforces trust across every corridor, classroom, and control center.",
+        },
+      ],
+    },
+
+    cta: {
+      textLines: [
+        "Drive Safety Using Vision AI in Education for Secure",
+        "Environment",
+      ],
+      href: "/education",
+    },
+
+    workflow: {
+      heading: "Efficient Workflow for Your Education Surveillance System",
+      image: "education_workflow.png",
+    },
+  },
+  transportation: {
+    title: [
+      {
+        text: "Pioneering the Future of Traveling with Computer Vision in Transportation",
+        color: "black",
+      },
+    ],
+    para: "In transportation, timely deliveries and safety are crucial, as even minor disruptions can cause major delays. VMukti Solutions enhances operations with advanced GPS tracking and video analytics for transportation, providing real-time insights, optimizing routes and ensuring fleet safety to drive efficiency.",
+    large_image: "transportation_mockup.png",
+    large_image_alt: "Transportation surveillance monitoring illustration",
+    keyApplications: [
+      {
+        id: "section1",
+        mainHeading:
+          "Optimizing Transit Operations with Intelligent Surveillance Solutions",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat1-1",
+            title: "Number Plate Recognition",
+            description:
+              "Take control of your perimeter with instant vehicle plate capture seamlessly enforcing access, streamlining monitoring and delivering precise audit trails. Experience security that moves at your pace, with unmatched accuracy.",
+            image: "../../assets/feat1_industry_trans_1.png",
+          },
+          {
+            id: "feat1-2",
+            title: "Driver Monitoring System",
+            description:
+              "With our advanced video analytics, you gain unmatched visibility into driver behavior detecting phone use, fatigue, smoking and seatbelt violations so you can proactively ensure compliance and protect your fleet with precision and confidence.",
+            image: "../../assets/feat1_industry_trans_2.png",
+          },
+          {
+            id: "feat1-3",
+            title: "Vacant Parking",
+            description:
+              "Your parking assets can be maximized with real-time vacancy tracking that delivers instant insights and flawless space utilization. Cut search times and elevate management because your operation deserves precision at every turn.",
+            image: "../../assets/feat1_industry_trans_3.png",
+          },
+          {
+            id: "feat1-4",
+            title: "Maintenance Insights",
+            description:
+              "VMukti deploys cutting-edge video analytics to spot road surface damage, potholes and parking lot wear instantly, empowering you to take swift preventive maintenance actions and safeguard infrastructure longevity.",
+            image: "../../assets/feat1_industry_trans_4.png",
+          },
+          {
+            id: "feat1-5",
+            title: "Pedestrian Traffic Statistics",
+            description:
+              "Our advanced analytics decode foot traffic patterns in real time, enabling you to proactively manage congestion, elevate safety standards and design spaces that reflect cutting-edge operational intelligence and refined user experience.",
+            image: "../../assets/feat1_industry_trans_5.png",
+          },
+          {
+            id: "feat1-6",
+            title: "Signal Monitoring",
+            description:
+              "With advanced visual intelligence traffic signal monitoring, you gain instant control to prevent delays, reduce congestion and maintain flawless light operation ensuring seamless flow and strict regulatory compliance.",
+            image: "../../assets/feat1_industry_trans_6.png",
+          },
+          {
+            id: "feat1-7",
+            title: "Automatic Driver Analysis System",
+            description:
+              "VMukti delivers precision driver assist with real-time obstacle detection, intelligent distance mapping and rear-side spatial awareness designed to elevate control and ensure flawless maneuvering.",
+            image: "../../assets/feat1_industry_trans_7.png",
+          },
+        ],
+      },
+      {
+        id: "section2",
+        mainHeading:
+          "Transportation Surveillance Solutions Driving Smarter Mobility",
+        bgColor: "blue",
+        features: [
+          {
+            id: "feat2-1",
+            title: "Unauthorized Area Alerts",
+            description:
+              "We secure your high-risk transit zones with visual intelligent monitoring that flags unauthorized access in real time, protecting infrastructure, enforcing no-parking, and maintaining operational integrity.",
+            image: "../../assets/feat2_industry_trans_1.png",
+          },
+          {
+            id: "feat2-2",
+            title: "Passenger Monitoring",
+            description:
+              "Your fleet deserves more than basic oversight. Our enterprise-grade vision surveillance architecture delivers live behavioral analytics across every route ensuring secure, seamless journeys at scale.",
+            image: "../../assets/feat2_industry_trans_2.png",
+          },
+          {
+            id: "feat2-3",
+            title: "Early Fire Monitoring",
+            description:
+              "VMukti equips your transport infrastructure with intelligent fire detection, using real-time video analytics to neutralize risks, reduce downtime and uphold passenger safety without compromise.",
+            image: "../../assets/feat2_industry_trans_3.png",
+          },
+        ],
+      },
+      {
+        id: "section3",
+        mainHeading:
+          "Transportation Solutions Designed for Regulatory Adherence",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat3-1",
+            title: "Safety Compliance",
+            description:
+              "Our intelligent vision platform flags missing helmets, jackets and seatbelts in real time enforcing compliance, mitigating liability and keeping your mobile workforce fully protected at every checkpoint.",
+            image: "../../assets/feat3_industry_trans_1.png",
+          },
+        ],
+      },
+    ],
+    keyBenefits: {
+      heading:
+        "The Impact of Transportation Video Surveillance Software on Safer Traveling",
+      description:
+        "VMukti Solution’s integrated fleet solution fuses GPS intelligence with real-time video oversight delivering unmatched visibility, route optimization, and compliance control for transportation networks that demand precision at every mile.",
+      benefits: [
+        {
+          image: "../../assets/result_industry_transportation_1.png",
+          heading: "Incident Reporting",
+          description:
+            "Our intelligent transport surveillance instantly detects accidents and critical hazards, triggering immediate alerts so your response teams act faster, smarter, and with exact operational precision.",
+        },
+        {
+          image: "../../assets/result_industry_transportation_2.png",
+          heading: "Smart Parking",
+          description:
+            "With intelligent vision and deep-learning algorithms, our parking solutions unlock real-time space optimization maximizing throughput and reducing urban congestion without operational compromise.",
+        },
+        {
+          image: "../../assets/result_industry_transportation_3.png",
+          heading: "Optimized Routing",
+          description:
+            "Your transportation operation gains sharper precision as computer vision reduces idle time, trims fuel costs, and accelerates dispatches delivering measurable efficiency across your entire fleet.",
+        },
+        {
+          image: "../../assets/result_industry_transportation_4.png",
+          heading: "Centralized Control",
+          description:
+            "We give you real-time oversight of every vehicle and checkpoint live streams, AI alerts, and GPS intelligence all fused into a single, scalable dashboard built to accelerate response and optimize movement.",
+        },
+        {
+          image: "../../assets/result_industry_transportation_5.png",
+          heading: "Traffic Compliance",
+          description:
+            "Our Vision AI delivers precision enforcement—tracking speed, lane discipline, and infractions in real time so your teams can prevent incidents, not just respond, using data-backed road intelligence.",
+        },
+        {
+          image: "../../assets/result_industry_transportation_6.png",
+          heading: "Passenger Safety Monitoring",
+          description:
+            "VMukti empowers your transit operations with real-time behavioral surveillance enabling instant threat detection, elevated passenger safety, and unmatched situational awareness across every moving zone.",
+        },
+      ],
+    },
+    cta: {
+      textLines: [
+        "Experience the Future of Mobility with Our Visual",
+        "Solution for Transportation",
+      ],
+      href: "/transportation",
+    },
+    workflow: {
+      heading:
+        "Crafting Precision with Every Surveillance Solution for Transportation",
+      image: "transportation_workflow.png",
+    },
+  },
+  smartcity: {
+    title: [
+      {
+        text: "Elevating Urban Safety with Computer Vision in Smart City",
+        color: "black",
+      },
+    ],
+    para: "VMukti solution computer vision brings smart surveillance to your streets, helping you spot problems as they happen and act immediately without delay. With quick setup and remote access from anywhere, it supports smooth, efficient city operations without hassle.",
+
+    large_image: "smartcity_mockup.png",
+    large_image_alt: "Smart city surveillance monitoring illustration",
+
+    keyApplications: [
+      {
+        id: "section1",
+        mainHeading:
+          "Streamlined City Operations with Vision-Driven Intelligence",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat1-1",
+            title: "Crowd Surge Alert",
+            description:
+              "We deliver cutting-edge visual intelligence that commands control over large crowds and public events ensuring seamless entry management, smooth flow and instant alerts that keep your city safe and efficient.",
+            image: "../../assets/feat1_industry_smcity_1.png",
+          },
+          {
+            id: "feat1-2",
+            title: "Passenger Platform Monitoring",
+            description:
+              "VMukti delivers precision crowd intelligence, tracking every passenger’s move across transit hubs to instantly flag anomalies and optimize flow empowering your team to maintain seamless safety with unmatched situational control.",
+            image: "../../assets/feat1_industry_smcity_2.png",
+          },
+          {
+            id: "feat1-3",
+            title: "Ticket Zone Monitoring",
+            description:
+              "Our advanced system precisely tracks passenger counts and analyzes wait times at ticket scans, empowering you to streamline flow, reduce congestion and deliver a seamless, high-end travel experience your customers expect.",
+            image: "../../assets/feat1_industry_smcity_3.png",
+          },
+          {
+            id: "feat1-4",
+            title: "Smart Parking Solutions",
+            description:
+              "With advanced visual intelligence, we deliver real-time parking availability directly to drivers’ screens, slashing search times and easing city traffic while elevating urban mobility with unmatched precision and speed.",
+            image: "../../assets/feat1_industry_smcity_4.png",
+          },
+          {
+            id: "feat1-5",
+            title: "Unauthorized Parking",
+            description:
+              "We utilize advanced spatial analytics to monitor and prevent unauthorized parking in restricted areas, ensuring your critical zones remain accessible and your traffic flows seamlessly without compromise.",
+            image: "../../assets/feat1_industry_smcity_5.png",
+          },
+          {
+            id: "feat1-6",
+            title: "Automatic Number Plate Recognition",
+            description:
+              "Your city demands flawless traffic enforcement. Our cutting-edge vehicle plate capture technology delivers pinpoint accuracy, instantly flagging violations thus helping you in keeping your roads safe.",
+            image: "../../assets/feat1_industry_smcity_6.png",
+          },
+          {
+            id: "feat1-7",
+            title: "Campus Monitoring",
+            description:
+              "VMukti elevates campus safety with precision analytics that monitor pedestrian flow, detect traffic infractions and instantly alert your security team ensuring flawless protection around schools and educational institutions.",
+            image: "../../assets/feat1_industry_smcity_7.png",
+          },
+        ],
+      },
+      {
+        id: "section2",
+        mainHeading:
+          "Smart Monitoring of Urban Transit via Computer Vision for Smart City Operations",
+        bgColor: "blue",
+        features: [
+          {
+            id: "feat2-1",
+            title: "Fall Incident Monitoring",
+            description:
+              "Our intelligent fall detection system leverages edge analytics to identify human falls in real time across telecom, parks and public infrastructure activating rapid response and elevating your city’s situational control.",
+            image: "../../assets/feat2_industry_smcity_1.png",
+          },
+          {
+            id: "feat2-2",
+            title: "Emergency Response",
+            description:
+              "With our edge-optimized surveillance mesh, incidents are detected in milliseconds triggering AI-powered SOS dispatch protocols for accelerated response and seamless coordination across emergency command systems.",
+            image: "../../assets/feat2_industry_smcity_2.png",
+          },
+          {
+            id: "feat2-3",
+            title: "Tower Monitoring",
+            description:
+              "Your infrastructure deserves uncompromised oversight. Our intelligent video layer delivers continuous tower surveillance, predictive alerts and operational assurance powered by precision-grade analytics at the edge.",
+            image: "../../assets/feat2_industry_smcity_3.png",
+          },
+          {
+            id: "feat2-4",
+            title: "Pool Safety Alert",
+            description:
+              "VMukti delivers high-precision drowning detection built for smart cities giving your teams real-time ponds, lakes, rivers surveillance for faster emergency coordination and unmatched safety assurance in high-density public zones.",
+            image: "../../assets/feat2_industry_smcity_4.png",
+          },
+          {
+            id: "feat2-5",
+            title: "Fire Hazard Monitoring",
+            description:
+              "Our AI-driven fire detection instantly flags abnormal heat patterns and ignition points, enabling you to respond proactively, prevent costly damage and maintain compliance across mission-critical operations.",
+            image: "../../assets/feat2_industry_smcity_5.png",
+          },
+          {
+            id: "feat2-6",
+            title: "Access Violation Alert",
+            description:
+              "VMukti enables real-time intrusion detection across critical sites from metro rails to substations by triggering instant alerts on perimeter breaches, ensuring public safety and uninterrupted operations.",
+            image: "../../assets/feat2_industry_smcity_6.png",
+          },
+          {
+            id: "feat2-7",
+            title: "Threat Weapon Identification",
+            description:
+              "Your operations deserve intelligent foresight, not delayed reactions. With real-time weapon detection, we surface potential threats instantly arming your response teams with precision, speed and control when it matters most.",
+            image: "../../assets/feat2_industry_smcity_7.png",
+          },
+          {
+            id: "feat2-8",
+            title: "Suspect Recognition",
+            description:
+              "With advanced facial detection, you detect flagged individuals in real time, push encrypted alerts across command units and enable actionable enforcement to protect high-traffic environments seamlessly.",
+            image: "../../assets/feat2_industry_smcity_8.png",
+          },
+        ],
+      },
+      {
+        id: "section3",
+        mainHeading:
+          "Ensuring City Policy Compliance with Smart Visual Oversight",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat3-1",
+            title: "No-Smoking Enforcement",
+            description:
+              "Our AI-powered city surveillance delivers precision smoking detection using real-time visual analytics empowering you to enforce compliance, reduce violations and uphold clean-air standards effortlessly.",
+            image: "../../assets/feat3_industry_smcity_1.png",
+          },
+        ],
+      },
+    ],
+
+    keyBenefits: {
+      heading:
+        "Greater Peace of Mind with a Smart City Video Surveillance Solution",
+      description:
+        "VMukti empowers your city with real-time computer vision built for impact streamlining traffic, enhancing public safety and enabling data-driven governance that scales with your ambitions for smarter, faster and more sustainable urban environments.",
+      benefits: [
+        {
+          image: "../../assets/result_industry_smartcity_1.png",
+          heading: "Proactive Crime Prevention",
+          description:
+            "Our real-time behavioral intelligence uses edge-deployed vision systems to flag unusual movements, unauthorized access and object abandonment enabling decisive intervention in high-density urban spaces.",
+        },
+        {
+          image: "../../assets/result_industry_smartcity_2.png",
+          heading: "Data-Driven Decision Making",
+          description:
+            "With real-time computer vision layered into your urban fabric, you unlock actionable insights on traffic density, behavioral anomalies and safety trends driving smarter governance with precision, speed and predictive intelligence.",
+        },
+        {
+          image: "../../assets/result_industry_smartcity_3.png",
+          heading: "Improved Traffic Flow",
+          description:
+            "Your smart city demands more than monitoring. VMukti's vision software delivers adaptive traffic intelligence, precision signal control, rule violation spotting and fluid mobility built for tomorrow's urban infrastructure.",
+        },
+        {
+          image: "../../assets/result_industry_smartcity_4.png",
+          heading: "Cost Savings",
+          description:
+            "We integrate advanced video infrastructure into your city’s core, streamlining workflows, automating oversight and reducing operational overhead with scalable, sensor-driven monitoring.",
+        },
+        {
+          image: "../../assets/result_industry_smartcity_5.png",
+          heading: "Sustainability",
+          description:
+            "Our smart city video surveillance solution helps authorities make informed decisions to optimize resource consumption and drive energy-efficient practices and a sustainable urban environment.",
+        },
+        {
+          image: "../../assets/result_industry_smartcity_6.png",
+          heading: "Enhanced Security",
+          description:
+            "VMukti delivers intelligent vision infrastructure for smart cities enabling instant threat detection, seamless emergency coordination and always-on urban oversight built for high-security, high-density environments.",
+        },
+      ],
+    },
+
+    cta: {
+      textLines: [
+        "Detect Issues in Real-Time – Experience Our Computer",
+        "Vision Solution for Smart Cities",
+      ],
+      href: "/smartcity",
+    },
+
+    workflow: {
+      heading:
+        "How We Provide Tailored Video Surveillance Solution for Smart City",
+      image: "smartcity_workflow.png",
+    },
+  },
+  // Result image remaining
+  pharma: {
+    title: [
+      {
+        text: "Setting New Safety Standards in Pharmaceutical Video Surveillance",
+        color: "black",
+      },
+    ],
+    para: "VMukti empowers your pharma operations with cutting-edge vision systems, offering unparalleled oversight of personnel and production. Our solution ensures flawless adherence to safety standards and regulatory mandates, securing product quality while optimizing your operational excellence at every level.",
+
+    large_image: "pharma_mockup.png",
+    large_image_alt: "Pharmaceutical site surveillance illustration",
+
+    keyApplications: [
+      {
+        id: "section1",
+        mainHeading:
+          "Streamlining Pharma Workflows Through Smart Video Monitoring",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat1-1",
+            title: "Workforce Motion Tracking",
+            description:
+              "We deploy advanced computer vision to monitor every movement and anomaly in your pharma environment, ensuring uninterrupted operations and safeguarding compliance with precision for your industry.",
+            image: "../../assets/feat1_industry_pharma_1.png",
+          },
+          {
+            id: "feat1-2",
+            title: "Identity Verification System",
+            description:
+              "Our cutting-edge facial recognition tech elevates your security framework, delivering real-time personnel verification and precise audit trails ensuring only authorized access while streamlining compliance.",
+            image: "../../assets/feat1_industry_pharma_2.png",
+          },
+          {
+            id: "feat1-3",
+            title: "Zone Breach Alert",
+            description:
+              "With our analytics, we empower you to enforce strict cleanroom boundaries seamlessly triggering immediate alerts when limits are crossed to safeguard compliance and uphold your facility’s highest standards.",
+            image: "../../assets/feat1_industry_pharma_3.png",
+          },
+          {
+            id: "feat1-4",
+            title: "Defect Scan Automation",
+            description:
+              "Your commitment to excellence deserves precision. With our intelligent visual inspection, every package, label and seal undergoes flawless scrutiny so you deliver uncompromised quality and build trust at every shipment.",
+            image: "../../assets/feat1_industry_pharma_4.png",
+          },
+          {
+            id: "feat1-5",
+            title: "Asset Absence Alert",
+            description:
+              "VMukti empowers your healthcare teams with real-time visual precision, identifying misplaced items in critical areas, safeguarding product integrity and streamlining compliance with unmatched accuracy and reliability.",
+            image: "../../assets/feat1_industry_pharma_5.png",
+          },
+        ],
+      },
+      {
+        id: "section2",
+        mainHeading:
+          "Protecting Critical Pharma Assets Through Visual Threat Detection",
+        bgColor: "blue",
+        features: [
+          {
+            id: "feat2-1",
+            title: "Fire Hazard Alert",
+            description:
+              "VMukti deploys cutting-edge AI-powered video analytics to instantly detect fire and smoke, delivering proactive alerts that let you act before hazards escalate because in safety, every second and every detail counts.",
+            image: "../../assets/feat2_industry_pharma_1.png",
+          },
+          {
+            id: "feat2-2",
+            title: "Access Violation",
+            description:
+              "Your facility deserves uncompromised protection, our advanced surveillance architecture identifies and flags unauthorized access instantly, reinforcing perimeter integrity and traceability with zero operational friction.",
+            image: "../../assets/feat2_industry_pharma_2.png",
+          },
+          {
+            id: "feat2-3",
+            title: "Entry/Exit Monitoring",
+            description:
+              "Our advanced solution ensures complete oversight of entry and exit by precisely tracking personnel movement and delivering real-time alerts, empowering you to maintain airtight security and eliminate vulnerabilities effortlessly.",
+            image: "../../assets/feat2_industry_pharma_3.png",
+          },
+          {
+            id: "feat2-4",
+            title: "Fall Risk Monitoring",
+            description:
+              "With real-time AI-driven fall detection, you gain proactive oversight that sends immediate alerts ensuring swift medical intervention. Perfectly engineered for sensitive spaces with its safety redefined at your command.",
+            image: "../../assets/feat2_industry_pharma_4.png",
+          },
+        ],
+      },
+      {
+        id: "section3",
+        mainHeading:
+          "Strengthening Compliance with Video Surveillance in Pharma",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat3-1",
+            title: "PPE Presence Check",
+            description:
+              "We equip your facility with real-time visual analytics that ensure strict adherence to medical-grade dress codes, actively reducing exposure risks and safeguarding every layer of your pharmaceutical workflow.",
+            image: "../../assets/feat3_industry_pharma_1.png",
+          },
+          {
+            id: "feat3-2",
+            title: "Hygiene Compliance",
+            description:
+              "Our advanced computer vision suite monitors hygiene compliance in real time flagging missed handwashing moments to help you enforce SOPs, eliminate risk vectors and meet global pharma-grade cleanliness mandates.",
+            image: "../../assets/feat3_industry_pharma_2.png",
+          },
+        ],
+      },
+    ],
+
+    keyBenefits: {
+      heading: "Driving Smart Solutions Using Computer Vision for Pharma",
+      description:
+        "VMukti brings precision-grade computer vision to pharmaceutical operations empowering your teams with real-time visual intelligence, automated deviation alerts and compliance-ready oversight. We help you enforce standards, reduce risk and maintain operational excellence without disruption.",
+      benefits: [
+        {
+          image: "../../assets/result_pharma_1.png",
+          heading: "Access Control and Security",
+          description:
+            "With intelligent access orchestration, you secure critical pharma zones, eliminate unauthorized movement and stay audit-ready ensuring every entry aligns with your regulatory and operational mandates.",
+        },
+        {
+          image: "../../assets/result_pharma_2.png",
+          heading: "Accurate Inventory Tracking",
+          description:
+            "We equip your pharma operations with precision-grade visual tracking, monitoring item flow in real time to eliminate shrinkage, ensure audit accuracy and reinforce inventory accountability across every batch.",
+        },
+        {
+          image: "../../assets/result_pharma_3.png",
+          heading: "Contamination Prevention",
+          description:
+            "You can use our system to enforce hygiene compliance by detecting protocol breaches in real time, safeguarding your production flow, preserving product integrity and ensuring brand trust at every critical stage.",
+        },
+        {
+          image: "../../assets/result_pharma_4.png",
+          heading: "Simplify Investigations",
+          description:
+            "VMukti equips your operations with intelligent vision AI that captures, classifies and contextualizes every critical event accelerating audits, resolving risks and streamlining compliance response.",
+        },
+        {
+          image: "../../assets/result_pharma_5.png",
+          heading: "Sterile Zone Intrusion",
+          description:
+            "Our system enforces sterile zone integrity with intelligent breach detection, instant alerts and regulatory-grade precision giving you complete operational control where contamination is not an option.",
+        },
+        {
+          image: "../../assets/result_pharma_6.png",
+          heading: "Improve Operational Discipline",
+          description:
+            "With precision-grade video intelligence, you gain continuous oversight into staff behavior and protocol adherence minimizing deviations, enforcing SOPs and safeguarding pharmaceutical integrity at every step.",
+        },
+      ],
+    },
+
+    workflow: {
+      heading: "The Pharma Video Surveillance Solution Process",
+      image: "pharma_workflow.png",
+    },
+
+    cta: {
+      textLines: [
+        "Lead with Precision Using Vision AI in Pharmaceutical",
+        "Solutions",
+      ],
+      href: "/pharma",
+    },
+  },
+  logistics: {
+    title: [
+      {
+        text: "Transforming Supply Chain Security with Computer Vision in Logistics",
+        color: "black",
+      },
+    ],
+    para: "Your operations deserve precision at every touchpoint. One wrong pick or mislabeled box can ripple into costly setbacks, reputational risk and delivery chaos. At VMukti, we integrate advanced computer vision into logistics infrastructure elevating safety, accelerating efficiency and productivity and helping you make sure you are following compliance in your entire workflow without any disruption, in real time.",
+
+    large_image: "logistics_mockup.png",
+    large_image_alt: "Logistics and supply chain surveillance illustration",
+
+    keyApplications: [
+      {
+        id: "section1",
+        mainHeading:
+          "Streamlining Cargo Flow Through Precision-Driven Visual Solutions",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat1-1",
+            title: "Smart Inventory Management",
+            description:
+              "VMukti equips your operations with precision-grade visual solutions that monitors stock in real time eliminating overstock, avoiding shortages, and delivering flawless inventory accuracy at enterprise scale.",
+            image: "../../assets/feat1_industry_logistics_1.png",
+          },
+          {
+            id: "feat1-2",
+            title: "Package Inspection and Quality Control",
+            description:
+              "We deploy vision-powered quality control to instantly flag mispackaged or damaged goods, minimizing downstream errors and ensuring every unit that moves out meets your brand’s precision standard.",
+            image: "../../assets/feat1_industry_logistics_2.png",
+          },
+          {
+            id: "feat1-3",
+            title: "Auto Attendance System",
+            description:
+              "You get accurate, real-time attendance tracking using VMukti's facial recognition, it needs no badges, no scanner. Just seamless planning across your logistics hubs where time means money.",
+            image: "../../assets/feat1_industry_logistics_3.png",
+          },
+          {
+            id: "feat1-4",
+            title: "Route and Fleet Optimization",
+            description:
+              "Our logistics visual solution suite leverages real-time traffic intelligence and delivery pattern analysis to optimize routing minimizing delays, fuel waste and missed SLAs with precision at scale.",
+            image: "../../assets/feat1_industry_logistics_4.png",
+          },
+          {
+            id: "feat1-5",
+            title: "Smart Label Validation",
+            description:
+              "We bring precision to your logistics flow helping in detection of unreadable, missing or duplicate labels in real time. No manual scanning needed, just uninterrupted accuracy from dock to doorstep.",
+            image: "../../assets/feat1_industry_logistics_5.png",
+          },
+          {
+            id: "feat1-6",
+            title: "Sack Loading & Unloading",
+            description:
+              "Your uptime is too valuable to risk. Our system monitors every corner with visual intelligence proactively detecting unsafe actions to protect assets, people and performance without slowing you down.",
+            image: "../../assets/feat1_industry_logistics_6.png",
+          },
+          {
+            id: "feat1-7",
+            title: "Vacant Parking",
+            description:
+              "Using VMukti's computer vision solution that pinpoints vacant zones instantly, streamlining vehicle movement and reducing choke points engineered for seamless throughput in logistics environments.",
+            image: "../../assets/feat1_industry_logistics_7.png",
+          },
+        ],
+      },
+      {
+        id: "section2",
+        mainHeading:
+          "Enhancing Cargo Security With Our Logistics Security Solutions",
+        bgColor: "blue",
+        features: [
+          {
+            id: "feat2-1",
+            title: "Fire Alerts",
+            description:
+              "We deploy real-time visual threat detection that identifies heat signatures and smoke trails with extreme precision. Automated alerts help neutralize fire risk across high-density and high-value operational zones.",
+            image: "../../assets/feat2_industry_logistics_1.png",
+          },
+          {
+            id: "feat2-2",
+            title: "Unauthorized Monitoring",
+            description:
+              "Our intelligent surveillance ecosystem actively flags unauthorized movement across restricted zones triggering instant alerts that let your team intervene before a breach disrupts safety, assets or operational flow.",
+            image: "../../assets/feat2_industry_logistics_2.png",
+          },
+          {
+            id: "feat2-3",
+            title: "Employee Safety Monitoring",
+            description:
+              "Leverage advanced vision systems that monitor employee dynamics across your facility, ensuring compliance, mitigating accidents that help to prevent injuries and maintaining operational integrity 24/7.",
+            image: "../../assets/feat2_industry_logistics_3.png",
+          },
+          {
+            id: "feat2-4",
+            title: "Driver Management System",
+            description:
+              "VMukti’s solution integrates real-time behavioral analytics into your logistics stream detecting drowsiness, device usage and safety violations to enforce compliance and minimize incident risk.",
+            image: "../../assets/feat2_industry_logistics_4.png",
+          },
+        ],
+      },
+      {
+        id: "section3",
+        mainHeading:
+          "Meeting Regulatory Demands with Intelligent Cargo Visual Solutions",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat3-1",
+            title: "Smoking Prevention",
+            description:
+              "Our system identifies smoking violations in restricted zones with precision, helping you enforce zero-tolerance policies and preserve controlled, compliant environments across your logistics operations.",
+            image: "../../assets/feat3_industry_logistics_1.png",
+          },
+          {
+            id: "feat3-2",
+            title: "PPE Kit Policy",
+            description:
+              "Our system enforces safety with real-time PPE kit detection automatically identifying non-compliance on the floor and triggering alerts before risk turns into liability. Stay protected, stay audit-ready.",
+            image: "../../assets/feat3_industry_logistics_2.png",
+          },
+        ],
+      },
+    ],
+
+    keyBenefits: {
+      heading: "Optimize Workflows in the Logistics Computer Vision Solution",
+      description:
+        "In an era where speed and precision are crucial, logistics companies are turning to next-gen solutions to stay ahead. Our logistics real time video surveillance offers cutting-edge technology that’s revolutionizing the industry.",
+      benefits: [
+        {
+          image: "../../assets/result_industry_logistics_1.png",
+          heading: "Improved Accuracy",
+          description:
+            "Our enterprise-grade video systems reduce manual missteps, giving your logistics operations pinpoint inventory visibility, flawless order routing, and total delivery traceability no guesswork, no compromise.",
+        },
+        {
+          image: "../../assets/result_industry_logistics_2.png",
+          heading: "Increased Safety",
+          description:
+            "We equip your logistics operations with enterprise-grade video intelligence that flags safety violations, detects real-time hazards and ensures protocol adherence without disrupting your workflow.",
+        },
+        {
+          image: "../../assets/result_industry_logistics_3.png",
+          heading: "Enhance Efficiency",
+          description:
+            "VMukti's Solutions accelerate your logistics workflow with Computer Vision AI automating sorting, streamlining package flow and delivering precision at scale across every node of your supply chain.",
+        },
+        {
+          image: "../../assets/result_industry_logistics_4.png",
+          heading: "Scalability",
+          description:
+            "Your logistics deserves more than basic oversight. Our premium surveillance framework delivers seamless data flow, transaction clarity and operational finesse engineered to elevate enterprise performance.",
+        },
+        {
+          image: "../../assets/result_industry_logistics_5.png",
+          heading: "Cost Reduction",
+          description:
+            "Our advanced video analytics platform minimizes manual oversight, slashes inefficiencies and ensures flawless goods movement eliminating stockouts, damage and delays across your logistics chain.",
+        },
+        {
+          image: "../../assets/result_industry_logistics_6.png",
+          heading: "Problem Identification",
+          description:
+            "We equip your logistics chain system with real-time visual intelligence instantly detecting damage, delays or disruptions so your teams act fast, reduce losses and maintain delivery precision.",
+        },
+      ],
+    },
+
+    workflow: {
+      heading: "Building Smart Processes for Logistics Surveillance Systems",
+      image: "logistics_workflow.png",
+    },
+
+    cta: {
+      textLines: [
+        "Track Issues in Real-Time – Book a Demo of Our",
+        "Computer Vision Logistics",
+      ],
+      href: "/logistics",
+    },
+  },
+  banking: {
+    title: [
+      {
+        text: "Securing Financial Spaces Through Computer Vision in Banking",
+        color: "black",
+      },
+    ],
+    para: "A single missed moment in surveillance can result in unauthorized access, critical data loss and costly trust issues that impact your bank’s bottom line. VMukti Solutions provides advanced bank video surveillance to help financial institutions eliminate blind spots, detect threats in real time and maintain secure, uninterrupted operations while safeguarding assets and customer trust.",
+
+    large_image: "banking_mockup.png",
+    large_image_alt: "Banking and financial surveillance illustration",
+
+    keyApplications: [
+      {
+        id: "section1",
+        mainHeading:
+          "Boosting Banking Efficiency Through Advanced Computer Vision",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat1-1",
+            title: "Person Counting and Time Analysis",
+            description:
+              "VMukti's intelligent vision system analyzes customer volumes and service durations in real time empowering your branch to reduce congestion waiting time and elevate the customer experience effortlessly.",
+            image: "../../assets/feat1_industry_banking_1.png",
+          },
+          {
+            id: "feat1-2",
+            title: "Crowd and Queue Management",
+            description:
+              "Our intelligent surveillance framework gives you command over branch activity, monitor foot traffic, detect crowding and optimize customer flow with zero disruption, even during peak banking hours.",
+            image: "../../assets/feat1_industry_banking_2.png",
+          },
+          {
+            id: "feat1-3",
+            title: "Staff Monitoring",
+            description:
+              "We equip your banking floor with an intelligent visual solution that oversights tracking staff conduct in real time, enforcing operational standards and eliminating compliance blind spots with absolute precision.",
+            image: "../../assets/feat1_industry_banking_3.png",
+          },
+          {
+            id: "feat1-4",
+            title: "Facial Recognition",
+            description:
+              "You get precision attendance without the paperwork. Our facial recognition ensures verified entries, zero spoofing and streamlined access built for environments where accuracy is non-negotiable.",
+            image: "../../assets/feat1_industry_banking_4.png",
+          },
+          {
+            id: "feat1-5",
+            title: "Customer Behavior Monitoring",
+            description:
+              "VMukti’s intelligent bank surveillance suite delivers real-time behavioral analytics, tracking every customer movement, spotting anomalies instantly and optimizing in-branch flow with precision-grade situational awareness.",
+            image: "../../assets/feat1_industry_banking_5.png",
+          },
+          {
+            id: "feat1-6",
+            title: "Parking Management",
+            description:
+              "We streamline your vehicle flow using computer vision which helps in precision-tuned parking intelligence, real-time slot visibility, seamless access and fortified perimeter logic built for high-security banking environments.",
+            image: "../../assets/feat1_industry_banking_6.png",
+          },
+          {
+            id: "feat1-7",
+            title: "Heatmap of Crowd",
+            description:
+              "You gain strategic visibility with VMukti’s heatmap intelligence color-coded movement data that reveals dwell time, traffic bottlenecks and blind spots across your facility, all in a single visual layer.",
+            image: "../../assets/feat1_industry_banking_7.png",
+          },
+          {
+            id: "feat1-8",
+            title: "Vacant Parking Detection",
+            description:
+              "Our smart vision systems pinpoint vacant parking in real time optimizing traffic flow for your entire building, enhancing VIP access and elevating the arrival experience across your high-footfall properties.",
+            image: "../../assets/feat1_industry_banking_8.png",
+          },
+        ],
+      },
+      {
+        id: "section2",
+        mainHeading:
+          "The Role of Visual Intelligence for Banking in Protecting Financial Institutions",
+        bgColor: "blue",
+        features: [
+          {
+            id: "feat2-1",
+            title: "Weapon Detection",
+            description:
+              "VMukti equips your sites with discreet weapon detection powered by advanced visual intelligence enabling instant threat identification, proactive containment and elevated protection for your staff, customers and brand integrity.",
+            image: "../../assets/feat2_industry_banking_1.png",
+          },
+          {
+            id: "feat2-2",
+            title: "Area Monitoring",
+            description:
+              "We equip your bank with precision-driven surveillance that secures high-risk zones, verifies access in real time and ensures only trusted personnel step into sensitive environments flawlessly and without compromise.",
+            image: "../../assets/feat2_industry_banking_2.png",
+          },
+          {
+            id: "feat2-3",
+            title: "ATM Monitoring",
+            description:
+              "Our intelligent surveillance ecosystem safeguards every ATM touchpoint detecting tampering, card skimming and anomalous behavior in real time, so your customers transact securely and your brand integrity stays intact.",
+            image: "../../assets/feat2_industry_banking_3.png",
+          },
+          {
+            id: "feat2-4",
+            title: "Smoke & Fire Detection",
+            description:
+              "VMukti's intelligent surveillance infrastructure identifies early fire indicators, thermal anomalies, smoke, or visual cues triggering instant alerts to safeguard personnel, high-value assets, and critical financial operations.",
+            image: "../../assets/feat2_industry_banking_4.png",
+          },
+          {
+            id: "feat2-5",
+            title: "Line Crossing Detection",
+            description:
+              "You gain precision monitoring with AI-powered motion analytics that identify unauthorized movement across secured zones triggering instant alerts and reinforcing layered access control without delay.",
+            image: "../../assets/feat2_industry_banking_5.png",
+          },
+          {
+            id: "feat2-6",
+            title: "Human Detection",
+            description:
+              "Our intelligent vision layer actively detects human presence in restricted banking areas delivering instant anomaly alerts to elevate situational command and reinforce high-tier branch security.",
+            image: "../../assets/feat2_industry_banking_6.png",
+          },
+        ],
+      },
+      {
+        id: "section3",
+        mainHeading:
+          "Ensuring Regulatory Compliance in Banking with Computer Vision",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat3-1",
+            title: "No-Smoking Compliance",
+            description:
+              "We deploy real-time behavior analytics to flag smoking in restricted banking areas. With VMukti, you gain precise alerts and automated compliance because risk has no place in your secure zones.",
+            image: "../../assets/feat3_industry_banking_1.png",
+          },
+          {
+            id: "feat3-2",
+            title: "Uniform Compliance Check",
+            description:
+              "Our advanced visual intelligence platform enforces dress code adherence, automates compliance protocols and delivers tamper-proof audit trails helping your bank meet the highest operational standards effortlessly.",
+            image: "../../assets/feat3_industry_banking_2.png",
+          },
+        ],
+      },
+    ],
+
+    keyBenefits: {
+      heading:
+        "Boosting Efficiency and Protection via Surveillance System for Banking",
+      description:
+        "In today’s high-stakes financial landscape, you demand nothing less than precision. Our AI-powered computer vision increases efficiency, safeguards your assets, ensures regulatory compliance and fortifies customer trust.",
+      benefits: [
+        {
+          image: "../../assets/result_industry_banking_1.png",
+          heading: "Suspicious Activity Detection",
+          description:
+            "Protect your bank with cutting-edge AI analytics that spot anomalies in ATM use and branch flow delivering real-time threat detection that empowers your security team to act swiftly and maintain trust without compromise.",
+        },
+        {
+          image: "../../assets/result_industry_banking_2.png",
+          heading: "Faster Incident Response",
+          description:
+            "Our advanced banking video surveillance delivers immediate breach detection and proactive alerts. Stay steps ahead of threats with intelligent monitoring designed to safeguard your operations and maintain trust.",
+        },
+        {
+          image: "../../assets/result_industry_banking_3.png",
+          heading: "Regulatory Compliance",
+          description:
+            "We power your banking security with relentless video oversight and audit capabilities. Our solution sharpens compliance and boosts transparency with instant insights turning complex investigations into resolutions.",
+        },
+        {
+          image: "../../assets/result_industry_banking_4.png",
+          heading: "Improved Customer Experience",
+          description:
+            "VMukti's Solutions create a secure environment where your customers feel genuinely protected and respected. This peace of mind deepens trust and cultivates lasting loyalty because at your bank, safety is a premium experience.",
+        },
+        {
+          image: "../../assets/result_industry_banking_5.png",
+          heading: "Cost Efficiency",
+          description:
+            "Elevate your bank’s security posture by deploying cutting-edge surveillance that intelligently replaces manual oversight slashing risks and optimizing operational spend without ever compromising safety standards.",
+        },
+        {
+          image: "../../assets/result_industry_banking_6.png",
+          heading: "Scalability",
+          description:
+            "VMukti empowers your banking with visual solutions designed for elite control and future-proof adaptability. We streamline your surveillance, making complex management effortless, so you maintain dominance over threats.",
+        },
+      ],
+    },
+
+    workflow: {
+      heading:
+        "Developing a Future-Ready Bank Surveillance System With Structured Implementation",
+      image: "banking_workflow.png",
+    },
+
+    cta: {
+      textLines: [
+        "Elevate Your Experience With The Bank Video",
+        "Surveillance Solution",
+      ],
+      href: "/banking",
+    },
+  },
+  sportsentertainment: {
+    title: [
+      {
+        text: "Bringing Every Moment to Life with Computer Vision for Sports & Entertainment",
+        color: "black",
+      },
+    ],
+    para: "Every moment counts in sports and entertainment where audience experience, performance and safety define success. VMukti Solutions brings precision to the spotlight with visual AI solutions that deliver real-time insights, streamline operations and transform the way games and events are experienced.",
+
+    large_image: "sportsentertainment_mockup.png",
+    large_image_alt: "Sports and entertainment surveillance illustration",
+
+    keyApplications: [
+      {
+        id: "section1",
+        mainHeading:
+          "Intelligent Venue Oversight for Sports & Entertainment Operations",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat1-1",
+            title: "Player Performance Analysis",
+            description:
+              "Our advanced vision system decodes every movement and metric delivering precision reports on player mechanics and performance gains to elevate your training with precise strategy.",
+            image: "../../assets/feat1_industry_sport_1.png",
+          },
+          {
+            id: "feat1-2",
+            title: "Automated Referee Assistance",
+            description:
+              "Your game environment demands precision. Our surveillance system delivers real-time video intelligence that flags rule violations instantly, empowering officials with unbiased, data-backed decisions at game speed.",
+            image: "../../assets/feat1_industry_sport_2.png",
+          },
+          {
+            id: "feat1-3",
+            title: "Match Highlights Generation",
+            description:
+              "VMukti leverages cutting-edge computer vision to autonomously extract impactful game moments producing polished, broadcast-grade highlight generation at unmatched speed and scale.",
+            image: "../../assets/feat1_industry_sport_3.png",
+          },
+          {
+            id: "feat1-4",
+            title: "Ticket Zone Analytics",
+            description:
+              "With advanced occupancy mapping and temporal behavior insights, our system optimizes throughput at ticket zones minimizing congestion and elevating guest movement to a new tier of efficiency.",
+            image: "../../assets/feat1_industry_sport_4.png",
+          },
+          {
+            id: "feat1-5",
+            title: "Crowd Stampede Alert",
+            description:
+              "Our intelligent alert system identifies abrupt crowd surges in real time, empowering your teams to act instantly averting stampedes, maintaining order and safeguarding every individual on-site.",
+            image: "../../assets/feat1_industry_sport_5.png",
+          },
+          {
+            id: "feat1-6",
+            title: "VIP Access Recognition",
+            description:
+              "We enable instant VIP recognition with ultra-fast biometric profiling, giving your key guests exclusive, secure and seamless entry to premium zones with no badges, no bottlenecks, just pure access control.",
+            image: "../../assets/feat1_industry_sport_6.png",
+          },
+          {
+            id: "feat1-7",
+            title: "Behavioral Movement Analysis",
+            description:
+              "Your environment stays in control with high-precision analytics that detect zone breaches, aggression or abnormal gatherings triggering immediate alerts to help your team respond before disruption unfolds.",
+            image: "../../assets/feat1_industry_sport_7.png",
+          },
+          {
+            id: "feat1-8",
+            title: "Crowd Volume Tracking",
+            description:
+              "With automated headcount intelligence, you gain real-time visibility into footfall, enabling precision-driven capacity planning, seamless crowd control and effortless compliance across every access point.",
+            image: "../../assets/feat1_industry_sport_8.png",
+          },
+          {
+            id: "feat1-9",
+            title: "Smart Parking",
+            description:
+              "VMukti optimizes vehicle flow by detecting vacant slots and flagging unauthorized access in reserved zones ensuring your critical lanes, VIP bays and team areas stay uncompromised and fully operational.",
+            image: "../../assets/feat1_industry_sport_9.png",
+          },
+        ],
+      },
+      {
+        id: "section2",
+        mainHeading:
+          "Seamless Control for Dynamic Spaces with Entertainment & Sports Surveillance System",
+        bgColor: "blue",
+        features: [
+          {
+            id: "feat2-1",
+            title: "Live Event Security",
+            description:
+              "Our intelligent monitoring safeguards ground perimeters and entry points, instantly flagging unauthorized access to maintain game integrity and let your team focus on performance, not security lapses.",
+            image: "../../assets/feat2_industry_sport_1.png",
+          },
+          {
+            id: "feat2-2",
+            title: "Restricted Zone Breach",
+            description:
+              "Your venue demands discretion, Our vision tech monitors sensitive zones like dugouts and locker corridors with surgical precision, ensuring athlete privacy and real-time boundary enforcement without compromise.",
+            image: "../../assets/feat2_industry_sport_2.png",
+          },
+          {
+            id: "feat2-3",
+            title: "Weapon Presence Alert",
+            description:
+              "With our advanced threat detection engine, your team stays ahead identifying concealed weapons in real time, even in crowded spaces and enabling proactive, coordinated response before risk becomes reality.",
+            image: "../../assets/feat2_industry_sport_3.png",
+          },
+        ],
+      },
+      {
+        id: "section3",
+        mainHeading:
+          "Ensuring Protocol Adherence with Visual Intelligence at Every Event",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat3-1",
+            title: "No-Smoke Zone Monitoring",
+            description:
+              "Our visual solution identifies smoking violations in real time using advanced visual analytics enabling you to uphold compliance, protect health standards and maintain a refined guest experience.",
+            image: "../../assets/feat3_industry_sport_1.png",
+          },
+        ],
+      },
+      {
+        id: "section4",
+        mainHeading:
+          "When Engagement Meets Safety through Video Surveillance in Sports and Entertainment",
+        bgColor: "blue",
+        features: [
+          {
+            id: "feat4-1",
+            title: "High Resolution Imaging",
+            description:
+              "We deliver precision-calibrated visuals with advanced resolution dynamics ensuring crystal clarity, seamless monitoring and uncompromised playback in high-security, high-demand environments.",
+            image: "../../assets/feat4_industry_sport_1.png",
+          },
+          {
+            id: "feat4-2",
+            title: "Improved Safety at Events",
+            description:
+              "VMukti transforms your live environments with real-time situational awareness fusing behavioral recognition and automated incident alerts to elevate safety and response precision during high-density gatherings.",
+            image: "../../assets/feat4_industry_sport_2.png",
+          },
+          {
+            id: "feat4-3",
+            title: "Reduces Human Mistakes",
+            description:
+              "Our platform eliminates manual lapses by fusing integration with our intelligent video workflows that helps in delivering precision, consistency and control in even the most fast-paced operational settings.",
+            image: "../../assets/feat4_industry_sport_3.png",
+          },
+          {
+            id: "feat4-4",
+            title: "Integration with Other Systems",
+            description:
+              "VMukti integrates our solution seamlessly with your infrastructure, syncing real-time data and intelligent systems to deliver a streamlined, future-ready command environment with zero operational friction.",
+            image: "../../assets/feat4_industry_sport_4.png",
+          },
+          {
+            id: "feat4-5",
+            title: "Event Incident Review",
+            description:
+              "Your footage isn’t just stored, it's searchable. With advanced event tagging, you pinpoint moments like object throws or pitch breaches instantly, streamlining reviews and accelerating response.",
+            image: "../../assets/feat4_industry_sport_5.png",
+          },
+          {
+            id: "feat4-6",
+            title: "Staff Activity Monitoring",
+            description:
+              "We equip you with real-time operational intelligence that streamlines workforce deployment, eliminates lag and accelerates on-ground responsiveness driving measurable efficiency at every layer.",
+            image: "../../assets/feat4_industry_sport_6.png",
+          },
+        ],
+      },
+    ],
+
+    keyBenefits: {
+      heading:
+        "When Engagement Meets Safety through Video Surveillance in Sports and Entertainment",
+      description:
+        "Your competitive edge begins with vision AI analyzing player dynamics, audience behavior and event flow in real time. We turn your live moments into operational intelligence, unlocking performance gains, operational precision and unmatched spectator engagement.",
+      benefits: [
+        {
+          image: "../../assets/result_industry_sport_1.png",
+          heading: "High Resolution Imaging",
+          description:
+            "We deliver precision-calibrated visuals with advanced resolution dynamics ensuring crystal clarity, seamless monitoring and uncompromised playback in high-security, high-demand environments.",
+        },
+        {
+          image: "../../assets/result_industry_sport_2.png",
+          heading: "Improved Safety at Events",
+          description:
+            "VMukti transforms your live environments with real-time situational awareness fusing behavioral recognition and automated incident alerts to elevate safety and response precision during high-density gatherings.",
+        },
+        {
+          image: "../../assets/result_industry_sport_3.png",
+          heading: "Reduces Human Mistakes",
+          description:
+            "Our platform eliminates manual lapses by fusing integration with our intelligent video workflows that helps in delivering precision, consistency and control in even the most fast-paced operational settings.",
+        },
+        {
+          image: "../../assets/result_industry_sport_4.png",
+          heading: "Integration with Other Systems",
+          description:
+            "VMukti integrates our solution seamlessly with your infrastructure, syncing real-time data and intelligent systems to deliver a streamlined, future-ready command environment with zero operational friction.",
+        },
+        {
+          image: "../../assets/result_industry_sport_5.png",
+          heading: "Event Incident Review",
+          description:
+            "Your footage isn’t just stored, it's searchable. With advanced event tagging, you pinpoint moments like object throws or pitch breaches instantly, streamlining reviews and accelerating response.",
+        },
+        {
+          image: "../../assets/result_industry_sport_6.png",
+          heading: "Staff Activity Monitoring",
+          description:
+            "We equip you with real-time operational intelligence that streamlines workforce deployment, eliminates lag and accelerates on-ground responsiveness driving measurable efficiency at every layer.",
+        },
+      ],
+    },
+
+    cta: {
+      textLines: 
+      [
+        "Unlock Smarter Game Moments with The Power of",
+        "Visual AI"
+      ],
+      href: "/sportsentertainment",
+    },
+
+    workflow: {
+      heading:
+        "How We Provide Tailored Video Surveillance Solution for Sports & Entertainment",
+      image: "sportsentertainment_workflow.png",
+    },
+  },
+  defense: {
+    title: [
+      {
+        text: "Harnessing Computer Vision in Defense to Strengthen National Security",
+        color: "black",
+      },
+    ],
+    para: "In the world of defense, silence isn't safe because what's unseen can be your greatest threat, like undetected movements or blind spots that can put entire operations at risk. VMukti solutions provides a surveillance solution for defense that detects anomalies, tracks movements and alerts security instantly, which offers faster and more accurate monitoring.",
+
+    large_image: "defence_mockup.png",
+    large_image_alt: "Defense surveillance monitoring illustration",
+
+    keyApplications: [
+      {
+        id: "section1",
+        mainHeading:
+          "Strengthening Border Control with Computer Vision for Defense",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat1-1",
+            title: "Centralize Control",
+            description:
+              "With live multi-camera feeds centralized you get centralized visibility from every feed enabling instant response, seamless oversight and operational clarity exactly when and where it most matters for you.",
+            image: "../../assets/feat1_industry_def_1.png",
+          },
+          {
+            id: "feat1-2",
+            title: "Crowd Monitoring at Military Events",
+            description:
+              "We deliver military-grade video intelligence to help you command every vantage point ensuring threat visibility, crowd control and operational dominance during parades, deployments or high-stakes demonstrations.",
+            image: "../../assets/feat1_industry_def_2.png",
+          },
+          {
+            id: "feat1-3",
+            title: "Head Count",
+            description:
+              "Our intelligent vision system delivers real-time headcount analytics empowering your team to manage density, optimize flow and maintain complete situational control without manual intervention.",
+            image: "../../assets/feat1_industry_def_3.png",
+          },
+        ],
+      },
+      {
+        id: "section2",
+        mainHeading: "Elevating Perimeter Defense with Visual Intelligence",
+        bgColor: "blue",
+        features: [
+          {
+            id: "feat2-1",
+            title: "Fire and Smoke Detection",
+            description:
+              "Your operations demand zero margin for error. We deploy real-time flame and particulate intelligence to spot threats early, activating rapid countermeasures before fire risks impact mission-critical zones or tactical readiness.",
+            image: "../../assets/feat2_industry_def_1.png",
+          },
+          {
+            id: "feat2-2",
+            title: "Entry/Exit Monitoring",
+            description:
+              "VMukti ensures full-spectrum visibility by tracking every individual entering or exiting your facility delivering encrypted access logs and real-time movement data built for audit-grade traceability in sensitive zones.",
+            image: "../../assets/feat2_industry_def_2.png",
+          },
+          {
+            id: "feat2-3",
+            title: "Restricted Area Surveillance",
+            description:
+              "With precision-grade analytics and encrypted video intelligence, Our defense solutions secure your most critical zones detecting breaches instantly and locking down threats before they compromise your command.",
+            image: "../../assets/feat2_industry_def_3.png",
+          },
+          {
+            id: "feat2-4",
+            title: "Authorized Vehicle Entry",
+            description:
+              "Our defense-grade Vision AI identifies, logs and verifies every vehicle through precision plate recognition delivering seamless gate control and real-time perimeter intelligence where authorization is non-negotiable.",
+            image: "../../assets/feat2_industry_def_4.png",
+          },
+          {
+            id: "feat2-5",
+            title: "Border Surveillance",
+            description:
+              "We secure your critical boundaries with precision surveillance real-time threat detection, autonomous monitoring and encrypted command access for high-risk environments that demand zero compromise.",
+            image: "../../assets/feat2_industry_def_5.png",
+          },
+          {
+            id: "feat2-6",
+            title: "Facial Recognition for Access Control",
+            description:
+              "Your perimeter stays sealed with real-time facial recognition granting instant, encrypted access only to verified personnel. No badges, no delays, just uncompromised defense-grade access control.",
+            image: "../../assets/feat2_industry_def_6.png",
+          },
+          {
+            id: "feat2-7",
+            title: "Line Crossing",
+            description:
+              "VMukti enables precision-level intrusion detection by monitoring virtual perimeters in real time, instantly alerting your response units when secured zones are breached, from command hubs to high-risk borders.",
+            image: "../../assets/feat2_industry_def_7.png",
+          },
+          {
+            id: "feat2-8",
+            title: "Object Detection",
+            description:
+              "We deploy advanced object anomaly recognition to detect unattended assets in real time empowering your team to assess risks instantly and act with precision in mission-critical environments.",
+            image: "../../assets/feat2_industry_def_8.png",
+          },
+        ],
+      },
+      {
+        id: "section3",
+        mainHeading:
+          "Ensuring Regulatory Alignment in Defense Zones with Visual Oversight",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat3-1",
+            title: "Safety PPE Kit Detection",
+            description:
+              "Our vision-powered detection system identifies helmets, vests, gloves and boots in real time ensuring your teams meet full compliance standards across high-risk defense operations without compromise.",
+            image: "../../assets/feat3_industry_def_1.png",
+          },
+        ],
+      },
+    ],
+
+    keyBenefits: {
+      heading:
+        "Power of Surveillance Solution for Defense in Securing Critical Operations",
+      description:
+        "VMukti empowers your high-security zones with a defense-grade surveillance ecosystem offering real-time threat identification, intelligent alerting and uninterrupted situational oversight. You stay ahead of risk, with every second accounted for.",
+      benefits: [
+        {
+          image: "../../assets/result_industry_defence_1.png",
+          heading: "Real-Time Threat Detection",
+          description:
+            "Your defense infrastructure stays mission-ready with real-time threat detection and instant situational response powered by precision-grade surveillance that protects what matters, when it matters most.",
+        },
+        {
+          image: "../../assets/result_industry_defence_2.png",
+          heading: "Quick Incident Response",
+          description:
+            "With our high-performance surveillance infrastructure, real-time breach detection activates advanced alerting protocols enabling coordinated, zero-lag response across your security network when every second counts.",
+        },
+        {
+          image: "../../assets/result_industry_defence_3.png",
+          heading: "Data-Driven Decision Making",
+          description:
+            "Our computer vision framework empowers your defense operations with mission-critical insight extracting tactical patterns from video intelligence to refine command decisions and elevate strategic superiority.",
+        },
+        {
+          image: "../../assets/result_industry_defence_4.png",
+          heading: "24/7 Monitoring Capability",
+          description:
+            "We deploy tactical video intelligence with always-on surveillance, AI-powered threat recognition and automated perimeter alerts built to safeguard critical outposts without needing boots on the ground.",
+        },
+        {
+          image: "../../assets/result_industry_defence_5.png",
+          heading: "Evidence Collection and Audit Trail",
+          description:
+            "Your defense operations demand precision. Our visual surveillance delivers high-fidelity footage, real-time visibility and a secure audit trail specifically engineered for mission-critical post-event analysis.",
+        },
+        {
+          image: "../../assets/result_industry_defence_6.png",
+          heading: "Data Security",
+          description:
+            "With enterprise-grade encryption, intelligent access layers, and forensic-level monitoring, your surveillance data stays locked down confidential, compliant, and breach-proof at every touchpoint.",
+        },
+      ],
+    },
+
+    cta: {
+      textLines: [
+        "Safeguard National Security – Partner with Our ",
+        "Defense Surveillance Solution",
+      ],
+      href: "/defense",
+    },
+
+    workflow: {
+      heading:
+        "Crafting Our Blueprint for an Advanced Defense Video Surveillance Solution",
+      image: "defence_workflow.png",
+    },
+  },
+  // Result image remaining
+  hospitality: {
+    title: [
+      {
+        text: "Elevating Guest Experience with Computer Vision in Hospitality",
+        color: "black",
+      },
+    ],
+    para: "In hospitality, every interaction counts as guest satisfaction and security directly influence reputation and success. VMukti Solutions drives excellence with computer vision, offering real-time monitoring and intelligent analytics to enhance guest experiences, improve security and streamline operations.",
+
+    large_image: "hospitality_mockup.png",
+    large_image_alt: "Hospitality surveillance monitoring illustration",
+
+    keyApplications: [
+      {
+        id: "section1",
+        mainHeading:
+          "Harnessing Vision AI in Hospitality to Redefine Hotel Management",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat1-1",
+            title: "Vacant Parking",
+            description:
+              "Our visual solutions offer real-time parking intelligence guiding guests instantly to available spots minimizing congestion, eliminating entry delays and elevating your visitors arrival experience.",
+            image: "../../assets/feat1_industry_hosp_1.png",
+          },
+          {
+            id: "feat1-2",
+            title: "Queue Management",
+            description:
+              "Your guest experience demands precision. Our intelligent system monitors wait times in real time and triggers instant staff alerts ensuring your brand delivers seamless, uninterrupted hospitality at every touchpoint.",
+            image: "../../assets/feat1_industry_hosp_2.png",
+          },
+          {
+            id: "feat1-3",
+            title: "Smart Room Access",
+            description:
+              "VMukti integrates advanced facial recognition in your system to streamline room access, eliminating keycards and ensuring only verified guests enter, enhancing both security and the luxury experience.",
+            image: "../../assets/feat1_industry_hosp_3.png",
+          },
+          {
+            id: "feat1-4",
+            title: "Staff Uniform Compliance",
+            description:
+              "With real-time visual AI enforcement, your teams stay aligned to uniform protocols upholding brand integrity, elevating guest perception and ensuring consistent visual compliance across every operational touchpoint.",
+            image: "../../assets/feat1_industry_hosp_4.png",
+          },
+          {
+            id: "feat1-5",
+            title: "Housekeeping Monitoring",
+            description:
+              "Our intelligent vision layer tracks kitchen workflows in real time confirming hygiene compliance and detecting unattended zones post service windows to uphold operational precision and brand integrity.",
+            image: "../../assets/feat1_industry_hosp_5.png",
+          },
+          {
+            id: "feat1-6",
+            title: "No-Entry Zone",
+            description:
+              "VMukti deploys advanced perimeter intelligence to protect sensitive zones detecting unauthorized movement in real time and activating instant threat response across VIP or high-value areas.",
+            image: "../../assets/feat1_industry_hosp_6.png",
+          },
+          {
+            id: "feat1-7",
+            title: "Entry/Exit Monitoring",
+            description:
+              "We deliver intelligent facial verification across lobbies, service doors and restricted zones seamlessly logging every guest, vendor and staff movement with zero compromise on privacy or control.",
+            image: "../../assets/feat1_industry_hosp_7.png",
+          },
+          {
+            id: "feat1-8",
+            title: "Heatmap for Crowd",
+            description:
+              "Your operations gain command-level oversight with live visual density mapping. Monitor guest flow across venues and deploy staff proactively using AI-driven insights that anticipate traffic surges before they disrupt service.",
+            image: "../../assets/feat1_industry_hosp_8.png",
+          },
+          {
+            id: "feat1-9",
+            title: "Person Counting",
+            description:
+              "With precision-driven occupancy analytics, you gain real-time visibility into foot traffic across elevators and event zones optimizing guest flow, enforcing safety thresholds and elevating operational foresight.",
+            image: "../../assets/feat1_industry_hosp_9.png",
+          },
+        ],
+      },
+      {
+        id: "section2",
+        mainHeading:
+          "Securing Hotel Spaces Through Real-Time Visual Surveillance",
+        bgColor: "blue",
+        features: [
+          {
+            id: "feat2-1",
+            title: "Pool Safety Monitoring",
+            description:
+              "Our drowning detection solution delivers instantaneous poolside surveillance, AI-triggered alerts and precision response giving you full control over aquatic safety without delay or compromise.",
+            image: "../../assets/feat2_industry_hosp_1.png",
+          },
+          {
+            id: "feat2-2",
+            title: "Weapon Alert",
+            description:
+              "We deploy precision-trained vision systems that instantly identify exposed weapons and trigger silent alerts enabling your team to intervene early and preserve safety without disrupting guest experience.",
+            image: "../../assets/feat2_industry_hosp_2.png",
+          },
+          {
+            id: "feat2-3",
+            title: "Early Fire Response",
+            description:
+              "VMukti brings next-gen fire and smoke analytics to your infrastructure automated threat detection, precision-triggered alerts and integrated response protocols built for zero-compromise environments.",
+            image: "../../assets/feat2_industry_hosp_3.png",
+          },
+          {
+            id: "feat2-4",
+            title: "Suspicious Item Scan",
+            description:
+              "Your environment demands precision. Our system flags unattended baggage and suspicious objects instantly activating real-time protocols to protect guests, staff and critical infrastructure without disruption.",
+            image: "../../assets/feat2_industry_hosp_4.png",
+          },
+          {
+            id: "feat2-5",
+            title: "Restricted Zone Alert",
+            description:
+              "With VMukti’s smart perimeter logic, you enforce digital boundaries across critical zones. Unauthorized access triggers real-time alerts, ensuring compliance and operational integrity without fail.",
+            image: "../../assets/feat2_industry_hosp_5.png",
+          },
+        ],
+      },
+      {
+        id: "section3",
+        mainHeading:
+          "Ensuring Operational Standards with Vision-Powered Compliance",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat3-1",
+            title: "No-Smoking Policy",
+            description:
+              "Our vision-powered system pinpoints smoking violations instantly empowering your team to maintain regulatory compliance, safeguard wellness standards and preserve air quality across critical zones.",
+            image: "../../assets/feat3_industry_hosp_1.png",
+          },
+          {
+            id: "feat3-2",
+            title: "Uniform Compliance",
+            description:
+              "VMukti's computer vision system detects uniform violations instantly, enabling your team to uphold brand standards, ensure staff professionalism and maintain consistency across guest-facing areas.",
+            image: "../../assets/feat3_industry_hosp_2.png",
+          },
+        ],
+      },
+    ],
+
+    keyBenefits: {
+      heading:
+        "A Hospitality Surveillance System That Understands Guest Spaces",
+      description:
+        "Our enterprise-grade surveillance redefines hospitality oversight delivering real-time visibility across guest zones and operations, powered by intelligent video analytics for proactive incident response, elevated service assurance and discreet, uninterrupted guest protection.",
+      benefits: [
+        {
+          image: "../../assets/result_hospitality_1.png",
+          heading: "Improved Guest Privacy",
+          description:
+            "Your privacy standards are non-negotiable, our solution tech enforces zone-specific surveillance with anonymized intelligence, safeguarding guest dignity while maintaining elite operational control.",
+        },
+        {
+          image: "../../assets/result_hospitality_2.png",
+          heading: "Remote Access",
+          description:
+            "VMukti puts your entire surveillance network in your palm stream high-fidelity video, monitors events as they unfold and takes decisive action without being bound to a screen, room or geography.",
+        },
+        {
+          image: "../../assets/result_hospitality_3.png",
+          heading: "Improved Resource Security",
+          description:
+            "Our video intelligence platform gives you round-the-clock command over every critical asset point detecting, flagging and preventing theft across back-end operations without disrupting guest-facing excellence.",
+        },
+        {
+          image: "../../assets/result_hospitality_4.png",
+          heading: "Better Operational Efficiency",
+          description:
+            "We replace manual routines with intelligent visual automation freeing your staff to elevate guest interactions while our system ensures compliance, efficiency and operational excellence behind the scenes.",
+        },
+        {
+          image: "../../assets/result_hospitality_5.png",
+          heading: "Optimized Resource Allocation",
+          description:
+            "Your property runs leaner and smarter with intelligent visual insights uncover inefficiencies, realign resource flow and ensure every guest touchpoint is staffed and serviced with intent, not guesswork.",
+        },
+        {
+          image: "../../assets/result_hospitality_6.png",
+          heading: "Continuous Monitoring",
+          description:
+            "With seamless system orchestration across critical zones, you gain uninterrupted situational awareness, accelerated incident response and intelligent uptime engineered for environments where failure isn’t an option.",
+        },
+      ],
+    },
+
+    cta: {
+      textLines: [
+        "Secure the Stay with Our Hospitality ",
+        "Video Surveillance",
+      ],
+      href: "/hospitality",
+    },
+
+    workflow: {
+      heading: "Crafting Hospitality Surveillance Solutions for Every Need",
+      image: "hospitality_workflow.png",
+    },
+  },
+  // Result image remaining
+  construction: {
+    title: [
+      {
+        text: "Computer Vision in Construction: A New Era of Site Intelligence",
+        color: "black",
+      },
+    ],
+    para: "Minor lapses like misaligned resources or bypassed SOPs silently compound disrupting critical milestones and inflating costs before you can course-correct. Our computer vision systems bring clarity to complexity, offering AI analytics and smart detection that elevate your safety standards, ensure compliance and streamline progress across every phase.",
+
+    large_image: "construction_mockup.png",
+    large_image_alt: "Construction site surveillance illustration",
+
+    keyApplications: [
+      {
+        id: "section1",
+        mainHeading: "Smarter Plans Begin with Construction Computer Vision",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat1-1",
+            title: "Site Progress Monitoring",
+            description:
+              "Harness next-gen AI vision to autonomously track construction milestones in real time, accelerate delivery, eliminate delays and elevate project control.",
+            image: "../../assets/feat1_industry_construction_1.png",
+          },
+          {
+            id: "feat1-2",
+            title: "Sack Loading & Unloading",
+            description:
+              "VMukti puts you in command monitoring on-site heavy lifting and material flow with real-time insights. Enhance worker safety, boost task productivity and meet compliance standards seamlessly, powered by our technology.",
+            image: "../../assets/feat1_industry_construction_2.png",
+          },
+          {
+            id: "feat1-3",
+            title: "Equipment Tracking",
+            description:
+              "Take absolute control over your construction assets with real-time equipment intelligence to maximize utilization, eliminate loss and elevate site operations to enterprise-grade precision.",
+            image: "../../assets/feat1_industry_construction_3.png",
+          },
+          {
+            id: "feat1-4",
+            title: "Workforce Monitoring",
+            description:
+              "Leverages AI-powered behavioral analytics to proactively detect fatigue, disengagement and anomalies to safeguarding workforce well-being in real time.",
+            image: "../../assets/feat1_industry_construction_4.png",
+          },
+          {
+            id: "feat1-5",
+            title: "Traffic Management",
+            description:
+              "Your construction site deserves elite traffic oversight, our cutting-edge visual platform delivers real-time vehicle flow analysis, eliminating bottlenecks and boosting operational fluidity with precision-engineered intelligence.",
+            image: "../../assets/feat1_industry_construction_5.png",
+          },
+          {
+            id: "feat1-6",
+            title: "Human Activity Monitoring",
+            description:
+              "Continuously tracks personnel activity to flag unsafe conduct be it non-compliant gear usage, manual handling errors, or unauthorized movement near active equipment mitigating site risk instantly.",
+            image: "../../assets/feat1_industry_construction_6.png",
+          },
+        ],
+      },
+      {
+        id: "section2",
+        mainHeading:
+          "Securing Construction Zones Through Intelligent Visual Monitoring",
+        bgColor: "blue",
+        features: [
+          {
+            id: "feat2-1",
+            title: "Unauthorized Entry Alerting",
+            description:
+              "With our cutting-edge visual intelligence, We flag any unauthorized entry into sensitive areas be it material storage or supervisor zones empowering you to enforce safety protocols instantly and maintain uncompromised integrity.",
+            image: "../../assets/feat2_industry_construction_1.png",
+          },
+          {
+            id: "feat2-2",
+            title: "Entry and Exit Monitoring",
+            description:
+              "We track every worker and visitor movement through your site gates and access points, ensuring airtight attendance logs. This precision fuels labor compliance and fortifies your security perimeter.",
+            image: "../../assets/feat2_industry_construction_2.png",
+          },
+          {
+            id: "feat2-3",
+            title: "Hazard Zones Monitoring",
+            description:
+              "Our advanced vision AI identifies risk-prone zones instantly, using intelligent area mapping and live alerts to help your team respond faster, enforce safety and maintain total control over dynamic construction sites.",
+            image: "../../assets/feat2_industry_construction_3.png",
+          },
+          {
+            id: "feat2-4",
+            title: "Fire & Smoke Intelligence",
+            description:
+              "We deploy precision fire and smoke detection across your site through computer vision helping in delivering real-time alerts, asset protection and uninterrupted safety compliance where every second and decision counts.",
+            image: "../../assets/feat2_industry_construction_4.png",
+          },
+          {
+            id: "feat2-5",
+            title: "Person Fall Alerting",
+            description:
+              "Your teams stay protected with intelligent fall detection that instantly identifies on-site incidents, auto-triggers alerts and activates emergency protocols minimizing downtime and safeguarding your workforce.",
+            image: "../../assets/feat2_industry_construction_5.png",
+          },
+          {
+            id: "feat2-6",
+            title: "Line Crossing",
+            description:
+              "VMukti safeguards your most sensitive zones, hazardous pits, crane zones, incomplete structures by delivering precision monitoring that instantly detects unauthorized access and mitigates risk before it becomes an incident.",
+            image: "../../assets/feat2_industry_construction_6.png",
+          },
+          {
+            id: "feat2-7",
+            title: "Unauthorized Human Monitoring",
+            description:
+              "Our advanced visual intelligence identifies unauthorized personnel near exclusion areas in real time, empowering you to prevent incidents and enforce site protocols with unparalleled precision and seamless operational control.",
+            image: "../../assets/feat2_industry_construction_7.png",
+          },
+        ],
+      },
+      {
+        id: "section3",
+        mainHeading:
+          "Meeting Safety Mandates Through Automated Visual Oversight",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat3-1",
+            title: "PPE Kit Monitoring",
+            description:
+              "VMukti safeguards your operations with real-time uniform compliance detection delivering AI-powered video oversight that enforces safety mandates without manual intervention or workflow disruption.",
+            image: "../../assets/feat3_industry_construction_1.png",
+          },
+        ],
+      },
+    ],
+
+    keyBenefits: {
+      heading:
+        "Build Strong Foundations with Video Surveillance for Construction Sites",
+      description:
+        "Gain unmatched visibility, control, and intelligence for every build — from safety compliance to workflow optimization — with adaptive video analytics designed for the unique demands of construction environments.",
+      benefits: [
+        {
+          image: "../../assets/result_construction_1.png",
+          heading: "Project Management",
+          description:
+            "Our vision-powered infrastructure gives you command over complex construction environments optimizing task flows, syncing stakeholders instantly and ensuring execution runs sharp, fast and fault-free.",
+        },
+        {
+          image: "../../assets/result_construction_2.png",
+          heading: "Increased Accountability",
+          description:
+            "We deliver intelligent construction surveillance that captures every on-site detail with timestamped precision enabling you to enforce accountability, validate timelines and mitigate risk across every phase.",
+        },
+        {
+          image: "../../assets/result_construction_3.png",
+          heading: "Better Compliance",
+          description:
+            "VMukti delivers intelligent surveillance that actively monitors construction workflows, ensuring your teams meet all safety and regulatory benchmarks with zero friction and helps in taking full accountability.",
+        },
+        {
+          image: "../../assets/result_construction_4.png",
+          heading: "Improved Monitoring",
+          description:
+            "Our AI-driven construction monitoring solutions redefine site oversight offering real-time analytics, smart threat detection and unmatched clarity to help you lead safer, more efficient builds without compromise.",
+        },
+        {
+          image: "../../assets/result_construction_5.png",
+          heading: "Centralised Video Access",
+          description:
+            "We deliver a unified video intelligence layer that puts you in command of every single site streamlining oversight, incident review and live access from any device, no matter where you operate.",
+        },
+        {
+          image: "../../assets/result_construction_6.png",
+          heading: "Custom AI Analytics",
+          description:
+            "Your construction sites demand more than surveillance, we deliver adaptive computer vision calibrated to your operations, enabling predictive maintenance, real-time risk detection and insight-driven performance at scale.",
+        },
+      ],
+    },
+
+    workflow: {
+      heading:
+        "Guiding You Through the Implementation of Video Surveillance for Construction Sites",
+      image: "construction_workflow.png",
+    },
+
+    cta: {
+      textLines: [
+        "Shape a Safer Environment with Construction",
+        "Surveillance Solution",
+      ],
+      href: "/construction",
+    },
+  },
+  // Result image remaining
+  enterprise: {
+    title: [
+      {
+        text: "Supercharge Your Security with Computer Vision Enterprise Surveillance Systems",
+        color: "black",
+      },
+    ],
+    para: "Your operations demand precision without subtle deviations that ripple into costly breaches, delaying transformation and undermining enterprise-grade performance. VMukti Solutions enables live surveillance, smart threat detection and centralized monitoring to protect your assets and streamline operations using computer vision enterprise solutions.",
+
+    large_image: "enterprise_mockup.png",
+    large_image_alt: "Enterprise surveillance illustration",
+
+    keyApplications: [
+      {
+        id: "section1",
+        mainHeading:
+          "Exploring Cutting-Edge Applications of Computer Vision in Enterprise Security",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat1-1",
+            title: "Employee Attendance Verification",
+            description:
+              "With precision-grade facial recognition, our Visual AI streamlines entry, eliminates manual checkpoints and ensures seamless attendance logging so your workforce moves with speed, clarity and control.",
+            image: "../../assets/feat1_industry_enterprise_1.png",
+          },
+          {
+            id: "feat1-2",
+            title: "Live Workspace Insights",
+            description:
+              "Our intelligent surveillance suite delivers precision monitoring, decoding occupancy trends in real time to optimize performance, reduce risk and enforce safety compliance without disrupting operations.",
+            image: "../../assets/feat1_industry_enterprise_2.png",
+          },
+          {
+            id: "feat1-3",
+            title: "Multi-Zone Surveillance Hub",
+            description:
+              "We deploy real-time visual intelligence layered across your infrastructure helping remotely in intrusion detection, breach containment and risk mitigation with zero lag and enterprise-grade precision.",
+            image: "../../assets/feat1_industry_enterprise_3.png",
+          },
+          {
+            id: "feat1-4",
+            title: "Visitor Flow and Experience Analysis",
+            description:
+              "Your facility stays uncompromised with our high-performance visual intelligence built to detect, track and respond for all visitor visits across zones through cutting-edge, unified computer vision architecture.",
+            image: "../../assets/feat1_industry_enterprise_4.png",
+          },
+          {
+            id: "feat1-5",
+            title: "Automated Queue Management",
+            description:
+              "VMukti empowers your operations with AI-driven queue monitoring, streamlining workforce deployment, cutting idle time and delivering a seamless, high-touch customer experience where every second counts.",
+            image: "../../assets/feat1_industry_enterprise_5.png",
+          },
+          {
+            id: "feat1-6",
+            title: "Smart Space Tracking",
+            description:
+              "Our next-gen computer vision engine transforms chaotic parking into a synchronized flow detecting, tracking and optimizing every vehicle movement with autonomous accuracy and operational clarity.",
+            image: "../../assets/feat1_industry_enterprise_6.png",
+          },
+          {
+            id: "feat1-7",
+            title: "Crowd Monitoring",
+            description:
+              "For your mission-critical operations, our vision intelligence pinpoints crowd build-up, streamlines personnel flow, shows a crowd heatmap and gives you command-grade visibility exactly where and when you need it.",
+            image: "../../assets/feat1_industry_enterprise_7.png",
+          },
+        ],
+      },
+      {
+        id: "section2",
+        mainHeading:
+          "Securing Enterprise Environments Through Vision-Driven Surveillance",
+        bgColor: "blue",
+        features: [
+          {
+            id: "feat2-1",
+            title: "Entry Exit Monitoring",
+            description:
+              "We deploy advanced facial authentication to log every movement across your facility area ensuring airtight perimeter integrity, zero tailgating and full audit trails, even after operational hours.",
+            image: "../../assets/feat2_industry_enterprise_1.png",
+          },
+          {
+            id: "feat2-2",
+            title: "Fire Hazard Monitoring",
+            description:
+              "Your infrastructure runs smarter with real-time visual anomaly detection powered by deep learning vision AI which helps in catching fire and smoke at inception across racks, panels and high-voltage units.",
+            image: "../../assets/feat2_industry_enterprise_2.png",
+          },
+          {
+            id: "feat2-3",
+            title: "Anomaly Object Scan",
+            description:
+              "Our object intelligence framework actively scans your lobbies, boardrooms and restricted zones for unattended assets flagging potential threats before they compromise security or operational trust.",
+            image: "../../assets/feat2_industry_enterprise_3.png",
+          },
+          {
+            id: "feat2-4",
+            title: "Line Breach Alert",
+            description:
+              "VMukti enforces the access limits you define, deploying advanced visual perimeters that detect breaches in real time, trigger instant alerts and uphold your site’s integrity with precision-grade surveillance.",
+            image: "../../assets/feat2_industry_enterprise_4.png",
+          },
+          {
+            id: "feat2-5",
+            title: "Area Access Detection",
+            description:
+              "We safeguard your mission-critical zones, server rooms, finance bays, executive suites with intelligent breach detection that alerts you instantly, ensuring zero compromise in precision and privacy.",
+            image: "../../assets/feat2_industry_enterprise_5.png",
+          },
+        ],
+      },
+      {
+        id: "section3",
+        mainHeading:
+          "Ensuring Policy Adherence with Real-Time Computer Vision Systems",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat3-1",
+            title: "Uniform Compliance Check",
+            description:
+              "Your operations demand precision. Our AI-native system enforces uniform compliance at entry denying access to non-compliant personnel and preserving integrity across high-security environments.",
+            image: "../../assets/feat3_industry_enterprise_1.png",
+          },
+          {
+            id: "feat3-2",
+            title: "Smoking Violation Alert",
+            description:
+              "With edge-powered visual intelligence, we detect smoking violations in real time helping you uphold compliance, protect personnel and maintain operational integrity without manual oversight.",
+            image: "../../assets/feat3_industry_enterprise_2.png",
+          },
+        ],
+      },
+    ],
+
+    keyBenefits: {
+      heading: "The Hidden Power of Enterprise Video Surveillance Solutions",
+      description:
+        "VMukti empowers your enterprise with next-gen surveillance infrastructure, AI-fueled, precision-built and engineered for total visibility, rapid threat response and uncompromising control across your environment.",
+      benefits: [
+        {
+          image: "../../assets/result_enterprise_1.png",
+          heading: "Enhanced Workplace Security",
+          description:
+            "Our advanced monitoring suite gives your team instant command over every zone seamless integration, encrypted visibility and intelligent alerts ensure your environment remains protected and in your control.",
+        },
+        {
+          image: "../../assets/result_enterprise_2.png",
+          heading: "Alerts for Unusual Activity",
+          description:
+            "We equip you with precision-led computer vision oversight, triggering instant alerts on anomalies so your response is proactive, your assets are protected and your operations never blindsided.",
+        },
+        {
+          image: "../../assets/result_enterprise_3.png",
+          heading: "Operational Transparency",
+          description:
+            "Your critical environments deserve uncompromised visibility. With our enterprise-grade video intelligence, you gain instant awareness, faster response and unmatched operational command at scale.",
+        },
+        {
+          image: "../../assets/result_enterprise_4.png",
+          heading: "Reduced Theft and Vandalism",
+          description:
+            "With precision-calibrated video intelligence and AI at the edge, we help you neutralize internal breaches and external threats protecting your people, IP and physical assets without missing a frame.",
+        },
+        {
+          image: "../../assets/result_enterprise_5.png",
+          heading: "Remote Oversight",
+          description:
+            "For your critical environments, our enterprise-grade surveillance delivers precision visibility, intelligent threat detection and uncompromised control onsite or remote, uptime and oversight are always yours.",
+        },
+        {
+          image: "../../assets/result_enterprise_6.png",
+          heading: "Optimized Resource Allocation",
+          description:
+            "VMukti delivers precision-driven visual intelligence that converts your operational footage into real-time insights, closing inefficiencies, accelerating execution and refining end-to-end performance.",
+        },
+      ],
+    },
+
+    workflow: {
+      heading:
+        "Building a Future-Ready Video Surveillance System for Enterprise",
+      image: "enterprise_workflow.png",
+    },
+
+    cta: {
+      textLines: [
+        "See How Computer Vision for Enterprise Can",
+        "Revolutionize Your Business",
+      ],
+      href: "/enterprise",
+    },
+  },
+  // Result image remaining
+  government: {
+    title: [
+      {
+        text: "Modernizing Administration Through Computer Vision in Government",
+        color: "black",
+      },
+    ],
+    para: "For you every detail matters in governance, where overlooked incidents or delayed responses can impact public safety and trust. VMukti Solutions delivers advanced government security solutions through a visual solution for government, offering real-time insights and intelligent monitoring to enhance operational control and civic efficiency.",
+
+    large_image: "government_mockup.png",
+    large_image_alt: "Government surveillance illustration",
+
+    keyApplications: [
+      {
+        id: "section1",
+        mainHeading:
+          "Crafting Advanced Government Video Surveillance Solutions for Smarter Management",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat1-1",
+            title: "Fed Workers Monitoring",
+            description:
+              "With enterprise-grade visual analytics, you gain precise oversight of federal workforce safety and performance ensuring policy compliance and optimized operational conditions without compromise.",
+            image: "../../assets/feat1_industry_government_1.png",
+          },
+          {
+            id: "feat1-2",
+            title: "Crowd Monitoring",
+            description:
+              "We equip your infrastructure with enterprise-grade video analytics designed to anticipate, alert and respond to public threats instantly, ensuring urban security runs as smartly as your mission demands.",
+            image: "../../assets/feat1_industry_government_2.png",
+          },
+          {
+            id: "feat1-3",
+            title: "Stampede Detection",
+            description:
+              "With intelligent anomaly alerts powered by advanced video analytics, your team anticipates crowd pressure spikes instantly enabling rapid intervention and safeguarding every critical moment on-site.",
+            image: "../../assets/feat1_industry_government_3.png",
+          },
+          {
+            id: "feat1-4",
+            title: "GPS Tracking",
+            description:
+              "Our advanced GPS telemetry platform empowers you to track government fleets and mission-critical assets with precision enabling real-time visibility, streamlined control and zero tolerance for misuse.",
+            image: "../../assets/feat1_industry_government_4.png",
+          },
+          {
+            id: "feat1-5",
+            title: "Event Live Streaming",
+            description:
+              "Your mission-critical moments, streamed flawlessly enable high-trust, low-latency coverage of government proceedings, empowering transparency and reinforcing institutional credibility in real time.",
+            image: "../../assets/feat1_industry_government_5.png",
+          },
+          {
+            id: "feat1-6",
+            title: "Head Count",
+            description:
+              "We deliver automated headcount intelligence that gives you precise, real-time audience flow metrics optimizing capacity planning, enforcing compliance and refining every entry-to-exit movement.",
+            image: "../../assets/feat1_industry_government_6.png",
+          },
+          {
+            id: "feat1-7",
+            title: "Entry and Exit Monitoring",
+            description:
+              "Our system delivers precise tracking of every individual at entry points, empowering your team with verifiable logs, airtight audits and seamless enforcement of corporate access protocols for public safety.",
+            image: "../../assets/feat1_industry_government_7.png",
+          },
+          {
+            id: "feat1-8",
+            title: "Heatmap for Crowd",
+            description:
+              "VMukti transforms your spaces with dynamic crowd density intelligence giving you the foresight to optimize response teams, manage real-time flow and secure every inch with precision analytics.",
+            image: "../../assets/feat1_industry_government_8.png",
+          },
+          {
+            id: "feat1-9",
+            title: "Vehicle and ANPR",
+            description:
+              "Your operations stay sharp with real-time license plate recognition, automated entry tracking, and frictionless vehicle validation engineered for high-security environments that can’t afford compromise.",
+            image: "../../assets/feat1_industry_government_9.png",
+          },
+          {
+            id: "feat1-10",
+            title: "Behavioral Activity Analysis",
+            description:
+              "For your high-density environments, our real-time behavioral analytics decode crowd dynamics, flag anomalies instantly and empower your response teams with precision support when seconds matter most.",
+            image: "../../assets/feat1_industry_government_10.png",
+          },
+        ],
+      },
+      {
+        id: "section2",
+        mainHeading:
+          "Reinventing Government Security with Real-Time Visual Intelligence",
+        bgColor: "blue",
+        features: [
+          {
+            id: "feat2-1",
+            title: "Early Fire Warning",
+            description:
+              "With precision-grade visual sensors and smart fire and smoke pattern recognition, your teams can respond faster, evacuate smarter and protect high-value public assets before heavy damage unfolds.",
+            image: "../../assets/feat2_industry_government_1.png",
+          },
+          {
+            id: "feat2-2",
+            title: "Suspicious Object Tracking",
+            description:
+              "Our advanced vision system flags unattended or high-risk objects in real-time in critical zones empowering your team with early threat awareness and accelerated incident response, without false alarms.",
+            image: "../../assets/feat2_industry_government_2.png",
+          },
+          {
+            id: "feat2-3",
+            title: "Boundary Breach Monitoring",
+            description:
+              "We monitor and flag breach attempts across secured zones in real time giving your team the intel to intercept threats before they escalate and maintain uncompromised perimeter control across the spaces.",
+            image: "../../assets/feat2_industry_government_3.png",
+          },
+          {
+            id: "feat2-4",
+            title: "Weapon Threat Alert",
+            description:
+              "For your critical entry points, we deploy AI-driven vision to detect concealed weapons with surgical accuracy minimizing threats before escalation and safeguarding operational continuity for better public order.",
+            image: "../../assets/feat2_industry_government_4.png",
+          },
+          {
+            id: "feat2-5",
+            title: "Access Violation Detection",
+            description:
+              "VMukti deploys intelligent surveillance at sensitive nodes, using advanced video analytics to identify unauthorized movement and trigger instant tamper-proof alerts across high-risk access points.",
+            image: "../../assets/feat2_industry_government_5.png",
+          },
+          {
+            id: "feat2-6",
+            title: "Public Property Protection",
+            description:
+              "Your government operations demand more than monitoring. Our AI-powered surveillance ecosystem ensures real-time threat detection, asset protection and uninterrupted situational control.",
+            image: "../../assets/feat2_industry_government_6.png",
+          },
+        ],
+      },
+      {
+        id: "section3",
+        mainHeading:
+          "Enabling Policy-Driven Oversight with Intelligent Video Compliance",
+        bgColor: "white",
+        features: [
+          {
+            id: "feat3-1",
+            title: "Vehicle Driver Monitoring",
+            description:
+              "We bring intelligent driver monitoring to your fleet enabling proactive compliance, minimizing risk exposure, real-time monitoring to reinforce safety through AI-driven video insights you can trust in real time.",
+            image: "../../assets/feat3_industry_government_1.png",
+          },
+          {
+            id: "feat3-2",
+            title: "Public Smoking Alert",
+            description:
+              "Our intelligent sensors detect smoking violations in real time enabling you to uphold compliance, protect brand reputation and ensure a refined, health-forward guest experience without compromise.",
+            image: "../../assets/feat3_industry_government_2.png",
+          },
+        ],
+      },
+    ],
+
+    keyBenefits: {
+      heading:
+        "Government Surveillance System as The Silent Backbone for Administration",
+      description:
+        "VMukti empowers your department with mission-grade video surveillance delivering real-time situational awareness, centralized command and AI-driven threat detection built to safeguard, comply and increase productivity for both people and infrastructure at scale.",
+      benefits: [
+        {
+          image: "../../assets/result_government_1.png",
+          heading: "Central Hub",
+          description:
+            "We unify your fragmented surveillance systems into one high-performance government-grade dashboard built for instant access, strategic oversight and real-time command at the highest level.",
+        },
+        {
+          image: "../../assets/result_government_2.png",
+          heading: "Seamless Integration",
+          description:
+            "Our system integrates seamlessly into your current infrastructure, enhancing operational continuity while unlocking greater surveillance precision, network agility and long-term performance gains.",
+        },
+        {
+          image: "../../assets/result_government_3.png",
+          heading: "Traffic Management",
+          description:
+            "Your city gains precision control with our intelligent video infrastructure analyzing real-time traffic patterns and autonomously optimizing flow to reduce congestion and elevate commuter experience.",
+        },
+        {
+          image: "../../assets/result_government_4.png",
+          heading: "High Quality Capture",
+          description:
+            "VMukti delivers precision-grade imaging with ultra-HD clarity and forensic-level detail empowering your team to monitor high-risk zones and assess threats in real time with complete operational confidence.",
+        },
+        {
+          image: "../../assets/result_government_5.png",
+          heading: "Hazard Safety",
+          description:
+            "We deliver real-time situational visual intelligence through advanced video analytics empowering your agency to neutralize threats instantly and safeguard lives in complex public environments.",
+        },
+        {
+          image: "../../assets/result_government_6.png",
+          heading: "Night Monitoring",
+          description:
+            "Our advanced imaging technology ensures uninterrupted visibility, delivering precision-grade surveillance in low-light conditions because your operations never stop and neither should your oversight.",
+        },
+      ],
+    },
+
+    workflow: {
+      heading: "How We Deliver Custom Visual Solutions for Government",
+      image: "government_workflow.png",
+    },
+
+    cta: {
+      textLines: [
+        "Lead with Confidence Using a Government",
+        "Surveillance System Designed for Scale",
+      ],
+      href: "/government",
+    },
   },
 };
 

@@ -16,9 +16,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 // import { solutionsData } from "../data/solutionsContent";
 
-const Solutions = ({ data }) => {
-  console.log(data);
-  
+const Solutions = ({ data }) => {  
   const [activeIndex, setActiveIndex] = useState(0);
   const contentBoxRef = useRef(null);
 
@@ -65,8 +63,9 @@ const Solutions = ({ data }) => {
         <VStack spacing={4}>
           <Heading
             as="h1"
-            size={{ base: "lg", md: "xl" }}
-            fontWeight="semibold"
+            // size={{ base: "lg", md: "xl" }}
+            fontSize="48px"
+            fontWeight="500"
             w="60vw"
             // bg="red"
           >

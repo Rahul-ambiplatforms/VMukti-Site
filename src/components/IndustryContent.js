@@ -23,6 +23,7 @@ import Achieved from "../pages/Home/Components/Achieved";
 import Results from "../pages/Home/Components/Results";
 import FaqsSection from "./faqsSection";
 import faqsData from "../data/faqsData";
+import { useParams } from "react-router-dom";
 
 const MotionBox = motion(Box);
 const MotionText = motion(Text);
@@ -201,7 +202,10 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
 };
 
 const IndustryContent = ({ props, content }) => {
-  // const titleFontSize = "48px"; // Font size for the title
+
+  const { name } = useParams();
+  const u_name = name.replace(/-/g, "");
+  const solutionFaqs = faqsData[u_name];
 
   const svgSize = useBreakpointValue({ base: "13px", md: "25px" });
 
@@ -386,7 +390,7 @@ const IndustryContent = ({ props, content }) => {
           </Flex>
           {/* -------------Features Start--------------- */}
 
-          <HorizontalScrollFeatures scrollData={content.keyApplications} />
+          {/* <HorizontalScrollFeatures scrollData={content.keyApplications} /> */}
 
           {/* --------------Features End-------------- */}
 
@@ -416,7 +420,7 @@ const IndustryContent = ({ props, content }) => {
               objectFit="contain"
             />
           </VStack>
-          
+
           {/* CTA */}
           <CtaBanner href={content.cta.href}>
             {content.cta.textLines.map((line, index) => (
@@ -482,7 +486,8 @@ const IndustryContent = ({ props, content }) => {
               </svg>
             </Button>
           </Flex> */}
-          <FaqsSection faqsList={faqsData.manufacturing} />
+          
+          <FaqsSection faqsList={solutionFaqs} />
         </Box>
         {/* <Trusted /> */}
       </PageContentWrapper>
