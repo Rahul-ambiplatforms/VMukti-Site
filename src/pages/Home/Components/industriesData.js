@@ -174,7 +174,15 @@ const industriesData = [
   },
 ]
 
-export default function IndustryGrid() {
+export default function IndustryGrid({heading,description,data={industriesData}}) {
+  
+  const titleFontSize = useBreakpointValue({
+    base: '24px',
+    sm: '32px',
+    md: '40px',
+    lg: '48px',
+  });
+
   // const [isDesktop, setIsDesktop] = useState(true) //I have to solve the yarn build error here...
   const [columns, setColumns] = useState(4)
 
@@ -229,7 +237,7 @@ export default function IndustryGrid() {
           lg: 'repeat(4, 1fr)',
         }}
         gap={{ base: '10px', md: '15px' }}
-        mt="3%"
+        mt="2%"
       >
         {grid.slice(1).flatMap((row, rowIndex) =>
           row.slice(1).map((industry, colIndex) => {
@@ -347,7 +355,6 @@ export default function IndustryGrid() {
                       height="100%"
                       borderRadius="24px"
                       padding="20px"
-                      // bgImage={industry.image}
                       bgImage={`${process.env.PUBLIC_URL}${industry.image}`}
                       bgSize="cover"
                       bgPosition="center"
@@ -379,8 +386,9 @@ export default function IndustryGrid() {
         minHeight={{ base: 'auto', md: '1338px' }}
         position="relative"
         mx="auto"
-        pb={{ base: '50px', md: '0' }}
+        // pb={{ base: '50px', md: '0' }}
         overflow="hidden"
+        mt="1%"
         _before={{
           content: '""',
           position: 'absolute',
@@ -395,36 +403,40 @@ export default function IndustryGrid() {
           opacity: '1',
           zIndex: '0',
         }}
+        // bg="red"
       >
         {/* We can add some creativity here also. */}
         <HeadingAnimation>
-          <Text
-            fontSize={useBreakpointValue({
-              base: '24px',
-              sm: '32px',
-              md: '40px',
-              lg: '48px',
-            })}
-            fontWeight="600"
-            marginBottom="10px"
-            padding="0"
-            lineHeight="normal"
-            textAlign="center"
-            position="relative"
-            zIndex="2"
-          >
-            Crafting Unique{' '}
-            <Text as="span" color="#db7b3a">
-              AI
-            </Text>{' '}
-            Solutions for {<br />}
-            <Text as="span" color="#3f77a5">
-              Every Industry
+          {heading && (
+            <Text
+              fontSize={titleFontSize}
+              fontWeight="600"
+              marginBottom="10px"
+              padding="0"
+              lineHeight="normal"
+              textAlign="center"
+              position="relative"
+              zIndex="2"
+              w="65%"
+              mx="auto"
+            >
+                {heading}
             </Text>
-            <Text as="span" color="#db7b3a">
-              .
+          )}
+
+          {description && (
+             <Text 
+                fontSize="16px" 
+                w={{base: "90%", md: "90%"}}
+                mx="auto"
+                mt="1%"
+                mb="2%"
+                position="relative"
+                zIndex="2"
+             >
+                {description}
             </Text>
-          </Text>
+          )}
         </HeadingAnimation>
         {/* Industry Grid */}
         {renderIndustryCards()}

@@ -22,13 +22,36 @@ import CtaBanner from "../../components/CtaBanner";
 import { homeSolutions } from "../../data/solutionsContent";
 import FaqsSection from "../../components/faqsSection";
 import faqsData from "../../data/faqsData";
+import schemaData from "../../data/schemaData";
+import { Helmet } from "react-helmet-async";
 // import BlogsDashboard from "../Blogs/HeroSection";
 // import BlogsContent from "../Blogs/BlogsContent";
 // import BlogsOverviewDash from "../Blogs/BlogsOverviewDash";
 
 const VMuktiHomepage = () => {
+  const homepageSchemas = schemaData.homepage;
+
   return (
     <>
+      <Helmet>
+        <title>
+          AI Computer Vision System for Smart Surveillance - Vmukti Solutions
+        </title>
+        <meta
+          name="description"
+          content="Vmukti Solutions is a trusted computer vision software company. We are offering AI surveillance for healthcare, education, manufacturing and more industries."
+        />
+        {homepageSchemas.map((schema, index) => (
+          <script
+            key={`schema-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schema),
+            }}
+          />
+        ))}
+      </Helmet>
+
       <PageContentWrapper noPadding>
         <HeroSection />
       </PageContentWrapper>
@@ -38,7 +61,6 @@ const VMuktiHomepage = () => {
         <Diagram />
         <ComputerVision />
         <Trusted />
-        {/* <Solutions /> */}
         <Solutions data={homeSolutions} />
         <Reviews />
         {/* <AdvancedComputerVision
@@ -74,11 +96,15 @@ const VMuktiHomepage = () => {
             cardBgColor2="#EAEAEA"
           />
         </StickySection> */}
-        {/* <Diagram /> */}
-        <Industries />
-        <Results />
+        <Industries heading="AI Computer Vision System for Evolving Industries" />
+        <Box position="relative" zIndex="9" mt="-9%">
+          <Results />
+        </Box>
         {/* <AdvancedSurveillance /> */}
-        <Achieved />
+        <Achieved
+          heading="Milestones of Our Journey"
+          description="Our journey is defined by innovation, impact, and measurable success. We continue to set benchmarks in visual surveillance. Every milestone reflects our commitment to solving real-world challenges using our Computer Vision Systems."
+        />
         <CtaBanner href="/contact-us">
           Join the AI-Powered Surveillance Revolution with
           <br />

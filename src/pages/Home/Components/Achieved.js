@@ -24,11 +24,13 @@ const useCountUp = (target, duration = 1000) => {
       { threshold: 0.1 }
     );
 
-    if (ref.current) observer.observe(ref.current);
+    const currentRef = ref.current; // Capture ref value
 
-    // return () => {
-    //   if (ref.current) observer.unobserve(ref.current);//I have to solve the yarn build error here...
-    // };
+    if (currentRef) observer.observe(currentRef);
+
+    return () => {
+      if (currentRef) observer.unobserve(currentRef); // Use captured value in cleanup
+    };
   }, []);
 
   useEffect(() => {
@@ -66,12 +68,54 @@ const AnimatedValue = ({ value, suffix }) => {
 };
 
 const achievementsData = [
-  { value: "18+", label: "No. of Years of Innovation", isBlack: false },
-  { value: "1B+", label: "Number of cameras feeds", isBlack: true },
-  { value: "200M+", label: "Number of minutes streamed", isBlack: false },
-  { value: "3M+", label: "No. of users served", isBlack: false },
-  { value: "1M+", label: "No. of cameras supplied", isBlack: false },
-  { value: "900+", label: "No. of projects completed", isBlack: true },
+  {
+    value: "18+",
+    label: "No. of Years of Innovation",
+    bgColor: "#FFFFFF",
+    valueColor: "#3F77A5",
+    labelColor: "#000000",
+    dashColor: "#3F77A5",
+  },
+  {
+    value: "1B+",
+    label: "Number of cameras feeds",
+    bgColor: "#3F77A5",
+    valueColor: "#FFFFFF",
+    labelColor: "#FFFFFF",
+    dashColor: "#FFFFFF",
+  },
+  {
+    value: "200M+",
+    label: "Number of minutes streamed",
+    bgColor: "#BECEDC",
+    valueColor: "#3F77A5",
+    labelColor: "#000000",
+    dashColor: "#3F77A5",
+  },
+  {
+    value: "3M+",
+    label: "No. of users served",
+    bgColor: "#FFFFFF",
+    valueColor: "#3F77A5",
+    labelColor: "#000000",
+    dashColor: "#3F77A5",
+  },
+  {
+    value: "1M+",
+    label: "No. of cameras supplied",
+    bgColor: "#3F77A5",
+    valueColor: "#FFFFFF",
+    labelColor: "#FFFFFF",
+    dashColor: "#FFFFFF",
+  },
+  {
+    value: "900+",
+    label: "No. of projects completed",
+    bgColor: "#BECEDC",
+    valueColor: "#3F77A5",
+    labelColor: "#000000",
+    dashColor: "#3F77A5",
+  },
 ];
 
 const marqueeScroll = keyframes`
@@ -79,33 +123,8 @@ const marqueeScroll = keyframes`
   100% { transform: translateX(-50%); } 
 `;
 
-const Achieved = () => {
-  // Responsive values with additional breakpoints for smoother transitions
-  const gridColumns = useBreakpointValue({
-    base: "repeat(2, minmax(130px, 1fr))",
-    sm: "repeat(2, minmax(150px, 1fr))",
-    md: "repeat(3, minmax(200px, 283px))",
-    lg: "repeat(3, 283px)",
-  });
-
-  // Dynamic card size that scales with viewport width
-  // const cardSize = useBreakpointValue({
-  //   base: 'minmax(130px, 180px)',
-  //   sm: 'minmax(150px, 180px)',
-  //   md: 'minmax(200px, 283px)',
-  //   lg: '283px',
-  // })
-  const cardColors = ["white", "#3f77a5", "#BECEDC"];
-  const containerWidth = useBreakpointValue({
-    base: "100%",
-    md: "100%",
-    lg: "1512px",
-  });
-  const containerHeight = useBreakpointValue({
-    base: "auto",
-    md: "auto",
-    lg: "auto",
-  });
+const Achieved = ({ heading, description, data = achievementsData }) => {
+  // --- All your responsive breakpoint values remain the same ---
   const titleFontSize = useBreakpointValue({
     base: "26px",
     md: "36px",
@@ -116,15 +135,6 @@ const Achieved = () => {
     md: "16px",
     lg: "16px",
   });
-
-  // Responsive gap that scales with viewport width
-  const gap = useBreakpointValue({
-    base: "8px",
-    sm: "clamp(8px, 2vw, 20px)",
-    md: "clamp(20px, 4vw, 50px)",
-    lg: "76px",
-  });
-
   const ellipseSize = useBreakpointValue({
     base: "200px",
     md: "300px",
@@ -135,24 +145,15 @@ const Achieved = () => {
     md: "15px",
     lg: "20px",
   });
-
-  // Responsive font sizes
   const valueFontSize = useBreakpointValue({
-    base: "clamp(32px, 8vw, 48px)", // Min 32px, scales up to 48px for small screens
-    md: "clamp(48px, 6vw, 64px)", // Min 48px, scales up to 64px for medium+ screens
+    base: "clamp(32px, 8vw, 48px)",
+    md: "clamp(48px, 6vw, 64px)",
   });
-
   const labelFontSize = useBreakpointValue({
-    base: "clamp(12px, 2vw, 12px)", // Fixed at 12px for small screens
-    md: "clamp(12px, 1.5vw, 16px)", // Starts at 12px, scales up to 16px for medium+ screens
+    base: "clamp(12px, 2vw, 12px)",
+    md: "clamp(12px, 1.5vw, 16px)",
   });
-
   const labelBottomMargin = useBreakpointValue({
-    base: "10px",
-    md: "15px",
-    lg: "20px",
-  });
-  const labelLeftMargin = useBreakpointValue({
     base: "10px",
     md: "15px",
     lg: "20px",
@@ -165,76 +166,79 @@ const Achieved = () => {
 
   return (
     <>
+      {/* <Box padding={{ base: "20px", md: "20px 20px" }} position="relative" overflow="hidden"> */}
       <Flex
         position="relative"
         textAlign="center"
         justifyContent="center"
         direction={"column"}
         alignItems="center"
-        padding={{ base: "20px", md: "40px 20px" }}
+        padding={{ base: "20px", md: "20px 20px" }}
         backgroundColor="#E7E7E7"
         width="100%"
         overflow="hidden"
-        maxWidth={containerWidth}
-        minHeight={containerHeight}
-        margin="0 auto"
+        mt="1%"
       >
         <HeadingAnimation>
-          <Text
-            fontSize={titleFontSize}
-            fontWeight="600"
-            marginBottom={titleMarginBottom}
-          >
-            Milestones of Our Journey
-          </Text>
-          <Text
-            fontSize={descFontSize}
-            fontWeight="500"
-            marginBottom={titleMarginBottom}
-          >
-            Our journey is defined by innovation, impact, and measurable
-            success. We continue to set benchmarks in visual surveillance. Every
-            milestone reflects our commitment to solving real-world challenges
-            using our Computer Vision Systems.
-          </Text>
+          {heading && (
+            <Text
+              color="#000"
+              fontSize={titleFontSize}
+              fontWeight="600"
+              mb={description ? "1%" : "5%"}
+            >
+              {heading}
+            </Text>
+          )}
+
+          {description && (
+            <Text
+              fontSize={descFontSize}
+              fontWeight="500"
+              color="#000"
+              mb="3%"
+              w={{ base: "90%", md: "80%", lg: "90%" }}
+              mx="auto"
+              textAlign="center"
+              lineHeight="20px"
+            >
+              {description}
+            </Text>
+          )}
         </HeadingAnimation>
-        <Box
-          position="absolute"
-          top={{ base: "50%", md: "60%", lg: "70%" }} // Align center vertically
-          left={{ base: "60%", md: "70%", lg: "80%" }} // Responsive positioning like Image
-          transform="translate(-50%, -50%)" // Centering correction
-          width="408px"
-          height="408px"
-          flexShrink={0}
-          borderRadius="50%" // Ensure a circular shape
-          opacity="0.12"
-          background="#3F77A5"
-          filter="blur(56.6px)"
-          zIndex={0} // Behind content but above the Image
-        />
 
-        {/* //background use properties: width: 255px;height: 255px;flex-shrink: 0; fill: #3F77A5;opacity: 0.12;filter: blur(56.599998474121094px); */}
-        <Box
-          position="absolute"
-          left={{ base: "50%", md: "30%", lg: "45px" }}
-          top={{ base: "0", md: "0", lg: "48px" }}
-          transform={{
-            base: "translateX(-50%)",
-            md: "translateX(-50%)",
-            lg: "none",
-          }}
-          width={ellipseSize}
-          height={ellipseSize}
-          flexShrink={0}
-          bg="#3F77A5"
-          // bg="red"
-          opacity="0.12"
-          filter="blur(56.6px)"
-          pointerEvents="none"
-          zIndex="0"
-        />
+        {/* Decorative elements remain the same */}
+        {/* <Box
+            position="absolute"
+            top={{ base: "50%", md: "60%", lg: "70%" }}
+            left={{ base: "60%", md: "70%", lg: "80%" }}
+            transform="translate(-50%, -50%)"
+            width="408px"
+            height="408px"
+            borderRadius="50%"
+            opacity="0.12"
+            background="#3F77A5"
+            filter="blur(56.6px)"
+            zIndex={0}
+          />
+          <Box
+            position="absolute"
+            left={{ base: "50%", md: "30%", lg: "45px" }}
+            top={{ base: "0", md: "0", lg: "48px" }}
+            transform={{
+              base: "translateX(-50%)",
+              md: "translateX(-50%)",
+              lg: "none",
+            }}
+            width={ellipseSize}
+            height={ellipseSize}
+            bg="#3F77A5"
+            opacity="0.12"
+            filter="blur(56.6px)"
+            pointerEvents="none"
+            zIndex="0"
+          /> */}
 
-        {/* This is the new Marquee Viewport */}
         <Box
           w="100%"
           mx="auto"
@@ -245,22 +249,26 @@ const Achieved = () => {
             },
           }}
         >
-          {/* This is the scrolling container */}
           <Flex
             w="max-content"
-            // Apply the keyframe animation we defined earlier
+            flexWrap="nowrap"
+            // w="fit-content"
+            // minW="100%"
             animation={`${marqueeScroll} 15s linear infinite`}
           >
             {[...achievementsData, ...achievementsData].map((item, index) => (
               <Box
+                key={index} // Added unique key for mapping
                 width={{
                   base: "200px",
                   md: "280px",
                 }}
                 mx={4}
                 flexShrink={0}
-                backgroundColor={item.isBlack ? "white" : "#3f77a5"}
-                color={item.isBlack ? "#3f77a5" : "white"}
+                // ===============================================
+                // UPDATED: Using new color properties from data
+                // ===============================================
+                backgroundColor={item.bgColor}
                 display="flex"
                 flexDirection="column"
                 justifyContent="center"
@@ -279,6 +287,10 @@ const Achieved = () => {
                   left="50%"
                   textAlign="center"
                   transform="translate(-50%, -50%)"
+                  // ===============================================
+                  // UPDATED: Applying the specific value color
+                  // ===============================================
+                  color={item.valueColor}
                 >
                   <AnimatedValue
                     value={item.value}
@@ -291,13 +303,13 @@ const Achieved = () => {
                   fontSize={labelFontSize}
                   fontWeight="700"
                   position="absolute"
-                  bottom={labelBottomMargin} // Correctly pins it to the bottom
-                  color={item.isBlack ? "black" : "white"}
-                  // 1. Center the text content (label and dash) within this box
+                  bottom={labelBottomMargin}
+                  // ===============================================
+                  // UPDATED: Applying the specific label color
+                  // ===============================================
+                  color={item.labelColor}
                   textAlign="center"
-                  // 2. Set the box width so it doesn't touch the edges
-                  width="calc(100% - 40px)" // Using 40px to account for padding
-                  // 3. Horizontally center the entire Text box itself
+                  width="calc(100% - 40px)"
                   left="50%"
                   transform="translateX(-50%)"
                   wordBreak={
@@ -308,23 +320,24 @@ const Achieved = () => {
                   lineHeight="1.2"
                 >
                   {item.label}
-                  {/* Underline Dash */}
                   <Box
-                    width="20px" // Slightly wider looks better
+                    width="20px"
                     height="3px"
-                    borderRadius="full" // A softer, pill shape looks modern
+                    borderRadius="24px"
                     marginTop="5px"
-                    backgroundColor={item.isBlack ? "#3f77a5" : "white"}
-                    // 4. Explicitly center the dash within the centered Text container
+                    // ===============================================
+                    // UPDATED: Applying the specific dash color
+                    // ===============================================
+                    backgroundColor={item.dashColor}
                     mx="auto"
                   />
                 </Text>
               </Box>
-              // {/* </ImagePop> */}
             ))}
           </Flex>
         </Box>
       </Flex>
+      {/* </Box> */}
     </>
   );
 };

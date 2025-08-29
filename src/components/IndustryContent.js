@@ -8,6 +8,7 @@ import {
   useBreakpointValue,
   Heading,
   VStack,
+  Spacer,
 } from "@chakra-ui/react"; // Chakra UI components
 import PageContentWrapper from "./PageContentWrapper";
 import { motion } from "framer-motion";
@@ -24,6 +25,8 @@ import Results from "../pages/Home/Components/Results";
 import FaqsSection from "./faqsSection";
 import faqsData from "../data/faqsData";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+// import { HorizontalScrollFeatures } from "./HorizontalScrollFeatures";
 
 const MotionBox = motion(Box);
 const MotionText = motion(Text);
@@ -43,34 +46,25 @@ const popAnimation1 = {
   }),
 };
 
-// const popAnimation = {
-//   hidden: { scale: 0.6, opacity: 0 },
-//   visible: {
-//     scale: 1,
-//     opacity: 1,
-//     transition: { duration: 0.7, ease: "easeOut" },
-//   },
-// };
-
 gsap.registerPlugin(ScrollTrigger);
 
-const FeatureCard = ({ feature }) => (
+const FeatureCard = ({ feature, bgColor }) => (
   <Flex
     direction="column"
-    w={{ base: "80vw", md: "65vw", lg: "85vw" }}
+    w={{ base: "80vw", md: "85vw", lg: "92vw" }}
     h="600px"
     flexShrink={0}
-    mr={{ base: "20vw", md: "2vw" }}
+    mr={{ base: "1vw", md: "2vw" }}
     align="center"
     justify="center"
+    mt="1%"
   >
     <Box
       position="relative"
       w="100%"
-      h={{ base: "300px", md: "450px", lg: "100%" }} // Responsive height
-      borderRadius="24px"
+      h={{ base: "300px", md: "450px", lg: "100%" }}
+      borderRadius="20px"
       overflow="hidden"
-      // boxShadow="2xl"
     >
       <Image
         src={`${process.env.PUBLIC_URL}/assets/${feature.image}`}
@@ -82,30 +76,28 @@ const FeatureCard = ({ feature }) => (
       <Box
         position="absolute"
         bottom={{ base: 4, md: 8 }}
-        left={{ base: 4, md: 8 }}
+        left={{ base: 4, md: bgColor === "blue" ? "62%" : 8 }}
         p={{ base: 4, md: 5 }}
-        w={{ base: "85%", sm: "60%", md: "35%" }}
+        w={{ base: "85%", sm: "60%", md: "30%" }}
         h="90%"
         bg="rgba(255, 255, 255, 0.95)"
-        backdropFilter="blur(2px) saturate(120%)"
-        borderRadius="24px"
-        boxShadow="md"
+        borderRadius="20px"
         display="flex"
         flexDirection="column"
-        justifyContent="center" // Centers vertically on the main axis
+        justifyContent="center" 
         alignItems="center"
       >
-        <Heading as="h3" size={{ base: "sm", md: "md" }} color="gray.800">
+        <Heading as="h3" fontSize={{ base: "20px", md: "24px" }} fontWeight="700" color="#000" lineHeight="30px" textAlign="center" w="70%">
           {feature.title}
         </Heading>
         <Box
-          width="30px"
+          width="25px"
           height="3px"
           borderRadius="full"
           bg="#3F77A5"
-          my={3}
+          my={2}
         />
-        <Text fontSize={{ base: "13px", md: "15px" }} color="gray.700">
+        <Text fontSize={{ base: "14px", md: "14px", lg: "14px" }} fontWeight="500" color="#444444" lineHeight="18px" textAlign="center"> 
           {feature.description}
         </Text>
       </Box>
@@ -113,7 +105,6 @@ const FeatureCard = ({ feature }) => (
   </Flex>
 );
 
-// This component contains the main GSAP animation logic and is now properly constrained.
 const HorizontalScrollFeatures = ({ scrollData = [] }) => {
   const mainContainerRef = useRef(null);
 
@@ -130,7 +121,7 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
           ease: "none",
           scrollTrigger: {
             trigger: section,
-            start: "top 8% top", // Pin when the section's top hits the viewport's top
+            start: "top 16% top",
             pin: true,
             scrub: 1.5,
             end: () => `+=${scrollAmount}`,
@@ -147,17 +138,14 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
   }
 
   return (
-    // The ref scopes our GSAP selectors to this component only.
     <Box ref={mainContainerRef} width="100%">
       {scrollData.map((sectionData) => (
-        // CRITICAL FIX: The main container no longer uses `100vw`.
-        // It's a standard Flexbox that will sit inside your PageContentWrapper.
         <Flex
           key={sectionData.id}
           className="horizontal-section"
           direction="column"
           justify="center"
-          h="100vh"
+          h="85vh"
           w="100%"
           position="relative"
           overflow="hidden"
@@ -165,21 +153,22 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
           bg={sectionData.bgColor === "blue" ? "#3F77A5" : "white"}
           borderRadius="24px"
           mt="2%"
-          mb="-6%"
-          // Need to change here mb -6% wont work instead mt -x%
+          mb="-4%"
+            // Need to change here mb -6% wont work instead mt -x%
         >
           <Heading
             as="h2"
-            size={{ base: "lg", md: "lg" }}
+            fontSize="36px"
+            fontWeight="500"
+            lineHeight="45px"
+            w="60%"
             position="absolute"
             top={{ base: "10%", md: "2%" }}
             left="50%"
             transform="translateX(-50%)"
-            w="90%"
             textAlign="center"
             zIndex={2}
-            // DYNAMIC TEXT COLOR
-            color={sectionData.bgColor === "blue" ? "white" : "gray.800"}
+            color={sectionData.bgColor === "blue" ? "white" : "black"}
           >
             {sectionData.mainHeading}
           </Heading>
@@ -189,10 +178,14 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
             w="max-content"
             h="100%"
             align="center"
-            pl={{ base: "5vw", md: "7vw" }}
+            pl={{ base: "5vw", md: "2vw" }}
           >
             {sectionData.features.map((feature) => (
-              <FeatureCard key={feature.id} feature={feature} />
+              <FeatureCard
+                key={feature.id}
+                feature={feature}
+                bgColor={sectionData.bgColor}
+              />
             ))}
           </Flex>
         </Flex>
@@ -202,7 +195,6 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
 };
 
 const IndustryContent = ({ props, content }) => {
-
   const { name } = useParams();
   const u_name = name.replace(/-/g, "");
   const solutionFaqs = faqsData[u_name];
@@ -211,13 +203,13 @@ const IndustryContent = ({ props, content }) => {
 
   const buttonWidth = useBreakpointValue({
     base: "130px",
-    md: "130px",
-    lg: "146px",
+    md: "179px",
+    lg: "179px",
   });
   const buttonHeight = useBreakpointValue({
-    base: "40px",
-    md: "45px",
-    lg: "50px",
+    base: "30px",
+    md: "48px",
+    lg: "48px",
   });
   if (
     !content ||
@@ -233,6 +225,10 @@ const IndustryContent = ({ props, content }) => {
 
   return (
     <>
+      <Helmet>
+        <title>{content.metetitle}</title>
+        <meta name="description" content={content.metadescription} />
+      </Helmet>
       <PageContentWrapper>
         <Box
           as="section"
@@ -242,17 +238,24 @@ const IndustryContent = ({ props, content }) => {
           flexDirection="column"
           alignItems="center"
           position="relative"
+          mt="3%"
         >
           {/* Title Container with relative positioning image and description*/}
-          <Flex direction="column" width="100%" alignItems="center" gap={4}>
-            <Box width="100%">
+          <Flex
+            direction="column"
+            width="100%"
+            alignItems="center"
+            justifyContent="center"
+            textAlign="center"
+            mx="auto"
+            gap={4}
+          >
+            <Box width="90%">
               <HeadingAnimation>
                 <MotionText
-                  fontSize={{ base: "2rem", md: "2.5rem", lg: "3.2rem" }}
+                  fontSize={{ base: "32px", md: "48px", lg: "48px" }}
                   fontWeight="600"
-                  lineHeight="1.1"
-                  // Title color should be dark now that it's on a light background
-                  color="gray.800"
+                  lineHeight="60px"
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
@@ -341,7 +344,7 @@ const IndustryContent = ({ props, content }) => {
                         </svg>
                       </Box>
                       <Text
-                        color="#1A202C"
+                        color="#444"
                         fontWeight="500"
                         textAlign="left"
                         fontSize={{ base: "14px", md: "16px" }}
@@ -354,8 +357,9 @@ const IndustryContent = ({ props, content }) => {
 
                     {/* Right Side: Button */}
                     <MotionButton
-                      width={{ base: "100%", md: buttonWidth }}
+                      width={buttonWidth}
                       height={buttonHeight}
+                      p="12px 32px"
                       bg="#3F77A5"
                       color="white"
                       borderRadius="full"
@@ -388,13 +392,18 @@ const IndustryContent = ({ props, content }) => {
               </Flex>
             </Box>
           </Flex>
-          {/* -------------Features Start--------------- */}
 
+          {/* ------------------------- */}
+          <Trusted />
+
+          {/* ------------------------- */}
           {/* <HorizontalScrollFeatures scrollData={content.keyApplications} /> */}
 
-          {/* --------------Features End-------------- */}
+          <Box mb="2%" w="100vw" overflow="hidden">
+            <Achieved heading={content.achieved} />
+          </Box>
 
-          <Achieved />
+          {/* ------------------------- */}
           <Results data={content.keyBenefits} />
 
           {/* Workflow */}
@@ -406,8 +415,10 @@ const IndustryContent = ({ props, content }) => {
             <Heading
               // as="h2"
               fontSize={{ base: "24px", md: "48px", lg: "48px" }}
+              fontWeight="500"
               textAlign="center"
-              color="gray.800"
+              color="black"
+              lineHeight="60px"
               w="75%"
             >
               {content.workflow.heading}
@@ -416,7 +427,6 @@ const IndustryContent = ({ props, content }) => {
               src={`${process.env.PUBLIC_URL}/assets/${content.workflow.image}`}
               alt={content.workflow.heading}
               w="100%"
-              maxW="1200px"
               objectFit="contain"
             />
           </VStack>
@@ -486,10 +496,9 @@ const IndustryContent = ({ props, content }) => {
               </svg>
             </Button>
           </Flex> */}
-          
+
           <FaqsSection faqsList={solutionFaqs} />
         </Box>
-        {/* <Trusted /> */}
       </PageContentWrapper>
     </>
   );

@@ -8,7 +8,9 @@
 //
 
 const industriesData = {
-  manufacturing: {  
+  manufacturing: {
+    metatitle:"Computer Vision in Manufacturing Industry - Vmukti Solutions",
+    metadescription:"Vmukti Solutions offers scalable computer vision for manufacturing to help you monitor, analyze, and optimize factory performance in real-time.",
     title: [
       {
         text: "Modernize Production Using Computer Vision for Manufacturing Industry",
@@ -158,7 +160,7 @@ const industriesData = {
         },
       ],
     },
-
+    achieved: "Success You Can Measure",
     cta: {
       // Use an array for multi-line text. This is cleaner.
       textLines: [
@@ -175,6 +177,8 @@ const industriesData = {
   },
   //MockUp image is remaining from the this to the end
   warehouse: {
+    metatitle:"Manage Your Inventory Using Warehouse Computer Vision Solution",
+    metadescription:"Unlock the full potential of your operations with computer vision warehouse technology to enhance real-time efficiency, inventory accuracy, and security.",
     title: [
       {
         text: "Achieve Perfect Inventory Accuracy with Computer Vision for Warehousing",
@@ -396,7 +400,7 @@ const industriesData = {
         },
       ],
     },
-
+    achieved: "Solving Problems with Every Milestones",
     cta: {
       textLines: [
         "Optimize Your Facility with Warehouse Video",
@@ -412,6 +416,8 @@ const industriesData = {
     },
   },
   healthcare: {
+    metatitle:"Computer Vision in Healthcare for Smarter Patient Safety",
+    metadescription:" Upgrade clinical safety and workflow with healthcare computer vision for AI monitoring, hygiene checks, and intelligent alerting in real time.",
     title: [
       {
         text: "The New Era of Clinical Excellence with Computer Vision in Healthcare",
@@ -585,6 +591,7 @@ const industriesData = {
         },
       ],
     },
+    achieved: "Innovation Drives Success",
 
     cta: {
       textLines: [
@@ -602,6 +609,8 @@ const industriesData = {
   },
   // Result image remaining, workflow remaining
   oilandgas: {
+    metatitle:"Transforming Operations with Computer Vision in Oil & Gas",
+    metadescription:"Optimize site control using computer vision for oil & gas to reduce manual tasks, gain real-time insights and enhance decision-making across operations.",
     title: [
       {
         text: "Securing Every Site with Computer Vision in Power, Oil & Gas",
@@ -774,6 +783,7 @@ const industriesData = {
         },
       ],
     },
+    achieved: "Performance Highlights in Numbers",
 
     workflow: {
       heading:
@@ -791,6 +801,8 @@ const industriesData = {
   },
   // Result image remaining
   election: {
+    metatitle:"Detect Suspicious Activity with Computer Vision in Elections",
+    metadescription:"Learn how computer vision for election security ensures transparent voting by detecting suspicious activity, enabling quick responses, and boosting public trust.",
     title: [
       {
         text: "Ensuring Fairness and Safety with Computer Vision in Election Systems",
@@ -936,6 +948,7 @@ const industriesData = {
         },
       ],
     },
+    achieved: "Delivering Results That Count",
 
     cta: {
       textLines: [
@@ -952,6 +965,8 @@ const industriesData = {
     },
   },
   education: {
+    metatitle:"Protect Learning Spaces with Computer Vision for Education",
+    metadescription:"Discover how computer vision in education helps schools and universities boost security, automate attendance, and monitor key areas effectively.",
     title: [
       {
         text: "Enhancing Campus Safety Through Computer Vision in Education",
@@ -1131,6 +1146,7 @@ const industriesData = {
         },
       ],
     },
+    achieved: "Innovation You Can Count On",
 
     cta: {
       textLines: [
@@ -1146,6 +1162,8 @@ const industriesData = {
     },
   },
   transportation: {
+    metatitle:"Travel Innovation Powered by Computer Vision in Transportation",
+    metadescription:"Boost safety and efficiency with advanced transportation surveillance solutions. Real-time monitoring and analytics for smarter, safer travel experiences.",
     title: [
       {
         text: "Pioneering the Future of Traveling with Computer Vision in Transportation",
@@ -1302,6 +1320,8 @@ const industriesData = {
         },
       ],
     },
+    achieved: "Solving Problems with Every Milestone",
+
     cta: {
       textLines: [
         "Experience the Future of Mobility with Our Visual",
@@ -1316,6 +1336,8 @@ const industriesData = {
     },
   },
   smartcity: {
+    metatitle:"Computer Vision in Smart City for Traffic and Safety",
+    metadescription:"Improve urban safety with our smart city surveillance solutions using smart cameras providing traffic detection, real-time insights, proactive crime prevention.",
     title: [
       {
         text: "Elevating Urban Safety with Computer Vision in Smart City",
@@ -1510,6 +1532,7 @@ const industriesData = {
         },
       ],
     },
+    achieved: "Outcomes You Can Trust",
 
     cta: {
       textLines: [
@@ -1527,6 +1550,8 @@ const industriesData = {
   },
   // Result image remaining
   pharma: {
+    metatitle:"Boosting Compliance via Computer Vision in Pharmaceutical",
+    metadescription:"Computer vision for pharma applications strengthens regulatory compliance, detects process anomalies and protects product integrity at scale.",
     title: [
       {
         text: "Setting New Safety Standards in Pharmaceutical Video Surveillance",
@@ -1685,6 +1710,7 @@ const industriesData = {
         },
       ],
     },
+    achieved: "Performance Backed by Numbers",
 
     workflow: {
       heading: "The Pharma Video Surveillance Solution Process",
@@ -1700,6 +1726,8 @@ const industriesData = {
     },
   },
   logistics: {
+    metatitle:"Computer Vision in Logistics: Enabling Seamless Operations",
+    metadescription:"VMukti Solutions enables computer vision logistics to boost efficiency, reduce losses, and provide full visibility across logistics and warehouse systems.",
     title: [
       {
         text: "Transforming Supply Chain Security with Computer Vision in Logistics",
@@ -1872,6 +1900,7 @@ const industriesData = {
         },
       ],
     },
+    achieved: "Solving Problems with Every Milestones",
 
     workflow: {
       heading: "Building Smart Processes for Logistics Surveillance Systems",
@@ -1887,6 +1916,8 @@ const industriesData = {
     },
   },
   banking: {
+    metatitle:"Boost Customer Safety with Computer Vision in Banking",
+    metadescription:"Improve safety and ensure security with computer vision for Bank branches and ATMs using AI-powered surveillance with continuous monitoring and alerts.",
     title: [
       {
         text: "Securing Financial Spaces Through Computer Vision in Banking",
@@ -2081,6 +2112,7 @@ const industriesData = {
         },
       ],
     },
+    achieved: "Growth You Can See and Scale",
 
     workflow: {
       heading:
@@ -2097,6 +2129,8 @@ const industriesData = {
     },
   },
   sportsentertainment: {
+    metatitle:"Strategic Edge for Computer Vision in Sports & Entertainment",
+    metadescription:"Transform the game with visual AI in sports & entertainment, unlocking powerful real-time intelligence across every play, moment, and fan interaction.",
     title: [
       {
         text: "Bringing Every Moment to Life with Computer Vision for Sports & Entertainment",
@@ -2320,13 +2354,10 @@ const industriesData = {
         },
       ],
     },
+    achieved: "Innovation You Can Count On",
 
     cta: {
-      textLines: 
-      [
-        "Unlock Smarter Game Moments with The Power of",
-        "Visual AI"
-      ],
+      textLines: ["Unlock Smarter Game Moments with The Power of", "Visual AI"],
       href: "/sportsentertainment",
     },
 
@@ -2337,6 +2368,8 @@ const industriesData = {
     },
   },
   defense: {
+    metatitle:"Intelligent Security Surveillance with Computer Vision in Defense",
+    metadescription:"Revolutionize operations with computer vision for defense for threat detection, intelligent monitoring, and enhanced situational awareness across key areas.",
     title: [
       {
         text: "Harnessing Computer Vision in Defense to Strengthen National Security",
@@ -2502,6 +2535,7 @@ const industriesData = {
         },
       ],
     },
+    achieved: "Our Roadmap of Achievements",
 
     cta: {
       textLines: [
@@ -2519,6 +2553,8 @@ const industriesData = {
   },
   // Result image remaining
   hospitality: {
+    metatitle:"Smart Hospitality Surveillance System for Premium Security",
+    metadescription:"A hospitality surveillance system that watches over your guests with precision, offering smart alerts and maintaining the quiet luxury of your property.",
     title: [
       {
         text: "Elevating Guest Experience with Computer Vision in Hospitality",
@@ -2713,6 +2749,7 @@ const industriesData = {
         },
       ],
     },
+    achieved: "Success You Can Measure",
 
     cta: {
       textLines: [
@@ -2729,6 +2766,8 @@ const industriesData = {
   },
   // Result image remaining
   construction: {
+    metatitle:"Paving Future Builds with Computer Vision in Construction",
+    metadescription:"Computer vision in construction industry isn't just the future, it is the upgrade your site needs for sharper safety, speed, and smarter outcomes.",
     title: [
       {
         text: "Computer Vision in Construction: A New Era of Site Intelligence",
@@ -2908,6 +2947,7 @@ const industriesData = {
         },
       ],
     },
+    achieved: "Proud Moments That Shaped Our Growth",
 
     workflow: {
       heading:
@@ -2925,6 +2965,8 @@ const industriesData = {
   },
   // Result image remaining
   enterprise: {
+    metatitle:"Computer Vision in Enterprise for Intelligent Monitoring",
+    metadescription:"VMukti Solutions offers an enterprise surveillance solution with computer vision for live threat detection, smart monitoring and enhanced operational security.",
     title: [
       {
         text: "Supercharge Your Security with Computer Vision Enterprise Surveillance Systems",
@@ -3104,6 +3146,7 @@ const industriesData = {
         },
       ],
     },
+    achieved: "Growth You Can See and Scale",
 
     workflow: {
       heading:
@@ -3121,6 +3164,8 @@ const industriesData = {
   },
   // Result image remaining
   government: {
+    metatitle:"Redefine Civic Efficiency with Computer Vision in Government",
+    metadescription:"From traffic to city safety to election monitoring, computer vision for government ensures smarter oversight, faster response, and public trust.",
     title: [
       {
         text: "Modernizing Administration Through Computer Vision in Government",
@@ -3329,6 +3374,7 @@ const industriesData = {
         },
       ],
     },
+    achieved: "Proud Moments That Shaped Our Growth",
 
     workflow: {
       heading: "How We Deliver Custom Visual Solutions for Government",

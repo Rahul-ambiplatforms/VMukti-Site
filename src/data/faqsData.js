@@ -64,7 +64,7 @@ const faqsData = {
       },
     ],
   },
-  enterprisevideomanagementsystem: {
+  enterprisemanagementsystem: {
     // The key MUST match the URL slug
     title: "Common Questions Answered",
     qa: [
@@ -72,17 +72,17 @@ const faqsData = {
         question:
           "What makes our EMS different from standard video management systems?",
         answer:
-          "With, VMukti's EMS handles large-scale surveillance with centralized control, multi-location monitoring, scalability and admin access, unlike standard systems designed for smaller setups.",
+          "With VMukti’s EMS, you get infrastructure and health monitoring, real-time alerts, SLA compliance, and uptime analytics—far beyond standard systems built only for basic video management.",
       },
       {
         question: "Is EMS customizable to suit enterprise-specific needs?",
         answer:
-          "Absolutely! Our EMS can be tailored to meet the unique security needs of an enterprise, from camera configuration to storage options to customized user access and alert systems.",
+          "Absolutely! Our EMS can be tailored to match enterprise requirements, from infrastructure and network monitoring to SLA tracking, uptime analytics, and custom alert configurations.",
       },
       {
         question: "Can EVMS integrate with existing enterprise tools?",
         answer:
-          "Yes, Our EMS can integrate with systems like biometric attendance, RFID access control and fire alarms to enable synchronized video verification and streamlined security operations.",
+          "Yes, our EMS integrates seamlessly with systems like biometric attendance, RFID access control, and fire alarms—providing synchronized monitoring, automated alerts, and streamlined security operations.",
       },
     ],
   },

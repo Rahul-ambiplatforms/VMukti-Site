@@ -74,13 +74,11 @@ const TestimonialCard = ({ testimonial }) => {
       bg="white"
       borderRadius="24px"
       p={8}
-      mx={{ base: 2, md: 3 }}
-      // boxShadow="lg"
-      align="start"
+      mr={{ base: 2, md: 6 }}
+      align="flex-start"
       spacing={5}
-      height="100%" // Use string "100%" for height
+      height="100%"
     >
-      {/* <Icon as={FaQuoteLeft} w={8} h={8} color="#3F77A5" /> */}
       <svg
         width="46"
         height="37"
@@ -94,14 +92,13 @@ const TestimonialCard = ({ testimonial }) => {
         />
       </svg>
 
-      <Text color="black" fontSize="16px" lineHeight="100%" flex="1">
+      <Text color="#444" fontSize="16px" lineHeight="20px" flex="1">
         {" "}
-        {/* flex="1" pushes the author to the bottom */}
         {testimonial.description}
       </Text>
       <HStack>
         <Flex justifyContent="center" alignItems="center">
-          <Box w="64px" h="64px" color="red" bg="red" borderRadius="8px">
+          <Box w="64px" h="64px" color="red" borderRadius="8px">
             <img
               src={testimonial.image}
               alt={testimonial.name}
@@ -111,9 +108,9 @@ const TestimonialCard = ({ testimonial }) => {
               borderRadius="8px"
             />
           </Box>
-          <VStack align="start" spacing={0} ml={2}>
-            <Text fontWeight="bold">{testimonial.name}</Text>
-            <Text fontSize="sm" color="gray.500">
+          <VStack align="start" spacing={0} ml={4}>
+            <Text fontWeight="700" fontSize="16px" color="black">{testimonial.name}</Text>
+            <Text fontSize="16px" fontWeight="500" color="#444">
               {testimonial.company}
             </Text>
           </VStack>
@@ -160,23 +157,13 @@ const Reviews = () => {
   };
 
   return (
-    // ✅ FIX 3: Removed bg="#F0F2F5" from here
-    <Box py={{ base: 16, md: "2%" }}>
-      <Flex
-        // maxW="1400px"
-        // mx="auto"
-        align="center"
-        direction={{ base: "column", lg: "row" }}
-        // px={{ base: 4, md: 8 }}
-        // bg="red"
-      >
+    <Box my="3%">
+      <Flex align="center" direction={{ base: "column", lg: "row" }}>
         {/* Left Side: Testimonials Slider */}
         <Box
-          w={{ base: "100%", lg: "65%" }}
+          w={{ base: "100%", lg: "70%" }}
           position="relative"
-          //   bg="blue"
-          // ✅ FIX 1: REMOVED the `sx` prop that caused overflow issues.
-          // By default, react-slick will now hide the partial next/prev slides.
+          // bg="blue"
         >
           <Slider ref={sliderRef} {...settings}>
             {testimonials.map((testimonial, index) => (
@@ -189,28 +176,29 @@ const Reviews = () => {
         </Box>
 
         {/* Right Side: Title and Navigation */}
-        <VStack
+        <Flex
           w={{ base: "100%", md: "35%", lg: "35%" }}
           align={{ base: "center", md: "flex-start", lg: "flex-start" }}
+          justifyContent="space-between"
           spacing={4}
-          pl={{ lg: 5 }}
-          mt={{ base: 16, md: 32 }}
-          // bg="green"
+          direction="column"
+          mt={{ base: 16, md: 48 }}
         >
-          {/* <BentArrowIcon w={16} h={16} color="#4299E1" transform="rotate(-90deg)" /> */}
-          <svg
-            width="34"
-            height="34"
-            viewBox="0 0 34 34"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M30.0367 33C31.6935 32.9989 33.0357 31.6548 33.0346 29.9979L33.0159 2.99793C33.0148 1.34108 31.6707 -0.00113821 30.0138 7.15256e-06C28.357 0.00115204 27.0148 1.34523 27.0159 3.00208L27.0325 27.0021L3.03251 27.0187C1.37566 27.0198 0.0334406 28.3639 0.0345855 30.0207C0.0357304 31.6776 1.3798 33.0198 3.03666 33.0187L30.0367 33ZM5 5L2.88015 7.12279L27.9147 32.1228L30.0346 30L32.1544 27.8772L7.11985 2.87721L5 5Z"
-              fill="#3F77A5"
-            />
-          </svg>
-          <Heading as="h2" fontSize="36px" fontWeight="600">
+          <Box mb="2%">
+            <svg
+              width="34"
+              height="34"
+              viewBox="0 0 34 34"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M30.0367 33C31.6935 32.9989 33.0357 31.6548 33.0346 29.9979L33.0159 2.99793C33.0148 1.34108 31.6707 -0.00113821 30.0138 7.15256e-06C28.357 0.00115204 27.0148 1.34523 27.0159 3.00208L27.0325 27.0021L3.03251 27.0187C1.37566 27.0198 0.0334406 28.3639 0.0345855 30.0207C0.0357304 31.6776 1.3798 33.0198 3.03666 33.0187L30.0367 33ZM5 5L2.88015 7.12279L27.9147 32.1228L30.0346 30L32.1544 27.8772L7.11985 2.87721L5 5Z"
+                fill="#3F77A5"
+              />
+            </svg>
+          </Box>
+          <Heading as="h2" fontSize="36px" fontWeight="600" lineHeight="45px">
             <Text as="span" color="#DB7B3A">
               Experiences
             </Text>{" "}
@@ -219,21 +207,19 @@ const Reviews = () => {
             Clients
           </Heading>
 
-          <HStack spacing={4} pt={4} mt="20%">
+          <Flex gap="2" mt="25%">
             {/* Previous Button */}
             <IconButton
               aria-label="Previous testimonial"
               isRound
               onClick={() => sliderRef?.current?.slickPrev()}
-              // --- 1. Define the Initial State ---
               bg="white"
-              color="#3F77A5" // The SVG will start with this color
+              color="#3F77A5"
               _hover={{
-                bg: "#3F77A5", // On hover, change background to blue
-                color: "white", // On hover, change the icon color to white
+                bg: "#3F77A5",
+                color: "white",
               }}
               icon={
-                // --- The SVG is now INSIDE the icon prop ---
                 <svg
                   width="25"
                   height="16"
@@ -249,16 +235,17 @@ const Reviews = () => {
                 </svg>
               }
             />
+
             {/* Next Button */}
             <IconButton
               aria-label="Next testimonial"
               isRound
               onClick={() => sliderRef?.current?.slickNext()}
-              bg="white" // Changed from "white" so the icon is visible
-              color="#3F77A5" // This sets the text color, but the icon has its own fill
+              bg="white"
+              color="#3F77A5"
               _hover={{
-                bg: "#3F77A5", // On hover, change the background to blue
-                color: "white", // On hover, change the SVG icon color to white
+                bg: "#3F77A5",
+                color: "white",
               }}
               icon={
                 // --- The SVG is now INSIDE the icon prop ---
@@ -276,8 +263,8 @@ const Reviews = () => {
                 </svg>
               }
             />
-          </HStack>
-        </VStack>
+          </Flex>
+        </Flex>
       </Flex>
     </Box>
   );

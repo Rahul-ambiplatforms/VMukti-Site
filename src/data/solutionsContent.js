@@ -1,4 +1,3 @@
-// By using 'export', we can import this object in any other file.
 
 export const homeSolutions = {
   heading: "Empower Every Business Workflow with Vision AI Solutions",
@@ -13,7 +12,7 @@ export const homeSolutions = {
     },
     {
       heading1: "EVMS",
-      heading2: "Enterprise Video Management System",
+      heading2: "Enterprise Management System",
       content:
         'A scalable AI surveillance software designed for your large-scale surveillance. EVMS centralizes monitoring across multiple locations, supports "N" number of cameras and integrates with AI analytics and emergency systems to deliver smart and efficient video management to the globe.',
       image: "./assets/solution_1.png",
@@ -63,19 +62,16 @@ export const homeSolutions = {
   ]
 };
 
-// src/data/solutionsContent.js
 
 export const solutionSolutions = {
   heading: "End-to-End Smart Viewing Solutions for Any Application",
 
-  // 2. The top-level description (This design doesn't have one, so we can use an empty string)
   description: "", 
   
-  // 3. The array of individual solutions
   solutions: [
     {
-      heading1: "Cloud AI", // Text for the button
-      heading2: "Cloud AI", // Main title inside the card
+      heading1: "Cloud AI", 
+      heading2: "Cloud AI", 
       content:
         "We offer Cloud AI surveillance for smart monitoring with features like pre-stampede detection, smoke and fire detection, threat detection, facial recognition, PPE kit detection and many more. It ensures instant alerts, secure access and continuous protection for people and assets.",
       image: "./assets/sol_solution_1.png", // Replace with your actual image path

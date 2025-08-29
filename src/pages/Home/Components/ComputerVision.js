@@ -83,15 +83,13 @@ const ComputerVision = () => {
           Explore Our{" "}
           <Text as="span" color="#3F77A5" fontWeight="500">
             Computer Vision Roadmap
-          </Text>
-        </Heading>
-        <Heading as="h2" fontSize="48px" fontWeight="500" mt={-4}>
-          and{" "}
-          <Text as="span" color="#f5a623">
+          </Text>{" "}
+           <br />and{" "}
+          <Text as="span" color="#DB7B3A">
             API Strategy
           </Text>
         </Heading>
-        <Text color="#000" fontSize="16px" fontWeight="500" w="95%">
+        <Text color="#000000" fontSize="16px" fontWeight="500" w="95%">
           We handle the complete lifecycle from data collection to computer
           vision models selection, API development to full system integration
           and final deployment. Our goal is to deliver high-performance AI
@@ -103,7 +101,7 @@ const ComputerVision = () => {
       <Box
         bg="white"
         px={{ base: 4, md: 8 }}
-        py={{ base: 4, md: 4 }}
+        pt={{ base: 4, md: 4 }}
         borderRadius="24px"
       >
         <Flex
@@ -122,7 +120,8 @@ const ComputerVision = () => {
               _hover={{
                 bg: activeIndex === index ? "#3F77A5" : "#dcdcdc",
               }}
-              m={2}
+              mx="8px"
+              mt="4"
               px={8}
               py={6}
               borderRadius="full"
@@ -158,13 +157,13 @@ const ComputerVision = () => {
               }}
             >
               <VStack spacing={6} align="center" textAlign="center">
-                <Text fontSize="lg" color="#444444" maxW="xl">
+                <Text fontSize="14px" fontWeight="500" color="#444444" w="50%">
                   {computerVisionSteps[activeIndex].content}
                 </Text>
                 <Box
                   w="full"
                   h={{ base: "200px", md: "500px" }}
-                  bg="#0e2d47"
+                  // bg="#0e2d47"
                   borderRadius="24px"
                   overflow="hidden"
                 >

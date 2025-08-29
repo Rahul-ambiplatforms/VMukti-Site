@@ -54,7 +54,6 @@ const Diagram = () => {
           <Text
             w="90%"
             fontSize={{ base: "20px", md: "48px" }}
-            // fontWeight="bold"
             fontWeight="500"
             // ml={{ md: "5%" }}
             // mt="5%"

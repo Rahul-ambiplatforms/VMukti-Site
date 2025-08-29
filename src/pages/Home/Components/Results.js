@@ -8,7 +8,6 @@ import {
   Image,
 } from "@chakra-ui/react";
 
-// --- This is the DEFAULT data that the component will use if no props are passed ---
 const featuresData = [
   {
     title: "Remote Monitoring",
@@ -50,8 +49,6 @@ const featuresData = [
 
 // The component now accepts an optional `data` prop.
 const Results = ({ data }) => {
-  // console.log('Results component data:', data);
-
   let headingContent;
   let subheadingContent;
   let featuresToRender;
@@ -60,10 +57,10 @@ const Results = ({ data }) => {
   const defaultHeading = (
     <Heading
       as="h1"
-      size={{ base: "xl", md: "2xl" }}
-      fontWeight="semibold"
-      color="gray.800"
-      lineHeight="shorter"
+      fontSize="48px"
+      fontWeight="600"
+      color="#000"
+      lineHeight="60px"
     >
       Results{" "}
       <Text as="span" color="#3F77A5">
@@ -85,11 +82,10 @@ const Results = ({ data }) => {
     headingContent = (
       <Heading
         as="h1"
-        // size={{ base: "xl", md: "2xl" }}
         fontSize="48px"
         fontWeight="600"
         color="black"
-        lineHeight="shorter"
+        lineHeight="60px"
       >
         {data.heading}
       </Heading>
@@ -104,35 +100,38 @@ const Results = ({ data }) => {
 
   return (
     <Box w="100%" bg="white" borderRadius="24px" py={{ base: 4, md: 8 }} px="8">
-      {/* Header Section (Now dynamic) */}
+
       <VStack
-        spacing={5}
-        justifyContent="center"
-        alignItems="center"
+        spacing={5} 
+        alignItems="center" 
         textAlign="center"
+        mx="auto"
+        w="100%" 
         mb={{ base: 6, md: 8 }}
       >
-        {headingContent}
-        <Text
-          justifyContent="center"
-          alignItems="center"
-          color="black"
-          w="100%"
-          fontWeight="500"
-          fontSize="16px"
-        >
-          {subheadingContent}
-        </Text>
+        <Box w={{ base: "90%", md: "80%", lg: "80%" }}>
+          {headingContent}
+        </Box>
+
+        <Box w={{ base: "90%", md: "90%", lg: "90%" }}>
+          <Text
+            color="black"
+            fontWeight="500"
+            fontSize="16px"
+            lineHeight="20px"
+          >
+            {subheadingContent}
+          </Text>
+        </Box>
       </VStack>
 
-      {/* --- Features Grid Section (Now dynamic) --- */}
       <SimpleGrid
         columns={{ base: 1, sm: 2, lg: 3 }}
         spacingX={{ base: 8, md: 12 }}
-        spacingY={{ base: 12, md: 16 }}
+        spacingY={{ base: 6, md: 8 }}
       >
         {featuresToRender.map((feature, index) => (
-          <VStack key={index} spacing={4} textAlign="center">
+          <VStack key={index} spacing={2} textAlign="center">
             {feature.image && (
               <Image
                 src={feature.image}
@@ -141,17 +140,23 @@ const Results = ({ data }) => {
               />
             )}
 
-            <Heading as="h3" fontSize="16px" fontWeight="bold" color="gray.800">
-              {/* 
-                  This uses the logical OR operator. It will use `feature.title` if it exists
-                  (from the default data), OR it will fall back to `feature.heading`
-                  (from your new industry data structure). This makes the component
-                  compatible with both data shapes.
-                */}
+            <Heading
+              as="h3"
+              fontSize="16px"
+              fontWeight="700"
+              mt="2"
+              color="#000000"
+            >
               {feature.title || feature.heading}
             </Heading>
 
-            <Text color="gray.600" noOfLines={3} mx="auto" fontSize="14px">
+            <Text
+              color="#444444"
+              mx="auto"
+              fontSize="14px"
+              lineHeight="18px"
+              w="85%"
+            >
               {feature.description}
             </Text>
           </VStack>

@@ -41,8 +41,8 @@ const dropdownItems = {
       path: "/solutions/video-management-system",
     },
     {
-      label: "Enterprise Video Management System (EMS)",
-      path: "/solutions/enterprise-video-management-system",
+      label: "Enterprise Management System (EMS)",
+      path: "/solutions/enterprise-management-system",
     },
     {
       label: "Integrated Command & Control Center (ICCC)",

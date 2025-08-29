@@ -49,7 +49,7 @@ const surveillanceData = [
 
 // --- MAIN COMPONENT ---
 const AISurveillance = () => {
-  const [activeIndex, setActiveIndex] = useState(2); // Start with the 3rd item as active
+  const [activeIndex, setActiveIndex] = useState(0);
   const activeFeature = surveillanceData[activeIndex];
 
   const handleNext = () => {
@@ -61,25 +61,38 @@ const AISurveillance = () => {
     );
   };
 
-  const mainPadding = useBreakpointValue({ base: 4, md: 8, lg: 16 });
-  const headerHeadingSize = useBreakpointValue({
-    base: "2xl",
-    md: "3xl",
-    lg: "4xl",
-  });
-  const featureHeadingSize = useBreakpointValue({ base: "xl", md: "2xl" });
-
   return (
     <Box bg="#3F77A5" p="3%" borderRadius={{ base: "0", md: "24px" }}>
       <Flex justify="space-between" align="center" mb={8}>
         <Box color="white">
-          <Heading as="h1" fontSize="48px" fontWeight="600">
+          <Heading as="h1" fontSize="48px" fontWeight="600" lineHeight="60px">
             {" "}
             Your All-in-One AI Surveillance
             <br />
             Ecosystem
           </Heading>
-          <Box w="80px" h="4px" bg="white" mt={4} borderRadius="full" />
+          <Box
+            position="relative"
+            width={{ base: "70%", md: "65%" }}
+            height="2px"
+            bg="rgba(255,255,255,0.3)"
+            mt={{ base: "6", md: "25px" }}
+            borderRadius="full"
+          >
+            <Box
+              position="absolute"
+              height="4px"
+              top="50%"
+              transform="translateY(-50%)"
+              bg="#FFFFFF"
+              justifyContent="center"
+              alignItems="center"
+              textAlign="center"
+              width={`${100 / surveillanceData.length}%`}
+              left={`${(activeIndex / surveillanceData.length) * 100}%`}
+              transition="left 0.2s ease-in-out"
+            />
+          </Box>
         </Box>
         <HStack spacing={2} position="absolute" right="5%">
           <IconButton
@@ -137,7 +150,7 @@ const AISurveillance = () => {
           align="stretch"
           spacing={5}
           w={{ base: "100%", lg: "30%" }}
-          color="white" // ✅ FIX: Set base text color for children
+          color="white"
           justifyContent="center"
         >
           {surveillanceData.map((item, index) => (
@@ -148,9 +161,8 @@ const AISurveillance = () => {
               onClick={() => setActiveIndex(index)}
               fontWeight={activeIndex === index ? "700" : "400"}
               color={activeIndex === index ? "#FFFFFF" : "#E7E7E7"}
-              //   opacity={activeIndex === index ? 1 : 0.7} // Active is full opacity, inactive is faded
               transition="all 0.2s"
-              _hover={{ opacity: 1 }} // ✅ FIX: Hover just brings to full opacity
+              _hover={{ opacity: 1 }}
             >
               <Icon
                 width="13"
@@ -161,7 +173,6 @@ const AISurveillance = () => {
                 visibility={activeIndex === index ? "visible" : "hidden"}
                 color="white" // This prop still controls the icon's color
               >
-                {/* 2. The old <path> is replaced with the new one */}
                 <path
                   d="M13 12.5L0 0L-4.37114e-06 25L13 12.5Z"
                   fill="currentColor"
@@ -173,52 +184,66 @@ const AISurveillance = () => {
           ))}
         </VStack>
 
-        {/* --- RIGHT CONTAINER (This is now the white card) --- */}
         <Flex
           direction={{ base: "column-reverse", md: "row" }}
           align="center"
-          //   gap={10}
           flex="1"
-          // ✅ FIX: The background and padding are applied here now
           bg="white"
           borderRadius="24px"
-          //   p={useBreakpointValue({ base: 5, md: 10 })}
           minH="511px"
         >
-          {/* Sub-container: Heading, description, link */}
           <VStack
             h="100%"
             align="stretch"
             justify="space-between"
             spacing={5}
             p="8"
-            // flex="1"
             flex={{ base: "1", md: "0 0 40%" }}
-            // bg="red"
           >
             <Box>
               <Heading
                 as="h3"
-                // size={featureHeadingSize}
                 fontSize="24px"
                 fontWeight="700"
                 color="#000"
+                lineHeight="30px"
               >
                 {activeFeature.title}
               </Heading>
-              <Box w="20px" h="3px" bg="#3F77A5" mt={1} borderRadius="full" />
-              <Text color="#444444" lineHeight="1.2" mt={2}>
+              <Box w="20px" h="3px" bg="#3F77A5" mt={2} borderRadius="full" />
+              <Text
+                color="#444444"
+                fontSize="14px"
+                fontWeight="500"
+                lineHeight="18px"
+                mt={2}
+              >
                 {activeFeature.description}
               </Text>
             </Box>
             <Link
-              color="#3F77A5"
-              fontWeight="bold"
+              color="black"
+              fontSize="16px"
+              fontWeight="400"
               href="#"
               display="flex"
               alignItems="center"
             >
-              Know More <Icon as={FaArrowRight} ml={2} />
+              Know More
+              <Box ml="3%">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="24"
+                  viewBox="0 0 22 24"
+                  fill="none"
+                >
+                  <path
+                    d="M20.9612 13.0607C21.547 12.4749 21.547 11.5251 20.9612 10.9393L11.4153 1.3934C10.8295 0.807612 9.87974 0.807612 9.29395 1.3934C8.70816 1.97919 8.70816 2.92893 9.29395 3.51472L17.7792 12L9.29395 20.4853C8.70816 21.0711 8.70816 22.0208 9.29395 22.6066C9.87974 23.1924 10.8295 23.1924 11.4153 22.6066L20.9612 13.0607ZM0.101562 12V13.5L19.9006 13.5V12V10.5L0.101562 10.5V12Z"
+                    fill="black"
+                  />
+                </svg>
+              </Box>
             </Link>
           </VStack>
           <Box

@@ -1,5 +1,7 @@
 export const solutionsData = {
   videomanagementsystem: {
+    metetitle:"Advanced Video Management System for Surveillance",
+    metadescription:"Best Video Management Software for CCTV offering live monitoring, cloud storage, AI analytics and seamless integration for enhanced surveillance control.",
     // Section 1: Hero section from the first image
     hero: {
       heading: "Intelligent Video Management System",
@@ -115,6 +117,13 @@ export const solutionsData = {
       ],
     },
 
+    industry: {
+      heading: "Smart VMS Designed for Real-World Sector Applications",
+      description:
+        "We engineer for those who demand control without compromising real-time visibility, AI-driven detection and frictionless rollout, built to perform in high-security, high-density, high-pressure spaces.",
+    },
+
+    trusted: "Performance Backed by Numbers",
     // Section 5: CTA Banner from the fifth image
     cta: {
       textLines: [
@@ -162,155 +171,144 @@ export const solutionsData = {
     },
   },
 
-  enterprisevideomanagementsystem: {
-    // Section 1: Hero section from the first image
+  enterprisemanagementsystem: {
+    metetitle:"Enterprise Management Solution for Scalable Security and Monitoring",
+    metadescription:"Enterprise Management Solution for CCTV feeds that empowers Command & Control Centres with real-time monitoring, automated alerts, uptime analytics, and zero downtime.",
+    // Section 1: Hero section updated
     hero: {
-      heading: "A New Era of VMS Enterprise Solutions",
+      heading: "Enterprise Management Solutions for Smarter CCTV Control",
       description:
-        "Our VMS enterprise offers a dynamic solution that grows with your business needs. Enhance your security infrastructure with real-time monitoring and scalable technology. Stay ahead of potential threats with an all-in-one, future-proof system.",
+        "Our EMS delivers an enterprise-grade solution that evolves with your surveillance needs. Monitor servers, cameras, and networks in real time with scalable technology. Ensure zero downtime, instant alerts, and future-proof security for your Command & Control Centre.",
       image: "../../assets/solution_evms_dash.png",
     },
 
-    // Section 2: Introduction from the second image
+    // Section 2: Introduction updated
     introduction: {
-      heading: "Understanding the Enterprise Video Management System",
+      heading:
+        "Understanding the Enterprise Management System for Surveillance",
       description:
-        "Enterprise video management system is a scalable platform designed to handle large-scale surveillance operations, enabling centralized monitoring, smart data handling and streamlined control of video feeds across multiple sites and departments for enhanced operational security.",
-      image: "../../assets/solution_evms_intro.png",
+        "Enterprise Management System is a scalable platform built for large-scale CCTV surveillance, ensuring centralized monitoring, real-time alerts, and streamlined control of video feeds across multiple sites for enhanced operational reliability.",
+      image: "../../assets/solution_ems_intro.png",
     },
 
-    // Section 3: Features and Accordion from the third image
+    // Section 3: Features and Accordion updated
     features: {
-      heading:
-        "Beyond Ordinary Enterprise VMS Solution for Tomorrow’s Security",
+      heading: "Next-Level Enterprise Management for Smarter Surveillance",
       description:
-        "A video management system for enterprises centralizes surveillance footage across multiple locations, enhancing both security and efficiency. A mission-critical EVMS framework we’ve designed integrates seamlessly with existing infrastructure for streamlined control and oversight.",
+        "An Enterprise Management System centralizes CCTV surveillance across multiple locations, enhancing security and efficiency. Our mission-critical EMS framework integrates seamlessly with existing infrastructure to deliver streamlined control, real-time oversight, and zero downtime.",
       accordionItems: [
         {
           title: "User Permissions and Event Notifications",
           content:
-            "Manage who can access what with full flexibility and rely on live notifications by our in-house EMS to flag unauthorized movements or object detection, giving your team the power to respond instantly.",
+            "Control access with flexible user permissions while EMS continuously monitors servers, cameras, and networks, sending real-time alerts on performance or security issues so your team can respond instantly.",
         },
         {
           title: "Flexible Storage Options",
           content:
-            "Select cloud storage for elasticity or on-premise for control by EVMS technology crafted by VMukti. Both options deliver fast performance and remote access without compromising security.",
+            "Choose scalable cloud storage or reliable on-premise control with VMukti’s EMS. Both ensure high performance, real-time monitoring, and secure access without downtime.",
         },
         {
           title: "Admin Access Control",
           content:
-            "Our solution provides granular admin access, allowing administrators to set permissions, monitor user activity and maintain system integrity with control over surveillance operations.",
+            "Our EMS offers granular admin access with role-based permissions, real-time activity tracking, and compliance monitoring to ensure system integrity and reliable surveillance operations.",
         },
         {
           title: "Seamless Integration with Enterprise Systems",
           content:
-            "We provide a platform that integrates smoothly with enterprise systems, ensuring synchronization with other security tools and business software to streamline operations and improve efficiency.",
+            "We provide a platform that connects effortlessly with enterprise infrastructure, ensuring smooth synchronization of servers, cameras, and networks to streamline monitoring and maximize performance.",
         },
         {
           title: "Alert Handling",
           content:
-            "Our in-house EVMS monitoring generates automated alerts for potential system issues, which are instantly analyzed by helpdesk teams to ensure prompt and effective resolution.",
+            "Our EMS continuously monitors servers, cameras, and networks to generate automated alerts, enabling real-time analysis and swift resolution by support teams.",
         },
         {
           title: "Live and Recorded Video Access",
           content:
-            "Our advanced video management platform allows seamless access to both live feeds and recorded footage from any connected camera, ensuring efficient real-time monitoring.",
+            "Our enterprise management solution ensures uninterrupted access to live CCTV feeds and recorded footage, backed by infrastructure monitoring for reliable, real-time surveillance.",
         },
         {
           title: "Storage and RAM Monitoring",
           content:
-            "VMukti’s proprietary system tracks combined storage and RAM usage across all connected cameras to ensure smooth performance, prevent overload and maintain optimal system uptime.",
+            "VMukti’s EMS continuously monitors storage and RAM usage across servers and connected cameras, delivering real-time alerts to prevent overload and ensure uninterrupted performance.",
         },
         {
           title: "Unique Customization",
           content:
-            "From interface customization to feature-level control, we deliver tailored configurations that align with your brand standards and connect effortlessly across your surveillance stack.",
+            "From dashboard layouts to monitoring preferences, we deliver tailored EMS configurations that align with your operations and integrate seamlessly across your surveillance ecosystem.",
         },
       ],
     },
 
-    // Section 4: Key Benefits grid from the fourth image
+    // Section 4: Key Benefits grid updated
     keyBenefits: {
-      heading:
-        "Redefine Surveillance with Enterprise Video Management Software",
+      heading: "Redefine Surveillance with Enterprise Management Software",
       benefits: [
         {
-          // Image name changed from vms to evms
           image: "../../assets/result_solution_evms_1.png",
-          // Title and Description updated from "Main Content"
           title: "Data Security",
           description:
-            "Our advanced enterprise video management system includes built-in encryption and robust security protocols to safeguard surveillance footage from unauthorized access or manipulation.",
+            "Our enterprise management system ensures surveillance reliability with built-in encryption, secure infrastructure monitoring, and real-time alerts to prevent unauthorized access or system breaches.",
         },
         {
           image: "../../assets/result_solution_evms_2.png",
           title: "Complete Access",
           description:
-            "AI EVMS by the VMukti platform provides role-based administrative controls, allowing designated personnel to manage user permissions and surveillance workflows with precision.",
+            "AI EMS by the VMukti solutions offers role-based administrative controls, enabling authorized personnel to manage infrastructure, alerts, and surveillance workflows with precision.",
         },
         {
           image: "../../assets/result_solution_evms_3.png",
           title: "Streamlined User Experience",
           description:
-            "Our system delivers a clean, intuitive interface that enables efficient configuration, monitoring and system management across enterprise surveillance deployments.",
+            "Our EMS platform offers a simple, intuitive interface that streamlines infrastructure monitoring, alerts, and performance management across enterprise surveillance systems.",
         },
         {
           image: "../../assets/result_solution_evms_4.png",
           title: "Scalability",
           description:
-            "VMukti’s enterprise video management system supports expansion, letting businesses scale surveillance by adding cameras, users or features without compromising performance.",
+            "VMukti’s Enterprise Management Solution scales effortlessly, monitoring servers, cameras, and networks while ensuring reliable performance without downtime.",
         },
         {
           image: "../../assets/result_solution_evms_5.png",
           title: "Regulatory Compliance",
           description:
-            "An intelligent surveillance ecosystem developed by VMukti that supports compliance with industry regulations through automated reporting features and policy-aligned footage retention.",
+            "An enterprise-grade surveillance management system by VMukti that ensures compliance with regulations through automated alerts, uptime analytics, and policy-driven reporting.",
         },
         {
           image: "../../assets/result_solution_evms_6.png",
           title: "Customizable Video Wall",
           description:
-            "Our system allows administrators to assign specific video management system (VMS) modules or interfaces to users, ensuring tailored access and security within the enterprise environment.",
+            "Our system enables administrators to assign specific EMS monitoring modules or dashboards to users, ensuring tailored access, uptime visibility, and enterprise-grade security.",
         },
       ],
     },
 
-    // Section 5: CTA Banner from the fifth image
+    // trusted section updated
+    trusted: "Raising the Bar in Enterprise Surveillance",
+
+    // industry section updated
+    industry: {
+      heading: "Enterprise VMS Software Reimagined for Remote Access",
+      description:
+        "Our EMS ensures surveillance infrastructure stays healthy and available with real-time monitoring of servers, cameras, and networks. Designed for enterprise scale, it delivers automated alerts, uptime analytics, and reliable performance across every site.",
+    },
+
+    // Section 5: CTA Banner updated
     cta: {
       textLines: [
-        "Let Enterprise Video Management Solution Become ",
-        "Your Key to Seamless Surveillance",
+        "Step Beyond Traditional Surveillance",
+        "with Our EMS Revolution",
       ],
-      // text: "Elevate Your Surveillance Setup with Advanced Cloud VMS Service for Smarter Security",
       buttonText: "Let's talk",
       href: "/contact-us",
     },
 
-    // Section 6: Workflow from the sixth image
-    // workflow: {
-    //   heading: "Step-by-Step Workflow of Cloud AI Security Solution",
-    //   steps: [
-    //     {
-    //       icon: "/assets/icons/video-input.svg",
-    //       title: "Video Data Input",
-    //     },
-    //     {
-    //       icon: "/assets/icons/ai-analytics.svg",
-    //       title: "AI-Powered Video Analytics",
-    //     },
-    //     {
-    //       icon: "/assets/icons/real-time-alerts.svg",
-    //       title: "Real Time Detection and Alerts",
-    //     },
-    //   ],
-    // },
-
-    // Section 7: Why Choose Us from the seventh image
+    // Section 7: Why Choose Us updated
     whyChooseUs: {
-      heading: "Why Choose Us for VMS?",
+      heading: "Why Choose Our EMS - Enterprise Management System?",
       description: [
-        "At VMukti, we bring you surveillance without compromise. Our AI-powered VMS delivers real-time awareness and automated threat detection so you're never in the dark and never a second too late. Manual oversight is outdated. Our system replaces it with fast, intelligent response built right in.",
-        "You get secure, encrypted access to multi-site footage anytime. Our adaptive storage grows with you whether you're scaling up or centralizing control. This is surveillance mode for forward-thinking operations like yours.",
+        "Enterprise Management Systems are vital for keeping large-scale surveillance infrastructures healthy and always available. With seamless integration and scalability, we deliver real-time infrastructure monitoring, automated alerts, and analytics that empower your security operations to stay ahead.",
+        "Leveraging advanced monitoring technology, our EMS tracks servers, cameras, and networks with precision while ensuring SLA compliance and uptime analytics. This system enhances reliability, simplifies administration, and enables proactive performance management, making it an indispensable tool for any enterprise.",
       ],
       images: [
         "/assets/vms/why-us-1.png",
@@ -321,7 +319,10 @@ export const solutionsData = {
       ],
     },
   },
+
   integratedcommandcontrolcenter: {
+    metetitle:"Master Command Flow Through Smart ICCC Services",
+    metadescription:"Delivering reliable and unmatched `efficiency with our Integrated Command and Control Centre solutions which enhances operational control and decision-making.",
     // Section 1: Hero section from the first image
     hero: {
       heading: "Explore the Power of Integrated Command Control Centre",
@@ -432,7 +433,12 @@ export const solutionsData = {
         },
       ],
     },
-
+    trusted: "Setting a New Benchmark for Control Centers",
+    industry: {
+      heading: "Purpose-Built for ICCC Operations",
+      description:
+        "Designed to strengthen command centers, our ICCC solutions enable real-time monitoring, smart detection and integrated response management. From public safety to traffic flow and emergency coordination. We support efficient, data-driven governance across critical urban zones.",
+    },
     // Section 5: CTA Banner from the fifth image
     cta: {
       textLines: [
@@ -479,7 +485,10 @@ export const solutionsData = {
       ],
     },
   },
+
   livestreamingsolution: {
+    metetitle:"Secure Live CCTV Feed Streaming for Command & Control",
+    metadescription:"Stream real-time CCTV feeds with ultra-HD clarity, zero delay, and multi-layer security - built for mission-critical monitoring and instant response.",
     // Section 1: Hero section from the first image
     hero: {
       heading:
@@ -603,7 +612,12 @@ export const solutionsData = {
         },
       ],
     },
-
+    trusted: "Achieving Excellence in Security Systems",
+    industry: {
+      heading: "Explore Our Live Streaming Solutions Across Industries",
+      description:
+        "Precision-crafted for enterprise-grade delivery, our live feed streaming architecture ensures seamless execution, secure scalability, and flawless operational communication—because your mission deserves nothing less than world-class reliability.",
+    },
     // Section 5: CTA Banner from the fifth image
     cta: {
       textLines: [
@@ -614,25 +628,6 @@ export const solutionsData = {
       buttonText: "Let's talk",
       href: "/contact-us",
     },
-
-    // Section 6: Workflow from the sixth image
-    // workflow: {
-    //   heading: "Step-by-Step Workflow of Cloud AI Security Solution",
-    //   steps: [
-    //     {
-    //       icon: "/assets/icons/video-input.svg",
-    //       title: "Video Data Input",
-    //     },
-    //     {
-    //       icon: "/assets/icons/ai-analytics.svg",
-    //       title: "AI-Powered Video Analytics",
-    //     },
-    //     {
-    //       icon: "/assets/icons/real-time-alerts.svg",
-    //       title: "Real Time Detection and Alerts",
-    //     },
-    //   ],
-    // },
 
     // Section 7: Why Choose Us from the seventh image
     whyChooseUs: {
@@ -650,7 +645,10 @@ export const solutionsData = {
       ],
     },
   },
+
   flyingsquadvehicle: {
+    metetitle:"Flying Squad Vehicle with GPS and Live AI Surveillance",
+    metadescription:"Power up your response force with a high-speed Flying Squad Vehicle packed with GPS tracking, smart AI surveillance and real-time control room sync.",
     // Section 1: Hero section from the first image
     hero: {
       heading: "Flying Squad Vehicle with Smart GPS and AI Security",
@@ -760,7 +758,12 @@ export const solutionsData = {
         },
       ],
     },
-
+    trusted: "Achieving Excellence in Security Systems",
+    industry: {
+      heading: "Uncover the Power of Flying Squad Units",
+      description:
+        "Built for swift action and real-time coordination, our mobile surveillance units empower teams to respond instantly to critical incidents. Adaptable across sectors, they enhance field visibility, control and decision-making where speed and mobility are essential.",
+    },
     // Section 5: CTA Banner from the fifth image
     cta: {
       textLines: [
@@ -809,6 +812,8 @@ export const solutionsData = {
   },
 
   cloudai: {
+    metetitle:"CloudAI Video Surveillance Solution for Square Monitoring",
+    metadescription:"Upgrade your security with Cloud AI surveillance, offering live video monitoring, automated alerts, and video analytics for enhanced safety and protection.",
     // Section 1: Hero section from the first image
     hero: {
       heading:
@@ -1031,50 +1036,55 @@ export const solutionsData = {
         ],
       },
     ],
-    keyBenefits: {
-      heading:
-        "Transform Your Security with the Benefits of CloudAI Surveillance",
-      benefits: [
-        {
-          // Image name updated to cloudai
-          image: "../../assets/result_solution_cloudai_1.png",
-          title: "Ensuring Data Security",
-          description:
-            "Using our CloudAI solution offers robust encryption and strict access controls that safeguard sensitive information and prevent unauthorized access.",
-        },
-        {
-          image: "../../assets/result_solution_cloudai_2.png",
-          title: "Live Alerts",
-          description:
-            "We provide CloudAI solution for better surveillance and provide instant alerts for unusual activities or system events, helping you take immediate action against potential threats.",
-        },
-        {
-          image: "../../assets/result_solution_cloudai_3.png",
-          title: "Automatic System Updates",
-          description:
-            "With our CloudAI CCTV solutions updates are handled automatically, ensuring your systems remain always up-to-date without any manual effort or downtime.",
-        },
-        {
-          image: "../../assets/result_solution_cloudai_4.png",
-          title: "Energy and Cost Efficiency",
-          description:
-            "Cloud-based video surveillance reduces on-site hardware dependency, power usage, and maintenance costs, making your security smarter and more efficient.",
-        },
-        {
-          image: "../../assets/result_solution_cloudai_5.png",
-          title: "Monitor Anywhere Anytime",
-          description:
-            "Access live video feeds and manage multiple sites remotely from a single dashboard. Our CloudAI ensures complete visibility over your entire surveillance network enabling faster responses and smarter decisions without being on-site.",
-        },
-        {
-          image: "../../assets/result_solution_cloudai_6.png",
-          title: "Cut Down Costs and Hardware",
-          description:
-            "Developed On-Site by VMukti’s CloudAI reduces reliance on physical servers and hardware, lowering setup costs, energy use and maintenance efforts while ensuring reliable performance.",
-        },
-      ],
+    // keyBenefits: {
+    //   heading:
+    //     "Transform Your Security with the Benefits of CloudAI Surveillance",
+    //   benefits: [
+    //     {
+    //       // Image name updated to cloudai
+    //       image: "../../assets/result_solution_cloudai_1.png",
+    //       title: "Ensuring Data Security",
+    //       description:
+    //         "Using our CloudAI solution offers robust encryption and strict access controls that safeguard sensitive information and prevent unauthorized access.",
+    //     },
+    //     {
+    //       image: "../../assets/result_solution_cloudai_2.png",
+    //       title: "Live Alerts",
+    //       description:
+    //         "We provide CloudAI solution for better surveillance and provide instant alerts for unusual activities or system events, helping you take immediate action against potential threats.",
+    //     },
+    //     {
+    //       image: "../../assets/result_solution_cloudai_3.png",
+    //       title: "Automatic System Updates",
+    //       description:
+    //         "With our CloudAI CCTV solutions updates are handled automatically, ensuring your systems remain always up-to-date without any manual effort or downtime.",
+    //     },
+    //     {
+    //       image: "../../assets/result_solution_cloudai_4.png",
+    //       title: "Energy and Cost Efficiency",
+    //       description:
+    //         "Cloud-based video surveillance reduces on-site hardware dependency, power usage, and maintenance costs, making your security smarter and more efficient.",
+    //     },
+    //     {
+    //       image: "../../assets/result_solution_cloudai_5.png",
+    //       title: "Monitor Anywhere Anytime",
+    //       description:
+    //         "Access live video feeds and manage multiple sites remotely from a single dashboard. Our CloudAI ensures complete visibility over your entire surveillance network enabling faster responses and smarter decisions without being on-site.",
+    //     },
+    //     {
+    //       image: "../../assets/result_solution_cloudai_6.png",
+    //       title: "Cut Down Costs and Hardware",
+    //       description:
+    //         "Developed On-Site by VMukti’s CloudAI reduces reliance on physical servers and hardware, lowering setup costs, energy use and maintenance efforts while ensuring reliable performance.",
+    //     },
+    //   ],
+    // },
+    trusted: "Achieving Excellence in Security Systems",
+    industry: {
+      heading: "Cloud AI Solutions Built for Scalable Industry Applications",
+      description:
+        "Our Cloud AI solutions provide intelligent monitoring from anywhere, enabling businesses to make faster, smarter decisions without on-site infrastructure. Proven across 17+ sectors, these solutions offer scalable deployments that improve security, enhance performance, and streamline operations through live insights.",
     },
-
     // Section 5: CTA Banner from the fifth image
     cta: {
       textLines: [
@@ -1110,6 +1120,8 @@ export const solutionsData = {
   },
 
   genai: {
+    metetitle:"Elevate Surveillance to New Heights with GenAI Solution",
+    metadescription:"Take control of security with Generative AI solutions that adapt to your unique surveillance needs, enhancing protection and enabling proactive detection.",
     // Section 1: Hero section from the first image
     hero: {
       heading: "Visual Intelligence Like Never Before with GenAI Solution",
@@ -1206,7 +1218,12 @@ export const solutionsData = {
         },
       ],
     },
-
+    trusted: "Achieving Excellence in Security Systems",
+    industry: {
+      heading: "Discover GenAI Video Intelligence Across Industries",
+      description:
+        "VMukti’s Generative AI solutions fuse real-time video understanding with contextual intelligence, empowering businesses to act faster and smarter at the edge. We serve sectors spanning from retail and manufacturing to education and public safety and deliver purpose-built deployments that elevate automation, insight and security where it’s needed most.",
+    },
     // Section 5: CTA Banner from the fifth image
     cta: {
       textLines: [
@@ -1240,7 +1257,10 @@ export const solutionsData = {
       ],
     },
   },
+
   visualbot: {
+    metetitle:"VisualBot Computer Vision Software for Custom AI Solutions",
+    metadescription:"Best VisualBot computer vision software solution delivers fast deployment, real-time insights, and custom AI models for seamless video analysis integration.",
     // Section 1: Hero section from the first image
     hero: {
       heading:
@@ -1256,6 +1276,7 @@ export const solutionsData = {
       description:
         "VisualBot isn’t just vision, it’s a strategic layer that transforms passive visuals into high-impact operational intelligence, recorded video and live camera feeds into real-time, actionable insights handling everything from data ingestion to full-scale model deployment to deliver fast, scalable and intelligent visual analysis. We offer powerful, developer-friendly APIs through VisualBot that integrate effortlessly into your AI infrastructure, enabling you to enhance existing systems with enterprise-grade computer vision streamlining operations, reducing overhead, and unlocking new levels of performance.",
       image: "../../assets/solution_bot_intro.png",
+      bgColor: "#BECEDC",
     },
 
     // Section 3: Features and Accordion from the third image
@@ -1300,7 +1321,8 @@ export const solutionsData = {
     // Section 4: Key Benefits grid from the fourth image
 
     keyBenefits: {
-      heading: "Simplify Video Intelligence Using VisualBot Software for Computer Vision",
+      heading:
+        "Simplify Video Intelligence Using VisualBot Software for Computer Vision",
       benefits: [
         {
           // Image name updated to visualbot
@@ -1341,7 +1363,12 @@ export const solutionsData = {
         },
       ],
     },
-
+    trusted: "Achieving Excellence in Security Systems",
+    // industry: {
+    //   heading: "Smart VMS Designed for Real-World Sector Applications",
+    //   description:
+    //     "We engineer for those who demand control without compromising real-time visibility, AI-driven detection and frictionless rollout, built to perform in high-security, high-density, high-pressure spaces.",
+    // },
     // Section 5: CTA Banner from the fifth image
     cta: {
       textLines: [

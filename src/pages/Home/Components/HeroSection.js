@@ -25,7 +25,6 @@ const HeroSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { threshold: 0.9, triggerOnce: false });
 
-  // useEffect(() => {
   const imageScaleAnimation = () => {
     gsap.to(imageRef.current, {
       y: 40,
@@ -35,18 +34,24 @@ const HeroSection = () => {
     });
   };
 
-  const hoverOutAnimation = () => {
-    gsap.killTweensOf(imageRef.current);
+  const handleImageHover = () => {
+    // Animate the image UP by 40px for a "lift" effect
     gsap.to(imageRef.current, {
-      y: 0,
+      y: 40, // Changed to negative for a more natural lift effect
+      duration: 0.4,
+      ease: "power2.out",
     });
   };
 
-  // Cleanup function
-  // return () => {
-  //   ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-  // };
-  // }, []);
+  // Function to run when the mouse LEAVES the image area
+  const handleImageLeave = () => {
+    // Animate the image back to its original position
+    gsap.to(imageRef.current, {
+      y: 0,
+      duration: 0.4,
+      ease: "power2.out",
+    });
+  };
 
   const ellipseSize = useBreakpointValue({
     base: "200px",
@@ -55,7 +60,7 @@ const HeroSection = () => {
   });
 
   return (
-    <Box bg="#E7E7E7" position="relative" mt="6%">
+    <Box bg="#E7E7E7" position="relative" mt="5%">
       {/* Background Ellipse */}
       <Box
         position="absolute"
@@ -186,6 +191,7 @@ const HeroSection = () => {
                 width={{ base: "60%", md: "45%", lg: "40%" }}
                 textAlign="justify"
                 fontStyle="normal"
+                color="#444444"
                 ml="10px"
                 mt={"1%"}
               >
@@ -259,7 +265,7 @@ const HeroSection = () => {
                   >
                     {/* Desktop View */}
                     <Box width="30px" height="33px">
-                      <svg 
+                      <svg
                         viewBox="0 0 33 33"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -277,6 +283,7 @@ const HeroSection = () => {
                       maxW={{ base: "220px", md: "40%" }}
                       fontSize={{ base: "12px", md: "16px", lg: "16px" }}
                       // width="50%"
+                      color="#444444"
                       textAlign="justify"
                     >
                       With over 18 years of domain excellence, we safeguard 700+
@@ -293,19 +300,23 @@ const HeroSection = () => {
                 position="relative"
                 mt={{ base: "1", md: "" }}
                 ml={{ base: "0", md: "-30px" }}
-                mb={{base:"15%",md:"5%"}}
+                mb={{ base: "15%", md: "5%" }}
                 width="fit-content"
               >
                 <Image
                   ref={imageRef}
+                  // onMouseEnter={handleImageHover}
+                  // onMouseLeave={handleImageLeave}
                   src="/assets/robohand.png"
                   alt="Robotic Hand"
                   display={{ base: "none", md: "block" }}
                 />
 
                 <MotionButton
-                  onMouseEnter={() => imageScaleAnimation()}
-                  onMouseLeave={() => hoverOutAnimation()}
+                  // onMouseEnter={() => imageScaleAnimation()}
+                  // onMouseLeave={() => hoverOutAnimation()}
+                  onMouseEnter={handleImageHover}
+                  onMouseLeave={handleImageLeave}
                   position="absolute"
                   padding="24px"
                   top={{ base: "20%", sm: "20%", md: "25%" }}
@@ -313,7 +324,7 @@ const HeroSection = () => {
                   // right={{ base: "", sm: "", md: "2%" }}
                   bg="white"
                   height={{ base: "34px", sm: "50px" }}
-                  borderRadius="20px"
+                  borderRadius="24px"
                   color="#3F77A5"
                   as={Link}
                   to="/contactus"
@@ -324,15 +335,15 @@ const HeroSection = () => {
                     color: "#2C5E84",
                   }}
                   fontSize={{ base: "14px", sm: "16px" }}
-                  animate={{
-                    x: [0, 5, 0, -5, 0],
-                    y: [0, 0, 5, 0, -5],
-                  }}
-                  transition={{
-                    repeat: Infinity,
-                    duration: 0.3,
-                    ease: "linear",
-                  }}
+                  // animate={{
+                  //   x: [0, 5, 0, -5, 0],
+                  //   y: [0, 0, 5, 0, -5],
+                  // }}
+                  // transition={{
+                  //   repeat: Infinity,
+                  //   duration: 0.3,
+                  //   ease: "linear",
+                  // }}
                 >
                   Book Demo
                   <svg
@@ -353,7 +364,7 @@ const HeroSection = () => {
 
             {!useBreakpointValue({ base: true, md: false }) && (
               <MotionImage
-                src="/assets/tablet1.webp" 
+                src="/assets/tablet1.webp"
                 position="absolute"
                 top="25%"
                 // bottom="-10%"

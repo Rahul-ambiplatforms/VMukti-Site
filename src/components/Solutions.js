@@ -16,7 +16,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 // import { solutionsData } from "../data/solutionsContent";
 
-const Solutions = ({ data }) => {  
+const Solutions = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const contentBoxRef = useRef(null);
 
@@ -36,18 +36,14 @@ const Solutions = ({ data }) => {
     { scope: contentBoxRef, dependencies: [activeIndex] }
   );
 
-  // --- GUARD CLAUSE: Prevents errors if no data is passed ---
   if (!data || !data.solutions || data.solutions.length === 0) {
-    // You can render a loading state or nothing at all
     return null;
   }
-
 
   const handleButtonClick = (index) => {
     setActiveIndex(index);
   };
 
-  // --- All data now comes from the 'data' prop ---
   const activeSolution = data.solutions[activeIndex];
 
   return (
@@ -63,20 +59,21 @@ const Solutions = ({ data }) => {
         <VStack spacing={4}>
           <Heading
             as="h1"
-            // size={{ base: "lg", md: "xl" }}
             fontSize="48px"
             fontWeight="500"
             w="60vw"
-            // bg="red"
           >
             {data.heading}
           </Heading>
-          <Text w="full" fontSize={{ base: "sm", md: "md" }}>
-            {data.description}
-          </Text>
+
+          {data.description && (
+            <Text w="full" mt="1%" fontSize={{ base: "14px", md: "16px" }}>
+              {data.description}
+            </Text>
+          )}
         </VStack>
 
-        <Flex wrap="wrap" mt={8} w="80%" justifyContent="center">
+        <Flex wrap="wrap" mt={4} w="80%" justifyContent="center">
           {data.solutions.map((solution, index) => (
             <Button
               key={index}
@@ -90,10 +87,10 @@ const Solutions = ({ data }) => {
                     ? "#f0f0f0"
                     : "rgba(255, 255, 255, 0.4)",
               }}
-              m={2}
+              m={4}
               width={{ base: "auto", md: "170px" }}
               height={{ base: "auto", md: "48px" }}
-              borderRadius="full"
+              borderRadius="24px"
               fontSize="16px"
               lineHeight="100%"
             >
@@ -103,12 +100,13 @@ const Solutions = ({ data }) => {
         </Flex>
       </Flex>
 
+      {/* Content and image part */}
       <Box
         w="100%"
         bg="white"
-        borderRadius="2xl"
+        borderRadius="24px"
         p={{ base: 6, md: 10 }}
-        mt={{ base: 6, md: 12 }}
+        mt={{ base: 2, md: 4 }}
         ref={contentBoxRef}
       >
         <Flex
@@ -116,17 +114,19 @@ const Solutions = ({ data }) => {
           gap={{ base: 8, md: 4 }}
           alignItems="stretch"
         >
+          {/* Left side content container */}
           <Box
             className="content-item"
             bg="#F3F3F3"
+            opacity="0.85"
             p={8}
-            borderRadius="xl"
+            borderRadius="24px"
             w={{ base: "100%", md: "30%", lg: "30%" }}
             display="flex"
             flexDirection="column"
           >
             <VStack align="start" spacing={5} flex="1">
-              <Heading as="h2" size="lg" color="gray.800">
+              <Heading as="h2" size="lg" color="black">
                 {activeSolution.heading2}
               </Heading>
               <svg
@@ -141,12 +141,22 @@ const Solutions = ({ data }) => {
                   fill="#3F77A5"
                 />
               </svg>
-              <Text color="gray.600" fontSize="md" lineHeight="1.1">
+              <Text
+                color="#444444"
+                fontSize="16px"
+                lineHeight="20px"
+                align="justify"
+              >
                 {activeSolution.content}
               </Text>
               <Spacer />
               <Flex gap="2" justifyContent="center" align="center">
-                <Button variant="link" fontSize="16px" color="black">
+                <Button
+                  variant="link"
+                  fontSize="16px"
+                  fontWeight="400"
+                  color="black"
+                >
                   Know More
                 </Button>
                 <Box
@@ -154,13 +164,15 @@ const Solutions = ({ data }) => {
                   width="22px"
                   height="24px"
                   viewBox="0 0 22 24"
-                  fill="currentColor"
+                  fill="black"
                 >
                   <path d="M20.9602 13.0607C21.546 12.4749 21.546 11.5251 20.9602 10.9393L11.4143 1.3934C10.8285 0.807612 9.87876 0.807612 9.29297 1.3934C8.70719 1.97919 8.70719 2.92893 9.29297 3.51472L17.7783 12L9.29297 20.4853C8.70719 21.0711 8.70719 22.0208 9.29297 22.6066C9.87876 23.1924 10.8285 23.1924 11.4143 22.6066L20.9602 13.0607ZM0.100586 13.5L19.8996 13.5V10.5L0.100586 10.5V13.5Z" />
                 </Box>
               </Flex>
             </VStack>
           </Box>
+
+          {/* Right side image container */}
           <Box
             w={{ base: "100%", lg: "70%" }}
             display="flex"

@@ -2,28 +2,24 @@ import React from "react";
 import { Box, Heading, Flex, Image, Center, } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
 
-// --- Data Arrays for Logos (Unchanged) ---
 const logosRow1 = [
-  "./assets/row_1_1.png",
-  "./assets/row_1_2.png",
-  "./assets/row_1_3.png",
-  "./assets/row_1_4.png",
-  "./assets/row_1_1.png", // Adding more for a longer, smoother loop
-  "./assets/row_1_2.png",
+  "/assets/row_1_1.png",
+  "/assets/row_1_2.png",
+  "/assets/row_1_3.png",
+  "/assets/row_1_4.png",
+  "/assets/row_1_1.png",
+  "/assets/row_1_2.png",
 ];
 
 const logosRow2 = [
-  "./assets/row_2_1.png",
-  "./assets/row_2_2.png",
-  "./assets/row_2_3.png",
-  "./assets/row_2_4.png",
-  "./assets/row_2_1.png", // Adding more for a longer, smoother loop
-  "./assets/row_2_2.png",
+  "/assets/row_2_1.png",
+  "/assets/row_2_2.png",
+  "/assets/row_2_3.png",
+  "/assets/row_2_4.png",
+  "/assets/row_2_1.png", 
+  "/assets/row_2_2.png",
 ];
 
-// --- ✅ FIX 1: Corrected Keyframes for a SEAMLESS Loop ---
-// When the content is duplicated once, the animation must move by exactly
-// half of the total width of the scrolling container to be seamless.
 const scrollRTL = keyframes`
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -38,17 +34,15 @@ const Trusted = () => {
   return (
     <Box my="3%" w="100vw" ml="-2vw">
       <Center>
-        <Heading as="h2" fontSize="36px" mb={12} color="black" fontWeight="600">
+        <Heading as="h2" fontSize="36px" mb={12} color="black" fontWeight="500">
           Trusted By
         </Heading>
       </Center>
 
-      {/* --- First Scrolling Row (Right to Left) --- */}
       <Box
         w="full"
         overflow="hidden"
         position="relative"
-        // ✅ OPTIMIZATION 1: Faded edges for a professional look
         _before={{
           content: '""',
           position: "absolute",
@@ -69,12 +63,11 @@ const Trusted = () => {
           // background: 'linear-gradient(to left, #F7FAFC, transparent)',
           zIndex: 2,
         }}
-        // ✅ OPTIMIZATION 2: Pause animation on hover
-        _hover={{
-            '& > div': { // Target the inner Flex
-                animationPlayState: 'paused'
-            }
-        }}
+        // _hover={{
+        //     '& > div': { // Target the inner Flex
+        //         animationPlayState: 'paused'
+        //     }
+        // }}
       >
         <Flex
           w="max-content"
@@ -83,11 +76,12 @@ const Trusted = () => {
           {/* We duplicate the logos array once to create the seamless effect */}
           {[...logosRow1, ...logosRow1].map((logo, index) => (
             <Image
-              key={`row1-${index}`} // A more unique key is better practice
+              key={`row1-${index}`} 
+              // src={`${process.env.PUBLIC_URL}${logo}`}
               src={logo}
               alt={`Partner logo ${index + 1}`}
               // h={{ base: "40px", md: "60px" }}
-              h="125px"
+              h="114px"
               objectFit="contain" 
               // px={{ base: 6, md: 10 }}
             />
@@ -100,7 +94,7 @@ const Trusted = () => {
         w="full"
         overflow="hidden"
         position="relative"
-        mt={8}
+        mt={4}
         _before={{
           content: '""',
           position: "absolute",
@@ -121,11 +115,11 @@ const Trusted = () => {
           // background: "linear-gradient(to left, #F7FAFC, transparent)",
           zIndex: 2,
         }}
-         _hover={{
-            '& > div': {
-                animationPlayState: 'paused'
-            }
-        }}
+        //  _hover={{
+        //     '& > div': {
+        //         animationPlayState: 'paused'
+        //     }
+        // }}
       >
         <Flex
           w="max-content"
@@ -136,10 +130,8 @@ const Trusted = () => {
               key={`row2-${index}`}
               src={logo}
               alt={`Partner logo ${index + 1}`}
-              // h={{ base: "40px", md: "50px" }}
               h="125px"
               objectFit="contain"
-              // px={{ base: 6, md: 10 }}
             />
           ))}
         </Flex>

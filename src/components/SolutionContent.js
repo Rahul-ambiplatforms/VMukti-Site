@@ -30,6 +30,7 @@ import faqsData from "../data/faqsData";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Helmet } from "react-helmet-async";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -92,7 +93,6 @@ const FeatureCard = ({ feature, bgColor }) => (
   </Flex>
 );
 
-// This component contains the main GSAP animation logic and is now properly constrained.
 const HorizontalScrollFeatures = ({ scrollData = [] }) => {
   const mainContainerRef = useRef(null);
 
@@ -218,6 +218,10 @@ const SolutionContent = ({ content }) => {
 
   return (
     <>
+      <Helmet>
+        <title>{content.metetitle}</title>
+        <meta name="description" content={content.metadescription} />
+      </Helmet>
       <Flex
         direction={{ base: "column", lg: "row" }}
         align="center"
@@ -233,26 +237,22 @@ const SolutionContent = ({ content }) => {
           align={{ base: "center", lg: "flex-start" }}
           textAlign={{ base: "center", lg: "left" }}
           spacing={6}
-          flex="1" // This allows the column to be flexible in size.
-          //   w="40%"
+          flex="1"
           maxW={{ base: "100%", lg: "40%" }}
           pl="4%"
         >
           <Heading
             as="h1"
             fontSize={headingSize}
-            // fontSize="48px"
             color="white"
             fontWeight="600"
           >
             {hero.heading}
           </Heading>
 
-          {/* <Icon as={LuArrowDown} boxSize="40px" color="white" />
-           */}
           <svg
-            width="25"
-            height="25"
+            width="34"
+            height="34"
             viewBox="0 0 34 34"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -266,7 +266,7 @@ const SolutionContent = ({ content }) => {
           <Text
             fontSize={{ base: "14px", lg: "16px" }}
             color="white"
-            // lineHeight="tall"
+            lineHeight="20px"
           >
             {hero.description}
           </Text>
@@ -307,25 +307,26 @@ const SolutionContent = ({ content }) => {
           />
         </Flex>
       </Flex>
+
       <Trusted />
 
       <PageContentWrapper>
         {/* --------------IntroductionSection-------------- */}
         <Box
-          //   bg="white"
           w="100%"
           textAlign="center"
-          //   p={{ base: 6, md: 12 }}
-          //   h="494px"
           borderRadius={{ base: "24px", md: "24px" }}
           position="relative"
+          // mb="3%"
+          mb={introduction.image ? "0" : "3%"}
         >
           {/* A VStack inside the white box to space out the heading and description. */}
           <VStack spacing={{ base: 4, md: 6 }}>
             <Box
               w="full"
-              bg="white"
-              h="494px"
+              bg={introduction.bgColor || "white"}
+              // h="494px"
+              h={introduction.image ? "494px" : "248px"}
               p={{ base: 6, md: 8 }}
               borderRadius={{ base: "24px", md: "24px" }}
             >
@@ -337,25 +338,25 @@ const SolutionContent = ({ content }) => {
                 fontSize="16px"
                 color="#444444"
                 w="80%"
-                //   maxW="4xl" // Constrains the width of the text for better readability.
                 mx="auto"
                 mt="1%"
-                lineHeight="tall"
+                lineHeight="20px"
               >
                 {introduction.description}
               </Text>
             </Box>
-            <Box mt="-23%">
-              <Image
-                src={introduction.image}
-                alt={introduction.heading}
-                w={{ base: "100%", md: "100%" }}
-                //   h="100%"
-                borderRadius="24px"
-                objectFit="cover"
-                zIndex={1}
-              />
-            </Box>
+            {introduction.image && (
+              <Box mt="-23%">
+                <Image
+                  src={introduction.image}
+                  alt={introduction.heading}
+                  w={{ base: "100%", md: "100%" }}
+                  borderRadius="24px"
+                  objectFit="cover"
+                  zIndex={1}
+                />
+              </Box>
+            )}
           </VStack>
         </Box>
         {/* --------------Features--------------  */}
@@ -377,7 +378,12 @@ const SolutionContent = ({ content }) => {
               align={{ base: "center", lg: "flex-start" }}
               textAlign={{ base: "center", lg: "left" }}
             >
-              <Heading as="h2" fontSize="48px" fontWeight="600">
+              <Heading
+                as="h2"
+                fontSize="48px"
+                lineHeight="60px"
+                fontWeight="600"
+              >
                 {features.heading}
               </Heading>
 
@@ -394,7 +400,11 @@ const SolutionContent = ({ content }) => {
                 />
               </svg>
 
-              <Text fontSize={{ base: "md", lg: "16px" }} fontWeight="500">
+              <Text
+                fontSize={{ base: "md", lg: "16px" }}
+                lineHeight="20px"
+                fontWeight="500"
+              >
                 {features.description}
               </Text>
 
@@ -405,14 +415,29 @@ const SolutionContent = ({ content }) => {
                 color="#3F77A5"
                 size="lg"
                 borderRadius="full"
-                px={8}
-                rightIcon={<Icon as={LuArrowUpRight} />}
+                px="12"
+                mt="2%"
+                // rightIcon={<Icon as={LuArrowUpRight} />}
                 _hover={{
                   transform: "translateY(-2px)",
                   boxShadow: "md",
                 }}
               >
                 Let's talk
+                <Box ml="2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    height="18"
+                    viewBox="0 0 17 18"
+                    fill="none"
+                  >
+                    <path
+                      d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM1.5 16L2.56066 17.0607L16.5607 3.06066L15.5 2L14.4393 0.939339L0.43934 14.9393L1.5 16Z"
+                      fill="#3F77A5"
+                    />
+                  </svg>
+                </Box>
               </Button>
             </VStack>
 
@@ -484,7 +509,9 @@ const SolutionContent = ({ content }) => {
           </Flex>
         </Box>
         {/* --------------Key Application-------------- */}
-        <HorizontalScrollFeatures scrollData={content.keyApplications} />
+        {content.keyApplications && (
+          <HorizontalScrollFeatures scrollData={content.keyApplications} />
+        )}
         {/* --------------Results-------------- */}
         {keyBenefits && (
           <Box mt="3%">
@@ -492,17 +519,25 @@ const SolutionContent = ({ content }) => {
           </Box>
         )}
         {/* --------------Industry Grid-------------- */}
-        <IndustryGrid />
-
+        <Box mt="3%" mb="-7%">
+          {content.industry && (
+            <IndustryGrid
+              heading={content.industry.heading}
+              description={content.industry.description}
+            />
+          )}
+        </Box>
         {/* --------------CTA-------------- */}
-        <CtaBanner href={content.cta.href}>
-          {content.cta.textLines.map((line, index) => (
-            <React.Fragment key={index}>
-              {line}
-              {index < content.cta.textLines.length - 1 && <br />}
-            </React.Fragment>
-          ))}
-        </CtaBanner>
+        <Box position="relative" zIndex="9">
+          <CtaBanner href={content.cta.href}>
+            {content.cta.textLines.map((line, index) => (
+              <React.Fragment key={index}>
+                {line}
+                {index < content.cta.textLines.length - 1 && <br />}
+              </React.Fragment>
+            ))}
+          </CtaBanner>
+        </Box>
 
         {/* --------------Workflow-------------- */}
         {content.workflow && (
@@ -531,7 +566,7 @@ const SolutionContent = ({ content }) => {
         )}
 
         {/* --------------Achieved-------------- */}
-        <Achieved />
+        <Achieved heading={content.trusted} />
 
         {/* --------------FAQs-------------- */}
         <FaqsSection faqsList={solutionFaqs} />
