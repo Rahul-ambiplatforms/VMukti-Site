@@ -1736,7 +1736,7 @@ const industriesData = {
     ],
     para: "Your operations deserve precision at every touchpoint. One wrong pick or mislabeled box can ripple into costly setbacks, reputational risk and delivery chaos. At VMukti, we integrate advanced computer vision into logistics infrastructure elevating safety, accelerating efficiency and productivity and helping you make sure you are following compliance in your entire workflow without any disruption, in real time.",
 
-    large_image: "logistics_mockup.png",
+    large_image: "logistic_mockup.png",
     large_image_alt: "Logistics and supply chain surveillance illustration",
 
     keyApplications: [
@@ -2378,7 +2378,7 @@ const industriesData = {
     ],
     para: "In the world of defense, silence isn't safe because what's unseen can be your greatest threat, like undetected movements or blind spots that can put entire operations at risk. VMukti solutions provides a surveillance solution for defense that detects anomalies, tracks movements and alerts security instantly, which offers faster and more accurate monitoring.",
 
-    large_image: "defence_mockup.png",
+    large_image: "defense_mockup.png",
     large_image_alt: "Defense surveillance monitoring illustration",
 
     keyApplications: [
