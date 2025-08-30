@@ -11,7 +11,7 @@ const StickySection = ({ children }) => (
                 key={index}
                 position="sticky"
                 borderRadius="24px"
-                top="1%"
+                top="15%"
                 height="fit-content"
                 zIndex={index + 1}
             >

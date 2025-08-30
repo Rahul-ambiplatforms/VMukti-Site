@@ -397,7 +397,7 @@ const IndustryContent = ({ props, content }) => {
           <Trusted />
 
           {/* ------------------------- */}
-          {/* <HorizontalScrollFeatures scrollData={content.keyApplications} /> */}
+          <HorizontalScrollFeatures scrollData={content.keyApplications} />
 
           <Box mb="2%" w="100vw" overflow="hidden">
             <Achieved heading={content.achieved} />

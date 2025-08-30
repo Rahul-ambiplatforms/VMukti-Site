@@ -1,7 +1,8 @@
 export const solutionsData = {
   videomanagementsystem: {
-    metetitle:"Advanced Video Management System for Surveillance",
-    metadescription:"Best Video Management Software for CCTV offering live monitoring, cloud storage, AI analytics and seamless integration for enhanced surveillance control.",
+    metetitle: "Advanced Video Management System for Surveillance",
+    metadescription:
+      "Best Video Management Software for CCTV offering live monitoring, cloud storage, AI analytics and seamless integration for enhanced surveillance control.",
     // Section 1: Hero section from the first image
     hero: {
       heading: "Intelligent Video Management System",
@@ -135,25 +136,6 @@ export const solutionsData = {
       href: "/contact-us",
     },
 
-    // Section 6: Workflow from the sixth image
-    // workflow: {
-    //   heading: "Step-by-Step Workflow of Cloud AI Security Solution",
-    //   steps: [
-    //     {
-    //       icon: "/assets/icons/video-input.svg",
-    //       title: "Video Data Input",
-    //     },
-    //     {
-    //       icon: "/assets/icons/ai-analytics.svg",
-    //       title: "AI-Powered Video Analytics",
-    //     },
-    //     {
-    //       icon: "/assets/icons/real-time-alerts.svg",
-    //       title: "Real Time Detection and Alerts",
-    //     },
-    //   ],
-    // },
-
     // Section 7: Why Choose Us from the seventh image
     whyChooseUs: {
       heading: "Why Choose Us for VMS?",
@@ -162,18 +144,20 @@ export const solutionsData = {
         "You get secure, encrypted access to multi-site footage anytime. Our adaptive storage grows with you whether you're scaling up or centralizing control. This is surveillance mode for forward-thinking operations like yours.",
       ],
       images: [
-        "/assets/vms/why-us-1.png",
-        "/assets/vms/why-us-2.png",
-        "/assets/vms/why-us-3.png",
-        "/assets/vms/why-us-4.png",
-        "/assets/vms/why-us-5.png",
+        "../../assets/solution_vms_choose_1.png",
+        // "../../assets/solution_vms_choose_1.png",
+        // "../../assets/solution_vms_choose_1.png",
+        "../../assets/solution_vms_choose_2.png",
+        "../../assets/solution_vms_choose_3.png",
       ],
     },
   },
 
   enterprisemanagementsystem: {
-    metetitle:"Enterprise Management Solution for Scalable Security and Monitoring",
-    metadescription:"Enterprise Management Solution for CCTV feeds that empowers Command & Control Centres with real-time monitoring, automated alerts, uptime analytics, and zero downtime.",
+    metetitle:
+      "Enterprise Management Solution for Scalable Security and Monitoring",
+    metadescription:
+      "Enterprise Management Solution for CCTV feeds that empowers Command & Control Centres with real-time monitoring, automated alerts, uptime analytics, and zero downtime.",
     // Section 1: Hero section updated
     hero: {
       heading: "Enterprise Management Solutions for Smarter CCTV Control",
@@ -310,19 +294,14 @@ export const solutionsData = {
         "Enterprise Management Systems are vital for keeping large-scale surveillance infrastructures healthy and always available. With seamless integration and scalability, we deliver real-time infrastructure monitoring, automated alerts, and analytics that empower your security operations to stay ahead.",
         "Leveraging advanced monitoring technology, our EMS tracks servers, cameras, and networks with precision while ensuring SLA compliance and uptime analytics. This system enhances reliability, simplifies administration, and enables proactive performance management, making it an indispensable tool for any enterprise.",
       ],
-      images: [
-        "/assets/vms/why-us-1.png",
-        "/assets/vms/why-us-2.png",
-        "/assets/vms/why-us-3.png",
-        "/assets/vms/why-us-4.png",
-        "/assets/vms/why-us-5.png",
-      ],
+      images: ["../../assets/solution_ems_choose_1.png"],
     },
   },
 
   integratedcommandcontrolcenter: {
-    metetitle:"Master Command Flow Through Smart ICCC Services",
-    metadescription:"Delivering reliable and unmatched `efficiency with our Integrated Command and Control Centre solutions which enhances operational control and decision-making.",
+    metetitle: "Master Command Flow Through Smart ICCC Services",
+    metadescription:
+      "Delivering reliable and unmatched `efficiency with our Integrated Command and Control Centre solutions which enhances operational control and decision-making.",
     // Section 1: Hero section from the first image
     hero: {
       heading: "Explore the Power of Integrated Command Control Centre",
@@ -450,25 +429,6 @@ export const solutionsData = {
       href: "/contact-us",
     },
 
-    // Section 6: Workflow from the sixth image
-    // workflow: {
-    //   heading: "Step-by-Step Workflow of Cloud AI Security Solution",
-    //   steps: [
-    //     {
-    //       icon: "/assets/icons/video-input.svg",
-    //       title: "Video Data Input",
-    //     },
-    //     {
-    //       icon: "/assets/icons/ai-analytics.svg",
-    //       title: "AI-Powered Video Analytics",
-    //     },
-    //     {
-    //       icon: "/assets/icons/real-time-alerts.svg",
-    //       title: "Real Time Detection and Alerts",
-    //     },
-    //   ],
-    // },
-
     // Section 7: Why Choose Us from the seventh image
     whyChooseUs: {
       heading: "Why Choose Us for VMS?",
@@ -476,19 +436,14 @@ export const solutionsData = {
         "At VMukti, we bring you surveillance without compromise. Our AI-powered VMS delivers real-time awareness and automated threat detection so you're never in the dark and never a second too late. Manual oversight is outdated. Our system replaces it with fast, intelligent response built right in.",
         "You get secure, encrypted access to multi-site footage anytime. Our adaptive storage grows with you whether you're scaling up or centralizing control. This is surveillance mode for forward-thinking operations like yours.",
       ],
-      images: [
-        "/assets/vms/why-us-1.png",
-        "/assets/vms/why-us-2.png",
-        "/assets/vms/why-us-3.png",
-        "/assets/vms/why-us-4.png",
-        "/assets/vms/why-us-5.png",
-      ],
+      images: ["../../assets/solution_iccc_choose_1.png"],
     },
   },
 
   livestreamingsolution: {
-    metetitle:"Secure Live CCTV Feed Streaming for Command & Control",
-    metadescription:"Stream real-time CCTV feeds with ultra-HD clarity, zero delay, and multi-layer security - built for mission-critical monitoring and instant response.",
+    metetitle: "Secure Live CCTV Feed Streaming for Command & Control",
+    metadescription:
+      "Stream real-time CCTV feeds with ultra-HD clarity, zero delay, and multi-layer security - built for mission-critical monitoring and instant response.",
     // Section 1: Hero section from the first image
     hero: {
       heading:
@@ -637,18 +592,19 @@ export const solutionsData = {
         "You get secure, encrypted access to multi-site footage anytime. Our adaptive storage grows with you whether you're scaling up or centralizing control. This is surveillance mode for forward-thinking operations like yours.",
       ],
       images: [
-        "/assets/vms/why-us-1.png",
-        "/assets/vms/why-us-2.png",
-        "/assets/vms/why-us-3.png",
-        "/assets/vms/why-us-4.png",
-        "/assets/vms/why-us-5.png",
+        "../../assets/solution_vms_choose_1.png",
+        // "../../assets/solution_vms_choose_1.png",
+        // "../../assets/solution_vms_choose_1.png",
+        "../../assets/solution_vms_choose_2.png",
+        "../../assets/solution_vms_choose_3.png",
       ],
     },
   },
 
   flyingsquadvehicle: {
-    metetitle:"Flying Squad Vehicle with GPS and Live AI Surveillance",
-    metadescription:"Power up your response force with a high-speed Flying Squad Vehicle packed with GPS tracking, smart AI surveillance and real-time control room sync.",
+    metetitle: "Flying Squad Vehicle with GPS and Live AI Surveillance",
+    metadescription:
+      "Power up your response force with a high-speed Flying Squad Vehicle packed with GPS tracking, smart AI surveillance and real-time control room sync.",
     // Section 1: Hero section from the first image
     hero: {
       heading: "Flying Squad Vehicle with Smart GPS and AI Security",
@@ -775,25 +731,6 @@ export const solutionsData = {
       href: "/contact-us",
     },
 
-    // Section 6: Workflow from the sixth image
-    // workflow: {
-    //   heading: "Step-by-Step Workflow of Cloud AI Security Solution",
-    //   steps: [
-    //     {
-    //       icon: "/assets/icons/video-input.svg",
-    //       title: "Video Data Input",
-    //     },
-    //     {
-    //       icon: "/assets/icons/ai-analytics.svg",
-    //       title: "AI-Powered Video Analytics",
-    //     },
-    //     {
-    //       icon: "/assets/icons/real-time-alerts.svg",
-    //       title: "Real Time Detection and Alerts",
-    //     },
-    //   ],
-    // },
-
     // Section 7: Why Choose Us from the seventh image
     whyChooseUs: {
       heading: "Why Choose Us for VMS?",
@@ -802,18 +739,19 @@ export const solutionsData = {
         "You get secure, encrypted access to multi-site footage anytime. Our adaptive storage grows with you whether you're scaling up or centralizing control. This is surveillance mode for forward-thinking operations like yours.",
       ],
       images: [
-        "/assets/vms/why-us-1.png",
-        "/assets/vms/why-us-2.png",
-        "/assets/vms/why-us-3.png",
-        "/assets/vms/why-us-4.png",
-        "/assets/vms/why-us-5.png",
+        "../../assets/solution_vms_choose_1.png",
+        // "../../assets/solution_vms_choose_1.png",
+        // "../../assets/solution_vms_choose_1.png",
+        "../../assets/solution_vms_choose_2.png",
+        "../../assets/solution_vms_choose_3.png",
       ],
     },
   },
 
   cloudai: {
-    metetitle:"CloudAI Video Surveillance Solution for Square Monitoring",
-    metadescription:"Upgrade your security with Cloud AI surveillance, offering live video monitoring, automated alerts, and video analytics for enhanced safety and protection.",
+    metetitle: "CloudAI Video Surveillance Solution for Square Monitoring",
+    metadescription:
+      "Upgrade your security with Cloud AI surveillance, offering live video monitoring, automated alerts, and video analytics for enhanced safety and protection.",
     // Section 1: Hero section from the first image
     hero: {
       heading:
@@ -1110,18 +1048,19 @@ export const solutionsData = {
         "You get secure, encrypted access to multi-site footage anytime. Our adaptive storage grows with you whether you're scaling up or centralizing control. This is surveillance mode for forward-thinking operations like yours.",
       ],
       images: [
-        "/assets/vms/why-us-1.png",
-        "/assets/vms/why-us-2.png",
-        "/assets/vms/why-us-3.png",
-        "/assets/vms/why-us-4.png",
-        "/assets/vms/why-us-5.png",
+        "../../assets/solution_vms_choose_1.png",
+        // "../../assets/solution_vms_choose_1.png",
+        // "../../assets/solution_vms_choose_1.png",
+        "../../assets/solution_vms_choose_2.png",
+        "../../assets/solution_vms_choose_3.png",
       ],
     },
   },
 
   genai: {
-    metetitle:"Elevate Surveillance to New Heights with GenAI Solution",
-    metadescription:"Take control of security with Generative AI solutions that adapt to your unique surveillance needs, enhancing protection and enabling proactive detection.",
+    metetitle: "Elevate Surveillance to New Heights with GenAI Solution",
+    metadescription:
+      "Take control of security with Generative AI solutions that adapt to your unique surveillance needs, enhancing protection and enabling proactive detection.",
     // Section 1: Hero section from the first image
     hero: {
       heading: "Visual Intelligence Like Never Before with GenAI Solution",
@@ -1248,19 +1187,14 @@ export const solutionsData = {
         "At VMukti, we bring you surveillance without compromise. Our AI-powered VMS delivers real-time awareness and automated threat detection so you're never in the dark and never a second too late. Manual oversight is outdated. Our system replaces it with fast, intelligent response built right in.",
         "You get secure, encrypted access to multi-site footage anytime. Our adaptive storage grows with you whether you're scaling up or centralizing control. This is surveillance mode for forward-thinking operations like yours.",
       ],
-      images: [
-        "/assets/vms/why-us-1.png",
-        "/assets/vms/why-us-2.png",
-        "/assets/vms/why-us-3.png",
-        "/assets/vms/why-us-4.png",
-        "/assets/vms/why-us-5.png",
-      ],
+      images: ["../../assets/solution_iccc_choose_1.png"],
     },
   },
 
   visualbot: {
-    metetitle:"VisualBot Computer Vision Software for Custom AI Solutions",
-    metadescription:"Best VisualBot computer vision software solution delivers fast deployment, real-time insights, and custom AI models for seamless video analysis integration.",
+    metetitle: "VisualBot Computer Vision Software for Custom AI Solutions",
+    metadescription:
+      "Best VisualBot computer vision software solution delivers fast deployment, real-time insights, and custom AI models for seamless video analysis integration.",
     // Section 1: Hero section from the first image
     hero: {
       heading:
@@ -1393,13 +1327,7 @@ export const solutionsData = {
         "At VMukti, we bring you surveillance without compromise. Our AI-powered VMS delivers real-time awareness and automated threat detection so you're never in the dark and never a second too late. Manual oversight is outdated. Our system replaces it with fast, intelligent response built right in.",
         "You get secure, encrypted access to multi-site footage anytime. Our adaptive storage grows with you whether you're scaling up or centralizing control. This is surveillance mode for forward-thinking operations like yours.",
       ],
-      images: [
-        "/assets/vms/why-us-1.png",
-        "/assets/vms/why-us-2.png",
-        "/assets/vms/why-us-3.png",
-        "/assets/vms/why-us-4.png",
-        "/assets/vms/why-us-5.png",
-      ],
+      images: ["../../assets/solution_iccc_choose_1.png"],
     },
   },
 };

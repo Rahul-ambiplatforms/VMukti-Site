@@ -14,6 +14,7 @@ import BlogsOverviewDash from "./pages/Blogs/BlogsOverviewDash";
 import CustomCursor from "./components/CustomCursor";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import SolutionDetails from "./components/SolutionDetails";
+import Thankyou from "./pages/ThankYou/Thankyou";
 // import Particles from '@tsparticles/react';
 // import ParticlesComponent from './components/Particles';
 // Lazy load components
@@ -57,9 +58,9 @@ function App() {
                 <Routes>
                   <Route path="/" element={<VMuktiHomepage />} />
                   <Route path="/technology" element={<TechnologyDashboard />} />
-                  <Route path="/solutions" element={<SolutionsHome />} />
+                  <Route path="/solution" element={<SolutionsHome />} />
                   <Route
-                    path="/solutions/:name"
+                    path="/solution/:name"
                     element={<SolutionDetails />}
                   />
                   <Route path="/industries" element={<IndustryDashboard />} />
@@ -67,7 +68,7 @@ function App() {
                     path="/industries/:name"
                     element={<IndustryDetails />}
                   />
-                  <Route path="/whoweare" element={<WhoWeare />} />
+                  <Route path="/about-us" element={<WhoWeare />} />
                   <Route
                     path="/whoweare/eventspotlight"
                     element={<EventSpotlight />}
@@ -80,8 +81,9 @@ function App() {
                   /> */}
                   <Route path="/serving" element={<OurServings />} />
                   <Route path="/serving/:name" element={<ServingsDock />} />
-                  <Route path="/contactus" element={<ContactUs />} />
+                  <Route path="/contact-us" element={<ContactUs />} />
                   <Route path="/Ambicam" element={<AmbicamLandingPage />} />
+                  <Route path="/thank-you" element={<Thankyou />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>

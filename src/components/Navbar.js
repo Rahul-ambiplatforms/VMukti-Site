@@ -37,65 +37,65 @@ const dropdownItems = {
   ],
   solutions: [
     {
-      label: "Video Management System (VMS)",
-      path: "/solutions/video-management-system",
+      label: "Video Management System",
+      path: "/solution/video-management-system",
     },
     {
-      label: "Enterprise Management System (EMS)",
-      path: "/solutions/enterprise-management-system",
+      label: "Enterprise Management System",
+      path: "/solution/enterprise-management-system",
     },
     {
-      label: "Integrated Command & Control Center (ICCC)",
-      path: "/solutions/integrated-command-control-center",
+      label: "Integrated Command & Control Center",
+      path: "/solution/integrated-command-control-center",
     },
     {
       label: "Live Webcasting & Streaming",
-      path: "/solutions/live-streaming-solution",
+      path: "/solution/live-streaming-solution",
     },
     {
-      label: "Flying Squad Vehicle (FSV)",
-      path: "/solutions/flying-squad-vehicle",
+      label: "Flying Squad Vehicle",
+      path: "/solution/flying-squad-vehicle",
     },
     {
-      label: "AI-Optimized Cloud Services",
-      path: "/solutions/cloudai",
+      label: "CloudAI",
+      path: "/solution/cloudai",
     },
     {
       label: "Generative AI",
-      path: "/solutions/genai",
+      path: "/solution/genai",
     },
     {
       label: "Visual Bot",
-      path: "/solutions/visualbot",
+      path: "/solution/visualbot",
     },
   ],
   industries: [
     {
-      label: "Manufacturing Industry",
+      label: "Manufacturing",
       path: "/industries/manufacturing",
     },
     {
-      label: "Warehouse Industry",
+      label: "Warehouse",
       path: "/industries/warehouse",
     },
     {
-      label: "HealthCare Industry",
+      label: "HealthCare",
       path: "/industries/healthcare",
     },
     {
-      label: "Oil & Gas Industry",
+      label: "Oil & Gas",
       path: "/industries/oil-and-gas",
     },
     {
-      label: "Election Industry",
+      label: "Election",
       path: "/industries/election",
     },
     {
-      label: "Education Industry",
+      label: "Education",
       path: "/industries/education",
     },
     {
-      label: "Transportation Industry",
+      label: "Transportation",
       path: "/industries/transportation",
     },
     {
@@ -103,35 +103,35 @@ const dropdownItems = {
       path: "/industries/smart-city",
     },
     {
-      label: "Pharma Industry",
+      label: "Pharma",
       path: "/industries/pharma",
     },
     {
-      label: "Logistics Industry",
+      label: "Logistics",
       path: "/industries/logistics",
     },
     {
-      label: "Banking Industry",
+      label: "Banking",
       path: "/industries/banking",
     },
     {
-      label: "Sports & Entertainment Industry",
+      label: "Sports & Entertainment",
       path: "/industries/sports-entertainment",
     },
     {
-      label: "Defense Industry",
+      label: "Defense",
       path: "/industries/defense",
     },
     {
-      label: "Hospitality Industry",
+      label: "Hospitality",
       path: "/industries/hospitality",
     },
     {
-      label: "Construction Industry",
+      label: "Construction",
       path: "/industries/construction",
     },
     {
-      label: "Enterprise Industry",
+      label: "Enterprise",
       path: "/industries/enterprise",
     },
     {
@@ -140,17 +140,18 @@ const dropdownItems = {
     },
   ],
   ourServing: [
-    { label: "Enterprise", path: "/serving/enterprise" },
-    { label: "Government", path: "/serving/government" },
-    { label: "General Consumers", path: "/serving/generalconsumers" },
+    { label: "Blogs", path: "/whoweare/blogs" },
+    // { label: "Enterprise", path: "/serving/enterprise" },
+    // { label: "Government", path: "/serving/government" },
+    // { label: "General Consumers", path: "/serving/generalconsumers" },
   ],
   Whoweare: [
-    { label: "About Us", path: "/whoweare" },
-    { label: "Event Spotlight", path: "/whoweare/eventspotlight" },
+    { label: "About Us", path: "/about-us" },
+    // { label: "Event Spotlight", path: "/whoweare/eventspotlight" },
     // { label: 'Social Impact', path: '/whoweare/social-impact' },
     // { label: 'Achievements', path: '/whoweare/achievements' },
-    // { label: 'Blogs', path: '/whoweare/blogs' },
-    { label: "Careers", path: "/whoweare/careers" },
+    // { label: 'Blogs', path: '/about-us/blogs' },
+    // { label: "Careers", path: "/about-us/careers" },
     // { label: 'Help Desk', path: '/whoweare/help-desk' },
     // { label: 'Terms & Condition', path: '/whoweare/terms' },
     // { label: 'Warranty Policy', path: '/whoweare/warranty' },
@@ -184,7 +185,7 @@ const Navbar = () => {
   const pathToLinkName = {
     "/": "Home",
     "/technology": "Technology",
-    "/solutions": "Solutions",
+    "/solution": "Solution",
     "/industries": "Industries",
     "/serving": "Our Serving",
     "/whoweare": "Who we are",
@@ -195,7 +196,7 @@ const Navbar = () => {
     if (currentLink) {
       setActiveLink(currentLink);
     }
-  }, [location]); 
+  }, [location]);
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -247,7 +248,7 @@ const Navbar = () => {
     // { name: 'Technology', path: '/technology' },
     {
       name: "Solutions",
-      path: "/solutions",
+      path: "/solution",
       hasDropdown: true,
       items: dropdownItems.solutions,
     },
@@ -265,7 +266,7 @@ const Navbar = () => {
     },
     {
       name: "Who we are",
-      path: "/whoweare",
+      // path: "/about-us",
       hasDropdown: true,
       items: dropdownItems.Whoweare,
     },
@@ -623,7 +624,7 @@ const Navbar = () => {
                 fontWeight="600"
                 borderRadius="24px"
                 flexShrink={0}
-                onClick={() => navigateTo("/contactus", "Contact Us")}
+                onClick={() => navigateTo("/contact-us", "Contact Us")}
                 _hover={{
                   background: "#35668E",
                   color: "#FFFFFF",
@@ -1010,8 +1011,8 @@ const Navbar = () => {
                       borderRadius="20px"
                       flexShrink={0}
                       onClick={() => {
-                        navigateTo("/contactus", "Contact Us"); // Navigation and tracking
-                        onClose(); // Close modal/menu
+                        navigateTo("/contact-us", "Contact Us"); // Navigation and tracking
+                        onClose();
                       }}
                       _hover={{
                         background: "#1E4A6A",

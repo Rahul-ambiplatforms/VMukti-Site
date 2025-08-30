@@ -15,7 +15,7 @@ import {
   AccordionIcon,
   AccordionPanel,
 } from "@chakra-ui/react";
-// Note: 'keyframes' import has been removed as it's no longer needed.
+import { keyframes } from "@emotion/react";
 import { useParams } from "react-router-dom";
 import { LuArrowDown, LuArrowUpRight } from "react-icons/lu";
 import Trusted from "./Trusted";
@@ -29,10 +29,16 @@ import FaqsSection from "./faqsSection";
 import faqsData from "../data/faqsData";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Marquee from "react-fast-marquee";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Helmet } from "react-helmet-async";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const marqueeScroll = keyframes`
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } 
+`;
 
 const FeatureCard = ({ feature, bgColor }) => (
   <Flex
@@ -184,9 +190,17 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
 
 // This component renders the main "dashboard" or hero section for a solution page.
 const SolutionContent = ({ content }) => {
+  const { hero } = content;
+  const { introduction } = content;
+  const { features } = content;
+  const { keyBenefits } = content;
+  const { workflow } = content;
+  const { whyChooseUs } = content;
+
   const { name } = useParams();
   const u_name = name.replace(/-/g, "");
   const solutionFaqs = faqsData[u_name];
+  const hasMultipleImages = whyChooseUs.images && whyChooseUs.images.length > 1;
 
   // Responsive values for padding and font sizes.
   const heroPadding = useBreakpointValue({ base: 6, md: 10, lg: 16 });
@@ -210,18 +224,13 @@ const SolutionContent = ({ content }) => {
     );
   }
 
-  const { hero } = content;
-  const { introduction } = content;
-  const { features } = content;
-  const { keyBenefits } = content;
-  const { workflow } = content;
-
   return (
     <>
       <Helmet>
         <title>{content.metetitle}</title>
         <meta name="description" content={content.metadescription} />
       </Helmet>
+      {/* --------------MainSection-------------- */}
       <Flex
         direction={{ base: "column", lg: "row" }}
         align="center"
@@ -564,6 +573,93 @@ const SolutionContent = ({ content }) => {
             />
           </VStack>
         )}
+
+        {/* --------------IntroductionSection Part 2-------------- */}
+        <Box w="100%" textAlign="center" mt="3%" mb="3%">
+          <VStack spacing={0}>
+            {" "}
+            {/* Set spacing to 0 to precisely control overlap */}
+            <Box
+              w="full"
+              bg="white"
+              p={{ base: 6, md: 8 }}
+              pb={{ base: "30%", md: "25%" }} // Add more bottom padding to create space FOR the overlapping images
+              borderRadius="24px"
+            >
+              <Heading
+                as="h2"
+                fontSize={{ base: "3xl", md: "48px" }}
+                fontWeight="500"
+                color="#000"
+              >
+                {whyChooseUs.heading}
+              </Heading>
+
+              {/* Map over the description array to render each paragraph */}
+              {whyChooseUs.description.map((paragraph, index) => (
+                <Text
+                  key={index}
+                  fontSize="16px"
+                  color="#444444"
+                  w={{ base: "95%", md: "80%" }}
+                  mx="auto"
+                  mt="20px"
+                  lineHeight="24px"
+                >
+                  {paragraph}
+                </Text>
+              ))}
+            </Box>
+            {/* This container handles the negative margin to create the overlap */}
+            <Box w="95%" mx="auto" mt={{ base: "-25%", md: "-23%" }} zIndex={1}>
+              {hasMultipleImages ? (
+                <Box
+                  w="100%"
+                  mx="auto"
+                  overflow="hidden"
+                  _hover={{
+                    "& > div": {
+                      animationPlayState: "paused",
+                    },
+                  }}
+                >
+                  <Flex
+                    w="max-content" // Allow flexbox to be as wide as its content
+                    flexWrap="nowrap"
+                    animation={`${marqueeScroll} 10s linear infinite`}
+                  >
+                    {[...whyChooseUs.images, ...whyChooseUs.images].map(
+                      (imgSrc, index) => (
+                        <Image
+                          key={index}
+                          src={imgSrc}
+                          alt={`${whyChooseUs.heading} collage ${index + 1}`}
+                          w={{ base: "280px", md: "350px" }}
+                          // w="100%"
+                          // h="auto"
+                          mx="10px" // Add space between images
+                          borderRadius="24px"
+                          objectFit="cover"
+                          boxShadow="lg"
+                          flexShrink={0} 
+                        />
+                      )
+                    )}
+                  </Flex>
+                </Box>
+              ) : (
+                <Image
+                  src={whyChooseUs.images[0]}
+                  alt={whyChooseUs.heading}
+                  w="100%"
+                  borderRadius="24px"
+                  objectFit="cover"
+                  // boxShadow="lg"
+                />
+              )}
+            </Box>
+          </VStack>
+        </Box>
 
         {/* --------------Achieved-------------- */}
         <Achieved heading={content.trusted} />

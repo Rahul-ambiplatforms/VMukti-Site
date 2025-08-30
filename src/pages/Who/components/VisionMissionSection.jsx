@@ -1,26 +1,24 @@
-import React from 'react'
-import { Box, Flex, Text, Image } from '@chakra-ui/react'
+import React from "react";
+import { Box, Flex, Text, Image } from "@chakra-ui/react";
 
 const VisionMissionSection = () => {
   return (
     <Flex
-      justifyContent="space-between"
-      alignItems="left"
-      mt={{ base: '5%', md: '1%' }}
-      mb="-2%" //------------------------- 1 to -2
-      direction={{ base: 'column', md: 'row' }}
-      gap={{ base: '4', md: '2' }} //----------------------------------------
+      // justifyContent="space-between"
+      alignItems="center"
+      mt={{ base: "5%", md: "1%" }}
+      mb="-2%"
+      direction={{ base: "column", md: "row" }}
+      gap={{ base: "4", md: "6" }} //----------------------------------------
       // bg="red"
     >
       {/* Vision Box */}
       <Box
-        width={{ base: '250px', md: '392px' }}
-        height={{ base: '250px', md: '392px' }}
+        width={{ base: "250px", md: "344px" }}
+        height={{ base: "250px", md: "344px" }}
         borderRadius="24px"
         bg="#FFF"
         p="6"
-        mr={{ base: '0', md: '0.5%' }}
-        // mb={{ base: "4", md: "0" }} //----------------------------------
         display="flex"
         flexDirection="column"
       >
@@ -117,19 +115,20 @@ const VisionMissionSection = () => {
         </Box>
 
         {/* Vision content - vertically centered, left-aligned */}
-        <Flex direction="column" justify="center" flex="1">
+        <Flex direction="column" justify="center">
           <Text
             color="#3F77A5"
-            fontSize={{ base: '20px', md: '36px' }}
+            fontSize={{ base: "48px", md: "64px" }}
             fontWeight="700"
           >
             Vision
           </Text>
           <Text
-            fontSize={{ base: '12px', md: '16px' }}
+            fontSize={{ base: "14px", md: "16px" }}
             fontWeight="500"
-            lineHeight="1.2"
-            mt={{ base: '2', md: '6' }} // ← Add margin top to push description downward
+            color="#000000"
+            lineHeight="20px"
+            mt={{ base: "2", md: "2" }} // ← Add margin top to push description downward
           >
             To redefine visual intelligence with AI-driven solutions that ensure
             safety, optimize operations, and drive innovation globally.
@@ -139,83 +138,81 @@ const VisionMissionSection = () => {
 
       {/* Mission Box */}
       <Box
-        width={{ base: '250px', md: '392px' }}
-        height={{ base: '250px', md: '392px' }}
+        width={{ base: "250px", md: "344px" }}
+        height={{ base: "250px", md: "344px" }}
         borderRadius="24px"
-        alignSelf={{ base: 'flex-end', md: 'auto' }}
+        alignSelf={{ base: "flex-end", md: "auto" }}
         bg="#C8D6E5"
         display="flex"
         flexDirection="column"
-        justifyContent="space-between"
-        // boxShadow="md"
         p="6"
-        mb={{ base: '-10%', md: '0' }} //-----------------------------------
+        // mb={{ base: '-10%', md: '0' }}
         zIndex={2}
       >
         {/* SVG Icon - top left */}
+
         <Box mb="4">
-          <Box>
-            <svg
-              width="35"
-              height="35"
-              viewBox="0 0 35 35"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M18.1249 11.8751C18.1249 10.2889 18.7733 9.14856 19.5881 8.33852C22.6806 5.26448 28.1249 7.31325 28.1249 11.8751C28.1249 13.2087 27.6897 14.1272 26.9431 15.0681C25.5218 16.8585 23.2459 17.2675 21.1035 16.3965C19.3245 15.6731 18.1251 13.8558 18.1251 11.8751H18.1249ZM6.79688 16.875C6.79688 17.3592 7.01542 17.3739 7.40306 17.7531L16.5037 26.8554C16.7572 27.1089 16.9536 27.3052 17.2069 27.5585C17.9998 28.3516 17.8639 28.5616 19.7813 27.3596L22.0928 25.8429C22.3734 25.656 22.5619 25.5202 22.8235 25.3237L25.6457 23.0677C26.39 22.3449 27.1691 21.7368 27.8789 20.8476C27.9986 20.6977 28.0868 20.6308 28.2239 20.4895C28.3794 20.3295 28.3799 20.2989 28.504 20.1446L29.393 19.0804C31.7639 16.1994 33.5012 12.4441 34.4064 8.85962C35.0872 6.16466 35.0629 4.21791 34.9195 1.56471C34.8402 0.0980017 34.7231 0 31.7186 0C28.1237 0 25.541 0.492802 22.3318 1.78482C20.0549 2.70142 17.6887 4.15886 15.9129 5.60041L12.3517 8.83586C12.336 8.85228 12.293 8.90137 12.2776 8.91814C11.099 10.2067 6.79706 15.8457 6.79706 16.8748L6.79688 16.875Z"
-                fill="#3F77A5"
-              />
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M9.90051e-05 34.0625C9.90051e-05 34.5354 -0.0245324 35.0001 0.703229 35.0001C2.99954 35.0001 5.96545 33.6659 7.56003 32.2475C7.77857 32.053 7.86503 32.0541 8.05964 31.8097C8.90707 30.7456 9.21871 30.4287 9.21871 28.9844C9.21871 26.3911 4.42467 22.819 1.11952 29.9475C0.682967 30.8891 9.90051e-05 32.7605 9.90051e-05 34.0625Z"
-                fill="#3F77A5"
-              />
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M0.546875 17.7344C0.546875 18.5495 1.79853 18.2291 2.23124 18.1689L5.7813 17.7344C5.13739 16.5175 6.10064 15.4353 6.89933 14.0869C7.29884 13.4127 8.46649 11.6821 9.00244 11.0338C9.16857 10.8327 9.28351 10.657 9.4423 10.458L12.3437 7.10938C8.36673 7.10938 5.29235 8.76824 3.03552 11.7855C2.64264 12.311 2.23805 12.8729 1.92587 13.4886C1.37927 14.5664 0.546875 16.4773 0.546875 17.7346V17.7344Z"
-                fill="#3F77A5"
-              />
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M16.7189 33.9063C16.7189 35.3545 21.1136 33.2744 21.8992 32.8367C25.6731 30.7337 27.8906 26.9291 27.8906 22.5781L24.8779 25.2685C23.1032 26.6551 21.732 27.6242 19.7697 28.7541C19.1892 29.0882 18.5457 29.5846 17.6727 29.3532C17.0618 29.1912 17.2565 29.1928 17.1646 29.977C17.1198 30.358 17.0611 30.8338 16.9974 31.2945L16.7188 33.9065L16.7189 33.9063Z"
-                fill="#3F77A5"
-              />
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M19.375 11.7186C19.375 16.9387 26.875 16.9373 26.875 11.7186C26.875 10.4757 26.2543 9.39241 25.2677 8.71671C24.1741 7.96816 22.8969 7.89636 21.6503 8.3689C20.308 8.87777 19.3752 10.2529 19.3752 11.7186H19.375Z"
-                fill="#3F77A5"
-              />
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M7.57831 21.8751C7.57831 22.8502 7.83946 23.1151 8.53526 23.8088L11.1914 26.4649C12.5166 27.7947 13.1854 27.5919 14.6875 26.797C14.4492 26.441 9.80386 21.8742 9.00395 21.0743C8.76131 20.8317 8.4591 20.4018 8.12509 20.3125C8.07758 20.8832 7.57812 21.191 7.57812 21.8751H7.57831Z"
-                fill="#3F77A5"
-              />
-            </svg>
-          </Box>
+          <svg
+            width="35"
+            height="35"
+            viewBox="0 0 35 35"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M18.1249 11.8751C18.1249 10.2889 18.7733 9.14856 19.5881 8.33852C22.6806 5.26448 28.1249 7.31325 28.1249 11.8751C28.1249 13.2087 27.6897 14.1272 26.9431 15.0681C25.5218 16.8585 23.2459 17.2675 21.1035 16.3965C19.3245 15.6731 18.1251 13.8558 18.1251 11.8751H18.1249ZM6.79688 16.875C6.79688 17.3592 7.01542 17.3739 7.40306 17.7531L16.5037 26.8554C16.7572 27.1089 16.9536 27.3052 17.2069 27.5585C17.9998 28.3516 17.8639 28.5616 19.7813 27.3596L22.0928 25.8429C22.3734 25.656 22.5619 25.5202 22.8235 25.3237L25.6457 23.0677C26.39 22.3449 27.1691 21.7368 27.8789 20.8476C27.9986 20.6977 28.0868 20.6308 28.2239 20.4895C28.3794 20.3295 28.3799 20.2989 28.504 20.1446L29.393 19.0804C31.7639 16.1994 33.5012 12.4441 34.4064 8.85962C35.0872 6.16466 35.0629 4.21791 34.9195 1.56471C34.8402 0.0980017 34.7231 0 31.7186 0C28.1237 0 25.541 0.492802 22.3318 1.78482C20.0549 2.70142 17.6887 4.15886 15.9129 5.60041L12.3517 8.83586C12.336 8.85228 12.293 8.90137 12.2776 8.91814C11.099 10.2067 6.79706 15.8457 6.79706 16.8748L6.79688 16.875Z"
+              fill="#3F77A5"
+            />
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M9.90051e-05 34.0625C9.90051e-05 34.5354 -0.0245324 35.0001 0.703229 35.0001C2.99954 35.0001 5.96545 33.6659 7.56003 32.2475C7.77857 32.053 7.86503 32.0541 8.05964 31.8097C8.90707 30.7456 9.21871 30.4287 9.21871 28.9844C9.21871 26.3911 4.42467 22.819 1.11952 29.9475C0.682967 30.8891 9.90051e-05 32.7605 9.90051e-05 34.0625Z"
+              fill="#3F77A5"
+            />
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M0.546875 17.7344C0.546875 18.5495 1.79853 18.2291 2.23124 18.1689L5.7813 17.7344C5.13739 16.5175 6.10064 15.4353 6.89933 14.0869C7.29884 13.4127 8.46649 11.6821 9.00244 11.0338C9.16857 10.8327 9.28351 10.657 9.4423 10.458L12.3437 7.10938C8.36673 7.10938 5.29235 8.76824 3.03552 11.7855C2.64264 12.311 2.23805 12.8729 1.92587 13.4886C1.37927 14.5664 0.546875 16.4773 0.546875 17.7346V17.7344Z"
+              fill="#3F77A5"
+            />
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M16.7189 33.9063C16.7189 35.3545 21.1136 33.2744 21.8992 32.8367C25.6731 30.7337 27.8906 26.9291 27.8906 22.5781L24.8779 25.2685C23.1032 26.6551 21.732 27.6242 19.7697 28.7541C19.1892 29.0882 18.5457 29.5846 17.6727 29.3532C17.0618 29.1912 17.2565 29.1928 17.1646 29.977C17.1198 30.358 17.0611 30.8338 16.9974 31.2945L16.7188 33.9065L16.7189 33.9063Z"
+              fill="#3F77A5"
+            />
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M19.375 11.7186C19.375 16.9387 26.875 16.9373 26.875 11.7186C26.875 10.4757 26.2543 9.39241 25.2677 8.71671C24.1741 7.96816 22.8969 7.89636 21.6503 8.3689C20.308 8.87777 19.3752 10.2529 19.3752 11.7186H19.375Z"
+              fill="#3F77A5"
+            />
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M7.57831 21.8751C7.57831 22.8502 7.83946 23.1151 8.53526 23.8088L11.1914 26.4649C12.5166 27.7947 13.1854 27.5919 14.6875 26.797C14.4492 26.441 9.80386 21.8742 9.00395 21.0743C8.76131 20.8317 8.4591 20.4018 8.12509 20.3125C8.07758 20.8832 7.57812 21.191 7.57812 21.8751H7.57831Z"
+              fill="#3F77A5"
+            />
+          </svg>
         </Box>
 
         {/* Mission content - vertically centered, left-aligned */}
-        <Flex direction="column" justify="center" flex="1">
+        <Flex direction="column" justify="center">
           <Text
             color="#3F77A5"
-            fontSize={{ base: '20px', md: '36px' }}
+            fontSize={{ base: "48px", md: "64px" }}
             fontWeight="700"
           >
             Mission
           </Text>
           <Text
-            fontSize={{ base: '12px', md: '16px' }}
+            fontSize={{ base: "14px", md: "16px" }}
             fontWeight="500"
-            lineHeight="1.2"
-            mt={{ base: '2', md: '6' }}
+            color="#000000"
+            lineHeight="20px"
+            mt={{ base: "2", md: "2" }}
           >
             To deliver cutting-edge surveillance and automation technologies
             that provide actionable insights, seamless integration, and
@@ -225,7 +222,7 @@ const VisionMissionSection = () => {
       </Box>
 
       <Box position="relative" width="fit-content">
-        <Image
+        {/* <Image
           position="absolute"
           top={0}
           left={0}
@@ -236,10 +233,10 @@ const VisionMissionSection = () => {
           zIndex={0}
           objectFit="cover"
           opacity={0.8}
-        />
+        /> */}
         <Image
           zIndex={1}
-          left="4%"
+          left="14%"
           position="relative"
           // src="/assets/robowho3.png"
           src={`${process.env.PUBLIC_URL}/assets/robowho3.png`}
@@ -247,7 +244,7 @@ const VisionMissionSection = () => {
         />
       </Box>
     </Flex>
-  )
-}
+  );
+};
 
-export default VisionMissionSection
+export default VisionMissionSection;

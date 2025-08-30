@@ -8,12 +8,13 @@ const HeroSection = () => {
       position="relative"
       display="flex"
       borderRadius="24px"
-      bgSize={{ base: "cover", md: "contain" }} // Maintain aspect ratio
+      bgSize={{ base: "cover", md: "contain" }}
       bgPosition="center"
-      bgRepeat="no-repeat" // Prevent tiling
-      backgroundImage="url('../assets/WhoDash.png')" // Set background image
-      width="100%" // Adjust width dynamically based on screen size
-      aspectRatio={{ base: "57 / 50", md: "16 / 9" }} // Maintain the aspect ratio of the image
+      bgRepeat="no-repeat"
+      backgroundImage="url('../assets/WhoDash.png')"
+      width="100%"
+      aspectRatio={{ base: "57 / 50", md: "16 / 9" }}
+      mt="2.2%"
     >
       <Box
         position="absolute"
@@ -34,13 +35,13 @@ const HeroSection = () => {
           {/* Heading */}
           <Box
             flex={2}
-            maxWidth={{ base: "100%", md: "65%", lg: "55%", xl: "45%" }}
+            maxWidth={{ base: "100%", md: "55%", lg: "60%", xl: "60%" }}
           >
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              viewport={{ amount: 0.2 }} // Triggers animation when 10% of it is visible
+              viewport={{ amount: 0.2 }}
             >
               <Heading
                 fontSize={{
@@ -51,8 +52,8 @@ const HeroSection = () => {
                 }}
                 color="#FFFFFF"
                 fontWeight="600"
-                mb={6}
-                maxW="100%" // Ensure heading stays within the container
+                mb={8}
+                w="100%"
               >
                 Pioneering AI-Driven Visual Intelligence Since 2007
               </Heading>
@@ -61,7 +62,7 @@ const HeroSection = () => {
           {/* Desktop View */}
           <Box
             display={{ base: "none", md: "block" }}
-            maxWidth={{ md: "55%", lg: "43%", xl: "33%" }}
+            maxWidth={{ md: "55%", lg: "45%", xl: "40%" }}
           >
             <motion.div
               initial={{ opacity: 0, x: -100 }}
@@ -87,25 +88,89 @@ const HeroSection = () => {
                 <Text
                   fontSize={{ base: "12px", md: "14px", lg: "16px" }}
                   fontWeight="500"
-                  mb="5%"
+                  lineHeight="20px"
+                  // mb="1%"
                 >
-                  Welcome to <b>VMukti Solutions</b>, where <b>innovation meets
-                  intelligence</b> to create a smarter, safer world. Headquartered
-                  in <b>Gujarat, India</b>,VMukti is a leading <b>Original Equipment
-                  Manufacturer (OEM)</b> and <b>System Integrator (SI)</b> specializing in 
-                  <b> smart surveillance</b>, <b>visual intelligence</b>, <b>video analytics</b>, and
-                  <b>cloud-based security solutions</b>.
+                  Welcome to{" "}
+                  <Text as="span" fontWeight="700">
+                    VMukti Solutions
+                  </Text>
+                  , where{" "}
+                  <Text as="span" fontWeight="700">
+                    innovation meets intelligence
+                  </Text>{" "}
+                  to create a smarter, safer world. Headquartered in{" "}
+                  <Text as="span" fontWeight="700">
+                    Gujarat, India
+                  </Text>
+                  , VMukti is a leading{" "}
+                  <Text as="span" fontWeight="700">
+                    Original Equipment Manufacturer (OEM)
+                  </Text>{" "}
+                  and{" "}
+                  <Text as="span" fontWeight="700">
+                    System Integrator (SI)
+                  </Text>{" "}
+                  specializing in{" "}
+                  <Text as="span" fontWeight="700">
+                    smart surveillance
+                  </Text>
+                  ,{" "}
+                  <Text as="span" fontWeight="700">
+                    visual intelligence
+                  </Text>
+                  ,{" "}
+                  <Text as="span" fontWeight="700">
+                    video analytics
+                  </Text>
+                  , and{" "}
+                  <Text as="span" fontWeight="700">
+                    cloud-based security solutions
+                  </Text>
+                  .
                 </Text>
+
                 <Text
                   fontSize={{ base: "12px", md: "14px", lg: "16px" }}
                   fontWeight="500"
-                  maxW="100%" // Ensure text stays within the container
+                  lineHeight="20px"
+                  maxW="100%"
                 >
-                  Since our inception in <b>2007</b>, we’ve been at the forefront of
-                  AI-powered transformation—delivering scalable, robust, and
-                  cost-effective technologies that empower a wide range of
-                  sectors including <b>banking</b>, <b>education</b>, <b>healthcare</b>, <b>smart
-                  cities</b>, <b>infrastructure</b>, <b>retail</b>, and <b>telecom</b>.
+                  Since our inception in{" "}
+                  <Text as="span" fontWeight="700">
+                    2007
+                  </Text>
+                  , we’ve been at the forefront of AI-powered
+                  transformation—delivering scalable, robust, and cost-effective
+                  technologies that empower a wide range of sectors including{" "}
+                  <Text as="span" fontWeight="700">
+                    banking
+                  </Text>
+                  ,{" "}
+                  <Text as="span" fontWeight="700">
+                    education
+                  </Text>
+                  ,{" "}
+                  <Text as="span" fontWeight="700">
+                    healthcare
+                  </Text>
+                  ,{" "}
+                  <Text as="span" fontWeight="700">
+                    smart cities
+                  </Text>
+                  ,{" "}
+                  <Text as="span" fontWeight="700">
+                    infrastructure
+                  </Text>
+                  ,{" "}
+                  <Text as="span" fontWeight="700">
+                    retail
+                  </Text>
+                  , and{" "}
+                  <Text as="span" fontWeight="700">
+                    telecom
+                  </Text>
+                  .
                 </Text>
               </Flex>
             </motion.div>
