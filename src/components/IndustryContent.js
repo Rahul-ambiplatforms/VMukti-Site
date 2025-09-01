@@ -84,10 +84,18 @@ const FeatureCard = ({ feature, bgColor }) => (
         borderRadius="20px"
         display="flex"
         flexDirection="column"
-        justifyContent="center" 
+        justifyContent="center"
         alignItems="center"
       >
-        <Heading as="h3" fontSize={{ base: "20px", md: "24px" }} fontWeight="700" color="#000" lineHeight="30px" textAlign="center" w="70%">
+        <Heading
+          as="h3"
+          fontSize={{ base: "20px", md: "24px" }}
+          fontWeight="700"
+          color="#000"
+          lineHeight="30px"
+          textAlign="center"
+          w="70%"
+        >
           {feature.title}
         </Heading>
         <Box
@@ -97,7 +105,13 @@ const FeatureCard = ({ feature, bgColor }) => (
           bg="#3F77A5"
           my={2}
         />
-        <Text fontSize={{ base: "14px", md: "14px", lg: "14px" }} fontWeight="500" color="#444444" lineHeight="18px" textAlign="center"> 
+        <Text
+          fontSize={{ base: "14px", md: "14px", lg: "14px" }}
+          fontWeight="500"
+          color="#444444"
+          lineHeight="18px"
+          textAlign="center"
+        >
           {feature.description}
         </Text>
       </Box>
@@ -154,7 +168,7 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
           borderRadius="24px"
           mt="2%"
           mb="-4%"
-            // Need to change here mb -6% wont work instead mt -x%
+          // Need to change here mb -6% wont work instead mt -x%
         >
           <Heading
             as="h2"
@@ -356,37 +370,42 @@ const IndustryContent = ({ props, content }) => {
                     </Flex>
 
                     {/* Right Side: Button */}
-                    <MotionButton
-                      width={buttonWidth}
-                      height={buttonHeight}
-                      p="12px 32px"
-                      bg="#3F77A5"
-                      color="white"
-                      borderRadius="full"
-                      _hover={{ bg: "#2c5a7a" }}
-                      px={{ base: "16px", lg: "20px" }}
-                      display="flex"
-                      alignItems="center"
-                      justifyContent="center"
-                      gap={2}
-                      flexShrink={0}
+                    <Link
+                      to="/contact-us"
+                      style={{ textDecoration: "none" }}
                     >
-                      Book Demo
-                      <Box as="span">
-                        <svg
-                          width="14"
-                          height="14"
-                          viewBox="0 0 18 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M17.5 2C17.5 1.17157 16.8284 0.499999 16 0.499999L2.5 0.5C1.67157 0.5 0.999999 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5L14.5 3.5L14.5 15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM3.06066 17.0607L17.0607 3.06066L14.9393 0.939339L0.93934 14.9393L3.06066 17.0607Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </Box>
-                    </MotionButton>
+                      <MotionButton
+                        width={buttonWidth}
+                        height={buttonHeight}
+                        p="12px 32px"
+                        bg="#3F77A5"
+                        color="white"
+                        borderRadius="full"
+                        _hover={{ bg: "#2c5a7a" }}
+                        px={{ base: "16px", lg: "20px" }}
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
+                        gap={2}
+                        flexShrink={0}
+                      >
+                        Book Demo
+                        <Box as="span">
+                          <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M17.5 2C17.5 1.17157 16.8284 0.499999 16 0.499999L2.5 0.5C1.67157 0.5 0.999999 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5L14.5 3.5L14.5 15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM3.06066 17.0607L17.0607 3.06066L14.9393 0.939339L0.93934 14.9393L3.06066 17.0607Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </Box>
+                      </MotionButton>
+                    </Link>
                   </Flex>
                 </Box>
               </Flex>

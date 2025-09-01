@@ -11,6 +11,7 @@ import {
   useBreakpointValue,
   Link,
   Icon,
+  Button,
 } from "@chakra-ui/react";
 import { FaArrowLeft, FaArrowRight, FaPlay } from "react-icons/fa";
 
@@ -20,30 +21,35 @@ const surveillanceData = [
     description:
       "Our centralized video controller monitors, manages, and secures all locations through one unified system. Offers real-time viewing, incident playback and remote access for efficient surveillance.",
     image: "/assets/WebPageMockup1.1.png",
+    path:"solution/video-management-system"
   },
   {
     title: "Enterprise Video Management System",
     description:
       "We deliver enterprise-level video surveillance that is designed for scalability, intelligence and seamless control. Supporting advanced user management and integration with existing security systems.",
     image: "/assets/WebPageMockup1.1.png",
+    path:"solution/enterprise-management-system"
   },
   {
     title: "Integrated Command and Control Centre",
     description:
       "With our Integrated command center solution combine real-time citywide surveillance live video feeds, automated alerts and emergency coordination to enhance urban safety and efficiency.",
     image: "/assets/WebPageMockup1.1.png",
+    path:"solution/integrated-command-control-center"
   },
   {
     title: "Live Streaming",
     description:
       "With VMukti’s live streaming, this isn’t public broadcasting - it’s secure, real-time CCTV feed transmission to your Command and Control Centre. Built for mission-critical use, it ensures ultra-HD clarity, zero-latency, and instant remote response across locations.",
     image: "/assets/WebPageMockup1.1.png",
+    path:"solution/live-streaming-solution"
   },
   {
     title: "Flying Squad Vehicle",
     description:
       "Stay in control of a fast-moving vehicle with GPS tracking, AI surveillance & real-time command center powered by VMukti’s Intelligence, giving you crucial visibility at every second counts. it equips your teams with smart monitoring, remote access and live video access to act instantly.",
     image: "/assets/WebPageMockup1.1.png",
+    path:"solution/flying-squad-vehicle"
   },
 ];
 
@@ -221,29 +227,32 @@ const AISurveillance = () => {
                 {activeFeature.description}
               </Text>
             </Box>
-            <Link
-              color="black"
-              fontSize="16px"
-              fontWeight="400"
-              href="#"
-              display="flex"
-              alignItems="center"
-            >
-              Know More
-              <Box ml="3%">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="24"
-                  viewBox="0 0 22 24"
-                  fill="none"
-                >
-                  <path
-                    d="M20.9612 13.0607C21.547 12.4749 21.547 11.5251 20.9612 10.9393L11.4153 1.3934C10.8295 0.807612 9.87974 0.807612 9.29395 1.3934C8.70816 1.97919 8.70816 2.92893 9.29395 3.51472L17.7792 12L9.29395 20.4853C8.70816 21.0711 8.70816 22.0208 9.29395 22.6066C9.87974 23.1924 10.8295 23.1924 11.4153 22.6066L20.9612 13.0607ZM0.101562 12V13.5L19.9006 13.5V12V10.5L0.101562 10.5V12Z"
-                    fill="black"
-                  />
-                </svg>
-              </Box>
+            <Link href={activeFeature.path} style={{ textDecoration: "none" }}>
+              <Button
+                color="black"
+                fontSize="16px"
+                fontWeight="400"
+                bg="white"
+                // href="contact-us"
+                // display="flex"
+                alignItems="center"
+              >
+                Know More
+                <Box ml="3%">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="24"
+                    viewBox="0 0 22 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M20.9612 13.0607C21.547 12.4749 21.547 11.5251 20.9612 10.9393L11.4153 1.3934C10.8295 0.807612 9.87974 0.807612 9.29395 1.3934C8.70816 1.97919 8.70816 2.92893 9.29395 3.51472L17.7792 12L9.29395 20.4853C8.70816 21.0711 8.70816 22.0208 9.29395 22.6066C9.87974 23.1924 10.8295 23.1924 11.4153 22.6066L20.9612 13.0607ZM0.101562 12V13.5L19.9006 13.5V12V10.5L0.101562 10.5V12Z"
+                      fill="black"
+                    />
+                  </svg>
+                </Box>
+              </Button>
             </Link>
           </VStack>
           <Box

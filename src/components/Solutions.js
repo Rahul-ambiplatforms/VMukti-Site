@@ -14,6 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Link } from "react-router-dom";
 // import { solutionsData } from "../data/solutionsContent";
 
 const Solutions = ({ data }) => {
@@ -57,12 +58,7 @@ const Solutions = ({ data }) => {
         alignItems="center"
       >
         <VStack spacing={4}>
-          <Heading
-            as="h1"
-            fontSize="48px"
-            fontWeight="500"
-            w="60vw"
-          >
+          <Heading as="h1" fontSize="48px" fontWeight="500" w="60vw">
             {data.heading}
           </Heading>
 
@@ -151,14 +147,19 @@ const Solutions = ({ data }) => {
               </Text>
               <Spacer />
               <Flex gap="2" justifyContent="center" align="center">
-                <Button
-                  variant="link"
-                  fontSize="16px"
-                  fontWeight="400"
-                  color="black"
+                <Link
+                  to={activeSolution.path}
+                  style={{ textDecoration: "none" }}
                 >
-                  Know More
-                </Button>
+                  <Button
+                    variant="link"
+                    fontSize="16px"
+                    fontWeight="400"
+                    color="black"
+                  >
+                    Know More
+                  </Button>
+                </Link>
                 <Box
                   as="svg"
                   width="22px"

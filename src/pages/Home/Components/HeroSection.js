@@ -311,54 +311,55 @@ const HeroSection = () => {
                   alt="Robotic Hand"
                   display={{ base: "none", md: "block" }}
                 />
-
-                <MotionButton
-                  // onMouseEnter={() => imageScaleAnimation()}
-                  // onMouseLeave={() => hoverOutAnimation()}
-                  onMouseEnter={handleImageHover}
-                  onMouseLeave={handleImageLeave}
-                  position="absolute"
-                  padding="24px"
-                  top={{ base: "20%", sm: "20%", md: "25%" }}
-                  left="80%"
-                  // right={{ base: "", sm: "", md: "2%" }}
-                  bg="white"
-                  height={{ base: "34px", sm: "50px" }}
-                  borderRadius="24px"
-                  color="#3F77A5"
-                  as={Link}
-                  to="/contactus"
-                  gap="2"
-                  display="flex"
-                  _hover={{
-                    bg: "#E0F2FE",
-                    color: "#2C5E84",
-                  }}
-                  fontSize={{ base: "14px", sm: "16px" }}
-                  // animate={{
-                  //   x: [0, 5, 0, -5, 0],
-                  //   y: [0, 0, 5, 0, -5],
-                  // }}
-                  // transition={{
-                  //   repeat: Infinity,
-                  //   duration: 0.3,
-                  //   ease: "linear",
-                  // }}
-                >
-                  Book Demo
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 17 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                <Link to="/contact-us">
+                  <MotionButton
+                    // onMouseEnter={() => imageScaleAnimation()}
+                    // onMouseLeave={() => hoverOutAnimation()}
+                    onMouseEnter={handleImageHover}
+                    onMouseLeave={handleImageLeave}
+                    position="absolute"
+                    padding="24px"
+                    top={{ base: "20%", sm: "20%", md: "25%" }}
+                    left="80%"
+                    // right={{ base: "", sm: "", md: "2%" }}
+                    bg="white"
+                    height={{ base: "34px", sm: "50px" }}
+                    borderRadius="24px"
+                    color="#3F77A5"
+                    // as={Link}
+                    // to="/contact-us"
+                    gap="2"
+                    display="flex"
+                    _hover={{
+                      bg: "#E0F2FE",
+                      color: "#2C5E84",
+                    }}
+                    fontSize={{ base: "14px", sm: "16px" }}
+                    // animate={{
+                    //   x: [0, 5, 0, -5, 0],
+                    //   y: [0, 0, 5, 0, -5],
+                    // }}
+                    // transition={{
+                    //   repeat: Infinity,
+                    //   duration: 0.3,
+                    //   ease: "linear",
+                    // }}
                   >
-                    <path
-                      d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
-                      fill="#3F77A5"
-                    />
-                  </svg>
-                </MotionButton>
+                    Book Demo
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 17 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
+                        fill="#3F77A5"
+                      />
+                    </svg>
+                  </MotionButton>
+                </Link>
               </Flex>
             </Flex>
 
@@ -367,12 +368,8 @@ const HeroSection = () => {
                 src="/assets/tablet1.webp"
                 position="absolute"
                 top="25%"
-                // bottom="-10%"
-                // bg={{base:"black",sm:"darkred",md:"yellow",lg:"darkorange",xl:"blue"}}
                 right={["-10px", "-20px", "-30px", "-45px"]} // Adjust for breakpoints: [sm, md, lg, xl]
                 width={["320px", "480px", "660px", "920px"]} // Responsive widths (840->940)
-                // height="auto"
-                // zIndex={1}
                 initial={{ scale: 0.8, opacity: 1 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}

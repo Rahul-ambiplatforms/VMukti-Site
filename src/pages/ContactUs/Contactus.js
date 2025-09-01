@@ -172,8 +172,8 @@ export default function ContactUs() {
   };
 
   return (
-    <PageContentWrapper>
-      <Box overflow="hidden" mb="14%" mt="3%">
+    <Box overflow="hidden" mb="14%" mt="3%">
+        <PageContentWrapper>
         {/* Hero Banner */}
         <Box
           // bgImage="url('./assets/Contactus.png')"
@@ -213,143 +213,8 @@ export default function ContactUs() {
           gap={6}
           position="relative"
         >
-          {/* Contact Form Section */}
-          {/* `<Flex
-            direction="column"
-            mt={{ base: "2%", md: "1%" }}
-            bg="white"
-            width={{ base: "100%", lg: "60%" }}
-            minH={{ md: "649px" }}
-            borderRadius="24px"
-            boxShadow="sm"
-            justifyContent="center"
-          >
-            <ImagePop>
-              <Box
-                as="form"
-                onSubmit={handleSubmit}
-                w="100%"
-                maxW="800px"
-                mx="auto"
-                p={{ base: 4, md: 6 }}
-              >
-                <Heading
-                  fontSize={{ base: "20px", md: "36px" }}
-                  fontWeight="600"
-                  mb="5%"
-                  textAlign={{ base: "center", md: "left" }}
-                >
-                  Send Us a{" "}
-                  <Text as="span" color="#DB7B3A">
-                    Message
-                  </Text>
-                </Heading>
-
-                <VStack spacing={4} align="stretch">
-                  <SimpleGrid
-                    columns={{ base: 1, md: 2 }}
-                    spacing={4}
-                    width="100%"
-                  >
-                    <Input
-                      name="firstName"
-                      value={formData.firstName}
-                      onChange={handleChange}
-                      placeholder="First name *"
-                      bg="#E7E7E7"
-                      border="none"
-                      borderRadius="10px"
-                      w="100%"
-                      h="44px"
-                      required
-                    />
-                    <Input
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      placeholder="Last name"
-                      bg="#E7E7E7"
-                      border="none"
-                      borderRadius="10px"
-                      w="100%"
-                      h="44px"
-                    />
-                  </SimpleGrid>
-
-                  <SimpleGrid
-                    columns={{ base: 1, md: 2 }}
-                    spacing={4}
-                    width="100%"
-                  >
-                    <Input
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="Email Address *"
-                      bg="#E7E7E7"
-                      border="none"
-                      borderRadius="10px"
-                      w="100%"
-                      h="44px"
-                      required
-                    />
-                    <Input
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="Phone Number"
-                      bg="#E7E7E7"
-                      border="none"
-                      borderRadius="10px"
-                      w="100%"
-                      h="44px"
-                    />
-                  </SimpleGrid>
-
-                  <Textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Write your message *"
-                    bg="#E7E7E7"
-                    border="none"
-                    w="100%"
-                    h="210px"
-                    resize="none"
-                    borderRadius="10px"
-                    required
-                  />
-
-                  <Flex
-                    justify={{ base: "left", md: "center", lg: "left" }}
-                    w="100%"
-                  >
-                    <Button
-                      type="submit"
-                      bg="#3F77A5"
-                      color="white"
-                      width={{ base: "100px", md: "146px" }}
-                      height={{ base: "40px", md: "50px" }}
-                      borderRadius="20px"
-                      fontSize={{ base: "16px", md: "16px" }}
-                      padding={{ base: "24px" }}
-                      fontWeight="700"
-                      isLoading={isLoading}
-                      loadingText="Sending..."
-                      _hover={{ bg: "#2c5a7d" }}
-                    >
-                      Submit
-                    </Button>
-                  </Flex>
-                </VStack>
-              </Box>
-            </ImagePop>
-          </Flex>` */}
           {/* ------contact us form------ */}
-          
-            <ContactUsForm />
+          <ContactUsForm />
           {/* Connection Cards - Mobile View */}
           <Box display={{ base: "block", lg: "none" }} mt={6}>
             <Box position="relative" w="100%">
@@ -517,9 +382,9 @@ export default function ContactUs() {
             />
           </Box> */}
         </Flex>
-
+</PageContentWrapper>
         <Trusted />
-
+<PageContentWrapper>
         {/* Connection Cards for Desktop View */}
         <Box display={{ base: "none", lg: "block" }} mt={6}>
           <SimpleGrid
@@ -579,7 +444,7 @@ export default function ContactUs() {
             ))}
           </SimpleGrid>
         </Box>
-      </Box>
     </PageContentWrapper>
+      </Box>
   );
 }

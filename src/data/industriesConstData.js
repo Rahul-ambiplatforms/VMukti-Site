@@ -167,7 +167,7 @@ const industriesData = {
         "Catch Defects in Real-Time – Book a Demo of Our",
         "Computer Vision Solution for Manufacturing",
       ],
-      href: "/manufacturing",
+      href: "/contact-us",
     },
     workflow: {
       heading:
@@ -406,7 +406,7 @@ const industriesData = {
         "Optimize Your Facility with Warehouse Video",
         "Surveillance Systems for Improved Management",
       ],
-      href: "/warehouse",
+      href: "contact-us",
     },
 
     workflow: {
@@ -598,7 +598,7 @@ const industriesData = {
         "Safeguard Clinical Excellence – Partner with Our Healthcare Surveillance ",
         "System",
       ],
-      href: "/healthcare",
+      href: "contact-us",
     },
 
     workflow: {
@@ -796,7 +796,7 @@ const industriesData = {
         "Boost Safety And Monitoring With Computer Vision",
         "Solutions For Oil & Gas Today",
       ],
-      href: "/oilandgas",
+      href: "contact-us",
     },
   },
   // Result image remaining
@@ -955,7 +955,7 @@ const industriesData = {
         "Catch Election Irregularities Faster – Book a Demo for ",
         "Our Election Solutions",
       ],
-      href: "/election",
+      href: "contact-us",
     },
 
     workflow: {
@@ -1153,7 +1153,7 @@ const industriesData = {
         "Drive Safety Using Vision AI in Education for Secure",
         "Environment",
       ],
-      href: "/education",
+      href: "contact-us",
     },
 
     workflow: {
@@ -1327,7 +1327,7 @@ const industriesData = {
         "Experience the Future of Mobility with Our Visual",
         "Solution for Transportation",
       ],
-      href: "/transportation",
+      href: "contact-us",
     },
     workflow: {
       heading:
@@ -1539,7 +1539,7 @@ const industriesData = {
         "Detect Issues in Real-Time – Experience Our Computer",
         "Vision Solution for Smart Cities",
       ],
-      href: "/smartcity",
+      href: "contact-us",
     },
 
     workflow: {
@@ -1722,7 +1722,7 @@ const industriesData = {
         "Lead with Precision Using Vision AI in Pharmaceutical",
         "Solutions",
       ],
-      href: "/pharma",
+      href: "contact-us",
     },
   },
   logistics: {
@@ -1912,7 +1912,7 @@ const industriesData = {
         "Track Issues in Real-Time – Book a Demo of Our",
         "Computer Vision Logistics",
       ],
-      href: "/logistics",
+      href: "contact-us",
     },
   },
   banking: {
@@ -2125,7 +2125,7 @@ const industriesData = {
         "Elevate Your Experience With The Bank Video",
         "Surveillance Solution",
       ],
-      href: "/banking",
+      href: "contact-us",
     },
   },
   sportsentertainment: {
@@ -2358,7 +2358,7 @@ const industriesData = {
 
     cta: {
       textLines: ["Unlock Smarter Game Moments with The Power of", "Visual AI"],
-      href: "/sportsentertainment",
+      href: "contact-us",
     },
 
     workflow: {
@@ -2542,7 +2542,7 @@ const industriesData = {
         "Safeguard National Security – Partner with Our ",
         "Defense Surveillance Solution",
       ],
-      href: "/defense",
+      href: "contact-us",
     },
 
     workflow: {
@@ -2756,7 +2756,7 @@ const industriesData = {
         "Secure the Stay with Our Hospitality ",
         "Video Surveillance",
       ],
-      href: "/hospitality",
+      href: "contact-us",
     },
 
     workflow: {
@@ -2960,7 +2960,7 @@ const industriesData = {
         "Shape a Safer Environment with Construction",
         "Surveillance Solution",
       ],
-      href: "/construction",
+      href: "contact-us",
     },
   },
   // Result image remaining
@@ -3159,7 +3159,7 @@ const industriesData = {
         "See How Computer Vision for Enterprise Can",
         "Revolutionize Your Business",
       ],
-      href: "/enterprise",
+      href: "contact-us",
     },
   },
   // Result image remaining
@@ -3386,7 +3386,7 @@ const industriesData = {
         "Lead with Confidence Using a Government",
         "Surveillance System Designed for Scale",
       ],
-      href: "/government",
+      href: "contact-us",
     },
   },
 };

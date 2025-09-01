@@ -764,8 +764,10 @@ export const solutionsData = {
     // Section 2: Introduction from the second image
     introduction: {
       heading: "Overview of CloudAI",
-      description:
-        "CloudAI is a technology that provides artificial intelligence services through cloud platforms. It allows real-time data processing using tools like machine learning and computer vision without needing local hardware. With CloudAI, organizations can enable smart operations such as video analytics, facial recognition and behavior detection from any location. It plays a key role in surveillance, traffic control, logistics and healthcare by offering faster insights and centralized management.",
+      description:[
+        "CloudAI is a technology that provides artificial intelligence services through cloud platforms. It allows real-time data processing using tools like machine learning and computer vision without needing local hardware.", 
+        "With CloudAI, organizations can enable smart operations such as video analytics, facial recognition and behavior detection from any location. It plays a key role in surveillance, traffic control, logistics and healthcare by offering faster insights and centralized management.",
+      ],
       // image: "../../assets/solution_evms_intro.png",
     },
 

@@ -32,7 +32,7 @@ const scrollLTR = keyframes`
 
 const Trusted = () => {
   return (
-    <Box my="3%" w="100vw" ml="-2vw">
+    <Box my="3%" w="100vw">
       <Center>
         <Heading as="h2" fontSize="36px" mb={12} color="black" fontWeight="500">
           Trusted By

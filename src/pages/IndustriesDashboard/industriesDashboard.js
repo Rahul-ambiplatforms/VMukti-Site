@@ -698,7 +698,7 @@ export default function IndustryDashboard() {
           {/* Industry Grid */}
           {renderIndustryCards()}
         </Box>
-        <CtaBanner href="/industry-demo">
+        <CtaBanner href="/contact-us">
           Modernize Your Industry's Future with Bold
           <br />
           Surveillance

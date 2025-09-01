@@ -173,11 +173,12 @@ const Achieved = ({ heading, description, data = achievementsData }) => {
         justifyContent="center"
         direction={"column"}
         alignItems="center"
-        padding={{ base: "20px", md: "20px 20px" }}
+        py={{ base: "20px", md: "20px" }}
         backgroundColor="#E7E7E7"
         width="100%"
         overflow="hidden"
         mt="1%"
+        // mr="100vw"
       >
         <HeadingAnimation>
           {heading && (
@@ -287,9 +288,6 @@ const Achieved = ({ heading, description, data = achievementsData }) => {
                   left="50%"
                   textAlign="center"
                   transform="translate(-50%, -50%)"
-                  // ===============================================
-                  // UPDATED: Applying the specific value color
-                  // ===============================================
                   color={item.valueColor}
                 >
                   <AnimatedValue

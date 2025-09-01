@@ -282,7 +282,7 @@ const SolutionContent = ({ content }) => {
 
           <Button
             as="a"
-            href="/contact-us" // This can be made dynamic later if needed.
+            href="/contact-us"
             bg="white"
             color="#3F77A5"
             size="lg"
@@ -299,14 +299,7 @@ const SolutionContent = ({ content }) => {
         </VStack>
 
         {/* --- Right Column: Display Image --- */}
-        <Flex
-          flex="1.2" // Give slightly more space to the image for better visual balance.
-          justify="center"
-          align="center"
-          w="100%"
-          mt="10%"
-          //   maxW={{ base: "100%", lg: "700px" }}
-        >
+        <Flex flex="1" justify="center" align="center" w="100%" mt="10%">
           <Image
             src={hero.image}
             alt={hero.heading}
@@ -329,7 +322,6 @@ const SolutionContent = ({ content }) => {
           // mb="3%"
           mb={introduction.image ? "0" : "3%"}
         >
-          {/* A VStack inside the white box to space out the heading and description. */}
           <VStack spacing={{ base: 4, md: 6 }}>
             <Box
               w="full"
@@ -342,17 +334,19 @@ const SolutionContent = ({ content }) => {
               <Heading as="h2" fontSize="48px" fontWeight="500" color="#000">
                 {introduction.heading}
               </Heading>
-
-              <Text
-                fontSize="16px"
-                color="#444444"
-                w="80%"
-                mx="auto"
-                mt="1%"
-                lineHeight="20px"
-              >
-                {introduction.description}
-              </Text>
+              <Box mt="2%">
+                {introduction.description.map((paragraph, index) => (
+                  <Text
+                    key={index}
+                    fontSize="16px"
+                    color="#444444"
+                    lineHeight="20px"
+                    mb="1%"
+                  >
+                    {paragraph}
+                  </Text>
+                ))}
+              </Box>
             </Box>
             {introduction.image && (
               <Box mt="-23%">
@@ -578,12 +572,11 @@ const SolutionContent = ({ content }) => {
         <Box w="100%" textAlign="center" mt="3%" mb="3%">
           <VStack spacing={0}>
             {" "}
-            {/* Set spacing to 0 to precisely control overlap */}
             <Box
               w="full"
               bg="white"
               p={{ base: 6, md: 8 }}
-              pb={{ base: "30%", md: "25%" }} // Add more bottom padding to create space FOR the overlapping images
+              pb={{ base: "30%", md: "25%" }}
               borderRadius="24px"
             >
               <Heading
@@ -611,11 +604,11 @@ const SolutionContent = ({ content }) => {
               ))}
             </Box>
             {/* This container handles the negative margin to create the overlap */}
-            <Box w="95%" mx="auto" mt={{ base: "-25%", md: "-23%" }} zIndex={1}>
+            <Box w="100vw" mt={{ base: "-25%", md: "-23%" }} zIndex={1}>
               {hasMultipleImages ? (
                 <Box
-                  w="100%"
-                  mx="auto"
+                  // w="100vw"
+                  // mx="auto"
                   overflow="hidden"
                   _hover={{
                     "& > div": {
@@ -624,27 +617,30 @@ const SolutionContent = ({ content }) => {
                   }}
                 >
                   <Flex
-                    w="max-content" // Allow flexbox to be as wide as its content
+                    w="max-content"
                     flexWrap="nowrap"
-                    animation={`${marqueeScroll} 10s linear infinite`}
+                    animation={`${marqueeScroll} 15s linear infinite`}
                   >
-                    {[...whyChooseUs.images, ...whyChooseUs.images].map(
-                      (imgSrc, index) => (
-                        <Image
-                          key={index}
-                          src={imgSrc}
-                          alt={`${whyChooseUs.heading} collage ${index + 1}`}
-                          w={{ base: "280px", md: "350px" }}
-                          // w="100%"
-                          // h="auto"
-                          mx="10px" // Add space between images
-                          borderRadius="24px"
-                          objectFit="cover"
-                          boxShadow="lg"
-                          flexShrink={0} 
-                        />
-                      )
-                    )}
+                    {[
+                      ...whyChooseUs.images,
+                      ...whyChooseUs.images,
+                      ...whyChooseUs.images,
+                      ...whyChooseUs.images,
+                    ].map((imgSrc, index) => (
+                      <Image
+                        key={index}
+                        src={imgSrc}
+                        alt={`${whyChooseUs.heading} collage ${index + 1}`}
+                        w={{ base: "280px", md: "305px" }}
+                        // w="100%"
+                        h="auto"
+                        mx="10px"
+                        borderRadius="24px"
+                        objectFit="cover"
+                        boxShadow="lg"
+                        flexShrink={0}
+                      />
+                    ))}
                   </Flex>
                 </Box>
               ) : (
@@ -660,10 +656,11 @@ const SolutionContent = ({ content }) => {
             </Box>
           </VStack>
         </Box>
+      </PageContentWrapper>
 
-        {/* --------------Achieved-------------- */}
-        <Achieved heading={content.trusted} />
-
+      {/* --------------Achieved-------------- */}
+      <Achieved heading={content.trusted} />
+      <PageContentWrapper>
         {/* --------------FAQs-------------- */}
         <FaqsSection faqsList={solutionFaqs} />
       </PageContentWrapper>

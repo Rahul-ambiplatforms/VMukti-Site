@@ -60,14 +60,11 @@ const VMuktiHomepage = () => {
         {/* Page Content Sections */}
         <Diagram />
         <ComputerVision />
-        <Trusted />
+      </PageContentWrapper>
+      <Trusted />
+      <PageContentWrapper>
         <Solutions data={homeSolutions} />
         <Reviews />
-        {/* <AdvancedComputerVision
-          cardBgColor1="#BECEDC"
-          cardBgColor2="#EAEAEA"
-          {...customData1}
-        /> */}
 
         {/* <Flex mt={"5%"} direction="column">
           <ObjectDescription
@@ -100,11 +97,14 @@ const VMuktiHomepage = () => {
         <Box position="relative" zIndex="9" mt="-9%">
           <Results />
         </Box>
-        {/* <AdvancedSurveillance /> */}
-        <Achieved
-          heading="Milestones of Our Journey"
-          description="Our journey is defined by innovation, impact, and measurable success. We continue to set benchmarks in visual surveillance. Every milestone reflects our commitment to solving real-world challenges using our Computer Vision Systems."
-        />
+      </PageContentWrapper>
+
+      {/* <AdvancedSurveillance /> */}
+      <Achieved
+        heading="Milestones of Our Journey"
+        description="Our journey is defined by innovation, impact, and measurable success. We continue to set benchmarks in visual surveillance. Every milestone reflects our commitment to solving real-world challenges using our Computer Vision Systems."
+      />
+      <PageContentWrapper>
         <CtaBanner href="/contact-us">
           Join the AI-Powered Surveillance Revolution with
           <br />
