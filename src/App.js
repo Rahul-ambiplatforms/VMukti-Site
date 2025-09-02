@@ -63,24 +63,24 @@ function App() {
                     path="/solution/:name"
                     element={<SolutionDetails />}
                   />
-                  <Route path="/industries" element={<IndustryDashboard />} />
+                  <Route path="/industry" element={<IndustryDashboard />} />
                   <Route
-                    path="/industries/:name"
+                    path="/industry/:name"
                     element={<IndustryDetails />}
                   />
                   <Route path="/about-us" element={<WhoWeare />} />
-                  <Route
+                  {/* <Route
                     path="/whoweare/eventspotlight"
                     element={<EventSpotlight />}
-                  />
-                  <Route path="/whoweare/careers" element={<VMuktiCareers />} />
-                  {/* <Route path="/whoweare/blogs" element={<BlogsDashboard />} />
-                  <Route
-                    path="/whoweare/blogs/:urlWords"
-                    element={<BlogsOverviewDash />}
                   /> */}
-                  <Route path="/serving" element={<OurServings />} />
-                  <Route path="/serving/:name" element={<ServingsDock />} />
+                  {/* <Route path="/whoweare/careers" element={<VMuktiCareers />} /> */}
+                  <Route path="/blog" element={<BlogsDashboard />} />
+                  <Route
+                    path="/blog/:urlWords"
+                    element={<BlogsOverviewDash />}
+                  />
+                  {/* <Route path="/serving" element={<OurServings />} /> */}
+                  {/* <Route path="/serving/:name" element={<ServingsDock />} /> */}
                   <Route path="/contact-us" element={<ContactUs />} />
                   <Route path="/Ambicam" element={<AmbicamLandingPage />} />
                   <Route path="/thank-you" element={<Thankyou />} />

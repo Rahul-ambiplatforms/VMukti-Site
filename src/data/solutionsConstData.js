@@ -14,8 +14,9 @@ export const solutionsData = {
     // Section 2: Introduction from the second image
     introduction: {
       heading: "What is a Video Management System?",
-      description:
+      description: [
         "A Video Management System (VMS) is a software platform that efficiently manages complex surveillance networks. VMukti’s VMS unifies live video, long-term storage, and multi-location control into a single intelligent solution for secure, remote monitoring.",
+      ],
       image: "../../assets/VMS_intro.png",
     },
 
@@ -145,10 +146,10 @@ export const solutionsData = {
       ],
       images: [
         "../../assets/solution_vms_choose_1.png",
-        // "../../assets/solution_vms_choose_1.png",
-        // "../../assets/solution_vms_choose_1.png",
         "../../assets/solution_vms_choose_2.png",
         "../../assets/solution_vms_choose_3.png",
+        "../../assets/solution_vms_choose_4.png",
+        "../../assets/solution_vms_choose_5.png",
       ],
     },
   },
@@ -170,9 +171,11 @@ export const solutionsData = {
     introduction: {
       heading:
         "Understanding the Enterprise Management System for Surveillance",
-      description:
+      description: [
         "Enterprise Management System is a scalable platform built for large-scale CCTV surveillance, ensuring centralized monitoring, real-time alerts, and streamlined control of video feeds across multiple sites for enhanced operational reliability.",
+      ],
       image: "../../assets/solution_ems_intro.png",
+      top: "-18%"
     },
 
     // Section 3: Features and Accordion updated
@@ -313,8 +316,9 @@ export const solutionsData = {
     // Section 2: Introduction from the second image
     introduction: {
       heading: "Exploring Integrated Command Control Centers",
-      description:
+      description: [
         "An integrated command and control solutions is a centralized hub unifying surveillance, communication and operations for seamless management. It enables live monitoring and coordinated responses, improving security efficiency and situational awareness.",
+      ],
       // image: "../../assets/solution_evms_intro.png",
     },
 
@@ -448,16 +452,18 @@ export const solutionsData = {
     hero: {
       heading:
         "Stream Smarter with Secure, Real-Time CCTV Live Streaming Services",
-      description:
+      description: [
         "We stream live CCTV feeds in real time to your Command & Control Centre with ultra-HD clarity, adaptive bitrates, and secure high-tech distribution. This ensures zero delay, no buffering, and unmatched precision for mission-critical monitoring.",
+      ],
       image: "../../assets/solution_live_dash.png",
     },
 
     // Section 2: Introduction from the second image
     introduction: {
       heading: "Overview: Intelligent Live Feed Streaming Solutions",
-      description:
+      description: [
         "VMukti’s live streaming delivers secure, real-time CCTV feeds to Command & Control Centres with ultra-clear quality and scalability, enabling citywide monitoring, emergency response, and multi-site management. With adaptive streaming, strong security, and seamless remote access, it ensures every critical moment is instantly visible and actionable.",
+      ],
       // image: "../../assets/solution_evms_intro.png",
     },
 
@@ -592,11 +598,11 @@ export const solutionsData = {
         "You get secure, encrypted access to multi-site footage anytime. Our adaptive storage grows with you whether you're scaling up or centralizing control. This is surveillance mode for forward-thinking operations like yours.",
       ],
       images: [
-        "../../assets/solution_vms_choose_1.png",
-        // "../../assets/solution_vms_choose_1.png",
-        // "../../assets/solution_vms_choose_1.png",
-        "../../assets/solution_vms_choose_2.png",
-        "../../assets/solution_vms_choose_3.png",
+        "../../assets/solution_live_choose_1.png",
+        "../../assets/solution_live_choose_2.png",
+        "../../assets/solution_live_choose_3.png",
+        "../../assets/solution_live_choose_4.png",
+        "../../assets/solution_live_choose_5.png",
       ],
     },
   },
@@ -608,16 +614,18 @@ export const solutionsData = {
     // Section 1: Hero section from the first image
     hero: {
       heading: "Flying Squad Vehicle with Smart GPS and AI Security",
-      description:
+      description: [
         "From fast deployment to instant visibility, our Flying Squad Vehicle delivers GPS tracking, live AI surveillance, and control room integration - keeping your teams connected, prepared, and effective when seconds matter most.",
-      image: "../../assets/solution_live_dash.png",
+      ],
+      image: "../../assets/solution_fsv_dash.png",
     },
 
     // Section 2: Introduction from the second image
     introduction: {
       heading: "Rapid-Response Flying Squad Vehicle for Real-Time Security",
-      description:
+      description: [
         "The Flying Squad Vehicle (FSV) is a mobile surveillance and rapid-response unit that brings the power of a control room to the field. With real-time visibility, live-streamed footage, GPS tracking, and remote camera control, it helps your teams respond instantly to emergencies, public gatherings, or high-risk zones like elections.",
+      ],
       // image: "../../assets/solution_evms_intro.png",
     },
 
@@ -758,14 +766,14 @@ export const solutionsData = {
         "CloudAI Computer Vision Surveillance Solution for Smarter Remote Security",
       description:
         "Power meets intelligence in our CloudAI solution, delivering visual surveillance that responds in real time, detects threats instantly, and provides secure access from anywhere. We provide full control across camera networks, smooth vms integration and proactive monitoring for large-scale high-value environments.",
-      image: "../../assets/solution_live_dash.png",
+      image: "../../assets/solution_cloud_dash.png",
     },
 
     // Section 2: Introduction from the second image
     introduction: {
       heading: "Overview of CloudAI",
-      description:[
-        "CloudAI is a technology that provides artificial intelligence services through cloud platforms. It allows real-time data processing using tools like machine learning and computer vision without needing local hardware.", 
+      description: [
+        "CloudAI is a technology that provides artificial intelligence services through cloud platforms. It allows real-time data processing using tools like machine learning and computer vision without needing local hardware.",
         "With CloudAI, organizations can enable smart operations such as video analytics, facial recognition and behavior detection from any location. It plays a key role in surveillance, traffic control, logistics and healthcare by offering faster insights and centralized management.",
       ],
       // image: "../../assets/solution_evms_intro.png",
@@ -1068,14 +1076,15 @@ export const solutionsData = {
       heading: "Visual Intelligence Like Never Before with GenAI Solution",
       description:
         "At VMukti, we use Generative AI to transform how you manage surveillance by thinking, learning, and adapting in real time, so you get instant, actionable intelligence. Our advanced algorithms summarize footage, detect humans and objects automatically, and deliver smart insights giving your team the clarity and speed to act without delay.",
-      // image: "../../assets/solution_live_dash.png",
+      image: "../../assets/solution_genai_dash.png",
     },
 
     // Section 2: Introduction from the second image
     introduction: {
       heading: "What is a GenerativeAI?",
-      description:
+      description: [
         "Generative AI is a class of artificial intelligence capable of producing original content text, images, audio and video by learning patterns from existing data and replicating human-like output. With VMukti’s solution, Generative AI turns learned data into powerful surveillance capabilities real-time threat detection, smart search, automated reporting and visual summaries empowering you to monitor faster and make decisions with precision.",
+      ],
       // image: "../../assets/solution_evms_intro.png",
     },
 
@@ -1179,6 +1188,7 @@ export const solutionsData = {
     // Section 6: Workflow from the sixth image
     workflow: {
       heading: "The Complete Process Behind Our GenAI Solution",
+      // *** Image is not in the group
       image: "../../assets/solution_genai_workflow.png",
     },
 
@@ -1189,7 +1199,7 @@ export const solutionsData = {
         "At VMukti, we bring you surveillance without compromise. Our AI-powered VMS delivers real-time awareness and automated threat detection so you're never in the dark and never a second too late. Manual oversight is outdated. Our system replaces it with fast, intelligent response built right in.",
         "You get secure, encrypted access to multi-site footage anytime. Our adaptive storage grows with you whether you're scaling up or centralizing control. This is surveillance mode for forward-thinking operations like yours.",
       ],
-      images: ["../../assets/solution_iccc_choose_1.png"],
+      images: ["../../assets/solution_genai_choose_1.png"],
     },
   },
 
@@ -1203,14 +1213,16 @@ export const solutionsData = {
         "Streamline Your AI Workflow with VisualBot Computer Vision Software",
       description:
         "VMukti’s VisualBot transforms raw footage into immediate intelligence enabling you to detect objects, extract insights and automate decisions with precision, speed and agility. Our robust, developer-friendly APIs integrate seamlessly into your existing systems, unlocking advanced visual data mining and deep pattern discovery at enterprise scale.",
-      // image: "../../assets/solution_live_dash.png",
+      image: "../../assets/solution_visbot_dash.png",
     },
 
     // Section 2: Introduction from the second image
     introduction: {
       heading: "Introduction to VisualBot",
-      description:
-        "VisualBot isn’t just vision, it’s a strategic layer that transforms passive visuals into high-impact operational intelligence, recorded video and live camera feeds into real-time, actionable insights handling everything from data ingestion to full-scale model deployment to deliver fast, scalable and intelligent visual analysis. We offer powerful, developer-friendly APIs through VisualBot that integrate effortlessly into your AI infrastructure, enabling you to enhance existing systems with enterprise-grade computer vision streamlining operations, reducing overhead, and unlocking new levels of performance.",
+      description: [
+        "VisualBot isn’t just vision, it’s a strategic layer that transforms passive visuals into high-impact operational intelligence, recorded video and live camera feeds into real-time, actionable insights handling everything from data ingestion to full-scale model deployment to deliver fast, scalable and intelligent visual analysis.",
+        "We offer powerful, developer-friendly APIs through VisualBot that integrate effortlessly into your AI infrastructure, enabling you to enhance existing systems with enterprise-grade computer vision streamlining operations, reducing overhead, and unlocking new levels of performance.",
+      ],
       image: "../../assets/solution_bot_intro.png",
       bgColor: "#BECEDC",
     },

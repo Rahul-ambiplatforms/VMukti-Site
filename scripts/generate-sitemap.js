@@ -57,13 +57,13 @@ const generateSitemap = async () => {
         lastmod: getPageLastModified("Technology"),
       },
       {
-        loc: "/solutions",
+        loc: "/solution",
         priority: "0.8",
         changefreq: "weekly",
         lastmod: getPageLastModified("Solutions"),
       },
       {
-        loc: "/industries",
+        loc: "/industry",
         priority: "0.8",
         changefreq: "weekly",
         lastmod: getPageLastModified("IndustriesDashboard"),

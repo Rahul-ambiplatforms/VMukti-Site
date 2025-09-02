@@ -39,14 +39,6 @@ const Hero = () => {
           Surveillance Ecosystem
         </CtaBanner>
       </PageContentWrapper>
-      {/* <PageContentWrapper noPadding>
-                <TripleImageSection />
-            </PageContentWrapper> */}
-      {/* <PageContentWrapper>
-                <Box id="solutions-slider"> 
-                    <SolutionEMS />
-                </Box>
-            </PageContentWrapper> */}
     </>
   );
 };

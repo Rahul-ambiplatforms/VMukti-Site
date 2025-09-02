@@ -20,35 +20,35 @@ const surveillanceData = [
     title: "Video Management System",
     description:
       "Our centralized video controller monitors, manages, and secures all locations through one unified system. Offers real-time viewing, incident playback and remote access for efficient surveillance.",
-    image: "/assets/WebPageMockup1.1.png",
+    image: "/assets/AISurveillance_1.png",
     path:"solution/video-management-system"
   },
   {
     title: "Enterprise Video Management System",
     description:
       "We deliver enterprise-level video surveillance that is designed for scalability, intelligence and seamless control. Supporting advanced user management and integration with existing security systems.",
-    image: "/assets/WebPageMockup1.1.png",
+    image: "/assets/AISurveillance_2.png",
     path:"solution/enterprise-management-system"
   },
   {
     title: "Integrated Command and Control Centre",
     description:
       "With our Integrated command center solution combine real-time citywide surveillance live video feeds, automated alerts and emergency coordination to enhance urban safety and efficiency.",
-    image: "/assets/WebPageMockup1.1.png",
+    image: "/assets/AISurveillance_3.png",
     path:"solution/integrated-command-control-center"
   },
   {
     title: "Live Streaming",
     description:
       "With VMukti’s live streaming, this isn’t public broadcasting - it’s secure, real-time CCTV feed transmission to your Command and Control Centre. Built for mission-critical use, it ensures ultra-HD clarity, zero-latency, and instant remote response across locations.",
-    image: "/assets/WebPageMockup1.1.png",
+    image: "/assets/AISurveillance_4.png",
     path:"solution/live-streaming-solution"
   },
   {
     title: "Flying Squad Vehicle",
     description:
       "Stay in control of a fast-moving vehicle with GPS tracking, AI surveillance & real-time command center powered by VMukti’s Intelligence, giving you crucial visibility at every second counts. it equips your teams with smart monitoring, remote access and live video access to act instantly.",
-    image: "/assets/WebPageMockup1.1.png",
+    image: "/assets/AISurveillance_5.png",
     path:"solution/flying-squad-vehicle"
   },
 ];

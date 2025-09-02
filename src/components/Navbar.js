@@ -72,75 +72,75 @@ const dropdownItems = {
   industries: [
     {
       label: "Manufacturing",
-      path: "/industries/manufacturing",
+      path: "/industry/manufacturing",
     },
     {
       label: "Warehouse",
-      path: "/industries/warehouse",
+      path: "/industry/warehouse",
     },
     {
       label: "HealthCare",
-      path: "/industries/healthcare",
+      path: "/industry/healthcare",
     },
     {
       label: "Oil & Gas",
-      path: "/industries/oil-and-gas",
+      path: "/industry/oil-and-gas",
     },
     {
       label: "Election",
-      path: "/industries/election",
+      path: "/industry/election",
     },
     {
       label: "Education",
-      path: "/industries/education",
+      path: "/industry/education",
     },
     {
       label: "Transportation",
-      path: "/industries/transportation",
+      path: "/industry/transportation",
     },
     {
       label: "Smart City Monitoring",
-      path: "/industries/smart-city",
+      path: "/industry/smart-city",
     },
     {
       label: "Pharma",
-      path: "/industries/pharma",
+      path: "/industry/pharma",
     },
     {
       label: "Logistics",
-      path: "/industries/logistics",
+      path: "/industry/logistics",
     },
     {
       label: "Banking",
-      path: "/industries/banking",
+      path: "/industry/banking",
     },
     {
       label: "Sports & Entertainment",
-      path: "/industries/sports-entertainment",
+      path: "/industry/sports-entertainment",
     },
     {
       label: "Defense",
-      path: "/industries/defense",
+      path: "/industry/defense",
     },
     {
       label: "Hospitality",
-      path: "/industries/hospitality",
+      path: "/industry/hospitality",
     },
     {
       label: "Construction",
-      path: "/industries/construction",
+      path: "/industry/construction",
     },
     {
       label: "Enterprise",
-      path: "/industries/enterprise",
+      path: "/industry/enterprise",
     },
     {
       label: "Government",
-      path: "/industries/government",
+      path: "/industry/government",
     },
   ],
   ourServing: [
-    { label: "Blogs", path: "/whoweare/blogs" },
+    { label: "Blogs", path: "/blog" },
     // { label: "Enterprise", path: "/serving/enterprise" },
     // { label: "Government", path: "/serving/government" },
     // { label: "General Consumers", path: "/serving/generalconsumers" },
@@ -187,7 +187,7 @@ const Navbar = () => {
     "/technology": "Technology",
     "/solution": "Solution",
     "/industries": "Industries",
-    "/serving": "Our Serving",
+    // "/serving": "Our Serving",
     "/whoweare": "Who we are",
   };
 
@@ -254,13 +254,13 @@ const Navbar = () => {
     },
     {
       name: "Industries",
-      path: "/industries",
+      path: "/industry",
       hasDropdown: true,
       items: dropdownItems.industries,
     },
     {
       name: "Resources",
-      path: "/serving", //resources
+      // path: "/serving", //resources
       hasDropdown: true,
       items: dropdownItems.ourServing,
     },
@@ -280,7 +280,7 @@ const Navbar = () => {
         // transition="top 0.3s ease-in-out"
         left="0"
         right="0"
-        zIndex={100}
+        zIndex={1000}
         width="100%"
         gap="2%"
       >
@@ -347,6 +347,8 @@ const Navbar = () => {
                                 cursor: "pointer",
                               }}
                               onClick={() => navigateTo(item.path, item.name)}
+                              onMouseEnter={() => handleMouseEnter(item.name)}
+                              onMouseLeave={() => handleMouseLeave(item.name)}
                             >
                               {item.name}
                               {isPathActive(item.path) && (
@@ -387,6 +389,7 @@ const Navbar = () => {
                               </svg>
                             </Box>
                             <MenuList
+                              // position="relative"
                               onMouseEnter={() => handleMouseEnter(item.name)}
                               onMouseLeave={() => handleMouseLeave(item.name)}
                               px="4"
@@ -397,9 +400,10 @@ const Navbar = () => {
                                 position: "absolute",
                                 left: "50%",
                                 transform: "translateX(-50%)",
-                                zIndex: 1000,
-                                whiteSpace: "nowrap", // Prevent text wrapping
+                                zIndex: "popover",
+                                whiteSpace: "nowrap",
                               }}
+                              // zIndex={10000}
                             >
                               {item.items.map((dropdownItem, idx) => (
                                 <React.Fragment key={dropdownItem.label || idx}>
@@ -450,7 +454,7 @@ const Navbar = () => {
                                     display="flex"
                                     pl="0"
                                     style={{
-                                      whiteSpace: "nowrap", // Prevent text wrapping
+                                      whiteSpace: "nowrap", 
                                     }}
                                   >
                                     <Flex direction="column" width="100%">

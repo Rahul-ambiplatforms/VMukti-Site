@@ -57,7 +57,6 @@ const VMuktiHomepage = () => {
       </PageContentWrapper>
 
       <PageContentWrapper>
-        {/* Page Content Sections */}
         <Diagram />
         <ComputerVision />
       </PageContentWrapper>
@@ -66,40 +65,12 @@ const VMuktiHomepage = () => {
         <Solutions data={homeSolutions} />
         <Reviews />
 
-        {/* <Flex mt={"5%"} direction="column">
-          <ObjectDescription
-            description={`Catch Everything,\n Miss Nothing`}
-            image="../assets/objectdetection.png"
-            list={[
-              "Precision Tracking",
-              "Automated Alerts",
-              "AI-Powered Recognition",
-              "Adaptive Learning",
-            ]}
-          />
-        </Flex> */}
-        {/* <Box mt="3%">
-          <SurveillanceSoftware />
-        </Box> */}
-        {/* <StickySection>
-          <AdvancedComputerVision
-            cardBgColor1="#BECEDC"
-            cardBgColor2="#EAEAEA"
-            {...customData}
-          />
-          <VideoAnalytics />
-          <AdvancedComputerVision
-            cardBgColor1="#BECEDC"
-            cardBgColor2="#EAEAEA"
-          />
-        </StickySection> */}
         <Industries heading="AI Computer Vision System for Evolving Industries" />
         <Box position="relative" zIndex="9" mt="-9%">
           <Results />
         </Box>
       </PageContentWrapper>
 
-      {/* <AdvancedSurveillance /> */}
       <Achieved
         heading="Milestones of Our Journey"
         description="Our journey is defined by innovation, impact, and measurable success. We continue to set benchmarks in visual surveillance. Every milestone reflects our commitment to solving real-world challenges using our Computer Vision Systems."

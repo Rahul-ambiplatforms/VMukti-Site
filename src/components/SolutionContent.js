@@ -299,13 +299,21 @@ const SolutionContent = ({ content }) => {
         </VStack>
 
         {/* --- Right Column: Display Image --- */}
-        <Flex flex="1" justify="center" align="center" w="100%" mt="10%">
+        <Flex
+          flex="1"
+          justify="center"
+          align="center"
+          w="100%"
+          mt="10%"
+          mr="2%"
+        >
           <Image
             src={hero.image}
             alt={hero.heading}
             objectFit="cover"
             w="100%"
-            borderRadius="xl"
+            // aspectRatio="4/3"
+            // borderRadius="24px"
           />
         </Flex>
       </Flex>
@@ -349,10 +357,11 @@ const SolutionContent = ({ content }) => {
               </Box>
             </Box>
             {introduction.image && (
-              <Box mt="-23%">
+              <Box mt={introduction.top || "-23%"}>
                 <Image
                   src={introduction.image}
                   alt={introduction.heading}
+                  // h="100%"
                   w={{ base: "100%", md: "100%" }}
                   borderRadius="24px"
                   objectFit="cover"
@@ -644,14 +653,17 @@ const SolutionContent = ({ content }) => {
                   </Flex>
                 </Box>
               ) : (
-                <Image
-                  src={whyChooseUs.images[0]}
-                  alt={whyChooseUs.heading}
-                  w="100%"
-                  borderRadius="24px"
-                  objectFit="cover"
-                  // boxShadow="lg"
-                />
+                // 9999999999999999999999999999999999999999999999999999
+                <Box w="90%" justifyContent="center" alignItems="center" mx="auto">
+                  <Image
+                    src={whyChooseUs.images[0]}
+                    alt={whyChooseUs.heading}
+                    w="100%"
+                    // h="100%"
+                    borderRadius="24px"
+                    objectFit="cover"
+                  />
+                </Box>
               )}
             </Box>
           </VStack>

@@ -22,33 +22,26 @@ const computerVisionSteps = [
     heading: "Model Selection",
     content:
       "Find the API model that suits your application. (Agentic Live Summarization, Agentic Video Summarization, Agentic Pose Detection, Zero Shot Object Detection, etc).",
-    image: "./assets/ComputerVision1.png",
+    image: "./assets/ComputerVision2.png",
   },
   {
     heading: "API Wrapping",
     content:
       "We wrap the model in a RESTful API using frameworks like Flask or FastAPI, adding endpoints for easy input, prediction, and integration.",
-    image: "./assets/ComputerVision1.png",
+    image: "./assets/ComputerVision3.png",
   },
   {
     heading: "Integration",
     content:
       "Provide the API key, documentation and SDKs to developers/clients to integrate the AI features into their apps or systems.",
-    image: "./assets/ComputerVision1.png",
+    image: "./assets/ComputerVision4.png",
   },
   {
     heading: "Deployment",
     content:
       "Deploy the API on cloud servers or edge devices (depending on the use case), ensuring scalability and low-latency access.",
-    image: "./assets/ComputerVision1.png",
+    image: "./assets/ComputerVision5.png",
   },
-  // To test the row-wrapping logic, you can uncomment this 6th item
-  //   {
-  //     heading: 'Monitoring',
-  //     content:
-  //       'Continuously monitor the performance and accuracy of the deployed model, with options for retraining and updates.',
-  //     image: './assets/ComputerVision1.png',
-  //   },
 ];
 
 const ComputerVision = () => {
@@ -140,7 +133,7 @@ const ComputerVision = () => {
           h={{ base: "auto", md: "600px" }}
           overflow="hidden"
         >
-          <AnimatePresence initial={false}>
+          <AnimatePresence initial={true}>
             <motion.div
               key={activeIndex}
               variants={variants}

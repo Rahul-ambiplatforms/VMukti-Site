@@ -33,7 +33,7 @@ const Announcement = () => {
       overflow="hidden"
       position="fixed"
       top="88px"
-      zIndex="2"
+      zIndex="999"
     >
       <Box
         display="flex"
@@ -53,14 +53,15 @@ const Announcement = () => {
               fontSize="16px"
               color="black"
               fontWeight="400"
-              mx="2rem" // Increased margin for better spacing
+              mx="2rem" 
             >
-              <span role="img" aria-label="sparkles">✨</span>
               <span style={{ margin: '0 0.5rem' }}>➡️</span>
+              <span role="img" aria-label="sparkles">✨</span>
               {event.message}
               <span style={{ margin: '0 0.5rem' }}>⬅️</span>
               <span role="img" aria-label="arrow">➡️</span>
               {event.details}
+              <span style={{ margin: '0 0.5rem' }}>⬅️</span>
             </Text>
           </React.Fragment>
         ))}
@@ -75,12 +76,13 @@ const Announcement = () => {
               fontWeight="400"
               mx="2rem"
             >
-              <span role="img" aria-label="sparkles">✨</span>
               <span style={{ margin: '0 0.5rem' }}>➡️</span>
+              <span role="img" aria-label="sparkles">✨</span>
               {event.message}
               <span style={{ margin: '0 0.5rem' }}>⬅️</span>
               <span role="img" aria-label="arrow">➡️</span>
               {event.details}
+              <span style={{ margin: '0 0.5rem' }}>⬅️</span>
             </Text>
           </React.Fragment>
         ))}

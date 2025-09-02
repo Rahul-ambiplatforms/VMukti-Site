@@ -86,7 +86,7 @@ const HeroSection = () => {
           bottom={{ base: "59%" }}
           left={{ base: "80%", md: "32%" }}
           transform="translateX(-50%)"
-          gap={6}
+          gap="3%"
           zIndex={0}
           width="auto"
           justifyContent="center"
