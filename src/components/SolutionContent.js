@@ -227,8 +227,51 @@ const SolutionContent = ({ content }) => {
   return (
     <>
       <Helmet>
+        {/* SEO Tags */}
         <title>{content.metetitle}</title>
         <meta name="description" content={content.metadescription} />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph (OG) Tags for Social Media Sharing */}
+        <meta property="og:title" content={content.metetitle} />
+        <meta property="og:description" content={content.metadescription} />
+
+        {/* The OG image should be a full URL, specific to this solution */}
+        <meta property="og:image" content={content.ogImage} />
+
+        <meta property="og:type" content="website" />
+
+        {/* The OG URL must be the full, unique URL of this specific solution page */}
+        <meta
+          property="og:url"
+          content={`https://vmukti.com/solution/${content.slug}/`}
+        />
+
+        <meta property="og:site_name" content="Vmukti Solutions" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@vmukti" />
+        <meta name="twitter:title" content={content.metetitle} />
+        <meta name="twitter:description" content={content.metadescription} />
+
+        {/* Use the same specific image for the Twitter card */}
+        <meta name="twitter:image" content={content.ogImage} />
+
+        {/* Canonical Link - must point to the unique URL of this page */}
+        <link
+          rel="canonical"
+          href={`https://vmukti.com/solution/${content.slug}/`}
+        />
+
+        {/* {content.schemas &&
+          content.schemas.map((schema, index) => (
+            <script
+              key={`schema-${index}`}
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            />
+          ))} */}
       </Helmet>
       {/* --------------MainSection-------------- */}
       <Flex
@@ -531,14 +574,14 @@ const SolutionContent = ({ content }) => {
           </Box>
         )}
         {/* --------------Industry Grid-------------- */}
-        <Box mt="3%" mb="-7%">
-          {content.industry && (
+        {content.industry && (
+          <Box mt="3%" mb="-7%">
             <IndustryGrid
               heading={content.industry.heading}
               description={content.industry.description}
             />
-          )}
-        </Box>
+          </Box>
+        )}
         {/* --------------CTA-------------- */}
         <Box position="relative" zIndex="9">
           <CtaBanner href={content.cta.href}>
@@ -653,8 +696,12 @@ const SolutionContent = ({ content }) => {
                   </Flex>
                 </Box>
               ) : (
-                // 9999999999999999999999999999999999999999999999999999
-                <Box w="90%" justifyContent="center" alignItems="center" mx="auto">
+                <Box
+                  w="90%"
+                  justifyContent="center"
+                  alignItems="center"
+                  mx="auto"
+                >
                   <Image
                     src={whyChooseUs.images[0]}
                     alt={whyChooseUs.heading}

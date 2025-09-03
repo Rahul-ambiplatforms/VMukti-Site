@@ -240,8 +240,44 @@ const IndustryContent = ({ props, content }) => {
   return (
     <>
       <Helmet>
+        {/* SEO Tags */}
         <title>{content.metetitle}</title>
         <meta name="description" content={content.metadescription} />
+        <meta name="robots" content="index, follow" />
+        {/* Open Graph (OG) Tags for Social Media Sharing */}
+        <meta property="og:title" content={content.metetitle} />
+        <meta property="og:description" content={content.metadescription} />
+        {/* The OG image must be a full URL, specific to this industry page */}
+        <meta property="og:image" content={content.ogImage} />
+        {/* "article" is a good type for specific sub-pages like this */}
+        <meta property="og:type" content="website" />
+        {/* The OG URL must be the full, unique URL of this specific industry page */}
+        <meta
+          property="og:url"
+          content={`https://vmukti.com/industry/${content.slug}/`}
+        />
+        <meta property="og:site_name" content="Vmukti Solutions" />
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@vmukti" />
+        <meta name="twitter:title" content={content.metetitle} />
+        <meta name="twitter:description" content={content.metadescription} />
+        {/* Use the same specific image for the Twitter card */}
+        <meta name="twitter:image" content={content.ogImage} />
+        {/* Canonical Link - must point to the unique URL of this page */}
+        <link
+          rel="canonical"
+          href={`https://vmukti.com/industry/${content.slug}/`}
+        />
+        {/* Optional: Add page-specific structured data from your content object.
+        {content.schemas &&
+          content.schemas.map((schema, index) => (
+            <script
+              key={`schema-${index}`}
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            />
+          ))} */}
       </Helmet>
       <PageContentWrapper>
         <Box
@@ -370,10 +406,7 @@ const IndustryContent = ({ props, content }) => {
                     </Flex>
 
                     {/* Right Side: Button */}
-                    <Link
-                      to="/contact-us"
-                      style={{ textDecoration: "none" }}
-                    >
+                    <Link to="/contact-us" style={{ textDecoration: "none" }}>
                       <MotionButton
                         width={buttonWidth}
                         height={buttonHeight}
@@ -416,7 +449,7 @@ const IndustryContent = ({ props, content }) => {
           <Trusted />
 
           {/* ------------------------- */}
-          <HorizontalScrollFeatures scrollData={content.keyApplications} />
+          {/* <HorizontalScrollFeatures scrollData={content.keyApplications} /> */}
 
           <Box mb="2%" w="100vw" overflow="hidden">
             <Achieved heading={content.achieved} />

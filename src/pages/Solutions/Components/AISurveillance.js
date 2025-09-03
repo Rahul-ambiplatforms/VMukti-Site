@@ -269,9 +269,9 @@ const AISurveillance = () => {
               src={activeFeature.image}
               alt={activeFeature.title}
               objectFit="contain"
-              //   maxH="350px"
+              // borderRadius="24px"
               h="100%"
-              w="100%"
+              w="95%"
             />
           </Box>
         </Flex>

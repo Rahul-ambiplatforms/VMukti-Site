@@ -21,6 +21,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import ContactUsForm from "./ContactUsForm";
 import Trusted from "../../components/Trusted";
+import { Helmet } from "react-helmet-async";
 
 const MotionBox = motion(Box);
 
@@ -172,180 +173,232 @@ export default function ContactUs() {
   };
 
   return (
-    <Box overflow="hidden" mb="14%" mt="3%">
+    <>
+      <Helmet>
+        {/* SEO Tags */}
+        <title>Contact Us - VMukti Solutions</title>
+        <meta
+          name="description"
+          content="Contact VMukti Solutions to discuss your AI vision needs. We help you to build, deploy and scale visual intelligence and surveillance solutions."
+        />
+        <meta name="robots" content="index, follow" />
+        {/* Open Graph (OG) Tags for Social Media Sharing */}
+        <meta property="og:title" content="Contact Us - VMukti Solutions" />
+        <meta
+          property="og:description"
+          content="Contact VMukti Solutions to discuss your AI vision needs. We help you to build, deploy and scale visual intelligence and surveillance solutions."
+        />
+        <meta
+          property="og:image"
+          content="https://www.vmukti.com/assets/Contactus.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.vmukti.com/contact-us/" />
+        <meta property="og:site_name" content="Vmukti Solutions" />
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@vmukti" />
+        <meta name="twitter:title" content="Contact Us - VMukti Solutions" />
+        <meta
+          name="twitter:description"
+          content="Contact VMukti Solutions to discuss your AI vision needs. We help you to build, deploy and scale visual intelligence and surveillance solutions."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.vmukti.com/assets/Contactus.png"
+        />
+        {/* Canonical Link */}
+        <link rel="canonical" href="https://www.vmukti.com/contact-us/" />
+        {/* 
+        {contactPageSchemas.map((schema, index) => (
+          <script
+            key={`schema-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          />
+        ))} */}
+      </Helmet>
+      <Box overflow="hidden" mb="14%" mt="3%">
         <PageContentWrapper>
-        {/* Hero Banner */}
-        <Box
-          // bgImage="url('./assets/Contactus.png')"
-          bgImage={`url(${process.env.PUBLIC_URL}/assets/Contactus.png)`}
-          bgSize="cover"
-          bgPosition="center"
-          h={{ base: "300px", md: "410px" }}
-          position="relative"
-          borderRadius="24px"
-          overflow="hidden"
-          zIndex="1"
-        >
+          {/* Hero Banner */}
           <Box
-            position="absolute"
-            top="50%"
-            left={{ base: "20px", md: "50px" }}
-            transform="translateY(-50%)"
-            color="white"
+            h={{ base: "300px", md: "410px" }}
+            position="relative"
+            borderRadius="24px"
+            overflow="hidden"
+            zIndex="1"
           >
-            <ImagePop>
-              <HeadingAnimation>
-                <Heading
-                  as="h1"
-                  fontSize={{ base: "24px", sm: "36px", md: "48px" }}
-                >
-                  Contact Us
-                </Heading>
-              </HeadingAnimation>
-            </ImagePop>
-          </Box>
-        </Box>
-
-        <Flex
-          direction={{ base: "column", lg: "row" }}
-          mt="1%"
-          mb="2%"
-          gap={6}
-          position="relative"
-        >
-          {/* ------contact us form------ */}
-          <ContactUsForm />
-          {/* Connection Cards - Mobile View */}
-          <Box display={{ base: "block", lg: "none" }} mt={6}>
-            <Box position="relative" w="100%">
-              <MotionBox
-                key={currentCardIndex} // Ensure animation triggers on card change
-                bg={cards[currentCardIndex].bg}
-                color={cards[currentCardIndex].color}
-                p={6}
-                borderRadius="24px"
-                minH="336px"
-                w="100%"
-                position="relative"
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                variants={scrollAnimation}
-              >
+            <Image
+              src={`${process.env.PUBLIC_URL}/assets/Contactus.png`}
+              alt="Contact Us - VMukti Solutions"
+              position="absolute"
+              top="0"
+              left="0"
+              width="100%"
+              height="100%"
+              objectFit="cover"
+              zIndex="-1"
+            />
+            <Box
+              position="absolute"
+              top="50%"
+              left={{ base: "20px", md: "50px" }}
+              transform="translateY(-50%)"
+              color="white"
+            >
+              <ImagePop>
                 <HeadingAnimation>
                   <Heading
-                    fontSize="36px"
-                    width={{ base: "203px", md: "256px" }}
-                    fontWeight="700"
-                    lineHeight="normal"
-                    fontStyle="normal"
-                    letterSpacing="-0.54%"
-                    mb={4}
+                    as="h1"
+                    fontSize={{ base: "24px", sm: "36px", md: "48px" }}
                   >
-                    {cards[currentCardIndex].title}
+                    Contact Us
                   </Heading>
                 </HeadingAnimation>
-                <Box position="absolute" bottom="16px">
-                  <SubHeadingAnimation>
-                    <Flex direction="column">
-                      <Text fontWeight="700" fontSize="16px">
-                        {cards[currentCardIndex].phone}
-                      </Text>
-                      <Box
-                        w="10%"
-                        h="1px"
-                        bgColor={
-                          cards[currentCardIndex].bg === "#3F77A5"
-                            ? "white"
-                            : "#3F77A5"
-                        }
-                        my={2} // Add some vertical spacing
-                      />
-                      <Text
-                        fontWeight="500"
-                        color={
-                          cards[currentCardIndex].bg === "#3F77A5"
-                            ? "white"
-                            : "#696969"
-                        }
-                        fontSize="16px"
-                      >
-                        {cards[currentCardIndex].email}
-                      </Text>
-                    </Flex>
-                  </SubHeadingAnimation>
-                </Box>
-              </MotionBox>
-              <Flex
-                position="absolute"
-                // top="350px"
-                bottom="-50px"
-                right="10px"
-                gap="2px"
-                zIndex="2"
-              >
-                <Button
-                  width="31px"
-                  height="31px"
-                  minWidth="31px"
-                  minHeight="31px"
-                  padding="0"
-                  borderRadius="5px"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  cursor="pointer"
-                  bgColor="white"
-                  _hover={{ bgColor: "#e0e0e0" }}
-                  onClick={handlePrevCard}
-                >
-                  <svg
-                    width="8"
-                    height="16"
-                    viewBox="0 0 8 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z"
-                      fill="#3F77A5"
-                    />
-                  </svg>
-                </Button>
-                <Button
-                  width="31px"
-                  height="31px"
-                  minWidth="31px"
-                  minHeight="31px"
-                  padding="0"
-                  borderRadius="5px"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  cursor="pointer"
-                  bgColor="white"
-                  _hover={{ bgColor: "#e0e0e0" }}
-                  onClick={handleNextCard}
-                >
-                  <svg
-                    width="8"
-                    height="16"
-                    viewBox="0 0 8 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z"
-                      fill="#3F77A5"
-                    />
-                  </svg>
-                </Button>
-              </Flex>
+              </ImagePop>
             </Box>
           </Box>
 
-          {/* Contact Image */}
-          {/* <Box
+          <Flex
+            direction={{ base: "column", lg: "row" }}
+            mt="1%"
+            mb="2%"
+            gap={6}
+            position="relative"
+          >
+            {/* ------contact us form------ */}
+            <ContactUsForm />
+            {/* Connection Cards - Mobile View */}
+            <Box display={{ base: "block", lg: "none" }} mt={6}>
+              <Box position="relative" w="100%">
+                <MotionBox
+                  key={currentCardIndex} // Ensure animation triggers on card change
+                  bg={cards[currentCardIndex].bg}
+                  color={cards[currentCardIndex].color}
+                  p={6}
+                  borderRadius="24px"
+                  minH="336px"
+                  w="100%"
+                  position="relative"
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={scrollAnimation}
+                >
+                  <HeadingAnimation>
+                    <Heading
+                      fontSize="36px"
+                      width={{ base: "203px", md: "256px" }}
+                      fontWeight="700"
+                      lineHeight="normal"
+                      fontStyle="normal"
+                      letterSpacing="-0.54%"
+                      mb={4}
+                    >
+                      {cards[currentCardIndex].title}
+                    </Heading>
+                  </HeadingAnimation>
+                  <Box position="absolute" bottom="16px">
+                    <SubHeadingAnimation>
+                      <Flex direction="column">
+                        <Text fontWeight="700" fontSize="16px">
+                          {cards[currentCardIndex].phone}
+                        </Text>
+                        <Box
+                          w="10%"
+                          h="1px"
+                          bgColor={
+                            cards[currentCardIndex].bg === "#3F77A5"
+                              ? "white"
+                              : "#3F77A5"
+                          }
+                          my={2} // Add some vertical spacing
+                        />
+                        <Text
+                          fontWeight="500"
+                          color={
+                            cards[currentCardIndex].bg === "#3F77A5"
+                              ? "white"
+                              : "#696969"
+                          }
+                          fontSize="16px"
+                        >
+                          {cards[currentCardIndex].email}
+                        </Text>
+                      </Flex>
+                    </SubHeadingAnimation>
+                  </Box>
+                </MotionBox>
+                <Flex
+                  position="absolute"
+                  // top="350px"
+                  bottom="-50px"
+                  right="10px"
+                  gap="2px"
+                  zIndex="2"
+                >
+                  <Button
+                    width="31px"
+                    height="31px"
+                    minWidth="31px"
+                    minHeight="31px"
+                    padding="0"
+                    borderRadius="5px"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                    cursor="pointer"
+                    bgColor="white"
+                    _hover={{ bgColor: "#e0e0e0" }}
+                    onClick={handlePrevCard}
+                  >
+                    <svg
+                      width="8"
+                      height="16"
+                      viewBox="0 0 8 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z"
+                        fill="#3F77A5"
+                      />
+                    </svg>
+                  </Button>
+                  <Button
+                    width="31px"
+                    height="31px"
+                    minWidth="31px"
+                    minHeight="31px"
+                    padding="0"
+                    borderRadius="5px"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                    cursor="pointer"
+                    bgColor="white"
+                    _hover={{ bgColor: "#e0e0e0" }}
+                    onClick={handleNextCard}
+                  >
+                    <svg
+                      width="8"
+                      height="16"
+                      viewBox="0 0 8 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z"
+                        fill="#3F77A5"
+                      />
+                    </svg>
+                  </Button>
+                </Flex>
+              </Box>
+            </Box>
+
+            {/* Contact Image */}
+            {/* <Box
             flex="1"
             display="flex"
             justifyContent="center"
@@ -381,70 +434,71 @@ export default function ContactUs() {
               zIndex={1}
             />
           </Box> */}
-        </Flex>
-</PageContentWrapper>
+          </Flex>
+        </PageContentWrapper>
         <Trusted />
-<PageContentWrapper>
-        {/* Connection Cards for Desktop View */}
-        <Box display={{ base: "none", lg: "block" }} mt={6}>
-          <SimpleGrid
-            columns={{ base: 2, md: 2, lg: 4 }}
-            spacing={{ base: 4, md: 6, lg: 8 }}
-          >
-            {cards.map((card, index) => (
-              <MotionBox
-                key={index}
-                bg={card.bg}
-                color={card.color}
-                p={{ base: 4, md: 6, lg: 6 }}
-                borderRadius="24px"
-                minH={{ base: "180px", md: "336px" }}
-                position="relative"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false }}
-                overflow="hidden"
-                variants={popAnimation(index)}
-              >
-                <HeadingAnimation>
-                  <Heading
-                    fontSize={{ base: "20px", md: "36px" }}
-                    fontWeight="700"
-                    letterSpacing="-1.5%"
-                    mb={4}
-                  >
-                    {card.title}
-                  </Heading>
-                </HeadingAnimation>
-                <Box position="absolute" bottom="16px">
-                  <SubHeadingAnimation>
-                    <Flex direction="column">
-                      <Text
-                        fontWeight="700"
-                        fontSize={{ base: "12px", md: "16px" }}
-                      >
-                        {card.phone}
-                      </Text>
-                      <Box
-                        w="10%"
-                        h="2px"
-                        bgColor={card.bg === "#3F77A5" ? "white" : "#3F77A5"}
-                        my={2} // Add some vertical spacing
-                      />
-                      <Text
-                        fontWeight="500"
-                        fontSize={{ base: "12px", md: "16px" }}
-                      >
-                        {card.email}
-                      </Text>
-                    </Flex>
-                  </SubHeadingAnimation>
-                </Box>
-              </MotionBox>
-            ))}
-          </SimpleGrid>
-        </Box>
-    </PageContentWrapper>
+        <PageContentWrapper>
+          {/* Connection Cards for Desktop View */}
+          <Box display={{ base: "none", lg: "block" }} mt={6}>
+            <SimpleGrid
+              columns={{ base: 2, md: 2, lg: 4 }}
+              spacing={{ base: 4, md: 6, lg: 8 }}
+            >
+              {cards.map((card, index) => (
+                <MotionBox
+                  key={index}
+                  bg={card.bg}
+                  color={card.color}
+                  p={{ base: 4, md: 6, lg: 6 }}
+                  borderRadius="24px"
+                  minH={{ base: "180px", md: "336px" }}
+                  position="relative"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false }}
+                  overflow="hidden"
+                  variants={popAnimation(index)}
+                >
+                  <HeadingAnimation>
+                    <Heading
+                      fontSize={{ base: "20px", md: "36px" }}
+                      fontWeight="700"
+                      letterSpacing="-1.5%"
+                      mb={4}
+                    >
+                      {card.title}
+                    </Heading>
+                  </HeadingAnimation>
+                  <Box position="absolute" bottom="16px">
+                    <SubHeadingAnimation>
+                      <Flex direction="column">
+                        <Text
+                          fontWeight="700"
+                          fontSize={{ base: "12px", md: "16px" }}
+                        >
+                          {card.phone}
+                        </Text>
+                        <Box
+                          w="10%"
+                          h="2px"
+                          bgColor={card.bg === "#3F77A5" ? "white" : "#3F77A5"}
+                          my={2} // Add some vertical spacing
+                        />
+                        <Text
+                          fontWeight="500"
+                          fontSize={{ base: "12px", md: "16px" }}
+                        >
+                          {card.email}
+                        </Text>
+                      </Flex>
+                    </SubHeadingAnimation>
+                  </Box>
+                </MotionBox>
+              ))}
+            </SimpleGrid>
+          </Box>
+        </PageContentWrapper>
       </Box>
+    </>
   );
 }

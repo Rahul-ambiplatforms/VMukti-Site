@@ -3,7 +3,9 @@ export const solutionsData = {
     metetitle: "Advanced Video Management System for Surveillance",
     metadescription:
       "Best Video Management Software for CCTV offering live monitoring, cloud storage, AI analytics and seamless integration for enhanced surveillance control.",
-    // Section 1: Hero section from the first image
+    ogImage: "https://www.vmukti.com/assets/MainWebPageMockup1.1.png",
+    slug: "video-management-system",
+      // Section 1: Hero section from the first image
     hero: {
       heading: "Intelligent Video Management System",
       description:
@@ -159,7 +161,9 @@ export const solutionsData = {
       "Enterprise Management Solution for Scalable Security and Monitoring",
     metadescription:
       "Enterprise Management Solution for CCTV feeds that empowers Command & Control Centres with real-time monitoring, automated alerts, uptime analytics, and zero downtime.",
-    // Section 1: Hero section updated
+    ogImage: "https://www.vmukti.com/assets/solution_evms_dash.png",
+    slug: "enterprise-management-system",
+      // Section 1: Hero section updated
     hero: {
       heading: "Enterprise Management Solutions for Smarter CCTV Control",
       description:
@@ -305,7 +309,9 @@ export const solutionsData = {
     metetitle: "Master Command Flow Through Smart ICCC Services",
     metadescription:
       "Delivering reliable and unmatched `efficiency with our Integrated Command and Control Centre solutions which enhances operational control and decision-making.",
-    // Section 1: Hero section from the first image
+    ogImage: "https://www.vmukti.com/assets/solution_iccc_dash.png",
+    slug: "integrated-command-control-center",
+      // Section 1: Hero section from the first image
     hero: {
       heading: "Explore the Power of Integrated Command Control Centre",
       description:
@@ -448,7 +454,9 @@ export const solutionsData = {
     metetitle: "Secure Live CCTV Feed Streaming for Command & Control",
     metadescription:
       "Stream real-time CCTV feeds with ultra-HD clarity, zero delay, and multi-layer security - built for mission-critical monitoring and instant response.",
-    // Section 1: Hero section from the first image
+    ogImage: "https://www.vmukti.com/assets/solution_live_dash.png",
+    slug: "live-streaming-solution",
+      // Section 1: Hero section from the first image
     hero: {
       heading:
         "Stream Smarter with Secure, Real-Time CCTV Live Streaming Services",
@@ -611,7 +619,9 @@ export const solutionsData = {
     metetitle: "Flying Squad Vehicle with GPS and Live AI Surveillance",
     metadescription:
       "Power up your response force with a high-speed Flying Squad Vehicle packed with GPS tracking, smart AI surveillance and real-time control room sync.",
-    // Section 1: Hero section from the first image
+    ogImage: "https://www.vmukti.com/assets/solution_fsv_dash.png",
+    slug: "flying-squad-vehicle",
+      // Section 1: Hero section from the first image
     hero: {
       heading: "Flying Squad Vehicle with Smart GPS and AI Security",
       description: [
@@ -760,7 +770,9 @@ export const solutionsData = {
     metetitle: "CloudAI Video Surveillance Solution for Square Monitoring",
     metadescription:
       "Upgrade your security with Cloud AI surveillance, offering live video monitoring, automated alerts, and video analytics for enhanced safety and protection.",
-    // Section 1: Hero section from the first image
+    ogImage: "https://www.vmukti.com/assets/solution_cloud_dash.png",
+    slug: "cloudai",
+      // Section 1: Hero section from the first image
     hero: {
       heading:
         "CloudAI Computer Vision Surveillance Solution for Smarter Remote Security",
@@ -1071,7 +1083,9 @@ export const solutionsData = {
     metetitle: "Elevate Surveillance to New Heights with GenAI Solution",
     metadescription:
       "Take control of security with Generative AI solutions that adapt to your unique surveillance needs, enhancing protection and enabling proactive detection.",
-    // Section 1: Hero section from the first image
+    ogImage: "https://www.vmukti.com/assets/solution_genai_dash.png",
+    slug: "genai",
+      // Section 1: Hero section from the first image
     hero: {
       heading: "Visual Intelligence Like Never Before with GenAI Solution",
       description:
@@ -1188,7 +1202,6 @@ export const solutionsData = {
     // Section 6: Workflow from the sixth image
     workflow: {
       heading: "The Complete Process Behind Our GenAI Solution",
-      // *** Image is not in the group
       image: "../../assets/solution_genai_workflow.png",
     },
 
@@ -1207,7 +1220,9 @@ export const solutionsData = {
     metetitle: "VisualBot Computer Vision Software for Custom AI Solutions",
     metadescription:
       "Best VisualBot computer vision software solution delivers fast deployment, real-time insights, and custom AI models for seamless video analysis integration.",
-    // Section 1: Hero section from the first image
+    ogImage: "https://www.vmukti.com/assets/solution_visbot_dash.png",
+    slug: "visualbot",
+      // Section 1: Hero section from the first image
     hero: {
       heading:
         "Streamline Your AI Workflow with VisualBot Computer Vision Software",

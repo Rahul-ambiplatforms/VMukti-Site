@@ -59,7 +59,7 @@ function App() {
                   <Route path="/" element={<VMuktiHomepage />} />
                   <Route path="/technology" element={<TechnologyDashboard />} />
                   <Route path="/solution" element={<SolutionsHome />} />
-                  <Route
+                  <Route  
                     path="/solution/:name"
                     element={<SolutionDetails />}
                   />

@@ -3,6 +3,7 @@ import {
   Box,
   Flex,
   Heading,
+  Image,
   Text,
   VStack,
   useBreakpointValue,
@@ -29,32 +30,39 @@ const SolutionDashboard = () => {
 
   return (
     <>
-      <Helmet>
-        <title>
-          Powerful, Flexible Visual Intelligence Solutions for Businesses
-        </title>
-        <meta
-          name="description"
-          content="Tackle complex challenges with AI vision solutions built for speed, control and resilience trusted across industries where uptime and security are non-negotiable."
-        />
-      </Helmet>
       <Flex
         w="100%"
         h={heroHeight}
-        position="relative" 
+        position="relative"
         alignItems="center"
         justifyContent="center"
         // Note: mt="-7%" can sometimes cause layout shifts.
         // This is kept as requested but be aware of its effects.
         mt="-7%"
-        bgImage="url('../assets/solution_dash.png')" // Set your background here
+        // bgImage="url('../assets/solution_dash.png')"
+        alt="Hero Image"
         bgSize="cover"
         bgPosition="center"
         borderRadius="0px 0px 24px 24px"
+        // role="img"
+        // aria-label="A modern dashboard displaying visual intelligence solutions and analytics"
       >
+        {/* <Box borderRadius="24px"> */}
+        <Image
+          src="../assets/solution_dash.png"
+          alt="Cutting-Edge Visual Solutions for a Smarter World"
+          position="absolute"
+          top="0"
+          left="0"
+          width="100%"
+          height="100%"
+          objectFit="cover"
+          zIndex="base"
+        />
+        {/* </Box> */}
         <VStack
           position="absolute"
-          bottom="-1%" 
+          bottom="-1%"
           w="100%"
           align="center"
           spacing={{ base: 6, md: 8 }}
@@ -82,7 +90,13 @@ const SolutionDashboard = () => {
               <Heading as="h2" fontSize="36px" fontWeight="500" color="black">
                 Unified Surveillance Intelligence for Every Sector
               </Heading>
-              <Text fontSize="16px" fontWeight="500" w="80%" lineHeight="20px" color="#444">
+              <Text
+                fontSize="16px"
+                fontWeight="500"
+                w="80%"
+                lineHeight="20px"
+                color="#444"
+              >
                 VMukti offers a unified surveillance solution with centralized
                 video management, scalable enterprise VMS, and an integrated
                 command center for real-time monitoring and response. Secure

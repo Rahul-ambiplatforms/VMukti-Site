@@ -41,6 +41,38 @@ const VMuktiHomepage = () => {
           name="description"
           content="Vmukti Solutions is a trusted computer vision software company. We are offering AI surveillance for healthcare, education, manufacturing and more industries."
         />
+        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:title"
+          content="AI Computer Vision System for Smart Surveillance - Vmukti Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Vmukti Solutions is a trusted computer vision software company. We are offering AI surveillance for healthcare, education, manufacturing and more industries."
+        />
+        <meta
+          property="og:image"
+          content="https://www.vmukti.com/assets/tablet1.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vmukti.com/" />
+        <meta property="og:site_name" content="Vmukti Solutions" />
+        {/* <!-- Twitter Card Tags --> */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@vmukti" />
+        <meta
+          name="twitter:title"
+          content="AI Computer Vision System for Smart Surveillance - Vmukti Solutions"
+        />
+        <meta
+          name="twitter:description"
+          content="Vmukti Solutions is a trusted computer vision software company. We are offering AI surveillance for healthcare, education, manufacturing and more industries."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.vmukti.com/assets/tablet1.webp"
+        />
+        <link rel="canonical" href="https://www.vmukti.com/" />
         {homepageSchemas.map((schema, index) => (
           <script
             key={`schema-${index}`}

@@ -149,7 +149,7 @@ const HeroSection = () => {
               mt="5%"
               // pb="5%"
               src="/assets/tablet.png"
-              alt="Tablet"
+              alt="Computer Vision Solution for Smart Surveillance"
               zIndex={1}
               width="500px"
               height="600px"

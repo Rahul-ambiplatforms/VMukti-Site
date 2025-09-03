@@ -7,6 +7,7 @@ import {
   Text,
   Flex,
   useBreakpointValue,
+  Image,
 } from "@chakra-ui/react";
 import { useInView } from "framer-motion";
 import { keyframes } from "@emotion/react";
@@ -452,7 +453,7 @@ export default function IndustryDashboard() {
                 rowSpan={1}
               >
                 <Link
-                  to={`/industries/${industry.link}`}
+                  to={`/industry/${industry.link}`}
                   _hover={{ textDecoration: "none" }}
                 >
                   <Box
@@ -543,7 +544,7 @@ export default function IndustryDashboard() {
 
                     {/* "Know More" Link with SVG Arrow */}
                     {industry.name && (
-                      <Link to={`/industries/${industry.link}`}>
+                      <Link to={`/industry/${industry.link}`}>
                         <Flex
                           gap="2"
                           alignItems="center"
@@ -585,11 +586,55 @@ export default function IndustryDashboard() {
   return (
     <>
       <Helmet>
+        {/* SEO Tags */}
         <title>Explore All Industries We Serve with Computer Vision AI</title>
         <meta
           name="description"
           content="Explore how our AI-powered video surveillance enhances safety, compliance and efficiency across transportation, retail, manufacturing and more industries."
         />
+        <meta name="robots" content="index, follow" />
+        {/* Open Graph (OG) Tags for Social Media Sharing */}
+        <meta
+          property="og:title"
+          content="Explore All Industries We Serve with Computer Vision AI"
+        />
+        <meta
+          property="og:description"
+          content="Explore how our AI-powered video surveillance enhances safety, compliance and efficiency across transportation, retail, manufacturing and more industries."
+        />
+        <meta
+          property="og:image"
+          content="https://www.vmukti.com/assets/industry_dashboard.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vmukti.com/industry/" />
+        <meta property="og:site_name" content="Vmukti Solutions" />
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@vmukti" />
+        <meta
+          name="twitter:title"
+          content="Explore All Industries We Serve with Computer Vision AI"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore how our AI-powered video surveillance enhances safety, compliance and efficiency across transportation, retail, manufacturing and more industries."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.vmukti.com/assets/industry_dashboard.png"
+        />
+        {/* Canonical Link */}
+        <link rel="canonical" href="https://www.vmukti.com/industry/" />
+        {/* Optional: Add structured data (JSON-LD schema) for the industries page.
+        For example:
+        {industriesPageSchemas.map((schema, index) => (
+          <script
+            key={`schema-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          />
+        ))} */}
       </Helmet>
       <PageContentWrapper>
         <Box
@@ -597,24 +642,13 @@ export default function IndustryDashboard() {
           backgroundColor="#E7E7E7"
           maxWidth="100%"
           minHeight={{ base: "auto", md: "1673px" }}
-          position="relative"
+          position="relative" // This is crucial for positioning the child image
           mx="auto"
           pb={{ base: "50px", md: "0" }}
-          _before={{
-            content: '""',
-            position: "absolute",
-            top: "22%",
-            left: "-5%",
-            width: "100%",
-            height: "100%",
-            backgroundImage: `url("./assets/image7.png")`,
-            backgroundPosition: "left top",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "1138px",
-            opacity: "1",
-            zIndex: "0",
-          }}
+          overflow="hidden" // Good practice to prevent content from spilling out
+          // The _before pseudo-element has been removed
           _after={{
+            // The _after styling remains unchanged
             content: '""',
             position: "absolute",
             left: { lg: "15%" },
@@ -633,6 +667,16 @@ export default function IndustryDashboard() {
             zIndex: "1",
           }}
         >
+          <Image
+            src="./assets/industry_dashboard.png"
+            alt="Transforming Industries with AI-Powered Intelligence"
+            position="absolute"
+            top="16%"
+            left="5%"
+            width="1300px"
+            height="auto"
+            zIndex={0}
+          />
           <Box
             display="flex"
             flexDirection="column"

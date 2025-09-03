@@ -1032,7 +1032,7 @@ const Navbar = () => {
           </DrawerContent>
         </Drawer>
       </Box>
-      <Announcement />
+      {/* <Announcement /> */}
     </>
   );
 };
