@@ -58,7 +58,7 @@ const VMuktiHomepage = () => {
         <meta property="og:url" content="https://vmukti.com/" />
         <meta property="og:site_name" content="Vmukti Solutions" />
         {/* <!-- Twitter Card Tags --> */}
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@vmukti" />
         <meta
           name="twitter:title"
