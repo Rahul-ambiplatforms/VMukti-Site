@@ -233,31 +233,36 @@ const PhoneInput = ({ value, onChange, isRequired }) => {
                     {country.name} ({country.code})
                   </Text>
                 </HStack>
+                {/* <Divider
+                  orientation="vertical"
+                  h="60%"
+                  borderColor="gray.400"
+                /> */}
               </MenuItem>
             ))}
           </MenuList>
         </Menu>
-        <Divider orientation="vertical" h="60%" borderColor="gray.400" />
         <Input
-          variant="unstyled"
+          // variant="unstyled"  
           value={value.number}
           onChange={handleNumberChange}
           type="tel"
-          pl={2}
+          // pl={2}
         />
+        {/* <Divider orientation="vertical" h="60%" borderColor="gray.400" /> */}
       </HStack>
       {!value.number && (
         <HStack
           position="absolute"
           top="50%"
-          left="100px"
+          left="90px"
           transform="translateY(-50%)"
           pointerEvents="none"
           zIndex="1"
         >
           <Text color="gray.500">000 000 0000</Text>
           {isRequired && (
-            <Text color="red.500" ml="1">
+            <Text color="red.500">
               *
             </Text>
           )}
@@ -322,8 +327,7 @@ const ContactUsForm = () => {
       !formData.fullName ||
       !formData.email ||
       !formData.phone.number ||
-      !formData.companyName ||
-      !formData.message
+      !formData.companyName
     ) {
       toast({
         title: "Missing required fields",
@@ -339,11 +343,15 @@ const ContactUsForm = () => {
 
     try {
       const response = await fetch(
+        // "http://localhost:5000/api/send-email",
         "https://vmukti.com/backend/api/send-email",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
+          body: JSON.stringify({
+            ...formData,
+            formType: 'Contact' 
+          }),
         }
       );
 
@@ -355,8 +363,8 @@ const ContactUsForm = () => {
           duration: 5000,
           isClosable: true,
         });
-        
-        navigate('/thank-you');
+
+        navigate("/thank-you");
 
         setFormData({
           fullName: "",

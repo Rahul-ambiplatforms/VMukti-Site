@@ -84,24 +84,24 @@ const ourSolutionsLinks = [
 
 const industriesWeServeLinks = [
   // Column 1
-  { text: "Manufacturing", path: "/industries/manufacturing" },
-  { text: "Warehouse", path: "/industries/warehouse" },
-  { text: "Healthcare", path: "/industries/healthcare" },
-  { text: "Oil & Gas", path: "/industries/oil-and-gas" },
-  { text: "Election", path: "/industries/election" },
-  { text: "Education", path: "/industries/education" },
-  { text: "Transportation", path: "/industries/transportation" },
-  { text: "Smart City", path: "/industries/smart-city" },
-  { text: "Pharma", path: "/industries/pharma" },
-  { text: "Logistics", path: "/industries/logistics" },
-  { text: "Banking", path: "/industries/banking" },
-  { text: "Sports & Entertainment", path: "/industries/sports-entertainment" },
-  { text: "Defense", path: "/industries/defense" },
+  { text: "Manufacturing", path: "/industry/manufacturing" },
+  { text: "Warehouse", path: "/industry/warehouse" },
+  { text: "Healthcare", path: "/industry/healthcare" },
+  { text: "Oil & Gas", path: "/industry/oil-and-gas" },
+  { text: "Election", path: "/industry/election" },
+  { text: "Education", path: "/industry/education" },
+  { text: "Transportation", path: "/industry/transportation" },
+  { text: "Smart City", path: "/industry/smart-city" },
+  { text: "Pharma", path: "/industry/pharma" },
+  { text: "Logistics", path: "/industry/logistics" },
+  { text: "Banking", path: "/industry/banking" },
+  { text: "Sports & Entertainment", path: "/industry/sports-entertainment" },
+  { text: "Defense", path: "/industry/defense" },
 
   // Column 2
-  { text: "Hospitality", path: "/industries/hospitality" },
-  { text: "Construction", path: "/industries/construction" }, 
-  { text: "Enterprise", path: "/industries/enterprise" },
+  { text: "Hospitality", path: "/industry/hospitality" },
+  { text: "Construction", path: "/industry/construction" }, 
+  { text: "Enterprise", path: "/industry/enterprise" },
   { text: "Government", path: "/industries/government" },
 ];
 

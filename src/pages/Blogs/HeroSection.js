@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   Box,
   Heading,
@@ -6,11 +6,12 @@ import {
   Flex,
   // Icon,
   useBreakpointValue,
-} from '@chakra-ui/react'
+  Image,
+} from "@chakra-ui/react";
 // import { ExternalLink } from 'lucide-react';
 
 const BlogsDashboard = () => {
-  const svgSize = useBreakpointValue({ base: '13', md: '25' })
+  const svgSize = useBreakpointValue({ base: "13", md: "25" });
 
   return (
     //   {/* Background Image */}
@@ -19,13 +20,21 @@ const BlogsDashboard = () => {
         position="relative"
         borderRadius="24px"
         width="100%"
-        //   height="100%"
-        backgroundImage={`url(${process.env.PUBLIC_URL}/assets/blogs_dashboard.png)`}
-        bgSize={{ base: 'cover', md: 'contain' }}
-        bgPosition={{ base: 'right', md: 'center' }}
-        bgRepeat="no-repeat"
-        aspectRatio={{ base: '57 / 50', md: '16 / 9' }}
+        aspectRatio={{ base: "57 / 50", md: "16 / 9" }}
+        overflow="hidden" // It's good practice to hide overflowing content from the container
       >
+        <Image
+          src={`${process.env.PUBLIC_URL}/assets/blogs_dashboard.png`}
+          alt="Blogs Dashboard" 
+          objectFit={{ base: "cover", md: "cover" }}
+          objectPosition={{ base: "right", md: "center" }}
+          width="100%"
+          height="100%"
+          position="absolute"
+          top="0"
+          left="0"
+        />
+
         {/* Overlay with blur effect */}
         <Box
           borderRadius="24px"
@@ -35,7 +44,7 @@ const BlogsDashboard = () => {
           width="100%"
           height="100%"
           bg="#3F77A5"
-          opacity={{ base: '0.5', md: '0' }}
+          opacity={{ base: "0.5", md: "0" }}
         />
 
         {/* Content */}
@@ -49,7 +58,7 @@ const BlogsDashboard = () => {
         >
           <Heading
             as="h2"
-            fontSize={{ base: '24px', md: '48px' }}
+            fontSize={{ base: "24px", md: "48px" }}
             fontWeight="600"
             mb="2%"
             //   bg="red"
@@ -71,7 +80,7 @@ const BlogsDashboard = () => {
             </svg>
           </Text>
           {/* //maxWidth="50%" */}
-          <Text fontSize={{ base: '12px', md: '16px' }} fontWeight="500">
+          <Text fontSize={{ base: "12px", md: "16px" }} fontWeight="500">
             Stay ahead of the curve with our expert insights, industry trends,
             and AI innovations.
             <br />
@@ -80,7 +89,7 @@ const BlogsDashboard = () => {
         </Flex>
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default BlogsDashboard
+export default BlogsDashboard;

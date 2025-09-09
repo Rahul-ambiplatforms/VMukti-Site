@@ -102,7 +102,7 @@ export default function ContactUs() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.firstName || !formData.email || !formData.message) {
+    if (!formData.firstName || !formData.email || !formData.number) {
       toast({
         title: "Missing required fields",
         description: "Please fill in all required fields",

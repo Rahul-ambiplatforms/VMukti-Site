@@ -8,6 +8,7 @@
 //
 
 const industriesData = {
+//Application image remaining
   manufacturing: {
     metatitle: "Computer Vision in Manufacturing Industry - Vmukti Solutions",
     metadescription:
@@ -35,35 +36,35 @@ const industriesData = {
             title: "Machine Operation Monitoring",
             description:
               "With our intelligent system, you continuously track machinery performance and behavioral patterns to detect anomalies early, prevent costly breakdowns and maximize your operational efficiency and uptime.",
-            image: "man1.png",
+            image: "../../assets/feat1_industry_man_1.png",
           },
           {
             id: "feat1-2",
             title: "Product Quality Screening",
             description:
               "We integrate enterprise-grade computer vision to inspect each unit in real time, so your production line delivers nothing short of excellence, with zero compromise on quality or brand trust.",
-            image: "man2.png",
+            image: "../../assets/feat1_industry_man_2.png",
           },
           {
             id: "feat1-3",
             title: "Inventory Management",
             description:
               "Take full control over goods flow using computer vision which helps you with real-time visibility, automated accuracy and zero guesswork, perfectly aligning your supply chain with data-driven execution and reduced waste.",
-            image: "man3.png",
+            image: "../../assets/feat1_industry_man_3.png",
           },
           {
             id: "feat1-4",
             title: "Human Behaviour Monitoring",
             description:
               "We deliver motion-intelligent surveillance that tracks subtle human activity patterns detecting deviations instantly and supporting precision-level safety across production environments where every action counts.",
-            image: "man4.png",
+            image: "../../assets/feat1_industry_man_4.png",
           },
           {
             id: "feat1-5",
             title: "Attendance Management",
             description:
               "Our facial recognition system captures attendance the moment anyone steps in, no cards, no codes just accurate face recognition. You get precision shift logs and zero tolerance for time theft, all without lifting a finger.",
-            image: "man5.png",
+            image: "../../assets/feat1_industry_man_5.png",
           },
         ],
       },
@@ -78,21 +79,21 @@ const industriesData = {
             title: "Early Fire Alerting",
             description:
               "We equip your infrastructure with intelligent visual systems that identify early fire or smoke indicators, triggering immediate alerts to help you prevent disruption, downtime and reputational risk before they ignite.",
-            image: "man6.png",
+            image: "../../assets/feat2_industry_man_1.png",
           },
           {
             id: "feat2-2",
             title: "Restricted Area Control",
             description:
               "Our advanced surveillance infrastructure secures your facility by instantly flagging unauthorized movement in high-risk zones ensuring compliance, visibility and complete operational command.",
-            image: "man7.png",
+            image: "../../assets/feat2_industry_man_2.png",
           },
           {
             id: "feat2-3",
             title: "Fall Incident Monitoring",
             description:
               "With VMukti, Sudden falls don’t go unnoticed. Our precision-trained intelligent vision models detect impact events instantly, delivering rapid alerts and accelerating response times in mission-critical areas.",
-            image: "man8.png",
+            image: "../../assets/feat2_industry_man_3.png",
           },
         ],
       },
@@ -107,14 +108,14 @@ const industriesData = {
             title: "Employee Safety Compliance",
             description:
               "Our system safeguards your compliance posture by continuously monitoring workforce adherence to safety protocols, ensuring regulatory alignment and helps in disciplining at every operational layer.",
-            image: "man9.png",
+            image: "../../assets/feat3_industry_man_1.png",
           },
           {
             id: "feat3-2",
             title: "PPE Kit Policy",
             description:
               "Using advanced visual recognition, our solution monitors PPE adherence scanning for helmets, gloves, and masks with precision. Instant alerts help you maintain regulatory compliance without manual checks.",
-            image: "man10.png",
+            image: "../../assets/feat3_industry_man_2.png",
           },
         ],
       },
@@ -310,56 +311,56 @@ const industriesData = {
           },
         ],
       },
-      {
-        id: "section4",
-        mainHeading:
-          "Unleashing Next-Level Efficiency with Computer Vision in Warehouse Management",
-        bgColor: "blue",
-        features: [
-          {
-            id: "feat4-1",
-            title: "Asset Protection",
-            description:
-              "Our proactive surveillance doesn’t wait for losses to occur. It flags breaches the moment they happen, deters theft attempts before they escalate, and keeps critical zones in close monitoring with fast alerts.",
-            image: "../../assets/feat4_industry_wh_1.png",
-          },
-          {
-            id: "feat4-2",
-            title: "Centralized Management",
-            description:
-              "VMukti helps you oversee multi-site operations via a unified control interface, accelerate post-event analysis with edge-powered insights and slash your response time from hours to actionable minutes.",
-            image: "../../assets/feat4_industry_wh_2.png",
-          },
-          {
-            id: "feat4-3",
-            title: "Smarter Storage Control",
-            description:
-              "Using our solution, track assets in real time with system-level accuracy, validate every move, remove human error, and drive warehouse precision with smart spatial analytics engineered for scale and speed.",
-            image: "../../assets/feat4_industry_wh_3.png",
-          },
-          {
-            id: "feat4-4",
-            title: "Continuous Monitoring",
-            description:
-              "You get ultra-clear imaging in all conditions with intelligent bandwidth compression that slashes storage use by 70% and airtight protection across assets which means no compromises, no gaps, just performance.",
-            image: "../../assets/feat4_industry_wh_4.png",
-          },
-          {
-            id: "feat4-5",
-            title: "Improved Operational Efficiency",
-            description:
-              "We eliminate workflow friction with precision visual solution, real-time operational intelligence, and unified task orchestration built to keep your production agile, aligned and outperforming expectations.",
-            image: "../../assets/feat4_industry_wh_5.png",
-          },
-          {
-            id: "feat4-6",
-            title: "Behavior Monitoring for Safety",
-            description:
-              "VMukti delivers real-time hazard interception and predictive oversight so you don’t react to incidents, you prevent them. Every shift operates under intelligent, compliant automation built for zero compromise.",
-            image: "../../assets/feat4_industry_wh_6.png",
-          },
-        ],
-      },
+      // {
+      //   id: "section4",
+      //   mainHeading:
+      //     "Unleashing Next-Level Efficiency with Computer Vision in Warehouse Management",
+      //   bgColor: "blue",
+      //   features: [
+      //     {
+      //       id: "feat4-1",
+      //       title: "Asset Protection",
+      //       description:
+      //         "Our proactive surveillance doesn’t wait for losses to occur. It flags breaches the moment they happen, deters theft attempts before they escalate, and keeps critical zones in close monitoring with fast alerts.",
+      //       image: "../../assets/feat4_industry_wh_1.png",
+      //     },
+      //     {
+      //       id: "feat4-2",
+      //       title: "Centralized Management",
+      //       description:
+      //         "VMukti helps you oversee multi-site operations via a unified control interface, accelerate post-event analysis with edge-powered insights and slash your response time from hours to actionable minutes.",
+      //       image: "../../assets/feat4_industry_wh_2.png",
+      //     },
+      //     {
+      //       id: "feat4-3",
+      //       title: "Smarter Storage Control",
+      //       description:
+      //         "Using our solution, track assets in real time with system-level accuracy, validate every move, remove human error, and drive warehouse precision with smart spatial analytics engineered for scale and speed.",
+      //       image: "../../assets/feat4_industry_wh_3.png",
+      //     },
+      //     {
+      //       id: "feat4-4",
+      //       title: "Continuous Monitoring",
+      //       description:
+      //         "You get ultra-clear imaging in all conditions with intelligent bandwidth compression that slashes storage use by 70% and airtight protection across assets which means no compromises, no gaps, just performance.",
+      //       image: "../../assets/feat4_industry_wh_4.png",
+      //     },
+      //     {
+      //       id: "feat4-5",
+      //       title: "Improved Operational Efficiency",
+      //       description:
+      //         "We eliminate workflow friction with precision visual solution, real-time operational intelligence, and unified task orchestration built to keep your production agile, aligned and outperforming expectations.",
+      //       image: "../../assets/feat4_industry_wh_5.png",
+      //     },
+      //     {
+      //       id: "feat4-6",
+      //       title: "Behavior Monitoring for Safety",
+      //       description:
+      //         "VMukti delivers real-time hazard interception and predictive oversight so you don’t react to incidents, you prevent them. Every shift operates under intelligent, compliant automation built for zero compromise.",
+      //       image: "../../assets/feat4_industry_wh_6.png",
+      //     },
+      //   ],
+      // },
     ],
 
     keyBenefits: {
