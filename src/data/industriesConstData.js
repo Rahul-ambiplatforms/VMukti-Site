@@ -8,7 +8,7 @@
 //
 
 const industriesData = {
-//Application image remaining
+
   manufacturing: {
     metatitle: "Computer Vision in Manufacturing Industry - Vmukti Solutions",
     metadescription:
