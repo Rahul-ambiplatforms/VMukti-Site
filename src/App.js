@@ -68,11 +68,11 @@ function App() {
                     element={<EventSpotlight />}
                   />
                   <Route path="/whoweare/careers" element={<VMuktiCareers />} />
-                  {/* <Route path="/whoweare/blogs" element={<BlogsDashboard />} />
+                  <Route path="/blog" element={<BlogsDashboard />} />
                   <Route
-                    path="/whoweare/blogs/:urlWords"
+                    path="/blog/:urlWords"
                     element={<BlogsOverviewDash />}
-                  /> */}
+                  />
                   <Route path="/serving" element={<OurServings />} />
                   <Route path="/serving/:name" element={<ServingsDock />} />
                   <Route path="/contactus" element={<ContactUs />} />
