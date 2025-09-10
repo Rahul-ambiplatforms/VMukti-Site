@@ -246,8 +246,8 @@ const BlogsOverviewDash = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/send-email",
-        // "https://vmukti.com/backend/api/send-email",
+        // "http://localhost:5000/api/send-email",
+        "https://vmukti.com/backend/api/send-email",
         {
           method: "POST",
           headers: {
@@ -302,9 +302,9 @@ const BlogsOverviewDash = () => {
     const match = url.match(/^(https?:\/\/[^\/]+\/)/);
     setBaseUrl(match ? match[1] : url);
   }, []);
-  const IMAGE_BASE_URL =
-    process.env.REACT_APP_IMAGE_BASE_URL || "http://localhost:5000/uploads";
-  // const IMAGE_BASE_URL = "https://vmukti.com/backend/uploads";
+  // const IMAGE_BASE_URL =
+    // process.env.REACT_APP_IMAGE_BASE_URL || "http://localhost:5000/uploads";
+  const IMAGE_BASE_URL = "https://vmukti.com/backend/uploads";
   useEffect(() => {
     const fetchBlog = async () => {
       try {
