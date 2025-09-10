@@ -246,8 +246,8 @@ const BlogsOverviewDash = () => {
 
     try {
       const response = await fetch(
-        // "http://localhost:5000/api/send-email",
-        "https://vmukti.com/backend/api/send-email",
+        "http://localhost:5000/api/send-email",
+        // "https://vmukti.com/backend/api/send-email",
         {
           method: "POST",
           headers: {
@@ -440,7 +440,6 @@ const BlogsOverviewDash = () => {
   return (
     <Box>
       <Helmet>
-        <meta charSet="utf-8" />
         <title>
           {blog.content?.metaTitle ||
             blog.metadata?.metaTitle ||
@@ -473,16 +472,12 @@ const BlogsOverviewDash = () => {
         />
         <meta property="og:url" content={currentUrl} />
         <meta property="og:type" content="blog" />
-        <meta property="og:site_name" content="Vmukti Solutions" />
+        <meta property="og:site_name" content="VMukti Solutions" />
         <meta property="og:image" content={mainImageOg} />
         <meta property="og:locale" content="en_US" />
         <meta
           name="twitter:card"
-          content={
-            blog.content?.metaDescription ||
-            blog.metadata?.metaDescription ||
-            "Default OG Description"
-          }
+          content="summary_large_image"
         />
         <meta name="twitter:site" content="@vmukti" />
         <meta

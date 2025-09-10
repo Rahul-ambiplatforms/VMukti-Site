@@ -6,7 +6,7 @@ body {
   overflow-x: hidden;
 }
 @font-face {
-  font-family: "WixMadeforDisplay"; /* Match this with the name used in the body */
+  font-family: "WixMadeforDisplay"; 
   src: url("../public/assets/Wix_Madefor_Display/WixMadeforDisplay-VariableFont_wght.ttf")
     format("truetype");
   font-weight: normal;
