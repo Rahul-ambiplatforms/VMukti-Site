@@ -2,7 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
 
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
+// const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
+const API_URL = "https://vmukti.com/backend/api";
 const BASE_URL = "https://vmukti.com";
 
 const formatDate = (date) => {
@@ -23,7 +24,7 @@ const getPageLastModified = (pagePath) => {
 
 const fetchBlogPosts = async () => {
   try {
-    const response = await axios.get(`${API_URL}/blog`);
+    const response = await axios.get(`${API_URL}/blogs`);
     if (Array.isArray(response.data)) return response.data;
     else if (Array.isArray(response.data.blogs)) return response.data.blogs;
     else if (Array.isArray(response.data.data)) return response.data.data;
