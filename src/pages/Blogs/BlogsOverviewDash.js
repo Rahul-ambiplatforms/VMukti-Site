@@ -347,6 +347,7 @@ const BlogsOverviewDash = () => {
   const [mainImageOg, setMainImageOg] = useState("");
   useEffect(() => {
     if (blog && blog.content && IMAGE_BASE_URL) {
+      // console.log("blog", blog);
       const img = blog.content.mainImage;
       if (img && typeof img === "string") {
         setMainImageOg(`${IMAGE_BASE_URL}/${img}`);
@@ -545,7 +546,7 @@ const BlogsOverviewDash = () => {
               // w="159px"
             >
               {/* Author Information */}
-              {(blog.content?.blogAuthor || blog.content?.author) && (
+              {(blog.content?.blogAuthor || blog.content?.author || blog.blogAuthor) && (
                 <Flex alignItems="center" gap={2}>
                   <Box>
                     <svg
@@ -566,7 +567,7 @@ const BlogsOverviewDash = () => {
                     </svg>
                   </Box>
                   <Text fontSize="16px" fontWeight="500" color="black">
-                    {blog.content?.blogAuthor || blog.content?.author}
+                    {blog.content?.blogAuthor || blog.content?.author || blog.blogAuthor}
                   </Text>
                 </Flex>
               )}

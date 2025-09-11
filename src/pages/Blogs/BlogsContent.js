@@ -60,8 +60,8 @@ export default function BlogsContent() {
   const borderColor = useColorModeValue("gray.200", "gray.700");
   const toast = useToast();
 
-  const IMAGE_BASE_URL = process.env.REACT_APP_IMAGE_BASE_URL || "http://localhost:5000/uploads";
-  // const IMAGE_BASE_URL = "https://vmukti.com/backend/uploads";
+  // const IMAGE_BASE_URL = process.env.REACT_APP_IMAGE_BASE_URL || "http://localhost:5000/uploads";
+  const IMAGE_BASE_URL = "https://vmukti.com/backend/uploads";
 
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOrder, setSortOrder] = useState("latest");
@@ -384,7 +384,7 @@ export default function BlogsContent() {
                       </svg>
                       {/* Prefer new blogAuthor, fallback to legacy author */}
                       <Text fontSize="16px" fontWeight="500" color="black">
-                        {post.content?.blogAuthor || post.content?.author || "Unknown Author"}
+                        {post.content?.blogAuthor || post.content?.author || post.author || "Unknown Author"}
                       </Text>
                     </Flex>
                   </Box>
