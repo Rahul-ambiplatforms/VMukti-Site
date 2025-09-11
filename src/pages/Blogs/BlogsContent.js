@@ -80,10 +80,9 @@ export default function BlogsContent() {
         sortOrder,
         "published"
       );
-      // Debug: Log the blog data to inspect author field
+      
       console.log("Fetched blogs:", response.data);
       if (response.status === "success") {
-        // Safety: ensure only published blogs are shown even if API changes
         const publishedOnly = Array.isArray(response.data)
           ? response.data.filter((b) => b.status === "published")
           : [];
@@ -103,7 +102,6 @@ export default function BlogsContent() {
     }
   }, [currentPage, blogsPerPage, searchTerm, sortOrder, toast]);
 
-  // Effect to fetch blogs whenever dependencies change
   useEffect(() => {
     fetchBlogs();
   }, [fetchBlogs]);
