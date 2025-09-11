@@ -21,6 +21,7 @@ import {
   useToast,
   Textarea,
   useBreakpointValue,
+  Icon,
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -204,8 +205,7 @@ const BlogsOverviewDash = () => {
   const [currentUrl, setCurrentUrl] = useState("");
   const [baseUrl, setBaseUrl] = useState("");
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    fullname: "",
     email: "",
     phone: "",
     message: "",
@@ -231,7 +231,7 @@ const BlogsOverviewDash = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.firstName || !formData.email || !formData.message) {
+    if (!formData.fullname || !formData.email || !formData.message) {
       toast({
         title: "Missing required fields",
         description: "Please fill in all required fields",
@@ -246,13 +246,17 @@ const BlogsOverviewDash = () => {
 
     try {
       const response = await fetch(
+        // "http://localhost:5000/api/send-email",
         "https://vmukti.com/backend/api/send-email",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify({
+            ...formData,
+            formType: 'Blog'
+          }),
         }
       );
 
@@ -268,8 +272,7 @@ const BlogsOverviewDash = () => {
         });
 
         setFormData({
-          firstName: "",
-          lastName: "",
+          fullname:"",
           email: "",
           phone: "",
           message: "",
@@ -299,7 +302,8 @@ const BlogsOverviewDash = () => {
     const match = url.match(/^(https?:\/\/[^\/]+\/)/);
     setBaseUrl(match ? match[1] : url);
   }, []);
-  // const IMAGE_BASE_URL = process.env.REACT_APP_IMAGE_BASE_URL;
+  // const IMAGE_BASE_URL =
+    // process.env.REACT_APP_IMAGE_BASE_URL || "http://localhost:5000/uploads";
   const IMAGE_BASE_URL = "https://vmukti.com/backend/uploads";
   useEffect(() => {
     const fetchBlog = async () => {
@@ -343,6 +347,7 @@ const BlogsOverviewDash = () => {
   const [mainImageOg, setMainImageOg] = useState("");
   useEffect(() => {
     if (blog && blog.content && IMAGE_BASE_URL) {
+      // console.log("blog", blog);
       const img = blog.content.mainImage;
       if (img && typeof img === "string") {
         setMainImageOg(`${IMAGE_BASE_URL}/${img}`);
@@ -436,26 +441,26 @@ const BlogsOverviewDash = () => {
   return (
     <Box>
       <Helmet>
-        <meta charSet="utf-8" />
         <title>
           {blog.content?.metaTitle ||
             blog.metadata?.metaTitle ||
-            "Default Title my name is again defaulyt title"}
+            "Default Title my name is again default title"}
         </title>
-        <meta
-          property="og:title"
-          content={
-            blog.content?.metaTitle ||
-            blog.metadata?.metaTitle ||
-            "Default OG Title"
-          }
-        />
         <meta
           name="description"
           content={
             blog.content?.metaDescription ||
             blog.metadata?.metaDescription ||
             "Default Description"
+          }
+        />
+        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:title"
+          content={
+            blog.content?.metaTitle ||
+            blog.metadata?.metaTitle ||
+            "Default OG Title"
           }
         />
         <meta
@@ -467,27 +472,38 @@ const BlogsOverviewDash = () => {
           }
         />
         <meta property="og:url" content={currentUrl} />
-        <meta property="og:type" content="article" />
-        {/* <meta property="og:type" content={currentUrl} /> */}
-        <meta property="og:site_name" content="Vmukti Solutions" />
+        <meta property="og:type" content="blog" />
+        <meta property="og:site_name" content="VMukti Solutions" />
         <meta property="og:image" content={mainImageOg} />
         <meta property="og:locale" content="en_US" />
         <meta
           name="twitter:card"
+          content="summary_large_image"
+        />
+        <meta name="twitter:site" content="@vmukti" />
+        <meta
+          name="twitter:title"
+          content={
+            blog.content?.metaTitle ||
+            blog.metadata?.metaTitle ||
+            "Default Twitter Title"
+          }
+        />
+        <meta
+          name="twitter:description"
           content={
             blog.content?.metaDescription ||
             blog.metadata?.metaDescription ||
-            "Default OG Description"
+            "Default Twiter Description"
           }
         />
-        <meta name="twitter:site" content={`${baseUrl}`} />
+        <meta name="twitter:image" content={mainImageOg} />
         <link rel="canonical" href={`${currentUrl}`} />
-        <meta name="robots" content="index, follow" />
       </Helmet>
       <Box px="2%">
         {/* Blog Header */}
         <Box mb={8}>
-          <Box
+          {/* <Box
             position="absolute"
             top="0"
             left="25%"
@@ -501,89 +517,132 @@ const BlogsOverviewDash = () => {
             filter="blur(100px)"
             display={{ base: "none", md: "block" }}
             ref={sectionRef}
-          />
+          /> */}
           <Heading
             as="h1"
             fontSize={{ base: "36px", md: "48px" }}
             mt="8"
             mb="4"
           >
-            {applyColorLogic(content.title || "Blog Title")}
+            {content.title}
+            {/* {applyColorLogic(content.title || "Blog Title")} */}
           </Heading>
 
-          {/* Date */}
-          <Box
-            display="flex"
-            gap="2"
-            alignItems="center"
-            borderRadius={{ base: "12px", md: "15px" }}
-            bg="white"
-            px={{ base: "4%", md: "1%" }}
-            py="1%"
-            mb={{ base: "4%", md: "2%" }}
-            w="fit-content"
-          >
-            <svg
-              width="21"
-              height="21"
-              viewBox="0 0 21 21"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+          {/* Author  and Date*/}
+          <Flex gap="1%">
+            <Box
+              display="flex"
+              flexWrap="wrap"
+              gap="2"
+              alignItems="center"
+              borderRadius={{ base: "12px", md: "15px" }}
+              bg="white"
+              px={{ base: "2%", md: "1%" }}
+              py="1%"
+              mb={{ base: "4%", md: "2%" }}
+              w="fit-content"
+              justifyContent="center"
+              // alignItems="center"
+              // w="159px"
             >
-              <g clip-path="url(#clip0_5166_926)">
-                <path
-                  d="M10.502 4.11673e-07C8.42529 4.20711e-07 6.39527 0.61579 4.66857 1.7695C2.94188 2.92321 1.59607 4.56303 0.801316 6.4816C0.00656746 8.40016 -0.201425 10.5113 0.203641 12.5481C0.608706 14.5849 1.60864 16.4558 3.07699 17.9243C4.54534 19.3928 6.41617 20.3929 8.45291 20.7981C10.4896 21.2034 12.6008 20.9956 14.5195 20.201C16.4381 19.4064 18.078 18.0608 19.2319 16.3342C20.3858 14.6076 21.0018 12.5776 21.002 10.501C21.0025 9.12191 20.7312 7.75625 20.2038 6.48205C19.6763 5.20784 18.9029 4.05006 17.9278 3.07486C16.9527 2.09967 15.795 1.32617 14.5208 0.798572C13.2467 0.270974 11.881 -0.000385799 10.502 4.11673e-07ZM10.502 18.9006C8.84048 18.9006 7.21631 18.4079 5.83484 17.4848C4.45337 16.5618 3.37665 15.2498 2.74083 13.7148C2.10501 12.1798 1.93865 10.4907 2.26278 8.86113C2.58692 7.23157 3.387 5.73473 4.56184 4.55989C5.73669 3.38504 7.23353 2.58497 8.86308 2.26083C10.4926 1.93669 12.1817 2.10305 13.7167 2.73887C15.2517 3.37469 16.5637 4.45141 17.4868 5.83288C18.4099 7.21435 18.9025 8.83852 18.9025 10.5C18.8961 12.726 18.0089 14.859 16.4349 16.433C14.8609 18.007 12.7279 18.8941 10.502 18.9006Z"
-                  fill="#3F77A5"
-                />
-                <path
-                  d="M11.0265 5.25098H9.44922V11.5512L14.9618 14.8585L15.7455 13.5458L11.0206 10.7635L11.0265 5.25098Z"
-                  fill="#3F77A5"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_5166_926">
-                  <rect width="21" height="21" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
+              {/* Author Information */}
+              {(blog.content?.blogAuthor || blog.content?.author || blog.blogAuthor) && (
+                <Flex alignItems="center" gap={2}>
+                  <Box>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21"
+                      height="21"
+                      viewBox="0 0 21 21"
+                      fill="none"
+                    >
+                      <path
+                        d="M20.088 19.9496C20.088 20.2281 19.9758 20.4951 19.776 20.6921C19.5763 20.889 19.3053 20.9996 19.0228 20.9996C18.7402 20.9996 18.4693 20.889 18.2695 20.6921C18.0697 20.4951 17.9575 20.2281 17.9575 19.9496V17.8496C17.9575 17.0142 17.6209 16.2129 17.0216 15.6222C16.4223 15.0315 15.6094 14.6996 14.7619 14.6996H6.24015C5.39261 14.6996 4.57976 15.0315 3.98046 15.6222C3.38116 16.2129 3.0445 17.0142 3.0445 17.8496V19.9496C3.0445 20.2281 2.93232 20.4951 2.73255 20.6921C2.53279 20.889 2.26179 20.9996 1.97928 20.9996C1.69677 20.9996 1.42577 20.889 1.22601 20.6921C1.02624 20.4951 0.914062 20.2281 0.914062 19.9496V17.8496C0.914062 16.4572 1.47521 15.1219 2.47405 14.1373C3.47288 13.1527 4.82758 12.5996 6.24015 12.5996H14.7619C16.1745 12.5996 17.5292 13.1527 18.528 14.1373C19.5268 15.1219 20.088 16.4572 20.088 17.8496V19.9496Z"
+                        fill="#3F77A5"
+                      />
+                      <path
+                        d="M10.4999 10.5C9.44652 10.5 8.41679 10.1921 7.54092 9.61522C6.66505 9.03834 5.98239 8.21837 5.57927 7.25906C5.17615 6.29975 5.07066 5.24416 5.27617 4.22576C5.48167 3.20736 5.98895 2.27193 6.73382 1.5377C7.47868 0.803478 8.42768 0.303447 9.46084 0.100875C10.494 -0.101697 11.5649 0.0022881 12.5382 0.399648C13.5114 0.797008 14.3432 1.46992 14.9284 2.33328C15.5136 3.19664 15.826 4.21165 15.826 5.25C15.826 6.64239 15.2649 7.97773 14.266 8.9623C13.2672 9.94687 11.9125 10.5 10.4999 10.5ZM10.4999 8.4C11.132 8.4 11.7498 8.21523 12.2754 7.86911C12.8009 7.52298 13.2104 7.03106 13.4523 6.45548C13.6942 5.87989 13.7575 5.24651 13.6342 4.63547C13.5109 4.02443 13.2065 3.46313 12.7596 3.0226C12.3127 2.58206 11.7433 2.28204 11.1234 2.1605C10.5035 2.03896 9.8609 2.10134 9.27697 2.33975C8.69304 2.57817 8.194 2.98197 7.84286 3.49998C7.49171 4.018 7.30427 4.62699 7.30427 5.25C7.30427 6.08543 7.64093 6.88667 8.24023 7.47741C8.83953 8.06815 9.65238 8.4 10.4999 8.4Z"
+                        fill="#3F77A5"
+                      />
+                    </svg>
+                  </Box>
+                  <Text fontSize="16px" fontWeight="500" color="black">
+                    {blog.content?.blogAuthor || blog.content?.author || blog.blogAuthor}
+                  </Text>
+                </Flex>
+              )}
+            </Box>
+            <Box
+              display="flex"
+              gap="2"
+              alignItems="center"
+              borderRadius={{ base: "12px", md: "15px" }}
+              bg="white"
+              px={{ base: "4%", md: "1%" }}
+              py="1%"
+              mb={{ base: "4%", md: "2%" }}
+              // minW="159px"
+              w="fit-content"
+            >
+              <svg
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_5166_926)">
+                  <path
+                    d="M10.502 4.11673e-07C8.42529 4.20711e-07 6.39527 0.61579 4.66857 1.7695C2.94188 2.92321 1.59607 4.56303 0.801316 6.4816C0.00656746 8.40016 -0.201425 10.5113 0.203641 12.5481C0.608706 14.5849 1.60864 16.4558 3.07699 17.9243C4.54534 19.3928 6.41617 20.3929 8.45291 20.7981C10.4896 21.2034 12.6008 20.9956 14.5195 20.201C16.4381 19.4064 18.078 18.0608 19.2319 16.3342C20.3858 14.6076 21.0018 12.5776 21.002 10.501C21.0025 9.12191 20.7312 7.75625 20.2038 6.48205C19.6763 5.20784 18.9029 4.05006 17.9278 3.07486C16.9527 2.09967 15.795 1.32617 14.5208 0.798572C13.2467 0.270974 11.881 -0.000385799 10.502 4.11673e-07ZM10.502 18.9006C8.84048 18.9006 7.21631 18.4079 5.83484 17.4848C4.45337 16.5618 3.37665 15.2498 2.74083 13.7148C2.10501 12.1798 1.93865 10.4907 2.26278 8.86113C2.58692 7.23157 3.387 5.73473 4.56184 4.55989C5.73669 3.38504 7.23353 2.58497 8.86308 2.26083C10.4926 1.93669 12.1817 2.10305 13.7167 2.73887C15.2517 3.37469 16.5637 4.45141 17.4868 5.83288C18.4099 7.21435 18.9025 8.83852 18.9025 10.5C18.8961 12.726 18.0089 14.859 16.4349 16.433C14.8609 18.007 12.7279 18.8941 10.502 18.9006Z"
+                    fill="#3F77A5"
+                  />
+                  <path
+                    d="M11.0265 5.25098H9.44922V11.5512L14.9618 14.8585L15.7455 13.5458L11.0206 10.7635L11.0265 5.25098Z"
+                    fill="#3F77A5"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_5166_926">
+                    <rect width="21" height="21" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
 
-            <Text fontSize="16px" fontWeight="500" color="black">
-              {(() => {
-                const created = new Date(
-                  blog.createdAt?.$date || blog.createdAt
-                );
-                const updated = new Date(
-                  blog.updatedAt?.$date || blog.updatedAt
-                );
+              <Text fontSize="16px" fontWeight="500" color="black">
+                {(() => {
+                  const created = new Date(
+                    blog.createdAt?.$date || blog.createdAt
+                  );
+                  const updated = new Date(
+                    blog.updatedAt?.$date || blog.updatedAt
+                  );
 
-                // Compare up to minutes
-                // const format = (d) =>
-                //   `${d.getFullYear()}-${d.getMonth()}-${d.getDate()} ${d.getHours()}:${d.getMinutes()}`;
+                  const isSame =
+                    Math.abs(updated.getTime() - created.getTime()) <= 60000;
 
-                const isSame = Math.abs(updated.getTime() - created.getTime()) <= 60000;
+                  const displayDate = isSame ? created : updated;
 
-                const displayDate = isSame ? created : updated;
+                  const label = isSame ? "Published" : "Updated";
 
-                const label = isSame ? "Published" : "Updated";
-
-                return (
-                  <>
-                    <span>{label}</span>
-                    <span style={{ color: "#3F77A5", padding: "0 4px" }}>
-                      ●
-                    </span>
-                    <span>
-                      {displayDate.toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </span>
-                  </>
-                );
-              })()}
-            </Text>
-          </Box>
+                  return (
+                    <>
+                      <span>{label}</span>
+                      <span style={{ color: "#3F77A5", padding: "0 4px" }}>
+                        ●
+                      </span>
+                      <span>
+                        {displayDate.toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </span>
+                    </>
+                  );
+                })()}
+              </Text>
+            </Box>
+          </Flex>
 
           {mainImageUrl && (
             <Box mb={6}>
@@ -625,9 +684,7 @@ const BlogsOverviewDash = () => {
               align="stretch"
             >
               {content.brief && (
-                <Box mt={4} fontSize="16px">
-                  {renderSlateContent(content.brief)}
-                </Box>
+                <Box fontSize="16px">{renderSlateContent(content.brief)}</Box>
               )}
               <Box
                 // p="2%"
@@ -698,7 +755,7 @@ const BlogsOverviewDash = () => {
                       switch (component.type) {
                         case "p":
                           return (
-                            <Box as="p" key={component.id} fontSize="16px">
+                            <Box as="p" key={component.id} fontSize="16px" mt="0" mb="0">
                               {renderSlateContent(component.content.text)}
                             </Box>
                           );
@@ -794,13 +851,13 @@ const BlogsOverviewDash = () => {
 
               {/* FAQ Section */}
               {faqComponents.length > 0 && (
-                <Box mt={8}>
+                <Box>
                   <Heading as="h2" fontSize="36px" mb={4}>
-                    <Text fontSize="16px" mt={2} color="gray.500">
+                    <Text fontSize="36px" color="black">
                       {content.faqs?.title || "Frequently Asked Questions"}
                     </Text>
                   </Heading>
-                  <Accordion allowMultiple>
+                  <Accordion allowMultiple defaultIndex={[0]}>
                     {faqComponents.map((faq, idx) => (
                       <AccordionItem key={faq.id || idx}>
                         <h3>
@@ -832,7 +889,7 @@ const BlogsOverviewDash = () => {
             direction={{ base: "column", md: "column" }}
             width={{ base: "100%", md: "30%" }}
             position={{ base: "relative", md: "sticky" }}
-            top={{ base: "20px", md: "20px" }} // Adjust the top value as needed
+            top={{ base: "20px", md: "50px" }} //85px
             // bg="red"
             // top="20px"
             borderRadius={{ base: "20px", md: "24px" }}
@@ -847,7 +904,31 @@ const BlogsOverviewDash = () => {
             >
               <TableOfContents components={components} />
             </Box>
-            <Box bg="white" borderRadius={{ base: "20px", md: "24px" }}>
+            <Box
+              bg="white"
+              borderRadius={{ base: "20px", md: "24px" }}
+              maxH="50vh"
+              display="flex"
+              flexDirection="column"
+            >
+              {/* Heading (fixed / non-scrollable) */}
+              <Heading
+                fontSize={{ base: "20px", md: "36px" }}
+                fontWeight="600"
+                px={{ base: 4, md: 6 }}
+                pt={{ base: 4, md: 6 }}
+                pb={{ base: 4, md: 2 }}
+                // borderBottom="1px solid #E7E7E7"
+                textAlign={{ base: "center", md: "left" }}
+                flexShrink={0}
+              >
+                Send Us a{" "}
+                <Text as="span" color="#DB7B3A">
+                  Message
+                </Text>
+              </Heading>
+
+              {/* Scrollable Form */}
               <Box
                 as="form"
                 onSubmit={handleSubmit}
@@ -855,25 +936,15 @@ const BlogsOverviewDash = () => {
                 maxW="800px"
                 mx="auto"
                 p={{ base: 4, md: 6 }}
+                overflowY="auto"
+                flex="1"
               >
-                <Heading
-                  fontSize={{ base: "20px", md: "36px" }}
-                  fontWeight="600"
-                  mb="5%"
-                  textAlign={{ base: "center", md: "left" }}
-                >
-                  Send Us a{" "}
-                  <Text as="span" color="#DB7B3A">
-                    Message
-                  </Text>
-                </Heading>
-
                 <VStack spacing={4} align="stretch">
                   {/* Name Fields */}
                   <SimpleGrid columns={1} spacing={4} width="100%">
                     <Input
-                      name="firstName"
-                      value={formData.firstName}
+                      name="fullname"
+                      value={formData.fullname}
                       onChange={handleChange}
                       placeholder="Full name *"
                       bg="#E7E7E7"
@@ -903,11 +974,12 @@ const BlogsOverviewDash = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="Phone Number"
+                      placeholder="Phone Number *"
                       bg="#E7E7E7"
                       border="none"
                       borderRadius="10px"
                       h="44px"
+                      required
                     />
                   </SimpleGrid>
 
@@ -916,13 +988,12 @@ const BlogsOverviewDash = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Write your message *"
+                    placeholder="Write your message"
                     bg="#E7E7E7"
                     border="none"
                     resize="none"
                     borderRadius="10px"
                     h="88px"
-                    required
                   />
 
                   {/* Submit Button */}
