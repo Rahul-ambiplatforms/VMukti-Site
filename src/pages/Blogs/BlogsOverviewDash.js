@@ -255,7 +255,7 @@ const BlogsOverviewDash = () => {
           },
           body: JSON.stringify({
             ...formData,
-            formType: 'Blog'
+            formType: "Blog",
           }),
         }
       );
@@ -272,7 +272,7 @@ const BlogsOverviewDash = () => {
         });
 
         setFormData({
-          fullname:"",
+          fullname: "",
           email: "",
           phone: "",
           message: "",
@@ -303,7 +303,7 @@ const BlogsOverviewDash = () => {
     setBaseUrl(match ? match[1] : url);
   }, []);
   // const IMAGE_BASE_URL =
-    // process.env.REACT_APP_IMAGE_BASE_URL || "http://localhost:5000/uploads";
+  // process.env.REACT_APP_IMAGE_BASE_URL || "http://localhost:5000/uploads";
   const IMAGE_BASE_URL = "https://vmukti.com/backend/uploads";
   useEffect(() => {
     const fetchBlog = async () => {
@@ -440,6 +440,16 @@ const BlogsOverviewDash = () => {
 
   return (
     <Box>
+      {/* component.content.schemaData */}
+      {blog.content.schemas.map((item, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: item.content.schemaData,
+          }}
+        />
+      ))}
       <Helmet>
         <title>
           {blog.content?.metaTitle ||
@@ -476,10 +486,7 @@ const BlogsOverviewDash = () => {
         <meta property="og:site_name" content="VMukti Solutions" />
         <meta property="og:image" content={mainImageOg} />
         <meta property="og:locale" content="en_US" />
-        <meta
-          name="twitter:card"
-          content="summary_large_image"
-        />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@vmukti" />
         <meta
           name="twitter:title"
@@ -546,7 +553,9 @@ const BlogsOverviewDash = () => {
               // w="159px"
             >
               {/* Author Information */}
-              {(blog.content?.blogAuthor || blog.content?.author || blog.blogAuthor) && (
+              {(blog.content?.blogAuthor ||
+                blog.content?.author ||
+                blog.blogAuthor) && (
                 <Flex alignItems="center" gap={2}>
                   <Box>
                     <svg
@@ -567,7 +576,9 @@ const BlogsOverviewDash = () => {
                     </svg>
                   </Box>
                   <Text fontSize="16px" fontWeight="500" color="black">
-                    {blog.content?.blogAuthor || blog.content?.author || blog.blogAuthor}
+                    {blog.content?.blogAuthor ||
+                      blog.content?.author ||
+                      blog.blogAuthor}
                   </Text>
                 </Flex>
               )}
@@ -755,7 +766,13 @@ const BlogsOverviewDash = () => {
                       switch (component.type) {
                         case "p":
                           return (
-                            <Box as="p" key={component.id} fontSize="16px" mt="0" mb="0">
+                            <Box
+                              as="p"
+                              key={component.id}
+                              fontSize="16px"
+                              mt="0"
+                              mb="0"
+                            >
                               {renderSlateContent(component.content.text)}
                             </Box>
                           );
