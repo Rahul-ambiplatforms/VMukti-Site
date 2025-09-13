@@ -50,24 +50,36 @@ const renderSlateContent = (content) => {
       switch (node.type) {
         case "paragraph":
           return (
-            <Box key={i} mb={2}>
+            <Box key={i}>
               <Text textAlign={node.align || "left"}>{children}</Text>
             </Box>
           );
         case "bulleted-list":
-          return <UnorderedList key={i}>{children}</UnorderedList>;
+          return (
+            <UnorderedList key={i} spacing={2} my="2">
+              {children}
+            </UnorderedList>
+          );
         case "numbered-list":
-          return <OrderedList key={i}>{children}</OrderedList>;
+          return (
+            <OrderedList key={i} spacing={2} mb="2">
+              {children}
+            </OrderedList>
+          );
         case "list-item":
           return <ListItem key={i}>{children}</ListItem>;
         case "link":
+          let relAttrs = "noopener noreferrer";
+          if (node.noFollow) {
+            relAttrs += " nofollow";
+          }
           return (
             <Box
               as="a"
               key={i}
               href={node.url}
               target="_blank"
-              rel="noopener noreferrer"
+              rel={relAttrs}
               color="blue.600"
               textDecoration="underline"
               _hover={{ color: "blue.700" }}
@@ -529,7 +541,7 @@ const BlogsOverviewDash = () => {
             as="h1"
             fontSize={{ base: "36px", md: "48px" }}
             mt="8"
-            mb="4"
+            mb={{ base: 2, md: 3 }}
           >
             {content.title}
             {/* {applyColorLogic(content.title || "Blog Title")} */}
@@ -738,6 +750,7 @@ const BlogsOverviewDash = () => {
                             as="h2"
                             id={group.heading.id}
                             fontSize="36px"
+                            mb={{ base: 2, md: 2 }}
                           >
                             {renderSlateContent(group.heading.content.text)}
                           </Heading>
@@ -747,6 +760,8 @@ const BlogsOverviewDash = () => {
                             as="h3"
                             id={group.heading.id}
                             fontSize="20px"
+                            mb={{ base: 2, md: 1 }}
+                            mt="-2"
                           >
                             {renderSlateContent(group.heading.content.text)}
                           </Heading>
@@ -756,6 +771,7 @@ const BlogsOverviewDash = () => {
                             as="h4"
                             id={group.heading.id}
                             fontSize="16px"
+                            mb={{ base: 1, md: 0 }}
                           >
                             {renderSlateContent(group.heading.content.text)}
                           </Heading>
@@ -770,8 +786,8 @@ const BlogsOverviewDash = () => {
                               as="p"
                               key={component.id}
                               fontSize="16px"
-                              mt="0"
-                              mb="0"
+                              mb="-1"
+                              mt="1"
                             >
                               {renderSlateContent(component.content.text)}
                             </Box>

@@ -3,7 +3,7 @@ const path = require("path");
 const axios = require("axios");
 
 const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
-const BASE_URL = "https://vmukti.com";
+const BASE_URL = "https://vmukti.com/";
 
 const formatDate = (date) => {
   return new Date(date).toISOString().split("T")[0]; // Only date
@@ -23,7 +23,7 @@ const getPageLastModified = (pagePath) => {
 
 const fetchBlogPosts = async () => {
   try {
-    const response = await axios.get(`${API_URL}/blog`);
+    const response = await axios.get(`${API_URL}/blogs`);
     if (Array.isArray(response.data)) return response.data;
     else if (Array.isArray(response.data.blogs)) return response.data.blogs;
     else if (Array.isArray(response.data.data)) return response.data.data;
@@ -177,7 +177,7 @@ const generateSitemap = async () => {
         lastmod: getPageLastModified("EventSpotlight"),
       },
       {
-        loc: "/blogs",
+        loc: "/blog",
         priority: "0.6",
         changefreq: "monthly",
         lastmod: getPageLastModified("BlogsDashboard"),
@@ -211,7 +211,7 @@ const generateSitemap = async () => {
           <priority>${page.priority}</priority>
         </url>`;
 
-      if (page.loc === "/blogs") {
+      if (page.loc === "/blog") {
         blogPosts.forEach((post) => {
           if (post.metadata?.urlWords && post.updatedAt) {
             const lastmod = formatDate(post.updatedAt.$date || post.updatedAt);
