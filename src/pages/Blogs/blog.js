@@ -6,11 +6,11 @@ const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
 // Get all blogs with pagination, sorting, and searching
 export const getBlogs = async (page = 1, limit = 6, searchTerm = "", sortOrder = "latest", status = "published") => {
+  console.log("Initial")
   try {
     // Construct the parameters object
     const params = { page, limit };
     
-    // Only add search and sort if they have a value
     if (searchTerm) {
       params.search = searchTerm;
     }

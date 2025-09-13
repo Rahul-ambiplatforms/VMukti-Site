@@ -24,6 +24,7 @@ import FaqsSection from "../../components/faqsSection";
 import faqsData from "../../data/faqsData";
 import schemaData from "../../data/schemaData";
 import { Helmet } from "react-helmet-async";
+import BlogView from "./Components/BlogView";
 // import BlogsDashboard from "../Blogs/HeroSection";
 // import BlogsContent from "../Blogs/BlogsContent";
 // import BlogsOverviewDash from "../Blogs/BlogsOverviewDash";
@@ -108,6 +109,7 @@ const VMuktiHomepage = () => {
         description="Our journey is defined by innovation, impact, and measurable success. We continue to set benchmarks in visual surveillance. Every milestone reflects our commitment to solving real-world challenges using our Computer Vision Systems."
       />
       <PageContentWrapper>
+        <BlogView />
         <CtaBanner href="/contact-us">
           Join the AI-Powered Surveillance Revolution with
           <br />

@@ -72,7 +72,6 @@ export default function BlogsContent() {
   const fetchBlogs = useCallback(async () => {
     setIsLoading(true);
     try {
-      // Pass current state to the API call
       const response = await getBlogs(
         currentPage,
         blogsPerPage,
@@ -81,13 +80,14 @@ export default function BlogsContent() {
         "published"
       );
       // Debug: Log the blog data to inspect author field
-      console.log("Fetched blogs:", response.data);
+      // console.log("Fetched blogs Here :", response.data);
       if (response.status === "success") {
         // Safety: ensure only published blogs are shown even if API changes
         const publishedOnly = Array.isArray(response.data)
           ? response.data.filter((b) => b.status === "published")
           : [];
         setBlogs(publishedOnly);
+        // console.log("All the blogs",blogs)
         setTotalPages(response.pagination.total);
       }
     } catch (error) {
@@ -117,7 +117,7 @@ export default function BlogsContent() {
   // Handler for clearing search
   const clearSearch = () => {
     setSearchTerm("");
-    setCurrentPage(1); // Reset to first page when search is cleared
+    setCurrentPage(1);
   };
 
   // Handler for changing sort order
