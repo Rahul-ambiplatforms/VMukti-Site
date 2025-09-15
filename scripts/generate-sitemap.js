@@ -2,8 +2,9 @@ const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
 
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
-const BASE_URL = "https://vmukti.com/";
+// const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
+const API_URL = "https://vmukti.com/backend/api";
+const BASE_URL = "https://vmukti.com";
 
 const formatDate = (date) => {
   return new Date(date).toISOString().split("T")[0]; // Only date
