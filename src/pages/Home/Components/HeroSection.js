@@ -82,9 +82,10 @@ const HeroSection = () => {
         {/* Decorative Boxes */}
         <Flex
           position="absolute"
-          top={{ md: "8%" }}
+          // top={{ md: "8%" }}
+          top={["", "", "25%", "12%"]}
           bottom={{ base: "59%" }}
-          left={{ base: "80%", md: "32%" }}
+          left={["", "", "25%", "25%"]}
           transform="translateX(-50%)"
           gap="3%"
           zIndex={0}
@@ -94,37 +95,38 @@ const HeroSection = () => {
         >
           <Box
             display={{ base: "none", md: "block" }}
-            height={{ base: "180px", md: "120px", lg: "200px" }}
+            height={["", "100px", "120px", "200px"]}
             minHeight="50px"
             aspectRatio="1/1"
             bg="#BECEDC"
             borderRadius="24px"
-            mt={{ base: "80px", md: "120px", lg: "30%" }}
+            mt={["", "", "80%", "30%"]}
           />
           <Box
             display={{ base: "none", md: "block" }}
-            height={{ base: "80px", md: "120px", lg: "200px" }}
+            height={["", "100px", "120px", "200px"]}
             minHeight="50px"
             aspectRatio="1/1"
             bg="#FFFFFF"
             borderRadius="24px"
-            mt={{ base: "40px", md: "60px", lg: "15%" }}
+            // mt={{ base: "40px", md: "60px", lg: "15%" }}
+            mt={["", "", "65%", "15%"]}
           />
           <Box
             display={{ base: "none", md: "block" }}
-            height={{ base: "80px", md: "120px", lg: "200px" }}
+            height={["", "100px", "120px", "200px"]}
             minHeight="50px"
             width="100%"
             aspectRatio="1/1"
             bg="#3F77A5"
             borderRadius="24px"
+            mt={["", "", "50%", "-1%"]}
           />
         </Flex>
       </Show>
 
       {/* Main Content */}
       <Flex
-        // pl={{ base: "0", md: "2.5%" }}
         direction={{ base: "column-reverse", md: "row" }}
         align="center"
         justify="center"
@@ -133,26 +135,26 @@ const HeroSection = () => {
       >
         {/* Mobile View */}
         <Box
-          overflow="hidden"
+          // overflow="hidden"
           width="full"
           display={{ base: "block", md: "none" }}
         >
           <Flex
-            mt={{ base: "-30%" }}
+            mt={{ base: "-10%" }}
             direction="column"
             position="relative"
-            width="600px"
+            width="auto"
           >
             {/* This is for Mobile */}
             <Image
-              // ml="-20%"
-              mt="5%"
-              // pb="5%"
+              mt="1%"
               src="/assets/tablet.png"
               alt="Computer Vision Solution for Smart Surveillance"
               zIndex={1}
-              width="500px"
-              height="600px"
+              // width="350px"
+              w="100%"
+              // height="323px"
+              h="100%"
               objectFit="cover"
               initial={{ scale: 0.9, opacity: 1 }}
               animate={
@@ -161,46 +163,6 @@ const HeroSection = () => {
               transition={{ duration: 0.5, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.2 }}
             />
-            <Flex
-              direction="column"
-              alignContent="flex-end"
-              justifyContent="flex-end"
-              ml="16%"
-              mt="-15%"
-              mb="2%"
-              // bg="red"
-            >
-              <Box width="13px" height="13px" alignSelf="flex-start" ml="2%">
-                <svg
-                  viewBox="0 0 33 33"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  style={{ display: "block" }}
-                >
-                  <path
-                    d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
-                    fill="#3F77A5"
-                  />
-                </svg>
-              </Box>
-              <Text
-                fontWeight="500"
-                lineHeight="100%"
-                maxW={{ base: "50%", md: "50%" }}
-                fontSize={{ base: "12px", md: "16px", lg: "16px" }}
-                width={{ base: "60%", md: "45%", lg: "40%" }}
-                textAlign="justify"
-                fontStyle="normal"
-                color="#444444"
-                ml="10px"
-                mt={"1%"}
-              >
-                With over 18 years of domain excellence, we safeguard 700+
-                districts through state-backed and enterprise-grade deployments
-                powered by proprietary visual intelligence and precision-tuned
-                computer vision frameworks for mission-critical surveillance.
-              </Text>
-            </Flex>
           </Flex>
         </Box>
 
@@ -238,7 +200,7 @@ const HeroSection = () => {
             <Text as="span" color="#000">
               Solution for{" "}
             </Text>
-            <Box as="span" display={{ base: "block", md: "inline" }}>
+            <Box as="span" display="inline">
               <Text as="span" color="#DB7B3A">
                 ELECTION
               </Text>
@@ -248,9 +210,9 @@ const HeroSection = () => {
             <Flex direction="column" zIndex={1}>
               {" "}
               {/* Desktop Subtext */}
-              {!useBreakpointValue({ base: true, md: false }) && (
+              {!useBreakpointValue({ base: false, md: false }) && (
                 <Flex mt="8px" direction={{ base: "column", md: "row" }}>
-                  <MotionBox
+                  <Box
                     mt="1%"
                     display="flex"
                     alignItems="flex-start"
@@ -263,43 +225,50 @@ const HeroSection = () => {
                     transition={{ duration: 0.9, ease: "easeOut" }}
                     viewport={{ once: false }}
                   >
-                    {/* Desktop View */}
-                    <Box width="30px" height="33px">
-                      <svg
-                        viewBox="0 0 33 33"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        style={{ display: "block" }}
+                    <Flex direction={{base:"column",md:"row"}}>
+                      {/* Desktop View */}
+                      <Box
+                        width={{ base: "20px", md: "33px" }}
+                        height={{ base: "25px", md: "33px" }}
                       >
-                        <path
-                          d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
-                          fill="#3F77A5"
-                        />
-                      </svg>
-                    </Box>
-                    <Text
-                      fontWeight="500"
-                      lineHeight="100%"
-                      maxW={{ base: "220px", md: "40%" }}
-                      fontSize={{ base: "12px", md: "16px", lg: "16px" }}
-                      // width="50%"
-                      color="#444444"
-                      textAlign="justify"
-                    >
-                      With over 18 years of domain excellence, we safeguard 700+
-                      districts through state-backed and enterprise-grade
-                      deployments powered by proprietary visual intelligence and
-                      precision-tuned computer vision frameworks for
-                      mission-critical surveillance.
-                    </Text>
-                  </MotionBox>
+                        <svg
+                          viewBox="0 0 33 33"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          style={{ display: "block" }}
+                        >
+                          <path
+                            d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
+                            fill="#3F77A5"
+                          />
+                        </svg>
+                      </Box>
+                      <Text
+                        fontWeight="500"
+                        lineHeight="100%"
+                        // maxW={{ base: "220px", md: "35%" }}
+                        w={["90%", "90%", "85%", "35%"]}
+                        fontSize={{ base: "14px", md: "16px", lg: "16px" }}
+                        // width="50%"
+                        color="#444444"
+                        textAlign="justify"
+                      >
+                        With over 18 years of domain excellence, we safeguard
+                        700+ districts through state-backed and enterprise-grade
+                        deployments powered by proprietary visual intelligence
+                        and precision-tuned computer vision frameworks for
+                        mission-critical surveillance.
+                      </Text>
+                    </Flex>
+                  </Box>
                 </Flex>
               )}
               {/* Robotic Hand and Button */}
               <Flex
                 position="relative"
                 mt={{ base: "1", md: "" }}
-                ml={{ base: "0", md: "-30px" }}
+                // ml={{ base: "0", md: "-30px" }}
+                ml={["", "", "-65px", "-30px"]}
                 mb={{ base: "15%", md: "5%" }}
                 width="fit-content"
               >
@@ -310,6 +279,7 @@ const HeroSection = () => {
                   src="/assets/robohand.png"
                   alt="Robotic Hand"
                   display={{ base: "none", md: "block" }}
+                  width={["", "", "55%", "90%"]}
                 />
                 <Link to="/contact-us">
                   <MotionButton
@@ -317,17 +287,16 @@ const HeroSection = () => {
                     // onMouseLeave={() => hoverOutAnimation()}
                     onMouseEnter={handleImageHover}
                     onMouseLeave={handleImageLeave}
-                    position="absolute"
-                    padding="24px"
-                    top={{ base: "20%", sm: "20%", md: "25%" }}
-                    left="80%"
-                    // right={{ base: "", sm: "", md: "2%" }}
+                    position="relative"
+                    py={["20px", "12px", "12px", "24px"]}
+                    px={["15px", "20px", "15px", "24px"]}
+                    top={["35%","35%", "25%", "25%" ]}
+                    // left={["", "", "55%", "0%"]}
+                    right={["","","25%","30%"]}
                     bg="white"
                     height={{ base: "34px", sm: "50px" }}
                     borderRadius="24px"
                     color="#3F77A5"
-                    // as={Link}
-                    // to="/contact-us"
                     gap="2"
                     display="flex"
                     _hover={{
@@ -335,15 +304,6 @@ const HeroSection = () => {
                       color: "#2C5E84",
                     }}
                     fontSize={{ base: "14px", sm: "16px" }}
-                    // animate={{
-                    //   x: [0, 5, 0, -5, 0],
-                    //   y: [0, 0, 5, 0, -5],
-                    // }}
-                    // transition={{
-                    //   repeat: Infinity,
-                    //   duration: 0.3,
-                    //   ease: "linear",
-                    // }}
                   >
                     Book Demo
                     <svg
@@ -367,9 +327,10 @@ const HeroSection = () => {
               <MotionImage
                 src="/assets/tablet1.webp"
                 position="absolute"
-                top="25%"
+                top={["", "", "44%", "25%"]}
                 right={["-10px", "-20px", "-30px", "-45px"]} // Adjust for breakpoints: [sm, md, lg, xl]
-                width={["320px", "480px", "660px", "920px"]} // Responsive widths (840->940)
+                width={["320px", "480px", "72%", "70%"]} // Responsive widths (840->940)
+                height={["auto", "auto", "70%", "98%"]}
                 initial={{ scale: 0.8, opacity: 1 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}

@@ -19,20 +19,18 @@ const Diagram = () => {
   // Responsive values
   // const containerWidth = useBreakpointValue({ base: '100%', md: '1446px' })
   const containerHeight = useBreakpointValue({ base: "auto", md: "760px" });
-  const leftPanelWidth = useBreakpointValue({ base: "100%", md: "32%" }); // Full width on small screens
-  const rightPanelPadding = useBreakpointValue({ base: "4", md: "8" }); // Smaller padding on small screens
-  // const fontSize = useBreakpointValue({ base: 'xl', md: '2xl' }) // Smaller font size on small screens
-  // const nodeFontSize = useBreakpointValue({ base: 'xs', md: 'sm' }) // Smaller font size for nodes on small screens
-  // const nodePosition = useBreakpointValue({ base: '10%', md: '5%' }) // Adjust node position on small screens
-
+  const leftPanelWidth = useBreakpointValue(["100%", "100%", "100%", "32%"]);
+  const rightPanelPadding = useBreakpointValue({ base: "4", md: "8" });
+  const svgSize = useBreakpointValue({ base: "25", md: "25" });
   return (
     <Flex
       height={containerHeight}
       borderRadius="24px"
       overflow="hidden"
       bg="white"
-      mt="10%"
-      direction={{ base: "column", md: "row" }} // Stack vertically on small screens
+      mt={{ base: "0", md: "10%" }}
+      // direction={{ base: "column", md: "row" }}
+      direction={["column", "column", "column", "row"]}
       mb="4%"
       position="relative"
       zIndex={1}
@@ -41,9 +39,9 @@ const Diagram = () => {
       <Box
         bg="#3F77A5"
         width={leftPanelWidth}
-        height={{ md: "100%" }}
+        height={["90%", "90%", "90%", "100%"]}
         color="white"
-        p={{ base: "4", md: "8" }} // Smaller padding on small screens
+        p={{ base: "6", md: "8" }} // Smaller padding on small screens
         display="flex"
         flexDirection="column"
         textAlign={{ base: "left", md: "left" }} // Center text on small screens
@@ -52,8 +50,9 @@ const Diagram = () => {
       >
         <HeadingAnimation>
           <Text
-            w="90%"
-            fontSize={{ base: "20px", md: "48px" }}
+            w={["100%", "100%", "95%", "90%"]}
+            // fontSize={{ base: "20px", md: "48px" }}
+            fontSize={["24px", "24px", "32px", "48px"]}
             fontWeight="500"
             // ml={{ md: "5%" }}
             // mt="5%"
@@ -69,13 +68,13 @@ const Diagram = () => {
             // ml={{ md: "5%" }}
             gap={5}
             direction={{ base: "column", md: "column" }}
-            pb={{ base: "25%" }}
+            // pb={{ base: "25%" }}
           >
             <Box>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
+                width={svgSize}
+                height={svgSize}
                 viewBox="0 0 33 33"
                 fill="none"
                 bg="red"
@@ -90,9 +89,9 @@ const Diagram = () => {
             <Text
               color="white"
               fontWeight="500"
-              maxW={{ base: "90%", md: "400px" }} // Reduced max width
-              fontSize={{ md: "16px" }}
-              lineHeight="1.1"
+              w={["100%","100%","80%","100%"]}
+              fontSize={{base:"14px", md: "16px" }}
+              lineHeight={{base:"18px", md: "20px" }}
               mt="-1%"
               align="justify"
             >
@@ -110,15 +109,23 @@ const Diagram = () => {
       <Flex
         flex={1}
         p={rightPanelPadding}
-        py={{ base: "25%", md: "0" }} // Adjust padding for small screens
-        // p={{base:"10",md:rightPanelPadding}}
+        py={["5%", null, null, "20%"]}
         justifyContent="center"
         alignItems="center"
         bg="white"
         position="relative"
       >
-        {/* <Image src="../assets/ai_implementation.png" /> */}
-        <Image src={`${process.env.PUBLIC_URL}/assets/ai_implementation.png`} />
+        {/* Desktop Image */}
+        <Image
+          src={`${process.env.PUBLIC_URL}/assets/ai_implementation.png`}
+          display={{ base: "none", md: "block" }}
+        />
+
+        {/* Mobile Image */}
+        <Image
+          src={`${process.env.PUBLIC_URL}/assets/ai_implementation_mobile.png`}
+          display={{ base: "block", md: "none" }}
+        />
       </Flex>
     </Flex>
   );
