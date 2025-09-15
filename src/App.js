@@ -46,7 +46,7 @@ function App() {
   return (
     <HelmetProvider>
       <ChakraProvider theme={theme}>
-        <CustomCursor />
+        {/* <CustomCursor /> */}
         <Router>
           <ErrorBoundary>
             <Navbar />
