@@ -68,7 +68,7 @@ const TestimonialCard = ({ testimonial }) => {
   return (
     <VStack
       display="flex"
-      flexDirection="column" // Ensures VStack children are stacked vertically
+      flexDirection="column"
       bg="white"
       borderRadius="24px"
       p={8}
@@ -90,7 +90,7 @@ const TestimonialCard = ({ testimonial }) => {
         />
       </svg>
 
-      <Text color="#444" fontSize="16px" lineHeight="20px" flex="1">
+      <Text color="#444" fontSize={{base:"14px",md:"16px"}} lineHeight={{base:"18px",md:"20px"}} flex="1">
         {" "}
         {testimonial.description}
       </Text>
@@ -135,8 +135,36 @@ const Reviews = () => {
 
   return (
     <Box my="3%">
-      <Flex align="center" direction={{ base: "column", lg: "row" }}>
+      <Flex align={["left","left","left","center"]} direction={{ base: "column", lg: "row" }}>
         {/* Left Side: Testimonials Slider */}
+        <Box mb="2%" mt="2%" display={["block", "block", "block", "none"]}>
+          <svg
+            width="25"
+            height="25"
+            viewBox="0 0 34 34"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30.0367 33C31.6935 32.9989 33.0357 31.6548 33.0346 29.9979L33.0159 2.99793C33.0148 1.34108 31.6707 -0.00113821 30.0138 7.15256e-06C28.357 0.00115204 27.0148 1.34523 27.0159 3.00208L27.0325 27.0021L3.03251 27.0187C1.37566 27.0198 0.0334406 28.3639 0.0345855 30.0207C0.0357304 31.6776 1.3798 33.0198 3.03666 33.0187L30.0367 33ZM5 5L2.88015 7.12279L27.9147 32.1228L30.0346 30L32.1544 27.8772L7.11985 2.87721L5 5Z"
+              fill="#3F77A5"
+            />
+          </svg>
+        </Box>
+        <Heading
+          as="h2"
+          fontSize="16px"
+          fontWeight="600"
+          lineHeight="45px"
+          display={["block", "block", "block", "none"]}
+          mb="4%"
+        >
+          <Text as="span" color="#DB7B3A">
+            Experiences
+          </Text>{" "}
+          from Our
+          {/* <br /> */} Clients
+        </Heading>
         <Box
           w={{ base: "100%", lg: "70%" }}
           position="relative"
@@ -154,14 +182,15 @@ const Reviews = () => {
 
         {/* Right Side: Title and Navigation */}
         <Flex
-          w={{ base: "100%", md: "35%", lg: "35%" }}
-          align={{ base: "center", md: "flex-start", lg: "flex-start" }}
+          // w={{ base: "100%", md: "35%", lg: "35%" }}
+          w={["100%", "100%", "100%", "35%"]}
+          align={["flex-end", "flex-end", "flex-end", "flex-start"]}
           justifyContent="space-between"
           spacing={4}
           direction="column"
-          mt={{ base: 16, md: 48 }}
+          mt={["0%", "0%", "0%", "14%"]}
         >
-          <Box mb="2%">
+          <Box mb="2%" display={["none", "none", "none", "block"]}>
             <svg
               width="34"
               height="34"
@@ -175,7 +204,13 @@ const Reviews = () => {
               />
             </svg>
           </Box>
-          <Heading as="h2" fontSize="36px" fontWeight="600" lineHeight="45px">
+          <Heading
+            as="h2"
+            fontSize="36px"
+            fontWeight="600"
+            lineHeight="45px"
+            display={["none", "none", "none", "block"]}
+          >
             <Text as="span" color="#DB7B3A">
               Experiences
             </Text>{" "}
@@ -184,7 +219,7 @@ const Reviews = () => {
             Clients
           </Heading>
 
-          <Flex gap="2" mt="25%">
+          <Flex gap="2" mt={["5%", "5%", "5%", "25%"]}>
             {/* Previous Button */}
             <IconButton
               aria-label="Previous testimonial"

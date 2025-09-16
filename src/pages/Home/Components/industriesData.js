@@ -521,7 +521,7 @@ export default function IndustryGrid({
               textAlign="center"
               position="relative"
               zIndex="2"
-              w="65%"
+              w={["90%","90%","70%","65%"]}
               mx="auto"
             >
               {heading}

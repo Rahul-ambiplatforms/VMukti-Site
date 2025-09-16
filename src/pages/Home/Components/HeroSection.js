@@ -196,7 +196,7 @@ const HeroSection = () => {
             <TypeAnimation
               sequence={typewriterSequence}
               speed={50} // Typing speed
-              style={{ color: "#DB7B3A" }} // Style of the animated word
+              style={{ color: "#DB7B3A" }} 
               wrapper="span" // Use a span to keep it inline
               repeat={Infinity} // Loop forever
               cursor={true}
@@ -206,7 +206,7 @@ const HeroSection = () => {
           </MotionBox>
           <Flex>
             <Flex direction="column" zIndex={1}>
-              {!useBreakpointValue({ base: true, md: false }) && ( // Show on md and up
+              {!useBreakpointValue({ base: false, md: false }) && ( 
                 <Flex mt="8px" direction={{ base: "column", md: "row" }}>
                   <MotionBox
                     mt="1%"

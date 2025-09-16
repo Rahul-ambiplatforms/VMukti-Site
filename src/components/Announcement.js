@@ -32,7 +32,7 @@ const Announcement = () => {
       align="center"
       overflow="hidden"
       position="fixed"
-      top="88px"
+      top={{base:"56px",md:"88px"}}
       zIndex="999"
     >
       <Box
