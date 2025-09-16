@@ -178,7 +178,7 @@ const generateSitemap = async () => {
         lastmod: getPageLastModified("EventSpotlight"),
       },
       {
-        loc: "/blogs",
+        loc: "/blog",
         priority: "0.6",
         changefreq: "monthly",
         lastmod: getPageLastModified("BlogsDashboard"),
@@ -212,7 +212,7 @@ const generateSitemap = async () => {
           <priority>${page.priority}</priority>
         </url>`;
 
-      if (page.loc === "/blogs") {
+      if (page.loc === "/blog") {
         blogPosts.forEach((post) => {
           if (post.metadata?.urlWords && post.updatedAt) {
             const lastmod = formatDate(post.updatedAt.$date || post.updatedAt);

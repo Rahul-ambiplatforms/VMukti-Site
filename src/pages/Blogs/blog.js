@@ -21,8 +21,9 @@ export const getBlogs = async (page = 1, limit = 6, searchTerm = "", sortOrder =
     if (status) {
       params.status = status;
     }
-
+    // console.log("RESPONSE RESPONSE",getBlogs)
     const response = await axios.get(`${API_URL}/blogs`, { params });
+    // console.log("OUTPUT---------------------")
     return response.data;
   } catch (error) {
     throw error.response?.data || error.message;

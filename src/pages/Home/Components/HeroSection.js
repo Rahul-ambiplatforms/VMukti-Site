@@ -349,7 +349,7 @@ const HeroSection = () => {
 
             {!useBreakpointValue({ base: true, md: false }) && (
               <MotionImage
-                src="/assets/tablet1.webp" //------------desktop View
+                src="/assets/tablet2.png" //------------desktop View
                 position="absolute"
                 bottom="-6%"
                 // bg={{base:"black",sm:"darkred",md:"yellow",lg:"darkorange",xl:"blue"}}
