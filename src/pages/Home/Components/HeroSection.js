@@ -12,40 +12,41 @@ import {
 import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TypeAnimation } from "react-type-animation"; // <-- 1. Import the new component
 
 // Motion components
 const MotionImage = motion(Image);
 const MotionBox = motion(Box);
 const MotionButton = motion(Button);
 
+// Array of words for the typewriter animation
+const industries = [
+  "Manufacturing", "Warehouse", "Healthcare", "Oil & Gas", "Election",
+  "Education", "Transportation", "Smart City", "Pharma", "Banking",
+  "Enterprise", "Logistics", "Government", "Sports", "Entertainment",
+  "Defense", "Hospitality", "Construction",
+];
+
 const HeroSection = () => {
-  const imageRef = useRef(null); // Reference for the image
-  const sectionRef = useRef(null); // Reference for the section containing the image
+  const imageRef = useRef(null);
+  const sectionRef = useRef(null);
   const ref = useRef(null);
   const inView = useInView(ref, { threshold: 0.9, triggerOnce: false });
 
-  const imageScaleAnimation = () => {
-    gsap.to(imageRef.current, {
-      y: 40,
-      duration: 1,
-      repeat: -1,
-      yoyo: true,
-    });
-  };
+  // 2. Transform the industries array into a sequence for the typewriter
+  // This format is ['Word 1', 1500ms pause, 'Word 2', 1500ms pause, ...]
+  const typewriterSequence = industries.flatMap((industry) => [industry, 1500]);
+
 
   const handleImageHover = () => {
-    // Animate the image UP by 40px for a "lift" effect
     gsap.to(imageRef.current, {
-      y: 40, // Changed to negative for a more natural lift effect
+      y: -20, // Negative value for a lift effect
       duration: 0.4,
       ease: "power2.out",
     });
   };
 
-  // Function to run when the mouse LEAVES the image area
   const handleImageLeave = () => {
-    // Animate the image back to its original position
     gsap.to(imageRef.current, {
       y: 0,
       duration: 0.4,
@@ -82,7 +83,6 @@ const HeroSection = () => {
         {/* Decorative Boxes */}
         <Flex
           position="absolute"
-          // top={{ md: "8%" }}
           top={["", "", "25%", "12%"]}
           bottom={{ base: "59%" }}
           left={["", "", "25%", "25%"]}
@@ -109,7 +109,6 @@ const HeroSection = () => {
             aspectRatio="1/1"
             bg="#FFFFFF"
             borderRadius="24px"
-            // mt={{ base: "40px", md: "60px", lg: "15%" }}
             mt={["", "", "65%", "15%"]}
           />
           <Box
@@ -133,9 +132,8 @@ const HeroSection = () => {
         position="relative"
         zIndex={1}
       >
-        {/* Mobile View */}
+        {/* Mobile View Image */}
         <Box
-          // overflow="hidden"
           width="full"
           display={{ base: "block", md: "none" }}
         >
@@ -145,15 +143,12 @@ const HeroSection = () => {
             position="relative"
             width="auto"
           >
-            {/* This is for Mobile */}
-            <Image
+            <MotionImage
               mt="1%"
               src="/assets/tablet.png"
               alt="Computer Vision Solution for Smart Surveillance"
               zIndex={1}
-              // width="350px"
               w="100%"
-              // height="323px"
               h="100%"
               objectFit="cover"
               initial={{ scale: 0.9, opacity: 1 }}
@@ -161,12 +156,9 @@ const HeroSection = () => {
                 inView ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 1 }
               }
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              viewport={{ once: false, amount: 0.2 }}
             />
           </Flex>
         </Box>
-
-        {/* Desktop View */}
 
         {/* Content Section */}
         <Box
@@ -184,11 +176,10 @@ const HeroSection = () => {
             fontSize={{ base: "32px", md: "48px", lg: "64px" }}
             fontWeight="600"
             letterSpacing="0%"
-            // fontStyle="normal"
             lineHeight="1.2"
             zIndex={1}
             initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0.6, x: -50 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <Text as="span" color="#000">
@@ -200,33 +191,35 @@ const HeroSection = () => {
             <Text as="span" color="#000">
               Solution for{" "}
             </Text>
-            <Box as="span" display="inline">
-              <Text as="span" color="#DB7B3A">
-                ELECTION
-              </Text>
-            </Box>
+            
+            {/* --- 3. UPDATED TYPEWRITER ANIMATION --- */}
+            <TypeAnimation
+              sequence={typewriterSequence}
+              speed={50} // Typing speed
+              style={{ color: "#DB7B3A" }} // Style of the animated word
+              wrapper="span" // Use a span to keep it inline
+              repeat={Infinity} // Loop forever
+              cursor={true}
+            />
+            {/* --- END OF UPDATE --- */}
+
           </MotionBox>
           <Flex>
             <Flex direction="column" zIndex={1}>
-              {" "}
-              {/* Desktop Subtext */}
-              {!useBreakpointValue({ base: false, md: false }) && (
+              {!useBreakpointValue({ base: true, md: false }) && ( // Show on md and up
                 <Flex mt="8px" direction={{ base: "column", md: "row" }}>
-                  <Box
+                  <MotionBox
                     mt="1%"
                     display="flex"
                     alignItems="flex-start"
                     gap={2}
                     initial={{ opacity: 0, x: -80 }}
-                    // whileInView={{ opacity: 1, x: 0 }}
                     animate={
-                      inView ? { opacity: 1, x: 0 } : { opacity: 0.6, x: -50 }
+                      inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }
                     }
                     transition={{ duration: 0.9, ease: "easeOut" }}
-                    viewport={{ once: false }}
                   >
-                    <Flex direction={{base:"column",md:"row"}}>
-                      {/* Desktop View */}
+                    <Flex direction={{ base: "column", md: "row" }}>
                       <Box
                         width={{ base: "20px", md: "33px" }}
                         height={{ base: "25px", md: "33px" }}
@@ -246,10 +239,8 @@ const HeroSection = () => {
                       <Text
                         fontWeight="500"
                         lineHeight="100%"
-                        // maxW={{ base: "220px", md: "35%" }}
                         w={["90%", "90%", "85%", "35%"]}
                         fontSize={{ base: "14px", md: "16px", lg: "16px" }}
-                        // width="50%"
                         color="#444444"
                         textAlign="justify"
                       >
@@ -260,22 +251,19 @@ const HeroSection = () => {
                         mission-critical surveillance.
                       </Text>
                     </Flex>
-                  </Box>
+                  </MotionBox>
                 </Flex>
               )}
               {/* Robotic Hand and Button */}
               <Flex
                 position="relative"
                 mt={{ base: "1", md: "" }}
-                // ml={{ base: "0", md: "-30px" }}
                 ml={["", "", "-65px", "-30px"]}
                 mb={{ base: "15%", md: "5%" }}
                 width="fit-content"
               >
                 <Image
                   ref={imageRef}
-                  // onMouseEnter={handleImageHover}
-                  // onMouseLeave={handleImageLeave}
                   src="/assets/robohand.png"
                   alt="Robotic Hand"
                   display={{ base: "none", md: "block" }}
@@ -283,16 +271,13 @@ const HeroSection = () => {
                 />
                 <Link to="/contact-us">
                   <MotionButton
-                    // onMouseEnter={() => imageScaleAnimation()}
-                    // onMouseLeave={() => hoverOutAnimation()}
                     onMouseEnter={handleImageHover}
                     onMouseLeave={handleImageLeave}
                     position="relative"
                     py={["20px", "12px", "12px", "24px"]}
                     px={["15px", "20px", "15px", "24px"]}
-                    top={["35%","35%", "25%", "25%" ]}
-                    // left={["", "", "55%", "0%"]}
-                    right={["","","25%","30%"]}
+                    top={["35%", "35%", "25%", "25%"]}
+                    right={["", "", "25%", "30%"]}
                     bg="white"
                     height={{ base: "34px", sm: "50px" }}
                     borderRadius="24px"
@@ -323,13 +308,13 @@ const HeroSection = () => {
               </Flex>
             </Flex>
 
-            {!useBreakpointValue({ base: true, md: false }) && (
+            {!useBreakpointValue({ base: true, md: false }) && ( // Show on md and up
               <MotionImage
                 src="/assets/tablet1.webp"
                 position="absolute"
                 top={["", "", "44%", "25%"]}
-                right={["-10px", "-20px", "-30px", "-45px"]} // Adjust for breakpoints: [sm, md, lg, xl]
-                width={["320px", "480px", "72%", "70%"]} // Responsive widths (840->940)
+                right={["-10px", "-20px", "-30px", "-45px"]}
+                width={["320px", "480px", "72%", "70%"]}
                 height={["auto", "auto", "70%", "98%"]}
                 initial={{ scale: 0.8, opacity: 1 }}
                 whileInView={{ scale: 1, opacity: 1 }}
