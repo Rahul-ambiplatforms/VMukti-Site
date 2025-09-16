@@ -118,7 +118,7 @@ const dropdownItems = {
     // { label: 'Help Desk', path: '/whoweare/help-desk' },
     // { label: 'Terms & Condition', path: '/whoweare/terms' },
     // { label: 'Warranty Policy', path: '/whoweare/warranty' },
-    // { label: 'Privacy Policy', path: '/whoweare/privacy' },
+    { label: 'Privacy Policy', path: '/whoweare/privacy-policy' },
   ],
 }
 
