@@ -14,10 +14,10 @@ const CtaBanner = ({ children, buttonText = "Let's talk", href = "#" }) => {
   const buttonSize = useBreakpointValue({ base: "sm", md: "md" });
 
   return (
-    <Box mt="2%" w="full">
+    <Box mt={{base:"4%",md:"2%"}} w="full">
       <Flex
         direction={{ base: "column", sm: "row" }}
-        align="center"
+        align={{base:"left",md:"center"}}
         justifyContent="space-between"
         bg="#BECEDC"
         borderRadius="24px"
@@ -27,10 +27,10 @@ const CtaBanner = ({ children, buttonText = "Let's talk", href = "#" }) => {
         {/* The dynamic title text is passed as children */}
         <Heading
           as="h2"
-          fontSize="36px"
-          fontWeight="500"
+          fontSize={{base:"16px",md:"36px"}}
+          fontWeight={{base:"600",md:"500"}}
           color="black"
-          textAlign={{ base: "center", sm: "left" }}
+          textAlign={{ base: "left", sm: "left" }}
         >
           {children}
         </Heading>
@@ -39,8 +39,8 @@ const CtaBanner = ({ children, buttonText = "Let's talk", href = "#" }) => {
           as="a"
           href={href}
           // size={buttonSize}
-          w="179px"
-          h="48px"
+          w={{base:"135px",md:"179px"}}
+          h={{base:"34px",md:"48px"}}
           p="12px 32px"
           bg="white"
           borderRadius="24px"

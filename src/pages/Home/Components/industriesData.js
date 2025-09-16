@@ -308,8 +308,8 @@ export default function IndustryGrid({
                       p="10px 20px"
                       borderRadius="full"
                       fontWeight="600"
-                      // boxShadow="md"
-                      // _hover={{ textDecoration: 'none', boxShadow: 'lg' }}
+                      // whiteSpace="normal" 
+                      // wordBreak="break-word"
                     >
                       {industry.text}
                       <AllIndustriesArrow ml={2} />
@@ -405,9 +405,9 @@ export default function IndustryGrid({
                           position="absolute"
                           top="70px"
                           left="20px"
-                          whiteSpace="nowrap"
+                          whiteSpace="wrap"
                           overflow="hidden"
-                          textOverflow="ellipsis"
+                          textAlign="left"
                           maxWidth="90%"
                         >
                           {industry.name}
@@ -467,7 +467,7 @@ export default function IndustryGrid({
                         textAlign="center"
                         style={{
                           transform: "rotateY(180deg)",
-                          backfaceVisibility: "hidden", // Ensures front side is not visible
+                          backfaceVisibility: "hidden", 
                         }}
                       ></Box>
                     </Box>
@@ -507,7 +507,6 @@ export default function IndustryGrid({
           opacity: "1",
           zIndex: "0",
         }}
-        // bg="red"
       >
         {/* We can add some creativity here also. */}
         <HeadingAnimation>

@@ -260,15 +260,13 @@ const Achieved = ({ heading, description, data = achievementsData }) => {
             {[...achievementsData, ...achievementsData].map((item, index) => (
               <Box
                 key={index} // Added unique key for mapping
-                width={{
-                  base: "200px",
-                  md: "280px",
-                }}
-                mx={4}
+                // width={{
+                //   base: "166px",
+                //   md: "280px",
+                // }}
+                w={["166px","166px","220px","280px"]}
+                mx={{ base: 1, md: 4 }}
                 flexShrink={0}
-                // ===============================================
-                // UPDATED: Using new color properties from data
-                // ===============================================
                 backgroundColor={item.bgColor}
                 display="flex"
                 flexDirection="column"

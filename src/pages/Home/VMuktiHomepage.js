@@ -99,7 +99,7 @@ const VMuktiHomepage = () => {
         <Reviews />
 
         <Industries heading="AI Computer Vision System for Evolving Industries" />
-        <Box position="relative" zIndex="9" mt={{base:"4%",md:"-9%"}}>
+        <Box position="relative" zIndex="9" mt={{ base: "4%", md: "-9%" }}>
           <Results />
         </Box>
       </PageContentWrapper>
@@ -111,9 +111,7 @@ const VMuktiHomepage = () => {
       <PageContentWrapper>
         <BlogView />
         <CtaBanner href="/contact-us">
-          Join the AI-Powered Surveillance Revolution with
-          <br />
-          VMukti Solutions
+          Join the AI-Powered Surveillance Revolution with VMukti Solutions
         </CtaBanner>
         <FaqsSection faqsList={faqsData.homepage} />
       </PageContentWrapper>

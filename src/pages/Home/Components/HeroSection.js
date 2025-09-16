@@ -21,10 +21,24 @@ const MotionButton = motion(Button);
 
 // Array of words for the typewriter animation
 const industries = [
-  "Manufacturing", "Warehouse", "Healthcare", "Oil & Gas", "Election",
-  "Education", "Transportation", "Smart City", "Pharma", "Banking",
-  "Enterprise", "Logistics", "Government", "Sports", "Entertainment",
-  "Defense", "Hospitality", "Construction",
+  "Manufacturing",
+  "Warehouse",
+  "Healthcare",
+  "Oil & Gas",
+  "Election",
+  "Education",
+  "Transportation",
+  "Smart City",
+  "Pharma",
+  "Banking",
+  "Enterprise",
+  "Logistics",
+  "Government",
+  "Sports",
+  "Entertainment",
+  "Defense",
+  "Hospitality",
+  "Construction",
 ];
 
 const HeroSection = () => {
@@ -36,7 +50,6 @@ const HeroSection = () => {
   // 2. Transform the industries array into a sequence for the typewriter
   // This format is ['Word 1', 1500ms pause, 'Word 2', 1500ms pause, ...]
   const typewriterSequence = industries.flatMap((industry) => [industry, 1500]);
-
 
   const handleImageHover = () => {
     gsap.to(imageRef.current, {
@@ -133,10 +146,7 @@ const HeroSection = () => {
         zIndex={1}
       >
         {/* Mobile View Image */}
-        <Box
-          width="full"
-          display={{ base: "block", md: "none" }}
-        >
+        <Box width="full" display={{ base: "block", md: "none" }}>
           <Flex
             mt={{ base: "-10%" }}
             direction="column"
@@ -191,22 +201,19 @@ const HeroSection = () => {
             <Text as="span" color="#000">
               Solution for{" "}
             </Text>
-            
-            {/* --- 3. UPDATED TYPEWRITER ANIMATION --- */}
             <TypeAnimation
               sequence={typewriterSequence}
-              speed={50} // Typing speed
-              style={{ color: "#DB7B3A" }} 
-              wrapper="span" // Use a span to keep it inline
-              repeat={Infinity} // Loop forever
+              speed={50}
+              style={{ color: "#DB7B3A" }}
+              wrapper="span"
+              repeat={Infinity}
               cursor={true}
             />
             {/* --- END OF UPDATE --- */}
-
           </MotionBox>
           <Flex>
             <Flex direction="column" zIndex={1}>
-              {!useBreakpointValue({ base: false, md: false }) && ( 
+              {!useBreakpointValue({ base: false, md: false }) && (
                 <Flex mt="8px" direction={{ base: "column", md: "row" }}>
                   <MotionBox
                     mt="1%"

@@ -57,17 +57,17 @@ const Results = ({ data }) => {
   const defaultHeading = (
     <Heading
       as="h1"
-      fontSize="48px"
+      fontSize={{ base: "24px", md: "48px" }}
       fontWeight="600"
       color="#000"
-      lineHeight="60px"
+      lineHeight={{ base: "30px", md: "60px" }}
     >
       Results{" "}
       <Text as="span" color="#3F77A5">
         You Can Trust
       </Text>{" "}
       with Our Computer
-      <br />
+      {/* <br /> */}
       Vision{" "}
       <Text as="span" color="#DB7B3A">
         Solutions
@@ -82,10 +82,10 @@ const Results = ({ data }) => {
     headingContent = (
       <Heading
         as="h1"
-        fontSize="48px"
+        fontSize={{base:"24px",md:"48px"}}
         fontWeight="600"
         color="black"
-        lineHeight="60px"
+        lineHeight={{base:"30px",md:"60px"}}
       >
         {data.heading}
       </Heading>
@@ -100,25 +100,22 @@ const Results = ({ data }) => {
 
   return (
     <Box w="100%" bg="white" borderRadius="24px" py={{ base: 4, md: 8 }} px="8">
-
       <VStack
-        spacing={5} 
-        alignItems="center" 
+        spacing={5}
+        alignItems="center"
         textAlign="center"
         mx="auto"
-        w="100%" 
+        w="100%"
         mb={{ base: 6, md: 8 }}
       >
-        <Box w={{ base: "90%", md: "80%", lg: "80%" }}>
-          {headingContent}
-        </Box>
+        <Box w={["100%","100%","100%","90%"]} >{headingContent}</Box>
 
-        <Box w={{ base: "90%", md: "90%", lg: "90%" }}>
+        <Box w={{ base: "100%", md: "90%", lg: "90%" }}>
           <Text
             color="black"
             fontWeight="500"
-            fontSize="16px"
-            lineHeight="20px"
+            fontSize={{base:"14px",md:"16px"}}
+            lineHeight={{base:"18px",md:"20px"}}
           >
             {subheadingContent}
           </Text>
@@ -142,7 +139,7 @@ const Results = ({ data }) => {
 
             <Heading
               as="h3"
-              fontSize="16px"
+              fontSize={{base:"14px",md:"16px"}}
               fontWeight="700"
               mt="2"
               color="#000000"
@@ -155,7 +152,7 @@ const Results = ({ data }) => {
               mx="auto"
               fontSize="14px"
               lineHeight="18px"
-              w="85%"
+              w={{base:"100%",md:"85%"}}
             >
               {feature.description}
             </Text>
