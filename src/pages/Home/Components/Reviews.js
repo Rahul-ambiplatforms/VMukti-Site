@@ -64,10 +64,8 @@ const testimonials = [
   },
 ];
 
-// --- COMPONENT: Individual Testimonial Card ---
 const TestimonialCard = ({ testimonial }) => {
   return (
-    // ✅ FIX 2: Added explicit flex properties to ensure consistent height
     <VStack
       display="flex"
       flexDirection="column" // Ensures VStack children are stacked vertically
@@ -109,7 +107,9 @@ const TestimonialCard = ({ testimonial }) => {
             />
           </Box>
           <VStack align="start" spacing={0} ml={4}>
-            <Text fontWeight="700" fontSize="16px" color="black">{testimonial.name}</Text>
+            <Text fontWeight="700" fontSize="16px" color="black">
+              {testimonial.name}
+            </Text>
             <Text fontSize="16px" fontWeight="500" color="#444">
               {testimonial.company}
             </Text>
@@ -120,29 +120,6 @@ const TestimonialCard = ({ testimonial }) => {
   );
 };
 
-// Custom Icon from previous examples
-const BentArrowIcon = (props) => (
-  <Icon viewBox="0 0 44 44" {...props}>
-    <path
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="3"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M27.5,13.2v-5a2,2,0,0,0-2-2h-18a2,2,0,0,0-2,2v18a2,2,0,0,0,2,2h5"
-    />
-    <path
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="3"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M38.5,18.2l-11,11-11-11"
-    />
-  </Icon>
-);
-
-// --- MAIN REVIEWS COMPONENT ---
 const Reviews = () => {
   const sliderRef = React.useRef(null);
   const slides_to_show = useBreakpointValue({ base: 1, md: 2, lg: 3 });

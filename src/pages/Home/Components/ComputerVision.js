@@ -80,11 +80,12 @@ const ComputerVision = () => {
 
   return (
     <Box >
-      <VStack spacing={4} textAlign="center" mb={{ base: 6, md: 10 }}>
+      <VStack spacing={4} textAlign="center" mb={{ base: 4, md: 8 }}>
         <Heading
           as="h1"
-          fontSize={{ base: "32px", md: "40px", lg: "48px" }}
+          fontSize={{ base: "24px", md: "40px", lg: "48px" }}
           fontWeight="500"
+          w={["100%","100%","90%","70%"]}
         >
           Explore Our{" "}
           <Text as="span" color="#3F77A5" fontWeight="500">
@@ -97,8 +98,9 @@ const ComputerVision = () => {
         </Heading>
         <Text
           color="#000000"
-          fontSize="16px"
+          fontSize={{base:"14px",md:"16px"}}
           fontWeight="500"
+          lineHeight={{base:"18px",md:"20px"}}
           w={{ base: "100%", md: "95%", lg: "95%" }}
         >
           We handle the complete lifecycle from data collection to computer
@@ -112,7 +114,7 @@ const ComputerVision = () => {
       <Box
         bg="white"
         // p={{ base: 4, sm: 6, md: 8 }}
-        p={["4","4","6","8"]}
+        pt={["4","4","6","8"]}
         borderRadius="24px"
       >
         <Box
@@ -151,7 +153,7 @@ const ComputerVision = () => {
         </Box>
 
         {/* Removed fixed height. The container is now fully dynamic. */}
-        <Box position="relative" overflow="hidden">
+        <Box position="relative" overflow="hidden" p={["4","4","6","8"]}>
           {/* mode="wait" ensures old content leaves before new content enters, preventing height jumps. */}
           <AnimatePresence mode="wait" initial={false} custom={direction}>
             <motion.div

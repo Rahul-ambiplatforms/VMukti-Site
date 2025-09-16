@@ -512,7 +512,8 @@ const Navbar = () => {
                 ))}
               </HStack>
             </Show>
-            <Show below="md">
+            {/* -------------------------------Ambicam------------------------------- */}
+            {/* <Show below="md">
               <Button
                 width={contactBtnSize}
                 height={contactBtnHeight}
@@ -530,7 +531,7 @@ const Navbar = () => {
               >
                 Ambicam
               </Button>
-            </Show>
+            </Show> */}
             {/* inside hamburger */}
             <Hide above="xl">
               {/* below="md" */}

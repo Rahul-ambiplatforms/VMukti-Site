@@ -5,10 +5,11 @@ export const homeSolutions = {
   solutions: [
     {
       heading1: "VMS",
-      heading2: "Video Management System",
+      heading2: "Video Management System",  
       content:
         "Elevate your security operations with our next-gen Video Management Software built for enterprises where precision and performance are non-negotiable. Powered by AI-native architecture, it delivers real-time situational awareness, intelligent analytics, and autonomous threat response at scale.",
       image: "./assets/home_solution_1.png",
+      image_mobile: "./assets/home_solution_mobile_1.png",
       path: "/solution/video-management-system",
     },
     {
@@ -17,6 +18,7 @@ export const homeSolutions = {
       content:
         'A scalable AI surveillance software designed for your large-scale surveillance. EVMS centralizes monitoring across multiple locations, supports "N" number of cameras and integrates with AI analytics and emergency systems to deliver smart and efficient video management to the globe.',
       image: "./assets/home_solution_2.png",
+      image_mobile: "./assets/home_solution_mobile_1.png",
       path: "/solution/enterprise-management-system",
     },
     {
@@ -25,6 +27,7 @@ export const homeSolutions = {
       content:
         "ICCC is your command nerve center unifying surveillance, emergency response, and citywide systems under one intelligent architecture. Powered by real-time analytics and multi-source data fusion, it empowers you to act decisively, secure proactively, and govern with unmatched situational clarity.",
       image: "./assets/home_solution_3.png",
+      image_mobile: "./assets/home_solution_mobile_1.png",
       path: "/solution/integrated-command-control-center",
     },
     {
@@ -33,6 +36,7 @@ export const homeSolutions = {
       content:
         "Experience the power of over 30 proprietary AI analytics modules delivered via our secure, cloud-native architecture. We engineer tailored intelligence solutions that scale seamlessly with your enterprise. Precision-built. Performance-driven. Future-proof.",
       image: "./assets/home_solution_4.png",
+      image_mobile: "./assets/home_solution_mobile_1.png",
       path: "/solution/cloudai",
     },
     {
@@ -41,6 +45,7 @@ export const homeSolutions = {
       content:
         "Our in-house Gen AI suite transforms complex video data into refined operational insights. With GPT-class contextual understanding and scalable visual analytics, it offers your enterprise clarity, speed and total control over every frame.",
       image: "./assets/home_solution_5.png",
+      image_mobile: "./assets/home_solution_mobile_1.png",
       path: "/solution/genai",
     },
     {
@@ -49,6 +54,7 @@ export const homeSolutions = {
       content:
         "Stream CCTV feeds securely to your Command & Control Centre with ultra-HD clarity, dynamic quality adjustment, and multi-layer encryption. Designed for mission-critical use, it supports instant monitoring, remote control, and cloud-archived playback—keeping teams connected and responsive in real time.",
       image: "./assets/home_solution_6.png",
+      image_mobile: "./assets/home_solution_mobile_1.png",
       path: "/solution/live-streaming-solution",
     },
     {
@@ -57,6 +63,7 @@ export const homeSolutions = {
       content:
         "Experience seamless GPS tracking, geo-fencing, and precision PTZ control with fully integrated centralized command suite. Real-time visibility, secure footage access and dynamic user control engineered for organizations that don’t compromise.",
       image: "./assets/home_solution_7.png",
+      image_mobile: "./assets/home_solution_mobile_1.png",
       path: "/solution/flying-squad-vehicle",
     },
     {
@@ -65,6 +72,7 @@ export const homeSolutions = {
       content:
         "Experience visual intelligence, redefined for the discerning enterprise. Our API suite operates quietly yet powerfully delivering high-fidelity insights from video and imagery, all in real time. Built for seamless integration and silent precision, it’s the intelligence layer your platform didn’t know it needed until now.",
       image: "./assets/home_solution_8.png",
+      image_mobile: "./assets/home_solution_mobile_1.png",
       path: "/solution/visualbot",
     },
   ],

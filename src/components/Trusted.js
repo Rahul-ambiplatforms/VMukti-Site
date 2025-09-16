@@ -1,8 +1,17 @@
 import React from "react";
-import { Box, Heading, Flex, Image, Center, } from "@chakra-ui/react";
+import { Box, Heading, Flex, Image, Center } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
 
 const logosRow1 = [
+  "/assets/row_1_1.png",
+  "/assets/row_1_2.png",
+  "/assets/row_1_3.png",
+  "/assets/row_1_4.png",
+  "/assets/row_1_1.png",
+  "/assets/row_1_2.png",
+];
+
+const logosRow1_mobile = [
   "/assets/row_1_1.png",
   "/assets/row_1_2.png",
   "/assets/row_1_3.png",
@@ -16,7 +25,16 @@ const logosRow2 = [
   "/assets/row_2_2.png",
   "/assets/row_2_3.png",
   "/assets/row_2_4.png",
-  "/assets/row_2_1.png", 
+  "/assets/row_2_1.png",
+  "/assets/row_2_2.png",
+];
+
+const logosRow2_mobile = [
+  "/assets/row_2_1.png",
+  "/assets/row_2_2.png",
+  "/assets/row_2_3.png",
+  "/assets/row_2_4.png",
+  "/assets/row_2_1.png",
   "/assets/row_2_2.png",
 ];
 
@@ -34,10 +52,18 @@ const Trusted = () => {
   return (
     <Box my="3%" w="100vw">
       <Center>
-        <Heading as="h2" fontSize="36px" mb={12} color="black" fontWeight="500">
+        <Heading
+          as="h2"
+          fontSize={{ base: "20px", md: "36px" }}
+          mb={{ base: "2", md: "12" }}
+          color="black"
+          fontWeight={{ base: "600", md: "500" }}
+        >
           Trusted By
         </Heading>
       </Center>
+
+      {/* --- First Scrolling Row (Left to Right) --- */}
 
       <Box
         w="full"
@@ -76,14 +102,12 @@ const Trusted = () => {
           {/* We duplicate the logos array once to create the seamless effect */}
           {[...logosRow1, ...logosRow1].map((logo, index) => (
             <Image
-              key={`row1-${index}`} 
+              key={`row1-${index}`}
               // src={`${process.env.PUBLIC_URL}${logo}`}
               src={logo}
               alt={`Partner logo ${index + 1}`}
-              // h={{ base: "40px", md: "60px" }}
-              h="114px"
-              objectFit="contain" 
-              // px={{ base: 6, md: 10 }}
+              h={{ base: "86px", md: "125px" }}
+              objectFit="contain"
             />
           ))}
         </Flex>
@@ -94,7 +118,7 @@ const Trusted = () => {
         w="full"
         overflow="hidden"
         position="relative"
-        mt={4}
+        mt={{ base: 0, md: 4 }}
         _before={{
           content: '""',
           position: "absolute",
@@ -102,7 +126,6 @@ const Trusted = () => {
           top: 0,
           bottom: 0,
           width: { base: "50px", md: "100px" },
-          // background: "linear-gradient(to right, #F7FAFC, transparent)",
           zIndex: 2,
         }}
         _after={{
@@ -112,7 +135,6 @@ const Trusted = () => {
           top: 0,
           bottom: 0,
           width: { base: "50px", md: "100px" },
-          // background: "linear-gradient(to left, #F7FAFC, transparent)",
           zIndex: 2,
         }}
         //  _hover={{
@@ -130,7 +152,7 @@ const Trusted = () => {
               key={`row2-${index}`}
               src={logo}
               alt={`Partner logo ${index + 1}`}
-              h="125px"
+              h={{ base: "86px", md: "125px" }}
               objectFit="contain"
             />
           ))}

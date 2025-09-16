@@ -11,6 +11,7 @@ import {
   GridItem,
   Icon,
   Spacer,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -20,6 +21,13 @@ import { Link } from "react-router-dom";
 const Solutions = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const contentBoxRef = useRef(null);
+  const buttonSize = useBreakpointValue({ base: 8, md: 0 });
+  
+  const activeSolution = data.solutions[activeIndex];
+  const imageSrc = useBreakpointValue({
+    base: activeSolution.image_mobile,
+    md: activeSolution.image,
+  });
 
   useGSAP(
     () => {
@@ -45,55 +53,94 @@ const Solutions = ({ data }) => {
     setActiveIndex(index);
   };
 
-  const activeSolution = data.solutions[activeIndex];
-
   return (
-    <Box bg="#3F77A5" pt={{ base: 10, md: 10 }} mt="2%" borderRadius="24px">
+    <Box
+      bg="#3F77A5"
+      pt={{ base: 10, md: 10 }}
+      mt={{ base: "4%", md: "2%" }}
+      borderRadius="24px"
+    >
       <Flex
-        w="90%"
+        w="full"
         mx="auto"
         textAlign="center"
         color="white"
         direction="column"
         alignItems="center"
       >
-        <VStack spacing={4}>
-          <Heading as="h1" fontSize="48px" fontWeight="500" w="60vw">
+        <VStack>
+          <Heading
+            as="h1"
+            fontSize={{ base: "24px", md: "48px" }}
+            lineHeight={{ base: "30px", md: "60px" }}
+            fontWeight="500"
+            w={["90vw", "90vw", "80vw", "60vw"]}
+          >
             {data.heading}
           </Heading>
 
           {data.description && (
-            <Text w="full" mt="1%" fontSize={{ base: "14px", md: "16px" }}>
+            <Text
+              w={["90%", "90%", "90%", "90%"]}
+              lineHeight={["18px", "18px", "20px", "20px"]}
+              mt="1%"
+              fontSize={{ base: "14px", md: "16px" }}
+            >
               {data.description}
             </Text>
           )}
         </VStack>
 
-        <Flex wrap="wrap" mt={4} w="80%" justifyContent="center">
-          {data.solutions.map((solution, index) => (
-            <Button
-              key={index}
-              onClick={() => handleButtonClick(index)}
-              bg={activeIndex === index ? "white" : "#BECEDC"}
-              color="black"
-              fontWeight={activeIndex === index ? "700" : "400"}
-              _hover={{
-                bg:
-                  activeIndex === index
-                    ? "#f0f0f0"
-                    : "rgba(255, 255, 255, 0.4)",
-              }}
-              m={4}
-              width={{ base: "auto", md: "170px" }}
-              height={{ base: "auto", md: "48px" }}
-              borderRadius="24px"
-              fontSize="16px"
-              lineHeight="100%"
-            >
-              {solution.heading1}
-            </Button>
-          ))}
-        </Flex>
+        <Box
+          overflowX={{ base: "auto", md: "hidden" }}
+          w="full"
+          py={{ base: 2, md: 0 }}
+          sx={{
+            "&::-webkit-scrollbar": {
+              height: { buttonSize },
+            },
+            "&::-webkit-scrollbar-thumb": {
+              background: "#d1d9e2",
+              borderRadius: "8px",
+            },
+          }}
+        >
+          <Flex
+            // wrap={{ base: "nowrap", md: "wrap" }}
+            wrap={["nowrap", "nowrap", "wrap", "wrap"]}
+            justifyContent={{ base: "flex-start", md: "center" }}
+            w={["", "", "100%", "80%"]}
+            mx="auto"
+            mt="2%"
+          >
+            {data.solutions.map((solution, index) => (
+              <Button
+                key={index}
+                onClick={() => handleButtonClick(index)}
+                bg={activeIndex === index ? "white" : "#BECEDC"}
+                color="black"
+                fontWeight={activeIndex === index ? "700" : "400"}
+                _hover={{
+                  bg:
+                    activeIndex === index
+                      ? "#f0f0f0"
+                      : "rgba(255, 255, 255, 0.4)",
+                }}
+                // 'm' provides margin on all sides, good for wrapping layout.
+                m={["2", "2", "2", "4"]}
+                height="48px"
+                borderRadius="24px"
+                fontSize="16px"
+                // --- Static Size Enforcement ---
+                flexShrink={0} // Prevents shrinking on mobile.
+                // minWidth={{base:"125px",md:"170px"}}
+                minWidth={["125px", "125px", "125px", "170px"]}
+              >
+                {solution.heading1}
+              </Button>
+            ))}
+          </Flex>
+        </Box>
       </Flex>
 
       {/* Content and image part */}
@@ -107,22 +154,29 @@ const Solutions = ({ data }) => {
       >
         <Flex
           direction={{ base: "column", lg: "row" }}
-          gap={{ base: 8, md: 4 }}
+          gap={{ base: 4, md: 4 }}
           alignItems="stretch"
+          // order={{ base: "2", md: "1" }}
         >
           {/* Left side content container */}
           <Box
             className="content-item"
-            bg="#F3F3F3"
+            bg={{ base: "#E7E7E7", md: "#F3F3F3" }}
             opacity="0.85"
-            p={8}
+            p={6}
             borderRadius="24px"
-            w={{ base: "100%", md: "30%", lg: "30%" }}
+            // w={{ base: "100%", md: "30%", lg: "30%" }}
+            w={["100%", "100%", "100%", "30%"]}
             display="flex"
-            flexDirection="column"
+            flexDirection={["row", "row", "row", "column"]}
+            order={{ base: 2, lg: 1 }}
           >
             <VStack align="start" spacing={5} flex="1">
-              <Heading as="h2" size="lg" color="black">
+              <Heading
+                as="h2"
+                fontSize={{ base: "20px", md: "36px" }}
+                color="black"
+              >
                 {activeSolution.heading2}
               </Heading>
               <svg
@@ -139,8 +193,8 @@ const Solutions = ({ data }) => {
               </svg>
               <Text
                 color="#444444"
-                fontSize="16px"
-                lineHeight="20px"
+                fontSize={{ base: "14px", md: "16px" }}
+                lineHeight={{ base: "18px", md: "20px" }}
                 align="justify"
               >
                 {activeSolution.content}
@@ -178,10 +232,11 @@ const Solutions = ({ data }) => {
             w={{ base: "100%", lg: "70%" }}
             display="flex"
             alignItems="stretch"
+            order={{ base: 1, lg: 2 }}
           >
             <Image
               className="content-image"
-              src={activeSolution.image}
+              src={imageSrc}
               alt={activeSolution.heading2}
               objectFit="cover"
               w="100%"
