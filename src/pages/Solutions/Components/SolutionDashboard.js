@@ -41,6 +41,8 @@ const SolutionDashboard = () => {
         bgSize="cover"
         bgPosition="center"
         borderRadius="0px 0px 24px 24px"
+        // role="img"
+        // aria-label="A modern dashboard displaying visual intelligence solutions and analytics"
       >
         {/* <Box borderRadius="24px"> */}
         <Image
@@ -51,7 +53,7 @@ const SolutionDashboard = () => {
           left="0"
           width="100%"
           height="100%"
-          objectFit="contain"
+          objectFit="cover"
           zIndex="base"
           borderRadius="24px"
           display={{base:"none",md:"block"}}
