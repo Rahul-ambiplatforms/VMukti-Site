@@ -288,7 +288,8 @@ const IndustryContent = ({ props, content }) => {
           flexDirection="column"
           alignItems="center"
           position="relative"
-          mt="3%"
+          // mt={{base:"6%",md:"3%"}}
+          mt={["7%", "6%", "5%", "3%"]}
         >
           {/* Title Container with relative positioning image and description*/}
           <Flex
@@ -300,12 +301,12 @@ const IndustryContent = ({ props, content }) => {
             mx="auto"
             gap={4}
           >
-            <Box width="90%">
+            <Box width={{ base: "100%", md: "90%" }}>
               <HeadingAnimation>
                 <MotionText
-                  fontSize={{ base: "32px", md: "48px", lg: "48px" }}
+                  fontSize={{ base: "24px", md: "48px", lg: "48px" }}
                   fontWeight="600"
-                  lineHeight="60px"
+                  lineHeight={{ base: "30px", md: "60px" }}
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
@@ -324,10 +325,9 @@ const IndustryContent = ({ props, content }) => {
             <Box
               position="relative"
               width="100%"
-              height={{ base: "450px", md: "600px", lg: "700px" }}
+              height={{ base: "554px", md: "600px", lg: "700px" }}
               borderRadius="24px"
               overflow="hidden"
-              boxShadow="lg"
             >
               {/* Background Image - This part is the same */}
               <MotionImage
@@ -359,25 +359,26 @@ const IndustryContent = ({ props, content }) => {
                 <Box
                   py={{ base: 4, md: 8 }}
                   px={{ base: 6, md: 10 }}
-                  borderRadius={{ base: "lg", md: "24px", lg: "24px" }}
+                  borderRadius={{ base: "16px", md: "24px", lg: "24px" }}
                   bg="rgba(255, 255, 255, 0.75)"
                   backdropFilter="blur(10px) saturate(90%)"
-                  // border="1px solid rgba(255, 255, 255, 0.8)"
                 >
                   <Flex
                     direction={{ base: "column", md: "row" }}
-                    alignItems="center"
+                    alignItems={{ base: "left", md: "center" }}
                     justifyContent="space-between"
                     gap={4}
                   >
                     {/* Left Side: Arrow and Description */}
                     <Flex
-                      alignItems="center"
-                      gap={4}
+                      // alignItems={{ base: "left", md: "center" }}
+                      alignItems={["left", "left", "center", "center"]}
+                      gap={{ base: 2, md: 4 }}
                       width={{ base: "100%", md: "auto" }}
+                      direction={{ base: "column", md: "row" }}
                     >
                       <Box
-                        display={{ base: "none", md: "block" }}
+                        display={{ base: "block", md: "block" }}
                         flexShrink={0}
                       >
                         <svg
@@ -398,7 +399,7 @@ const IndustryContent = ({ props, content }) => {
                         fontWeight="500"
                         textAlign="left"
                         fontSize={{ base: "14px", md: "16px" }}
-                        lineHeight="1"
+                        lineHeight={{ base: "18px", md: "20px" }}
                         w="90%"
                       >
                         {content.para}
@@ -410,12 +411,12 @@ const IndustryContent = ({ props, content }) => {
                       <MotionButton
                         width={buttonWidth}
                         height={buttonHeight}
-                        p="12px 32px"
+                        p={{ base: "16px 32px", md: "12px 32px" }}
                         bg="#3F77A5"
                         color="white"
-                        borderRadius="full"
+                        borderRadius={{ base: "20px", md: "24px" }}
                         _hover={{ bg: "#2c5a7a" }}
-                        px={{ base: "16px", lg: "20px" }}
+                        // px={{ base: "20px", lg: "20px" }}
                         display="flex"
                         alignItems="center"
                         justifyContent="center"
@@ -449,7 +450,7 @@ const IndustryContent = ({ props, content }) => {
           <Trusted />
 
           {/* ------------------------- */}
-          <HorizontalScrollFeatures scrollData={content.keyApplications} />
+          {/* <HorizontalScrollFeatures scrollData={content.keyApplications} /> */}
 
           <Box mb="2%" w="100vw" overflow="hidden">
             <Achieved heading={content.achieved} />
@@ -470,17 +471,30 @@ const IndustryContent = ({ props, content }) => {
               fontWeight="500"
               textAlign="center"
               color="black"
-              lineHeight="60px"
+              lineHeight={{ base: "30px", md: "60px" }}
               w="75%"
             >
               {content.workflow.heading}
             </Heading>
-            <Image
-              src={`${process.env.PUBLIC_URL}/assets/${content.workflow.image}`}
-              alt={content.workflow.heading}
-              w="100%"
-              objectFit="contain"
-            />
+            <>
+              {/* Mobile */}
+              <Image
+                src={`${process.env.PUBLIC_URL}/assets/${content.workflow.image_mobile}`}
+                alt={content.workflow.heading}
+                w="100%"
+                objectFit="cover"
+                display={{ base: "block", md: "none" }}
+              />
+
+              {/* Desktop */}
+              <Image
+                src={`${process.env.PUBLIC_URL}/assets/${content.workflow.image}`}
+                alt={content.workflow.heading}
+                w="100%"
+                objectFit="contain"
+                display={{ base: "none", md: "block" }}
+              />
+            </>
           </VStack>
 
           {/* CTA */}
@@ -548,8 +562,9 @@ const IndustryContent = ({ props, content }) => {
               </svg>
             </Button>
           </Flex> */}
-
-          <FaqsSection faqsList={solutionFaqs} />
+          <Box mt={{ base: "4%", md: "0" }}>
+            <FaqsSection faqsList={solutionFaqs} />
+          </Box>
         </Box>
       </PageContentWrapper>
     </>

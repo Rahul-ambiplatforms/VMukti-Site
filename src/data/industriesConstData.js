@@ -8,7 +8,6 @@
 //
 
 const industriesData = {
-
   manufacturing: {
     metatitle: "Computer Vision in Manufacturing Industry - Vmukti Solutions",
     metadescription:
@@ -168,8 +167,8 @@ const industriesData = {
     cta: {
       // Use an array for multi-line text. This is cleaner.
       textLines: [
-        "Catch Defects in Real-Time – Book a Demo of Our",
-        "Computer Vision Solution for Manufacturing",
+        "Catch Defects in Real-Time – Book a Demo of Our Computer Vision Solution for Manufacturing",
+        // "Computer Vision Solution for Manufacturing",
       ],
       href: "/contact-us",
     },
@@ -177,6 +176,7 @@ const industriesData = {
       heading:
         "How We Deliver Custom Manufacturing Video Surveillance Solutions",
       image: "manufacturing_workflow.png",
+      image_mobile: "manufacturing_workflow_mobile.png",
     },
   },
   warehouse: {
@@ -409,8 +409,8 @@ const industriesData = {
     achieved: "Solving Problems with Every Milestones",
     cta: {
       textLines: [
-        "Optimize Your Facility with Warehouse Video",
-        "Surveillance Systems for Improved Management",
+        "Optimize Your Facility with Warehouse Video Surveillance Systems for Improved Management",
+        // "Surveillance Systems for Improved Management",
       ],
       href: "contact-us",
     },
@@ -419,6 +419,7 @@ const industriesData = {
       heading:
         "How We Provide Tailored Video Surveillance Solution for Warehouse",
       image: "warehouse_workflow.png",
+      image_mobile: "warehouse_workflow_mobile.png",
     },
   },
   healthcare: {
@@ -604,8 +605,8 @@ const industriesData = {
 
     cta: {
       textLines: [
-        "Safeguard Clinical Excellence – Partner with Our Healthcare Surveillance ",
-        "System",
+        "Safeguard Clinical Excellence – Partner with Our Healthcare Surveillance System",
+        // "System",
       ],
       href: "contact-us",
     },
@@ -614,6 +615,7 @@ const industriesData = {
       heading:
         "Our Strategic Approach to Planning Video Surveillance for Healthcare",
       image: "healthcare_workflow.png",
+      image_mobile: "healthcare_workflow_mobile.png",
     },
   },
   // Result image remaining, workflow remaining
@@ -801,12 +803,13 @@ const industriesData = {
       heading:
         "Complete Setup Process for Computer Vision Oil and Gas Surveillance Solution",
       image: "oilandgas_workflow.png",
+      image_mobile: "oilandgas_workflow_mobile.png",
     },
 
     cta: {
       textLines: [
-        "Boost Safety And Monitoring With Computer Vision",
-        "Solutions For Oil & Gas Today",
+        "Boost Safety And Monitoring With Computer Vision Solutions For Oil & Gas Today",
+        // "Solutions For Oil & Gas Today",
       ],
       href: "contact-us",
     },
@@ -966,8 +969,8 @@ const industriesData = {
 
     cta: {
       textLines: [
-        "Catch Election Irregularities Faster – Book a Demo for ",
-        "Our Election Solutions",
+        "Catch Election Irregularities Faster – Book a Demo for Our Election Solutions",
+        // "Our Election Solutions",
       ],
       href: "contact-us",
     },
@@ -976,6 +979,7 @@ const industriesData = {
       heading:
         "Step-by-Step Plan for Delivering Security in Election Surveillance Solutions",
       image: "election_workflow.png",
+      image_mobile: "election_workflow_mobile.png",
     },
   },
   education: {
@@ -1167,8 +1171,8 @@ const industriesData = {
 
     cta: {
       textLines: [
-        "Drive Safety Using Vision AI in Education for Secure",
-        "Environment",
+        "Drive Safety Using Vision AI in Education for Secure Environment",
+        // "Environment",
       ],
       href: "contact-us",
     },
@@ -1176,6 +1180,7 @@ const industriesData = {
     workflow: {
       heading: "Efficient Workflow for Your Education Surveillance System",
       image: "education_workflow.png",
+      image_mobile: "education_workflow_mobile.png",
     },
   },
   transportation: {
@@ -1344,8 +1349,8 @@ const industriesData = {
 
     cta: {
       textLines: [
-        "Experience the Future of Mobility with Our Visual",
-        "Solution for Transportation",
+        "Experience the Future of Mobility with Our Visual Solution for Transportation",
+        // "Solution for Transportation",
       ],
       href: "contact-us",
     },
@@ -1353,6 +1358,7 @@ const industriesData = {
       heading:
         "Crafting Precision with Every Surveillance Solution for Transportation",
       image: "transportation_workflow.png",
+      image_mobile: "transportation_workflow_mobile.png",
     },
   },
   smartcity: {
@@ -1559,8 +1565,8 @@ const industriesData = {
 
     cta: {
       textLines: [
-        "Detect Issues in Real-Time – Experience Our Computer",
-        "Vision Solution for Smart Cities",
+        "Detect Issues in Real-Time – Experience Our Computer Vision Solution for Smart Cities",
+        // "Vision Solution for Smart Cities",
       ],
       href: "contact-us",
     },
@@ -1569,6 +1575,7 @@ const industriesData = {
       heading:
         "How We Provide Tailored Video Surveillance Solution for Smart City",
       image: "smartcity_workflow.png",
+      image_mobile: "smartcity_workflow_mobile.png",
     },
   },
   pharma: {
@@ -1740,12 +1747,13 @@ const industriesData = {
     workflow: {
       heading: "The Pharma Video Surveillance Solution Process",
       image: "pharma_workflow.png",
+      image_mobile: "pharma_workflow_mobile.png",
     },
 
     cta: {
       textLines: [
-        "Lead with Precision Using Vision AI in Pharmaceutical",
-        "Solutions",
+        "Lead with Precision Using Vision AI in Pharmaceutical Solutions",
+        // "Solutions",
       ],
       href: "contact-us",
     },
@@ -1933,12 +1941,13 @@ const industriesData = {
     workflow: {
       heading: "Building Smart Processes for Logistics Surveillance Systems",
       image: "logistics_workflow.png",
+      image_mobile: "logistics_workflow_mobile.png",
     },
 
     cta: {
       textLines: [
-        "Track Issues in Real-Time – Book a Demo of Our",
-        "Computer Vision Logistics",
+        "Track Issues in Real-Time – Book a Demo of Our Computer Vision Logistics",
+        // "Computer Vision Logistics",
       ],
       href: "contact-us",
     },
@@ -2149,12 +2158,13 @@ const industriesData = {
       heading:
         "Developing a Future-Ready Bank Surveillance System With Structured Implementation",
       image: "banking_workflow.png",
+      image_mobile: "banking_workflow_mobile.png",
     },
 
     cta: {
       textLines: [
-        "Elevate Your Experience With The Bank Video",
-        "Surveillance Solution",
+        "Elevate Your Experience With The Bank Video Surveillance Solution",
+        // "Surveillance Solution",
       ],
       href: "contact-us",
     },
@@ -2391,7 +2401,10 @@ const industriesData = {
     achieved: "Innovation You Can Count On",
 
     cta: {
-      textLines: ["Unlock Smarter Game Moments with The Power of", "Visual AI"],
+      textLines: [
+        "Unlock Smarter Game Moments with The Power of Visual AI",
+        // "Visual AI"
+      ],
       href: "contact-us",
     },
 
@@ -2399,6 +2412,7 @@ const industriesData = {
       heading:
         "How We Provide Tailored Video Surveillance Solution for Sports & Entertainment",
       image: "sportsentertainment_workflow.png",
+      image_mobile: "sportsentertainment_workflow_mobile.png",
     },
   },
   defense: {
@@ -2577,8 +2591,8 @@ const industriesData = {
 
     cta: {
       textLines: [
-        "Safeguard National Security – Partner with Our ",
-        "Defense Surveillance Solution",
+        "Safeguard National Security – Partner with Our Defense Surveillance Solution",
+        // "Defense Surveillance Solution",
       ],
       href: "contact-us",
     },
@@ -2587,6 +2601,7 @@ const industriesData = {
       heading:
         "Crafting Our Blueprint for an Advanced Defense Video Surveillance Solution",
       image: "defence_workflow.png",
+      image_mobile: "defence_workflow_mobile.png",
     },
   },
   hospitality: {
@@ -2793,8 +2808,8 @@ const industriesData = {
 
     cta: {
       textLines: [
-        "Secure the Stay with Our Hospitality ",
-        "Video Surveillance",
+        "Secure the Stay with Our Hospitality Video Surveillance",
+        // "Video Surveillance",
       ],
       href: "contact-us",
     },
@@ -2802,6 +2817,7 @@ const industriesData = {
     workflow: {
       heading: "Crafting Hospitality Surveillance Solutions for Every Need",
       image: "hospitality_workflow.png",
+      image_mobile: "hospitality_workflow_mobile.png",
     },
   },
   construction: {
@@ -2995,12 +3011,13 @@ const industriesData = {
       heading:
         "Guiding You Through the Implementation of Video Surveillance for Construction Sites",
       image: "construction_workflow.png",
+      image_mobile: "construction_workflow_mobile.png",
     },
 
     cta: {
       textLines: [
-        "Shape a Safer Environment with Construction",
-        "Surveillance Solution",
+        "Shape a Safer Environment with Construction Surveillance Solution",
+        // "Surveillance Solution",
       ],
       href: "contact-us",
     },
@@ -3196,12 +3213,13 @@ const industriesData = {
       heading:
         "Building a Future-Ready Video Surveillance System for Enterprise",
       image: "enterprise_workflow.png",
+      image_mobile: "enterprise_workflow_mobile.png",
     },
 
     cta: {
       textLines: [
-        "See How Computer Vision for Enterprise Can",
-        "Revolutionize Your Business",
+        "See How Computer Vision for Enterprise Can Revolutionize Your Business",
+        // "Revolutionize Your Business",
       ],
       href: "contact-us",
     },
@@ -3425,12 +3443,13 @@ const industriesData = {
     workflow: {
       heading: "How We Deliver Custom Visual Solutions for Government",
       image: "government_workflow.png",
+      image_mobile: "government_workflow_mobile.png",
     },
 
     cta: {
       textLines: [
-        "Lead with Confidence Using a Government",
-        "Surveillance System Designed for Scale",
+        "Lead with Confidence Using a Government Surveillance System Designed for Scale",
+        // "Surveillance System Designed for Scale",
       ],
       href: "contact-us",
     },

@@ -13,7 +13,7 @@ import { Helmet } from "react-helmet-async";
 // You can create a new component file (e.g., HeroSection.jsx) and paste this code.
 const SolutionDashboard = () => {
   // These responsive values ensure the component looks great on all screen sizes.
-  const heroHeight = useBreakpointValue({ base: "70vh", md: "95vh" });
+  const heroHeight = useBreakpointValue({ base: "140vh", md: "95vh" });
   const contentWidth = useBreakpointValue({
     base: "95%",
     md: "100%",
@@ -36,16 +36,11 @@ const SolutionDashboard = () => {
         position="relative"
         alignItems="center"
         justifyContent="center"
-        // Note: mt="-7%" can sometimes cause layout shifts.
-        // This is kept as requested but be aware of its effects.
-        mt="-7%"
-        // bgImage="url('../assets/solution_dash.png')"
+        mt={["5%","","-7%","-7%"]}
         alt="Hero Image"
         bgSize="cover"
         bgPosition="center"
         borderRadius="0px 0px 24px 24px"
-        // role="img"
-        // aria-label="A modern dashboard displaying visual intelligence solutions and analytics"
       >
         {/* <Box borderRadius="24px"> */}
         <Image
@@ -56,8 +51,23 @@ const SolutionDashboard = () => {
           left="0"
           width="100%"
           height="100%"
+          objectFit="contain"
+          zIndex="base"
+          borderRadius="24px"
+          display={{base:"none",md:"block"}}
+        />
+        <Image
+          src="../assets/solution_dash_mobile.png"
+          alt="Cutting-Edge Visual Solutions for a Smarter World"
+          position="absolute"
+          top="0"
+          left="0"
+          width="100%"
+          height="100%"
           objectFit="cover"
           zIndex="base"
+          borderRadius="24px"
+          display={{base:"block",md:"none"}}
         />
         {/* </Box> */}
         <VStack

@@ -17,6 +17,7 @@ const CtaBanner = ({ children, buttonText = "Let's talk", href = "#" }) => {
     <Box mt={{base:"4%",md:"2%"}} w="full">
       <Flex
         direction={{ base: "column", sm: "row" }}
+        // direction: {["column","column","column","row"]}
         align={{base:"left",md:"center"}}
         justifyContent="space-between"
         bg="#BECEDC"
@@ -31,6 +32,7 @@ const CtaBanner = ({ children, buttonText = "Let's talk", href = "#" }) => {
           fontWeight={{base:"600",md:"500"}}
           color="black"
           textAlign={{ base: "left", sm: "left" }}
+          w={{base:"90%",md:"70%"}}
         >
           {children}
         </Heading>
