@@ -26,7 +26,8 @@ import FaqsSection from "./faqsSection";
 import faqsData from "../data/faqsData";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-// import { HorizontalScrollFeatures } from "./HorizontalScrollFeatures";
+import HorizontalScrollFeatures from "./HorizontalScrollFeatures";
+
 
 const MotionBox = motion(Box);
 const MotionText = motion(Text);
@@ -46,167 +47,167 @@ const popAnimation1 = {
   }),
 };
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
-const FeatureCard = ({ feature, bgColor }) => (
-  <Flex
-    direction="column"
-    w={{ base: "80vw", md: "85vw", lg: "92vw" }}
-    h="600px"
-    flexShrink={0}
-    mr={{ base: "1vw", md: "2vw" }}
-    align="center"
-    justify="center"
-    mt="1%"
-  >
-    <Box
-      position="relative"
-      w="100%"
-      h={{ base: "300px", md: "450px", lg: "100%" }}
-      borderRadius="20px"
-      overflow="hidden"
-    >
-      <Image
-        src={`${process.env.PUBLIC_URL}/assets/${feature.image}`}
-        alt={feature.title}
-        objectFit="cover"
-        w="100%"
-        h="100%"
-      />
-      <Box
-        position="absolute"
-        bottom={{ base: 4, md: 8 }}
-        left={{ base: 4, md: bgColor === "blue" ? "62%" : 8 }}
-        p={{ base: 4, md: 5 }}
-        w={{ base: "85%", sm: "60%", md: "30%" }}
-        h="90%"
-        bg="rgba(255, 255, 255, 0.95)"
-        borderRadius="20px"
-        display="flex"
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Heading
-          as="h3"
-          fontSize={{ base: "20px", md: "24px" }}
-          fontWeight="700"
-          color="#000"
-          lineHeight="30px"
-          textAlign="center"
-          w="70%"
-        >
-          {feature.title}
-        </Heading>
-        <Box
-          width="25px"
-          height="3px"
-          borderRadius="full"
-          bg="#3F77A5"
-          my={2}
-        />
-        <Text
-          fontSize={{ base: "14px", md: "14px", lg: "14px" }}
-          fontWeight="500"
-          color="#444444"
-          lineHeight="18px"
-          textAlign="center"
-        >
-          {feature.description}
-        </Text>
-      </Box>
-    </Box>
-  </Flex>
-);
+// const FeatureCard = ({ feature, bgColor }) => (
+//   <Flex
+//     direction="column"
+//     w={{ base: "80vw", md: "85vw", lg: "92vw" }}
+//     h="600px"
+//     flexShrink={0}
+//     mr={{ base: "1vw", md: "2vw" }}
+//     align="center"
+//     justify="center"
+//     mt="1%"
+//   >
+//     <Box
+//       position="relative"
+//       w="100%"
+//       h={{ base: "300px", md: "450px", lg: "100%" }}
+//       borderRadius="20px"
+//       overflow="hidden"
+//     >
+//       <Image
+//         src={`${process.env.PUBLIC_URL}/assets/${feature.image}`}
+//         alt={feature.title}
+//         objectFit="cover"
+//         w="100%"
+//         h="100%"
+//       />
+//       <Box
+//         position="absolute"
+//         bottom={{ base: 4, md: 8 }}
+//         left={{ base: 4, md: bgColor === "blue" ? "62%" : 8 }}
+//         p={{ base: 4, md: 5 }}
+//         w={{ base: "85%", sm: "60%", md: "30%" }}
+//         h="90%"
+//         bg="rgba(255, 255, 255, 0.95)"
+//         borderRadius="20px"
+//         display="flex"
+//         flexDirection="column"
+//         justifyContent="center"
+//         alignItems="center"
+//       >
+//         <Heading
+//           as="h3"
+//           fontSize={{ base: "20px", md: "24px" }}
+//           fontWeight="700"
+//           color="#000"
+//           lineHeight="30px"
+//           textAlign="center"
+//           w="70%"
+//         >
+//           {feature.title}
+//         </Heading>
+//         <Box
+//           width="25px"
+//           height="3px"
+//           borderRadius="full"
+//           bg="#3F77A5"
+//           my={2}
+//         />
+//         <Text
+//           fontSize={{ base: "14px", md: "14px", lg: "14px" }}
+//           fontWeight="500"
+//           color="#444444"
+//           lineHeight="18px"
+//           textAlign="center"
+//         >
+//           {feature.description}
+//         </Text>
+//       </Box>
+//     </Box>
+//   </Flex>
+// );
 
-const HorizontalScrollFeatures = ({ scrollData = [] }) => {
-  const mainContainerRef = useRef(null);
+// const HorizontalScrollFeatures = ({ scrollData = [] }) => {
+//   const mainContainerRef = useRef(null);
 
-  useGSAP(
-    () => {
-      const horizontalSections = gsap.utils.toArray(".horizontal-section");
+//   useGSAP(
+//     () => {
+//       const horizontalSections = gsap.utils.toArray(".horizontal-section");
 
-      horizontalSections.forEach((section) => {
-        const track = section.querySelector(".horizontal-track");
-        const scrollAmount = track.scrollWidth - section.offsetWidth;
+//       horizontalSections.forEach((section) => {
+//         const track = section.querySelector(".horizontal-track");
+//         const scrollAmount = track.scrollWidth - section.offsetWidth;
 
-        gsap.to(track, {
-          x: -scrollAmount,
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 16% top",
-            pin: true,
-            scrub: 1.5,
-            end: () => `+=${scrollAmount}`,
-            invalidateOnRefresh: true,
-          },
-        });
-      });
-    },
-    { scope: mainContainerRef, dependencies: [scrollData] }
-  );
+//         gsap.to(track, {
+//           x: -scrollAmount,
+//           ease: "none",
+//           scrollTrigger: {
+//             trigger: section,
+//             start: "top 16% top",
+//             pin: true,
+//             scrub: 1.5,
+//             end: () => `+=${scrollAmount}`,
+//             invalidateOnRefresh: true,
+//           },
+//         });
+//       });
+//     },
+//     { scope: mainContainerRef, dependencies: [scrollData] }
+//   );
 
-  if (!scrollData || scrollData.length === 0) {
-    return null;
-  }
+//   if (!scrollData || scrollData.length === 0) {
+//     return null;
+//   }
 
-  return (
-    <Box ref={mainContainerRef} width="100%">
-      {scrollData.map((sectionData) => (
-        <Flex
-          key={sectionData.id}
-          className="horizontal-section"
-          direction="column"
-          justify="center"
-          h="85vh"
-          w="100%"
-          position="relative"
-          overflow="hidden"
-          // p={{ base: 2, md: 4 }}
-          bg={sectionData.bgColor === "blue" ? "#3F77A5" : "white"}
-          borderRadius="24px"
-          mt="2%"
-          mb="-4%"
-          // Need to change here mb -6% wont work instead mt -x%
-        >
-          <Heading
-            as="h2"
-            fontSize="36px"
-            fontWeight="500"
-            lineHeight="45px"
-            w="60%"
-            position="absolute"
-            top={{ base: "10%", md: "2%" }}
-            left="50%"
-            transform="translateX(-50%)"
-            textAlign="center"
-            zIndex={2}
-            color={sectionData.bgColor === "blue" ? "white" : "black"}
-          >
-            {sectionData.mainHeading}
-          </Heading>
+//   return (
+//     <Box ref={mainContainerRef} width="100%">
+//       {scrollData.map((sectionData) => (
+//         <Flex
+//           key={sectionData.id}
+//           className="horizontal-section"
+//           direction="column"
+//           justify="center"
+//           h="85vh"
+//           w="100%"
+//           position="relative"
+//           overflow="hidden"
+//           // p={{ base: 2, md: 4 }}
+//           bg={sectionData.bgColor === "blue" ? "#3F77A5" : "white"}
+//           borderRadius="24px"
+//           mt="2%"
+//           mb="-4%"
+//           // Need to change here mb -6% wont work instead mt -x%
+//         >
+//           <Heading
+//             as="h2"
+//             fontSize="36px"
+//             fontWeight="500"
+//             lineHeight="45px"
+//             w="60%"
+//             position="absolute"
+//             top={{ base: "10%", md: "2%" }}
+//             left="50%"
+//             transform="translateX(-50%)"
+//             textAlign="center"
+//             zIndex={2}
+//             color={sectionData.bgColor === "blue" ? "white" : "black"}
+//           >
+//             {sectionData.mainHeading}
+//           </Heading>
 
-          <Flex
-            className="horizontal-track"
-            w="max-content"
-            h="100%"
-            align="center"
-            pl={{ base: "5vw", md: "2vw" }}
-          >
-            {sectionData.features.map((feature) => (
-              <FeatureCard
-                key={feature.id}
-                feature={feature}
-                bgColor={sectionData.bgColor}
-              />
-            ))}
-          </Flex>
-        </Flex>
-      ))}
-    </Box>
-  );
-};
+//           <Flex
+//             className="horizontal-track"
+//             w="max-content"
+//             h="100%"
+//             align="center"
+//             pl={{ base: "5vw", md: "2vw" }}
+//           >
+//             {sectionData.features.map((feature) => (
+//               <FeatureCard
+//                 key={feature.id}
+//                 feature={feature}
+//                 bgColor={sectionData.bgColor}
+//               />
+//             ))}
+//           </Flex>
+//         </Flex>
+//       ))}
+//     </Box>
+//   );
+// };
 
 const IndustryContent = ({ props, content }) => {
   const { name } = useParams();
@@ -450,7 +451,7 @@ const IndustryContent = ({ props, content }) => {
           <Trusted />
 
           {/* ------------------------- */}
-          {/* <HorizontalScrollFeatures scrollData={content.keyApplications} /> */}
+          <HorizontalScrollFeatures scrollData={content.keyApplications} />
 
           <Box mb="2%" w="100vw" overflow="hidden">
             <Achieved heading={content.achieved} />

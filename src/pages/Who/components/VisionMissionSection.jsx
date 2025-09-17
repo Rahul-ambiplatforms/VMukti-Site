@@ -7,15 +7,15 @@ const VisionMissionSection = () => {
       // justifyContent="space-between"
       alignItems="center"
       mt={{ base: "5%", md: "1%" }}
-      mb="-2%"
+      mb={["0","0","0","-2%"]}
       direction={{ base: "column", md: "row" }}
-      gap={{ base: "4", md: "6" }} //----------------------------------------
+      gap={{ base: "4", md: "6" }}
       // bg="red"
     >
       {/* Vision Box */}
       <Box
-        width={{ base: "250px", md: "344px" }}
-        height={{ base: "250px", md: "344px" }}
+        width={{ base: "100%", md: "344px" }}
+        height={{ base: "100%", md: "344px" }}
         borderRadius="24px"
         bg="#FFF"
         p="6"
@@ -118,7 +118,7 @@ const VisionMissionSection = () => {
         <Flex direction="column" justify="center">
           <Text
             color="#3F77A5"
-            fontSize={{ base: "48px", md: "64px" }}
+            fontSize={{ base: "24px", md: "64px" }}
             fontWeight="700"
           >
             Vision
@@ -138,8 +138,8 @@ const VisionMissionSection = () => {
 
       {/* Mission Box */}
       <Box
-        width={{ base: "250px", md: "344px" }}
-        height={{ base: "250px", md: "344px" }}
+        width={{ base: "100%", md: "344px" }}
+        height={{ base: "100%", md: "344px" }}
         borderRadius="24px"
         alignSelf={{ base: "flex-end", md: "auto" }}
         bg="#C8D6E5"
@@ -202,7 +202,7 @@ const VisionMissionSection = () => {
         <Flex direction="column" justify="center">
           <Text
             color="#3F77A5"
-            fontSize={{ base: "48px", md: "64px" }}
+            fontSize={{ base: "24px", md: "64px" }}
             fontWeight="700"
           >
             Mission
@@ -221,19 +221,11 @@ const VisionMissionSection = () => {
         </Flex>
       </Box>
 
-      <Box position="relative" width="fit-content">
-        {/* <Image
-          position="absolute"
-          top={0}
-          left={0}
-          width="100%"
-          height="100%"
-          src="/assets/VMukti Brochure O2 1.png"
-          alt="VMukti Background"
-          zIndex={0}
-          objectFit="cover"
-          opacity={0.8}
-        /> */}
+      <Box
+        display={{ base: "none", md: "block" }}
+        position="relative"
+        width="fit-content"
+      >
         <Image
           zIndex={1}
           left="14%"

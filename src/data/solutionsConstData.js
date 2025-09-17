@@ -5,7 +5,7 @@ export const solutionsData = {
       "Best Video Management Software for CCTV offering live monitoring, cloud storage, AI analytics and seamless integration for enhanced surveillance control.",
     ogImage: "https://www.vmukti.com/assets/MainWebPageMockup1.1.png",
     slug: "video-management-system",
-      // Section 1: Hero section from the first image
+    // Section 1: Hero section from the first image
     hero: {
       heading: "Intelligent Video Management System",
       description:
@@ -163,7 +163,7 @@ export const solutionsData = {
       "Enterprise Management Solution for CCTV feeds that empowers Command & Control Centres with real-time monitoring, automated alerts, uptime analytics, and zero downtime.",
     ogImage: "https://www.vmukti.com/assets/solution_evms_dash.png",
     slug: "enterprise-management-system",
-      // Section 1: Hero section updated
+    // Section 1: Hero section updated
     hero: {
       heading: "Enterprise Management Solutions for Smarter CCTV Control",
       description:
@@ -179,7 +179,7 @@ export const solutionsData = {
         "Enterprise Management System is a scalable platform built for large-scale CCTV surveillance, ensuring centralized monitoring, real-time alerts, and streamlined control of video feeds across multiple sites for enhanced operational reliability.",
       ],
       image: "../../assets/solution_ems_intro.png",
-      top: "-18%"
+      top: "-18%",
     },
 
     // Section 3: Features and Accordion updated
@@ -311,7 +311,7 @@ export const solutionsData = {
       "Delivering reliable and unmatched `efficiency with our Integrated Command and Control Centre solutions which enhances operational control and decision-making.",
     ogImage: "https://www.vmukti.com/assets/solution_iccc_dash.png",
     slug: "integrated-command-control-center",
-      // Section 1: Hero section from the first image
+    // Section 1: Hero section from the first image
     hero: {
       heading: "Explore the Power of Integrated Command Control Centre",
       description:
@@ -456,7 +456,7 @@ export const solutionsData = {
       "Stream real-time CCTV feeds with ultra-HD clarity, zero delay, and multi-layer security - built for mission-critical monitoring and instant response.",
     ogImage: "https://www.vmukti.com/assets/solution_live_dash.png",
     slug: "live-streaming-solution",
-      // Section 1: Hero section from the first image
+    // Section 1: Hero section from the first image
     hero: {
       heading:
         "Stream Smarter with Secure, Real-Time CCTV Live Streaming Services",
@@ -621,7 +621,7 @@ export const solutionsData = {
       "Power up your response force with a high-speed Flying Squad Vehicle packed with GPS tracking, smart AI surveillance and real-time control room sync.",
     ogImage: "https://www.vmukti.com/assets/solution_fsv_dash.png",
     slug: "flying-squad-vehicle",
-      // Section 1: Hero section from the first image
+    // Section 1: Hero section from the first image
     hero: {
       heading: "Flying Squad Vehicle with Smart GPS and AI Security",
       description: [
@@ -756,13 +756,11 @@ export const solutionsData = {
         "At VMukti, we bring you surveillance without compromise. Our AI-powered VMS delivers real-time awareness and automated threat detection so you're never in the dark and never a second too late. Manual oversight is outdated. Our system replaces it with fast, intelligent response built right in.",
         "You get secure, encrypted access to multi-site footage anytime. Our adaptive storage grows with you whether you're scaling up or centralizing control. This is surveillance mode for forward-thinking operations like yours.",
       ],
-      images: [
-        "../../assets/solution_vms_choose_1.png",
-        // "../../assets/solution_vms_choose_1.png",
-        // "../../assets/solution_vms_choose_1.png",
-        "../../assets/solution_vms_choose_2.png",
-        "../../assets/solution_vms_choose_3.png",
-      ],
+      // images: [
+      //   // "../../assets/solution_vms_choose_1.png",
+      //   // "../../assets/solution_vms_choose_2.png",
+      //   // "../../assets/solution_vms_choose_3.png",
+      // ],
     },
   },
 
@@ -772,7 +770,7 @@ export const solutionsData = {
       "Upgrade your security with Cloud AI surveillance, offering live video monitoring, automated alerts, and video analytics for enhanced safety and protection.",
     ogImage: "https://www.vmukti.com/assets/solution_cloud_dash.png",
     slug: "cloudai",
-      // Section 1: Hero section from the first image
+    // Section 1: Hero section from the first image
     hero: {
       heading:
         "CloudAI Computer Vision Surveillance Solution for Smarter Remote Security",
@@ -1070,11 +1068,9 @@ export const solutionsData = {
         "You get secure, encrypted access to multi-site footage anytime. Our adaptive storage grows with you whether you're scaling up or centralizing control. This is surveillance mode for forward-thinking operations like yours.",
       ],
       images: [
-        "../../assets/solution_vms_choose_1.png",
         // "../../assets/solution_vms_choose_1.png",
-        // "../../assets/solution_vms_choose_1.png",
-        "../../assets/solution_vms_choose_2.png",
-        "../../assets/solution_vms_choose_3.png",
+        // "../../assets/solution_vms_choose_2.png",
+        // "../../assets/solution_vms_choose_3.png",
       ],
     },
   },
@@ -1085,7 +1081,7 @@ export const solutionsData = {
       "Take control of security with Generative AI solutions that adapt to your unique surveillance needs, enhancing protection and enabling proactive detection.",
     ogImage: "https://www.vmukti.com/assets/solution_genai_dash.png",
     slug: "genai",
-      // Section 1: Hero section from the first image
+    // Section 1: Hero section from the first image
     hero: {
       heading: "Visual Intelligence Like Never Before with GenAI Solution",
       description:
@@ -1222,7 +1218,7 @@ export const solutionsData = {
       "Best VisualBot computer vision software solution delivers fast deployment, real-time insights, and custom AI models for seamless video analysis integration.",
     ogImage: "https://www.vmukti.com/assets/solution_visbot_dash.png",
     slug: "visualbot",
-      // Section 1: Hero section from the first image
+    // Section 1: Hero section from the first image
     hero: {
       heading:
         "Streamline Your AI Workflow with VisualBot Computer Vision Software",
@@ -1327,11 +1323,6 @@ export const solutionsData = {
       ],
     },
     trusted: "Achieving Excellence in Security Systems",
-    // industry: {
-    //   heading: "Smart VMS Designed for Real-World Sector Applications",
-    //   description:
-    //     "We engineer for those who demand control without compromising real-time visibility, AI-driven detection and frictionless rollout, built to perform in high-security, high-density, high-pressure spaces.",
-    // },
     // Section 5: CTA Banner from the fifth image
     cta: {
       textLines: [
@@ -1351,12 +1342,12 @@ export const solutionsData = {
 
     // Section 7: Why Choose Us from the seventh image
     whyChooseUs: {
-      heading: "Why Choose Us for VMS?",
+      heading: "Why Should You Choose Our VisualBot?",
       description: [
-        "At VMukti, we bring you surveillance without compromise. Our AI-powered VMS delivers real-time awareness and automated threat detection so you're never in the dark and never a second too late. Manual oversight is outdated. Our system replaces it with fast, intelligent response built right in.",
-        "You get secure, encrypted access to multi-site footage anytime. Our adaptive storage grows with you whether you're scaling up or centralizing control. This is surveillance mode for forward-thinking operations like yours.",
+        "We believe that artificial intelligence should be accessible to everyone, not just data scientists. Our platform VisualBot empowers teams to build and deploy powerful computer vision models with minimal coding. Whether you're inspecting products on a factory floor or automating visual checks in a high-precision environment. Our solution helps you achieve faster development, lower costs and higher accuracy without the traditional complexity of AI systems.",
+        "What sets us apart is our focus on usability, flexibility and speed. With tools like VisualBot we simplify every step from model training to deployment using intuitive interfaces and generative AI. This means you can move from concept to real-world implementation in minutes not months. Our technology is trusted across industries from automotive and electronics to food and healthcare, making us the go-to partner for businesses aiming to modernize operations with intelligent vision.",
       ],
-      images: ["../../assets/solution_iccc_choose_1.png"],
+      // images: "",
     },
   },
 };

@@ -214,7 +214,8 @@ const SolutionContent = ({ content }) => {
     md: "16px",
     lg: "16px",
   });
-
+  const svgSize = useBreakpointValue({ base: "25px", md: "34px" });
+  const svgSize1 = useBreakpointValue({ base: "12px", md: "18px" });
   // A guard clause to prevent errors if content hasn't loaded yet.
   if (!content || !content.hero) {
     return (
@@ -280,31 +281,33 @@ const SolutionContent = ({ content }) => {
         justify="center"
         bg="#3F77A5" // The main blue background color from the image.
         // p={heroPadding}
-        gap={10}
-        mt="-7%"
-        h="95vh"
+        // gap={10}
+        mt={["0", "0", "0", "-7%"]}
+        h={{ base: "80vh", md: "95vh" }}
       >
         {/* --- Left Column: Text and Call-to-Action --- */}
         <VStack
-          align={{ base: "center", lg: "flex-start" }}
-          textAlign={{ base: "center", lg: "left" }}
-          spacing={6}
+          align={{ base: "left", lg: "flex-start" }}
+          textAlign={{ base: "left", lg: "left" }}
+          spacing={{ base: 2, md: 6 }}
           flex="1"
           maxW={{ base: "100%", lg: "40%" }}
           pl="4%"
+          mt={["10%", "10%", "25%", "0"]}
         >
           <Heading
             as="h1"
             fontSize={headingSize}
             color="white"
             fontWeight="600"
+            w={{ base: "80%", md: "100%" }}
           >
             {hero.heading}
           </Heading>
 
           <svg
-            width="34"
-            height="34"
+            width={svgSize}
+            height={svgSize}
             viewBox="0 0 34 34"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -319,6 +322,7 @@ const SolutionContent = ({ content }) => {
             fontSize={{ base: "14px", lg: "16px" }}
             color="white"
             lineHeight="20px"
+            w={{ base: "90%", md: "100%" }}
           >
             {hero.description}
           </Text>
@@ -328,16 +332,33 @@ const SolutionContent = ({ content }) => {
             href="/contact-us"
             bg="white"
             color="#3F77A5"
-            size="lg"
-            borderRadius="full"
+            fontSize="16px"
+            borderRadius="24px"
             px={8}
-            rightIcon={<Icon as={LuArrowUpRight} />}
+            py="4"
+            w={{ base: "135px", md: "179px" }}
+            h={{ base: "34px", md: "48px" }}
+            // rightIcon={<Icon as={LuArrowUpRight} />}
             _hover={{
               transform: "translateY(-2px)",
               boxShadow: "lg",
             }}
           >
             Book Demo
+            <Box ml="2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={svgSize1}
+                height={svgSize1}
+                viewBox="0 0 18 18"
+                fill="none"
+              >
+                <path
+                  d="M17.5 2C17.5 1.17157 16.8284 0.499999 16 0.499999L2.5 0.5C1.67157 0.5 0.999999 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5L14.5 3.5L14.5 15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM2 16L3.06066 17.0607L17.0607 3.06066L16 2L14.9393 0.939339L0.93934 14.9393L2 16Z"
+                  fill="#3F77A5"
+                />
+              </svg>
+            </Box>
           </Button>
         </VStack>
 
@@ -347,7 +368,7 @@ const SolutionContent = ({ content }) => {
           justify="center"
           align="center"
           w="100%"
-          mt="10%"
+          mt={["0", "0", "0", "10%"]}
           mr="2%"
         >
           <Image
@@ -355,8 +376,6 @@ const SolutionContent = ({ content }) => {
             alt={hero.heading}
             objectFit="cover"
             w="100%"
-            // aspectRatio="4/3"
-            // borderRadius="24px"
           />
         </Flex>
       </Flex>
@@ -377,12 +396,20 @@ const SolutionContent = ({ content }) => {
             <Box
               w="full"
               bg={introduction.bgColor || "white"}
-              // h="494px"
-              h={introduction.image ? "494px" : "248px"}
+              h={
+                introduction.image
+                  ? ["294px", "294px", "394px", "494px"]
+                  : "300px"
+              }
               p={{ base: 6, md: 8 }}
-              borderRadius={{ base: "24px", md: "24px" }}
+              borderRadius={{ base: "16px", md: "24px" }}
             >
-              <Heading as="h2" fontSize="48px" fontWeight="500" color="#000">
+              <Heading
+                as="h2"
+                fontSize={{ base: "20px", md: "48px" }}
+                fontWeight={{ base: "600", md: "500" }}
+                color="#000"
+              >
                 {introduction.heading}
               </Heading>
               <Box mt="2%">
@@ -391,7 +418,7 @@ const SolutionContent = ({ content }) => {
                     key={index}
                     fontSize="16px"
                     color="#444444"
-                    lineHeight="20px"
+                    lineHeight={{ base: "18px", md: "20px" }}
                     mb="1%"
                   >
                     {paragraph}
@@ -400,11 +427,13 @@ const SolutionContent = ({ content }) => {
               </Box>
             </Box>
             {introduction.image && (
-              <Box mt={introduction.top || "-23%"}>
+              <Box
+                mt={introduction.top || "-23%"}
+                mb={{ base: "10%", md: "2%" }}
+              >
                 <Image
                   src={introduction.image}
                   alt={introduction.heading}
-                  // h="100%"
                   w={{ base: "100%", md: "100%" }}
                   borderRadius="24px"
                   objectFit="cover"
@@ -418,33 +447,33 @@ const SolutionContent = ({ content }) => {
         <Box>
           <Flex
             direction={{ base: "column", lg: "row" }}
-            borderRadius={{ base: "none", lg: "24px" }}
-            overflow="hidden" // Hides anything that spills out of the rounded corners
+            borderRadius={{ base: "16px", lg: "24px" }}
+            overflow="hidden"
             minH={{ lg: "737px" }}
             important
           >
             {/* --- LEFT CONTAINER --- */}
             <VStack
-              flex={{ base: "1", lg: "0 0 50%" }} // Takes up 40% width on large screens
+              flex={{ base: "1", lg: "0 0 50%" }}
               bg="#3F77A5"
               color="white"
-              p="8"
+              p={{ base: "4", md: "8" }}
               spacing={4}
-              align={{ base: "center", lg: "flex-start" }}
-              textAlign={{ base: "center", lg: "left" }}
+              align={{ base: "flex-start", lg: "flex-start" }}
+              textAlign={{ base: "left", lg: "left" }}
             >
               <Heading
                 as="h2"
-                fontSize="48px"
-                lineHeight="60px"
+                fontSize={{ base: "20px", md: "48px" }}
+                lineHeight={{ base: "25px", md: "60px" }}
                 fontWeight="600"
               >
                 {features.heading}
               </Heading>
 
               <svg
-                width="34"
-                height="34"
+                width={svgSize}
+                height={svgSize}
                 viewBox="0 0 34 34"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -470,7 +499,7 @@ const SolutionContent = ({ content }) => {
                 color="#3F77A5"
                 size="lg"
                 borderRadius="full"
-                px="12"
+                px={{ base: "8", md: "12" }}
                 mt="2%"
                 // rightIcon={<Icon as={LuArrowUpRight} />}
                 _hover={{
@@ -500,8 +529,8 @@ const SolutionContent = ({ content }) => {
             <Box
               flex="1"
               bg="white"
-              //   p={contentPadding}
-              p="8"
+              p={{ base: "2", md: "8" }}
+              pb={{ base: "4", md: "none" }}
             >
               <Accordion allowMultiple={false} defaultIndex={[0]}>
                 {content.features.accordionItems.map((item, index) => (
@@ -511,7 +540,6 @@ const SolutionContent = ({ content }) => {
                     borderColor="#444444"
                     // Width Need to be decreased
                   >
-                    {/* ✅ STEP 1: Get the `isExpanded` state by using a function as the child */}
                     {({ isExpanded }) => (
                       <>
                         <h2>
@@ -551,6 +579,7 @@ const SolutionContent = ({ content }) => {
                           pb={4}
                           color="#444444"
                           fontSize="14px"
+                          lineHeight="18px"
                           w="90%"
                         >
                           {item.content}
@@ -575,7 +604,7 @@ const SolutionContent = ({ content }) => {
         )}
         {/* --------------Industry Grid-------------- */}
         {content.industry && (
-          <Box mt="3%" mb="-7%">
+          <Box mt="3%" mb={{ base: "2%", md: "-7%" }}>
             <IndustryGrid
               heading={content.industry.heading}
               description={content.industry.description}
@@ -628,13 +657,18 @@ const SolutionContent = ({ content }) => {
               w="full"
               bg="white"
               p={{ base: 6, md: 8 }}
-              pb={{ base: "30%", md: "25%" }}
+              // pb={{ base: "", md: "25%" }}
+              pb={
+                whyChooseUs.images
+                  ? ["30%", "30%", "30%", "25%"]
+                  : ["5%", "5%", "5%", "3%"]
+              }
               borderRadius="24px"
             >
               <Heading
                 as="h2"
-                fontSize={{ base: "3xl", md: "48px" }}
-                fontWeight="500"
+                fontSize={{ base: "24px", md: "48px" }}
+                fontWeight="600"
                 color="#000"
               >
                 {whyChooseUs.heading}
@@ -644,75 +678,76 @@ const SolutionContent = ({ content }) => {
               {whyChooseUs.description.map((paragraph, index) => (
                 <Text
                   key={index}
-                  fontSize="16px"
+                  fontSize={{ base: "14px", md: "16px" }}
                   color="#444444"
                   w={{ base: "95%", md: "80%" }}
                   mx="auto"
                   mt="20px"
-                  lineHeight="24px"
+                  lineHeight="20px"
                 >
                   {paragraph}
                 </Text>
               ))}
             </Box>
             {/* This container handles the negative margin to create the overlap */}
-            <Box w="100vw" mt={{ base: "-25%", md: "-23%" }} zIndex={1}>
-              {hasMultipleImages ? (
-                <Box
-                  // w="100vw"
-                  // mx="auto"
-                  overflow="hidden"
-                  _hover={{
-                    "& > div": {
-                      animationPlayState: "paused",
-                    },
-                  }}
-                >
-                  <Flex
-                    w="max-content"
-                    flexWrap="nowrap"
-                    animation={`${marqueeScroll} 15s linear infinite`}
+            {whyChooseUs.images && (
+              <Box w="100vw" mt={{ base: "-25%", md: "-23%" }} zIndex={1}>
+                {hasMultipleImages ? (
+                  <Box
+                    // w="100vw"
+                    // mx="auto"
+                    overflow="hidden"
+                    _hover={{
+                      "& > div": {
+                        animationPlayState: "paused",
+                      },
+                    }}
                   >
-                    {[
-                      ...whyChooseUs.images,
-                      ...whyChooseUs.images,
-                      ...whyChooseUs.images,
-                      ...whyChooseUs.images,
-                    ].map((imgSrc, index) => (
-                      <Image
-                        key={index}
-                        src={imgSrc}
-                        alt={`${whyChooseUs.heading} collage ${index + 1}`}
-                        w={{ base: "280px", md: "305px" }}
-                        // w="100%"
-                        h="auto"
-                        mx="10px"
-                        borderRadius="24px"
-                        objectFit="cover"
-                        boxShadow="lg"
-                        flexShrink={0}
-                      />
-                    ))}
-                  </Flex>
-                </Box>
-              ) : (
-                <Box
-                  w="90%"
-                  justifyContent="center"
-                  alignItems="center"
-                  mx="auto"
-                >
-                  <Image
-                    src={whyChooseUs.images[0]}
-                    alt={whyChooseUs.heading}
-                    w="100%"
-                    // h="100%"
-                    borderRadius="24px"
-                    objectFit="cover"
-                  />
-                </Box>
-              )}
-            </Box>
+                    <Flex
+                      w="max-content"
+                      flexWrap="nowrap"
+                      animation={`${marqueeScroll} 15s linear infinite`}
+                    >
+                      {[
+                        ...whyChooseUs.images,
+                        ...whyChooseUs.images,
+                        ...whyChooseUs.images,
+                        ...whyChooseUs.images,
+                      ].map((imgSrc, index) => (
+                        <Image
+                          key={index}
+                          src={imgSrc}
+                          alt={`${whyChooseUs.heading} collage ${index + 1}`}
+                          w={{ base: "180px", md: "305px" }}
+                          // w="100%"
+                          h="auto"
+                          mx={{ base: "4px", md: "10px" }}
+                          borderRadius={{ base: "16px", md: "24px" }}
+                          objectFit="cover"
+                          flexShrink={0}
+                        />
+                      ))}
+                    </Flex>
+                  </Box>
+                ) : (
+                  <Box
+                    w="90%"
+                    justifyContent="center"
+                    alignItems="center"
+                    mx="auto"
+                  >
+                    <Image
+                      src={whyChooseUs.images[0]}
+                      alt={whyChooseUs.heading}
+                      w="100%"
+                      // h="100%"
+                      borderRadius={{ base: "16px", md: "24px" }}
+                      objectFit="cover"
+                    />
+                  </Box>
+                )}
+              </Box>
+            )}
           </VStack>
         </Box>
       </PageContentWrapper>

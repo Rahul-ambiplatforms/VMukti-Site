@@ -37,7 +37,7 @@ const industriesData = [
     img:
       "data:image/svg+xml;charset=utf-8," +
       encodeURIComponent(
-        '<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M0 31.7125C0.00106823 32.3785 0.621354 32.9989 1.28745 33H4.12503V16.6288C4.12503 15.7718 4.67849 15.1465 5.54293 15.1465H27.4571C28.3215 15.1465 28.875 15.7718 28.875 16.6288V33H31.7125C32.3785 32.9989 32.9989 32.3785 33 31.7125V11.5362C32.9989 10.9531 31.8054 10.2921 31.1819 9.87475L22.4419 3.85502C22.2462 3.7222 22.1057 3.60683 21.9144 3.48019L17.7891 0.644501C17.2376 0.277147 16.929 0.0632632 16.6637 0H16.3366C16.0767 0.0620763 15.7778 0.269076 15.2495 0.618507L0.825148 10.5575C0.514293 10.7631 0.00106823 11.0597 0.000118692 11.5356V31.7127L0 31.7125ZM12.375 18.498V24.1054C12.375 24.4558 12.6723 24.75 13.0196 24.75H19.9804C20.3425 24.75 20.625 24.4675 20.625 24.1054V18.498C20.625 18.0948 20.2676 17.8534 19.8515 17.8534H17.5312C17.5312 18.5816 17.6989 19.9159 16.5 19.9159C15.301 19.9159 15.4688 18.5816 15.4688 17.8534H13.1485C12.7325 17.8534 12.375 18.0947 12.375 18.498ZM17.1445 27.0702V32.162C17.1445 32.5855 17.3698 32.9988 17.7873 32.9999H24.8161C25.2183 32.9988 25.4589 32.6419 25.4589 32.2264V26.8123C25.4589 26.4357 25.1264 26.1032 24.7498 26.1032H22.3006C22.3006 26.7648 22.4059 27.4737 22.0559 27.8566C21.4959 28.4693 20.3025 28.1354 20.3025 27.1344V26.1032H17.8533C17.3559 26.1032 17.1444 26.5698 17.1444 27.07L17.1445 27.0702ZM7.54099 26.8124V32.2265C7.54099 32.6419 7.78158 32.9989 8.18383 33H15.2125C15.6301 32.9989 15.8554 32.5855 15.8554 32.1621V27.0704C15.8554 26.5701 15.644 26.1036 15.1464 26.1036H12.6972C12.6972 26.9553 12.888 28.1661 11.6016 28.1661C11.2559 28.1661 10.6993 27.8143 10.6993 27.1994V26.1037H8.25006C7.87345 26.1037 7.54099 26.4362 7.54099 26.8128V26.8124Z" fill="#3F77A5"/></svg>'
+        '<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 50 48" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M41.4068 43.6485C41.4068 42.2315 43.0809 42.4093 43.0809 43.5368C43.0809 44.7545 41.4068 44.4697 41.4068 43.6485ZM13.8395 43.5368C13.8395 42.3948 15.5136 42.2453 15.5136 43.6485C15.5136 44.4697 13.8395 44.7545 13.8395 43.5368ZM6.9198 43.6485C6.9198 42.2857 8.59391 42.2993 8.59391 43.6485C8.59391 44.5701 6.9198 44.5751 6.9198 43.6485ZM34.4872 43.5368C34.4872 43.0772 34.9203 42.644 35.3801 42.644C35.8172 42.644 36.1613 43.0592 36.1613 43.5368C36.1613 44.691 34.4872 44.5606 34.4872 43.5368ZM28.4603 42.644C28.9354 42.644 29.3385 43.0789 29.3241 43.5239C29.3088 43.9911 28.9016 44.3776 28.4768 44.371C27.2581 44.3523 27.4182 42.644 28.4603 42.644ZM20.7592 43.5368C20.7592 41.8866 23.1829 42.8688 22.1877 44.0722C21.7506 44.6008 20.7592 44.4484 20.7592 43.5368ZM0 43.202C0 44.6923 0.242673 45.7787 1.30717 46.8056C1.95401 47.4294 3.11231 48.0011 4.35277 48.0011H45.7596C47.9212 48.0011 50.0007 45.9215 50.0007 43.76C50.0007 40.33 47.7261 38.9609 44.6436 38.9609H5.58045C3.90085 38.9609 2.60324 39.1861 1.65475 39.9461C0.843313 40.5963 0 41.7834 0 43.202Z" fill="#3F77A5"/><path fill-rule="evenodd" clip-rule="evenodd" d="M25.0004 18.3119C22.8672 18.3119 21.1734 17.2138 20.3093 15.5252C18.5655 12.118 20.8975 7.70927 24.554 7.70927C26.2893 7.70927 27.486 7.90279 28.7691 9.18607C31.7261 12.1429 30.2054 18.3119 25.0004 18.3119ZM20.3128 3.57968C18.6554 3.57968 18.4266 1.14315 16.8779 2.71179C13.8215 5.80765 13.5609 5.41964 15.0589 7.04797C15.9866 8.05642 15.5105 9.88781 13.9271 10.1406C13.3769 10.2284 12.8196 10.0497 12.423 10.3107C11.7004 10.7862 11.9422 13.1265 11.9422 14.2941C11.9422 16.679 13.6183 15.1486 14.9763 16.2823C15.4056 16.6406 15.5136 17.1353 15.5136 17.7539C15.5136 19.1265 14.1744 19.2817 14.1744 20.2093C14.1744 20.5703 16.3543 22.7859 16.7313 23.1212C18.7711 24.9349 18.1987 22.4415 20.3128 22.4415C22.4949 22.4415 22.1517 24.9645 22.2359 25.3174C22.3261 25.6947 22.6993 26.0128 23.2146 26.0128H26.7862C28.1266 26.0128 27.7497 24.3473 27.8701 23.8601C28.1838 22.5899 29.7197 21.8942 31.048 22.9788C31.8445 23.6294 31.906 24.4251 33.2319 23.0834C33.703 22.6066 35.8264 20.6151 35.8264 20.3209C35.8264 18.9295 34.4872 19.6259 34.4872 17.419C34.4872 15.6186 37.0209 15.8275 37.1999 15.779C37.5359 15.688 37.947 15.4255 37.947 15.0753C37.947 8.88246 38.1964 10.5915 35.98 10.1226C34.6351 9.83823 34.4872 8.96137 34.4872 8.04406C34.4872 6.50827 36.8879 6.45042 35.1866 4.77758C31.8729 1.51952 32.5297 1.72749 30.8867 3.10444C30.3427 3.56043 29.573 3.65592 28.9034 3.36129C26.911 2.48443 28.6256 0.00830495 26.8977 0.00830495C20.9952 0.00830495 22.6668 -0.250798 22.0952 2.12548C21.9129 2.8834 21.2046 3.57968 20.3128 3.57968Z" fill="#3F77A5"/><path fill-rule="evenodd" clip-rule="evenodd" d="M2.56641 29.3621V37.5095C3.23783 37.4945 3.65001 37.2864 4.46369 37.2864H15.1782V29.2505C15.1782 28.5654 14.647 28.2461 13.9505 28.2461H3.68244C3.05554 28.2461 2.56641 28.7352 2.56641 29.3621Z" fill="#3F77A5"/><path fill-rule="evenodd" clip-rule="evenodd" d="M34.8223 29.0273V37.2864H45.5367C46.3504 37.2864 46.7626 37.4945 47.434 37.5095V29.5854C47.434 28.8143 47.0763 28.2461 46.318 28.2461H36.0499C35.5129 28.2461 34.8223 28.5522 34.8223 29.0273Z" fill="#3F77A5"/><path fill-rule="evenodd" clip-rule="evenodd" d="M18.75 29.139V37.2864H31.2501V29.0273C31.2501 28.5069 30.5724 28.2461 30.0224 28.2461H19.7545C19.2147 28.2461 18.75 28.563 18.75 29.139Z" fill="#3F77A5"/></svg>'
       ),
     className: "light-blue",
     position: [1, 1],
@@ -45,7 +45,7 @@ const industriesData = [
     textColor: "black",
     dashColor: "#3F77A5",
     image: "./assets/ManufacturingIndustry.png",
-    path: "/industries/manufacturing",
+    path: "/industry/manufacturing",
   },
   {
     name: "",
@@ -69,7 +69,7 @@ const industriesData = [
     textColor: "black",
     dashColor: "#3F77A5",
     image: "./assets/WarehousingLogisticIndustry.png",
-    path: "/industries/warehouse",
+    path: "/industry/warehouse",
   },
   {
     name: "Healthcare Industry",
@@ -84,7 +84,7 @@ const industriesData = [
     textColor: "black",
     dashColor: "#3F77A5",
     image: "./assets/HealthcareIndustry.png",
-    path: "/industries/healthcare",
+    path: "/industry/healthcare",
   },
   // -----2nd Row-----
   {
@@ -101,7 +101,7 @@ const industriesData = [
     dashColor: "#3F77A5",
     isWide: true,
     image: "./assets/OilGasIndustry.png",
-    path: "/industries/oil-and-gas",
+    path: "/industry/oil-and-gas",
   },
   {
     name: "",
@@ -125,7 +125,7 @@ const industriesData = [
     textColor: "white",
     dashColor: "white",
     image: "./assets/ElectionIndustry.png",
-    path: "/industries/election",
+    path: "/industry/election",
   },
   // -----3rd Row-----
   {
@@ -141,7 +141,7 @@ const industriesData = [
     textColor: "white",
     dashColor: "white",
     image: "./assets/EducationIndustry.png",
-    path: "/industries/education",
+    path: "/industry/education",
   },
   {
     name: "Transportation Industry",
@@ -156,7 +156,7 @@ const industriesData = [
     textColor: "black",
     dashColor: "black",
     image: "./assets/TransportationIndustry.png",
-    path: "/industries/transportation",
+    path: "/industry/transportation",
   },
   {
     name: "Smart City",
@@ -171,12 +171,12 @@ const industriesData = [
     textColor: "black",
     dashColor: "#3F77A5",
     image: "./assets/CityMonitoring.png",
-    path: "/industries/smart-city",
+    path: "/industry/smart-city",
   },
   {
     isLink: true,
     text: "All Industries",
-    path: "/industries", // The page it will navigate to
+    path: "/industry", // The page it will navigate to
     position: [3, 4],
   },
   //   {
@@ -308,7 +308,7 @@ export default function IndustryGrid({
                       p="10px 20px"
                       borderRadius="full"
                       fontWeight="600"
-                      // whiteSpace="normal" 
+                      // whiteSpace="normal"
                       // wordBreak="break-word"
                     >
                       {industry.text}
@@ -467,7 +467,7 @@ export default function IndustryGrid({
                         textAlign="center"
                         style={{
                           transform: "rotateY(180deg)",
-                          backfaceVisibility: "hidden", 
+                          backfaceVisibility: "hidden",
                         }}
                       ></Box>
                     </Box>
@@ -520,7 +520,7 @@ export default function IndustryGrid({
               textAlign="center"
               position="relative"
               zIndex="2"
-              w={["90%","90%","70%","65%"]}
+              w={["90%", "90%", "70%", "65%"]}
               mx="auto"
             >
               {heading}
@@ -533,7 +533,8 @@ export default function IndustryGrid({
               w={{ base: "90%", md: "90%" }}
               mx="auto"
               mt="1%"
-              mb="2%"
+              mb={{base:"5%",md:"2%"}}
+              lineHeight="18px"
               position="relative"
               zIndex="2"
             >

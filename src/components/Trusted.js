@@ -11,25 +11,7 @@ const logosRow1 = [
   "/assets/row_1_2.png",
 ];
 
-const logosRow1_mobile = [
-  "/assets/row_1_1.png",
-  "/assets/row_1_2.png",
-  "/assets/row_1_3.png",
-  "/assets/row_1_4.png",
-  "/assets/row_1_1.png",
-  "/assets/row_1_2.png",
-];
-
 const logosRow2 = [
-  "/assets/row_2_1.png",
-  "/assets/row_2_2.png",
-  "/assets/row_2_3.png",
-  "/assets/row_2_4.png",
-  "/assets/row_2_1.png",
-  "/assets/row_2_2.png",
-];
-
-const logosRow2_mobile = [
   "/assets/row_2_1.png",
   "/assets/row_2_2.png",
   "/assets/row_2_3.png",
@@ -76,7 +58,6 @@ const Trusted = () => {
           top: 0,
           bottom: 0,
           width: { base: "50px", md: "100px" },
-          // background: 'linear-gradient(to right, #F7FAFC, transparent)',
           zIndex: 2,
         }}
         _after={{
@@ -86,7 +67,6 @@ const Trusted = () => {
           top: 0,
           bottom: 0,
           width: { base: "50px", md: "100px" },
-          // background: 'linear-gradient(to left, #F7FAFC, transparent)',
           zIndex: 2,
         }}
         // _hover={{

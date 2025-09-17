@@ -21,35 +21,35 @@ const surveillanceData = [
     description:
       "Our centralized video controller monitors, manages, and secures all locations through one unified system. Offers real-time viewing, incident playback and remote access for efficient surveillance.",
     image: "/assets/AISurveillance_1.png",
-    path:"solution/video-management-system"
+    path: "solution/video-management-system",
   },
   {
     title: "Enterprise Video Management System",
     description:
       "We deliver enterprise-level video surveillance that is designed for scalability, intelligence and seamless control. Supporting advanced user management and integration with existing security systems.",
     image: "/assets/AISurveillance_2.png",
-    path:"solution/enterprise-management-system"
+    path: "solution/enterprise-management-system",
   },
   {
     title: "Integrated Command and Control Centre",
     description:
       "With our Integrated command center solution combine real-time citywide surveillance live video feeds, automated alerts and emergency coordination to enhance urban safety and efficiency.",
     image: "/assets/AISurveillance_3.png",
-    path:"solution/integrated-command-control-center"
+    path: "solution/integrated-command-control-center",
   },
   {
     title: "Live Streaming",
     description:
       "With VMukti’s live streaming, this isn’t public broadcasting - it’s secure, real-time CCTV feed transmission to your Command and Control Centre. Built for mission-critical use, it ensures ultra-HD clarity, zero-latency, and instant remote response across locations.",
     image: "/assets/AISurveillance_4.png",
-    path:"solution/live-streaming-solution"
+    path: "solution/live-streaming-solution",
   },
   {
     title: "Flying Squad Vehicle",
     description:
       "Stay in control of a fast-moving vehicle with GPS tracking, AI surveillance & real-time command center powered by VMukti’s Intelligence, giving you crucial visibility at every second counts. it equips your teams with smart monitoring, remote access and live video access to act instantly.",
     image: "/assets/AISurveillance_5.png",
-    path:"solution/flying-squad-vehicle"
+    path: "solution/flying-squad-vehicle",
   },
 ];
 
@@ -68,10 +68,19 @@ const AISurveillance = () => {
   };
 
   return (
-    <Box bg="#3F77A5" p="3%" borderRadius={{ base: "0", md: "24px" }}>
+    <Box bg="#3F77A5" p="3%" borderRadius={{ base: "20px", md: "24px" }}>
       <Flex justify="space-between" align="center" mb={8}>
-        <Box color="white">
-          <Heading as="h1" fontSize="48px" fontWeight="600" lineHeight="60px">
+        <Box
+          color="white"
+          textAlign={{ base: "center", md: "left" }}
+          mx={{ base: "auto", md: "0" }}
+        >
+          <Heading
+            as="h1"
+            fontSize={{ base: "20px", md: "48px" }}
+            fontWeight="600"
+            lineHeight={{ base: "25px", md: "60px" }}
+          >
             {" "}
             Your All-in-One AI Surveillance
             <br />
@@ -84,6 +93,7 @@ const AISurveillance = () => {
             bg="rgba(255,255,255,0.3)"
             mt={{ base: "6", md: "25px" }}
             borderRadius="full"
+            display={{ base: "none", md: "block" }}
           >
             <Box
               position="absolute"
@@ -100,7 +110,12 @@ const AISurveillance = () => {
             />
           </Box>
         </Box>
-        <HStack spacing={2} position="absolute" right="5%">
+        <HStack
+          spacing={2}
+          position="absolute"
+          right="5%"
+          display={{ base: "none", md: "block" }}
+        >
           <IconButton
             size="lg"
             icon={
@@ -154,10 +169,13 @@ const AISurveillance = () => {
         {/* --- LEFT CONTAINER (Now on the blue background) --- */}
         <VStack
           align="stretch"
-          spacing={5}
+          spacing={{ base: 3, md: 5 }}
           w={{ base: "100%", lg: "30%" }}
           color="white"
           justifyContent="center"
+          // bg="red"
+          mb={{ base: "5%", md: "0" }}
+          order={{ base: "2", md: "1" }}
         >
           {surveillanceData.map((item, index) => (
             <Flex
@@ -197,6 +215,8 @@ const AISurveillance = () => {
           bg="white"
           borderRadius="24px"
           minH="511px"
+          order={{ base: "1", md: "2" }}
+          // bg="blue"
         >
           <VStack
             h="100%"

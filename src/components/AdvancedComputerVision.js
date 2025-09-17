@@ -130,7 +130,7 @@ const AdvancedComputerVision = ({
         transition={{ duration: 0.8, ease: "easeOut" }}
         mt={{ base: "1%", md: "1%" }}
       >
-        <Flex flexWrap="wrap">
+        <Flex flexWrap="wrap" mb={["5%","5%","2%","0%"]}>
           {title.map((item, index) => (
             <Text
               as="span"
@@ -158,6 +158,7 @@ const AdvancedComputerVision = ({
           zIndex={2}
           pointerEvents="auto"
           mb="5%"
+          display={["none","none","none","block"]}
         >
           {/* <Button
             width="31px"

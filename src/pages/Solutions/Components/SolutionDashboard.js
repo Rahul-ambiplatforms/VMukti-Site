@@ -13,7 +13,7 @@ import { Helmet } from "react-helmet-async";
 // You can create a new component file (e.g., HeroSection.jsx) and paste this code.
 const SolutionDashboard = () => {
   // These responsive values ensure the component looks great on all screen sizes.
-  const heroHeight = useBreakpointValue({ base: "140vh", md: "95vh" });
+  const heroHeight = useBreakpointValue({ base: "120vh", md: "95vh" });
   const contentWidth = useBreakpointValue({
     base: "95%",
     md: "100%",
@@ -22,7 +22,7 @@ const SolutionDashboard = () => {
   //   const contentBottom = useBreakpointValue({ base: '20px', md: '40px' });
   const containerPadding = useBreakpointValue({ base: 4, md: 8, lg: 16 });
   const mainHeadingSize = useBreakpointValue({
-    base: "48px",
+    base: "32px",
     md: "64px",
     lg: "64px",
   });
@@ -36,7 +36,7 @@ const SolutionDashboard = () => {
         position="relative"
         alignItems="center"
         justifyContent="center"
-        mt={["5%","","-7%","-7%"]}
+        mt={["-4%", "", "-7%", "-7%"]}
         alt="Hero Image"
         bgSize="cover"
         bgPosition="center"
@@ -56,7 +56,7 @@ const SolutionDashboard = () => {
           objectFit="cover"
           zIndex="base"
           borderRadius="24px"
-          display={{base:"none",md:"block"}}
+          display={{ base: "none", md: "block" }}
         />
         <Image
           src="../assets/solution_dash_mobile.png"
@@ -69,7 +69,7 @@ const SolutionDashboard = () => {
           objectFit="cover"
           zIndex="base"
           borderRadius="24px"
-          display={{base:"block",md:"none"}}
+          display={{ base: "block", md: "none" }}
         />
         {/* </Box> */}
         <VStack
@@ -84,9 +84,10 @@ const SolutionDashboard = () => {
             as="h1"
             color="white"
             textAlign="center"
-            fontSize={mainHeadingSize} // Make sure this variable is defined
+            fontSize={mainHeadingSize} 
             fontWeight="600"
-            w="80%"
+            w={{ base: "100%", md: "80%" }}
+            mb={["50%", "40%", "20%", "0"]}
           >
             Cutting-Edge Visual Solutions for a Smarter World
           </Heading>
@@ -99,7 +100,15 @@ const SolutionDashboard = () => {
             borderRadius="24px"
           >
             <VStack spacing={4} textAlign="center">
-              <Heading as="h2" fontSize="36px" fontWeight="500" color="black">
+              <Heading
+                as="h2"
+                fontSize={{ base: "20px", md: "36px" }}
+                w="90%"
+                p={["2%", "2%", "1%", "0"]}
+                fontWeight="500"
+                color="black"
+                lineHeight={{ base: "25px", md: "40px" }}
+              >
                 Unified Surveillance Intelligence for Every Sector
               </Heading>
               <Text

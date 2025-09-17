@@ -7,14 +7,17 @@ const HeroSection = () => {
     <Box
       position="relative"
       display="flex"
-      borderRadius="24px"
+      borderRadius={{ base: "16px", md: "24px" }}
       bgSize={{ base: "cover", md: "contain" }}
       bgPosition="center"
       bgRepeat="no-repeat"
       backgroundImage="url('../assets/WhoDash.png')"
       width="100%"
-      aspectRatio={{ base: "57 / 50", md: "16 / 9" }}
-      mt="2.2%"
+      height="100%"
+      // aspectRatio={{ base: "9/16", md: "16 / 9" }}
+      aspectRatio={["9/16", "9/16", "16/9", "16/9"]}
+      // mt={{ base: "10%", md: "2.2%" }}
+      mt={["10%", "10%", "6%", "3%"]}
     >
       <Box
         position="absolute"
@@ -35,7 +38,8 @@ const HeroSection = () => {
           {/* Heading */}
           <Box
             flex={2}
-            maxWidth={{ base: "100%", md: "55%", lg: "60%", xl: "60%" }}
+            // maxWidth={{ base: "100%", md: "55%", lg: "60%", xl: "60%" }}
+            maxWidth={["100%", "100%", "100%", "55%"]}
           >
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -46,8 +50,8 @@ const HeroSection = () => {
               <Heading
                 fontSize={{
                   base: "24px",
-                  sm: "32px",
-                  md: "40px",
+                  sm: "24px",
+                  md: "24px",
                   lg: "48px",
                 }}
                 color="#FFFFFF"
@@ -60,10 +64,7 @@ const HeroSection = () => {
             </motion.div>
           </Box>
           {/* Desktop View */}
-          <Box
-            display={{ base: "none", md: "block" }}
-            maxWidth={{ md: "55%", lg: "45%", xl: "40%" }}
-          >
+          <Box maxWidth={["100%", "100%", "80%", "55%"]}>
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -86,7 +87,7 @@ const HeroSection = () => {
                   </svg>
                 </Box>
                 <Text
-                  fontSize={{ base: "12px", md: "14px", lg: "16px" }}
+                  fontSize={{ base: "14px", md: "14px", lg: "16px" }}
                   fontWeight="500"
                   lineHeight="20px"
                   // mb="1%"
@@ -193,7 +194,8 @@ const HeroSection = () => {
             </Box>
             <Text
               mt="3%"
-              fontSize={{ base: "12px", md: "14px", lg: "16px" }}
+              fontSize={{ base: "14px", md: "14px", lg: "16px" }}
+              lineHeight={{ base: "18px", md: "20px" }}
               color="#FFFFFF"
               fontWeight="500"
               width={{ base: "80%", md: "45%" }}

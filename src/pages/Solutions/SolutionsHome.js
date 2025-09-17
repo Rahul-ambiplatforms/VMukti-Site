@@ -89,7 +89,7 @@ const Hero = () => {
       </Helmet>
       <SolutionDashboard />
       <Trusted />
-      <PageContentWrapper noPadding>
+      <PageContentWrapper>
         <AISurveillance />
         <Solutions data={solutionSolutions} />
         <CertificationsSection />
