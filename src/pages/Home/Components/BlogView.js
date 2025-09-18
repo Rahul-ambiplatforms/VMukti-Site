@@ -19,8 +19,8 @@ import { FiArrowDown, FiArrowRight } from "react-icons/fi";
 import { getBlogs } from "../../Blogs/blog"; // Make sure this path is correct
 
 // The base URL for your images.
-// const IMAGE_BASE_URL = process.env.REACT_APP_IMAGE_BASE_URL || "http://localhost:5000/uploads/";
-const IMAGE_BASE_URL = "https:/vmukti.com/backend/uploads/";
+const IMAGE_BASE_URL = process.env.REACT_APP_IMAGE_BASE_URL || "http://localhost:5000/uploads/";
+// const IMAGE_BASE_URL = "https://vmukti.com/backend/uploads/";
 
 // --- BlogPostCard Component (Redesigned & Optimized) ---
 // This component is wrapped in React.memo for performance optimization.
