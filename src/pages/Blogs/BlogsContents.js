@@ -25,7 +25,7 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getBlogs, getBlogById } from "./blog";
+import { getBlogs, getBlogById, getBlogByUrlWords } from "./blog";
 import { Helmet } from "react-helmet-async";
 import ContactUs from "../ContactUs/Contactus";
 import ImagePop from "../../components/Animation/Image/ImagePop";
@@ -255,7 +255,7 @@ const BlogsOverviewDash = () => {
           },
           body: JSON.stringify({
             ...formData,
-            formType: 'Blog'
+            formType: "Blog",
           }),
         }
       );
@@ -272,7 +272,7 @@ const BlogsOverviewDash = () => {
         });
 
         setFormData({
-          fullname:"",
+          fullname: "",
           email: "",
           phone: "",
           message: "",
@@ -305,45 +305,39 @@ const BlogsOverviewDash = () => {
   const IMAGE_BASE_URL =
     process.env.REACT_APP_IMAGE_BASE_URL || "http://localhost:5000/uploads";
   // const IMAGE_BASE_URL = "https://vmukti.com/backend/uploads";
+
+
   useEffect(() => {
+    // We define an async function inside so we can use await
     const fetchBlog = async () => {
       try {
         setLoading(true);
-        // Fetch all blogs (first page, large limit for safety)
-        const blogsResponse = await getBlogs(1, 6);
-        if (blogsResponse.status === "success") {
-          const found = blogsResponse.data.find(
-            (b) => b.metadata?.urlWords === urlWords
-          );
-          if (found) {
-            const response = await getBlogById(found._id);
-            if (response.status === "success") {
-              setBlog(response.data);
-            } else {
-              setError("Blog not found");
-            }
-          } else {
-            setError("Blog not found");
-          }
+        setError(null);
+
+        const response = await getBlogByUrlWords(urlWords);
+
+        if (response.status === "success") {
+          setBlog(response.data);
         } else {
-          setError("Error fetching blogs list");
+          setError(response.message || "Blog not found");
         }
       } catch (err) {
-        setError("Error fetching blog");
+        setError("An error occurred while fetching the blog.");
+        console.error(err);
       } finally {
         setLoading(false);
       }
     };
-    // fetchBlog();
 
+    // Only run the fetch function if urlWords exists
     if (urlWords) {
-      // Only fetch if urlWords is present
       fetchBlog();
     } else {
       setError("No urlWords parameter found.");
       setLoading(false);
     }
-  }, [urlWords]);
+  }, [urlWords]); 
+
   const [mainImageOg, setMainImageOg] = useState("");
   useEffect(() => {
     if (blog && blog.content && IMAGE_BASE_URL) {
@@ -759,7 +753,13 @@ const BlogsOverviewDash = () => {
                       switch (component.type) {
                         case "p":
                           return (
-                            <Box as="p" key={component.id} fontSize="16px" mt="0" mb="0">
+                            <Box
+                              as="p"
+                              key={component.id}
+                              fontSize="16px"
+                              mt="0"
+                              mb="0"
+                            >
                               {renderSlateContent(component.content.text)}
                             </Box>
                           );

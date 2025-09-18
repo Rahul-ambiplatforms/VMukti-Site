@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 // const API_URL = "https://vmukti.com/backend/api";
 
 // Get all blogs with pagination, sorting, and searching
@@ -35,6 +35,16 @@ export const getBlogs = async (
   } catch (error) {
     throw error.response?.data || error.message;
   }
+};
+
+export const getBlogByUrlWords = async (urlWords) => {
+  console.log("Initial Initial");
+  const response = await fetch(`${API_URL}/blogs/urlWords/${urlWords}`);
+  console.log("AFTER AAFTER", response);
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+  return response.json();
 };
 
 // Get a single blog by ID

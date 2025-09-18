@@ -1,6 +1,6 @@
 import React from "react";
 import HeroSection from "./HeroSection";
-import BlogsContent from "./BlogsContent";
+import BlogsContent from "./BlogsGrid";
 import { Box } from "@chakra-ui/react";
 import { Helmet } from "react-helmet-async";
 const BlogsDashboard = () => {

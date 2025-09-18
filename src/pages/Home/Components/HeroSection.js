@@ -21,24 +21,24 @@ const MotionButton = motion(Button);
 
 // Array of words for the typewriter animation
 const industries = [
-  "Manufacturing",
-  "Warehouse",
-  "Healthcare",
-  "Oil & Gas",
-  "Election",
-  "Education",
-  "Transportation",
-  "Smart City",
-  "Pharma",
-  "Banking",
-  "Enterprise",
-  "Logistics",
-  "Government",
-  "Sports",
-  "Entertainment",
-  "Defense",
-  "Hospitality",
-  "Construction",
+  "MANUFACTURING",
+  "WAREHOUSE",
+  "HEALTHCARE",
+  "OIL & GAS",
+  "ELECTION",
+  "EDUCATION",
+  "TRANSPORTATION",
+  "SMART CITY",
+  "PHARMA",
+  "BANKING",
+  "ENTERPRISE",
+  "LOGISTICS",
+  "GOVERNMENT",
+  "SPORTS",
+  "ENTERTAINMENT",
+  "DEFENSE",
+  "HOSPITALITY",
+  "CONSTRUCTION",
 ];
 
 const HeroSection = () => {
@@ -93,7 +93,6 @@ const HeroSection = () => {
       />
 
       <Show above="md">
-        {/* Decorative Boxes */}
         <Flex
           position="absolute"
           top={["", "", "25%", "12%"]}
@@ -191,6 +190,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
+            mt={{ base: "2%", md: "0" }}
           >
             <Text as="span" color="#000">
               Deliver Excellence Using{" "}
@@ -226,7 +226,10 @@ const HeroSection = () => {
                     }
                     transition={{ duration: 0.9, ease: "easeOut" }}
                   >
-                    <Flex direction={{ base: "column", md: "row" }}>
+                    <Flex
+                      direction={{ base: "column", md: "row" }}
+                      gap={{ base: "2", md: "4" }}
+                    >
                       <Box
                         width={{ base: "20px", md: "33px" }}
                         height={{ base: "25px", md: "33px" }}

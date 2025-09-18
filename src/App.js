@@ -10,7 +10,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import PageContentWrapper from "./components/PageContentWrapper";
 import AmbicamLandingPage from "./pages/Ambicam/AmbicamLandingPage";
 import BlogsDashboard from "./pages/Blogs/BlogsDashboard";
-import BlogsOverviewDash from "./pages/Blogs/BlogsOverviewDash";
+import BlogsContents from "./pages/Blogs/BlogsContents";
 import CustomCursor from "./components/CustomCursor";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import SolutionDetails from "./components/SolutionDetails";
@@ -59,15 +59,9 @@ function App() {
                   <Route path="/" element={<VMuktiHomepage />} />
                   <Route path="/technology" element={<TechnologyDashboard />} />
                   <Route path="/solution" element={<SolutionsHome />} />
-                  <Route  
-                    path="/solution/:name"
-                    element={<SolutionDetails />}
-                  />
+                  <Route path="/solution/:name" element={<SolutionDetails />} />
                   <Route path="/industry" element={<IndustryDashboard />} />
-                  <Route
-                    path="/industry/:name"
-                    element={<IndustryDetails />}
-                  />
+                  <Route path="/industry/:name" element={<IndustryDetails />} />
                   <Route path="/about-us" element={<WhoWeare />} />
                   {/* <Route
                     path="/whoweare/eventspotlight"
@@ -75,10 +69,7 @@ function App() {
                   /> */}
                   {/* <Route path="/whoweare/careers" element={<VMuktiCareers />} /> */}
                   <Route path="/blog" element={<BlogsDashboard />} />
-                  <Route
-                    path="/blog/:urlWords"
-                    element={<BlogsOverviewDash />}
-                  />
+                  <Route path="/blog/:urlWords" element={<BlogsContents />} />
                   {/* <Route path="/serving" element={<OurServings />} /> */}
                   {/* <Route path="/serving/:name" element={<ServingsDock />} /> */}
                   <Route path="/contact-us" element={<ContactUs />} />
