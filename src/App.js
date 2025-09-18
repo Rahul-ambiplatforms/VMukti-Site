@@ -69,7 +69,7 @@ function App() {
                     element={<EventSpotlight />}
                   />
                   <Route
-                    path="/whoweare/privacy-policy"
+                    path="/privacy-policy"
                     element={<PrivacyPolicy /> }
                   />
                   <Route path="/whoweare/careers" element={<VMuktiCareers />} />
