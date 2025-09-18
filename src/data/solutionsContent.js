@@ -5,7 +5,7 @@ export const homeSolutions = {
   solutions: [
     {
       heading1: "VMS",
-      heading2: "Video Management System",  
+      heading2: "Video Management System",
       content:
         "Elevate your security operations with our next-gen Video Management Software built for enterprises where precision and performance are non-negotiable. Powered by AI-native architecture, it delivers real-time situational awareness, intelligent analytics, and autonomous threat response at scale.",
       image: "./assets/home_solution_1.png",
@@ -89,7 +89,8 @@ export const solutionSolutions = {
       heading2: "Cloud AI",
       content:
         "We offer Cloud AI surveillance for smart monitoring with features like pre-stampede detection, smoke and fire detection, threat detection, facial recognition, PPE kit detection and many more. It ensures instant alerts, secure access and continuous protection for people and assets.",
-      image: "./assets/sol_solution_1.png",
+      image: "/assets/sol_solution_1.png",
+      image_mobile: "/assets/sol_solution_1.png",
       path: "/solution/cloudai",
     },
     {
@@ -97,7 +98,8 @@ export const solutionSolutions = {
       heading2: "Generative AI",
       content:
         "We provide GenAI transformed surveillance with smart search, automated reports and visual summaries while integrating with VMS for direct access to camera settings and seamless monitoring.",
-      image: "./assets/sol_solution_2.png",
+      image: "/assets/sol_solution_2.png",
+      image_mobile: "/assets/sol_solution_2.png",
       path: "/solution/genai",
     },
     {
@@ -105,7 +107,8 @@ export const solutionSolutions = {
       heading2: "AI VisualBot",
       content:
         "Our AI-powered analytics turn video into instant insights. Provides API keys for easy integration so systems can quickly process footage and receive actionable results within seconds.",
-      image: "./assets/sol_solution_3.png",
+      image: "/assets/sol_solution_3.png",
+      image_mobile: "/assets/sol_solution_3.png",
       path: "/solution/visualbot",
     },
   ],

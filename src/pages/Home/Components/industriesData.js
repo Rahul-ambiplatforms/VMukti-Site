@@ -44,7 +44,7 @@ const industriesData = [
     bgColor: "#BECEDC",
     textColor: "black",
     dashColor: "#3F77A5",
-    image: "./assets/ManufacturingIndustry.png",
+    image: "/assets/ManufacturingIndustry.png",
     path: "/industry/manufacturing",
   },
   {
@@ -68,7 +68,7 @@ const industriesData = [
     bgColor: "#BECEDC",
     textColor: "black",
     dashColor: "#3F77A5",
-    image: "./assets/WarehousingLogisticIndustry.png",
+    image: "/assets/WarehousingLogisticIndustry.png",
     path: "/industry/warehouse",
   },
   {
@@ -83,7 +83,7 @@ const industriesData = [
     bgColor: "white",
     textColor: "black",
     dashColor: "#3F77A5",
-    image: "./assets/HealthcareIndustry.png",
+    image: "/assets/HealthcareIndustry.png",
     path: "/industry/healthcare",
   },
   // -----2nd Row-----
@@ -100,7 +100,7 @@ const industriesData = [
     textColor: "black",
     dashColor: "#3F77A5",
     isWide: true,
-    image: "./assets/OilGasIndustry.png",
+    image: "/assets/OilGasIndustry.png",
     path: "/industry/oil-and-gas",
   },
   {
@@ -124,7 +124,7 @@ const industriesData = [
     bgColor: "#3F77A5",
     textColor: "white",
     dashColor: "white",
-    image: "./assets/ElectionIndustry.png",
+    image: "/assets/ElectionIndustry.png",
     path: "/industry/election",
   },
   // -----3rd Row-----
@@ -140,7 +140,7 @@ const industriesData = [
     bgColor: "#3F77A5",
     textColor: "white",
     dashColor: "white",
-    image: "./assets/EducationIndustry.png",
+    image: "/assets/EducationIndustry.png",
     path: "/industry/education",
   },
   {
@@ -155,7 +155,7 @@ const industriesData = [
     bgColor: "#BECEDC",
     textColor: "black",
     dashColor: "black",
-    image: "./assets/TransportationIndustry.png",
+    image: "/assets/TransportationIndustry.png",
     path: "/industry/transportation",
   },
   {
@@ -170,7 +170,7 @@ const industriesData = [
     bgColor: "white",
     textColor: "black",
     dashColor: "#3F77A5",
-    image: "./assets/CityMonitoring.png",
+    image: "/assets/CityMonitoring.png",
     path: "/industry/smart-city",
   },
   {
@@ -198,7 +198,7 @@ const industriesData = [
   //     bgColor: 'white',
   //     textColor: 'black',
   //     dashColor: '#3F77A5',
-  //     image: './assets/BankingIndustry.png',
+  //     image: '/assets/BankingIndustry.png',
   //   },
   // {
   //   name: 'Defense',
@@ -212,7 +212,7 @@ const industriesData = [
   //   bgColor: '#BECEDC',
   //   textColor: 'black',
   //   dashColor: '#3F77A5',
-  //   image: './assets/DefenseIndustry.png',
+  //   image: '/assets/DefenseIndustry.png',
   // },
 ];
 
@@ -500,7 +500,7 @@ export default function IndustryGrid({
           right: "5%",
           width: "100%",
           height: "100%",
-          backgroundImage: `./assets/image7_2.png`,
+          backgroundImage: `/assets/image7_2.png`,
           backgroundPosition: "left top",
           backgroundRepeat: "no-repeat",
           backgroundSize: "1138px",

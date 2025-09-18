@@ -278,7 +278,6 @@ export default function BlogsContent() {
                   src={`${IMAGE_BASE_URL}/${post.content.mainImage}`}
                   alt={post.content?.imageText || "Blog image"}
                   w="full"
-                  // h="400px"
                   aspectRatio="16/9"
                   borderRadius="24px"
                   objectFit="cover"
@@ -313,8 +312,18 @@ export default function BlogsContent() {
                   </Text>
                 </Box>
                 <Box flex="1" />
-                <Flex justifyContent="space-between" p={{ base: "2", md: "5" }}>
-                  <Box display="flex" whiteSpace="nowrap" gap="4" alignItems="center">
+                <Flex
+                  justifyContent="space-between"
+                  direction={{ base: "column", md: "row" }}
+                  gap="2"
+                  p={{ base: "2", md: "5" }}
+                >
+                  <Box
+                    display="flex"
+                    whiteSpace="nowrap"
+                    gap="4"
+                    alignItems="center"
+                  >
                     <Flex gap="2%">
                       <svg
                         width="21"
@@ -384,13 +393,20 @@ export default function BlogsContent() {
                       </svg>
                       {/* Prefer new blogAuthor, fallback to legacy author */}
                       <Text fontSize="16px" fontWeight="500" color="black">
-                        {post.content?.blogAuthor || post.content?.author || "Unknown Author"}
+                        {post.content?.blogAuthor ||
+                          post.content?.author ||
+                          "Unknown Author"}
                       </Text>
                     </Flex>
                   </Box>
                   {/* <Box> */}
                   <Link to={`/blog/${post.metadata.urlWords}`}>
-                    <Flex align="center" gap="2">
+                    <Flex
+                      align="center"
+                      gap="2"
+                      pl={{ base: "2", md: "0" }}
+                      pb={{ base: "2", md: "0" }}
+                    >
                       <Text fontSize="14px" fontWeight={500} color="#000000">
                         Learn More
                       </Text>

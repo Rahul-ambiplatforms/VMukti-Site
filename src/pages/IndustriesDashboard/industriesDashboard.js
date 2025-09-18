@@ -695,7 +695,7 @@ export default function IndustryDashboard() {
           }}
         >
           <Image
-            src="./assets/industry_dashboard.png"
+            src="/assets/industry_dashboard.png"
             alt="Transforming Industries with AI-Powered Intelligence"
             position="absolute"
             top="16%"

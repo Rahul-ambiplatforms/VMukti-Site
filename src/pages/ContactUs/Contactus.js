@@ -268,134 +268,6 @@ export default function ContactUs() {
           >
             {/* ------contact us form------ */}
             <ContactUsForm />
-            {/* Connection Cards - Mobile View */}
-            <Box display={{ base: "block", lg: "none" }} mt={6}>
-              <Box position="relative" w="100%">
-                <MotionBox
-                  key={currentCardIndex} // Ensure animation triggers on card change
-                  bg={cards[currentCardIndex].bg}
-                  color={cards[currentCardIndex].color}
-                  p={6}
-                  borderRadius="24px"
-                  minH="336px"
-                  w="100%"
-                  position="relative"
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  variants={scrollAnimation}
-                >
-                  <HeadingAnimation>
-                    <Heading
-                      fontSize="36px"
-                      width={{ base: "203px", md: "256px" }}
-                      fontWeight="700"
-                      lineHeight="normal"
-                      fontStyle="normal"
-                      letterSpacing="-0.54%"
-                      mb={4}
-                    >
-                      {cards[currentCardIndex].title}
-                    </Heading>
-                  </HeadingAnimation>
-                  <Box position="absolute" bottom="16px">
-                    <SubHeadingAnimation>
-                      <Flex direction="column">
-                        <Text fontWeight="700" fontSize="16px">
-                          {cards[currentCardIndex].phone}
-                        </Text>
-                        <Box
-                          w="10%"
-                          h="1px"
-                          bgColor={
-                            cards[currentCardIndex].bg === "#3F77A5"
-                              ? "white"
-                              : "#3F77A5"
-                          }
-                          my={2} // Add some vertical spacing
-                        />
-                        <Text
-                          fontWeight="500"
-                          color={
-                            cards[currentCardIndex].bg === "#3F77A5"
-                              ? "white"
-                              : "#696969"
-                          }
-                          fontSize="16px"
-                        >
-                          {cards[currentCardIndex].email}
-                        </Text>
-                      </Flex>
-                    </SubHeadingAnimation>
-                  </Box>
-                </MotionBox>
-                <Flex
-                  position="absolute"
-                  // top="350px"
-                  bottom="-50px"
-                  right="10px"
-                  gap="2px"
-                  zIndex="2"
-                >
-                  <Button
-                    width="31px"
-                    height="31px"
-                    minWidth="31px"
-                    minHeight="31px"
-                    padding="0"
-                    borderRadius="5px"
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                    cursor="pointer"
-                    bgColor="white"
-                    _hover={{ bgColor: "#e0e0e0" }}
-                    onClick={handlePrevCard}
-                  >
-                    <svg
-                      width="8"
-                      height="16"
-                      viewBox="0 0 8 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z"
-                        fill="#3F77A5"
-                      />
-                    </svg>
-                  </Button>
-                  <Button
-                    width="31px"
-                    height="31px"
-                    minWidth="31px"
-                    minHeight="31px"
-                    padding="0"
-                    borderRadius="5px"
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                    cursor="pointer"
-                    bgColor="white"
-                    _hover={{ bgColor: "#e0e0e0" }}
-                    onClick={handleNextCard}
-                  >
-                    <svg
-                      width="8"
-                      height="16"
-                      viewBox="0 0 8 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z"
-                        fill="#3F77A5"
-                      />
-                    </svg>
-                  </Button>
-                </Flex>
-              </Box>
-            </Box>
 
             {/* Contact Image */}
             {/* <Box
@@ -438,6 +310,135 @@ export default function ContactUs() {
         </PageContentWrapper>
         <Trusted />
         <PageContentWrapper>
+          {/* Connection Cards - Mobile View */}
+          <Box display={{ base: "block", lg: "none" }} mt={6} mb="16">
+            <Box position="relative" w="100%">
+              <MotionBox
+                key={currentCardIndex} // Ensure animation triggers on card change
+                bg={cards[currentCardIndex].bg}
+                color={cards[currentCardIndex].color}
+                p={6}
+                borderRadius="24px"
+                minH="336px"
+                w="100%"
+                position="relative"
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                variants={scrollAnimation}
+                overflow="hidden"
+              >
+                <HeadingAnimation>
+                  <Heading
+                    fontSize="36px"
+                    width={{ base: "203px", md: "256px" }}
+                    fontWeight="700"
+                    lineHeight="normal"
+                    fontStyle="normal"
+                    letterSpacing="-0.54%"
+                    mb={4}
+                  >
+                    {cards[currentCardIndex].title}
+                  </Heading>
+                </HeadingAnimation>
+                <Box position="absolute" bottom="16px">
+                  <SubHeadingAnimation>
+                    <Flex direction="column">
+                      <Text fontWeight="700" fontSize="16px">
+                        {cards[currentCardIndex].phone}
+                      </Text>
+                      <Box
+                        w="10%"
+                        h="1px"
+                        bgColor={
+                          cards[currentCardIndex].bg === "#3F77A5"
+                            ? "white"
+                            : "#3F77A5"
+                        }
+                        my={2} // Add some vertical spacing
+                      />
+                      <Text
+                        fontWeight="500"
+                        color={
+                          cards[currentCardIndex].bg === "#3F77A5"
+                            ? "white"
+                            : "#696969"
+                        }
+                        fontSize="16px"
+                      >
+                        {cards[currentCardIndex].email}
+                      </Text>
+                    </Flex>
+                  </SubHeadingAnimation>
+                </Box>
+              </MotionBox>
+              <Flex
+                position="absolute"
+                // top="350px"
+                bottom="-50px"
+                right="10px"
+                gap="2px"
+                zIndex="2"
+              >
+                <Button
+                  width="31px"
+                  height="31px"
+                  minWidth="31px"
+                  minHeight="31px"
+                  padding="0"
+                  borderRadius="5px"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  cursor="pointer"
+                  bgColor="white"
+                  _hover={{ bgColor: "#e0e0e0" }}
+                  onClick={handlePrevCard}
+                >
+                  <svg
+                    width="8"
+                    height="16"
+                    viewBox="0 0 8 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z"
+                      fill="#3F77A5"
+                    />
+                  </svg>
+                </Button>
+                <Button
+                  width="31px"
+                  height="31px"
+                  minWidth="31px"
+                  minHeight="31px"
+                  padding="0"
+                  borderRadius="5px"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  cursor="pointer"
+                  bgColor="white"
+                  _hover={{ bgColor: "#e0e0e0" }}
+                  onClick={handleNextCard}
+                >
+                  <svg
+                    width="8"
+                    height="16"
+                    viewBox="0 0 8 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z"
+                      fill="#3F77A5"
+                    />
+                  </svg>
+                </Button>
+              </Flex>
+            </Box>
+          </Box>
           {/* Connection Cards for Desktop View */}
           <Box display={{ base: "none", lg: "block" }} mt={6}>
             <SimpleGrid

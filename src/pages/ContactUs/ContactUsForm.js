@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Box,
   Flex,
@@ -24,8 +24,10 @@ import {
 } from "@chakra-ui/react";
 import { CheckCircleIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
+import countryData from "../../data/Country_Code.json";
 
 // --- DATA ---
+
 const leftPanelData = {
   heading: "Let's Build the Future of Visual Intelligence Together",
   description:
@@ -41,13 +43,13 @@ const leftPanelData = {
 };
 
 const formOptions = {
-  countries: [
-    { code: "+91", name: "India", flag: "🇮🇳" },
-    { code: "+1", name: "United States", flag: "🇺🇸" },
-    { code: "+44", name: "United Kingdom", flag: "🇬🇧" },
-    { code: "+1", name: "Canada", flag: "🇨🇦" },
-  ],
-  cities: ["New York", "Mumbai", "London", "Toronto"],
+  // countries: [
+  //   { code: "+91", name: "India", flag: "🇮🇳" },
+  //   { code: "+1", name: "United States", flag: "🇺🇸" },
+  //   { code: "+44", name: "United Kingdom", flag: "🇬🇧" },
+  //   { code: "+1", name: "Canada", flag: "🇨🇦" },
+  // ],
+  // cities: ["New York", "Mumbai", "London", "Toronto"],
   businessProfiles: ["Government", "Enterprise", "System Integrator"],
   inquiryTypes: [
     "AI Cameras",
@@ -164,6 +166,8 @@ const CustomRadioDropdown = ({
           zIndex="dropdown"
           width="240px"
           border="1px solid #ccc"
+          maxH="300px"
+          overflowY="auto"
         >
           <RadioGroup onChange={handleSelect} value={value}>
             <VStack align="flex-start" w="100%" spacing={3}>
@@ -184,9 +188,8 @@ const CustomRadioDropdown = ({
 };
 
 const PhoneInput = ({ value, onChange, isRequired }) => {
-  const currentCountry =
-    formOptions.countries.find((c) => c.code === value.code) ||
-    formOptions.countries[0];
+  const currentCountry = countryData.find((c) => c.dial_code === value.code) ||
+    countryData[0] || { dial_code: "", name: "" };
 
   const handleCodeChange = (newCode) => {
     onChange({ ...value, code: newCode });
@@ -221,29 +224,23 @@ const PhoneInput = ({ value, onChange, isRequired }) => {
               </Icon>
             </HStack>
           </MenuButton>
-          <MenuList zIndex="dropdown">
-            {formOptions.countries.map((country) => (
+          <MenuList zIndex="dropdown" maxH="300px" overflowY="auto">
+            {countryData.map((country) => (
               <MenuItem
-                key={`${country.name}-${country.code}`}
-                onClick={() => handleCodeChange(country.code)}
+                key={`${country.name}-${country.dial_code}`}
+                onClick={() => handleCodeChange(country.dial_code)}
               >
                 <HStack>
-                  <Text fontSize="xl">{country.flag}</Text>
                   <Text>
-                    {country.name} ({country.code})
+                    {country.name} ({country.dial_code})
                   </Text>
                 </HStack>
-                {/* <Divider
-                  orientation="vertical"
-                  h="60%"
-                  borderColor="gray.400"
-                /> */}
               </MenuItem>
             ))}
           </MenuList>
         </Menu>
         <Input
-          // variant="unstyled"  
+          // variant="unstyled"
           value={value.number}
           onChange={handleNumberChange}
           type="tel"
@@ -261,11 +258,7 @@ const PhoneInput = ({ value, onChange, isRequired }) => {
           zIndex="1"
         >
           <Text color="gray.500">000 000 0000</Text>
-          {isRequired && (
-            <Text color="red.500">
-              *
-            </Text>
-          )}
+          {isRequired && <Text color="red.500">*</Text>}
         </HStack>
       )}
     </Flex>
@@ -350,7 +343,7 @@ const ContactUsForm = () => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             ...formData,
-            formType: 'Contact' 
+            formType: "Contact",
           }),
         }
       );
@@ -477,96 +470,129 @@ const ContactUsForm = () => {
               </Text>
             </Heading>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
-              <RequiredPlaceholder
-                text="Full name"
-                hasValue={!!formData.fullName}
-                isRequired={true}
-              >
-                <Input
-                  name="fullName"
-                  value={formData.fullName}
-                  onChange={handleChange}
-                  bg="#F0F0F0"
-                  border="none"
-                  borderRadius="10px"
-                  h="48px"
+              {/* 1. Full name */}
+              <Box sx={{ order: { base: 1, md: "initial" } }}>
+                <RequiredPlaceholder
+                  text="Full name"
+                  hasValue={!!formData.fullName}
+                  isRequired={true}
+                >
+                  <Input
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    bg="#F0F0F0"
+                    border="none"
+                    borderRadius="10px"
+                    h="48px"
+                  />
+                </RequiredPlaceholder>
+              </Box>
+
+              {/* 2. Email Address */}
+              <Box sx={{ order: { base: 2, md: "initial" } }}>
+                <RequiredPlaceholder
+                  text="Email Address"
+                  hasValue={!!formData.email}
+                  isRequired={true}
+                >
+                  <Input
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    bg="#F0F0F0"
+                    border="none"
+                    borderRadius="10px"
+                    h="48px"
+                  />
+                </RequiredPlaceholder>
+              </Box>
+
+              {/* 3. Phone */}
+              <Box sx={{ order: { base: 3, md: "initial" } }}>
+                <PhoneInput
+                  value={formData.phone}
+                  onChange={handlePhoneChange}
+                  isRequired={true}
                 />
-              </RequiredPlaceholder>
+              </Box>
 
-              <CustomRadioDropdown
-                placeholder="Country"
-                name="country"
-                options={formOptions.countries.map((c) => c.name)}
-                value={formData.country}
-                onChange={handleDropdownChange}
-                isRequired={false}
-              />
+              {/* 4. Company Name */}
+              <Box sx={{ order: { base: 4, md: "initial" } }}>
+                <RequiredPlaceholder
+                  text="Company Name"
+                  hasValue={!!formData.companyName}
+                  isRequired={true}
+                >
+                  <Input
+                    name="companyName"
+                    value={formData.companyName}
+                    onChange={handleChange}
+                    bg="#F0F0F0"
+                    border="none"
+                    borderRadius="10px"
+                    h="48px"
+                  />
+                </RequiredPlaceholder>
+              </Box>
 
-              <RequiredPlaceholder
-                text="Email Address"
-                hasValue={!!formData.email}
-                isRequired={true}
-              >
-                <Input
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  bg="#F0F0F0"
-                  border="none"
-                  borderRadius="10px"
-                  h="48px"
+              {/* 5. Country */}
+              <Box sx={{ order: { base: 5, md: "initial" } }}>
+                <CustomRadioDropdown
+                  placeholder="Country"
+                  name="country"
+                  options={countryData.map((c) => `${c.name} (${c.dial_code})`)}
+                  value={formData.country}
+                  onChange={handleDropdownChange}
+                  isRequired={false}
+                  maxH="200px"
+                  overflowY="auto"
                 />
-              </RequiredPlaceholder>
+              </Box>
 
-              <CustomRadioDropdown
-                placeholder="City"
-                name="city"
-                options={formOptions.cities}
-                value={formData.city}
-                onChange={handleDropdownChange}
-                isRequired={false}
-              />
+              {/* 6. City */}
+              <Box sx={{ order: { base: 6, md: "initial" } }}>
+                <RequiredPlaceholder
+                  text="City"
+                  hasValue={!!formData.city}
+                  isRequired={false}
+                >
+                  <Input
+                    name="city"
+                    value={formData.city}
+                    onChange={handleChange}
+                    bg="#F0F0F0"
+                    border="none"
+                    borderRadius="10px"
+                    h="48px"
+                  />
+                </RequiredPlaceholder>
+              </Box>
 
-              <PhoneInput
-                value={formData.phone}
-                onChange={handlePhoneChange}
-                isRequired={true}
-              />
-
-              <CustomRadioDropdown
-                placeholder="Business Profile"
-                name="businessProfile"
-                options={formOptions.businessProfiles}
-                value={formData.businessProfile}
-                onChange={handleDropdownChange}
-                isRequired={false}
-              />
-
-              <RequiredPlaceholder
-                text="Company Name"
-                hasValue={!!formData.companyName}
-                isRequired={true}
-              >
-                <Input
-                  name="companyName"
-                  value={formData.companyName}
-                  onChange={handleChange}
-                  bg="#F0F0F0"
-                  border="none"
-                  borderRadius="10px"
-                  h="48px"
+              {/* 7. Business Profile */}
+              <Box sx={{ order: { base: 7, md: "initial" } }}>
+                <CustomRadioDropdown
+                  placeholder="Business Profile"
+                  name="businessProfile"
+                  options={formOptions.businessProfiles}
+                  value={formData.businessProfile}
+                  onChange={handleDropdownChange}
+                  isRequired={false}
                 />
-              </RequiredPlaceholder>
+              </Box>
 
-              <CustomRadioDropdown
-                placeholder="Inquiry Type"
-                name="inquiryType"
-                options={formOptions.inquiryTypes}
-                value={formData.inquiryType}
-                onChange={handleDropdownChange}
-                isRequired={false}
-              />
+              {/* 8. Inquiry Type */}
+              <Box sx={{ order: { base: 8, md: "initial" } }}>
+                <CustomRadioDropdown
+                  placeholder="Inquiry Type"
+                  name="inquiryType"
+                  options={formOptions.inquiryTypes}
+                  value={formData.inquiryType}
+                  onChange={handleDropdownChange}
+                  isRequired={false}
+                />
+              </Box>
             </SimpleGrid>
             <Textarea
               name="message"
@@ -577,7 +603,7 @@ const ContactUsForm = () => {
               border="none"
               borderRadius="10px"
               mt={5}
-              h="192px"
+              h={{ base: "124px", md: "192px" }}
               resize="none"
             />
             <Button

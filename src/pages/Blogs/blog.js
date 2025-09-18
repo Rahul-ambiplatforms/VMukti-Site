@@ -1,16 +1,22 @@
 // frontend/src/api/blog.js
 
-import axios from 'axios';
+import axios from "axios";
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+// const API_URL = "https://vmukti.com/backend/api";
 
 // Get all blogs with pagination, sorting, and searching
-export const getBlogs = async (page = 1, limit = 6, searchTerm = "", sortOrder = "latest", status = "published") => {
-  console.log("Initial")
+export const getBlogs = async (
+  page = 1,
+  limit = 6,
+  searchTerm = "",
+  sortOrder = "latest",
+  status = "published"
+) => {
   try {
     // Construct the parameters object
     const params = { page, limit };
-    
+
     if (searchTerm) {
       params.search = searchTerm;
     }
@@ -22,6 +28,9 @@ export const getBlogs = async (page = 1, limit = 6, searchTerm = "", sortOrder =
     }
 
     const response = await axios.get(`${API_URL}/blogs`, { params });
+    // console.log("response", response);
+    // console.log("response data", response.data);
+
     return response.data;
   } catch (error) {
     throw error.response?.data || error.message;
