@@ -73,11 +73,11 @@ function App() {
                     element={<PrivacyPolicy /> }
                   />
                   <Route path="/whoweare/careers" element={<VMuktiCareers />} />
-                  <Route path="/blog" element={<BlogsDashboard />} />
-                  <Route
+                  {/* <Route path="/blog" element={<BlogsDashboard />} /> */}
+                  {/* <Route
                     path="/blog/:urlWords"
                     element={<BlogsOverviewDash />}
-                  />
+                  /> */}
                   <Route path="/serving" element={<OurServings />} />
                   <Route path="/serving/:name" element={<ServingsDock />} />
                   <Route path="/contactus" element={<ContactUs />} />

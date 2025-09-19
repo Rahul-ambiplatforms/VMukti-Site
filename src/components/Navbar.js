@@ -113,7 +113,7 @@ const dropdownItems = {
     { label: 'Event Spotlight', path: '/whoweare/eventspotlight' },
     // { label: 'Social Impact', path: '/whoweare/social-impact' },
     // { label: 'Achievements', path: '/whoweare/achievements' },
-    { label: 'Blogs', path: '/blog' },
+    // { label: 'Blogs', path: '/blog' },
     { label: 'Careers', path: '/whoweare/careers' },
     // { label: 'Help Desk', path: '/whoweare/help-desk' },
     // { label: 'Terms & Condition', path: '/whoweare/terms' },
