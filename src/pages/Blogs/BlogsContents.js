@@ -302,10 +302,12 @@ const BlogsOverviewDash = () => {
     const match = url.match(/^(https?:\/\/[^\/]+\/)/);
     setBaseUrl(match ? match[1] : url);
   }, []);
+  // const IMAGE_BASE_URL =
+  //   process.env.REACT_APP_IMAGE_BASE_URL || "http://localhost:5000/uploads";
   const IMAGE_BASE_URL =
-    process.env.REACT_APP_IMAGE_BASE_URL || "http://localhost:5000/uploads";
-  // const IMAGE_BASE_URL = "https://vmukti.com/backend/uploads";
+    "https://res.cloudinary.com/dzs02ecai/image/upload/v1758361869/uploads";
 
+  // const IMAGE_BASE_URL = "https://vmukti.com/backend/uploads";
 
   useEffect(() => {
     // We define an async function inside so we can use await
@@ -336,7 +338,7 @@ const BlogsOverviewDash = () => {
       setError("No urlWords parameter found.");
       setLoading(false);
     }
-  }, [urlWords]); 
+  }, [urlWords]);
 
   const [mainImageOg, setMainImageOg] = useState("");
   useEffect(() => {
