@@ -33,7 +33,7 @@ const AllIndustriesArrow = (props) => (
 const industriesData = [
   // -----1st Row-----
   {
-    name: "Manufacturing Industry",
+    name: "Manufacturing",
     img:
       "data:image/svg+xml;charset=utf-8," +
       encodeURIComponent(
@@ -57,7 +57,7 @@ const industriesData = [
     dashColor: "",
   },
   {
-    name: "Warehouse Industry",
+    name: "Warehouse",
     img:
       "data:image/svg+xml;charset=utf-8," +
       encodeURIComponent(
@@ -72,7 +72,7 @@ const industriesData = [
     path: "/industry/warehouse",
   },
   {
-    name: "Healthcare Industry",
+    name: "Healthcare",
     img:
       "data:image/svg+xml;charset=utf-8," +
       encodeURIComponent(
@@ -88,7 +88,7 @@ const industriesData = [
   },
   // -----2nd Row-----
   {
-    name: "Oil & Gas Industry",
+    name: "Oil & Gas",
     img:
       "data:image/svg+xml;charset=utf-8," +
       encodeURIComponent(
@@ -113,7 +113,7 @@ const industriesData = [
     dashColor: "",
   },
   {
-    name: "Election Industry",
+    name: "Election",
     img:
       "data:image/svg+xml;charset=utf-8," +
       encodeURIComponent(
@@ -129,7 +129,7 @@ const industriesData = [
   },
   // -----3rd Row-----
   {
-    name: "Education Industry",
+    name: "Education",
     img:
       "data:image/svg+xml;charset=utf-8," +
       encodeURIComponent(
@@ -144,7 +144,7 @@ const industriesData = [
     path: "/industry/education",
   },
   {
-    name: "Transportation Industry",
+    name: "Transportation",
     img:
       "data:image/svg+xml;charset=utf-8," +
       encodeURIComponent(
@@ -180,7 +180,7 @@ const industriesData = [
     position: [3, 4],
   },
   //   {
-  //     name: 'Banking Industry',
+  //     name: 'Banking',
   //     img:
   //       'data:image/svg+xml;charset=utf-8,' +
   //       encodeURIComponent(
@@ -399,7 +399,6 @@ export default function IndustryGrid({
                         )}
                         {/* Industry Name & Line */}
                         <Text
-                          as="div"
                           fontSize="16px"
                           fontWeight="700"
                           position="absolute"
@@ -409,6 +408,8 @@ export default function IndustryGrid({
                           overflow="hidden"
                           textAlign="left"
                           maxWidth="90%"
+                          as={industry.name?"h3":"div"}
+                          // as="div"
                         >
                           {industry.name}
                           <Box
@@ -522,6 +523,7 @@ export default function IndustryGrid({
               zIndex="2"
               w={["90%", "90%", "70%", "65%"]}
               mx="auto"
+              as="h2"
             >
               {heading}
             </Text>
@@ -533,10 +535,11 @@ export default function IndustryGrid({
               w={{ base: "90%", md: "90%" }}
               mx="auto"
               mt="1%"
-              mb={{base:"5%",md:"2%"}}
+              mb={{ base: "5%", md: "2%" }}
               lineHeight="18px"
               position="relative"
               zIndex="2"
+              as="p"
             >
               {description}
             </Text>

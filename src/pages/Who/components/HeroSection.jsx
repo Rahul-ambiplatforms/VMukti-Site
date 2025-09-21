@@ -58,6 +58,7 @@ const HeroSection = () => {
                 fontWeight="600"
                 mb={8}
                 w="100%"
+                as="h1"
               >
                 Pioneering AI-Driven Visual Intelligence Since 2007
               </Heading>
@@ -91,6 +92,7 @@ const HeroSection = () => {
                   fontWeight="500"
                   lineHeight="20px"
                   // mb="1%"
+                  as="p"
                 >
                   Welcome to{" "}
                   <Text as="span" fontWeight="700">
@@ -136,6 +138,7 @@ const HeroSection = () => {
                   fontWeight="500"
                   lineHeight="20px"
                   maxW="100%"
+                  as="p"
                 >
                   Since our inception in{" "}
                   <Text as="span" fontWeight="700">

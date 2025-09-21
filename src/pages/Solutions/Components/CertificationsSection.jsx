@@ -15,6 +15,7 @@ const CertificationsSection = () => {
           fontWeight="600"
           lineHeight="normal"
           color="#000"
+          as="h2"
         >
           Our Certifications
         </Heading>
@@ -22,7 +23,7 @@ const CertificationsSection = () => {
 
       <Flex
         flexWrap={{ base: "wrap", md: "nowrap" }}
-        justifyContent={{ base: "center", md: "flex-start" }}
+        justifyContent={{ base: "center", md: "center" }}
         overflowX={{ base: "visible", md: "auto" }}
         gap={{ base: 2, md: 4 }}
         mx="auto"

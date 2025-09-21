@@ -17,6 +17,7 @@ import PageContentWrapper from "../../components/PageContentWrapper";
 import HeadingAnimation from "../../components/Animation/Text/HeadingAnimation";
 import CtaBanner from "../../components/CtaBanner";
 import { Helmet } from "react-helmet-async";
+import schemaData from "../../data/schemaData";
 // import SubHeadingAnimation from '../../components/Animation/Text/SubHeadingAnimation'
 // import { keyframes } from "@emotion/react";
 
@@ -37,7 +38,7 @@ const floatAnimation = keyframes`
 const industriesData = [
   // {/* 1st ROW */}
   {
-    name: "Manufacturing Industry",
+    name: "Manufacturing",
     img:
       "data:image/svg+xml;charset=utf-8," +
       encodeURIComponent(
@@ -62,7 +63,7 @@ const industriesData = [
     dashColor: "",
   },
   {
-    name: "Warehouse Industry",
+    name: "Warehouse",
     img:
       "data:image/svg+xml;charset=utf-8," +
       encodeURIComponent(
@@ -78,7 +79,7 @@ const industriesData = [
     link: "warehouse",
   },
   {
-    name: "Healthcare Industry",
+    name: "Healthcare",
     img:
       "data:image/svg+xml;charset=utf-8," +
       encodeURIComponent(
@@ -95,7 +96,7 @@ const industriesData = [
   },
   // {/* 2nd ROW */}
   {
-    name: "Oil & Gas Industry",
+    name: "Oil & Gas",
     img:
       "data:image/svg+xml;charset=utf-8," +
       encodeURIComponent(
@@ -121,7 +122,7 @@ const industriesData = [
     dashColor: "",
   },
   {
-    name: "Election Industry",
+    name: "Election",
     img:
       "data:image/svg+xml;charset=utf-8," +
       encodeURIComponent(
@@ -138,7 +139,7 @@ const industriesData = [
   },
   // {/* 3rd ROW */}
   {
-    name: "Education Industry",
+    name: "Education",
     img:
       "data:image/svg+xml;charset=utf-8," +
       encodeURIComponent(
@@ -154,7 +155,7 @@ const industriesData = [
     link: "education",
   },
   {
-    name: "Transportation Industry",
+    name: "Transportation",
     img:
       "data:image/svg+xml;charset=utf-8," +
       encodeURIComponent(
@@ -527,7 +528,6 @@ export default function IndustryDashboard() {
                       right="20px"
                     >
                       <Text
-                        as="div"
                         fontSize={{ base: "14px", md: "16px" }}
                         fontWeight="700"
                         wordBreak="break-word"
@@ -535,6 +535,7 @@ export default function IndustryDashboard() {
                         width="100%"
                         mt="-2%"
                         noOfLines={{ base: 2 }}
+                        as={industry.name?"h2":"div"}
                       >
                         {industry.name}
                         <Box
@@ -563,6 +564,7 @@ export default function IndustryDashboard() {
                           // noOfLines={{ base: 3, md: 5, lg: 10 }}
                           noOfLines={["3", "3", "7", "10"]}
                           display={{ base: "none", md: "block" }}
+                          as="p"
                         >
                           {industry.description}
                         </Text>
@@ -610,8 +612,21 @@ export default function IndustryDashboard() {
     );
   };
 
+  const industrypageSchemas = schemaData.industrypage;
+
   return (
     <>
+      <script>
+        {industrypageSchemas.map((schema, index) => (
+          <script
+            key={`schema-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schema),
+            }}
+          />
+        ))}
+      </script>
       <Helmet>
         {/* SEO Tags */}
         <title>Explore All Industries We Serve with Computer Vision AI</title>
@@ -720,6 +735,7 @@ export default function IndustryDashboard() {
                 marginBottom="30px"
                 lineHeight={{ base: "40px", md: "81px" }}
                 width={{ base: "100%", md: "90%" }}
+                as="h1"
               >
                 Transforming Industries with{" "}
                 <Text as="span" color="#3F77A5">
@@ -758,6 +774,7 @@ export default function IndustryDashboard() {
                 fontSize={{ base: "14px", md: "16px" }}
                 width="100%"
                 lineHeight={{ base: "18px", md: "20px" }}
+                as="p"
               >
                 We provide AI-driven solutions that revolutionize industries
                 with advanced security, automation, and intelligence. Enhancing

@@ -120,6 +120,7 @@ const VisionMissionSection = () => {
             color="#3F77A5"
             fontSize={{ base: "24px", md: "64px" }}
             fontWeight="700"
+            as="h2"
           >
             Vision
           </Text>
@@ -204,6 +205,7 @@ const VisionMissionSection = () => {
             color="#3F77A5"
             fontSize={{ base: "24px", md: "64px" }}
             fontWeight="700"
+            as="h2"
           >
             Mission
           </Text>

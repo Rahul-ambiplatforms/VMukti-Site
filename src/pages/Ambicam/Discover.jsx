@@ -29,6 +29,7 @@ const Discover = () => {
             lineHeight="1"
             gap={2}
             mb={{ base: "5", md: "10" }}
+            as="h2"
             // bg="red"
           >
             <Text>Discover </Text>

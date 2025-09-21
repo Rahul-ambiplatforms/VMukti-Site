@@ -51,6 +51,7 @@ const FaqsSection = ({ faqsList }) => {
                     fontWeight="700"
                     fontSize={{ base: "14px", md: "16px" }}
                     color="#000"
+                    as="h3"
                   >
                     {faq.question}
                   </Text>

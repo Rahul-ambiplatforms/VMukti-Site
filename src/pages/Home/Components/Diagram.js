@@ -51,11 +51,9 @@ const Diagram = () => {
         <HeadingAnimation>
           <Text
             w={["100%", "100%", "95%", "90%"]}
-            // fontSize={{ base: "20px", md: "48px" }}
             fontSize={["24px", "24px", "32px", "48px"]}
             fontWeight="500"
-            // ml={{ md: "5%" }}
-            // mt="5%"
+            as="h2"
             lineHeight={{ base: "1.2", md: "1.2" }} // Adjusts vertical spacing
           >
             Power Your AI Models Using Our Computer Vision Platform
@@ -94,6 +92,7 @@ const Diagram = () => {
               lineHeight={{base:"18px", md: "20px" }}
               mt="-1%"
               align="justify"
+              as="p"
             >
               Seamlessly deploy and scale your enterprise-grade computer vision
               with our AI-first platform. Engineered for performance, our API

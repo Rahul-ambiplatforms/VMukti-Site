@@ -107,7 +107,7 @@ const WhoWeare = () => {
         <VerticalTimeline />
       </StickySection>
 
-      <Box mt={"5%"}>
+      <Box mt={{base:"5%",md:"2%"}}>
         <CulturalSection gridItems={gridItems} />
       </Box>
       <CertificationsSection />

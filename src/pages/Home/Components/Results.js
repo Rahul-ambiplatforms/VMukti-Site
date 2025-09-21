@@ -56,7 +56,7 @@ const Results = ({ data }) => {
   // This is the default heading JSX
   const defaultHeading = (
     <Heading
-      as="h1"
+      as="h2"
       fontSize={{ base: "24px", md: "48px" }}
       fontWeight="600"
       color="#000"
@@ -81,7 +81,7 @@ const Results = ({ data }) => {
   if (data && data.heading && data.benefits) {
     headingContent = (
       <Heading
-        as="h1"
+        as="h2"
         fontSize={{base:"24px",md:"48px"}}
         fontWeight="600"
         color="black"
@@ -116,6 +116,7 @@ const Results = ({ data }) => {
             fontWeight="500"
             fontSize={{base:"14px",md:"16px"}}
             lineHeight={{base:"18px",md:"20px"}}
+            as="p"
           >
             {subheadingContent}
           </Text>
@@ -153,6 +154,7 @@ const Results = ({ data }) => {
               fontSize="14px"
               lineHeight="18px"
               w={{base:"100%",md:"85%"}}
+              as="p"
             >
               {feature.description}
             </Text>

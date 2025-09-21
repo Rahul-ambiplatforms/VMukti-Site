@@ -8,6 +8,7 @@ import {
   Button,
   useBreakpointValue,
   Show,
+  Heading,
 } from "@chakra-ui/react";
 import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -53,7 +54,7 @@ const HeroSection = () => {
 
   const handleImageHover = () => {
     gsap.to(imageRef.current, {
-      y: -20, // Negative value for a lift effect
+      y: 40,
       duration: 0.4,
       ease: "power2.out",
     });
@@ -182,6 +183,7 @@ const HeroSection = () => {
           {/* Animated Heading */}
           <MotionBox
             ref={ref}
+            as="h1"
             fontSize={{ base: "32px", md: "48px", lg: "64px" }}
             fontWeight="600"
             letterSpacing="0%"
@@ -247,6 +249,7 @@ const HeroSection = () => {
                         </svg>
                       </Box>
                       <Text
+                        as="p"
                         fontWeight="500"
                         lineHeight="100%"
                         w={["90%", "90%", "85%", "35%"]}

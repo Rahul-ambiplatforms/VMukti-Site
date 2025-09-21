@@ -184,11 +184,11 @@ const BlogView = () => {
           textAlign={{ base: "center", lg: "left" }}
           mb={{ base: 10, lg: 0 }}
         >
-          <Heading as="h2" size="2xl" fontWeight="bold">
+          <Heading as="h2" fontSize="48px" fontWeight="bold">
             Our Latest <Box as="span" color="orange.400">Blogs</Box>
           </Heading>
           <Icon as={FiArrowDown} w={8} h={8} color="#3F77A5" />
-          <Text color="gray.600">
+          <Text color="black" as="p">
             Welcome to our blog section, where knowledge meets inspiration,
             explore insightful articles, expect tips, and the latest trends in
             our field.

@@ -196,6 +196,7 @@ const SolutionContent = ({ content }) => {
   const { keyBenefits } = content;
   const { workflow } = content;
   const { whyChooseUs } = content;
+  const { schema } = content; 
 
   const { name } = useParams();
   const u_name = name.replace(/-/g, "");
@@ -227,6 +228,17 @@ const SolutionContent = ({ content }) => {
 
   return (
     <>
+    <script>
+        {schema.map((schema, index) => (
+          <script
+            key={`schema-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schema),
+            }}
+          />
+        ))}
+      </script>
       <Helmet>
         {/* SEO Tags */}
         <title>{content.metetitle}</title>
@@ -323,6 +335,7 @@ const SolutionContent = ({ content }) => {
             color="white"
             lineHeight="20px"
             w={{ base: "90%", md: "100%" }}
+            as="p"
           >
             {hero.description}
           </Text>
@@ -383,7 +396,7 @@ const SolutionContent = ({ content }) => {
       <Trusted />
 
       <PageContentWrapper>
-        {/* --------------IntroductionSection-------------- */}
+        {/* --------------IntroductionSection Part 1-------------- */}
         <Box
           w="100%"
           textAlign="center"
@@ -407,7 +420,7 @@ const SolutionContent = ({ content }) => {
               <Heading
                 as="h2"
                 fontSize={{ base: "20px", md: "48px" }}
-                fontWeight={{ base: "600", md: "500" }}
+                fontWeight={{ base: "500", md: "500" }}
                 color="#000"
               >
                 {introduction.heading}
@@ -416,10 +429,11 @@ const SolutionContent = ({ content }) => {
                 {introduction.description.map((paragraph, index) => (
                   <Text
                     key={index}
-                    fontSize="16px"
+                    fontSize={{ base: "14px", md: "16px" }}
                     color="#444444"
                     lineHeight={{ base: "18px", md: "20px" }}
                     mb="1%"
+                    as="p"
                   >
                     {paragraph}
                   </Text>
@@ -428,7 +442,7 @@ const SolutionContent = ({ content }) => {
             </Box>
             {introduction.image && (
               <Box
-                mt={introduction.top || "-23%"}
+                mt={introduction.top || "-25%"}
                 mb={{ base: "10%", md: "2%" }}
               >
                 <Image
@@ -488,6 +502,7 @@ const SolutionContent = ({ content }) => {
                 fontSize={{ base: "md", lg: "16px" }}
                 lineHeight="20px"
                 fontWeight="500"
+                as="p"
               >
                 {features.description}
               </Text>
@@ -542,45 +557,47 @@ const SolutionContent = ({ content }) => {
                   >
                     {({ isExpanded }) => (
                       <>
-                        <h2>
-                          <AccordionButton py={4}>
-                            <Box
-                              flex="1"
-                              textAlign="left"
-                              fontSize="16px"
-                              color="black"
-                              fontWeight={isExpanded ? "700" : "400"}
-                            >
-                              {item.title}
-                            </Box>
+                        {/* <h2> */}
+                        <AccordionButton py={4}>
+                          <Box
+                            flex="1"
+                            textAlign="left"
+                            fontSize="16px"
+                            color="black"
+                            fontWeight={isExpanded ? "700" : "400"}
+                            as="h3"
+                          >
+                            {item.title}
+                          </Box>
 
-                            {/* ✅ STEP 3: Wrap the SVG in a Box to apply the conditional transform */}
-                            <Box
-                              as="span"
-                              transform={isExpanded ? "rotate(180deg)" : "none"}
-                              transition="transform 0.3s"
+                          {/* ✅ STEP 3: Wrap the SVG in a Box to apply the conditional transform */}
+                          <Box
+                            as="span"
+                            transform={isExpanded ? "rotate(180deg)" : "none"}
+                            transition="transform 0.3s"
+                          >
+                            <svg
+                              width="24"
+                              height="12"
+                              viewBox="0 0 24 12"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
-                              <svg
-                                width="24"
-                                height="12"
-                                viewBox="0 0 24 12"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M12 12L24 0L0 2.86197e-07L12 12Z"
-                                  fill="#3F77A5"
-                                />
-                              </svg>
-                            </Box>
-                          </AccordionButton>
-                        </h2>
+                              <path
+                                d="M12 12L24 0L0 2.86197e-07L12 12Z"
+                                fill="#3F77A5"
+                              />
+                            </svg>
+                          </Box>
+                        </AccordionButton>
+                        {/* </h2> */}
                         <AccordionPanel
                           pb={4}
                           color="#444444"
                           fontSize="14px"
                           lineHeight="18px"
                           w="90%"
+                          as="p"
                         >
                           {item.content}
                         </AccordionPanel>
@@ -635,6 +652,7 @@ const SolutionContent = ({ content }) => {
               textAlign="center"
               color="gray.800"
               w="75%"
+              as="h2"
             >
               {/* Use the specific workflow object from the content prop */}
               {content.workflow.heading}
@@ -684,6 +702,7 @@ const SolutionContent = ({ content }) => {
                   mx="auto"
                   mt="20px"
                   lineHeight="20px"
+                  as="p"
                 >
                   {paragraph}
                 </Text>

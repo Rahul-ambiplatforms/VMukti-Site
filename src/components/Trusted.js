@@ -32,12 +32,12 @@ const scrollLTR = keyframes`
 
 const Trusted = () => {
   return (
-    <Box my="3%" w="100vw">
+    <Box my="2%" w="100vw">
       <Center>
         <Heading
           as="h2"
           fontSize={{ base: "20px", md: "36px" }}
-          mb={{ base: "2", md: "12" }}
+          mb={{ base: "2", md: "6" }}
           color="black"
           fontWeight={{ base: "600", md: "500" }}
         >

@@ -144,6 +144,7 @@ export default function BlogsContent() {
           fontWeight="600"
           color="#000000"
           mb={{ base: "4", md: "0" }}
+          as="h2"
         >
           Recent blog{" "}
           <Box as="span" color="#DB7B3A">

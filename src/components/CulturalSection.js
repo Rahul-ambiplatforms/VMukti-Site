@@ -21,7 +21,7 @@ const floatingAnimation = {
 
 export default function CulturalSection({ gridItems }) {
   return (
-    <Box py={{ base: 6, md: 12 }} position="relative" overflow="hidden">
+    <Box py={{ base: 6, md: 0 }} position="relative" overflow="hidden">
       <Container
         maxW="100%"
         // px={{ base: 4, md: 8 }}

@@ -82,6 +82,7 @@ const FeatureCard = ({ feature, bgColor }) => (
           color="#444444"
           lineHeight="18px"
           textAlign="center"
+          as="p"
         >
           {feature.description}
         </Text>

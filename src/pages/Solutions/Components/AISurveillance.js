@@ -76,7 +76,7 @@ const AISurveillance = () => {
           mx={{ base: "auto", md: "0" }}
         >
           <Heading
-            as="h1"
+            as="h2"
             fontSize={{ base: "20px", md: "48px" }}
             fontWeight="600"
             lineHeight={{ base: "25px", md: "60px" }}
@@ -203,7 +203,7 @@ const AISurveillance = () => {
                 />
               </Icon>
 
-              <Text fontSize="16px">{item.title}</Text>
+              <Text as="h3" fontSize="16px">{item.title}</Text>
             </Flex>
           ))}
         </VStack>
@@ -228,7 +228,7 @@ const AISurveillance = () => {
           >
             <Box>
               <Heading
-                as="h3"
+                // as="h3"
                 fontSize="24px"
                 fontWeight="700"
                 color="#000"
@@ -243,6 +243,7 @@ const AISurveillance = () => {
                 fontWeight="500"
                 lineHeight="18px"
                 mt={2}
+                as="p"
               >
                 {activeFeature.description}
               </Text>

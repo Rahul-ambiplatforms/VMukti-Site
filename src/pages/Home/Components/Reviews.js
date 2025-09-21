@@ -90,7 +90,7 @@ const TestimonialCard = ({ testimonial }) => {
         />
       </svg>
 
-      <Text color="#444" fontSize={{base:"14px",md:"16px"}} lineHeight={{base:"18px",md:"20px"}} flex="1">
+      <Text as="p" color="#444" fontSize={{base:"14px",md:"16px"}} lineHeight={{base:"18px",md:"20px"}} flex="1">
         {" "}
         {testimonial.description}
       </Text>

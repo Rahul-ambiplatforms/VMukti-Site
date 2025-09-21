@@ -337,6 +337,7 @@ export default function ContactUs() {
                     fontStyle="normal"
                     letterSpacing="-0.54%"
                     mb={4}
+                    as="h2"
                   >
                     {cards[currentCardIndex].title}
                   </Heading>

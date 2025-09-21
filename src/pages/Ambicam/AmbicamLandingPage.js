@@ -18,7 +18,7 @@
     const isDesktop = useBreakpointValue({ base: false, md: true });
 
     const mainContent = (
-      <Box overflowX="hidden">
+      <Box mt="3%" overflowX="hidden">
         <Box
           bgImage={{
             base: "url('./assets/ambidash-mobile.png')",
@@ -54,6 +54,7 @@
                     fontSize={{ base: "32px", md: "48px" }}
                     mb="4"
                     pb={{ base: "550", md: "0" }}
+                    as="h1"
                   >
                     <Text as="span" color="#3F77A5">
                       Ambicam –{" "}

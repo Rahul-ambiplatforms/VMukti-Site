@@ -34,6 +34,17 @@ const VMuktiHomepage = () => {
 
   return (
     <>
+      <script>
+        {homepageSchemas.map((schema, index) => (
+          <script
+            key={`schema-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schema),
+            }}
+          />
+        ))}
+      </script>
       <Helmet>
         <title>
           AI Computer Vision System for Smart Surveillance - Vmukti Solutions

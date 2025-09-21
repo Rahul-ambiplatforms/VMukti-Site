@@ -131,8 +131,8 @@ export const solutionsData = {
     // Section 5: CTA Banner from the fifth image
     cta: {
       textLines: [
-        "Elevate Your Surveillance Setup with Advanced Cloud ",
-        "VMS Service for Smarter Security",
+        "Elevate Your Surveillance Setup with Advanced Cloud VMS Service for Smarter Security",
+        // "VMS Service for Smarter Security",
       ],
       // text: "Elevate Your Surveillance Setup with Advanced Cloud VMS Service for Smarter Security",
       buttonText: "Let's talk",
@@ -154,6 +154,118 @@ export const solutionsData = {
         "../../assets/solution_vms_choose_5.png",
       ],
     },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Advanced Video Management System for Surveillance",
+        description:
+          "Best Video Management Software for CCTV offering live monitoring, cloud storage, AI analytics and seamless integration for enhanced surveillance control.",
+        url: "https://www.vmukti.com/solution/video-management-system/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Smart Video Management System",
+        },
+        inLanguage: "en-US",
+      },
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Solutions",
+            item: "https://www.vmukti.com/solution/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Video Management Solution",
+            item: "https://www.vmukti.com/solution/video-management-system/",
+          },
+        ],
+      },
+      // FAQ Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/solution/video-management-system/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "What camera works with your VMS analytics system?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Various cameras, including IP cameras, PTZ cameras, AI-powered cameras and any third-party Cameras work with our VMS software for smarter security, offering compatibility for real-time surveillance and analytics through features like motion detection and object recognition.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How can video management software be integrated with your existing tools?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Our video management software for CCTV can be integrated with your existing tools through APIs and third-party system integrations, allowing you to link with other security systems such as access control, alarm systems, and building management platforms.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What are the differences between on-premise and cloud-based VMS?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "An on-premise VMS is managed locally on your hardware, giving you more control but requiring dedicated maintenance. A cloud based video management system on the other hand is hosted remotely, offering flexibility, scalability and easy remote access.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What kinds of storage are available for video management systems?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Our developed video management systems support various storage options such as cloud storage, NAS, DAS and SAN. A cloud based video management system provides a scalable, secure solution for storing large volumes of video data remotely.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How can you ensure data security and privacy with a VMS system?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "For, data security and privacy can be ensured with our VMS system by using encryption, multi-factor authentication and role-based access controls. Additionally, VMS features like secure storage help protect sensitive video data from unauthorized access.",
+            },
+          },
+        ],
+      },
+    ],
   },
 
   enterprisemanagementsystem: {
@@ -287,8 +399,8 @@ export const solutionsData = {
     // Section 5: CTA Banner updated
     cta: {
       textLines: [
-        "Step Beyond Traditional Surveillance",
-        "with Our EMS Revolution",
+        "Step Beyond Traditional Surveillance with Our EMS Revolution",
+        // "with Our EMS Revolution",
       ],
       buttonText: "Let's talk",
       href: "/contact-us",
@@ -303,6 +415,103 @@ export const solutionsData = {
       ],
       images: ["../../assets/solution_ems_choose_1.png"],
     },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Enterprise Management Solution for Scalable Security and Monitoring",
+        description:
+          "Enterprise Management Solution for CCTV feeds that empowers Command & Control Centres with real-time monitoring, automated alerts, uptime analytics, and zero downtime.",
+        url: "https://www.vmukti.com/solution/enterprise-management-system/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Enterprise Management Solution",
+        },
+        inLanguage: "en-US",
+      },
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Solutions",
+            item: "https://www.vmukti.com/solution/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Enterprise Management System",
+            item: "https://www.vmukti.com/solution/enterprise-management-system/",
+          },
+        ],
+      },
+
+      // FAQ Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/solution/enterprise-management-system/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "What makes our EMS different from standard video management systems?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "With VMukti’s EMS, you get infrastructure and health monitoring, real-time alerts, SLA compliance, and uptime analytics—far beyond standard systems built only for basic video management.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Is EMS customizable to suit enterprise-specific needs?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Absolutely! Our EMS can be tailored to match enterprise requirements, from infrastructure and network monitoring to SLA tracking, uptime analytics, and custom alert configurations.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can EVMS integrate with existing enterprise tools?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, our EMS integrates seamlessly with systems like biometric attendance, RFID access control, and fire alarms—providing synchronized monitoring, automated alerts, and streamlined security operations.",
+            },
+          },
+        ],
+      },
+    ],
   },
 
   integratedcommandcontrolcenter: {
@@ -431,8 +640,8 @@ export const solutionsData = {
     // Section 5: CTA Banner from the fifth image
     cta: {
       textLines: [
-        "Upgrade Your Surveillance Network with Scalable ",
-        "ICCC Services for Any Industry",
+        "Upgrade Your Surveillance Network with Scalable ICCC Services for Any Industry",
+        // "ICCC Services for Any Industry",
       ],
       // text: "Elevate Your Surveillance Setup with Advanced Cloud VMS Service for Smarter Security",
       buttonText: "Let's talk",
@@ -448,6 +657,104 @@ export const solutionsData = {
       ],
       images: ["../../assets/solution_iccc_choose_1.png"],
     },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Master Command Flow Through Smart ICCC Services",
+        description:
+          "Delivering reliable and unmatched efficiency with our Integrated Command and Control Centre solutions which enhances operational control and decision-making.",
+        url: "https://www.vmukti.com/solution/integrated-command-control-center/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Integrated Command Control Centre",
+        },
+        inLanguage: "en-US",
+      },
+
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Solutions",
+            item: "https://www.vmukti.com/solution/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "ICCC",
+            item: "https://www.vmukti.com/solution/integrated-command-control-center/",
+          },
+        ],
+      },
+
+      // FAQ Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/solution/integrated-command-control-center/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "What are the benefits of ICCC over EVMS?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "The benefits of ICCC include centralized monitoring, real-time coordination and integrated system response, offering faster, smarter decision-making than EVMS.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What information is displayed on the ICCC’s geospatial interface?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "The integrated command and control centre ICCC interface shows all active cameras, flying squad vehicle locations and key infrastructure points for situational awareness.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What detection analytics and reports are offered through ICCC?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Our ICCC solutions features offer a wide range of ready-made analytics and also the flexibility to create custom analytics tailored to your specific needs.",
+            },
+          },
+        ],
+      },
+    ],
   },
 
   livestreamingsolution: {
@@ -590,8 +897,8 @@ export const solutionsData = {
     // Section 5: CTA Banner from the fifth image
     cta: {
       textLines: [
-        "Start the Streaming Revolution with Our Live CCTV ",
-        "Feed Streaming Service",
+        "Start the Streaming Revolution with Our Live CCTV Feed Streaming Service",
+        // "Feed Streaming Service",
       ],
       // text: "Elevate Your Surveillance Setup with Advanced Cloud VMS Service for Smarter Security",
       buttonText: "Let's talk",
@@ -613,6 +920,110 @@ export const solutionsData = {
         "../../assets/solution_live_choose_5.png",
       ],
     },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Secure Live CCTV Feed Streaming for Command & Control",
+        description:
+          "Stream real-time CCTV feeds with ultra-HD clarity, zero delay, and multi-layer security - built for mission-critical monitoring and instant response.",
+        url: "https://www.vmukti.com/solution/live-streaming-solution",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Live Video Streaming Solution",
+        },
+        inLanguage: "en-US",
+      },
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Solutions",
+            item: "https://www.vmukti.com/solution/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Live Streaming",
+            item: "https://www.vmukti.com/solution/live-streaming-solution/",
+          },
+        ],
+      },
+      // FAQ Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/solution/live-streaming-solution/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "What makes a live streaming software solution ideal for business communication?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Our solution delivers secure, scalable video streaming for large audiences, helping businesses engage employees and clients while improving collaboration and communication.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How do live video streaming services secure content against unauthorized access or privacy?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "VMukti safeguards content with encryption, password protection, and advanced security technologies to prevent unauthorized access and piracy during broadcasts.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What specific services does an online video streaming software provider offer to event hosts?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "We provide branded web pages, logo integration, and detailed viewer reports to strengthen branding, boost engagement, and track performance effectively.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Is the multi-bitrate streaming feature in your service auto or manual?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Our service features auto-enabled multi-bitrate streaming, ensuring smooth playback across varying internet speeds without manual adjustments.",
+            },
+          },
+        ],
+      },
+    ],
   },
 
   flyingsquadvehicle: {
@@ -741,8 +1152,8 @@ export const solutionsData = {
     // Section 5: CTA Banner from the fifth image
     cta: {
       textLines: [
-        "Meet the Flying Squad Vehicle Built for Urgency ",
-        "Speed and Total Control",
+        "Meet the Flying Squad Vehicle Built for Urgency Speed and Total Control",
+        // "Speed and Total Control",
       ],
       // text: "Elevate Your Surveillance Setup with Advanced Cloud VMS Service for Smarter Security",
       buttonText: "Let's talk",
@@ -762,6 +1173,102 @@ export const solutionsData = {
       //   // "../../assets/solution_vms_choose_3.png",
       // ],
     },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Flying Squad Vehicle with GPS and Live AI Surveillance",
+        description:
+          "Power up your response force with a high-speed Flying Squad Vehicle packed with GPS tracking, smart AI surveillance and real-time control room sync.",
+        url: "https://www.vmukti.com/solution/flying-squad-vehicle/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Flying Squad Vehicle Solution",
+        },
+        inLanguage: "en-US",
+      },
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Solutions",
+            item: "https://www.vmukti.com/solution/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Flying Squad Vehicle",
+            item: "https://www.vmukti.com/solution/flying-squad-vehicle/",
+          },
+        ],
+      },
+      // FAQ Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/solution/flying-squad-vehicle/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Can the FSV operate in remote or high-risk locations?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, The vehicle is designed for rugged terrains and can maintain connectivity and surveillance performance in remote or volatile environments.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can we integrate the FSV system with our existing VMS or command setup?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, our FSV system is fully compatible with standard video management systems and command center platforms for seamless integration.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How secure is the access to the FSV system?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Access is controlled using user-specific credentials, role-based permissions and encrypted data channels to ensure maximum security.",
+            },
+          },
+        ],
+      },
+    ],
   },
 
   cloudai: {
@@ -994,49 +1501,7 @@ export const solutionsData = {
         ],
       },
     ],
-    // keyBenefits: {
-    //   heading:
-    //     "Transform Your Security with the Benefits of CloudAI Surveillance",
-    //   benefits: [
-    //     {
-    //       // Image name updated to cloudai
-    //       image: "../../assets/result_solution_cloudai_1.png",
-    //       title: "Ensuring Data Security",
-    //       description:
-    //         "Using our CloudAI solution offers robust encryption and strict access controls that safeguard sensitive information and prevent unauthorized access.",
-    //     },
-    //     {
-    //       image: "../../assets/result_solution_cloudai_2.png",
-    //       title: "Live Alerts",
-    //       description:
-    //         "We provide CloudAI solution for better surveillance and provide instant alerts for unusual activities or system events, helping you take immediate action against potential threats.",
-    //     },
-    //     {
-    //       image: "../../assets/result_solution_cloudai_3.png",
-    //       title: "Automatic System Updates",
-    //       description:
-    //         "With our CloudAI CCTV solutions updates are handled automatically, ensuring your systems remain always up-to-date without any manual effort or downtime.",
-    //     },
-    //     {
-    //       image: "../../assets/result_solution_cloudai_4.png",
-    //       title: "Energy and Cost Efficiency",
-    //       description:
-    //         "Cloud-based video surveillance reduces on-site hardware dependency, power usage, and maintenance costs, making your security smarter and more efficient.",
-    //     },
-    //     {
-    //       image: "../../assets/result_solution_cloudai_5.png",
-    //       title: "Monitor Anywhere Anytime",
-    //       description:
-    //         "Access live video feeds and manage multiple sites remotely from a single dashboard. Our CloudAI ensures complete visibility over your entire surveillance network enabling faster responses and smarter decisions without being on-site.",
-    //     },
-    //     {
-    //       image: "../../assets/result_solution_cloudai_6.png",
-    //       title: "Cut Down Costs and Hardware",
-    //       description:
-    //         "Developed On-Site by VMukti’s CloudAI reduces reliance on physical servers and hardware, lowering setup costs, energy use and maintenance efforts while ensuring reliable performance.",
-    //     },
-    //   ],
-    // },
+
     trusted: "Achieving Excellence in Security Systems",
     industry: {
       heading: "Cloud AI Solutions Built for Scalable Industry Applications",
@@ -1046,8 +1511,8 @@ export const solutionsData = {
     // Section 5: CTA Banner from the fifth image
     cta: {
       textLines: [
-        "Start Transforming Your Operations With Our ",
-        "Intelligent Cloud AI Solution",
+        "Start Transforming Your Operations With Our Intelligent Cloud AI Solution",
+        // "Intelligent Cloud AI Solution",
       ],
       // text: "Elevate Your Surveillance Setup with Advanced Cloud VMS Service for Smarter Security",
       buttonText: "Let's talk",
@@ -1062,17 +1527,113 @@ export const solutionsData = {
 
     // Section 7: Why Choose Us from the seventh image
     whyChooseUs: {
-      heading: "Why Choose Us for VMS?",
+      heading: "Why Choose Us for CloudAI?",
       description: [
-        "At VMukti, we bring you surveillance without compromise. Our AI-powered VMS delivers real-time awareness and automated threat detection so you're never in the dark and never a second too late. Manual oversight is outdated. Our system replaces it with fast, intelligent response built right in.",
-        "You get secure, encrypted access to multi-site footage anytime. Our adaptive storage grows with you whether you're scaling up or centralizing control. This is surveillance mode for forward-thinking operations like yours.",
+        "We offer a powerful CloudAI platform built for real-time video analytics and smart decision- making. Our solution requires no local infrastructure and scales easily to fit any setup or location.",
+        "From object and face detection to behavior analysis and vehicle tracking, our CloudAI delivers accurate insights instantly. Backed by expert support and seamless integration, we ensure fast deployment and reliable performance every step of the way.",
       ],
-      images: [
-        // "../../assets/solution_vms_choose_1.png",
-        // "../../assets/solution_vms_choose_2.png",
-        // "../../assets/solution_vms_choose_3.png",
-      ],
+      // images: [
+      //   // "../../assets/solution_vms_choose_1.png",
+      //   // "../../assets/solution_vms_choose_2.png",
+      //   // "../../assets/solution_vms_choose_3.png",
+      // ],
     },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "CloudAI Video Surveillance Solution for Square Monitoring",
+        description:
+          "Upgrade your security with Cloud AI surveillance, offering live video monitoring, automated alerts, and video analytics for enhanced safety and protection.",
+        url: "https://www.vmukti.com/solution/cloudai/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "CloudAI Computer Vision Surveillance Solution",
+        },
+        inLanguage: "en-US",
+      },
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Solutions",
+            item: "https://www.vmukti.com/solution/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "CloudAI",
+            item: "https://www.vmukti.com/solution/cloudai/",
+          },
+        ],
+      },
+      // FAQ Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/solution/cloudai/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How is Cloud AI better than traditional AI solutions?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Cloud AI is more scalable, cost-effective and flexible than traditional AI. A cloud video surveillance solution eliminates the need for expensive on-premise hardware and allows businesses to quickly adapt to changing needs.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can your Cloud AI solution be customized for our needs?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, our cloud video surveillance software can be fully customized to match your specific needs, whether it's adjusting analytics features, integrating with existing systems, or scaling across multiple sites.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Do I need specialized hardware to use Cloud AI solutions?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "No, you don't need specialized hardware to use our CloudAI surveillance video analysis. The solution works with most standard IP cameras and existing infrastructure, making it easy to deploy without major upgrades while still delivering powerful AI-driven insights from the cloud.",
+            },
+          },
+        ],
+      },
+    ],
   },
 
   genai: {
@@ -1188,7 +1749,7 @@ export const solutionsData = {
     cta: {
       textLines: [
         "Let GenAI Completely Reconstruct Your Surveillance Game",
-        "Game",
+        // "Game",
       ],
       // text: "Elevate Your Surveillance Setup with Advanced Cloud VMS Service for Smarter Security",
       buttonText: "Let's talk",
@@ -1210,6 +1771,72 @@ export const solutionsData = {
       ],
       images: ["../../assets/solution_genai_choose_1.png"],
     },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Elevate Surveillance to New Heights with GenAI Solution",
+        description:
+          "Take control of security with Generative AI solutions that adapt to your unique surveillance needs, enhancing protection and enabling proactive detection.",
+        url: "https://www.vmukti.com/solution/genai/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Visual Intelligence with GenAI Solution",
+        },
+        inLanguage: "en-US",
+      },
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Solutions",
+            item: "https://www.vmukti.com/solution/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "GenAI",
+            item: "https://www.vmukti.com/solution/genai/",
+          },
+        ],
+      },
+      // FAQ Schema
+      // {"@context":"https://schema.org","@type":"FAQPage","url":"https://www.vmukti.com/solution/genai/","mainEntity":[{"@type":"Question","name":"Can I schedule GenAI to trigger alerts based on future conditions or time-specific rules?","acceptedAnswer":{"@type":"Answer","text":"Yes, GPT can be configured to trigger alerts based on future-set parameters such as restricted area access after hours, expected delivery windows, or custom time-based logic."}},{"@type":"Question","name":"What else can a GenAI security solution analyze besides live video?","acceptedAnswer":{"@type":"Answer","text":"With, Our GenAI security solution can analyze recorded surveillance footage and CCTV archives offering extensive flexibility to monitor and analyze video content from various sources."}},{"@type":"Question","name":"Can I command the GenAI system to only track individuals wearing red jackets?","acceptedAnswer":{"@type":"Answer","text":"Absolutely, Our GenAI video analysis can be instructed to track specific visual attributes like "individuals in red jackets" and focus detection, logging or alerting accordingly."}},{"@type":"Question","name":"Which CCTV systems will work with your system?","acceptedAnswer":{"@type":"Answer","text":"GenAI CCTV solutions are highly adaptable and can work with any CCTV system, including third-party cameras, ensuring seamless integration for enhanced surveillance capabilities."}}]}
+    ],
   },
 
   visualbot: {
@@ -1235,6 +1862,7 @@ export const solutionsData = {
         "We offer powerful, developer-friendly APIs through VisualBot that integrate effortlessly into your AI infrastructure, enabling you to enhance existing systems with enterprise-grade computer vision streamlining operations, reducing overhead, and unlocking new levels of performance.",
       ],
       image: "../../assets/solution_bot_intro.png",
+      top: "-23%",
       bgColor: "#BECEDC",
     },
 
@@ -1326,8 +1954,8 @@ export const solutionsData = {
     // Section 5: CTA Banner from the fifth image
     cta: {
       textLines: [
-        "Start Building Your Own Vision AI Model with ",
-        "Our VisualBot",
+        "Start Building Your Own Vision AI Model with Our VisualBot",
+        // "Our VisualBot",
       ],
       // text: "Elevate Your Surveillance Setup with Advanced Cloud VMS Service for Smarter Security",
       buttonText: "Let's talk",
@@ -1349,5 +1977,110 @@ export const solutionsData = {
       ],
       // images: "",
     },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "VisualBot Computer Vision Software for Custom AI Solutions",
+        description:
+          "Best VisualBot computer vision software solution delivers fast deployment, real-time insights, and custom AI models for seamless video analysis integration.",
+        url: "https://www.vmukti.com/solution/visualbot/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "VisualBot: Computer Vision Software Solution",
+        },
+        inLanguage: "en-US",
+      },
+
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Solutions",
+            item: "https://www.vmukti.com/solution/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "VisualBot",
+            item: "https://www.vmukti.com/solution/visualbot/",
+          },
+        ],
+      },
+      // FAQ Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/solution/visualbot/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How is the model trained and deployed?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "You upload images, label them and the system trains the model for you. And you can then deploy it with a few clicks.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Do I need AI or programming knowledge to use VisualBot?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "No, you don’t need AI or coding skills. VisualBot is designed to be user-friendly with a simple interface.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can I use my existing cameras or hardware with this solution?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, VisualBot works with most standard cameras and setups, You can use your existing hardware systems.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What image formats and resolutions are supported?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "VisualBot supports following image formats like, JPEG, PNG, BMP, and TIFF. Also our Platform supports following video formats such as MP4, AVI, and MOV.",
+            },
+          },
+        ],
+      },
+    ],
   },
 };

@@ -435,7 +435,7 @@ const ContactUsForm = () => {
                 fill="#fff"
               />
             </svg>
-            <Text fontSize="16px" lineHeight="20px" fontWeight="500">
+            <Text as="p" fontSize="16px" lineHeight="20px" fontWeight="500">
               {leftPanelData.description}
             </Text>
             <VStack spacing={4} align="flex-start" w="100%" pt={4}>
@@ -443,7 +443,7 @@ const ContactUsForm = () => {
                 <React.Fragment key={index}>
                   <HStack spacing={4} align="center">
                     <Icon as={CheckCircleIcon} color="#48BB78" w={6} h={6} />
-                    <Text>{item}</Text>
+                    <Text as="p">{item}</Text>
                   </HStack>
                   {index < leftPanelData.checklist.length - 1 && (
                     <Divider opacity={0.2} />

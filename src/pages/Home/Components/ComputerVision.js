@@ -82,7 +82,7 @@ const ComputerVision = () => {
     <Box >
       <VStack spacing={4} textAlign="center" mb={{ base: 4, md: 8 }}>
         <Heading
-          as="h1"
+          as="h2"
           fontSize={{ base: "24px", md: "40px", lg: "48px" }}
           fontWeight="500"
           w={["100%","100%","90%","70%"]}
@@ -102,6 +102,7 @@ const ComputerVision = () => {
           fontWeight="500"
           lineHeight={{base:"18px",md:"20px"}}
           w={{ base: "100%", md: "95%", lg: "95%" }}
+          as="p"
         >
           We handle the complete lifecycle from data collection to computer
           vision models selection, API development to full system integration
@@ -145,6 +146,7 @@ const ComputerVision = () => {
                 transition="background-color 0.2s ease-in-out"
                 flexShrink={0}
                 w={{ base: "150px", md: "170px" }}
+                as="h3"
               >
                 {step.heading}
               </Button>
@@ -174,7 +176,8 @@ const ComputerVision = () => {
                   fontWeight="400"
                   color="#444444"
                   w={{ base: "95%", md: "70%", lg: "60%" }}
-                  minH={{ base: "auto", md: "60px" }} // Only reserve height on desktop
+                  minH={{ base: "auto", md: "60px" }}
+                  as="p"
                 >
                   {computerVisionSteps[activeIndex].content}
                 </Text>

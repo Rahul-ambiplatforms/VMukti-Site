@@ -314,7 +314,7 @@ const IndustryContent = ({ props, content }) => {
                   viewport={{ once: true }}
                 >
                   {content.title.map((part, index) => (
-                    <Text as="span" color={part.color} key={index}>
+                    <Text as="h1" color={part.color} key={index}>
                       {part.text}{" "}
                     </Text>
                   ))}
@@ -402,6 +402,7 @@ const IndustryContent = ({ props, content }) => {
                         fontSize={{ base: "14px", md: "16px" }}
                         lineHeight={{ base: "18px", md: "20px" }}
                         w="90%"
+                        as="p"
                       >
                         {content.para}
                       </Text>
@@ -467,7 +468,7 @@ const IndustryContent = ({ props, content }) => {
             py={{ base: 10, md: 16 }}
           >
             <Heading
-              // as="h2"
+              as="h2"
               fontSize={{ base: "24px", md: "48px", lg: "48px" }}
               fontWeight="500"
               textAlign="center"

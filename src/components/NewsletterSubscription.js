@@ -187,7 +187,7 @@ const NewsletterSubscription = () => {
               cursor={{ base: "pointer", md: "default" }}
             >
               <Flex justify="space-between" align="center">
-                <Heading fontSize="16px" fontWeight={700}>
+                <Heading as="p" fontSize="16px" fontWeight={700}>
                   Industries we serve
                 </Heading>
                 <Box
@@ -308,7 +308,7 @@ const NewsletterSubscription = () => {
               cursor={{ base: "pointer", md: "default" }}
             >
               <Flex justify="space-between" align="center">
-                <Heading fontSize="16px" fontWeight={700}>
+                <Heading as="p" fontSize="16px" fontWeight={700}>
                   Our Solutions
                 </Heading>
                 <Box
@@ -417,7 +417,7 @@ const NewsletterSubscription = () => {
                 cursor={{ base: "pointer", md: "default" }}
               >
                 <Flex justify="space-between" align="center">
-                  <Heading fontSize="16px" fontWeight={700}>
+                  <Heading as="p" fontSize="16px" fontWeight={700}>
                     Resources
                   </Heading>
                   <Box
@@ -543,7 +543,7 @@ const NewsletterSubscription = () => {
               >
                 <Box>
                   <Flex justify="space-between" align="center">
-                    <Heading fontSize="16px" fontWeight={700}>
+                    <Heading as="p" fontSize="16px" fontWeight={700}>
                       Who we are
                     </Heading>
                     <Box
@@ -732,6 +732,7 @@ const NewsletterSubscription = () => {
               <Heading
                 fontSize="16px"
                 fontWeight={700}
+                as="p"
                 // fontFamily="'Wix Madefor Display', sans-serif"
                 // mb="10px"
               >
@@ -941,6 +942,7 @@ const NewsletterSubscription = () => {
             <Heading
               fontSize="16px"
               fontWeight={700}
+              as="p"
               // fontFamily="'Wix Madefor Display', sans-serif"
               // mb="10px"
             >

@@ -183,6 +183,7 @@ const Achieved = ({ heading, description, data = achievementsData }) => {
         <HeadingAnimation>
           {heading && (
             <Text
+              as="h2"
               color="#000"
               fontSize={titleFontSize}
               fontWeight="600"
@@ -202,6 +203,7 @@ const Achieved = ({ heading, description, data = achievementsData }) => {
               mx="auto"
               textAlign="center"
               lineHeight="20px"
+              as="p"
             >
               {description}
             </Text>
@@ -264,7 +266,7 @@ const Achieved = ({ heading, description, data = achievementsData }) => {
                 //   base: "166px",
                 //   md: "280px",
                 // }}
-                w={["166px","166px","220px","280px"]}
+                w={["166px", "166px", "220px", "280px"]}
                 mx={{ base: 1, md: 4 }}
                 flexShrink={0}
                 backgroundColor={item.bgColor}
@@ -287,6 +289,7 @@ const Achieved = ({ heading, description, data = achievementsData }) => {
                   textAlign="center"
                   transform="translate(-50%, -50%)"
                   color={item.valueColor}
+                  // as="h3"
                 >
                   <AnimatedValue
                     value={item.value}
@@ -300,9 +303,6 @@ const Achieved = ({ heading, description, data = achievementsData }) => {
                   fontWeight="700"
                   position="absolute"
                   bottom={labelBottomMargin}
-                  // ===============================================
-                  // UPDATED: Applying the specific label color
-                  // ===============================================
                   color={item.labelColor}
                   textAlign="center"
                   width="calc(100% - 40px)"
@@ -321,9 +321,6 @@ const Achieved = ({ heading, description, data = achievementsData }) => {
                     height="3px"
                     borderRadius="24px"
                     marginTop="5px"
-                    // ===============================================
-                    // UPDATED: Applying the specific dash color
-                    // ===============================================
                     backgroundColor={item.dashColor}
                     mx="auto"
                   />

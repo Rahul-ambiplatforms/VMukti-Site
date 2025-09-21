@@ -84,7 +84,7 @@ const SolutionDashboard = () => {
             as="h1"
             color="white"
             textAlign="center"
-            fontSize={mainHeadingSize} 
+            fontSize={mainHeadingSize}
             fontWeight="600"
             w={{ base: "100%", md: "80%" }}
             mb={["50%", "40%", "20%", "0"]}
@@ -117,6 +117,7 @@ const SolutionDashboard = () => {
                 w="80%"
                 lineHeight="20px"
                 color="#444"
+                as="p"
               >
                 VMukti offers a unified surveillance solution with centralized
                 video management, scalable enterprise VMS, and an integrated
@@ -126,7 +127,7 @@ const SolutionDashboard = () => {
                 mobility with GPS tracking, AI surveillance, and instant video
                 access for on-ground teams.
               </Text>
-              <Text fontSize="16px" fontWeight="500" w="80%">
+              <Text fontSize="16px" fontWeight="500" w="80%" as="p">
                 Our smart analytics suite includes CloudAI for real-time threat
                 detection, facial recognition, and safety alerts. GenAI enables
                 smart search, automated reports, and camera access through VMS

@@ -10,6 +10,7 @@ import AISurveillance from "./Components/AISurveillance.js";
 import Solutions from "../../components/Solutions.js";
 import { solutionSolutions } from "../../data/solutionsContent.js";
 import CertificationsSection from "./Components/CertificationsSection.jsx";
+import schemaData from "../../data/schemaData";
 import CtaBanner from "../../components/CtaBanner.js";
 import { Helmet } from "react-helmet-async";
 
@@ -26,8 +27,21 @@ const Hero = () => {
     }
   }, [location]);
 
+  const solutionpageSchemas = schemaData.solutionpage;
+
   return (
     <>
+      <script>
+        {solutionpageSchemas.map((schema, index) => (
+          <script
+            key={`schema-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schema),
+            }}
+          />
+        ))}
+      </script>
       <Helmet>
         {/* SEO Tags */}
         <title>
@@ -50,7 +64,7 @@ const Hero = () => {
         />
         <meta
           property="og:image"
-          content="https://www.vmukti.com/assets/solution_dash.png" 
+          content="https://www.vmukti.com/assets/solution_dash.png"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://vmukti.com/solution/" />

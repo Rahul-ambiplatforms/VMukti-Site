@@ -133,7 +133,7 @@ const AdvancedComputerVision = ({
         <Flex flexWrap="wrap" mb={["5%","5%","2%","0%"]}>
           {title.map((item, index) => (
             <Text
-              as="span"
+              as="h2"
               color={item.color}
               display="inline"
               key={index}

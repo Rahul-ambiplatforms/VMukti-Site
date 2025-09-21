@@ -70,7 +70,7 @@ const Solutions = ({ data }) => {
       >
         <VStack>
           <Heading
-            as="h1"
+            as="h2"
             fontSize={{ base: "24px", md: "48px" }}
             lineHeight={{ base: "30px", md: "60px" }}
             fontWeight="500"
@@ -85,6 +85,7 @@ const Solutions = ({ data }) => {
               lineHeight={["18px", "18px", "20px", "20px"]}
               mt="1%"
               fontSize={{ base: "14px", md: "16px" }}
+              as="p"
             >
               {data.description}
             </Text>
@@ -133,8 +134,9 @@ const Solutions = ({ data }) => {
                 fontSize="16px"
                 // --- Static Size Enforcement ---
                 flexShrink={0} // Prevents shrinking on mobile.
-                // minWidth={{base:"125px",md:"170px"}}
                 minWidth={["125px", "125px", "125px", "170px"]}
+                // as="h3"
+                as="p"
               >
                 {solution.heading1}
               </Button>
@@ -173,7 +175,7 @@ const Solutions = ({ data }) => {
           >
             <VStack align="start" spacing={5} flex="1">
               <Heading
-                as="h2"
+                as="h3"
                 fontSize={{ base: "20px", md: "36px" }}
                 color="black"
               >
@@ -196,6 +198,7 @@ const Solutions = ({ data }) => {
                 fontSize={{ base: "14px", md: "16px" }}
                 lineHeight={{ base: "18px", md: "20px" }}
                 align="justify"
+                as="p"
               >
                 {activeSolution.content}
               </Text>
