@@ -31,6 +31,7 @@ export const getBlogs = async (
     // console.log("response", response);
     // console.log("response data", response.data);
 
+    // console.log("OUTPUT---------------------")
     return response.data;
   } catch (error) {
     throw error.response?.data || error.message;

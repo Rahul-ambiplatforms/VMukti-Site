@@ -102,7 +102,7 @@ export default function ContactUs() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.firstName || !formData.email || !formData.number) {
+    if (!formData.firstName || !formData.email || !formData.phone) {
       toast({
         title: "Missing required fields",
         description: "Please fill in all required fields",
@@ -117,13 +117,17 @@ export default function ContactUs() {
 
     try {
       const response = await fetch(
-        "https://vmukti.com/backend/api/send-email",
+        // "http://localhost:5000/api/send-email",
+        'https://vmukti.com/backend/api/send-email',
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify({
+            ...formData,
+            formType: "Contact",
+          }),
         }
       );
 

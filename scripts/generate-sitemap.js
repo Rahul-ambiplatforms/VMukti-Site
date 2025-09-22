@@ -2,7 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
 
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
+// const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
+const API_URL = "https://vmukti.com/backend/api";
 const BASE_URL = "https://vmukti.com";
 
 const formatDate = (date) => {
@@ -165,31 +166,25 @@ const generateSitemap = async () => {
         lastmod: getPageLastModified("OurServings"),
       },
       {
-        loc: "/serving/generalconsumers",
-        priority: "0.8",
-        changefreq: "weekly",
-        lastmod: getPageLastModified("OurServings"),
-      },
-      {
         loc: "/whoweare",
         priority: "0.8",
         changefreq: "weekly",
-        lastmod: getPageLastModified("Who"),
+        lastmod: getPageLastModified("WhoweAre"),
       },
       {
-        loc: "/event-spotlight",
+        loc: "/whoweare/event-spotlight",
         priority: "0.8",
         changefreq: "weekly",
         lastmod: getPageLastModified("EventSpotlight"),
       },
       {
-        loc: "/blogs",
+        loc: "/blog",
         priority: "0.6",
         changefreq: "monthly",
-        lastmod: getPageLastModified("Blogs"),
+        lastmod: getPageLastModified("BlogsDashboard"),
       },
       {
-        loc: "/career",
+        loc: "/whoweare/careers",
         priority: "0.8",
         changefreq: "weekly",
         lastmod: getPageLastModified("career"),
@@ -210,24 +205,24 @@ const generateSitemap = async () => {
 
     for (const page of staticPages) {
       sitemap += `
-  <url>
-    <loc>${BASE_URL}${page.loc}</loc>
-    <lastmod>${page.lastmod}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`;
+        <url>
+          <loc>${BASE_URL}${page.loc}</loc>
+          <lastmod>${page.lastmod}</lastmod>
+          <changefreq>${page.changefreq}</changefreq>
+          <priority>${page.priority}</priority>
+        </url>`;
 
-      if (page.loc === "/blogs") {
+      if (page.loc === "/blog") {
         blogPosts.forEach((post) => {
           if (post.metadata?.urlWords && post.updatedAt) {
             const lastmod = formatDate(post.updatedAt.$date || post.updatedAt);
             sitemap += `
-  <url>
-    <loc>${BASE_URL}/blogs/${post.metadata.urlWords}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>`;
+              <url>
+                <loc>${BASE_URL}/blogs/${post.metadata.urlWords}</loc>
+                <lastmod>${lastmod}</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.6</priority>
+              </url>`;
           }
         });
       }
@@ -252,3 +247,6 @@ generateSitemap()
     console.error("Error:", error);
     process.exit(1);
   });
+
+//npm i sitemap-generator
+// npm run generate-sitemap

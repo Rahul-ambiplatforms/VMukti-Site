@@ -15,6 +15,7 @@ import CustomCursor from "./components/CustomCursor";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import SolutionDetails from "./components/SolutionDetails";
 import Thankyou from "./pages/ThankYou/Thankyou";
+import PrivacyPolicy from "./pages/Who/components/PrivacyPolicy";
 // import Particles from '@tsparticles/react';
 // import ParticlesComponent from './components/Particles';
 // Lazy load components
@@ -66,6 +67,20 @@ function App() {
                   {/* <Route
                     path="/whoweare/eventspotlight"
                     element={<EventSpotlight />}
+                  />
+                  <Route
+                    path="/whoweare/privacy-policy"
+                    element={<PrivacyPolicy /> }
+                  />
+                  <Route path="/whoweare/careers" element={<VMuktiCareers />} />
+                  <Route path="/blog" element={<BlogsDashboard />} />
+                  <Route
+                    path="/blog/:urlWords"
+                    element={<BlogsOverviewDash />}
+                  />
+                  <Route path="/serving" element={<OurServings />} />
+                  <Route path="/serving/:name" element={<ServingsDock />} />
+                  <Route path="/contactus" element={<ContactUs />} />
                   /> */}
                   {/* <Route path="/whoweare/careers" element={<VMuktiCareers />} /> */}
                   <Route path="/blog" element={<BlogsDashboard />} />

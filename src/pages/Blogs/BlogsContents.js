@@ -50,24 +50,36 @@ const renderSlateContent = (content) => {
       switch (node.type) {
         case "paragraph":
           return (
-            <Box key={i} mb={2}>
+            <Box key={i}>
               <Text textAlign={node.align || "left"}>{children}</Text>
             </Box>
           );
         case "bulleted-list":
-          return <UnorderedList key={i}>{children}</UnorderedList>;
+          return (
+            <UnorderedList key={i} spacing={2} my="2">
+              {children}
+            </UnorderedList>
+          );
         case "numbered-list":
-          return <OrderedList key={i}>{children}</OrderedList>;
+          return (
+            <OrderedList key={i} spacing={2} mb="2">
+              {children}
+            </OrderedList>
+          );
         case "list-item":
           return <ListItem key={i}>{children}</ListItem>;
         case "link":
+          let relAttrs = "noopener noreferrer";
+          if (node.noFollow) {
+            relAttrs += " nofollow";
+          }
           return (
             <Box
               as="a"
               key={i}
               href={node.url}
               target="_blank"
-              rel="noopener noreferrer"
+              rel={relAttrs}
               color="blue.600"
               textDecoration="underline"
               _hover={{ color: "blue.700" }}
@@ -343,6 +355,7 @@ const BlogsOverviewDash = () => {
   const [mainImageOg, setMainImageOg] = useState("");
   useEffect(() => {
     if (blog && blog.content && IMAGE_BASE_URL) {
+      // console.log("blog", blog);
       const img = blog.content.mainImage;
       if (img && typeof img === "string") {
         setMainImageOg(`${IMAGE_BASE_URL}/${img}`);
@@ -435,8 +448,17 @@ const BlogsOverviewDash = () => {
 
   return (
     <Box>
+      {/* component.content.schemaData */}
+      {blog.content.schemas.map((item, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: item.content.schemaData,
+          }}
+        />
+      ))}
       <Helmet>
-        <meta charSet="utf-8" />
         <title>
           {blog.content?.metaTitle ||
             blog.metadata?.metaTitle ||
@@ -469,15 +491,25 @@ const BlogsOverviewDash = () => {
         />
         <meta property="og:url" content={currentUrl} />
         <meta property="og:type" content="blog" />
-        <meta property="og:site_name" content="Vmukti Solutions" />
+        <meta property="og:site_name" content="VMukti Solutions" />
         <meta property="og:image" content={mainImageOg} />
         <meta property="og:locale" content="en_US" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@vmukti" />
         <meta
-          name="twitter:card"
+          name="twitter:title"
+          content={
+            blog.content?.metaTitle ||
+            blog.metadata?.metaTitle ||
+            "Default Twitter Title"
+          }
+        />
+        <meta
+          name="twitter:description"
           content={
             blog.content?.metaDescription ||
             blog.metadata?.metaDescription ||
-            "Default OG Description"
+            "Default Twiter Description"
           }
         />
         <meta name="twitter:site" content="@vmukti" />
@@ -522,7 +554,7 @@ const BlogsOverviewDash = () => {
             as="h1"
             fontSize={{ base: "36px", md: "48px" }}
             mt="8"
-            mb="4"
+            mb={{ base: 2, md: 3 }}
           >
             {content.title}
             {/* {applyColorLogic(content.title || "Blog Title")} */}
@@ -546,7 +578,9 @@ const BlogsOverviewDash = () => {
               // w="159px"
             >
               {/* Author Information */}
-              {(blog.content?.blogAuthor || blog.content?.author) && (
+              {(blog.content?.blogAuthor ||
+                blog.content?.author ||
+                blog.blogAuthor) && (
                 <Flex alignItems="center" gap={2}>
                   <Box>
                     <svg
@@ -567,7 +601,9 @@ const BlogsOverviewDash = () => {
                     </svg>
                   </Box>
                   <Text fontSize="16px" fontWeight="500" color="black">
-                    {blog.content?.blogAuthor || blog.content?.author}
+                    {blog.content?.blogAuthor ||
+                      blog.content?.author ||
+                      blog.blogAuthor}
                   </Text>
                 </Flex>
               )}
@@ -727,6 +763,7 @@ const BlogsOverviewDash = () => {
                             as="h2"
                             id={group.heading.id}
                             fontSize="36px"
+                            mb={{ base: 2, md: 2 }}
                           >
                             {renderSlateContent(group.heading.content.text)}
                           </Heading>
@@ -736,6 +773,8 @@ const BlogsOverviewDash = () => {
                             as="h3"
                             id={group.heading.id}
                             fontSize="20px"
+                            mb={{ base: 2, md: 1 }}
+                            mt="-2"
                           >
                             {renderSlateContent(group.heading.content.text)}
                           </Heading>
@@ -745,6 +784,7 @@ const BlogsOverviewDash = () => {
                             as="h4"
                             id={group.heading.id}
                             fontSize="16px"
+                            mb={{ base: 1, md: 0 }}
                           >
                             {renderSlateContent(group.heading.content.text)}
                           </Heading>
@@ -759,8 +799,8 @@ const BlogsOverviewDash = () => {
                               as="p"
                               key={component.id}
                               fontSize="16px"
-                              mt="0"
-                              mb="0"
+                              mb="-1"
+                              mt="1"
                             >
                               {renderSlateContent(component.content.text)}
                             </Box>
@@ -895,7 +935,7 @@ const BlogsOverviewDash = () => {
             direction={{ base: "column", md: "column" }}
             width={{ base: "100%", md: "30%" }}
             position={{ base: "relative", md: "sticky" }}
-            top={{ base: "20px", md: "85px" }} // Adjust the top value as needed
+            top={{ base: "20px", md: "50px" }} //85px
             // bg="red"
             // top="20px"
             borderRadius={{ base: "20px", md: "24px" }}
