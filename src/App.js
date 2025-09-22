@@ -67,21 +67,8 @@ function App() {
                   {/* <Route
                     path="/whoweare/eventspotlight"
                     element={<EventSpotlight />}
-                  />
-                  <Route
-                    path="/whoweare/privacy-policy"
-                    element={<PrivacyPolicy /> }
-                  />
-                  <Route path="/whoweare/careers" element={<VMuktiCareers />} />
-                  <Route path="/blog" element={<BlogsDashboard />} />
-                  <Route
-                    path="/blog/:urlWords"
-                    element={<BlogsOverviewDash />}
-                  />
-                  <Route path="/serving" element={<OurServings />} />
-                  <Route path="/serving/:name" element={<ServingsDock />} />
-                  <Route path="/contactus" element={<ContactUs />} />
                   /> */}
+                  <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                   {/* <Route path="/whoweare/careers" element={<VMuktiCareers />} /> */}
                   <Route path="/blog" element={<BlogsDashboard />} />
                   <Route path="/blog/:urlWords" element={<BlogsContents />} />

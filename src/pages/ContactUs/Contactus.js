@@ -265,8 +265,8 @@ export default function ContactUs() {
 
           <Flex
             direction={{ base: "column", lg: "row" }}
-            mt="1%"
-            mb="2%"
+            mt={{base:"1%",md:"3%"}}
+            mb={{base:"2%",md:"4%"}}
             gap={6}
             position="relative"
           >
