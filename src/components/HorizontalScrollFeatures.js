@@ -17,7 +17,7 @@ const FeatureCard = ({ feature, bgColor }) => (
     w={["85vw", "85vw", "92vw", "92vw"]}
     h={["60vh", "60vh", "60vh", "65vh"]}
     flexShrink={0}
-    mr={["5vw", "5vw", "5vw", "2vw"]}
+    mr={["5vw", "5vw", "5vw", "2vw"]} 
     align="center"
     justify="center"
     mt="1%"
@@ -28,6 +28,8 @@ const FeatureCard = ({ feature, bgColor }) => (
       h={["60vh", "60vh", "60vh", "65vh"]}
       borderRadius="20px"
       overflow="hidden"
+      justifyContent={["center","","",""]}
+      alignItems={["center","","",""]}
     >
       <Image
         src={`${process.env.PUBLIC_URL}/assets/${feature.image}`}
@@ -38,25 +40,25 @@ const FeatureCard = ({ feature, bgColor }) => (
       />
       <Box
         position="absolute"
-        bottom={{ base: 0, md: 8 }}
+        bottom = {["0","0","2","4"]}
         left={{
           base: "0",
           sm: bgColor === "blue" ? "50%" : 8, 
-          md: bgColor === "blue" ? "50%" : 8, 
-          lg: bgColor === "blue" ? "66%" : 8, 
+          md: bgColor === "blue" ? "50%" : 2, 
+          lg: bgColor === "blue" ? "68%" : 8, 
         }}
         // left={{ base: 0, md: bgColor === "blue" ? "66%" : 8 }}
         // left={["0","bgColor === "blue" ? "50%" : 8","bgColor === "blue" ? "66%" : 8","bgColor === "blue" ? "66%" : 8"]}
         p={{ base: 4, md: 5 }}
-        // w={{ base: "85%", sm: "60%", md: "30%" }}
-        w={["100%", "100%", "45%", "30%"]}
-        h={["45%", "45%", "90%", "90%"]}
+        w={["90%", "100%", "45%", "30%"]}
+        h={["50%", "45%", "90%", "90%"]}
         bg="rgba(255, 255, 255, 0.95)"
         borderRadius="20px"
         display="flex"
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
+        m={["5%","5%","2%","0"]}
       >
         <Heading
           as="h3"

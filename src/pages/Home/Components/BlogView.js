@@ -23,7 +23,8 @@ import { getBlogs } from "../../Blogs/blog"; // Make sure this path is correct
 // const IMAGE_BASE_URL =
 //   process.env.REACT_APP_IMAGE_BASE_URL || "http://localhost:5000/uploads/";
 // const IMAGE_BASE_URL = "https://vmukti.com/backend/uploads/";
-const IMAGE_BASE_URL = "https://res.cloudinary.com/dzs02ecai/image/upload/v1758361869/uploads"
+const IMAGE_BASE_URL =
+  "https://res.cloudinary.com/dzs02ecai/image/upload/v1758361869/uploads/";
 
 const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
   // Safely access nested properties with fallbacks
@@ -98,7 +99,7 @@ const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
   return (
     <Flex
       w="100%"
-      borderRadius="24px" 
+      borderRadius="24px"
       overflow="hidden"
       //   boxShadow="lg"
       direction={flexDirection}
@@ -158,14 +159,14 @@ const BlogView = () => {
   const toast = useToast();
   const [blogs, setBlogs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
+  const svgSize = useBreakpointValue({base:"25",md:"34"})
   const containerPadding = useBreakpointValue({ base: 6, md: 10, lg: 16 });
 
   const fetchBlogs = useCallback(async () => {
     setIsLoading(true);
     try {
       // Fetch up to 2 latest blogs
-      const response = await getBlogs(1, 2, "", "desc", "published");
+      const response = await getBlogs(1, 2, "", "latest", "published");
       if (response.status === "success" && Array.isArray(response.data)) {
         setBlogs(response.data);
       }
@@ -198,25 +199,29 @@ const BlogView = () => {
       >
         {/* Left Section */}
         <VStack
-          align={{ base: "center", lg: "start" }}
+          align={{ base: "left", lg: "start" }}
           spacing={5}
           w={{ base: "100%", lg: "30%" }}
-          textAlign={{ base: "center", lg: "left" }}
+          textAlign={{ base: "left", lg: "left" }}
           mb={{ base: 10, lg: 0 }}
         >
-          <Heading as="h2" fontSize="48px" fontWeight="bold">
+          <Heading
+            as="h2"
+            fontSize={{ base: "24px", md: "48px" }}
+            fontWeight="bold"
+          >
             Our Latest{" "}
             <Box as="span" color="orange.400">
               Blogs
             </Box>
           </Heading>
           {/* <Icon as={FiArrowDown} w={8} h={8} color="#3F77A5" /> */}
-          <Flex direction="column" gap="4">
+          <Flex direction="column" gap="4" w="90%">
             <Box>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="34"
-                height="34"
+                width={svgSize}
+                height={svgSize}
                 viewBox="0 0 34 34"
                 fill="none"
               >
@@ -228,7 +233,8 @@ const BlogView = () => {
             </Box>
             <Text
               color="black"
-              fontSize="16px"
+              fontSize={{base:"14px",md:"16px"}}
+              lineHeight={{base:"18px",md:"20px"}}
               fontWeight="500"
               as="p"
               textAlign="justify"
@@ -240,7 +246,7 @@ const BlogView = () => {
           </Flex>
           <Link
             as={RouterLink}
-            to="/blogs" // <-- Set the destination path to your blogs page
+            to="/blog" // <-- Set the destination path to your blogs page
             _hover={{ textDecoration: "none" }} // Prevents the link underline on hover
           >
             <Button

@@ -22,6 +22,7 @@ const industriesData = {
     ],
     para: "Keep your operations secure with our computer vision solution in manufacturing. Monitor every corner in real time, detect threats early and respond instantly. Simple to deploy and easy to use, it gives you full control and clear visibility anytime, anywhere.",
     large_image: "manufacturing_mockup.png",
+    large_image_mobile: "manufacturing_mockup_mobile.png",
     large_image_alt: "Closeup shot of a bee on a chamomile flower",
     keyApplications: [
       {
@@ -194,6 +195,7 @@ const industriesData = {
     para: "Gain full control of your warehouse operations with our computer vision solution. Track inventory with precision, strengthen safety measures and monitor every activity in real time. From sack handling to fire detection and restricted zone alerts. Our system helps you respond instantly, minimize costly errors and protect every inch of your facility.",
 
     large_image: "warehouse_mockup.png",
+    large_image_mobile: "warehouse_mockup_mobile.png",
     large_image_alt: "Warehouse surveillance monitoring illustration",
 
     keyApplications: [
@@ -437,6 +439,7 @@ const industriesData = {
     para: "We understand what’s at stake: patient’s life, response delays, security breaches. Our solution ensures uninterrupted care, operational control, and brand trust at scale. VMukti Solutions is leveraging computer vision in the healthcare industry to provide intelligent surveillance that enhances safety, improves response times, and keeps your facility running smoothly.",
 
     large_image: "healthcare_mockup.png",
+    large_image_mobile: "healthcare_mockup_mobile.png",
     large_image_alt: "Healthcare surveillance monitoring illustration",
 
     keyApplications: [
@@ -634,6 +637,7 @@ const industriesData = {
     para: "Your Oil and Gas sites deal with high-risk environments involving flammable materials, remote locations and complex operations. Manual monitoring often results in delayed detection of leaks, equipment faults or unauthorized access. VMukti Solution uses computer vision in power, oil & gas to offer smart surveillance with real-time alerts and safety violation tracking. Our visual intelligence system ensures faster responses, remote monitoring and better control to keep people and assets safe.",
 
     large_image: "oilandgas_mockup.png",
+    large_image_mobile: "oilandgas_mockup_mobile.png",
     large_image_alt: "Oil and gas site surveillance illustration",
 
     keyApplications: [
@@ -663,13 +667,6 @@ const industriesData = {
             description:
               "With cutting-edge computer vision, we monitor critical behaviors like standing, sitting and falling in oil & gas environments delivering instant alerts that empower your team to act swiftly and prevent incidents.",
             image: "../../assets/feat1_industry_oilgas_3.png",
-          },
-          {
-            id: "feat1-4",
-            title: "Entry/Exit Monitoring",
-            description:
-              "Our computer vision locks down every high-security zone by precisely tracking every entry and exit with timestamp accuracy giving you airtight control and foolproof audit trails for total peace of mind.",
-            image: "../../assets/feat1_industry_oilgas_4.png",
           },
         ],
       },
@@ -829,6 +826,7 @@ const industriesData = {
     para: "Every vote matters in your elections because even a single flaw, like voter fraud or misinformation, can quickly escalate into distrust and damage the credibility of the entire process. VMukti Solutions enhances election security with its offering of real-time monitoring, fraud vote prevention and transparent evidence through the election surveillance system.",
 
     large_image: "election_mockup.png",
+    large_image_mobile: "election_mockup_mobile.png",
     large_image_alt: "Election surveillance monitoring illustration",
 
     keyApplications: [
@@ -997,6 +995,7 @@ const industriesData = {
     para: "In a world where campus environments face rising complexity and risk, your institution needs more than just surveillance, it needs strategic visual intelligence. VMukti delivers intelligent video infrastructure with real-time situational awareness, proactive threat detection and seamless oversight ensuring your campus stays secure, compliant and future-ready without disrupting the learning experience.",
 
     large_image: "education_mockup.png",
+    large_image_mobile: "education_mockup_mobile.png",
     large_image_alt: "Education surveillance monitoring illustration",
 
     keyApplications: [
@@ -1197,6 +1196,7 @@ const industriesData = {
     ],
     para: "In transportation, timely deliveries and safety are crucial, as even minor disruptions can cause major delays. VMukti Solutions enhances operations with advanced GPS tracking and video analytics for transportation, providing real-time insights, optimizing routes and ensuring fleet safety to drive efficiency.",
     large_image: "transportation_mockup.png",
+    large_image_mobile: "transportation_mockup_mobile.png",
     large_image_alt: "Transportation surveillance monitoring illustration",
     keyApplications: [
       {
@@ -1376,6 +1376,7 @@ const industriesData = {
     para: "VMukti solution computer vision brings smart surveillance to your streets, helping you spot problems as they happen and act immediately without delay. With quick setup and remote access from anywhere, it supports smooth, efficient city operations without hassle.",
 
     large_image: "smartcity_mockup.png",
+    large_image_mobile: "smartcity_mockup_mobile.png",
     large_image_alt: "Smart city surveillance monitoring illustration",
 
     keyApplications: [
@@ -1593,6 +1594,7 @@ const industriesData = {
     para: "VMukti empowers your pharma operations with cutting-edge vision systems, offering unparalleled oversight of personnel and production. Our solution ensures flawless adherence to safety standards and regulatory mandates, securing product quality while optimizing your operational excellence at every level.",
 
     large_image: "pharma_mockup.png",
+    large_image_mobile: "pharma_mockup_mobile.png",
     large_image_alt: "Pharmaceutical site surveillance illustration",
 
     keyApplications: [
@@ -1773,6 +1775,7 @@ const industriesData = {
     para: "Your operations deserve precision at every touchpoint. One wrong pick or mislabeled box can ripple into costly setbacks, reputational risk and delivery chaos. At VMukti, we integrate advanced computer vision into logistics infrastructure elevating safety, accelerating efficiency and productivity and helping you make sure you are following compliance in your entire workflow without any disruption, in real time.",
 
     large_image: "logistic_mockup.png",
+    large_image_mobile: "logistic_mockup_mobile.png",
     large_image_alt: "Logistics and supply chain surveillance illustration",
 
     keyApplications: [
@@ -1967,6 +1970,7 @@ const industriesData = {
     para: "A single missed moment in surveillance can result in unauthorized access, critical data loss and costly trust issues that impact your bank’s bottom line. VMukti Solutions provides advanced bank video surveillance to help financial institutions eliminate blind spots, detect threats in real time and maintain secure, uninterrupted operations while safeguarding assets and customer trust.",
 
     large_image: "banking_mockup.png",
+    large_image_mobile: "banking_mockup_mobile.png",
     large_image_alt: "Banking and financial surveillance illustration",
 
     keyApplications: [
@@ -2184,6 +2188,7 @@ const industriesData = {
     para: "Every moment counts in sports and entertainment where audience experience, performance and safety define success. VMukti Solutions brings precision to the spotlight with visual AI solutions that deliver real-time insights, streamline operations and transform the way games and events are experienced.",
 
     large_image: "sportsentertainment_mockup.png",
+    large_image_mobile: "sportsentertainment_mockup_mobile.png",
     large_image_alt: "Sports and entertainment surveillance illustration",
 
     keyApplications: [
@@ -2431,6 +2436,7 @@ const industriesData = {
     para: "In the world of defense, silence isn't safe because what's unseen can be your greatest threat, like undetected movements or blind spots that can put entire operations at risk. VMukti solutions provides a surveillance solution for defense that detects anomalies, tracks movements and alerts security instantly, which offers faster and more accurate monitoring.",
 
     large_image: "defense_mockup.png",
+    large_image_mobile: "defense_mockup_mobile.png",
     large_image_alt: "Defense surveillance monitoring illustration",
 
     keyApplications: [
@@ -2619,6 +2625,7 @@ const industriesData = {
     para: "In hospitality, every interaction counts as guest satisfaction and security directly influence reputation and success. VMukti Solutions drives excellence with computer vision, offering real-time monitoring and intelligent analytics to enhance guest experiences, improve security and streamline operations.",
 
     large_image: "hospitality_mockup.png",
+    large_image_mobile: "hospitality_mockup_mobile.png",
     large_image_alt: "Hospitality surveillance monitoring illustration",
 
     keyApplications: [
@@ -2835,6 +2842,7 @@ const industriesData = {
     para: "Minor lapses like misaligned resources or bypassed SOPs silently compound disrupting critical milestones and inflating costs before you can course-correct. Our computer vision systems bring clarity to complexity, offering AI analytics and smart detection that elevate your safety standards, ensure compliance and streamline progress across every phase.",
 
     large_image: "construction_mockup.png",
+    large_image_mobile: "construction_mockup_mobile.png",
     large_image_alt: "Construction site surveillance illustration",
 
     keyApplications: [
@@ -3037,6 +3045,7 @@ const industriesData = {
     para: "Your operations demand precision without subtle deviations that ripple into costly breaches, delaying transformation and undermining enterprise-grade performance. VMukti Solutions enables live surveillance, smart threat detection and centralized monitoring to protect your assets and streamline operations using computer vision enterprise solutions.",
 
     large_image: "enterprise_mockup.png",
+    large_image_mobile: "enterprise_mockup_mobile.png",
     large_image_alt: "Enterprise surveillance illustration",
 
     keyApplications: [
@@ -3239,6 +3248,7 @@ const industriesData = {
     para: "For you every detail matters in governance, where overlooked incidents or delayed responses can impact public safety and trust. VMukti Solutions delivers advanced government security solutions through a visual solution for government, offering real-time insights and intelligent monitoring to enhance operational control and civic efficiency.",
 
     large_image: "government_mockup.png",
+    large_image_mobile: "government_mockup_mobile.png",
     large_image_alt: "Government surveillance illustration",
 
     keyApplications: [

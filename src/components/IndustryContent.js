@@ -28,7 +28,6 @@ import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import HorizontalScrollFeatures from "./HorizontalScrollFeatures";
 
-
 const MotionBox = motion(Box);
 const MotionText = motion(Text);
 const MotionButton = motion(Button);
@@ -302,7 +301,7 @@ const IndustryContent = ({ props, content }) => {
             mx="auto"
             gap={4}
           >
-            <Box width={{ base: "100%", md: "90%" }}>
+            <Box width={{ base: "100%", md: "80%" }}>
               <HeadingAnimation>
                 <MotionText
                   fontSize={{ base: "24px", md: "48px", lg: "48px" }}
@@ -331,6 +330,7 @@ const IndustryContent = ({ props, content }) => {
               overflow="hidden"
             >
               {/* Background Image - This part is the same */}
+              {/* For Desktop (md and above) */}
               <MotionImage
                 src={`${process.env.PUBLIC_URL}/assets/${content.large_image}`}
                 alt={content.large_image_alt}
@@ -341,6 +341,24 @@ const IndustryContent = ({ props, content }) => {
                 height="100%"
                 objectFit="cover"
                 zIndex="0"
+                display={{ base: "none", md: "block" }}
+                initial={{ scale: 1.1, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              />
+
+              {/* For Mobile (base only) */}
+              <MotionImage
+                src={`${process.env.PUBLIC_URL}/assets/${content.large_image_mobile}`}
+                alt={content.large_image_alt}
+                position="absolute"
+                top="0"
+                left="0"
+                width="100%"
+                height="100%"
+                objectFit="cover"
+                zIndex="0"
+                display={{ base: "block", md: "none" }}
                 initial={{ scale: 1.1, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -413,7 +431,7 @@ const IndustryContent = ({ props, content }) => {
                       <MotionButton
                         width={buttonWidth}
                         height={buttonHeight}
-                        p={{ base: "16px 32px", md: "12px 32px" }}
+                        p={{ base: "20px 48px", md: "12px 32px" }}
                         bg="#3F77A5"
                         color="white"
                         borderRadius={{ base: "20px", md: "24px" }}
@@ -424,6 +442,7 @@ const IndustryContent = ({ props, content }) => {
                         justifyContent="center"
                         gap={2}
                         flexShrink={0}
+                        fontSize={{ base: "14px", md: "16px" }}
                       >
                         Book Demo
                         <Box as="span">

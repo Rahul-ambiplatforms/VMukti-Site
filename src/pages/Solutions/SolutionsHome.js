@@ -106,7 +106,9 @@ const Hero = () => {
       <PageContentWrapper>
         <AISurveillance />
         <Solutions data={solutionSolutions} />
-        <CertificationsSection />
+      </PageContentWrapper>
+      <CertificationsSection />
+      <PageContentWrapper>
         <CtaBanner href="/contact-us" buttonText="Get in Touch">
           Step Into The Future of Visual Intelligence with Our AI
           <br />

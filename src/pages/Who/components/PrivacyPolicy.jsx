@@ -10,6 +10,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { Helmet } from "react-helmet-async"; // For SEO Meta Tags
+import PageContentWrapper from "../../../components/PageContentWrapper";
 
 // A reusable component to structure each section of the policy
 const PolicySection = ({ title, children, ...props }) => (
@@ -33,6 +34,7 @@ const HeroSection = () => {
       bgSize="cover"
       bgPosition="center"
       position="relative"
+      borderRadius="24px"
     >
       <Container
         maxW="container.xl"
@@ -82,7 +84,9 @@ const PrivacyPolicy = () => {
       </Helmet>
 
       <Box>
-        <HeroSection />
+        <PageContentWrapper>
+          <HeroSection />
+        </PageContentWrapper>
 
         <Container
           maxW="container.lg"

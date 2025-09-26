@@ -11,6 +11,7 @@ export const solutionsData = {
       description:
         "Command your surveillance ecosystem with our AI video intelligence. Experience live oversight, autonomous threat detection, seamless integrations and a unified interface all built to reduce overhead and deliver uncompromising control.",
       image: "../../assets/MainWebPageMockup1.1.png",
+      image_certi: "../../assets/solution_page_certi.png",
     },
 
     // Section 2: Introduction from the second image
@@ -281,6 +282,7 @@ export const solutionsData = {
       description:
         "Our EMS delivers an enterprise-grade solution that evolves with your surveillance needs. Monitor servers, cameras, and networks in real time with scalable technology. Ensure zero downtime, instant alerts, and future-proof security for your Command & Control Centre.",
       image: "../../assets/solution_evms_dash.png",
+      image_certi: "../../assets/solution_page_certi.png",
     },
 
     // Section 2: Introduction updated
@@ -526,6 +528,7 @@ export const solutionsData = {
       description:
         "Our developed integrated control and command centre brings together real-time data, surveillance and analytics into one centralized platform. It empowers authorities to monitor incidents, manage emergencies and make faster, more informed decisions across large-scale operations.",
       image: "../../assets/solution_iccc_dash.png",
+      image_certi: "../../assets/solution_page_certi.png",
     },
 
     // Section 2: Introduction from the second image
@@ -771,6 +774,7 @@ export const solutionsData = {
         "We stream live CCTV feeds in real time to your Command & Control Centre with ultra-HD clarity, adaptive bitrates, and secure high-tech distribution. This ensures zero delay, no buffering, and unmatched precision for mission-critical monitoring.",
       ],
       image: "../../assets/solution_live_dash.png",
+      image_certi: "../../assets/solution_page_certi.png",
     },
 
     // Section 2: Introduction from the second image
@@ -1039,6 +1043,7 @@ export const solutionsData = {
         "From fast deployment to instant visibility, our Flying Squad Vehicle delivers GPS tracking, live AI surveillance, and control room integration - keeping your teams connected, prepared, and effective when seconds matter most.",
       ],
       image: "../../assets/solution_fsv_dash.png",
+      image_certi: "../../assets/solution_page_certi.png",
     },
 
     // Section 2: Introduction from the second image
@@ -1284,6 +1289,7 @@ export const solutionsData = {
       description:
         "Power meets intelligence in our CloudAI solution, delivering visual surveillance that responds in real time, detects threats instantly, and provides secure access from anywhere. We provide full control across camera networks, smooth vms integration and proactive monitoring for large-scale high-value environments.",
       image: "../../assets/solution_cloud_dash.png",
+      image_certi: "../../assets/solution_page_certi.png",
     },
 
     // Section 2: Introduction from the second image
@@ -1648,6 +1654,7 @@ export const solutionsData = {
       description:
         "At VMukti, we use Generative AI to transform how you manage surveillance by thinking, learning, and adapting in real time, so you get instant, actionable intelligence. Our advanced algorithms summarize footage, detect humans and objects automatically, and deliver smart insights giving your team the clarity and speed to act without delay.",
       image: "../../assets/solution_genai_dash.png",
+      image_certi: "../../assets/solution_page_certi.png",
     },
 
     // Section 2: Introduction from the second image

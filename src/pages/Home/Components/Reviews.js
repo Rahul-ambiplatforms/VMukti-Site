@@ -22,44 +22,44 @@ import "slick-carousel/slick/slick-theme.css";
 const testimonials = [
   {
     description:
-      "VMukti’s VMS has made a real difference in how we manage surveillance. It’s easy to use, sends quick alerts and remote access has been a big plus for us, especially when handling multiple sites and responding on the go.",
-    name: "Aniket Pandya",
-    company: "BSNL",
+      "VMukti Solutions provided webcasting services for our 1st Convocation Ceremony at IIT Mandi. The audio and video quality were excellent, and the entire execution was seamless. Their technology and service delivery were flawless and met the high standards expected at IIT Mandi.",
+    name: "Dr. Varun Dutt",
+    company: "IIT Mandi",
     image: "/assets/client_1.png",
   },
   {
     description:
-      "VMukti really improved our security setup with a custom visual solution that fits exactly what we needed. The alerts are smart, reliable and make day-to-day monitoring much easier.",
-    name: "Priya Sharma",
-    company: "Tech Mahindra",
+      "VMukti Solutions successfully managed the webcasting of the 2nd Convocation of IIT Patna, held in the august presence of the President of India, Sri Pranab Mukherjee. Their technology and execution were up-to-date and highly satisfactory, ensuring seamless coverage of this prestigious event.",
+    name: "Dr. Prolay Das",
+    company: "IIT Patna",
     image: "/assets/client_1.png",
   },
   {
     description:
-      "We partnered with VMukti for live streaming our event and the experience was great. The video quality was top-notch, everything ran smoothly and their team was super supportive throughout. I would definitely recommend them!",
-    name: "Rajesh Kumar",
-    company: "Infosys",
+      "We thank VMukti Solutions for providing excellent webcasting services for our student activity ‘Milaap’. Their support and technology were impressive, and the performance of their portal exceeded our expectations, making the entire experience seamless and professional.",
+    name: "Trusha Joshi",
+    company: "IRMA, Anand",
     image: "/assets/client_1.png",
   },
   {
     description:
-      "With VMukti’s GenAI, we’ve taken our surveillance to the next level. Real-time insights, smart reports and easy control have helped us respond faster and get detailed day-to-day summaries.",
-    name: "Sunita Rao",
-    company: "Reliance Retail",
+      "Vmukti Solutions provided webcasting services for our Workshop on Technology Enhanced Learning (TEL). The audio and video quality were excellent, and the entire execution was seamless. Their technology and service were flawless and met all our expectations.",
+    name: "Dr. S. Mohankumar",
+    company: "SDM Engineering College",
     image: "/assets/client_1.png",
   },
   {
     description:
-      "Our team used VMukti’s VisualBot to simplify a complex video analysis project and the results were impressive. Easy integration, fast deployment and accurate insights made it a go-to tool for our workflows.",
-    name: "Vikram Singh",
-    company: "L&T",
+      "Vmukti Solutions provided webcasting services for the 5th Convocation ceremony at NIT Agartala. The audio and video quality were excellent, and the entire execution was seamless. Their technology and service were flawless, meeting the highest standards of excellence.",
+    name: "Kamal Kanti Paul",
+    company: "NIT, Agartala",
     image: "/assets/client_1.png",
   },
   {
     description:
-      "VMukti’s surveillance system has been a game-changer for our campus. From automated attendance to real-time alerts, it’s helped us improve safety and streamline daily operations without disrupting the learning environment.",
-    name: "Amitabh Desai",
-    company: "Govt. of Gujarat",
+      "VMukti Solutions successfully carried out the live webcasting of the Convocation event at Ganpat University through their SoLite Video Delivery Platform. The event was viewed by audiences worldwide. The VMukti team demonstrated excellent expertise and experience in managing live webcasts, delivering high-quality and seamless services.",
+    name: "P. I. Patel",
+    company: "Ganpat University, Mehsana",
     image: "/assets/client_1.png",
   },
 ];
@@ -71,11 +71,12 @@ const TestimonialCard = ({ testimonial }) => {
       flexDirection="column"
       bg="white"
       borderRadius="24px"
-      p={8}
-      mr={{ base: 2, md: 6 }}
+      p={{ base: 8, md: 6 }}
+      mr={{ base: 2, md: 4 }}
       align="flex-start"
       spacing={5}
       height="100%"
+      // w="280px"
     >
       <svg
         width="46"
@@ -90,7 +91,13 @@ const TestimonialCard = ({ testimonial }) => {
         />
       </svg>
 
-      <Text as="p" color="#444" fontSize={{base:"14px",md:"16px"}} lineHeight={{base:"18px",md:"20px"}} flex="1">
+      <Text
+        as="p"
+        color="#444"
+        fontSize={{ base: "14px", md: "16px" }}
+        lineHeight={{ base: "18px", md: "20px" }}
+        flex="1"
+      >
         {" "}
         {testimonial.description}
       </Text>
@@ -106,11 +113,11 @@ const TestimonialCard = ({ testimonial }) => {
               borderRadius="8px"
             />
           </Box>
-          <VStack align="start" spacing={0} ml={4}>
+          <VStack align="start" spacing={0} ml={{ base: "4", md: "1" }}>
             <Text fontWeight="700" fontSize="16px" color="black">
               {testimonial.name}
             </Text>
-            <Text fontSize="16px" fontWeight="500" color="#444">
+            <Text fontSize="14px" fontWeight="500" color="#444">
               {testimonial.company}
             </Text>
           </VStack>
@@ -135,7 +142,10 @@ const Reviews = () => {
 
   return (
     <Box my="3%">
-      <Flex align={["left","left","left","center"]} direction={{ base: "column", lg: "row" }}>
+      <Flex
+        align={["left", "left", "left", "center"]}
+        direction={{ base: "column", lg: "row" }}
+      >
         {/* Left Side: Testimonials Slider */}
         <Box mb="2%" mt="2%" display={["block", "block", "block", "none"]}>
           <svg

@@ -91,6 +91,7 @@ const gridItems = [
 
 const WhoWeare = () => {
   return (
+    <>
     <PageContentWrapper>
       <HeroSection />
       <VisionMissionSection />
@@ -110,10 +111,13 @@ const WhoWeare = () => {
       <Box mt={{base:"5%",md:"2%"}}>
         <CulturalSection gridItems={gridItems} />
       </Box>
+      </PageContentWrapper>
       <CertificationsSection />
+      <PageContentWrapper>
       <Reviews />
       {/* <ReviewsSection /> */}
-    </PageContentWrapper>
+      </PageContentWrapper>
+    </>
   );
 };
 

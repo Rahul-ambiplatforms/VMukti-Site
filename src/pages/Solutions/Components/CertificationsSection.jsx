@@ -21,19 +21,28 @@ const CertificationsSection = () => {
         </Heading>
       </HeadingAnimation>
 
+      {/* This is the scrolling container */}
       <Flex
-        flexWrap={{ base: "wrap", md: "nowrap" }}
-        justifyContent={{ base: "center", md: "center" }}
-        overflowX={{ base: "visible", md: "auto" }}
-        gap={{ base: 2, md: 4 }}
+        direction="row" // Explicitly set direction
+        alignItems="center" // Good practice to vertically align items
+        overflowX="auto" // Always allow horizontal scrolling
+        // **** FIX #1: Change justifyContent to flex-start ****
+        justifyContent={{ base: "center", md: "flex-start" }}
+        flexWrap={{ base: "wrap", md: "nowrap" }} // Keep wrapping on mobile
+        gap={{ base: 4, md: 4 }}
+        // **** FIX #2: Add horizontal padding for visual spacing ****
+        px={{ base: 4, md: 8 }} // Adds space on the left and right
         mx="auto"
+        // **** FIX #3: Correct the scrollbar hiding syntax ****
         sx={{
-          "&::-webkit-scrollbar": { display: "none" },
-          "&::-webkit-scrollbar-thumb": {},
-          "scrollbar-width": "none", // For Firefox
+          "&::-webkit-scrollbar": {
+            display: "none", // Hides scrollbar on Chrome, Safari, Edge
+          },
+          "scrollbar-width": "none", // Hides scrollbar on Firefox
         }}
       >
         {CertificationsData.map((cert, index) => (
+          // This is a certification item
           <Flex
             as={motion.div}
             key={index}
@@ -43,8 +52,10 @@ const CertificationsSection = () => {
             bg="#fff"
             borderRadius="24px"
             textAlign="center"
+            // Use minW to prevent shrinking and ensure consistent size
+            minW={{ base: "150px", md: "140px" }}
             boxSize={{ base: "166px", md: "140px" }}
-            flexShrink={{ base: 0, md: 1 }}
+            flexShrink={0} // Ensure items do not shrink
           >
             <Box mb={3} color={cert.color}>
               {cert.icon}

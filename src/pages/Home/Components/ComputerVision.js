@@ -155,7 +155,7 @@ const ComputerVision = () => {
         </Box>
 
         {/* Removed fixed height. The container is now fully dynamic. */}
-        <Box position="relative" overflow="hidden" p={["4","4","6","8"]}>
+        <Box position="relative" overflow="hidden" mt={{base:"0",md:"-2%"}} p={["4","4","6","8"]}>
           {/* mode="wait" ensures old content leaves before new content enters, preventing height jumps. */}
           <AnimatePresence mode="wait" initial={false} custom={direction}>
             <motion.div
@@ -187,7 +187,7 @@ const ComputerVision = () => {
                   px={{ base: 0, md: 4 }}
                 >
                   <AspectRatio
-                    ratio={{ base: 3 / 4, md: 16 / 9 }}
+                    ratio={{ base: 3 / 4, md: 16 / 6 }}
                     w="100%"
                     borderRadius="24px"
                     overflow="hidden"

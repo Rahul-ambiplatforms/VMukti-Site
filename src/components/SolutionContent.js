@@ -196,7 +196,7 @@ const SolutionContent = ({ content }) => {
   const { keyBenefits } = content;
   const { workflow } = content;
   const { whyChooseUs } = content;
-  const { schema } = content; 
+  const { schema } = content;
 
   const { name } = useParams();
   const u_name = name.replace(/-/g, "");
@@ -228,7 +228,7 @@ const SolutionContent = ({ content }) => {
 
   return (
     <>
-    <script>
+      <script>
         {schema.map((schema, index) => (
           <script
             key={`schema-${index}`}
@@ -291,11 +291,13 @@ const SolutionContent = ({ content }) => {
         direction={{ base: "column", lg: "row" }}
         align="center"
         justify="center"
-        bg="#3F77A5" // The main blue background color from the image.
+        bg="#3F77A5" 
         // p={heroPadding}
         // gap={10}
-        mt={["0", "0", "0", "-7%"]}
-        h={{ base: "80vh", md: "95vh" }}
+        // mt={["0", "0", "0", "-7%"]}
+        // h={{ base: "80vh", md: "100vh" }}
+        h="auto"
+        pb="2%"
       >
         {/* --- Left Column: Text and Call-to-Action --- */}
         <VStack
@@ -305,7 +307,7 @@ const SolutionContent = ({ content }) => {
           flex="1"
           maxW={{ base: "100%", lg: "40%" }}
           pl="4%"
-          mt={["10%", "10%", "25%", "0"]}
+          mt={["12%", "10%", "8%", "5%"]}
         >
           <Heading
             as="h1"
@@ -373,6 +375,15 @@ const SolutionContent = ({ content }) => {
               </svg>
             </Box>
           </Button>
+          {hero.image_certi && (<Box w="180px" h="52px">
+            <img
+              src={hero.image_certi}
+              alt={hero.heading}
+              w="100%"
+              h="100%"
+              objectFit="cover"
+            />
+          </Box>)}
         </VStack>
 
         {/* --- Right Column: Display Image --- */}
@@ -381,7 +392,7 @@ const SolutionContent = ({ content }) => {
           justify="center"
           align="center"
           w="100%"
-          mt={["0", "0", "0", "10%"]}
+          // mt={["0", "0", "0", "10%"]}
           mr="2%"
         >
           <Image
@@ -407,17 +418,18 @@ const SolutionContent = ({ content }) => {
         >
           <VStack spacing={{ base: 4, md: 6 }}>
             <Box
-              w="full"
               bg={introduction.bgColor || "white"}
               h={
                 introduction.image
                   ? ["294px", "294px", "394px", "494px"]
-                  : "300px"
+                  : "248px"
               }
               p={{ base: 6, md: 8 }}
               borderRadius={{ base: "16px", md: "24px" }}
             >
               <Heading
+                mx="auto"
+                w="70%"
                 as="h2"
                 fontSize={{ base: "20px", md: "48px" }}
                 fontWeight={{ base: "500", md: "500" }}

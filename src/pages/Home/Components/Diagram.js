@@ -50,7 +50,7 @@ const Diagram = () => {
       >
         <HeadingAnimation>
           <Text
-            w={["100%", "100%", "95%", "90%"]}
+            w={["100%", "100%", "95%", "100%"]}
             fontSize={["24px", "24px", "32px", "48px"]}
             fontWeight="500"
             as="h2"
