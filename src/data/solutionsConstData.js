@@ -1581,6 +1581,7 @@ export const solutionsData = {
     workflow: {
       heading: "Step-by-Step Workflow of Cloud AI Security Solution",
       image: "../../assets/solution_cloud_workflow.png",
+      image_mobile: "../../assets/solution_cloud_workflow.png",
     },
 
     // Section 7: Why Choose Us from the seventh image

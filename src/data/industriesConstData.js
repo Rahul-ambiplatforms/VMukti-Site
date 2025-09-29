@@ -179,6 +179,124 @@ const industriesData = {
       image: "manufacturing_workflow.png",
       image_mobile: "manufacturing_workflow_mobile.png",
     },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Computer Vision in Manufacturing Industry - Vmukti Solutions",
+        description:
+          "Vmukti Solutions offers scalable computer vision for manufacturing to help you monitor, analyze, and optimize factory performance in real-time.",
+        url: "https://www.vmukti.com/industry/manufacturing/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Computer Vision for Manufacturing Industry",
+        },
+        inLanguage: "en-US",
+      },
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Industry",
+            item: "https://www.vmukti.com/industry/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Manufacturing",
+            item: "https://www.vmukti.com/industry/manufacturing/",
+          },
+        ],
+      },
+      // Service Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: "Computer Vision in Manufacturing Industry",
+        url: "https://www.vmukti.com/industry/manufacturing/",
+        provider: { "@type": "Organization", name: "VMukti Solutions" },
+        areaServed: {
+          "@type": "Country",
+          name: "India, United States, United Kingdom, UAE, Canada",
+        },
+        description:
+          "Vmukti Solutions offers scalable computer vision for manufacturing to help you monitor, analyze, and optimize factory performance in real-time.",
+      },
+      // FAQ Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/industry/manufacturing/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How can computer vision help to detect and prevent hazards in manufacturing?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "We use computer vision to spot hazards, unsafe actions, leaks, smoke or faulty machines. Your team gets real-time alerts, helping prevent accidents and keeping the workplace safe and compliant.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What are the key areas that should be prioritized for surveillance in manufacturing?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "We recommend focusing surveillance on entry/exit points, production lines, storage, high-risk zones, safety areas and loading bays ensuring security, compliance, and smooth operations with computer vision built for manufacturing.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How can access control and video surveillance be integrated to boost security in manufacturing plants?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "VMukti's Solutions connects access logs with live camera feeds, so you always know who’s entering or exiting restricted areas real-time video surveillance and access control, fully integrated for stronger on-site security.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How does computer vision impact the efficiency of automotive manufacturing?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Our solution improves efficiency in automotive manufacturing by automating inspections, detecting defects early, guiding robots in assembly, and ensuring safety compliance, resulting in faster production, fewer errors, and higher quality for you.",
+            },
+          },
+        ],
+      },
+    ],
   },
   warehouse: {
     metatitle: "Manage Your Inventory Using Warehouse Computer Vision Solution",
@@ -423,6 +541,117 @@ const industriesData = {
       image: "warehouse_workflow.png",
       image_mobile: "warehouse_workflow_mobile.png",
     },
+    schema: [
+      //  Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Manage Your Inventory Using Warehouse Computer Vision Solution",
+        description:
+          "Unlock the full potential of your operations with computer vision warehouse technology to enhance real-time efficiency, inventory accuracy, and security.",
+        url: "https://www.vmukti.com/industry/warehouse/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Computer Vision for Warehousing Industry",
+        },
+        inLanguage: "en-US",
+      },
+
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Industry",
+            item: "https://www.vmukti.com/industry/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Warehousing",
+            item: "https://www.vmukti.com/industry/warehouse/",
+          },
+        ],
+      },
+      // Service Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: "Computer Vision in Warehousing Industry",
+        url: "https://www.vmukti.com/industry/warehouse/",
+        provider: { "@type": "Organization", name: "VMukti Solutions" },
+        areaServed: {
+          "@type": "Country",
+          name: "India, United States, United Kingdom, UAE, Canada",
+        },
+        description:
+          "Unlock the full potential of your operations with computer vision warehouse technology to enhance real-time efficiency, inventory accuracy, and security.",
+      },
+      // FAQ Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/industry/warehouse/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Can your visual solution improve my inventory management?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, our computer vision for warehousing tracks goods in real-time, identifies misplaced items and reduces stock discrepancies by automated visual monitoring system.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can your solution detect if goods go missing?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "VMukti’s warehouse computer vision system includes missing object detection that instantly identifies removed or misplaced items, helping to prevent theft, loss or stock mismanagement.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can your system operate effectively in low-light or night time conditions?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Using IR Technology our solution supports night-vision technology, allowing continuous monitoring in dark or poorly lit areas. It ensures 24/7 visibility without compromising on detection accuracy.",
+            },
+          },
+        ],
+      },
+    ],
   },
   healthcare: {
     metatitle: "Computer Vision in Healthcare for Smarter Patient Safety",
@@ -620,6 +849,117 @@ const industriesData = {
       image: "healthcare_workflow.png",
       image_mobile: "healthcare_workflow_mobile.png",
     },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Computer Vision in Healthcare for Smarter Patient Safety",
+        description:
+          "Upgrade clinical safety and workflow with healthcare computer vision for AI monitoring, hygiene checks, and intelligent alerting in real time.",
+        url: "https://www.vmukti.com/industry/healthcare/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Computer Vision for Healthcare Industry",
+        },
+        inLanguage: "en-US",
+      },
+
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Industry",
+            item: "https://www.vmukti.com/industry/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Healthcare",
+            item: "https://www.vmukti.com/industry/healthcare/",
+          },
+        ],
+      },
+      // Service Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: "Computer Vision in Healthcare Industry",
+        url: "https://www.vmukti.com/industry/healthcare/",
+        provider: { "@type": "Organization", name: "VMukti Solutions" },
+        areaServed: {
+          "@type": "Country",
+          name: "India, United States, United Kingdom, UAE, Canada",
+        },
+        description:
+          "Upgrade clinical safety and workflow with healthcare computer vision for AI monitoring, hygiene checks, and intelligent alerting in real time.",
+      },
+      // FAQ Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/industry/healthcare/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How does your system stand out from other AI-driven surveillance platforms?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Our system stands out by focusing on Vision AI in healthcare, offering precise, contextual video analysis specifically designed for patient care, operational efficiency, and medical compliance, going beyond basic surveillance features.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What steps are taken to ensure patient privacy and compliance?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "We follow strict data protection protocols and support privacy zones, role-based access and encrypted video storage. Our hospital surveillance system is designed with compliance in mind, including GDPR where applicable.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How do you train your AI to recognize abnormal vs. normal behavior in a hospital setting?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "We train our AI with real-world hospital footage and clinical expert input to recognize abnormal patient behaviors like sudden movements, distress, prolonged immobility, wandering, falls, bed-exit attempts and unusual posture. This enables accurate, real-time risk detection to enhance patient safety.",
+            },
+          },
+        ],
+      },
+    ],
   },
   // Result image remaining, workflow remaining
   oilandgas: {
@@ -796,13 +1136,6 @@ const industriesData = {
     },
     achieved: "Performance Highlights in Numbers",
 
-    workflow: {
-      heading:
-        "Complete Setup Process for Computer Vision Oil and Gas Surveillance Solution",
-      image: "oilandgas_workflow.png",
-      image_mobile: "oilandgas_workflow_mobile.png",
-    },
-
     cta: {
       textLines: [
         "Boost Safety And Monitoring With Computer Vision Solutions For Oil & Gas Today",
@@ -810,6 +1143,132 @@ const industriesData = {
       ],
       href: "contact-us",
     },
+    workflow: {
+      heading:
+        "Complete Setup Process for Computer Vision Oil and Gas Surveillance Solution",
+      image: "oilandgas_workflow.png",
+      image_mobile: "oilandgas_workflow_mobile.png",
+    },
+
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Transforming Operations with Computer Vision in Oil & Gas",
+        description:
+          "Optimize site control using computer vision for oil & gas to reduce manual tasks, gain real-time insights and enhance decision-making across operations.",
+        url: "https://www.vmukti.com/industry/oil-and-gas/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Computer Vision for Oil & Gas Industry",
+        },
+        inLanguage: "en-US",
+      },
+
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Industry",
+            item: "https://www.vmukti.com/industry/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Oil & Gas",
+            item: "https://www.vmukti.com/industry/oil-and-gas/",
+          },
+        ],
+      },
+      // Service Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: "Computer Vision in Power, Oil & Gas Industry",
+        url: "https://www.vmukti.com/industry/oil-and-gas/",
+        provider: { "@type": "Organization", name: "VMukti Solutions" },
+        areaServed: {
+          "@type": "Country",
+          name: "India, United States, United Kingdom, UAE, Canada",
+        },
+        description:
+          "Optimize site control using computer vision for oil & gas to reduce manual tasks, gain real-time insights and enhance decision-making across operations.",
+      },
+      // FAQ Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/industry/oil-and-gas/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Is the system capable of working in low-light or harsh weather conditions?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Our oil and gas video surveillance system is designed with vision models trained to perform effectively in challenging conditions such as low-light fog and heat-prone environments.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can the system integrate with existing surveillance or access control infrastructure?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Your modern facilities require flexible systems, our platform delivers just that. Powered by an oil and gas surveillance system, our solution integrates effortlessly with IP cameras, access control and alarm systems, enabling smarter automation.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Does the system support analytics and detailed reporting?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "VMukti’s Solutions provides activity logs, rule-based alerts and audit-ready reports. Using video analytics in oil and gas the system also delivers heatmaps, detection trends and zone-wise summaries to enhance safety planning and operational efficiency.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can I customize alerts for different zones or activities?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, alerts can be tailored for specific areas and events. With video surveillance in oil & gas you can configure alerts for activities like smoking detection in tank zones or line crossing at critical entry points.",
+            },
+          },
+        ],
+      },
+    ],
   },
   election: {
     metatitle: "Detect Suspicious Activity with Computer Vision in Elections",
@@ -979,6 +1438,117 @@ const industriesData = {
       image: "election_workflow.png",
       image_mobile: "election_workflow_mobile.png",
     },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Detect Suspicious Activity with Computer Vision in Elections",
+        description:
+          "Learn how computer vision for election security ensures transparent voting by detecting suspicious activity, enabling quick responses, and boosting public trust.",
+        url: "https://www.vmukti.com/industry/election/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Computer Vision for Election",
+        },
+        inLanguage: "en-US",
+      },
+
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Industry",
+            item: "https://www.vmukti.com/industry/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Election",
+            item: "https://www.vmukti.com/industry/election/",
+          },
+        ],
+      },
+      // Service Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: "Computer Vision in Election Industry",
+        url: "https://www.vmukti.com/industry/election/",
+        provider: { "@type": "Organization", name: "VMukti Solutions" },
+        areaServed: {
+          "@type": "Country",
+          name: "India, United States, United Kingdom, UAE, Canada",
+        },
+        description:
+          "Learn how computer vision for election security ensures transparent voting by detecting suspicious activity, enabling quick responses, and boosting public trust.",
+      },
+      // FAQ Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/industry/election/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Is the surveillance system for the election available on a rental basis?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "VMukti Solutions provides the election video surveillance solution on a rental basis to ensure secure, transparent and real-time monitoring of election activities across different locations.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Is it possible to tailor the election surveillance system to specific requirements?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, we provide surveillance solution for elections that can be tailored to specific needs including location layout, crowd size, custom analytics like motion or face detection and VMS customization.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Do your cameras support GPS tracking to monitor vehicle movements?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Our surveillance solution for elections provides GPS tracking in the camera to monitor vehicle movements in real time, ensuring secure and efficient transportation during election operations.",
+            },
+          },
+        ],
+      },
+    ],
   },
   education: {
     metatitle: "Protect Learning Spaces with Computer Vision for Education",
@@ -1181,6 +1751,125 @@ const industriesData = {
       image: "education_workflow.png",
       image_mobile: "education_workflow_mobile.png",
     },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Protect Learning Spaces with Computer Vision for Education",
+        description:
+          "Discover how computer vision in education helps schools and universities boost security, automate attendance, and monitor key areas effectively.",
+        url: "https://www.vmukti.com/industry/education/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Computer Vision for Education Industry",
+        },
+        inLanguage: "en-US",
+      },
+
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Industry",
+            item: "https://www.vmukti.com/industry/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Education",
+            item: "https://www.vmukti.com/industry/education/",
+          },
+        ],
+      },
+      // Service Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: "Computer Vision in Education Industry",
+        url: "https://www.vmukti.com/industry/education/",
+        provider: { "@type": "Organization", name: "VMukti Solutions" },
+        areaServed: {
+          "@type": "Country",
+          name: "India, United States, United Kingdom, UAE, Canada",
+        },
+        description:
+          "Discover how computer vision in education helps schools and universities boost security, automate attendance, and monitor key areas effectively.",
+      },
+      // FAQ Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/industry/education/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How does your system help with attendance tracking in schools?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Our education surveillance software automates student check-ins using facial recognition, reducing manual effort and enhancing accuracy.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can your software detect bullying for better campus safety?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, our school surveillance system provides real-time insights into student behavior, helping staff respond promptly to issues and fostering a supportive, secure learning environment.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Is staff accountability improved with your surveillance software?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Absolutely. Cameras placed in key areas help maintain professional conduct, reduce complaints and provide clear visual records when incidents occur.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can your system help manage crowd control during school events?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "VMukti’s surveillance solution for education uses real-time analytics to monitor crowd density, detect congestion and alert staff, ensuring smooth and safe campus movement.",
+            },
+          },
+        ],
+      },
+    ],
   },
   transportation: {
     metatitle: "Travel Innovation Powered by Computer Vision in Transportation",
@@ -1360,6 +2049,117 @@ const industriesData = {
       image: "transportation_workflow.png",
       image_mobile: "transportation_workflow_mobile.png",
     },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Protect Learning Spaces with Computer Vision for Education",
+        description:
+          "Discover how computer vision in education helps schools and universities boost security, automate attendance, and monitor key areas effectively.",
+        url: "https://www.vmukti.com/industry/education/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Computer Vision for Education Industry",
+        },
+        inLanguage: "en-US",
+      },
+
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Industry",
+            item: "https://www.vmukti.com/industry/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Transportation",
+            item: "https://www.vmukti.com/industry/transportation/",
+          },
+        ],
+      },
+      // Service Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: "Computer Vision in Transportation Industry",
+        url: "https://www.vmukti.com/industry/transportation/",
+        provider: { "@type": "Organization", name: "VMukti Solutions" },
+        areaServed: {
+          "@type": "Country",
+          name: "India, United States, United Kingdom, UAE, Canada",
+        },
+        description:
+          "Boost safety and efficiency with advanced transportation surveillance solutions. Real-time monitoring and analytics for smarter, safer travel experiences.",
+      },
+      // FAQ Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/industry/transportation/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How does your system manage parking attendance during large events?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "With, ANPR-enabled cameras in transportation surveillance security solutions log all vehicle entry and exit, helping you track parking occupancy and streamline traffic flow without manual checks.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Is real-time monitoring possible for multiple locations or vehicles?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Absolutely, You can monitor all sites and vehicles remotely through a centralized dashboard with real-time video, intelligent analytics and live alerts. With integrated GPS tracking and video management our system provides full visibility of vehicles, enhances route management, strengthens security and boosts operational efficiency.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can your solution help improve real-time traffic management?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, our surveillance systems help you monitor traffic lights to ensure signal uptime and smooth vehicle movement, supporting efficient road operations and quicker incident response.",
+            },
+          },
+        ],
+      },
+    ],
   },
   smartcity: {
     metatitle: "Computer Vision in Smart City for Traffic and Safety",
@@ -1578,6 +2378,119 @@ const industriesData = {
       image: "smartcity_workflow.png",
       image_mobile: "smartcity_workflow_mobile.png",
     },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Computer Vision in Smart City for Traffic and Safety",
+        description:
+          "Improve urban safety with our smart city surveillance solutions using smart cameras providing traffic detection, real-time insights, proactive crime prevention.",
+        url: "https://www.vmukti.com/industry/smart-city/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Computer Vision for Smart City",
+        },
+        inLanguage: "en-US",
+      },
+
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Industry",
+            item: "https://www.vmukti.com/industry/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Smart City",
+            item: "https://www.vmukti.com/industry/smart-city/",
+          },
+        ],
+      },
+
+      // Service Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: "Computer Vision in Smart City",
+        url: "https://www.vmukti.com/industry/smart-city/",
+        provider: { "@type": "Organization", name: "VMukti Solutions" },
+        areaServed: {
+          "@type": "Country",
+          name: "India, United States, United Kingdom, UAE, Canada",
+        },
+        description:
+          "Improve urban safety with our smart city surveillance solutions using smart cameras providing traffic detection, real-time insights, proactive crime prevention.",
+      },
+      // FAQ Schema
+
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/industry/smart-city/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How does the AI model handle low-light or adverse weather conditions in real-time detection?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "VMukti’s visual solutions for smart city utilizes advanced AI algorithms and image processing techniques that enhance detection in low-light or adverse weather conditions, ensuring reliable surveillance even in challenging environments.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How does edge processing reduce bandwidth consumption in smart city surveillance?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Our video analytics for smart city reduces bandwidth consumption by processing high-resolution video streams locally, wherever data is captured. This minimizes the need for transmitting large video files, enabling real-time monitoring while optimizing network usage.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How can video analytics integrate with existing surveillance systems?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "You can integrate software with existing surveillance systems by adding advanced video analytics to enhance real-time monitoring. It works with the current infrastructure to improve features like detection, crowd monitoring and traffic management, optimizing security and efficiency.",
+            },
+          },
+        ],
+      },
+    ],
   },
   pharma: {
     metatitle: "Boosting Compliance via Computer Vision in Pharmaceutical",
@@ -1746,12 +2659,6 @@ const industriesData = {
     },
     achieved: "Performance Backed by Numbers",
 
-    workflow: {
-      heading: "The Pharma Video Surveillance Solution Process",
-      image: "pharma_workflow.png",
-      image_mobile: "pharma_workflow_mobile.png",
-    },
-
     cta: {
       textLines: [
         "Lead with Precision Using Vision AI in Pharmaceutical Solutions",
@@ -1759,6 +2666,125 @@ const industriesData = {
       ],
       href: "contact-us",
     },
+    workflow: {
+      heading: "The Pharma Video Surveillance Solution Process",
+      image: "pharma_workflow.png",
+      image_mobile: "pharma_workflow_mobile.png",
+    },
+
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Boosting Compliance via Computer Vision in Pharmaceutical",
+        description:
+          "Computer vision for pharma applications strengthens regulatory compliance, detects process anomalies and protects product integrity at scale.",
+        url: "https://www.vmukti.com/industry/pharma/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Computer Vision for Pharma Industry",
+        },
+        inLanguage: "en-US",
+      },
+
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Industry",
+            item: "https://www.vmukti.com/industry/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Smart City",
+            item: "https://www.vmukti.com/industry/smart-city/",
+          },
+        ],
+      },
+      // Service Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: "Computer Vision in Pharmaceutical Industry",
+        url: "https://www.vmukti.com/industry/pharma/",
+        provider: { "@type": "Organization", name: "VMukti Solutions" },
+        areaServed: {
+          "@type": "Country",
+          name: "India, United States, United Kingdom, UAE, Canada",
+        },
+        description:
+          "Computer vision for pharma applications strengthens regulatory compliance, detects process anomalies and protects product integrity at scale.",
+      },
+
+      // FAQ Schema
+
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/industry/pharma/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "What features help prevent loss or misplacement of critical items in pharmaceutical facilities?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, use our video analytics for pharmaceuticals system for missing and unattended object detection to spot misplaced or unattended items, ensuring operational efficiency and compliance.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How does pharma video surveillance automate compliance report generation?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Our solution leverages advanced analytics to summarize critical events and generate detailed compliance reports, simplifying audits and ensuring regulatory adherence.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How does pharma video surveillance handle object counting for inventory management?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "VMukti’s pharma video surveillance uses precise object counting to track equipment and materials in real time, improving inventory accuracy and operational efficiency.",
+            },
+          },
+        ],
+      },
+    ],
   },
   logistics: {
     metatitle: "Computer Vision in Logistics: Enabling Seamless Operations",
@@ -1941,12 +2967,6 @@ const industriesData = {
     },
     achieved: "Solving Problems with Every Milestones",
 
-    workflow: {
-      heading: "Building Smart Processes for Logistics Surveillance Systems",
-      image: "logistics_workflow.png",
-      image_mobile: "logistics_workflow_mobile.png",
-    },
-
     cta: {
       textLines: [
         "Track Issues in Real-Time – Book a Demo of Our Computer Vision Logistics",
@@ -1954,6 +2974,125 @@ const industriesData = {
       ],
       href: "contact-us",
     },
+    workflow: {
+      heading: "Building Smart Processes for Logistics Surveillance Systems",
+      image: "logistics_workflow.png",
+      image_mobile: "logistics_workflow_mobile.png",
+    },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Computer Vision in Logistics: Enabling Seamless Operations",
+        description:
+          "VMukti Solutions enables Computer Vision Logistics to boost efficiency, reduce losses, and provide full visibility across logistics and warehouse systems.",
+        url: "https://www.vmukti.com/industry/logistics/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Computer Vision for Logistics Industry",
+        },
+        inLanguage: "en-US",
+      },
+
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Industry",
+            item: "https://www.vmukti.com/industry/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Logistics",
+            item: "https://www.vmukti.com/industry/logistics/",
+          },
+        ],
+      },
+
+      // Service Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: "Computer Vision in Logistics Industry",
+        url: "https://www.vmukti.com/industry/logistics/",
+        provider: { "@type": "Organization", name: "VMukti Solutions" },
+        areaServed: {
+          "@type": "Country",
+          name: "India, United States, United Kingdom, UAE, Canada",
+        },
+        description:
+          "VMukti Solutions enables computer vision logistics to boost efficiency, reduce losses, and provide full visibility across logistics and warehouse systems.",
+      },
+
+      // FAQ Schema
+
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/industry/logistics/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How will the system integrate with existing security measures?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "VMukti’s Logistics video surveillance integrates seamlessly with your existing CCTV, access control, VMS, and ERP systems via APIs or custom connectors, enhancing your security measures without disrupting existing infrastructure.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can it track and identify inventory in low-light or high-speed conveyor environments?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, our logistics video surveillance system is equipped with advanced imaging and vision AI for logistics, ensuring accurate tracking even in low-light or high-speed environments, such as conveyor systems.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How does this solution reduce operational costs over time?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Our real time video surveillance helps you reduce labor costs, delays, and inventory inaccuracies by automating manual tasks, minimizing errors, preventing losses, and optimizing workflows.",
+            },
+          },
+        ],
+      },
+    ],
   },
   banking: {
     metatitle: "Boost Customer Safety with Computer Vision in Banking",
@@ -2158,13 +3297,6 @@ const industriesData = {
     },
     achieved: "Growth You Can See and Scale",
 
-    workflow: {
-      heading:
-        "Developing a Future-Ready Bank Surveillance System With Structured Implementation",
-      image: "banking_workflow.png",
-      image_mobile: "banking_workflow_mobile.png",
-    },
-
     cta: {
       textLines: [
         "Elevate Your Experience With The Bank Video Surveillance Solution",
@@ -2172,6 +3304,126 @@ const industriesData = {
       ],
       href: "contact-us",
     },
+    workflow: {
+      heading:
+        "Developing a Future-Ready Bank Surveillance System With Structured Implementation",
+      image: "banking_workflow.png",
+      image_mobile: "banking_workflow_mobile.png",
+    },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Boost Customer Safety with Computer Vision in Banking",
+        description:
+          "Improve safety and ensure security with computer vision for Bank branches and ATMs using AI-powered surveillance with continuous monitoring and alerts.",
+        url: "https://www.vmukti.com/industry/banking/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Computer Vision for Banking Industry",
+        },
+        inLanguage: "en-US",
+      },
+
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Industry",
+            item: "https://www.vmukti.com/industry/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Banking",
+            item: "https://www.vmukti.com/industry/banking/",
+          },
+        ],
+      },
+
+      // Service Schema
+
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: "Computer Vision in Banking Industry",
+        url: "https://www.vmukti.com/industry/banking/",
+        provider: { "@type": "Organization", name: "VMukti Solutions" },
+        areaServed: {
+          "@type": "Country",
+          name: "India, United States, United Kingdom, UAE, Canada",
+        },
+        description:
+          "Improve safety and ensure security with computer vision for Bank branches and ATMs using AI-powered surveillance with continuous monitoring and alerts.",
+      },
+
+      // FAQ Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/industry/banking/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Can the system automatically differentiate between staff and customers using face recognition?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Our banking surveillance solutions with advanced face recognition technology can easily differentiate between staff and customers by comparing facial features against stored employee data. This helps improve security and operational efficiency in a banking environment.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How accurate is the object detection during low-light or night time conditions?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "VMukti’s Solutions are equipped with advanced object detection algorithms and remain highly accurate in low-light or nighttime conditions. Enhanced with infrared or low-light capabilities, these systems ensure reliable surveillance, even in challenging lighting environments.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can we integrate with existing banking surveillance systems to enhance security?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes you can integrate with existing surveillance systems to enhance security. Our video analytics solution works seamlessly with your current setup and supports features like motion detection, face recognition and unattended baggage detection. It can also connect with access control and alarm systems enabling real-time alerts and unified monitoring for faster threat response.",
+            },
+          },
+        ],
+      },
+    ],
   },
   sportsentertainment: {
     metatitle: "Strategic Edge for Computer Vision in Sports & Entertainment",
@@ -2419,6 +3671,112 @@ const industriesData = {
       image: "sportsentertainment_workflow.png",
       image_mobile: "sportsentertainment_workflow_mobile.png",
     },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Strategic Edge for Computer Vision in Sports & Entertainment",
+        description:
+          "Transform the game with visual AI in sports & entertainment, unlocking powerful real-time intelligence across every play, moment, and fan interaction.",
+        url: "https://www.vmukti.com/industry/sports-entertainment/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Computer Vision for Sports & Entertainment Industry",
+        },
+        inLanguage: "en-US",
+      },
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Industry",
+            item: "https://www.vmukti.com/industry/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Sports & Entertainment",
+            item: "https://www.vmukti.com/industry/sports-entertainment/",
+          },
+        ],
+      },
+
+      // Service Schema
+
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: "Computer Vision in Sports & Entertainment Industry",
+        url: "https://www.vmukti.com/industry/sports-entertainment/",
+        provider: { "@type": "Organization", name: "VMukti Solutions" },
+        areaServed: {
+          "@type": "Country",
+          name: "India, United States, United Kingdom, UAE, Canada",
+        },
+        description:
+          "Transform the game with visual AI in sports & entertainment, unlocking powerful real-time intelligence across every play, moment, and fan interaction.",
+      },
+
+      // FAQ Schema
+
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/industry/sports-entertainment/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Can your system identify VIPs or known individuals in the audience?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, our facial recognition using computer vision in entertainment can flag VIPs or players, improving both experience and security with an entertainment surveillance system.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Is the system able to adapt to different types of sports?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "VMukti’s visual AI solution is flexible, tailored to various sports, providing insights specific to each sport's needs, from football to basketball.",
+            },
+          },
+        ],
+      },
+    ],
   },
   defense: {
     metatitle:
@@ -2609,6 +3967,127 @@ const industriesData = {
       image: "defence_workflow.png",
       image_mobile: "defence_workflow_mobile.png",
     },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Intelligent Security Surveillance with Computer Vision in Defense",
+        description:
+          "Revolutionize operations with computer vision for defense for threat detection, intelligent monitoring, and enhanced situational awareness across key areas.",
+        url: "https://www.vmukti.com/industry/defense/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Computer Vision for Defense Industry",
+        },
+        inLanguage: "en-US",
+      },
+
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Industry",
+            item: "https://www.vmukti.com/industry/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Defense",
+            item: "https://www.vmukti.com/industry/defense/",
+          },
+        ],
+      },
+
+      // Service Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: "Computer Vision in Defense Industry",
+        url: "https://www.vmukti.com/industry/defense/",
+        provider: { "@type": "Organization", name: "VMukti Solutions" },
+        areaServed: {
+          "@type": "Country",
+          name: "India, United States, United Kingdom, UAE, Canada",
+        },
+        description:
+          "Revolutionize operations with computer vision for defense for threat detection, intelligent monitoring, and enhanced situational awareness across key areas.",
+      },
+
+      // FAQ Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/industry/defense/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "What role does computer vision for defense play in enhancing perimeter security?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Computer vision for defense enables automated monitoring of critical zones, using instant face/object recognition, motion tracking and anomaly detection to strengthen perimeter security without relying on manual surveillance.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How does the defense surveillance system integrate with existing military infrastructure?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "The defense surveillance system is designed for seamless integration with existing command centers, VMS and access control systems, providing a unified platform for centralized monitoring and decision-making.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can the system dynamically adjust compression based on network conditions?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "VMukti’s visual solution for defense can dynamically adjust compression based on network conditions to maintain continuous streaming and optimize bandwidth without compromising critical footage.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Are the cameras waterproof and capable of withstanding harsh weather conditions?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, the cameras in our defense security solutions are IP 66 waterproof and designed to withstand harsh weather conditions, ensuring reliable performance in rain, snow and extreme temperatures.",
+            },
+          },
+        ],
+      },
+    ],
   },
   hospitality: {
     metatitle: "Smart Hospitality Surveillance System for Premium Security",
@@ -2826,6 +4305,127 @@ const industriesData = {
       image: "hospitality_workflow.png",
       image_mobile: "hospitality_workflow_mobile.png",
     },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Smart Hospitality Surveillance System for Premium Security",
+        description:
+          "A hospitality surveillance system that watches over your guests with precision, offering smart alerts and maintaining the quiet luxury of your property.",
+        url: "https://www.vmukti.com/industry/hospitality/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Computer Vision for Hospitality Industry",
+        },
+        inLanguage: "en-US",
+      },
+
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Industry",
+            item: "https://www.vmukti.com/industry/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Hospitality",
+            item: "https://www.vmukti.com/industry/hospitality/",
+          },
+        ],
+      },
+
+      // Service Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: "Computer Vision in Hospitality Industry",
+        url: "https://www.vmukti.com/industry/hospitality/",
+        provider: { "@type": "Organization", name: "VMukti Solutions" },
+        areaServed: {
+          "@type": "Country",
+          name: "India, United States, United Kingdom, UAE, Canada",
+        },
+        description:
+          "A hospitality surveillance system that watches over your guests with precision, offering smart alerts and maintaining the quiet luxury of your property.",
+      },
+
+      // FAQ Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/industry/hospitality/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "What types of safety and surveillance features do you offer for hotel managers?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "We offer a comprehensive suite of AI-powered tools to ensure guest and staff security. This includes facial recognition, fire and smoke detection, unauthorized entry alerts, human activity monitoring, fall and drowning detection, PPE kit violation alerts, vacant parking detection and behavior tracking like yawning, eye closure or phone use while driving.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Does your system detect unattended luggage in hotel lobbies?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, our hospitality video surveillance solution employs advanced object detection to identify unattended bags or luggage in lobbies, triggering immediate alerts for staff to take action.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How can AI surveillance ensure kitchen hygiene compliance?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Our system detects missing PPE, skipped handwashing and smoking in kitchens, sending real-time alerts to managers and logging violations for inspections.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can your system track all room services?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "VMukti’s system provides visual verification through hospitality security solutions, ensuring room service deliveries are made to the correct rooms without delays or discrepancies.",
+            },
+          },
+        ],
+      },
+    ],
   },
   construction: {
     metatitle: "Paving Future Builds with Computer Vision in Construction",
@@ -3015,13 +4615,6 @@ const industriesData = {
     },
     achieved: "Proud Moments That Shaped Our Growth",
 
-    workflow: {
-      heading:
-        "Guiding You Through the Implementation of Video Surveillance for Construction Sites",
-      image: "construction_workflow.png",
-      image_mobile: "construction_workflow_mobile.png",
-    },
-
     cta: {
       textLines: [
         "Shape a Safer Environment with Construction Surveillance Solution",
@@ -3029,6 +4622,133 @@ const industriesData = {
       ],
       href: "contact-us",
     },
+    workflow: {
+      heading:
+        "Guiding You Through the Implementation of Video Surveillance for Construction Sites",
+      image: "construction_workflow.png",
+      image_mobile: "construction_workflow_mobile.png",
+    },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Paving Future Builds with Computer Vision in Construction",
+        description:
+          "Computer vision in construction industry isn't just the future, it is the upgrade your site needs for sharper safety, speed, and smarter outcomes.",
+        url: "https://www.vmukti.com/industry/construction/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Computer Vision for Construction Industry",
+        },
+        inLanguage: "en-US",
+      },
+
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Industry",
+            item: "https://www.vmukti.com/industry/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Construction",
+            item: "https://www.vmukti.com/industry/construction/",
+          },
+        ],
+      },
+
+      // Service Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: "Computer Vision in Construction Industry",
+        url: "https://www.vmukti.com/industry/construction/",
+        provider: { "@type": "Organization", name: "VMukti Solutions" },
+        areaServed: {
+          "@type": "Country",
+          name: "India, United States, United Kingdom, UAE, Canada",
+        },
+        description:
+          "Computer vision in construction industry isn't just the future, it is the upgrade your site needs for sharper safety, speed, and smarter outcomes.",
+      },
+
+      // FAQ Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/industry/construction/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How can video data be used to validate subcontractor working hours?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Video footage from our construction video surveillance solution can be reviewed to cross-check subcontractor work hours and ensure accurate billing.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can old footage be analyzed to improve future project planning?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, your old footage captured from the construction site surveillance camera can provide valuable insights into past issues and help in planning future projects more effectively.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Does the system offer visual summaries of daily or weekly site activities?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "VMukti’s system offers visual summaries by aggregating data from cameras, allowing teams to review daily or weekly activities quickly and effectively.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can the solution generate safety reports that meet ISO standards?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Using our construction video surveillance software, our solution can automatically create safety compliance reports that align with ISO standards helping you stay audit-ready and meet safety regulations with ease.",
+            },
+          },
+        ],
+      },
+    ],
   },
   enterprise: {
     metatitle: "Computer Vision in Enterprise for Intelligent Monitoring",
@@ -3218,13 +4938,6 @@ const industriesData = {
     },
     achieved: "Growth You Can See and Scale",
 
-    workflow: {
-      heading:
-        "Building a Future-Ready Video Surveillance System for Enterprise",
-      image: "enterprise_workflow.png",
-      image_mobile: "enterprise_workflow_mobile.png",
-    },
-
     cta: {
       textLines: [
         "See How Computer Vision for Enterprise Can Revolutionize Your Business",
@@ -3232,6 +4945,125 @@ const industriesData = {
       ],
       href: "contact-us",
     },
+    workflow: {
+      heading:
+        "Building a Future-Ready Video Surveillance System for Enterprise",
+      image: "enterprise_workflow.png",
+      image_mobile: "enterprise_workflow_mobile.png",
+    },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Computer Vision in Enterprise for Intelligent Monitoring",
+        description:
+          "VMukti Solutions offers an enterprise surveillance solution with computer vision for live threat detection, smart monitoring and enhanced operational security.",
+        url: "https://www.vmukti.com/industry/enterprise/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Computer Vision for Enterprise",
+        },
+        inLanguage: "en-US",
+      },
+
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Industry",
+            item: "https://www.vmukti.com/industry/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Enterprise",
+            item: "https://www.vmukti.com/industry/enterprise/",
+          },
+        ],
+      },
+
+      // Service Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: "Computer Vision For Enterprise",
+        url: "https://www.vmukti.com/industry/enterprise/",
+        provider: { "@type": "Organization", name: "VMukti Solutions" },
+        areaServed: {
+          "@type": "Country",
+          name: "India, United States, United Kingdom, UAE, Canada",
+        },
+        description:
+          "VMukti Solutions offers an enterprise surveillance solution with computer vision for live threat detection, smart monitoring and enhanced operational security.",
+      },
+
+      // FAQ Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/industry/enterprise/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How does AI surveillance improve operational efficiency in large-scale enterprise environments?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "We deliver AI-powered enterprise video intelligence that automates your surveillance operations eliminating manual monitoring, minimizing human error, accelerating incident response and optimizing costs across the board.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How does Artificial intelligence surveillance contribute to predictive security in critical infrastructure environments?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, our AI-powered surveillance system is built for critical infrastructure. By analyzing real-time and historical video through advanced computer vision, we help you anticipate threats and secure vital assets before incidents occur.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How can AI surveillance reduce the cost of physical security personnel in large enterprises?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Our enterprise video surveillance solution automates routine monitoring, reducing the need for physical security presence and helping businesses to optimize workforce and save costs with AI surveillance.",
+            },
+          },
+        ],
+      },
+    ],
   },
   government: {
     metatitle: "Redefine Civic Efficiency with Computer Vision in Government",
@@ -3450,12 +5282,6 @@ const industriesData = {
     },
     achieved: "Proud Moments That Shaped Our Growth",
 
-    workflow: {
-      heading: "How We Deliver Custom Visual Solutions for Government",
-      image: "government_workflow.png",
-      image_mobile: "government_workflow_mobile.png",
-    },
-
     cta: {
       textLines: [
         "Lead with Confidence Using a Government Surveillance System Designed for Scale",
@@ -3463,6 +5289,125 @@ const industriesData = {
       ],
       href: "contact-us",
     },
+    workflow: {
+      heading: "How We Deliver Custom Visual Solutions for Government",
+      image: "government_workflow.png",
+      image_mobile: "government_workflow_mobile.png",
+    },
+    schema: [
+      // Webpage Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Redefine Civic Efficiency with Computer Vision in Government",
+        description:
+          "From traffic to city safety to election monitoring, computer vision for government ensures smarter oversight, faster response, and public trust.",
+        url: "https://www.vmukti.com/industry/government/",
+        datePublished: "2006-11-10",
+        dateModified: "2025-05-05",
+        publisher: {
+          "@type": "Organization",
+          name: "VMukti Solutions",
+          url: "https://www.vmukti.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1",
+          ],
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "Add Image Link",
+          width: 174,
+          height: 123,
+          caption: "Computer Vision for Government",
+        },
+        inLanguage: "en-US",
+      },
+
+      // Breadcrumb Schema
+      {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "VMukti Solutions",
+            item: "https://www.vmukti.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Industry",
+            item: "https://www.vmukti.com/industry/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Government",
+            item: "https://www.vmukti.com/industry/government/",
+          },
+        ],
+      },
+
+      // Service Schema
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: "Computer Vision For Government",
+        url: "https://www.vmukti.com/industry/government/",
+        provider: { "@type": "Organization", name: "VMukti Solutions" },
+        areaServed: {
+          "@type": "Country",
+          name: "India, United States, United Kingdom, UAE, Canada",
+        },
+        description:
+          "From traffic to city safety to election monitoring, computer vision for government ensures smarter oversight, faster response, and public trust.",
+      },
+
+      // FAQ Schema
+
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        url: "https://www.vmukti.com/industry/government/",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Can your system function as a centralized hub for managing multiple surveillance at once?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "For you, Our government security solutions enable seamless integration, offering a centralized hub to manage multiple surveillance feeds from different locations efficiently.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How can AI video surveillance be applied across various stages of elections?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "With vision AI in government, our system can monitor voting stations, track crowds and enhance real-time decision-making during election events for improved security.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What level of control does the government get through your video management system?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "VMukti’s government video surveillance solution provides complete control, offering real-time viewing, incident detection and automated alerts for government personnel.",
+            },
+          },
+        ],
+      },
+    ],
   },
 };
 
