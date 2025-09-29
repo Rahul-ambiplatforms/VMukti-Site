@@ -156,6 +156,7 @@ const dropdownItems = {
     // { label: 'Terms & Condition', path: '/whoweare/terms' },
     // { label: 'Warranty Policy', path: '/whoweare/warranty' },
     { label: "Privacy Policy", path: "/privacy-policy" },
+    { label: "Terms and Conditions", path: "/terms-and-conditions" },
   ],
 };
 
