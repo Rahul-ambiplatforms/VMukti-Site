@@ -147,7 +147,7 @@ const Reviews = () => {
         direction={{ base: "column", lg: "row" }}
       >
         {/* Left Side: Testimonials Slider */}
-        <Box mb="2%" mt="2%" display={["block", "block", "block", "none"]}>
+        <Box mt="2%" display={["block", "block", "block", "none"]}>
           <svg
             width="25"
             height="25"

@@ -176,7 +176,7 @@ const industriesData = [
   {
     isLink: true,
     text: "All Industries",
-    path: "/industry", // The page it will navigate to
+    path: "/industry", 
     position: [3, 4],
   },
   //   {
@@ -298,6 +298,7 @@ export default function IndustryGrid({
                     alignItems="center"
                     justifyContent="center"
                     p={4}
+                    bg="red"
                   >
                     <Button
                       onClick={() => navigate(industry.path)}

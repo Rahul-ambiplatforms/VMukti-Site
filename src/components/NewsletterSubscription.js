@@ -1101,7 +1101,7 @@ const NewsletterSubscription = () => {
                 ))}
               </Flex>
               <Flex mt="5%">
-                <Link href={"/contactus"}>
+                <Link href={"/contact-us"}>
                   <Button
                     width={buttonWidth}
                     height={buttonHeight}
