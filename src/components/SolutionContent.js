@@ -31,6 +31,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Marquee from "react-fast-marquee";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import HorizontalScrollFeatures from "./HorizontalScrollFeatures";
 import { Helmet } from "react-helmet-async";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -40,155 +41,154 @@ const marqueeScroll = keyframes`
   100% { transform: translateX(-50%); } 
 `;
 
-const FeatureCard = ({ feature, bgColor }) => (
-  <Flex
-    direction="column"
-    w={{ base: "80vw", md: "65vw", lg: "85vw" }}
-    h="600px"
-    flexShrink={0}
-    mr={{ base: "20vw", md: "2vw" }}
-    align="center"
-    justify="center"
-  >
-    <Box
-      position="relative"
-      w="100%"
-      h={{ base: "300px", md: "450px", lg: "100%" }} // Responsive height
-      borderRadius="24px"
-      overflow="hidden"
-      // boxShadow="2xl"
-    >
-      <Image
-        src={`${process.env.PUBLIC_URL}/assets/${feature.image}`}
-        alt={feature.title}
-        objectFit="cover"
-        w="100%"
-        h="100%"
-      />
-      <Box
-        position="absolute"
-        bottom={{ base: 4, md: 8 }}
-        left={{ base: 4, md: bgColor === "blue" ? "62%" : 8 }}
-        p={{ base: 4, md: 5 }}
-        w={{ base: "85%", sm: "60%", md: "35%" }}
-        h="90%"
-        bg="rgba(255, 255, 255, 0.95)"
-        backdropFilter="blur(2px) saturate(120%)"
-        borderRadius="24px"
-        boxShadow="md"
-        display="flex"
-        flexDirection="column"
-        justifyContent="center" // Centers vertically on the main axis
-        alignItems="center"
-      >
-        <Heading as="h3" size={{ base: "sm", md: "md" }} color="gray.800">
-          {feature.title}
-        </Heading>
-        <Box
-          width="30px"
-          height="3px"
-          borderRadius="full"
-          bg="#3F77A5"
-          my={3}
-        />
-        <Text fontSize={{ base: "13px", md: "15px" }} color="gray.700">
-          {feature.description}
-        </Text>
-      </Box>
-    </Box>
-  </Flex>
-);
+// const FeatureCard = ({ feature, bgColor }) => (
+//   <Flex
+//     direction="column"
+//     w={{ base: "80vw", md: "65vw", lg: "85vw" }}
+//     h="600px"
+//     flexShrink={0}
+//     mr={{ base: "20vw", md: "2vw" }}
+//     align="center"
+//     justify="center"
+//   >
+//     <Box
+//       position="relative"
+//       w="100%"
+//       h={{ base: "300px", md: "450px", lg: "100%" }} // Responsive height
+//       borderRadius="24px"
+//       overflow="hidden"
+//     >
+//       <Image
+//         src={`${process.env.PUBLIC_URL}/assets/${feature.image}`}
+//         alt={feature.title}
+//         objectFit="cover"
+//         w="100%"
+//         h="100%"
+//       />
+//       <Box
+//         position="absolute"
+//         bottom={{ base: 4, md: 8 }}
+//         left={{ base: 4, md: bgColor === "blue" ? "62%" : 8 }}
+//         p={{ base: 4, md: 5 }}
+//         w={{ base: "85%", sm: "60%", md: "35%" }}
+//         h="90%"
+//         bg="rgba(255, 255, 255, 0.95)"
+//         backdropFilter="blur(2px) saturate(120%)"
+//         borderRadius="24px"
+//         boxShadow="md"
+//         display="flex"
+//         flexDirection="column"
+//         justifyContent="center" // Centers vertically on the main axis
+//         alignItems="center"
+//       >
+//         <Heading as="h3" size={{ base: "sm", md: "md" }} color="gray.800">
+//           {feature.title}
+//         </Heading>
+//         <Box
+//           width="30px"
+//           height="3px"
+//           borderRadius="full"
+//           bg="#3F77A5"
+//           my={3}
+//         />
+//         <Text fontSize={{ base: "13px", md: "15px" }} color="gray.700">
+//           {feature.description}
+//         </Text>
+//       </Box>
+//     </Box>
+//   </Flex>
+// );
 
-const HorizontalScrollFeatures = ({ scrollData = [] }) => {
-  const mainContainerRef = useRef(null);
+// const HorizontalScrollFeatures = ({ scrollData = [] }) => {
+//   const mainContainerRef = useRef(null);
 
-  useGSAP(
-    () => {
-      const horizontalSections = gsap.utils.toArray(".horizontal-section");
+//   useGSAP(
+//     () => {
+//       const horizontalSections = gsap.utils.toArray(".horizontal-section");
 
-      horizontalSections.forEach((section) => {
-        const track = section.querySelector(".horizontal-track");
-        const scrollAmount = track.scrollWidth - section.offsetWidth;
+//       horizontalSections.forEach((section) => {
+//         const track = section.querySelector(".horizontal-track");
+//         const scrollAmount = track.scrollWidth - section.offsetWidth;
 
-        gsap.to(track, {
-          x: -scrollAmount,
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 8% top", // Pin when the section's top hits the viewport's top
-            pin: true,
-            scrub: 1.5,
-            end: () => `+=${scrollAmount}`,
-            invalidateOnRefresh: true,
-          },
-        });
-      });
-    },
-    { scope: mainContainerRef, dependencies: [scrollData] }
-  );
+//         gsap.to(track, {
+//           x: -scrollAmount,
+//           ease: "none",
+//           scrollTrigger: {
+//             trigger: section,
+//             start: "top 8% top", // Pin when the section's top hits the viewport's top
+//             pin: true,
+//             scrub: 1.5,
+//             end: () => `+=${scrollAmount}`,
+//             invalidateOnRefresh: true,
+//           },
+//         });
+//       });
+//     },
+//     { scope: mainContainerRef, dependencies: [scrollData] }
+//   );
 
-  if (!scrollData || scrollData.length === 0) {
-    return null;
-  }
+//   if (!scrollData || scrollData.length === 0) {
+//     return null;
+//   }
 
-  return (
-    // The ref scopes our GSAP selectors to this component only.
-    <Box ref={mainContainerRef} width="100%">
-      {scrollData.map((sectionData) => (
-        <Flex
-          key={sectionData.id}
-          className="horizontal-section"
-          direction="column"
-          justify="center"
-          h="100vh"
-          w="100%"
-          position="relative"
-          overflow="hidden"
-          // p={{ base: 2, md: 4 }}
-          bg={sectionData.bgColor === "blue" ? "#3F77A5" : "white"}
-          borderRadius="24px"
-          mt="2%"
-          mb="-6%"
-          // Need to change here mb -6% wont work instead mt -x%
-        >
-          <Heading
-            as="h2"
-            // size={{ base: "lg", md: "lg" }}
-            fontSize="36px"
-            position="absolute"
-            top={{ base: "10%", md: "2%" }}
-            left="50%"
-            transform="translateX(-50%)"
-            w="90%"
-            textAlign="center"
-            zIndex={2}
-            color={sectionData.bgColor === "blue" ? "white" : "black"}
-          >
-            {sectionData.mainHeading}
-          </Heading>
+//   return (
+//     // The ref scopes our GSAP selectors to this component only.
+//     <Box ref={mainContainerRef} width="100%">
+//       {scrollData.map((sectionData) => (
+//         <Flex
+//           key={sectionData.id}
+//           className="horizontal-section"
+//           direction="column"
+//           justify="center"
+//           h="100vh"
+//           w="100%"
+//           position="relative"
+//           overflow="hidden"
+//           // p={{ base: 2, md: 4 }}
+//           bg={sectionData.bgColor === "blue" ? "#3F77A5" : "white"}
+//           borderRadius="24px"
+//           mt="2%"
+//           mb="-6%"
+//         >
+//           <Heading
+//             as="h2"
+//             // size={{ base: "lg", md: "lg" }}
+//             fontSize="36px"
+//             position="absolute"
+//             top={{ base: "10%", md: "2%" }}
+//             left="50%"
+//             transform="translateX(-50%)"
+//             w="90%"
+//             textAlign="center"
+//             zIndex={2}
+//             color={sectionData.bgColor === "blue" ? "white" : "black"}
+//           >
+//             {sectionData.mainHeading}
+//           </Heading>
 
-          <Flex
-            className="horizontal-track"
-            w="max-content"
-            h="100%"
-            align="center"
-            pl={{ base: "5vw", md: "7vw" }}
-          >
-            {sectionData.features.map((feature) => (
-              <FeatureCard
-                key={feature.id}
-                feature={feature}
-                bgColor={sectionData.bgColor}
-              />
-            ))}
-          </Flex>
-        </Flex>
-      ))}
-    </Box>
-  );
-};
+//           <Flex
+//             className="horizontal-track"
+//             w="max-content"
+//             h="100%"
+//             align="center"
+//             pl={{ base: "5vw", md: "7vw" }}
+//           >
+//             {sectionData.features.map((feature) => (
+//               <FeatureCard
+//                 key={feature.id}
+//                 feature={feature}
+//                 bgColor={sectionData.bgColor}
+//               />
+//             ))}
+//           </Flex>
+//         </Flex>
+//       ))}
+//     </Box>
+//   );
+// };
 
 // This component renders the main "dashboard" or hero section for a solution page.
+
 const SolutionContent = ({ content }) => {
   const { hero } = content;
   const { introduction } = content;
@@ -291,116 +291,120 @@ const SolutionContent = ({ content }) => {
         direction={{ base: "column", lg: "row" }}
         align="center"
         justify="center"
-        bg="#3F77A5" 
-        // p={heroPadding}
-        // gap={10}
-        // mt={["0", "0", "0", "-7%"]}
-        // h={{ base: "80vh", md: "100vh" }}
+        bg="#3F77A5"
+        mt={["-5%", "-5%", "-3%", "-7%"]}
         h="auto"
         pb="2%"
       >
         {/* --- Left Column: Text and Call-to-Action --- */}
-        <VStack
-          align={{ base: "left", lg: "flex-start" }}
-          textAlign={{ base: "left", lg: "left" }}
-          spacing={{ base: 2, md: 6 }}
-          flex="1"
-          maxW={{ base: "100%", lg: "40%" }}
-          pl="4%"
-          mt={["12%", "10%", "8%", "5%"]}
-        >
-          <Heading
-            as="h1"
-            fontSize={headingSize}
-            color="white"
-            fontWeight="600"
-            w={{ base: "80%", md: "100%" }}
-          >
-            {hero.heading}
-          </Heading>
-
-          <svg
-            width={svgSize}
-            height={svgSize}
-            viewBox="0 0 34 34"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M30.0367 33C31.6935 32.9989 33.0357 31.6548 33.0346 29.9979L33.0159 2.99793C33.0148 1.34108 31.6707 -0.00113821 30.0138 7.15256e-06C28.357 0.00115204 27.0148 1.34523 27.0159 3.00208L27.0325 27.0021L3.03251 27.0187C1.37566 27.0198 0.0334406 28.3639 0.0345855 30.0207C0.0357304 31.6776 1.3798 33.0198 3.03666 33.0187L30.0367 33ZM5 5L2.88015 7.12279L27.9147 32.1228L30.0346 30L32.1544 27.8772L7.11985 2.87721L5 5Z"
-              fill="#fff"
-            />
-          </svg>
-
-          <Text
-            fontSize={{ base: "14px", lg: "16px" }}
-            color="white"
-            lineHeight="20px"
-            w={{ base: "90%", md: "100%" }}
-            as="p"
-          >
-            {hero.description}
-          </Text>
-
-          <Button
-            as="a"
-            href="/contact-us"
-            bg="white"
-            color="#3F77A5"
-            fontSize="16px"
-            borderRadius="24px"
-            px={8}
-            py="4"
-            w={{ base: "135px", md: "179px" }}
-            h={{ base: "34px", md: "48px" }}
-            // rightIcon={<Icon as={LuArrowUpRight} />}
-            _hover={{
-              transform: "translateY(-2px)",
-              boxShadow: "lg",
-            }}
-          >
-            Book Demo
-            <Box ml="2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={svgSize1}
-                height={svgSize1}
-                viewBox="0 0 18 18"
-                fill="none"
-              >
-                <path
-                  d="M17.5 2C17.5 1.17157 16.8284 0.499999 16 0.499999L2.5 0.5C1.67157 0.5 0.999999 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5L14.5 3.5L14.5 15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM2 16L3.06066 17.0607L17.0607 3.06066L16 2L14.9393 0.939339L0.93934 14.9393L2 16Z"
-                  fill="#3F77A5"
-                />
-              </svg>
-            </Box>
-          </Button>
-          {hero.image_certi && (<Box w="180px" h="52px">
-            <img
-              src={hero.image_certi}
-              alt={hero.heading}
-              w="100%"
-              h="100%"
-              objectFit="cover"
-            />
-          </Box>)}
-        </VStack>
-
-        {/* --- Right Column: Display Image --- */}
         <Flex
-          flex="1"
-          justify="center"
-          align="center"
-          w="100%"
-          // mt={["0", "0", "0", "10%"]}
-          mr="2%"
+          direction={{ base: "column", lg: "row" }}
+          mt={["12%", "10%", "8%", "10%"]}
         >
-          <Image
-            src={hero.image}
-            alt={hero.heading}
-            objectFit="cover"
+          <VStack
+            align={{ base: "left", lg: "flex-start" }}
+            textAlign={{ base: "left", lg: "left" }}
+            spacing={{ base: 2, md: 6 }}
+            flex="1"
+            maxW={{ base: "100%", lg: "40%" }}
+            pl="4%"
+            // mt={["12%", "10%", "8%", "10%"]}
+          >
+            <Heading
+              as="h1"
+              fontSize={headingSize}
+              color="white"
+              fontWeight="600"
+              w={{ base: "80%", md: "100%" }}
+            >
+              {hero.heading}
+            </Heading>
+
+            <svg
+              width={svgSize}
+              height={svgSize}
+              viewBox="0 0 34 34"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M30.0367 33C31.6935 32.9989 33.0357 31.6548 33.0346 29.9979L33.0159 2.99793C33.0148 1.34108 31.6707 -0.00113821 30.0138 7.15256e-06C28.357 0.00115204 27.0148 1.34523 27.0159 3.00208L27.0325 27.0021L3.03251 27.0187C1.37566 27.0198 0.0334406 28.3639 0.0345855 30.0207C0.0357304 31.6776 1.3798 33.0198 3.03666 33.0187L30.0367 33ZM5 5L2.88015 7.12279L27.9147 32.1228L30.0346 30L32.1544 27.8772L7.11985 2.87721L5 5Z"
+                fill="#fff"
+              />
+            </svg>
+
+            <Text
+              fontSize={{ base: "14px", lg: "16px" }}
+              color="white"
+              lineHeight="20px"
+              w={{ base: "90%", md: "100%" }}
+              as="p"
+            >
+              {hero.description}
+            </Text>
+
+            <Button
+              as="a"
+              href="/contact-us"
+              bg="white"
+              color="#3F77A5"
+              fontSize="16px"
+              borderRadius="24px"
+              px={8}
+              py="4"
+              w={{ base: "135px", md: "179px" }}
+              h={{ base: "34px", md: "48px" }}
+              // rightIcon={<Icon as={LuArrowUpRight} />}
+              _hover={{
+                transform: "translateY(-2px)",
+                boxShadow: "lg",
+              }}
+            >
+              Book Demo
+              <Box ml="2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={svgSize1}
+                  height={svgSize1}
+                  viewBox="0 0 18 18"
+                  fill="none"
+                >
+                  <path
+                    d="M17.5 2C17.5 1.17157 16.8284 0.499999 16 0.499999L2.5 0.5C1.67157 0.5 0.999999 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5L14.5 3.5L14.5 15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM2 16L3.06066 17.0607L17.0607 3.06066L16 2L14.9393 0.939339L0.93934 14.9393L2 16Z"
+                    fill="#3F77A5"
+                  />
+                </svg>
+              </Box>
+            </Button>
+            {hero.image_certi && (
+              <Box w="180px" h="52px" my={{ base: "5%", md: "0" }}>
+                <img
+                  src={hero.image_certi}
+                  alt={hero.heading}
+                  w="100%"
+                  h="100%"
+                  objectFit="cover"
+                />
+              </Box>
+            )}
+          </VStack>
+
+          {/* --- Right Column: Display Image --- */}
+          <Flex
+            flex="1"
+            justify="center"
+            align="center"
             w="100%"
-          />
+            // mt={["0", "0", "0", "10%"]}
+            mr="2%"
+          >
+            <Image
+              src={hero.image}
+              alt={hero.heading}
+              objectFit="cover"
+              w="100%"
+            />
+          </Flex>
         </Flex>
       </Flex>
 
@@ -422,7 +426,7 @@ const SolutionContent = ({ content }) => {
               h={
                 introduction.image
                   ? ["294px", "294px", "394px", "494px"]
-                  : "248px"
+                  : ["280px","280px","260px","248px"]
               }
               p={{ base: 6, md: 8 }}
               borderRadius={{ base: "16px", md: "24px" }}
@@ -670,11 +674,21 @@ const SolutionContent = ({ content }) => {
               {content.workflow.heading}
             </Heading>
             <Image
-              src={content.workflow.image} // Also update the image path
+              src={content.workflow.image} 
               alt={content.workflow.heading}
               w="100%"
               maxW="1200px"
               objectFit="contain"
+              display={{base:"none",md:"block"}}
+
+            />
+            <Image
+              src={content.workflow.image_mobile} 
+              alt={content.workflow.heading}
+              w="100%"
+              maxW="1200px"
+              objectFit="contain"
+              display={{base:"block",md:"none"}}
             />
           </VStack>
         )}

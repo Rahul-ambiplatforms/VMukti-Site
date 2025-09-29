@@ -102,7 +102,9 @@ const Hero = () => {
   */}
       </Helmet>
       <SolutionDashboard />
-      <Trusted />
+      <Box mt={{base:"5%",md:"0"}}>
+        <Trusted />
+      </Box>
       <PageContentWrapper>
         <AISurveillance />
         <Solutions data={solutionSolutions} />

@@ -36,13 +36,11 @@ const SolutionDashboard = () => {
         position="relative"
         alignItems="center"
         justifyContent="center"
-        mt={["-4%", "", "-7%", "-7%"]}
+        mt={["-20%", "-15%", "-7%", "-7%"]}
         alt="Hero Image"
         bgSize="cover"
         bgPosition="center"
         borderRadius="0px 0px 24px 24px"
-        // role="img"
-        // aria-label="A modern dashboard displaying visual intelligence solutions and analytics"
       >
         {/* <Box borderRadius="24px"> */}
         <Image
@@ -70,6 +68,7 @@ const SolutionDashboard = () => {
           zIndex="base"
           borderRadius="24px"
           display={{ base: "block", md: "none" }}
+          // mt="-20%"
         />
         {/* </Box> */}
         <VStack
@@ -96,7 +95,7 @@ const SolutionDashboard = () => {
             w="100%"
             bg="rgba(255, 255, 255, 0.85)"
             backdropFilter="blur(10px)"
-            py="2%"
+            py={{base:"5%",md:"2%"}}
             borderRadius="24px"
           >
             <VStack spacing={4} textAlign="center">

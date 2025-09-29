@@ -20,9 +20,6 @@ import { FiArrowDown, FiArrowRight } from "react-icons/fi";
 import { getBlogs } from "../../Blogs/blog"; // Make sure this path is correct
 
 // The base URL for your images.
-// const IMAGE_BASE_URL =
-//   process.env.REACT_APP_IMAGE_BASE_URL || "http://localhost:5000/uploads/";
-// const IMAGE_BASE_URL = "https://vmukti.com/backend/uploads/";
 const IMAGE_BASE_URL =
   "https://res.cloudinary.com/dzs02ecai/image/upload/v1758361869/uploads/";
 
@@ -35,7 +32,6 @@ const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
     "No description available.";
   const url = `/blog/${post.metadata?.urlWords || post._id}`;
 
-  // Define the layout structure based on the variant prop
   const textSection = (
     <VStack
       align="start"
@@ -54,13 +50,8 @@ const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
       <Text fontSize="sm" opacity={0.9} noOfLines={3}>
         {brief}
       </Text>
-      <Link
-        href={url}
-        isExternal
-        fontWeight="bold"
-        display="flex"
-        alignItems="center"
-      >
+      {/* This is no longer a link, but styled to look like one */}
+      <Flex as="span" fontWeight="bold" display="flex" alignItems="center">
         Read more
         <Box ml="2">
           <svg
@@ -76,7 +67,7 @@ const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
             />
           </svg>
         </Box>
-      </Link>
+      </Flex>
     </VStack>
   );
 
@@ -90,29 +81,29 @@ const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
     />
   );
 
-  // Set the order based on screen size and layout variant
   const flexDirection = useBreakpointValue({
     base: "column",
     md: layoutVariant === "textFirst" ? "row" : "row-reverse",
   });
 
   return (
-    <Flex
-      w="100%"
-      borderRadius="24px"
-      overflow="hidden"
-      //   boxShadow="lg"
-      direction={flexDirection}
-      // h="760px"
-    >
-      {textSection}
-      {imageSection}
-    </Flex>
+    // The entire card is now wrapped in a RouterLink
+    <Link as={RouterLink} to={url} _hover={{ textDecoration: "none" }}>
+      <Flex
+        w="100%"
+        borderRadius="24px"
+        overflow="hidden"
+        direction={flexDirection}
+        h="100%"
+      >
+        {textSection}
+        {imageSection}
+      </Flex>
+    </Link>
   );
 });
 
 // --- Placeholder Component ---
-// This component is displayed when a blog post is not available for a slot.
 const BlogPlaceholderCard = ({ layoutVariant = "textFirst" }) => {
   const textSection = (
     <Center
@@ -121,7 +112,7 @@ const BlogPlaceholderCard = ({ layoutVariant = "textFirst" }) => {
       bg="#3F77A5"
       color="whiteAlpha.700"
       h="100%"
-      minH={{ base: "200px", md: "250px" }}
+      minH={{ base: "450px", md: "100%" }}
     >
       <Text>No blog post available.</Text>
     </Center>
@@ -145,7 +136,6 @@ const BlogPlaceholderCard = ({ layoutVariant = "textFirst" }) => {
       w="100%"
       borderRadius="24px"
       overflow="hidden"
-      // boxShadow="lg"
       direction={flexDirection}
     >
       {textSection}
@@ -159,13 +149,15 @@ const BlogView = () => {
   const toast = useToast();
   const [blogs, setBlogs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const svgSize = useBreakpointValue({base:"25",md:"34"})
-  const containerPadding = useBreakpointValue({ base: 6, md: 10, lg: 16 });
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const isMobile = useBreakpointValue({ base: true, lg: false });
+  const svgSize = useBreakpointValue({ base: "25", md: "34" });
 
   const fetchBlogs = useCallback(async () => {
     setIsLoading(true);
     try {
-      // Fetch up to 2 latest blogs
       const response = await getBlogs(1, 2, "", "latest", "published");
       if (response.status === "success" && Array.isArray(response.data)) {
         setBlogs(response.data);
@@ -187,6 +179,16 @@ const BlogView = () => {
     fetchBlogs();
   }, [fetchBlogs]);
 
+  // Effect for auto-scrolling carousel on mobile
+  useEffect(() => {
+    if (isMobile && !isPaused && blogs.length > 1) {
+      const timer = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % blogs.length);
+      }, 5000); // Change card every 5 seconds
+      return () => clearInterval(timer);
+    }
+  }, [currentIndex, isMobile, isPaused, blogs.length]);
+
   return (
     <Box bg="white" p="2%" borderRadius="24px">
       <Flex
@@ -195,7 +197,6 @@ const BlogView = () => {
         justify="center"
         maxW="100%"
         mx="auto"
-        gap={10}
       >
         {/* Left Section */}
         <VStack
@@ -203,7 +204,8 @@ const BlogView = () => {
           spacing={5}
           w={{ base: "100%", lg: "30%" }}
           textAlign={{ base: "left", lg: "left" }}
-          mb={{ base: 10, lg: 0 }}
+          mb={{ base: 2, lg: 0 }}
+          p={{ base: "4" }}
         >
           <Heading
             as="h2"
@@ -215,7 +217,6 @@ const BlogView = () => {
               Blogs
             </Box>
           </Heading>
-          {/* <Icon as={FiArrowDown} w={8} h={8} color="#3F77A5" /> */}
           <Flex direction="column" gap="4" w="90%">
             <Box>
               <svg
@@ -233,8 +234,8 @@ const BlogView = () => {
             </Box>
             <Text
               color="black"
-              fontSize={{base:"14px",md:"16px"}}
-              lineHeight={{base:"18px",md:"20px"}}
+              fontSize={{ base: "14px", md: "16px" }}
+              lineHeight={{ base: "18px", md: "20px" }}
               fontWeight="500"
               as="p"
               textAlign="justify"
@@ -246,8 +247,9 @@ const BlogView = () => {
           </Flex>
           <Link
             as={RouterLink}
-            to="/blog" // <-- Set the destination path to your blogs page
-            _hover={{ textDecoration: "none" }} // Prevents the link underline on hover
+            to="/blog"
+            _hover={{ textDecoration: "none" }}
+            display={{ base: "none", md: "block" }}
           >
             <Button
               bg="#E7E7E7"
@@ -282,7 +284,8 @@ const BlogView = () => {
           w={{ base: "100%", lg: "70%" }}
           align="center"
           justify="center"
-          minH="300px" // Provides space for the spinner
+          minH="300px"
+          mb={{ base: "5%", md: "0" }}
         >
           {isLoading ? (
             <Spinner
@@ -292,8 +295,37 @@ const BlogView = () => {
               color="#3F77A5"
               size="xl"
             />
+          ) : isMobile ? (
+            // --- Mobile Carousel ---
+            <Box
+              w="100%"
+              position="relative"
+              overflow="hidden"
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+              onTouchStart={() => setIsPaused(true)}
+              onTouchEnd={() => setIsPaused(false)}
+            >
+              <Flex
+                w="100%"
+                transition="transform 0.5s ease-in-out"
+                transform={`translateX(-${currentIndex * 100}%)`}
+              >
+                {blogs.length > 0 ? (
+                  blogs.map((post) => (
+                    <Box key={post._id} flex="0 0 100%" p={1}>
+                      <BlogPostCard post={post} />
+                    </Box>
+                  ))
+                ) : (
+                  <Box flex="0 0 100%">
+                    <BlogPlaceholderCard />
+                  </Box>
+                )}
+              </Flex>
+            </Box>
           ) : (
-            // This logic ensures we always have two slots.
+            // --- Desktop Static View ---
             Array.from({ length: 2 }).map((_, index) => {
               const post = blogs[index];
               const layoutVariant = index === 0 ? "textFirst" : "imageFirst";
@@ -313,6 +345,38 @@ const BlogView = () => {
             })
           )}
         </Stack>
+        <Link
+          as={RouterLink}
+          to="/blog"
+          _hover={{ textDecoration: "none" }}
+          display={{ base: "block", md: "none" }}
+          mb={{ base: "5%", md: "0" }}
+        >
+          <Button
+            bg="#E7E7E7"
+            color="#3F77A5"
+            _hover={{ bg: "gray.300" }}
+            size="lg"
+            px={8}
+            borderRadius="24px"
+          >
+            View all
+            <Box ml="2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+              >
+                <path
+                  d="M17.5 2C17.5 1.17157 16.8284 0.499999 16 0.499999L2.5 0.5C1.67157 0.5 0.999999 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5L14.5 3.5L14.5 15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM2 16L3.06066 17.0607L17.0607 3.06066L16 2L14.9393 0.939339L0.93934 14.9393L2 16Z"
+                  fill="#3F77A5"
+                />
+              </svg>
+            </Box>
+          </Button>
+        </Link>
       </Flex>
     </Box>
   );

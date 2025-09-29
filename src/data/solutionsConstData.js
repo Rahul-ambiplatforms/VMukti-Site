@@ -1366,91 +1366,91 @@ export const solutionsData = {
             title: "Pre-Stampede Detection",
             description:
               "VMukti’s CloudAI solution helps identify and manage sudden crowd movements. It prevents accidents, supports emergency response and improves safety in crowded areas.",
-            image: "../../assets/man1.png",
+            image: "../../assets/feat1_industry_cloudai_1.png",
           },
           {
             id: "feat1-2",
             title: "Fire Detection",
             description:
               "Receive instant alerts for smoke or flames with our CloudAI for surveillance security to reduce response time, prevent damage, and enhance fire safety measures.",
-            image: "../../assets/man1.png",
+            image: "../../assets/feat1_industry_cloudai_2.png",
           },
           {
             id: "feat1-3",
             title: "Weapon Detection",
             description:
               "Our AI-powered surveillance identifies weapons the moment they appear, helping you take immediate action to safeguard people, assets and high-risk zones with precision and confidence.",
-            image: "../../assets/man1.png",
+            image: "../../assets/feat1_industry_cloudai_3.png",
           },
           {
             id: "feat1-4",
             title: "Line Crossing",
             description:
               "Our CloudAI cctv solutions detect when a person or object crosses a defined virtual line. It is useful for managing restricted access and improving overall security control.",
-            image: "../../assets/man1.png",
+            image: "../../assets/feat1_industry_cloudai_4.png",
           },
+          // {
+          //   id: "feat1-5",
+          //   title: "Unauthorized Parking",
+          //   description:
+          //     "Vehicles parked in restricted areas are quickly detected by the Vmukti’s CloudAI security solution. It enables automated alerts and supports better space enforcement.",
+          //   image: "../../assets/feat1_industry_cloudai_5.png",
+          // },
+          // {
+          //   id: "feat1-6",
+          //   title: "Detecting Phone Usage While Driving",
+          //   description:
+          //     "Our cloud video surveillance solution accurately identifies drivers using mobile phones in vehicles. Providing instant alerts and it helps reduce distracted driving on the road.",
+          //   image: "../../assets/feat1_industry_cloudai_6.png",
+          // },
           {
             id: "feat1-5",
-            title: "Unauthorized Parking",
-            description:
-              "Vehicles parked in restricted areas are quickly detected by the Vmukti’s CloudAI security solution. It enables automated alerts and supports better space enforcement.",
-            image: "../../assets/man1.png",
-          },
-          {
-            id: "feat1-6",
-            title: "Detecting Phone Usage While Driving",
-            description:
-              "Our cloud video surveillance solution accurately identifies drivers using mobile phones in vehicles. Providing instant alerts and it helps reduce distracted driving on the road.",
-            image: "../../assets/man1.png",
-          },
-          {
-            id: "feat1-7",
             title: "Monitoring Head Movements",
             description:
               "We offer cloud video surveillance software that tracks head movements whether the driver's head turns left or right. It plays a key role in ensuring driver alertness and preventing accidents.",
-            image: "../../assets/man1.png",
+            image: "../../assets/feat1_industry_cloudai_5.png",
           },
           {
-            id: "feat1-8",
+            id: "feat1-6",
             title: "Eyes Closing",
             description:
               "Analysis detects prolonged eye closure through facial movements tracking with our CloudAI surveillance video, helping deliver early fatigue alerts to reduce risk during long driving hours.",
-            image: "../../assets/man1.png",
+            image: "../../assets/feat1_industry_cloudai_6.png",
           },
           {
-            id: "feat1-9",
+            id: "feat1-7",
             title: "Yawning While Driving",
             description:
               "Monitors facial patterns to detect yawning using VMukti’s cloud video surveillance which enables proactive fatigue management and promotes road safety in logistics and transport.",
-            image: "../../assets/man1.png",
+            image: "../../assets/feat1_industry_cloudai_7.png",
           },
           {
-            id: "feat1-10",
+            id: "feat1-8",
             title: "Identifying Conversations with Passengers",
             description:
               "We provide cloud video surveillance software that monitors interactions between drivers and passengers. It identifies possible distractions to support focused and safe driving.",
-            image: "../../assets/man1.png",
+            image: "../../assets/feat1_industry_cloudai_8.png",
           },
           {
-            id: "feat1-11",
+            id: "feat1-9",
             title: "Unauthorized Entry Detection",
             description:
               "An intelligent surveillance ecosystem developed by VMukti’s Cloud AI to monitor secure areas for unauthorized access. Provides live alerts to quickly respond and prevent security breaches.",
-            image: "../../assets/man1.png",
+            image: "../../assets/feat1_industry_cloudai_9.png",
           },
           {
-            id: "feat1-12",
+            id: "feat1-10",
             title: "Entry / Exit",
             description:
               "Monitor and record entry and exit activity with CloudAI video surveillance solution, supporting accurate access tracking detailed logs and improved security oversight across facilities.",
-            image: "../../assets/man1.png",
+            image: "../../assets/feat1_industry_cloudai_10.png",
           },
           {
-            id: "feat1-13",
+            id: "feat1-11",
             title: "Human Detection",
             description:
               "Our Cloud video surveillance identifies human presence in restricted or sensitive zones. We provide intelligent monitoring with automated alerts to help organizations respond instantly.",
-            image: "../../assets/man1.png",
+            image: "../../assets/feat1_industry_cloudai_11.png",
           },
         ],
       },
@@ -1460,49 +1460,101 @@ export const solutionsData = {
           "Automating Compliance Checks through CloudAI Surveillance",
         description:
           "CloudAI surveillance continuously monitors activities to ensure all protocols are followed accurately. Our system helps to reduce manual supervision, boosts accountability and supports a safer, more efficient environment across facilities.",
-        bgColor: "blue", // Or your desired background for this section
+        bgColor: "blue",
         features: [
           {
             id: "feat2-1",
             title: "PPE Kit Detection",
             description:
               "Driven by our CloudAI solution it automatically detects essential safety gear like helmets, gloves boots and vests to maintain compliance and ensure worker protection across industrial zones.",
-            image: "../../assets/man1.png",
+            image: "../../assets/feat2_industry_cloudai_1.png",
           },
           {
             id: "feat2-2",
             title: "Hand Wash Policy",
             description:
               "Missed handwashing is detected with our CloudAI for surveillance, which enforces hygiene protocols and reduces infection risks. This is critical for maintaining cleanliness in sensitive areas.",
-            image: "../../assets/man1.png",
+            image: "../../assets/feat2_industry_cloudai_2.png",
           },
           {
             id: "feat2-3",
             title: "No Seatbelt Usage",
             description:
               "Using our cloud video surveillance solution automatically identifies if a driver is not wearing a seatbelt. It helps enforce compliance with safety regulations through visual detection.",
-            image: "../../assets/man1.png",
+            image: "../../assets/feat2_industry_cloudai_3.png",
           },
           {
             id: "feat2-4",
             title: "Smoking Detection",
             description:
               "We offer Identified smoking behavior in real time through a Cloud video surveillance solution, enabling enforcement of no-smoking policies in vehicles and workplace settings.",
-            image: "../../assets/man1.png",
+            image: "../../assets/feat2_industry_cloudai_4.png",
           },
           {
             id: "feat2-5",
             title: "Object Detection",
             description:
               "Detects and identifies unattended or unauthorized objects instantly with our CloudAI security solution enabling swift response to potential security risks and operational disruptions.",
-            image: "../../assets/man1.png",
+            image: "../../assets/feat2_industry_cloudai_5.png",
           },
           {
             id: "feat2-6",
             title: "No Uniform",
             description:
               "Our cloud video surveillance ensures uniform compliance by detecting unauthorized attire. It helps enforce dress codes in industrial, corporate and high-security zones.",
-            image: "../../assets/man1.png",
+            image: "../../assets/feat2_industry_cloudai_6.png",
+          },
+        ],
+      },
+      {
+        id: "section3",
+        mainHeading:
+          "Transform Your Security with the Benefits of CloudAI Surveillance",
+        description:
+          "Vmukit’s CloudAI surveillance delivers scalable storage and remote access with AI threat detection and instant alerts. It ensures security, easy integration, and Instant insights for faster decisions.",
+        bgColor: "white", // Or your desired background color
+        features: [
+          {
+            id: "feat3-1",
+            title: "Ensuring Data Security",
+            description:
+              "Using our CloudAI solution offers robust encryption and strict access controls that safeguard sensitive information and prevent unauthorized access.",
+            image: "../../assets/feat3_industry_cloudai_1.png",
+          },
+          {
+            id: "feat3-2",
+            title: "Live Alerts",
+            description:
+              "We provide CloudAI solution for better surveillance and provide instant alerts for unusual activities or system events, helping you take immediate action against potential threats.",
+            image: "../../assets/feat3_industry_cloudai_2.png",
+          },
+          {
+            id: "feat3-3",
+            title: "Automatic System Updates",
+            description:
+              "With our CloudAI CCTV solutions updates are handled automatically, ensuring your systems remain always up-to-date without any manual effort or downtime.",
+            image: "../../assets/feat3_industry_cloudai_3.png",
+          },
+          {
+            id: "feat3-4",
+            title: "Energy and Cost Efficiency",
+            description:
+              "Cloud-based video surveillance reduces on-site hardware dependency, power usage, and maintenance costs, making your security smarter and more efficient.",
+            image: "../../assets/feat3_industry_cloudai_4.png",
+          },
+          {
+            id: "feat3-5",
+            title: "Monitor Anywhere Anytime",
+            description:
+              "Access live video feeds and manage multiple sites remotely from a single dashboard. Our CloudAI ensures complete visibility over your entire surveillance network enabling faster responses and smarter decisions without being on-site.",
+            image: "../../assets/feat3_industry_cloudai_5.png",
+          },
+          {
+            id: "feat3-6",
+            title: "Cut Down Costs and Hardware",
+            description:
+              "Developed On-Site by VMukti’s CloudAI reduces reliance on physical servers and hardware, lowering setup costs, energy use and maintenance efforts while ensuring reliable performance.",
+            image: "../../assets/feat3_industry_cloudai_6.png",
           },
         ],
       },
@@ -1767,6 +1819,7 @@ export const solutionsData = {
     workflow: {
       heading: "The Complete Process Behind Our GenAI Solution",
       image: "../../assets/solution_genai_workflow.png",
+      image_mobile: "../../assets/solution_genai_workflow_mobile.png",
     },
 
     // Section 7: Why Choose Us from the seventh image
@@ -1969,11 +2022,6 @@ export const solutionsData = {
       href: "/contact-us",
     },
 
-    // Section 6: Workflow from the sixth image
-    workflow: {
-      heading: "The Complete Process Behind Our GenAI Solution",
-      image: "../../assets/solution_genai_workflow.png",
-    },
 
     // Section 7: Why Choose Us from the seventh image
     whyChooseUs: {

@@ -176,44 +176,9 @@ const industriesData = [
   {
     isLink: true,
     text: "All Industries",
-    path: "/industry", 
+    path: "/industry",
     position: [3, 4],
   },
-  //   {
-  //     name: 'Banking',
-  //     img:
-  //       'data:image/svg+xml;charset=utf-8,' +
-  //       encodeURIComponent(
-  //         `<svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-  // <path fillRule="evenodd" clipRule="evenodd" d="M26.2432 8.81782V31.9696C26.2432 32.5811 26.6621 33.0001 27.2736 33.0001H32.0139C32.6255 33.0001 33.0444 32.5811 33.0444 31.9696V8.81782C33.0444 8.28679 32.6459 7.78735 32.1513 7.78735H27.1363C26.6417 7.78735 26.2432 8.28679 26.2432 8.81782Z" fill="#3F77A5"/>
-  //     <path fillRule="evenodd" clipRule="evenodd" d="M26.6556 2.90961C26.6556 3.26863 26.7942 3.65063 26.8617 3.94009C26.5815 4.35859 26.3111 4.47274 26.0537 4.7122C25.945 4.81336 25.8905 4.88889 25.7792 4.98721L24.3096 6.26568C23.8638 6.62156 22.759 7.72713 22.2588 8.06206C21.9945 8.00046 21.9485 7.91193 21.6668 7.82968C20.5826 7.51321 19.6999 7.86456 18.9501 8.46311C18.4327 8.87621 18.1729 9.51621 17.9995 10.2604C17.7288 10.2665 17.3507 10.3636 17.0667 10.4268C16.7168 10.5047 16.4705 10.56 16.1044 10.6324C15.7319 10.7062 15.5148 10.7653 15.143 10.8389C14.8308 10.9007 14.4496 11.0096 14.1523 11.0161C13.9017 10.6419 13.6413 10.3275 13.232 10.0816C10.5041 8.44239 8.10688 11.6341 8.93117 13.3519L5.64656 15.632C5.43395 15.7767 5.38191 15.8412 5.15267 15.9625C4.7703 15.7602 4.49427 15.5571 3.97388 15.4907C2.60906 15.3165 1.30117 15.9757 0.782616 17.2945C0.424552 18.2053 0.585414 19.1532 1.05069 19.9272C1.22878 20.2235 1.60136 20.6223 1.90045 20.7949C4.43471 22.2562 6.38925 19.9883 6.38925 18.7105L6.32057 17.5426C6.80599 17.2858 7.68911 16.5883 8.18833 16.2502C8.51698 16.0277 8.79863 15.8388 9.11787 15.5997L10.0303 14.9321C12.3258 16.4692 14.5304 14.4709 14.5645 12.9397C14.9154 12.9397 15.2058 12.8312 15.5548 12.7621C16.0852 12.6572 18.1281 12.184 18.4804 12.184C18.5706 12.5217 18.8799 12.7342 19.0762 12.8935C21.2072 14.6229 23.7703 12.6253 23.7703 11.0161V10.3979C23.7703 9.55738 23.1328 9.80137 24.7218 8.53274L28.167 5.45146C30.1659 6.50916 32.4951 5.08967 32.4951 2.90961C32.4951 0.408711 29.5258 -0.995084 27.5307 0.830561C27.2992 1.04229 27.1006 1.3978 26.9431 1.68565C26.8033 1.94103 26.6556 2.54089 26.6556 2.90961Z" fill="#3F77A5"/>
-  // <path fillRule="evenodd" clipRule="evenodd" d="M17.5186 16.3748V32.1757C17.5186 32.5883 18.0032 33.0001 18.4117 33.0001H23.2893C24.0806 33.0001 24.3198 32.333 24.3198 31.626V16.8556C24.3198 15.8726 23.9318 15.4817 22.9458 15.4817H18.8238C18.1768 15.4817 17.5186 15.7285 17.5186 16.3748Z" fill="#3F77A5"/>
-  //   <path fillRule="evenodd" clipRule="evenodd" d="M8.79346 18.367V31.9695C8.79346 32.581 9.21239 33 9.82393 33H14.5642C15.1758 33 15.5947 32.581 15.5947 31.9695V18.367C15.5947 17.9798 15.1583 17.4739 14.7703 17.4739H9.61782C9.20517 17.4739 8.79346 17.9586 8.79346 18.367Z" fill="#3F77A5"/>
-  // <path fillRule="evenodd" clipRule="evenodd" d="M0 24.6186V31.6259C0 32.3337 0.24019 32.9999 1.03047 32.9999H5.90813C6.31656 32.9999 6.80124 32.5882 6.80124 32.1756V24.069C6.80124 23.6649 6.39078 23.2446 5.83945 23.2446H1.03047C0.266099 23.2446 0 23.8443 0 24.6186Z" fill="#3F77A5"/>
-  // </svg>
-  // `
-  //       ),
-  //     className: 'white',
-  //     position: [2, 4],
-  //     bgColor: 'white',
-  //     textColor: 'black',
-  //     dashColor: '#3F77A5',
-  //     image: '/assets/BankingIndustry.png',
-  //   },
-  // {
-  //   name: 'Defense',
-  //   img:
-  //     'data:image/svg+xml;charset=utf-8,' +
-  //     encodeURIComponent(
-  //       '<svg width="30" height="35" viewBox="0 0 30 35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.000105915 5.9168L13.928 0.881836V34.1176C9.65723 31.3919 5.4666 27.0673 2.62918 22.4434C0.909035 19.6515 0 16.4112 0 13.0798L0.000105915 5.9168Z" fill="#3F77A5"/><path d="M30 5.9168V13.0801C30 16.4114 29.091 19.6516 27.3708 22.4462C24.5333 27.0688 20.3428 31.3904 16.072 34.1162V0.881836L30 5.9168Z" fill="#3F77A5"/></svg>'
-  //     ),
-  //   className: 'light-blue',
-  //   position: [1, 4],
-  //   bgColor: '#BECEDC',
-  //   textColor: 'black',
-  //   dashColor: '#3F77A5',
-  //   image: '/assets/DefenseIndustry.png',
-  // },
 ];
 
 export default function IndustryGrid({
@@ -230,13 +195,11 @@ export default function IndustryGrid({
     lg: "48px",
   });
 
-  // const [isDesktop, setIsDesktop] = useState(true) //I have to solve the yarn build error here...
   const [columns, setColumns] = useState(4);
 
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      // setIsDesktop(width >= 768)
       if (width >= 992) {
         setColumns(4);
       } else if (width >= 768) {
@@ -254,231 +217,413 @@ export default function IndustryGrid({
     };
   }, []);
 
-  // Create a grid layout based on the industry data
   const renderIndustryCards = () => {
-    // Create a 4x4 grid (rows x columns) to place cards
-    const grid = Array(4)
-      .fill()
-      .map(() => Array(5).fill(null));
+    // --- RENDER LOGIC FOR DESKTOP AND TABLET ---
+    if (columns > 2) {
+      const grid = Array(4)
+        .fill()
+        .map(() => Array(5).fill(null));
 
-    // Place each industry in its position
-    industriesData.forEach((industry) => {
-      const [row, col] = industry.position;
+      industriesData.forEach((industry) => {
+        const [row, col] = industry.position;
+        if (row >= 1 && row <= 3 && col >= 1 && col <= 4) {
+          grid[row][col] = industry;
+        }
+      });
 
-      // Check if the number of columns is less than 4 and skip null/no image cards
-      if (columns < 4 && !industry.name) {
-        return;
-      }
+      return (
+        <Grid
+          templateColumns={{
+            md: "repeat(3, 1fr)",
+            lg: "repeat(4, 1fr)",
+          }}
+          gap={{ md: "15px" }}
+          mt="2%"
+        >
+          {grid.slice(1).flatMap((row, rowIndex) =>
+            row.slice(1).map((industry, colIndex) => {
+              if (!industry) return null;
 
-      if (row >= 1 && row <= 3 && col >= 1 && col <= 4) {
-        grid[row][col] = industry;
-      }
-    });
+              if (industry.isLink) {
+                return (
+                  <GridItem key="all-industries-link">
+                    <Flex
+                      h={{ base: "200px", md: "320px" }}
+                      alignItems="center"
+                      justifyContent="center"
+                      p={4}
+                    >
+                      <Button
+                        onClick={() => navigate(industry.path)}
+                        display="inline-flex"
+                        alignItems="center"
+                        bg="white"
+                        color="#3F77A5"
+                        p="10px 20px"
+                        borderRadius="full"
+                        fontWeight="600"
+                      >
+                        {industry.text}
+                        <AllIndustriesArrow ml={2} />
+                      </Button>
+                    </Flex>
+                  </GridItem>
+                );
+              }
 
-    // Render the grid
+              return (
+                <GridItem
+                  key={`${rowIndex}-${colIndex}`}
+                  colSpan={{
+                    md: industry.isWide ? 2 : 1,
+                  }}
+                  rowSpan={1}
+                  sx={{
+                    perspective: "1000px",
+                  }}
+                >
+                  <RouterLink
+                    to={industry.path}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Box
+                      width={{
+                        base: "100%",
+                        md: "100%",
+                        lg: industry.isWide ? "640px" : "100%",
+                      }}
+                      height={{ base: "200px", md: "320px" }}
+                      borderRadius="24px"
+                      position="relative"
+                      style={{
+                        transformStyle: "preserve-3d",
+                        transition: "transform 0.6s ease-in-out",
+                      }}
+                      _hover={{
+                        transform: "rotateY(180deg)",
+                      }}
+                    >
+                      <Box
+                        position="absolute"
+                        width="100%"
+                        height="100%"
+                        borderRadius="24px"
+                        style={{
+                          transformStyle: "preserve-3d",
+                        }}
+                      >
+                        <Box
+                          position="absolute"
+                          width="100%"
+                          height="100%"
+                          backgroundColor={industry.bgColor}
+                          color={industry.textColor}
+                          borderRadius="24px"
+                          display="flex"
+                          flexDirection="column"
+                          justifyContent="flex-end"
+                          alignItems="flex-start"
+                          padding={{ base: "10px", md: "20px" }}
+                          style={{
+                            transform: "rotateY(0deg)",
+                            backfaceVisibility: "hidden",
+                          }}
+                        >
+                          {industry.img && (
+                            <Box
+                              dangerouslySetInnerHTML={{
+                                __html: decodeURIComponent(
+                                  industry.img.split(
+                                    "data:image/svg+xml;charset=utf-8,"
+                                  )[1]
+                                ),
+                              }}
+                              position="absolute"
+                              top="25px"
+                              left="20px"
+                              width="33px"
+                              height="33px"
+                            />
+                          )}
+                          <Text
+                            fontSize="16px"
+                            fontWeight="700"
+                            position="absolute"
+                            top="70px"
+                            left="20px"
+                            whiteSpace="wrap"
+                            overflow="hidden"
+                            textAlign="left"
+                            maxWidth="90%"
+                            as={industry.name ? "h3" : "div"}
+                          >
+                            {industry.name}
+                            <Box
+                              width="18px"
+                              height="3px"
+                              borderRadius="2px"
+                              marginTop="5px"
+                              backgroundColor={industry.dashColor}
+                            />
+                          </Text>
+                          {industry.name && (
+                            <Button
+                              position="absolute"
+                              bottom="20px"
+                              left="20px"
+                              variant="link"
+                              color={industry.textColor}
+                              fontSize="16px"
+                              fontWeight="500"
+                              _hover={{ textDecoration: "underline" }}
+                            >
+                              Know More
+                              <Box ml="2">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="22"
+                                  height="24"
+                                  viewBox="0 0 22 24"
+                                  fill="none"
+                                >
+                                  <path
+                                    d="M20.9602 13.0607C21.546 12.4749 21.546 11.5251 20.9602 10.9393L11.4143 1.3934C10.8285 0.807612 9.87876 0.807612 9.29297 1.3934C8.70719 1.97919 8.70719 2.92893 9.29297 3.51472L17.7783 12L9.29297 20.4853C8.70719 21.0711 8.70719 22.0208 9.29297 22.6066C9.87876 23.1924 10.8285 23.1924 11.4143 22.6066L20.9602 13.0607ZM0.100586 12V13.5L19.8996 13.5V12V10.5L0.100586 10.5V12Z"
+                                    fill="currentColor"
+                                  />
+                                </svg>
+                              </Box>
+                            </Button>
+                          )}
+                        </Box>
+                        <Box
+                          position="absolute"
+                          width="100%"
+                          height="100%"
+                          borderRadius="24px"
+                          padding="20px"
+                          bgImage={`${process.env.PUBLIC_URL}${industry.image}`}
+                          bgSize="cover"
+                          bgPosition="center"
+                          display="flex"
+                          justifyContent="center"
+                          alignItems="center"
+                          textAlign="center"
+                          style={{
+                            transform: "rotateY(180deg)",
+                            backfaceVisibility: "hidden",
+                          }}
+                        ></Box>
+                      </Box>
+                    </Box>
+                  </RouterLink>
+                </GridItem>
+              );
+            })
+          )}
+        </Grid>
+      );
+    }
+
+    // --- RENDER LOGIC FOR MOBILE ---
+    // Create a flat list of all cards that should be visible.
+    let orderedIndustries = industriesData.filter(
+      (industry) => industry.name !== "" || industry.isLink
+    );
+
+    // Reorder the cards to prevent empty gaps.
+    const wideCardIndex = orderedIndustries.findIndex(
+      (industry) => industry.isWide
+    );
+
+    if (wideCardIndex > 0 && wideCardIndex % 2 !== 0) {
+      [orderedIndustries[wideCardIndex - 1], orderedIndustries[wideCardIndex]] =
+        [
+          orderedIndustries[wideCardIndex],
+          orderedIndustries[wideCardIndex - 1],
+        ];
+    }
+
     return (
       <Grid
         templateColumns={{
-          base: "repeat(2, 1fr)",
-          md: "repeat(3, 1fr)",
-          lg: "repeat(4, 1fr)",
+          base: "repeat(2, minmax(0, 1fr))",
         }}
-        gap={{ base: "10px", md: "15px" }}
+        gap={{ base: "10px" }}
         mt="2%"
       >
-        {grid.slice(1).flatMap((row, rowIndex) =>
-          row.slice(1).map((industry, colIndex) => {
-            if (!industry) return null;
-
-            if (industry.isLink) {
-              return (
-                <GridItem key="all-industries-link">
-                  <Flex
-                    h={{ base: "200px", md: "320px" }}
-                    alignItems="center"
-                    justifyContent="center"
-                    p={4}
-                    bg="red"
-                  >
-                    <Button
-                      onClick={() => navigate(industry.path)}
-                      display="inline-flex"
-                      alignItems="center"
-                      bg="white"
-                      color="#3F77A5"
-                      p="10px 20px"
-                      borderRadius="full"
-                      fontWeight="600"
-                      // whiteSpace="normal"
-                      // wordBreak="break-word"
-                    >
-                      {industry.text}
-                      <AllIndustriesArrow ml={2} />
-                    </Button>
-                  </Flex>
-                </GridItem>
-              );
-            }
-
+        {orderedIndustries.map((industry, index) => {
+          if (industry.isLink) {
             return (
-              <GridItem
-                key={`${rowIndex}-${colIndex}`}
-                colSpan={{
-                  base: 1,
-                  md: industry.isWide ? 2 : 1,
-                }}
-                rowSpan={1}
-                sx={{
-                  perspective: "1000px",
-                }}
-              >
-                {/* The entire card is wrapped in a Link component for navigation */}
-                <RouterLink
-                  to={industry.path}
-                  style={{ textDecoration: "none" }}
+              <GridItem key="all-industries-link">
+                <Flex
+                  h={{ base: "200px", md: "320px" }}
+                  alignItems="center"
+                  justifyContent="center"
+                  p={4}
+                >
+                  <Button
+                    onClick={() => navigate(industry.path)}
+                    display="inline-flex"
+                    alignItems="center"
+                    bg="white"
+                    color="#3F77A5"
+                    p="10px 20px"
+                    borderRadius="full"
+                    fontWeight="600"
+                  >
+                    {industry.text}
+                    <AllIndustriesArrow ml={2} />
+                  </Button>
+                </Flex>
+              </GridItem>
+            );
+          }
+
+          return (
+            <GridItem
+              key={`${industry.name}-${index}`}
+              colSpan={{
+                base: industry.isWide ? 2 : 1,
+              }}
+              rowSpan={1}
+              sx={{
+                perspective: "1000px",
+              }}
+            >
+              <RouterLink to={industry.path} style={{ textDecoration: "none" }}>
+                <Box
+                  width={{
+                    base: "100%",
+                  }}
+                  height={{ base: "200px", md: "320px" }}
+                  borderRadius="24px"
+                  position="relative"
+                  style={{
+                    transformStyle: "preserve-3d",
+                    transition: "transform 0.6s ease-in-out",
+                  }}
+                  _hover={{
+                    transform: "rotateY(180deg)",
+                  }}
                 >
                   <Box
-                    width={{
-                      base: "100%",
-                      md: "100%",
-                      lg: industry.isWide ? "640px" : "100%",
-                    }}
-                    height={{ base: "200px", md: "320px" }}
+                    position="absolute"
+                    width="100%"
+                    height="100%"
                     borderRadius="24px"
-                    position="relative"
                     style={{
                       transformStyle: "preserve-3d",
-                      transition: "transform 0.6s ease-in-out",
-                    }}
-                    _hover={{
-                      transform: "rotateY(180deg)", // Flip the card
                     }}
                   >
                     <Box
                       position="absolute"
                       width="100%"
                       height="100%"
+                      backgroundColor={industry.bgColor}
+                      color={industry.textColor}
                       borderRadius="24px"
+                      display="flex"
+                      flexDirection="column"
+                      justifyContent="flex-end"
+                      alignItems="flex-start"
+                      padding={{ base: "10px", md: "20px" }}
                       style={{
-                        transformStyle: "preserve-3d",
+                        transform: "rotateY(0deg)",
+                        backfaceVisibility: "hidden",
                       }}
                     >
-                      {/* Front Side */}
-                      <Box
-                        position="absolute"
-                        width="100%"
-                        height="100%"
-                        backgroundColor={industry.bgColor}
-                        color={industry.textColor}
-                        borderRadius="24px"
-                        display="flex"
-                        flexDirection="column"
-                        justifyContent="flex-end"
-                        alignItems="flex-start"
-                        padding={{ base: "10px", md: "20px" }}
-                        style={{
-                          transform: "rotateY(0deg)",
-                          backfaceVisibility: "hidden",
-                        }}
-                      >
-                        {/* Industry Icon */}
-                        {industry.img && (
-                          <Box
-                            dangerouslySetInnerHTML={{
-                              __html: decodeURIComponent(
-                                industry.img.split(
-                                  "data:image/svg+xml;charset=utf-8,"
-                                )[1]
-                              ),
-                            }}
-                            position="absolute"
-                            top="25px"
-                            left="20px"
-                            width="33px"
-                            height="33px"
-                          />
-                        )}
-                        {/* Industry Name & Line */}
-                        <Text
-                          fontSize="16px"
-                          fontWeight="700"
+                      {industry.img && (
+                        <Box
+                          dangerouslySetInnerHTML={{
+                            __html: decodeURIComponent(
+                              industry.img.split(
+                                "data:image/svg+xml;charset=utf-8,"
+                              )[1]
+                            ),
+                          }}
                           position="absolute"
-                          top="70px"
+                          top="25px"
                           left="20px"
-                          whiteSpace="wrap"
-                          overflow="hidden"
-                          textAlign="left"
-                          maxWidth="90%"
-                          as={industry.name?"h3":"div"}
-                          // as="div"
-                        >
-                          {industry.name}
-                          <Box
-                            width="18px"
-                            height="3px"
-                            borderRadius="2px"
-                            marginTop="5px"
-                            backgroundColor={industry.dashColor}
-                          />
-                        </Text>
-
-                        {/* Know More Button */}
-                        {industry.name && (
-                          <Button
-                            position="absolute"
-                            bottom="20px"
-                            left="20px"
-                            variant="link"
-                            color={industry.textColor}
-                            fontSize="16px"
-                            fontWeight="500"
-                            _hover={{ textDecoration: "underline" }}
-                          >
-                            Know More
-                            <Box ml="2">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="22"
-                                height="24"
-                                viewBox="0 0 22 24"
-                                fill="none"
-                              >
-                                <path
-                                  d="M20.9602 13.0607C21.546 12.4749 21.546 11.5251 20.9602 10.9393L11.4143 1.3934C10.8285 0.807612 9.87876 0.807612 9.29297 1.3934C8.70719 1.97919 8.70719 2.92893 9.29297 3.51472L17.7783 12L9.29297 20.4853C8.70719 21.0711 8.70719 22.0208 9.29297 22.6066C9.87876 23.1924 10.8285 23.1924 11.4143 22.6066L20.9602 13.0607ZM0.100586 12V13.5L19.8996 13.5V12V10.5L0.100586 10.5V12Z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                            </Box>
-                          </Button>
-                        )}
-                      </Box>
-
-                      {/* Back Side */}
-                      <Box
+                          width="33px"
+                          height="33px"
+                        />
+                      )}
+                      <Text
+                        fontSize="16px"
+                        fontWeight="700"
                         position="absolute"
-                        width="100%"
-                        height="100%"
-                        borderRadius="24px"
-                        padding="20px"
-                        bgImage={`${process.env.PUBLIC_URL}${industry.image}`}
-                        bgSize="cover"
-                        bgPosition="center"
-                        display="flex"
-                        justifyContent="center"
-                        alignItems="center"
-                        textAlign="center"
-                        style={{
-                          transform: "rotateY(180deg)",
-                          backfaceVisibility: "hidden",
-                        }}
-                      ></Box>
+                        top="70px"
+                        left="20px"
+                        whiteSpace="wrap"
+                        overflow="hidden"
+                        textAlign="left"
+                        maxWidth="90%"
+                        as={industry.name ? "h3" : "div"}
+                      >
+                        {industry.name}
+                        <Box
+                          width="18px"
+                          height="3px"
+                          borderRadius="2px"
+                          marginTop="5px"
+                          backgroundColor={industry.dashColor}
+                        />
+                      </Text>
+
+                      {industry.name && (
+                        <Button
+                          position="absolute"
+                          bottom="20px"
+                          left="20px"
+                          variant="link"
+                          color={industry.textColor}
+                          fontSize="16px"
+                          fontWeight="500"
+                          _hover={{ textDecoration: "underline" }}
+                        >
+                          Know More
+                          <Box ml="2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="22"
+                              height="24"
+                              viewBox="0 0 22 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M20.9602 13.0607C21.546 12.4749 21.546 11.5251 20.9602 10.9393L11.4143 1.3934C10.8285 0.807612 9.87876 0.807612 9.29297 1.3934C8.70719 1.97919 8.70719 2.92893 9.29297 3.51472L17.7783 12L9.29297 20.4853C8.70719 21.0711 8.70719 22.0208 9.29297 22.6066C9.87876 23.1924 10.8285 23.1924 11.4143 22.6066L20.9602 13.0607ZM0.100586 12V13.5L19.8996 13.5V12V10.5L0.100586 10.5V12Z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </Box>
+                        </Button>
+                      )}
                     </Box>
+
+                    <Box
+                      position="absolute"
+                      width="100%"
+                      height="100%"
+                      borderRadius="24px"
+                      padding="20px"
+                      bgImage={`${process.env.PUBLIC_URL}${industry.image}`}
+                      bgSize="cover"
+                      bgPosition="center"
+                      display="flex"
+                      justifyContent="center"
+                      alignItems="center"
+                      textAlign="center"
+                      style={{
+                        transform: "rotateY(180deg)",
+                        backfaceVisibility: "hidden",
+                      }}
+                    ></Box>
                   </Box>
-                </RouterLink>
-              </GridItem>
-            );
-          })
-        )}
+                </Box>
+              </RouterLink>
+            </GridItem>
+          );
+        })}
       </Grid>
     );
   };
@@ -492,7 +637,6 @@ export default function IndustryGrid({
         minHeight={{ base: "auto", md: "1338px" }}
         position="relative"
         mx="auto"
-        // pb={{ base: '50px', md: '0' }}
         overflow="hidden"
         mt="1%"
         _before={{
@@ -510,7 +654,6 @@ export default function IndustryGrid({
           zIndex: "0",
         }}
       >
-        {/* We can add some creativity here also. */}
         <HeadingAnimation>
           {heading && (
             <Text
@@ -546,66 +689,7 @@ export default function IndustryGrid({
             </Text>
           )}
         </HeadingAnimation>
-        {/* Industry Grid */}
         {renderIndustryCards()}
-
-        {/* Bottom elements */}
-
-        {/* Bottom elements */}
-        {/* <Flex
-          justifyContent="flex-end" // Align to the right
-          alignItems="center" // Vertically center
-          mx="auto" // Center the container horizontally
-          mt="5%" // Margin top
-          position="relative" // Use relative positioning
-          zIndex="2" // Ensure it's above other elements
-        >
-          <Box
-            width="466px" // Fixed width for the line
-            height="1px"
-            backgroundColor="#3f77a5"
-            flexShrink={0} // Prevent the line from shrinking
-            marginRight="10px" // Space between line and button
-          />
-
-          <Button
-            height={{ base: '40px', md: '50px' }} // Responsive height
-            minWidth="146px" // Minimum width to fit content
-            backgroundColor="white"
-            color="#3F77A5"
-            fontSize="14px"
-            fontWeight="600"
-            borderRadius="20px"
-            as={Link}
-            to="/industries"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            p="8px 16px" // Padding for better spacing
-            gap="8px" // Space between text and icon
-            zIndex="2"
-            _hover={{ backgroundColor: '#f0f0f0' }}
-          >
-            All Industries
-            <svg
-              style={{
-                width: '1em',
-                height: '1em',
-                minWidth: '14px',
-                minHeight: '14px',
-                flexShrink: 0, // Prevent the icon from shrinking
-              }}
-              viewBox="0 0 18 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M17.5 2C17.5 1.17157 16.8284 0.499999 16 0.499999L2.5 0.5C1.67157 0.5 0.999999 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5L14.5 3.5L14.5 15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM3.06066 17.0607L17.0607 3.06066L14.9393 0.939339L0.93934 14.9393L3.06066 17.0607Z"
-                fill="#3F77A5"
-              />
-            </svg>
-          </Button>
-        </Flex> */}
       </Box>
     </>
   );
