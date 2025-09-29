@@ -35,9 +35,9 @@ import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 
 const whoWeAreLinks = [
   { text: "About Us", path: "/about-us" },
-  // { text: "Terms & Condition" },
+  { text: "Terms & Condition", path: "/terms-and-conditions" },
   // { text: "Trademark Policy" },
-  { text: "Privacy Policy " },
+  { text: "Privacy Policy ", path: "/privacy-policy" },
   // { text: "Event Spotlight", path: "/whoweare/eventspotlight" },
   // { text: "Social Impact", path: "/whoweare/socialimpact" },
   // { text: "Achievements", path: "/whoweare/achievements" },

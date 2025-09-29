@@ -67,7 +67,7 @@ const TermsAndCondition = () => {
       </Helmet>
       <PageContentWrapper>
         <Box
-          bg="linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../assets/termsandcondition.jpg')" 
+          bg="linear-gradient(rgba(129, 210, 221, 0.4), rgba(91, 91, 134, 0.1)), url('../assets/termsandcondition.jpg')" 
           backgroundSize="cover"
           backgroundPosition="center"
           py={{ base: 20, md: 28 }}
