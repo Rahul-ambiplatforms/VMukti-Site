@@ -48,7 +48,7 @@ const HeroSection = () => {
         <Heading
           as="h1"
           color="white"
-          fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }}
+          fontSize={{ base: "32px", md: "48px", lg: "64px" }}
           fontWeight="bold"
         >
           Privacy Policy
