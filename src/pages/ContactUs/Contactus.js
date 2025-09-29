@@ -1,6 +1,8 @@
 import {
+  Accordion,
   Box,
   Button,
+  ChakraProvider,
   Flex,
   Heading,
   Image,
@@ -17,6 +19,9 @@ import ImagePop from "../../components/Animation/Image/ImagePop";
 import PageContentWrapper from "../../components/PageContentWrapper";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import ContactUsForm from "./ContactUsForm";
+import Trusted from "../../components/Trusted";
+import { Helmet } from "react-helmet-async";
 
 const MotionBox = motion(Box);
 
@@ -172,194 +177,145 @@ export default function ContactUs() {
   };
 
   return (
-    <PageContentWrapper>
-      <Box
-        // minH="100vh" // Ensure full viewport height in mobile view
-        overflow="hidden" // Prevent unintended overflow
-        // mb={{md:"14%"}}
-        mb="14%"
-      >
-        {/* Hero Banner */}
-        <Box
-          // bgImage="url('./assets/Contactus.png')"
-          bgImage={`url(${process.env.PUBLIC_URL}/assets/Contactus.png)`}
-          bgSize="cover"
-          bgPosition="center"
-          h={{ base: "300px", md: "410px" }}
-          position="relative"
-          borderRadius="24px"
-          overflow="hidden"
-          zIndex="1"
-        >
+    <>
+      <Helmet>
+        {/* SEO Tags */}
+        <title>Contact Us - VMukti Solutions</title>
+        <meta
+          name="description"
+          content="Contact VMukti Solutions to discuss your AI vision needs. We help you to build, deploy and scale visual intelligence and surveillance solutions."
+        />
+        <meta name="robots" content="index, follow" />
+        {/* Open Graph (OG) Tags for Social Media Sharing */}
+        <meta property="og:title" content="Contact Us - VMukti Solutions" />
+        <meta
+          property="og:description"
+          content="Contact VMukti Solutions to discuss your AI vision needs. We help you to build, deploy and scale visual intelligence and surveillance solutions."
+        />
+        <meta
+          property="og:image"
+          content="https://www.vmukti.com/assets/Contactus.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.vmukti.com/contact-us/" />
+        <meta property="og:site_name" content="Vmukti Solutions" />
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@vmukti" />
+        <meta name="twitter:title" content="Contact Us - VMukti Solutions" />
+        <meta
+          name="twitter:description"
+          content="Contact VMukti Solutions to discuss your AI vision needs. We help you to build, deploy and scale visual intelligence and surveillance solutions."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.vmukti.com/assets/Contactus.png"
+        />
+        {/* Canonical Link */}
+        <link rel="canonical" href="https://www.vmukti.com/contact-us/" />
+        {/* 
+        {contactPageSchemas.map((schema, index) => (
+          <script
+            key={`schema-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          />
+        ))} */}
+      </Helmet>
+      <Box overflow="hidden" mb="14%" mt="3%">
+        <PageContentWrapper>
+          {/* Hero Banner */}
           <Box
-            position="absolute"
-            top="50%"
-            left={{ base: "20px", md: "50px" }}
-            transform="translateY(-50%)"
-            color="white"
-          >
-            <ImagePop>
-              <HeadingAnimation>
-                <Heading
-                  as="h1"
-                  fontSize={{ base: "24px", sm: "36px", md: "48px" }}
-                >
-                  Contact Us
-                </Heading>
-              </HeadingAnimation>
-            </ImagePop>
-          </Box>
-        </Box>
-
-        <Flex
-          direction={{ base: "column", lg: "row" }}
-          mt="1%"
-          mb="2%"
-          gap={6}
-          position="relative"
-        >
-          {/* Contact Form Section */}
-          <Flex
-            direction="column"
-            mt={{ base: "2%", md: "1%" }}
-            bg="white"
-            width={{ base: "100%", lg: "60%" }}
-            minH={{ md: "649px" }}
+            h={{ base: "300px", md: "410px" }}
+            position="relative"
             borderRadius="24px"
-            boxShadow="sm"
-            justifyContent="center"
+            overflow="hidden"
+            zIndex="1"
           >
-            {/* Contact Form */}
-            <ImagePop>
-              <Box
-                as="form"
-                onSubmit={handleSubmit}
-                w="100%"
-                maxW="800px"
-                mx="auto"
-                p={{ base: 4, md: 6 }}
-              >
-                <Heading
-                  fontSize={{ base: "20px", md: "36px" }}
-                  fontWeight="600"
-                  mb="5%"
-                  textAlign={{ base: "center", md: "left" }}
-                >
-                  Send Us a{" "}
-                  <Text as="span" color="#DB7B3A">
-                    Message
-                  </Text>
-                </Heading>
-
-                <VStack spacing={4} align="stretch">
-                  {/* Name Fields */}
-                  <SimpleGrid
-                    columns={{ base: 1, md: 2 }}
-                    spacing={4}
-                    width="100%"
+            <Image
+              src={`${process.env.PUBLIC_URL}/assets/Contactus.png`}
+              alt="Contact Us - VMukti Solutions"
+              position="absolute"
+              top="0"
+              left="0"
+              width="100%"
+              height="100%"
+              objectFit="cover"
+              zIndex="-1"
+            />
+            <Box
+              position="absolute"
+              top="50%"
+              left={{ base: "20px", md: "50px" }}
+              transform="translateY(-50%)"
+              color="white"
+            >
+              <ImagePop>
+                <HeadingAnimation>
+                  <Heading
+                    as="h1"
+                    fontSize={{ base: "24px", sm: "36px", md: "48px" }}
                   >
-                    <Input
-                      name="firstName"
-                      value={formData.firstName}
-                      onChange={handleChange}
-                      placeholder="First name *"
-                      bg="#E7E7E7"
-                      border="none"
-                      borderRadius="10px"
-                      w="100%"
-                      h="44px"
-                      required
-                    />
-                    <Input
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      placeholder="Last name"
-                      bg="#E7E7E7"
-                      border="none"
-                      borderRadius="10px"
-                      w="100%"
-                      h="44px"
-                    />
-                  </SimpleGrid>
+                    Contact Us
+                  </Heading>
+                </HeadingAnimation>
+              </ImagePop>
+            </Box>
+          </Box>
 
-                  {/* Contact Fields */}
-                  <SimpleGrid
-                    columns={{ base: 1, md: 2 }}
-                    spacing={4}
-                    width="100%"
-                  >
-                    <Input
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="Email Address *"
-                      bg="#E7E7E7"
-                      border="none"
-                      borderRadius="10px"
-                      w="100%"
-                      h="44px"
-                      required
-                    />
-                    <Input
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="Phone Number"
-                      bg="#E7E7E7"
-                      border="none"
-                      borderRadius="10px"
-                      w="100%"
-                      h="44px"
-                    />
-                  </SimpleGrid>
+          <Flex
+            direction={{ base: "column", lg: "row" }}
+            mt={{base:"1%",md:"3%"}}
+            mb={{base:"2%",md:"4%"}}
+            gap={6}
+            position="relative"
+          >
+            {/* ------contact us form------ */}
+            <ContactUsForm />
 
-                  {/* Message Field */}
-                  <Textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Write your message *"
-                    bg="#E7E7E7"
-                    border="none"
-                    w="100%"
-                    h="210px"
-                    resize="none"
-                    borderRadius="10px"
-                    required
-                  />
-
-                  {/* Submit Button */}
-                  <Flex
-                    justify={{ base: "left", md: "center", lg: "left" }}
-                    w="100%"
-                  >
-                    <Button
-                      type="submit"
-                      bg="#3F77A5"
-                      color="white"
-                      width={{ base: "100px", md: "146px" }}
-                      height={{ base: "40px", md: "50px" }}
-                      borderRadius="20px"
-                      fontSize={{ base: "16px", md: "16px" }}
-                      padding={{ base: "24px" }}
-                      fontWeight="700"
-                      isLoading={isLoading}
-                      loadingText="Sending..."
-                      _hover={{ bg: "#2c5a7d" }}
-                    >
-                      Submit
-                    </Button>
-                  </Flex>
-                </VStack>
-              </Box>
-            </ImagePop>
+            {/* Contact Image */}
+            {/* <Box
+            flex="1"
+            display="flex"
+            justifyContent="center"
+            position="relative"
+            maxW={{ base: '100%', lg: '80%' }}
+            overflow="hidden"
+          >
+            <Box
+              position="absolute"
+              top="0"
+              left="0"
+              right="0"
+              bottom="0"
+              // bgImage="url('./assets/BannerBrochure6.png')"
+              bgImage={`url(${process.env.PUBLIC_URL}/assets/BannerBrochure6.png)`}
+              bgSize="contain"
+              bgRepeat="no-repeat"
+              w="150%"
+              h="150%"
+              zIndex={0}
+              transform={{
+                base: 'rotate(0deg) translateX(0) translateY(0)', // Mobile view transformation
+                lg: 'rotate(-160deg) translateX(100px) translateY(550px)', // Desktop view transformation
+              }}
+            />
+            <Image
+              // src="./assets/robowho2.png"
+              src={`${process.env.PUBLIC_URL}/assets/robowho2.png`}
+              alt="Robot hand"
+              mt={{ base: '0', md: '30%' }}
+              maxH="55%"
+              maxW="100%"
+              zIndex={1}
+            />
+          </Box> */}
           </Flex>
-
+        </PageContentWrapper>
+        <Trusted />
+        <PageContentWrapper>
           {/* Connection Cards - Mobile View */}
-          <Box display={{ base: "block", lg: "none" }} mt={6}>
+          <Box display={{ base: "block", lg: "none" }} mt={6} mb="16">
             <Box position="relative" w="100%">
               <MotionBox
                 key={currentCardIndex} // Ensure animation triggers on card change
@@ -374,6 +330,7 @@ export default function ContactUs() {
                 animate="visible"
                 exit="exit"
                 variants={scrollAnimation}
+                overflow="hidden"
               >
                 <HeadingAnimation>
                   <Heading
@@ -384,6 +341,7 @@ export default function ContactUs() {
                     fontStyle="normal"
                     letterSpacing="-0.54%"
                     mb={4}
+                    as="h2"
                   >
                     {cards[currentCardIndex].title}
                   </Heading>
@@ -486,106 +444,67 @@ export default function ContactUs() {
               </Flex>
             </Box>
           </Box>
-
-          {/* Contact Image */}
-          <Box
-            flex="1"
-            display="flex"
-            justifyContent="center"
-            position="relative"
-            maxW={{ base: "100%", lg: "80%" }}
-            overflow="hidden"
-          >
-            <Box
-              position="absolute"
-              top="0"
-              left="0"
-              right="0"
-              bottom="0"
-              // bgImage="url('./assets/BannerBrochure6.png')"
-              bgImage={`url(${process.env.PUBLIC_URL}/assets/BannerBrochure6.png)`}
-              bgSize="contain"
-              bgRepeat="no-repeat"
-              w="150%"
-              h="150%"
-              zIndex={0}
-              transform={{
-                base: "rotate(0deg) translateX(0) translateY(0)", // Mobile view transformation
-                lg: "rotate(-160deg) translateX(100px) translateY(550px)", // Desktop view transformation
-              }}
-            />
-            <Image
-              // src="./assets/robowho2.png"
-              src={`${process.env.PUBLIC_URL}/assets/robowho2.png`}
-              alt="Robot hand"
-              mt={{ base: "0", md: "30%" }}
-              maxH="55%"
-              maxW="100%"
-              zIndex={1}
-            />
+          {/* Connection Cards for Desktop View */}
+          <Box display={{ base: "none", lg: "block" }} mt={6}>
+            <SimpleGrid
+              columns={{ base: 2, md: 2, lg: 4 }}
+              spacing={{ base: 4, md: 4, lg: 4 }}
+            >
+              {cards.map((card, index) => (
+                <MotionBox
+                  key={index}
+                  bg={card.bg}
+                  color={card.color}
+                  p={{ base: 4, md: 6, lg: 6 }}
+                  borderRadius="24px"
+                  minH={{ base: "180px", md: "336px" }}
+                  position="relative"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false }}
+                  overflow="hidden"
+                  variants={popAnimation(index)}
+                >
+                  <HeadingAnimation>
+                    <Heading
+                      fontSize={{ base: "20px", md: "36px" }}
+                      fontWeight="700"
+                      letterSpacing="-1.5%"
+                      mb={4}
+                    >
+                      {card.title}
+                    </Heading>
+                  </HeadingAnimation>
+                  <Box position="absolute" bottom="16px">
+                    <SubHeadingAnimation>
+                      <Flex direction="column">
+                        <Text
+                          fontWeight="700"
+                          fontSize={{ base: "12px", md: "16px" }}
+                        >
+                          {card.phone}
+                        </Text>
+                        <Box
+                          w="10%"
+                          h="2px"
+                          bgColor={card.bg === "#3F77A5" ? "white" : "#3F77A5"}
+                          my={2} // Add some vertical spacing
+                        />
+                        <Text
+                          fontWeight="500"
+                          fontSize={{ base: "12px", md: "16px" }}
+                        >
+                          {card.email}
+                        </Text>
+                      </Flex>
+                    </SubHeadingAnimation>
+                  </Box>
+                </MotionBox>
+              ))}
+            </SimpleGrid>
           </Box>
-        </Flex>
-
-        {/* Connection Cards for Desktop View */}
-        <Box display={{ base: "none", lg: "block" }} mt={6}>
-          <SimpleGrid
-            columns={{ base: 2, md: 2, lg: 4 }}
-            spacing={{ base: 4, md: 6, lg: 8 }}
-          >
-            {cards.map((card, index) => (
-              <MotionBox
-                key={index}
-                bg={card.bg}
-                color={card.color}
-                p={{ base: 4, md: 6, lg: 6 }}
-                borderRadius="24px"
-                minH={{ base: "180px", md: "336px" }}
-                position="relative"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false }}
-                overflow="hidden"
-                variants={popAnimation(index)}
-              >
-                <HeadingAnimation>
-                  <Heading
-                    fontSize={{ base: "20px", md: "36px" }}
-                    fontWeight="700"
-                    letterSpacing="-1.5%"
-                    mb={4}
-                  >
-                    {card.title}
-                  </Heading>
-                </HeadingAnimation>
-                <Box position="absolute" bottom="16px">
-                  <SubHeadingAnimation>
-                    <Flex direction="column">
-                      <Text
-                        fontWeight="700"
-                        fontSize={{ base: "12px", md: "16px" }}
-                      >
-                        {card.phone}
-                      </Text>
-                      <Box
-                        w="10%"
-                        h="2px"
-                        bgColor={card.bg === "#3F77A5" ? "white" : "#3F77A5"}
-                        my={2} // Add some vertical spacing
-                      />
-                      <Text
-                        fontWeight="500"
-                        fontSize={{ base: "12px", md: "16px" }}
-                      >
-                        {card.email}
-                      </Text>
-                    </Flex>
-                  </SubHeadingAnimation>
-                </Box>
-              </MotionBox>
-            ))}
-          </SimpleGrid>
-        </Box>
+        </PageContentWrapper>
       </Box>
-    </PageContentWrapper>
+    </>
   );
 }

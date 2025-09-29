@@ -1,17 +1,22 @@
 // frontend/src/api/blog.js
 
-import axios from 'axios';
+import axios from "axios";
 
-// const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
-const API_URL = 'https://vmukti.com/backend/api'; 
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
+// const API_URL = "https://vmukti.com/backend/api";
 
 // Get all blogs with pagination, sorting, and searching
-export const getBlogs = async (page = 1, limit = 6, searchTerm = "", sortOrder = "latest", status = "published") => {
+export const getBlogs = async (
+  page = 1,
+  limit = 6,
+  searchTerm = "",
+  sortOrder = "latest",
+  status = "published"
+) => {
   try {
     // Construct the parameters object
     const params = { page, limit };
-    
-    // Only add search and sort if they have a value
+
     if (searchTerm) {
       params.search = searchTerm;
     }
@@ -21,13 +26,26 @@ export const getBlogs = async (page = 1, limit = 6, searchTerm = "", sortOrder =
     if (status) {
       params.status = status;
     }
-    // console.log("RESPONSE RESPONSE",getBlogs)
+
     const response = await axios.get(`${API_URL}/blogs`, { params });
+    console.log("response", response);
+    console.log("response data", response.data);
+
     // console.log("OUTPUT---------------------")
     return response.data;
   } catch (error) {
     throw error.response?.data || error.message;
   }
+};
+
+export const getBlogByUrlWords = async (urlWords) => {
+  console.log("Initial Initial");
+  const response = await fetch(`${API_URL}/blogs/urlWords/${urlWords}`);
+  console.log("AFTER AAFTER", response);
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+  return response.json();
 };
 
 // Get a single blog by ID

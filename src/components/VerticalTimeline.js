@@ -1,21 +1,22 @@
-"use client"
+"use client";
 
-import React, { useRef, useState, useEffect } from "react"
+import React, { useRef } from "react";
 import {
   Grid,
   Box,
   Text,
   Heading,
   Flex,
-  Button,
   useBreakpointValue,
-} from "@chakra-ui/react"
+} from "@chakra-ui/react";
+import { motion } from "framer-motion"; // Make sure motion is imported
 
 const TimelineGrid = () => {
   const timelineItems = [
     {
       year: "2007",
-      content: "Founded with a vision to revolutionize surveillance technology.",
+      content:
+        "Founded with a vision to revolutionize surveillance technology.",
     },
     {
       year: "2010",
@@ -52,60 +53,26 @@ const TimelineGrid = () => {
       content:
         "Pioneering the future of Edge AI, Cloud AI, and multimodal Generative AI solutions.",
     },
-  ]
+  ];
 
-  // Determine how many columns should be visible responsively.
-  // For example, on mobile show 1 column; on medium and above, show 4.
-  const visibleColumns = useBreakpointValue({ base: 1, md: 4 })
+  // This ref is for the outer container, to set the drag constraints
+  const constraintsRef = useRef(null);
 
-  // Refs for the scrollable container and its parent container.
-  const scrollContainerRef = useRef(null)
-  const containerRef = useRef(null)
-
-  // Measure container width in pixels.
-  const [containerWidth, setContainerWidth] = useState(0)
-
-  useEffect(() => {
-    if (containerRef.current) {
-      setContainerWidth(containerRef.current.offsetWidth)
-    }
-    const handleResize = () => {
-      if (containerRef.current) {
-        setContainerWidth(containerRef.current.offsetWidth)
-      }
-    }
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [visibleColumns])
-
-  // Compute the width (in pixels) of a single column based on the container width.
-  const computedColumnWidth = containerWidth / visibleColumns
-
-  // Scroll the container by one column width on button clicks.
-  const handleNext = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({
-        left: computedColumnWidth,
-        behavior: "smooth",
-      })
-    }
-  }
-
-  const handlePrev = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({
-        left: -computedColumnWidth,
-        behavior: "smooth",
-      })
-    }
-  }
+  const columnWidth = useBreakpointValue({ base: 300, md: 350 }); // Fixed width for each column
+  const gridGap = useBreakpointValue({ base: 16, md: 24 }); // Gap between columns
 
   return (
-    <Flex p="6%" direction="column" bg="#FFFFFF" borderRadius="20px" mt="2%">
+    <Flex
+      p={{ base: 4, md: 8 }}
+      direction="column"
+      bg="#FFFFFF"
+      borderRadius="24px"
+      mt="2%"
+    >
       <Heading
-        mb={10}
-        textAlign="left"
-        fontSize={{ base: "24px", md: "36px" }}
+        mb={{ base: 6, md: 10 }}
+        textAlign="center"
+        fontSize={{ base: "24px", md: "48px" }}
       >
         <Box as="span" color="#3F77A5">
           The VMukti
@@ -113,149 +80,82 @@ const TimelineGrid = () => {
         Timeline: A History of Progress
       </Heading>
 
-      <Flex align="center" direction={{ base: "column", md: "row" }} gap={4}>
-        {/* Parent container that sets the visible area for the grid, centered with mx="auto" */}
-        <Box
-          ref={containerRef}
-          width="100%"
-          maxW={{ base: "100%", md: "80%" }}
-          mx="auto"
+      {/* --- THIS IS THE DRAGGABLE SLIDER --- */}
+      {/* Outer container to hide overflow and set drag boundaries */}
+      <Box
+        ref={constraintsRef}
+        w="100%"
+        overflow="hidden" // Hides the parts of the grid that are off-screen
+      >
+        <motion.div
+          drag="x" // Enables horizontal dragging
+          dragConstraints={constraintsRef} // Prevents dragging beyond the container
+          style={{
+            display: "flex",
+            cursor: "grab",
+            width: `${(columnWidth + gridGap) * timelineItems.length}px`,
+            padding: "0 10px",
+          }}
+          whileTap={{ cursor: "grabbing" }}
         >
-          {/* Scrollable container */}
-          <Box ref={scrollContainerRef} overflowX="hidden">
-            <Grid
-              templateRows="repeat(5, auto)"
-              // Each column uses a relative width based on visible columns.
-              templateColumns={`repeat(${timelineItems.length}, calc(100% / ${visibleColumns}))`}
-              gap={4}
-              // Overall grid width is set to fit all items
-              maxWidth={`calc(${timelineItems.length} * (100% / ${visibleColumns}))`}
-            >
-              {timelineItems.map((item, colIndex) => {
-                const isOddColumn = colIndex % 2 === 0
-                return (
-                  <React.Fragment key={colIndex}>
-                    {isOddColumn ? (
-                      <>
-                        {/* Row 1: empty */}
-                        <Box gridColumn={colIndex + 1} gridRow={1} />
-                        {/* Row 2: empty */}
-                        <Box gridColumn={colIndex + 1} gridRow={2} />
-                        {/* Row 3: year */}
-                        <Box gridColumn={colIndex + 1} gridRow={3}>
-                          <Text
-                            color="#3F77A5"
-                            fontSize={{ base: "24px", md: "36px" }}
-                            fontWeight="700"
-                          >
-                            {item.year}
-                          </Text>
-                        </Box>
-                        {/* Row 4: vertical divider */}
-                        <Box
-                          gridColumn={colIndex + 1}
-                          gridRow={4}
-                          display="flex"
-                          justifyContent="flex-start"
-                        >
-                          <Box w="2px" h="20px" bg="#3F77A5" />
-                        </Box>
-                        {/* Row 5: item content */}
-                        <Box gridColumn={colIndex + 1} gridRow={5}>
-                          <Text fontSize={{ base: "14px", md: "16px" }} fontWeight="500">
-                            {item.content}
-                          </Text>
-                        </Box>
-                      </>
-                    ) : (
-                      <>
-                        {/* Row 1: item content */}
-                        <Box gridColumn={colIndex + 1} gridRow={1}>
-                          <Text fontSize={{ base: "14px", md: "16px" }} fontWeight="500">
-                            {item.content}
-                          </Text>
-                        </Box>
-                        {/* Row 2: vertical divider */}
-                        <Box
-                          gridColumn={colIndex + 1}
-                          gridRow={2}
-                          display="flex"
-                          justifyContent="flex-start"
-                        >
-                          <Box w="2px" h="20px" bg="#3F77A5" />
-                        </Box>
-                        {/* Row 3: year */}
-                        <Box gridColumn={colIndex + 1} gridRow={3}>
-                          <Text
-                            color="#3F77A5"
-                            fontSize={{ base: "24px", md: "36px" }}
-                            fontWeight="700"
-                          >
-                            {item.year}
-                          </Text>
-                        </Box>
-                        {/* Row 4: empty */}
-                        <Box gridColumn={colIndex + 1} gridRow={4} />
-                        {/* Row 5: empty */}
-                        <Box gridColumn={colIndex + 1} gridRow={5} />
-                      </>
-                    )}
-                  </React.Fragment>
-                )
-              })}
-            </Grid>
-          </Box>
-        </Box>
+          {timelineItems.map((item, index) => {
+            const isOddItem = index % 2 === 0;
+            return (
+              <Flex
+                key={item.year}
+                direction="column"
+                justify={isOddItem ? "flex-end" : "flex-start"} // Alternates layout up/down
+                width={`${columnWidth}px`}
+                flexShrink={0} // Prevents columns from shrinking
+                mr={`${gridGap}px`} // Margin between items
+                minH="350px"
+              >
+                {!isOddItem && (
+                  <Text
+                    fontSize={{ base: "14px", md: "16px" }}
+                    color="#000"
+                    fontWeight="500"
+                    lineHeight="20px"
+                    textAlign="center"
+                    mb={4}
+                  >
+                    {item.content}
+                  </Text>
+                )}
 
-        <Flex gap={1}>
-          <Button
-            width="31px"
-            height="31px"
-            minWidth="31px"
-            minHeight="31px"
-            padding="0"
-            borderRadius="5px"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            cursor="pointer"
-            bgColor="#E7E7E7"
-            _hover={{ bgColor: '#e0e0e0' }}
-            onClick={handlePrev}
-          >
-            <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
-              <path
-                d="M0.076934 7.76919L7.46155 15.1538L7.46155 0.38458L0.076934 7.76919Z"
-                fill="#3F77A5"
-              />
-            </svg>
-          </Button>
-          <Button
-            width="31px"
-            height="31px"
-            minWidth="31px"
-            minHeight="31px"
-            padding="0"
-            borderRadius="5px"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            cursor="pointer"
-            bgColor="#E7E7E7"
-            _hover={{ bgColor: '#e0e0e0' }}
-            onClick={handleNext}
-          >
-            <svg width="8" height="16" viewBox="0 0 8 16" fill="none">
-              <path
-                d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z"
-                fill="#3F77A5"
-              />
-            </svg>
-          </Button>
-        </Flex>
-      </Flex>
+                <Flex direction="column" align="center" w="100%">
+                  {!isOddItem && <Box w="2px" h="50px" bg="#3F77A5" />}
+
+                  <Text
+                    color="#3F77A5"
+                    fontSize={{ base: "48px", md: "64px" }}
+                    fontWeight="700"
+                  >
+                    {item.year}
+                  </Text>
+
+                  {isOddItem && <Box w="2px" h="50px" bg="#3F77A5" />}
+                </Flex>
+
+                {isOddItem && (
+                  <Text
+                    fontSize={{ base: "14px", md: "16px" }}
+                    fontWeight="500"
+                    color="#000"
+                    lineHeight="20px"
+                    textAlign="center"
+                    mt={4}
+                  >
+                    {item.content}
+                  </Text>
+                )}
+              </Flex>
+            );
+          })}
+        </motion.div>
+      </Box>
     </Flex>
-  )
-}
+  );
+};
 
-export default TimelineGrid
+export default TimelineGrid;

@@ -1,164 +1,224 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         <url>
-          <loc>https://vmukti.com//</loc>
-          <lastmod>2025-09-11</lastmod>
+          <loc>https://vmukti.com/</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>daily</changefreq>
           <priority>1.0</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//technology</loc>
-          <lastmod>2025-08-04</lastmod>
+          <loc>https://vmukti.com/solution</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//solutions</loc>
-          <lastmod>2025-09-09</lastmod>
+          <loc>https://vmukti.com/solution/video-management-system</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//industries</loc>
-          <lastmod>2025-09-09</lastmod>
+          <loc>https://vmukti.com/solution/enterprise-management-system</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//industries/retailindustry</loc>
-          <lastmod>2025-09-09</lastmod>
+          <loc>https://vmukti.com/solution/integrated-command-control-center</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//industries/manufacturingindustry</loc>
-          <lastmod>2025-09-09</lastmod>
+          <loc>https://vmukti.com/solution/live-streaming-solution</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//industries/healthcareindustry</loc>
-          <lastmod>2025-09-09</lastmod>
+          <loc>https://vmukti.com/solution/flying-squad-vehicle</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//industries/educationindustry</loc>
-          <lastmod>2025-09-09</lastmod>
+          <loc>https://vmukti.com/solution/cloudai</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//industries/financeindustry</loc>
-          <lastmod>2025-09-09</lastmod>
+          <loc>https://vmukti.com/solution/genai</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//industries/transportationindustry</loc>
-          <lastmod>2025-09-09</lastmod>
+          <loc>https://vmukti.com/solution/visualbot</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//industries/citymonitoring</loc>
-          <lastmod>2025-09-09</lastmod>
+          <loc>https://vmukti.com/industry</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//industries/agricultureindustry</loc>
-          <lastmod>2025-09-09</lastmod>
+          <loc>https://vmukti.com/industry/construction</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//industries/warehousinglogisticIndustry</loc>
-          <lastmod>2025-09-09</lastmod>
+          <loc>https://vmukti.com/industry/manufacturing</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//industries/entertainmentindustry</loc>
-          <lastmod>2025-09-09</lastmod>
+          <loc>https://vmukti.com/industry/healthcare</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//industries/defenseindustry</loc>
-          <lastmod>2025-09-09</lastmod>
+          <loc>https://vmukti.com/industry/education</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//industries/election</loc>
-          <lastmod>2025-09-09</lastmod>
+          <loc>https://vmukti.com/industry/oil-and-gas</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//industries/hospitalityindustry</loc>
-          <lastmod>2025-09-09</lastmod>
+          <loc>https://vmukti.com/industry/transportation</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//serving</loc>
-          <lastmod>2025-08-04</lastmod>
+          <loc>https://vmukti.com/industry/smart-city</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//serving/enterprise</loc>
-          <lastmod>2025-08-04</lastmod>
+          <loc>https://vmukti.com/industry/warehouse</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//serving/government</loc>
-          <lastmod>2025-08-04</lastmod>
+          <loc>https://vmukti.com/industry/logistics</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//whoweare</loc>
-          <lastmod>2025-09-12</lastmod>
+          <loc>https://vmukti.com/industry/sports-entertainment</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//whoweare/event-spotlight</loc>
-          <lastmod>2025-08-04</lastmod>
+          <loc>https://vmukti.com/industry/defense</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>
         <url>
-          <loc>https://vmukti.com//blog</loc>
-          <lastmod>2025-09-12</lastmod>
+          <loc>https://vmukti.com/industry/election</loc>
+          <lastmod>2025-09-29</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://vmukti.com/industry/hospitality</loc>
+          <lastmod>2025-09-29</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://vmukti.com/industry/pharma</loc>
+          <lastmod>2025-09-29</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://vmukti.com/industry/enterprise</loc>
+          <lastmod>2025-09-29</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://vmukti.com/industry/banking</loc>
+          <lastmod>2025-09-29</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://vmukti.com/industry/government</loc>
+          <lastmod>2025-09-29</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://vmukti.com/whoweare</loc>
+          <lastmod>2025-09-29</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://vmukti.com/blog</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>monthly</changefreq>
           <priority>0.6</priority>
         </url>
               <url>
-                <loc>https://vmukti.com//blogs/guide-to-vms</loc>
-                <lastmod>2025-09-11</lastmod>
+                <loc>https://vmukti.com/blogs/how-generative-ai-is-revolutionizing-the-surveillance-industry</loc>
+                <lastmod>2025-09-25</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.6</priority>
+              </url>
+              <url>
+                <loc>https://vmukti.com/blogs/guide-to-vms</loc>
+                <lastmod>2025-09-25</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.6</priority>
+              </url>
+              <url>
+                <loc>https://vmukti.com/blogs/join-us-at-isc-west-2025</loc>
+                <lastmod>2025-09-25</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.6</priority>
+              </url>
+              <url>
+                <loc>https://vmukti.com/blogs/advantages-of-remote-security-and-video-surveillance</loc>
+                <lastmod>2025-09-25</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.6</priority>
+              </url>
+              <url>
+                <loc>https://vmukti.com/blogs/best-live-streaming-services-provider-in-india</loc>
+                <lastmod>2025-09-25</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.6</priority>
+              </url>
+              <url>
+                <loc>https://vmukti.com/blogs/best-streaming-engine-for-webcast</loc>
+                <lastmod>2025-09-25</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>0.6</priority>
               </url>
         <url>
-          <loc>https://vmukti.com//whoweare/careers</loc>
-          <lastmod>2025-08-04</lastmod>
-          <changefreq>weekly</changefreq>
-          <priority>0.8</priority>
-        </url>
-        <url>
-          <loc>https://vmukti.com//ambicam</loc>
-          <lastmod>2025-08-04</lastmod>
-          <changefreq>weekly</changefreq>
-          <priority>0.8</priority>
-        </url>
-        <url>
-          <loc>https://vmukti.com//contact-us</loc>
-          <lastmod>2025-09-11</lastmod>
+          <loc>https://vmukti.com/contact-us</loc>
+          <lastmod>2025-09-29</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
         </url>

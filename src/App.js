@@ -10,9 +10,11 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import PageContentWrapper from "./components/PageContentWrapper";
 import AmbicamLandingPage from "./pages/Ambicam/AmbicamLandingPage";
 import BlogsDashboard from "./pages/Blogs/BlogsDashboard";
-import BlogsOverviewDash from "./pages/Blogs/BlogsOverviewDash";
+import BlogsContents from "./pages/Blogs/BlogsContents";
 import CustomCursor from "./components/CustomCursor";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import SolutionDetails from "./components/SolutionDetails";
+import Thankyou from "./pages/ThankYou/Thankyou";
 import PrivacyPolicy from "./pages/Who/components/PrivacyPolicy";
 // import Particles from '@tsparticles/react';
 // import ParticlesComponent from './components/Particles';
@@ -57,31 +59,24 @@ function App() {
                 <Routes>
                   <Route path="/" element={<VMuktiHomepage />} />
                   <Route path="/technology" element={<TechnologyDashboard />} />
-                  <Route path="/solutions" element={<SolutionsHome />} />
-                  <Route path="/industries" element={<IndustryDashboard />} />
-                  <Route
-                    path="/industries/:name"
-                    element={<IndustryDetails />}
-                  />
-                  <Route path="/whoweare" element={<WhoWeare />} />
-                  <Route
+                  <Route path="/solution" element={<SolutionsHome />} />
+                  <Route path="/solution/:name" element={<SolutionDetails />} />
+                  <Route path="/industry" element={<IndustryDashboard />} />
+                  <Route path="/industry/:name" element={<IndustryDetails />} />
+                  <Route path="/about-us" element={<WhoWeare />} />
+                  {/* <Route
                     path="/whoweare/eventspotlight"
                     element={<EventSpotlight />}
-                  />
-                  <Route
-                    path="/privacy-policy"
-                    element={<PrivacyPolicy /> }
-                  />
-                  <Route path="/whoweare/careers" element={<VMuktiCareers />} />
-                  {/* <Route path="/blog" element={<BlogsDashboard />} /> */}
-                  {/* <Route
-                    path="/blog/:urlWords"
-                    element={<BlogsOverviewDash />}
                   /> */}
-                  <Route path="/serving" element={<OurServings />} />
-                  <Route path="/serving/:name" element={<ServingsDock />} />
-                  <Route path="/contactus" element={<ContactUs />} />
+                  <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                  {/* <Route path="/whoweare/careers" element={<VMuktiCareers />} /> */}
+                  <Route path="/blog" element={<BlogsDashboard />} />
+                  <Route path="/blog/:urlWords" element={<BlogsContents />} />
+                  {/* <Route path="/serving" element={<OurServings />} /> */}
+                  {/* <Route path="/serving/:name" element={<ServingsDock />} /> */}
+                  <Route path="/contact-us" element={<ContactUs />} />
                   <Route path="/Ambicam" element={<AmbicamLandingPage />} />
+                  <Route path="/thank-you" element={<Thankyou />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>

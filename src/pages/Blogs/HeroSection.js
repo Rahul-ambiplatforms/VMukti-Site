@@ -57,7 +57,7 @@ const BlogsDashboard = () => {
           justifyContent="flex-start"
         >
           <Heading
-            as="h2"
+            as="h1"
             fontSize={{ base: "24px", md: "48px" }}
             fontWeight="600"
             mb="2%"
@@ -80,7 +80,7 @@ const BlogsDashboard = () => {
             </svg>
           </Text>
           {/* //maxWidth="50%" */}
-          <Text fontSize={{ base: "12px", md: "16px" }} fontWeight="500">
+          <Text fontSize={{ base: "12px", md: "16px" }} as="p" fontWeight="500">
             Stay ahead of the curve with our expert insights, industry trends,
             and AI innovations.
             <br />

@@ -39,7 +39,7 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
       bg={bgColor}
       borderRadius="24px"
       overflow="visible"
-      mt="8%"
+      mt="15%"
       mb={{ base: '10px', md: '15px', lg: '20px' }}
       //   boxShadow="lg"
       alignItems="left"

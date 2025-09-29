@@ -61,10 +61,10 @@ const TrustedBy = () => {
           mb={8}
           px={{base:"10%",md:"0"}}
         >
-          <Text fontSize={{ base: "36px", md: "48px" }} fontWeight="600">
+          <Text as="h2" fontSize={{ base: "36px", md: "48px" }} fontWeight="600">
             Trusted Across Sectors
           </Text>
-          <Text fontSize={{ base: "14px", md: "16px" }} fontWeight="700">
+          <Text as="p" fontSize={{ base: "14px", md: "16px" }} fontWeight="700">
             From one camera to thousands, our solutions are cost-effective and
             future-ready.
           </Text>
@@ -114,7 +114,7 @@ const TrustedBy = () => {
                     width="336px"
                     height="auto"
                   />
-                  <Text fontSize="16px" fontWeight="700" p={4}>
+                  <Text fontSize="16px" fontWeight="700" as="h3" p={4}>
                     {card.title}
                   </Text>
                 </Flex>

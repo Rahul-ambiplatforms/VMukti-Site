@@ -4,24 +4,26 @@ import PageContentWrapper from "../../components/PageContentWrapper";
 import HeroSection from "./components/HeroSection";
 import VisionMissionSection from "./components/VisionMissionSection";
 import VerticalTimeline from "../../components/VerticalTimeline";
-import CertificationsSection from "./components/CertificationsSection";
-import ReviewsSection from "./components/ReviewsSection";
+// import CertificationsSection from "./components/CertificationsSection";
+// import ReviewsSection from "./components/ReviewsSection";
 import AdvancedComputerVision from "../../components/AdvancedComputerVision";
 import { customData2 } from "../../data/AdvancedComputerVisionData";
 import CulturalSection from "../../components/CulturalSection";
 import StickySection from "../Home/Data/StickySection";
+import CertificationsSection from "../Solutions/Components/CertificationsSection";
+import Reviews from "../Home/Components/Reviews";
 
 const gridItems = [
   {
     description: (
       <>
-        <b>18 + Years of</b>
-        <br /> Technology Leadership
+        <b>18 + Years</b>
+        <br />of Technology Leadership
       </>
     ),
     bgColor: "white",
-    textColor: "black", // Add if needed
-    alignItems: "Center"
+    textColor: "black",
+    alignItems: "Center",
   },
   {
     description: (
@@ -29,8 +31,8 @@ const gridItems = [
         End-to-End <b>OEM</b> &<br /> Customizable Solutions
       </>
     ),
-    bgColor: "white",
-    textColor: "black", // Add if needed
+    bgColor: "#3F77A5",
+    textColor: "white", 
     alignItems: "Center",
   },
   {
@@ -38,14 +40,14 @@ const gridItems = [
       {
         text: "Why ",
         textColor: "black",
-        fontSize: "100px"
+        fontSize: "64px",
       },
       {
         text: "VMukti?",
         textColor: "#3F77A5",
-        fontSize: "100px",
-        fontWeight: "bold"
-      }
+        fontSize: "64px",
+        fontWeight: "bold",
+      },
     ],
     bgColor: "transparent",
     alignItems: "Center",
@@ -57,7 +59,6 @@ const gridItems = [
         <b> STQC-Certified VMS,</b>
         <br /> <b>EMS & ICCC</b> Platforms
       </>
-
     ),
     textColor: "white", // Add if needed
     alignItems: "Center",
@@ -67,14 +68,14 @@ const gridItems = [
   {
     description: (
       <>
-        Deployed Across<br />
+        Deployed Across
+        <br />
         <b>1,42,000+</b> Locations
       </>
     ),
-    textColor: "black", // Add if needed
+    textColor: "black", 
     alignItems: "Center",
-    bgColor: "#BECEDC",
-
+    bgColor: "white",
   },
   {
     description: (
@@ -82,34 +83,41 @@ const gridItems = [
         Trusted by Government &<br /> Enterprise Sectors
       </>
     ),
-    bgColor: "white",
+    bgColor: "#BECEDC",
     textColor: "black", // Add if needed
-    alignItems: "Center"
+    alignItems: "Center",
   },
 ];
 
 const WhoWeare = () => {
   return (
+    <>
     <PageContentWrapper>
       <HeroSection />
       <VisionMissionSection />
+
       <StickySection>
-        <AdvancedComputerVision 
-          bgColor="#5887AE" 
-          textColor="white" // New prop for text color
-          cardBgColor1="white" // New prop for card background color
-          cardBgColor2="white" // New prop for card background color
-          lineColor="white" // New prop for line color
-          {...customData2} 
+        <AdvancedComputerVision
+          bgColor="#5887AE"
+          textColor="white" 
+          cardBgColor1="white" 
+          cardBgColor2="white"
+          lineColor="white" 
+          {...customData2}
         />
         <VerticalTimeline />
       </StickySection>
-      <Box mt={"5%"}>
+
+      <Box mt={{base:"5%",md:"2%"}}>
         <CulturalSection gridItems={gridItems} />
       </Box>
+      </PageContentWrapper>
       <CertificationsSection />
-      <ReviewsSection />
-    </PageContentWrapper>
+      <PageContentWrapper>
+      <Reviews />
+      {/* <ReviewsSection /> */}
+      </PageContentWrapper>
+    </>
   );
 };
 

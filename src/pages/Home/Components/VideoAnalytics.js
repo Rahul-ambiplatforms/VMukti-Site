@@ -38,7 +38,6 @@ const VideoAnalytics = () => {
   ]
 
   const [featureIndex, setFeatureIndex] = useState(0)
-  // const progress = (featureIndex / (features.length - 1)) * 100
 
   const handleNext = () => {
     setFeatureIndex((prevIndex) => (prevIndex + 1) % features.length)
@@ -162,7 +161,6 @@ const VideoAnalytics = () => {
                 fontWeight="500"
                 letterSpacing="-0.21px"
                 marginTop="8px"
-                // whiteSpace={{ base: "normal", md: "wrap" }}
               >
                 {features[featureIndex].description}
               </Text>
@@ -176,7 +174,7 @@ const VideoAnalytics = () => {
             justifyContent={{ base: 'space-between', md: 'flex-start' }}
             width="100%"
             mt={{ base: '20px', md: '25px' }}
-            display={{ base: 'none', md: 'flex' }} // Hide progress bar in mobile view
+            display={{ base: 'none', md: 'flex' }} 
           >
             <Box
               position="relative"
@@ -188,11 +186,10 @@ const VideoAnalytics = () => {
               <Box
                 position="absolute"
                 mt="-1px"
-                // height="100%"
                 width={`${100 / features.length}%`}
                 bg="#FFFFFF"
-                left={`${(featureIndex / features.length) * 100}%`} // Adjusted calculation for initial position
-                transform="translateX(0)" // Removed "-100%" to fix the initial position
+                left={`${(featureIndex / features.length) * 100}%`} 
+                transform="translateX(0)" 
                 transition="left 0.3s ease-in-out"
                 height="4px"
               />

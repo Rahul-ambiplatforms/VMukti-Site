@@ -8,46 +8,65 @@ import {
   Button,
   useBreakpointValue,
   Show,
+  Heading,
 } from "@chakra-ui/react";
 import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TypeAnimation } from "react-type-animation"; // <-- 1. Import the new component
 
 // Motion components
 const MotionImage = motion(Image);
 const MotionBox = motion(Box);
 const MotionButton = motion(Button);
 
-const HeroSection = () => {
+// Array of words for the typewriter animation
+const industries = [
+  "MANUFACTURING",
+  "WAREHOUSE",
+  "HEALTHCARE",
+  "OIL & GAS",
+  "ELECTION",
+  "EDUCATION",
+  "TRANSPORTATION",
+  "SMART CITY",
+  "PHARMA",
+  "BANKING",
+  "ENTERPRISE",
+  "LOGISTICS",
+  "GOVERNMENT",
+  "SPORTS",
+  "ENTERTAINMENT",
+  "DEFENSE",
+  "HOSPITALITY",
+  "CONSTRUCTION",
+];
 
-  const imageRef = useRef(null); // Reference for the image
-  const sectionRef = useRef(null); // Reference for the section containing the image
+const HeroSection = () => {
+  const imageRef = useRef(null);
+  const sectionRef = useRef(null);
   const ref = useRef(null);
   const inView = useInView(ref, { threshold: 0.9, triggerOnce: false });
 
-  // useEffect(() => {
-  const imageScaleAnimation = () => {
+  // 2. Transform the industries array into a sequence for the typewriter
+  // This format is ['Word 1', 1500ms pause, 'Word 2', 1500ms pause, ...]
+  const typewriterSequence = industries.flatMap((industry) => [industry, 1500]);
+
+  const handleImageHover = () => {
     gsap.to(imageRef.current, {
       y: 40,
-      duration: 1,
-      repeat: -1,
-      yoyo: true,
+      duration: 0.4,
+      ease: "power2.out",
     });
   };
 
-  const hoverOutAnimation = () => {
-    gsap.killTweensOf(imageRef.current);
+  const handleImageLeave = () => {
     gsap.to(imageRef.current, {
       y: 0,
+      duration: 0.4,
+      ease: "power2.out",
     });
   };
-
-  // Cleanup function
-  // return () => {
-  //   ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-  // };
-  // }, []);
 
   const ellipseSize = useBreakpointValue({
     base: "200px",
@@ -56,8 +75,7 @@ const HeroSection = () => {
   });
 
   return (
-    <Box bg="#E7E7E7" position="relative"
-    >
+    <Box bg="#E7E7E7" position="relative" mt="5%">
       {/* Background Ellipse */}
       <Box
         position="absolute"
@@ -76,130 +94,81 @@ const HeroSection = () => {
       />
 
       <Show above="md">
-        {/* Decorative Boxes */}
         <Flex
           position="absolute"
-          top={{ md: "15%" }}
+          top={["", "", "25%", "12%"]}
           bottom={{ base: "59%" }}
-          left={{ base: "80%", md: "58%" }} //32->
+          left={["", "", "25%", "25%"]}
           transform="translateX(-50%)"
-          gap={4}
+          gap="3%"
           zIndex={0}
-          width="100%"
+          width="auto"
           justifyContent="center"
           pt={{ base: "10vh", md: "8vh", lg: "20%" }}
         >
           <Box
             display={{ base: "none", md: "block" }}
-            height={{ base: "180px", md: "120px", lg: "188px" }}
+            height={["", "100px", "120px", "200px"]}
             minHeight="50px"
             aspectRatio="1/1"
             bg="#BECEDC"
             borderRadius="24px"
-            mt={{ base: "80px", md: "120px", lg: "15%" }}
+            mt={["", "", "80%", "30%"]}
           />
           <Box
             display={{ base: "none", md: "block" }}
-            height={{ base: "80px", md: "120px", lg: "188px" }}
+            height={["", "100px", "120px", "200px"]}
             minHeight="50px"
             aspectRatio="1/1"
             bg="#FFFFFF"
             borderRadius="24px"
-            mt={{ base: "40px", md: "60px", lg: "9%" }}
+            mt={["", "", "65%", "15%"]}
           />
           <Box
             display={{ base: "none", md: "block" }}
-            height={{ base: "80px", md: "120px", lg: "188px" }}
-            width="900px"
+            height={["", "100px", "120px", "200px"]}
             minHeight="50px"
+            width="100%"
             aspectRatio="1/1"
             bg="#3F77A5"
-            borderRadius="24px 0 0 24px"
+            borderRadius="24px"
+            mt={["", "", "50%", "-1%"]}
           />
         </Flex>
       </Show>
 
       {/* Main Content */}
       <Flex
-        // pl={{ base: "0", md: "2.5%" }}
         direction={{ base: "column-reverse", md: "row" }}
         align="center"
         justify="center"
         position="relative"
         zIndex={1}
       >
-        {/* Mobile View */}
-        <Box
-          overflow="hidden"
-          width="full"
-          display={{ base: "block", md: "none" }}
-        >
+        {/* Mobile View Image */}
+        <Box width="full" display={{ base: "block", md: "none" }}>
           <Flex
-            mt={{ base: "-30%" }}
+            mt={{ base: "-10%" }}
             direction="column"
             position="relative"
-            width="600px"
+            width="auto"
           >
-            {/* This is for Mobile */}
-            <Image
-              // ml="-20%"
-              mt="5%"
-              // pb="5%"
+            <MotionImage
+              mt="1%"
               src="/assets/tablet.png"
-              alt="Tablet"
+              alt="Computer Vision Solution for Smart Surveillance"
               zIndex={1}
-              width="500px"
-              height="600px"
+              w="100%"
+              h="100%"
               objectFit="cover"
               initial={{ scale: 0.9, opacity: 1 }}
               animate={
                 inView ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 1 }
               }
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              viewport={{ once: false, amount: 0.2 }}
             />
-            <Flex
-              direction="column"
-              alignContent="flex-end"
-              justifyContent="flex-end"
-              ml="16%"
-              mt="-15%"
-              mb="2%" // jenil
-            // bg="red"
-            >
-              <Box width="13px" height="13px" alignSelf="flex-start" ml="2%">
-                <svg
-                  viewBox="0 0 33 33"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  style={{ display: "block" }}
-                >
-                  <path
-                    d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
-                    fill="#3F77A5"
-                  />
-                </svg>
-              </Box>
-              <Text
-                fontWeight="500"
-                lineHeight="normal"
-                maxW={{ base: "50%", md: "50%" }}
-                fontSize={{ base: "12px", md: "16px" }}
-                width={{ base: "60%", md: "50%" }}
-                textAlign="justify"
-                fontStyle="normal"
-                ml="10px"
-                mt={"1%"}
-              >
-                Got visuals piling up? Our AI turns them into answers—fast. It's
-                like giving your cameras a brain to spot what matters and fix
-                your headaches on the spot.
-              </Text>
-            </Flex>
           </Flex>
         </Box>
-
-        {/* Desktop View */}
 
         {/* Content Section */}
         <Box
@@ -214,83 +183,96 @@ const HeroSection = () => {
           {/* Animated Heading */}
           <MotionBox
             ref={ref}
-            fontSize={{ base: "32px", md: "48px", lg: "100px" }}
+            as="h1"
+            fontSize={{ base: "32px", md: "48px", lg: "64px" }}
             fontWeight="600"
-            fontStyle="normal"
+            letterSpacing="0%"
             lineHeight="1.2"
             zIndex={1}
             initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0.6, x: -50 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
+            mt={{ base: "2%", md: "0" }}
           >
+            <Text as="span" color="#000">
+              Deliver Excellence Using{" "}
+            </Text>
             <Text as="span" color="#3F77A5">
-              Advanced{" "}
+              Computer Vision{" "}
             </Text>
             <Text as="span" color="#000">
-              Computer Vision & Image{" "}
+              Solution for{" "}
             </Text>
-            <Box as="span" display={{ base: "block", md: "inline" }}>
-              <Text as="span" color="#DB7B3A">
-                Intelligence
-              </Text>
-              <Text as="span" color="#3F77A5">
-                .
-              </Text>
-            </Box>
+            <TypeAnimation
+              sequence={typewriterSequence}
+              speed={50}
+              style={{ color: "#DB7B3A" }}
+              wrapper="span"
+              repeat={Infinity}
+              cursor={true}
+            />
+            {/* --- END OF UPDATE --- */}
           </MotionBox>
           <Flex>
             <Flex direction="column" zIndex={1}>
-              {" "}
-              {/* Desktop Subtext */}
-              {!useBreakpointValue({ base: true, md: false }) && (
-                <Flex mt="16px" direction={{ base: "column", md: "row" }}>
+              {!useBreakpointValue({ base: false, md: false }) && (
+                <Flex mt="8px" direction={{ base: "column", md: "row" }}>
                   <MotionBox
-                    mt="2%"
+                    mt="1%"
                     display="flex"
-                    alignItems="center"
-                    gap={8}
+                    alignItems="flex-start"
+                    gap={2}
                     initial={{ opacity: 0, x: -80 }}
-                    // whileInView={{ opacity: 1, x: 0 }}
                     animate={
-                      inView ? { opacity: 1, x: 0 } : { opacity: 0.6, x: -50 }
+                      inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }
                     }
                     transition={{ duration: 0.9, ease: "easeOut" }}
-                    viewport={{ once: false }}
                   >
-                    <Box width="30px" height="33px">
-                      <svg
-                        viewBox="0 0 33 33"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        style={{ display: "block" }}
-                      >
-                        <path
-                          d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
-                          fill="#3F77A5"
-                        />
-                      </svg>
-                    </Box>
-                    <Text
-                      fontWeight="500"
-                      lineHeight="100%"
-                      maxW={{ base: "220px", md: "45%" }}
-                      fontSize={{ base: "12px", md: "16px" }}
-                      width="45%"
-                      textAlign="justify"
+                    <Flex
+                      direction={{ base: "column", md: "row" }}
+                      gap={{ base: "2", md: "4" }}
                     >
-                      Got visuals piling up? Our AI turns them into
-                      answers—fast. It's like giving your cameras a brain to
-                      spot what matters and fix your headaches on the spot.
-                    </Text>
+                      <Box
+                        width={{ base: "20px", md: "33px" }}
+                        height={{ base: "25px", md: "33px" }}
+                      >
+                        <svg
+                          viewBox="0 0 33 33"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          style={{ display: "block" }}
+                        >
+                          <path
+                            d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z"
+                            fill="#3F77A5"
+                          />
+                        </svg>
+                      </Box>
+                      <Text
+                        as="p"
+                        fontWeight="500"
+                        lineHeight="100%"
+                        w={["90%", "90%", "85%", "35%"]}
+                        fontSize={{ base: "14px", md: "16px", lg: "16px" }}
+                        color="#444444"
+                        textAlign="justify"
+                      >
+                        With over 18 years of domain excellence, we safeguard
+                        700+ districts through state-backed and enterprise-grade
+                        deployments powered by proprietary visual intelligence
+                        and precision-tuned computer vision frameworks for
+                        mission-critical surveillance.
+                      </Text>
+                    </Flex>
                   </MotionBox>
                 </Flex>
               )}
               {/* Robotic Hand and Button */}
               <Flex
                 position="relative"
-                mt={{ base: "1", md: "-10%" }}
-                ml={{ base: "0", md: "-40px" }}
-                // py={{base:"15%",md:"0"}}
+                mt={{ base: "1", md: "" }}
+                ml={["", "", "-65px", "-30px"]}
+                mb={{ base: "15%", md: "5%" }}
                 width="fit-content"
               >
                 <Image
@@ -298,65 +280,55 @@ const HeroSection = () => {
                   src="/assets/robohand.png"
                   alt="Robotic Hand"
                   display={{ base: "none", md: "block" }}
+                  width={["", "", "55%", "90%"]}
                 />
-
-                <MotionButton
-                  onMouseEnter={() => imageScaleAnimation()}
-                  onMouseLeave={() => hoverOutAnimation()}
-                  position="absolute"
-                  padding="24px"
-                  top={{ base: "20%", sm: "20%", md: "37%" }}
-                  right={{ base: "", sm: "", md: "8%" }}
-                  bg="white"
-                  height={{ base: "34px", sm: "50px" }}
-                  borderRadius="20px"
-                  color="#3F77A5"
-                  as={Link}
-                  to="/contactus"
-                  gap="2"
-                  display="flex"
-                  _hover={{
-                    bg: "#E0F2FE",
-                    color: "#2C5E84",
-                  }}
-                  fontSize={{ base: "14px", sm: "16px" }}
-                  animate={{
-                    x: [0, 5, 0, -5, 0],
-                    y: [0, 0, 5, 0, -5],
-                  }}
-                  transition={{
-                    repeat: Infinity,
-                    duration: 0.3,
-                    ease: "linear",
-                  }}
-                >
-                  Book Demo
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 17 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                <Link to="/contact-us">
+                  <MotionButton
+                    onMouseEnter={handleImageHover}
+                    onMouseLeave={handleImageLeave}
+                    position="relative"
+                    py={["20px", "12px", "12px", "24px"]}
+                    px={["15px", "20px", "15px", "24px"]}
+                    top={["35%", "35%", "25%", "25%"]}
+                    right={["", "", "25%", "30%"]}
+                    bg="white"
+                    height={{ base: "34px", sm: "50px" }}
+                    borderRadius="24px"
+                    color="#3F77A5"
+                    gap="2"
+                    display="flex"
+                    _hover={{
+                      bg: "#E0F2FE",
+                      color: "#2C5E84",
+                    }}
+                    fontSize={{ base: "14px", sm: "16px" }}
                   >
-                    <path
-                      d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
-                      fill="#3F77A5"
-                    />
-                  </svg>
-                </MotionButton>
+                    Book Demo
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 17 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
+                        fill="#3F77A5"
+                      />
+                    </svg>
+                  </MotionButton>
+                </Link>
               </Flex>
             </Flex>
 
-            {!useBreakpointValue({ base: true, md: false }) && (
+            {!useBreakpointValue({ base: true, md: false }) && ( // Show on md and up
               <MotionImage
-                src="/assets/tablet2.png" //------------desktop View
+                src={`${process.env.PUBLIC_URL}/assets/tablet2.png`}
                 position="absolute"
-                bottom="-6%"
-                // bg={{base:"black",sm:"darkred",md:"yellow",lg:"darkorange",xl:"blue"}}
-                right={["-10px", "-20px", "-30px", "-30px"]} // Adjust for breakpoints: [sm, md, lg, xl]
-                width={["320px", "480px", "660px", "940px"]} // Responsive widths (840->940)
-                // height="auto"
-                // zIndex={1}
+                top={["", "", "44%", "25%"]}
+                right={["-10px", "-20px", "-30px", "-45px"]}
+                width={["320px", "480px", "72%", "70%"]}
+                height={["auto", "auto", "70%", "98%"]}
                 initial={{ scale: 0.8, opacity: 1 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}

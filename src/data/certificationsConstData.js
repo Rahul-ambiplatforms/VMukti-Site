@@ -1,7 +1,7 @@
 const CertificationsData = [
   {
-    name: 'STQC',
-    description: 'Certified',
+    name: "STQC",
+    description: "Certified",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -48,8 +48,42 @@ const CertificationsData = [
     ),
   },
   {
-    name: 'ISO',
-    description: '9001:2015',
+    name: "Onvif",
+    description: "",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="103"
+        height="29"
+        viewBox="0 0 103 29"
+        fill="none"
+      >
+        <path
+          d="M14.1937 0C6.35417 0 0 6.35418 0 14.1937C0 22.0333 6.35417 28.3875 14.1937 28.3875C22.0333 28.3875 28.3875 22.0333 28.3875 14.1937C28.3914 6.35418 22.0333 0 14.1937 0ZM15.6005 23.8056C9.67862 23.8056 4.87664 19.0036 4.87664 13.0817C4.87664 7.15974 9.67862 2.35776 15.6005 2.35776C21.5225 2.35776 26.3244 7.15974 26.3244 13.0817C26.3284 19.0075 21.5264 23.8056 15.6005 23.8056Z"
+          fill="#3F77A5"
+        />
+        <path
+          d="M45.9198 9.66406H33.1328V26.6282H37.9466V11.6131C37.9466 11.6131 44.285 11.6131 44.9059 11.6131C46.741 11.6131 47.7549 13.1693 47.7549 14.4307C47.7549 14.8551 47.7549 26.6282 47.7549 26.6282H52.5687C52.5687 26.6282 52.5687 16.6077 52.5687 14.415C52.5687 13.967 52.5647 9.66406 45.9198 9.66406Z"
+          fill="#3F77A5"
+        />
+        <path
+          d="M83.3138 9.66406H78.5V26.6282H83.3138V9.66406Z"
+          fill="#3F77A5"
+        />
+        <path
+          d="M73.7392 9.66406L67.2318 22.1681L60.7204 9.66406H55.1875L64.0134 26.6793H67.4086L76.2345 9.66406H73.7392Z"
+          fill="#3F77A5"
+        />
+        <path
+          d="M96.9049 11.6092C97.3843 11.6092 101.243 11.6092 103 11.6092V9.66016H95.8911C89.2501 9.66016 89.2422 13.967 89.2422 14.4071C89.2422 16.5999 89.2422 26.6203 89.2422 26.6203H94.0559C94.0559 26.6203 94.0559 22.0345 94.0559 18.4821H102.288V16.533H94.0559C94.0559 15.3542 94.0559 14.5289 94.0559 14.4189C94.0559 13.1654 95.0737 11.6092 96.9049 11.6092Z"
+          fill="#3F77A5"
+        />
+      </svg>
+    ),
+  },
+  {
+    name: "ISO",
+    description: "9001:2015",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -170,8 +204,8 @@ const CertificationsData = [
     ),
   },
   {
-    name: 'ISO',
-    description: '14001:2015',
+    name: "ISO",
+    description: "14001:2015",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -296,8 +330,8 @@ const CertificationsData = [
     ),
   },
   {
-    name: 'ISO',
-    description: '27001:2013',
+    name: "ISO",
+    description: "27001:2013",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -422,8 +456,8 @@ const CertificationsData = [
     ),
   },
   {
-    name: 'CMMI',
-    description: 'Compliant',
+    name: "CMMI",
+    description: "Compliant",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -468,8 +502,8 @@ const CertificationsData = [
     ),
   },
   {
-    name: 'BIS',
-    description: '',
+    name: "BIS",
+    description: "",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -494,8 +528,8 @@ const CertificationsData = [
     ),
   },
   {
-    name: 'CE',
-    description: '',
+    name: "CE",
+    description: "",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -514,8 +548,8 @@ const CertificationsData = [
     ),
   },
   {
-    name: 'FCC',
-    description: '',
+    name: "FCC",
+    description: "",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -537,8 +571,8 @@ const CertificationsData = [
   },
   // { name: 'FCC', description: '', icon: <FaBroadcastTower size={32} />, color: 'purple.400' },
   {
-    name: 'RoHS',
-    description: '',
+    name: "RoHS",
+    description: "",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -617,6 +651,6 @@ const CertificationsData = [
     ),
   },
   // { name: 'RoHS', description: '', icon: <FaRecycle size={32} />, color: 'green.600' },
-]
+];
 
-export default CertificationsData
+export default CertificationsData;
