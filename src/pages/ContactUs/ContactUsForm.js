@@ -453,27 +453,29 @@ const ContactUsForm = () => {
       );
 
       if (response.ok) {
-        toast({
-          title: "Message Sent!",
-          description: "We'll get back to you soon.",
-          status: "success",
-          duration: 5000,
-          isClosable: true,
-        });
 
-        // navigate("/thank-you");
-
-        // setFormData({
-        //   fullName: "",
-        //   country: "",
-        //   email: "",
-        //   city: "",
-        //   phone: { code: "+91", number: "" },
-        //   businessProfile: "",
-        //   companyName: "",
-        //   inquiryType: "",
-        //   message: "",
+        // toast({
+        //   title: "Message Sent!",
+        //   description: "We'll get back to you soon.",
+        //   status: "success",
+        //   duration: 5000,
+        //   isClosable: true,
         // });
+
+        navigate("/thank-you");
+
+        setFormData({
+          fullName: "",
+          country: "",
+          email: "",
+          city: "",
+          phone: { code: "+91", number: "" },
+          businessProfile: "",
+          companyName: "",
+          inquiryType: "",
+          message: "",
+        });
+        
       } else {
         const data = await response.json();
         throw new Error(data.error || "Failed to send message");
