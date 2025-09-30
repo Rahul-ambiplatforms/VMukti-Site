@@ -12,6 +12,8 @@ import {
   Button,
   Icon,
   Divider,
+  InputGroup,
+  InputLeftElement,
   RadioGroup,
   Radio,
   useDisclosure,
@@ -98,9 +100,19 @@ const CustomRadioDropdown = ({
   const { isOpen, onToggle, onClose } = useDisclosure();
   const dropdownRef = useRef(null);
   useOutsideClick({ ref: dropdownRef, handler: () => onClose() });
+  const [search, setSearch] = useState("");
+  const searchRef = useRef(null);
+
+  useEffect(() => {
+    if (isOpen && searchRef.current) {
+      // focus the search box when dropdown opens
+      setTimeout(() => searchRef.current && searchRef.current.focus(), 0);
+    }
+  }, [isOpen]);
 
   const handleSelect = (newValue) => {
     onChange(name, newValue);
+    setSearch("");
     onClose();
   };
 
@@ -169,14 +181,25 @@ const CustomRadioDropdown = ({
           maxH="300px"
           overflowY="auto"
         >
+          <Input
+            placeholder={`Search ${placeholder?.toLowerCase?.() || ""}`}
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            size="sm"
+            ref={searchRef}
+          />
           <RadioGroup onChange={handleSelect} value={value}>
             <VStack align="flex-start" w="100%" spacing={3}>
-              {options.map((option, index) => (
+              {options
+                .filter((option) =>
+                  option.toLowerCase().includes(search.toLowerCase())
+                )
+                .map((option, index, arr) => (
                 <React.Fragment key={option}>
                   <Radio value={option} colorScheme="blue">
                     {option}
                   </Radio>
-                  {index < options.length - 1 && <Divider />}
+                  {index < arr.length - 1 && <Divider />}
                 </React.Fragment>
               ))}
             </VStack>
@@ -187,12 +210,28 @@ const CustomRadioDropdown = ({
   );
 };
 
-const PhoneInput = ({ value, onChange, isRequired }) => {
+const PhoneInput = ({ value, onChange, isRequired, inputRef, hasError }) => {
   const currentCountry = countryData.find((c) => c.dial_code === value.code) ||
     countryData[0] || { dial_code: "", name: "" };
+  const [search, setSearch] = useState("");
+  const searchRef = useRef(null);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  useEffect(() => {
+    if (isOpen && searchRef.current) {
+      setTimeout(() => searchRef.current && searchRef.current.focus(), 0);
+    }
+  }, [isOpen]);
 
   const handleCodeChange = (newCode) => {
     onChange({ ...value, code: newCode });
+    onClose();
+    if (inputRef && inputRef.current) {
+      inputRef.current.focus();
+      try {
+        inputRef.current.setSelectionRange(0, 0);
+      } catch {}
+    }
   };
 
   const handleNumberChange = (e) => {
@@ -205,34 +244,60 @@ const PhoneInput = ({ value, onChange, isRequired }) => {
         bg="#F0F0F0"
         h="48px"
         borderRadius="10px"
+        border={hasError ? "1px solid #E53E3E" : "none"}
         px={3}
         spacing={2}
         w="100%"
       >
-        <Menu>
+        <Menu isOpen={isOpen} onClose={onClose}>
           <MenuButton
             as={Button}
             variant="unstyled"
             h="100%"
+            w="40%"
             _active={{ bg: "transparent" }}
+            onClick={() => (isOpen ? onClose() : onOpen())}
           >
-            <HStack>
-              <Text fontSize="xl">{currentCountry.flag}</Text>
+            <Flex align="center" justify="center" w="100%" gap="1">
+              {/* <Text fontSize="xl">{currentCountry.flag}</Text> */}
               <Text>{currentCountry.code}</Text>
+              <Text>{currentCountry.dial_code}</Text>
               <Icon viewBox="0 0 14 8" w="14px" h="8px">
                 <path d="M7 7.5L14 0.5L0 0.5L7 7.5Z" fill="#3F77A5" />
               </Icon>
-            </HStack>
+            </Flex>
           </MenuButton>
           <MenuList zIndex="dropdown" maxH="300px" overflowY="auto">
-            {countryData.map((country) => (
+            <Box p={2} position="sticky" top={0} bg="white" zIndex={1}>
+              <Input
+                size="sm"
+                placeholder="Search country or code"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                ref={searchRef}
+              />
+            </Box>
+            {countryData
+              .filter((country) => {
+                const query = search.trim();
+                if (!query) return true;
+                const isNumericQuery = /^\+?\d+$/.test(query);
+                if (isNumericQuery) {
+                  return country.dial_code.replace("+", "").includes(query.replace("+", ""));
+                }
+                return (
+                  country.name.toLowerCase().includes(query.toLowerCase()) ||
+                  country.dial_code.includes(query)
+                );
+              })
+              .map((country) => (
               <MenuItem
                 key={`${country.name}-${country.dial_code}`}
                 onClick={() => handleCodeChange(country.dial_code)}
               >
                 <HStack>
                   <Text>
-                    {country.name} ({country.dial_code})
+                    {country.name} ({country.code} {country.dial_code})
                   </Text>
                 </HStack>
               </MenuItem>
@@ -240,11 +305,15 @@ const PhoneInput = ({ value, onChange, isRequired }) => {
           </MenuList>
         </Menu>
         <Input
-          // variant="unstyled"
+          ref={inputRef}
           value={value.number}
           onChange={handleNumberChange}
           type="tel"
-          // pl={2}
+          onFocus={(e) => {
+            try {
+              e.target.setSelectionRange(0, 0);
+            } catch {}
+          }}
         />
         {/* <Divider orientation="vertical" h="60%" borderColor="gray.400" /> */}
       </HStack>
@@ -252,7 +321,7 @@ const PhoneInput = ({ value, onChange, isRequired }) => {
         <HStack
           position="absolute"
           top="50%"
-          left="90px"
+          left="100px"
           transform="translateY(-50%)"
           pointerEvents="none"
           zIndex="1"
@@ -300,6 +369,17 @@ const ContactUsForm = () => {
     inquiryType: "",
     message: "",
   });
+  const [errors, setErrors] = useState({
+    fullName: false,
+    email: false,
+    phone: false,
+    companyName: false,
+  });
+
+  const fullNameRef = useRef(null);
+  const emailRef = useRef(null);
+  const phoneRef = useRef(null);
+  const companyRef = useRef(null);
 
   const handleDropdownChange = (name, value) => {
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -307,28 +387,51 @@ const ContactUsForm = () => {
 
   const handlePhoneChange = (phoneValue) => {
     setFormData((prev) => ({ ...prev, phone: phoneValue }));
+    if (phoneValue.number) {
+      setErrors((prev) => ({ ...prev, phone: false }));
+    }
   };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    if (errors[e.target.name]) {
+      setErrors((prev) => ({ ...prev, [e.target.name]: false }));
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (
-      !formData.fullName ||
-      !formData.email ||
-      !formData.phone.number ||
-      !formData.companyName
-    ) {
+    const checks = [
+      { key: 'fullName', empty: !formData.fullName, ref: fullNameRef },
+      { key: 'email', empty: !formData.email, ref: emailRef },
+      { key: 'phone', empty: !formData.phone.number, ref: phoneRef },
+      { key: 'companyName', empty: !formData.companyName, ref: companyRef },
+    ];
+    const firstInvalid = checks.find((c) => c.empty);
+
+    if (firstInvalid) {
+      setErrors({ fullName: false, email: false, phone: false, companyName: false, [firstInvalid.key]: true });
+
+      if (firstInvalid.ref && firstInvalid.ref.current) {
+        firstInvalid.ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
+        setTimeout(() => {
+          firstInvalid.ref.current && firstInvalid.ref.current.focus();
+        }, 250);
+      }
+
       toast({
         title: "Missing required fields",
         description: "Please fill in all fields marked with *",
         status: "warning",
-        duration: 5000,
+        duration: 3000,
         isClosable: true,
       });
+
+      // Clear red border after 5 seconds
+      setTimeout(() => {
+        setErrors((prev) => ({ ...prev, [firstInvalid.key]: false }));
+      }, 5000);
       return;
     }
 
@@ -343,6 +446,7 @@ const ContactUsForm = () => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             ...formData,
+            phoneFull: `${formData.phone.code}${formData.phone.number}`,
             formType: "Contact",
           }),
         }
@@ -357,19 +461,19 @@ const ContactUsForm = () => {
           isClosable: true,
         });
 
-        navigate("/thank-you");
+        // navigate("/thank-you");
 
-        setFormData({
-          fullName: "",
-          country: "",
-          email: "",
-          city: "",
-          phone: { code: "+91", number: "" },
-          businessProfile: "",
-          companyName: "",
-          inquiryType: "",
-          message: "",
-        });
+        // setFormData({
+        //   fullName: "",
+        //   country: "",
+        //   email: "",
+        //   city: "",
+        //   phone: { code: "+91", number: "" },
+        //   businessProfile: "",
+        //   companyName: "",
+        //   inquiryType: "",
+        //   message: "",
+        // });
       } else {
         const data = await response.json();
         throw new Error(data.error || "Failed to send message");
@@ -478,11 +582,12 @@ const ContactUsForm = () => {
                   isRequired={true}
                 >
                   <Input
+                    ref={fullNameRef}
                     name="fullName"
                     value={formData.fullName}
                     onChange={handleChange}
                     bg="#F0F0F0"
-                    border="none"
+                    border={errors.fullName ? "1px solid #E53E3E" : "none"}
                     borderRadius="10px"
                     h="48px"
                   />
@@ -497,12 +602,13 @@ const ContactUsForm = () => {
                   isRequired={true}
                 >
                   <Input
+                    ref={emailRef}
                     name="email"
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
                     bg="#F0F0F0"
-                    border="none"
+                    border={errors.email ? "1px solid #E53E3E" : "none"}
                     borderRadius="10px"
                     h="48px"
                   />
@@ -515,6 +621,8 @@ const ContactUsForm = () => {
                   value={formData.phone}
                   onChange={handlePhoneChange}
                   isRequired={true}
+                  inputRef={phoneRef}
+                  hasError={errors.phone}
                 />
               </Box>
 
@@ -526,11 +634,12 @@ const ContactUsForm = () => {
                   isRequired={true}
                 >
                   <Input
+                    ref={companyRef}
                     name="companyName"
                     value={formData.companyName}
                     onChange={handleChange}
                     bg="#F0F0F0"
-                    border="none"
+                    border={errors.companyName ? "1px solid #E53E3E" : "none"}
                     borderRadius="10px"
                     h="48px"
                   />
@@ -542,7 +651,7 @@ const ContactUsForm = () => {
                 <CustomRadioDropdown
                   placeholder="Country"
                   name="country"
-                  options={countryData.map((c) => `${c.name} (${c.dial_code})`)}
+                  options={countryData.map((c) => `${c.name}`)}
                   value={formData.country}
                   onChange={handleDropdownChange}
                   isRequired={false}

@@ -202,9 +202,12 @@ const NewsletterSubscription = () => {
               cursor={{ base: "pointer", md: "default" }}
             >
               <Flex justify="space-between" align="center">
-                <Heading as="p" fontSize="16px" fontWeight={700}>
-                  Industries we serve
-                </Heading>
+                <Link href="/industry">
+                  <Heading as="p" fontSize="16px" fontWeight={700}>
+                    Industries we serve
+                  </Heading>
+                </Link>
+
                 <Box
                   display={{ base: "block", md: "none" }}
                   onClick={() => setIsIndustriesOpen(!isIndustriesOpen)}
@@ -323,9 +326,11 @@ const NewsletterSubscription = () => {
               cursor={{ base: "pointer", md: "default" }}
             >
               <Flex justify="space-between" align="center">
-                <Heading as="p" fontSize="16px" fontWeight={700}>
-                  Our Solutions
-                </Heading>
+                <Link href="/solution">
+                  <Heading as="p" fontSize="16px" fontWeight={700}>
+                    Our Solutions
+                  </Heading>
+                </Link>
                 <Box
                   display={{ base: "block", md: "none" }}
                   onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
@@ -734,9 +739,11 @@ const NewsletterSubscription = () => {
             justifyContent="space-between"
           >
             <Box h="auto">
-              <Heading fontSize="16px" fontWeight={700} as="p">
-                Contact Us
-              </Heading>
+              <Link href="/contact-us">
+                <Heading fontSize="16px" fontWeight={700} as="p">
+                  Contact Us
+                </Heading>
+              </Link>
               <Box
                 width="17px"
                 height="2px"
@@ -938,15 +945,11 @@ const NewsletterSubscription = () => {
             minW="250px"
             order="4"
           >
-            <Heading
-              fontSize="16px"
-              fontWeight={700}
-              as="p"
-              // fontFamily="'Wix Madefor Display', sans-serif"
-              // mb="10px"
-            >
-              Contact Us
-            </Heading>
+            <Link href="/contact-us">
+              <Heading fontSize="16px" fontWeight={700} as="p">
+                Contact Us
+              </Heading>
+            </Link>
             <Box
               width="17px"
               height="2px"
@@ -1166,7 +1169,7 @@ const NewsletterSubscription = () => {
             padding="20px 0"
             gap={2}
             direction={{ base: "column", md: "row" }}
-            justifyContent={{ base: "center", md: "center" }}
+            justifyContent={{ base: "center", md: "space-between" }}
           >
             {/* Logo Section */}
             <Flex

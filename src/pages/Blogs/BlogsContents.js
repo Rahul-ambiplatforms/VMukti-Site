@@ -217,7 +217,7 @@ const BlogsOverviewDash = () => {
   const [currentUrl, setCurrentUrl] = useState("");
   const [baseUrl, setBaseUrl] = useState("");
   const [formData, setFormData] = useState({
-    fullname: "",
+    fullName: "",
     email: "",
     phone: "",
     message: "",
@@ -243,7 +243,7 @@ const BlogsOverviewDash = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.fullname || !formData.email || !formData.message) {
+    if (!formData.fullName || !formData.email || !formData.message) {
       toast({
         title: "Missing required fields",
         description: "Please fill in all required fields",
@@ -284,7 +284,7 @@ const BlogsOverviewDash = () => {
         });
 
         setFormData({
-          fullname: "",
+          fullName: "",
           email: "",
           phone: "",
           message: "",
@@ -988,8 +988,8 @@ const BlogsOverviewDash = () => {
                   {/* Name Fields */}
                   <SimpleGrid columns={1} spacing={4} width="100%">
                     <Input
-                      name="fullname"
-                      value={formData.fullname}
+                      name="fullName"
+                      value={formData.fullName}
                       onChange={handleChange}
                       placeholder="Full name *"
                       bg="#E7E7E7"
