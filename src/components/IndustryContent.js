@@ -267,7 +267,7 @@ const IndustryContent = ({ props, content }) => {
           property="og:url"
           content={`https://vmukti.com/industry/${content.slug}/`}
         />
-        <meta property="og:site_name" content="Vmukti Solutions" />
+        <meta property="og:site_name" content="VMukti Solutions" />
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@vmukti" />
@@ -277,7 +277,7 @@ const IndustryContent = ({ props, content }) => {
         <meta name="twitter:image" content={content.ogImage} />
         <link
           rel="canonical"
-          href={`https://vmukti.com/industry/${content.slug}/`}
+          href={`https://vmukti.com/industry/${content.slug}`}
         />
         {/* Optional: Add page-specific structured data from your content object.
         {content.schemas &&

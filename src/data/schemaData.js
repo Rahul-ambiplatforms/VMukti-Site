@@ -4,9 +4,9 @@
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "AI Computer Vision System for Smart Surveillance - Vmukti Solutions",
+        name: "AI Computer Vision System for Smart Surveillance - VMukti Solutions",
         description:
-          "Vmukti Solutions is a trusted computer vision software company. We are offering AI surveillance for healthcare, education, manufacturing and more industries.",
+          "VMukti Solutions is a trusted computer vision software company. We are offering AI surveillance for healthcare, education, manufacturing and more industries.",
         url: "https://www.vmukti.com/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",

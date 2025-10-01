@@ -9,9 +9,9 @@
 
 const industriesData = {
   manufacturing: {
-    metatitle: "Computer Vision in Manufacturing Industry - Vmukti Solutions",
+    metatitle: "Computer Vision in Manufacturing Industry - VMukti Solutions",
     metadescription:
-      "Vmukti Solutions offers scalable computer vision for manufacturing to help you monitor, analyze, and optimize factory performance in real-time.",
+      "VMukti Solutions offers scalable computer vision for manufacturing to help you monitor, analyze, and optimize factory performance in real-time.",
     ogImage: "https://www.vmukti.com/assets/manufacturing_mockup.png",
     slug: "manufacturing",
     title: [
@@ -184,9 +184,9 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Computer Vision in Manufacturing Industry - Vmukti Solutions",
+        name: "Computer Vision in Manufacturing Industry - VMukti Solutions",
         description:
-          "Vmukti Solutions offers scalable computer vision for manufacturing to help you monitor, analyze, and optimize factory performance in real-time.",
+          "VMukti Solutions offers scalable computer vision for manufacturing to help you monitor, analyze, and optimize factory performance in real-time.",
         url: "https://www.vmukti.com/industry/manufacturing/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -254,7 +254,7 @@ const industriesData = {
           name: "India, United States, United Kingdom, UAE, Canada",
         },
         description:
-          "Vmukti Solutions offers scalable computer vision for manufacturing to help you monitor, analyze, and optimize factory performance in real-time.",
+          "VMukti Solutions offers scalable computer vision for manufacturing to help you monitor, analyze, and optimize factory performance in real-time.",
       },
       // FAQ Schema
       {

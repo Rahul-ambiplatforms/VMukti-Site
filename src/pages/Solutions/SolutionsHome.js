@@ -67,8 +67,8 @@ const Hero = () => {
           content="https://www.vmukti.com/assets/solution_dash.png"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://vmukti.com/solution/" />
-        <meta property="og:site_name" content="Vmukti Solutions" />
+        <meta property="og:url" content="https://vmukti.com/solution" />
+        <meta property="og:site_name" content="VMukti Solutions" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -87,7 +87,7 @@ const Hero = () => {
         />
 
         {/* Canonical Link */}
-        <link rel="canonical" href="https://www.vmukti.com/solution/" />
+        <link rel="canonical" href="https://www.vmukti.com/solution" />
 
         {/* 
     Add structured data (JSON-LD schema) for the solutions page if you have it.

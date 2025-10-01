@@ -260,7 +260,7 @@ const SolutionContent = ({ content }) => {
           content={`https://vmukti.com/solution/${content.slug}/`}
         />
 
-        <meta property="og:site_name" content="Vmukti Solutions" />
+        <meta property="og:site_name" content="VMukti Solutions" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -274,7 +274,7 @@ const SolutionContent = ({ content }) => {
         {/* Canonical Link - must point to the unique URL of this page */}
         <link
           rel="canonical"
-          href={`https://vmukti.com/solution/${content.slug}/`}
+          href={`https://vmukti.com/solution/${content.slug}`}
         />
 
         {/* {content.schemas &&

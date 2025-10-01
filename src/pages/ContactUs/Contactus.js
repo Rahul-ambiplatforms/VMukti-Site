@@ -198,7 +198,7 @@ export default function ContactUs() {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.vmukti.com/contact-us/" />
-        <meta property="og:site_name" content="Vmukti Solutions" />
+        <meta property="og:site_name" content="VMukti Solutions" />
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@vmukti" />
@@ -212,7 +212,7 @@ export default function ContactUs() {
           content="https://www.vmukti.com/assets/Contactus.png"
         />
         {/* Canonical Link */}
-        <link rel="canonical" href="https://www.vmukti.com/contact-us/" />
+        <link rel="canonical" href="https://www.vmukti.com/contact-us" />
         {/* 
         {contactPageSchemas.map((schema, index) => (
           <script

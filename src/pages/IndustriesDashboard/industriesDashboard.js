@@ -650,7 +650,7 @@ export default function IndustryDashboard() {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://vmukti.com/industry/" />
-        <meta property="og:site_name" content="Vmukti Solutions" />
+        <meta property="og:site_name" content="VMukti Solutions" />
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@vmukti" />
@@ -667,7 +667,7 @@ export default function IndustryDashboard() {
           content="https://www.vmukti.com/assets/industry_dashboard.png"
         />
         {/* Canonical Link */}
-        <link rel="canonical" href="https://www.vmukti.com/industry/" />
+        <link rel="canonical" href="https://www.vmukti.com/industry" />
         {/* Optional: Add structured data (JSON-LD schema) for the industries page.
         For example:
         {industriesPageSchemas.map((schema, index) => (

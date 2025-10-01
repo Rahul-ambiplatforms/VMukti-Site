@@ -78,9 +78,9 @@ const PrivacyPolicy = () => {
         <title>Privacy Policy - Vmukti</title>
         <meta
           name="description"
-          content="Read the Vmukti Solutions Privacy Policy to understand how we collect, use, and protect your personal information on our platform."
+          content="Read the VMukti Solutions Privacy Policy to understand how we collect, use, and protect your personal information on our platform."
         />
-        <link rel="canonical" href="https://www.vmukti.com/privacy-policy/" />
+        <link rel="canonical" href="https://www.vmukti.com/privacy-policy" />
       </Helmet>
 
       <Box>

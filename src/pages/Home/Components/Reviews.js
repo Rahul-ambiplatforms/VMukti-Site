@@ -43,14 +43,14 @@ const testimonials = [
   },
   {
     description:
-      "Vmukti Solutions provided webcasting services for our Workshop on Technology Enhanced Learning (TEL). The audio and video quality were excellent, and the entire execution was seamless. Their technology and service were flawless and met all our expectations.",
+      "VMukti Solutions provided webcasting services for our Workshop on Technology Enhanced Learning (TEL). The audio and video quality were excellent, and the entire execution was seamless. Their technology and service were flawless and met all our expectations.",
     name: "Dr. S. Mohankumar",
     company: "SDM Engineering College",
     image: "/assets/client_1.png",
   },
   {
     description:
-      "Vmukti Solutions provided webcasting services for the 5th Convocation ceremony at NIT Agartala. The audio and video quality were excellent, and the entire execution was seamless. Their technology and service were flawless, meeting the highest standards of excellence.",
+      "VMukti Solutions provided webcasting services for the 5th Convocation ceremony at NIT Agartala. The audio and video quality were excellent, and the entire execution was seamless. Their technology and service were flawless, meeting the highest standards of excellence.",
     name: "Kamal Kanti Paul",
     company: "NIT, Agartala",
     image: "/assets/client_1.png",

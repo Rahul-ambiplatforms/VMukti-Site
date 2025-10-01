@@ -27,7 +27,7 @@ const BlogsDashboard = () => {
         />
         <meta property="og:type" content="blog" />
         <meta property="og:url" content="https://vmukti.com/blog" />
-        <meta property="og:site_name" content="Vmukti Solutions" />
+        <meta property="og:site_name" content="VMukti Solutions" />
         {/* <!-- Twitter Card Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@vmukti" />
@@ -43,7 +43,7 @@ const BlogsDashboard = () => {
           name="twitter:image"
           content="https://www.vmukti.com/assets/blogs_dashboard.png"
         />
-        <link rel="canonical" href="https://vmukti.com/blog" />
+        <link rel="canonical" href="https://www.vmukti.com/blog" />
         {/* {blogsPageSchemas.map((schema, index) => (
           <script
             key={`schema-${index}`}
