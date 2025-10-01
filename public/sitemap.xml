@@ -181,37 +181,85 @@
           <priority>0.6</priority>
         </url>
               <url>
-                <loc>https://vmukti.com/blogs/how-generative-ai-is-revolutionizing-the-surveillance-industry</loc>
+                <loc>https://vmukti.com/blog/how-generative-ai-is-revolutionizing-the-surveillance-industry</loc>
+                <lastmod>2025-09-30</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.6</priority>
+              </url>
+              <url>
+                <loc>https://vmukti.com/blog/join-us-at-isc-west-2025</loc>
+                <lastmod>2025-09-30</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.6</priority>
+              </url>
+              <url>
+                <loc>https://vmukti.com/blog/guide-to-vms</loc>
                 <lastmod>2025-09-25</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>0.6</priority>
               </url>
               <url>
-                <loc>https://vmukti.com/blogs/guide-to-vms</loc>
+                <loc>https://vmukti.com/blog/advantages-of-remote-security-and-video-surveillance</loc>
                 <lastmod>2025-09-25</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>0.6</priority>
               </url>
               <url>
-                <loc>https://vmukti.com/blogs/join-us-at-isc-west-2025</loc>
+                <loc>https://vmukti.com/blog/best-live-streaming-services-provider-in-india</loc>
                 <lastmod>2025-09-25</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>0.6</priority>
               </url>
               <url>
-                <loc>https://vmukti.com/blogs/advantages-of-remote-security-and-video-surveillance</loc>
+                <loc>https://vmukti.com/blog/best-streaming-engine-for-webcast</loc>
                 <lastmod>2025-09-25</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>0.6</priority>
               </url>
               <url>
-                <loc>https://vmukti.com/blogs/best-live-streaming-services-provider-in-india</loc>
+                <loc>https://vmukti.com/blog/best-webcasting-solution-platform</loc>
                 <lastmod>2025-09-25</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>0.6</priority>
               </url>
               <url>
-                <loc>https://vmukti.com/blogs/best-streaming-engine-for-webcast</loc>
+                <loc>https://vmukti.com/blog/cloud-based-live-streaming-solutions</loc>
+                <lastmod>2025-09-25</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.6</priority>
+              </url>
+              <url>
+                <loc>https://vmukti.com/blog/edge-ai-camera-solutions-with-video-monitoring-technology</loc>
+                <lastmod>2025-09-25</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.6</priority>
+              </url>
+              <url>
+                <loc>https://vmukti.com/blog/emerging-trends-in-intelligent-video-surveillance</loc>
+                <lastmod>2025-09-25</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.6</priority>
+              </url>
+              <url>
+                <loc>https://vmukti.com/blog/latest-technology-of-cctv-surveillance-systems</loc>
+                <lastmod>2025-09-25</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.6</priority>
+              </url>
+              <url>
+                <loc>https://vmukti.com/blog/keep-home-safe-during-your-vacation</loc>
+                <lastmod>2025-09-25</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.6</priority>
+              </url>
+              <url>
+                <loc>https://vmukti.com/blog/everything-about-webcast</loc>
+                <lastmod>2025-09-25</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.6</priority>
+              </url>
+              <url>
+                <loc>https://vmukti.com/blog/empowering-surveillance-systems-with-vmukti-media-server</loc>
                 <lastmod>2025-09-25</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>0.6</priority>

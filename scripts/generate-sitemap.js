@@ -7,7 +7,7 @@ const API_URL = "https://vmukti.com/backend/api";
 const BASE_URL = "https://vmukti.com";
 
 const formatDate = (date) => {
-  return new Date(date).toISOString().split("T")[0]; // Only date
+  return new Date(date).toISOString().split("T")[0];
 };
 
 const getPageLastModified = (pagePath) => {
@@ -23,24 +23,41 @@ const getPageLastModified = (pagePath) => {
 };
 
 const fetchBlogPosts = async () => {
-  try {
-    const response = await axios.get(`${API_URL}/blogs`);
-    if (Array.isArray(response.data)) return response.data;
-    else if (Array.isArray(response.data.blogs)) return response.data.blogs;
-    else if (Array.isArray(response.data.data)) return response.data.data;
-    else {
-      console.error("Unexpected blog API format:", response.data);
-      return [];
+  // 1. Initial request to get pagination details
+  const initialResponse = await axios.get(`${API_URL}/blogs`, {
+    params: {
+      page: 1,
+      limit: 6 // You can keep the default limit for the initial check
     }
-  } catch (error) {
-    console.error("Error fetching blog posts from API:", error);
-    return [];
+  });
+
+  const pagination = initialResponse.data.pagination;
+  const totalPages = pagination.total;
+  const allBlogs = initialResponse.data.data;
+
+  // 2. If there is more than one page, fetch the rest
+  if (totalPages > 1) {
+    const promises = [];
+    for (let page = 2; page <= totalPages; page++) {
+      promises.push(axios.get(`${API_URL}/blogs`, { params: { page, limit: 6 } }));
+    }
+
+    // 3. Execute all promises concurrently
+    const responses = await Promise.all(promises);
+
+    // 4. Combine the results
+    responses.forEach(response => {
+      allBlogs.push(...response.data.data);
+    });
   }
+
+  return allBlogs;
 };
 
 const generateSitemap = async () => {
   try {
     const blogPosts = await fetchBlogPosts();
+    // console.log("Fetched blog posts:", blogPosts.length);
 
     let sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
@@ -241,7 +258,7 @@ const generateSitemap = async () => {
         loc: "/whoweare",
         priority: "0.8",
         changefreq: "weekly",
-        lastmod: getPageLastModified("WhoweAre"),
+        lastmod: getPageLastModified("Who"),
       },
       // {
       //   loc: "/whoweare/event-spotlight",
@@ -253,7 +270,7 @@ const generateSitemap = async () => {
         loc: "/blog",
         priority: "0.6",
         changefreq: "monthly",
-        lastmod: getPageLastModified("BlogsDashboard"),
+        lastmod: getPageLastModified("Blogs"),
       },
       // {
       //   loc: "/whoweare/careers",
@@ -290,7 +307,7 @@ const generateSitemap = async () => {
             const lastmod = formatDate(post.updatedAt.$date || post.updatedAt);
             sitemap += `
               <url>
-                <loc>${BASE_URL}/blogs/${post.metadata.urlWords}</loc>
+                <loc>${BASE_URL}/blog/${post.metadata.urlWords}</loc>
                 <lastmod>${lastmod}</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>0.6</priority>
