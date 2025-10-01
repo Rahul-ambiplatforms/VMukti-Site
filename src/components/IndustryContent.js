@@ -275,7 +275,6 @@ const IndustryContent = ({ props, content }) => {
         <meta name="twitter:description" content={content.metadescription} />
         {/* Use the same specific image for the Twitter card */}
         <meta name="twitter:image" content={content.ogImage} />
-        {/* Canonical Link - must point to the unique URL of this page */}
         <link
           rel="canonical"
           href={`https://vmukti.com/industry/${content.slug}/`}

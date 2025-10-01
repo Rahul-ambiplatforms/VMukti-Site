@@ -195,13 +195,13 @@ const CustomRadioDropdown = ({
                   option.toLowerCase().includes(search.toLowerCase())
                 )
                 .map((option, index, arr) => (
-                <React.Fragment key={option}>
-                  <Radio value={option} colorScheme="blue">
-                    {option}
-                  </Radio>
-                  {index < arr.length - 1 && <Divider />}
-                </React.Fragment>
-              ))}
+                  <React.Fragment key={option}>
+                    <Radio value={option} colorScheme="blue">
+                      {option}
+                    </Radio>
+                    {index < arr.length - 1 && <Divider />}
+                  </React.Fragment>
+                ))}
             </VStack>
           </RadioGroup>
         </VStack>
@@ -283,7 +283,9 @@ const PhoneInput = ({ value, onChange, isRequired, inputRef, hasError }) => {
                 if (!query) return true;
                 const isNumericQuery = /^\+?\d+$/.test(query);
                 if (isNumericQuery) {
-                  return country.dial_code.replace("+", "").includes(query.replace("+", ""));
+                  return country.dial_code
+                    .replace("+", "")
+                    .includes(query.replace("+", ""));
                 }
                 return (
                   country.name.toLowerCase().includes(query.toLowerCase()) ||
@@ -291,17 +293,17 @@ const PhoneInput = ({ value, onChange, isRequired, inputRef, hasError }) => {
                 );
               })
               .map((country) => (
-              <MenuItem
-                key={`${country.name}-${country.dial_code}`}
-                onClick={() => handleCodeChange(country.dial_code)}
-              >
-                <HStack>
-                  <Text>
-                    {country.name} ({country.code} {country.dial_code})
-                  </Text>
-                </HStack>
-              </MenuItem>
-            ))}
+                <MenuItem
+                  key={`${country.name}-${country.dial_code}`}
+                  onClick={() => handleCodeChange(country.dial_code)}
+                >
+                  <HStack>
+                    <Text>
+                      {country.name} ({country.code} {country.dial_code})
+                    </Text>
+                  </HStack>
+                </MenuItem>
+              ))}
           </MenuList>
         </Menu>
         <Input
@@ -403,18 +405,27 @@ const ContactUsForm = () => {
     e.preventDefault();
 
     const checks = [
-      { key: 'fullName', empty: !formData.fullName, ref: fullNameRef },
-      { key: 'email', empty: !formData.email, ref: emailRef },
-      { key: 'phone', empty: !formData.phone.number, ref: phoneRef },
-      { key: 'companyName', empty: !formData.companyName, ref: companyRef },
+      { key: "fullName", empty: !formData.fullName, ref: fullNameRef },
+      { key: "email", empty: !formData.email, ref: emailRef },
+      { key: "phone", empty: !formData.phone.number, ref: phoneRef },
+      { key: "companyName", empty: !formData.companyName, ref: companyRef },
     ];
     const firstInvalid = checks.find((c) => c.empty);
 
     if (firstInvalid) {
-      setErrors({ fullName: false, email: false, phone: false, companyName: false, [firstInvalid.key]: true });
+      setErrors({
+        fullName: false,
+        email: false,
+        phone: false,
+        companyName: false,
+        [firstInvalid.key]: true,
+      });
 
       if (firstInvalid.ref && firstInvalid.ref.current) {
-        firstInvalid.ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
+        firstInvalid.ref.current.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
         setTimeout(() => {
           firstInvalid.ref.current && firstInvalid.ref.current.focus();
         }, 250);
@@ -453,7 +464,6 @@ const ContactUsForm = () => {
       );
 
       if (response.ok) {
-
         // toast({
         //   title: "Message Sent!",
         //   description: "We'll get back to you soon.",
@@ -475,7 +485,6 @@ const ContactUsForm = () => {
           inquiryType: "",
           message: "",
         });
-        
       } else {
         const data = await response.json();
         throw new Error(data.error || "Failed to send message");
@@ -548,7 +557,26 @@ const ContactUsForm = () => {
               {leftPanelData.checklist.map((item, index) => (
                 <React.Fragment key={index}>
                   <HStack spacing={4} align="center">
-                    <Icon as={CheckCircleIcon} color="#48BB78" w={6} h={6} />
+                    {/* <Icon as={CheckCircleIcon} color="#48BB78" w={6} h={6} /> */}
+                    <Box>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M12 0.5C18.3513 0.5 23.5 5.64873 23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5Z"
+                          fill="#7AC000"
+                          stroke="white"
+                        />
+                        <path
+                          d="M16.7224 7.06296C16.5762 7.06855 16.4327 7.10376 16.3004 7.16636C16.1682 7.22897 16.05 7.31774 15.953 7.42728C14.1841 9.33881 12.5648 11.2122 10.8707 13.0743L8.87298 11.3489C8.76068 11.2504 8.62896 11.1767 8.48626 11.1325C8.34357 11.0882 8.19309 11.0744 8.04474 11.0921C7.8964 11.1099 7.75346 11.1586 7.62519 11.2352C7.49693 11.3118 7.38621 11.4146 7.30026 11.5368C7.11434 11.7905 7.02924 12.1044 7.06132 12.4174C7.09339 12.7304 7.24043 13.02 7.47397 13.2308L10.2692 15.6407C10.4798 15.8253 10.7548 15.919 11.0341 15.9013C11.3135 15.8836 11.5745 15.7559 11.76 15.5463C13.7704 13.375 15.5718 11.2418 17.537 9.11995C17.7501 8.88815 17.8694 8.58551 17.872 8.27068C17.8746 7.95585 17.7603 7.65121 17.5511 7.4159C17.4467 7.30068 17.3185 7.20937 17.1755 7.14844C17.0324 7.08751 16.8778 7.0584 16.7224 7.06296Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </Box>
                     <Text as="p">{item}</Text>
                   </HStack>
                   {index < leftPanelData.checklist.length - 1 && (
