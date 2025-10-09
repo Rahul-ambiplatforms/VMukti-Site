@@ -151,7 +151,7 @@ const dropdownItems = {
     // { label: 'Social Impact', path: '/whoweare/social-impact' },
     // { label: 'Achievements', path: '/whoweare/achievements' },
     // { label: "Blogs", path: "/blog" },
-    // { label: "Careers", path: "/about-us/careers" },
+    { label: "Careers", path: "/careers" },
     // { label: 'Help Desk', path: '/whoweare/help-desk' },
     // { label: 'Terms & Condition', path: '/whoweare/terms' },
     // { label: 'Warranty Policy', path: '/whoweare/warranty' },

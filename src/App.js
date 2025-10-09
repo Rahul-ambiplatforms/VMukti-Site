@@ -17,6 +17,7 @@ import SolutionDetails from "./components/SolutionDetails";
 import Thankyou from "./pages/ThankYou/Thankyou";
 import PrivacyPolicy from "./pages/Who/components/PrivacyPolicy";
 import TermsAndCondition from "./pages/Who/components/TermsAndCondition";
+import CareerHome from "./pages/career/CareerHome";
 // import Particles from '@tsparticles/react';
 // import ParticlesComponent from './components/Particles';
 // Lazy load components
@@ -70,8 +71,12 @@ function App() {
                     element={<EventSpotlight />}
                   /> */}
                   <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                  <Route path="/terms-and-conditions" element={<TermsAndCondition />} />
-                  {/* <Route path="/whoweare/careers" element={<VMuktiCareers />} /> */}
+                  <Route
+                    path="/terms-and-conditions"
+                    element={<TermsAndCondition />}
+                  />
+                  {/* <Route path="/careers" element={<VMuktiCareers />} /> */}
+                  <Route path="/careers" element={<CareerHome />} />
                   <Route path="/blog" element={<BlogsDashboard />} />
                   <Route path="/blog/:urlWords" element={<BlogsContents />} />
                   {/* <Route path="/serving" element={<OurServings />} /> */}
