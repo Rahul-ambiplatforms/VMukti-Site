@@ -239,7 +239,7 @@ const CareerOportunity = () => {
             align="center"
             p={6}
             borderBottomWidth="1px"
-            borderColor="gray.200"
+            borderColor="#3F77A5"
           >
             <Box>
               <Heading as="h2" fontSize="36px">

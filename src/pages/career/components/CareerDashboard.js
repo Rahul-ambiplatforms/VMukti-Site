@@ -26,13 +26,14 @@ const CareerDashboard = () => {
             fontWeight="600"
             mb={6}
             lineHeight={{base:"40px",md:"60px",lg:"81px"}}
-            w="70%"
+            w={{base:"100%",md:"70%"}}
           >
             Meet the team work behind our success
           </Heading>
           <Flex
             align="start"
             justify={{ base: "flex-start", lg: "flex-start" }}
+            direction={{base:"column",md:"row"}}
             gap="4"
           >
             <Box>
@@ -52,7 +53,7 @@ const CareerDashboard = () => {
             <Text
               fontSize={{ base: "14px", md: "16px" }}
               color="#444"
-              maxW="50%"
+              maxW={{base:"100%",md:"50%"}}
             >
               We are a company that values people as much as innovation. With a
               supportive culture, exciting challenges, and endless opportunities
