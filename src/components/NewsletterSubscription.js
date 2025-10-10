@@ -36,13 +36,13 @@ import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 const whoWeAreLinks = [
   { text: "About Us", path: "/about-us" },
   { text: "Terms & Condition", path: "/terms-and-conditions" },
-  // { text: "Trademark Policy" },
   { text: "Privacy Policy ", path: "/privacy-policy" },
+  { text: "Careers", path: "/careers" },
+  // { text: "Trademark Policy" },
   // { text: "Event Spotlight", path: "/whoweare/eventspotlight" },
   // { text: "Social Impact", path: "/whoweare/socialimpact" },
   // { text: "Achievements", path: "/whoweare/achievements" },
   // { text: "Blogs", path: "/whoweare/blogs" },
-  // { text: "Careers", path: "/whoweare/careers" },
   // { text: "Help Desk", path: "/whoweare/helpdesk" },
 ];
 

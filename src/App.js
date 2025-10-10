@@ -18,6 +18,7 @@ import Thankyou from "./pages/ThankYou/Thankyou";
 import PrivacyPolicy from "./pages/Who/components/PrivacyPolicy";
 import TermsAndCondition from "./pages/Who/components/TermsAndCondition";
 import CareerHome from "./pages/career/CareerHome";
+import Thankyoucareer from "./pages/ThankYou/Thankyoucareer";
 // import Particles from '@tsparticles/react';
 // import ParticlesComponent from './components/Particles';
 // Lazy load components
@@ -84,6 +85,7 @@ function App() {
                   <Route path="/contact-us" element={<ContactUs />} />
                   <Route path="/Ambicam" element={<AmbicamLandingPage />} />
                   <Route path="/thank-you" element={<Thankyou />} />
+                  <Route path="/thank-you-careers" element={<Thankyoucareer />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
