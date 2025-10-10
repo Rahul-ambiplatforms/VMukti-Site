@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import {
   Box,
   Flex,
@@ -23,6 +23,9 @@ import {
   InputRightElement,
   Textarea,
   useBreakpointValue,
+  Spinner,
+  Alert,
+  AlertIcon,
 } from "@chakra-ui/react";
 import {
   FiUser,
@@ -32,44 +35,16 @@ import {
   FiPaperclip,
 } from "react-icons/fi";
 import { Helmet } from "react-helmet";
+import { getJobs } from "../../../api/jobs";
 
-const jobData = [
-  {
-    id: 1,
-    title: "Jr. HR",
-    type: "Full Time",
-    location: "Ahmedabad,GJ",
-    experience: "0-2 years",
-    openings: 2,
-    keyResponsibilities:
-      "Source and engage top candidates, manage job postings, screen and interview applicants, coordinate interviews, support onboarding, maintain recruitment data, and collaborate with hiring managers to meet hiring needs.",
-  },
-  {
-    id: 2,
-    title: "Corporate Marketing & Sales",
-    type: "Full Time",
-    location: "Ahmedabad,GJ",
-    experience: "2-3 years",
-    openings: 1,
-    keySkills:
-      "2-3 years B2B/B2G sales experience, knowledge of CCTV/video surveillance/AI security solutions, strong communication, negotiation, analytical skills, and CRM proficiency.",
-    keyresponsibilities:
-      "Identify and pursue government, enterprise, and international sales opportunities; develop client relationships and strategic partnerships; drive sales strategy, market research, and pipeline management; represent the company at meetings, trade shows, and events.",
-  },
-  {
-    id: 3,
-    title: "Government Sales",
-    type: "Full Time",
-    location: "East Zone, South zone",
-    experience: "10-15 years",
-    openings: 2,
-    keySkills: "Technical/IT Sales experience",
-  },
-];
+// Static job data removed - now fetching from API
 
 const CareerOportunity = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedJob, setSelectedJob] = useState(null);
+  const [jobs, setJobs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [form, setForm] = useState({
     fullName: "",
     yearsOfExperience: "",
@@ -81,6 +56,28 @@ const CareerOportunity = () => {
   const [resumeName, setResumeName] = useState("");
   const [resumeFile, setResumeFile] = useState(null);
   const fileInputRef = useRef(null);
+
+  // Fetch jobs from API
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        setLoading(true);
+        const response = await getJobs(1, 50, 'OPEN'); // Get first 50 open jobs
+        if (response.status === 'success') {
+          setJobs(response.data.jobs || []);
+        } else {
+          setError('Failed to fetch jobs');
+        }
+      } catch (err) {
+        console.error('Error fetching jobs:', err);
+        setError('Failed to load job opportunities');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchJobs();
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -109,7 +106,7 @@ const CareerOportunity = () => {
     formData.append("about", form.about);
     formData.append("phone", form.phone);
     formData.append("currentCompany", form.currentCompany);
-    formData.append("jobTitle", selectedJob?.title || "");
+    formData.append("jobTitle", selectedJob?.jobRole || "");
     if (resumeFile) formData.append("resume", resumeFile);
 
     try {
@@ -164,14 +161,14 @@ const CareerOportunity = () => {
             fill="none"
           >
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M0 28.094C0 30.4956 0.147258 32.1022 2.06616 33.6841C2.44831 33.9991 2.96593 34.3144 3.43685 34.501C4.10194 34.7644 4.91057 34.9982 5.81055 34.9982H23.379C24.2392 34.9982 25.1024 34.7885 25.706 34.5226C26.3465 34.2404 26.9501 33.92 27.4649 33.4102C29.2553 31.6371 29.1896 30.0933 29.1896 27.8204C29.1896 26.4305 28.9389 24.9395 28.67 23.7599C28.1064 21.2872 26.8769 18.7052 24.4974 17.5417C23.6063 17.1059 22.5462 16.8828 21.465 16.8828C19.9592 16.8828 16.6484 21.5801 10.7314 18.5245C9.75665 18.021 8.6286 16.8828 7.51957 16.8828C3.47777 16.8828 1.19481 20.3272 0.506878 23.8838C0.377601 24.5519 0.238506 25.1943 0.156145 25.8573C0.0646902 26.5921 0 27.3096 0 28.0938L0 28.094Z"
               fill="#3F77A5"
             />
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M5.94552 7.99803C5.94552 9.07286 5.92857 9.54481 6.20407 10.6105C6.28323 10.9168 6.34926 11.0954 6.44867 11.3914L6.91577 12.4281C8.97986 16.2164 13.5545 17.9482 17.8117 16.1729C18.3641 15.9425 19.3054 15.3571 19.737 14.9536C20.7036 14.0498 21.4611 13.2963 22.0562 12.009C23.7751 8.29058 22.5861 4.05089 19.3742 1.61054C18.5697 0.999288 17.58 0.527959 16.6105 0.272608C16.0261 0.118633 15.4018 0.0272815 14.768 0H13.9573C12.8201 0.048776 11.6941 0.30392 10.7525 0.773699C8.08319 2.10574 5.94552 4.94229 5.94552 7.99813V7.99803Z"
               fill="#3F77A5"
             />
@@ -179,11 +176,11 @@ const CareerOportunity = () => {
         </Box>
         <Box>
           <Text fontWeight="bold" fontSize="16px" color="#3F77A5">
-            {job.title}
+            {job.jobRole}
           </Text>
           <Box w="16px" h="2.5px" borderRadius="full" bg="#3F77A5" />
           <Text fontSize="16px" fontWeight="500" color="#000" mt="5%">
-            {job.type}
+            {job.employmentType}
           </Text>
         </Box>
       </Flex>
@@ -249,7 +246,7 @@ const CareerOportunity = () => {
                 </Text>
               </Heading>
               <Text fontSize="16px" fontWeight="500" mt={4}>
-                {jobData.length} Jobs found
+                {loading ? "Loading..." : `${jobs.length} Jobs found`}
               </Text>
             </Box>
             {/* <Flex align="center">
@@ -273,11 +270,28 @@ const CareerOportunity = () => {
           </Flex> */}
           </Flex>
 
-          <VStack spacing={0} align="stretch">
-            {jobData.slice(0, 5).map((job) => (
-              <JobCard key={job.id} job={job} />
-            ))}
-          </VStack>
+          {loading ? (
+            <Flex justify="center" align="center" py={8}>
+              <Spinner size="xl" color="#3F77A5" />
+            </Flex>
+          ) : error ? (
+            <Alert status="error" borderRadius="md">
+              <AlertIcon />
+              {error}
+            </Alert>
+          ) : jobs.length === 0 ? (
+            <Box textAlign="center" py={8}>
+              <Text fontSize="lg" color="gray.500">
+                No job opportunities available at the moment.
+              </Text>
+            </Box>
+          ) : (
+            <VStack spacing={0} align="stretch">
+              {jobs.slice(0, 10).map((job) => (
+                <JobCard key={job._id} job={job} />
+              ))}
+            </VStack>
+          )}
         </Box>
 
         {/* Application Modal */}
@@ -316,7 +330,11 @@ const CareerOportunity = () => {
                     {/* We're always looking for high-talented candidates of all the
                   business types, use the form below and let us know about you
                   and contact back.  */}
-                    {selectedJob.keyResponsibilities || selectedJob.keySkills}
+                    {selectedJob.keyResponsibilities?.length > 0 
+                      ? selectedJob.keyResponsibilities.join(', ')
+                      : selectedJob.keySkills?.length > 0 
+                        ? selectedJob.keySkills.join(', ')
+                        : 'No additional details available.'}
                   </Text>
                 </Flex>
 
@@ -362,10 +380,10 @@ const CareerOportunity = () => {
                     </Box>
                     <Box>
                       <Text fontWeight="600" color="#3F77A5">
-                        {selectedJob.title}
+                        {selectedJob.jobRole}
                       </Text>
                       <Text fontSize="16px" color="#000">
-                        {selectedJob.type}
+                        {selectedJob.employmentType}
                       </Text>
                     </Box>
                   </Flex>
