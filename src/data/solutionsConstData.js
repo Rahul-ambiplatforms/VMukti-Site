@@ -1304,49 +1304,75 @@ export const solutionsData = {
 
     // Section 3: Features and Accordion from the third image
     features: {
-      heading: "Advanced Features of the Flying Squad Vehicle",
+      heading:
+        "Driving Efficiency Through Visual Intelligence and Seamless Control",
       description:
-        "The Flying Squad Vehicle is a regular vehicle enhanced with surveillance hardware, live GPS, cameras, and communication systems. It acts as a mobile unit that helps teams monitor areas while moving, record incidents on the go, and stay connected with the control room in real time.",
+        "With VMukti, your operations become sharper, faster, and effortlessly manageable powered by visual intelligence built for precision. We give you the control to streamline workflows, cut delays, and make smarter decisions in real time.",
       accordionItems: [
         {
-          title: "Live GPS Tracking",
+          title: "Crowd Control",
           content:
-            "Track every flying squad vehicle in motion with real-time GPS visibility. Our solution empowers teams with instant location updates and intelligent route adjustments for rapid and efficient deployment.",
+            "Part of our system cloud video surveillance monitors ongoing crowd density and movement to improve safety crowd control and space management in public and commercial areas.",
         },
         {
-          title: "Moving Vehicle Surveillance",
+          title: "Sack Loading and Unloading",
           content:
-            "Record crisp and stable video instantly, whether during patrols, high-speed pursuits, or emergency responses by Backed by our AI-driven engine, ensuring uninterrupted surveillance when it matters most.",
+            "It monitors sack loading and unloading in live tracking actions like lifting methods and time taken. Our cloudAI helps ensure proper procedures detecting unsafe practices and improve overall operational efficiency.",
         },
         {
-          title: "Geo-Fencing Alerts",
+          title: "ADAS (Advanced Driver Assistance System)",
           content:
-            "We offer geo-fenced zones and receive instant alerts the moment a flying squad vehicle crosses set boundaries, enhancing operational control and ensuring strict compliance.",
+            "Our CloudAI solution delivers ADAS to detect hazards like lane drifting, adaptive speed control, wrong-way driving alert, blind-spot, and 360° View. It provides live alerts to improve driver safety and reduce accidents.",
         },
         {
-          title: "Live Monitoring to Control Room",
+          title: "Face Recognition",
           content:
-            "Transmit live video streams straight from our proprietary system to the command center, empowering control rooms with immediate visual intelligence for rapid and informed response.",
+            "CloudAI for surveillance applies face recognition to verify identities and enable contactless access. It tracks attendance accurately, cutting manual effort and ensuring reliability.",
         },
         {
-          title: "Remote PTZ Control",
+          title: "Conveyor Belt",
           content:
-            "Remotely control pan, tilt and zoom functions to adjust focus and capture every angle. Developed in-house at VMukti’s system giving your team full visual command without needing to be physically present.",
+            "We Deliver belt activity detects slowdowns or obstructions and spot performance issues early to maintain smooth operations, improve safety and reduce unplanned downtime.",
         },
         {
-          title: "Recording and Playback Support",
+          title: "Person Counting and Time Analysis",
           content:
-            "Our system automatically captures and stores footage from moving flying squad vehicles, enabling seamless playback, review, and evidence collection, ensuring total operational transparency at every moment.",
+            "With our CloudAI for surveillance security monitors how many people pass through ticket scanning points and how long they take. It improves throughput and identifies congestion points.",
         },
         {
-          title: "User-specific Credentials",
+          title: "Vehicle Count & Detection",
           content:
-            "We provide every team member with secure role-based access tailored to their responsibilities. This safeguards system operations and live feeds, ensuring only authorized personnel can view or control critical functions.",
+            "Detects and counts vehicles instantly with our CloudAI solution to manage traffic flow, optimize site access, monitor parking, and secure entry and exit points.",
         },
         {
-          title: "Customization",
+          title: "Vacant Parking",
           content:
-            "Built to adapt our flying squad vehicle services, support personalized camera setups and control interfaces to meet distinct mission requirements, delivering precision and performance in dynamic field conditions.",
+            "Identifies vacant parking spots by continuously analyzing video feeds. Using our CloudAI surveillance, this feature optimizes parking space management efficiently.",
+        },
+        {
+          title: "Automatic Number Plate Recognition",
+          content:
+            "With our CloudAI cctv solutions offer number plate recognition to capture and identify vehicle plates for traffic and access control. It works accurately day and night across varied conditions.",
+        },
+        {
+          title: "Gender Detection",
+          content:
+            "Detects gender in real time by analyzing facial features from live video streams. Our CloudAI uses this to support access control and gather gender-based data to improve planning.",
+        },
+        {
+          title: "Human Activity Analysis",
+          content:
+            "Our CloudAI surveillance solution detects human activities such as a person standing, sitting, drowning, and falling. It enhances situational awareness and enables a quick response to potential risks.",
+        },
+        {
+          title: "Emotion Detection",
+          content:
+            "Reads facial cues to determine emotional states such as stress or anger using our CloudAI surveillance video analysis, helping assess a person's readiness and emotional stability.",
+        },
+        {
+          title: "Head Count",
+          content:
+            "We offer CloudAI video surveillance to accurately count individuals in real time. It supports effective crowd management and helps ensure safe occupancy levels.",
         },
       ],
     },
@@ -2022,7 +2048,6 @@ export const solutionsData = {
       buttonText: "Let's talk",
       href: "/contact-us",
     },
-
 
     // Section 7: Why Choose Us from the seventh image
     whyChooseUs: {

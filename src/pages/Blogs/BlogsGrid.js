@@ -92,13 +92,13 @@ export default function BlogsContent() {
         setTotalPages(response.pagination.total);
       }
     } catch (error) {
-      toast({
-        title: "Error fetching blogs",
-        description: error.message || "Unknown error",
-        status: "error",
-        duration: 5000,
-        isClosable: true,
-      });
+      // toast({
+      //   title: "Error fetching blogs",
+      //   description: error.message || "Unknown error",
+      //   status: "error",
+      //   duration: 5000,
+      //   isClosable: true,
+      // });
     } finally {
       setIsLoading(false);
     }

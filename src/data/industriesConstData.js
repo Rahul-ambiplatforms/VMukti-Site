@@ -3559,56 +3559,6 @@ const industriesData = {
           },
         ],
       },
-      {
-        id: "section4",
-        mainHeading:
-          "When Engagement Meets Safety through Video Surveillance in Sports and Entertainment",
-        bgColor: "blue",
-        features: [
-          {
-            id: "feat4-1",
-            title: "High Resolution Imaging",
-            description:
-              "We deliver precision-calibrated visuals with advanced resolution dynamics ensuring crystal clarity, seamless monitoring and uncompromised playback in high-security, high-demand environments.",
-            image: "../../assets/feat4_industry_sport_1.png",
-          },
-          {
-            id: "feat4-2",
-            title: "Improved Safety at Events",
-            description:
-              "VMukti transforms your live environments with real-time situational awareness fusing behavioral recognition and automated incident alerts to elevate safety and response precision during high-density gatherings.",
-            image: "../../assets/feat4_industry_sport_2.png",
-          },
-          {
-            id: "feat4-3",
-            title: "Reduces Human Mistakes",
-            description:
-              "Our platform eliminates manual lapses by fusing integration with our intelligent video workflows that helps in delivering precision, consistency and control in even the most fast-paced operational settings.",
-            image: "../../assets/feat4_industry_sport_3.png",
-          },
-          {
-            id: "feat4-4",
-            title: "Integration with Other Systems",
-            description:
-              "VMukti integrates our solution seamlessly with your infrastructure, syncing real-time data and intelligent systems to deliver a streamlined, future-ready command environment with zero operational friction.",
-            image: "../../assets/feat4_industry_sport_4.png",
-          },
-          {
-            id: "feat4-5",
-            title: "Event Incident Review",
-            description:
-              "Your footage isn’t just stored, it's searchable. With advanced event tagging, you pinpoint moments like object throws or pitch breaches instantly, streamlining reviews and accelerating response.",
-            image: "../../assets/feat4_industry_sport_5.png",
-          },
-          {
-            id: "feat4-6",
-            title: "Staff Activity Monitoring",
-            description:
-              "We equip you with real-time operational intelligence that streamlines workforce deployment, eliminates lag and accelerates on-ground responsiveness driving measurable efficiency at every layer.",
-            image: "../../assets/feat4_industry_sport_6.png",
-          },
-        ],
-      },
     ],
 
     keyBenefits: {

@@ -163,13 +163,13 @@ const BlogView = () => {
         setBlogs(response.data);
       }
     } catch (error) {
-      toast({
-        title: "Error fetching blogs",
-        description: error.message || "An unknown error occurred.",
-        status: "error",
-        duration: 5000,
-        isClosable: true,
-      });
+      // toast({
+      //   title: "Error fetching blogs",
+      //   description: error.message || "An unknown error occurred.",
+      //   status: "error",
+      //   duration: 5000,
+      //   isClosable: true,
+      // });
     } finally {
       setIsLoading(false);
     }

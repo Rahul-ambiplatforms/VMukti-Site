@@ -65,8 +65,8 @@ const CareerOportunity = () => {
           setError("Failed to fetch jobs");
         }
       } catch (err) {
-        console.error("Error fetching jobs:", err);
-        setError("Failed to load job opportunities");
+        // console.error("Error fetching jobs:", err);
+        // setError("Failed to load job opportunities");
       } finally {
         setLoading(false);
       }
