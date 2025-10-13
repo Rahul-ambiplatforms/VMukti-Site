@@ -166,10 +166,8 @@ const industriesData = {
     },
     achieved: "Success You Can Measure",
     cta: {
-      // Use an array for multi-line text. This is cleaner.
       textLines: [
         "Catch Defects in Real-Time – Book a Demo of Our Computer Vision Solution for Manufacturing",
-        // "Computer Vision Solution for Manufacturing",
       ],
       href: "/contact-us",
     },

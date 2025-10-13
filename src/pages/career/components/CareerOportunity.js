@@ -120,7 +120,7 @@ const CareerOportunity = () => {
       return; // Exit if validation fails
     }
 
-    setIsSubmitting(true); // <-- NEW: Start loading/submitting
+    setIsSubmitting(true);
 
     const formData = new FormData();
     formData.append("fullName", form.fullName);
@@ -134,7 +134,7 @@ const CareerOportunity = () => {
 
     try {
       const response = await fetch(
-        // "http://localhost:5000/api/send-email-carrer",
+        // "http://localhost:5000/api/send-email-carreer",
         "https://vmukti.com/backend/api/send-email-carreer",
         {
           method: "POST",
@@ -143,7 +143,6 @@ const CareerOportunity = () => {
       );
 
       if (!response.ok) {
-        // Attempt to get a specific error message from the response body
         let errorData = {};
         try {
           errorData = await response.json();
@@ -161,7 +160,7 @@ const CareerOportunity = () => {
         isClosable: true,
       });
 
-      navigate("/thank-you-careers");
+      navigate("/careers-thank-you");
       onClose();
 
       // Reset form on success
@@ -189,7 +188,7 @@ const CareerOportunity = () => {
       });
       console.error("Submission error:", err);
     } finally {
-      setIsSubmitting(false); // <-- NEW: Stop loading
+      setIsSubmitting(false); 
     }
   };
 
