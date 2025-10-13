@@ -36,35 +36,35 @@ const industriesData = {
             title: "Machine Operation Monitoring",
             description:
               "With our intelligent system, you continuously track machinery performance and behavioral patterns to detect anomalies early, prevent costly breakdowns and maximize your operational efficiency and uptime.",
-            image: "../../assets/feat1_industry_man_1.png",
+            image: "../../assets/feat1_industry_man_1.webp",
           },
           {
             id: "feat1-2",
             title: "Product Quality Screening",
             description:
               "We integrate enterprise-grade computer vision to inspect each unit in real time, so your production line delivers nothing short of excellence, with zero compromise on quality or brand trust.",
-            image: "../../assets/feat1_industry_man_2.png",
+            image: "../../assets/feat1_industry_man_2.webp",
           },
           {
             id: "feat1-3",
             title: "Inventory Management",
             description:
               "Take full control over goods flow using computer vision which helps you with real-time visibility, automated accuracy and zero guesswork, perfectly aligning your supply chain with data-driven execution and reduced waste.",
-            image: "../../assets/feat1_industry_man_3.png",
+            image: "../../assets/feat1_industry_man_3.webp",
           },
           {
             id: "feat1-4",
             title: "Human Behaviour Monitoring",
             description:
               "We deliver motion-intelligent surveillance that tracks subtle human activity patterns detecting deviations instantly and supporting precision-level safety across production environments where every action counts.",
-            image: "../../assets/feat1_industry_man_4.png",
+            image: "../../assets/feat1_industry_man_4.webp",
           },
           {
             id: "feat1-5",
             title: "Attendance Management",
             description:
               "Our facial recognition system captures attendance the moment anyone steps in, no cards, no codes just accurate face recognition. You get precision shift logs and zero tolerance for time theft, all without lifting a finger.",
-            image: "../../assets/feat1_industry_man_5.png",
+            image: "../../assets/feat1_industry_man_5.webp",
           },
         ],
       },
@@ -79,21 +79,21 @@ const industriesData = {
             title: "Early Fire Alerting",
             description:
               "We equip your infrastructure with intelligent visual systems that identify early fire or smoke indicators, triggering immediate alerts to help you prevent disruption, downtime and reputational risk before they ignite.",
-            image: "../../assets/feat2_industry_man_1.png",
+            image: "../../assets/feat2_industry_man_1.webp",
           },
           {
             id: "feat2-2",
             title: "Restricted Area Control",
             description:
               "Our advanced surveillance infrastructure secures your facility by instantly flagging unauthorized movement in high-risk zones ensuring compliance, visibility and complete operational command.",
-            image: "../../assets/feat2_industry_man_2.png",
+            image: "../../assets/feat2_industry_man_2.webp",
           },
           {
             id: "feat2-3",
             title: "Fall Incident Monitoring",
             description:
               "With VMukti, Sudden falls don’t go unnoticed. Our precision-trained intelligent vision models detect impact events instantly, delivering rapid alerts and accelerating response times in mission-critical areas.",
-            image: "../../assets/feat2_industry_man_3.png",
+            image: "../../assets/feat2_industry_man_3.webp",
           },
         ],
       },
@@ -108,14 +108,14 @@ const industriesData = {
             title: "Employee Safety Compliance",
             description:
               "Our system safeguards your compliance posture by continuously monitoring workforce adherence to safety protocols, ensuring regulatory alignment and helps in disciplining at every operational layer.",
-            image: "../../assets/feat3_industry_man_1.png",
+            image: "../../assets/feat3_industry_man_1.webp",
           },
           {
             id: "feat3-2",
             title: "PPE Kit Policy",
             description:
               "Using advanced visual recognition, our solution monitors PPE adherence scanning for helmets, gloves, and masks with precision. Instant alerts help you maintain regulatory compliance without manual checks.",
-            image: "../../assets/feat3_industry_man_2.png",
+            image: "../../assets/feat3_industry_man_2.webp",
           },
         ],
       },
@@ -328,35 +328,35 @@ const industriesData = {
             title: "Sack Loading & Unloading",
             description:
               "Manual sack handling creates inefficiencies you can’t afford from misaligned loads to costly delays. Our vision-driven oversight across bays and belts turns every movement into a measured advantage.",
-            image: "../../assets/feat1_industry_wh_1.png",
+            image: "../../assets/feat1_industry_wh_1.webp",
           },
           {
             id: "feat1-2",
             title: "Inventory Management",
             description:
               "Inventory discrepancies and blind spots aren’t just inefficiencies, they're liabilities. Our AI-driven visual system gives you full visibility over every pallet, SKU and movement. No guesswork, just control, precision and operational integrity.",
-            image: "../../assets/feat1_industry_wh_2.png",
+            image: "../../assets/feat1_industry_wh_2.webp",
           },
           {
             id: "feat1-3",
             title: "Attendance Management",
             description:
               "Leverage AI-driven facial authentication to streamline attendance tracking across multi-site operations. No manual inputs. Just secure, shift-wise workforce intelligence delivered with enterprise precision.",
-            image: "../../assets/feat1_industry_wh_3.png",
+            image: "../../assets/feat1_industry_wh_3.webp",
           },
           {
             id: "feat1-4",
             title: "Incident Detection",
             description:
               "Stay ahead of risk with real-time visual intelligence. Our system identifies behavioral anomalies like loitering or unsafe movement before they disrupt operations, ensuring your warehouse runs without any blind spots.",
-            image: "../../assets/feat1_industry_wh_4.png",
+            image: "../../assets/feat1_industry_wh_4.webp",
           },
           {
             id: "feat1-5",
             title: "Workers Monitoring",
             description:
               "Built for environments where milliseconds and millimeters matter. Our real-time visual intelligence flags any breaches and machine zone violations ensuring your workforce operates in sync with engineered safety protocols.",
-            image: "../../assets/feat1_industry_wh_5.png",
+            image: "../../assets/feat1_industry_wh_5.webp",
           },
         ],
       },
@@ -371,35 +371,35 @@ const industriesData = {
             title: "Fire Alerts",
             description:
               "Deploy high-sensitivity detection across heat-prone zones storage, electrical or dock areas triggering instant alerts through smart edge analytics to safeguard your infrastructure at full scale.",
-            image: "../../assets/feat2_industry_wh_1.png",
+            image: "../../assets/feat2_industry_wh_1.webp",
           },
           {
             id: "feat2-2",
             title: "Entry/Exit Monitoring",
             description:
               "Experience seamless control over every access point, high-fidelity tracking, intelligent timestamping and compliance-grade logging that delivers confidence, clarity and uninterrupted oversight.",
-            image: "../../assets/feat2_industry_wh_2.png",
+            image: "../../assets/feat2_industry_wh_2.webp",
           },
           {
             id: "feat2-3",
             title: "Restricted Zone Monitoring",
             description:
               "In sensitive zones, precision is everything, Our surveillance tech delivers uninterrupted control and immediate breach awareness because when compliance matters, so does absolute visibility.",
-            image: "../../assets/feat2_industry_wh_3.png",
+            image: "../../assets/feat2_industry_wh_3.webp",
           },
           {
             id: "feat2-4",
             title: "Security Breach Identification",
             description:
               "Advanced Surveillance architecture secures restricted zones with precision. High-frequency motion analysis and behavioral mapping detect threats instantly because reaction time shouldn't be a variable.",
-            image: "../../assets/feat2_industry_wh_4.png",
+            image: "../../assets/feat2_industry_wh_4.webp",
           },
           {
             id: "feat2-5",
             title: "Asset Tracking",
             description:
               "Deploy intelligent asset tracking that locks down movement anomalies across your floor. High-accuracy surveillance ensures zero compromise, nothing skips the checks and the blind spots are covered in real-time.",
-            image: "../../assets/feat2_industry_wh_5.png",
+            image: "../../assets/feat2_industry_wh_5.webp",
           },
         ],
       },
@@ -413,21 +413,21 @@ const industriesData = {
             title: "Gear Compliance",
             description:
               "Deploy high-fidelity video analytics to detect PPE lapses helmets, vests, boots, gloves in real time. Instant alerts keep your site aligned with compliance protocols, zero manual chasing required.",
-            image: "../../assets/feat3_industry_wh_1.png",
+            image: "../../assets/feat3_industry_wh_1.webp",
           },
           {
             id: "feat3-2",
             title: "Worker Safety Compliance",
             description:
               "VMukti's solution closes critical safety gaps in real time. With advanced behavior tracking, protocols stay enforced, teams stay protected and operations move forward without friction or downtime.",
-            image: "../../assets/feat3_industry_wh_2.png",
+            image: "../../assets/feat3_industry_wh_2.webp",
           },
           {
             id: "feat3-3",
             title: "Policy Enforcement",
             description:
               "We eliminate enforcement gaps with the help of high-precision detection that instantly flag and act on smoking violations across critical zones to maintain a safe, audit-ready and regulation-aligned facility.",
-            image: "../../assets/feat3_industry_wh_3.png",
+            image: "../../assets/feat3_industry_wh_3.webp",
           },
         ],
       },
@@ -683,42 +683,42 @@ const industriesData = {
             title: "Identity Verification",
             description:
               "We deliver advanced attendance automation, combining facial recognition with intelligent access protocols ensuring only authorized personnel enter high-security zones, without operational slowdowns.",
-            image: "../../assets/feat1_industry_heal_1.png",
+            image: "../../assets/feat1_industry_heal_1.webp",
           },
           {
             id: "feat1-2",
             title: "Staff Monitoring",
             description:
               "Our enterprise-grade surveillance gives you granular visibility into healthcare workflows optimizing staff performance, elevating accountability and driving precision across critical touchpoints.",
-            image: "../../assets/feat1_industry_heal_2.png",
+            image: "../../assets/feat1_industry_heal_2.webp",
           },
           {
             id: "feat1-3",
             title: "Crowd and Queue Management",
             description:
               "We equip your facility with precision video intelligence to monitor patient movement, manage density and streamline flow ensuring every second which enhances healthcare and operational excellence.",
-            image: "../../assets/feat1_industry_heal_3.png",
+            image: "../../assets/feat1_industry_heal_3.webp",
           },
           {
             id: "feat1-4",
             title: "Inventory and Asset Management",
             description:
               "Your critical medical assets deserve more than passive oversight. Our intelligent surveillance ecosystem safeguards equipment in real time minimizing loss, maximizing utilization and ensuring operational integrity.",
-            image: "../../assets/feat1_industry_heal_4.png",
+            image: "../../assets/feat1_industry_heal_4.webp",
           },
           {
             id: "feat1-5",
             title: "Vacant Parking System",
             description:
               "VMukti's solution helps with intelligent parking management which integrates with hospital infrastructure to deliver real-time slot detection streamlining emergency flow and reducing congestion with surgical accuracy.",
-            image: "../../assets/feat1_industry_heal_5.png",
+            image: "../../assets/feat1_industry_heal_5.webp",
           },
           {
             id: "feat1-6",
             title: "Staff Movement Tracking",
             description:
               "Our system continuously tracks postural shifts standing, sitting or falls within critical zones like ICUs or ERs, enabling your team to intervene instantly and uphold care standards without compromise.",
-            image: "../../assets/feat1_industry_heal_6.png",
+            image: "../../assets/feat1_industry_heal_6.webp",
           },
         ],
       },
@@ -733,28 +733,28 @@ const industriesData = {
             title: "Zone Breach Alert",
             description:
               "We secure your most sensitive spaces ICUs, pharmacies, ORs with surgical precision. Our system flags unauthorized access in real time, ensuring patient zones remain protected, compliant and under your command.",
-            image: "../../assets/feat2_industry_heal_1.png",
+            image: "../../assets/feat2_industry_heal_1.webp",
           },
           {
             id: "feat2-2",
             title: "Sensitive Area Control",
             description:
               "You control the healthcare space and we deliver vigilance. With computer vision securing restricted zones, unauthorized access is flagged in real time, keeping sensitive operations untouchable.",
-            image: "../../assets/feat2_industry_heal_2.png",
+            image: "../../assets/feat2_industry_heal_2.webp",
           },
           {
             id: "feat2-3",
             title: "Hazardous Event Alert",
             description:
               "VMukti equips your facility with precision-driven fire and smoke detection tailored for healthcare. Expect instant alerts, seamless integration and response time that protects what matters people and reputation.",
-            image: "../../assets/feat2_industry_heal_3.png",
+            image: "../../assets/feat2_industry_heal_3.webp",
           },
           {
             id: "feat2-4",
             title: "Fall Risk Monitoring",
             description:
               "Our computer vision system monitors patient behavior in real time detecting distress or falls instantly and triggering alerts, so your staff responds faster with zero compromise on patient safety.",
-            image: "../../assets/feat2_industry_heal_4.png",
+            image: "../../assets/feat2_industry_heal_4.webp",
           },
         ],
       },
@@ -769,21 +769,21 @@ const industriesData = {
             title: "PPE Adherence Check",
             description:
               "Our advanced visual intelligence platform enforces hygiene compliance, automates infection control protocols and delivers tamper-proof audit trails empowering your facility to meet the highest clinical standards effortlessly.",
-            image: "../../assets/feat3_industry_heal_1.png",
+            image: "../../assets/feat3_industry_heal_1.webp",
           },
           {
             id: "feat3-2",
             title: "Hand Wash Policy",
             description:
               "We bring intelligent oversight to your hygiene protocols. Through surgical-grade visual monitoring, you gain real-time enforcement of handwashing compliance minimizing infection risk and maximizing operational trust.",
-            image: "../../assets/feat3_industry_heal_2.png",
+            image: "../../assets/feat3_industry_heal_2.webp",
           },
           {
             id: "feat3-3",
             title: "No-Smoking Compliance",
             description:
               "We deploy real-time behavior analytics to flag smoking in restricted hospital zones. With VMukti, you gain precision alerts and automated compliance because risk has no place in your critical care spaces.",
-            image: "../../assets/feat3_industry_heal_3.png",
+            image: "../../assets/feat3_industry_heal_3.webp",
           },
         ],
       },
@@ -992,21 +992,21 @@ const industriesData = {
             title: "Asset Failure Alert",
             description:
               "We empower your operations with intelligent vision tech that spots abnormal equipment behavior before it impacts production, ensuring smooth workflows and safeguarding your most critical assets.",
-            image: "../../assets/feat1_industry_oilgas_1.png",
+            image: "../../assets/feat1_industry_oilgas_1.webp",
           },
           {
             id: "feat1-2",
             title: "Remote Site Surveillance",
             description:
               "Your asset protection gets a major upgrade with our visual intelligence, offering non-stop surveillance at unmanned locations minimizing risks, cutting costs and giving you unparalleled control from anywhere.",
-            image: "../../assets/feat1_industry_oilgas_2.png",
+            image: "../../assets/feat1_industry_oilgas_2.webp",
           },
           {
             id: "feat1-3",
             title: "Worker Movement Tracking",
             description:
               "With cutting-edge computer vision, we monitor critical behaviors like standing, sitting and falling in oil & gas environments delivering instant alerts that empower your team to act swiftly and prevent incidents.",
-            image: "../../assets/feat1_industry_oilgas_3.png",
+            image: "../../assets/feat1_industry_oilgas_3.webp",
           },
         ],
       },
@@ -1021,49 +1021,49 @@ const industriesData = {
             title: "Perimeter Breach Alert",
             description:
               "We deliver precision monitoring of safety boundaries with instant alerts the moment anyone crosses restricted zones, giving you unmatched control to prevent accidents and unauthorized access effortlessly.",
-            image: "../../assets/feat2_industry_oilgas_1.png",
+            image: "../../assets/feat2_industry_oilgas_1.webp",
           },
           {
             id: "feat2-2",
             title: "Foreign Object Monitoring",
             description:
               "We detect foreign or misplaced objects near vital infrastructure pipelines, control panels, fuel tanks ensuring you act fast and prevent costly disruptions before they happen. Precision matters.",
-            image: "../../assets/feat2_industry_oilgas_2.png",
+            image: "../../assets/feat2_industry_oilgas_2.webp",
           },
           {
             id: "feat2-3",
             title: "Personnel Presence Scan",
             description:
               "Your facility gains unmatched precision in detecting human presence in critical zones, ensuring strict safety compliance while minimizing manual checks and elevating operational excellence with advanced tech.",
-            image: "../../assets/feat2_industry_oilgas_3.png",
+            image: "../../assets/feat2_industry_oilgas_3.webp",
           },
           {
             id: "feat2-4",
             title: "Restricted Access Alert",
             description:
               "VMukti elevates your perimeter defense by delivering instant, AI-driven alerts on unauthorized entries in critical areas, ensuring your operations maintain uncompromised security and rapid incident response.",
-            image: "../../assets/feat2_industry_oilgas_4.png",
+            image: "../../assets/feat2_industry_oilgas_4.webp",
           },
           {
             id: "feat2-5",
             title: "Combustion Threat Alert",
             description:
               "With our advanced visual AI, fire and smoke are identified the moment they appear, giving your team real-time alerts to neutralize threats immediately and maintain uninterrupted, secure operations.",
-            image: "../../assets/feat2_industry_oilgas_5.png",
+            image: "../../assets/feat2_industry_oilgas_5.webp",
           },
           {
             id: "feat2-6",
             title: "Infrastructure Monitoring",
             description:
               "Our advanced surveillance solutions provide instant, precise monitoring across pipelines and refineries ensuring your operations remain secure, compliant and uninterrupted with intelligent, real-time threat detection.",
-            image: "../../assets/feat2_industry_oilgas_6.png",
+            image: "../../assets/feat2_industry_oilgas_6.webp",
           },
           {
             id: "feat2-7",
             title: "Emergency Response Management",
             description:
               "We empower your emergency teams with crystal-clear visual data from advanced surveillance, enabling rapid, informed decisions that minimize risks and safeguard operations in the most critical moments.",
-            image: "../../assets/feat2_industry_oilgas_7.png",
+            image: "../../assets/feat2_industry_oilgas_7.webp",
           },
         ],
       },
@@ -1078,14 +1078,14 @@ const industriesData = {
             title: "Hazardous Behavior Alert",
             description:
               "Your restricted zones are fortified with cutting-edge computer vision, delivering real-time analytics that enforce strict safety protocols and proactively minimize fire risks because precision saves lives.",
-            image: "../../assets/feat3_industry_oilgas_1.png",
+            image: "../../assets/feat3_industry_oilgas_1.webp",
           },
           {
             id: "feat3-2",
             title: "Safety Gear Compliance",
             description:
               "We instantly pinpoint personnel lacking essential PPE helmets, vests, gloves, boots, empowering you to enforce safety protocols rigorously and slash workplace injury risks with precision and authority.",
-            image: "../../assets/feat3_industry_oilgas_2.png",
+            image: "../../assets/feat3_industry_oilgas_2.webp",
           },
         ],
       },
@@ -1300,28 +1300,28 @@ const industriesData = {
             title: "Vehicle Tracking",
             description:
               "With precision GPS telemetry embedded into your election surveillance, you orchestrate movement with confidence ensuring route fidelity, faster threat response and airtight coordination at scale.",
-            image: "../../assets/feat1_industry_elec_1.png",
+            image: "../../assets/feat1_industry_elec_1.webp",
           },
           {
             id: "feat1-2",
             title: "Crowd Control",
             description:
               "We equip your election command with intelligent crowd analytics monitoring density, movement and flow in real time to preempt risk, optimize response and maintain absolute control at every polling site.",
-            image: "../../assets/feat1_industry_elec_2.png",
+            image: "../../assets/feat1_industry_elec_2.webp",
           },
           {
             id: "feat1-3",
             title: "Live Streaming",
             description:
               "Our advanced video solution delivers encrypted live streams of polling zones to ensure real-time transparency, instant anomaly alerts and centralized oversight for uncompromised electoral integrity.",
-            image: "../../assets/feat1_industry_elec_3.png",
+            image: "../../assets/feat1_industry_elec_3.webp",
           },
           {
             id: "feat1-4",
             title: "Pre Stampede Alert",
             description:
               "VMukti empowers your election command with intelligent crowd surveillance detecting pre-stampede patterns in real time to ensure voter safety, operational control, and an uninterrupted democratic process.",
-            image: "../../assets/feat1_industry_elec_4.png",
+            image: "../../assets/feat1_industry_elec_4.webp",
           },
         ],
       },
@@ -1336,28 +1336,28 @@ const industriesData = {
             title: "Weapons Identification",
             description:
               "Your election environments demand zero tolerance for threat. Our AI-powered video analytics detects visible weapons in real time ensuring proactive response and uncompromised voter and staff protection.",
-            image: "../../assets/feat2_industry_elec_1.png",
+            image: "../../assets/feat2_industry_elec_1.webp",
           },
           {
             id: "feat2-2",
             title: "Polling Station Security",
             description:
               "With precision-grade surveillance, you maintain full visual command over voting zones, detect anomalies instantly, enforce access protocols and safeguard electoral integrity without disruption.",
-            image: "../../assets/feat2_industry_elec_2.png",
+            image: "../../assets/feat2_industry_elec_2.webp",
           },
           {
             id: "feat2-3",
             title: "Voting Machine Monitoring",
             description:
               "We deploy precision-grade monitoring across every voting node, leveraging intelligent video analytics to detect anomalies instantly ensuring your elections stay protected, traceable and fully accountable.",
-            image: "../../assets/feat2_industry_elec_3.png",
+            image: "../../assets/feat2_industry_elec_3.webp",
           },
           {
             id: "feat2-4",
             title: "Multiple Area Monitoring",
             description:
               "Our integrated command and control centre fuses multi-source surveillance into a unified console delivering real-time election visibility, precision alerting and unmatched control during mission-critical moments.",
-            image: "../../assets/feat2_industry_elec_4.png",
+            image: "../../assets/feat2_industry_elec_4.webp",
           },
         ],
       },
@@ -1372,7 +1372,7 @@ const industriesData = {
             title: "No-Smoke Zone Monitoring",
             description:
               "VMukti’s system flags smoking violations instantly, helping you maintain compliance with electoral health mandates, safeguard public air quality and ensure a clean, disciplined and trusted polling environment.",
-            image: "../../assets/feat3_industry_elec_1.png",
+            image: "../../assets/feat3_industry_elec_1.webp",
           },
         ],
       },
@@ -1580,49 +1580,49 @@ const industriesData = {
             title: "FR Based Attendance",
             description:
               "Our intelligent attendance system eliminates manual tracking leveraging facial authentication to ensure secure, frictionless student check-ins and real-time visibility across your campus infrastructure.",
-            image: "../../assets/feat1_industry_edu_1.png",
+            image: "../../assets/feat1_industry_edu_1.webp",
           },
           {
             id: "feat1-2",
             title: "Exam Monitoring",
             description:
               "Designed for high-stakes assessments, our proctoring framework integrates real-time invigilation, behavioral analytics and secure access protocols to guarantee integrity without operational friction.",
-            image: "../../assets/feat1_industry_edu_2.png",
+            image: "../../assets/feat1_industry_edu_2.webp",
           },
           {
             id: "feat1-3",
             title: "Asset Loss Alert",
             description:
               "We deploy precision-driven object tracking to flag missing items instantly in educational premises, giving you full situational awareness and control over your environment without relying on human intervention.",
-            image: "../../assets/feat1_industry_edu_3.png",
+            image: "../../assets/feat1_industry_edu_3.webp",
           },
           {
             id: "feat1-4",
             title: "Queue Monitoring",
             description:
               "Our intelligent queue orchestration system optimizes student movement with real-time pathing and congestion prediction built for campuses that prioritize order, safety and operational excellence.",
-            image: "../../assets/feat1_industry_edu_4.png",
+            image: "../../assets/feat1_industry_edu_4.webp",
           },
           {
             id: "feat1-5",
             title: "Bus Monitoring System",
             description:
               "VMukti equips you with advanced education-grade transit monitoring offering live video, intelligent anomaly detection and GPS-integrated oversight to secure every journey with unmatched operational clarity.",
-            image: "../../assets/feat1_industry_edu_5.png",
+            image: "../../assets/feat1_industry_edu_5.webp",
           },
           {
             id: "feat1-6",
             title: "Student Behaviour Analysis",
             description:
               "Your campus deserves more than passive surveillance. With our intelligent visual systems, you gain actionable insight into student behavior elevating response, safeguarding culture and reinforcing a truly secure environment.",
-            image: "../../assets/feat1_industry_edu_6.png",
+            image: "../../assets/feat1_industry_edu_6.webp",
           },
           {
             id: "feat1-7",
             title: "Parking Slot Availability",
             description:
               "We deploy precision-guided visual analytics to identify available parking in real time minimizing idle loops and ensuring seamless space access for your staff and guests the moment they arrive.",
-            image: "../../assets/feat1_industry_edu_7.png",
+            image: "../../assets/feat1_industry_edu_7.webp",
           },
         ],
       },
@@ -1637,35 +1637,35 @@ const industriesData = {
             title: "Parking Violation Alert",
             description:
               "Gain precise oversight for your campus with smart vehicle detection that alerts you to violations in real time ensuring your traffic flows seamlessly and your access parking zones stay strictly enforced.",
-            image: "../../assets/feat2_industry_edu_1.png",
+            image: "../../assets/feat2_industry_edu_1.webp",
           },
           {
             id: "feat2-2",
             title: "Restricted Zone Breach",
             description:
               "Our system leverages behavioral mapping and line cross detection to detect unauthorized movement across restricted areas delivering real-time visibility where your student safety begins.",
-            image: "../../assets/feat2_industry_edu_2.png",
+            image: "../../assets/feat2_industry_edu_2.webp",
           },
           {
             id: "feat2-3",
             title: "Weapon Threat Alert",
             description:
               "VMukti's advanced weapon detection to help you identify concealed threats like knives and guns in real time so your campus stays protected, your response is immediate, and escalation never occurs.",
-            image: "../../assets/feat2_industry_edu_3.png",
+            image: "../../assets/feat2_industry_edu_3.webp",
           },
           {
             id: "feat2-4",
             title: "Sensitive Zone Monitoring",
             description:
               "We secure your critical zones, electrical bays, storage units and high-risk areas by controlling access with precision authentication, protecting infrastructure and operational integrity without compromise.",
-            image: "../../assets/feat2_industry_edu_4.png",
+            image: "../../assets/feat2_industry_edu_4.webp",
           },
           {
             id: "feat2-5",
             title: "Early Fire Monitoring",
             description:
               "Our system delivers early fire and smoke detection using advanced vision intelligence enabling you to act before danger escalates and protecting both critical infrastructure and operational continuity.",
-            image: "../../assets/feat2_industry_edu_5.png",
+            image: "../../assets/feat2_industry_edu_5.webp",
           },
         ],
       },
@@ -1679,14 +1679,14 @@ const industriesData = {
             title: "Hand Wash Compliance",
             description:
               "We equip your campus with intelligent hygiene compliance tech that detects handwashing lapses in real time ensuring kitchen zones remain safe, audit-ready and aligned with institutional health mandates.",
-            image: "../../assets/feat3_industry_edu_1.png",
+            image: "../../assets/feat3_industry_edu_1.webp",
           },
           {
             id: "feat3-2",
             title: "On-Campus Smoking Alert",
             description:
               "Your spaces stay uncompromised. Our real-time smoke detection pinpoints violations instantly across corridors and open zones empowering your team to act fast, enforce rules and maintain control at scale.",
-            image: "../../assets/feat3_industry_edu_2.png",
+            image: "../../assets/feat3_industry_edu_2.webp",
           },
         ],
       },
@@ -1899,49 +1899,49 @@ const industriesData = {
             title: "Number Plate Recognition",
             description:
               "Take control of your perimeter with instant vehicle plate capture seamlessly enforcing access, streamlining monitoring and delivering precise audit trails. Experience security that moves at your pace, with unmatched accuracy.",
-            image: "../../assets/feat1_industry_trans_1.png",
+            image: "../../assets/feat1_industry_trans_1.webp",
           },
           {
             id: "feat1-2",
             title: "Driver Monitoring System",
             description:
               "With our advanced video analytics, you gain unmatched visibility into driver behavior detecting phone use, fatigue, smoking and seatbelt violations so you can proactively ensure compliance and protect your fleet with precision and confidence.",
-            image: "../../assets/feat1_industry_trans_2.png",
+            image: "../../assets/feat1_industry_trans_2.webp",
           },
           {
             id: "feat1-3",
             title: "Vacant Parking",
             description:
               "Your parking assets can be maximized with real-time vacancy tracking that delivers instant insights and flawless space utilization. Cut search times and elevate management because your operation deserves precision at every turn.",
-            image: "../../assets/feat1_industry_trans_3.png",
+            image: "../../assets/feat1_industry_trans_3.webp",
           },
           {
             id: "feat1-4",
             title: "Maintenance Insights",
             description:
               "VMukti deploys cutting-edge video analytics to spot road surface damage, potholes and parking lot wear instantly, empowering you to take swift preventive maintenance actions and safeguard infrastructure longevity.",
-            image: "../../assets/feat1_industry_trans_4.png",
+            image: "../../assets/feat1_industry_trans_4.webp",
           },
           {
             id: "feat1-5",
             title: "Pedestrian Traffic Statistics",
             description:
               "Our advanced analytics decode foot traffic patterns in real time, enabling you to proactively manage congestion, elevate safety standards and design spaces that reflect cutting-edge operational intelligence and refined user experience.",
-            image: "../../assets/feat1_industry_trans_5.png",
+            image: "../../assets/feat1_industry_trans_5.webp",
           },
           {
             id: "feat1-6",
             title: "Signal Monitoring",
             description:
               "With advanced visual intelligence traffic signal monitoring, you gain instant control to prevent delays, reduce congestion and maintain flawless light operation ensuring seamless flow and strict regulatory compliance.",
-            image: "../../assets/feat1_industry_trans_6.png",
+            image: "../../assets/feat1_industry_trans_6.webp",
           },
           {
             id: "feat1-7",
             title: "Automatic Driver Analysis System",
             description:
               "VMukti delivers precision driver assist with real-time obstacle detection, intelligent distance mapping and rear-side spatial awareness designed to elevate control and ensure flawless maneuvering.",
-            image: "../../assets/feat1_industry_trans_7.png",
+            image: "../../assets/feat1_industry_trans_7.webp",
           },
         ],
       },
@@ -1956,21 +1956,21 @@ const industriesData = {
             title: "Unauthorized Area Alerts",
             description:
               "We secure your high-risk transit zones with visual intelligent monitoring that flags unauthorized access in real time, protecting infrastructure, enforcing no-parking, and maintaining operational integrity.",
-            image: "../../assets/feat2_industry_trans_1.png",
+            image: "../../assets/feat2_industry_trans_1.webp",
           },
           {
             id: "feat2-2",
             title: "Passenger Monitoring",
             description:
               "Your fleet deserves more than basic oversight. Our enterprise-grade vision surveillance architecture delivers live behavioral analytics across every route ensuring secure, seamless journeys at scale.",
-            image: "../../assets/feat2_industry_trans_2.png",
+            image: "../../assets/feat2_industry_trans_2.webp",
           },
           {
             id: "feat2-3",
             title: "Early Fire Monitoring",
             description:
               "VMukti equips your transport infrastructure with intelligent fire detection, using real-time video analytics to neutralize risks, reduce downtime and uphold passenger safety without compromise.",
-            image: "../../assets/feat2_industry_trans_3.png",
+            image: "../../assets/feat2_industry_trans_3.webp",
           },
         ],
       },
@@ -1985,7 +1985,7 @@ const industriesData = {
             title: "Safety Compliance",
             description:
               "Our intelligent vision platform flags missing helmets, jackets and seatbelts in real time enforcing compliance, mitigating liability and keeping your mobile workforce fully protected at every checkpoint.",
-            image: "../../assets/feat3_industry_trans_1.png",
+            image: "../../assets/feat3_industry_trans_1.webp",
           },
         ],
       },
@@ -2191,49 +2191,49 @@ const industriesData = {
             title: "Crowd Surge Alert",
             description:
               "We deliver cutting-edge visual intelligence that commands control over large crowds and public events ensuring seamless entry management, smooth flow and instant alerts that keep your city safe and efficient.",
-            image: "../../assets/feat1_industry_smcity_1.png",
+            image: "../../assets/feat1_industry_smcity_1.webp",
           },
           {
             id: "feat1-2",
             title: "Passenger Platform Monitoring",
             description:
               "VMukti delivers precision crowd intelligence, tracking every passenger’s move across transit hubs to instantly flag anomalies and optimize flow empowering your team to maintain seamless safety with unmatched situational control.",
-            image: "../../assets/feat1_industry_smcity_2.png",
+            image: "../../assets/feat1_industry_smcity_2.webp",
           },
           {
             id: "feat1-3",
             title: "Ticket Zone Monitoring",
             description:
               "Our advanced system precisely tracks passenger counts and analyzes wait times at ticket scans, empowering you to streamline flow, reduce congestion and deliver a seamless, high-end travel experience your customers expect.",
-            image: "../../assets/feat1_industry_smcity_3.png",
+            image: "../../assets/feat1_industry_smcity_3.webp",
           },
           {
             id: "feat1-4",
             title: "Smart Parking Solutions",
             description:
               "With advanced visual intelligence, we deliver real-time parking availability directly to drivers’ screens, slashing search times and easing city traffic while elevating urban mobility with unmatched precision and speed.",
-            image: "../../assets/feat1_industry_smcity_4.png",
+            image: "../../assets/feat1_industry_smcity_4.webp",
           },
           {
             id: "feat1-5",
             title: "Unauthorized Parking",
             description:
               "We utilize advanced spatial analytics to monitor and prevent unauthorized parking in restricted areas, ensuring your critical zones remain accessible and your traffic flows seamlessly without compromise.",
-            image: "../../assets/feat1_industry_smcity_5.png",
+            image: "../../assets/feat1_industry_smcity_5.webp",
           },
           {
             id: "feat1-6",
             title: "Automatic Number Plate Recognition",
             description:
               "Your city demands flawless traffic enforcement. Our cutting-edge vehicle plate capture technology delivers pinpoint accuracy, instantly flagging violations thus helping you in keeping your roads safe.",
-            image: "../../assets/feat1_industry_smcity_6.png",
+            image: "../../assets/feat1_industry_smcity_6.webp",
           },
           {
             id: "feat1-7",
             title: "Campus Monitoring",
             description:
               "VMukti elevates campus safety with precision analytics that monitor pedestrian flow, detect traffic infractions and instantly alert your security team ensuring flawless protection around schools and educational institutions.",
-            image: "../../assets/feat1_industry_smcity_7.png",
+            image: "../../assets/feat1_industry_smcity_7.webp",
           },
         ],
       },
@@ -2248,56 +2248,56 @@ const industriesData = {
             title: "Fall Incident Monitoring",
             description:
               "Our intelligent fall detection system leverages edge analytics to identify human falls in real time across telecom, parks and public infrastructure activating rapid response and elevating your city’s situational control.",
-            image: "../../assets/feat2_industry_smcity_1.png",
+            image: "../../assets/feat2_industry_smcity_1.webp",
           },
           {
             id: "feat2-2",
             title: "Emergency Response",
             description:
               "With our edge-optimized surveillance mesh, incidents are detected in milliseconds triggering AI-powered SOS dispatch protocols for accelerated response and seamless coordination across emergency command systems.",
-            image: "../../assets/feat2_industry_smcity_2.png",
+            image: "../../assets/feat2_industry_smcity_2.webp",
           },
           {
             id: "feat2-3",
             title: "Tower Monitoring",
             description:
               "Your infrastructure deserves uncompromised oversight. Our intelligent video layer delivers continuous tower surveillance, predictive alerts and operational assurance powered by precision-grade analytics at the edge.",
-            image: "../../assets/feat2_industry_smcity_3.png",
+            image: "../../assets/feat2_industry_smcity_3.webp",
           },
           {
             id: "feat2-4",
             title: "Pool Safety Alert",
             description:
               "VMukti delivers high-precision drowning detection built for smart cities giving your teams real-time ponds, lakes, rivers surveillance for faster emergency coordination and unmatched safety assurance in high-density public zones.",
-            image: "../../assets/feat2_industry_smcity_4.png",
+            image: "../../assets/feat2_industry_smcity_4.webp",
           },
           {
             id: "feat2-5",
             title: "Fire Hazard Monitoring",
             description:
               "Our AI-driven fire detection instantly flags abnormal heat patterns and ignition points, enabling you to respond proactively, prevent costly damage and maintain compliance across mission-critical operations.",
-            image: "../../assets/feat2_industry_smcity_5.png",
+            image: "../../assets/feat2_industry_smcity_5.webp",
           },
           {
             id: "feat2-6",
             title: "Access Violation Alert",
             description:
               "VMukti enables real-time intrusion detection across critical sites from metro rails to substations by triggering instant alerts on perimeter breaches, ensuring public safety and uninterrupted operations.",
-            image: "../../assets/feat2_industry_smcity_6.png",
+            image: "../../assets/feat2_industry_smcity_6.webp",
           },
           {
             id: "feat2-7",
             title: "Threat Weapon Identification",
             description:
               "Your operations deserve intelligent foresight, not delayed reactions. With real-time weapon detection, we surface potential threats instantly arming your response teams with precision, speed and control when it matters most.",
-            image: "../../assets/feat2_industry_smcity_7.png",
+            image: "../../assets/feat2_industry_smcity_7.webp",
           },
           {
             id: "feat2-8",
             title: "Suspect Recognition",
             description:
               "With advanced facial detection, you detect flagged individuals in real time, push encrypted alerts across command units and enable actionable enforcement to protect high-traffic environments seamlessly.",
-            image: "../../assets/feat2_industry_smcity_8.png",
+            image: "../../assets/feat2_industry_smcity_8.webp",
           },
         ],
       },
@@ -2312,7 +2312,7 @@ const industriesData = {
             title: "No-Smoking Enforcement",
             description:
               "Our AI-powered city surveillance delivers precision smoking detection using real-time visual analytics empowering you to enforce compliance, reduce violations and uphold clean-air standards effortlessly.",
-            image: "../../assets/feat3_industry_smcity_1.png",
+            image: "../../assets/feat3_industry_smcity_1.webp",
           },
         ],
       },
@@ -2522,35 +2522,35 @@ const industriesData = {
             title: "Workforce Motion Tracking",
             description:
               "We deploy advanced computer vision to monitor every movement and anomaly in your pharma environment, ensuring uninterrupted operations and safeguarding compliance with precision for your industry.",
-            image: "../../assets/feat1_industry_pharma_1.png",
+            image: "../../assets/feat1_industry_pharma_1.webp",
           },
           {
             id: "feat1-2",
             title: "Identity Verification System",
             description:
               "Our cutting-edge facial recognition tech elevates your security framework, delivering real-time personnel verification and precise audit trails ensuring only authorized access while streamlining compliance.",
-            image: "../../assets/feat1_industry_pharma_2.png",
+            image: "../../assets/feat1_industry_pharma_2.webp",
           },
           {
             id: "feat1-3",
             title: "Zone Breach Alert",
             description:
               "With our analytics, we empower you to enforce strict cleanroom boundaries seamlessly triggering immediate alerts when limits are crossed to safeguard compliance and uphold your facility’s highest standards.",
-            image: "../../assets/feat1_industry_pharma_3.png",
+            image: "../../assets/feat1_industry_pharma_3.webp",
           },
           {
             id: "feat1-4",
             title: "Defect Scan Automation",
             description:
               "Your commitment to excellence deserves precision. With our intelligent visual inspection, every package, label and seal undergoes flawless scrutiny so you deliver uncompromised quality and build trust at every shipment.",
-            image: "../../assets/feat1_industry_pharma_4.png",
+            image: "../../assets/feat1_industry_pharma_4.webp",
           },
           {
             id: "feat1-5",
             title: "Asset Absence Alert",
             description:
               "VMukti empowers your healthcare teams with real-time visual precision, identifying misplaced items in critical areas, safeguarding product integrity and streamlining compliance with unmatched accuracy and reliability.",
-            image: "../../assets/feat1_industry_pharma_5.png",
+            image: "../../assets/feat1_industry_pharma_5.webp",
           },
         ],
       },
@@ -2565,28 +2565,28 @@ const industriesData = {
             title: "Fire Hazard Alert",
             description:
               "VMukti deploys cutting-edge AI-powered video analytics to instantly detect fire and smoke, delivering proactive alerts that let you act before hazards escalate because in safety, every second and every detail counts.",
-            image: "../../assets/feat2_industry_pharma_1.png",
+            image: "../../assets/feat2_industry_pharma_1.webp",
           },
           {
             id: "feat2-2",
             title: "Access Violation",
             description:
               "Your facility deserves uncompromised protection, our advanced surveillance architecture identifies and flags unauthorized access instantly, reinforcing perimeter integrity and traceability with zero operational friction.",
-            image: "../../assets/feat2_industry_pharma_2.png",
+            image: "../../assets/feat2_industry_pharma_2.webp",
           },
           {
             id: "feat2-3",
             title: "Entry/Exit Monitoring",
             description:
               "Our advanced solution ensures complete oversight of entry and exit by precisely tracking personnel movement and delivering real-time alerts, empowering you to maintain airtight security and eliminate vulnerabilities effortlessly.",
-            image: "../../assets/feat2_industry_pharma_3.png",
+            image: "../../assets/feat2_industry_pharma_3.webp",
           },
           {
             id: "feat2-4",
             title: "Fall Risk Monitoring",
             description:
               "With real-time AI-driven fall detection, you gain proactive oversight that sends immediate alerts ensuring swift medical intervention. Perfectly engineered for sensitive spaces with its safety redefined at your command.",
-            image: "../../assets/feat2_industry_pharma_4.png",
+            image: "../../assets/feat2_industry_pharma_4.webp",
           },
         ],
       },
@@ -2601,14 +2601,14 @@ const industriesData = {
             title: "PPE Presence Check",
             description:
               "We equip your facility with real-time visual analytics that ensure strict adherence to medical-grade dress codes, actively reducing exposure risks and safeguarding every layer of your pharmaceutical workflow.",
-            image: "../../assets/feat3_industry_pharma_1.png",
+            image: "../../assets/feat3_industry_pharma_1.webp",
           },
           {
             id: "feat3-2",
             title: "Hygiene Compliance",
             description:
               "Our advanced computer vision suite monitors hygiene compliance in real time flagging missed handwashing moments to help you enforce SOPs, eliminate risk vectors and meet global pharma-grade cleanliness mandates.",
-            image: "../../assets/feat3_industry_pharma_2.png",
+            image: "../../assets/feat3_industry_pharma_2.webp",
           },
         ],
       },
@@ -2816,49 +2816,49 @@ const industriesData = {
             title: "Smart Inventory Management",
             description:
               "VMukti equips your operations with precision-grade visual solutions that monitors stock in real time eliminating overstock, avoiding shortages, and delivering flawless inventory accuracy at enterprise scale.",
-            image: "../../assets/feat1_industry_logistics_1.png",
+            image: "../../assets/feat1_industry_logistics_1.webp",
           },
           {
             id: "feat1-2",
             title: "Package Inspection and Quality Control",
             description:
               "We deploy vision-powered quality control to instantly flag mispackaged or damaged goods, minimizing downstream errors and ensuring every unit that moves out meets your brand’s precision standard.",
-            image: "../../assets/feat1_industry_logistics_2.png",
+            image: "../../assets/feat1_industry_logistics_2.webp",
           },
           {
             id: "feat1-3",
             title: "Auto Attendance System",
             description:
               "You get accurate, real-time attendance tracking using VMukti's facial recognition, it needs no badges, no scanner. Just seamless planning across your logistics hubs where time means money.",
-            image: "../../assets/feat1_industry_logistics_3.png",
+            image: "../../assets/feat1_industry_logistics_3.webp",
           },
           {
             id: "feat1-4",
             title: "Route and Fleet Optimization",
             description:
               "Our logistics visual solution suite leverages real-time traffic intelligence and delivery pattern analysis to optimize routing minimizing delays, fuel waste and missed SLAs with precision at scale.",
-            image: "../../assets/feat1_industry_logistics_4.png",
+            image: "../../assets/feat1_industry_logistics_4.webp",
           },
           {
             id: "feat1-5",
             title: "Smart Label Validation",
             description:
               "We bring precision to your logistics flow helping in detection of unreadable, missing or duplicate labels in real time. No manual scanning needed, just uninterrupted accuracy from dock to doorstep.",
-            image: "../../assets/feat1_industry_logistics_5.png",
+            image: "../../assets/feat1_industry_logistics_5.webp",
           },
           {
             id: "feat1-6",
             title: "Sack Loading & Unloading",
             description:
               "Your uptime is too valuable to risk. Our system monitors every corner with visual intelligence proactively detecting unsafe actions to protect assets, people and performance without slowing you down.",
-            image: "../../assets/feat1_industry_logistics_6.png",
+            image: "../../assets/feat1_industry_logistics_6.webp",
           },
           {
             id: "feat1-7",
             title: "Vacant Parking",
             description:
               "Using VMukti's computer vision solution that pinpoints vacant zones instantly, streamlining vehicle movement and reducing choke points engineered for seamless throughput in logistics environments.",
-            image: "../../assets/feat1_industry_logistics_7.png",
+            image: "../../assets/feat1_industry_logistics_7.webp",
           },
         ],
       },
@@ -2873,28 +2873,28 @@ const industriesData = {
             title: "Fire Alerts",
             description:
               "We deploy real-time visual threat detection that identifies heat signatures and smoke trails with extreme precision. Automated alerts help neutralize fire risk across high-density and high-value operational zones.",
-            image: "../../assets/feat2_industry_logistics_1.png",
+            image: "../../assets/feat2_industry_logistics_1.webp",
           },
           {
             id: "feat2-2",
             title: "Unauthorized Monitoring",
             description:
               "Our intelligent surveillance ecosystem actively flags unauthorized movement across restricted zones triggering instant alerts that let your team intervene before a breach disrupts safety, assets or operational flow.",
-            image: "../../assets/feat2_industry_logistics_2.png",
+            image: "../../assets/feat2_industry_logistics_2.webp",
           },
           {
             id: "feat2-3",
             title: "Employee Safety Monitoring",
             description:
               "Leverage advanced vision systems that monitor employee dynamics across your facility, ensuring compliance, mitigating accidents that help to prevent injuries and maintaining operational integrity 24/7.",
-            image: "../../assets/feat2_industry_logistics_3.png",
+            image: "../../assets/feat2_industry_logistics_3.webp",
           },
           {
             id: "feat2-4",
             title: "Driver Management System",
             description:
               "VMukti’s solution integrates real-time behavioral analytics into your logistics stream detecting drowsiness, device usage and safety violations to enforce compliance and minimize incident risk.",
-            image: "../../assets/feat2_industry_logistics_4.png",
+            image: "../../assets/feat2_industry_logistics_4.webp",
           },
         ],
       },
@@ -2909,14 +2909,14 @@ const industriesData = {
             title: "Smoking Prevention",
             description:
               "Our system identifies smoking violations in restricted zones with precision, helping you enforce zero-tolerance policies and preserve controlled, compliant environments across your logistics operations.",
-            image: "../../assets/feat3_industry_logistics_1.png",
+            image: "../../assets/feat3_industry_logistics_1.webp",
           },
           {
             id: "feat3-2",
             title: "PPE Kit Policy",
             description:
               "Our system enforces safety with real-time PPE kit detection automatically identifying non-compliance on the floor and triggering alerts before risk turns into liability. Stay protected, stay audit-ready.",
-            image: "../../assets/feat3_industry_logistics_2.png",
+            image: "../../assets/feat3_industry_logistics_2.webp",
           },
         ],
       },
@@ -3124,56 +3124,56 @@ const industriesData = {
             title: "Person Counting and Time Analysis",
             description:
               "VMukti's intelligent vision system analyzes customer volumes and service durations in real time empowering your branch to reduce congestion waiting time and elevate the customer experience effortlessly.",
-            image: "../../assets/feat1_industry_banking_1.png",
+            image: "../../assets/feat1_industry_banking_1.webp",
           },
           {
             id: "feat1-2",
             title: "Crowd and Queue Management",
             description:
               "Our intelligent surveillance framework gives you command over branch activity, monitor foot traffic, detect crowding and optimize customer flow with zero disruption, even during peak banking hours.",
-            image: "../../assets/feat1_industry_banking_2.png",
+            image: "../../assets/feat1_industry_banking_2.webp",
           },
           {
             id: "feat1-3",
             title: "Staff Monitoring",
             description:
               "We equip your banking floor with an intelligent visual solution that oversights tracking staff conduct in real time, enforcing operational standards and eliminating compliance blind spots with absolute precision.",
-            image: "../../assets/feat1_industry_banking_3.png",
+            image: "../../assets/feat1_industry_banking_3.webp",
           },
           {
             id: "feat1-4",
             title: "Facial Recognition",
             description:
               "You get precision attendance without the paperwork. Our facial recognition ensures verified entries, zero spoofing and streamlined access built for environments where accuracy is non-negotiable.",
-            image: "../../assets/feat1_industry_banking_4.png",
+            image: "../../assets/feat1_industry_banking_4.webp",
           },
           {
             id: "feat1-5",
             title: "Customer Behavior Monitoring",
             description:
               "VMukti’s intelligent bank surveillance suite delivers real-time behavioral analytics, tracking every customer movement, spotting anomalies instantly and optimizing in-branch flow with precision-grade situational awareness.",
-            image: "../../assets/feat1_industry_banking_5.png",
+            image: "../../assets/feat1_industry_banking_5.webp",
           },
           {
             id: "feat1-6",
             title: "Parking Management",
             description:
               "We streamline your vehicle flow using computer vision which helps in precision-tuned parking intelligence, real-time slot visibility, seamless access and fortified perimeter logic built for high-security banking environments.",
-            image: "../../assets/feat1_industry_banking_6.png",
+            image: "../../assets/feat1_industry_banking_6.webp",
           },
           {
             id: "feat1-7",
             title: "Heatmap of Crowd",
             description:
               "You gain strategic visibility with VMukti’s heatmap intelligence color-coded movement data that reveals dwell time, traffic bottlenecks and blind spots across your facility, all in a single visual layer.",
-            image: "../../assets/feat1_industry_banking_7.png",
+            image: "../../assets/feat1_industry_banking_7.webp",
           },
           {
             id: "feat1-8",
             title: "Vacant Parking Detection",
             description:
               "Our smart vision systems pinpoint vacant parking in real time optimizing traffic flow for your entire building, enhancing VIP access and elevating the arrival experience across your high-footfall properties.",
-            image: "../../assets/feat1_industry_banking_8.png",
+            image: "../../assets/feat1_industry_banking_8.webp",
           },
         ],
       },
@@ -3188,42 +3188,42 @@ const industriesData = {
             title: "Weapon Detection",
             description:
               "VMukti equips your sites with discreet weapon detection powered by advanced visual intelligence enabling instant threat identification, proactive containment and elevated protection for your staff, customers and brand integrity.",
-            image: "../../assets/feat2_industry_banking_1.png",
+            image: "../../assets/feat2_industry_banking_1.webp",
           },
           {
             id: "feat2-2",
             title: "Area Monitoring",
             description:
               "We equip your bank with precision-driven surveillance that secures high-risk zones, verifies access in real time and ensures only trusted personnel step into sensitive environments flawlessly and without compromise.",
-            image: "../../assets/feat2_industry_banking_2.png",
+            image: "../../assets/feat2_industry_banking_2.webp",
           },
           {
             id: "feat2-3",
             title: "ATM Monitoring",
             description:
               "Our intelligent surveillance ecosystem safeguards every ATM touchpoint detecting tampering, card skimming and anomalous behavior in real time, so your customers transact securely and your brand integrity stays intact.",
-            image: "../../assets/feat2_industry_banking_3.png",
+            image: "../../assets/feat2_industry_banking_3.webp",
           },
           {
             id: "feat2-4",
             title: "Smoke & Fire Detection",
             description:
               "VMukti's intelligent surveillance infrastructure identifies early fire indicators, thermal anomalies, smoke, or visual cues triggering instant alerts to safeguard personnel, high-value assets, and critical financial operations.",
-            image: "../../assets/feat2_industry_banking_4.png",
+            image: "../../assets/feat2_industry_banking_4.webp",
           },
           {
             id: "feat2-5",
             title: "Line Crossing Detection",
             description:
               "You gain precision monitoring with AI-powered motion analytics that identify unauthorized movement across secured zones triggering instant alerts and reinforcing layered access control without delay.",
-            image: "../../assets/feat2_industry_banking_5.png",
+            image: "../../assets/feat2_industry_banking_5.webp",
           },
           {
             id: "feat2-6",
             title: "Human Detection",
             description:
               "Our intelligent vision layer actively detects human presence in restricted banking areas delivering instant anomaly alerts to elevate situational command and reinforce high-tier branch security.",
-            image: "../../assets/feat2_industry_banking_6.png",
+            image: "../../assets/feat2_industry_banking_6.webp",
           },
         ],
       },
@@ -3238,14 +3238,14 @@ const industriesData = {
             title: "No-Smoking Compliance",
             description:
               "We deploy real-time behavior analytics to flag smoking in restricted banking areas. With VMukti, you gain precise alerts and automated compliance because risk has no place in your secure zones.",
-            image: "../../assets/feat3_industry_banking_1.png",
+            image: "../../assets/feat3_industry_banking_1.webp",
           },
           {
             id: "feat3-2",
             title: "Uniform Compliance Check",
             description:
               "Our advanced visual intelligence platform enforces dress code adherence, automates compliance protocols and delivers tamper-proof audit trails helping your bank meet the highest operational standards effortlessly.",
-            image: "../../assets/feat3_industry_banking_2.png",
+            image: "../../assets/feat3_industry_banking_2.webp",
           },
         ],
       },
@@ -3455,63 +3455,63 @@ const industriesData = {
             title: "Player Performance Analysis",
             description:
               "Our advanced vision system decodes every movement and metric delivering precision reports on player mechanics and performance gains to elevate your training with precise strategy.",
-            image: "../../assets/feat1_industry_sport_1.png",
+            image: "../../assets/feat1_industry_sport_1.webp",
           },
           {
             id: "feat1-2",
             title: "Automated Referee Assistance",
             description:
               "Your game environment demands precision. Our surveillance system delivers real-time video intelligence that flags rule violations instantly, empowering officials with unbiased, data-backed decisions at game speed.",
-            image: "../../assets/feat1_industry_sport_2.png",
+            image: "../../assets/feat1_industry_sport_2.webp",
           },
           {
             id: "feat1-3",
             title: "Match Highlights Generation",
             description:
               "VMukti leverages cutting-edge computer vision to autonomously extract impactful game moments producing polished, broadcast-grade highlight generation at unmatched speed and scale.",
-            image: "../../assets/feat1_industry_sport_3.png",
+            image: "../../assets/feat1_industry_sport_3.webp",
           },
           {
             id: "feat1-4",
             title: "Ticket Zone Analytics",
             description:
               "With advanced occupancy mapping and temporal behavior insights, our system optimizes throughput at ticket zones minimizing congestion and elevating guest movement to a new tier of efficiency.",
-            image: "../../assets/feat1_industry_sport_4.png",
+            image: "../../assets/feat1_industry_sport_4.webp",
           },
           {
             id: "feat1-5",
             title: "Crowd Stampede Alert",
             description:
               "Our intelligent alert system identifies abrupt crowd surges in real time, empowering your teams to act instantly averting stampedes, maintaining order and safeguarding every individual on-site.",
-            image: "../../assets/feat1_industry_sport_5.png",
+            image: "../../assets/feat1_industry_sport_5.webp",
           },
           {
             id: "feat1-6",
             title: "VIP Access Recognition",
             description:
               "We enable instant VIP recognition with ultra-fast biometric profiling, giving your key guests exclusive, secure and seamless entry to premium zones with no badges, no bottlenecks, just pure access control.",
-            image: "../../assets/feat1_industry_sport_6.png",
+            image: "../../assets/feat1_industry_sport_6.webp",
           },
           {
             id: "feat1-7",
             title: "Behavioral Movement Analysis",
             description:
               "Your environment stays in control with high-precision analytics that detect zone breaches, aggression or abnormal gatherings triggering immediate alerts to help your team respond before disruption unfolds.",
-            image: "../../assets/feat1_industry_sport_7.png",
+            image: "../../assets/feat1_industry_sport_7.webp",
           },
           {
             id: "feat1-8",
             title: "Crowd Volume Tracking",
             description:
               "With automated headcount intelligence, you gain real-time visibility into footfall, enabling precision-driven capacity planning, seamless crowd control and effortless compliance across every access point.",
-            image: "../../assets/feat1_industry_sport_8.png",
+            image: "../../assets/feat1_industry_sport_8.webp",
           },
           {
             id: "feat1-9",
             title: "Smart Parking",
             description:
               "VMukti optimizes vehicle flow by detecting vacant slots and flagging unauthorized access in reserved zones ensuring your critical lanes, VIP bays and team areas stay uncompromised and fully operational.",
-            image: "../../assets/feat1_industry_sport_9.png",
+            image: "../../assets/feat1_industry_sport_9.webp",
           },
         ],
       },
@@ -3526,21 +3526,21 @@ const industriesData = {
             title: "Live Event Security",
             description:
               "Our intelligent monitoring safeguards ground perimeters and entry points, instantly flagging unauthorized access to maintain game integrity and let your team focus on performance, not security lapses.",
-            image: "../../assets/feat2_industry_sport_1.png",
+            image: "../../assets/feat2_industry_sport_1.webp",
           },
           {
             id: "feat2-2",
             title: "Restricted Zone Breach",
             description:
               "Your venue demands discretion, Our vision tech monitors sensitive zones like dugouts and locker corridors with surgical precision, ensuring athlete privacy and real-time boundary enforcement without compromise.",
-            image: "../../assets/feat2_industry_sport_2.png",
+            image: "../../assets/feat2_industry_sport_2.webp",
           },
           {
             id: "feat2-3",
             title: "Weapon Presence Alert",
             description:
               "With our advanced threat detection engine, your team stays ahead identifying concealed weapons in real time, even in crowded spaces and enabling proactive, coordinated response before risk becomes reality.",
-            image: "../../assets/feat2_industry_sport_3.png",
+            image: "../../assets/feat2_industry_sport_3.webp",
           },
         ],
       },
@@ -3555,7 +3555,7 @@ const industriesData = {
             title: "No-Smoke Zone Monitoring",
             description:
               "Our visual solution identifies smoking violations in real time using advanced visual analytics enabling you to uphold compliance, protect health standards and maintain a refined guest experience.",
-            image: "../../assets/feat3_industry_sport_1.png",
+            image: "../../assets/feat3_industry_sport_1.webp",
           },
         ],
       },
@@ -3759,21 +3759,21 @@ const industriesData = {
             title: "Centralize Control",
             description:
               "With live multi-camera feeds centralized you get centralized visibility from every feed enabling instant response, seamless oversight and operational clarity exactly when and where it most matters for you.",
-            image: "../../assets/feat1_industry_def_1.png",
+            image: "../../assets/feat1_industry_def_1.webp",
           },
           {
             id: "feat1-2",
             title: "Crowd Monitoring at Military Events",
             description:
               "We deliver military-grade video intelligence to help you command every vantage point ensuring threat visibility, crowd control and operational dominance during parades, deployments or high-stakes demonstrations.",
-            image: "../../assets/feat1_industry_def_2.png",
+            image: "../../assets/feat1_industry_def_2.webp",
           },
           {
             id: "feat1-3",
             title: "Head Count",
             description:
               "Our intelligent vision system delivers real-time headcount analytics empowering your team to manage density, optimize flow and maintain complete situational control without manual intervention.",
-            image: "../../assets/feat1_industry_def_3.png",
+            image: "../../assets/feat1_industry_def_3.webp",
           },
         ],
       },
@@ -3787,56 +3787,56 @@ const industriesData = {
             title: "Fire and Smoke Detection",
             description:
               "Your operations demand zero margin for error. We deploy real-time flame and particulate intelligence to spot threats early, activating rapid countermeasures before fire risks impact mission-critical zones or tactical readiness.",
-            image: "../../assets/feat2_industry_def_1.png",
+            image: "../../assets/feat2_industry_def_1.webp",
           },
           {
             id: "feat2-2",
             title: "Entry/Exit Monitoring",
             description:
               "VMukti ensures full-spectrum visibility by tracking every individual entering or exiting your facility delivering encrypted access logs and real-time movement data built for audit-grade traceability in sensitive zones.",
-            image: "../../assets/feat2_industry_def_2.png",
+            image: "../../assets/feat2_industry_def_2.webp",
           },
           {
             id: "feat2-3",
             title: "Restricted Area Surveillance",
             description:
               "With precision-grade analytics and encrypted video intelligence, Our defense solutions secure your most critical zones detecting breaches instantly and locking down threats before they compromise your command.",
-            image: "../../assets/feat2_industry_def_3.png",
+            image: "../../assets/feat2_industry_def_3.webp",
           },
           {
             id: "feat2-4",
             title: "Authorized Vehicle Entry",
             description:
               "Our defense-grade Vision AI identifies, logs and verifies every vehicle through precision plate recognition delivering seamless gate control and real-time perimeter intelligence where authorization is non-negotiable.",
-            image: "../../assets/feat2_industry_def_4.png",
+            image: "../../assets/feat2_industry_def_4.webp",
           },
           {
             id: "feat2-5",
             title: "Border Surveillance",
             description:
               "We secure your critical boundaries with precision surveillance real-time threat detection, autonomous monitoring and encrypted command access for high-risk environments that demand zero compromise.",
-            image: "../../assets/feat2_industry_def_5.png",
+            image: "../../assets/feat2_industry_def_5.webp",
           },
           {
             id: "feat2-6",
             title: "Facial Recognition for Access Control",
             description:
               "Your perimeter stays sealed with real-time facial recognition granting instant, encrypted access only to verified personnel. No badges, no delays, just uncompromised defense-grade access control.",
-            image: "../../assets/feat2_industry_def_6.png",
+            image: "../../assets/feat2_industry_def_6.webp",
           },
           {
             id: "feat2-7",
             title: "Line Crossing",
             description:
               "VMukti enables precision-level intrusion detection by monitoring virtual perimeters in real time, instantly alerting your response units when secured zones are breached, from command hubs to high-risk borders.",
-            image: "../../assets/feat2_industry_def_7.png",
+            image: "../../assets/feat2_industry_def_7.webp",
           },
           {
             id: "feat2-8",
             title: "Object Detection",
             description:
               "We deploy advanced object anomaly recognition to detect unattended assets in real time empowering your team to assess risks instantly and act with precision in mission-critical environments.",
-            image: "../../assets/feat2_industry_def_8.png",
+            image: "../../assets/feat2_industry_def_8.webp",
           },
         ],
       },
@@ -3851,7 +3851,7 @@ const industriesData = {
             title: "Safety PPE Kit Detection",
             description:
               "Our vision-powered detection system identifies helmets, vests, gloves and boots in real time ensuring your teams meet full compliance standards across high-risk defense operations without compromise.",
-            image: "../../assets/feat3_industry_def_1.png",
+            image: "../../assets/feat3_industry_def_1.webp",
           },
         ],
       },
@@ -4069,63 +4069,63 @@ const industriesData = {
             title: "Vacant Parking",
             description:
               "Our visual solutions offer real-time parking intelligence guiding guests instantly to available spots minimizing congestion, eliminating entry delays and elevating your visitors arrival experience.",
-            image: "../../assets/feat1_industry_hosp_1.png",
+            image: "../../assets/feat1_industry_hosp_1.webp",
           },
           {
             id: "feat1-2",
             title: "Queue Management",
             description:
               "Your guest experience demands precision. Our intelligent system monitors wait times in real time and triggers instant staff alerts ensuring your brand delivers seamless, uninterrupted hospitality at every touchpoint.",
-            image: "../../assets/feat1_industry_hosp_2.png",
+            image: "../../assets/feat1_industry_hosp_2.webp",
           },
           {
             id: "feat1-3",
             title: "Smart Room Access",
             description:
               "VMukti integrates advanced facial recognition in your system to streamline room access, eliminating keycards and ensuring only verified guests enter, enhancing both security and the luxury experience.",
-            image: "../../assets/feat1_industry_hosp_3.png",
+            image: "../../assets/feat1_industry_hosp_3.webp",
           },
           {
             id: "feat1-4",
             title: "Staff Uniform Compliance",
             description:
               "With real-time visual AI enforcement, your teams stay aligned to uniform protocols upholding brand integrity, elevating guest perception and ensuring consistent visual compliance across every operational touchpoint.",
-            image: "../../assets/feat1_industry_hosp_4.png",
+            image: "../../assets/feat1_industry_hosp_4.webp",
           },
           {
             id: "feat1-5",
             title: "Housekeeping Monitoring",
             description:
               "Our intelligent vision layer tracks kitchen workflows in real time confirming hygiene compliance and detecting unattended zones post service windows to uphold operational precision and brand integrity.",
-            image: "../../assets/feat1_industry_hosp_5.png",
+            image: "../../assets/feat1_industry_hosp_5.webp",
           },
           {
             id: "feat1-6",
             title: "No-Entry Zone",
             description:
               "VMukti deploys advanced perimeter intelligence to protect sensitive zones detecting unauthorized movement in real time and activating instant threat response across VIP or high-value areas.",
-            image: "../../assets/feat1_industry_hosp_6.png",
+            image: "../../assets/feat1_industry_hosp_6.webp",
           },
           {
             id: "feat1-7",
             title: "Entry/Exit Monitoring",
             description:
               "We deliver intelligent facial verification across lobbies, service doors and restricted zones seamlessly logging every guest, vendor and staff movement with zero compromise on privacy or control.",
-            image: "../../assets/feat1_industry_hosp_7.png",
+            image: "../../assets/feat1_industry_hosp_7.webp",
           },
           {
             id: "feat1-8",
             title: "Heatmap for Crowd",
             description:
               "Your operations gain command-level oversight with live visual density mapping. Monitor guest flow across venues and deploy staff proactively using AI-driven insights that anticipate traffic surges before they disrupt service.",
-            image: "../../assets/feat1_industry_hosp_8.png",
+            image: "../../assets/feat1_industry_hosp_8.webp",
           },
           {
             id: "feat1-9",
             title: "Person Counting",
             description:
               "With precision-driven occupancy analytics, you gain real-time visibility into foot traffic across elevators and event zones optimizing guest flow, enforcing safety thresholds and elevating operational foresight.",
-            image: "../../assets/feat1_industry_hosp_9.png",
+            image: "../../assets/feat1_industry_hosp_9.webp",
           },
         ],
       },
@@ -4140,35 +4140,35 @@ const industriesData = {
             title: "Pool Safety Monitoring",
             description:
               "Our drowning detection solution delivers instantaneous poolside surveillance, AI-triggered alerts and precision response giving you full control over aquatic safety without delay or compromise.",
-            image: "../../assets/feat2_industry_hosp_1.png",
+            image: "../../assets/feat2_industry_hosp_1.webp",
           },
           {
             id: "feat2-2",
             title: "Weapon Alert",
             description:
               "We deploy precision-trained vision systems that instantly identify exposed weapons and trigger silent alerts enabling your team to intervene early and preserve safety without disrupting guest experience.",
-            image: "../../assets/feat2_industry_hosp_2.png",
+            image: "../../assets/feat2_industry_hosp_2.webp",
           },
           {
             id: "feat2-3",
             title: "Early Fire Response",
             description:
               "VMukti brings next-gen fire and smoke analytics to your infrastructure automated threat detection, precision-triggered alerts and integrated response protocols built for zero-compromise environments.",
-            image: "../../assets/feat2_industry_hosp_3.png",
+            image: "../../assets/feat2_industry_hosp_3.webp",
           },
           {
             id: "feat2-4",
             title: "Suspicious Item Scan",
             description:
               "Your environment demands precision. Our system flags unattended baggage and suspicious objects instantly activating real-time protocols to protect guests, staff and critical infrastructure without disruption.",
-            image: "../../assets/feat2_industry_hosp_4.png",
+            image: "../../assets/feat2_industry_hosp_4.webp",
           },
           {
             id: "feat2-5",
             title: "Restricted Zone Alert",
             description:
               "With VMukti’s smart perimeter logic, you enforce digital boundaries across critical zones. Unauthorized access triggers real-time alerts, ensuring compliance and operational integrity without fail.",
-            image: "../../assets/feat2_industry_hosp_5.png",
+            image: "../../assets/feat2_industry_hosp_5.webp",
           },
         ],
       },
@@ -4183,14 +4183,14 @@ const industriesData = {
             title: "No-Smoking Policy",
             description:
               "Our vision-powered system pinpoints smoking violations instantly empowering your team to maintain regulatory compliance, safeguard wellness standards and preserve air quality across critical zones.",
-            image: "../../assets/feat3_industry_hosp_1.png",
+            image: "../../assets/feat3_industry_hosp_1.webp",
           },
           {
             id: "feat3-2",
             title: "Uniform Compliance",
             description:
               "VMukti's computer vision system detects uniform violations instantly, enabling your team to uphold brand standards, ensure staff professionalism and maintain consistency across guest-facing areas.",
-            image: "../../assets/feat3_industry_hosp_2.png",
+            image: "../../assets/feat3_industry_hosp_2.webp",
           },
         ],
       },
@@ -4406,42 +4406,42 @@ const industriesData = {
             title: "Site Progress Monitoring",
             description:
               "Harness next-gen AI vision to autonomously track construction milestones in real time, accelerate delivery, eliminate delays and elevate project control.",
-            image: "../../assets/feat1_industry_construction_1.png",
+            image: "../../assets/feat1_industry_construction_1.webp",
           },
           {
             id: "feat1-2",
             title: "Sack Loading & Unloading",
             description:
               "VMukti puts you in command monitoring on-site heavy lifting and material flow with real-time insights. Enhance worker safety, boost task productivity and meet compliance standards seamlessly, powered by our technology.",
-            image: "../../assets/feat1_industry_construction_2.png",
+            image: "../../assets/feat1_industry_construction_2.webp",
           },
           {
             id: "feat1-3",
             title: "Equipment Tracking",
             description:
               "Take absolute control over your construction assets with real-time equipment intelligence to maximize utilization, eliminate loss and elevate site operations to enterprise-grade precision.",
-            image: "../../assets/feat1_industry_construction_3.png",
+            image: "../../assets/feat1_industry_construction_3.webp",
           },
           {
             id: "feat1-4",
             title: "Workforce Monitoring",
             description:
               "Leverages AI-powered behavioral analytics to proactively detect fatigue, disengagement and anomalies to safeguarding workforce well-being in real time.",
-            image: "../../assets/feat1_industry_construction_4.png",
+            image: "../../assets/feat1_industry_construction_4.webp",
           },
           {
             id: "feat1-5",
             title: "Traffic Management",
             description:
               "Your construction site deserves elite traffic oversight, our cutting-edge visual platform delivers real-time vehicle flow analysis, eliminating bottlenecks and boosting operational fluidity with precision-engineered intelligence.",
-            image: "../../assets/feat1_industry_construction_5.png",
+            image: "../../assets/feat1_industry_construction_5.webp",
           },
           {
             id: "feat1-6",
             title: "Human Activity Monitoring",
             description:
               "Continuously tracks personnel activity to flag unsafe conduct be it non-compliant gear usage, manual handling errors, or unauthorized movement near active equipment mitigating site risk instantly.",
-            image: "../../assets/feat1_industry_construction_6.png",
+            image: "../../assets/feat1_industry_construction_6.webp",
           },
         ],
       },
@@ -4456,49 +4456,49 @@ const industriesData = {
             title: "Unauthorized Entry Alerting",
             description:
               "With our cutting-edge visual intelligence, We flag any unauthorized entry into sensitive areas be it material storage or supervisor zones empowering you to enforce safety protocols instantly and maintain uncompromised integrity.",
-            image: "../../assets/feat2_industry_construction_1.png",
+            image: "../../assets/feat2_industry_construction_1.webp",
           },
           {
             id: "feat2-2",
             title: "Entry and Exit Monitoring",
             description:
               "We track every worker and visitor movement through your site gates and access points, ensuring airtight attendance logs. This precision fuels labor compliance and fortifies your security perimeter.",
-            image: "../../assets/feat2_industry_construction_2.png",
+            image: "../../assets/feat2_industry_construction_2.webp",
           },
           {
             id: "feat2-3",
             title: "Hazard Zones Monitoring",
             description:
               "Our advanced vision AI identifies risk-prone zones instantly, using intelligent area mapping and live alerts to help your team respond faster, enforce safety and maintain total control over dynamic construction sites.",
-            image: "../../assets/feat2_industry_construction_3.png",
+            image: "../../assets/feat2_industry_construction_3.webp",
           },
           {
             id: "feat2-4",
             title: "Fire & Smoke Intelligence",
             description:
               "We deploy precision fire and smoke detection across your site through computer vision helping in delivering real-time alerts, asset protection and uninterrupted safety compliance where every second and decision counts.",
-            image: "../../assets/feat2_industry_construction_4.png",
+            image: "../../assets/feat2_industry_construction_4.webp",
           },
           {
             id: "feat2-5",
             title: "Person Fall Alerting",
             description:
               "Your teams stay protected with intelligent fall detection that instantly identifies on-site incidents, auto-triggers alerts and activates emergency protocols minimizing downtime and safeguarding your workforce.",
-            image: "../../assets/feat2_industry_construction_5.png",
+            image: "../../assets/feat2_industry_construction_5.webp",
           },
           {
             id: "feat2-6",
             title: "Line Crossing",
             description:
               "VMukti safeguards your most sensitive zones, hazardous pits, crane zones, incomplete structures by delivering precision monitoring that instantly detects unauthorized access and mitigates risk before it becomes an incident.",
-            image: "../../assets/feat2_industry_construction_6.png",
+            image: "../../assets/feat2_industry_construction_6.webp",
           },
           {
             id: "feat2-7",
             title: "Unauthorized Human Monitoring",
             description:
               "Our advanced visual intelligence identifies unauthorized personnel near exclusion areas in real time, empowering you to prevent incidents and enforce site protocols with unparalleled precision and seamless operational control.",
-            image: "../../assets/feat2_industry_construction_7.png",
+            image: "../../assets/feat2_industry_construction_7.webp",
           },
         ],
       },
@@ -4513,7 +4513,7 @@ const industriesData = {
             title: "PPE Kit Monitoring",
             description:
               "VMukti safeguards your operations with real-time uniform compliance detection delivering AI-powered video oversight that enforces safety mandates without manual intervention or workflow disruption.",
-            image: "../../assets/feat3_industry_construction_1.png",
+            image: "../../assets/feat3_industry_construction_1.webp",
           },
         ],
       },
@@ -4730,49 +4730,49 @@ const industriesData = {
             title: "Employee Attendance Verification",
             description:
               "With precision-grade facial recognition, our Visual AI streamlines entry, eliminates manual checkpoints and ensures seamless attendance logging so your workforce moves with speed, clarity and control.",
-            image: "../../assets/feat1_industry_enterprise_1.png",
+            image: "../../assets/feat1_industry_enterprise_1.webp",
           },
           {
             id: "feat1-2",
             title: "Live Workspace Insights",
             description:
               "Our intelligent surveillance suite delivers precision monitoring, decoding occupancy trends in real time to optimize performance, reduce risk and enforce safety compliance without disrupting operations.",
-            image: "../../assets/feat1_industry_enterprise_2.png",
+            image: "../../assets/feat1_industry_enterprise_2.webp",
           },
           {
             id: "feat1-3",
             title: "Multi-Zone Surveillance Hub",
             description:
               "We deploy real-time visual intelligence layered across your infrastructure helping remotely in intrusion detection, breach containment and risk mitigation with zero lag and enterprise-grade precision.",
-            image: "../../assets/feat1_industry_enterprise_3.png",
+            image: "../../assets/feat1_industry_enterprise_3.webp",
           },
           {
             id: "feat1-4",
             title: "Visitor Flow and Experience Analysis",
             description:
               "Your facility stays uncompromised with our high-performance visual intelligence built to detect, track and respond for all visitor visits across zones through cutting-edge, unified computer vision architecture.",
-            image: "../../assets/feat1_industry_enterprise_4.png",
+            image: "../../assets/feat1_industry_enterprise_4.webp",
           },
           {
             id: "feat1-5",
             title: "Automated Queue Management",
             description:
               "VMukti empowers your operations with AI-driven queue monitoring, streamlining workforce deployment, cutting idle time and delivering a seamless, high-touch customer experience where every second counts.",
-            image: "../../assets/feat1_industry_enterprise_5.png",
+            image: "../../assets/feat1_industry_enterprise_5.webp",
           },
           {
             id: "feat1-6",
             title: "Smart Space Tracking",
             description:
               "Our next-gen computer vision engine transforms chaotic parking into a synchronized flow detecting, tracking and optimizing every vehicle movement with autonomous accuracy and operational clarity.",
-            image: "../../assets/feat1_industry_enterprise_6.png",
+            image: "../../assets/feat1_industry_enterprise_6.webp",
           },
           {
             id: "feat1-7",
             title: "Crowd Monitoring",
             description:
               "For your mission-critical operations, our vision intelligence pinpoints crowd build-up, streamlines personnel flow, shows a crowd heatmap and gives you command-grade visibility exactly where and when you need it.",
-            image: "../../assets/feat1_industry_enterprise_7.png",
+            image: "../../assets/feat1_industry_enterprise_7.webp",
           },
         ],
       },
@@ -4787,35 +4787,35 @@ const industriesData = {
             title: "Entry Exit Monitoring",
             description:
               "We deploy advanced facial authentication to log every movement across your facility area ensuring airtight perimeter integrity, zero tailgating and full audit trails, even after operational hours.",
-            image: "../../assets/feat2_industry_enterprise_1.png",
+            image: "../../assets/feat2_industry_enterprise_1.webp",
           },
           {
             id: "feat2-2",
             title: "Fire Hazard Monitoring",
             description:
               "Your infrastructure runs smarter with real-time visual anomaly detection powered by deep learning vision AI which helps in catching fire and smoke at inception across racks, panels and high-voltage units.",
-            image: "../../assets/feat2_industry_enterprise_2.png",
+            image: "../../assets/feat2_industry_enterprise_2.webp",
           },
           {
             id: "feat2-3",
             title: "Anomaly Object Scan",
             description:
               "Our object intelligence framework actively scans your lobbies, boardrooms and restricted zones for unattended assets flagging potential threats before they compromise security or operational trust.",
-            image: "../../assets/feat2_industry_enterprise_3.png",
+            image: "../../assets/feat2_industry_enterprise_3.webp",
           },
           {
             id: "feat2-4",
             title: "Line Breach Alert",
             description:
               "VMukti enforces the access limits you define, deploying advanced visual perimeters that detect breaches in real time, trigger instant alerts and uphold your site’s integrity with precision-grade surveillance.",
-            image: "../../assets/feat2_industry_enterprise_4.png",
+            image: "../../assets/feat2_industry_enterprise_4.webp",
           },
           {
             id: "feat2-5",
             title: "Area Access Detection",
             description:
               "We safeguard your mission-critical zones, server rooms, finance bays, executive suites with intelligent breach detection that alerts you instantly, ensuring zero compromise in precision and privacy.",
-            image: "../../assets/feat2_industry_enterprise_5.png",
+            image: "../../assets/feat2_industry_enterprise_5.webp",
           },
         ],
       },
@@ -4830,14 +4830,14 @@ const industriesData = {
             title: "Uniform Compliance Check",
             description:
               "Your operations demand precision. Our AI-native system enforces uniform compliance at entry denying access to non-compliant personnel and preserving integrity across high-security environments.",
-            image: "../../assets/feat3_industry_enterprise_1.png",
+            image: "../../assets/feat3_industry_enterprise_1.webp",
           },
           {
             id: "feat3-2",
             title: "Smoking Violation Alert",
             description:
               "With edge-powered visual intelligence, we detect smoking violations in real time helping you uphold compliance, protect personnel and maintain operational integrity without manual oversight.",
-            image: "../../assets/feat3_industry_enterprise_2.png",
+            image: "../../assets/feat3_industry_enterprise_2.webp",
           },
         ],
       },
@@ -5045,70 +5045,70 @@ const industriesData = {
             title: "Fed Workers Monitoring",
             description:
               "With enterprise-grade visual analytics, you gain precise oversight of federal workforce safety and performance ensuring policy compliance and optimized operational conditions without compromise.",
-            image: "../../assets/feat1_industry_government_1.png",
+            image: "../../assets/feat1_industry_government_1.webp",
           },
           {
             id: "feat1-2",
             title: "Crowd Monitoring",
             description:
               "We equip your infrastructure with enterprise-grade video analytics designed to anticipate, alert and respond to public threats instantly, ensuring urban security runs as smartly as your mission demands.",
-            image: "../../assets/feat1_industry_government_2.png",
+            image: "../../assets/feat1_industry_government_2.webp",
           },
           {
             id: "feat1-3",
             title: "Stampede Detection",
             description:
               "With intelligent anomaly alerts powered by advanced video analytics, your team anticipates crowd pressure spikes instantly enabling rapid intervention and safeguarding every critical moment on-site.",
-            image: "../../assets/feat1_industry_government_3.png",
+            image: "../../assets/feat1_industry_government_3.webp",
           },
           {
             id: "feat1-4",
             title: "GPS Tracking",
             description:
               "Our advanced GPS telemetry platform empowers you to track government fleets and mission-critical assets with precision enabling real-time visibility, streamlined control and zero tolerance for misuse.",
-            image: "../../assets/feat1_industry_government_4.png",
+            image: "../../assets/feat1_industry_government_4.webp",
           },
           {
             id: "feat1-5",
             title: "Event Live Streaming",
             description:
               "Your mission-critical moments, streamed flawlessly enable high-trust, low-latency coverage of government proceedings, empowering transparency and reinforcing institutional credibility in real time.",
-            image: "../../assets/feat1_industry_government_5.png",
+            image: "../../assets/feat1_industry_government_5.webp",
           },
           {
             id: "feat1-6",
             title: "Head Count",
             description:
               "We deliver automated headcount intelligence that gives you precise, real-time audience flow metrics optimizing capacity planning, enforcing compliance and refining every entry-to-exit movement.",
-            image: "../../assets/feat1_industry_government_6.png",
+            image: "../../assets/feat1_industry_government_6.webp",
           },
           {
             id: "feat1-7",
             title: "Entry and Exit Monitoring",
             description:
               "Our system delivers precise tracking of every individual at entry points, empowering your team with verifiable logs, airtight audits and seamless enforcement of corporate access protocols for public safety.",
-            image: "../../assets/feat1_industry_government_7.png",
+            image: "../../assets/feat1_industry_government_7.webp",
           },
           {
             id: "feat1-8",
             title: "Heatmap for Crowd",
             description:
               "VMukti transforms your spaces with dynamic crowd density intelligence giving you the foresight to optimize response teams, manage real-time flow and secure every inch with precision analytics.",
-            image: "../../assets/feat1_industry_government_8.png",
+            image: "../../assets/feat1_industry_government_8.webp",
           },
           {
             id: "feat1-9",
             title: "Vehicle and ANPR",
             description:
               "Your operations stay sharp with real-time license plate recognition, automated entry tracking, and frictionless vehicle validation engineered for high-security environments that can’t afford compromise.",
-            image: "../../assets/feat1_industry_government_9.png",
+            image: "../../assets/feat1_industry_government_9.webp",
           },
           {
             id: "feat1-10",
             title: "Behavioral Activity Analysis",
             description:
               "For your high-density environments, our real-time behavioral analytics decode crowd dynamics, flag anomalies instantly and empower your response teams with precision support when seconds matter most.",
-            image: "../../assets/feat1_industry_government_10.png",
+            image: "../../assets/feat1_industry_government_10.webp",
           },
         ],
       },
@@ -5123,42 +5123,42 @@ const industriesData = {
             title: "Early Fire Warning",
             description:
               "With precision-grade visual sensors and smart fire and smoke pattern recognition, your teams can respond faster, evacuate smarter and protect high-value public assets before heavy damage unfolds.",
-            image: "../../assets/feat2_industry_government_1.png",
+            image: "../../assets/feat2_industry_government_1.webp",
           },
           {
             id: "feat2-2",
             title: "Suspicious Object Tracking",
             description:
               "Our advanced vision system flags unattended or high-risk objects in real-time in critical zones empowering your team with early threat awareness and accelerated incident response, without false alarms.",
-            image: "../../assets/feat2_industry_government_2.png",
+            image: "../../assets/feat2_industry_government_2.webp",
           },
           {
             id: "feat2-3",
             title: "Boundary Breach Monitoring",
             description:
               "We monitor and flag breach attempts across secured zones in real time giving your team the intel to intercept threats before they escalate and maintain uncompromised perimeter control across the spaces.",
-            image: "../../assets/feat2_industry_government_3.png",
+            image: "../../assets/feat2_industry_government_3.webp",
           },
           {
             id: "feat2-4",
             title: "Weapon Threat Alert",
             description:
               "For your critical entry points, we deploy AI-driven vision to detect concealed weapons with surgical accuracy minimizing threats before escalation and safeguarding operational continuity for better public order.",
-            image: "../../assets/feat2_industry_government_4.png",
+            image: "../../assets/feat2_industry_government_4.webp",
           },
           {
             id: "feat2-5",
             title: "Access Violation Detection",
             description:
               "VMukti deploys intelligent surveillance at sensitive nodes, using advanced video analytics to identify unauthorized movement and trigger instant tamper-proof alerts across high-risk access points.",
-            image: "../../assets/feat2_industry_government_5.png",
+            image: "../../assets/feat2_industry_government_5.webp",
           },
           {
             id: "feat2-6",
             title: "Public Property Protection",
             description:
               "Your government operations demand more than monitoring. Our AI-powered surveillance ecosystem ensures real-time threat detection, asset protection and uninterrupted situational control.",
-            image: "../../assets/feat2_industry_government_6.png",
+            image: "../../assets/feat2_industry_government_6.webp",
           },
         ],
       },
@@ -5173,14 +5173,14 @@ const industriesData = {
             title: "Vehicle Driver Monitoring",
             description:
               "We bring intelligent driver monitoring to your fleet enabling proactive compliance, minimizing risk exposure, real-time monitoring to reinforce safety through AI-driven video insights you can trust in real time.",
-            image: "../../assets/feat3_industry_government_1.png",
+            image: "../../assets/feat3_industry_government_1.webp",
           },
           {
             id: "feat3-2",
             title: "Public Smoking Alert",
             description:
               "Our intelligent sensors detect smoking violations in real time enabling you to uphold compliance, protect brand reputation and ensure a refined, health-forward guest experience without compromise.",
-            image: "../../assets/feat3_industry_government_2.png",
+            image: "../../assets/feat3_industry_government_2.webp",
           },
         ],
       },

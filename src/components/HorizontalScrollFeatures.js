@@ -5,6 +5,8 @@ import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import "lazysizes";
+import "lazysizes/plugins/attrchange/ls.attrchange";
 
 // --- GSAP Plugin Registration ---
 // It's essential to register the plugin for ScrollTrigger to work.
@@ -17,7 +19,7 @@ const FeatureCard = ({ feature, bgColor }) => (
     w={["85vw", "85vw", "92vw", "92vw"]}
     h={["60vh", "60vh", "60vh", "65vh"]}
     flexShrink={0}
-    mr={["5vw", "5vw", "5vw", "2vw"]} 
+    mr={["5vw", "5vw", "5vw", "2vw"]}
     align="center"
     justify="center"
     mt="1%"
@@ -28,24 +30,25 @@ const FeatureCard = ({ feature, bgColor }) => (
       h={["60vh", "60vh", "60vh", "65vh"]}
       borderRadius="20px"
       overflow="hidden"
-      justifyContent={["center","","",""]}
-      alignItems={["center","","",""]}
+      justifyContent={["center", "", "", ""]}
+      alignItems={["center", "", "", ""]}
     >
       <Image
         src={`${process.env.PUBLIC_URL}/assets/${feature.image}`}
         alt={feature.title}
+        className="lazyload"
         objectFit="cover"
         w="100%"
         h="100%"
       />
       <Box
         position="absolute"
-        bottom = {["0","0","2","4"]}
+        bottom={["0", "0", "2", "4"]}
         left={{
           base: "0",
-          sm: bgColor === "blue" ? "50%" : 8, 
-          md: bgColor === "blue" ? "50%" : 2, 
-          lg: bgColor === "blue" ? "68%" : 8, 
+          sm: bgColor === "blue" ? "50%" : 8,
+          md: bgColor === "blue" ? "50%" : 2,
+          lg: bgColor === "blue" ? "68%" : 8,
         }}
         // left={{ base: 0, md: bgColor === "blue" ? "66%" : 8 }}
         // left={["0","bgColor === "blue" ? "50%" : 8","bgColor === "blue" ? "66%" : 8","bgColor === "blue" ? "66%" : 8"]}
@@ -58,7 +61,7 @@ const FeatureCard = ({ feature, bgColor }) => (
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
-        m={["5%","5%","2%","0"]}
+        m={["5%", "5%", "2%", "0"]}
       >
         <Heading
           as="h3"
