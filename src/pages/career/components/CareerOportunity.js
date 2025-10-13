@@ -134,8 +134,8 @@ const CareerOportunity = () => {
 
     try {
       const response = await fetch(
-        // "http://localhost:5000/api/send-email-carreer",
-        "https://vmukti.com/backend/api/send-email-carreer",
+        // "http://localhost:5000/api/send-email-career",
+        "https://vmukti.com/backend/api/send-email-career",
         {
           method: "POST",
           body: formData,
