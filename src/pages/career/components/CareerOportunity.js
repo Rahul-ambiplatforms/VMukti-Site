@@ -24,12 +24,13 @@ import {
   Spinner,
   Alert,
   AlertIcon,
-  useToast, // <-- NEW: Import useToast
+  useToast,
+  textDecoration, // <-- NEW: Import useToast
 } from "@chakra-ui/react";
 import { FiPaperclip } from "react-icons/fi";
 import { Helmet } from "react-helmet";
 import { getJobs } from "../../../api/jobs";
-import { useNavigate } from "react-router-dom";
+import { data, useNavigate } from "react-router-dom";
 
 const CareerOportunity = () => {
   const navigate = useNavigate();
@@ -58,9 +59,10 @@ const CareerOportunity = () => {
     const fetchJobs = async () => {
       try {
         setLoading(true);
-        const response = await getJobs(1, 50, "OPEN"); // Get first 50 open jobs
+        const response = await getJobs(1, 50, "OPEN");
         if (response.status === "success") {
           setJobs(response.data.jobs || []);
+          // console.log("Display all the jobs",response.data.jobs)
         } else {
           setError("Failed to fetch jobs");
         }
@@ -188,15 +190,18 @@ const CareerOportunity = () => {
       });
       console.error("Submission error:", err);
     } finally {
-      setIsSubmitting(false); 
+      setIsSubmitting(false);
     }
   };
 
   const handleApplyClick = (job) => {
     setSelectedJob(job);
+    // console.log("Selected job for application:", job);
+    // console.log("Key and responsibility", job.skillsAndResponsibilities);
+    // console.log("JOB DESCRIPTION", job.jdUrl);
     onOpen();
   };
-
+  // console.log("Key and responsibility",selectedJob.skillsAndResponsibilities);
   const JobCard = ({ job }) => (
     <Flex
       justify="space-between"
@@ -263,17 +268,34 @@ const CareerOportunity = () => {
           {job.openings}
         </Text>
       </Box>
-      <Button
-        colorScheme="gray"
-        variant="solid"
-        bg="#E7E7E7"
-        fontSize="16px"
-        px="32px"
-        borderRadius="20px"
-        onClick={() => handleApplyClick(job)}
-      >
-        Apply
-      </Button>
+      <Flex gap={3} align="center">
+        {job.jdUrl && (
+          <Button
+            as="a"
+            href={job.jdUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            colorScheme="blue"
+            variant="outline"
+            fontSize="16px"
+            px="24px"
+            borderRadius="20px"
+          >
+            View JD
+          </Button>
+        )}
+        <Button
+          colorScheme="gray"
+          variant="solid"
+          bg="#E7E7E7"
+          fontSize="16px"
+          px="32px"
+          borderRadius="20px"
+          onClick={() => handleApplyClick(job)}
+        >
+          Apply
+        </Button>
+      </Flex>
     </Flex>
   );
 
@@ -367,12 +389,63 @@ const CareerOportunity = () => {
                     </svg>
                   </Box>
                   <Text color="#696969" fontSize="16px" fontWeight="500">
-                    {selectedJob.keyResponsibilities?.length > 0
+                    {selectedJob.skillsAndResponsibilities &&
+                    selectedJob.skillsAndResponsibilities.trim().length > 0
+                      ? selectedJob.skillsAndResponsibilities
+                      : selectedJob.keyResponsibilities?.length > 0
                       ? selectedJob.keyResponsibilities.join(", ")
                       : selectedJob.keySkills?.length > 0
                       ? selectedJob.keySkills.join(", ")
                       : "No additional details available."}
                   </Text>
+                  {selectedJob.jdUrl && (
+                    <Box textAlign="center" mt={4}>
+                      <Button
+                        as="a"
+                        href={selectedJob.jdUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        variant="ghost"
+                        colorScheme="blue"
+                        _hover={{ textDecoration: "none", color: "blue.600" }}
+                        display="flex"
+                        flexDirection="column"
+                        alignItems="center"
+                        justifyContent="center"
+                        p={4}
+                      >
+                        <Flex
+                          direction="column"
+                          align="flex-start"
+                          gap={2}
+                          _hover={{ textDecoration: "underline" }}
+                        >
+                          <Box>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="33"
+                              height="29"
+                              viewBox="0 0 33 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M13.8738 0.000551784C13.1802 0.000551784 12.6066 0.575552 12.6066 1.2565V11.9481H9.14822C8.64045 11.9481 8.17063 12.2483 7.97421 12.724C7.78282 13.1869 7.88717 13.7299 8.25042 14.0892L15.6058 21.3633C15.8525 21.6034 16.1711 21.7264 16.498 21.7281H16.5042C16.8256 21.7264 17.1548 21.5995 17.3964 21.36L24.749 14.0886C25.1073 13.7343 25.2244 13.1936 25.0252 12.7206C24.8288 12.2549 24.3607 11.9475 23.854 11.9475H20.3956V1.25595C20.3956 0.570034 19.8192 0 19.1256 0L13.8738 0.000551784ZM15.1438 2.51245H17.8584V13.2013C17.8584 13.8872 18.4348 14.4572 19.1284 14.4572H20.7907L16.5008 18.6997L12.211 14.4572H13.8733C14.5668 14.4572 15.1433 13.8872 15.1433 13.2013L15.1438 2.51245ZM1.26998 17.6589C0.576402 17.6589 0 18.2289 0 18.9149V27.744C0 28.43 0.576402 29 1.26998 29H31.73C32.4236 29 33 28.43 33 27.744V18.9149C33 18.2289 32.4236 17.6589 31.73 17.6589H24.2028C23.5092 17.6589 22.9328 18.2289 22.9328 18.9149C22.9328 19.6008 23.5092 20.1708 24.2028 20.1708H30.4628V26.4881H2.53996V20.1708H8.79725C9.49083 20.1708 10.0672 19.6008 10.0672 18.9149C10.0672 18.2289 9.49083 17.6589 8.79725 17.6589H1.26998Z"
+                                fill="#3F77A5"
+                              />
+                            </svg>
+                          </Box>
+                          <Text
+                            fontSize="16px"
+                            fontWeight="700"
+                            color="#3F77A5"
+                            _hover={{ textDecoration: "underline" }}
+                          >
+                            Download Job Description
+                          </Text>
+                        </Flex>
+                      </Button>
+                    </Box>
+                  )}
                 </Flex>
 
                 {/* Selected Job Info */}
