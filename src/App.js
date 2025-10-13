@@ -61,7 +61,7 @@ function App() {
               <Suspense fallback={<LoadingSpinner />}>
                 <Routes>
                   <Route path="/" element={<VMuktiHomepage />} />
-                  <Route path="/technology" element={<TechnologyDashboard />} />
+                  {/* <Route path="/technology" element={<TechnologyDashboard />} /> */}
                   <Route path="/solution" element={<SolutionsHome />} />
                   <Route path="/solution/:name" element={<SolutionDetails />} />
                   <Route path="/industry" element={<IndustryDashboard />} />
