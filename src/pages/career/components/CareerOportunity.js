@@ -269,7 +269,7 @@ const CareerOportunity = () => {
         </Text>
       </Box>
       <Flex gap={3} align="center">
-        {job.jdUrl && (
+        {/* {job.jdUrl && (
           <Button
             as="a"
             href={job.jdUrl}
@@ -283,7 +283,7 @@ const CareerOportunity = () => {
           >
             View JD
           </Button>
-        )}
+        )} */}
         <Button
           colorScheme="gray"
           variant="solid"

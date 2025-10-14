@@ -277,7 +277,7 @@ const IndustryContent = ({ props, content }) => {
         <meta name="twitter:image" content={content.ogImage} />
         <link
           rel="canonical"
-          href={`https://vmukti.com/industry/${content.slug}`}
+          href={`https://www.vmukti.com/industry/${content.slug}`}
         />
         {/* Optional: Add page-specific structured data from your content object.
         {content.schemas &&

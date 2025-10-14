@@ -274,7 +274,7 @@ const SolutionContent = ({ content }) => {
         {/* Canonical Link - must point to the unique URL of this page */}
         <link
           rel="canonical"
-          href={`https://vmukti.com/solution/${content.slug}`}
+          href={`https://www.vmukti.com/solution/${content.slug}`}
         />
 
         {/* {content.schemas &&

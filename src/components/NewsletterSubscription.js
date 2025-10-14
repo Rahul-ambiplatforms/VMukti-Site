@@ -55,7 +55,7 @@ const whoWeAreLinks = [
 // ];
 const resources = [
   // Column 1
-  { text: "Blogs", path: "/about-us/blogs" },
+  { text: "Blogs", path: "/blog" },
   // { text: "Company News" },
 
   // Column 2
