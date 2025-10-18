@@ -1136,7 +1136,7 @@ export const solutionsData = {
         },
         {
           image: "../../assets/result_solution_fsv_5.png",
-          title: "Clear Proof and Recordkeeping",
+          title: "Clear Proof and Record keeping",
           description:
             "Everything the camera sees is recorded and saved. This gives you reliable proof for reviews, reports, or investigations when needed.",
         },

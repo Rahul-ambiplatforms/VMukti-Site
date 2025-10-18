@@ -357,24 +357,18 @@ export default function BlogsContent() {
                           {(() => {
                             const created = new Date(post.createdAt);
                             const updated = new Date(post.updatedAt);
-                            const wasUpdated =
-                              updated.getTime() - created.getTime() > 60000;
-                            const displayDate = wasUpdated ? updated : created;
-                            const label = wasUpdated ? "Updated" : "Published";
-                            const formattedDate =
-                              displayDate.toLocaleDateString("en-US", {
-                                year: "numeric",
-                                month: "long",
-                                day: "numeric",
-                              });
+                            
+                            // Always display the updatedAt field
+                            // If createdAt and updatedAt are the same, it means the blog was never updated
+                            // If they are different, it means the blog was updated at some point
+                            const formattedDate = updated.toLocaleDateString("en-US", {
+                              year: "numeric",
+                              month: "long",
+                              day: "numeric",
+                            });
+                            
                             return (
                               <>
-                                {/* <span>{label}</span>
-                              <span
-                                style={{ color: "#3F77A5", padding: "0 4px" }}
-                              >
-                                ●
-                              </span> */}
                                 <span>{formattedDate}</span>
                               </>
                             );

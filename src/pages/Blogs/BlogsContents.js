@@ -652,12 +652,13 @@ const BlogsOverviewDash = () => {
                     blog.updatedAt?.$date || blog.updatedAt
                   );
 
-                  const isSame =
-                    Math.abs(updated.getTime() - created.getTime()) <= 60000;
+                  // Check if the blog was actually updated
+                  // If createdAt and updatedAt are the same (within 1 minute), it means the blog was never updated
+                  // If they are different, it means the blog was updated at some point
+                  const wasUpdated = Math.abs(updated.getTime() - created.getTime()) > 60000;
 
-                  const displayDate = isSame ? created : updated;
-
-                  const label = isSame ? "Published" : "Updated";
+                  // Always display the updatedAt field, but show appropriate label
+                  const label = wasUpdated ? "Updated" : "Published";
 
                   return (
                     <>
@@ -666,7 +667,7 @@ const BlogsOverviewDash = () => {
                         ●
                       </span>
                       <span>
-                        {displayDate.toLocaleDateString("en-US", {
+                        {updated.toLocaleDateString("en-US", {
                           year: "numeric",
                           month: "long",
                           day: "numeric",
