@@ -1,6 +1,6 @@
 import React from "react";
 import HeroSection from "./HeroSection";
-import BlogsContent from "./BlogsGrid";
+import BlogsGrid from "./BlogsGrid";
 import { Box } from "@chakra-ui/react";
 import { Helmet } from "react-helmet-async";
 const BlogsDashboard = () => {
@@ -56,7 +56,7 @@ const BlogsDashboard = () => {
       </Helmet>
       <Box>
         <HeroSection />
-        <BlogsContent />
+        <BlogsGrid />
       </Box>
     </>
   );

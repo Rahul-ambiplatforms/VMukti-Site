@@ -24,7 +24,7 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { getBlogs, getBlogById, getBlogByUrlWords } from "./blog";
 import { Helmet } from "react-helmet-async";
 import ContactUs from "../ContactUs/Contactus";
@@ -224,6 +224,7 @@ const BlogsOverviewDash = () => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
+  const navigate = useNavigate();
 
   const sectionRef = useRef(null); // Reference for the section containing the image
   const ellipseSize = useBreakpointValue({
@@ -268,6 +269,7 @@ const BlogsOverviewDash = () => {
           body: JSON.stringify({
             ...formData,
             formType: "Blog",
+            pageUrl: currentUrl,
           }),
         }
       );
@@ -275,13 +277,15 @@ const BlogsOverviewDash = () => {
       const data = await response.json();
 
       if (response.ok) {
-        toast({
-          title: "Message Sent!",
-          description: "We'll get back to you soon.",
-          status: "success",
-          duration: 5000,
-          isClosable: true,
-        });
+        // toast({
+        //   title: "Message Sent!",
+        //   description: "We'll get back to you soon.",
+        //   status: "success",
+        //   duration: 5000,
+        //   isClosable: true,
+        // });
+        
+        navigate("/blog-thank-you");
 
         setFormData({
           fullName: "",
@@ -289,6 +293,7 @@ const BlogsOverviewDash = () => {
           phone: "",
           message: "",
         });
+
       } else {
         throw new Error(data.error || "Failed to send message");
       }
@@ -655,7 +660,8 @@ const BlogsOverviewDash = () => {
                   // Check if the blog was actually updated
                   // If createdAt and updatedAt are the same (within 1 minute), it means the blog was never updated
                   // If they are different, it means the blog was updated at some point
-                  const wasUpdated = Math.abs(updated.getTime() - created.getTime()) > 60000;
+                  const wasUpdated =
+                    Math.abs(updated.getTime() - created.getTime()) > 60000;
 
                   // Always display the updatedAt field, but show appropriate label
                   const label = wasUpdated ? "Updated" : "Published";
