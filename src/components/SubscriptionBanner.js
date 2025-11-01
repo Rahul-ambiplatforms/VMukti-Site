@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from "react";
 import {
   Flex,
   Box,
@@ -7,31 +7,49 @@ import {
   Button,
   Image,
   useBreakpointValue,
-} from '@chakra-ui/react'
+} from "@chakra-ui/react";
+import axios from "axios";
 
-
-const SubscriptionBanner = ({ bgColor = 'white' }) => {
-  const [email, setEmail] = useState('')
-  // const [isSubscribed, setIsSubscribed] = useState(false);
+const SubscriptionBanner = ({ bgColor = "white" }) => {
+  const [email, setEmail] = useState("");
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   // Responsive values
   const headingSize = useBreakpointValue({
-    base: '24px',
-    md: '28px',
-    lg: '36px',
-    xl: '48px',
-  })
+    base: "24px",
+    md: "28px",
+    lg: "36px",
+    xl: "48px",
+  });
   const imageSize = useBreakpointValue({
-    base: '150px',
-    md: '250px',
-    lg: '368px',
-  })
+    base: "150px",
+    md: "250px",
+    lg: "368px",
+  });
 
-  // const handleSubscribe = () => {
-  //     if (email.trim() !== "") {
-  //         setIsSubscribed(true);
-  //     }
-  // };
+  const handleSubscribe = async () => {
+    if (!email.trim()) return;
+
+    try {
+      setLoading(true);
+      await axios.post(
+        "http://localhost:5000/api/send-email",
+        // "https://vmukti.com/backend/api/send-email",
+        {
+          email,
+          formType: "Subscription",
+          message: "Please subscribe me to the newsletter.",
+        }
+      );
+      setIsSubscribed(true);
+      setEmail("");
+    } catch (err) {
+      console.error("Subscription error:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <Flex
@@ -40,25 +58,25 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
       borderRadius="24px"
       overflow="visible"
       mt="15%"
-      mb={{ base: '10px', md: '15px', lg: '20px' }}
+      mb={{ base: "10px", md: "15px", lg: "20px" }}
       //   boxShadow="lg"
       alignItems="left"
       // _hover={{ boxShadow: "xl", transform: "scale(1.01)", transition: "all 0.3s ease" }}
-      p={{ base: '15px', md: '20px', lg: '30px' }}
-      direction={{ base: 'column', md: 'row' }}
-      gap={{ base: '15px', md: '20px', lg: '30px' }}
-    // bg="green"
+      p={{ base: "15px", md: "20px", lg: "30px" }}
+      direction={{ base: "column", md: "row" }}
+      gap={{ base: "15px", md: "20px", lg: "30px" }}
+      // bg="green"
     >
       {/* Image Section */}
       <Box
         display={{ base: "none", md: "block" }} //Added this line
-        position={{ base: 'relative', md: 'absolute' }}
-        left={{ base: '0', md: '0' }}
-        bottom={{ base: '0', md: '0' }}
+        position={{ base: "relative", md: "absolute" }}
+        left={{ base: "0", md: "0" }}
+        bottom={{ base: "0", md: "0" }}
         width={imageSize}
-        height={{ base: 'auto', md: imageSize }}
+        height={{ base: "auto", md: imageSize }}
         flexShrink="0"
-        mb={{ base: '10px', md: '0' }}
+        mb={{ base: "10px", md: "0" }}
         zIndex={4}
         overflow="visible"
       >
@@ -74,14 +92,14 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
 
       <Box
         display={{ base: "none", md: "block" }} //Added this line
-        position={{ base: 'relative', md: 'absolute' }}
-        right={{ base: '0', md: '-5px' }}
+        position={{ base: "relative", md: "absolute" }}
+        right={{ base: "0", md: "-5px" }}
         // left={{ base: '0', md: '500px' }}
-        top={{ base: '0', md: '-2' }}
+        top={{ base: "0", md: "-2" }}
         width="454px"
         height="252px"
         flexShrink="0"
-        mb={{ base: '10px', md: '0' }}
+        mb={{ base: "10px", md: "0" }}
         zIndex={0}
         // bg="red"
         overflow="hidden"
@@ -99,29 +117,28 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
       {/* Content Section */}
       <Flex
         flexGrow={1}
-        ml={{ base: '0', md: '30%' }}
+        ml={{ base: "0", md: "30%" }}
         // pl={{ base: '0', md: '300px', lg: '350px' }}
         // pr={{ base: '0', md: '15px', lg: '20px' }}
         alignItems="center"
         // bg="red"
-        justifyContent={{ base: 'flex-start', md: 'space-between' }} // Changed for mobile
-        direction={{ base: 'column', md: 'row' }}
-        textAlign={{ base: 'left', md: 'left' }} // Align text left on mobile
-      // gap={{ base: '15px', md: '20px', lg: '30px' }}
-      // bg="green"
-
+        justifyContent={{ base: "flex-start", md: "space-between" }} // Changed for mobile
+        direction={{ base: "column", md: "row" }}
+        textAlign={{ base: "left", md: "left" }} // Align text left on mobile
+        // gap={{ base: '15px', md: '20px', lg: '30px' }}
+        // bg="green"
       >
         <Flex
           direction="column"
           wrap="nowrap"
           overflow="visible"
           display="inline-flex"
-          alignItems={{ base: 'flex-start', md: 'flex-start' }} // Left align on mobile
+          alignItems={{ base: "flex-start", md: "flex-start" }} // Left align on mobile
           justifyContent="center"
           minWidth="fit-content"
-          width={{ base: '100%', md: 'auto' }} // Full width on mobile
-          pl={{ base: '5px', md: '0' }}
-        // bg="green"
+          width={{ base: "100%", md: "auto" }} // Full width on mobile
+          pl={{ base: "5px", md: "0" }}
+          // bg="green"
         >
           <Text
             color="black"
@@ -129,7 +146,7 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
             fontWeight="400"
             letterSpacing="-0.72px"
             whiteSpace="nowrap"
-            textAlign={{ base: 'left', md: 'left' }}
+            textAlign={{ base: "left", md: "left" }}
           >
             Subscribe to
           </Text>
@@ -138,7 +155,7 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
             as="span"
             color="#3F77A5"
             fontSize={headingSize}
-            fontWeight={'400'}
+            fontWeight={"400"}
             mb={{ base: "10px", md: "0" }}
             mt="-3" //remove this line if you want to keep the default margin
             whiteSpace="nowrap"
@@ -147,7 +164,6 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
             Our Newsletter
           </Text>
         </Flex>
-
 
         {/* Email Input Section */}
 
@@ -160,11 +176,16 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
             background="#E7E7E7"
             alignItems="center"
             px="12px"
-          // boxShadow="sm"
-          // bg="red"
+            // boxShadow="sm"
+            // bg="red"
           >
             {/* Email Icon */}
-            <Box display={{ base: "none", md: "flex" }} alignItems="center" justifyContent="center" mr="8px">
+            <Box
+              display={{ base: "none", md: "flex" }}
+              alignItems="center"
+              justifyContent="center"
+              mr="8px"
+            >
               <svg
                 width="33"
                 height="22"
@@ -180,8 +201,13 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
             </Box>
 
             {/* Divider */}
-            <Box height="20px" display={{ base: "none", md: "block" }} width="2px" bg="#3F77A5" mx="8px" />
-
+            <Box
+              height="20px"
+              display={{ base: "none", md: "block" }}
+              width="2px"
+              bg="#3F77A5"
+              mx="8px"
+            />
 
             {/* Input Field */}
             <Input
@@ -190,7 +216,7 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
               border="none"
               outline="none"
               bg="transparent"
-              width="100%"
+              width="65%"
               fontSize="14px"
               fontWeight="600"
               color="#3F77A5"
@@ -211,23 +237,17 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
               bg="#3F77A5"
               color="white"
               borderRadius="20px"
-              px={{ base: "12px", md: "20px" }} // Reduced padding on mobile
+              px={{ base: "12px", md: "20px" }}
               fontSize="14px"
               fontWeight="bold"
               _hover={{ bg: "#2c5a7a" }}
-              display="flex"
-              alignItems="center"
-              gap="8px"
-              _disabled={{
-                opacity: 0.6,
-                cursor: "not-allowed",
-                bg: "#3F77A5" // Maintain same color when disabled
-              }}
-              isDisabled={true}
               minW="74px"
               m="3px"
+              isLoading={loading}
+              onClick={handleSubscribe}
+              disabled={loading || !email.trim()}
             >
-              <Text display={{ base: "none", md: "inline" }}>Subscribe</Text>
+              {isSubscribed ? "Subscribed" : "Subscribe"}
               <svg
                 width="14"
                 height="14"
@@ -235,18 +255,18 @@ const SubscriptionBanner = ({ bgColor = 'white' }) => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
+                {" "}
                 <path
                   d="M17.5 2C17.5 1.17157 16.8284 0.499999 16 0.499999L2.5 0.5C1.67157 0.5 0.999999 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5L14.5 3.5L14.5 15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM3.06066 17.0607L17.0607 3.06066L14.9393 0.939339L0.93934 14.9393L3.06066 17.0607Z"
                   fill="white"
-                />
+                />{" "}
               </svg>
             </Button>
           </Flex>
         </Flex>
-
       </Flex>
     </Flex>
-  )
-}
+  );
+};
 
-export default SubscriptionBanner
+export default SubscriptionBanner;

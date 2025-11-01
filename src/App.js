@@ -19,6 +19,8 @@ import PrivacyPolicy from "./pages/Who/components/PrivacyPolicy";
 import TermsAndCondition from "./pages/Who/components/TermsAndCondition";
 import CareerHome from "./pages/career/CareerHome";
 import Thankyoucareer from "./pages/ThankYou/Thankyoucareer";
+// Import VoiceAssistant
+import VoiceAssistant from "./components/VoiceAssistant";
 // import Particles from '@tsparticles/react';
 // import ParticlesComponent from './components/Particles';
 // Lazy load components
@@ -86,7 +88,10 @@ function App() {
                   <Route path="/Ambicam" element={<AmbicamLandingPage />} />
                   <Route path="/thank-you" element={<Thankyou />} />
                   <Route path="/blog-thank-you" element={<Thankyou />} />
-                  <Route path="/careers-thank-you" element={<Thankyoucareer />} />
+                  <Route
+                    path="/careers-thank-you"
+                    element={<Thankyoucareer />}
+                  />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
@@ -95,6 +100,7 @@ function App() {
           <PageContentWrapper>
             <NewsletterSubscription />
           </PageContentWrapper>
+          {/* <VoiceAssistant /> */}
         </Router>
       </ChakraProvider>
     </HelmetProvider>

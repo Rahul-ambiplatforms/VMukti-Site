@@ -41,7 +41,8 @@ const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
       w={{ base: "100%", md: "50%" }}
       bg="#3F77A5"
       color="white"
-      h="100%"
+      h="100%" // This will now correctly be 100% of the 400px parent
+      minH="200px" // Keep for mobile
     >
       <Heading as="h3" size="md" noOfLines={2}>
         {title}
@@ -50,7 +51,6 @@ const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
       <Text fontSize="sm" opacity={0.9} noOfLines={3}>
         {brief}
       </Text>
-      {/* This is no longer a link, but styled to look like one */}
       <Flex as="span" fontWeight="bold" display="flex" alignItems="center">
         Read more
         <Box ml="2">
@@ -77,7 +77,8 @@ const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
       alt={title}
       objectFit="cover"
       w={{ base: "100%", md: "50%" }}
-      h={{ base: "250px", md: "auto" }}
+      // UPDATED: Set desktop height to 100% to fill the 400px container
+      h={{ base: "250px", md: "100%" }}
     />
   );
 
@@ -94,7 +95,8 @@ const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
         borderRadius="24px"
         overflow="hidden"
         direction={flexDirection}
-        h="100%"
+        // UPDATED: Set fixed height on desktop, auto on mobile
+        h={{ base: "auto", md: "400px" }}
       >
         {textSection}
         {imageSection}
@@ -111,8 +113,9 @@ const BlogPlaceholderCard = ({ layoutVariant = "textFirst" }) => {
       w={{ base: "100%", md: "50%" }}
       bg="#3F77A5"
       color="whiteAlpha.700"
+      // UPDATED: Match the real card's props
       h="100%"
-      minH={{ base: "450px", md: "100%" }}
+      minH="200px"
     >
       <Text>No blog post available.</Text>
     </Center>
@@ -121,7 +124,8 @@ const BlogPlaceholderCard = ({ layoutVariant = "textFirst" }) => {
   const imageSection = (
     <Box
       w={{ base: "100%", md: "50%" }}
-      h={{ base: "250px", md: "auto" }}
+      // UPDATED: Match the real card's props
+      h={{ base: "250px", md: "100%" }}
       bg="gray.200"
     />
   );
@@ -137,6 +141,8 @@ const BlogPlaceholderCard = ({ layoutVariant = "textFirst" }) => {
       borderRadius="24px"
       overflow="hidden"
       direction={flexDirection}
+      // UPDATED: Match the real card's props
+      h={{ base: "auto", md: "400px" }}
     >
       {textSection}
       {imageSection}
@@ -173,7 +179,7 @@ const BlogView = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [toast]);
+  }, [toast]); // Removed fetchBlogs from dependency array as it's defined inside
 
   useEffect(() => {
     fetchBlogs();

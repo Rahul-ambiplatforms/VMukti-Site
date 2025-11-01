@@ -97,34 +97,47 @@ const VMuktiHomepage = () => {
       </Helmet>
 
       <PageContentWrapper noPadding>
-        <HeroSection />
+        <HeroSection id="section-hero"/>
       </PageContentWrapper>
 
       <PageContentWrapper>
-        <Diagram />
-        <ComputerVision />
+        <Diagram id="section-diagram"/>
+        <Box id="section-computervision">
+          <ComputerVision />
+        </Box>
       </PageContentWrapper>
-      <Trusted />
+      <Box id="section-trusted">
+        <Trusted />
+      </Box>
       <PageContentWrapper>
-        <Solutions data={homeSolutions} />
-        <Reviews />
-
-        <Industries heading="AI Computer Vision System for Evolving Industries" />
-        <Box position="relative" zIndex="9" mt={{ base: "4%", md: "-9%" }}>
+        <Solutions data={homeSolutions} id="section-solutions"/>
+        <Box id="section-reviews">
+          <Reviews />
+        </Box>
+        <Box id="section-industries">
+          <Industries heading="AI Computer Vision System for Evolving Industries" />
+        </Box>
+        <Box position="relative" zIndex="9" mt={{ base: "4%", md: "-9%" }} id="section-results">
           <Results />
         </Box>
       </PageContentWrapper>
 
-      <Achieved
-        heading="Milestones of Our Journey"
-        description="Our journey is defined by innovation, impact, and measurable success. We continue to set benchmarks in visual surveillance. Every milestone reflects our commitment to solving real-world challenges using our Computer Vision Systems."
-      />
+      <Box id="section-achievements">
+        <Achieved
+          heading="Milestones of Our Journey"
+          description="Our journey is defined by innovation, impact, and measurable success. We continue to set benchmarks in visual surveillance. Every milestone reflects our commitment to solving real-world challenges using our Computer Vision Systems."
+        />
+      </Box>
       <PageContentWrapper>
-        <BlogView />
-        <CtaBanner href="/contact-us">
-          Join the AI-Powered Surveillance Revolution with VMukti Solutions
-        </CtaBanner>
-        <FaqsSection faqsList={faqsData.homepage} />
+        <BlogView id="section-blogs"/>
+        <Box id="section-contact-cta">
+          <CtaBanner href="/contact-us">
+            Join the AI-Powered Surveillance Revolution with VMukti Solutions
+          </CtaBanner>
+        </Box>
+        <Box id="section-faq">
+          <FaqsSection faqsList={faqsData.homepage} />
+        </Box>
       </PageContentWrapper>
     </>
   );
