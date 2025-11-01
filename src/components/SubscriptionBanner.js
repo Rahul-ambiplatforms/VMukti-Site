@@ -34,8 +34,8 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
     try {
       setLoading(true);
       await axios.post(
-        "http://localhost:5000/api/send-email",
-        // "https://vmukti.com/backend/api/send-email",
+        // "http://localhost:5000/api/send-email",
+        "https://vmukti.com/backend/api/send-email",
         {
           email,
           formType: "Subscription",
