@@ -28,8 +28,8 @@ export const getBlogs = async (
     }
 
     const response = await axios.get(`${API_URL}/blogs`, { params });
-    console.log("response", response);
-    console.log("response data", response.data);
+    // console.log("response", response);
+    // console.log("response data", response.data);
 
     // console.log("OUTPUT---------------------")
     return response.data;

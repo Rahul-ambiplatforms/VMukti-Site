@@ -45,14 +45,18 @@ const leftPanelData = {
 };
 
 const formOptions = {
-  // countries: [
-  //   { code: "+91", name: "India", flag: "🇮🇳" },
-  //   { code: "+1", name: "United States", flag: "🇺🇸" },
-  //   { code: "+44", name: "United Kingdom", flag: "🇬🇧" },
-  //   { code: "+1", name: "Canada", flag: "🇨🇦" },
-  // ],
-  // cities: ["New York", "Mumbai", "London", "Toronto"],
-  businessProfiles: ["Government", "Enterprise", "System Integrator"],
+  camerasFor: ["Office", "Factory", "Home", "Other"],
+  businessProfiles: [
+    "Government",
+    "Stokist",
+    "Distributor",
+    "Dealer",
+    "Customer",
+    "New Customer",
+    "End User",
+    "System Integrator",
+    "Other",
+  ],
   inquiryTypes: [
     "AI Cameras",
     "VMS",
@@ -367,8 +371,10 @@ const ContactUsForm = () => {
     city: "",
     phone: { code: "+91", number: "" },
     businessProfile: "",
+    camerasFor: "",
     companyName: "",
     inquiryType: "",
+    customerQuantity: "",
     message: "",
   });
   const [errors, setErrors] = useState({
@@ -395,9 +401,23 @@ const ContactUsForm = () => {
   };
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    if (errors[e.target.name]) {
-      setErrors((prev) => ({ ...prev, [e.target.name]: false }));
+    const { name, value } = e.target;
+
+    if (name === "customerQuantity") {
+      if (value === "") {
+        setFormData((prev) => ({ ...prev, [name]: "" }));
+      } else {
+        const numericValue = Number(value);
+        if (!Number.isNaN(numericValue) && numericValue >= 0) {
+          setFormData((prev) => ({ ...prev, [name]: value }));
+        }
+      }
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
+
+    if (errors[name]) {
+      setErrors((prev) => ({ ...prev, [name]: false }));
     }
   };
 
@@ -457,8 +477,14 @@ const ContactUsForm = () => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             ...formData,
+            customerType: formData.businessProfile,
+            customerQuantity:
+              formData.customerQuantity === ""
+                ? ""
+                : Math.max(0, Number(formData.customerQuantity)),
             phoneFull: `${formData.phone.code}${formData.phone.number}`,
             formType: "Contact",
+            leadType: "VMukti",
           }),
         }
       );
@@ -481,8 +507,10 @@ const ContactUsForm = () => {
           city: "",
           phone: { code: "+91", number: "" },
           businessProfile: "",
+          camerasFor: "",
           companyName: "",
           inquiryType: "",
+          customerQuantity: "",
           message: "",
         });
       } else {
@@ -709,10 +737,22 @@ const ContactUsForm = () => {
                 </RequiredPlaceholder>
               </Box>
 
-              {/* 7. Business Profile */}
+              {/* 7. I want cameras for */}
               <Box sx={{ order: { base: 7, md: "initial" } }}>
                 <CustomRadioDropdown
-                  placeholder="Business Profile"
+                  placeholder="I want cameras for"
+                  name="camerasFor"
+                  options={formOptions.camerasFor}
+                  value={formData.camerasFor}
+                  onChange={handleDropdownChange}
+                  isRequired={false}
+                />
+              </Box>
+
+              {/* 8. I am a */}
+              <Box sx={{ order: { base: 8, md: "initial" } }}>
+                <CustomRadioDropdown
+                  placeholder="I am a"
                   name="businessProfile"
                   options={formOptions.businessProfiles}
                   value={formData.businessProfile}
@@ -721,8 +761,8 @@ const ContactUsForm = () => {
                 />
               </Box>
 
-              {/* 8. Inquiry Type */}
-              <Box sx={{ order: { base: 8, md: "initial" } }}>
+              {/* 9. Inquiry Type */}
+              <Box sx={{ order: { base: 9, md: "initial" } }}>
                 <CustomRadioDropdown
                   placeholder="Inquiry Type"
                   name="inquiryType"
@@ -731,6 +771,29 @@ const ContactUsForm = () => {
                   onChange={handleDropdownChange}
                   isRequired={false}
                 />
+              </Box>
+
+              {/* 10. No. of Cameras Needed */}
+              <Box sx={{ order: { base: 10, md: "initial" } }}>
+                <RequiredPlaceholder
+                  text="No. of Cameras Needed"
+                  hasValue={formData.customerQuantity !== ""}
+                  isRequired={false}
+                >
+                  <Input
+                    name="customerQuantity"
+                    type="number"
+                    inputMode="numeric"
+                    min="0"
+                    step="1"
+                    value={formData.customerQuantity}
+                    onChange={handleChange}
+                    bg="#F0F0F0"
+                    border="none"
+                    borderRadius="10px"
+                    h="48px"
+                  />
+                </RequiredPlaceholder>
               </Box>
             </SimpleGrid>
             <Textarea

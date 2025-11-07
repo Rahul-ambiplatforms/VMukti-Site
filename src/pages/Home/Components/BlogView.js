@@ -190,7 +190,7 @@ const BlogView = () => {
     if (isMobile && !isPaused && blogs.length > 1) {
       const timer = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % blogs.length);
-      }, 5000); // Change card every 5 seconds
+      }, 3000); 
       return () => clearInterval(timer);
     }
   }, [currentIndex, isMobile, isPaused, blogs.length]);
