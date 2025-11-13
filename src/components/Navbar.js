@@ -1060,6 +1060,27 @@ const Navbar = () => {
                       </div>
                     </Box>
                     <Button
+                      as="a"
+                      width={contactBtnSize}
+                      height={contactBtnHeight}
+                      background="#3F77A5"
+                      color="#FFFFFF"
+                      fontSize={fontSize}
+                      px="20"
+                      fontWeight="600"
+                      borderRadius="24px"
+                      flexShrink={0}
+                      href="https://calendly.com/book-cloud-vms-demo/30min"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      _hover={{
+                        background: "#35668E",
+                        color: "#FFFFFF",
+                      }}
+                    >
+                      Cloud VMS Demo
+                    </Button>
+                    <Button
                       width="146px"
                       height="50px"
                       background="#3F77A5"
