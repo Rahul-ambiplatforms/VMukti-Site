@@ -23,12 +23,9 @@ import { homeSolutions } from "../../data/solutionsContent";
 import FaqsSection from "../../components/faqsSection";
 import faqsData from "../../data/faqsData";
 import schemaData from "../../data/schemaData";
-import { Helmet } from "react-helmet-async";
 import BlogView from "./Components/BlogView";
-// import BlogsDashboard from "../Blogs/HeroSection";
-// import BlogsContent from "../Blogs/BlogsContent";
-// import BlogsOverviewDash from "../Blogs/BlogsOverviewDash";
-
+import { Helmet } from "react-helmet-async";
+import CertificationSection from "../Solutions/Components/CertificationsSection";
 const VMuktiHomepage = () => {
   const homepageSchemas = schemaData.homepage;
 
@@ -108,6 +105,9 @@ const VMuktiHomepage = () => {
       </PageContentWrapper>
       <Box id="section-trusted">
         <Trusted />
+      </Box>
+      <Box id="section-certifications">
+        <CertificationSection /> 
       </Box>
       <PageContentWrapper>
         <Solutions data={homeSolutions} id="section-solutions"/>

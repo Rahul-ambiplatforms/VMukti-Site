@@ -1,12 +1,14 @@
 import React from "react";
 import { Box, Text, Heading, Flex } from "@chakra-ui/react";
-import { motion } from "framer-motion";
 import CertificationsData from "../../../data/certificationsConstData";
 import HeadingAnimation from "../../../components/Animation/Text/HeadingAnimation";
 
 const CertificationsSection = () => {
+  // animation speed (higher = slower). Adjust seconds as needed.
+  const durationSeconds = 20;
+
   return (
-    <Box py={{ base: "2", md: "4" }} mt="5%" position="relative">
+    <Box py={{ base: "2", md: "4" }} mt="5%" position="relative" overflow="hidden">
       <HeadingAnimation>
         <Heading
           textAlign="center"
@@ -21,62 +23,108 @@ const CertificationsSection = () => {
         </Heading>
       </HeadingAnimation>
 
-      {/* This is the scrolling container */}
-      <Flex
-        direction="row" // Explicitly set direction
-        alignItems="center" // Good practice to vertically align items
-        overflowX="auto" // Always allow horizontal scrolling
-        // **** FIX #1: Change justifyContent to flex-start ****
-        justifyContent={{ base: "center", md: "flex-start" }}
-        flexWrap={{ base: "wrap", md: "nowrap" }} // Keep wrapping on mobile
-        gap={{ base: 4, md: 4 }}
-        // **** FIX #2: Add horizontal padding for visual spacing ****
-        px={{ base: 4, md: 8 }} // Adds space on the left and right
-        mx="auto"
-        // **** FIX #3: Correct the scrollbar hiding syntax ****
+      {/* MARQUEE WRAPPER */}
+      <Box
+        // outer wrapper hides overflow and handles hover to pause
+        width="100%"
+        overflow="hidden"
+        px={{ base: 4, md: 8 }}
+        // pause animation on hover
         sx={{
-          "&::-webkit-scrollbar": {
-            display: "none", // Hides scrollbar on Chrome, Safari, Edge
+          "&:hover .marqueeTrack": {
+            animationPlayState: "paused",
           },
-          "scrollbar-width": "none", // Hides scrollbar on Firefox
         }}
       >
-        {CertificationsData.map((cert, index) => (
-          // This is a certification item
-          <Flex
-            as={motion.div}
-            key={index}
-            direction="column"
-            align="center"
-            justify="center"
-            bg="#fff"
-            borderRadius="24px"
-            textAlign="center"
-            // Use minW to prevent shrinking and ensure consistent size
-            minW={{ base: "150px", md: "140px" }}
-            boxSize={{ base: "166px", md: "140px" }}
-            flexShrink={0} // Ensure items do not shrink
-          >
-            <Box mb={3} color={cert.color}>
-              {cert.icon}
-            </Box>
-            <Text
-              fontSize="14px"
-              fontWeight="500"
-              color="black"
-              mb={1}
-              lineHeight="1.2"
-            >
-              {cert.name}
-            </Text>
-            {cert.description && (
-              <Text fontSize="14px" color="black" fontWeight="500">
-                {cert.description}
-              </Text>
-            )}
+        {/* TRACK: duplicated content for seamless infinite scroll */}
+        <Flex
+          as="div"
+          className="marqueeTrack"
+          align="center"
+          // the keyframes are declared here via sx
+          sx={{
+            display: "inline-flex",
+            gap: "24px",
+            animation: `marquee ${durationSeconds}s linear infinite`,
+            animationPlayState: "running",
+            whiteSpace: "nowrap",
+            // hide native scrollbar on webkit & firefox
+            "&::-webkit-scrollbar": { display: "none" },
+            scrollbarWidth: "none",
+            // keyframes
+            "@keyframes marquee": {
+              "0%": { transform: "translateX(0)" },
+              "100%": { transform: `translateX(-50%)` }, // moves half the width because we duplicate items
+            },
+          }}
+        >
+          {/* first copy */}
+          <Flex as="div" align="center" gap={{ base: 4, md: 6 }}>
+            {CertificationsData.map((cert, index) => (
+              <Flex
+                key={`first-${index}`}
+                direction="column"
+                align="center"
+                justify="center"
+                bg="#fff"
+                borderRadius="24px"
+                textAlign="center"
+                minW={{ base: "150px", md: "140px" }}
+                boxSize={{ base: "166px", md: "140px" }}
+                flexShrink={0}
+                px={3}
+                py={4}
+                boxShadow="sm"
+              >
+                <Box mb={3} color={cert.color}>
+                  {cert.icon}
+                </Box>
+                <Text fontSize="14px" fontWeight="500" color="black" mb={1} lineHeight="1.2">
+                  {cert.name}
+                </Text>
+                {cert.description && (
+                  <Text fontSize="12px" color="black" fontWeight="500">
+                    {cert.description}
+                  </Text>
+                )}
+              </Flex>
+            ))}
           </Flex>
-        ))}
-      </Flex>
+
+          {/* second copy (duplicate) */}
+          <Flex as="div" align="center" gap={{ base: 4, md: 6 }}>
+            {CertificationsData.map((cert, index) => (
+              <Flex
+                key={`second-${index}`}
+                direction="column"
+                align="center"
+                justify="center"
+                bg="#fff"
+                borderRadius="24px"
+                textAlign="center"
+                minW={{ base: "150px", md: "140px" }}
+                boxSize={{ base: "166px", md: "140px" }}
+                flexShrink={0}
+                px={3}
+                py={4}
+                boxShadow="sm"
+              >
+                <Box mb={3} color={cert.color}>
+                  {cert.icon}
+                </Box>
+                <Text fontSize="14px" fontWeight="500" color="black" mb={1} lineHeight="1.2">
+                  {cert.name}
+                </Text>
+                {cert.description && (
+                  <Text fontSize="12px" color="black" fontWeight="500">
+                    {cert.description}
+                  </Text>
+                )}
+              </Flex>
+            ))}
+          </Flex>
+        </Flex>
+      </Box>
     </Box>
   );
 };
