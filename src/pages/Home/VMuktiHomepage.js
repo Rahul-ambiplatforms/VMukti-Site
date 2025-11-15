@@ -94,11 +94,16 @@ const VMuktiHomepage = () => {
       </Helmet>
 
       <PageContentWrapper noPadding>
-        <HeroSection id="section-hero"/>
+        <HeroSection id="section-hero" />
       </PageContentWrapper>
 
       <PageContentWrapper>
-        <Diagram id="section-diagram"/>
+        <Diagram id="section-diagram" />
+      </PageContentWrapper>
+      <Box id="section-certifications">
+        <CertificationSection />
+      </Box>
+      <PageContentWrapper>
         <Box id="section-computervision">
           <ComputerVision />
         </Box>
@@ -106,18 +111,20 @@ const VMuktiHomepage = () => {
       <Box id="section-trusted">
         <Trusted />
       </Box>
-      <Box id="section-certifications">
-        <CertificationSection /> 
-      </Box>
       <PageContentWrapper>
-        <Solutions data={homeSolutions} id="section-solutions"/>
+        <Solutions data={homeSolutions} id="section-solutions" />
         <Box id="section-reviews">
           <Reviews />
         </Box>
         <Box id="section-industries">
           <Industries heading="AI Computer Vision System for Evolving Industries" />
         </Box>
-        <Box position="relative" zIndex="9" mt={{ base: "4%", md: "-9%" }} id="section-results">
+        <Box
+          position="relative"
+          zIndex="9"
+          mt={{ base: "4%", md: "-9%" }}
+          id="section-results"
+        >
           <Results />
         </Box>
       </PageContentWrapper>
@@ -129,7 +136,7 @@ const VMuktiHomepage = () => {
         />
       </Box>
       <PageContentWrapper>
-        <BlogView id="section-blogs"/>
+        <BlogView id="section-blogs" />
         <Box id="section-contact-cta">
           <CtaBanner href="/contact-us">
             Join the AI-Powered Surveillance Revolution with VMukti Solutions

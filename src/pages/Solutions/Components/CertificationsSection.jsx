@@ -8,7 +8,7 @@ const CertificationsSection = () => {
   const durationSeconds = 20;
 
   return (
-    <Box py={{ base: "2", md: "4" }} mt="5%" position="relative" overflow="hidden">
+    <Box py={{ base: "2", md: "4" }} mt="3%" position="relative" overflow="hidden">
       <HeadingAnimation>
         <Heading
           textAlign="center"

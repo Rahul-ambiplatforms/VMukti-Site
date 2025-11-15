@@ -31,7 +31,7 @@ const Diagram = () => {
       mt={{ base: "0", md: "10%" }}
       // direction={{ base: "column", md: "row" }}
       direction={["column", "column", "column", "row"]}
-      mb="4%"
+      // mb="1%"
       position="relative"
       zIndex={1}
     >
