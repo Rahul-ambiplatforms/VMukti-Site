@@ -630,7 +630,7 @@ const Navbar = () => {
                   fontWeight="600"
                   borderRadius="24px"
                   flexShrink={0}
-                  href="https://calendly.com/book-cloud-vms-demo/30min"
+                  href="https://calendly.com/book-cloud-vms-demo/30min?utm_source=vmukti&utm_medium=website&utm_campaign=cloud_vms_demo"
                   target="_blank"
                   rel="noopener noreferrer"
                   _hover={{
@@ -1070,7 +1070,7 @@ const Navbar = () => {
                       fontWeight="600"
                       borderRadius="24px"
                       flexShrink={0}
-                      href="https://calendly.com/book-cloud-vms-demo/30min"
+                      href="https://calendly.com/book-cloud-vms-demo/30min?utm_source=vmukti&utm_medium=website&utm_campaign=cloud_vms_demo"
                       target="_blank"
                       rel="noopener noreferrer"
                       _hover={{
