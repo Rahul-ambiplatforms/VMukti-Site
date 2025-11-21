@@ -234,7 +234,7 @@ export default function ContactUs() {
           >
             <Image
               src={`${process.env.PUBLIC_URL}/assets/Contactus.png`}
-              alt="Contact Us | VMukti Solutions – AI Video Surveillance & Support Team"
+              alt="Contact VMukti Solutions"
               position="absolute"
               top="0"
               left="0"
