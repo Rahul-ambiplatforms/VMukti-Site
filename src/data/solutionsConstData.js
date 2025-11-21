@@ -165,7 +165,7 @@ export const solutionsData = {
           "Manage, monitor, and secure multiple locations with VMukti’s cloud-based video management system featuring AI analytics, centralized monitoring, and reliable remote access.",
         url: "https://www.vmukti.com/solution/video-management-system/",
         datePublished: "2006-11-10",
-        dateModified: "2025-05-05",
+        dateModified: "2025-11-21",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -427,7 +427,7 @@ export const solutionsData = {
           "VMukti Cloud EMS offers admin access control, user permissions, event alerts, flexible storage, live & recorded video, alert handling, and centralized monitoring.",
         url: "https://www.vmukti.com/solution/enterprise-management-system/",
         datePublished: "2006-11-10",
-        dateModified: "2025-05-05",
+        dateModified: "2025-11-21",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -670,7 +670,7 @@ export const solutionsData = {
           "Delivering reliable and unmatched efficiency with our Integrated Command and Control Centre solutions which enhances operational control and decision-making.",
         url: "https://www.vmukti.com/solution/integrated-command-control-center/",
         datePublished: "2006-11-10",
-        dateModified: "2025-05-05",
+        dateModified: "2025-11-21",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -934,7 +934,7 @@ export const solutionsData = {
           "Stream real-time CCTV feeds to your command center with VMukti’s secure live streaming platform featuring adaptive quality, OTP access, user reports, and VOD playback.",
         url: "https://www.vmukti.com/solution/live-streaming-solution",
         datePublished: "2006-11-10",
-        dateModified: "2025-05-05",
+        dateModified: "2025-11-21",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -1188,7 +1188,7 @@ export const solutionsData = {
           "Enhance field operations with VMukti’s Flying Squad Vehicle featuring live GPS, moving surveillance, geo-fencing alerts, PTZ control, and real-time control room viewing.",
         url: "https://www.vmukti.com/solution/flying-squad-vehicle/",
         datePublished: "2006-11-10",
-        dateModified: "2025-05-05",
+        dateModified: "2025-11-21",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -1633,7 +1633,7 @@ export const solutionsData = {
           "Enhance operations with VMukti CloudAI featuring face recognition, ANPR, crowd analysis, ADAS, vehicle detection and real-time cloud-based visual intelligence.",
         url: "https://www.vmukti.com/solution/cloudai/",
         datePublished: "2006-11-10",
-        dateModified: "2025-05-05",
+        dateModified: "2025-11-21",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -1868,7 +1868,7 @@ export const solutionsData = {
           " VMukti GenAI offers advanced video intelligence with GPT-driven smart search, real-time analysis, activity detection, and automated reporting for faster decision-making.",
         url: "https://www.vmukti.com/solution/genai/",
         datePublished: "2006-11-10",
-        dateModified: "2025-05-05",
+        dateModified: "2025-11-21",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -2068,7 +2068,7 @@ export const solutionsData = {
           "Turn visual data into actionable intelligence with VisualBot. Get AI-driven video insights, automated text descriptions and scalable API integrations for enterprise systems.",
         url: "https://www.vmukti.com/solution/visualbot/",
         datePublished: "2006-11-10",
-        dateModified: "2025-05-05",
+        dateModified: "2025-11-21",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",

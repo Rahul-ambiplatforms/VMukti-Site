@@ -40,6 +40,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "update-schema-dates": "node scripts/update-schema-dates.js",
+    "prebuild": "npm run update-schema-dates",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

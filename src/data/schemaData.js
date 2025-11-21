@@ -9,7 +9,7 @@
           "Enhance security and operations with VMukti’s cloud-based video surveillance solutions, offering centralized monitoring, remote access, and robust protection for multi-location businesses.",
         url: "https://www.vmukti.com/",
         datePublished: "2006-11-10",
-        dateModified: "2025-05-05",
+        dateModified: "2025-11-21",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -165,7 +165,7 @@
           "Discover VMukti’s unified AI surveillance ecosystem—Cloud VMS, ICCC, GenAI, VisualBot, CloudAI analytics, live streaming, and enterprise-grade monitoring.",
         url: "https://www.vmukti.com/solution/",
         datePublished: "2006-11-10",
-        dateModified: "2025-05-05",
+        dateModified: "2025-11-21",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -327,7 +327,7 @@
           "Explore how our AI-powered video surveillance enhances safety, compliance and efficiency across transportation, retail, manufacturing and more industries.",
         url: "https://www.vmukti.com/industry/",
         datePublished: "2006-11-10",
-        dateModified: "2025-05-05",
+        dateModified: "2025-11-21",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
