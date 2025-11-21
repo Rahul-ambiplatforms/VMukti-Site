@@ -959,7 +959,6 @@ const industriesData = {
       },
     ],
   },
-  // Result image remaining, workflow remaining
   oilandgas: {
     metatitle: "Smart Video Surveillance Solution for Oil & Gas Operations | VMukti",
     metadescription:

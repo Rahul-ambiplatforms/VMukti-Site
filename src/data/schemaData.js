@@ -322,9 +322,9 @@
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Explore All Industries We Serve with Computer Vision AI",
+        name: "Industries We Serve – AI Video Surveillance Solutions | VMukti Solutions",
         description:
-          "Explore how our AI-powered video surveillance enhances safety, compliance and efficiency across transportation, retail, manufacturing and more industries.",
+          "VMukti provides AI-enabled video surveillance for retail, manufacturing, logistics, education, healthcare, smart cities, and more—boosting safety, automation, and operational efficiency.",
         url: "https://www.vmukti.com/industry/",
         datePublished: "2006-11-10",
         dateModified: "2025-11-21",

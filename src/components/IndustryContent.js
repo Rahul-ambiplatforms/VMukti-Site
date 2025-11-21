@@ -268,10 +268,9 @@ const IndustryContent = ({ props, content }) => {
           content={`https://www.vmukti.com/industry/${content.slug}/`}
         />
         <meta property="og:site_name" content="VMukti Solutions" />
-        {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@vmukti" />
-        <meta name="twitter:title" content={content.metetitle} />
+        <meta name="twitter:title" content={content.metatitle} />
         <meta name="twitter:description" content={content.metadescription} />
         {/* Use the same specific image for the Twitter card */}
         <meta name="twitter:image" content={content.ogImage} />
