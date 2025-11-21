@@ -9,9 +9,9 @@
 
 const industriesData = {
   manufacturing: {
-    metatitle: "Computer Vision in Manufacturing Industry - VMukti Solutions",
+    metatitle: "Smart Manufacturing, Factory & Industrial Surveillance Solutions | VMukti",
     metadescription:
-      "VMukti Solutions offers scalable computer vision for manufacturing to help you monitor, analyze, and optimize factory performance in real-time.",
+      "AI-powered manufacturing video surveillance system enhances safety, quality checks, and operational visibility with real-time monitoring and intelligent video analytics.",
     ogImage: "https://www.vmukti.com/assets/manufacturing_mockup.png",
     slug: "manufacturing",
     title: [
@@ -182,9 +182,9 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Computer Vision in Manufacturing Industry - VMukti Solutions",
+        name: "Smart Manufacturing, Factory & Industrial Surveillance Solutions | VMukti",
         description:
-          "VMukti Solutions offers scalable computer vision for manufacturing to help you monitor, analyze, and optimize factory performance in real-time.",
+          "AI-powered manufacturing video surveillance system enhances safety, quality checks, and operational visibility with real-time monitoring and intelligent video analytics.",
         url: "https://www.vmukti.com/industry/manufacturing/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -297,9 +297,9 @@ const industriesData = {
     ],
   },
   warehouse: {
-    metatitle: "Manage Your Inventory Using Warehouse Computer Vision Solution",
+    metatitle: "Warehouse Video Surveillance & Smart Operations Monitoring | VMukti",
     metadescription:
-      "Unlock the full potential of your operations with computer vision warehouse technology to enhance real-time efficiency, inventory accuracy, and security.",
+      "VMukti's AI warehouse surveillance system offers real-time monitoring, theft prevention, worker safety, and inventory tracking for smarter warehouse operations.",
     ogImage: "https://www.vmukti.com/assets/warehouse_mockup.png",
     slug: "warehouse",
     title: [
@@ -544,9 +544,9 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Manage Your Inventory Using Warehouse Computer Vision Solution",
+        name: "Warehouse Video Surveillance & Smart Operations Monitoring | VMukti",
         description:
-          "Unlock the full potential of your operations with computer vision warehouse technology to enhance real-time efficiency, inventory accuracy, and security.",
+          "VMukti's AI warehouse surveillance system offers real-time monitoring, theft prevention, worker safety, and inventory tracking for smarter warehouse operations.",
         url: "https://www.vmukti.com/industry/warehouse/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -652,9 +652,9 @@ const industriesData = {
     ],
   },
   healthcare: {
-    metatitle: "Computer Vision in Healthcare for Smarter Patient Safety",
+    metatitle: "AI-based Video Surveillance Systems for Hospitals & Healthcare Facilities",
     metadescription:
-      " Upgrade clinical safety and workflow with healthcare computer vision for AI monitoring, hygiene checks, and intelligent alerting in real time.",
+      "VMukti's AI healthcare video surveillance solution streamlines hospital security, staff monitoring, and compliance tracking with real-time alerts and intelligent analytics.",
     ogImage: "https://www.vmukti.com/assets/healthcare_mockup.png",
     slug: "healthcare",
     title: [
@@ -852,9 +852,9 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Computer Vision in Healthcare for Smarter Patient Safety",
+        name: "AI-based Video Surveillance Systems for Hospitals & Healthcare Facilities",
         description:
-          "Upgrade clinical safety and workflow with healthcare computer vision for AI monitoring, hygiene checks, and intelligent alerting in real time.",
+          "VMukti's AI healthcare video surveillance solution streamlines hospital security, staff monitoring, and compliance tracking with real-time alerts and intelligent analytics.",
         url: "https://www.vmukti.com/industry/healthcare/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -961,9 +961,9 @@ const industriesData = {
   },
   // Result image remaining, workflow remaining
   oilandgas: {
-    metatitle: "Transforming Operations with Computer Vision in Oil & Gas",
+    metatitle: "Smart Video Surveillance Solution for Oil & Gas Operations | VMukti",
     metadescription:
-      "Optimize site control using computer vision for oil & gas to reduce manual tasks, gain real-time insights and enhance decision-making across operations.",
+      "VMukti delivers AI-powered surveillance for oil & gas operations, enabling pipeline alerts, remote rig monitoring, worker safety insights, and centralized control.",
     ogImage: "https://www.vmukti.com/assets/oilandgas_mockup.png",
     slug: "oil-and-gas",
     title: [
@@ -1153,9 +1153,9 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Transforming Operations with Computer Vision in Oil & Gas",
+        name: "Smart Video Surveillance Solution for Oil & Gas Operations | VMukti",
         description:
-          "Optimize site control using computer vision for oil & gas to reduce manual tasks, gain real-time insights and enhance decision-making across operations.",
+          "VMukti delivers AI-powered surveillance for oil & gas operations, enabling pipeline alerts, remote rig monitoring, worker safety insights, and centralized control.",
         url: "https://www.vmukti.com/industry/oil-and-gas/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -1269,9 +1269,9 @@ const industriesData = {
     ],
   },
   election: {
-    metatitle: "Detect Suspicious Activity with Computer Vision in Elections",
+    metatitle: "AI-Powered Election Surveillance & Monitoring Solutions | VMukti",
     metadescription:
-      "Learn how computer vision for election security ensures transparent voting by detecting suspicious activity, enabling quick responses, and boosting public trust.",
+      "Ensure transparent elections with VMukti's AI-powered election surveillance system offering live monitoring, crowd insights, incident alerts, and seamless command center control.",
     ogImage: "https://www.vmukti.com/assets/election_mockup.png",
     slug: "election",
     title: [
@@ -1441,9 +1441,9 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Detect Suspicious Activity with Computer Vision in Elections",
+        name: "AI-Powered Election Surveillance & Monitoring Solutions | VMukti",
         description:
-          "Learn how computer vision for election security ensures transparent voting by detecting suspicious activity, enabling quick responses, and boosting public trust.",
+          "Ensure transparent elections with VMukti's AI-powered election surveillance system offering live monitoring, crowd insights, incident alerts, and seamless command center control.",
         url: "https://www.vmukti.com/industry/election/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -1549,9 +1549,9 @@ const industriesData = {
     ],
   },
   education: {
-    metatitle: "Protect Learning Spaces with Computer Vision for Education",
+    metatitle: "AI Security Surveillance Solutions for Schools, Colleges & Universities",
     metadescription:
-      "Discover how computer vision in education helps schools and universities boost security, automate attendance, and monitor key areas effectively.",
+      "Improve campus safety with VMukti's AI education surveillance system offering smart monitoring, threat detection, and unified control for schools and universities.",
     ogImage: "https://www.vmukti.com/assets/education_mockup.png",
     slug: "education",
     title: [
@@ -1754,9 +1754,9 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Protect Learning Spaces with Computer Vision for Education",
+        name: "AI Security Surveillance Solutions for Schools, Colleges & Universities",
         description:
-          "Discover how computer vision in education helps schools and universities boost security, automate attendance, and monitor key areas effectively.",
+          "Improve campus safety with VMukti's AI education surveillance system offering smart monitoring, threat detection, and unified control for schools and universities.",
         url: "https://www.vmukti.com/industry/education/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -1870,9 +1870,9 @@ const industriesData = {
     ],
   },
   transportation: {
-    metatitle: "Travel Innovation Powered by Computer Vision in Transportation",
+    metatitle: "Smart Transportation Security & Video Monitoring System | VMukti",
     metadescription:
-      "Boost safety and efficiency with advanced transportation surveillance solutions. Real-time monitoring and analytics for smarter, safer travel experiences.",
+      "VMukti delivers AI-powered transportation surveillance for fleets, stations, and highways. Get real-time alerts, tracking, analytics, and centralized monitoring.",
     ogImage: "https://www.vmukti.com/assets/transportation_mockup.png",
     slug: "transportation",
     title: [
@@ -2052,10 +2052,10 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Protect Learning Spaces with Computer Vision for Education",
+        name: "Smart Transportation Security & Video Monitoring System | VMukti",
         description:
-          "Discover how computer vision in education helps schools and universities boost security, automate attendance, and monitor key areas effectively.",
-        url: "https://www.vmukti.com/industry/education/",
+          "VMukti delivers AI-powered transportation surveillance for fleets, stations, and highways. Get real-time alerts, tracking, analytics, and centralized monitoring.",
+        url: "https://www.vmukti.com/industry/transportation/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
         publisher: {
@@ -2160,9 +2160,9 @@ const industriesData = {
     ],
   },
   smartcity: {
-    metatitle: "Computer Vision in Smart City for Traffic and Safety",
+    metatitle: "AI-Powered Smart City Monitoring & ICCC Solutions | VMukti Solutions",
     metadescription:
-      "Improve urban safety with our smart city surveillance solutions using smart cameras providing traffic detection, real-time insights, proactive crime prevention.",
+      "VMukti powers smart cities with AI video surveillance, ICCC, GIS mapping, and real-time alerts for efficient urban management and faster decision-making.",
     ogImage: "https://www.vmukti.com/assets/smartcity_mockup.png",
     slug: "smart-city",
     title: [
@@ -2381,9 +2381,9 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Computer Vision in Smart City for Traffic and Safety",
+        name: "AI-Powered Smart City Monitoring & ICCC Solutions | VMukti Solutions",
         description:
-          "Improve urban safety with our smart city surveillance solutions using smart cameras providing traffic detection, real-time insights, proactive crime prevention.",
+          "VMukti powers smart cities with AI video surveillance, ICCC, GIS mapping, and real-time alerts for efficient urban management and faster decision-making.",
         url: "https://www.vmukti.com/industry/smart-city/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -2491,9 +2491,9 @@ const industriesData = {
     ],
   },
   pharma: {
-    metatitle: "Boosting Compliance via Computer Vision in Pharmaceutical",
+    metatitle: "Pharma & Pharmaceutical Manufacturing Video Surveillance | VMukti",
     metadescription:
-      "Computer vision for pharma applications strengthens regulatory compliance, detects process anomalies and protects product integrity at scale.",
+      "AI-powered video surveillance for pharmaceutical manufacturing ensures compliance, contamination control, and real-time monitoring for GMP and regulatory standards.",
     ogImage: "https://www.vmukti.com/assets/pharma_mockup.png",
     slug: "pharma",
     title: [
@@ -2675,9 +2675,9 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Boosting Compliance via Computer Vision in Pharmaceutical",
+        name: "Pharma & Pharmaceutical Manufacturing Video Surveillance | VMukti",
         description:
-          "Computer vision for pharma applications strengthens regulatory compliance, detects process anomalies and protects product integrity at scale.",
+          "AI-powered video surveillance for pharmaceutical manufacturing ensures compliance, contamination control, and real-time monitoring for GMP and regulatory standards.",
         url: "https://www.vmukti.com/industry/pharma/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -2785,9 +2785,9 @@ const industriesData = {
     ],
   },
   logistics: {
-    metatitle: "Computer Vision in Logistics: Enabling Seamless Operations",
+    metatitle: "Logistics & Supply Chain Video Surveillance Solutions | VMukti",
     metadescription:
-      "VMukti Solutions enables computer vision logistics to boost efficiency, reduce losses, and provide full visibility across logistics and warehouse systems.",
+      "AI-powered video surveillance for logistics ensures shipment security, real-time tracking, loss prevention, and compliance across your entire supply chain operations.",
     ogImage: "https://www.vmukti.com/assets/logistic_mockup.png",
     slug: "logistics",
     title: [
@@ -2982,9 +2982,9 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Computer Vision in Logistics: Enabling Seamless Operations",
+        name: "Logistics & Supply Chain Video Surveillance Solutions | VMukti",
         description:
-          "VMukti Solutions enables Computer Vision Logistics to boost efficiency, reduce losses, and provide full visibility across logistics and warehouse systems.",
+          "AI-powered video surveillance for logistics ensures shipment security, real-time tracking, loss prevention, and compliance across your entire supply chain operations.",
         url: "https://www.vmukti.com/industry/logistics/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -3093,9 +3093,9 @@ const industriesData = {
     ],
   },
   banking: {
-    metatitle: "Boost Customer Safety with Computer Vision in Banking",
+    metatitle: "Bank & Financial Institution Video Surveillance Solutions | VMukti",
     metadescription:
-      "Improve safety and ensure security with computer vision for Bank branches and ATMs using AI-powered surveillance with continuous monitoring and alerts.",
+      "AI-powered banking surveillance system protects branches, ATMs, and sensitive areas with real-time threat detection, fraud prevention, and compliance monitoring.",
     ogImage: "https://www.vmukti.com/assets/banking_mockup.png",
     slug: "banking",
     title: [
@@ -3313,9 +3313,9 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Boost Customer Safety with Computer Vision in Banking",
+        name: "Bank & Financial Institution Video Surveillance Solutions | VMukti",
         description:
-          "Improve safety and ensure security with computer vision for Bank branches and ATMs using AI-powered surveillance with continuous monitoring and alerts.",
+          "AI-powered banking surveillance system protects branches, ATMs, and sensitive areas with real-time threat detection, fraud prevention, and compliance monitoring.",
         url: "https://www.vmukti.com/industry/banking/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -3424,9 +3424,9 @@ const industriesData = {
     ],
   },
   sportsentertainment: {
-    metatitle: "Strategic Edge for Computer Vision in Sports & Entertainment",
+    metatitle: "Sports & Entertainment Video Surveillance & Analytics | VMukti",
     metadescription:
-      "Transform the game with visual AI in sports & entertainment, unlocking powerful real-time intelligence across every play, moment, and fan interaction.",
+      "AI-powered sports and entertainment surveillance delivers real-time crowd management, fan safety monitoring, incident detection, and operational intelligence.",
     ogImage: "https://www.vmukti.com/assets/sportsentertainment_mockup.png",
     slug: "sports-entertainment",
     title: [
@@ -3624,9 +3624,9 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Strategic Edge for Computer Vision in Sports & Entertainment",
+        name: "Sports & Entertainment Video Surveillance & Analytics | VMukti",
         description:
-          "Transform the game with visual AI in sports & entertainment, unlocking powerful real-time intelligence across every play, moment, and fan interaction.",
+          "AI-powered sports and entertainment surveillance delivers real-time crowd management, fan safety monitoring, incident detection, and operational intelligence.",
         url: "https://www.vmukti.com/industry/sports-entertainment/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -3728,9 +3728,9 @@ const industriesData = {
   },
   defense: {
     metatitle:
-      "Intelligent Security Surveillance with Computer Vision in Defense",
+      "Defense & Military Surveillance Solutions with AI Video Analytics | VMukti",
     metadescription:
-      "Revolutionize operations with computer vision for defense for threat detection, intelligent monitoring, and enhanced situational awareness across key areas.",
+      "AI-powered defense surveillance delivers perimeter security, threat detection, real-time situational awareness, and advanced monitoring for military and defense operations.",
     ogImage: "https://www.vmukti.com/assets/defense_mockup.png",
     slug: "defense",
     title: [
@@ -3920,9 +3920,9 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Intelligent Security Surveillance with Computer Vision in Defense",
+        name: "Defense & Military Surveillance Solutions with AI Video Analytics | VMukti",
         description:
-          "Revolutionize operations with computer vision for defense for threat detection, intelligent monitoring, and enhanced situational awareness across key areas.",
+          "AI-powered defense surveillance delivers perimeter security, threat detection, real-time situational awareness, and advanced monitoring for military and defense operations.",
         url: "https://www.vmukti.com/industry/defense/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -4038,9 +4038,9 @@ const industriesData = {
     ],
   },
   hospitality: {
-    metatitle: "Smart Hospitality Surveillance System for Premium Security",
+    metatitle: "Hospitality & Hotel Video Surveillance Solutions | VMukti",
     metadescription:
-      "A hospitality surveillance system that watches over your guests with precision, offering smart alerts and maintaining the quiet luxury of your property.",
+      "AI-powered hospitality surveillance enhances guest safety, prevents theft and property damage, improves operations, and maintains property security 24/7.",
     ogImage: "https://www.vmukti.com/assets/hospitality_mockup.png",
     slug: "hospitality",
     title: [
@@ -4258,9 +4258,9 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Smart Hospitality Surveillance System for Premium Security",
+        name: "Hospitality & Hotel Video Surveillance Solutions | VMukti",
         description:
-          "A hospitality surveillance system that watches over your guests with precision, offering smart alerts and maintaining the quiet luxury of your property.",
+          "AI-powered hospitality surveillance enhances guest safety, prevents theft and property damage, improves operations, and maintains property security 24/7.",
         url: "https://www.vmukti.com/industry/hospitality/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -4376,9 +4376,9 @@ const industriesData = {
     ],
   },
   construction: {
-    metatitle: "Paving Future Builds with Computer Vision in Construction",
+    metatitle: "Construction & Building Site Surveillance Solutions | VMukti",
     metadescription:
-      "Computer vision in construction industry isn't just the future, it is the upgrade your site needs for sharper safety, speed, and smarter outcomes.",
+      "AI-powered construction surveillance monitors site safety, equipment tracking, material management, worker compliance, and real-time progress documentation.",
     ogImage: "https://www.vmukti.com/assets/construction_mockup.png",
     slug: "construction",
     title: [
@@ -4581,9 +4581,9 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Paving Future Builds with Computer Vision in Construction",
+        name: "Construction & Building Site Surveillance Solutions | VMukti",
         description:
-          "Computer vision in construction industry isn't just the future, it is the upgrade your site needs for sharper safety, speed, and smarter outcomes.",
+          "AI-powered construction surveillance monitors site safety, equipment tracking, material management, worker compliance, and real-time progress documentation.",
         url: "https://www.vmukti.com/industry/construction/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -4699,9 +4699,9 @@ const industriesData = {
     ],
   },
   enterprise: {
-    metatitle: "Computer Vision in Enterprise for Intelligent Monitoring",
+    metatitle: "Enterprise Video Surveillance & Security Solutions | VMukti",
     metadescription:
-      "VMukti Solutions offers an enterprise surveillance solution with computer vision for live threat detection, smart monitoring and enhanced operational security.",
+      "AI-powered enterprise surveillance provides comprehensive monitoring, asset protection, threat detection, and real-time security across all corporate facilities.",
     ogImage: "https://www.vmukti.com/assets/enterprise_mockup.png",
     slug: "enterprise",
     title: [
@@ -4904,9 +4904,9 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Computer Vision in Enterprise for Intelligent Monitoring",
+        name: "Enterprise Video Surveillance & Security Solutions | VMukti",
         description:
-          "VMukti Solutions offers an enterprise surveillance solution with computer vision for live threat detection, smart monitoring and enhanced operational security.",
+          "AI-powered enterprise surveillance provides comprehensive monitoring, asset protection, threat detection, and real-time security across all corporate facilities.",
         url: "https://www.vmukti.com/industry/enterprise/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -5014,9 +5014,9 @@ const industriesData = {
     ],
   },
   government: {
-    metatitle: "Redefine Civic Efficiency with Computer Vision in Government",
+    metatitle: "Government & Public Sector Surveillance Solutions | VMukti",
     metadescription:
-      "From traffic to city safety to election monitoring, computer vision for government ensures smarter oversight, faster response, and public trust.",
+      "AI-powered government surveillance delivers public safety monitoring, traffic management, citizen services optimization, and intelligent civic infrastructure oversight.",
     ogImage: "https://www.vmukti.com/assets/government_mockup.png",
     slug: "government",
     title: [
@@ -5247,9 +5247,9 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Redefine Civic Efficiency with Computer Vision in Government",
+        name: "Government & Public Sector Surveillance Solutions | VMukti",
         description:
-          "From traffic to city safety to election monitoring, computer vision for government ensures smarter oversight, faster response, and public trust.",
+          "AI-powered government surveillance delivers public safety monitoring, traffic management, citizen services optimization, and intelligent civic infrastructure oversight.",
         url: "https://www.vmukti.com/industry/government/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",

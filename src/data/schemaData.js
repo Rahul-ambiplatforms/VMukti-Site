@@ -4,9 +4,9 @@
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "AI Computer Vision System for Smart Surveillance - VMukti Solutions",
+        name: "AI Cloud Video Surveillance & Centralized Monitoring System | VMukti Solutions",
         description:
-          "VMukti Solutions is a trusted computer vision software company. We are offering AI surveillance for healthcare, education, manufacturing and more industries.",
+          "Enhance security and operations with VMukti’s cloud-based video surveillance solutions, offering centralized monitoring, remote access, and robust protection for multi-location businesses.",
         url: "https://www.vmukti.com/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -160,9 +160,9 @@
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Powerful, Flexible Visual Intelligence Solutions for Businesses",
+        name: "Unified AI Surveillance Ecosystem for Enterprises & Government",
         description:
-          "Tackle complex challenges with AI vision solutions built for speed, control and resilience trusted across industries where uptime and security are non-negotiable.",
+          "Discover VMukti’s unified AI surveillance ecosystem—Cloud VMS, ICCC, GenAI, VisualBot, CloudAI analytics, live streaming, and enterprise-grade monitoring.",
         url: "https://www.vmukti.com/solution/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",

@@ -75,12 +75,52 @@ const PrivacyPolicy = () => {
     <>
       {/* --- SEO AND METADATA --- */}
       <Helmet>
-        <title>Privacy Policy - Vmukti</title>
+        <title>Data Privacy & Security Policy | VMukti Solutions</title>
         <meta
           name="description"
-          content="Read the VMukti Solutions Privacy Policy to understand how we collect, use, and protect your personal information on our platform."
+          content="Your privacy matters. Explore VMukti’s policy on data protection, security measures, usage practices, and user rights to ensure a safe digital experience."
         />
+        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:title"
+          content="Data Privacy & Security Policy | VMukti Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Your privacy matters. Explore VMukti’s policy on data protection, security measures, usage practices, and user rights to ensure a safe digital experience."
+        />
+        {/* <meta
+          property="og:image"
+          content="[YOUR_PRIVACY_PAGE_IMAGE_LINK]" // Placeholder for relevant image/logo
+        /> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.vmukti.com/privacy-policy" />
+        <meta property="og:site_name" content="VMukti Solutions" />
+        {/* */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@vmukti" />
+        <meta
+          name="twitter:title"
+          content="Data Privacy & Security Policy | VMukti Solutions"
+        />
+        <meta
+          name="twitter:description"
+          content="Your privacy matters. Explore VMukti’s policy on data protection, security measures, usage practices, and user rights to ensure a safe digital experience."
+        />
+        {/* <meta
+          name="twitter:image"
+          content="[YOUR_PRIVACY_PAGE_IMAGE_LINK]" // Placeholder for relevant image/logo
+        /> */}
         <link rel="canonical" href="https://www.vmukti.com/privacy-policy" />
+        {/* {privacyPageSchemas.map((schema, index) => (
+          <script
+            key={`schema-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schema),
+            }}
+          />
+        ))} */}
       </Helmet>
 
       <Box>

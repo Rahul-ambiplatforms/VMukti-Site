@@ -629,20 +629,20 @@ export default function IndustryDashboard() {
       </script>
       <Helmet>
         {/* SEO Tags */}
-        <title>Explore All Industries We Serve with Computer Vision AI</title>
+        <title>Industries We Serve – AI Video Surveillance Solutions | VMukti Solutions</title>
         <meta
           name="description"
-          content="Explore how our AI-powered video surveillance enhances safety, compliance and efficiency across transportation, retail, manufacturing and more industries."
+          content="VMukti provides AI-enabled video surveillance for retail, manufacturing, logistics, education, healthcare, smart cities, and more—boosting safety, automation, and operational efficiency."
         />
         <meta name="robots" content="index, follow" />
         {/* Open Graph (OG) Tags for Social Media Sharing */}
         <meta
           property="og:title"
-          content="Explore All Industries We Serve with Computer Vision AI"
+          content="Industries We Serve – AI Video Surveillance Solutions | VMukti Solutions"
         />
         <meta
           property="og:description"
-          content="Explore how our AI-powered video surveillance enhances safety, compliance and efficiency across transportation, retail, manufacturing and more industries."
+          content="VMukti provides AI-enabled video surveillance for retail, manufacturing, logistics, education, healthcare, smart cities, and more—boosting safety, automation, and operational efficiency."
         />
         <meta
           property="og:image"
@@ -656,11 +656,11 @@ export default function IndustryDashboard() {
         <meta name="twitter:site" content="@vmukti" />
         <meta
           name="twitter:title"
-          content="Explore All Industries We Serve with Computer Vision AI"
+          content="Industries We Serve – AI Video Surveillance Solutions | VMukti Solutions"
         />
         <meta
           name="twitter:description"
-          content="Explore how our AI-powered video surveillance enhances safety, compliance and efficiency across transportation, retail, manufacturing and more industries."
+          content="VMukti provides AI-enabled video surveillance for retail, manufacturing, logistics, education, healthcare, smart cities, and more—boosting safety, automation, and operational efficiency."
         />
         <meta
           name="twitter:image"

@@ -45,22 +45,22 @@ const Hero = () => {
       <Helmet>
         {/* SEO Tags */}
         <title>
-          Powerful, Flexible Visual Intelligence Solutions for Businesses
+          Unified AI Surveillance Ecosystem for Enterprises & Government
         </title>
         <meta
           name="description"
-          content="Tackle complex challenges with AI vision solutions built for speed, control and resilience trusted across industries where uptime and security are non-negotiable."
+          content="Discover VMukti’s unified AI surveillance ecosystem—Cloud VMS, ICCC, GenAI, VisualBot, CloudAI analytics, live streaming, and enterprise-grade monitoring."
         />
         <meta name="robots" content="index, follow" />
 
         {/* Open Graph (OG) Tags for Social Media Sharing */}
         <meta
           property="og:title"
-          content="Powerful, Flexible Visual Intelligence Solutions for Businesses"
+          content="Unified AI Surveillance Ecosystem for Enterprises & Government"
         />
         <meta
           property="og:description"
-          content="Tackle complex challenges with AI vision solutions built for speed, control and resilience trusted across industries where uptime and security are non-negotiable."
+          content="Discover VMukti’s unified AI surveillance ecosystem—Cloud VMS, ICCC, GenAI, VisualBot, CloudAI analytics, live streaming, and enterprise-grade monitoring."
         />
         <meta
           property="og:image"
@@ -75,11 +75,11 @@ const Hero = () => {
         <meta name="twitter:site" content="@vmukti" />
         <meta
           name="twitter:title"
-          content="Powerful, Flexible Visual Intelligence Solutions for Businesses"
+          content="Unified AI Surveillance Ecosystem for Enterprises & Government"
         />
         <meta
           name="twitter:description"
-          content="Tackle complex challenges with AI vision solutions built for speed, control and resilience trusted across industries where uptime and security are non-negotiable."
+          content="Discover VMukti’s unified AI surveillance ecosystem—Cloud VMS, ICCC, GenAI, VisualBot, CloudAI analytics, live streaming, and enterprise-grade monitoring."
         />
         <meta
           name="twitter:image"

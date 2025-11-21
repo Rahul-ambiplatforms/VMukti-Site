@@ -33,35 +33,34 @@ const TermsAndCondition = () => {
     <Box>
       <Helmet>
         {/* --- Primary Meta Tags --- */}
-        <title>Terms and Conditions - Vmukti</title>
+        <title>Terms & Conditions | VMukti Solutions</title>
         <meta
           name="description"
-          content="Welcome to VMukti Solutions Pvt. Ltd. and the website of VMukti (the Site). Please read the following Terms of Use carefully before using site"
+          content="Read the official Terms & Conditions of VMukti Solutions. Review policies on service usage, responsibilities, privacy, and compliance for all users and partners."
         />
         <meta name="robots" content="index, follow" /> {/* As requested */}
         <link
           rel="canonical"
           href="https://www.vmukti.com/terms-and-conditions"
         />
-        {/* --- Open Graph / Facebook Meta Tags --- */}
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
           content="https://www.vmukti.com/terms-and-conditions"
         />
-        <meta property="og:title" content="Terms and Conditions - Vmukti" />
+        <meta property="og:title" content="Terms & Conditions | VMukti Solutions" />
         <meta
           property="og:description"
-          content="Welcome to VMukti Solutions Pvt. Ltd. and the website of VMukti (the Site). Please read the following Terms of Use carefully before using site"
+          content="Read the official Terms & Conditions of VMukti Solutions. Review policies on service usage, responsibilities, privacy, and compliance for all users and partners."
         />
         {/* <meta property="og:image" content={featureImage} /> */}
         {/* --- Twitter Meta Tags --- */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@vmukti" />
-        <meta name="twitter:title" content="Terms and Conditions - Vmukti" />
+        <meta name="twitter:title" content="Terms & Conditions | VMukti Solutions" />
         <meta
           name="twitter:description"
-          content="Welcome to VMukti Solutions Pvt. Ltd. and the website of VMukti (the Site). Please read the following Terms of Use carefully before using site"
+          content="Read the official Terms & Conditions of VMukti Solutions. Review policies on service usage, responsibilities, privacy, and compliance for all users and partners."
         />
         {/* <meta name="twitter:image" content={featureImage} /> */}
       </Helmet>

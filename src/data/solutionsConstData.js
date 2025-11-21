@@ -1,8 +1,8 @@
 export const solutionsData = {
   videomanagementsystem: {
-    metetitle: "Advanced Video Management System for Surveillance",
+    metetitle: "AI-Powered Cloud Video Management System (VMS) | VMukti Solutions",
     metadescription:
-      "Best Video Management Software for CCTV offering live monitoring, cloud storage, AI analytics and seamless integration for enhanced surveillance control.",
+      "Manage, monitor, and secure multiple locations with VMukti’s cloud-based video management system featuring AI analytics, centralized monitoring, and reliable remote access.",
     ogImage: "https://www.vmukti.com/assets/MainWebPageMockup1.1.png",
     slug: "video-management-system",
     // Section 1: Hero section from the first image
@@ -160,9 +160,9 @@ export const solutionsData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Advanced Video Management System for Surveillance",
+        name: "AI-Powered Cloud Video Management System (VMS) | VMukti Solutions",
         description:
-          "Best Video Management Software for CCTV offering live monitoring, cloud storage, AI analytics and seamless integration for enhanced surveillance control.",
+          "Manage, monitor, and secure multiple locations with VMukti’s cloud-based video management system featuring AI analytics, centralized monitoring, and reliable remote access.",
         url: "https://www.vmukti.com/solution/video-management-system/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -271,9 +271,9 @@ export const solutionsData = {
 
   enterprisemanagementsystem: {
     metetitle:
-      "Enterprise Management Solution for Scalable Security and Monitoring",
+      "Cloud Enterprise Management System for Multi-Location Businesses",
     metadescription:
-      "Enterprise Management Solution for CCTV feeds that empowers Command & Control Centres with real-time monitoring, automated alerts, uptime analytics, and zero downtime.",
+      "VMukti Cloud EMS offers admin access control, user permissions, event alerts, flexible storage, live & recorded video, alert handling, and centralized monitoring.",
     ogImage: "https://www.vmukti.com/assets/solution_evms_dash.png",
     slug: "enterprise-management-system",
     // Section 1: Hero section updated
@@ -422,9 +422,9 @@ export const solutionsData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Enterprise Management Solution for Scalable Security and Monitoring",
+        name: "Cloud Enterprise Management System for Multi-Location Businesses",
         description:
-          "Enterprise Management Solution for CCTV feeds that empowers Command & Control Centres with real-time monitoring, automated alerts, uptime analytics, and zero downtime.",
+          "VMukti Cloud EMS offers admin access control, user permissions, event alerts, flexible storage, live & recorded video, alert handling, and centralized monitoring.",
         url: "https://www.vmukti.com/solution/enterprise-management-system/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -517,9 +517,9 @@ export const solutionsData = {
   },
 
   integratedcommandcontrolcenter: {
-    metetitle: "Master Command Flow Through Smart ICCC Services",
+    metetitle: "AI Integrated Command & Control Center Solutions | VMukti Solutions",
     metadescription:
-      "Delivering reliable and unmatched `efficiency with our Integrated Command and Control Centre solutions which enhances operational control and decision-making.",
+      "VMukti’s ICCC platform unifies live video, GIS mapping, AI alerts, and real-time coordination to enhance urban safety, incident response, and smart city operations.",
     ogImage: "https://www.vmukti.com/assets/solution_iccc_dash.png",
     slug: "integrated-command-control-center",
     // Section 1: Hero section from the first image
@@ -665,7 +665,7 @@ export const solutionsData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Master Command Flow Through Smart ICCC Services",
+        name: "AI Integrated Command & Control Center Solutions | VMukti Solutions",
         description:
           "Delivering reliable and unmatched efficiency with our Integrated Command and Control Centre solutions which enhances operational control and decision-making.",
         url: "https://www.vmukti.com/solution/integrated-command-control-center/",
@@ -761,9 +761,9 @@ export const solutionsData = {
   },
 
   livestreamingsolution: {
-    metetitle: "Secure Live CCTV Feed Streaming for Command & Control",
+    metetitle: "Secure Live CCTV Feed Streaming & Command Centre Monitoring",
     metadescription:
-      "Stream real-time CCTV feeds with ultra-HD clarity, zero delay, and multi-layer security - built for mission-critical monitoring and instant response.",
+      "Stream real-time CCTV feeds to your command center with VMukti’s secure live streaming platform featuring adaptive quality, OTP access, user reports, and VOD playback.",
     ogImage: "https://www.vmukti.com/assets/solution_live_dash.png",
     slug: "live-streaming-solution",
     // Section 1: Hero section from the first image
@@ -929,9 +929,9 @@ export const solutionsData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Secure Live CCTV Feed Streaming for Command & Control",
+        name: "Secure Live CCTV Feed Streaming & Command Centre Monitoring",
         description:
-          "Stream real-time CCTV feeds with ultra-HD clarity, zero delay, and multi-layer security - built for mission-critical monitoring and instant response.",
+          "Stream real-time CCTV feeds to your command center with VMukti’s secure live streaming platform featuring adaptive quality, OTP access, user reports, and VOD playback.",
         url: "https://www.vmukti.com/solution/live-streaming-solution",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -1031,9 +1031,9 @@ export const solutionsData = {
   },
 
   flyingsquadvehicle: {
-    metetitle: "Flying Squad Vehicle with GPS and Live AI Surveillance",
+    metetitle: "Flying Squad Vehicle with Live GPS, Mobile Monitoring & PTZ Control",
     metadescription:
-      "Power up your response force with a high-speed Flying Squad Vehicle packed with GPS tracking, smart AI surveillance and real-time control room sync.",
+      "Enhance field operations with VMukti’s Flying Squad Vehicle featuring live GPS, moving surveillance, geo-fencing alerts, PTZ control, and real-time control room viewing.",
     ogImage: "https://www.vmukti.com/assets/solution_fsv_dash.png",
     slug: "flying-squad-vehicle",
     // Section 1: Hero section from the first image
@@ -1183,9 +1183,9 @@ export const solutionsData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Flying Squad Vehicle with GPS and Live AI Surveillance",
+        name: "Flying Squad Vehicle with Live GPS, Mobile Monitoring & PTZ Control",
         description:
-          "Power up your response force with a high-speed Flying Squad Vehicle packed with GPS tracking, smart AI surveillance and real-time control room sync.",
+          "Enhance field operations with VMukti’s Flying Squad Vehicle featuring live GPS, moving surveillance, geo-fencing alerts, PTZ control, and real-time control room viewing.",
         url: "https://www.vmukti.com/solution/flying-squad-vehicle/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -1277,9 +1277,9 @@ export const solutionsData = {
   },
 
   cloudai: {
-    metetitle: "CloudAI Video Surveillance Solution for Square Monitoring",
+    metetitle: "CloudAI Solution for Smart Video Analytics & Detections by VMukti",
     metadescription:
-      "Upgrade your security with Cloud AI surveillance, offering live video monitoring, automated alerts, and video analytics for enhanced safety and protection.",
+      "Enhance operations with VMukti CloudAI featuring face recognition, ANPR, crowd analysis, ADAS, vehicle detection and real-time cloud-based visual intelligence.",
     ogImage: "https://www.vmukti.com/assets/solution_cloud_dash.png",
     slug: "cloudai",
     // Section 1: Hero section from the first image
@@ -1628,9 +1628,9 @@ export const solutionsData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "CloudAI Video Surveillance Solution for Square Monitoring",
+        name: "CloudAI Solution for Smart Video Analytics & Detections by VMukti",
         description:
-          "Upgrade your security with Cloud AI surveillance, offering live video monitoring, automated alerts, and video analytics for enhanced safety and protection.",
+          "Enhance operations with VMukti CloudAI featuring face recognition, ANPR, crowd analysis, ADAS, vehicle detection and real-time cloud-based visual intelligence.",
         url: "https://www.vmukti.com/solution/cloudai/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -1722,9 +1722,9 @@ export const solutionsData = {
   },
 
   genai: {
-    metetitle: "Elevate Surveillance to New Heights with GenAI Solution",
+    metetitle: "Generative AI for Smart Video Surveillance Intelligence & Reporting",
     metadescription:
-      "Take control of security with Generative AI solutions that adapt to your unique surveillance needs, enhancing protection and enabling proactive detection.",
+      " VMukti GenAI offers advanced video intelligence with GPT-driven smart search, real-time analysis, activity detection, and automated reporting for faster decision-making.",
     ogImage: "https://www.vmukti.com/assets/solution_genai_dash.png",
     slug: "genai",
     // Section 1: Hero section from the first image
@@ -1863,9 +1863,9 @@ export const solutionsData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Elevate Surveillance to New Heights with GenAI Solution",
+        name: "Generative AI for Smart Video Surveillance Intelligence & Reporting",
         description:
-          "Take control of security with Generative AI solutions that adapt to your unique surveillance needs, enhancing protection and enabling proactive detection.",
+          " VMukti GenAI offers advanced video intelligence with GPT-driven smart search, real-time analysis, activity detection, and automated reporting for faster decision-making.",
         url: "https://www.vmukti.com/solution/genai/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",
@@ -1927,9 +1927,9 @@ export const solutionsData = {
   },
 
   visualbot: {
-    metetitle: "VisualBot Computer Vision Software for Custom AI Solutions",
+    metetitle: "VisualBot – AI Computer Vision API Platform for Video & Image Intelligence",
     metadescription:
-      "Best VisualBot computer vision software solution delivers fast deployment, real-time insights, and custom AI models for seamless video analysis integration.",
+      "Turn visual data into actionable intelligence with VisualBot. Get AI-driven video insights, automated text descriptions and scalable API integrations for enterprise systems.",
     ogImage: "https://www.vmukti.com/assets/solution_visbot_dash.png",
     slug: "visualbot",
     // Section 1: Hero section from the first image
@@ -2063,9 +2063,9 @@ export const solutionsData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "VisualBot Computer Vision Software for Custom AI Solutions",
+        name: "VisualBot – AI Computer Vision API Platform for Video & Image Intelligence",
         description:
-          "Best VisualBot computer vision software solution delivers fast deployment, real-time insights, and custom AI models for seamless video analysis integration.",
+          "Turn visual data into actionable intelligence with VisualBot. Get AI-driven video insights, automated text descriptions and scalable API integrations for enterprise systems.",
         url: "https://www.vmukti.com/solution/visualbot/",
         datePublished: "2006-11-10",
         dateModified: "2025-05-05",

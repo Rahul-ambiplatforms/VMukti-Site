@@ -304,11 +304,55 @@ const CareerOportunity = () => {
   return (
     <>
       <Helmet>
-        <title>Career Opportunities at Vmukti</title>
+        <title>
+          VMukti Careers | Grow Your Career in AI, Cloud & Security Tech
+        </title>
         <meta
           name="description"
-          content="Explore exciting career opportunities at Vmukti. Join our innovative team and contribute to cutting-edge technology solutions. Apply now!"
+          content="Join VMukti and build the future of AI-powered cloud video surveillance. Explore open roles in engineering, product, operations, and innovation-driven teams."
         />
+        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:title"
+          content="VMukti Careers | Grow Your Career in AI, Cloud & Security Tech"
+        />
+        <meta
+          property="og:description"
+          content="Join VMukti and build the future of AI-powered cloud video surveillance. Explore open roles in engineering, product, operations, and innovation-driven teams."
+        />
+        <meta
+          property="og:image"
+          content="https://vmukti.com/assets/CareerDash.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vmukti.com/careers" />{" "}
+        {/* Assumed URL */}
+        <meta property="og:site_name" content="VMukti Solutions" />
+        {/* */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@vmukti" />
+        <meta
+          name="twitter:title"
+          content="VMukti Careers | Grow Your Career in AI, Cloud & Security Tech"
+        />
+        <meta
+          name="twitter:description"
+          content="Join VMukti and build the future of AI-powered cloud video surveillance. Explore open roles in engineering, product, operations, and innovation-driven teams."
+        />
+        <meta
+          name="twitter:image"
+          content="https://vmukti.com/assets/CareerDash.png"
+        />
+        <link rel="canonical" href="https://www.vmukti.com/careers" />{" "}
+        {/* {careerPageSchemas.map((schema, index) => (
+          <script
+            key={`schema-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schema),
+            }}
+          />
+        ))} */}
       </Helmet>
       <Box mt="2%">
         <Box mx="auto" bg="white" borderRadius="24px" p="8">

@@ -252,11 +252,11 @@ const IndustryContent = ({ props, content }) => {
       </script>
       <Helmet>
         {/* SEO Tags */}
-        <title>{content.metetitle}</title>
+        <title>{content.metatitle}</title>
         <meta name="description" content={content.metadescription} />
         <meta name="robots" content="index, follow" />
         {/* Open Graph (OG) Tags for Social Media Sharing */}
-        <meta property="og:title" content={content.metetitle} />
+        <meta property="og:title" content={content.metatitle} />
         <meta property="og:description" content={content.metadescription} />
         {/* The OG image must be a full URL, specific to this industry page */}
         <meta property="og:image" content={content.ogImage} />
@@ -265,7 +265,7 @@ const IndustryContent = ({ props, content }) => {
         {/* The OG URL must be the full, unique URL of this specific industry page */}
         <meta
           property="og:url"
-          content={`https://vmukti.com/industry/${content.slug}/`}
+          content={`https://www.vmukti.com/industry/${content.slug}/`}
         />
         <meta property="og:site_name" content="VMukti Solutions" />
         {/* Twitter Card Tags */}

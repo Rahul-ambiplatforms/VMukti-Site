@@ -44,20 +44,21 @@ const VMuktiHomepage = () => {
       </script>
       <Helmet>
         <title>
-          AI Computer Vision System for Smart Surveillance - VMukti Solutions
+          AI Cloud Video Surveillance & Centralized Monitoring System | VMukti
+          Solutions
         </title>
         <meta
           name="description"
-          content="VMukti Solutions is a trusted computer vision software company. We are offering AI surveillance for healthcare, education, manufacturing and more industries."
+          content="Enhance security and operations with VMukti’s cloud-based video surveillance solutions, offering centralized monitoring, remote access, and robust protection for multi-location businesses."
         />
         <meta name="robots" content="index, follow" />
         <meta
           property="og:title"
-          content="AI Computer Vision System for Smart Surveillance - VMukti Solutions"
+          content="AI Cloud Video Surveillance & Centralized Monitoring System | VMukti Solutions"
         />
         <meta
           property="og:description"
-          content="VMukti Solutions is a trusted computer vision software company. We are offering AI surveillance for healthcare, education, manufacturing and more industries."
+          content="Enhance security and operations with VMukti’s cloud-based video surveillance solutions, offering centralized monitoring, remote access, and robust protection for multi-location businesses."
         />
         <meta
           property="og:image"
@@ -71,11 +72,11 @@ const VMuktiHomepage = () => {
         <meta name="twitter:site" content="@vmukti" />
         <meta
           name="twitter:title"
-          content="AI Computer Vision System for Smart Surveillance - VMukti Solutions"
+          content="AI Cloud Video Surveillance & Centralized Monitoring System | VMukti Solutions"
         />
         <meta
           name="twitter:description"
-          content="VMukti Solutions is a trusted computer vision software company. We are offering AI surveillance for healthcare, education, manufacturing and more industries."
+          content="Enhance security and operations with VMukti’s cloud-based video surveillance solutions, offering centralized monitoring, remote access, and robust protection for multi-location businesses."
         />
         <meta
           name="twitter:image"

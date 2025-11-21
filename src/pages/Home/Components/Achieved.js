@@ -54,9 +54,14 @@ const useCountUp = (target, duration = 1000) => {
   return { count, ref };
 };
 
-// Component for animated count-up value
-const AnimatedValue = ({ value, suffix }) => {
-  const numericValue = parseInt(value.replace(/\D/g, "")); // Extract numeric value
+const AnimatedValue = ({ value }) => {
+  const firstNumberMatch = value.match(/\d+/);
+  const numericValue = firstNumberMatch ? parseInt(firstNumberMatch[0], 10) : 0;
+
+  const suffix = firstNumberMatch
+    ? value.replace(firstNumberMatch[0], "")
+    : value;
+
   const { count, ref } = useCountUp(numericValue, 500);
 
   return (
@@ -115,6 +120,14 @@ const achievementsData = [
     valueColor: "#3F77A5",
     labelColor: "#000000",
     dashColor: "#3F77A5",
+  },
+  {
+    value: "24x7",
+    label: "Global Cloud Support",
+    bgColor: "#3F77A5",
+    valueColor: "#FFFFFF",
+    labelColor: "#FFFFFF",
+    dashColor: "#FFFFFF",
   },
 ];
 

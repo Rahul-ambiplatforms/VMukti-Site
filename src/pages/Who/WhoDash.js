@@ -12,13 +12,15 @@ import CulturalSection from "../../components/CulturalSection";
 import StickySection from "../Home/Data/StickySection";
 import CertificationsSection from "../Solutions/Components/CertificationsSection";
 import Reviews from "../Home/Components/Reviews";
+import { Helmet } from "react-helmet-async";
 
 const gridItems = [
   {
     description: (
       <>
         <b>18 + Years</b>
-        <br />of Technology Leadership
+        <br />
+        of Technology Leadership
       </>
     ),
     bgColor: "white",
@@ -32,7 +34,7 @@ const gridItems = [
       </>
     ),
     bgColor: "#3F77A5",
-    textColor: "white", 
+    textColor: "white",
     alignItems: "Center",
   },
   {
@@ -73,7 +75,7 @@ const gridItems = [
         <b>1,42,000+</b> Locations
       </>
     ),
-    textColor: "black", 
+    textColor: "black",
     alignItems: "Center",
     bgColor: "white",
   },
@@ -92,30 +94,79 @@ const gridItems = [
 const WhoWeare = () => {
   return (
     <>
-    <PageContentWrapper>
-      <HeroSection />
-      <VisionMissionSection />
-
-      <StickySection>
-        <AdvancedComputerVision
-          bgColor="#5887AE"
-          textColor="white" 
-          cardBgColor1="white" 
-          cardBgColor2="white"
-          lineColor="white" 
-          {...customData2}
+      <Helmet>
+        <title>
+          India’s Leading AI & Cloud Video Intelligence Company | About VMukti
+        </title>
+        <meta
+          name="description"
+          content="Explore VMukti Solutions journey as an AI video intelligence and Cloud-based surveillance provider delivering surveillance solutions for enterprises and government projects."
         />
-        <VerticalTimeline />
-      </StickySection>
+        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:title"
+          content="India’s Leading AI & Cloud Video Intelligence Company | About VMukti"
+        />
+        <meta
+          property="og:description"
+          content="Explore VMukti Solutions journey as an AI video intelligence and Cloud-based surveillance provider delivering surveillance solutions for enterprises and government projects."
+        />
+        {/* <meta
+          property="og:image"
+          content="[YOUR_ABOUT_PAGE_IMAGE_LINK]" 
+        /> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vmukti.com/about-us" />
+        <meta property="og:site_name" content="VMukti Solutions" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@vmukti" />
+        <meta
+          name="twitter:title"
+          content="India’s Leading AI & Cloud Video Intelligence Company | About VMukti"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore VMukti Solutions journey as an AI video intelligence and Cloud-based surveillance provider delivering surveillance solutions for enterprises and government projects."
+        />
+        {/* <meta
+          name="twitter:image"
+          content="[YOUR_ABOUT_PAGE_IMAGE_LINK]" 
+        /> */}
+        <link rel="canonical" href="https://www.vmukti.com/about-us" />{" "}
+        {/* {aboutPageSchemas.map((schema, index) => (
+          <script
+            key={`schema-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schema),
+            }}
+          />
+        ))} */}
+      </Helmet>
+      <PageContentWrapper>
+        <HeroSection />
+        <VisionMissionSection />
 
-      <Box mt={{base:"5%",md:"2%"}}>
-        <CulturalSection gridItems={gridItems} />
-      </Box>
+        <StickySection>
+          <AdvancedComputerVision
+            bgColor="#5887AE"
+            textColor="white"
+            cardBgColor1="white"
+            cardBgColor2="white"
+            lineColor="white"
+            {...customData2}
+          />
+          <VerticalTimeline />
+        </StickySection>
+
+        <Box mt={{ base: "5%", md: "2%" }}>
+          <CulturalSection gridItems={gridItems} />
+        </Box>
       </PageContentWrapper>
       <CertificationsSection />
       <PageContentWrapper>
-      <Reviews />
-      {/* <ReviewsSection /> */}
+        <Reviews />
+        {/* <ReviewsSection /> */}
       </PageContentWrapper>
     </>
   );

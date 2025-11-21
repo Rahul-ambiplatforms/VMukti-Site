@@ -7,19 +7,19 @@ const BlogsDashboard = () => {
   return (
     <>
       <Helmet>
-        <title>Insights & Innovations: Explore Our Tech Journal </title>
+        <title>Latest Trends & Insights for AI Video Surveillance & Cloud VMS | VMukti </title>
         <meta
           name="description"
-          content="Stay ahead of the curve with our expert insights, industry trends, and AI innovations. Explore our latest thoughts and breakthroughs."
+          content="Explore expert insights on AI surveillance, Cloud VMS, EMS ICCC, video intelligence and smart security solutions. Stay updated with VMukti’s latest blogs and key trends."
         />
         <meta name="robots" content="index, follow" />
         <meta
           property="og:title"
-          content="Insights & Innovations: Explore Our Tech Journal"
+          content="Latest Trends & Insights for AI Video Surveillance & Cloud VMS | VMukti"
         />
         <meta
           property="og:description"
-          content="Stay ahead of the curve with our expert insights, industry trends, and AI innovations. Explore our latest thoughts and breakthroughs."
+          content="Explore expert insights on AI surveillance, Cloud VMS, EMS ICCC, video intelligence and smart security solutions. Stay updated with VMukti’s latest blogs and key trends."
         />
         <meta
           property="og:image"
@@ -33,11 +33,11 @@ const BlogsDashboard = () => {
         <meta name="twitter:site" content="@vmukti" />
         <meta
           name="twitter:title"
-          content="Insights & Innovations: Explore Our Tech Journal"
+          content="Latest Trends & Insights for AI Video Surveillance & Cloud VMS | VMukti"
         />
         <meta
           name="twitter:description"
-          content="Stay ahead of the curve with our expert insights, industry trends, and AI innovations. Explore our latest thoughts and breakthroughs."
+          content="Explore expert insights on AI surveillance, Cloud VMS, EMS ICCC, video intelligence and smart security solutions. Stay updated with VMukti’s latest blogs and key trends."
         />
         <meta
           name="twitter:image"

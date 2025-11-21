@@ -180,17 +180,17 @@ export default function ContactUs() {
     <>
       <Helmet>
         {/* SEO Tags */}
-        <title>Contact Us - VMukti Solutions</title>
+        <title>Contact Us | VMukti Solutions – AI Video Surveillance & Support Team</title>
         <meta
           name="description"
-          content="Contact VMukti Solutions to discuss your AI vision needs. We help you to build, deploy and scale visual intelligence and surveillance solutions."
+          content="Have questions? Contact VMukti Solutions for AI-powered surveillance solutions, Cloud VMS, GenAI analytics and deployment support. Our team is ready to assist."
         />
         <meta name="robots" content="index, follow" />
         {/* Open Graph (OG) Tags for Social Media Sharing */}
-        <meta property="og:title" content="Contact Us - VMukti Solutions" />
+        <meta property="og:title" content="Contact Us | VMukti Solutions – AI Video Surveillance & Support Team" />
         <meta
           property="og:description"
-          content="Contact VMukti Solutions to discuss your AI vision needs. We help you to build, deploy and scale visual intelligence and surveillance solutions."
+          content="Have questions? Contact VMukti Solutions for AI-powered surveillance solutions, Cloud VMS, GenAI analytics and deployment support. Our team is ready to assist."
         />
         <meta
           property="og:image"
@@ -202,10 +202,10 @@ export default function ContactUs() {
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@vmukti" />
-        <meta name="twitter:title" content="Contact Us - VMukti Solutions" />
+        <meta name="twitter:title" content="Contact Us | VMukti Solutions – AI Video Surveillance & Support Team" />
         <meta
           name="twitter:description"
-          content="Contact VMukti Solutions to discuss your AI vision needs. We help you to build, deploy and scale visual intelligence and surveillance solutions."
+          content="Have questions? Contact VMukti Solutions for AI-powered surveillance solutions, Cloud VMS, GenAI analytics and deployment support. Our team is ready to assist."
         />
         <meta
           name="twitter:image"
@@ -234,7 +234,7 @@ export default function ContactUs() {
           >
             <Image
               src={`${process.env.PUBLIC_URL}/assets/Contactus.png`}
-              alt="Contact Us - VMukti Solutions"
+              alt="Contact Us | VMukti Solutions – AI Video Surveillance & Support Team"
               position="absolute"
               top="0"
               left="0"
