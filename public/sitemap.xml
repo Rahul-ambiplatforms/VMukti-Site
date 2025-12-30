@@ -181,6 +181,30 @@
           <priority>0.6</priority>
         </url>
               <url>
+                <loc>https://www.vmukti.com/blog/cloud-based-video-surveillance-for-enterprise-security</loc>
+                <lastmod>2025-12-29</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.6</priority>
+              </url>
+              <url>
+                <loc>https://www.vmukti.com/blog/what-is-computer-vision</loc>
+                <lastmod>2025-12-17</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.6</priority>
+              </url>
+              <url>
+                <loc>https://www.vmukti.com/blog/what-is-intelligent-video-analytics</loc>
+                <lastmod>2025-12-13</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.6</priority>
+              </url>
+              <url>
+                <loc>https://www.vmukti.com/blog/what-is-video-surveillance-system</loc>
+                <lastmod>2025-12-04</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.6</priority>
+              </url>
+              <url>
                 <loc>https://www.vmukti.com/blog/cloud-enterprise-management-system-for-surveillance</loc>
                 <lastmod>2025-11-14</lastmod>
                 <changefreq>monthly</changefreq>
