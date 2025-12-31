@@ -44,21 +44,20 @@ const VMuktiHomepage = () => {
       </script>
       <Helmet>
         <title>
-          AI Cloud Video Surveillance & Centralized Monitoring System | VMukti
-          Solutions
+          Best Cloud Video Surveillance & Intelligent Video Monitoring System
         </title>
         <meta
           name="description"
-          content="Enhance security and operations with VMukti’s cloud-based video surveillance solutions, offering centralized monitoring, remote access, and robust protection for multi-location businesses."
+          content="VMukti delivers the best cloud video surveillance and AI video monitoring platform with secure streaming, centralized control, enterprise-grade analytics & scalability."
         />
         <meta name="robots" content="index, follow" />
         <meta
           property="og:title"
-          content="AI Cloud Video Surveillance & Centralized Monitoring System | VMukti Solutions"
+          content="Best Cloud Video Surveillance & Intelligent Video Monitoring System"
         />
         <meta
           property="og:description"
-          content="Enhance security and operations with VMukti’s cloud-based video surveillance solutions, offering centralized monitoring, remote access, and robust protection for multi-location businesses."
+          content="VMukti delivers the best cloud video surveillance and AI video monitoring platform with secure streaming, centralized control, enterprise-grade analytics & scalability."
         />
         <meta
           property="og:image"
@@ -72,11 +71,11 @@ const VMuktiHomepage = () => {
         <meta name="twitter:site" content="@vmukti" />
         <meta
           name="twitter:title"
-          content="AI Cloud Video Surveillance & Centralized Monitoring System | VMukti Solutions"
+          content="Best Cloud Video Surveillance & Intelligent Video Monitoring System"
         />
         <meta
           name="twitter:description"
-          content="Enhance security and operations with VMukti’s cloud-based video surveillance solutions, offering centralized monitoring, remote access, and robust protection for multi-location businesses."
+          content="VMukti delivers the best cloud video surveillance and AI video monitoring platform with secure streaming, centralized control, enterprise-grade analytics & scalability."
         />
         <meta
           name="twitter:image"

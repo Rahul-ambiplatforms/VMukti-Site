@@ -1,8 +1,8 @@
 export const solutionsData = {
   videomanagementsystem: {
-    metetitle: "AI-Powered Cloud Video Management System (VMS) | VMukti Solutions",
+    metetitle: "Cloud-based Video Management System | AI-Powered VMS by VMukti",
     metadescription:
-      "Manage, monitor, and secure multiple locations with VMukti’s cloud-based video management system featuring AI analytics, centralized monitoring, and reliable remote access.",
+      "VMukti’s cloud-based video management system delivers AI-powered monitoring, secure streaming, centralized control, and scalable enterprise deployments.",
     ogImage: "https://www.vmukti.com/assets/MainWebPageMockup1.1.png",
     slug: "video-management-system",
     // Section 1: Hero section from the first image
@@ -160,9 +160,9 @@ export const solutionsData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "AI-Powered Cloud Video Management System (VMS) | VMukti Solutions",
+        name: "Cloud-based Video Management System | AI-Powered VMS by VMukti",
         description:
-          "Manage, monitor, and secure multiple locations with VMukti’s cloud-based video management system featuring AI analytics, centralized monitoring, and reliable remote access.",
+          "VMukti’s cloud-based video management system delivers AI-powered monitoring, secure streaming, centralized control, and scalable enterprise deployments.",
         url: "https://www.vmukti.com/solution/video-management-system/",
         datePublished: "2006-11-10",
         dateModified: "2025-11-21",
@@ -271,9 +271,9 @@ export const solutionsData = {
 
   enterprisemanagementsystem: {
     metetitle:
-      "Cloud Enterprise Management System for Multi-Location Businesses",
+      "Cloud-based Enterprise Video Management System | VMukti Solutions",
     metadescription:
-      "VMukti Cloud EMS offers admin access control, user permissions, event alerts, flexible storage, live & recorded video, alert handling, and centralized monitoring.",
+      "VMukti’s Cloud enterprise management system delivers centralized monitoring, access control, user permissions, event alerts, flexible storage and live and recorded video.",
     ogImage: "https://www.vmukti.com/assets/solution_evms_dash.png",
     slug: "enterprise-management-system",
     // Section 1: Hero section updated
@@ -422,9 +422,9 @@ export const solutionsData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Cloud Enterprise Management System for Multi-Location Businesses",
+        name: "Cloud-based Enterprise Video Management System | VMukti Solutions",
         description:
-          "VMukti Cloud EMS offers admin access control, user permissions, event alerts, flexible storage, live & recorded video, alert handling, and centralized monitoring.",
+          "VMukti’s Cloud enterprise management system delivers centralized monitoring, access control, user permissions, event alerts, flexible storage and live and recorded video.",
         url: "https://www.vmukti.com/solution/enterprise-management-system/",
         datePublished: "2006-11-10",
         dateModified: "2025-11-21",
@@ -517,9 +517,9 @@ export const solutionsData = {
   },
 
   integratedcommandcontrolcenter: {
-    metetitle: "AI Integrated Command & Control Center Solutions | VMukti Solutions",
+    metetitle: "Integrated Command and Control Centre | Intelligent ICCC Solution",
     metadescription:
-      "VMukti’s ICCC platform unifies live video, GIS mapping, AI alerts, and real-time coordination to enhance urban safety, incident response, and smart city operations.",
+      "VMukti’s Integrated command and control center solutions integrates live video, GIS mapping, AI alerts and real-time coordination to enhance urban safety and operations.",
     ogImage: "https://www.vmukti.com/assets/solution_iccc_dash.png",
     slug: "integrated-command-control-center",
     // Section 1: Hero section from the first image
@@ -665,7 +665,7 @@ export const solutionsData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "AI Integrated Command & Control Center Solutions | VMukti Solutions",
+        name: "Integrated Command and Control Centre | Intelligent ICCC Solution",
         description:
           "Delivering reliable and unmatched efficiency with our Integrated Command and Control Centre solutions which enhances operational control and decision-making.",
         url: "https://www.vmukti.com/solution/integrated-command-control-center/",
@@ -761,9 +761,9 @@ export const solutionsData = {
   },
 
   livestreamingsolution: {
-    metetitle: "Secure Live CCTV Feed Streaming & Command Centre Monitoring",
+    metetitle: "Live Video Surveillance & Secure Stream Monitoring System | VMukti",
     metadescription:
-      "Stream real-time CCTV feeds to your command center with VMukti’s secure live streaming platform featuring adaptive quality, OTP access, user reports, and VOD playback.",
+      "VMukti’s live video surveillance system delivers secure streaming, adaptive quality, OTP access, user reports, and on-demand video playback.",
     ogImage: "https://www.vmukti.com/assets/solution_live_dash.png",
     slug: "live-streaming-solution",
     // Section 1: Hero section from the first image
@@ -929,9 +929,9 @@ export const solutionsData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Secure Live CCTV Feed Streaming & Command Centre Monitoring",
+        name: "Live Video Surveillance & Secure Stream Monitoring System | VMukti",
         description:
-          "Stream real-time CCTV feeds to your command center with VMukti’s secure live streaming platform featuring adaptive quality, OTP access, user reports, and VOD playback.",
+          "VMukti’s live video surveillance system delivers secure streaming, adaptive quality, OTP access, user reports, and on-demand video playback.",
         url: "https://www.vmukti.com/solution/live-streaming-solution",
         datePublished: "2006-11-10",
         dateModified: "2025-11-21",

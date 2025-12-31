@@ -45,22 +45,22 @@ const Hero = () => {
       <Helmet>
         {/* SEO Tags */}
         <title>
-          Unified AI Surveillance Ecosystem for Enterprises & Government
+          VMukti's Products & Solutions | Enterprise Video Surveillance Platform
         </title>
         <meta
           name="description"
-          content="Discover VMukti’s unified AI surveillance ecosystem—Cloud VMS, ICCC, GenAI, VisualBot, CloudAI analytics, live streaming, and enterprise-grade monitoring."
+          content="Discover VMukti’s enterprise video surveillance products and solutions built for large-scale deployments, secure monitoring, and centralized video management."
         />
         <meta name="robots" content="index, follow" />
 
         {/* Open Graph (OG) Tags for Social Media Sharing */}
         <meta
           property="og:title"
-          content="Unified AI Surveillance Ecosystem for Enterprises & Government"
+          content="VMukti's Products & Solutions | Enterprise Video Surveillance Platform"
         />
         <meta
           property="og:description"
-          content="Discover VMukti’s unified AI surveillance ecosystem—Cloud VMS, ICCC, GenAI, VisualBot, CloudAI analytics, live streaming, and enterprise-grade monitoring."
+          content="Discover VMukti’s enterprise video surveillance products and solutions built for large-scale deployments, secure monitoring, and centralized video management."
         />
         <meta
           property="og:image"
@@ -75,11 +75,11 @@ const Hero = () => {
         <meta name="twitter:site" content="@vmukti" />
         <meta
           name="twitter:title"
-          content="Unified AI Surveillance Ecosystem for Enterprises & Government"
+          content="VMukti's Products & Solutions | Enterprise Video Surveillance Platform"
         />
         <meta
           name="twitter:description"
-          content="Discover VMukti’s unified AI surveillance ecosystem—Cloud VMS, ICCC, GenAI, VisualBot, CloudAI analytics, live streaming, and enterprise-grade monitoring."
+          content="Discover VMukti’s enterprise video surveillance products and solutions built for large-scale deployments, secure monitoring, and centralized video management."
         />
         <meta
           name="twitter:image"

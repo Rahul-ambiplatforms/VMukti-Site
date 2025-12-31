@@ -4,9 +4,9 @@
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "AI Cloud Video Surveillance & Centralized Monitoring System | VMukti Solutions",
+        name: "Best Cloud Video Surveillance & Intelligent Video Monitoring System",
         description:
-          "Enhance security and operations with VMukti’s cloud-based video surveillance solutions, offering centralized monitoring, remote access, and robust protection for multi-location businesses.",
+          "VMukti delivers the best cloud video surveillance and AI video monitoring platform with secure streaming, centralized control, enterprise-grade analytics & scalability.",
         url: "https://www.vmukti.com/",
         datePublished: "2006-11-10",
         dateModified: "2025-11-21",
@@ -160,9 +160,9 @@
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Unified AI Surveillance Ecosystem for Enterprises & Government",
+        name: "VMukti's Products & Solutions | Enterprise Video Surveillance Platform",
         description:
-          "Discover VMukti’s unified AI surveillance ecosystem—Cloud VMS, ICCC, GenAI, VisualBot, CloudAI analytics, live streaming, and enterprise-grade monitoring.",
+          "Discover VMukti’s enterprise video surveillance products and solutions built for large-scale deployments, secure monitoring, and centralized video management.",
         url: "https://www.vmukti.com/solution/",
         datePublished: "2006-11-10",
         dateModified: "2025-11-21",
