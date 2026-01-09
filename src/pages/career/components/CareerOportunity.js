@@ -408,6 +408,7 @@ const CareerOportunity = () => {
               <ModalHeader
                 fontSize={{ base: "2xl", md: "3xl" }}
                 fontWeight="bold"
+                mt={2}
               >
                 Submit your{" "}
                 <Text as="span" color="#DB7B3A">
