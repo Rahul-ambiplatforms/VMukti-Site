@@ -416,7 +416,7 @@ const CareerOportunity = () => {
               </ModalHeader>
               <ModalCloseButton />
 
-              <ModalBody pb={6} maxH={{ base: "90vh", md: "90vh" }} overflowY="auto">
+              <ModalBody pb={6} maxH={{ base: "80vh", md: "90vh" }} overflowY="auto">
                 <Flex align="start" mb={6} direction="column" gap="4">
                   <Box>
                     <svg
