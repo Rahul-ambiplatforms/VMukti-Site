@@ -416,7 +416,7 @@ const CareerOportunity = () => {
               </ModalHeader>
               <ModalCloseButton />
 
-              <ModalBody pb={6}>
+              <ModalBody pb={6} maxH={{ base: "90vh", md: "90vh" }} overflowY="auto">
                 <Flex align="start" mb={6} direction="column" gap="4">
                   <Box>
                     <svg
@@ -434,13 +434,13 @@ const CareerOportunity = () => {
                   </Box>
                   <Text color="#696969" fontSize="16px" fontWeight="500">
                     {selectedJob.skillsAndResponsibilities &&
-                    selectedJob.skillsAndResponsibilities.trim().length > 0
+                      selectedJob.skillsAndResponsibilities.trim().length > 0
                       ? selectedJob.skillsAndResponsibilities
                       : selectedJob.keyResponsibilities?.length > 0
-                      ? selectedJob.keyResponsibilities.join(", ")
-                      : selectedJob.keySkills?.length > 0
-                      ? selectedJob.keySkills.join(", ")
-                      : "No additional details available."}
+                        ? selectedJob.keyResponsibilities.join(", ")
+                        : selectedJob.keySkills?.length > 0
+                          ? selectedJob.keySkills.join(", ")
+                          : "No additional details available."}
                   </Text>
                   {selectedJob.jdUrl && (
                     <Box textAlign="center" mt={4}>
