@@ -282,7 +282,7 @@ const HeroSection = () => {
                   display={{ base: "none", md: "block" }}
                   width={["", "", "55%", "90%"]}
                 />
-                <Link to="/contact-us">
+                <Link to="/book-a-demo">
                   <MotionButton
                     onMouseEnter={handleImageHover}
                     onMouseLeave={handleImageLeave}

@@ -916,7 +916,7 @@ const NewsletterSubscription = () => {
                 flexShrink={0}
                 // ml={{ base: '5px', md: '10px', lg: '15px' }}
                 // mt="20%"
-                onClick={() => navigateTo("/contact-us", "contactus")}
+                onClick={() => navigateTo("/book-a-demo", "Book a Demo")}
                 fontWeight={700}
                 // fontSize={{base:"12px",md:"16px"}}
                 gap="2"
@@ -1118,7 +1118,7 @@ const NewsletterSubscription = () => {
                 ))}
               </Flex>
               <Flex mt="5%">
-                <Link href={"/contact-us"}>
+                <Link href={"/book-a-demo"}>
                   <Button
                     width={buttonWidth}
                     height={buttonHeight}

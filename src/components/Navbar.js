@@ -404,7 +404,7 @@ const Navbar = () => {
                                 zIndex: "popover",
                                 whiteSpace: "nowrap",
                               }}
-                              // zIndex={10000}
+                            // zIndex={10000}
                             >
                               {item.items.map((dropdownItem, idx) => (
                                 <React.Fragment key={dropdownItem.label || idx}>
@@ -422,8 +422,8 @@ const Navbar = () => {
                                           : "400"
                                         : location.pathname ===
                                           dropdownItem.path
-                                        ? "700"
-                                        : "400"
+                                          ? "700"
+                                          : "400"
                                     }
                                     fontSize="14px"
                                     color={
@@ -436,15 +436,14 @@ const Navbar = () => {
                                           : "#696969"
                                         : location.pathname ===
                                           dropdownItem.path
-                                        ? "#3F77A5"
-                                        : "#696969"
+                                          ? "#3F77A5"
+                                          : "#696969"
                                     }
                                     onClick={() =>
                                       navigateTo(
-                                        `${dropdownItem.path}${
-                                          dropdownItem.sliderId
-                                            ? `?slider=${dropdownItem.sliderId}`
-                                            : ""
+                                        `${dropdownItem.path}${dropdownItem.sliderId
+                                          ? `?slider=${dropdownItem.sliderId}`
+                                          : ""
                                         }`,
                                         item.name,
                                         dropdownItem.sliderId
@@ -620,7 +619,6 @@ const Navbar = () => {
             </Show> */}
               <Show above="md">
                 <Button
-                  as="a"
                   width={contactBtnSize}
                   height={contactBtnHeight}
                   background="#3F77A5"
@@ -630,9 +628,7 @@ const Navbar = () => {
                   fontWeight="600"
                   borderRadius="24px"
                   flexShrink={0}
-                  href="https://calendly.com/book-cloud-vms-demo/30min?utm_source=vmukti&utm_medium=website&utm_campaign=cloud_vms_demo"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={() => navigateTo("/book-a-demo", "Book Demo")}
                   _hover={{
                     background: "#35668E",
                     color: "#FFFFFF",
@@ -815,10 +811,9 @@ const Navbar = () => {
                                     py={2}
                                     onClick={() => {
                                       navigateTo(
-                                        `${dropdownItem.path}${
-                                          dropdownItem.sliderId
-                                            ? `?slider=${dropdownItem.sliderId}`
-                                            : ""
+                                        `${dropdownItem.path}${dropdownItem.sliderId
+                                          ? `?slider=${dropdownItem.sliderId}`
+                                          : ""
                                         }`,
                                         item.name,
                                         dropdownItem.sliderId

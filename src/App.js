@@ -41,6 +41,7 @@ const OurServings = lazy(() => import("./pages/OurServings/OurServings"));
 const ServingsDock = lazy(() => import("./pages/OurServings/ServingsDock"));
 const ContactUs = lazy(() => import("./pages/ContactUs/Contactus"));
 const VMuktiCareers = lazy(() => import("./pages/career/Career"));
+const BookDemo = lazy(() => import("./pages/BookDemo/BookDemo"));
 const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 
 // Loading component
@@ -84,6 +85,7 @@ function App() {
                   <Route path="/blog/:urlWords" element={<BlogsContents />} />
                   {/* <Route path="/serving" element={<OurServings />} /> */}
                   {/* <Route path="/serving/:name" element={<ServingsDock />} /> */}
+                  <Route path="/book-a-demo" element={<BookDemo />} />
                   <Route path="/contact-us" element={<ContactUs />} />
                   <Route path="/Ambicam" element={<AmbicamLandingPage />} />
                   <Route path="/thank-you" element={<Thankyou />} />
