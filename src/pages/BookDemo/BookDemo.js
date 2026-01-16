@@ -324,8 +324,8 @@ export default function BookDemo() {
             });
 
             const response = await fetch(
-                // "https://vmukti.com/backend/api/send-email",
-                "http://localhost:5000/api/send-email",
+                "https://vmukti.com/backend/api/send-email",
+                // "http://localhost:5000/api/send-email",
                 {
                     method: "POST",
                     headers: {
