@@ -15,6 +15,7 @@ import CustomCursor from "./components/CustomCursor";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import SolutionDetails from "./components/SolutionDetails";
 import Thankyou from "./pages/ThankYou/Thankyou";
+import ThankyouDemo from "./pages/ThankYou/ThankyouDemo";
 import PrivacyPolicy from "./pages/Who/components/PrivacyPolicy";
 import TermsAndCondition from "./pages/Who/components/TermsAndCondition";
 import CareerHome from "./pages/career/CareerHome";
@@ -89,6 +90,7 @@ function App() {
                   <Route path="/contact-us" element={<ContactUs />} />
                   <Route path="/Ambicam" element={<AmbicamLandingPage />} />
                   <Route path="/thank-you" element={<Thankyou />} />
+                  <Route path="/demo-thank-you" element={<ThankyouDemo />} />
                   <Route path="/blog-thank-you" element={<Thankyou />} />
                   <Route
                     path="/careers-thank-you"

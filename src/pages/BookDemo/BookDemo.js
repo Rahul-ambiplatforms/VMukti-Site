@@ -15,8 +15,6 @@ import {
     FormLabel,
     FormErrorMessage,
     Select,
-    InputGroup,
-    InputLeftElement,
 } from "@chakra-ui/react";
 import { Helmet } from "react-helmet-async";
 import PageContentWrapper from "../../components/PageContentWrapper";
@@ -346,25 +344,8 @@ export default function BookDemo() {
             const data = await response.json();
 
             if (response.ok) {
-                toast({
-                    title: "Booking Submitted!",
-                    description: "We'll contact you shortly to confirm your demo.",
-                    status: "success",
-                    duration: 5000,
-                    isClosable: true,
-                });
-
-                // Reset form
-                setFormData({
-                    fullName: "",
-                    email: "",
-                    countryCode: "+91",
-                    mobileNumber: "",
-                    requirements: "",
-                    agreedToTerms: false,
-                });
-                setSelectedDate(null);
-                setSelectedTime(null);
+                // Redirect to thank you page immediately
+                window.location.href = "/demo-thank-you";
             } else {
                 throw new Error(data.error || "Failed to submit booking");
             }
