@@ -431,11 +431,19 @@ export default function BookDemo() {
                                 as="h2"
                                 fontSize={{ base: "20px", md: "24px" }}
                                 fontWeight="600"
-                                mb={4}
+                                mb={2}
                                 color="#3F77A5"
                             >
                                 Select a Date & Time
                             </Heading>
+                            <Text
+                                fontSize="12px"
+                                color="#696969"
+                                mb={4}
+                                fontStyle="italic"
+                            >
+                                All times are in IST (Indian Standard Time)
+                            </Text>
 
                             {/* Month Navigation */}
                             <Flex justify="space-between" align="center" mb={4}>
