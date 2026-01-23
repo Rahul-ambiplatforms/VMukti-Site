@@ -265,8 +265,10 @@ export default function BookDemo() {
             newErrors.email = "Please enter a valid email address";
         }
 
-        // Mobile number validation
-        if (formData.mobileNumber.trim()) {
+        // Mobile number validation - now mandatory
+        if (!formData.mobileNumber.trim()) {
+            newErrors.mobileNumber = "Mobile number is required";
+        } else {
             const cleanNumber = formData.mobileNumber.replace(/\s+/g, '');
             
             if (formData.countryCode === "+91") {
@@ -642,7 +644,7 @@ export default function BookDemo() {
 
                                 <FormControl isInvalid={errors.mobileNumber}>
                                     <FormLabel fontSize="14px" fontWeight="500">
-                                        Mobile Number
+                                        Mobile Number <Text as="span" color="red.500">*</Text>
                                     </FormLabel>
                                     <Flex gap={2}>
                                         <Select
@@ -672,8 +674,8 @@ export default function BookDemo() {
                                             onChange={handleInputChange}
                                             placeholder={
                                                 formData.countryCode === "+91" 
-                                                    ? "Enter 10-digit mobile number" 
-                                                    : "Enter mobile number"
+                                                    ? "Enter 10-digit mobile number *" 
+                                                    : "Enter mobile number *"
                                             }
                                             maxLength={15}
                                             borderColor="#BECEDC"
