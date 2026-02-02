@@ -495,6 +495,9 @@ const PopupForm = () => {
         });
 
         setIsOpen(false);
+        
+        // Navigate to US thank you page
+        navigate("/thank-you-us");
       } else {
         const data = await response.json();
         throw new Error(data.error || "Failed to send message");

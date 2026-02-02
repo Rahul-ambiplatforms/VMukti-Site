@@ -25,6 +25,7 @@ const commandMap = {
   "contact us": "/contact-us",
   "open ambicam": "/Ambicam",
   "thank you page": "/thank-you",
+  "thank you us": "/thank-you-us",
   "blog thank you": "/blog-thank-you",
   "careers thank you": "/careers-thank-you",
 

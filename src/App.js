@@ -92,6 +92,7 @@ function App() {
                   <Route path="/contact-us" element={<ContactUs />} />
                   <Route path="/Ambicam" element={<AmbicamLandingPage />} />
                   <Route path="/thank-you" element={<Thankyou />} />
+                  <Route path="/thank-you-us" element={<Thankyou />} />
                   <Route path="/demo-thank-you" element={<ThankyouDemo />} />
                   <Route path="/blog-thank-you" element={<Thankyou />} />
                   <Route
