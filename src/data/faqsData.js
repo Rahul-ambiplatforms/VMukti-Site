@@ -28,6 +28,27 @@ const faqsData = {
     ],
   },
 
+  homepage_us: {
+    title: "Frequently Asked Questions", // Title for this section
+    qa: [
+      {
+        question: "Is VMukti’s cloud video surveillance solution NDAA compliant?",
+        answer:
+          "Yes. VMukti supports NDAA-compliant cloud VMS architecture, making it suitable for US government, enterprises, and regulated industries that require NDAA-compliant video surveillance systems.",
+      },
+      {
+        question: "Can VMukti integrate with existing CCTV cameras and infrastructure?",
+        answer:
+          "Yes. VMukti’s Cloud VMS integrates seamlessly with existing ONVIF-compliant cameras and legacy CCTV systems. Enterprises can upgrade to AI-driven surveillance without replacing their current hardware.",
+      },
+      {
+        question: "Can VMukti support hybrid deployment (cloud + on-prem)?",
+        answer:
+          "Yes. VMukti offers flexible deployment models including cloud, on-prem, and hybrid video surveillance systems, allowing enterprises to choose the architecture that fits their compliance, performance, and data policies.",
+      },
+    ]
+  },
+
   //Sub Solution Page
   videomanagementsystem: {
     // The key MUST match the URL slug

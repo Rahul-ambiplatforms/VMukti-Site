@@ -155,6 +155,77 @@
         ],
       },
     ],
+    homepage_us:[
+      // WebPage Schema for US Homepage
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "AI-Powered Cloud Video Surveillance for US Multi-Location Enterprises",
+        "description": "Enterprise-grade AI cloud video surveillance solution for US multi-location companies. Improve visibility, automate incident response, and manage all sites from one Cloud VMS.",
+        "url": "https://www.vmukti.com/video-surveillance-solutions-usa",
+        "datePublished": "2026-02-01",
+        "dateModified": "2026-02-01",
+        "publisher": {
+          "@type": "Organization",
+          "name": "VMukti Solutions",
+          "url": "https://www.vmukti.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.vmukti.com/assets/vmuktilogo.png",
+            "width": 25,
+            "height": 6
+          },
+          "sameAs": [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1"
+          ]
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "Image Link",
+          "width": 174,
+          "height": 123,
+          "caption": "Best Video Surveillance Company In USA"
+        },
+        "inLanguage": "en-US"
+      },
+
+      // FAQ Schema for US Homepage
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "url": "https://www.vmukti.com/video-surveillance-solutions-usa",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is VMukti's cloud video surveillance solution NDAA compliant?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. VMukti supports NDAA-compliant cloud VMS architecture, making it suitable for US government, enterprises, and regulated industries that require NDAA-compliant video surveillance systems."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can VMukti integrate with existing CCTV cameras and infrastructure?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. VMukti's Cloud VMS integrates seamlessly with existing ONVIF-compliant cameras and legacy CCTV systems. Enterprises can upgrade to AI-driven surveillance without replacing their current hardware."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can VMukti support hybrid deployment (cloud + on-prem)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. VMukti offers flexible deployment models including cloud, on-prem, and hybrid video surveillance systems, allowing enterprises to choose the architecture that fits their compliance, performance, and data policies."
+            }
+          }
+        ]
+      }
+    ],
     solutionpage: [
       // Webpage Schema
       {

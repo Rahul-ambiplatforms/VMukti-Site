@@ -26,6 +26,7 @@ import VoiceAssistant from "./components/VoiceAssistant";
 // import ParticlesComponent from './components/Particles';
 // Lazy load components
 const VMuktiHomepage = lazy(() => import("./pages/Home/VMuktiHomepage"));
+const VMuktiHomepageUS = lazy(() => import("./pages/Home_US/VMuktiHomepageUS"));
 const TechnologyDashboard = lazy(() =>
   import("./pages/Technology/TechnologyDashboard")
 );
@@ -65,6 +66,7 @@ function App() {
               <Suspense fallback={<LoadingSpinner />}>
                 <Routes>
                   <Route path="/" element={<VMuktiHomepage />} />
+                  <Route path="/video-surveillance-solutions-usa" element={<VMuktiHomepageUS />} />
                   {/* <Route path="/technology" element={<TechnologyDashboard />} /> */}
                   <Route path="/solution" element={<SolutionsHome />} />
                   <Route path="/solution/:name" element={<SolutionDetails />} />
