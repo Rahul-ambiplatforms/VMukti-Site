@@ -531,15 +531,15 @@ const PopupForm = () => {
         // bg="transparent"
         // boxShadow="none"
         // m={{ base: 0, md: 4 }}
-maxW={{ base: "100vw", md: "90vw" }}
-w={{ base: "100vw", md: "90vw" }}
+        maxW={{ base: "100vw", md: "90vw" }}
+        w={{ base: "100vw", md: "90vw" }}
 
-maxH={{ base: "90vh", md: "85vh" }}
-h="auto"
+        maxH={{ base: "90vh", md: "85vh" }}
+        h="auto"
 
-overflowY="auto"
-borderRadius={{ base: "0", md: "24px" }}
-m={{ base: 0, md: 4 }}
+        overflowY="auto"
+        borderRadius={{ base: "0", md: "24px" }}
+        m={{ base: 0, md: 4 }}
 
       >
         {/* Close Button */}
