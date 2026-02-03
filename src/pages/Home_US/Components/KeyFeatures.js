@@ -21,7 +21,7 @@ const keyFeaturesData = [
     {
         title: "Integrates with existing cameras, ONVIF devices & hardware",
         description: "Integrates with existing cameras, \n ONVIF devices & hardware",
-        image: "./assets/onvif.png",
+        image: "./assets/Onvif.png",
     },
     {
         title: "Proven deployments in Government, Smart Cities & Enterprises",
