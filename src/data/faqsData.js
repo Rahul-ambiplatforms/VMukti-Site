@@ -49,6 +49,27 @@ const faqsData = {
     ]
   },
 
+  homepage_uk: {
+    title: "Frequently Asked Questions", // Title for this section
+    qa: [
+      {
+        question: "Is VMukti's cloud video surveillance solution suitable for UK Enterprises and public sector?",
+        answer:
+          "Yes. VMukti's platform is designed for enterprise and public sector requirements, supporting compliance-ready architecture, secure cloud infrastructure, and scalable deployments suitable for UK government, smart cities, and critical public services.",
+      },
+      {
+        question: "How secure is VMukti's cloud video surveillance platform?",
+        answer:
+          "VMukti's platform is built with enterprise-grade security, encrypted data transmission, role-based access control, compliance-ready architecture, and high-availability cloud infrastructure to ensure secure and reliable video surveillance.",
+      },
+      {
+        question: "Can VMukti scale for large enterprise deployments across the UK?",
+        answer:
+          "Yes. VMukti's Cloud VMS is designed for enterprise-scale deployments, supporting thousands of cameras, multiple locations, and high-volume video data with seamless scalability.",
+      },
+    ]
+  },
+
   //Sub Solution Page
   videomanagementsystem: {
     // The key MUST match the URL slug

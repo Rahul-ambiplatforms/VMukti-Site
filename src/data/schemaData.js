@@ -226,6 +226,77 @@
         ]
       }
     ],
+    homepage_uk:[
+      // WebPage Schema for UK Homepage
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "AI Cloud Video Surveillance for Multi-Location Business in UK",
+        "description": "AI video surveillance and cloud video surveillance system for UK multi-location enterprises. Centralise monitoring, automate incidents, and improve visibility with Cloud VMS.",
+        "url": "https://www.vmukti.com/video-surveillance-solutions-uk",
+        "datePublished": "2026-02-01",
+        "dateModified": "2026-02-01",
+        "publisher": {
+          "@type": "Organization",
+          "name": "VMukti Solutions",
+          "url": "https://www.vmukti.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.vmukti.com/assets/vmuktilogo.png",
+            "width": 25,
+            "height": 6
+          },
+          "sameAs": [
+            "https://www.facebook.com/VMuktisolutions",
+            "https://www.instagram.com/vmuktisolutions/",
+            "https://www.linkedin.com/company/vmuktisolutions",
+            "https://x.com/VMukti",
+            "https://www.youtube.com/@VMukti1"
+          ]
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "Image Link",
+          "width": 174,
+          "height": 123,
+          "caption": "Best Video Surveillance Company In UK"
+        },
+        "inLanguage": "en-US"
+      },
+
+      // FAQ Schema for UK Homepage
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "url": "https://www.vmukti.com/video-surveillance-solutions-uk",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is VMukti's cloud video surveillance solution suitable for UK enterprises and the public sector?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. VMukti's platform is designed for enterprise and public sector requirements, supporting compliance-ready architecture, secure cloud infrastructure, and scalable deployments suitable for UK government, smart cities, and critical public services."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How secure is VMukti's cloud video surveillance platform?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "VMukti's platform is built with enterprise-grade security, encrypted data transmission, role-based access control, compliance-ready architecture, and high-availability cloud infrastructure to ensure secure and reliable video surveillance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can VMukti scale for large enterprise deployments across the UK?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. VMukti's Cloud VMS is designed for enterprise-scale deployments, supporting thousands of cameras, multiple locations, and high-volume video data with seamless scalability."
+            }
+          }
+        ]
+      }
+    ],
     solutionpage: [
       // Webpage Schema
       {

@@ -27,6 +27,7 @@ import VoiceAssistant from "./components/VoiceAssistant";
 // Lazy load components
 const VMuktiHomepage = lazy(() => import("./pages/Home/VMuktiHomepage"));
 const VMuktiHomepageUS = lazy(() => import("./pages/Home_US/VMuktiHomepageUS"));
+const VMuktiHomepageUK = lazy(() => import("./pages/Home_UK/VMuktiHomepageUK"));
 const TechnologyDashboard = lazy(() =>
   import("./pages/Technology/TechnologyDashboard")
 );
@@ -67,6 +68,7 @@ function App() {
                 <Routes>
                   <Route path="/" element={<VMuktiHomepage />} />
                   <Route path="/video-surveillance-solutions-usa" element={<VMuktiHomepageUS />} />
+                  <Route path="/video-surveillance-solutions-uk" element={<VMuktiHomepageUK />} />
                   {/* <Route path="/technology" element={<TechnologyDashboard />} /> */}
                   <Route path="/solution" element={<SolutionsHome />} />
                   <Route path="/solution/:name" element={<SolutionDetails />} />
@@ -93,6 +95,7 @@ function App() {
                   <Route path="/Ambicam" element={<AmbicamLandingPage />} />
                   <Route path="/thank-you" element={<Thankyou />} />
                   <Route path="/thank-you-us" element={<Thankyou />} />
+                  <Route path="/thank-you-uk" element={<Thankyou />} />
                   <Route path="/demo-thank-you" element={<ThankyouDemo />} />
                   <Route path="/blog-thank-you" element={<Thankyou />} />
                   <Route
