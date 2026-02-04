@@ -1,8 +1,8 @@
 export const solutionsData = {
   videomanagementsystem: {
-    metetitle: "Cloud-based Video Management System | AI-Powered VMS by VMukti",
+    metetitle: "Cloud-Based Video Management System (VMS) in the USA | AI-Powered VMukti",
     metadescription:
-      "VMukti’s cloud-based video management system delivers AI-powered monitoring, secure streaming, centralized control, and scalable enterprise deployments.",
+      "VMukti’s cloud-based video management system in the USA delivers AI-powered monitoring, secure streaming, centralized control, and scalable enterprise deployments.",
     ogImage: "https://www.vmukti.com/assets/MainWebPageMockup1.1.png",
     slug: "video-management-system",
     // Section 1: Hero section from the first image
@@ -271,9 +271,9 @@ export const solutionsData = {
 
   enterprisemanagementsystem: {
     metetitle:
-      "Cloud-based Enterprise Video Management System | VMukti Solutions",
+      "Cloud-Based Enterprise Video Management System in the USA | VMukti",
     metadescription:
-      "VMukti’s Cloud enterprise management system delivers centralized monitoring, access control, user permissions, event alerts, flexible storage and live and recorded video.",
+      "VMukti’s cloud enterprise video management system in the USA offers centralized monitoring, access control, user permissions, real-time alerts, flexible storage, and live and recorded video management.",
     ogImage: "https://www.vmukti.com/assets/solution_evms_dash.png",
     slug: "enterprise-management-system",
     // Section 1: Hero section updated
@@ -517,9 +517,9 @@ export const solutionsData = {
   },
 
   integratedcommandcontrolcenter: {
-    metetitle: "Integrated Command and Control Centre | Intelligent ICCC Solution",
+    metetitle: "Integrated Command and Control Center (ICCC) Solutions in the USA",
     metadescription:
-      "VMukti’s Integrated command and control center solutions integrates live video, GIS mapping, AI alerts and real-time coordination to enhance urban safety and operations.",
+      "VMukti’s integrated command and control center solutions in the USA combine live video, GIS mapping, AI alerts, and real-time coordination to enhance smart city operations and public safety.",
     ogImage: "https://www.vmukti.com/assets/solution_iccc_dash.png",
     slug: "integrated-command-control-center",
     // Section 1: Hero section from the first image
@@ -761,9 +761,9 @@ export const solutionsData = {
   },
 
   livestreamingsolution: {
-    metetitle: "Live Video Surveillance & Secure Stream Monitoring System | VMukti",
+    metetitle: "Live Video Surveillance & Secure Streaming Solutions in the USA | VMukti",
     metadescription:
-      "VMukti’s live video surveillance system delivers secure streaming, adaptive quality, OTP access, user reports, and on-demand video playback.",
+      "VMukti’s live video surveillance solution in the USA delivers secure streaming, adaptive quality, OTP access, user reporting, and on-demand video playback for enterprises.",
     ogImage: "https://www.vmukti.com/assets/solution_live_dash.png",
     slug: "live-streaming-solution",
     // Section 1: Hero section from the first image
@@ -1031,9 +1031,9 @@ export const solutionsData = {
   },
 
   flyingsquadvehicle: {
-    metetitle: "Flying Squad Vehicle Surveillance | FSV Video Monitoring System",
+    metetitle: "Mobile Vehicle Surveillance & Monitoring System in the USA | VMukti FSV",
     metadescription:
-      "VMukti’s flying squad vehicle surveillance system enables live GPS tracking, moving video surveillance, geo-fencing alerts, PTZ camera control and ICCC monitoring.",
+      "VMukti’s mobile vehicle surveillance system in the USA enables real-time GPS tracking, moving video surveillance, geo-fencing alerts, PTZ camera control, and ICCC integration.",
     ogImage: "https://www.vmukti.com/assets/solution_fsv_dash.png",
     slug: "flying-squad-vehicle",
     // Section 1: Hero section from the first image
@@ -1277,9 +1277,9 @@ export const solutionsData = {
   },
 
   cloudai: {
-    metetitle: "Cloud-Based Video Analytics for Smart Surveillance | CloudAI By VMukti",
+    metetitle: "Cloud-Based Video Analytics Solutions in the USA | CloudAI by VMukti",
     metadescription:
-      "VMukti's CloudAI provides cloud-based video analytics with face recognition, ANPR, crowd analysis, ADAS, and vehicle detection for smart surveillance.",
+      "VMukti's CloudAI delivers cloud-based video analytics in the USA with face recognition, ANPR, crowd analysis, vehicle detection, and AI-powered smart surveillance.",
     ogImage: "https://www.vmukti.com/assets/solution_cloud_dash.png",
     slug: "cloudai",
     // Section 1: Hero section from the first image
@@ -1630,7 +1630,7 @@ export const solutionsData = {
         "@type": "WebPage",
         name: "Cloud-Based Video Analytics for Smart Surveillance | CloudAI By VMukti",
         description:
-          "VMukti's CloudAI provides cloud-based video analytics with face recognition, ANPR, crowd analysis, ADAS, and vehicle detection for smart surveillance.",
+          "VMukti's CloudAI delivers cloud-based video analytics in the USA with face recognition, ANPR, crowd analysis, vehicle detection, and AI-powered smart surveillance.",
         url: "https://www.vmukti.com/solution/cloudai/",
         datePublished: "2006-11-10",
         dateModified: "2025-11-21",
@@ -1722,9 +1722,9 @@ export const solutionsData = {
   },
 
   genai: {
-    metetitle: "Generative AI Video Search | Video Search Like GPT for Surveillance",
+    metetitle: "Generative AI Video Search for Surveillance in the USA | VMukti GenAI",
     metadescription:
-      "Search surveillance video instantly using natural language with VMukti GenAI, enabling faster investigations, real-time insights, and automated reports without manual review.",
+      "Search surveillance video instantly using natural language with VMukti GenAI in the USA, enabling faster investigations, real-time insights, and automated reports without manual review.",
     ogImage: "https://www.vmukti.com/assets/solution_genai_dash.png",
     slug: "genai",
     // Section 1: Hero section from the first image
@@ -1865,7 +1865,7 @@ export const solutionsData = {
         "@type": "WebPage",
         name: "Generative AI Video Search | Video Search Like GPT for Surveillance",
         description:
-          "Search surveillance video instantly using natural language with VMukti GenAI, enabling faster investigations, real-time insights, and automated reports without manual review.",
+          "Search surveillance video instantly using natural language with VMukti GenAI in the USA, enabling faster investigations, real-time insights, and automated reports without manual review.",
         url: "https://www.vmukti.com/solution/genai/",
         datePublished: "2006-11-10",
         dateModified: "2025-11-21",
@@ -1927,9 +1927,9 @@ export const solutionsData = {
   },
 
   visualbot: {
-    metetitle: "VisualBot - Computer Vision API Platform for Video & Image Intelligence",
+    metetitle: "Computer Vision API Platform in the USA | VisualBot by VMukti",
     metadescription:
-      "VisualBot by VMukti turns video and image data into actionable intelligence with AI-driven insights, automated descriptions, and scalable computer vision APIs.",
+      "VisualBot by VMukti transforms video and image data into actionable intelligence in the USA with AI-driven insights, automated descriptions, and scalable computer vision APIs.",
     ogImage: "https://www.vmukti.com/assets/solution_visbot_dash.png",
     slug: "visualbot",
     // Section 1: Hero section from the first image
@@ -2065,7 +2065,7 @@ export const solutionsData = {
         "@type": "WebPage",
         name: "VisualBot - Computer Vision API Platform for Video & Image Intelligence",
         description:
-          "VisualBot by VMukti turns video and image data into actionable intelligence with AI-driven insights, automated descriptions, and scalable computer vision APIs.",
+          "VisualBot by VMukti transforms video and image data into actionable intelligence in the USA with AI-driven insights, automated descriptions, and scalable computer vision APIs.",
         url: "https://www.vmukti.com/solution/visualbot/",
         datePublished: "2006-11-10",
         dateModified: "2025-11-21",

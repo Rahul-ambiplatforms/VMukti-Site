@@ -9,9 +9,9 @@
 
 const industriesData = {
   manufacturing: {
-    metatitle: "Smart Manufacturing, Factory & Industrial Surveillance Solutions | VMukti",
+    metatitle: "Manufacturing & Industrial Surveillance Solutions in USA | VMukti",
     metadescription:
-      "AI-powered manufacturing video surveillance system enhances safety, quality checks, and operational visibility with real-time monitoring and intelligent video analytics.",
+      "VMukti’s AI-powered manufacturing video surveillance system in the USA enhances factory safety, quality control, operational visibility, and real-time monitoring with smart analytics.",
     ogImage: "https://www.vmukti.com/assets/manufacturing_mockup.png",
     slug: "manufacturing",
     title: [
@@ -297,9 +297,9 @@ const industriesData = {
     ],
   },
   warehouse: {
-    metatitle: "Warehouse Video Surveillance & Smart Operations Monitoring | VMukti",
+    metatitle: "Warehouse Video Surveillance & Monitoring Solutions in USA",
     metadescription:
-      "VMukti's AI warehouse surveillance system offers real-time monitoring, theft prevention, worker safety, and inventory tracking for smarter warehouse operations.",
+      "VMukti’s AI-powered manufacturing video surveillance system in the USA enhances factory safety, quality control, operational visibility, and real-time monitoring with smart analytics.",
     ogImage: "https://www.vmukti.com/assets/warehouse_mockup.png",
     slug: "warehouse",
     title: [
@@ -546,7 +546,7 @@ const industriesData = {
         "@type": "WebPage",
         name: "Warehouse Video Surveillance & Smart Operations Monitoring | VMukti",
         description:
-          "VMukti's AI warehouse surveillance system offers real-time monitoring, theft prevention, worker safety, and inventory tracking for smarter warehouse operations.",
+          "VMukti's AI warehouse surveillance system in the USA provides real-time monitoring, theft prevention, worker safety, inventory tracking, and smarter warehouse operations.",
         url: "https://www.vmukti.com/industry/warehouse/",
         datePublished: "2006-11-10",
         dateModified: "2025-11-21",
@@ -652,9 +652,9 @@ const industriesData = {
     ],
   },
   healthcare: {
-    metatitle: "AI-based Video Surveillance Systems for Hospitals & Healthcare Facilities",
+    metatitle: "AI Video Surveillance for Hospitals & Healthcare in USA",
     metadescription:
-      "VMukti's AI healthcare video surveillance solution streamlines hospital security, staff monitoring, and compliance tracking with real-time alerts and intelligent analytics.",
+      "VMukti’s AI healthcare video surveillance solution in the USA improves hospital security, staff monitoring, compliance tracking, and patient safety with real-time alerts and analytics.",
     ogImage: "https://www.vmukti.com/assets/healthcare_mockup.png",
     slug: "healthcare",
     title: [
@@ -854,7 +854,7 @@ const industriesData = {
         "@type": "WebPage",
         name: "AI-based Video Surveillance Systems for Hospitals & Healthcare Facilities",
         description:
-          "VMukti's AI healthcare video surveillance solution streamlines hospital security, staff monitoring, and compliance tracking with real-time alerts and intelligent analytics.",
+          "VMukti's AI healthcare video surveillance solution in the USA improves hospital security, staff monitoring, compliance tracking, and patient safety with real-time alerts and analytics.",
         url: "https://www.vmukti.com/industry/healthcare/",
         datePublished: "2006-11-10",
         dateModified: "2025-11-21",
@@ -960,9 +960,9 @@ const industriesData = {
     ],
   },
   oilandgas: {
-    metatitle: "Smart Video Surveillance Solution for Oil & Gas Operations | VMukti",
+    metatitle: "Oil & Gas Video Surveillance Solutions in USA | VMukti",
     metadescription:
-      "VMukti delivers AI-powered surveillance for oil & gas operations, enabling pipeline alerts, remote rig monitoring, worker safety insights, and centralized control.",
+      "VMukti delivers AI-powered surveillance for oil and gas operations in the USA with pipeline monitoring, remote site visibility, worker safety insights, and centralized control.",
     ogImage: "https://www.vmukti.com/assets/oilandgas_mockup.png",
     slug: "oil-and-gas",
     title: [
@@ -1268,9 +1268,9 @@ const industriesData = {
     ],
   },
   election: {
-    metatitle: "AI-Powered Election Surveillance & Monitoring Solutions | VMukti",
+    metatitle: "AI Election Surveillance & Monitoring Solutions in USA",
     metadescription:
-      "Ensure transparent elections with VMukti's AI-powered election surveillance system offering live monitoring, crowd insights, incident alerts, and seamless command center control.",
+      "Ensure transparent elections in the USA with VMukti’s AI-powered election surveillance system offering live monitoring, crowd insights, incident alerts, and command center integration.",
     ogImage: "https://www.vmukti.com/assets/election_mockup.png",
     slug: "election",
     title: [
@@ -1548,9 +1548,9 @@ const industriesData = {
     ],
   },
   education: {
-    metatitle: "AI Security Surveillance Solutions for Schools, Colleges & Universities",
+    metatitle: "AI Surveillance for Schools, Colleges & Universities in USA",
     metadescription:
-      "Improve campus safety with VMukti's AI education surveillance system offering smart monitoring, threat detection, and unified control for schools and universities.",
+      "Improve campus safety in the USA with VMukti’s AI education surveillance system providing smart monitoring, threat detection, incident alerts, and centralized security management.",
     ogImage: "https://www.vmukti.com/assets/education_mockup.png",
     slug: "education",
     title: [
@@ -1869,9 +1869,9 @@ const industriesData = {
     ],
   },
   transportation: {
-    metatitle: "Smart Transportation Security & Video Monitoring System | VMukti",
+    metatitle: "Transportation Security & Video Monitoring Solutions in USA",
     metadescription:
-      "VMukti delivers AI-powered transportation surveillance for fleets, stations, and highways. Get real-time alerts, tracking, analytics, and centralized monitoring.",
+      "VMukti delivers AI-powered transportation surveillance solutions in the USA with real-time alerts, tracking, analytics, and centralized monitoring for fleets and infrastructure.",
     ogImage: "https://www.vmukti.com/assets/transportation_mockup.png",
     slug: "transportation",
     title: [
@@ -2159,9 +2159,9 @@ const industriesData = {
     ],
   },
   smartcity: {
-    metatitle: "AI-Powered Smart City Monitoring & ICCC Solutions | VMukti Solutions",
+    metatitle: "AI Smart City Monitoring & ICCC Solutions in USA",
     metadescription:
-      "VMukti powers smart cities with AI video surveillance, ICCC, GIS mapping, and real-time alerts for efficient urban management and faster decision-making.",
+      "VMukti powers smart cities in the USA with AI video surveillance, ICCC platforms, GIS mapping, and real-time alerts to enhance urban safety and operational efficiency.",
     ogImage: "https://www.vmukti.com/assets/smartcity_mockup.png",
     slug: "smart-city",
     title: [
@@ -2490,9 +2490,9 @@ const industriesData = {
     ],
   },
   pharma: {
-    metatitle: "Pharma & Pharmaceutical Manufacturing Video Surveillance | VMukti",
+    metatitle: "Pharma Industry Video Surveillance & Monitoring in USA",
     metadescription:
-      "AI-powered video surveillance for pharmaceutical manufacturing ensures compliance, contamination control, and real-time monitoring for GMP and regulatory standards.",
+      "VMukti’s AI pharmaceutical monitoring solution in the USA helps ensure GMP compliance, track production processes, prevent risks, and secure pharma facilities end to end.",
     ogImage: "https://www.vmukti.com/assets/pharma_mockup.png",
     slug: "pharma",
     title: [
@@ -2784,9 +2784,9 @@ const industriesData = {
     ],
   },
   logistics: {
-    metatitle: "Logistics & Supply Chain Video Surveillance Solutions | VMukti",
+    metatitle: "Logistics & Supply Chain Surveillance Solutions in USA",
     metadescription:
-      "AI-powered video surveillance for logistics ensures shipment security, real-time tracking, loss prevention, and compliance across your entire supply chain operations.",
+      "VMukti’s AI logistics surveillance system in the USA improves cargo tracking, yard monitoring, loading operations, theft prevention, and real-time visibility across supply chains.",
     ogImage: "https://www.vmukti.com/assets/logistic_mockup.png",
     slug: "logistics",
     title: [
@@ -3092,9 +3092,9 @@ const industriesData = {
     ],
   },
   banking: {
-    metatitle: "Bank & Financial Institution Video Surveillance Solutions | VMukti",
+    metatitle: "Bank Video Surveillance & Monitoring Systems in USA",
     metadescription:
-      "AI-powered banking surveillance system protects branches, ATMs, and sensitive areas with real-time threat detection, fraud prevention, and compliance monitoring.",
+      "Secure banking operations in the USA with VMukti’s AI surveillance system for ATMs, branches, and cash zones with proactive alerts, smart analytics, and reliable video access.",
     ogImage: "https://www.vmukti.com/assets/banking_mockup.png",
     slug: "banking",
     title: [
@@ -3423,9 +3423,9 @@ const industriesData = {
     ],
   },
   sportsentertainment: {
-    metatitle: "Sports & Entertainment Video Surveillance & Analytics | VMukti",
+    metatitle: "Sports & Entertainment Video Surveillance Solutions in USA",
     metadescription:
-      "AI-powered sports and entertainment surveillance delivers real-time crowd management, fan safety monitoring, incident detection, and operational intelligence.",
+      "VMukti delivers AI surveillance solutions in the USA for sports and entertainment venues with crowd analysis, live monitoring, emergency alerts, and advanced event security.",
     ogImage: "https://www.vmukti.com/assets/sportsentertainment_mockup.png",
     slug: "sports-entertainment",
     title: [
@@ -3726,10 +3726,9 @@ const industriesData = {
     ],
   },
   defense: {
-    metatitle:
-      "Defense & Military Surveillance Solutions with AI Video Analytics | VMukti",
+    metatitle: "Defense & Armed Forces Video Surveillance Solutions in USA",
     metadescription:
-      "AI-powered defense surveillance delivers perimeter security, threat detection, real-time situational awareness, and advanced monitoring for military and defense operations.",
+      "VMukti’s AI defense surveillance system in the USA provides real-time threat detection, centralized command visibility, and secure video analytics for situational awareness.",
     ogImage: "https://www.vmukti.com/assets/defense_mockup.png",
     slug: "defense",
     title: [
@@ -4037,9 +4036,9 @@ const industriesData = {
     ],
   },
   hospitality: {
-    metatitle: "Hospitality & Hotel Video Surveillance Solutions | VMukti",
+    metatitle: "Hospitality Video Surveillance Solutions in USA | VMukti",
     metadescription:
-      "AI-powered hospitality surveillance enhances guest safety, prevents theft and property damage, improves operations, and maintains property security 24/7.",
+      "VMukti’s AI hospitality surveillance solution in the USA enhances guest security, operational visibility, smart alerts, and seamless multi-site monitoring for hotels and resorts.",
     ogImage: "https://www.vmukti.com/assets/hospitality_mockup.png",
     slug: "hospitality",
     title: [
@@ -4375,9 +4374,9 @@ const industriesData = {
     ],
   },
   construction: {
-    metatitle: "Construction & Building Site Surveillance Solutions | VMukti",
+    metatitle: "Construction Site Video Surveillance Solutions in USA",
     metadescription:
-      "AI-powered construction surveillance monitors site safety, equipment tracking, material management, worker compliance, and real-time progress documentation.",
+      "VMukti’s smart construction surveillance system in the USA improves site safety, tracks activities, prevents theft, and delivers real-time visibility with AI-powered insights.",
     ogImage: "https://www.vmukti.com/assets/construction_mockup.png",
     slug: "construction",
     title: [
@@ -4698,9 +4697,9 @@ const industriesData = {
     ],
   },
   enterprise: {
-    metatitle: "Enterprise Video Surveillance & Security Solutions | VMukti",
+    metatitle: "Enterprise Video Surveillance & Management Systems in USA",
     metadescription:
-      "AI-powered enterprise surveillance provides comprehensive monitoring, asset protection, threat detection, and real-time security across all corporate facilities.",
+      "VMukti delivers enterprise-grade surveillance solutions in the USA with AI analytics, smart alerts, centralized monitoring, and scalable video management for large organizations.",
     ogImage: "https://www.vmukti.com/assets/enterprise_mockup.png",
     slug: "enterprise",
     title: [
@@ -5013,9 +5012,9 @@ const industriesData = {
     ],
   },
   government: {
-    metatitle: "Government & Public Sector Surveillance Solutions | VMukti",
+    metatitle: "Government Video Surveillance & AI Monitoring Solutions in USA",
     metadescription:
-      "AI-powered government surveillance delivers public safety monitoring, traffic management, citizen services optimization, and intelligent civic infrastructure oversight.",
+      "VMukti provides AI-driven surveillance solutions in the USA for government agencies with advanced analytics, multi-camera control, ICCC integration, and real-time threat detection.",
     ogImage: "https://www.vmukti.com/assets/government_mockup.png",
     slug: "government",
     title: [

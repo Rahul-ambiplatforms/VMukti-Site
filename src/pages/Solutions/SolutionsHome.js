@@ -45,22 +45,22 @@ const Hero = () => {
       <Helmet>
         {/* SEO Tags */}
         <title>
-          VMukti's Products & Solutions | Enterprise Video Surveillance Platform
+          Enterprise Video Surveillance Products & Solutions in the USA | VMukti
         </title>
         <meta
           name="description"
-          content="Discover VMukti’s enterprise video surveillance products and solutions built for large-scale deployments, secure monitoring, and centralized video management."
+          content="Explore VMukti’s enterprise video surveillance products and solutions for the USA market, designed for large-scale deployments, secure monitoring, and centralized video management."
         />
         <meta name="robots" content="index, follow" />
 
         {/* Open Graph (OG) Tags for Social Media Sharing */}
         <meta
           property="og:title"
-          content="VMukti's Products & Solutions | Enterprise Video Surveillance Platform"
+          content="Enterprise Video Surveillance Products & Solutions in the USA | VMukti"
         />
         <meta
           property="og:description"
-          content="Discover VMukti’s enterprise video surveillance products and solutions built for large-scale deployments, secure monitoring, and centralized video management."
+          content="Explore VMukti’s enterprise video surveillance products and solutions for the USA market, designed for large-scale deployments, secure monitoring, and centralized video management."
         />
         <meta
           property="og:image"
@@ -75,11 +75,11 @@ const Hero = () => {
         <meta name="twitter:site" content="@vmukti" />
         <meta
           name="twitter:title"
-          content="VMukti's Products & Solutions | Enterprise Video Surveillance Platform"
+          content="Enterprise Video Surveillance Products & Solutions in the USA | VMukti"
         />
         <meta
           name="twitter:description"
-          content="Discover VMukti’s enterprise video surveillance products and solutions built for large-scale deployments, secure monitoring, and centralized video management."
+          content="Explore VMukti’s enterprise video surveillance products and solutions for the USA market, designed for large-scale deployments, secure monitoring, and centralized video management."
         />
         <meta
           name="twitter:image"

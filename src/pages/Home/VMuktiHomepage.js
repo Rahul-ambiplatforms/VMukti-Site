@@ -44,20 +44,20 @@ const VMuktiHomepage = () => {
       </script>
       <Helmet>
         <title>
-          Best Cloud Video Surveillance & Intelligent Video Monitoring System
+          Best Cloud Video Surveillance & AI Video Monitoring Platform in the USA
         </title>
         <meta
           name="description"
-          content="VMukti delivers the best cloud video surveillance and AI video monitoring platform with secure streaming, centralized control, enterprise-grade analytics & scalability."
+          content="VMukti delivers enterprise-grade cloud video surveillance and AI video monitoring solutions in the USA with secure streaming, centralized management, advanced analytics, and scalable deployments."
         />
         <meta name="robots" content="index, follow" />
         <meta
           property="og:title"
-          content="Best Cloud Video Surveillance & Intelligent Video Monitoring System"
+          content="Best Cloud Video Surveillance & AI Video Monitoring Platform in the USA"
         />
         <meta
           property="og:description"
-          content="VMukti delivers the best cloud video surveillance and AI video monitoring platform with secure streaming, centralized control, enterprise-grade analytics & scalability."
+          content="VMukti delivers enterprise-grade cloud video surveillance and AI video monitoring solutions in the USA with secure streaming, centralized management, advanced analytics, and scalable deployments."
         />
         <meta
           property="og:image"
@@ -71,11 +71,11 @@ const VMuktiHomepage = () => {
         <meta name="twitter:site" content="@vmukti" />
         <meta
           name="twitter:title"
-          content="Best Cloud Video Surveillance & Intelligent Video Monitoring System"
+          content="Best Cloud Video Surveillance & AI Video Monitoring Platform in the USA"
         />
         <meta
           name="twitter:description"
-          content="VMukti delivers the best cloud video surveillance and AI video monitoring platform with secure streaming, centralized control, enterprise-grade analytics & scalability."
+          content="VMukti delivers enterprise-grade cloud video surveillance and AI video monitoring solutions in the USA with secure streaming, centralized management, advanced analytics, and scalable deployments."
         />
         <meta
           name="twitter:image"
