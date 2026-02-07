@@ -56,7 +56,7 @@ const Diagram = () => {
             as="h2"
             lineHeight={{ base: "1.2", md: "1.2" }} // Adjusts vertical spacing
           >
-            Power Your AI Models Using Our Computer Vision Platform
+            Our Video Intelligence Platform: VisualBot
           </Text>
         </HeadingAnimation>
         <SubHeadingAnimation>

@@ -1,7 +1,7 @@
 export const homeSolutions = {
-  heading: "Empower Every Business Workflow with Vision AI Solutions",
+  heading: "Intelligent Video Surveillance Services for Enterprises",
   description:
-    "Power your operations with our next-gen AI surveillance suite featuring intelligent VMS, event-driven EMS, strategic ICCC integrations and advanced Cloud+AI orchestration. From enterprise campuses to critical infrastructure, our systems are designed for decision-makers who demand control, security and scale without compromise.",
+    "Our cloud video management system and intelligent video surveillance solutions help enterprises gain real-time visibility and control. Powered by an advanced AI surveillance suite with VMS, EMS, ICCC, and Cloud AI, VMukti delivers scalable, secure, and intelligent video surveillance for enterprise and critical infrastructure.",
   solutions: [
     {
       heading1: "VMS",

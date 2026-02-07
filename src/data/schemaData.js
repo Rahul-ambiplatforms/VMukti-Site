@@ -4,9 +4,9 @@
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Best Cloud Video Surveillance & Intelligent Video Monitoring System",
+        name: "Cloud Video Surveillance Solutions In USA | VMukti Solutions",
         description:
-          "VMukti delivers the best cloud video surveillance and AI video monitoring platform with secure streaming, centralized control, enterprise-grade analytics & scalability.",
+          "We offers flexible cloud video surveillance solutions for USA businesses. Add cloud intelligence to your current CCTV infrastructure effortlessly.",
         url: "https://www.vmukti.com/",
         datePublished: "2006-11-10",
         dateModified: "2025-11-21",

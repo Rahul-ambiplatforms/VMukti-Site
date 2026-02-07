@@ -195,10 +195,10 @@ const HeroSection = () => {
             mt={{ base: "2%", md: "0" }}
           >
             <Text as="span" color="#000">
-              Deliver Excellence Using{" "}
+              Cloud-based Video{" "}
             </Text>
             <Text as="span" color="#3F77A5">
-              Computer Vision{" "}
+              Surveillance <br /> {" "}
             </Text>
             <Text as="span" color="#000">
               Solution for{" "}

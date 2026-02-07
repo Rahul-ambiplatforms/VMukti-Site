@@ -44,20 +44,20 @@ const VMuktiHomepage = () => {
       </script>
       <Helmet>
         <title>
-          Best Cloud Video Surveillance & AI Video Monitoring Platform in the USA
+          Cloud Video Surveillance Solutions In USA | VMukti Solutions
         </title>
         <meta
           name="description"
-          content="VMukti delivers enterprise-grade cloud video surveillance and AI video monitoring solutions in the USA with secure streaming, centralized management, advanced analytics, and scalable deployments."
+          content="We offers flexible cloud video surveillance solutions for USA businesses. Add cloud intelligence to your current CCTV infrastructure effortlessly."
         />
         <meta name="robots" content="index, follow" />
         <meta
           property="og:title"
-          content="Best Cloud Video Surveillance & AI Video Monitoring Platform in the USA"
+          content="Cloud Video Surveillance Solutions In USA | VMukti Solutions"
         />
         <meta
           property="og:description"
-          content="VMukti delivers enterprise-grade cloud video surveillance and AI video monitoring solutions in the USA with secure streaming, centralized management, advanced analytics, and scalable deployments."
+          content="We offers flexible cloud video surveillance solutions for USA businesses. Add cloud intelligence to your current CCTV infrastructure effortlessly."
         />
         <meta
           property="og:image"
@@ -117,7 +117,7 @@ const VMuktiHomepage = () => {
           <Reviews />
         </Box>
         <Box id="section-industries">
-          <Industries heading="AI Computer Vision System for Evolving Industries" />
+          <Industries heading="Industry-Focused Cloud-Based Video Surveillance Solutions" />
         </Box>
         <Box
           position="relative"
@@ -139,7 +139,7 @@ const VMuktiHomepage = () => {
         <BlogView id="section-blogs" />
         <Box id="section-contact-cta">
           <CtaBanner href="/contact-us">
-            Join the AI-Powered Surveillance Revolution with VMukti Solutions
+          Experience Our AI-Powered Video Surveillance Today
           </CtaBanner>
         </Box>
         <Box id="section-faq">

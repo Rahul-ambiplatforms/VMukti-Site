@@ -87,13 +87,13 @@ const ComputerVision = () => {
           fontWeight="500"
           w={["100%","100%","90%","70%"]}
         >
-          Explore Our{" "}
+          {/* Visual {" "} */}
           <Text as="span" color="#3F77A5" fontWeight="500">
-            Computer Vision Roadmap
+          Computer Vision 
           </Text>{" "}
           and{" "}
           <Text as="span" color="#DB7B3A">
-            API Strategy
+          Development Process
           </Text>
         </Heading>
         <Text

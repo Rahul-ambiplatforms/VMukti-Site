@@ -62,15 +62,15 @@ const Results = ({ data }) => {
       color="#000"
       lineHeight={{ base: "30px", md: "60px" }}
     >
-      Results{" "}
+      Why Choose{" "}
       <Text as="span" color="#3F77A5">
-        You Can Trust
-      </Text>{" "}
-      with Our Computer{" "}
+        Our Cloud
+        </Text>{" "}
+        {/* with Our Computer{" "} */}
       {/* <br /> */}
-      Vision{" "}
+      {/* Vision{" "} */}
       <Text as="span" color="#DB7B3A">
-        Solutions
+      Video Surveillance Solutions
       </Text>
     </Heading>
   );
