@@ -91,7 +91,7 @@ const ComputerVision = () => {
           <Text as="span" color="#3F77A5" fontWeight="500">
           Computer Vision 
           </Text>{" "}
-          and{" "}
+          {/* and{" "} */}
           <Text as="span" color="#DB7B3A">
           Development Process
           </Text>
