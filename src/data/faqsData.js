@@ -73,7 +73,7 @@ const faqsData = {
   //Sub Solution Page
   videomanagementsystem: {
     // The key MUST match the URL slug
-    title: "Frequently Asked Questions about Video Management System",
+    title: "FAQs About Our VMS ",
     qa: [
       {
         question: "What camera works with your VMS analytics system?",

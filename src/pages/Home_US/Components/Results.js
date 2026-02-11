@@ -11,27 +11,27 @@ import {
 const featuresData = [
   {
     title: "ONVIF-compliant\n solutions",
-    image: "./assets/Onvif.png", 
+    image: "/assets/Onvif.png", 
   },
   {
     title: "Cloud or On-Prem \n deployment",
-    image: "./assets/Cloud.png",
+    image: "/assets/Cloud.png",
   },
   {
     title: "Works with existing CCTV cameras\nand infrastructure",
-    image: "./assets/CCTV.png", 
+    image: "/assets/CCTV.png", 
   },
   {
     title: "Unified multi-location monitoring\nfrom a single Cloud VMS for \n enterprises US",
-    image: "./assets/MultiLocation.png",
+    image: "/assets/MultiLocation.png",
   },
   {
     title: "Modern AI analytics built for US \n compliance & scalability",
-    image: "./assets/MordanAI.png", 
+    image: "/assets/MordanAI.png", 
   },
   {
     title: "Supports AI security camera \n system for business US needs",
-    image: "./assets/SupportsAI.png",
+    image: "/assets/SupportsAI.png",
   },
 ];
 

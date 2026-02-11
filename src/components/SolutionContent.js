@@ -468,6 +468,7 @@ const SolutionContent = ({ content }) => {
                   borderRadius="24px"
                   objectFit="cover"
                   zIndex={1}
+                  mt={"2%"}
                 />
               </Box>
             )}

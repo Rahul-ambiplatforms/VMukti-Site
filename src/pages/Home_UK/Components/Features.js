@@ -11,37 +11,37 @@ const featuresData = [
   {
     title: "Smart Cities & Public Safety",
     description: "city-wide command, emergency response, \n Smart City Command Center UK",
-    image: "./assets/smart-cities-icon.png",
+    image: "/assets/smart-cities-icon.png",
   },
   {
     title: "Manufacturing & Warehousing",
     description: "safety compliance, intrusion detection, \n worker monitoring",
-    image: "./assets/manufacturing-icon.png",
+    image: "/assets/manufacturing-icon.png",
   },
   {
     title: "Retail Chains & Shopping Centres",
     description: "loss prevention & occupancy intelligence",
-    image: "./assets/retail-icon.png",
+    image: "/assets/retail-icon.png",
   },
   {
     title: "Transport & Logistics",
     description: "ANPR, fleet & yard surveillance",
-    image: "./assets/transportation-icon.png",
+    image: "/assets/transportation-icon.png",
   },
   {
     title: "Education & Universities",
     description: "student & campus protection",
-    image: "./assets/education-icon.png",
+    image: "/assets/education-icon.png",
   },
   {
     title: "Banking & Financial Services",
     description: "ATM & branch surveillance with \n audit-ready insights",
-    image: "./assets/banking-icon.png",
+    image: "/assets/banking-icon.png",
   },
   {
     title: "Healthcare & Hospitals",
     description: "patient safety & restricted zone monitoring",
-    image: "./assets/smart-cities-icon.png",
+    image: "/assets/smart-cities-icon.png",
   },
 ];
 

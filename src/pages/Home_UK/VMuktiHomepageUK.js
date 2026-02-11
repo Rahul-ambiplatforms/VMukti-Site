@@ -1,5 +1,5 @@
 // src/pages/VMuktiHomepage/index.js
-import React from "react";
+import React, { useState } from "react";
 import { Box } from "@chakra-ui/react";
 import PageContentWrapper from "../../components/PageContentWrapper";
 import HeroSection from "./Components/HeroSection";
@@ -15,14 +15,19 @@ import CertificateSection from "./Components/CertificateSection";
 import BestCloudVideo from "./Components/BestCloudVideo";
 import Features from "./Components/Features";
 import KeyFeatures from "./Components/KeyFeatures";
-import PopupForm from "./Components/PopupForm";
+import PopupForm, { PopupFormContext } from "./Components/PopupForm";
 import CTABanner from "./Components/CTABanner";
 
 const VMuktiHomepage = () => {
   const homepageSchemas_uk = schemaData.homepage_uk;
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const openPopup = () => {
+    setIsPopupOpen(true);
+  };
 
   return (
-    <>
+    <PopupFormContext.Provider value={{ openPopup }}>
       <Helmet>
         <title>AI Cloud Video Surveillance for Multi-Location Business in UK</title>
         <meta
@@ -43,7 +48,7 @@ const VMuktiHomepage = () => {
           content="https://www.vmukti.com/assets/tablet1.webp"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.vmukti.com/video-surveillance-solutions-uk" />
+        <meta property="og:url" content="https://www.vmukti.com/uk/video-surveillance-solutions" />
         <meta property="og:site_name" content="VMukti Solutions" />
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -60,7 +65,7 @@ const VMuktiHomepage = () => {
           name="twitter:image"
           content="https://www.vmukti.com/assets/tablet1.webp"
         />
-        <link rel="canonical" href="https://www.vmukti.com/video-surveillance-solutions-uk" />
+        <link rel="canonical" href="https://www.vmukti.com/uk/video-surveillance-solutions" />
         {homepageSchemas_uk.map((schema, index) => (
           <script
             key={`schema-${index}`}
@@ -101,7 +106,7 @@ const VMuktiHomepage = () => {
       
       <PageContentWrapper>
         <Features />
-        <CTABanner href="/book-a-demo">
+        <CTABanner>
           Request a Demo of Our UK AI Video Surveillance & Cloud VMS Platform
         </CTABanner>
         <Box id="section-faq">
@@ -110,8 +115,8 @@ const VMuktiHomepage = () => {
       </PageContentWrapper>
       
       {/* Popup Form */}
-      <PopupForm />
-    </>
+      <PopupForm isOpen={isPopupOpen} setIsOpen={setIsPopupOpen} />
+    </PopupFormContext.Provider>
   );
 };
 

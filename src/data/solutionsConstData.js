@@ -1,24 +1,24 @@
 export const solutionsData = {
   videomanagementsystem: {
-    metetitle: "Cloud-Based Video Management System (VMS) in the USA | AI-Powered VMukti",
+    metetitle: "Cloud VMS Systems & AI Video Management Software in USA | VMukti",
     metadescription:
-      "VMukti’s cloud-based video management system in the USA delivers AI-powered monitoring, secure streaming, centralized control, and scalable enterprise deployments.",
+      "Looking for the right VMS system? Our AI-powered cloud video management system delivers real-time surveillance, scalability and security for US businesses.",
     ogImage: "https://www.vmukti.com/assets/MainWebPageMockup1.1.png",
     slug: "video-management-system",
     // Section 1: Hero section from the first image
     hero: {
-      heading: "Intelligent Video Management System",
+      heading: "Next-Gen AI Video Management System",
       description:
-        "Command your surveillance ecosystem with our AI video intelligence. Experience live oversight, autonomous threat detection, seamless integrations and a unified interface all built to reduce overhead and deliver uncompromising control.",
+        "Our intelligent video management system empowers enterprises with AI-powered monitoring, automated threat detection and unified operations—reducing overhead and maximizing control.",
       image: "../../assets/MainWebPageMockup1.1.png",
       image_certi: "../../assets/solution_page_certi.png",
     },
 
     // Section 2: Introduction from the second image
     introduction: {
-      heading: "What is a Video Management System?",
+      heading: "What is a Video Management System (VMS)?",
       description: [
-        "A Video Management System (VMS) is a software platform that efficiently manages complex surveillance networks. VMukti’s VMS unifies live video, long-term storage, and multi-location control into a single intelligent solution for secure, remote monitoring.",
+        "A video management system is an intelligent software platform designed to simplify and optimize complex surveillance networks. Our best vms software unifies live video monitoring, long-term storage, and multi-location control into a single cloud-ready solution—enabling enterprises to make informed security decisions, scale operations and securely manage their facilities from anywhere.",
       ],
       image: "../../assets/VMS_intro.png",
     },
@@ -26,9 +26,9 @@ export const solutionsData = {
     // Section 3: Features and Accordion from the third image
     features: {
       heading:
-        "Supercharge Your Surveillance with Cutting-Edge VMS System Features",
+        "Intelligent VMS Features for Scalable Cloud Surveillance",
       description:
-        "You can power complex surveillance networks effortlessly with our video management software that seamlessly unifies live feeds, high-retention storage, and multi-location control into one intelligent, remote monitoring software.",
+        "From live feed management to intelligent storage and remote control, Our cloud-based video management system features deliver enterprise-grade security and operational insights across the USA, UK, UAE and Global.",
       accordionItems: [
         {
           title: "Live and Recorded Video Access",
@@ -81,7 +81,7 @@ export const solutionsData = {
     // Section 4: Key Benefits grid from the fourth image
     keyBenefits: {
       heading:
-        "Enhancing Surveillance Efficiency with The Best Video Management System Software",
+        "Benefits of Video Management Systems Software for Enterprises",
       benefits: [
         {
           image: "../../assets/result_solution_vms_1.png",
@@ -123,16 +123,16 @@ export const solutionsData = {
     },
 
     industry: {
-      heading: "Smart VMS Designed for Real-World Sector Applications",
+      heading: "Smart Video Management Solutions for Every Industry",
       description:
-        "We engineer for those who demand control without compromising real-time visibility, AI-driven detection and frictionless rollout, built to perform in high-security, high-density, high-pressure spaces.",
+        "Designed for decision-makers who need real-time visibility, AI-driven detection, and seamless deployment. Our best video management software performs reliably across high-security, high-density and mission-critical environments worldwide.",
     },
 
     trusted: "Performance Backed by Numbers",
     // Section 5: CTA Banner from the fifth image
     cta: {
       textLines: [
-        "Elevate Your Surveillance Setup with Advanced Cloud VMS Service for Smarter Security",
+        "Scale Your Surveillance with Our Intelligent Cloud Video Management Services",
         // "VMS Service for Smarter Security",
       ],
       // text: "Elevate Your Surveillance Setup with Advanced Cloud VMS Service for Smarter Security",
@@ -142,10 +142,10 @@ export const solutionsData = {
 
     // Section 7: Why Choose Us from the seventh image
     whyChooseUs: {
-      heading: "Why Choose Us for VMS?",
+      heading: "Why Choose VMukti for Video Management Systems (VMS)?",
       description: [
-        "At VMukti, we bring you surveillance without compromise. Our AI-powered VMS delivers real-time awareness and automated threat detection so you're never in the dark and never a second too late. Manual oversight is outdated. Our system replaces it with fast, intelligent response built right in.",
-        "You get secure, encrypted access to multi-site footage anytime. Our adaptive storage grows with you whether you're scaling up or centralizing control. This is surveillance mode for forward-thinking operations like yours.",
+        "VMukti delivers the best AI-powered video management solutions that keeps your operations secure, aware and in control—anywhere in the world. From real-time threat detection to automated alerts, our system replaces outdated manual oversight with intelligence built right in.",
+        "Access encrypted multi-site footage anytime, scale seamlessly, and centralize control across the globe. Fast. Smart. Global. This is surveillance designed for decision-makers who demand speed, security, and scale—without compromise.",
       ],
       images: [
         "../../assets/solution_vms_choose_1.png",

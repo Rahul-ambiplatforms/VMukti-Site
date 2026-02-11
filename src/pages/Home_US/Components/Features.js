@@ -12,32 +12,32 @@ const featuresData = [
   {
     title: "Smart Cities & Public Safety",
     description: "city-wide monitoring, Smart City Command \n Center USA, ICCC command centers",
-    image: "./assets/smart-cities-icon.png",
+    image: "/assets/smart-cities-icon.png",
   },
   {
     title: "Manufacturing & Warehousing",
     description: "worker safety, SOP compliance, \n theft & intrusion detection",
-    image: "./assets/manufacturing-icon.png",
+    image: "/assets/manufacturing-icon.png",
   },
   {
     title: "Retail Chains & Shopping Malls",
     description: "customer analytics, loss prevention, \n occupancy tracking",
-    image: "./assets/retail-icon.png",
+    image: "/assets/retail-icon.png",
   },
   {
     title: "Transportation & Logistics",
     description: "ANPR, yard surveillance, cargo safety, \n fleet monitoring",
-    image: "./assets/transportation-icon.png",
+    image: "/assets/transportation-icon.png",
   },
   {
     title: "Education & Campus Security",
     description: "school safety, perimeter \n monitoring, real-time alerts",
-    image: "./assets/education-icon.png",
+    image: "/assets/education-icon.png",
   },
   {
     title: "Banking & Financial Institutions",
     description: "ATM surveillance, branch monitoring, \n audit-ready reports",
-    image: "./assets/banking-icon.png",
+    image: "/assets/banking-icon.png",
   },
 ];
 

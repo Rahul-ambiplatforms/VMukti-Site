@@ -11,32 +11,32 @@ const keyFeaturesData = [
     {
         title: "99.99% uptime Cloud VMS",
         description: "99.99% uptime Cloud VMS",
-        image: "./assets/cloud-vms-icon.png",
+        image: "/assets/cloud-vms-icon.png",
     },
     {
         title: "AI-powered alerts & automated incident reporting",
         description: "AI-powered alerts & automated \n incident reporting",
-        image: "./assets/ai-alerts-icon.png",
+        image: "/assets/ai-alerts-icon.png",
     },
     {
         title: "Integrates with existing cameras, ONVIF devices & hardware",
         description: "Integrates with existing cameras, \n ONVIF devices & hardware",
-        image: "./assets/Onvif.png",
+        image: "/assets/Onvif.png",
     },
     {
         title: "Proven deployments in Government, Smart Cities & Enterprises",
         description: "Proven deployments in Government, \n Smart Cities & Enterprises",
-        image: "./assets/government-deployment-icon.png",
+        image: "/assets/government-deployment-icon.png",
     },
     {
         title: "API-based integration with Access control, GPS, custom applications",
         description: "API-based integration with Access control, \n GPS, custom applications",
-        image: "./assets/api-integration-icon.png",
+        image: "/assets/api-integration-icon.png",
     },
     {
         title: "24x7 Global Cloud Support, US-focused service model",
         description: "24x7 Global Cloud Support, US- \n focused service model",
-        image: "./assets/cloud-support-icon.png",
+        image: "/assets/cloud-support-icon.png",
     },
 ];
 

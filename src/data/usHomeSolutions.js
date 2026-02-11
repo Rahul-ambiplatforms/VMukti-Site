@@ -8,9 +8,9 @@ export const homeSolutions = {
       heading2: "Cloud Video Management System",
       content:
         "A cloud based video surveillance and cloud video surveillance solution for centralized monitoring across multi-location enterprises—ideal for smart cities, retail chains, government agencies, and logistics networks.",
-      image_certi: "./assets/home_solution_certi.png",
-      image: "./assets/home_solution_1.png",
-      image_mobile: "./assets/home_solution_mobile_1.png",
+      image_certi: "/assets/home_solution_certi.png",
+      image: "/assets/home_solution_1.png",
+      image_mobile: "/assets/home_solution_mobile_1.png",
       path: "/solution/video-management-system",
     },
     {
@@ -18,9 +18,9 @@ export const homeSolutions = {
       heading2: "Enterprise Management System",
       content:
         "Monitor servers, cameras, networks, and device health. Zero downtime, instant alerts, predictive maintenance—making it the best cloud based video surveillance support ecosystem.",
-      image_certi: "./assets/home_solution_certi.png",
-      image: "./assets/home_solution_2.png",
-      image_mobile: "./assets/home_solution_mobile_2.png",
+      image_certi: "/assets/home_solution_certi.png",
+      image: "/assets/home_solution_2.png",
+      image_mobile: "/assets/home_solution_mobile_2.png",
       path: "/solution/enterprise-management-system",
     },
     {
@@ -28,9 +28,9 @@ export const homeSolutions = {
       heading2: "Integrated Command & Control Center",
       content:
         "Real-time emergency response center for smart city command center USA, public safety, transportation, and large government operations. Supports integrated command and control centre & integrated command control center requirements.",
-      image_certi: "./assets/home_solution_certi.png",
-      image: "./assets/home_solution_3.png",
-      image_mobile: "./assets/home_solution_mobile_3.png",
+      image_certi: "/assets/home_solution_certi.png",
+      image: "/assets/home_solution_3.png",
+      image_mobile: "/assets/home_solution_mobile_3.png",
       path: "/solution/integrated-command-control-center",
     },
     {
@@ -38,9 +38,9 @@ export const homeSolutions = {
       heading2: "Cloud AI",
       content:
         "Advanced AI-powered event detection: motion intelligence, human/vehicle detection, queue management, intrusion alerts, behavior analysis—ideal for AI CCTV USA deployments.",
-      image_certi: "./assets/home_solution_certi.png",
-      image: "./assets/home_solution_4.png",
-      image_mobile: "./assets/home_solution_mobile_4.png",
+      image_certi: "/assets/home_solution_certi.png",
+      image: "/assets/home_solution_4.png",
+      image_mobile: "/assets/home_solution_mobile_4.png",
       path: "/solution/cloudai",
     },
     {
@@ -48,9 +48,9 @@ export const homeSolutions = {
       heading2: "Generative AI",
       content:
         "Natural-language video search, automated reporting, and next-generation AI video surveillance solutions USA capabilities.",
-      image_certi: "./assets/home_solution_certi.png",
-      image: "./assets/home_solution_5.png",
-      image_mobile: "./assets/home_solution_mobile_5.png",
+      image_certi: "/assets/home_solution_certi.png",
+      image: "/assets/home_solution_5.png",
+      image_mobile: "/assets/home_solution_mobile_5.png",
       path: "/solution/genai",
     },
     {
@@ -58,9 +58,9 @@ export const homeSolutions = {
       heading2: "Live Streaming",
       content:
         "Secure, low-latency live video monitoring system for events, emergencies, elections, or mobile operations.",
-      image_certi: "./assets/home_solution_certi.png",
-      image: "./assets/home_solution_6.png",
-      image_mobile: "./assets/home_solution_mobile_6.png",
+      image_certi: "/assets/home_solution_certi.png",
+      image: "/assets/home_solution_6.png",
+      image_mobile: "/assets/home_solution_mobile_6.png",
       path: "/solution/live-streaming-solution",
     },
     {
@@ -68,9 +68,9 @@ export const homeSolutions = {
       heading2: "Flying Squad Vehicle",
       content:
         "Mobile, vehicle-mounted ICCC surveillance platform USA for incident response, law enforcement, and field operations.",
-      image_certi: "./assets/home_solution_certi.png",
-      image: "./assets/home_solution_7.png",
-      image_mobile: "./assets/home_solution_mobile_7.png",
+      image_certi: "/assets/home_solution_certi.png",
+      image: "/assets/home_solution_7.png",
+      image_mobile: "/assets/home_solution_mobile_7.png",
       path: "/solution/flying-squad-vehicle",
     },
     {
@@ -78,9 +78,9 @@ export const homeSolutions = {
       heading2: "VisualBot",
       content:
         "AI-driven image & video analytics to convert visuals into actionable insights—supports enterprise-grade cloud based surveillance needs.",
-      image_certi: "./assets/home_solution_certi.png",
-      image: "./assets/home_solution_8.png",
-      image_mobile: "./assets/home_solution_mobile_8.png",
+      image_certi: "/assets/home_solution_certi.png",
+      image: "/assets/home_solution_8.png",
+      image_mobile: "/assets/home_solution_mobile_8.png",
       path: "/solution/visualbot",
     },
   ],

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Box,
   Button,
@@ -8,10 +8,12 @@ import {
   VStack,
   HStack,
   Image,
-  useBreakpointValue,
 } from "@chakra-ui/react";
+import { PopupFormContext } from "./PopupForm";
 
 const CoreSecurity = () => {
+  const { openPopup } = useContext(PopupFormContext) || {};
+  
   const challenges = [
     "Increasing security threats & liability risks",
     "Limited visibility across multiple locations and remote sites",
@@ -88,8 +90,7 @@ const CoreSecurity = () => {
           </VStack>
 
           <Button
-            as="a"
-            href="/contact-us"
+            onClick={openPopup}
             bg="white"
             color="#3F77A5"
             size="lg"
@@ -98,6 +99,7 @@ const CoreSecurity = () => {
             py={3}
             fontSize="16px"
             fontWeight="600"
+            cursor="pointer"
             _hover={{
               transform: "translateY(-2px)",
               boxShadow: "0px 8px 25px rgba(0, 0, 0, 0.15)",

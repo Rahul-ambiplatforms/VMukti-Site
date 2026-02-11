@@ -69,13 +69,13 @@ const generateSitemap = async () => {
         lastmod: getPageLastModified("Home"),
       },
       {
-        loc: "/video-surveillance-solutions-usa",
+        loc: "/usa/video-surveillance-solutions",
         priority: "0.9",
         changefreq: "weekly",
         lastmod: getPageLastModified("Home_US"),
       },
       {
-        loc: "/video-surveillance-solutions-uk",
+        loc: "/uk/video-surveillance-solutions",
         priority: "0.9",
         changefreq: "weekly",
         lastmod: getPageLastModified("Home_UK"),

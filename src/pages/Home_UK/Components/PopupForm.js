@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, createContext } from "react";
 import {
   Box,
   Flex,
@@ -334,9 +334,11 @@ const PhoneInput = ({ value, onChange, isRequired, inputRef, hasError }) => {
   );
 };
 
+// --- CREATE CONTEXT ---
+export const PopupFormContext = createContext();
+
 // --- MAIN POPUP FORM COMPONENT ---
-const PopupForm = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const PopupForm = ({ isOpen, setIsOpen }) => {
   const toast = useToast();
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
@@ -371,7 +373,7 @@ const PopupForm = () => {
     }, 2000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [setIsOpen]);
 
   const handleDropdownChange = (name, value) => {
     setFormData((prev) => ({ ...prev, [name]: value }));

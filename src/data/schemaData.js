@@ -162,7 +162,7 @@
         "@type": "WebPage",
         "name": "AI-Powered Cloud Video Surveillance for US Multi-Location Enterprises",
         "description": "Enterprise-grade AI cloud video surveillance solution for US multi-location companies. Improve visibility, automate incident response, and manage all sites from one Cloud VMS.",
-        "url": "https://www.vmukti.com/video-surveillance-solutions-usa",
+        "url": "https://www.vmukti.com/usa/video-surveillance-solutions",
         "datePublished": "2026-02-01",
         "dateModified": "2026-02-01",
         "publisher": {
@@ -197,7 +197,7 @@
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "url": "https://www.vmukti.com/video-surveillance-solutions-usa",
+        "url": "https://www.vmukti.com/usa/video-surveillance-solutions",
         "mainEntity": [
           {
             "@type": "Question",
@@ -233,7 +233,7 @@
         "@type": "WebPage",
         "name": "AI Cloud Video Surveillance for Multi-Location Business in UK",
         "description": "AI video surveillance and cloud video surveillance system for UK multi-location enterprises. Centralise monitoring, automate incidents, and improve visibility with Cloud VMS.",
-        "url": "https://www.vmukti.com/video-surveillance-solutions-uk",
+        "url": "https://www.vmukti.com/uk/video-surveillance-solutions",
         "datePublished": "2026-02-01",
         "dateModified": "2026-02-01",
         "publisher": {
@@ -261,14 +261,14 @@
           "height": 123,
           "caption": "Best Video Surveillance Company In UK"
         },
-        "inLanguage": "en-US"
+        "inLanguage": "en-GB"
       },
 
       // FAQ Schema for UK Homepage
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "url": "https://www.vmukti.com/video-surveillance-solutions-uk",
+        "url": "https://www.vmukti.com/uk/video-surveillance-solutions",
         "mainEntity": [
           {
             "@type": "Question",

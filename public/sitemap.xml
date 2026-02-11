@@ -7,13 +7,13 @@
           <priority>1.0</priority>
         </url>
         <url>
-          <loc>https://www.vmukti.com/video-surveillance-solutions-usa</loc>
+          <loc>https://www.vmukti.com/usa/video-surveillance-solutions</loc>
           <lastmod>2026-01-31</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.9</priority>
         </url>
         <url>
-          <loc>https://www.vmukti.com/video-surveillance-solutions-uk</loc>
+          <loc>https://www.vmukti.com/uk/video-surveillance-solutions</loc>
           <lastmod>2026-02-03</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.9</priority>
@@ -192,6 +192,12 @@
           <changefreq>monthly</changefreq>
           <priority>0.6</priority>
         </url>
+              <url>
+                <loc>https://www.vmukti.com/blog/video-surveillance-trends</loc>
+                <lastmod>2026-02-10</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.6</priority>
+              </url>
               <url>
                 <loc>https://www.vmukti.com/blog/cloud-video-surveillance-vs-traditional-cctv</loc>
                 <lastmod>2026-02-05</lastmod>

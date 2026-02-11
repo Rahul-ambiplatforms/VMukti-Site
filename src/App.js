@@ -67,8 +67,8 @@ function App() {
               <Suspense fallback={<LoadingSpinner />}>
                 <Routes>
                   <Route path="/" element={<VMuktiHomepage />} />
-                  <Route path="/video-surveillance-solutions-usa" element={<VMuktiHomepageUS />} />
-                  <Route path="/video-surveillance-solutions-uk" element={<VMuktiHomepageUK />} />
+                  <Route path="/usa/video-surveillance-solutions" element={<VMuktiHomepageUS />} />
+                  <Route path="/uk/video-surveillance-solutions" element={<VMuktiHomepageUK />} />
                   {/* <Route path="/technology" element={<TechnologyDashboard />} /> */}
                   <Route path="/solution" element={<SolutionsHome />} />
                   <Route path="/solution/:name" element={<SolutionDetails />} />

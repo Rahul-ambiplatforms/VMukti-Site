@@ -10,32 +10,32 @@ const keyFeaturesData = [
     {
         title: "99.99% reliable Cloud VMS",
         description: "99.99% reliable Cloud VMS",
-        image: "./assets/cloud-vms-icon.png",
+        image: "/assets/cloud-vms-icon.png",
     },
     {
         title: "AI-powered alerts & automated reporting",
         description: "AI-powered alerts & automated reporting",
-        image: "./assets/ai-alerts-icon.png",
+        image: "/assets/ai-alerts-icon.png",
     },
     {
         title: "Flexible API for access control, GPS & third-party systems",
         description: "Flexible API for access control, \n GPS & third-party systems",
-        image: "./assets/api-integration-icon.png",
+        image: "/assets/api-integration-icon.png",
     },
     {
         title: "Proven in UK public sector, smart cities & enterprise deployments",
         description: "Proven in UK public sector, \n smart cities & enterprise deployments",
-        image: "./assets/government-deployment-icon.png",
+        image: "/assets/government-deployment-icon.png",
     },
     {
         title: "24×7 UK-focused cloud support",
         description: "24×7 UK-focused cloud support",
-        image: "./assets/cloud-support-icon.png",
+        image: "/assets/cloud-support-icon.png",
     },
     {
         title: "Ideal for video surveillance solutions, cloud video surveillance systems, enterprise video surveillance",
         description: "Ideal for video surveillance solutions, \n cloud video surveillance systems, \n enterprise video surveillance",
-        image: "./assets/Onvif.png",
+        image: "/assets/Onvif.png",
     },
 ];
 

@@ -1,5 +1,5 @@
 // src/components/HeroSection/index.js
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import {
   Box,
   Flex,
@@ -8,12 +8,11 @@ import {
   Button,
   useBreakpointValue,
   Show,
-  Heading,
 } from "@chakra-ui/react";
 import { motion, useInView } from "framer-motion";
-import { Link } from "react-router-dom";
 import { gsap } from "gsap";
-import { TypeAnimation } from "react-type-animation"; // <-- 1. Import the new component
+import { TypeAnimation } from "react-type-animation";
+import { PopupFormContext } from "./PopupForm";
 
 // Motion components
 const MotionImage = motion(Image);
@@ -22,7 +21,7 @@ const MotionButton = motion(Button);
 
 // Array of words for the typewriter animation
 const industries = [
-  "US Enterprises"
+  "US Businesses"
 ];
 
 const HeroSection = () => {
@@ -30,9 +29,11 @@ const HeroSection = () => {
   const sectionRef = useRef(null);
   const ref = useRef(null);
   const inView = useInView(ref, { threshold: 0.9, triggerOnce: false });
+  
+  // Get the openPopup function from context
+  const { openPopup } = useContext(PopupFormContext) || {};
 
-  // 2. Transform the industries array into a sequence for the typewriter
-  // This format is ['Word 1', 1500ms pause, 'Word 2', 1500ms pause, ...]
+  // Transform the industries array into a sequence for the typewriter
   const typewriterSequence = industries.flatMap((industry) => [industry, 1500]);
 
   const handleImageHover = () => {
@@ -49,6 +50,13 @@ const HeroSection = () => {
       duration: 0.4,
       ease: "power2.out",
     });
+  };
+  
+  const handleBookDemoClick = (e) => {
+    e.preventDefault();
+    if (openPopup) {
+      openPopup();
+    }
   };
 
   const ellipseSize = useBreakpointValue({
@@ -181,10 +189,10 @@ const HeroSection = () => {
               AI-Powered{" "}
             </Text>
             <Text as="span" color="#3F77A5">
-              Video Surveillance{" "}
+              Video Surveillance {" "}
             </Text>
             <Text as="span" color="#000">
-              & Cloud VMS for Modern{" "}
+             Solutions for{" "}
             </Text>
             <TypeAnimation
               sequence={typewriterSequence}
@@ -266,42 +274,44 @@ const HeroSection = () => {
                   display={{ base: "none", md: "block" }}
                   width={["", "", "55%", "90%"]}
                 />
-                <Link to="/book-a-demo">
-                  <MotionButton
-                    onMouseEnter={handleImageHover}
-                    onMouseLeave={handleImageLeave}
-                    position="relative"
-                    py={["20px", "12px", "12px", "24px"]}
-                    px={["15px", "20px", "15px", "24px"]}
-                    top={["35%", "35%", "25%", "25%"]}
-                    right={["", "", "25%", "30%"]}
-                    bg="white"
-                    height={{ base: "34px", sm: "50px" }}
-                    borderRadius="24px"
-                    color="#3F77A5"
-                    gap="2"
-                    display="flex"
-                    _hover={{
-                      bg: "#E0F2FE",
-                      color: "#2C5E84",
-                    }}
-                    fontSize={{ base: "14px", sm: "16px" }}
+                <MotionButton
+                  onMouseEnter={handleImageHover}
+                  onMouseLeave={handleImageLeave}
+                  onClick={handleBookDemoClick}
+                  position="relative"
+                  py={["20px", "12px", "12px", "24px"]}
+                  px={["15px", "20px", "15px", "24px"]}
+                  top={["35%", "35%", "25%", "25%"]}
+                  right={["", "", "25%", "15%"]}
+                  bg="white"
+                  height={{ base: "34px", sm: "50px" }}
+                  borderRadius="24px"
+                  color="#3F77A5"
+                  gap="2"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  cursor="pointer"
+                  _hover={{
+                    bg: "#E0F2FE",
+                    color: "#2C5E84",
+                  }}
+                  fontSize={{ base: "14px", sm: "16px" }}
+                >
+                  Book Demo
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 17 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    Book Demo
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 17 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
-                        fill="#3F77A5"
-                      />
-                    </svg>
-                  </MotionButton>
-                </Link>
+                    <path
+                      d="M17 2C17 1.17157 16.3284 0.499999 15.5 0.499999L2 0.5C1.17157 0.5 0.499999 1.17157 0.5 2C0.5 2.82843 1.17157 3.5 2 3.5L14 3.5L14 15.5C14 16.3284 14.6716 17 15.5 17C16.3284 17 17 16.3284 17 15.5L17 2ZM2.56066 17.0607L16.5607 3.06066L14.4393 0.939339L0.43934 14.9393L2.56066 17.0607Z"
+                      fill="#3F77A5"
+                    />
+                  </svg>
+                </MotionButton>
               </Flex>
             </Flex>
 

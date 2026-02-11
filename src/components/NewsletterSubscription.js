@@ -46,6 +46,11 @@ const whoWeAreLinks = [
   // { text: "Help Desk", path: "/whoweare/helpdesk" },
 ];
 
+const globalPresence =[
+  { text: "USA", path: "/usa/video-surveillance-solutions" },
+  { text: "UK", path: "/uk/video-surveillance-solutions" },
+];
+
 // const policyLinks = [
 //   // { text: "Terms & Condition", path: "/whoweare/terms-and-condition" },
 //   // { text: "Trademark Policy", path: "/whoweare/trademark-policy" },
@@ -596,40 +601,41 @@ const NewsletterSubscription = () => {
 
                   {/* Desktop content - two columns with bullet points */}
                   <Box display={{ base: "none", md: "block" }} mt="5%">
-                    <Flex direction="row">
-                      <Box mr="30px">
-                        <List spacing="10px">
-                          {whoWeAreLinks.map((item, index) => (
-                            <ListItem
-                              key={index}
-                              _hover={{ color: "#3F77A5", cursor: "pointer" }}
-                              color="#696969"
-                              fontSize="14px"
-                              fontWeight="500"
-                            >
-                              •&nbsp;&nbsp;
-                              <Link href={item.path}>{item.text}</Link>
-                            </ListItem>
-                          ))}
-                        </List>
-                      </Box>
-                      {/* <Box>
-                        <List spacing="10px">
-                          {policyLinks.map((item, index) => (
-                            <ListItem
-                              key={index}
-                              _hover={{ color: "#3F77A5", cursor: "pointer" }}
-                              color="#696969"
-                              fontSize="14px"
-                              fontWeight="500"
-                            >
-                              •&nbsp;&nbsp;
-                              <Link href={item.path}>{item.text}</Link>
-                            </ListItem>
-                          ))}
-                        </List>
-                      </Box> */}
-                    </Flex>
+                    <List spacing="10px">
+                      {whoWeAreLinks.map((item, index) => (
+                        <ListItem
+                          key={index}
+                          _hover={{ color: "#3F77A5", cursor: "pointer" }}
+                          color="#696969"
+                          fontSize="14px"
+                          fontWeight="500"
+                        >
+                          •&nbsp;&nbsp;
+                          <Link href={item.path}>{item.text}</Link>
+                        </ListItem>
+                      ))}
+                    </List>
+                    
+                    {/* Global Presence Section */}
+                    <Box mt="20px">
+                      <Text fontSize="14px" fontWeight="700" color="#000" mb="10px">
+                        Global Presence
+                      </Text>
+                      <List spacing="10px">
+                        {globalPresence.map((item, index) => (
+                          <ListItem
+                            key={index}
+                            _hover={{ color: "#3F77A5", cursor: "pointer" }}
+                            color="#696969"
+                            fontSize="14px"
+                            fontWeight="500"
+                          >
+                            •&nbsp;&nbsp;
+                            <Link href={item.path}>{item.text}</Link>
+                          </ListItem>
+                        ))}
+                      </List>
+                    </Box>
                   </Box>
                 </Box>
 
@@ -701,6 +707,42 @@ const NewsletterSubscription = () => {
                       )}
                     </Box>
                   ))}
+                  
+                  {/* Global Presence Section */}
+                  <Box mt="20px">
+                    <Text fontSize="14px" fontWeight="700" color="#000" mb="10px">
+                      Global Presence
+                    </Text>
+                    {globalPresence.map((item, index) => (
+                      <Box key={index}>
+                        <Link href={item.path}>
+                          <Flex
+                            align="center"
+                            py="10px"
+                            _hover={{ color: "#3F77A5", cursor: "pointer" }}
+                          >
+                            <Text
+                              fontSize="14px"
+                              fontWeight="500"
+                              color="#696969"
+                            >
+                              {item.text}
+                            </Text>
+                          </Flex>
+                        </Link>
+                        {index !== globalPresence.length - 1 && (
+                          <Box
+                            height="1px"
+                            bg="#3F77A5"
+                            opacity="0.2"
+                            my="5px"
+                            w="60%"
+                          />
+                        )}
+                      </Box>
+                    ))}
+                  </Box>
+
                   <Box align="left" mt="20px">
                     <Link href={"/Ambicam"}>
                       <Button

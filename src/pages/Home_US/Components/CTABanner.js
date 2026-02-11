@@ -1,17 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Box,
   Button,
   Flex,
   Heading,
-  Icon,
-  useBreakpointValue,
 } from "@chakra-ui/react";
-import { LuArrowUpRight } from "react-icons/lu"; // A clean icon that matches your image
+import { PopupFormContext } from "./PopupForm";
 
-const CTABanner = ({ children, buttonText = "Request a Demo", href = "#" }) => {
-  // Use responsive font size for the heading
-  const buttonSize = useBreakpointValue({ base: "sm", md: "md" });
+const CTABanner = ({ children, buttonText = "Request a Demo" }) => {
+  const { openPopup } = useContext(PopupFormContext) || {};
 
   return (
     <Box mt={{base:"4%",md:"2%"}} w="full">
@@ -37,9 +34,7 @@ const CTABanner = ({ children, buttonText = "Request a Demo", href = "#" }) => {
         </Heading>
 
         <Button
-          as="a"
-          href={href}
-          // size={buttonSize}
+          onClick={openPopup}
           w={{base:"135px",md:"179px"}}
           h={{base:"34px",md:"48px"}}
           p="12px 32px"
@@ -48,6 +43,7 @@ const CTABanner = ({ children, buttonText = "Request a Demo", href = "#" }) => {
           color="#3F77A5"
           fontSize="16px"
           flexShrink={0}
+          cursor="pointer"
           _hover={{
             boxShadow: "md",
             transform: "translateY(-2px)",

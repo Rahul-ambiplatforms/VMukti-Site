@@ -145,6 +145,10 @@ const dropdownItems = {
     // { label: "Government", path: "/serving/government" },
     // { label: "General Consumers", path: "/serving/generalconsumers" },
   ],
+  global:[
+    {label: "USA", path:"/usa/video-surveillance-solutions"},
+    {label: "UK", path:"/uk/video-surveillance-solutions"},
+  ],
   Whoweare: [
     { label: "About Us", path: "/about-us" },
     // { label: "Event Spotlight", path: "/whoweare/eventspotlight" },
@@ -264,6 +268,12 @@ const Navbar = () => {
       // path: "/serving", //resources
       hasDropdown: true,
       items: dropdownItems.ourServing,
+    },
+    {
+      name: "Global",
+      // path: "/serving", //resources
+      hasDropdown: true,
+      items: dropdownItems.global,
     },
     {
       name: "Who we are",
