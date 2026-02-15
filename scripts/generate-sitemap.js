@@ -302,6 +302,92 @@ const generateSitemap = async () => {
         changefreq: "weekly",
         lastmod: getPageLastModified("ContactUs"),
       },
+
+      // SEO Landing Pages
+      {
+        loc: `/technology/cloud-native-vms`,
+        priority: `0.8`,
+        changefreq: `weekly`,
+        lastmod: `2026-02-15`,
+      },
+      {
+        loc: `/technology/generative-ai-surveillance`,
+        priority: `0.8`,
+        changefreq: `weekly`,
+        lastmod: `2026-02-15`,
+      },
+      {
+        loc: `/technology/ai-video-analytics`,
+        priority: `0.8`,
+        changefreq: `weekly`,
+        lastmod: `2026-02-15`,
+      },
+      {
+        loc: `/solutions/smart-cities`,
+        priority: `0.8`,
+        changefreq: `weekly`,
+        lastmod: `2026-02-15`,
+      },
+      {
+        loc: `/solutions/transportation`,
+        priority: `0.7`,
+        changefreq: `monthly`,
+        lastmod: `2026-02-15`,
+      },
+      {
+        loc: `/solutions/banking-finance`,
+        priority: `0.7`,
+        changefreq: `monthly`,
+        lastmod: `2026-02-15`,
+      },
+      {
+        loc: `/solutions/retail-analytics`,
+        priority: `0.7`,
+        changefreq: `monthly`,
+        lastmod: `2026-02-15`,
+      },
+      {
+        loc: `/solutions/oil-gas`,
+        priority: `0.7`,
+        changefreq: `monthly`,
+        lastmod: `2026-02-15`,
+      },
+      {
+        loc: `/middle-east/video-surveillance-solutions`,
+        priority: `0.8`,
+        changefreq: `weekly`,
+        lastmod: `2026-02-15`,
+      },
+      {
+        loc: `/saudi-arabia/smart-city-surveillance`,
+        priority: `0.8`,
+        changefreq: `weekly`,
+        lastmod: `2026-02-15`,
+      },
+      {
+        loc: `/africa/video-surveillance`,
+        priority: `0.7`,
+        changefreq: `monthly`,
+        lastmod: `2026-02-15`,
+      },
+      {
+        loc: `/europe/cloud-vms`,
+        priority: `0.7`,
+        changefreq: `monthly`,
+        lastmod: `2026-02-15`,
+      },
+      {
+        loc: `/compare/cloud-vms-vs-on-premise`,
+        priority: `0.8`,
+        changefreq: `monthly`,
+        lastmod: `2026-02-15`,
+      },
+      {
+        loc: `/resources/vms-buyers-guide`,
+        priority: `0.8`,
+        changefreq: `monthly`,
+        lastmod: `2026-02-15`,
+      },
     ];
 
     for (const page of staticPages) {
