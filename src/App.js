@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import NewsletterSubscription from "./components/NewsletterSubscription";
 import ScrollToTop from "./components/ScrollToTop";
 import SEORouter from "./components/SEO/SEORouter";
+import SEOIntegration from "./components/SEO/SEOIntegration";
 import ErrorBoundary from "./components/ErrorBoundary";
 import PageContentWrapper from "./components/PageContentWrapper";
 import AmbicamLandingPage from "./pages/Ambicam/AmbicamLandingPage";
@@ -65,6 +66,7 @@ function App() {
             <Navbar />
             <ScrollToTop />
             <SEORouter />
+                  <SEOIntegration />
             <Box pt={{ base: "20%", sm: "20%", md: "100px" }} bg="#E7E7E7">
               <Suspense fallback={<LoadingSpinner />}>
                 <Routes>
