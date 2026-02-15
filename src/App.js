@@ -49,6 +49,7 @@ const ContactUs = lazy(() => import("./pages/ContactUs/Contactus"));
 const VMuktiCareers = lazy(() => import("./pages/career/Career"));
 const BookDemo = lazy(() => import("./pages/BookDemo/BookDemo"));
 const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
+const SEOLandingPage = lazy(() => import("./pages/SEOLandingPages/SEOLandingPage"));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -107,6 +108,21 @@ function App() {
                     path="/careers-thank-you"
                     element={<Thankyoucareer />}
                   />
+                  {/* SEO Landing Pages */}
+                  <Route path="/technology/cloud-native-vms" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/technology/generative-ai-surveillance" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/technology/ai-video-analytics" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/smart-cities" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/transportation" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/banking-finance" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/retail-analytics" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/oil-gas" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/middle-east/video-surveillance-solutions" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/saudi-arabia/smart-city-surveillance" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/africa/video-surveillance" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/europe/cloud-vms" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/compare/cloud-vms-vs-on-premise" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/resources/vms-buyers-guide" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
@@ -228,6 +244,21 @@ function App() {
                     path="/careers-thank-you"
                     element={<Thankyoucareer />}
                   />
+                  {/* SEO Landing Pages */}
+                  <Route path="/technology/cloud-native-vms" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/technology/generative-ai-surveillance" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/technology/ai-video-analytics" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/smart-cities" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/transportation" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/banking-finance" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/retail-analytics" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/oil-gas" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/middle-east/video-surveillance-solutions" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/saudi-arabia/smart-city-surveillance" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/africa/video-surveillance" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/europe/cloud-vms" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/compare/cloud-vms-vs-on-premise" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/resources/vms-buyers-guide" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
@@ -352,6 +383,21 @@ function App() {
                     path="/careers-thank-you"
                     element={<Thankyoucareer />}
                   />
+                  {/* SEO Landing Pages */}
+                  <Route path="/technology/cloud-native-vms" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/technology/generative-ai-surveillance" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/technology/ai-video-analytics" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/smart-cities" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/transportation" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/banking-finance" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/retail-analytics" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/oil-gas" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/middle-east/video-surveillance-solutions" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/saudi-arabia/smart-city-surveillance" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/africa/video-surveillance" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/europe/cloud-vms" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/compare/cloud-vms-vs-on-premise" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/resources/vms-buyers-guide" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
@@ -472,6 +518,21 @@ function App() {
                     path="/careers-thank-you"
                     element={<Thankyoucareer />}
                   />
+                  {/* SEO Landing Pages */}
+                  <Route path="/technology/cloud-native-vms" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/technology/generative-ai-surveillance" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/technology/ai-video-analytics" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/smart-cities" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/transportation" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/banking-finance" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/retail-analytics" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/solutions/oil-gas" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/middle-east/video-surveillance-solutions" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/saudi-arabia/smart-city-surveillance" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/africa/video-surveillance" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/europe/cloud-vms" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/compare/cloud-vms-vs-on-premise" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/resources/vms-buyers-guide" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
@@ -488,3 +549,4 @@ function App() {
 }
 
 export default React.memo(App);
+
