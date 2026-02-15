@@ -273,7 +273,7 @@ const categoryColors = {
 // Main SEO Landing Page Component
 const SEOLandingPage = () => {
   const { category, pageSlug } = useParams();
-  const lookupKey = pageSlug || category;
+  const lookupKey = (pageSlug && seoPageData[pageSlug]) ? pageSlug : category;
   const pageData = seoPageData[lookupKey];
 
   if (!pageData) {
