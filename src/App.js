@@ -108,15 +108,13 @@ function App() {
                     path="/careers-thank-you"
                     element={<Thankyoucareer />}
                   />
-                  {/* SEO Landing Pages - parameterized routes */}
+                  {/* SEO Landing Pages - 114 pages with flexible routing */}
                   <Route path="/technology/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
                   <Route path="/solutions/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
                   <Route path="/compare/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
                   <Route path="/resources/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
-                  <Route path="/:category/video-surveillance-solutions" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
-                  <Route path="/:category/smart-city-surveillance" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
-                  <Route path="/:category/video-surveillance" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
-                  <Route path="/:category/cloud-vms" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/industry/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/:category/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} /></Suspense>} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
@@ -134,3 +132,4 @@ function App() {
 }
 
 export default React.memo(App);
+
