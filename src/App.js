@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import NewsletterSubscription from "./components/NewsletterSubscription";
 import ScrollToTop from "./components/ScrollToTop";
 import SEORouter from "./components/SEO/SEORouter";
-import SEOIntegration from "./components/SEO/SEOIntegration";
+import SEOIntegration from "./components/SO/SEOIntegration";
 import SEOContent from "./components/Content/SEOContent";
 import ErrorBoundary from "./components/ErrorBoundary";
 import PageContentWrapper from "./components/PageContentWrapper";
@@ -15,7 +15,7 @@ import AmbicamLandingPage from "./pages/Ambicam/AmbicamLandingPage";
 import BlogsDashboard from "./pages/Blogs/BlogsDashboard";
 import BlogsContents from "./pages/Blogs/BlogsContents";
 import CustomCursor from "./components/CustomCursor";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import SolutionDetails from "./components/SolutionDetails";
 import Thankyou from "./pages/ThankYou/Thankyou";
 import ThankyouDemo from "./pages/ThankYou/ThankyouDemo";
@@ -60,8 +60,7 @@ const LoadingSpinner = () => (
 
 function App() {
   return (
-    <HelmetProvider>
-      <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme}>
         {/* <CustomCursor /> */}
         <Router>
           <ErrorBoundary>
@@ -127,7 +126,6 @@ function App() {
           {/* <VoiceAssistant /> */}
         </Router>
       </ChakraProvider>
-    </HelmetProvider>
   );
 }
 
