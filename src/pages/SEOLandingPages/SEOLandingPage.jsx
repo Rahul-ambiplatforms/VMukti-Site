@@ -26,6 +26,7 @@ import { CheckCircleIcon, ChevronRightIcon } from '@chakra-ui/icons';
 import seoPageData from '../../data/seoPageData';
 import seoPageDataExpansion from '../../data/seoPageDataExpansion';
 
+
 // Stat Card Component
 const StatCard = ({ value, label }) => (
   <Box
@@ -48,6 +49,7 @@ const StatCard = ({ value, label }) => (
   </Box>
 );
 
+
 // Feature List Component
 const FeatureList = ({ features }) => (
   <List spacing={3} mt={4}>
@@ -59,6 +61,7 @@ const FeatureList = ({ features }) => (
     ))}
   </List>
 );
+
 
 // Section Component
 const ContentSection = ({ section, index }) => (
@@ -90,6 +93,7 @@ const ContentSection = ({ section, index }) => (
   </Box>
 );
 
+
 // FAQ Section Component
 const FAQSection = ({ faqs }) => (
   <Box py={{ base: 10, md: 16 }} bg="white">
@@ -117,6 +121,7 @@ const FAQSection = ({ faqs }) => (
     </Container>
   </Box>
 );
+
 
 // CTA Section Component
 const CTASection = ({ cta }) => (
@@ -152,6 +157,7 @@ const CTASection = ({ cta }) => (
   </Box>
 );
 
+
 // Breadcrumb Component
 const PageBreadcrumb = ({ category, pageTitle }) => {
   const categoryLabels = {
@@ -160,6 +166,7 @@ const PageBreadcrumb = ({ category, pageTitle }) => {
     geo: 'Regions',
     compare: 'Resources'
   };
+
 
   return (
     <Flex py={3} fontSize="sm" color="gray.400" align="center" flexWrap="wrap">
@@ -174,9 +181,11 @@ const PageBreadcrumb = ({ category, pageTitle }) => {
   );
 };
 
+
 // JSON-LD Schema Generator
 const generateSchemas = (pageData) => {
   const schemas = [];
+
 
   // WebPage Schema
   schemas.push({
@@ -192,6 +201,7 @@ const generateSchemas = (pageData) => {
       logo: { '@type': 'ImageObject', url: 'https://www.vmukti.com/logo.png' }
     }
   });
+
 
   // BreadcrumbList Schema
   const categoryPaths = {
@@ -217,6 +227,7 @@ const generateSchemas = (pageData) => {
     ]
   });
 
+
   // FAQPage Schema
   if (pageData.faqs && pageData.faqs.length > 0) {
     schemas.push({
@@ -230,6 +241,7 @@ const generateSchemas = (pageData) => {
     });
   }
 
+
   // Product Schema for solution/technology pages
   if (pageData.category === 'solutions' || pageData.category === 'technology') {
     schemas.push({
@@ -241,6 +253,7 @@ const generateSchemas = (pageData) => {
       manufacturer: { '@type': 'Organization', name: 'VMukti Solutions Pvt. Ltd.' }
     });
   }
+
 
   // Organization Schema for geo pages
   if (pageData.category === 'geo') {
@@ -260,8 +273,10 @@ const generateSchemas = (pageData) => {
     });
   }
 
+
   return schemas;
 };
+
 
 const categoryColors = {
   technology: 'purple',
@@ -270,12 +285,14 @@ const categoryColors = {
   compare: 'orange'
 };
 
+
 // Main SEO Landing Page Component
 const SEOLandingPage = () => {
   const { category, pageSlug } = useParams();
-  const lookupKey = (category && pageSlug && allSeoData[`${category}-${pageSlug}`]) ? `${category}-${pageSlug}` : (pageSlug && allSeoData[pageSlug]) ? pageSlug : (category && allSeoData[category]) ? category : null;
   const allSeoData = { ...seoPageData, ...seoPageDataExpansion };
+  const lookupKey = (category && pageSlug && allSeoData[`${category}-${pageSlug}`]) ? `${category}-${pageSlug}` : (pageSlug && allSeoData[pageSlug]) ? pageSlug : (category && allSeoData[category]) ? category : null;
   const pageData = allSeoData[lookupKey];
+
 
   if (!pageData) {
     return (
@@ -287,7 +304,9 @@ const SEOLandingPage = () => {
     );
   }
 
+
   const schemas = generateSchemas(pageData);
+
 
   return (
     <>
@@ -313,6 +332,7 @@ const SEOLandingPage = () => {
           </script>
         ))}
       </Helmet>
+
 
       {/* Hero Section */}
       <Box
@@ -365,15 +385,18 @@ const SEOLandingPage = () => {
         </Container>
       </Box>
 
+
       {/* Content Sections */}
       {pageData.sections.map((section, idx) => (
         <ContentSection key={idx} section={section} index={idx} />
       ))}
 
+
       {/* FAQ Section */}
       {pageData.faqs && pageData.faqs.length > 0 && (
         <FAQSection faqs={pageData.faqs} />
       )}
+
 
       {/* CTA Section */}
       <CTASection cta={pageData.cta} />
@@ -381,5 +404,12 @@ const SEOLandingPage = () => {
   );
 };
 
+
 export default SEOLandingPage;
+
+
+
+
+
+
 
