@@ -59,6 +59,16 @@ const SEORouter = () => {
     if (clean.includes('ems')) return 'productEMS';
     if (clean.includes('iccc')) return 'productICCC';
 
+    // Skip SEO meta for SEO Landing Pages - they set their own Helmet
+    // Check for expansion page routes: /:category/:pageSlug patterns
+    const parts = clean.split('/');
+    if (parts.length === 2) {
+      const categories = ['usa', 'uk', 'india', 'canada', 'australia', 'technology', 'solutions', 'compare', 'resources'];
+      if (categories.includes(parts[0])) return null;
+    }
+    // Check for industry SEO pages (not standard industry dashboard pages)
+    if (clean.startsWith('industry/') && clean.includes('-')) return null;
+
     return 'home';
   };
 
@@ -89,6 +99,9 @@ const SEORouter = () => {
 
     return schemas;
   };
+
+  // Don't render SEO tags for pages that handle their own meta (SEO Landing Pages)
+  if (!pageKey) return null;
 
   return (
     <SEO
