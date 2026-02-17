@@ -264,7 +264,67 @@ const routes = [
   '/europe/cloud-vms',
   '/compare/cloud-vms-vs-on-premise',
   '/resources/vms-buyers-guide'
+
+  // === Expansion SEO Pages (50 new routes) ===
+  // US City Pages
+  '/video-surveillance-new-york',
+  '/video-surveillance-los-angeles',
+  '/video-surveillance-chicago',
+  '/video-surveillance-houston',
+  '/video-surveillance-phoenix',
+  '/video-surveillance-philadelphia',
+  '/video-surveillance-san-antonio',
+  '/video-surveillance-san-diego',
+  '/video-surveillance-dallas',
+  '/video-surveillance-san-jose',
+  // UK City Pages
+  '/video-surveillance-london',
+  '/video-surveillance-manchester',
+  '/video-surveillance-birmingham-uk',
+  '/video-surveillance-leeds',
+  '/video-surveillance-glasgow',
+  '/video-surveillance-liverpool',
+  '/video-surveillance-bristol',
+  '/video-surveillance-edinburgh',
+  '/video-surveillance-cardiff',
+  '/video-surveillance-belfast',
+  // India City Pages
+  '/video-surveillance-mumbai',
+  '/video-surveillance-delhi',
+  '/video-surveillance-bangalore',
+  '/video-surveillance-hyderabad',
+  '/video-surveillance-chennai',
+  '/video-surveillance-kolkata',
+  '/video-surveillance-pune',
+  '/video-surveillance-ahmedabad',
+  '/video-surveillance-jaipur',
+  '/video-surveillance-lucknow',
+  // Canada City Pages
+  '/video-surveillance-toronto',
+  '/video-surveillance-vancouver',
+  '/video-surveillance-montreal',
+  '/video-surveillance-calgary',
+  '/video-surveillance-ottawa',
+  // Australia City Pages
+  '/video-surveillance-sydney',
+  '/video-surveillance-melbourne',
+  '/video-surveillance-brisbane',
+  '/video-surveillance-perth',
+  '/video-surveillance-adelaide',
+  // Industry Verticals
+  '/video-surveillance-healthcare',
+  '/video-surveillance-education',
+  '/video-surveillance-manufacturing',
+  '/video-surveillance-logistics',
+  '/video-surveillance-hospitality-industry',
+  '/video-surveillance-critical-infrastructure',
+  // Resource Pages
+  '/video-analytics-roi-calculator',
+  '/smart-city-surveillance-whitepaper',
+  '/ai-surveillance-trends-2025',
+  '/choosing-right-vms',
 ];
+
 
 module.exports = routes;
 
