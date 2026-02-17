@@ -288,9 +288,11 @@ const categoryColors = {
 
 // Main SEO Landing Page Component
 const SEOLandingPage = () => {
-  const { category, pageSlug } = useParams();
+  const { category, pageSlug, name } = useParams();
+  // When rendered from IndustryDetails fallback, route param is 'name' not 'pageSlug'
+  const effectiveSlug = pageSlug || name;
   const allSeoData = { ...seoPageData, ...seoPageDataExpansion };
-  const lookupKey = (category && pageSlug && allSeoData[`${category}-${pageSlug}`]) ? `${category}-${pageSlug}` : (pageSlug && allSeoData[pageSlug]) ? pageSlug : (category && allSeoData[category]) ? category : null;
+  const lookupKey = (category && effectiveSlug && allSeoData[`${category}-${effectiveSlug}`]) ? `${category}-${effectiveSlug}` : (effectiveSlug && allSeoData[effectiveSlug]) ? effectiveSlug : (category && allSeoData[category]) ? category : null;
   const pageData = allSeoData[lookupKey];
 
 
