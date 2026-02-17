@@ -25,6 +25,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { CheckCircleIcon, ChevronRightIcon } from '@chakra-ui/icons';
 import seoPageData from '../../data/seoPageData';
 import seoPageDataExpansion from '../../data/seoPageDataExpansion';
+import seoPageDataInnovation from '../../data/seoPageDataInnovation';
 
 
 // Stat Card Component
@@ -291,7 +292,7 @@ const SEOLandingPage = () => {
   const { category, pageSlug, name } = useParams();
   // When rendered from IndustryDetails fallback, route param is 'name' not 'pageSlug'
   const effectiveSlug = pageSlug || name;
-  const allSeoData = { ...seoPageData, ...seoPageDataExpansion };
+  const allSeoData = { ...seoPageData, ...seoPageDataExpansion, ...seoPageDataInnovation };
   const lookupKey = (category && effectiveSlug && allSeoData[`${category}-${effectiveSlug}`]) ? `${category}-${effectiveSlug}` : (effectiveSlug && allSeoData[effectiveSlug]) ? effectiveSlug : (category && allSeoData[category]) ? category : null;
   const pageData = allSeoData[lookupKey];
 
