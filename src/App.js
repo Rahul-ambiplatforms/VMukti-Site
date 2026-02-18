@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import NewsletterSubscription from "./components/NewsletterSubscription";
 import ScrollToTop from "./components/ScrollToTop";
 import SEORouter from "./components/SEO/SEORouter";
-import SEOIntegration from "./components/SO/SEOIntegration";
+import SEOIntegration from "./components/SEO/SEOIntegration";
 import SEOContent from "./components/Content/SEOContent";
 import ErrorBoundary from "./components/ErrorBoundary";
 import PageContentWrapper from "./components/PageContentWrapper";
