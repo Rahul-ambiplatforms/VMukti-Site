@@ -36,14 +36,24 @@ Allow: /
 User-agent: Baiduspider
 Allow: /
 
-# Block AI training crawlers (optional - preserves content)
+# Allow AI crawlers for visibility and citations
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: CCBot
-Disallow: /
+Allow: /
 
 User-agent: Google-Extended
-Disallow: /User-agent: *
-Disallow: /admin
-Sitemap: https://www.vmukti.com/sitemap.xml
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
