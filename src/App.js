@@ -43,6 +43,9 @@ const WhoWeare = lazy(() => import("./pages/Who/WhoDash"));
 const EventSpotlight = lazy(() =>
   import("./pages/EventSpotlight/EventDashboard")
 );
+const ConvergenceIndia2026 = lazy(() =>
+  import("./pages/Events/ConvergenceIndia2026")
+);
 const OurServings = lazy(() => import("./pages/OurServings/OurServings"));
 const ServingsDock = lazy(() => import("./pages/OurServings/ServingsDock"));
 const ContactUs = lazy(() => import("./pages/ContactUs/Contactus"));
@@ -81,7 +84,10 @@ function App() {
                   <Route path="/industry/:name" element={<IndustryDetails />} />
                   <Route path="/about-us" element={<WhoWeare />} />
                   {/* <Route
-                    path="/whoweare/eventspotlight"
+                    path="/events/convergence-india-2026"
+                element={<ConvergenceIndia2026 />} />
+              <Route
+            path="/whoweare/eventspotlight"
                     element={<EventSpotlight />}
                   /> */}
                   <Route path="/privacy-policy" element={<PrivacyPolicy />} />
