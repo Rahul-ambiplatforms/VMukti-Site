@@ -57,3 +57,16 @@ Allow: /
 
 User-agent: Bytespider
 Allow: /
+
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
