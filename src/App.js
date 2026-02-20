@@ -83,13 +83,14 @@ function App() {
                   <Route path="/industry" element={<IndustryDashboard />} />
                   <Route path="/industry/:name" element={<IndustryDetails />} />
                   <Route path="/about-us" element={<WhoWeare />} />
-                  {/* <Route
-                    path="/events/convergence-india-2026"
-                element={<ConvergenceIndia2026 />} />
               <Route
-            path="/whoweare/eventspotlight"
-                    element={<EventSpotlight />}
-                  /> */}
+                path="/events/convergence-india-2026"
+                element={<ConvergenceIndia2026 />}
+              />
+              {/* <Route
+                path="/whoweare/eventspotlight"
+                element={<EventSpotlight />}
+              /> */}
                   <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                   <Route
                     path="/terms-and-conditions"
