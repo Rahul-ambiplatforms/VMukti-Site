@@ -1,7 +1,6 @@
 // src/pages/VMuktiHomepage/index.js
 import React from "react";
-import { Box, Flex, Text, Button } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Box, Flex } from "@chakra-ui/react";
 import PageContentWrapper from "../../components/PageContentWrapper";
 import AdvancedComputerVision from "../../components/AdvancedComputerVision";
 import VideoAnalytics from "./Components/VideoAnalytics";
@@ -32,13 +31,6 @@ const VMuktiHomepage = () => {
 
   return (
     <>
-      {/* Convergence India 2026 Event Banner */}
-      <Box bg="linear-gradient(90deg,#0f3460,#1a1a2e)" color="white" py={3} px={4} textAlign="center">
-        <Flex align="center" justify="center" gap={4} flexWrap="wrap">
-          <Text fontWeight="bold" fontSize={{base:"sm",md:"md"}}>Meet us at Convergence India 2026 | March 23-25 | Booth F4-06, Hall 04</Text>
-          <Button as={Link} to="/events/convergence-india-2026" colorScheme="orange" size="sm">Learn More</Button>
-        </Flex>
-      </Box>
       <script>
         {homepageSchemas.map((schema, index) => (
           <script
