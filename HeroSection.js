@@ -193,6 +193,7 @@ const HeroSection = () => {
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             mt={{ base: "2%", md: "0" }}
+          minH={{ base: "200px", md: "180px", lg: "200px" }}
           >
             <Text as="span" color="#000">
               Cloud-based Video{" "}
