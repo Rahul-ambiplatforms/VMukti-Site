@@ -228,7 +228,7 @@ const VisionMissionSection = () => {
         position="relative"
         width="fit-content"
       >
-        <Image
+        <Image loading="lazy"
           zIndex={1}
           left="14%"
           position="relative"

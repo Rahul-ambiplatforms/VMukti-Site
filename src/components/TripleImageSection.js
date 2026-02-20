@@ -168,7 +168,7 @@ const TripleImageSection = ({
                   w={{ base: '170px', sm: '200px' }}
                   h={{ base: '350px', sm: '450px' }}
                 >
-                  <Image
+                  <Image loading="lazy"
                     src={image}
                     alt={`Surveillance Image ${index + 1}`}
                     w="100%"

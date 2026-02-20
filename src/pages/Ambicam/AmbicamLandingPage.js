@@ -163,7 +163,7 @@
                           </svg>
                         </Box>
                       </Button>
-                      <Image
+                      <Image loading="lazy"
                         src="./assets/ambicam_logo.png"
                         alt="Ambicam logo"
                         w="204px"
@@ -291,7 +291,7 @@
                 </svg>
               </Box>
             </Button>
-            <Image
+            <Image loading="lazy"
               src="./assets/ambicam_logo.png"
               alt="Ambicam logo"
               w={{base:"180px",md:"204px"}}

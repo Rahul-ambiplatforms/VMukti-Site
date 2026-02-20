@@ -72,7 +72,7 @@ const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
   );
 
   const imageSection = (
-    <Image
+    <Image loading="lazy"
       src={imageUrl}
       alt={title}
       objectFit="cover"

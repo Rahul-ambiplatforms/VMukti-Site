@@ -97,7 +97,7 @@ const AdvancedComputerVision = ({
         opacity="0.8"
         pointerEvents="none"
       >
-        <Image
+        <Image loading="lazy"
           src={backgroundImage}
           alt="Background"
           objectFit="cover"
@@ -306,7 +306,7 @@ const AdvancedComputerVision = ({
                       style={{ objectFit: "cover", borderRadius: "24px" }}
                     />
                   ) : (
-                    <Image
+                    <Image loading="lazy"
                       src={`${process.env.PUBLIC_URL}${card.media}`}
                       alt={card.label}
                       width={{ base: "100%", md: "100%", lg: "100%" }}

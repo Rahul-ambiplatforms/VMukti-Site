@@ -115,14 +115,14 @@ const Diagram = () => {
         position="relative"
       >
         {/* Desktop Image */}
-        <Image
+        <Image loading="lazy"
           alt="VMukti AI Implementation Architecture Diagram"
           src={`${process.env.PUBLIC_URL}/assets/ai_implementation.png`}
           display={{ base: "none", md: "block" }}
         />
 
         {/* Mobile Image */}
-        <Image
+        <Image loading="lazy"
           alt="VMukti AI Implementation Architecture Diagram - Mobile View"
           src={`${process.env.PUBLIC_URL}/assets/ai_implementation_mobile.png`}
           display={{ base: "block", md: "none" }}

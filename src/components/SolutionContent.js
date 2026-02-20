@@ -58,7 +58,7 @@ const marqueeScroll = keyframes`
 //       borderRadius="24px"
 //       overflow="hidden"
 //     >
-//       <Image
+//       <Image loading="lazy"
 //         src={`${process.env.PUBLIC_URL}/assets/${feature.image}`}
 //         alt={feature.title}
 //         objectFit="cover"
@@ -398,7 +398,7 @@ const SolutionContent = ({ content }) => {
             // mt={["0", "0", "0", "10%"]}
             mr="2%"
           >
-            <Image
+            <Image loading="lazy"
               src={hero.image}
               alt={hero.heading}
               objectFit="cover"
@@ -461,7 +461,7 @@ const SolutionContent = ({ content }) => {
                 mt={introduction.top || "-25%"}
                 mb={{ base: "10%", md: "2%" }}
               >
-                <Image
+                <Image loading="lazy"
                   src={introduction.image}
                   alt={introduction.heading}
                   w={{ base: "100%", md: "100%" }}
@@ -674,7 +674,7 @@ const SolutionContent = ({ content }) => {
               {/* Use the specific workflow object from the content prop */}
               {content.workflow.heading}
             </Heading>
-            <Image
+            <Image loading="lazy"
               src={content.workflow.image} 
               alt={content.workflow.heading}
               w="100%"
@@ -683,7 +683,7 @@ const SolutionContent = ({ content }) => {
               display={{base:"none",md:"block"}}
 
             />
-            <Image
+            <Image loading="lazy"
               src={content.workflow.image_mobile} 
               alt={content.workflow.heading}
               w="100%"
@@ -760,7 +760,7 @@ const SolutionContent = ({ content }) => {
                         ...whyChooseUs.images,
                         ...whyChooseUs.images,
                       ].map((imgSrc, index) => (
-                        <Image
+                        <Image loading="lazy"
                           key={index}
                           src={imgSrc}
                           alt={`${whyChooseUs.heading} collage ${index + 1}`}
@@ -782,7 +782,7 @@ const SolutionContent = ({ content }) => {
                     alignItems="center"
                     mx="auto"
                   >
-                    <Image
+                    <Image loading="lazy"
                       src={whyChooseUs.images[0]}
                       alt={whyChooseUs.heading}
                       w="100%"

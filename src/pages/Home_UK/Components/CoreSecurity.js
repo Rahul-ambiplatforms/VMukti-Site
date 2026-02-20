@@ -140,7 +140,7 @@ const CoreSecurity = () => {
                 borderRadius="8px"
                 transition="all 0.2s ease"
               >
-                <Image
+                <Image loading="lazy"
                   src="/assets/tickmark.svg"
                   alt="Check mark"
                   w="24px"

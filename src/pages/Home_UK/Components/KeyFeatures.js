@@ -62,7 +62,7 @@ const KeyFeatures = ({ data }) => {
                 {featuresToRender.map((feature, index) => (
                   <VStack key={index} spacing={2} textAlign="center">
                     {feature.image && (
-                      <Image
+                      <Image loading="lazy"
                         src={feature.image}
                         alt={feature.title || feature.heading}
                         boxSize="72px"

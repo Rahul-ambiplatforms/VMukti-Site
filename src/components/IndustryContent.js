@@ -66,7 +66,7 @@ const popAnimation1 = {
 //       borderRadius="20px"
 //       overflow="hidden"
 //     >
-//       <Image
+//       <Image loading="lazy"
 //         src={`${process.env.PUBLIC_URL}/assets/${feature.image}`}
 //         alt={feature.title}
 //         objectFit="cover"
@@ -508,7 +508,7 @@ const IndustryContent = ({ props, content }) => {
             </Heading>
             <>
               {/* Mobile */}
-              <Image
+              <Image loading="lazy"
                 src={`${process.env.PUBLIC_URL}/assets/${content.workflow.image_mobile}`}
                 alt={content.workflow.heading}
                 w="100%"
@@ -517,7 +517,7 @@ const IndustryContent = ({ props, content }) => {
               />
 
               {/* Desktop */}
-              <Image
+              <Image loading="lazy"
                 src={`${process.env.PUBLIC_URL}/assets/${content.workflow.image}`}
                 alt={content.workflow.heading}
                 w="100%"

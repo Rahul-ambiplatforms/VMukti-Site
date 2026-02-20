@@ -249,7 +249,7 @@ const Solutions = ({ data }) => {
             alignItems="stretch"
             order={{ base: 1, lg: 2 }}
           >
-            <Image
+            <Image loading="lazy"
               className="content-image"
               src={imageSrc}
               alt={activeSolution.heading2}

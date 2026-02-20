@@ -286,7 +286,7 @@ const AISurveillance = () => {
             borderRadius="24px"
             // boxShadow="inner"
           >
-            <Image
+            <Image loading="lazy"
               src={activeFeature.image}
               alt={activeFeature.title}
               objectFit="contain"

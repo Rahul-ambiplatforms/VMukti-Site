@@ -111,7 +111,7 @@ const ServingsDescriptionCard = ({ description, keybenefits, image }) => {
                       alignItems="center"
                       justifyContent="flex-start"
                     >
-                      <Image src={benefit.svg} />
+                      <Image loading="lazy" src={benefit.svg} />
                     </Box>
                   </motion.div>
                   {/* </SubHeadingAnimation> */}

@@ -232,7 +232,7 @@ export default function ContactUs() {
             overflow="hidden"
             zIndex="1"
           >
-            <Image
+            <Image loading="lazy"
               src={`${process.env.PUBLIC_URL}/assets/Contactus.png`}
               alt="Contact VMukti Solutions"
               position="absolute"
@@ -300,7 +300,7 @@ export default function ContactUs() {
                 lg: 'rotate(-160deg) translateX(100px) translateY(550px)', // Desktop view transformation
               }}
             />
-            <Image
+            <Image loading="lazy"
               // src="./assets/robowho2.png"
               src={`${process.env.PUBLIC_URL}/assets/robowho2.png`}
               alt="Robot hand"

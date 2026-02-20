@@ -709,7 +709,7 @@ export default function IndustryDashboard() {
             zIndex: "1",
           }}
         >
-          <Image
+          <Image loading="lazy"
             src="/assets/industry_dashboard.png"
             alt="Transforming Industries with AI-Powered Intelligence"
             position="absolute"

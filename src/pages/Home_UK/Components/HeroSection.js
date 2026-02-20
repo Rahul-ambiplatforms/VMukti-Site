@@ -265,7 +265,7 @@ const HeroSection = () => {
                 mb={{ base: "15%", md: "5%" }}
                 width="fit-content"
               >
-                <Image
+                <Image loading="lazy"
                   ref={imageRef}
                   src="/assets/robohand.png"
                   alt="Robotic Hand"

@@ -108,7 +108,7 @@ const TrustedBy = () => {
                   bg="white"
                   borderRadius="24px"
                 >
-                  <Image
+                  <Image loading="lazy"
                     src={card.image}
                     alt={card.alt}
                     width="336px"

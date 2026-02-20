@@ -109,7 +109,7 @@ const VideoAnalytics = () => {
               overflow="hidden"
               mb="15px"
             >
-              <Image
+              <Image loading="lazy"
                 key={`mobile-image-${featureIndex}`}
                 src={featureImages[featureIndex].image}
                 alt={features[featureIndex].title}
@@ -363,7 +363,7 @@ const VideoAnalytics = () => {
             zIndex={2}
             right={0}
           >
-            <Image
+            <Image loading="lazy"
               key={`desktop-image-${featureIndex}`}
               // src={featureImages[featureIndex].image}
               src={`${process.env.PUBLIC_URL}${featureImages[featureIndex].image}`}

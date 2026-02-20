@@ -192,7 +192,7 @@ const ComputerVision = () => {
                     borderRadius="24px"
                     overflow="hidden"
                   >
-                    <Image
+                    <Image loading="lazy"
                       src={isMobile ? computerVisionSteps[activeIndex].image_mobile : computerVisionSteps[activeIndex].image}
                       alt={computerVisionSteps[activeIndex].heading}
                       objectFit="contain"

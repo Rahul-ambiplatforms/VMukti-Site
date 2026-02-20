@@ -319,7 +319,7 @@ const Navbar = () => {
             mx="1%"
             justifyContent="space-between"
           >
-            <Image
+            <Image loading="lazy"
               src="../assets/VMukti_logo.png"
               alt="Logo"
               height={logoHeight}
@@ -1012,7 +1012,7 @@ const Navbar = () => {
                   minHeight="408px"
                   overflow="hidden"
                 >
-                  <Image
+                  <Image loading="lazy"
                     src={`${process.env.PUBLIC_URL}/assets/robot.png`}
                     alt="AI Robot"
                     width="100%"

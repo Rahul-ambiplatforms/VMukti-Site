@@ -69,7 +69,7 @@ const HeroSection = ({ isAnimationTriggered }) => {
         opacity="80%"
         zIndex={2}
       >
-        <Image
+        <Image loading="lazy"
           src="/assets/VMukti Brochure O2 1.png"
           alt="VMukti Brochure"
           width="100%"

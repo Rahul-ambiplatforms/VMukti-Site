@@ -81,7 +81,7 @@ const Trusted = () => {
         >
           {/* We duplicate the logos array once to create the seamless effect */}
           {[...logosRow1, ...logosRow1].map((logo, index) => (
-            <Image
+            <Image loading="lazy"
               key={`row1-${index}`}
               // src={`${process.env.PUBLIC_URL}${logo}`}
               src={logo}
@@ -128,7 +128,7 @@ const Trusted = () => {
           animation={`${scrollLTR} 65s linear infinite`} // Varied speed for interest
         >
           {[...logosRow2, ...logosRow2].map((logo, index) => (
-            <Image
+            <Image loading="lazy"
               key={`row2-${index}`}
               src={logo}
               alt={`Partner logo ${index + 1}`}

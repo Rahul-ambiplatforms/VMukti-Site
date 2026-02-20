@@ -116,7 +116,7 @@ export default function HeroSection() {
         </Box>
         <Box zIndex={1}>
           <ImagePop>
-            <Image
+            <Image loading="lazy"
               src={`${process.env.PUBLIC_URL}/assets/career.png`}
               // src={${process.env.PUBLIC_URL} /assets/career.png}
               alt="Team collaboration"

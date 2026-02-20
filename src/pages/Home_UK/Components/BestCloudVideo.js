@@ -71,7 +71,7 @@ const BestCloudVideo = ({ introduction }) => {
             mt={intro.top || "-25%"}
             mb={{ base: "10%", md: "2%" }}
           >
-            <Image
+            <Image loading="lazy"
               src={intro.image}
               alt={intro.heading}
               w={{ base: "100%", md: "100%" }}

@@ -15,7 +15,7 @@ const RoboticHandButton = () => {
       ml={{ base: "4%", md: "-40px" }}
       width="fit-content"
     >
-      <Image
+      <Image loading="lazy"
         src="/assets/robohand.png"
         alt="Robotic Hand"
         display={{ base: "none", md: "block" }}

@@ -57,7 +57,7 @@ const DashboardItem = ({ item }) => (
     minHeight="300px"
     borderColor="gray.100"
   >
-    <Image
+    <Image loading="lazy"
       src={`${process.env.PUBLIC_URL}/${item.image}`}
       alt={item.title}
       borderRadius="24px"

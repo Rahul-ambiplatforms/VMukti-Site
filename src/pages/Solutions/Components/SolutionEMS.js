@@ -859,7 +859,7 @@ const SolutionEMS = () => {
                     // bg="red"
                   >
                     {slide.image ? (
-                      <Image
+                      <Image loading="lazy"
                         // src={slide.image}
                         src={`${process.env.PUBLIC_URL}${slide.image}`}
                         alt={slide.title1}
@@ -921,7 +921,7 @@ const SolutionEMS = () => {
                               delay: 0.5 * idx, // Individual delay based on index
                             }}
                           >
-                            <Image
+                            <Image loading="lazy"
                               src={benefit.image}
                               alt={benefit.title}
                               style={{

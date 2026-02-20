@@ -43,7 +43,7 @@ const SolutionDashboard = () => {
         borderRadius="0px 0px 24px 24px"
       >
         {/* <Box borderRadius="24px"> */}
-        <Image
+        <Image loading="lazy"
           src="../assets/solution_dash.png"
           alt="Cutting-Edge Visual Solutions for a Smarter World"
           position="absolute"
@@ -56,7 +56,7 @@ const SolutionDashboard = () => {
           borderRadius="24px"
           display={{ base: "none", md: "block" }}
         />
-        <Image
+        <Image loading="lazy"
           src="../assets/solution_dash_mobile.png"
           alt="Cutting-Edge Visual Solutions for a Smarter World"
           position="absolute"

@@ -173,7 +173,7 @@ const SurveillanceSoftware = () => {
           // mx="-5%"
           zIndex={{ base: "1", md: "2" }}
         >
-          <Image
+          <Image loading="lazy"
             ref={imageRef} // Apply ref to the image
             // height="100%"
             // src="../assets/surveillancemock.png"
