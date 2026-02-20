@@ -162,7 +162,7 @@ const Reviews = () => {
           </svg>
         </Box>
         <Heading
-          as="h2"
+          as="h3"
           fontSize="16px"
           fontWeight="600"
           lineHeight="45px"
