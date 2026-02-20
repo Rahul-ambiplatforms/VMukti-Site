@@ -1,6 +1,7 @@
 // src/pages/VMuktiHomepage/index.js
 import React from "react";
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Text, Button } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import PageContentWrapper from "../../components/PageContentWrapper";
 import AdvancedComputerVision from "../../components/AdvancedComputerVision";
 import VideoAnalytics from "./Components/VideoAnalytics";
