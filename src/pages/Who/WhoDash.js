@@ -11,7 +11,7 @@ import { customData2 } from "../../data/AdvancedComputerVisionData";
 import CulturalSection from "../../components/CulturalSection";
 import StickySection from "../Home/Data/StickySection";
 import CertificationsSection from "../Solutions/Components/CertificationsSection";
-import Reviews from "../Home/Components/Reviews";
+// import Reviews from "../Home/Components/Reviews";  // Removed: component does not exist
 import { Helmet } from "react-helmet-async";
 
 const gridItems = [
@@ -165,7 +165,7 @@ const WhoWeare = () => {
       </PageContentWrapper>
       <CertificationsSection />
       <PageContentWrapper>
-        <Reviews />
+        {/* <Reviews /> */}
         {/* <ReviewsSection /> */}
       </PageContentWrapper>
     </>
