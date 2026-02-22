@@ -47,11 +47,41 @@
     <!-- Hreflang for Global Targeting -->
     <link rel="alternate" hreflang="en" href="https://www.vmukti.com" />
     <link rel="alternate" hreflang="x-default" href="https://www.vmukti.com" />
+    <link rel="alternate" hreflang="en-IN" href="https://www.vmukti.com" />
+    <link rel="alternate" hreflang="en-US" href="https://www.vmukti.com" />
+    <link rel="alternate" hreflang="en-GB" href="https://www.vmukti.com" />
+    <link rel="alternate" hreflang="en-AE" href="https://www.vmukti.com" />
+    <link rel="alternate" hreflang="en-SG" href="https://www.vmukti.com" />
+    <link rel="alternate" hreflang="en-SA" href="https://www.vmukti.com" />
+    <link rel="alternate" hreflang="en-AU" href="https://www.vmukti.com" />
 
     <!-- Favicon & PWA -->
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    
+    <!-- GEO Targeting Meta Tags -->
+    <meta name="geo.region" content="IN-GJ" />
+    <meta name="geo.placename" content="Ahmedabad" />
+    <meta name="geo.position" content="23.03;72.51" />
+    <meta name="ICBM" content="23.03, 72.51" />
+    <meta name="classification" content="Enterprise Video Management, Smart City Platform, ICCC" />
+    <meta name="subject" content="Enterprise Cloud VMS, EMS and ICCC Platform for Smart Cities" />
+    <meta name="coverage" content="Worldwide" />
+    <meta name="distribution" content="Global" />
+    <meta name="target" content="enterprise, government, smart city, defense, banking" />
+    <meta property="article:publisher" content="https://www.vmukti.com" />
+    <meta property="business:contact_data:street_address" content="Arista@Eight Corporate House, Bodakdev" />
+    <meta property="business:contact_data:locality" content="Ahmedabad" />
+    <meta property="business:contact_data:region" content="Gujarat" />
+    <meta property="business:contact_data:postal_code" content="380054" />
+    <meta property="business:contact_data:country_name" content="India" />
+    
+    <!-- Performance: Preconnect & DNS Prefetch -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
@@ -98,8 +128,16 @@
       "description": "Enterprise Cloud VMS, EMS & ICCC Platform",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://www.vmukti.com/search?q={search_term_string}",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.vmukti.com/search?q={search_term_string}"
+        },
         "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "VMukti Solutions",
+        "logo": "https://www.vmukti.com/logo.png"
       }
     }
     </script>
