@@ -31,6 +31,7 @@ import seoPageDataCompliance from '../../data/seoPageDataCompliance';
 import seoPageDataExpansion2 from '../../data/seoPageDataExpansion2';
 import seoPageDataGenAI from '../../data/seoPageDataGenAI';
 import seoPageDataGeoIntl from '../../data/seoPageDataGeoIntl';
+import seoPageDataGeo from '../../data/seoPageDataGeo';
 
 
 // Stat Card Component
