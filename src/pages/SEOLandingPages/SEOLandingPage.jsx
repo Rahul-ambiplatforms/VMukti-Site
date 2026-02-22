@@ -294,7 +294,7 @@ const categoryColors = {
 
 // Main SEO Landing Page Component
 const SEOLandingPage = () => {
-  const { category, pageSlug, name } = useParams();
+  const { category, pageSlug, name, slug } = useParams();
   // When rendered from IndustryDetails fallback, route param is 'name' not 'pageSlug'
   const effectiveSlug = pageSlug || name;
   const allSeoData = { ...seoPageData, ...seoPageDataExpansion, ...seoPageDataInnovation, ...seoPageDataCompare, ...seoPageDataCompliance, ...seoPageDataExpansion2, ...seoPageDataGenAI, ...seoPageDataGeoIntl };
