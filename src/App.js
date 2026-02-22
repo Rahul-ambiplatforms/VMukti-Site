@@ -120,7 +120,8 @@ function App() {
                   <Route path="/compare/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
                   <Route path="/resources/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
                   <Route path="/industry/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
-                  <Route path="/:category/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                  <Route path="/cloud-vms-:slug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+                <Route path="/:category/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
