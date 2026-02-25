@@ -27,9 +27,9 @@ const seoPageDataExpansion3 = {
       }
     ],
     "faqs": [
-      {"question": "Does VMukti comply with Brazil LGPD data protection law?", "answer": "Yes, VMukti cloud VMS is fully LGPD-compliant with data residency in Brazil and automated consent management."},
-      {"question": "What is the typical deployment timeline for LatAm rollouts?", "answer": "Regional teams deliver deployments in 4-6 weeks including architecture design, provisioning, and training."},
-      {"question": "Can VMukti integrate with legacy surveillance in Mexico?", "answer": "Yes. ONVIF support enables seamless integration with legacy systems from all major vendors with zero downtime."}
+      {"q": "Does VMukti comply with Brazil LGPD data protection law?", "a": "Yes, VMukti cloud VMS is fully LGPD-compliant with data residency in Brazil and automated consent management."},
+      {"q": "What is the typical deployment timeline for LatAm rollouts?", "a": "Regional teams deliver deployments in 4-6 weeks including architecture design, provisioning, and training."},
+      {"q": "Can VMukti integrate with legacy surveillance in Mexico?", "a": "Yes. ONVIF support enables seamless integration with legacy systems from all major vendors with zero downtime."}
     ],
     "cta": {"title": "Launch Cloud VMS in LatAm", "description": "Schedule a regional deployment assessment.", "buttonText": "Book a Demo", "buttonLink": "/book-a-demo"}
   },
@@ -57,9 +57,9 @@ const seoPageDataExpansion3 = {
       }
     ],
     "faqs": [
-      {"question": "How accurate is VMukti shrinkage detection?", "answer": "VMukti achieves 94% accuracy in identifying shrinkage incidents with near-zero false positives in controlled environments."},
-      {"question": "Can VMukti anonymize customer footage for privacy?", "answer": "Yes. VMukti processes video while automatically de-identifying faces. Only aggregated insights are retained."},
-      {"question": "What ROI timeline do retailers typically see?", "answer": "Most retailers see measurable ROI within 6-8 months through shrinkage reduction and labor optimization."}
+      {"q": "How accurate is VMukti shrinkage detection?", "a": "VMukti achieves 94% accuracy in identifying shrinkage incidents with near-zero false positives in controlled environments."},
+      {"q": "Can VMukti anonymize customer footage for privacy?", "a": "Yes. VMukti processes video while automatically de-identifying faces. Only aggregated insights are retained."},
+      {"q": "What ROI timeline do retailers typically see?", "a": "Most retailers see measurable ROI within 6-8 months through shrinkage reduction and labor optimization."}
     ],
     "cta": {"title": "Start Your Retail AI Analytics Pilot", "description": "Deploy VMukti AI analytics in 2-3 stores risk-free.", "buttonText": "Book a Demo", "buttonLink": "/book-a-demo"}
   },
@@ -87,9 +87,9 @@ const seoPageDataExpansion3 = {
       }
     ],
     "faqs": [
-      {"question": "How does VMukti GenAI handle false positives?", "answer": "Multi-stage validation with confidence scoring and human-in-the-loop keeps false positive rates below 2%."},
-      {"question": "Can VMukti search archived footage with natural language?", "answer": "Yes. Semantic embeddings enable natural language search across footage from any time period."},
-      {"question": "Does GenAI require custom model training?", "answer": "No. Foundation models are pre-trained on diverse environments. Optional fine-tuning available for specific scenarios."}
+      {"q": "How does VMukti GenAI handle false positives?", "a": "Multi-stage validation with confidence scoring and human-in-the-loop keeps false positive rates below 2%."},
+      {"q": "Can VMukti search archived footage with natural language?", "a": "Yes. Semantic embeddings enable natural language search across footage from any time period."},
+      {"q": "Does GenAI require custom model training?", "a": "No. Foundation models are pre-trained on diverse environments. Optional fine-tuning available for specific scenarios."}
     ],
     "cta": {"title": "Experience GenAI Surveillance", "description": "See live anomaly detection and natural language search.", "buttonText": "Book a Demo", "buttonLink": "/book-a-demo"}
   },
@@ -123,10 +123,10 @@ const seoPageDataExpansion3 = {
       }
     ],
     "faqs": [
-      {"question": "Can we migrate from on-premise VMS without downtime?", "answer": "Yes. VMukti offers zero-downtime migration via parallel operation for 2-4 weeks, then cutover in a 1-hour window."},
-      {"question": "Is on-premise VMS still viable for small deployments?", "answer": "For small deployments under 500 cameras in stable sites, yes. But growing enterprises with AI needs favor cloud-native solutions."},
-      {"question": "What legacy VMS features are covered by VMukti cloud?", "answer": "VMukti covers 100% of standard VMS core functionality plus modern AI enhancements including GenAI search, anomaly detection, and multi-site dashboards."},
-      {"question": "How does cloud VMS handle internet outages?", "answer": "VMukti edge devices continue recording locally during outages and automatically sync to cloud when connectivity is restored. No footage is ever lost."}
+      {"q": "Can we migrate from on-premise VMS without downtime?", "a": "Yes. VMukti offers zero-downtime migration via parallel operation for 2-4 weeks, then cutover in a 1-hour window."},
+      {"q": "Is on-premise VMS still viable for small deployments?", "a": "For small deployments under 500 cameras in stable sites, yes. But growing enterprises with AI needs favor cloud-native solutions."},
+      {"q": "What legacy VMS features are covered by VMukti cloud?", "a": "VMukti covers 100% of standard VMS core functionality plus modern AI enhancements including GenAI search, anomaly detection, and multi-site dashboards."},
+      {"q": "How does cloud VMS handle internet outages?", "a": "VMukti edge devices continue recording locally during outages and automatically sync to cloud when connectivity is restored. No footage is ever lost."}
     ],
     "cta": {"title": "Migrate to Cloud VMS", "description": "Get a free migration assessment.", "buttonText": "Book a Demo", "buttonLink": "/book-a-demo"}
   },
@@ -154,9 +154,9 @@ const seoPageDataExpansion3 = {
       }
     ],
     "faqs": [
-      {"question": "Can VMukti detect PPE compliance automatically?", "answer": "Yes. VMukti AI detects helmets, safety vests, goggles, and other PPE with 95%+ accuracy, generating instant alerts for violations."},
-      {"question": "How does VMukti integrate with existing factory IoT systems?", "answer": "VMukti supports MQTT, OPC-UA, and REST API integrations with major industrial IoT platforms for unified monitoring."},
-      {"question": "What types of equipment failures can be predicted?", "answer": "Visual AI detects overheating signatures, unusual vibrations, smoke or steam leaks, and abnormal operational patterns across conveyor belts, motors, and assembly equipment."}
+      {"q": "Can VMukti detect PPE compliance automatically?", "a": "Yes. VMukti AI detects helmets, safety vests, goggles, and other PPE with 95%+ accuracy, generating instant alerts for violations."},
+      {"q": "How does VMukti integrate with existing factory IoT systems?", "a": "VMukti supports MQTT, OPC-UA, and REST API integrations with major industrial IoT platforms for unified monitoring."},
+      {"q": "What types of equipment failures can be predicted?", "a": "Visual AI detects overheating signatures, unusual vibrations, smoke or steam leaks, and abnormal operational patterns across conveyor belts, motors, and assembly equipment."}
     ],
     "cta": {"title": "Modernize Factory Surveillance", "description": "See how AI transforms manufacturing safety and efficiency.", "buttonText": "Book a Demo", "buttonLink": "/book-a-demo"}
   }
