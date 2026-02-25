@@ -28,10 +28,11 @@ import seoPageDataExpansion from '../../data/seoPageDataExpansion';
 import seoPageDataInnovation from '../../data/seoPageDataInnovation';
 import seoPageDataCompare from '../../data/seoPageDataCompare';
 import seoPageDataCompliance from '../../data/seoPageDataCompliance';
-import seoPageDataExpansion2 from '../../data/seoPageDataExpansion2';
+import seoPageDataExpansin2 from '../../data/seoPageDataExpansion2';
 import seoPageDataGenAI from '../../data/seoPageDataGenAI';
 import seoPageDataGeoIntl from '../../data/seoPageDataGeoIntl';
 import seoPageDataGeo from '../../data/seoPageDataGeo';
+import seoPageDataExpansion3 from '../../data/seoPageDataExpansion3'
 
 
 // Stat Card Component
@@ -298,7 +299,7 @@ const SEOLandingPage = () => {
   const { category, pageSlug, name, slug } = useParams();
   // When rendered from IndustryDetails fallback, route param is 'name' not 'pageSlug'
   const effectiveSlug = pageSlug || name;
-  const allSeoData = { ...seoPageData, ...seoPageDataExpansion, ...seoPageDataInnovation, ...seoPageDataCompare, ...seoPageDataCompliance, ...seoPageDataExpansion2, ...seoPageDataGenAI, ...seoPageDataGeoIntl };
+  const allSeoData = { ...seoPageData, ...seoPageDataExpansion, ...seoPageDataInnovation, ...seoPageDataCompare, ...seoPageDataCompliance, ...seoPageDataExpansion2, ...seoPageDataGenAI, ...seoPageDataGeoIntl, ...seoPageDataGeo, ...seoPageDataExpansion3 };
   const lookupKey = (category && effectiveSlug && allSeoData[`${category}-${effectiveSlug}`]) ? `${category}-${effectiveSlug}` : (effectiveSlug && allSeoData[effectiveSlug]) ? effectiveSlug : (category && allSeoData[category]) ? category : null;
   const pageData = allSeoData[lookupKey];
 
