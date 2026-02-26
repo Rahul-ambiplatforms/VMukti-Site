@@ -28,7 +28,7 @@ import seoPageDataExpansion from '../../data/seoPageDataExpansion';
 import seoPageDataInnovation from '../../data/seoPageDataInnovation';
 import seoPageDataCompare from '../../data/seoPageDataCompare';
 import seoPageDataCompliance from '../../data/seoPageDataCompliance';
-import seoPageDataExpansin2 from '../../data/seoPageDataExpansion2';
+import seoPageDataExpansion2 from '../../data/seoPageDataExpansion2';
 import seoPageDataGenAI from '../../data/seoPageDataGenAI';
 import seoPageDataGeoIntl from '../../data/seoPageDataGeoIntl';
 import seoPageDataGeo from '../../data/seoPageDataGeo';

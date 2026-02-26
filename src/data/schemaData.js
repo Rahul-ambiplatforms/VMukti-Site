@@ -9,7 +9,7 @@
           "We offers flexible cloud video surveillance solutions for USA businesses. Add cloud intelligence to your current CCTV infrastructure effortlessly.",
         url: "https://www.vmukti.com/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-20",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -307,7 +307,7 @@
           "Discover VMukti’s enterprise video surveillance products and solutions built for large-scale deployments, secure monitoring, and centralized video management.",
         url: "https://www.vmukti.com/solution/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-11",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -469,7 +469,7 @@
           "VMukti provides AI-enabled video surveillance for retail, manufacturing, logistics, education, healthcare, smart cities, and more—boosting safety, automation, and operational efficiency.",
         url: "https://www.vmukti.com/industry/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-20",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",

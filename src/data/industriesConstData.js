@@ -187,7 +187,7 @@ const industriesData = {
           "AI-powered manufacturing video surveillance system enhances safety, quality checks, and operational visibility with real-time monitoring and intelligent video analytics.",
         url: "https://www.vmukti.com/industry/manufacturing/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-20",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -549,7 +549,7 @@ const industriesData = {
           "VMukti's AI warehouse surveillance system in the USA provides real-time monitoring, theft prevention, worker safety, inventory tracking, and smarter warehouse operations.",
         url: "https://www.vmukti.com/industry/warehouse/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-20",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -857,7 +857,7 @@ const industriesData = {
           "VMukti's AI healthcare video surveillance solution in the USA improves hospital security, staff monitoring, compliance tracking, and patient safety with real-time alerts and analytics.",
         url: "https://www.vmukti.com/industry/healthcare/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-20",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -1157,7 +1157,7 @@ const industriesData = {
           "VMukti delivers AI-powered surveillance for oil & gas operations, enabling pipeline alerts, remote rig monitoring, worker safety insights, and centralized control.",
         url: "https://www.vmukti.com/industry/oil-and-gas/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-20",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -1445,7 +1445,7 @@ const industriesData = {
           "Ensure transparent elections with VMukti's AI-powered election surveillance system offering live monitoring, crowd insights, incident alerts, and seamless command center control.",
         url: "https://www.vmukti.com/industry/election/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-20",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -1758,7 +1758,7 @@ const industriesData = {
           "Improve campus safety with VMukti's AI education surveillance system offering smart monitoring, threat detection, and unified control for schools and universities.",
         url: "https://www.vmukti.com/industry/education/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-20",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -2056,7 +2056,7 @@ const industriesData = {
           "VMukti delivers AI-powered transportation surveillance for fleets, stations, and highways. Get real-time alerts, tracking, analytics, and centralized monitoring.",
         url: "https://www.vmukti.com/industry/transportation/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-20",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -2385,7 +2385,7 @@ const industriesData = {
           "VMukti powers smart cities with AI video surveillance, ICCC, GIS mapping, and real-time alerts for efficient urban management and faster decision-making.",
         url: "https://www.vmukti.com/industry/smart-city/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-20",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -2679,7 +2679,7 @@ const industriesData = {
           "AI-powered video surveillance for pharmaceutical manufacturing ensures compliance, contamination control, and real-time monitoring for GMP and regulatory standards.",
         url: "https://www.vmukti.com/industry/pharma/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-20",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -2986,7 +2986,7 @@ const industriesData = {
           "AI-powered video surveillance for logistics ensures shipment security, real-time tracking, loss prevention, and compliance across your entire supply chain operations.",
         url: "https://www.vmukti.com/industry/logistics/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-20",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -3317,7 +3317,7 @@ const industriesData = {
           "AI-powered banking surveillance system protects branches, ATMs, and sensitive areas with real-time threat detection, fraud prevention, and compliance monitoring.",
         url: "https://www.vmukti.com/industry/banking/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-20",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -3628,7 +3628,7 @@ const industriesData = {
           "AI-powered sports and entertainment surveillance delivers real-time crowd management, fan safety monitoring, incident detection, and operational intelligence.",
         url: "https://www.vmukti.com/industry/sports-entertainment/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-20",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -3923,7 +3923,7 @@ const industriesData = {
           "AI-powered defense surveillance delivers perimeter security, threat detection, real-time situational awareness, and advanced monitoring for military and defense operations.",
         url: "https://www.vmukti.com/industry/defense/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-20",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -4261,7 +4261,7 @@ const industriesData = {
           "AI-powered hospitality surveillance enhances guest safety, prevents theft and property damage, improves operations, and maintains property security 24/7.",
         url: "https://www.vmukti.com/industry/hospitality/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-20",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -4584,7 +4584,7 @@ const industriesData = {
           "AI-powered construction surveillance monitors site safety, equipment tracking, material management, worker compliance, and real-time progress documentation.",
         url: "https://www.vmukti.com/industry/construction/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-20",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -4907,7 +4907,7 @@ const industriesData = {
           "AI-powered enterprise surveillance provides comprehensive monitoring, asset protection, threat detection, and real-time security across all corporate facilities.",
         url: "https://www.vmukti.com/industry/enterprise/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-20",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
@@ -5250,7 +5250,7 @@ const industriesData = {
           "AI-powered government surveillance delivers public safety monitoring, traffic management, citizen services optimization, and intelligent civic infrastructure oversight.",
         url: "https://www.vmukti.com/industry/government/",
         datePublished: "2006-11-10",
-        dateModified: "2025-11-21",
+        dateModified: "2026-02-20",
         publisher: {
           "@type": "Organization",
           name: "VMukti Solutions",
