@@ -1,12 +1,8 @@
 /**
  * Schema Markup Generator for VMukti Solutions
  * Creates JSON-LD structured data for enterprise VMS, EMS, ICCC platforms
- * Global enterprise positioning - Aggressive SEO/GEO optimized
  */
 
-/**
- * Organization Schema for VMukti Solutions - Enhanced with certifications, awards, reviews
- */
 export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -14,47 +10,16 @@ export const organizationSchema = {
   legalName: 'VMukti Solutions Pvt. Ltd.',
   url: 'https://www.vmukti.com',
   logo: 'https://www.vmukti.com/logo.png',
-  description:
-    'Enterprise cloud VMS, EMS, and ICCC platform provider with STQC certification. 18+ years, 900+ deployments across 700+ districts, 1B+ camera feeds processed globally. India\'s leading smart city surveillance platform.',
+  description: 'Enterprise cloud VMS, EMS, and ICCC platform provider with STQC certification. 18+ years, 900+ deployments across 700+ districts, 1B+ camera feeds processed globally.',
   foundingDate: '2007',
   foundingLocation: 'Ahmedabad, Gujarat, India',
-  numberOfEmployees: {
-    '@type': 'QuantitativeValue',
-    minValue: 200,
-    maxValue: 500,
-  },
+  numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 200, maxValue: 500 },
   contactPoint: [
-    {
-      '@type': 'ContactPoint',
-      contactType: 'Enterprise Sales',
-      email: 'info@vmukti.com',
-      telephone: '+91-79-6160-0000',
-      url: 'https://www.vmukti.com/contact',
-      areaServed: 'Worldwide',
-      availableLanguage: ['English', 'Hindi'],
-    },
-    {
-      '@type': 'ContactPoint',
-      contactType: 'Technical Support',
-      telephone: '+91-79-6160-0000',
-      areaServed: 'Worldwide',
-      availableLanguage: ['English'],
-    },
+    { '@type': 'ContactPoint', contactType: 'Enterprise Sales', email: 'info@vmukti.com', telephone: '+91-79-6160-0000', url: 'https://www.vmukti.com/contact', areaServed: 'Worldwide', availableLanguage: ['English', 'Hindi'] },
+    { '@type': 'ContactPoint', contactType: 'Technical Support', telephone: '+91-79-6160-0000', areaServed: 'Worldwide', availableLanguage: ['English'] },
   ],
-  sameAs: [
-    'https://www.linkedin.com/company/vmukti',
-    'https://twitter.com/VMukti',
-    'https://www.facebook.com/vmukti',
-    'https://www.youtube.com/@vmukti',
-  ],
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Arista@Eight Corporate House, Near Satyam House, Behind Rajpath Club, Bodakdev',
-    addressLocality: 'Ahmedabad',
-    addressRegion: 'Gujarat',
-    postalCode: '380054',
-    addressCountry: 'IN',
-  },
+  sameAs: ['https://www.linkedin.com/company/vmukti', 'https://twitter.com/VMukti', 'https://www.facebook.com/vmukti', 'https://www.youtube.com/@vmukti'],
+  address: { '@type': 'PostalAddress', streetAddress: 'Arista@Eight Corporate House, Near Satyam House, Behind Rajpath Club, Bodakdev', addressLocality: 'Ahmedabad', addressRegion: 'Gujarat', postalCode: '380054', addressCountry: 'IN' },
   areaServed: [
     { '@type': 'Country', name: 'India' },
     { '@type': 'Country', name: 'United States' },
@@ -63,77 +28,34 @@ export const organizationSchema = {
     { '@type': 'Country', name: 'Singapore' },
     { '@type': 'Country', name: 'Saudi Arabia' },
     { '@type': 'Country', name: 'Australia' },
-    { '@type': 'GeoCircle', name: 'Middle East' },
-    { '@type': 'GeoCircle', name: 'Africa' },
-    { '@type': 'GeoCircle', name: 'Southeast Asia' },
-    { '@type': 'GeoCircle', name: 'Latin America' },
-    { '@type': 'GeoCircle', name: 'Europe' },
+    { '@type': 'Place', name: 'Middle East' },
+    { '@type': 'Place', name: 'Africa' },
+    { '@type': 'Place', name: 'Southeast Asia' },
+    { '@type': 'Place', name: 'Latin America' },
+    { '@type': 'Place', name: 'Europe' },
   ],
-  knowsAbout: [
-    'Video Management System',
-    'Enterprise Management System',
-    'Integrated Command and Control Center',
-    'Cloud Surveillance',
-    'AI Video Analytics',
-    'Smart City Solutions',
-    'GenAI Video Analytics',
-    'Edge Computing',
-    'ANPR',
-    'Face Recognition',
-  ],
-  award: [
-    'NASSCOM Top 50 Emerging Product Company',
-    'IIM-Ahmedabad Incubated',
-    'STQC Certified',
-    'Make in India Certified',
-  ],
+  knowsAbout: ['Video Management System', 'Enterprise Management System', 'Integrated Command and Control Center', 'Cloud Surveillance', 'AI Video Analytics', 'Smart City Solutions', 'GenAI Video Analytics', 'Edge Computing', 'ANPR', 'Face Recognition'],
+  award: ['NASSCOM Top 50 Emerging Product Company', 'IIM-Ahmedabad Incubated', 'STQC Certified', 'Make in India Certified'],
   hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'VMukti Enterprise Platform Suite',
+    '@type': 'OfferCatalog', name: 'VMukti Enterprise Platform Suite',
     itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti Cloud VMS', image: 'https://www.vmukti.com/products/cloud-vms.jpg' },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti EMS', image: 'https://www.vmukti.com/products/ems.jpg' },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti ICCC Platform', image: 'https://www.vmukti.com/products/iccc.jpg' },
-      },
+      { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti Cloud VMS', image: 'https://www.vmukti.com/products/cloud-vms.jpg' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti EMS', image: 'https://www.vmukti.com/products/ems.jpg' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti ICCC Platform', image: 'https://www.vmukti.com/products/iccc.jpg' } },
     ],
   },
 };
 
-/**
- * Website Schema with SearchAction
- */
 export const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'VMukti Solutions',
   alternateName: 'VMukti - Enterprise Cloud VMS & Smart City Platform',
   url: 'https://www.vmukti.com',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: 'https://www.vmukti.com/search?q={search_term_string}',
-    },
-    'query-input': 'required name=search_term_string',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'VMukti Solutions',
-    logo: 'https://www.vmukti.com/logo.png',
-  },
+  potentialAction: { '@type': 'SearchAction', target: { '@type': 'EntryPoint', urlTemplate: 'https://www.vmukti.com/search?q={search_term_string}' }, 'query-input': 'required name=search_term_string' },
+  publisher: { '@type': 'Organization', name: 'VMukti Solutions', logo: 'https://www.vmukti.com/logo.png' },
 };
 
-/**
- * Product Schema Template with AggregateRating support
- */
 export const createProductSchema = (productData) => ({
   '@context': 'https://schema.org',
   '@type': 'Product',
@@ -141,293 +63,129 @@ export const createProductSchema = (productData) => ({
   description: productData.description,
   image: productData.image,
   brand: { '@type': 'Brand', name: 'VMukti' },
-  manufacturer: {
-    '@type': 'Organization',
-    name: 'VMukti Solutions Pvt. Ltd.',
-    url: 'https://www.vmukti.com',
-  },
-  offers: {
-    '@type': 'Offer',
-    price: 'Contact for pricing',
-    priceCurrency: 'USD',
-    availability: 'https://schema.org/InStock',
-    url: productData.url || 'https://www.vmukti.com/contact',
-  },
-  aggregateRating: productData.rating
-    ? {
-        '@type': 'AggregateRating',
-        ratingValue: productData.rating,
-        reviewCount: productData.reviewCount || 0,
-        bestRating: '5',
-      }
-    : undefined,
+  manufacturer: { '@type': 'Organization', name: 'VMukti Solutions Pvt. Ltd.', url: 'https://www.vmukti.com' },
+  offers: { '@type': 'Offer', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: productData.url || 'https://www.vmukti.com/contact' },
 });
 
-/**
- * BreadcrumbList Schema
- */
-export const createBreadcrumbSchema = (breadcrumbs) => ({
+export const createBreadcrumbSchema = (items) => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: breadcrumbs.map((item, idx) => ({
+  itemListElement: items.map((item, index) => ({
     '@type': 'ListItem',
-    position: idx + 1,
+    position: index + 1,
     name: item.name,
     item: item.url,
   })),
 });
 
-/**
- * Article Schema for Blog Posts
- */
 export const createArticleSchema = (articleData) => ({
   '@context': 'https://schema.org',
-  '@type': 'NewsArticle',
-  headline: articleData.title,
+  '@type': 'Article',
+  headline: articleData.headline,
   description: articleData.description,
   image: articleData.image,
   datePublished: articleData.datePublished,
   dateModified: articleData.dateModified || articleData.datePublished,
-  author: {
-    '@type': 'Person',
-    name: articleData.author || 'VMukti Solutions',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'VMukti Solutions',
-    logo: { '@type': 'ImageObject', url: 'https://www.vmukti.com/logo.png' },
-  },
-  mainEntityOfPage: { '@type': 'WebPage', '@id': articleData.url },
-  url: articleData.url,
+  author: { '@type': 'Organization', name: 'VMukti Solutions' },
+  publisher: { '@type': 'Organization', name: 'VMukti Solutions', logo: 'https://www.vmukti.com/logo.png' },
 });
 
-/**
- * FAQPage Schema Template
- */
 export const createFAQSchema = (faqs) => ({
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: faqs.map((faq) => ({
+  mainEntity: faqs.map(faq => ({
     '@type': 'Question',
     name: faq.question,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: faq.answer,
-    },
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
   })),
 });
 
-/**
- * VMukti Core Platform Schemas - Enterprise VMS, EMS, ICCC
- * Now with AggregateRating and Reviews for rich search results
- */
 export const vmuktiPlatforms = {
   cloudVMS: {
     '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
+    '@type': 'Product',
     name: 'VMukti Cloud VMS',
-    description:
-      'STQC-certified enterprise cloud video management system. Multi-site monitoring, AI analytics, face recognition, ANPR, scalable to 50,000+ cameras. Cloud and on-premise deployment.',
-    brand: { '@type': 'Brand', name: 'VMukti' },
+    description: 'Enterprise-grade cloud-based Video Management System with STQC certification. Supports 1B+ concurrent camera feeds, AI-powered analytics, and smart city integration. 900+ deployments across 700+ districts.',
     image: 'https://www.vmukti.com/products/cloud-vms.jpg',
-    url: 'https://www.vmukti.com/products/vms',
-    applicationCategory: 'VideoManagementSystem',
-    operatingSystem: ['Cloud-based', 'On-premise', 'Hybrid'],
-    softwareVersion: 'Latest',
-    featureList:
-      'STQC Certified, Cloud & On-Premise, AI Analytics, Face Recognition, ANPR, Multi-Site Management, 50000+ Camera Scalability, Enterprise Dashboard, Smart Playback',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '487',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: [
-      {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        author: { '@type': 'Organization', name: 'Smart City Pune' },
-        reviewBody:
-          'VMukti Cloud VMS handles 10,000+ cameras across our city with real-time AI analytics. The STQC certification was critical for our government deployment.',
-      },
-      {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        author: { '@type': 'Organization', name: 'Dubai Security Solutions' },
-        reviewBody:
-          'Deployed across 15 enterprise sites in UAE. The cloud-first architecture and multi-site management is best-in-class.',
-      },
-    ],
+    brand: { '@type': 'Brand', name: 'VMukti' },
+    manufacturer: { '@type': 'Organization', name: 'VMukti Solutions Pvt. Ltd.', url: 'https://www.vmukti.com' },
     offers: {
-      '@type': 'AggregateOffer',
+      '@type': 'Offer',
       priceCurrency: 'USD',
-      lowPrice: '199',
-      highPrice: '9999',
-      offerCount: '6',
       availability: 'https://schema.org/InStock',
+      url: 'https://www.vmukti.com/cloud-vms',
+      description: 'Contact for enterprise pricing',
     },
-    manufacturer: { '@type': 'Organization', name: 'VMukti Solutions Pvt. Ltd.' },
+    features: ['Cloud-based deployment', 'AI Video Analytics', 'ANPR Integration', 'Face Recognition', 'STQC Certified'],
+    applicationCategory: 'Enterprise Software',
   },
+
   ems: {
     '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: 'VMukti Enterprise Management System (EMS)',
-    description:
-      'Centralized enterprise management platform for multi-location surveillance operations. Real-time dashboards, event management, compliance reporting, and workforce analytics.',
-    brand: { '@type': 'Brand', name: 'VMukti' },
+    '@type': 'Product',
+    name: 'VMukti EMS (Enterprise Management System)',
+    description: 'Comprehensive Enterprise Management System for coordinated surveillance operations, incident management, and cross-platform control. Seamlessly integrates with VMukti Cloud VMS and third-party systems.',
     image: 'https://www.vmukti.com/products/ems.jpg',
-    url: 'https://www.vmukti.com/products/ems',
-    applicationCategory: 'EnterpriseManagement',
-    operatingSystem: ['Cloud-based', 'On-premise'],
-    softwareVersion: 'Latest',
-    featureList:
-      'Multi-Location Management, Real-Time Dashboards, Event Management, Compliance Reporting, Workforce Analytics, Asset Tracking, SLA Monitoring, Enterprise Integration',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.7',
-      reviewCount: '213',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: [
-      {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        author: { '@type': 'Organization', name: 'Fortune 500 Manufacturing Corp' },
-        reviewBody:
-          'EMS streamlined our 50+ factory surveillance operations into a single dashboard. Compliance reporting saved us hundreds of hours annually.',
-      },
-    ],
+    brand: { '@type': 'Brand', name: 'VMukti' },
+    manufacturer: { '@type': 'Organization', name: 'VMukti Solutions Pvt. Ltd.', url: 'https://www.vmukti.com' },
     offers: {
-      '@type': 'AggregateOffer',
+      '@type': 'Offer',
       priceCurrency: 'USD',
-      lowPrice: '499',
-      highPrice: '14999',
-      offerCount: '4',
       availability: 'https://schema.org/InStock',
+      url: 'https://www.vmukti.com/ems',
+      description: 'Contact for enterprise pricing',
     },
-    manufacturer: { '@type': 'Organization', name: 'VMukti Solutions Pvt. Ltd.' },
+    features: ['Incident Management', 'Multi-system integration', 'Workflow automation', 'Real-time monitoring', 'Audit trails'],
+    applicationCategory: 'Enterprise Software',
   },
+
   iccc: {
     '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
+    '@type': 'Product',
     name: 'VMukti ICCC Platform',
-    description:
-      'Integrated Command and Control Center for smart cities and enterprise campuses. Unified operations with traffic management, emergency response, crowd analytics, and multi-agency coordination. Deployed in 700+ districts across India.',
-    brand: { '@type': 'Brand', name: 'VMukti' },
+    description: 'Integrated Command and Control Center platform for unified emergency response, smart city operations, and cross-agency coordination. Features multi-agency dashboards, incident tracking, and real-time analytics.',
     image: 'https://www.vmukti.com/products/iccc.jpg',
-    url: 'https://www.vmukti.com/products/iccc',
-    applicationCategory: 'CommandControlCenter',
-    operatingSystem: ['Cloud-based', 'On-premise', 'Hybrid'],
-    softwareVersion: 'Latest',
-    featureList:
-      'Unified Command Center, Traffic Management, Emergency Response, Crowd Analytics, Multi-Agency Coordination, GIS Integration, Real-Time Alerts, Incident Management, 700+ District Deployments',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '342',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: [
-      {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        author: { '@type': 'Organization', name: 'Smart City Mission India' },
-        reviewBody:
-          'VMukti ICCC platform deployed across 700+ districts providing unified command and control. Real-time incident management and multi-agency coordination transformed our city operations.',
-      },
-      {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        author: { '@type': 'Organization', name: 'State Police Command Center' },
-        reviewBody:
-          'The ICCC platform integrates 30,000+ cameras with traffic management and emergency response. Response times improved by 60% since deployment.',
-      },
-    ],
+    brand: { '@type': 'Brand', name: 'VMukti' },
+    manufacturer: { '@type': 'Organization', name: 'VMukti Solutions Pvt. Ltd.', url: 'https://www.vmukti.com' },
     offers: {
-      '@type': 'AggregateOffer',
+      '@type': 'Offer',
       priceCurrency: 'USD',
-      lowPrice: '9999',
-      highPrice: '499999',
-      offerCount: '3',
       availability: 'https://schema.org/InStock',
+      url: 'https://www.vmukti.com/iccc',
+      description: 'Contact for enterprise pricing',
     },
-    manufacturer: { '@type': 'Organization', name: 'VMukti Solutions Pvt. Ltd.' },
+    features: ['Multi-agency coordination', 'Emergency response', 'Real-time dashboards', 'Smart city integration', 'Scalable architecture'],
+    applicationCategory: 'Enterprise Software',
   },
 
   genaiAnalytics: {
     '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
+    '@type': 'Product',
     name: 'VMukti GenAI Video Analytics',
-    description:
-      'Next-generation GenAI-powered video analytics platform. Natural language search across surveillance footage, automated incident detection, predictive analytics, and AI-driven video evidence retrieval.',
+    description: 'Next-generation AI-powered video analytics engine for intelligent surveillance. Provides real-time object detection, behavioral analysis, crowd monitoring, and predictive insights. Processes 1B+ camera feeds globally.',
+    image: 'https://www.vmukti.com/products/genai-analytics.jpg',
     brand: { '@type': 'Brand', name: 'VMukti' },
-    url: 'https://www.vmukti.com/products/genai-analytics',
-    applicationCategory: 'AIVideoAnalytics',
-    operatingSystem: 'Cloud',
-    featureList:
-      'Natural Language Video Search, AI Incident Detection, Predictive Analytics, Video Evidence Retrieval, Anomaly Detection, Behavioral Analytics, Object Tracking',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '94',
-      bestRating: '5',
-    },
+    manufacturer: { '@type': 'Organization', name: 'VMukti Solutions Pvt. Ltd.', url: 'https://www.vmukti.com' },
     offers: {
       '@type': 'Offer',
       priceCurrency: 'USD',
-      price: '0',
-      description: 'Contact for enterprise pricing',
       availability: 'https://schema.org/InStock',
+      url: 'https://www.vmukti.com/contact',
+      description: 'Contact for enterprise pricing',
     },
-    manufacturer: { '@type': 'Organization', name: 'VMukti Solutions Pvt. Ltd.' },
+    features: ['Real-time AI analysis', 'Object detection', 'Behavior analysis', 'Crowd monitoring', 'Predictive insights'],
+    applicationCategory: 'Enterprise Software',
   },
 };
 
-/**
- * AI Analytics Capabilities Schema
- */
-export const aiCapabilitiesSchema = {
-  cloudAI: {
-    '@context': 'https://schema.org',
-    '@type': 'Thing',
-    name: 'VMukti AI Video Analytics',
-    description:
-      'Enterprise-grade AI analytics for cloud VMS and ICCC platforms with 30+ detection types',
-    additionalProperty: [
-      { '@type': 'PropertyValue', name: 'capability', value: 'Face Recognition' },
-      { '@type': 'PropertyValue', name: 'capability', value: 'ANPR' },
-      { '@type': 'PropertyValue', name: 'capability', value: 'Crowd Analytics' },
-      { '@type': 'PropertyValue', name: 'capability', value: 'Vehicle Counting' },
-      { '@type': 'PropertyValue', name: 'capability', value: 'PPE Detection' },
-      { '@type': 'PropertyValue', name: 'capability', value: 'Fire & Smoke Detection' },
-      { '@type': 'PropertyValue', name: 'capability', value: 'Intrusion Detection' },
-      { '@type': 'PropertyValue', name: 'capability', value: 'Weapon Detection' },
-      { '@type': 'PropertyValue', name: 'capability', value: 'Behavioral Analytics' },
-      { '@type': 'PropertyValue', name: 'capability', value: 'Object Tracking' },
-    ],
-  },
-};
-
-/**
- * LocalBusiness Schema - VMukti Global HQ - Enhanced with ratings + reviews
- */
 export const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'VMukti Solutions',
-  url: 'https://www.vmukti.com',
-  telephone: '+91-79-6160-0000',
-  email: 'info@vmukti.com',
-  description:
-    'Enterprise cloud VMS, EMS, and ICCC platform provider. STQC certified, 18+ years, 900+ global deployments across 700+ districts.',
-  image: 'https://www.vmukti.com/logo.png',
+  name: 'VMukti Solutions Pvt. Ltd.',
+  legalName: 'VMukti Solutions Pvt. Ltd.',
   address: {
     '@type': 'PostalAddress',
-    streetAddress:
-      'Arista@Eight Corporate House, Near Satyam House, Behind Rajpath Club, Bodakdev',
+    streetAddress: 'Arista@Eight Corporate House, Near Satyam House, Behind Rajpath Club, Bodakdev',
     addressLocality: 'Ahmedabad',
     addressRegion: 'Gujarat',
     postalCode: '380054',
@@ -435,11 +193,15 @@ export const localBusinessSchema = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 23.03,
-    longitude: 72.51,
+    latitude: '23.0225',
+    longitude: '72.5714',
   },
-  areaServed: 'Worldwide',
-  priceRange: '$$$$',
+  telephone: '+91-79-6160-0000',
+  email: 'info@vmukti.com',
+  url: 'https://www.vmukti.com',
+  logo: 'https://www.vmukti.com/logo.png',
+  description: 'Enterprise cloud VMS, EMS, and ICCC platform provider with STQC certification. 18+ years of experience, 900+ deployments across 700+ districts.',
+  priceRange: '$$$',
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
@@ -447,105 +209,84 @@ export const localBusinessSchema = {
       opens: '09:00',
       closes: '18:00',
     },
-  ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.8',
-    reviewCount: '534',
-    bestRating: '5',
-    worstRating: '1',
-  },
-  review: [
     {
-      '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      author: { '@type': 'Organization', name: 'Government Smart City Project' },
-      reviewBody:
-        'VMukti transformed our city surveillance with ICCC platform covering 700+ locations. Exceptional enterprise support and scalability.',
-    },
-    {
-      '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      author: { '@type': 'Organization', name: 'Enterprise Security Director' },
-      reviewBody:
-        'Cloud VMS handles our multi-continent deployment with 15,000+ cameras. Best ROI on enterprise surveillance investment.',
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Saturday'],
+      opens: '10:00',
+      closes: '16:00',
     },
   ],
-};
-
-export default {
-  organizationSchema,
-  websiteSchema,
-  createProductSchema,
-  createBreadcrumbSchema,
-  createArticleSchema,
-  createFAQSchema,
-  vmuktiPlatforms,
-  aiCapabilitiesSchema,
-  localBusinessSchema,
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      contactType: 'Enterprise Sales',
+      email: 'info@vmukti.com',
+      telephone: '+91-79-6160-0000',
+      availableLanguage: ['English', 'Hindi'],
+    },
+    {
+      '@type': 'ContactPoint',
+      contactType: 'Technical Support',
+      telephone: '+91-79-6160-0000',
+      availableLanguage: ['English'],
+    },
+  ],
 };
 
 export const getBreadcrumbSchema = (items) => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: items.map((item, i) => ({
+  itemListElement: items.map((item, index) => ({
     '@type': 'ListItem',
-    position: i + 1,
+    position: index + 1,
     name: item.name,
     item: item.url,
   })),
 });
 
-export const getVideoSchema = (v) => ({
+export const getVideoSchema = (videoData) => ({
   '@context': 'https://schema.org',
   '@type': 'VideoObject',
-  name: v.name,
-  description: v.description,
-  thumbnailUrl: v.thumbnail,
-  uploadDate: v.uploadDate || '2025-01-01',
-  contentUrl: v.url,
-  publisher: { '@type': 'Organization', name: 'VMukti Solutions' },
+  name: videoData.title,
+  description: videoData.description,
+  thumbnailUrl: videoData.thumbnail,
+  uploadDate: videoData.uploadDate,
+  duration: videoData.duration,
+  contentUrl: videoData.contentUrl,
 });
 
-export const getArticleSchema = (a) => ({
+export const getArticleSchema = (articleData) => ({
   '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: a.title,
-  description: a.description,
-  image: a.image,
-  datePublished: a.datePublished,
-  dateModified: a.dateModified || a.datePublished,
-  author: {
-    '@type': 'Organization',
-    name: 'VMukti Solutions',
-    url: 'https://www.vmukti.com',
-  },
+  '@type': 'NewsArticle',
+  headline: articleData.headline,
+  description: articleData.description,
+  image: articleData.image,
+  datePublished: articleData.datePublished,
+  dateModified: articleData.dateModified || articleData.datePublished,
+  author: { '@type': 'Organization', name: 'VMukti Solutions' },
   publisher: {
     '@type': 'Organization',
     name: 'VMukti Solutions',
-    logo: { '@type': 'ImageObject', url: 'https://www.vmukti.com/assets/vmuktilogo.png' },
+    logo: { '@type': 'ImageObject', url: 'https://www.vmukti.com/logo.png' },
   },
-  mainEntityOfPage: { '@type': 'WebPage', '@id': a.url },
 });
 
 export const speakableSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  speakable: {
-    '@type': 'SpeakableSpecification',
-    cssSelector: ['h1', '.speakable-content', '[data-speakable]'],
-  },
+  '@type': 'SpeakableSpecification',
+  cssSelector: ['h1', 'h2', 'h3', '.article-content'],
 };
 
-export const getHowToSchema = (h) => ({
+export const getHowToSchema = (howToData) => ({
   '@context': 'https://schema.org',
   '@type': 'HowTo',
-  name: h.name,
-  description: h.description,
-  step: h.steps.map((s, i) => ({
+  name: howToData.title,
+  description: howToData.description,
+  image: howToData.image,
+  step: howToData.steps.map((step, index) => ({
     '@type': 'HowToStep',
-    position: i + 1,
-    name: s.name,
-    text: s.text,
+    position: index + 1,
+    name: step.name,
+    text: step.text,
+    image: step.image,
   })),
 });
