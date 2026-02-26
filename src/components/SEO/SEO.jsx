@@ -18,6 +18,17 @@ import { Helmet } from 'react-helmet-async';
  * - article (object): Article-specific data (author, publishedTime, modifiedTime)
  */
 
+// Regional hreflang configuration for international targeting
+const REGIONAL_HREFLANG = [
+  { lang: 'en-IN', path: '/in/video-surveillance-solutions' },
+  { lang: 'en-US', path: '/usa/video-surveillance-solutions' },
+  { lang: 'en-GB', path: '/uk/video-surveillance-solutions' },
+  { lang: 'en-AE', path: '/uae/video-surveillance-solutions' },
+  { lang: 'en-SG', path: '/sg/video-surveillance-solutions' },
+  { lang: 'en-SA', path: '/sa/video-surveillance-solutions' },
+  { lang: 'en-AU', path: '/au/video-surveillance-solutions' },
+];
+
 const SEO = ({
   title,
   description,
@@ -33,16 +44,16 @@ const SEO = ({
   const siteUrl = 'https://www.vmukti.com';
 
   // Ensure title includes site name
-  const fullTitle = title && title.includes('VMukti') ? title : `${title} | ${siteName}`;
+  const fullTitle = title && title.includes('VMukti')
+    ? title
+    : `${title} | ${siteName}`;
 
   // Fallback description if not provided
-  const finalDescription =
-    description ||
+  const finalDescription = description ||
     'VMukti Solutions: STQC-certified enterprise cloud VMS, EMS, and ICCC platform. 900+ global deployments, 1B+ camera feeds processed.';
 
   // Default keywords if not provided
-  const finalKeywords =
-    keywords ||
+  const finalKeywords = keywords ||
     'enterprise cloud VMS, video management system, ICCC platform, EMS, STQC certified, global surveillance';
 
   // Ensure absolute URL for og:image
@@ -88,9 +99,12 @@ const SEO = ({
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="mobile-web-app-capable" content="yes" />
 
-      {/* Global Targeting - hreflang */}
+      {/* Global Targeting - hreflang for all regional markets */}
       <link rel="alternate" hrefLang="en" href={finalCanonicalUrl} />
       <link rel="alternate" hrefLang="x-default" href={finalCanonicalUrl} />
+      {REGIONAL_HREFLANG.map(({ lang, path }) => (
+        <link key={lang} rel="alternate" hrefLang={lang} href={`${siteUrl}${path}`} />
+      ))}
 
       {/* Article-specific tags */}
       {article && (
@@ -102,11 +116,9 @@ const SEO = ({
             <meta property="article:modified_time" content={article.modifiedTime} />
           )}
           {article.section && <meta property="article:section" content={article.section} />}
-          {article.tags &&
-            Array.isArray(article.tags) &&
-            article.tags.map((tag, idx) => (
-              <meta key={idx} property="article:tag" content={tag} />
-            ))}
+          {article.tags && Array.isArray(article.tags) && article.tags.map((tag, idx) => (
+            <meta key={idx} property="article:tag" content={tag} />
+          ))}
         </>
       )}
 
