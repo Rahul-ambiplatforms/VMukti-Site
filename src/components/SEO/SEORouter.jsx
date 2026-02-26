@@ -29,16 +29,44 @@ const SEORouter = () => {
     if (clean === 'blog') return 'blog';
     if (clean.startsWith('blog/')) return 'blog';
     if (clean === 'solution') return 'solutions';
-    if (clean.startsWith('solution/')) return 'solutions';
-    if (clean === 'industry') return 'industries';
     if (clean === 'book-a-demo') return 'contact';
 
-    // Industry pages
+    // Solution/Product pages - specific mappings
+    if (clean.startsWith('solution/')) {
+      const solution = clean.replace('solution/', '');
+      const solutionMap = {
+        'video-management-system': 'productVMS',
+        'vms': 'productVMS',
+        'cloud-vms': 'productVMS',
+        'enterprise-management-system': 'productEMS',
+        'ems': 'productEMS',
+        'iccc': 'productICCC',
+        'command-control-center': 'productICCC',
+        'cloudai': 'solutionCloudAI',
+        'cloud-ai': 'solutionCloudAI',
+        'genai': 'solutionGenAI',
+        'gen-ai': 'solutionGenAI',
+        'generative-ai': 'solutionGenAI',
+        'visualbot': 'solutionVisualBot',
+        'visual-bot': 'solutionVisualBot',
+        'live-streaming': 'solutionLiveStreaming',
+        'livestreaming': 'solutionLiveStreaming',
+        'face-surveillance': 'solutionFSV',
+        'fsv': 'solutionFSV',
+        'face-recognition': 'solutionFSV',
+      };
+      return solutionMap[solution] || 'solutions';
+    }
+
+    if (clean === 'industry') return 'industries';
+
+    // Industry pages - expanded mappings
     if (clean.startsWith('industry/')) {
       const industry = clean.replace('industry/', '');
       const industryMap = {
         'banking': 'industryBanking',
         'finance': 'industryBanking',
+        'banking-finance': 'industryBanking',
         'healthcare': 'industryHealthcare',
         'hospital': 'industryHealthcare',
         'smart-city': 'industrySmartCity',
@@ -50,11 +78,29 @@ const SEORouter = () => {
         'government': 'industryGovernment',
         'defense': 'industryDefense',
         'military': 'industryDefense',
+        'warehouse': 'industryWarehouse',
+        'warehousing': 'industryWarehouse',
+        'logistics': 'industryLogistics',
+        'education': 'industryEducation',
+        'school': 'industryEducation',
+        'university': 'industryEducation',
+        'election': 'industryElection',
+        'transportation': 'industryTransportation',
+        'transport': 'industryTransportation',
+        'pharma': 'industryPharma',
+        'pharmaceutical': 'industryPharma',
+        'construction': 'industryConstruction',
+        'hospitality': 'industryHospitality',
+        'hotel': 'industryHospitality',
+        'sports-entertainment': 'industrySports',
+        'sports': 'industrySports',
+        'enterprise': 'industryEnterprise',
+        'retail': 'industryRetail',
       };
       return industryMap[industry] || 'industries';
     }
 
-    // Product/platform pages
+    // Product/platform pages (legacy URL patterns)
     if (clean.includes('vms')) return 'productVMS';
     if (clean.includes('ems')) return 'productEMS';
     if (clean.includes('iccc')) return 'productICCC';
@@ -63,9 +109,14 @@ const SEORouter = () => {
     // Check for expansion page routes: /:category/:pageSlug patterns
     const parts = clean.split('/');
     if (parts.length === 2) {
-      const categories = ['usa', 'uk', 'india', 'canada', 'australia', 'technology', 'solutions', 'compare', 'resources'];
+      const categories = [
+        'usa', 'uk', 'india', 'canada', 'australia',
+        'uae', 'sg', 'sa', 'in',
+        'technology', 'solutions', 'compare', 'resources'
+      ];
       if (categories.includes(parts[0])) return null;
     }
+
     // Check for industry SEO pages (not standard industry dashboard pages)
     if (clean.startsWith('industry/') && clean.includes('-')) return null;
 
