@@ -246,7 +246,7 @@ export const localBusinessSchema = {
     latitude: '23.0225',
     longitude: '72.5714',
   },
-  telephone: '+91-79-6160-0000',
+  telephone: '+91-968-777-0000',
   email: 'info@vmukti.com',
   priceRange: '$$$',
   contactPoint: [
@@ -254,12 +254,12 @@ export const localBusinessSchema = {
       '@type': 'ContactPoint',
       contactType: 'Enterprise Sales',
       email: 'info@vmukti.com',
-      telephone: '+91-79-6160-0000',
+      telephone: '+91-968-777-0000',
     },
     {
       '@type': 'ContactPoint',
       contactType: 'Technical Support',
-      telephone: '+91-79-6160-0000',
+      telephone: '+91-968-777-0000',
     },
   ],
 };
@@ -292,7 +292,7 @@ export const organizationSchema = {
       '@type': 'ContactPoint',
       contactType: 'Enterprise Sales',
       email: 'info@vmukti.com',
-      telephone: '+91-79-6160-0000',
+      telephone: '+91-968-777-0000',
       url: 'https://www.vmukti.com/contact',
       areaServed: 'Worldwide',
       availableLanguage: ['English', 'Hindi'],
@@ -300,7 +300,7 @@ export const organizationSchema = {
     {
       '@type': 'ContactPoint',
       contactType: 'Technical Support',
-      telephone: '+91-79-6160-0000',
+      telephone: '+91-968-777-0000',
       areaServed: 'Worldwide',
       availableLanguage: ['English'],
     },
