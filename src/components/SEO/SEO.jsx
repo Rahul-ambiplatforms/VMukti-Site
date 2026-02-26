@@ -18,15 +18,15 @@ import { Helmet } from 'react-helmet-async';
  * - article (object): Article-specific data (author, publishedTime, modifiedTime)
  */
 
-// Regional hreflang configuration for international targeting
+// Only USA and UK have dedicated regional pages; others point to homepage until regional pages are created
 const REGIONAL_HREFLANG = [
-  { lang: 'en-IN', path: '/in/video-surveillance-solutions' },
+  { lang: 'en-IN', path: '/' },
   { lang: 'en-US', path: '/usa/video-surveillance-solutions' },
   { lang: 'en-GB', path: '/uk/video-surveillance-solutions' },
-  { lang: 'en-AE', path: '/uae/video-surveillance-solutions' },
-  { lang: 'en-SG', path: '/sg/video-surveillance-solutions' },
-  { lang: 'en-SA', path: '/sa/video-surveillance-solutions' },
-  { lang: 'en-AU', path: '/au/video-surveillance-solutions' },
+  { lang: 'en-AE', path: '/' },
+  { lang: 'en-SG', path: '/' },
+  { lang: 'en-SA', path: '/' },
+  { lang: 'en-AU', path: '/' },
 ];
 
 const SEO = ({
