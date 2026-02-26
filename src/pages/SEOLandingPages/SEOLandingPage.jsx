@@ -149,7 +149,7 @@ const CTASection = ({ cta }) => (
       </Text>
       <Button
         as={RouterLink}
-        to={(cta.buttonLink || cta.link)}
+        to={(cta?.buttonLink || cta?.link || "/book-a-demo")}
         size="lg"
         colorScheme="orange"
         px={10}
@@ -160,7 +160,7 @@ const CTASection = ({ cta }) => (
         _hover={{ transform: 'scale(1.05)' }}
         transition="all 0.2s"
       >
-        {(cta.buttonText || cta.text)}
+        {(cta?.buttonText || cta?.text || "Book a Demo")}
       </Button>
     </Container>
   </Box>
@@ -383,9 +383,9 @@ const SEOLandingPage = () => {
               {pageData.heroDescription}
             </Text>
             <HStack spacing={4} pt={4} flexWrap="wrap">
-              <Button as={RouterLink} to={(pageData.cta.buttonLink || pageData.cta.link)} size="lg" colorScheme="orange" px={8}
+              <Button as={RouterLink} to={(pageData?.cta?.buttonLink || pageData?.cta?.link || "/book-a-demo")} size="lg" colorScheme="orange" px={8}
                 borderRadius="full" fontWeight="700" _hover={{ transform: 'scale(1.05)' }} transition="all 0.2s">
-                {(pageData.cta.buttonText || pageData.cta.text)}
+                {(pageData?.cta?.buttonText || pageData?.cta?.text || "Book a Demo")}
               </Button>
               <Button as={RouterLink} to="/solution" size="lg" variant="outline" color="white"
                 borderColor="white" px={8} borderRadius="full" _hover={{ bg: 'whiteAlpha.200' }}>
@@ -410,7 +410,7 @@ const SEOLandingPage = () => {
 
 
       {/* CTA Section */}
-      <CTASection cta={pageData.cta} />
+      <CTASection cta={pageData?.cta} />
     </>
   );
 };
