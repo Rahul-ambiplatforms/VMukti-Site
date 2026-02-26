@@ -1,734 +1,465 @@
-  const schemaData = {
-    homepage: [
-      // WebPage Schema
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        name: "Cloud Video Surveillance Solutions In USA | VMukti Solutions",
-        description:
-          "We offers flexible cloud video surveillance solutions for USA businesses. Add cloud intelligence to your current CCTV infrastructure effortlessly.",
-        url: "https://www.vmukti.com/",
-        datePublished: "2006-11-10",
-        dateModified: "2026-02-20",
-        publisher: {
-          "@type": "Organization",
-          name: "VMukti Solutions",
-          url: "https://www.vmukti.com/",
-          logo: {
-            "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
-            width: 25,
-            height: 6,
-          },
-          sameAs: [
-            "https://www.facebook.com/VMuktisolutions",
-            "https://www.instagram.com/vmuktisolutions/",
-            "https://www.linkedin.com/company/vmuktisolutions",
-            "https://x.com/VMukti",
-            "https://www.youtube.com/@VMukti1",
-          ],
-        },
-        primaryImageOfPage: {
-          "@type": "ImageObject",
-          url: "https://www.vmukti.com/assets/tablet1.webp",
-          width: 174,
-          height: 123,
-          caption: "Computer Vision & Surveillance Solution",
-        },
-        inLanguage: "en-US",
-      },
+/**
+ * Schema Data Configuration for VMukti Solutions
+ * Structured data for SEO optimization across site pages
+ */
 
-      // Organization Schema
-      {
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        name: "VMukti Solutions",
-        url: "https://www.vmukti.com/",
-        logo: "https://www.vmukti.com/assets/vmuktilogo.png",
-        contactPoint: {
-          "@type": "ContactPoint",
-          telephone: "+91-968-777-0000",
-          email: "contact@vmukti.com",
-          contactType: "Sales",
-          areaServed: "Global",
-        },
-        sameAs: [
-          "https://www.facebook.com/VMuktisolutions",
-          "https://www.instagram.com/vmuktisolutions/",
-          "https://www.linkedin.com/company/vmuktisolutions",
-          "https://x.com/VMukti",
-          "https://www.youtube.com/@VMukti1",
-        ],
-        address: {
-          "@type": "PostalAddress",
-          streetAddress:
-            "7, Arista@Eight Corporate House, Near Satyam House, Behind Rajpath Club, Bodakdev",
-          addressLocality: "Ahmedabad",
-          addressRegion: "Gujarat",
-          postalCode: "380054",
-          addressCountry: "IN",
-        },
-        foundingDate: "2007",
-        description:
-          "VMukti Solutions Pvt. Ltd. provides smart video surveillance across India for 16+ years with over 900+ projects across varied domains. Powered by EdgeAI, CloudAI and GenAI technologies, We offer complete end-to-end solutions including Live Webcasting, VMS, EMS, ICCC, Custom CCTV Cameras, VisualBot APIs, and Flying Squad Vehicle Monitoring. Our in-house R&D develops tailored innovations for unique client needs. We support diverse industries, meeting needs and driving success across sectors. Using Computer Vision models we provide proactive management and smart Video Monitoring. All our offerings comply with standards like CE, ISO, FCC, and RoHS. With reliability, and innovation, we are redefining the future of intelligent surveillance.",
-      },
+export const homepageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'VMukti Solutions - Enterprise Cloud VMS & Smart City Platform',
+  description: 'VMukti is a leading provider of enterprise cloud VMS, EMS, and ICCC platforms with STQC certification. 18+ years, 900+ deployments, 1B+ camera feeds processed globally.',
+  url: 'https://www.vmukti.com',
+  primaryImageOfPage: {
+    '@type': 'ImageObject',
+    url: 'https://www.vmukti.com/assets/tablet1.webp',
+    width: '1200',
+    height: '630',
+  },
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'VMukti Solutions',
+    url: 'https://www.vmukti.com',
+  },
+};
 
-      // LocalBusiness Schema
+export const solutionpageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'VMukti Solutions & Products',
+  description: 'Enterprise video management, incident management, and command center solutions for smart cities and surveillance operations.',
+  url: 'https://www.vmukti.com/solutions',
+  primaryImageOfPage: {
+    '@type': 'ImageObject',
+    url: 'https://www.vmukti.com/assets/solutions-hero.webp',
+    width: '1200',
+    height: '630',
+  },
+  breadcrumb: {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
       {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        name: "VMukti Solutions",
-        address: {
-          "@type": "PostalAddress",
-          addressCountry: "IN",
-          streetAddress:
-            "7, Arista@Eight Corporate House, Near Satyam House, Behind Rajpath Club, Bodakdev",
-          addressLocality: "Ahmedabad",
-          addressRegion: "Gujarat",
-          postalCode: "380054",
-        },
-        pricerange: "$$$",
-        email: "contact@vmukti.com",
-        telephone: "+91-968-777-0000",
-        openingHours: "Mo,Tu,We,Th,Fr,Sa 09:30-18:30",
-        openingHoursSpecification: [
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday",
-            ],
-            opens: "09:30",
-            closes: "18:30",
-          },
-        ],
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: "23.037684",
-          longitude: "72.503439",
-        },
-        image: "https://www.vmukti.com/assets/vmuktilogo.png",
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.vmukti.com',
       },
-
-      // FAQ Schema
       {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        url: "https://www.vmukti.com/",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "Do you provide APIs for custom integrations?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, We provide robust APIs to enable custom integrations with your business systems, mobile apps, or control rooms. Your video surveillance software can use our API’s to adapt to your operational needs for maximum flexibility.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How well does our AI Solutions integrate with third-party security systems?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Our Vision AI seamlessly integrates with your existing VMS, access control, and incident response ecosystem—no disruption, just pure operational synergy. Designed for enterprise-grade scalability, it fits right into your infrastructure with zero compromise.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "What kind of support does VMukti Solutions offer?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "From zero-latency rollout to real-time AI tuning across edge nodes, our support ecosystem is designed for scale and speed. VMukti gives you hyper-responsive assistance for global NOC coverage, auto-recovery triggers, and adaptive learning support models. Whether it’s deploying vision intelligence across 1 or 1,000 sites, we move with your ambition.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "What makes VMukti Solutions different from other surveillance providers?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "VMukti Solutions combines real-time threat detection, predictive analytics, and seamless integration with VMS, EMS, and ICCC. Our AI computer vision solution is powered by advanced software for delivering smarter, faster, and reliable surveillance than traditional CCTV.",
-            },
-          },
-        ],
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Solutions',
+        item: 'https://www.vmukti.com/solutions',
       },
     ],
-    homepage_us:[
-      // WebPage Schema for US Homepage
+  },
+  mainEntity: {
+    '@type': 'ItemList',
+    name: 'VMukti Solutions',
+    itemListElement: [
       {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "AI-Powered Cloud Video Surveillance for US Multi-Location Enterprises",
-        "description": "Enterprise-grade AI cloud video surveillance solution for US multi-location companies. Improve visibility, automate incident response, and manage all sites from one Cloud VMS.",
-        "url": "https://www.vmukti.com/usa/video-surveillance-solutions",
-        "datePublished": "2026-02-01",
-        "dateModified": "2026-02-01",
-        "publisher": {
-          "@type": "Organization",
-          "name": "VMukti Solutions",
-          "url": "https://www.vmukti.com/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://www.vmukti.com/assets/vmuktilogo.png",
-            "width": 25,
-            "height": 6
-          },
-          "sameAs": [
-            "https://www.facebook.com/VMuktisolutions",
-            "https://www.instagram.com/vmuktisolutions/",
-            "https://www.linkedin.com/company/vmuktisolutions",
-            "https://x.com/VMukti",
-            "https://www.youtube.com/@VMukti1"
-          ]
-        },
-        "primaryImageOfPage": {
-          "@type": "ImageObject",
-          "url": "Image Link",
-          "width": 174,
-          "height": 123,
-          "caption": "Best Video Surveillance Company In USA"
-        },
-        "inLanguage": "en-US"
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Cloud VMS',
+        description: 'Enterprise-grade cloud-based Video Management System',
+        url: 'https://www.vmukti.com/solutions/cloud-vms',
       },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'EMS',
+        description: 'Enterprise Management System for coordinated surveillance operations',
+        url: 'https://www.vmukti.com/solutions/ems',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'ICCC',
+        description: 'Integrated Command and Control Center for emergency response',
+        url: 'https://www.vmukti.com/solutions/iccc',
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
+        name: 'GenAI Analytics',
+        description: 'Next-generation AI-powered video analytics',
+        url: 'https://www.vmukti.com/solutions/genai-analytics',
+      },
+    ],
+  },
+};
 
-      // FAQ Schema for US Homepage
+export const industrypageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'VMukti Industries & Use Cases',
+  description: 'VMukti solutions for smart cities, transportation, healthcare, banking, retail, and government sectors.',
+  url: 'https://www.vmukti.com/industries',
+  primaryImageOfPage: {
+    '@type': 'ImageObject',
+    url: 'https://www.vmukti.com/assets/industries-hero.webp',
+    width: '1200',
+    height: '630',
+  },
+  breadcrumb: {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
       {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "url": "https://www.vmukti.com/usa/video-surveillance-solutions",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Is VMukti's cloud video surveillance solution NDAA compliant?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. VMukti supports NDAA-compliant cloud VMS architecture, making it suitable for US government, enterprises, and regulated industries that require NDAA-compliant video surveillance systems."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can VMukti integrate with existing CCTV cameras and infrastructure?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. VMukti's Cloud VMS integrates seamlessly with existing ONVIF-compliant cameras and legacy CCTV systems. Enterprises can upgrade to AI-driven surveillance without replacing their current hardware."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can VMukti support hybrid deployment (cloud + on-prem)?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. VMukti offers flexible deployment models including cloud, on-prem, and hybrid video surveillance systems, allowing enterprises to choose the architecture that fits their compliance, performance, and data policies."
-            }
-          }
-        ]
-      }
-    ],
-    homepage_uk:[
-      // WebPage Schema for UK Homepage
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "AI Cloud Video Surveillance for Multi-Location Business in UK",
-        "description": "AI video surveillance and cloud video surveillance system for UK multi-location enterprises. Centralise monitoring, automate incidents, and improve visibility with Cloud VMS.",
-        "url": "https://www.vmukti.com/uk/video-surveillance-solutions",
-        "datePublished": "2026-02-01",
-        "dateModified": "2026-02-01",
-        "publisher": {
-          "@type": "Organization",
-          "name": "VMukti Solutions",
-          "url": "https://www.vmukti.com/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://www.vmukti.com/assets/vmuktilogo.png",
-            "width": 25,
-            "height": 6
-          },
-          "sameAs": [
-            "https://www.facebook.com/VMuktisolutions",
-            "https://www.instagram.com/vmuktisolutions/",
-            "https://www.linkedin.com/company/vmuktisolutions",
-            "https://x.com/VMukti",
-            "https://www.youtube.com/@VMukti1"
-          ]
-        },
-        "primaryImageOfPage": {
-          "@type": "ImageObject",
-          "url": "Image Link",
-          "width": 174,
-          "height": 123,
-          "caption": "Best Video Surveillance Company In UK"
-        },
-        "inLanguage": "en-GB"
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.vmukti.com',
       },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Industries',
+        item: 'https://www.vmukti.com/industries',
+      },
+    ],
+  },
+  mainEntity: {
+    '@type': 'ItemList',
+    name: 'VMukti Industry Solutions',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+     name: 'Smart Cities',
+        description: 'Unified platform for city-wide surveillance and emergency response',
+        url: 'https://www.vmukti.com/industries/smart-cities',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Transportation',
+        description: 'Traffic monitoring, ANPR, and intelligent transportation systems',
+        url: 'https://www.vmukti.com/industries/transportation',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Healthcare',
+        description: 'Secure facility monitoring and access control',
+        url: 'https://www.vmukti.com/industries/healthcare',
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
+        name: 'Banking & Finance',
+        description: 'High-security surveillance for financial institutions',
+        url: 'https://www.vmukti.com/industries/banking-finance',
+      },
+      {
+        '@type': 'ListItem',
+        position: 5,
+        name: 'Retail',
+        description: 'Store security, loss prevention, and customer analytics',
+        url: 'https://www.vmukti.com/industries/retail',
+      },
+      {
+        '@type': 'ListItem',
+        position: 6,
+        name: 'Government',
+        description: 'Public safety and cross-agency coordination',
+        url: 'https://www.vmukti.com/industries/government',
+      },
+    ],
+  },
+};
 
-      // FAQ Schema for UK Homepage
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "url": "https://www.vmukti.com/uk/video-surveillance-solutions",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Is VMukti's cloud video surveillance solution suitable for UK enterprises and the public sector?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. VMukti's platform is designed for enterprise and public sector requirements, supporting compliance-ready architecture, secure cloud infrastructure, and scalable deployments suitable for UK government, smart cities, and critical public services."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How secure is VMukti's cloud video surveillance platform?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "VMukti's platform is built with enterprise-grade security, encrypted data transmission, role-based access control, compliance-ready architecture, and high-availability cloud infrastructure to ensure secure and reliable video surveillance."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can VMukti scale for large enterprise deployments across the UK?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. VMukti's Cloud VMS is designed for enterprise-scale deployments, supporting thousands of cameras, multiple locations, and high-volume video data with seamless scalability."
-            }
-          }
-        ]
-      }
-    ],
-    solutionpage: [
-      // Webpage Schema
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        name: "VMukti's Products & Solutions | Enterprise Video Surveillance Platform",
-        description:
-          "Discover VMukti’s enterprise video surveillance products and solutions built for large-scale deployments, secure monitoring, and centralized video management.",
-        url: "https://www.vmukti.com/solution/",
-        datePublished: "2006-11-10",
-        dateModified: "2026-02-11",
-        publisher: {
-          "@type": "Organization",
-          name: "VMukti Solutions",
-          url: "https://www.vmukti.com/",
-          logo: {
-            "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
-            width: 25,
-            height: 6,
-          },
-          sameAs: [
-            "https://www.facebook.com/VMuktisolutions",
-            "https://www.instagram.com/vmuktisolutions/",
-            "https://www.linkedin.com/company/vmuktisolutions",
-            "https://x.com/VMukti",
-            "https://www.youtube.com/@VMukti1",
-          ],
-        },
-        primaryImageOfPage: {
-          "@type": "ImageObject",
-          url: "Add image Link",
-          width: 174,
-          height: 123,
-          caption: "Visual Surveillance Intelligence for Every Sector",
-        },
-        inLanguage: "en-US",
-      },
-      // ItemList Schema
-      {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        name: "Visual Intelligence Solutions for a Smarter World",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            url: "https://www.vmukti.com/solution/video-management-system/",
-            name: "Video Management System",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            url: "https://www.vmukti.com/solution/enterprise-management-system/",
-            name: "Enterprise Video Management System",
-          },
-          {
-            "@type": "ListItem",
-            position: 3,
-            url: "https://www.vmukti.com/solution/integrated-command-control-center/",
-            name: "Integrated Command and Control Centre",
-          },
-          {
-            "@type": "ListItem",
-            position: 4,
-            url: "https://www.vmukti.com/solution/live-streaming-solution/",
-            name: "Live Streaming",
-          },
-          {
-            "@type": "ListItem",
-            position: 5,
-            url: "https://www.vmukti.com/solution/flying-squad-vehicle/",
-            name: "Flying Squad Vehicle",
-          },
-          {
-            "@type": "ListItem",
-            position: 6,
-            url: "https://www.vmukti.com/solution/cloudai/",
-            name: "CloudAI",
-          },
-          {
-            "@type": "ListItem",
-            position: 7,
-            url: "https://www.vmukti.com/solution/genai/",
-            name: "GenAI",
-          },
-          {
-            "@type": "ListItem",
-            position: 8,
-            url: "https://www.vmukti.com/solution/visualbot/",
-            name: "VisualBot",
-          },
-        ],
-      },
-      // Breadcrumb Schema
-      {
-        "@context": "https://schema.org/",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "VMukti Solutions",
-            item: "https://www.vmukti.com/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Solutions",
-            item: "https://www.vmukti.com/solution/",
-          },
-          {
-            "@type": "ListItem",
-            position: 3,
-            name: "Video Management System",
-            item: "https://www.vmukti.com/solution/video-management-system/",
-          },
-          {
-            "@type": "ListItem",
-            position: 4,
-            name: "Enterprise Video Management System",
-            item: "https://www.vmukti.com/solution/enterprise-management-system/",
-          },
-          {
-            "@type": "ListItem",
-            position: 5,
-            name: "Integrated Command and Control Centre",
-            item: "https://www.vmukti.com/solution/integrated-command-control-center/",
-          },
-          {
-            "@type": "ListItem",
-            position: 6,
-            name: "Live Streaming",
-            item: "https://www.vmukti.com/solution/live-streaming-solution/",
-          },
-          {
-            "@type": "ListItem",
-            position: 7,
-            name: "Flying Squad Vehicle",
-            item: "https://www.vmukti.com/solution/flying-squad-vehicle/",
-          },
-          {
-            "@type": "ListItem",
-            position: 8,
-            name: "CloudAI",
-            item: "https://www.vmukti.com/solution/cloudai/",
-          },
-          {
-            "@type": "ListItem",
-            position: 9,
-            name: "GenAI",
-            item: "https://www.vmukti.com/solution/genai/",
-          },
-          {
-            "@type": "ListItem",
-            position: 10,
-            name: "VisualBot",
-            item: "https://www.vmukti.com/solution/visualbot/",
-          },
-        ],
-      },
-    ],
-    industrypage: [
-      // Webpage Schema
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        name: "Industries We Serve – AI Video Surveillance Solutions | VMukti Solutions",
-        description:
-          "VMukti provides AI-enabled video surveillance for retail, manufacturing, logistics, education, healthcare, smart cities, and more—boosting safety, automation, and operational efficiency.",
-        url: "https://www.vmukti.com/industry/",
-        datePublished: "2006-11-10",
-        dateModified: "2026-02-20",
-        publisher: {
-          "@type": "Organization",
-          name: "VMukti Solutions",
-          url: "https://www.vmukti.com/",
-          logo: {
-            "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
-            width: 25,
-            height: 6,
-          },
-          sameAs: [
-            "https://www.facebook.com/VMuktisolutions",
-            "https://www.instagram.com/vmuktisolutions/",
-            "https://www.linkedin.com/company/vmuktisolutions",
-            "https://x.com/VMukti",
-            "https://www.youtube.com/@VMukti1",
-          ],
-        },
-        primaryImageOfPage: {
-          "@type": "ImageObject",
-          url: "Add image Link",
-          width: 174,
-          height: 123,
-          caption: "Computer Vision Surveillance Intelligence Across Industries",
-        },
-        inLanguage: "en-US",
-      },
-      // Breadcrumb Schema
-      {
-        "@context": "https://schema.org/",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "VMukti Solutions",
-            item: "https://www.vmukti.com/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Industry",
-            item: "https://www.vmukti.com/industry/",
-          },
-          {
-            "@type": "ListItem",
-            position: 3,
-            name: "Manufacturing",
-            item: "https://www.vmukti.com/industry/manufacturing/",
-          },
-          {
-            "@type": "ListItem",
-            position: 4,
-            name: "Warehouse",
-            item: "https://www.vmukti.com/industry/warehouse/",
-          },
-          {
-            "@type": "ListItem",
-            position: 5,
-            name: "Healthcare",
-            item: "https://www.vmukti.com/industry/healthcare/",
-          },
-          {
-            "@type": "ListItem",
-            position: 6,
-            name: "Oil & Gas",
-            item: "https://www.vmukti.com/industry/oil-and-gas/",
-          },
-          {
-            "@type": "ListItem",
-            position: 7,
-            name: "Election",
-            item: "https://www.vmukti.com/industry/election/",
-          },
-          {
-            "@type": "ListItem",
-            position: 8,
-            name: "Education",
-            item: "https://www.vmukti.com/industry/education/",
-          },
-          {
-            "@type": "ListItem",
-            position: 9,
-            name: "Transportation",
-            item: "https://www.vmukti.com/industry/transportation/",
-          },
-          {
-            "@type": "ListItem",
-            position: 10,
-            name: "Smart City",
-            item: "https://www.vmukti.com/industry/smart-city/",
-          },
-          {
-            "@type": "ListItem",
-            position: 11,
-            name: "Pharma",
-            item: "https://www.vmukti.com/industry/pharma/",
-          },
-          {
-            "@type": "ListItem",
-            position: 12,
-            name: "Logistics",
-            item: "https://www.vmukti.com/industry/logistics/",
-          },
-          {
-            "@type": "ListItem",
-            position: 13,
-            name: "Banking",
-            item: "https://www.vmukti.com/industry/banking/",
-          },
-          {
-            "@type": "ListItem",
-            position: 14,
-            name: "Sports & Entertainment",
-            item: "https://www.vmukti.com/industry/sports-entertainment/",
-          },
-          {
-            "@type": "ListItem",
-            position: 15,
-            name: "Defense",
-            item: "https://www.vmukti.com/industry/defense/",
-          },
-          {
-            "@type": "ListItem",
-            position: 16,
-            name: "Hospitality",
-            item: "https://www.vmukti.com/industry/hospitality/",
-          },
-          {
-            "@type": "ListItem",
-            position: 17,
-            name: "Construction",
-            item: "https://www.vmukti.com/industry/construction/",
-          },
-          {
-            "@type": "ListItem",
-            position: 18,
-            name: "Enterprise",
-            item: "https://www.vmukti.com/industry/enterprise/",
-          },
-          {
-            "@type": "ListItem",
-            position: 19,
-            name: "Government",
-            item: "https://www.vmukti.com/industry/government/",
-          },
-        ],
-      },
-      // ItemList Schema
-      {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        name: "Explore All Industries We Serve with Computer Vision AI",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            url: "https://www.vmukti.com/industry/manufacturing/",
-            name: "Manufacturing",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            url: "https://www.vmukti.com/industry/warehouse/",
-            name: "Warehouse",
-          },
-          {
-            "@type": "ListItem",
-            position: 3,
-            url: "https://www.vmukti.com/industry/healthcare/",
-            name: "Healthcare",
-          },
-          {
-            "@type": "ListItem",
-            position: 4,
-            url: "https://www.vmukti.com/industry/oil-and-gas/",
-            name: "Oil & Gas",
-          },
-          {
-            "@type": "ListItem",
-            position: 5,
-            url: "https://www.vmukti.com/industry/election/",
-            name: "Election",
-          },
-          {
-            "@type": "ListItem",
-            position: 6,
-            url: "https://www.vmukti.com/industry/education/",
-            name: "Education",
-          },
-          {
-            "@type": "ListItem",
-            position: 7,
-            url: "https://www.vmukti.com/industry/transportation/",
-            name: "Transportation",
-          },
-          {
-            "@type": "ListItem",
-            position: 8,
-            url: "https://www.vmukti.com/industry/smart-city/",
-            name: "Smart City",
-          },
-          {
-            "@type": "ListItem",
-            position: 9,
-            url: "https://www.vmukti.com/industry/pharma/",
-            name: "Pharma",
-          },
-          {
-            "@type": "ListItem",
-            position: 10,
-            url: "https://www.vmukti.com/industry/logistics/",
-            name: "Logistics",
-          },
-          {
-            "@type": "ListItem",
-            position: 11,
-            url: "https://www.vmukti.com/industry/banking/",
-            name: "Banking",
-          },
-          {
-            "@type": "ListItem",
-            position: 12,
-            url: "https://www.vmukti.com/industry/sports-entertainment/",
-            name: "Sports & Entertainment",
-          },
-          {
-            "@type": "ListItem",
-            position: 13,
-            url: "https://www.vmukti.com/industry/defense/",
-            name: "Defense",
-          },
-          {
-            "@type": "ListItem",
-            position: 14,
-            url: "https://www.vmukti.com/industry/hospitality/",
-            name: "Hospitality",
-          },
-          {
-            "@type": "ListItem",
-            position: 15,
-            url: "https://www.vmukti.com/industry/construction/",
-            name: "Construction",
-          },
-          {
-            "@type": "ListItem",
-            position: 16,
-            url: "https://www.vmukti.com/industry/enterprise/",
-            name: "Enterprise",
-          },
-          {
-            "@type": "ListItem",
-            position: 17,
-            url: "https://www.vmukti.com/industry/government/",
-            name: "Government",
-          },
-        ],
-      },
-    ],
-  };
+export const productpageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'VMukti Cloud VMS',
+  description: 'Enterprise-grade cloud-based Video Management System with STQC certification, supporting 1B+ concurrent camera feeds with AI analytics and smart city integration.',
+  url: 'https://www.vmukti.com/products/cloud-vms',
+  primaryImageOfPage: {
+    '@type': 'ImageObject',
+    url: 'https://www.vmukti.com/assets/cloud-vms-hero.webp',
+    width: '1200',
+    height: '630',
+  },
+  brand: {
+    '@type': 'Brand',
+    name: 'VMukti',
+  },
+  manufacturer: {
+    '@type': 'Organization',
+    name: 'VMukti Solutions Pvt. Ltd.',
+    url: 'https://www.vmukti.com',
+  },
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
+    url: 'https://www.vmukti.com/products/cloud-vms',
+    description: 'Contact for enterprise pricing',
+  },
+};
 
-  export default schemaData;
+export const aboutpageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'About VMukti Solutions',
+  description: 'Learn about VMukti Solutions - 18+ years of innovation in enterprise surveillance platforms, with 900+ deployments across 700+ districts.',
+  url: 'https://www.vmukti.com/about',
+  primaryImageOfPage: {
+    '@type': 'ImageObject',
+    url: 'https://www.vmukti.com/assets/about-hero.webp',
+    width: '1200',
+    height: '630',
+  },
+};
+
+export const contactpageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contact VMukti Solutions',
+  description: 'Get in touch with VMukti for enterprise surveillance solutions, support, or partnership inquiries.',
+  url: 'https://www.vmukti.com/contact',
+  primaryImageOfPage: {
+    '@type': 'ImageObject',
+    url: 'https://www.vmukti.com/assets/contact-hero.webp',
+    width: '1200',
+    height: '630',
+  },
+};
+
+export const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'VMukti Solutions Pvt. Ltd.',
+  url: 'https://www.vmukti.com',
+  logo: 'https://www.vmukti.com/logo.png',
+  description: 'Enterprise cloud VMS, EMS, and ICCC platform provider',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Arista@Eight Corporate House, Near Satyam House, Behind Rajpath Club, Bodakdev',
+    addressLocality: 'Ahmedabad',
+    addressRegion: 'Gujarat',
+    postalCode: '380054',
+    addressCountry: 'IN',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: '23.0225',
+    longitude: '72.5714',
+  },
+  telephone: '+91-79-6160-0000',
+  email: 'info@vmukti.com',
+  priceRange: '$$$',
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      contactType: 'Enterprise Sales',
+      email: 'info@vmukti.com',
+      telephone: '+91-79-6160-0000',
+    },
+    {
+      '@type': 'ContactPoint',
+      contactType: 'Technical Support',
+      telephone: '+91-79-6160-0000',
+    },
+  ],
+};
+
+export const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'VMukti Solutions',
+  legalName: 'VMukti Solutions Pvt. Ltd.',
+  url: 'https://www.vmukti.com',
+  logo: 'https://www.vmukti.com/logo.png',
+  description: 'Enterprise cloud VMS, EMS, and ICCC platform provider with STQC certification. 18+ years, 900+ deployments across 700+ districts, 1B+ camera feeds processed globally.',
+  foundingDate: '2007',
+  foundingLocation: 'Ahmedabad, Gujarat, India',
+  numberOfEmployees: {
+    '@type': 'QuantitativeValue',
+    minValue: 200,
+    maxValue: 500,
+  },
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Arista@Eight Corporate House, Near Satyam House, Behind Rajpath Club, Bodakdev',
+    addressLocality: 'Ahmedabad',
+    addressRegion: 'Gujarat',
+    postalCode: '380054',
+    addressCountry: 'IN',
+  },
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      contactType: 'Enterprise Sales',
+      email: 'info@vmukti.com',
+      telephone: '+91-79-6160-0000',
+      url: 'https://www.vmukti.com/contact',
+      areaServed: 'Worldwide',
+      availableLanguage: ['English', 'Hindi'],
+    },
+    {
+      '@type': 'ContactPoint',
+      contactType: 'Technical Support',
+      telephone: '+91-79-6160-0000',
+      areaServed: 'Worldwide',
+      availableLanguage: ['English'],
+    },
+  ],
+  sameAs: [
+    'https://www.linkedin.com/company/vmukti',
+    'https://twitter.com/VMukti',
+    'https://www.facebook.com/vmukti',
+    'https://www.youtube.com/@vmukti',
+  ],
+  areaServed: [
+    { '@type': 'Country', name: 'India' },
+    { '@type': 'Country', name: 'United States' },
+    { '@type': 'Country', name: 'United Arab Emirates' },
+    { '@type': 'Country', name: 'United Kingdom' },
+    { '@type': 'Country', name: 'Singapore' },
+    { '@type': 'Country', name: 'Saudi Arabia' },
+    { '@type': 'Country', name: 'Australia' },
+    { '@type': 'Place', name: 'Middle East' },
+    { '@type': 'Place', name: 'Africa' },
+    { '@type': 'Place', name: 'Southeast Asia' },
+    { '@type': 'Place', name: 'Latin America' },
+    { '@type': 'Place', name: 'Europe' },
+  ],
+  knowsAbout: [
+    'Video Management System',
+    'Enterprise Management System',
+    'Integrated Command and Control Center',
+    'Cloud Surveillance',
+    'AI Video Analytics',
+    'Smart City Solutions',
+    'GenAI Video Analytics',
+    'Edge Computing',
+    'ANPR',
+    'Face Recognition',
+  ],
+  award: [
+    'NASSCOM Top 50 Emerging Product Company',
+    'IIM-Ahmedabad Incubated',
+    'STQC Certified',
+    'Make in India Certified',
+  ],
+};
+
+export const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'VMukti Solutions',
+  alternateName: 'VMukti - Enterprise Cloud VMS & Smart City Platform',
+  url: 'https://www.vmukti.com',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://www.vmukti.com/search?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'VMukti Solutions',
+    logo: 'https://www.vmuti.com/logo.png',
+  },
+};
+
+export const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is VMukti Cloud VMS?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'VMukti Cloud VMS is an enterprise-grade, cloud-based Video Management System designed for large-scale surveillance operations. It supports unlimited concurrent camera feeds with AI-powered analytics and is STQC certified.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does VMukti support integration with existing systems?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, VMukti platforms are designed with enterprise integration in mind. Our EMS and ICCC solutions seamlessly integrate with third-party VMS systems and legacy infrastructure.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How many camera feeds can VMukti process?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'VMukti has processed over 1 billion camera feeds globally and supports unlimited scalability for enterprise deployments. Our infrastructure is designed to handle the largest smart city and surveillance projects.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is VMukti STQC certified?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, VMukti Cloud VMS is STQC (Security Testing and Quality Certification) certified, ensuring it meets the highest security and quality standards for government and enterprise use.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What industries does VMukti serve?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'VMukti serves a wide range of industries including smart cities, transportation, healthcare, banking, retail, and government. We have 900+ deployments across 700+ districts globally.',
+      },
+    },
+  ],
+};
+
+export const breadcrumbHomepage = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://www.vmukti.com',
+    },
+  ],
+};
+
+export const breadcrumbSolution = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://www.vmukti.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Solutions',
+      item: 'https://www.vmukti.com/solutions',
+    },
+  ],
+};
+
+export const breadcrumbIndustry = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://www.vmukti.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Industries',
+      item: 'https://www.vmukti.com/industries',
+    },
+  ],
+};
