@@ -463,3 +463,39 @@ export const breadcrumbIndustry = {
     },
   ],
 };
+
+// Default export for backward compatibility with existing page components
+// Pages import: import schemaData from "../../data/schemaData"
+// and access: schemaData.homepage, schemaData.solutionpage, etc.
+const schemaData = {
+  homepage: [
+    homepageSchema,
+    organizationSchema,
+    websiteSchema,
+    localBusinessSchema,
+    faqSchema,
+    breadcrumbHomepage,
+  ],
+  homepage_us: [
+    homepageSchema,
+    organizationSchema,
+    localBusinessSchema,
+  ],
+  homepage_uk: [
+    homepageSchema,
+    organizationSchema,
+    localBusinessSchema,
+  ],
+  solutionpage: [
+    solutionpageSchema,
+    organizationSchema,
+    breadcrumbSolution,
+  ],
+  industrypage: [
+    industrypageSchema,
+    organizationSchema,
+    breadcrumbIndustry,
+  ],
+};
+
+export default schemaData;
