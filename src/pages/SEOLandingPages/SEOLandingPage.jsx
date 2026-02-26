@@ -33,6 +33,7 @@ import seoPageDataGenAI from '../../data/seoPageDataGenAI';
 import seoPageDataGeoIntl from '../../data/seoPageDataGeoIntl';
 import seoPageDataGeo from '../../data/seoPageDataGeo';
 import seoPageDataExpansion3 from '../../data/seoPageDataExpansion3'
+import seoPageDataExpansion4 from "../../data/seoPageDataExpansion4";
 
 
 // Stat Card Component
@@ -299,7 +300,7 @@ const SEOLandingPage = () => {
   const { category, pageSlug, name, slug } = useParams();
   // When rendered from IndustryDetails fallback, route param is 'name' not 'pageSlug'
   const effectiveSlug = pageSlug || name;
-  const allSeoData = { ...seoPageData, ...seoPageDataExpansion, ...seoPageDataInnovation, ...seoPageDataCompare, ...seoPageDataCompliance, ...seoPageDataExpansion2, ...seoPageDataGenAI, ...seoPageDataGeoIntl, ...seoPageDataGeo, ...seoPageDataExpansion3 };
+  const allSeoData = { ...seoPageData, ...seoPageDataExpansion, ...seoPageDataInnovation, ...seoPageDataCompare, ...seoPageDataCompliance, ...seoPageDataExpansion2, ...seoPageDataGenAI, ...seoPageDataGeoIntl, ...seoPageDataGeo, ...seoPageDataExpansion3, ...seoPageDataExpansion4 };
   const lookupKey = (category && effectiveSlug && allSeoData[`${category}-${effectiveSlug}`]) ? `${category}-${effectiveSlug}` : (effectiveSlug && allSeoData[effectiveSlug]) ? effectiveSlug : (category && allSeoData[category]) ? category : null;
   const pageData = allSeoData[lookupKey];
 
