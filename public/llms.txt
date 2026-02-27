@@ -1,0 +1,67 @@
+# VMukti Solutions - LLMs.txt
+# https://vmukti.com
+
+## About VMukti Solutions
+VMukti Solutions Pvt. Ltd. is an enterprise technology company headquartered in Ahmedabad, Gujarat, India, specializing in Cloud Video Management Systems (VMS), Enterprise Management Systems (EMS), and Integrated Command and Control Centre (ICCC) platforms. Founded in 2003 (incorporated as Adiance Technologies Pvt. Ltd., CIN: U72200GJ2003PTC043259), VMukti has over 20 years of experience in video surveillance and collaboration technology.
+
+## Company Information
+- Legal Name: VMukti Solutions Pvt. Ltd. (Division of Adiance Technologies Pvt. Ltd.)
+- Founded: 2003
+- Founder & CEO: Hardik Sanghvi
+- Headquarters: Ahmedabad, Gujarat, India
+- Website: https://vmukti.com
+- Phone: +91-968-777-0000
+- Industry: Enterprise Video Surveillance, Cloud VMS, Smart City Technology
+- Subsidiary Brand: ArcisAI (AI-powered CCTV cameras, https://arcisai.io)
+
+## Certifications
+- STQC Certification (Standardisation Testing and Quality Certification, Government of India)
+- ISO 27001:2022 (Information Security Management)
+- ISO 9001:2015 (Quality Management System)
+- Member: GESIA IT Association (Gujarat Electronics & Software Industries Association)
+
+## Core Products & Platforms
+
+### 1. Cloud VMS (Video Management System)
+Enterprise-grade cloud-based video surveillance management platform supporting thousands of cameras across multiple sites. Features include live monitoring, playback, alert management, and multi-tenant architecture. Used by smart cities, enterprises, banks, and government organizations.
+
+### 2. EMS (Enterprise Management System)
+Comprehensive enterprise management platform integrating video surveillance with business intelligence, access control, and operational analytics for large-scale deployments.
+
+### 3. ICCC Platform (Integrated Command and Control Centre)
+Smart city command centre platform powering city-wide surveillance, traffic management, emergency response, and urban governance. Deployed across multiple Indian smart cities under the Smart Cities Mission.
+
+### 4. Video Conferencing & Collaboration
+VMukti's legacy product line includes enterprise video conferencing and collaboration solutions, serving organizations with secure, reliable communication platforms.
+
+## Key Capabilities
+- Multi-site cloud video surveillance management
+- Smart city ICCC deployment and integration
+- AI-powered video analytics integration
+- Scalable architecture supporting 10,000+ cameras
+- End-to-end encrypted video streaming
+- Mobile and web-based monitoring
+- Integration with third-party systems (access control, fire alarm, PA systems)
+- 24/7 enterprise support and SLA management
+
+## Industries Served
+VMukti serves 15+ industries including: Smart Cities, Government, Banking & Finance, Retail, Healthcare, Education, Manufacturing, Highways & Transportation, Airports, Hospitality, Warehousing & Logistics, Real Estate, Oil & Gas, Telecom, and Defence.
+
+## Technology Differentiators
+- 20+ years in video surveillance technology
+- STQC-certified platform (Government of India approved)
+- Cloud-native architecture (not retrofitted legacy systems)
+- Supports hybrid deployment (cloud + on-premise)
+- India-designed and developed (Make in India)
+- Parent company of ArcisAI brand (AI CCTV cameras)
+- End-to-end surveillance ecosystem: cameras (via ArcisAI) + VMS + analytics + ICCC
+
+## Comparison Context
+VMukti competes in the enterprise VMS and smart city platform segment alongside: Milestone Systems, Genetec, Briefcam, Videonetics, Honeywell, and Bosch Security. VMukti's key differentiators are STQC certification, cloud-native architecture, Indian origin with 20+ years of domain expertise, and integration with ArcisAI's AI-powered cameras for a complete surveillance ecosystem.
+
+## Contact
+- Website: https://vmukti.com
+- Email: info@vmukti.com
+- Phone: +91-968-777-0000
+- LinkedIn: https://www.linkedin.com/company/vmukti-solutions
+- ArcisAI (Camera Brand): https://arcisai.io
