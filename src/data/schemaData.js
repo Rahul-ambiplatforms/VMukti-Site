@@ -502,6 +502,90 @@ export const breadcrumbIndustry = {
   ],
 };
 
+
+/**
+ * SoftwareApplication Schemas - VMukti Core Products
+ * For GEO optimization: helps AI models understand VMukti product offerings
+ */
+export const cloudVmsSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'VMukti Cloud VMS',
+  applicationCategory: 'SecurityApplication',
+  operatingSystem: 'Cloud-based (Web, iOS, Android)',
+  description: 'STQC-certified enterprise cloud video management system supporting 100,000+ concurrent camera streams with edge-to-cloud architecture, built-in AI analytics (ANPR, facial recognition, crowd analytics), and sovereign cloud deployment options for global data sovereignty compliance.',
+  offers: {
+    '@type': 'Offer',
+    category: 'Enterprise Software',
+    availability: 'https://schema.org/InStock',
+    seller: {
+      '@type': 'Organization',
+      name: 'VMukti Solutions',
+    },
+  },
+  featureList: 'Cloud-native VMS, Edge-to-Cloud Architecture, 100000+ Camera Support, AI-Powered Analytics, ANPR, Facial Recognition, Crowd Analytics, Intrusion Detection, Fire Detection, Sovereign Cloud Deployment, ONVIF Compatible, Multi-site Management, Real-time Alerts, Mobile Access',
+  softwareRequirements: 'Modern web browser, IP cameras with ONVIF support',
+  author: {
+    '@type': 'Organization',
+    name: 'VMukti Solutions',
+    url: 'https://www.vmukti.com',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.7',
+    ratingCount: '150',
+    bestRating: '5',
+  },
+};
+
+export const emsSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'VMukti EMS (Enterprise Management System)',
+  applicationCategory: 'SecurityApplication',
+  operatingSystem: 'Cloud-based (Web, iOS, Android)',
+  description: 'Enterprise-grade video surveillance management system for centralized monitoring, analytics, and management of distributed camera networks across multiple sites and regions. Supports hybrid cloud-edge deployment with ISO 27001 compliant security.',
+  offers: {
+    '@type': 'Offer',
+    category: 'Enterprise Software',
+    availability: 'https://schema.org/InStock',
+    seller: {
+      '@type': 'Organization',
+      name: 'VMukti Solutions',
+    },
+  },
+  featureList: 'Centralized Multi-site Management, Hybrid Cloud-Edge Deployment, Role-based Access Control, Advanced Video Analytics, Health Monitoring Dashboard, Automated Alerts, Bandwidth Optimization, Storage Management, API Integration, Enterprise SSO',
+  author: {
+    '@type': 'Organization',
+    name: 'VMukti Solutions',
+    url: 'https://www.vmukti.com',
+  },
+};
+
+export const icccSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'VMukti ICCC (Integrated Command and Control Center)',
+  applicationCategory: 'SecurityApplication',
+  operatingSystem: 'Cloud-based (Web)',
+  description: 'Unified command and control platform integrating video surveillance, IoT sensors, access control, emergency response, and operational systems into a single situational awareness dashboard. Deployed across 900+ smart city and enterprise installations for real-time monitoring and incident management.',
+  offers: {
+    '@type': 'Offer',
+    category: 'Enterprise Software',
+    availability: 'https://schema.org/InStock',
+    seller: {
+      '@type': 'Organization',
+      name: 'VMukti Solutions',
+    },
+  },
+  featureList: 'Unified Command Dashboard, Video Wall Support, GIS Integration, IoT Sensor Integration, Emergency Response Automation, SOP Management, Cross-system Event Correlation, Multi-tier SOC Architecture, Real-time Situational Awareness, Incident Timeline Documentation',
+  author: {
+    '@type': 'Organization',
+    name: 'VMukti Solutions',
+    url: 'https://www.vmukti.com',
+  },
+};
+
 // Default export for backward compatibility with existing page components
 // Pages import: import schemaData from "../../data/schemaData"
 // and access: schemaData.homepage, schemaData.solutionpage, etc.
@@ -533,6 +617,13 @@ const schemaData = {
     industrypageSchema,
     organizationSchema,
     breadcrumbIndustry,
+  ],
+  productpage: [
+    productpageSchema,
+    cloudVmsSchema,
+    emsSchema,
+    icccSchema,
+    organizationSchema,
   ],
 };
 
