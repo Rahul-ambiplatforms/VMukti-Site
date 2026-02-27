@@ -269,10 +269,45 @@ export const organizationSchema = {
   '@type': 'Organization',
   name: 'VMukti Solutions',
   legalName: 'VMukti Solutions Pvt. Ltd.',
+    telephone: '+91-968-777-0000',
+    founder: {
+      '@type': 'Person',
+      name: 'Hardik Sanghvi',
+      jobTitle: 'Founder & CEO'
+    },
+    memberOf: {
+      '@type': 'Organization',
+      name: 'GESIA IT Association',
+      description: 'Gujarat Electronics & Software Industries Association'
+    },
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Government Certification',
+        name: 'STQC Certification',
+        recognizedBy: { '@type': 'Organization', name: 'STQC, Ministry of Electronics & IT, Government of India' }
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'ISO Certification',
+        name: 'ISO 27001:2022 - Information Security Management'
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'ISO Certification',
+        name: 'ISO 9001:2015 - Quality Management System'
+      }
+    ],
+    award: ['STQC Certified Enterprise VMS Platform'],
+    subsidiaryOf: {
+      '@type': 'Organization',
+      name: 'Adiance Technologies Pvt. Ltd.',
+      url: 'https://arcisai.io'
+    },
   url: 'https://www.vmukti.com',
   logo: 'https://www.vmukti.com/logo.png',
   description: 'Enterprise cloud VMS, EMS, and ICCC platform provider with STQC certification. 18+ years, 900+ deployments across 700+ districts, 1B+ camera feeds processed globally.',
-  foundingDate: '2007',
+  foundingDate: '2003',
   foundingLocation: 'Ahmedabad, Gujarat, India',
   numberOfEmployees: {
     '@type': 'QuantitativeValue',
@@ -310,6 +345,9 @@ export const organizationSchema = {
     'https://twitter.com/VMukti',
     'https://www.facebook.com/vmukti',
     'https://www.youtube.com/@vmukti',
+      'https://www.crunchbase.com/organization/adiance-technologies',
+      'https://www.facebook.com/vmaboratoryukti',
+      'https://arcisai.io',
   ],
   areaServed: [
     { '@type': 'Country', name: 'India' },
