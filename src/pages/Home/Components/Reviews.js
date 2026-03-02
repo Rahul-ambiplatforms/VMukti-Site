@@ -16,10 +16,10 @@ const Reviews = () => {
             <div key={index} style={{ background: "#fff", borderRadius: "12px", padding: "30px", boxShadow: "0 4px 15px rgba(0,0,0,0.08)" }}>
               <div style={{ display: "flex", marginBottom: "15px" }}>
                 {[...Array(review.rating)].map((_, i) => (
-                  <span key={i} style={{ color: "#ffc107", fontSize: "1.2rem" }}>\u2605</span>
+                  <span key={i} style={{ color: "#ffc107", fontSize: "1.2rem" }}>★</span>
                 ))}
               </div>
-              <p style={{ color: "#555", lineHeight: "1.6", marginBottom: "20px", fontStyle: "italic" }}>\u201c{review.text}\u201d</p>
+              <p style={{ color: "#555", lineHeight: "1.6", marginBottom: "20px", fontStyle: "italic" }}>"{review.text}"</p>
               <div>
                 <strong style={{ color: "#1a1a2e" }}>{review.name}</strong>
                 <p style={{ color: "#888", fontSize: "0.9rem", margin: "4px 0 0" }}>{review.role}</p>
