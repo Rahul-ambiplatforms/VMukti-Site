@@ -1,4 +1,3 @@
-'use client';
 const seoPageData = {
   "middle-east-cloud-native-vms": {
     "slug": "/middle-east/cloud-native-vms",

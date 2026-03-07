@@ -13,8 +13,9 @@ const SEOLandingPage = lazy(() => import("../pages-src/SEOLandingPages/SEOLandin
 //     return str.replace(/-([a-z])/g, (match, letter) => letter.toUpperCase());
 // };
 
-const IndustryDetails = () => {
-    const { name } = useParams();
+const IndustryDetails = ({ industryName }) => {
+    const params = useParams();
+    const name = industryName || params?.name || '';
     const solutionKey = name.replace(/-/g, "");
     const content = industriesData[solutionKey.toLowerCase()];
     // console.log("Industry Name: ", solutionKey);
@@ -28,7 +29,7 @@ const IndustryDetails = () => {
         );
     }
 
-    return <IndustryContent content={content} />;
+    return <IndustryContent content={content} industryName={name} />;
 };
 
 export default IndustryDetails;

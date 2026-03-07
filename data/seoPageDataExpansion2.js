@@ -1,4 +1,3 @@
-'use client';
 // seoPageDataExpansion2.js - Phase 4A: VMS, ICCC & EMS Expansion Pages
 // Auto-generated SEO content for VMukti Solutions
 // Production-ready comprehensive SEO data for 15 critical pages

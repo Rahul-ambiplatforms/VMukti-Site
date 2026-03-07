@@ -1,6 +1,7 @@
 import { getPageData, getAllSlugsForCategory } from '../../../lib/seo-pages';
 import { generateLandingPageMetadata } from '../../../lib/metadata';
 import SEOLandingPageContent from '../../../components/SEOLandingPageContent';
+import { notFound } from 'next/navigation';
 
 const CATEGORY = 'compare';
 
@@ -19,6 +20,6 @@ export async function generateMetadata({ params }) {
 export default async function Page({ params }) {
   const { pageSlug } = await params;
   const pageData = getPageData(CATEGORY, pageSlug);
-  if (!pageData) return <div>Page not found</div>;
+  if (!pageData) notFound();
   return <SEOLandingPageContent pageData={pageData} category={CATEGORY} />;
 }

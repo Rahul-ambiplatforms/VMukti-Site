@@ -193,7 +193,7 @@ const marqueeScroll = keyframes`
 
 // This component renders the main "dashboard" or hero section for a solution page.
 
-const SolutionContent = ({ content }) => {
+const SolutionContent = ({ content, solutionName }) => {
   const { hero } = content;
   const { introduction } = content;
   const { features } = content;
@@ -202,7 +202,8 @@ const SolutionContent = ({ content }) => {
   const { whyChooseUs } = content;
   const { schema } = content;
 
-  const { name } = useParams();
+  const params = useParams();
+  const name = solutionName || params?.name || '';
   const u_name = name.replace(/-/g, "");
   const solutionFaqs = faqsData[u_name];
   const hasMultipleImages = whyChooseUs.images && whyChooseUs.images.length > 1;

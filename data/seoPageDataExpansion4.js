@@ -1,4 +1,3 @@
-'use client';
 // seoPageDataExpansion4.js â VMukti SEO expansion wave 4
 // Generated: 2026-02-25
 // 15 new pages: Global regions + industries + technology/product pages

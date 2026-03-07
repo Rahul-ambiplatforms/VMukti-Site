@@ -1,4 +1,3 @@
-'use client';
 // VMukti GEO-targeted SEO landing pages for Indian cities
 // Clean replacement for corrupted seoPageDataGeo.js
 

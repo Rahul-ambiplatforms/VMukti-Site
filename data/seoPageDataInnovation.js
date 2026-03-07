@@ -1,4 +1,3 @@
-'use client';
 const seoPageDataInnovation = {
   "visual-bot-ai-video-assistant": {
     "slug": "/product/visual-bot-ai-video-assistant",

@@ -1,4 +1,3 @@
-'use client';
 // seoPageDataExpansion3.js — Auto-generated SEO expansion
 // Generated: 2026-02-24
 // Pages: Latin America, Retail AI Analytics, GenAI Platform, Why Choose Cloud VMS, Smart Factory

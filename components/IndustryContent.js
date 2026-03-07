@@ -209,8 +209,9 @@ const popAnimation1 = {
 //   );
 // };
 
-const IndustryContent = ({ props, content }) => {
-  const { name } = useParams();
+const IndustryContent = ({ props, content, industryName }) => {
+  const params = useParams();
+  const name = industryName || params?.name || '';
   const u_name = name.replace(/-/g, "");
   const solutionFaqs = faqsData[u_name];
 

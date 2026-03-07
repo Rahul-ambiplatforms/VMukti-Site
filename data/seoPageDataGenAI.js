@@ -1,4 +1,3 @@
-'use client';
 const seoPageDataGenAI = {
   "ai-video-chatbot": {
     slug: "/genai/ai-video-chatbot",

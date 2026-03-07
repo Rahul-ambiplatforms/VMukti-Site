@@ -1,4 +1,3 @@
-'use client';
 const seoPageDataGeoIntl = {
   "cloud-vms-uae": {
     slug: "/geo/cloud-vms-uae",

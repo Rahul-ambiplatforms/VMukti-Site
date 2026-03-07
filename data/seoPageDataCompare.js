@@ -1,4 +1,3 @@
-'use client';
 const seoPageDataCompare = {
   "vmukti-vs-milestone": {
     slug: "/compare/vmukti-vs-milestone",

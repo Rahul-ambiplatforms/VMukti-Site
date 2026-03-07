@@ -1,4 +1,3 @@
-'use client';
 const seoPageDataExpansion = {
   "cloud-video-surveillance-new-york": {
     "slug": "/usa/cloud-video-surveillance-new-york",

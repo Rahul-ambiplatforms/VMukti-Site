@@ -1,4 +1,3 @@
-'use client';
 // seoPageDataCompliance.js
 // VMukti GCC & Regulatory Compliance SEO Landing Pages
 // Targeting: Saudi PDPL, UAE Data Residency, NDAA, GDPR, EU AI Act, GCC frameworks

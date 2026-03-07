@@ -7,8 +7,9 @@ import { Box } from "@chakra-ui/react";
 import { solutionsData } from "../data/solutionsConstData";
 
 
-const SolutionDetails = () => {
-  const { name } = useParams();
+const SolutionDetails = ({ solutionName }) => {
+  const params = useParams();
+  const name = solutionName || params?.name || '';
 
   const solutionKey = name.replace(/-/g, "");
 
@@ -25,7 +26,7 @@ const SolutionDetails = () => {
     );
   }
 
-  return <SolutionContent content={content} />;
+  return <SolutionContent content={content} solutionName={name} />;
 };
 
 export default SolutionDetails;
