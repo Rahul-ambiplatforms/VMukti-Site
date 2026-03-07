@@ -165,7 +165,7 @@
                         </Box>
                       </Button>
                       <Image loading="lazy"
-                        src="./assets/ambicam_logo.png"
+                        src="/assets/ambicam_logo.png"
                         alt="Ambicam logo"
                         w="204px"
                         h="33px"
@@ -293,7 +293,7 @@
               </Box>
             </Button>
             <Image loading="lazy"
-              src="./assets/ambicam_logo.png"
+              src="/assets/ambicam_logo.png"
               alt="Ambicam logo"
               w={{base:"180px",md:"204px"}}
               h={{base:"auto",md:"33px"}}

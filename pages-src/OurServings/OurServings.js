@@ -204,7 +204,7 @@ const OurServings = () => {
                 <MotionImage
                   position="absolute"
                   top={{ base: "0", md: "-5%" }}
-                  src={`${process.env.PUBLIC_URL}/assets/${image}`}
+                  src={`/assets/${image}`}
                   alt="Responsive screen mockup"
                   width={{ base: "100%", md: "100%" }}
                   // maxWidth="800px" // Optional: Limit the maximum width for better scaling

@@ -63,7 +63,7 @@ const marqueeScroll = keyframes`
 //       overflow="hidden"
 //     >
 //       <Image loading="lazy"
-//         src={`${process.env.PUBLIC_URL}/assets/${feature.image}`}
+//         src={`/assets/${feature.image}`}
 //         alt={feature.title}
 //         objectFit="cover"
 //         w="100%"

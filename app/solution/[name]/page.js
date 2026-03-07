@@ -6,6 +6,7 @@ export const dynamic = 'force-dynamic';
 
 const solutionMap = {
   'video-management-system': 'productVMS',
+  'cloud-vms': 'productVMS',
   'enterprise-management-system': 'productEMS',
   'iccc': 'productICCC',
   'cloudai': 'solutionCloudAI',

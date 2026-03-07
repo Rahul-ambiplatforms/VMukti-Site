@@ -31,7 +31,7 @@ const ServingsDescriptionCard = ({ description, keybenefits, image }) => {
           left="0"
           w="100%"
           h="100%"
-          bgImage={`${process.env.PUBLIC_URL}/${image}`}
+          bgImage={`/${image}`}
           bgSize="cover"
           bgPosition="center"
           zIndex={1} // Behind the text

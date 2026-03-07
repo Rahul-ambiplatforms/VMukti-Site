@@ -59,7 +59,7 @@ const DashboardItem = ({ item }) => (
     borderColor="gray.100"
   >
     <Image loading="lazy"
-      src={`${process.env.PUBLIC_URL}/${item.image}`}
+      src={`/${item.image}`}
       alt={item.title}
       borderRadius="24px"
       mb={4}

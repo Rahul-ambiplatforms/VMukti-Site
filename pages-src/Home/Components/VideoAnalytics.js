@@ -365,7 +365,7 @@ const VideoAnalytics = () => {
             <Image loading="lazy"
               key={`desktop-image-${featureIndex}`}
               // src={featureImages[featureIndex].image}
-              src={`${process.env.PUBLIC_URL}${featureImages[featureIndex].image}`}
+              src={`${featureImages[featureIndex].image}`}
               alt={features[featureIndex].title}
               objectFit="cover"
               width="100%"

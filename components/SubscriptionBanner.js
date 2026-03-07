@@ -82,7 +82,7 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
         overflow="visible"
       >
         <Image loading="lazy"
-          src={`${process.env.PUBLIC_URL}/assets/robot.png`} // Use absolute path
+          src={`/assets/robot.png`} // Use absolute path
           alt="AI Robot"
           ml="15%"
           width="100%"
@@ -106,7 +106,7 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
         overflow="hidden"
       >
         <Image loading="lazy"
-          src={`${process.env.PUBLIC_URL}/assets/BannerBroucher.png`} // Use absolute path
+          src={`/assets/BannerBroucher.png`} // Use absolute path
           alt="Connections and Dots"
           // ml="15%"
           width="100%"

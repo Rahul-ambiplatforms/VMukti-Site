@@ -293,7 +293,7 @@ export default function VMuktiCareers() {
             height={{ base: '100%', lg: '525px' }}
             zIndex="0"
             backgroundRepeat="no-repeat"
-            backgroundImage={`url(${process.env.PUBLIC_URL}/assets/BannerBrochre4.svg)`}
+            backgroundImage={`url(/assets/BannerBrochre4.svg)`}
             backgroundPosition="center"
           />
           <Heading as="h2" fontSize={{ base: '26px', md: '36px' }}>

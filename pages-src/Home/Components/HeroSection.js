@@ -330,7 +330,7 @@ const HeroSection = () => {
             {!useBreakpointValue({ base: true, md: false }) && ( // Show on md and up
               <MotionImage
                 alt="VMukti Cloud-based Video Surveillance Tablet Dashboard"
-                src={`${process.env.PUBLIC_URL}/assets/tablet2.png`}
+                src={`/assets/tablet2.png`}
                 position="absolute"
                 top={["", "", "44%", "25%"]}
                 right={["-10px", "-20px", "-30px", "-45px"]}

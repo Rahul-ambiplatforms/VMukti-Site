@@ -184,7 +184,7 @@ const SurveillanceSoftware = () => {
             // height="100%"
             // src="../assets/surveillancemock.png"
             alt="VMukti Surveillance Software Dashboard Mockup"
-            src={`${process.env.PUBLIC_URL}/assets/surveillancemock.png`}
+            src={`/assets/surveillancemock.png`}
             onLoad={handleImageLoad}
             transform={{ base: "scale(1.2)", md: "scale(0.6)" }}
             clipPath="inset(0)" // Ensures image does not affect layout

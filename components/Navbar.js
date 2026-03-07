@@ -27,7 +27,7 @@ import {
   Divider,
 } from "@chakra-ui/react";
 
-import { useNavigate, useLocation } from "react-router-dom";
+import { useAppNavigate, useAppLocation } from "../lib/useAppNavigate";
 import PageContentWrapper from "./PageContentWrapper";
 import Announcement from "./Announcement";
 const dropdownItems = {
@@ -173,8 +173,8 @@ const Navbar = () => {
   const [menuOpenStates, setMenuOpenStates] = useState({});
   const [isNavbarVisible, setIsNavbarVisible] = useState(true);
   const [openAccordion, setOpenAccordion] = useState(null); // Track the currently opened accordion
-  const location = useLocation();
-  const navigate = useNavigate();
+  const location = useAppLocation();
+  const navigate = useAppNavigate();
 
   const navigateTo = (path, linkName, sliderId = null) => {
     setActiveLink(linkName);
@@ -1014,7 +1014,7 @@ const Navbar = () => {
                   overflow="hidden"
                 >
                   <Image loading="lazy"
-                    src={`${process.env.PUBLIC_URL}/assets/robot.png`}
+                    src={`/assets/robot.png`}
                     alt="AI Robot"
                     width="100%"
                     height="auto"

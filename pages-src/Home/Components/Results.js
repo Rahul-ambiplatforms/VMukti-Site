@@ -14,37 +14,37 @@ const featuresData = [
     title: "Remote Monitoring",
     description:
       "Seamless remote access to live and archived feeds because visibility should never be limited.",
-    image: "./assets/result_home_1.png",
+    image: "/assets/result_home_1.png",
   },
   {
     title: "Custom-built Solutions",
     description:
       "Tailored Visual AI built for your ecosystem seamless access to critical footage, anytime, anywhere.",
-    image: "./assets/result_home_2.png",
+    image: "/assets/result_home_2.png",
   },
   {
     title: "Data Security",
     description:
       "Safeguard critical footage with enterprise-grade encryption and seamless access through secure cloud sync.",
-    image: "./assets/result_home_3.png",
+    image: "/assets/result_home_3.png",
   },
   {
     title: "Efficient Video Tech",
     description:
       "Precision imaging tech captures ultra-detailed visuals while optimizing bandwidth for leaner operations.",
-    image: "./assets/result_home_4.png",
+    image: "/assets/result_home_4.png",
   },
   {
     title: "Quad-HD Clarity",
     description:
       "Quad HD imaging delivers razor-sharp clarity every frame built for precision and absolute visibility.",
-    image: "./assets/result_home_5.png",
+    image: "/assets/result_home_5.png",
   },
   {
     title: "Reduced False Alarms",
     description:
       "Streamlined alerting. Every ping means something and you’re always in control.",
-    image: "./assets/result_home_6.png",
+    image: "/assets/result_home_6.png",
   },
 ];
 

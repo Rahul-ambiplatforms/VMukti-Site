@@ -234,7 +234,7 @@ export default function ContactUs() {
             zIndex="1"
           >
             <Image loading="lazy"
-              src={`${process.env.PUBLIC_URL}/assets/Contactus.png`}
+              src={`/assets/Contactus.png`}
               alt="Contact VMukti Solutions"
               position="absolute"
               top="0"
@@ -290,7 +290,7 @@ export default function ContactUs() {
               right="0"
               bottom="0"
               // bgImage="url('./assets/BannerBrochure6.png')"
-              bgImage={`url(${process.env.PUBLIC_URL}/assets/BannerBrochure6.png)`}
+              bgImage={`url(/assets/BannerBrochure6.png)`}
               bgSize="contain"
               bgRepeat="no-repeat"
               w="150%"
@@ -302,8 +302,8 @@ export default function ContactUs() {
               }}
             />
             <Image loading="lazy"
-              // src="./assets/robowho2.png"
-              src={`${process.env.PUBLIC_URL}/assets/robowho2.png`}
+              // src="/assets/robowho2.png"
+              src={`/assets/robowho2.png`}
               alt="Robot hand"
               mt={{ base: '0', md: '30%' }}
               maxH="55%"

@@ -130,7 +130,7 @@ const TripleImageSection = ({
             >
               <MotionImage
                 // src={image}
-                src={`${process.env.PUBLIC_URL}${image}`}
+                src={`${image}`}
                 alt="Surveillance Image"
                 w="100%"
                 h="100%"

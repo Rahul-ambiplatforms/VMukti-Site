@@ -322,7 +322,7 @@ const AdvancedSurveillance = () => {
                       // bg="green"
                     >
                       <Image loading="lazy"
-                        src={`${process.env.PUBLIC_URL}${card.image}`}
+                        src={`${card.image}`}
                         alt={card.label}
                         width="100%"
                         height="100%"

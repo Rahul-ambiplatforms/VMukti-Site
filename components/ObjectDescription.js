@@ -64,7 +64,7 @@ const ObjectDescription = ({ description, image, list }) => {
             right="0"
             w="100%"
             h="100%"
-            bgImage={`${process.env.PUBLIC_URL}/${image}`}
+            bgImage={`/${image}`}
             bgSize="cover"
             bgPosition="right" // Show right side on mobile, center on larger screens
             zIndex={1} // Behind the text

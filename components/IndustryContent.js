@@ -68,7 +68,7 @@ const popAnimation1 = {
 //       overflow="hidden"
 //     >
 //       <Image loading="lazy"
-//         src={`${process.env.PUBLIC_URL}/assets/${feature.image}`}
+//         src={`/assets/${feature.image}`}
 //         alt={feature.title}
 //         objectFit="cover"
 //         w="100%"
@@ -343,7 +343,7 @@ const IndustryContent = ({ props, content, industryName }) => {
               {/* Background Image - This part is the same */}
               {/* For Desktop (md and above) */}
               <MotionImage
-                src={`${process.env.PUBLIC_URL}/assets/${content.large_image}`}
+                src={`/assets/${content.large_image}`}
                 alt={content.large_image_alt}
                 position="absolute"
                 top="0"
@@ -360,7 +360,7 @@ const IndustryContent = ({ props, content, industryName }) => {
 
               {/* For Mobile (base only) */}
               <MotionImage
-                src={`${process.env.PUBLIC_URL}/assets/${content.large_image_mobile}`}
+                src={`/assets/${content.large_image_mobile}`}
                 alt={content.large_image_alt}
                 position="absolute"
                 top="0"
@@ -511,7 +511,7 @@ const IndustryContent = ({ props, content, industryName }) => {
             <>
               {/* Mobile */}
               <Image loading="lazy"
-                src={`${process.env.PUBLIC_URL}/assets/${content.workflow.image_mobile}`}
+                src={`/assets/${content.workflow.image_mobile}`}
                 alt={content.workflow.heading}
                 w="100%"
                 objectFit="cover"
@@ -520,7 +520,7 @@ const IndustryContent = ({ props, content, industryName }) => {
 
               {/* Desktop */}
               <Image loading="lazy"
-                src={`${process.env.PUBLIC_URL}/assets/${content.workflow.image}`}
+                src={`/assets/${content.workflow.image}`}
                 alt={content.workflow.heading}
                 w="100%"
                 objectFit="contain"

@@ -1,4 +1,5 @@
 import { Providers } from './providers';
+import SiteLayout from './site-layout';
 import Script from 'next/script';
 import './globals.css';
 
@@ -158,7 +159,9 @@ export default function RootLayout({ children }) {
         </noscript>
 
         <Providers>
-          {children}
+          <SiteLayout>
+            {children}
+          </SiteLayout>
         </Providers>
 
         {/* Google Tag Manager */}

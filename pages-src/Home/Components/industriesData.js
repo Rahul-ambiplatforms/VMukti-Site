@@ -400,7 +400,7 @@ export default function IndustryGrid({
                           height="100%"
                           borderRadius="24px"
                           padding="20px"
-                          bgImage={`${process.env.PUBLIC_URL}${industry.image}`}
+                          bgImage={`${industry.image}`}
                           bgSize="cover"
                           bgPosition="center"
                           display="flex"
@@ -605,7 +605,7 @@ export default function IndustryGrid({
                       height="100%"
                       borderRadius="24px"
                       padding="20px"
-                      bgImage={`${process.env.PUBLIC_URL}${industry.image}`}
+                      bgImage={`${industry.image}`}
                       bgSize="cover"
                       bgPosition="center"
                       display="flex"

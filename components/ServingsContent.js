@@ -135,7 +135,7 @@ const ServingsContent = ({ page: name }) => {
           <ServingsDescriptionCard
             description={data.description}
             keybenefits={data.keybenefits}
-            image={`${process.env.PUBLIC_URL}${data.image}`}
+            image={`${data.image}`}
           />
 
           {/* Deployment Model grid  */}

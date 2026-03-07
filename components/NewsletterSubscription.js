@@ -14,7 +14,7 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import SubscriptionBanner from "./SubscriptionBanner";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useAppNavigate, useAppLocation } from "../lib/useAppNavigate";
 import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 
 // const PhoneIcon = ({ mr = "10px", w = "21px", h = "21px" }) => (
@@ -131,8 +131,8 @@ const NewsletterSubscription = () => {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isServingsOpen, setIsServingsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const location = useLocation();
-  const navigate = useNavigate();
+  const location = useAppLocation();
+  const navigate = useAppNavigate();
 
   const industriesColumn1End = 13;
   const industriesWeServeLinks1 = industriesWeServeLinks.slice(

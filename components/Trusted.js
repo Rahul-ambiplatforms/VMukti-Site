@@ -84,7 +84,7 @@ const Trusted = () => {
           {[...logosRow1, ...logosRow1].map((logo, index) => (
             <Image loading="lazy"
               key={`row1-${index}`}
-              // src={`${process.env.PUBLIC_URL}${logo}`}
+              // src={`${logo}`}
               src={logo}
               alt={`Partner logo ${index + 1}`}
               h={{ base: "86px", md: "125px" }}

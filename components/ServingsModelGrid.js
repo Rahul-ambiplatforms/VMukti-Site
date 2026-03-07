@@ -51,7 +51,7 @@ const ServingsModelGrid = ({ title, description, cards }) => {
             //<> // removed fragment, added key to Flex
             <Flex key={card.title || index} direction="column" gap={5}>
               <motion.img
-                src={`${process.env.PUBLIC_URL}/assets/${card.image}`}
+                src={`/assets/${card.image}`}
                 alt={card.image_alt}
                 width="100%"
                 height={{ base: '200px', md: '368px' }}
