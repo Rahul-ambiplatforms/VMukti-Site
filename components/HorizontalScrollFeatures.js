@@ -1,15 +1,17 @@
 'use client';
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
 import "lazysizes";
 import "lazysizes/plugins/attrchange/ls.attrchange";
 
 // --- GSAP Plugin Registration ---
 // It's essential to register the plugin for ScrollTrigger to work.
-gsap.registerPlugin(ScrollTrigger);
+// Only register on the client side to avoid SSR errors
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 // --- Feature Card Component (Your Exact Code) ---
 const FeatureCard = ({ feature, bgColor }) => (
@@ -99,8 +101,9 @@ const FeatureCard = ({ feature, bgColor }) => (
 const HorizontalScrollFeatures = ({ scrollData = [] }) => {
   const mainContainerRef = useRef(null);
 
-  useGSAP(
-    () => {
+  useEffect(() => {
+    if (typeof window === 'undefined' || !mainContainerRef.current) return;
+    const ctx = gsap.context(() => {
       const horizontalSections = gsap.utils.toArray(".horizontal-section");
 
       horizontalSections.forEach((section) => {
@@ -120,9 +123,9 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
           },
         });
       });
-    },
-    { scope: mainContainerRef, dependencies: [scrollData] }
-  );
+    }, mainContainerRef);
+    return () => ctx.revert();
+  }, [scrollData]);
 
   if (!scrollData || scrollData.length === 0) {
     return null;

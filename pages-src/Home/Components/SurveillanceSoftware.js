@@ -7,7 +7,10 @@ import PageContentWrapper from "../../../components/PageContentWrapper";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+// Only register on the client side to avoid SSR errors
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 const SurveillanceSoftware = () => {
   const [imageHeight, setImageHeight] = useState("100dvh");
@@ -15,6 +18,8 @@ const SurveillanceSoftware = () => {
   const sectionRef = useRef(null); // Reference for the section containing the image
   //I have to solve the yarn build error here...
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const screenWidth = window.innerWidth;
     const scaleValue = screenWidth < 768 ? 1.5 : 1.1; // Tailwind's md breakpoint is 768px
     // Build Error

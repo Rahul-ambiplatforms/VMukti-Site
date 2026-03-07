@@ -18,7 +18,7 @@ import SubHeadingAnimation from "./Animation/Text/SubHeadingAnimation";
 import { Link } from "react-router-dom";
 import CtaBanner from "./CtaBanner";
 import Trusted from "./Trusted";
-import { useGSAP } from "@gsap/react";
+// useGSAP removed for SSR compatibility
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Achieved from "../pages-src/Home/Components/Achieved";

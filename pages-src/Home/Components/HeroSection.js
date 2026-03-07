@@ -54,19 +54,23 @@ const HeroSection = () => {
   const typewriterSequence = industries.flatMap((industry) => [industry, 1500]);
 
   const handleImageHover = () => {
-    gsap.to(imageRef.current, {
-      y: 40,
-      duration: 0.4,
-      ease: "power2.out",
-    });
+    if (typeof window !== 'undefined' && imageRef.current) {
+      gsap.to(imageRef.current, {
+        y: 40,
+        duration: 0.4,
+        ease: "power2.out",
+      });
+    }
   };
 
   const handleImageLeave = () => {
-    gsap.to(imageRef.current, {
-      y: 0,
-      duration: 0.4,
-      ease: "power2.out",
-    });
+    if (typeof window !== 'undefined' && imageRef.current) {
+      gsap.to(imageRef.current, {
+        y: 0,
+        duration: 0.4,
+        ease: "power2.out",
+      });
+    }
   };
 
   const ellipseSize = useBreakpointValue({

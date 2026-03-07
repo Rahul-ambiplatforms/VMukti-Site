@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   Box,
   Button,
@@ -15,7 +15,6 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
 // import { solutionsData } from "../data/solutionsContent";
 
@@ -30,8 +29,9 @@ const Solutions = ({ data }) => {
     md: activeSolution.image,
   });
 
-  useGSAP(
-    () => {
+  useEffect(() => {
+    if (typeof window === 'undefined' || !contentBoxRef.current) return;
+    const ctx = gsap.context(() => {
       gsap.fromTo(
         ".content-item",
         { opacity: 0, scale: 0.65 },
@@ -42,9 +42,9 @@ const Solutions = ({ data }) => {
         { opacity: 0, scale: 0.65 },
         { opacity: 1, scale: 1, duration: 0.9, ease: "power3.out" }
       );
-    },
-    { scope: contentBoxRef, dependencies: [activeIndex] }
-  );
+    }, contentBoxRef);
+    return () => ctx.revert();
+  }, [activeIndex]);
 
   if (!data || !data.solutions || data.solutions.length === 0) {
     return null;

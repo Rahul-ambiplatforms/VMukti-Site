@@ -28,14 +28,17 @@ import CtaBanner from "./CtaBanner";
 import Achieved from "../pages-src/Home/Components/Achieved";
 import FaqsSection from "./faqsSection";
 import faqsData from "../data/faqsData";
-import { useGSAP } from "@gsap/react";
+// useGSAP removed for SSR compatibility
 import gsap from "gsap";
 import Marquee from "react-fast-marquee";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HorizontalScrollFeatures from "./HorizontalScrollFeatures";
 import { Helmet } from "react-helmet-async";
 
-gsap.registerPlugin(ScrollTrigger);
+// Only register on the client side to avoid SSR errors
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 const marqueeScroll = keyframes`
   0% { transform: translateX(0); }
