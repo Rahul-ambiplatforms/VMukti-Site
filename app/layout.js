@@ -2,6 +2,7 @@ import { Providers } from './providers';
 import SiteLayout from './site-layout';
 import Script from 'next/script';
 import './globals.css';
+import SchemaMarkup from '../components/SchemaMarkup';
 
 const SITE_URL = 'https://www.vmukti.com';
 
@@ -148,6 +149,9 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        {/* JSON-LD Schema Markup for GEO */}
+        <SchemaMarkup />
+
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
