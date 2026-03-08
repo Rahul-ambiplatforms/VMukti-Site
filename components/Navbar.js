@@ -141,10 +141,10 @@ const dropdownItems = {
     },
   ],
   ourServing: [
-    { label: "Blogs", path: "/blog" },
-    // { label: "Enterprise", path: "/serving/enterprise" },
-    // { label: "Government", path: "/serving/government" },
-    // { label: "General Consumers", path: "/serving/generalconsumers" },
+    { label: "Insights & Blog", path: "/blog" },
+    { label: "Solution Comparisons", path: "/compare" },
+    { label: "Customer Stories", path: "/customer-stories" },
+    { label: "Product Updates", path: "/blog?category=product-updates" },
   ],
   global:[
     {label: "USA", path:"/usa/video-surveillance-solutions"},

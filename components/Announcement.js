@@ -1,93 +1,66 @@
 'use client';
-import React from 'react';
-import { Box, Flex, Text } from '@chakra-ui/react';
-import { keyframes } from '@emotion/react';
+import React, { useState } from 'react';
+import { Box, Flex, Text, CloseButton } from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom';
 
-// --- Data for the Events ---
-const events = [
-  {
-    message: "We're thrilled to showcase our cutting-edge Visual Intelligence technology at GITEX GLOBAL 2025!",
-    details: "Visit Us at Booth CC1 - 54 | Date: 13th - 17th October, 2025 | Dubai World Trade",
-  },
-  {
-    message: "Join us next at the AI Summit 2026 in New York!",
-    details: "Booth A12 | Date: 5th - 8th January, 2026 | Javits Center",
-  },
-];
-
-// --- CSS Animation for the Marquee Effect ---
-// CHANGE 2: The animation now moves the container by -50% of its total width.
-// This is because the container now holds two copies of the content.
-const marqueeAnimation = keyframes`
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
-`;
-
-// --- The Announcement Bar Component ---
 const Announcement = () => {
+  const [isVisible, setIsVisible] = useState(true);
+
+  if (!isVisible) return null;
+
   return (
     <Flex
-      bg="#D9D9D9"
-      height="50px"
+      bg="#1A365D"
+      height={{ base: "40px", md: "44px" }}
       width="100%"
       align="center"
-      overflow="hidden"
+      justify="center"
       position="fixed"
-      top={{base:"56px",md:"88px"}}
+      top={{ base: "56px", md: "80px" }}
       zIndex="999"
+      px={4}
     >
-      <Box
-        display="flex"
-        whiteSpace="nowrap"
-        // I recommend a longer duration for readability
-        animation={`${marqueeAnimation} 40s linear infinite`}
+      <Flex
+        align="center"
+        justify="center"
+        gap={{ base: 2, md: 4 }}
+        maxW="1200px"
+        w="100%"
       >
-        {/*
-          CHANGE 1: We render the list of events TWICE.
-          This is the key to creating a seamless loop.
-        */}
-        
-        {/* ---- FIRST COPY ---- */}
-        {events.map((event, index) => (
-          <React.Fragment key={index}>
-            <Text
-              fontSize="16px"
-              color="black"
-              fontWeight="400"
-              mx="2rem" 
-            >
-              <span style={{ margin: '0 0.5rem' }}>➡️</span>
-              <span role="img" aria-label="sparkles">✨</span>
-              {event.message}
-              <span style={{ margin: '0 0.5rem' }}>⬅️</span>
-              <span role="img" aria-label="arrow">➡️</span>
-              {event.details}
-              <span style={{ margin: '0 0.5rem' }}>⬅️</span>
-            </Text>
-          </React.Fragment>
-        ))}
-
-        {/* ---- SECOND COPY (The Duplicate for the loop) ---- */}
-        {events.map((event, index) => (
-          // Add a prefix to the key to avoid React duplicate key warnings
-          <React.Fragment key={`duplicate-${index}`}>
-            <Text
-              fontSize="16px"
-              color="black"
-              fontWeight="400"
-              mx="2rem"
-            >
-              <span style={{ margin: '0 0.5rem' }}>➡️</span>
-              <span role="img" aria-label="sparkles">✨</span>
-              {event.message}
-              <span style={{ margin: '0 0.5rem' }}>⬅️</span>
-              <span role="img" aria-label="arrow">➡️</span>
-              {event.details}
-              <span style={{ margin: '0 0.5rem' }}>⬅️</span>
-            </Text>
-          </React.Fragment>
-        ))}
-      </Box>
+        <Text
+          fontSize={{ base: "11px", md: "14px" }}
+          color="white"
+          fontWeight="400"
+          textAlign="center"
+          noOfLines={1}
+        >
+          India Surveillance Market 2026: 140+ data points on AI-powered security trends.
+        </Text>
+        <Box
+          as={RouterLink}
+          to="/blog"
+          bg="#3F77A5"
+          color="white"
+          fontSize={{ base: "10px", md: "13px" }}
+          fontWeight="600"
+          px={{ base: 3, md: 5 }}
+          py={{ base: "4px", md: "6px" }}
+          borderRadius="6px"
+          whiteSpace="nowrap"
+          _hover={{ bg: "#4A8BC2", textDecoration: "none" }}
+          transition="background 0.2s"
+        >
+          Read the Report
+        </Box>
+      </Flex>
+      <CloseButton
+        color="whiteAlpha.700"
+        size="sm"
+        position="absolute"
+        right={{ base: 1, md: 3 }}
+        onClick={() => setIsVisible(false)}
+        _hover={{ color: "white" }}
+      />
     </Flex>
   );
 };
