@@ -87,33 +87,50 @@ const ContentSection = ({ section, index }) => (
   </Box>
 );
 
-// FAQ Section Component
-const FAQSection = ({ faqs }) => (
-  <Box py={{ base: 10, md: 16 }} bg="white">
-    <Container maxW="4xl">
-      <Heading as="h2" size="xl" textAlign="center" mb={10} color="gray.800">
-        Frequently Asked Questions
-      </Heading>
-      <Accordion allowMultiple>
-        {faqs.map((faq, idx) => (
-          <AccordionItem key={idx} border="1px solid" borderColor="gray.200" borderRadius="lg" mb={4} overflow="hidden">
-            <h3>
-              <AccordionButton py={5} px={6} _hover={{ bg: 'gray.50' }}>
-                <Box flex="1" textAlign="left" fontWeight="600" fontSize="lg" color="gray.800">
-                  {faq.q}
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h3>
-            <AccordionPanel pb={5} px={6} fontSize="md" color="gray.600" lineHeight="tall">
-              {faq.a}
-            </AccordionPanel>
-          </AccordionItem>
-        ))}
-      </Accordion>
-    </Container>
-  </Box>
-);
+// FAQ Section Component — supports both {q, a} and {question, answer} formats
+// Also injects FAQPage structured data for AI/search engine consumption
+const FAQSection = ({ faqs }) => {
+  const normalizedFaqs = faqs.map(f => ({
+    question: f.q || f.question,
+    answer: f.a || f.answer,
+  }));
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: normalizedFaqs.map(f => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  };
+  return (
+    <Box py={{ base: 10, md: 16 }} bg="white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Container maxW="4xl">
+        <Heading as="h2" size="xl" textAlign="center" mb={10} color="gray.800">
+          Frequently Asked Questions
+        </Heading>
+        <Accordion allowMultiple>
+          {normalizedFaqs.map((faq, idx) => (
+            <AccordionItem key={idx} border="1px solid" borderColor="gray.200" borderRadius="lg" mb={4} overflow="hidden">
+              <h3>
+                <AccordionButton py={5} px={6} _hover={{ bg: 'gray.50' }}>
+                  <Box flex="1" textAlign="left" fontWeight="600" fontSize="lg" color="gray.800">
+                    {faq.question}
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h3>
+              <AccordionPanel pb={5} px={6} fontSize="md" color="gray.600" lineHeight="tall">
+                {faq.answer}
+              </AccordionPanel>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </Container>
+    </Box>
+  );
+};
 
 // CTA Section Component
 const CTASection = ({ cta }) => (
@@ -283,9 +300,9 @@ export default function SEOLandingPageContent({ pageData, category }) {
         <ContentSection key={idx} section={section} index={idx} />
       ))}
 
-      {/* FAQ Section */}
-      {pageData.faqs && pageData.faqs.length > 0 && (
-        <FAQSection faqs={pageData.faqs} />
+      {/* FAQ Section — supports both 'faqs' and 'faq' keys from data */}
+      {(pageData.faqs || pageData.faq) && (pageData.faqs || pageData.faq).length > 0 && (
+        <FAQSection faqs={pageData.faqs || pageData.faq} />
       )}
 
       {/* CTA Section */}

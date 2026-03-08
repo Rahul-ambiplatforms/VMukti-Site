@@ -449,6 +449,38 @@ export const faqSchema = {
         text: 'VMukti serves a wide range of industries including smart cities, transportation, healthcare, banking, retail, and government. We have 900+ deployments across 700+ districts globally.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'How does VMukti compare to Milestone XProtect and Genetec?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'VMukti is a cloud-native VMS platform, unlike Milestone XProtect and Genetec Security Center which originated as on-premise solutions. VMukti offers STQC government certification, native ICCC integration for smart cities, and 50+ built-in AI analytics — capabilities that require third-party plugins with Milestone or Genetec. VMukti is also available on Microsoft Azure Marketplace for enterprise procurement.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is VMukti a good alternative to Verkada for cloud video surveillance?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'VMukti and Verkada are both cloud-native VMS platforms. VMukti differentiates with STQC government certification, sovereign cloud deployment options, ICCC command center integration, and availability on Azure Marketplace. VMukti has been deployed across 700+ government districts in India and exhibited at ISC West 2025 and GITEX 2023/2024.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is VMukti listed on Azure Marketplace?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, VMukti Cloud VMS is listed on Microsoft Azure Marketplace, enabling enterprise customers to procure VMukti through existing Azure agreements. This makes VMukti one of the few Indian VMS platforms available for global cloud-first procurement.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What certifications does VMukti hold?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'VMukti holds STQC certification from India\'s Ministry of Electronics & IT, ISO 27001:2022 for information security, and ISO 9001:2015 for quality management. VMukti is also a NASSCOM Top 50 Emerging Product Company and was incubated at IIM-Ahmedabad.',
+      },
+    },
   ],
 };
 
