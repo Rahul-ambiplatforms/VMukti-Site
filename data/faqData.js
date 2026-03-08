@@ -258,6 +258,104 @@ export const faqData = {
     ],
   },
 
+  // GenAI for Video Surveillance FAQs
+  genai: {
+    title: 'GenAI Video Surveillance FAQs',
+    qa: [
+      {
+        question: 'What is GenAI for video surveillance and how does VMukti use it?',
+        answer:
+          'VMukti GenAI applies generative AI to video surveillance, enabling natural language queries across video feeds ("show me all red vehicles from yesterday"), automated incident reports, intelligent video summarization, and conversational analytics. Instead of manually reviewing hours of footage, operators ask questions in plain English and get instant answers with relevant video clips. This reduces investigation time by up to 90% and makes surveillance data accessible to non-technical users.',
+      },
+      {
+        question: 'Can I search surveillance video using natural language with VMukti GenAI?',
+        answer:
+          'Yes, VMukti GenAI supports natural language video search. Operators can type queries like "find person wearing blue jacket near gate 3 between 2pm and 4pm" and the system retrieves matching video segments instantly. This works across thousands of cameras simultaneously, eliminating manual review. The AI understands context, objects, actions, colors, locations, and time references. Accuracy improves over time as the system learns from your specific environment and use patterns.',
+      },
+      {
+        question: 'How does VMukti GenAI generate incident reports automatically?',
+        answer:
+          'When an incident is detected or flagged, VMukti GenAI automatically generates a structured report including: timeline of events, involved persons/vehicles, location mapping, contributing factors, and recommended actions. Reports are generated in seconds rather than hours of manual compilation. They include relevant video snapshots, can be exported as PDF, and integrate with existing incident management systems. This automation saves security teams 3-4 hours per incident on documentation.',
+      },
+      {
+        question: 'Is VMukti GenAI available for existing VMukti VMS customers?',
+        answer:
+          'Yes, VMukti GenAI is designed as an add-on module that integrates with existing VMukti Cloud VMS and EMS deployments. No hardware changes required. The GenAI processing runs in the cloud, analyzing metadata and video feeds from your existing camera infrastructure. Existing customers can enable GenAI capabilities through a simple license upgrade. The system works with all camera feeds already connected to VMukti VMS, including ONVIF-compatible cameras from any manufacturer.',
+      },
+    ],
+  },
+
+  // VisualBot FAQs
+  visualbot: {
+    title: 'VMukti VisualBot FAQs',
+    qa: [
+      {
+        question: 'What is VMukti VisualBot and what does it do?',
+        answer:
+          'VMukti VisualBot is an AI-powered automated monitoring agent that continuously watches your camera feeds and understands what it sees. Unlike traditional motion-detection systems, VisualBot understands scenes contextually, identifying anomalies like abandoned objects, unusual crowd formations, unauthorized access, or safety violations. It proactively alerts operators before incidents escalate, functioning as a tireless AI security guard across all your cameras 24/7.',
+      },
+      {
+        question: 'How is VMukti VisualBot different from standard video analytics?',
+        answer:
+          'Standard video analytics rely on predefined rules (tripwires, zones, motion thresholds). VMukti VisualBot uses deep learning scene understanding to detect anomalies without predefined rules. It learns normal patterns for each camera view and flags deviations automatically. This means it can catch scenarios you never anticipated, such as unusual vehicle parking patterns, people in restricted areas during odd hours, or gradual crowd buildup. False alert rates are 80% lower than rule-based systems because it understands context.',
+      },
+      {
+        question: 'Can VMukti VisualBot work with existing cameras?',
+        answer:
+          'Yes, VMukti VisualBot works with any IP camera that supports RTSP or ONVIF protocols. No special cameras or hardware required. The AI processing happens on VMukti edge servers or cloud infrastructure, not on the camera itself. This means you can add VisualBot intelligence to your existing camera investment. It supports cameras from all major manufacturers including Hikvision, Dahua, Axis, Bosch, Hanwha, and ArcisAI cameras.',
+      },
+    ],
+  },
+
+  // Live Streaming FAQs
+  liveStreaming: {
+    title: 'VMukti Live Streaming FAQs',
+    qa: [
+      {
+        question: 'What is VMukti Live Streaming Platform used for?',
+        answer:
+          'VMukti Live Streaming Platform enables enterprise-grade live video broadcasting for surveillance monitoring, public event streaming, government transparency initiatives, and operational visibility. Key use cases include: streaming city surveillance to command centers, broadcasting public meetings for citizen transparency, live monitoring of construction/infrastructure projects, and emergency situation awareness. The platform supports adaptive bitrate streaming for reliable delivery across varying network conditions.',
+      },
+      {
+        question: 'How many concurrent viewers can VMukti Live Streaming support?',
+        answer:
+          'VMukti Live Streaming Platform scales to support thousands of concurrent viewers through multi-CDN architecture and adaptive bitrate delivery. The platform automatically adjusts video quality based on viewer bandwidth, ensuring smooth playback on any device. Enterprise deployments typically handle 500-10,000+ concurrent streams with sub-2-second latency. Auto-scaling infrastructure means you pay for what you use, and the system handles traffic spikes during critical events without manual intervention.',
+      },
+      {
+        question: 'Is VMukti Live Streaming secure for government and enterprise use?',
+        answer:
+          'Yes, VMukti Live Streaming includes enterprise-grade security: (1) end-to-end encryption (AES-256); (2) token-based access control; (3) IP whitelisting; (4) role-based viewing permissions; (5) DRM protection; (6) audit logging of all viewer activity. The platform is STQC-certified and deployed across 50+ smart city projects in India for government use. Data sovereignty options ensure streams are processed and stored within specified geographic boundaries. Supports private cloud and on-premise deployment models.',
+      },
+    ],
+  },
+
+  // Face Surveillance System FAQs
+  faceSurveillance: {
+    title: 'VMukti Face Surveillance FAQs',
+    qa: [
+      {
+        question: 'How accurate is VMukti Face Surveillance System?',
+        answer:
+          'VMukti Face Surveillance System achieves 99.2%+ accuracy in controlled environments and 95%+ in real-world conditions with varying lighting, angles, and partial occlusion. The system uses deep learning models trained on diverse datasets for reliable performance across demographics. Key capabilities: real-time identification against watchlists of 100,000+ faces, processing speeds of 30+ faces per second per camera, and liveness detection to prevent spoofing with photos or videos. Accuracy improves with enrollment photo quality.',
+      },
+      {
+        question: 'What are the main use cases for VMukti Face Surveillance?',
+        answer:
+          'VMukti Face Surveillance supports: (1) law enforcement watchlist monitoring—real-time alerts when persons of interest appear; (2) enterprise access control—facial authentication for secure areas; (3) attendance management—automated check-in/out without cards; (4) VIP identification—instant recognition for hospitality and events; (5) missing persons—scan crowds against databases; (6) repeat offender detection—retail loss prevention. Deployed across smart cities (50+), airports, corporate campuses, educational institutions, and banking facilities.',
+      },
+      {
+        question: 'Does VMukti Face Surveillance comply with privacy regulations?',
+        answer:
+          'Yes, VMukti Face Surveillance is built with privacy-by-design principles: (1) data minimization—only stores face embeddings, not full images; (2) consent management—configurable opt-in workflows; (3) data retention policies—automatic purging per regulatory requirements; (4) audit trails—complete logging of all recognition events; (5) access controls—role-based permissions for face data. Compliant with Indian IT Act, GDPR principles, and CCPA requirements. On-premise deployment options ensure face data never leaves your infrastructure.',
+      },
+      {
+        question: 'Can VMukti Face Surveillance integrate with existing access control systems?',
+        answer:
+          'Yes, VMukti Face Surveillance integrates with major access control systems through standard protocols (Wiegand, OSDP) and APIs. Supported integrations include: door controllers, turnstiles, boom barriers, elevator control systems, and visitor management platforms. The system can augment or replace card-based access with facial authentication. Dual-factor authentication mode combines face recognition with card/PIN for high-security areas. Integration with VMukti VMS provides video verification of all access events.',
+      },
+    ],
+  },
+
   // General VMukti Information FAQs
   general: {
     title: 'About VMukti Solutions FAQs',

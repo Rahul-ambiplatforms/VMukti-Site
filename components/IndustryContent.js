@@ -241,17 +241,15 @@ const IndustryContent = ({ props, content, industryName }) => {
 
   return (
     <>
-    <script>
-        {content.schema.map((schema, index) => (
-          <script
-            key={`schema-${index}`}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(schema),
-            }}
-          />
-        ))}
-      </script>
+      {content.schema && content.schema.map((schemaItem, index) => (
+        <script
+          key={`schema-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaItem),
+          }}
+        />
+      ))}
       <Helmet>
         {/* SEO Tags */}
         <title>{content.metatitle}</title>
