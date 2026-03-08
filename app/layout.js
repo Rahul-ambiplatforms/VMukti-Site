@@ -2,7 +2,6 @@ import { Providers } from './providers';
 import SiteLayout from './site-layout';
 import Script from 'next/script';
 import './globals.css';
-import SchemaMarkup from '../components/SchemaMarkup';
 
 const SITE_URL = 'https://www.vmukti.com';
 
@@ -107,10 +106,14 @@ const organizationSchema = {
     },
   ],
   sameAs: [
-    'https://www.linkedin.com/company/vmukti-solutions/',
-    'https://twitter.com/VMuktiSolution',
+    'https://www.linkedin.com/company/vmuktisolutions',
+    'https://www.youtube.com/@VMukti1',
+    'https://twitter.com/VMukti',
+    'https://www.facebook.com/VMuktisolutions',
+    'https://www.instagram.com/vmuktisolutions/',
+    'https://www.crunchbase.com/organization/vmukti-solutions',
   ],
-  award: ['NASSCOM Top 50 Emerging Companies', 'IIM-Ahmedabad Incubated', 'STQC Certified'],
+  award: ['NASSCOM Top 50 Emerging Companies', 'IIM-Ahmedabad Incubated', 'STQC Certified', 'ISO 27001:2022 Certified', 'ISO 9001:2015 Certified', 'Make in India Certified'],
   numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 50, maxValue: 200 },
   knowsAbout: ['Cloud VMS', 'Enterprise Management System', 'ICCC', 'AI Video Analytics', 'Smart City Surveillance'],
 };
@@ -149,9 +152,6 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        {/* JSON-LD Schema Markup for GEO */}
-        <SchemaMarkup />
-
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

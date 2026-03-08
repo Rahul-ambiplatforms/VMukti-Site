@@ -34,10 +34,12 @@ export const OrganizationSchema = () => {
       addressCountry: 'IN',
     },
     sameAs: [
-      'https://www.linkedin.com/company/vmukti-solutions/',
-      'https://www.youtube.com/@vmukti',
-      'https://twitter.com/VMuktiSolution',
-      'https://www.facebook.com/vmaboratoryukti',
+      'https://www.linkedin.com/company/vmuktisolutions',
+      'https://www.youtube.com/@VMukti1',
+      'https://twitter.com/VMukti',
+      'https://www.facebook.com/VMuktisolutions',
+      'https://www.instagram.com/vmuktisolutions/',
+      'https://www.crunchbase.com/organization/vmukti-solutions',
     ],
     numberOfEmployees: {
       '@type': 'QuantitativeValue',
@@ -346,6 +348,70 @@ export const LocalBusinessSchema = (props) => {
       '@type': 'GeoCoordinates',
       latitude,
       longitude,
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+};
+
+/**
+ * EventSchema - Event structured data for exhibitions, conferences, etc.
+ * @param {Object} props - {name, description, startDate, endDate, location, image, url, organizer, performer}
+ */
+export const EventSchema = (props) => {
+  const {
+    name = '',
+    description = '',
+    startDate = '',
+    endDate = '',
+    locationName = '',
+    streetAddress = '',
+    addressLocality = '',
+    addressRegion = '',
+    addressCountry = 'IN',
+    image = '',
+    url = '',
+    organizer = 'VMukti Solutions',
+    eventStatus = 'https://schema.org/EventScheduled',
+    eventAttendanceMode = 'https://schema.org/OfflineEventAttendanceMode',
+  } = props;
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name,
+    description,
+    startDate,
+    endDate,
+    eventStatus,
+    eventAttendanceMode,
+    location: {
+      '@type': 'Place',
+      name: locationName,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress,
+        addressLocality,
+        addressRegion,
+        addressCountry,
+      },
+    },
+    ...(image && { image }),
+    url,
+    organizer: {
+      '@type': 'Organization',
+      name: organizer,
+      url: 'https://www.vmukti.com',
+    },
+    performer: {
+      '@type': 'Organization',
+      name: 'VMukti Solutions',
+      url: 'https://www.vmukti.com',
     },
   };
 
