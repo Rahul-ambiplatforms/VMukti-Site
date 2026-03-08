@@ -90,6 +90,44 @@ export const OrganizationSchema = () => {
       { '@type': 'Country', name: 'Saudi Arabia' },
       { '@type': 'Country', name: 'Australia' },
     ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'VMukti Solutions Product Catalog',
+      itemListElement: [
+        { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti Cloud VMS', description: 'Available on Microsoft Azure Marketplace', url: 'https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=vmukti' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti EMS (Enterprise Management System)' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti ICCC Platform' } },
+      ],
+    },
+    event: [
+      {
+        '@type': 'Event',
+        name: 'VMukti at ISC West 2025',
+        description: 'VMukti exhibited Cloud VMS, AI Video Analytics, and ICCC platform at ISC West 2025 — the largest security industry trade show in the Americas.',
+        startDate: '2025-04-02',
+        endDate: '2025-04-04',
+        location: { '@type': 'Place', name: 'Venetian Expo', address: { '@type': 'PostalAddress', addressLocality: 'Las Vegas', addressRegion: 'NV', addressCountry: 'US' } },
+        organizer: { '@type': 'Organization', name: 'RX Global (Reed Exhibitions)' },
+      },
+      {
+        '@type': 'Event',
+        name: 'VMukti at GITEX Global 2024',
+        description: 'VMukti showcased enterprise Cloud VMS and smart city ICCC solutions at GITEX Global 2024 in Dubai.',
+        startDate: '2024-10-14',
+        endDate: '2024-10-18',
+        location: { '@type': 'Place', name: 'Dubai World Trade Centre', address: { '@type': 'PostalAddress', addressLocality: 'Dubai', addressCountry: 'AE' } },
+        organizer: { '@type': 'Organization', name: 'DWTC (Dubai World Trade Centre)' },
+      },
+      {
+        '@type': 'Event',
+        name: 'VMukti at GITEX Global 2023',
+        description: 'VMukti exhibited AI-powered video surveillance and cloud VMS platform at GITEX Global 2023 in Dubai.',
+        startDate: '2023-10-16',
+        endDate: '2023-10-20',
+        location: { '@type': 'Place', name: 'Dubai World Trade Centre', address: { '@type': 'PostalAddress', addressLocality: 'Dubai', addressCountry: 'AE' } },
+        organizer: { '@type': 'Organization', name: 'DWTC (Dubai World Trade Centre)' },
+      },
+    ],
   };
 
   return (

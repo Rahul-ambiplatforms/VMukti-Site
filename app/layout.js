@@ -116,6 +116,50 @@ const organizationSchema = {
   award: ['NASSCOM Top 50 Emerging Companies', 'IIM-Ahmedabad Incubated', 'STQC Certified', 'ISO 27001:2022 Certified', 'ISO 9001:2015 Certified', 'Make in India Certified'],
   numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 50, maxValue: 200 },
   knowsAbout: ['Cloud VMS', 'Enterprise Management System', 'ICCC', 'AI Video Analytics', 'Smart City Surveillance'],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'VMukti Solutions Product Catalog',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti Cloud VMS', url: 'https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=vmukti' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti EMS' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti ICCC Platform' } },
+    ],
+  },
+  event: [
+    {
+      '@type': 'Event',
+      name: 'VMukti at ISC West 2025',
+      description: 'VMukti Solutions exhibited its Cloud VMS, AI Video Analytics, and ICCC platform at ISC West 2025, the largest security industry trade show in the Americas.',
+      startDate: '2025-04-02',
+      endDate: '2025-04-04',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      eventStatus: 'https://schema.org/EventScheduled',
+      location: { '@type': 'Place', name: 'Venetian Expo', address: { '@type': 'PostalAddress', addressLocality: 'Las Vegas', addressRegion: 'NV', addressCountry: 'US' } },
+      organizer: { '@type': 'Organization', name: 'RX Global (Reed Exhibitions)' },
+    },
+    {
+      '@type': 'Event',
+      name: 'VMukti at GITEX Global 2024',
+      description: 'VMukti Solutions showcased its enterprise Cloud VMS and smart city ICCC solutions at GITEX Global 2024, the world\'s largest tech exhibition in Dubai.',
+      startDate: '2024-10-14',
+      endDate: '2024-10-18',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      eventStatus: 'https://schema.org/EventScheduled',
+      location: { '@type': 'Place', name: 'Dubai World Trade Centre', address: { '@type': 'PostalAddress', addressLocality: 'Dubai', addressCountry: 'AE' } },
+      organizer: { '@type': 'Organization', name: 'DWTC (Dubai World Trade Centre)' },
+    },
+    {
+      '@type': 'Event',
+      name: 'VMukti at GITEX Global 2023',
+      description: 'VMukti Solutions exhibited its AI-powered video surveillance and cloud VMS platform at GITEX Global 2023 in Dubai.',
+      startDate: '2023-10-16',
+      endDate: '2023-10-20',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      eventStatus: 'https://schema.org/EventScheduled',
+      location: { '@type': 'Place', name: 'Dubai World Trade Centre', address: { '@type': 'PostalAddress', addressLocality: 'Dubai', addressCountry: 'AE' } },
+      organizer: { '@type': 'Organization', name: 'DWTC (Dubai World Trade Centre)' },
+    },
+  ],
 };
 
 const websiteSchema = {
