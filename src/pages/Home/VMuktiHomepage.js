@@ -48,7 +48,7 @@ const VMuktiHomepage = () => {
         </title>
         <meta
           name="description"
-          content="We offers flexible cloud video surveillance solutions for USA businesses. Add cloud intelligence to your current CCTV infrastructure effortlessly."
+          content="We offer flexible cloud video surveillance solutions for USA businesses. Add cloud intelligence to your current CCTV infrastructure effortlessly."
         />
         <meta name="robots" content="index, follow" />
         <meta
@@ -57,7 +57,7 @@ const VMuktiHomepage = () => {
         />
         <meta
           property="og:description"
-          content="We offers flexible cloud video surveillance solutions for USA businesses. Add cloud intelligence to your current CCTV infrastructure effortlessly."
+          content="We offer flexible cloud video surveillance solutions for USA businesses. Add cloud intelligence to your current CCTV infrastructure effortlessly."
         />
         <meta
           property="og:image"
