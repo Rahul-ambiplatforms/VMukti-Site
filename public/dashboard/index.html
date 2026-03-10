@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VMukti & ArcisAI — Project Dashboard</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0f172a;--card:#1e293b;--card2:#334155;--accent:#3b82f6;--green:#22c55e;--yellow:#eab308;--red:#ef4444;--orange:#f97316;--purple:#a855f7;--cyan:#06b6d4;--text:#f1f5f9;--muted:#94a3b8;--border:#475569}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;min-height:100vh}
+.container{max-width:1400px;margin:0 auto;padding:20px}
+
+/* Header */
+.header{background:linear-gradient(135deg,#1e3a5f 0%,#0f172a 50%,#1a1a2e 100%);border:1px solid var(--border);border-radius:16px;padding:30px;margin-bottom:24px;position:relative;overflow:hidden}
+.header::before{content:'';position:absolute;top:-50%;right:-10%;width:300px;height:300px;background:radial-gradient(circle,rgba(59,130,246,0.15),transparent 70%);border-radius:50%}
+.header h1{font-size:28px;font-weight:700;margin-bottom:4px}
+.header h1 span{color:var(--accent)}
+.header .subtitle{color:var(--muted);font-size:14px}
+.header .update-badge{position:absolute;top:20px;right:20px;background:var(--accent);color:#fff;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600}
+
+/* Stats Row */
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:24px}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;transition:transform 0.2s}
+.stat-card:hover{transform:translateY(-2px)}
+.stat-card .number{font-size:32px;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stat-card .label{color:var(--muted);font-size:13px;margin-top:4px}
+
+/* Tabs */
+.tabs{display:flex;gap:4px;margin-bottom:20px;background:var(--card);border-radius:12px;padding:4px;overflow-x:auto;flex-wrap:nowrap}
+.tab{padding:10px 18px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;color:var(--muted);white-space:nowrap;transition:all 0.2s;border:none;background:none}
+.tab:hover{color:var(--text);background:var(--card2)}
+.tab.active{background:var(--accent);color:#fff}
+
+/* Tab content */
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* Tables */
+.section{background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:20px;overflow:hidden}
+.section-header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
+.section-header h3{font-size:16px;font-weight:700}
+.section-header .icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px}
+.icon-blue{background:rgba(59,130,246,0.15);color:var(--accent)}
+.icon-green{background:rgba(34,197,94,0.15);color:var(--green)}
+.icon-red{background:rgba(239,68,68,0.15);color:var(--red)}
+.icon-yellow{background:rgba(234,179,8,0.15);color:var(--yellow)}
+.icon-purple{background:rgba(168,85,247,0.15);color:var(--purple)}
+.icon-cyan{background:rgba(6,182,212,0.15);color:var(--cyan)}
+
+table{width:100%;border-collapse:collapse}
+th{background:var(--card2);padding:10px 16px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);font-weight:600;position:sticky;top:0}
+td{padding:10px 16px;border-top:1px solid rgba(71,85,105,0.4);font-size:13px;vertical-align:top}
+tr:hover td{background:rgba(59,130,246,0.04)}
+
+/* Status badges */
+.badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.3px}
+.badge-done{background:rgba(34,197,94,0.15);color:#4ade80}
+.badge-live{background:rgba(34,197,94,0.25);color:#86efac}
+.badge-progress{background:rgba(234,179,8,0.15);color:#fde047}
+.badge-pending{background:rgba(239,68,68,0.12);color:#fca5a5}
+.badge-blocked{background:rgba(148,163,184,0.15);color:#cbd5e1}
+.badge-active{background:rgba(6,182,212,0.15);color:#67e8f9}
+.badge-high{background:rgba(239,68,68,0.12);color:#fca5a5}
+.badge-medium{background:rgba(234,179,8,0.12);color:#fde047}
+.badge-low{background:rgba(34,197,94,0.12);color:#86efac}
+
+/* Brand tags */
+.brand{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600}
+.brand-vmukti{background:rgba(59,130,246,0.15);color:#93c5fd}
+.brand-arcisai{background:rgba(168,85,247,0.15);color:#d8b4fe}
+.brand-both{background:rgba(6,182,212,0.15);color:#67e8f9}
+.brand-shared{background:rgba(234,179,8,0.12);color:#fde047}
+
+/* Code block */
+.code-block{background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:16px;font-family:'Fira Code','Courier New',monospace;font-size:12px;color:#e6edf3;overflow-x:auto;margin:12px 16px 16px;line-height:1.6;white-space:pre}
+.code-block .comment{color:#8b949e}
+.code-block .string{color:#a5d6ff}
+.code-block .keyword{color:#ff7b72}
+
+/* ID Cards */
+.id-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;padding:16px}
+.id-card{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:14px;display:flex;align-items:center;gap:12px}
+.id-card .id-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.id-card .id-info{flex:1;min-width:0}
+.id-card .id-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px}
+.id-card .id-value{font-size:14px;font-weight:600;font-family:'Fira Code',monospace;word-break:break-all}
+.id-card .id-status{font-size:10px;margin-top:2px}
+
+/* Progress bars */
+.progress-section{padding:16px 20px}
+.progress-item{margin-bottom:16px}
+.progress-label{display:flex;justify-content:space-between;margin-bottom:6px;font-size:13px}
+.progress-bar{height:8px;background:var(--card2);border-radius:4px;overflow:hidden}
+.progress-fill{height:100%;border-radius:4px;transition:width 0.5s}
+.progress-fill.blue{background:linear-gradient(90deg,var(--accent),var(--cyan))}
+.progress-fill.green{background:linear-gradient(90deg,var(--green),#86efac)}
+.progress-fill.yellow{background:linear-gradient(90deg,var(--yellow),var(--orange))}
+.progress-fill.red{background:linear-gradient(90deg,var(--red),var(--orange))}
+
+/* Responsive */
+@media(max-width:768px){
+  .container{padding:12px}
+  .header{padding:20px}
+  .header h1{font-size:20px}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .tabs{overflow-x:auto}
+  .id-grid{grid-template-columns:1fr}
+  td,th{padding:8px 10px;font-size:12px}
+}
+
+/* Print */
+@media print{
+  body{background:#fff;color:#000}
+  .tab-content{display:block!important}
+  .tabs{display:none}
+  .section{break-inside:avoid;border:1px solid #ccc}
+  .badge,.brand{border:1px solid #ccc}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- Header -->
+<div class="header">
+  <div class="update-badge">Updated: Mar 10, 2026</div>
+  <h1><span>VMukti</span> & <span>ArcisAI</span></h1>
+  <div style="font-size:18px;font-weight:600;margin:4px 0">B2B Go-To-Market Project Dashboard</div>
+  <div class="subtitle">VMukti = SOFTWARE (Cloud VMS) &nbsp;|&nbsp; ArcisAI = HARDWARE (AI Cameras) &nbsp;|&nbsp; Target: Global Enterprise (US + UAE → UK/EU)</div>
+</div>
+
+<!-- Stats -->
+<div class="stats-row">
+  <div class="stat-card"><div class="number">125+</div><div class="label">Files Created</div></div>
+  <div class="stat-card"><div class="number">7</div><div class="label">Google Ads Tasks Done</div></div>
+  <div class="stat-card"><div class="number">4</div><div class="label">Landing Pages Built</div></div>
+  <div class="stat-card"><div class="number">10+</div><div class="label">Blogs Ready</div></div>
+  <div class="stat-card"><div class="number">5</div><div class="label">Git Commits Pushed</div></div>
+  <div class="stat-card"><div class="number">17</div><div class="label">Action Items Pending</div></div>
+</div>
+
+<!-- Tabs -->
+<div class="tabs">
+  <div class="tab active" onclick="showTab('overview')">Overview</div>
+  <div class="tab" onclick="showTab('google-ads')">Google Ads</div>
+  <div class="tab" onclick="showTab('website')">Website & SEO</div>
+  <div class="tab" onclick="showTab('content')">Content & Marketing</div>
+  <div class="tab" onclick="showTab('listings')">B2B Listings</div>
+  <div class="tab" onclick="showTab('actions')">Action Items</div>
+  <div class="tab" onclick="showTab('tracking')">Conversion Tracking</div>
+</div>
+
+<!-- ==================== OVERVIEW TAB ==================== -->
+<div id="overview" class="tab-content active">
+
+<!-- Progress Overview -->
+<div class="section">
+  <div class="section-header"><div class="icon icon-blue">📊</div><h3>Overall Progress</h3></div>
+  <div class="progress-section">
+    <div class="progress-item">
+      <div class="progress-label"><span>Google Ads Setup (VMukti)</span><span>70%</span></div>
+      <div class="progress-bar"><div class="progress-fill blue" style="width:70%"></div></div>
+    </div>
+    <div class="progress-item">
+      <div class="progress-label"><span>Google Ads Setup (ArcisAI)</span><span>0%</span></div>
+      <div class="progress-bar"><div class="progress-fill red" style="width:0%"></div></div>
+    </div>
+    <div class="progress-item">
+      <div class="progress-label"><span>SEO & GEO Strategy</span><span>85%</span></div>
+      <div class="progress-bar"><div class="progress-fill green" style="width:85%"></div></div>
+    </div>
+    <div class="progress-item">
+      <div class="progress-label"><span>Content Creation</span><span>90%</span></div>
+      <div class="progress-bar"><div class="progress-fill green" style="width:90%"></div></div>
+    </div>
+    <div class="progress-item">
+      <div class="progress-label"><span>Website Performance Fixes</span><span>15%</span></div>
+      <div class="progress-bar"><div class="progress-fill red" style="width:15%"></div></div>
+    </div>
+    <div class="progress-item">
+      <div class="progress-label"><span>B2B Directory Listings</span><span>25%</span></div>
+      <div class="progress-bar"><div class="progress-fill yellow" style="width:25%"></div></div>
+    </div>
+    <div class="progress-item">
+      <div class="progress-label"><span>CRM & Email Automation</span><span>10%</span></div>
+      <div class="progress-bar"><div class="progress-fill red" style="width:10%"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Key Accounts -->
+<div class="section">
+  <div class="section-header"><div class="icon icon-cyan">🔑</div><h3>Key Accounts & IDs</h3></div>
+  <div class="id-grid">
+    <div class="id-card">
+      <div class="id-icon" style="background:rgba(59,130,246,0.15);color:var(--accent)">📢</div>
+      <div class="id-info">
+        <div class="id-label">VMukti Google Ads Customer ID</div>
+        <div class="id-value">400-418-0796</div>
+        <div class="id-status"><span class="badge badge-active">ACTIVE</span> ₹10K paid</div>
+      </div>
+    </div>
+    <div class="id-card">
+      <div class="id-icon" style="background:rgba(34,197,94,0.15);color:var(--green)">🏷️</div>
+      <div class="id-info">
+        <div class="id-label">Google Tag Conversion ID</div>
+        <div class="id-value">AW-18005237666</div>
+        <div class="id-status"><span class="badge badge-done">DEPLOYED</span></div>
+      </div>
+    </div>
+    <div class="id-card">
+      <div class="id-icon" style="background:rgba(234,179,8,0.15);color:var(--yellow)">📈</div>
+      <div class="id-info">
+        <div class="id-label">GA4 Property ID</div>
+        <div class="id-value">G-GGKLN98WFR</div>
+        <div class="id-status"><span class="badge badge-active">TRACKING</span></div>
+      </div>
+    </div>
+    <div class="id-card">
+      <div class="id-icon" style="background:rgba(168,85,247,0.15);color:var(--purple)">📦</div>
+      <div class="id-info">
+        <div class="id-label">GTM Container</div>
+        <div class="id-value">GTM-WCPW3K5</div>
+        <div class="id-status"><span class="badge badge-active">DEPLOYED</span></div>
+      </div>
+    </div>
+    <div class="id-card">
+      <div class="id-icon" style="background:rgba(59,130,246,0.15);color:var(--accent)">💻</div>
+      <div class="id-info">
+        <div class="id-label">VMukti GitHub Repo</div>
+        <div class="id-value">Rahul-ambiplatforms/VMukti-Site</div>
+        <div class="id-status"><span class="badge badge-active">main branch</span></div>
+      </div>
+    </div>
+    <div class="id-card">
+      <div class="id-icon" style="background:rgba(168,85,247,0.15);color:var(--purple)">💻</div>
+      <div class="id-info">
+        <div class="id-label">ArcisAI GitHub Repo</div>
+        <div class="id-value">Rahul-ambiplatforms/ArcisInfo-1</div>
+        <div class="id-status"><span class="badge badge-active">main branch</span></div>
+      </div>
+    </div>
+    <div class="id-card">
+      <div class="id-icon" style="background:rgba(239,68,68,0.15);color:var(--red)">⚠️</div>
+      <div class="id-info">
+        <div class="id-label">ArcisAI Google Ads</div>
+        <div class="id-value">NOT CREATED YET</div>
+        <div class="id-status"><span class="badge badge-pending">PENDING</span></div>
+      </div>
+    </div>
+    <div class="id-card">
+      <div class="id-icon" style="background:rgba(234,179,8,0.15);color:var(--yellow)">💰</div>
+      <div class="id-info">
+        <div class="id-label">Total Ads Budget</div>
+        <div class="id-value">₹50K/month</div>
+        <div class="id-status">₹25K VMukti + ₹25K ArcisAI</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== GOOGLE ADS TAB ==================== -->
+<div id="google-ads" class="tab-content">
+<div class="section">
+  <div class="section-header"><div class="icon icon-blue">📢</div><h3>VMukti Google Ads — Account 400-418-0796</h3></div>
+  <table>
+    <tr><th>Task</th><th>Status</th><th>Details</th><th>Date</th><th>Notes</th></tr>
+    <tr><td>Create new Google Ads account</td><td><span class="badge badge-done">DONE</span></td><td>Customer ID: 400-418-0796</td><td>Mar 10</td><td>Old 9332488541 was suspended</td></tr>
+    <tr><td>₹10,000 initial payment</td><td><span class="badge badge-done">DONE</span></td><td>Manual payment by Kushal</td><td>Mar 10</td><td>Account now active</td></tr>
+    <tr><td>Demo Request conversion action</td><td><span class="badge badge-done">DONE</span></td><td>Label: I_r6CPio24UcEKK_yIlD</td><td>Mar 10</td><td>Primary, Submit lead form, One count</td></tr>
+    <tr><td>Contact Form Submit conversion</td><td><span class="badge badge-done">DONE</span></td><td>Label: 6tAFCPuo24UcEKK_yIlD</td><td>Mar 10</td><td>Primary, Submit lead form, One count</td></tr>
+    <tr><td>Enhanced Conversions enabled</td><td><span class="badge badge-done">DONE</span></td><td>Auto-detect customer data</td><td>Mar 10</td><td>Improves conversion measurement</td></tr>
+    <tr><td>Google Tag setup (AW-18005237666)</td><td><span class="badge badge-done">DONE</span></td><td>Named "VMukti Website Tag"</td><td>Mar 10</td><td>Tag IDs: AW-18005237666, GT-MR457XJF</td></tr>
+    <tr><td>Deploy gtag.js on landing pages</td><td><span class="badge badge-done">DONE</span></td><td>enterprise-vms + enterprise pages</td><td>Mar 10</td><td>Pushed to GitHub (commit 3506a8d)</td></tr>
+    <tr><td>Switch to Organization payments profile</td><td><span class="badge badge-blocked">BLOCKED</span></td><td>Ad blocker prevents iframe</td><td>—</td><td>👤 Kushal: Disable ad blocker, do manually</td></tr>
+    <tr><td>Link GA4 to Google Ads</td><td><span class="badge badge-pending">PENDING</span></td><td>Connect in Data Manager</td><td>—</td><td>Enables cross-platform reporting</td></tr>
+    <tr><td>Create Search campaigns</td><td><span class="badge badge-pending">PENDING</span></td><td>Blueprint ready in outputs</td><td>—</td><td>₹25K/month budget</td></tr>
+    <tr><td>Set up remarketing audiences</td><td><span class="badge badge-pending">PENDING</span></td><td>Tag deployed, need audiences</td><td>—</td><td></td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <div class="section-header"><div class="icon icon-purple">📢</div><h3>ArcisAI Google Ads — NOT YET CREATED</h3></div>
+  <table>
+    <tr><th>Task</th><th>Status</th><th>Priority</th><th>Notes</th></tr>
+    <tr><td>Create ArcisAI Google Ads account</td><td><span class="badge badge-pending">PENDING</span></td><td><span class="badge badge-high">HIGH</span></td><td>Separate account, ₹25K/month</td></tr>
+    <tr><td>Deploy landing page conversion tags</td><td><span class="badge badge-pending">PENDING</span></td><td><span class="badge badge-high">HIGH</span></td><td>Landing page has GA4 only</td></tr>
+    <tr><td>Create conversion actions</td><td><span class="badge badge-pending">PENDING</span></td><td><span class="badge badge-high">HIGH</span></td><td>Demo + Contact form</td></tr>
+    <tr><td>Create Search campaigns</td><td><span class="badge badge-pending">PENDING</span></td><td><span class="badge badge-high">HIGH</span></td><td>AI cameras + NDAA keywords</td></tr>
+  </table>
+</div>
+</div>
+
+<!-- ==================== WEBSITE & SEO TAB ==================== -->
+<div id="website" class="tab-content">
+<div class="section">
+  <div class="section-header"><div class="icon icon-green">🚀</div><h3>Code Pushed to GitHub</h3></div>
+  <table>
+    <tr><th>Change</th><th>Status</th><th>Commit</th><th>Brand</th><th>Notes</th></tr>
+    <tr><td>Enterprise VMS Landing Page (new)</td><td><span class="badge badge-live">PUSHED</span></td><td><code>d655e1a</code></td><td><span class="brand brand-vmukti">VMukti</span></td><td>Full landing page with form, GTM, GA4</td></tr>
+    <tr><td>Enterprise Page — VisualBot (new)</td><td><span class="badge badge-live">PUSHED</span></td><td><code>d655e1a</code></td><td><span class="brand brand-vmukti">VMukti</span></td><td>Azure deployment, AI engine features</td></tr>
+    <tr><td>GTM + GA4 tracking added</td><td><span class="badge badge-live">PUSHED</span></td><td><code>6cee856</code></td><td><span class="brand brand-vmukti">VMukti</span></td><td>GTM-WCPW3K5 + G-GGKLN98WFR</td></tr>
+    <tr><td>SEO meta description fix</td><td><span class="badge badge-live">PUSHED</span></td><td><code>801ce23</code></td><td><span class="brand brand-vmukti">VMukti</span></td><td>"We offers" → "We offer"</td></tr>
+    <tr><td>Google Ads tag (AW-18005237666)</td><td><span class="badge badge-live">PUSHED</span></td><td><code>3506a8d</code></td><td><span class="brand brand-vmukti">VMukti</span></td><td>Correct conversion ID + labels</td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <div class="section-header"><div class="icon icon-green">✅</div><h3>SEO & GEO Work Completed</h3></div>
+  <table>
+    <tr><th>Item</th><th>Status</th><th>Brand</th><th>Type</th></tr>
+    <tr><td>Complete SEO audit (technical + on-page + competitor)</td><td><span class="badge badge-done">DONE</span></td><td><span class="brand brand-both">Both</span></td><td>Audit</td></tr>
+    <tr><td>GEO strategy (ChatGPT/Gemini/Perplexity visibility)</td><td><span class="badge badge-done">DONE</span></td><td><span class="brand brand-both">Both</span></td><td>Strategy</td></tr>
+    <tr><td>Structured data schemas (JSON-LD)</td><td><span class="badge badge-done">DONE</span></td><td><span class="brand brand-both">Both</span></td><td>Technical</td></tr>
+    <tr><td>XML Sitemaps</td><td><span class="badge badge-done">DONE</span></td><td><span class="brand brand-both">Both</span></td><td>Technical</td></tr>
+    <tr><td>robots.txt files</td><td><span class="badge badge-done">DONE</span></td><td><span class="brand brand-both">Both</span></td><td>Technical</td></tr>
+    <tr><td>SEO blog drafts (5+ per brand)</td><td><span class="badge badge-done">DONE</span></td><td><span class="brand brand-both">Both</span></td><td>Content</td></tr>
+    <tr><td>Competitor keyword campaigns</td><td><span class="badge badge-done">DONE</span></td><td><span class="brand brand-both">Both</span></td><td>Strategy</td></tr>
+    <tr><td>Internet presence gap analysis</td><td><span class="badge badge-done">DONE</span></td><td><span class="brand brand-both">Both</span></td><td>Audit</td></tr>
+    <tr><td>Google Business Profile optimization report</td><td><span class="badge badge-done">DONE</span></td><td><span class="brand brand-vmukti">VMukti</span></td><td>Audit</td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <div class="section-header"><div class="icon icon-red">🔧</div><h3>Website Fixes Needed — Dev Team</h3></div>
+  <table>
+    <tr><th>Fix Required</th><th>Status</th><th>Brand</th><th>Priority</th><th>Impact</th></tr>
+    <tr><td>Remove "India" from titles/H1s</td><td><span class="badge badge-pending">PENDING</span></td><td><span class="brand brand-both">Both</span></td><td><span class="badge badge-high">HIGH</span></td><td>Hurts global enterprise positioning</td></tr>
+    <tr><td>Fix hero animation (causes slow load)</td><td><span class="badge badge-pending">PENDING</span></td><td><span class="brand brand-vmukti">VMukti</span></td><td><span class="badge badge-high">HIGH</span></td><td>Desktop PageSpeed: 17 → target 70+</td></tr>
+    <tr><td>Replace calendar with Calendly</td><td><span class="badge badge-pending">PENDING</span></td><td><span class="brand brand-both">Both</span></td><td><span class="badge badge-high">HIGH</span></td><td>Enterprise demo booking UX</td></tr>
+    <tr><td>Fix ArcisAI contact form</td><td><span class="badge badge-pending">PENDING</span></td><td><span class="brand brand-arcisai">ArcisAI</span></td><td><span class="badge badge-high">HIGH</span></td><td>Form not submitting — losing leads</td></tr>
+    <tr><td>Show full desktop navigation</td><td><span class="badge badge-pending">PENDING</span></td><td><span class="brand brand-vmukti">VMukti</span></td><td><span class="badge badge-medium">MED</span></td><td>Nav hidden on desktop view</td></tr>
+    <tr><td>Mobile performance optimization</td><td><span class="badge badge-pending">PENDING</span></td><td><span class="brand brand-arcisai">ArcisAI</span></td><td><span class="badge badge-high">HIGH</span></td><td>Mobile score: 48 → target 70+</td></tr>
+    <tr><td>Deploy structured data schemas</td><td><span class="badge badge-pending">PENDING</span></td><td><span class="brand brand-both">Both</span></td><td><span class="badge badge-high">HIGH</span></td><td>JSON-LD files ready in outputs</td></tr>
+    <tr><td>Deploy sitemaps + robots.txt</td><td><span class="badge badge-pending">PENDING</span></td><td><span class="brand brand-both">Both</span></td><td><span class="badge badge-high">HIGH</span></td><td>Files ready in outputs</td></tr>
+  </table>
+</div>
+</div>
+
+<!-- ==================== CONTENT TAB ==================== -->
+<div id="content" class="tab-content">
+<div class="section">
+  <div class="section-header"><div class="icon icon-purple">📄</div><h3>Landing Pages & Site Pages</h3></div>
+  <table>
+    <tr><th>Page</th><th>Status</th><th>Brand</th><th>Tracking</th></tr>
+    <tr><td>Global Enterprise VMS Landing</td><td><span class="badge badge-live">LIVE</span></td><td><span class="brand brand-vmukti">VMukti</span></td><td>GTM + GA4 + Google Ads + Conversions</td></tr>
+    <tr><td>Enterprise Page (VisualBot AI)</td><td><span class="badge badge-live">LIVE</span></td><td><span class="brand brand-vmukti">VMukti</span></td><td>GTM + GA4 + Google Ads</td></tr>
+    <tr><td>Cloud VMS Alternative Landing</td><td><span class="badge badge-done">READY</span></td><td><span class="brand brand-vmukti">VMukti</span></td><td>Competitor capture page</td></tr>
+    <tr><td>Pricing Demo Landing</td><td><span class="badge badge-done">READY</span></td><td><span class="brand brand-vmukti">VMukti</span></td><td>—</td></tr>
+    <tr><td>Global Enterprise Cameras Landing</td><td><span class="badge badge-done">READY</span></td><td><span class="brand brand-arcisai">ArcisAI</span></td><td>GA4 only — needs Ads tags</td></tr>
+    <tr><td>NDAA Compliant Page</td><td><span class="badge badge-done">READY</span></td><td><span class="brand brand-arcisai">ArcisAI</span></td><td>GA4 only — needs Ads tags</td></tr>
+    <tr><td>Pricing Page</td><td><span class="badge badge-done">READY</span></td><td><span class="brand brand-both">Both</span></td><td>—</td></tr>
+    <tr><td>Competitor Comparison Pages</td><td><span class="badge badge-done">READY</span></td><td><span class="brand brand-both">Both</span></td><td>VMukti vs Milestone, ArcisAI vs Hikvision</td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <div class="section-header"><div class="icon icon-green">✍️</div><h3>Blog Posts & Thought Leadership (10+ Ready)</h3></div>
+  <table>
+    <tr><th>Content</th><th>Brand</th><th>Type</th><th>Status</th></tr>
+    <tr><td>Cloud VMS Comparison (VMukti vs competitors)</td><td><span class="brand brand-vmukti">VMukti</span></td><td>Blog</td><td><span class="badge badge-done">READY</span></td></tr>
+    <tr><td>ArcisAI vs Indian CCTV Brands</td><td><span class="brand brand-arcisai">ArcisAI</span></td><td>Blog</td><td><span class="badge badge-done">READY</span></td></tr>
+    <tr><td>AI Video Analytics for Smart Cities/ICCC</td><td><span class="brand brand-vmukti">VMukti</span></td><td>Blog</td><td><span class="badge badge-done">READY</span></td></tr>
+    <tr><td>ArcisGPT — GenAI Video Surveillance</td><td><span class="brand brand-arcisai">ArcisAI</span></td><td>Blog</td><td><span class="badge badge-done">READY</span></td></tr>
+    <tr><td>Election Surveillance India (VMukti)</td><td><span class="brand brand-vmukti">VMukti</span></td><td>Blog</td><td><span class="badge badge-done">READY</span></td></tr>
+    <tr><td>VMukti GEO Blog Pack (global enterprise)</td><td><span class="brand brand-vmukti">VMukti</span></td><td>Blog Pack</td><td><span class="badge badge-done">READY</span></td></tr>
+    <tr><td>ArcisAI SEO Blog Pack</td><td><span class="brand brand-arcisai">ArcisAI</span></td><td>Blog Pack</td><td><span class="badge badge-done">READY</span></td></tr>
+    <tr><td>Rise of Indian AI CCTV Brands (LinkedIn)</td><td><span class="brand brand-arcisai">ArcisAI</span></td><td>Article</td><td><span class="badge badge-done">READY</span></td></tr>
+    <tr><td>Top 10 AI CCTV Brands India (Medium)</td><td><span class="brand brand-arcisai">ArcisAI</span></td><td>Article</td><td><span class="badge badge-done">READY</span></td></tr>
+    <tr><td>15 LinkedIn Posts (Competitor Capture)</td><td><span class="brand brand-both">Both</span></td><td>Social</td><td><span class="badge badge-done">READY</span></td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <div class="section-header"><div class="icon icon-cyan">📧</div><h3>Email, PR & Outreach</h3></div>
+  <table>
+    <tr><th>Asset</th><th>Brand</th><th>Type</th><th>Status</th></tr>
+    <tr><td>HubSpot Full-Cycle Email Nurture Sequence</td><td><span class="brand brand-both">Both</span></td><td>Email Automation</td><td><span class="badge badge-done">READY</span></td></tr>
+    <tr><td>ArcisAI Email Campaign Playbook</td><td><span class="brand brand-arcisai">ArcisAI</span></td><td>Email Strategy</td><td><span class="badge badge-done">READY</span></td></tr>
+    <tr><td>Enterprise Case Study Templates</td><td><span class="brand brand-both">Both</span></td><td>Template</td><td><span class="badge badge-done">READY</span></td></tr>
+    <tr><td>G2/Capterra Listing Content</td><td><span class="brand brand-both">Both</span></td><td>Listing</td><td><span class="badge badge-done">READY</span></td></tr>
+    <tr><td>Quora Answers (VMukti + ArcisAI)</td><td><span class="brand brand-both">Both</span></td><td>Outreach</td><td><span class="badge badge-done">READY</span></td></tr>
+    <tr><td>PR / Media Pitch Kit</td><td><span class="brand brand-both">Both</span></td><td>PR</td><td><span class="badge badge-done">READY</span></td></tr>
+    <tr><td>ArcisAI Press Release</td><td><span class="brand brand-arcisai">ArcisAI</span></td><td>PR</td><td><span class="badge badge-done">READY</span></td></tr>
+    <tr><td>Japan Export Press Release</td><td><span class="brand brand-arcisai">ArcisAI</span></td><td>PR</td><td><span class="badge badge-done">READY</span></td></tr>
+  </table>
+</div>
+</div>
+
+<!-- ==================== B2B LISTINGS TAB ==================== -->
+<div id="listings" class="tab-content">
+<div class="section">
+  <div class="section-header"><div class="icon icon-yellow">🏢</div><h3>B2B Directory Listings Status</h3></div>
+  <table>
+    <tr><th>Platform</th><th>VMukti</th><th>ArcisAI</th><th>Priority</th><th>Notes</th></tr>
+    <tr><td><strong>G2</strong></td><td><span class="badge badge-pending">PENDING</span></td><td><span class="badge badge-pending">PENDING</span></td><td><span class="badge badge-high">HIGH</span></td><td>Need 5+ reviews per brand</td></tr>
+    <tr><td><strong>Capterra</strong> (Gartner)</td><td><span class="badge badge-progress">IN PROGRESS</span></td><td><span class="badge badge-progress">IN PROGRESS</span></td><td><span class="badge badge-high">HIGH</span></td><td>Login: Adiance999</td></tr>
+    <tr><td><strong>GetApp</strong> (Gartner)</td><td><span class="badge badge-progress">IN PROGRESS</span></td><td><span class="badge badge-progress">IN PROGRESS</span></td><td><span class="badge badge-high">HIGH</span></td><td>Same Gartner account</td></tr>
+    <tr><td><strong>Software Advice</strong> (Gartner)</td><td><span class="badge badge-progress">IN PROGRESS</span></td><td><span class="badge badge-progress">IN PROGRESS</span></td><td><span class="badge badge-high">HIGH</span></td><td>Same Gartner account</td></tr>
+    <tr><td><strong>GoodFirms</strong></td><td><span class="badge badge-active">ACTIVE</span></td><td><span class="badge badge-active">ACTIVE</span></td><td><span class="badge badge-high">HIGH</span></td><td>Profiles created & live</td></tr>
+    <tr><td><strong>Clutch.co</strong></td><td><span class="badge badge-pending">PENDING</span></td><td><span class="badge badge-pending">PENDING</span></td><td><span class="badge badge-high">HIGH</span></td><td>Need to claim profiles</td></tr>
+    <tr><td><strong>TrustRadius</strong></td><td><span class="badge badge-pending">PENDING</span></td><td><span class="badge badge-pending">PENDING</span></td><td><span class="badge badge-medium">MED</span></td><td></td></tr>
+    <tr><td><strong>Product Hunt</strong></td><td><span class="badge badge-pending">PENDING</span></td><td><span class="badge badge-pending">PENDING</span></td><td><span class="badge badge-medium">MED</span></td><td></td></tr>
+    <tr><td><strong>Crunchbase</strong></td><td><span class="badge badge-pending">PENDING</span></td><td><span class="badge badge-pending">PENDING</span></td><td><span class="badge badge-medium">MED</span></td><td></td></tr>
+    <tr><td><strong>LinkedIn</strong></td><td><span class="badge badge-active">ACTIVE</span></td><td><span class="badge badge-active">ACTIVE</span></td><td><span class="badge badge-high">HIGH</span></td><td>Company pages live</td></tr>
+    <tr><td><strong>Wikipedia/Wikidata</strong></td><td><span class="badge badge-done">DRAFT</span></td><td><span class="badge badge-done">DRAFT</span></td><td><span class="badge badge-low">LOW</span></td><td>Drafts ready for submission</td></tr>
+    <tr><td><strong>Quora</strong></td><td><span class="badge badge-done">DONE</span></td><td><span class="badge badge-done">DONE</span></td><td><span class="badge badge-medium">MED</span></td><td>Answers written & ready</td></tr>
+    <tr><td><strong>Medium</strong></td><td><span class="badge badge-done">DONE</span></td><td><span class="badge badge-done">DONE</span></td><td><span class="badge badge-medium">MED</span></td><td>Articles ready to publish</td></tr>
+  </table>
+</div>
+</div>
+
+<!-- ==================== ACTION ITEMS TAB ==================== -->
+<div id="actions" class="tab-content">
+<div class="section">
+  <div class="section-header"><div class="icon icon-red">🎯</div><h3>Priority Action Items — What Needs To Happen Next</h3></div>
+  <table>
+    <tr><th>#</th><th>Action</th><th>Owner</th><th>Brand</th><th>Priority</th><th>Depends On</th></tr>
+    <tr><td>1</td><td><strong>Create ArcisAI Google Ads account</strong></td><td>Claude + Kushal</td><td><span class="brand brand-arcisai">ArcisAI</span></td><td><span class="badge badge-high">HIGH</span></td><td>Payment needed</td></tr>
+    <tr><td>2</td><td><strong>Link GA4 to Google Ads</strong></td><td>Claude</td><td><span class="brand brand-vmukti">VMukti</span></td><td><span class="badge badge-high">HIGH</span></td><td>—</td></tr>
+    <tr><td>3</td><td><strong>Create first VMukti Search campaigns</strong></td><td>Claude</td><td><span class="brand brand-vmukti">VMukti</span></td><td><span class="badge badge-high">HIGH</span></td><td>Blueprint ready</td></tr>
+    <tr><td>4</td><td>Switch payments to Organization profile</td><td>👤 Kushal</td><td><span class="brand brand-vmukti">VMukti</span></td><td><span class="badge badge-medium">MED</span></td><td>Disable ad blocker</td></tr>
+    <tr><td>5</td><td><strong>Connect HubSpot CRM + automation</strong></td><td>Claude + Kushal</td><td><span class="brand brand-both">Both</span></td><td><span class="badge badge-high">HIGH</span></td><td>HubSpot account</td></tr>
+    <tr><td>6</td><td><strong>Get 5+ G2 reviews per brand</strong></td><td>👤 Kushal (team)</td><td><span class="brand brand-both">Both</span></td><td><span class="badge badge-high">HIGH</span></td><td>Ask existing customers</td></tr>
+    <tr><td>7</td><td><strong>Create 3 real case studies</strong></td><td>👤 Kushal (team)</td><td><span class="brand brand-both">Both</span></td><td><span class="badge badge-high">HIGH</span></td><td>Templates provided</td></tr>
+    <tr><td>8</td><td><strong>Deploy structured data + sitemaps</strong></td><td>👤 Dev Team</td><td><span class="brand brand-both">Both</span></td><td><span class="badge badge-high">HIGH</span></td><td>Files ready</td></tr>
+    <tr><td>9</td><td><strong>Fix VMukti PageSpeed (17→70+)</strong></td><td>👤 Dev Team</td><td><span class="brand brand-vmukti">VMukti</span></td><td><span class="badge badge-high">HIGH</span></td><td>Hero animation issue</td></tr>
+    <tr><td>10</td><td><strong>Fix ArcisAI mobile score (48→70+)</strong></td><td>👤 Dev Team</td><td><span class="brand brand-arcisai">ArcisAI</span></td><td><span class="badge badge-high">HIGH</span></td><td>—</td></tr>
+    <tr><td>11</td><td>Remove "India" from titles/H1s</td><td>👤 Dev Team</td><td><span class="brand brand-both">Both</span></td><td><span class="badge badge-high">HIGH</span></td><td>Global positioning</td></tr>
+    <tr><td>12</td><td>Replace calendar with Calendly</td><td>👤 Dev Team</td><td><span class="brand brand-both">Both</span></td><td><span class="badge badge-high">HIGH</span></td><td>—</td></tr>
+    <tr><td>13</td><td>Fix ArcisAI contact form</td><td>👤 Dev Team</td><td><span class="brand brand-arcisai">ArcisAI</span></td><td><span class="badge badge-high">HIGH</span></td><td>Losing leads!</td></tr>
+    <tr><td>14</td><td>Publish blog posts on both sites</td><td>👤 Dev Team</td><td><span class="brand brand-both">Both</span></td><td><span class="badge badge-medium">MED</span></td><td>10+ drafts ready</td></tr>
+    <tr><td>15</td><td>Set up remarketing audiences</td><td>Claude</td><td><span class="brand brand-vmukti">VMukti</span></td><td><span class="badge badge-medium">MED</span></td><td>After campaigns live</td></tr>
+    <tr><td>16</td><td>Claim Clutch.co profiles</td><td>👤 Kushal</td><td><span class="brand brand-both">Both</span></td><td><span class="badge badge-medium">MED</span></td><td>—</td></tr>
+    <tr><td>17</td><td>Submit Wikipedia/Wikidata entries</td><td>👤 Kushal</td><td><span class="brand brand-both">Both</span></td><td><span class="badge badge-low">LOW</span></td><td>Drafts ready</td></tr>
+  </table>
+</div>
+</div>
+
+<!-- ==================== CONVERSION TRACKING TAB ==================== -->
+<div id="tracking" class="tab-content">
+<div class="section">
+  <div class="section-header"><div class="icon icon-cyan">🏷️</div><h3>VMukti Conversion Actions</h3></div>
+  <table>
+    <tr><th>Conversion Name</th><th>send_to Value</th><th>Category</th><th>Settings</th></tr>
+    <tr><td><strong>Demo Request</strong></td><td><code>AW-18005237666/I_r6CPio24UcEKK_yIlD</code></td><td>Submit lead form</td><td>Primary | One count | 90-day | Data-driven</td></tr>
+    <tr><td><strong>Contact Form Submit</strong></td><td><code>AW-18005237666/6tAFCPuo24UcEKK_yIlD</code></td><td>Submit lead form</td><td>Primary | One count | 90-day | Data-driven</td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <div class="section-header"><div class="icon icon-green">💻</div><h3>Installation Code (Already Deployed)</h3></div>
+  <div class="code-block"><span class="comment">&lt;!-- Google tag (gtag.js) --&gt;</span>
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=<span class="string">AW-18005237666</span>"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  <span class="keyword">function</span> gtag(){dataLayer.push(arguments);}
+  gtag(<span class="string">'js'</span>, new Date());
+  gtag(<span class="string">'config'</span>, <span class="string">'AW-18005237666'</span>);  <span class="comment">// Google Ads</span>
+  gtag(<span class="string">'config'</span>, <span class="string">'G-GGKLN98WFR'</span>);   <span class="comment">// GA4</span>
+&lt;/script&gt;
+
+<span class="comment">&lt;!-- GTM Container --&gt;</span>
+&lt;script&gt;(function(w,d,s,l,i){...})(window,document,'script','dataLayer','<span class="string">GTM-WCPW3K5</span>');&lt;/script&gt;
+
+<span class="comment">&lt;!-- Fire on Demo Form Submit --&gt;</span>
+gtag(<span class="string">'event'</span>, <span class="string">'conversion'</span>, {
+  <span class="string">'send_to'</span>: <span class="string">'AW-18005237666/I_r6CPio24UcEKK_yIlD'</span>,
+  <span class="string">'value'</span>: 1.0,
+  <span class="string">'currency'</span>: <span class="string">'INR'</span>
+});
+
+<span class="comment">&lt;!-- Fire on Contact Form Submit --&gt;</span>
+gtag(<span class="string">'event'</span>, <span class="string">'conversion'</span>, {
+  <span class="string">'send_to'</span>: <span class="string">'AW-18005237666/6tAFCPuo24UcEKK_yIlD'</span>,
+  <span class="string">'value'</span>: 1.0,
+  <span class="string">'currency'</span>: <span class="string">'INR'</span>
+});</div>
+</div>
+
+<div class="section">
+  <div class="section-header"><div class="icon icon-purple">📍</div><h3>Where Tags Are Deployed</h3></div>
+  <table>
+    <tr><th>Page</th><th>GTM</th><th>GA4</th><th>Google Ads</th><th>Conversions</th></tr>
+    <tr><td>VMukti /landing/enterprise-vms/</td><td><span class="badge badge-done">✓</span></td><td><span class="badge badge-done">✓</span></td><td><span class="badge badge-done">✓</span></td><td><span class="badge badge-done">✓</span></td></tr>
+    <tr><td>VMukti /enterprise/</td><td><span class="badge badge-done">✓</span></td><td><span class="badge badge-done">✓</span></td><td><span class="badge badge-done">✓</span></td><td>—</td></tr>
+    <tr><td>ArcisAI /landing/enterprise-cameras/</td><td>—</td><td><span class="badge badge-done">✓</span></td><td><span class="badge badge-pending">—</span></td><td><span class="badge badge-pending">—</span></td></tr>
+    <tr><td>ArcisAI /ndaa-compliant/</td><td>—</td><td><span class="badge badge-done">✓</span></td><td><span class="badge badge-pending">—</span></td><td><span class="badge badge-pending">—</span></td></tr>
+  </table>
+</div>
+</div>
+
+</div><!-- /container -->
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>
