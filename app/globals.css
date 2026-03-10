@@ -1,37 +1,76 @@
 /* Global styles for VMukti Next.js */
-@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800&display=swap');
+
+/* Local WixMadeforDisplay Font */
+@font-face {
+  font-family: 'WixMadeforDisplay';
+  src: url('/assets/Wix_Madefor_Display/WixMadeforDisplay-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'WixMadeforDisplay';
+  src: url('/assets/Wix_Madefor_Display/static/WixMadeforDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'WixMadeforDisplay';
+  src: url('/assets/Wix_Madefor_Display/static/WixMadeforDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'WixMadeforDisplay';
+  src: url('/assets/Wix_Madefor_Display/static/WixMadeforDisplay-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'WixMadeforDisplay';
+  src: url('/assets/Wix_Madefor_Display/static/WixMadeforDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'WixMadeforDisplay';
+  src: url('/assets/Wix_Madefor_Display/static/WixMadeforDisplay-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: 'WixMadeforDisplay', sans-serif;
+  font-family: 'WixMadeforDisplay', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background: #E7E7E7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-::-webkit-scrollbar-track {
-  background: #e7e7e7;
-}
 
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
 
 /* Slick Carousel */
 @import "~slick-carousel/slick/slick.css";

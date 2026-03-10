@@ -35,7 +35,7 @@ const FeatureCard = ({ feature, bgColor }) => (
       alignItems={["center", "", "", ""]}
     >
       <Image loading="lazy"
-        src={`/assets/${feature.image}`}
+        src={feature.image}
         alt={feature.title}
         className="lazyload"
         objectFit="cover"
