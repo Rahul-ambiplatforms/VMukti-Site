@@ -52,7 +52,7 @@ const renderSlateContent = (content) => {
         case "paragraph":
           return (
             <Box key={i}>
-              <Text textAlign={node.align || "left"}>{children}</Text>
+              <Text as="div" textAlign={node.align || "left"}>{children}</Text>
             </Box>
           );
         case "bulleted-list":
@@ -191,6 +191,7 @@ const TableOfContents = ({ components }) => {
 
             {/* --- START: Modified Text component --- */}
             <Text
+              as="div"
               sx={{
                 display: "-webkit-box",
                 WebkitLineClamp: "2", // The number of lines to show

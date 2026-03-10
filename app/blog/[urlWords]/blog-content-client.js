@@ -45,7 +45,7 @@ const renderSlateContent = (content) => {
         case 'paragraph':
           return (
             <Box key={i}>
-              <Text textAlign={node.align || 'left'} mb={3} lineHeight="1.8">
+              <Text as="div" textAlign={node.align || 'left'} mb={3} lineHeight="1.8">
                 {children}
               </Text>
             </Box>
@@ -136,7 +136,7 @@ const TableOfContents = ({ components }) => {
                 <path d="M7.92307 7.99997L0.538452 0.615356L0.53845 15.3846L7.92307 7.99997Z" fill="#3F77A5" />
               </svg>
             </Box>
-            <Text noOfLines={2}>
+            <Text as="div" noOfLines={2}>
               {renderSlateContent(heading.content?.text)}
             </Text>
           </Flex>

@@ -61,6 +61,11 @@ const nextConfig = {
     ];
   },
 
+  webpack: (config) => {
+    config.resolve.alias['react-router-dom'] = require('path').resolve(__dirname, 'lib/react-router-dom-mock.js');
+    return config;
+  },
+
   // Transpile Chakra UI packages
   transpilePackages: ['@chakra-ui/react', '@chakra-ui/next-js'],
 

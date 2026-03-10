@@ -313,6 +313,7 @@ const IndustryContent = ({ props, content, industryName }) => {
             <Box width={{ base: "100%", md: "80%" }}>
               <HeadingAnimation>
                 <MotionText
+                  as="h1"
                   fontSize={{ base: "24px", md: "48px", lg: "48px" }}
                   fontWeight="600"
                   lineHeight={{ base: "30px", md: "60px" }}
@@ -322,9 +323,9 @@ const IndustryContent = ({ props, content, industryName }) => {
                   viewport={{ once: true }}
                 >
                   {content.title.map((part, index) => (
-                    <Text as="h1" color={part.color} key={index}>
+                    <Box as="span" color={part.color} key={index}>
                       {part.text}{" "}
-                    </Text>
+                    </Box>
                   ))}
                 </MotionText>
               </HeadingAnimation>

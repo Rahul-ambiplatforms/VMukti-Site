@@ -21,9 +21,7 @@ export function Providers({ children }) {
   return (
     <ChakraProvider theme={theme}>
       <HelmetProvider>
-        <RouterWrapper>
-          {children}
-        </RouterWrapper>
+        {children}
       </HelmetProvider>
     </ChakraProvider>
   );

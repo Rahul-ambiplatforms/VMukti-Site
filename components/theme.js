@@ -3,8 +3,8 @@ import { extendTheme } from '@chakra-ui/react';
 
 const theme = extendTheme({
   fonts: {
-    heading: "'WixMadeforDisplay', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-    body: "'WixMadeforDisplay', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    heading: "var(--font-wix), 'WixMadeforDisplay', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    body: "var(--font-wix), 'WixMadeforDisplay', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
   },
   styles: {
     global: {

@@ -16,7 +16,7 @@ import {
   Badge,
   HStack,
 } from "@chakra-ui/react";
-import { Link as RouterLink } from "react-router-dom";
+import RouterLink from "next/link";
 import { FiArrowRight } from "react-icons/fi";
 import { getBlogs } from "../../Blogs/blog";
 
@@ -41,7 +41,7 @@ const FeaturedBlogCard = memo(({ post }) => {
     : "";
 
   return (
-    <Link as={RouterLink} to={url} _hover={{ textDecoration: "none" }} w="100%">
+    <Link as={RouterLink} href={url} _hover={{ textDecoration: "none" }} w="100%">
       <Box
         borderRadius="16px"
         overflow="hidden"
@@ -169,7 +169,7 @@ const BlogView = () => {
         </Box>
         <Link
           as={RouterLink}
-          to="/blog"
+          href="/blog"
           _hover={{ textDecoration: "none" }}
           display={{ base: "none", md: "block" }}
           mt={{ base: 4, md: 0 }}
@@ -230,7 +230,7 @@ const BlogView = () => {
 
       {/* Mobile CTA */}
       <Flex justify="center" display={{ base: "flex", md: "none" }} mt={6}>
-        <Link as={RouterLink} to="/blog" _hover={{ textDecoration: "none" }}>
+        <Link as={RouterLink} href="/blog" _hover={{ textDecoration: "none" }}>
           <Button
             bg="#3F77A5"
             color="white"

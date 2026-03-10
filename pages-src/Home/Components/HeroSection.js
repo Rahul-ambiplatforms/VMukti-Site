@@ -12,7 +12,8 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import { motion, useInView } from "framer-motion";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
 import { gsap } from "gsap";
 import { TypeAnimation } from "react-type-animation"; // <-- 1. Import the new component
 
@@ -288,7 +289,7 @@ const HeroSection = () => {
                   display={{ base: "none", md: "block" }}
                   width={["", "", "55%", "90%"]}
                 />
-                <Link to="/book-a-demo">
+                <Link href="/book-a-demo">
                   <MotionButton
                     onMouseEnter={handleImageHover}
                     onMouseLeave={handleImageLeave}

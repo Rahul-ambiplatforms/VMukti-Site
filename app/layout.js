@@ -1,6 +1,7 @@
 import { Providers } from './providers';
 import SiteLayout from './site-layout';
 import Script from 'next/script';
+import localFont from 'next/font/local';
 import './globals.css';
 
 const SITE_URL = 'https://www.vmukti.com';
@@ -174,16 +175,17 @@ const websiteSchema = {
   },
 };
 
+const wixFont = localFont({
+  src: '../public/assets/Wix_Madefor_Display/WixMadeforDisplay-VariableFont_wght.ttf',
+  variable: '--font-wix',
+  display: 'swap',
+});
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={wixFont.variable}>
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preload" href="/assets/Wix_Madefor_Display/WixMadeforDisplay-VariableFont_wght.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
-        <link rel="preload" href="/assets/Wix_Madefor_Display/static/WixMadeforDisplay-Regular.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
-        <link rel="preload" href="/assets/Wix_Madefor_Display/static/WixMadeforDisplay-Medium.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
-        <link rel="preload" href="/assets/Wix_Madefor_Display/static/WixMadeforDisplay-SemiBold.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
-        <link rel="preload" href="/assets/Wix_Madefor_Display/static/WixMadeforDisplay-Bold.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
