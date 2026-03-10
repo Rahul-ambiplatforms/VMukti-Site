@@ -12,14 +12,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vmukti.com/enterprise-cloud-vms">
 
-    <!-- Google Ads Conversion Tag -->
-    <!-- Replace XXXXXXXXXX with your actual Google Ads conversion ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WCPW3K5');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Ads + GA4 via gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-9332488541"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'AW-XXXXXXXXXX');
+        gtag('config', 'AW-9332488541');
+        gtag('config', 'G-GGKLN98WFR');
     </script>
 
     <style>
@@ -713,6 +721,10 @@
     </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCPW3K5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- ===== TOP BAR ===== -->
 <div class="top-bar">
@@ -1219,7 +1231,7 @@
         // Fire Google Ads conversion
         if (typeof gtag !== 'undefined') {
             gtag('event', 'conversion', {
-                'send_to': 'AW-XXXXXXXXXX/YYYYYYYYYYYY', // Replace with actual conversion label
+                'send_to': 'AW-9332488541/demo_request',
                 'value': 100.0,
                 'currency': 'USD'
             });
@@ -1257,7 +1269,7 @@
 <!-- Replace with actual remarketing tag from Google Ads account -->
 <script>
     gtag('event', 'page_view', {
-        'send_to': 'AW-XXXXXXXXXX',
+        'send_to': 'AW-9332488541',
         'ecomm_pagetype': 'product',
         'ecomm_prodid': 'vmukti-cloud-vms-enterprise',
         'ecomm_totalvalue': 100
