@@ -3,9 +3,9 @@ import React from "react";
 
 const Reviews = () => {
   return (
-    <section className="reviews-section" style={{ padding: "60px 0", background: "#f8f9fa" }}>
+    <section className="reviews-section" style={{ margin: "32px 0", padding: "48px 0", background: "#ffffffff", borderRadius: "24px" }}>
       <div className="container" style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 15px" }}>
-        <h2 style={{ textAlign: "center", marginBottom: "40px", fontSize: "2rem", color: "#1a1a2e" }}>
+        <h2 style={{ marginTop: "0px", textAlign: "center", marginBottom: "20px", fontSize: "2rem", color: "#1a1a2e" }}>
           What Our Clients Say
         </h2>
         <div className="reviews-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "30px" }}>
