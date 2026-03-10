@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Solutions | VMukti — Cloud-Native Video Intelligence for Global Enterprises</title>
+    <meta name="description" content="VMukti enterprise cloud VMS: 99.9% uptime SLA, Azure multi-region deployment, NDAA compliant, proprietary VisualBot AI engine, 50+ computer vision models. Built for Fortune 500.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            /* VMukti Brand Colors — extracted from vmukti.com */
+            --brand-blue: #3F77A5;         /* Primary steel blue */
+            --brand-blue-dark: #2E5F87;    /* Hover state */
+            --brand-blue-light: #4A8BC2;   /* Lighter variant */
+            --brand-orange: #DB7B3A;       /* Accent orange */
+            --brand-orange-light: #ED8936; /* Lighter orange */
+            --brand-navy: #1A202C;         /* Dark text */
+            --brand-navy-deep: #1A1A2E;   /* Deepest dark */
+            --white: #FFFFFF;
+            --gray-50: #F7FAFC;            /* Light section bg */
+            --gray-100: #EDF2F7;
+            --gray-200: #E2E8F0;
+            --gray-300: #CBD5E0;
+            --gray-500: #718096;
+            --gray-600: #4A5568;
+            --gray-700: #2D3748;
+            --gray-800: #1A202C;
+            --gray-900: #171923;
+            --green: #38A169;
+            --red: #E53E3E;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: var(--gray-800);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        /* ===== HEADER — matches vmukti.com sticky header ===== */
+        .header {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(8px);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+        .logo svg { width: 32px; height: 32px; }
+        .logo-text {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--brand-navy);
+            letter-spacing: -0.5px;
+        }
+        .header-ctas { display: flex; gap: 12px; }
+        .btn-pill {
+            padding: 10px 28px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-pill-primary {
+            background: var(--brand-blue);
+            color: var(--white);
+        }
+        .btn-pill-primary:hover { background: var(--brand-blue-dark); }
+        .btn-pill-outline {
+            background: transparent;
+            color: var(--brand-blue);
+            border: 2px solid var(--brand-blue);
+        }
+        .btn-pill-outline:hover { background: var(--brand-blue); color: var(--white); }
+
+        /* ===== HERO — clean, matches VMukti's light hero style ===== */
+        .hero {
+            background: linear-gradient(160deg, var(--gray-50) 0%, var(--white) 40%, var(--gray-50) 100%);
+            padding: 80px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(63,119,165,0.06), transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--brand-blue);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 16px;
+        }
+        .hero h1 {
+            font-size: 44px;
+            font-weight: 800;
+            color: var(--brand-navy);
+            line-height: 1.15;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+        .hero h1 .accent { color: var(--brand-blue); }
+        .hero-desc {
+            font-size: 18px;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+        .hero-ctas { display: flex; gap: 12px; margin-bottom: 40px; flex-wrap: wrap; }
+
+        /* Hero Tech Stack Visual */
+        .hero-tech {
+            background: var(--white);
+            border-radius: 16px;
+            border: 1px solid var(--gray-200);
+            padding: 32px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+        }
+        .tech-stack-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gray-500);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .tech-layers {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .tech-layer {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 18px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .tech-layer-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        .layer-1 { background: #EBF8FF; }
+        .layer-1 .tech-layer-icon { background: var(--brand-blue); color: white; }
+        .layer-2 { background: #FFF5EB; }
+        .layer-2 .tech-layer-icon { background: var(--brand-orange); color: white; }
+        .layer-3 { background: #F0FFF4; }
+        .layer-3 .tech-layer-icon { background: var(--green); color: white; }
+        .layer-4 { background: #FAF5FF; }
+        .layer-4 .tech-layer-icon { background: #805AD5; color: white; }
+        .layer-5 { background: #FFF5F5; }
+        .layer-5 .tech-layer-icon { background: var(--red); color: white; }
+        .tech-layer-name { color: var(--gray-700); }
+        .tech-layer-detail { color: var(--gray-500); font-weight: 400; font-size: 12px; margin-left: auto; }
+
+        /* ===== SECTIONS ===== */
+        .section { padding: 80px 0; }
+        .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+        .section-header { text-align: center; margin-bottom: 56px; }
+        .section-eyebrow {
+            font-size: 12px;
+            color: var(--brand-blue);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .section-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--brand-navy);
+            margin-bottom: 14px;
+            line-height: 1.2;
+            letter-spacing: -0.3px;
+        }
+        .section-desc {
+            font-size: 17px;
+            color: var(--gray-600);
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* ===== WHY VMukti — TECHNOLOGY SUPERIORITY ===== */
+        .tech-section { background: var(--white); }
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .tech-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 32px;
+            transition: box-shadow 0.3s, border-color 0.3s;
+        }
+        .tech-card:hover {
+            box-shadow: 0 8px 32px rgba(63,119,165,0.08);
+            border-color: var(--brand-blue);
+        }
+        .tech-card-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--brand-blue);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .tech-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--brand-navy);
+            margin-bottom: 10px;
+        }
+        .tech-card p {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+        .tech-card .tech-tag {
+            display: inline-block;
+            background: rgba(63,119,165,0.08);
+            color: var(--brand-blue);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 14px;
+        }
+
+        /* ===== ARCHITECTURE DIAGRAM ===== */
+        .arch-section { background: var(--brand-navy-deep); color: var(--white); }
+        .arch-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .arch-grid h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        .arch-grid h2 .accent { color: var(--brand-blue-light); }
+        .arch-grid p {
+            font-size: 16px;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+        .arch-features {
+            list-style: none;
+        }
+        .arch-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            font-size: 15px;
+            color: rgba(255,255,255,0.85);
+        }
+        .arch-check { color: var(--brand-blue-light); font-size: 18px; }
+
+        .arch-visual {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 32px;
+        }
+        .arch-visual-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--brand-blue-light);
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        .arch-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .arch-flow-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 10px;
+            padding: 16px;
+        }
+        .arch-flow-num {
+            width: 32px;
+            height: 32px;
+            background: var(--brand-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        .arch-flow-text { font-size: 14px; }
+        .arch-flow-text strong { color: white; }
+        .arch-flow-text span { color: rgba(255,255,255,0.6); font-size: 12px; display: block; margin-top: 2px; }
+
+        /* ===== SLA & SECURITY GRID ===== */
+        .sla-section { background: var(--gray-50); }
+        .sla-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 48px;
+        }
+        .sla-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 28px 20px;
+            text-align: center;
+        }
+        .sla-number {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--brand-blue);
+        }
+        .sla-label {
+            font-size: 13px;
+            color: var(--gray-600);
+            margin-top: 6px;
+            font-weight: 500;
+        }
+
+        .security-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .security-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 28px;
+        }
+        .security-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--brand-navy);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .security-card h3 span { font-size: 20px; }
+        .security-card p {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* ===== AZURE DATA RESIDENCY ===== */
+        .azure-section { background: var(--white); }
+        .azure-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+        .azure-regions { list-style: none; }
+        .azure-regions li {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--gray-100);
+            font-size: 15px;
+            color: var(--gray-700);
+        }
+        .region-flag { font-size: 24px; }
+        .azure-regions li strong { color: var(--brand-navy); }
+
+        .azure-right {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 36px;
+        }
+        .azure-right h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--brand-navy);
+            margin-bottom: 16px;
+        }
+        .azure-right p {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .azure-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #EBF8FF;
+            color: var(--brand-blue);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        /* ===== SUPPORT TIERS ===== */
+        .support-section { background: var(--gray-50); }
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .support-card {
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 32px 28px;
+        }
+        .support-card.featured {
+            border-color: var(--brand-blue);
+            position: relative;
+        }
+        .support-card.featured::before {
+            content: 'RECOMMENDED';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--brand-blue);
+            color: white;
+            padding: 4px 16px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+        .support-tier {
+            font-size: 12px;
+            color: var(--brand-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .support-card h3 {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--brand-navy);
+            margin-bottom: 20px;
+        }
+        .support-list { list-style: none; }
+        .support-list li {
+            padding: 8px 0;
+            font-size: 14px;
+            color: var(--gray-600);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .s-check { color: var(--green); font-weight: 700; font-size: 16px; }
+
+        /* ===== INTEGRATIONS ===== */
+        .integrations-section { background: var(--white); }
+        .integration-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .int-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 10px;
+            padding: 24px;
+            text-align: center;
+            transition: border-color 0.2s;
+        }
+        .int-card:hover { border-color: var(--brand-blue); }
+        .int-icon { font-size: 28px; margin-bottom: 10px; }
+        .int-card h4 { font-size: 14px; font-weight: 700; color: var(--brand-navy); margin-bottom: 4px; }
+        .int-card p { font-size: 12px; color: var(--gray-500); }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: var(--brand-blue);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .cta-section p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+        .btn-cta-white {
+            background: var(--white);
+            color: var(--brand-blue);
+            padding: 14px 36px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+        }
+        .btn-cta-ghost {
+            background: transparent;
+            color: var(--white);
+            padding: 14px 36px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            border: 2px solid rgba(255,255,255,0.4);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--brand-navy-deep);
+            color: rgba(255,255,255,0.6);
+            padding: 32px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+        .footer a { color: var(--brand-blue-light); text-decoration: none; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-inner, .arch-grid, .azure-grid { grid-template-columns: 1fr; gap: 40px; }
+            .tech-grid, .security-grid, .support-grid { grid-template-columns: 1fr 1fr; }
+            .sla-grid { grid-template-columns: repeat(2, 1fr); }
+            .integration-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .hero { padding: 56px 0 40px; }
+            .tech-grid, .security-grid, .support-grid { grid-template-columns: 1fr; }
+            .section { padding: 56px 0; }
+            .section-title { font-size: 28px; }
+            .header-ctas .btn-pill-outline { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+    <div class="header-inner">
+        <a href="https://vmukti.com" class="logo">
+            <svg viewBox="0 0 32 32" fill="none">
+                <rect width="32" height="32" rx="6" fill="#3F77A5"/>
+                <path d="M8 10l8 12 8-12" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="logo-text">VMukti</span>
+        </a>
+        <div class="header-ctas">
+            <a href="/book-a-demo" class="btn-pill btn-pill-primary">Cloud VMS Demo</a>
+            <a href="/contact-us" class="btn-pill btn-pill-outline">Contact Us</a>
+        </div>
+    </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <div class="hero-inner">
+        <div>
+            <div class="hero-eyebrow">&#x2B22; Enterprise Solutions</div>
+            <h1>Cloud-Native Video Intelligence <span class="accent">Built for Global Enterprise</span></h1>
+            <p class="hero-desc">
+                VMukti isn't a repackaged legacy VMS. It's a ground-up cloud platform with a proprietary AI engine,
+                microservices architecture, and 18 years of computer vision R&D — deployed on Microsoft Azure for
+                enterprise-grade reliability.
+            </p>
+            <div class="hero-ctas">
+                <a href="/book-a-demo" class="btn-pill btn-pill-primary">Schedule Enterprise Demo &rarr;</a>
+                <a href="mailto:sales@vmukti.com" class="btn-pill btn-pill-outline">Contact Enterprise Sales</a>
+            </div>
+        </div>
+        <div class="hero-tech">
+            <div class="tech-stack-label">VMukti Technology Stack</div>
+            <div class="tech-layers">
+                <div class="tech-layer layer-1">
+                    <div class="tech-layer-icon">&#x1F9E0;</div>
+                    <span class="tech-layer-name">VisualBot AI Engine</span>
+                    <span class="tech-layer-detail">Proprietary</span>
+                </div>
+                <div class="tech-layer layer-2">
+                    <div class="tech-layer-icon">&#x1F50D;</div>
+                    <span class="tech-layer-name">50+ Computer Vision Models</span>
+                    <span class="tech-layer-detail">Pre-trained</span>
+                </div>
+                <div class="tech-layer layer-3">
+                    <div class="tech-layer-icon">&#x2601;</div>
+                    <span class="tech-layer-name">Azure Cloud Infrastructure</span>
+                    <span class="tech-layer-detail">Multi-region</span>
+                </div>
+                <div class="tech-layer layer-4">
+                    <div class="tech-layer-icon">&#x1F517;</div>
+                    <span class="tech-layer-name">RESTful API / SDK Suite</span>
+                    <span class="tech-layer-detail">Open</span>
+                </div>
+                <div class="tech-layer layer-5">
+                    <div class="tech-layer-icon">&#x1F6E1;</div>
+                    <span class="tech-layer-name">Enterprise Security Layer</span>
+                    <span class="tech-layer-detail">Zero-Trust</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TECHNOLOGY SUPERIORITY ===== -->
+<section class="section tech-section">
+    <div class="section-inner">
+        <div class="section-header">
+            <div class="section-eyebrow">Why VMukti</div>
+            <h2 class="section-title">What Makes VMukti Architecturally Different</h2>
+            <p class="section-desc">Not a legacy VMS bolted onto the cloud. VMukti is a purpose-built, cloud-native platform with proprietary AI that no competitor can replicate.</p>
+        </div>
+        <div class="tech-grid">
+            <div class="tech-card">
+                <div class="tech-card-icon">&#x1F9E0;</div>
+                <h3>VisualBot: Proprietary AI Engine</h3>
+                <p>Unlike competitors who bolt on third-party analytics, VMukti's VisualBot is a proprietary computer vision platform with 50+ pre-trained models built in-house over 18 years. Image, video, live stream, and zero-shot detection — all from one engine.</p>
+                <span class="tech-tag">18 Years of R&D</span>
+            </div>
+            <div class="tech-card">
+                <div class="tech-card-icon">&#x2699;</div>
+                <h3>True Microservices Architecture</h3>
+                <p>Every VMukti component (recording, streaming, analytics, alerting) runs as an independent microservice on Azure Kubernetes. Scale each component independently. Zero single points of failure. Rolling updates with zero downtime.</p>
+                <span class="tech-tag">Kubernetes-Native</span>
+            </div>
+            <div class="tech-card">
+                <div class="tech-card-icon">&#x1F4F9;</div>
+                <h3>Camera-Agnostic ONVIF/RTSP</h3>
+                <p>Works with any camera brand — Axis, Hanwha, Bosch, Dahua, or even legacy analog via encoders. No vendor lock-in, no proprietary codecs, no compatibility lists. If it streams video, VMukti manages it.</p>
+                <span class="tech-tag">5,000+ Camera Models</span>
+            </div>
+            <div class="tech-card">
+                <div class="tech-card-icon">&#x1F517;</div>
+                <h3>API-First Platform (VisualBot SDK)</h3>
+                <p>Full RESTful API and SDK for custom integrations. Embed VMukti's AI analytics into your existing workflows, build custom dashboards, trigger automations, and feed real-time intelligence into your SIEM, PSIM, or access control system.</p>
+                <span class="tech-tag">Open API</span>
+            </div>
+            <div class="tech-card">
+                <div class="tech-card-icon">&#x26A1;</div>
+                <h3>Edge + Cloud Hybrid Processing</h3>
+                <p>Run AI at the edge (on-camera or edge box) for low-latency alerts. Stream to Azure cloud for deep analytics, long-term storage, and cross-site intelligence. Flexible architecture that adapts to bandwidth and latency requirements.</p>
+                <span class="tech-tag">Edge + Cloud</span>
+            </div>
+            <div class="tech-card">
+                <div class="tech-card-icon">&#x1F4CA;</div>
+                <h3>Multi-Tenant Global Dashboard</h3>
+                <p>Single pane of glass for 10,000+ cameras across 100+ sites in 30+ countries. Role-based views for security operators, site managers, C-suite executives. Real-time and historical analytics from one browser tab.</p>
+                <span class="tech-tag">Unlimited Scale</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ARCHITECTURE SECTION ===== -->
+<section class="section arch-section">
+    <div class="section-inner">
+        <div class="arch-grid">
+            <div>
+                <h2>18 Years of Computer Vision R&D in <span class="accent">One Platform</span></h2>
+                <p>VMukti was founded in 2007 as a video technology research company. Unlike startups that license third-party AI, every model in our VisualBot engine is trained on our own datasets, optimized for surveillance-specific scenarios, and hardened through millions of real-world deployments.</p>
+                <p>This means our AI doesn't just detect objects — it understands context. A person loitering is different from a person waiting. A vehicle stopped is different from a vehicle parked. VMukti's models reduce false alerts by up to 85% compared to generic AI platforms.</p>
+                <ul class="arch-features">
+                    <li><span class="arch-check">&#x2713;</span> 700+ deployments across Smart Cities, Banking, Manufacturing, Oil &amp; Gas</li>
+                    <li><span class="arch-check">&#x2713;</span> 500,000+ cameras under management globally</li>
+                    <li><span class="arch-check">&#x2713;</span> Custom model training available for enterprise-specific use cases</li>
+                    <li><span class="arch-check">&#x2713;</span> 85% fewer false alerts vs. generic computer vision</li>
+                    <li><span class="arch-check">&#x2713;</span> STQC-certified for government deployments</li>
+                </ul>
+            </div>
+            <div class="arch-visual">
+                <div class="arch-visual-title">VisualBot AI Pipeline</div>
+                <div class="arch-flow">
+                    <div class="arch-flow-item">
+                        <div class="arch-flow-num">1</div>
+                        <div class="arch-flow-text"><strong>Ingest</strong><span>Image, Video, RTSP Live, Zero-Shot</span></div>
+                    </div>
+                    <div class="arch-flow-item">
+                        <div class="arch-flow-num">2</div>
+                        <div class="arch-flow-text"><strong>Pre-Process</strong><span>Resolution normalize, frame sampling, ROI extraction</span></div>
+                    </div>
+                    <div class="arch-flow-item">
+                        <div class="arch-flow-num">3</div>
+                        <div class="arch-flow-text"><strong>Model Inference</strong><span>50+ models: object, face, ANPR, behavior, anomaly</span></div>
+                    </div>
+                    <div class="arch-flow-item">
+                        <div class="arch-flow-num">4</div>
+                        <div class="arch-flow-text"><strong>Context Engine</strong><span>Scene understanding, cross-camera correlation</span></div>
+                    </div>
+                    <div class="arch-flow-item">
+                        <div class="arch-flow-num">5</div>
+                        <div class="arch-flow-text"><strong>Action</strong><span>Alert, automate, report, API webhook, SIEM push</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SLA & SECURITY ===== -->
+<section class="section sla-section">
+    <div class="section-inner">
+        <div class="section-header">
+            <div class="section-eyebrow">Enterprise SLA &amp; Security</div>
+            <h2 class="section-title">Built for Regulated, Mission-Critical Environments</h2>
+        </div>
+        <div class="sla-grid">
+            <div class="sla-card">
+                <div class="sla-number">99.9%</div>
+                <div class="sla-label">Platform Uptime SLA</div>
+            </div>
+            <div class="sla-card">
+                <div class="sla-number">&lt;30m</div>
+                <div class="sla-label">P1 Critical Response</div>
+            </div>
+            <div class="sla-card">
+                <div class="sla-number">24/7</div>
+                <div class="sla-label">Support Coverage</div>
+            </div>
+            <div class="sla-card">
+                <div class="sla-number">18yr</div>
+                <div class="sla-label">Track Record</div>
+            </div>
+        </div>
+        <div class="security-grid">
+            <div class="security-card">
+                <h3><span>&#x1F512;</span> End-to-End Encryption</h3>
+                <p>TLS 1.3 in transit, AES-256 at rest. Zero-knowledge architecture — VMukti cannot access your video streams.</p>
+            </div>
+            <div class="security-card">
+                <h3><span>&#x1F6E1;</span> NDAA Compliant</h3>
+                <p>No components from NDAA-banned entities. Eligible for US federal, defense, and government contractor use.</p>
+            </div>
+            <div class="security-card">
+                <h3><span>&#x1F30D;</span> GDPR Ready</h3>
+                <p>Data Processing Agreements, right-to-erasure, EU data residency, privacy-by-design architecture.</p>
+            </div>
+            <div class="security-card">
+                <h3><span>&#x1F50D;</span> SOC 2 Type II (In Progress)</h3>
+                <p>Currently undergoing SOC 2 Type II certification. Interim readiness report available on request.</p>
+            </div>
+            <div class="security-card">
+                <h3><span>&#x1F4DD;</span> Immutable Audit Logs</h3>
+                <p>Every user action logged: logins, video access, config changes, exports. SIEM integration via syslog/webhook.</p>
+            </div>
+            <div class="security-card">
+                <h3><span>&#x1F465;</span> SSO / RBAC</h3>
+                <p>SAML 2.0 / OAuth 2.0 with Okta, Azure AD, OneLogin. Granular role-based access per site, camera, and feature.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== AZURE DATA RESIDENCY ===== -->
+<section class="section azure-section">
+    <div class="section-inner">
+        <div class="section-header">
+            <div class="section-eyebrow">Global Infrastructure</div>
+            <h2 class="section-title">Deployed on Microsoft Azure — Multi-Region</h2>
+            <p class="section-desc">Your data stays where you need it. Meet data sovereignty requirements in every jurisdiction with Azure's global region network.</p>
+        </div>
+        <div class="azure-grid">
+            <div>
+                <ul class="azure-regions">
+                    <li><span class="region-flag">&#x1F1FA;&#x1F1F8;</span> <strong>North America</strong> — Azure East US (Virginia), West US 2 (Washington)</li>
+                    <li><span class="region-flag">&#x1F1EA;&#x1F1FA;</span> <strong>Europe</strong> — Azure West Europe (Netherlands), North Europe (Ireland)</li>
+                    <li><span class="region-flag">&#x1F1E6;&#x1F1EA;</span> <strong>Middle East</strong> — Azure UAE North (Dubai)</li>
+                    <li><span class="region-flag">&#x1F1EC;&#x1F1E7;</span> <strong>UK</strong> — Azure UK South (London)</li>
+                    <li><span class="region-flag">&#x1F1F8;&#x1F1EC;</span> <strong>Asia-Pacific</strong> — Azure Southeast Asia (Singapore)</li>
+                    <li><span class="region-flag">&#x1F1EE;&#x1F1F3;</span> <strong>South Asia</strong> — Azure Central India (Pune)</li>
+                    <li><span class="region-flag">&#x1F1E6;&#x1F1FA;</span> <strong>Oceania</strong> — Azure Australia East (Sydney)</li>
+                </ul>
+            </div>
+            <div class="azure-right">
+                <h3>Private Cloud &amp; Hybrid Options</h3>
+                <p>For maximum control, VMukti deploys on your own infrastructure — Azure Stack Hub, Azure Arc, on-premises Kubernetes, or fully air-gapped environments for defense and critical infrastructure.</p>
+                <p>Cross-region replication for disaster recovery with configurable RPO/RTO targets. Data never leaves your chosen region unless you explicitly enable geo-replication.</p>
+                <div class="azure-badge">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0L0 3v5c0 4.4 3.4 8.5 8 10 4.6-1.5 8-5.6 8-10V3L8 0z"/></svg>
+                    Powered by Microsoft Azure
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== INTEGRATIONS ===== -->
+<section class="section integrations-section">
+    <div class="section-inner">
+        <div class="section-header">
+            <div class="section-eyebrow">Ecosystem</div>
+            <h2 class="section-title">Integrates With Your Existing Stack</h2>
+        </div>
+        <div class="integration-grid">
+            <div class="int-card"><div class="int-icon">&#x1F511;</div><h4>Access Control</h4><p>Lenel, Genetec Synergis, HID, AMAG</p></div>
+            <div class="int-card"><div class="int-icon">&#x1F514;</div><h4>Alarm / Intrusion</h4><p>Honeywell, Bosch, DSC, Texecom</p></div>
+            <div class="int-card"><div class="int-icon">&#x1F4CA;</div><h4>SIEM / SOAR</h4><p>Splunk, QRadar, Sentinel, Palo Alto</p></div>
+            <div class="int-card"><div class="int-icon">&#x1F4F1;</div><h4>PSIM</h4><p>CNL, Qognify, Mission Control</p></div>
+            <div class="int-card"><div class="int-icon">&#x1F4BB;</div><h4>ITSM</h4><p>ServiceNow, Jira, PagerDuty</p></div>
+            <div class="int-card"><div class="int-icon">&#x1F4E7;</div><h4>Communication</h4><p>Slack, Teams, Email, Webhook</p></div>
+            <div class="int-card"><div class="int-icon">&#x2699;</div><h4>REST API / SDK</h4><p>Build custom integrations</p></div>
+            <div class="int-card"><div class="int-icon">&#x1F4F9;</div><h4>5,000+ Cameras</h4><p>Any ONVIF / RTSP brand</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SUPPORT TIERS ===== -->
+<section class="section support-section">
+    <div class="section-inner">
+        <div class="section-header">
+            <div class="section-eyebrow">Support Plans</div>
+            <h2 class="section-title">Enterprise Support Tiers</h2>
+        </div>
+        <div class="support-grid">
+            <div class="support-card">
+                <div class="support-tier">Standard</div>
+                <h3>Business</h3>
+                <ul class="support-list">
+                    <li><span class="s-check">&#10003;</span> 8x5 business hours support</li>
+                    <li><span class="s-check">&#10003;</span> Email + portal tickets</li>
+                    <li><span class="s-check">&#10003;</span> P1 response: 4 hours</li>
+                    <li><span class="s-check">&#10003;</span> Quarterly business reviews</li>
+                    <li><span class="s-check">&#10003;</span> Knowledge base + training library</li>
+                </ul>
+            </div>
+            <div class="support-card featured">
+                <div class="support-tier">Premium</div>
+                <h3>Enterprise</h3>
+                <ul class="support-list">
+                    <li><span class="s-check">&#10003;</span> 24/7 support coverage</li>
+                    <li><span class="s-check">&#10003;</span> Phone + email + portal</li>
+                    <li><span class="s-check">&#10003;</span> P1 response: 30 minutes</li>
+                    <li><span class="s-check">&#10003;</span> Dedicated account manager</li>
+                    <li><span class="s-check">&#10003;</span> Monthly business reviews</li>
+                    <li><span class="s-check">&#10003;</span> Priority feature requests</li>
+                    <li><span class="s-check">&#10003;</span> On-site training (2x/year)</li>
+                </ul>
+            </div>
+            <div class="support-card">
+                <div class="support-tier">Mission Critical</div>
+                <h3>Dedicated</h3>
+                <ul class="support-list">
+                    <li><span class="s-check">&#10003;</span> Everything in Enterprise</li>
+                    <li><span class="s-check">&#10003;</span> Dedicated support engineer</li>
+                    <li><span class="s-check">&#10003;</span> P1 response: 15 minutes</li>
+                    <li><span class="s-check">&#10003;</span> Custom SLA terms</li>
+                    <li><span class="s-check">&#10003;</span> Dedicated Slack/Teams channel</li>
+                    <li><span class="s-check">&#10003;</span> Architecture review sessions</li>
+                    <li><span class="s-check">&#10003;</span> DR planning &amp; custom integrations</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+    <div class="section-inner">
+        <h2>Talk to Enterprise Sales</h2>
+        <p>Get a custom deployment plan for your organization — tailored to your camera count, site distribution, compliance needs, and budget.</p>
+        <div class="cta-buttons">
+            <a href="/book-a-demo" class="btn-cta-white">Schedule Enterprise Demo &rarr;</a>
+            <a href="mailto:sales@vmukti.com?subject=Enterprise%20Inquiry" class="btn-cta-ghost">Email Enterprise Sales</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="section-inner">
+        <p>&copy; 2026 VMukti Solutions Pvt. Ltd. All rights reserved. &nbsp;|&nbsp; <a href="/privacy-policy">Privacy</a> &nbsp;|&nbsp; <a href="/terms-and-conditions">Terms</a> &nbsp;|&nbsp; <a href="mailto:sales@vmukti.com">sales@vmukti.com</a></p>
+    </div>
+</footer>
+
+</body>
+</html>

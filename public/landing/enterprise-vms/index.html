@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Cloud VMS | Replace Milestone & Genetec | VMukti Solutions</title>
+    <meta name="description" content="Enterprise-grade cloud video management system. 60% lower TCO than Milestone/Genetec. SOC2-ready, multi-region deployment, unlimited camera scaling. Book a demo.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Enterprise Cloud VMS — Replace Legacy On-Premise Systems">
+    <meta property="og:description" content="Fortune 500 companies are switching from Milestone & Genetec to cloud-native VMS. See why.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vmukti.com/enterprise-cloud-vms">
+
+    <!-- Google Ads Conversion Tag -->
+    <!-- Replace XXXXXXXXXX with your actual Google Ads conversion ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-XXXXXXXXXX');
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy: #0B1A2E;
+            --navy-light: #132B4A;
+            --blue: #2563EB;
+            --blue-hover: #1D4ED8;
+            --teal: #0EA5E9;
+            --green: #10B981;
+            --orange: #F59E0B;
+            --white: #FFFFFF;
+            --gray-50: #F8FAFC;
+            --gray-100: #F1F5F9;
+            --gray-200: #E2E8F0;
+            --gray-300: #CBD5E1;
+            --gray-500: #64748B;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1E293B;
+            --gray-900: #0F172A;
+            --red: #EF4444;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--gray-800);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background: var(--navy);
+            color: var(--white);
+            padding: 8px 0;
+            font-size: 13px;
+            text-align: center;
+        }
+        .top-bar span { opacity: 0.9; }
+        .top-bar strong { color: var(--teal); }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--navy);
+            text-decoration: none;
+        }
+        .logo span { color: var(--blue); }
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .header-phone {
+            color: var(--gray-600);
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-header {
+            background: var(--blue);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        .btn-header:hover { background: var(--blue-hover); }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: var(--white);
+            padding: 80px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(37, 99, 235, 0.2);
+            border: 1px solid rgba(37, 99, 235, 0.4);
+            color: var(--teal);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .hero h1 {
+            font-size: 44px;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--teal), var(--blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-subtitle {
+            font-size: 18px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .hero-stat {
+            text-align: center;
+        }
+        .hero-stat-number {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--teal);
+        }
+        .hero-stat-label {
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+            margin-top: 4px;
+        }
+
+        /* ===== HERO FORM ===== */
+        .hero-form-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 36px 32px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+        }
+        .form-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 4px;
+        }
+        .form-subtitle {
+            font-size: 14px;
+            color: var(--gray-500);
+            margin-bottom: 24px;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-bottom: 6px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid var(--gray-300);
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            color: var(--gray-800);
+            transition: border-color 0.2s;
+            background: var(--white);
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .btn-submit {
+            width: 100%;
+            background: var(--blue);
+            color: var(--white);
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 8px;
+        }
+        .btn-submit:hover { background: var(--blue-hover); }
+        .form-trust {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 12px;
+            font-size: 12px;
+            color: var(--gray-500);
+        }
+        .form-trust svg { flex-shrink: 0; }
+
+        /* ===== TRUST BAR ===== */
+        .trust-bar {
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 32px 0;
+        }
+        .trust-bar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            text-align: center;
+        }
+        .trust-bar-label {
+            font-size: 13px;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 32px;
+            align-items: center;
+        }
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray-700);
+        }
+        .trust-badge svg { flex-shrink: 0; }
+
+        /* ===== SECTION DEFAULTS ===== */
+        .section {
+            padding: 80px 0;
+        }
+        .section-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        .section-label {
+            font-size: 13px;
+            color: var(--blue);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .section-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .section-desc {
+            font-size: 17px;
+            color: var(--gray-600);
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        /* ===== PAIN POINTS ===== */
+        .pain-section { background: var(--white); }
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .pain-card {
+            background: #FEF2F2;
+            border: 1px solid #FECACA;
+            border-radius: 12px;
+            padding: 28px;
+        }
+        .pain-icon {
+            width: 48px;
+            height: 48px;
+            background: #FEE2E2;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 24px;
+        }
+        .pain-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #991B1B;
+            margin-bottom: 8px;
+        }
+        .pain-card p {
+            font-size: 14px;
+            color: #7F1D1D;
+            line-height: 1.6;
+        }
+
+        /* ===== SOLUTION ===== */
+        .solution-section { background: var(--gray-50); }
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .solution-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 32px;
+            border: 1px solid var(--gray-200);
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .solution-card:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        .solution-icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, var(--blue), var(--teal));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--white);
+            font-size: 24px;
+        }
+        .solution-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 10px;
+        }
+        .solution-card p {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* ===== COMPARISON TABLE ===== */
+        .compare-section { background: var(--white); }
+        .compare-table-wrap {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid var(--gray-200);
+        }
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px;
+        }
+        .compare-table thead th {
+            background: var(--navy);
+            color: var(--white);
+            padding: 16px 20px;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .compare-table thead th:first-child { border-radius: 11px 0 0 0; }
+        .compare-table thead th:last-child { border-radius: 0 11px 0 0; }
+        .compare-table thead th.highlight-col {
+            background: var(--blue);
+        }
+        .compare-table tbody td {
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--gray-100);
+            font-size: 14px;
+            color: var(--gray-700);
+        }
+        .compare-table tbody td.highlight-col {
+            background: #EFF6FF;
+            font-weight: 600;
+            color: var(--blue);
+        }
+        .compare-table tbody tr:last-child td { border-bottom: none; }
+        .check { color: var(--green); font-weight: 700; }
+        .cross { color: var(--red); font-weight: 700; }
+
+        /* ===== USE CASES ===== */
+        .usecase-section { background: var(--gray-50); }
+        .usecase-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .usecase-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 28px 24px;
+            text-align: center;
+            border: 1px solid var(--gray-200);
+            transition: box-shadow 0.3s;
+        }
+        .usecase-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+        .usecase-icon {
+            font-size: 36px;
+            margin-bottom: 14px;
+        }
+        .usecase-card h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 8px;
+        }
+        .usecase-card p {
+            font-size: 13px;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonial-section { background: var(--white); }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        .testimonial-card {
+            background: var(--gray-50);
+            border-radius: 12px;
+            padding: 32px;
+            border: 1px solid var(--gray-200);
+        }
+        .testimonial-stars {
+            color: var(--orange);
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+        .testimonial-text {
+            font-size: 15px;
+            color: var(--gray-700);
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--blue), var(--teal));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .testimonial-name {
+            font-weight: 700;
+            color: var(--gray-900);
+            font-size: 14px;
+        }
+        .testimonial-role {
+            font-size: 13px;
+            color: var(--gray-500);
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--navy), var(--navy-light));
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 36px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn-cta-primary {
+            background: var(--blue);
+            color: var(--white);
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: background 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-cta-primary:hover { background: var(--blue-hover); }
+        .btn-cta-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            border: 2px solid rgba(255,255,255,0.3);
+            transition: border-color 0.2s;
+        }
+        .btn-cta-secondary:hover { border-color: rgba(255,255,255,0.6); }
+
+        /* ===== FAQ ===== */
+        .faq-section { background: var(--gray-50); }
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 10px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 20px 24px;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--gray-900);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question:hover { color: var(--blue); }
+        .faq-answer {
+            padding: 0 24px 20px;
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.7;
+            display: none;
+        }
+        .faq-item.open .faq-answer { display: block; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-toggle {
+            font-size: 24px;
+            color: var(--gray-400);
+            transition: transform 0.2s;
+            flex-shrink: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--navy);
+            color: rgba(255,255,255,0.7);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+        .footer a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+        .footer-links {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+            .hero h1 { font-size: 36px; }
+            .pain-grid, .solution-grid { grid-template-columns: repeat(2, 1fr); }
+            .usecase-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .hero { padding: 48px 0 40px; }
+            .hero h1 { font-size: 30px; }
+            .hero-stats { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+            .hero-stat-number { font-size: 28px; }
+            .pain-grid, .solution-grid, .testimonial-grid { grid-template-columns: 1fr; }
+            .usecase-grid { grid-template-columns: 1fr 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .section { padding: 56px 0; }
+            .section-title { font-size: 28px; }
+            .cta-section h2 { font-size: 28px; }
+            .header-phone { display: none; }
+        }
+        @media (max-width: 480px) {
+            .usecase-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ===== FLOATING CTA (Mobile) ===== */
+        .floating-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            padding: 12px 16px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+            z-index: 200;
+        }
+        .floating-cta a {
+            display: block;
+            background: var(--blue);
+            color: var(--white);
+            text-align: center;
+            padding: 14px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        @media (max-width: 768px) {
+            .floating-cta { display: block; }
+            body { padding-bottom: 70px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<div class="top-bar">
+    <span>Trusted by enterprises across <strong>30+ countries</strong> &nbsp;|&nbsp; Serving <strong>500,000+ cameras</strong> globally &nbsp;|&nbsp; <strong>99.9% uptime SLA</strong></span>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+    <div class="header-inner">
+        <a href="https://vmukti.com" class="logo">V<span>Mukti</span></a>
+        <div class="header-cta">
+            <a href="mailto:sales@vmukti.com" class="header-phone">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                sales@vmukti.com
+            </a>
+            <a href="#demo-form" class="btn-header">Book Enterprise Demo &rarr;</a>
+        </div>
+    </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <div class="hero-inner">
+        <div>
+            <div class="hero-badge">&#x1F512; Enterprise-Grade Cloud VMS</div>
+            <h1>Replace Your <span class="highlight">Legacy VMS</span> with Cloud-Native Intelligence</h1>
+            <p class="hero-subtitle">
+                Fortune 500 security teams are moving from Milestone, Genetec, and Honeywell to VMukti's cloud-native VMS.
+                60% lower TCO. Zero hardware lock-in. AI-powered analytics built in.
+            </p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-number">60%</div>
+                    <div class="hero-stat-label">Lower TCO vs. On-Prem</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">500K+</div>
+                    <div class="hero-stat-label">Cameras Managed</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">30+</div>
+                    <div class="hero-stat-label">Countries Deployed</div>
+                </div>
+            </div>
+        </div>
+        <div id="demo-form">
+            <div class="hero-form-card">
+                <div class="form-title">Get a Personalized Demo</div>
+                <div class="form-subtitle">See VMukti in action for your specific use case</div>
+                <form id="leadForm" action="/thank-you" method="GET">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name *</label>
+                            <input type="text" name="firstName" placeholder="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name *</label>
+                            <input type="text" name="lastName" placeholder="Smith" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Work Email *</label>
+                        <input type="email" name="email" placeholder="john@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Company Name *</label>
+                        <input type="text" name="company" placeholder="Acme Corp" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Country *</label>
+                            <select name="country" required>
+                                <option value="">Select Country</option>
+                                <option value="US">United States</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="AE">United Arab Emirates</option>
+                                <option value="SA">Saudi Arabia</option>
+                                <option value="DE">Germany</option>
+                                <option value="FR">France</option>
+                                <option value="AU">Australia</option>
+                                <option value="SG">Singapore</option>
+                                <option value="CA">Canada</option>
+                                <option value="JP">Japan</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Number of Cameras</label>
+                            <select name="cameras">
+                                <option value="">Select Range</option>
+                                <option value="50-200">50 - 200</option>
+                                <option value="200-500">200 - 500</option>
+                                <option value="500-2000">500 - 2,000</option>
+                                <option value="2000-10000">2,000 - 10,000</option>
+                                <option value="10000+">10,000+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Current VMS (if any)</label>
+                        <select name="currentVms">
+                            <option value="">Select Current System</option>
+                            <option value="milestone">Milestone XProtect</option>
+                            <option value="genetec">Genetec Security Center</option>
+                            <option value="honeywell">Honeywell MAXPRO</option>
+                            <option value="avigilon">Avigilon (Motorola)</option>
+                            <option value="verkada">Verkada</option>
+                            <option value="eagle-eye">Eagle Eye Networks</option>
+                            <option value="other">Other</option>
+                            <option value="none">No VMS — New Installation</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">Book My Enterprise Demo &rarr;</button>
+                    <div class="form-trust">
+                        <svg width="14" height="14" fill="var(--green)" viewBox="0 0 20 20"><path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm-2 14.5l-3.5-3.5 1.41-1.41L8 11.67l6.09-6.09L15.5 7l-7.5 7.5z"/></svg>
+                        <span>No commitment required &nbsp;|&nbsp; Response within 4 business hours</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TRUST BAR ===== -->
+<div class="trust-bar">
+    <div class="trust-bar-inner">
+        <div class="trust-bar-label">Enterprise Compliance & Certifications</div>
+        <div class="trust-badges">
+            <div class="trust-badge">
+                <svg width="20" height="20" fill="var(--green)" viewBox="0 0 20 20"><path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm-2 14.5l-3.5-3.5 1.41-1.41L8 11.67l6.09-6.09L15.5 7l-7.5 7.5z"/></svg>
+                STQC Certified
+            </div>
+            <div class="trust-badge">
+                <svg width="20" height="20" fill="var(--green)" viewBox="0 0 20 20"><path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm-2 14.5l-3.5-3.5 1.41-1.41L8 11.67l6.09-6.09L15.5 7l-7.5 7.5z"/></svg>
+                NDAA Compliant
+            </div>
+            <div class="trust-badge">
+                <svg width="20" height="20" fill="var(--green)" viewBox="0 0 20 20"><path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm-2 14.5l-3.5-3.5 1.41-1.41L8 11.67l6.09-6.09L15.5 7l-7.5 7.5z"/></svg>
+                GDPR Ready
+            </div>
+            <div class="trust-badge">
+                <svg width="20" height="20" fill="var(--green)" viewBox="0 0 20 20"><path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm-2 14.5l-3.5-3.5 1.41-1.41L8 11.67l6.09-6.09L15.5 7l-7.5 7.5z"/></svg>
+                SOC 2 Roadmap
+            </div>
+            <div class="trust-badge">
+                <svg width="20" height="20" fill="var(--green)" viewBox="0 0 20 20"><path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm-2 14.5l-3.5-3.5 1.41-1.41L8 11.67l6.09-6.09L15.5 7l-7.5 7.5z"/></svg>
+                99.9% Uptime SLA
+            </div>
+            <div class="trust-badge">
+                <svg width="20" height="20" fill="var(--green)" viewBox="0 0 20 20"><path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm-2 14.5l-3.5-3.5 1.41-1.41L8 11.67l6.09-6.09L15.5 7l-7.5 7.5z"/></svg>
+                Multi-Region Cloud
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== PAIN POINTS ===== -->
+<section class="section pain-section">
+    <div class="section-inner">
+        <div class="section-header">
+            <div class="section-label">The Problem</div>
+            <h2 class="section-title">Why Enterprise Security Teams Are Moving Away from Legacy VMS</h2>
+            <p class="section-desc">On-premise VMS platforms were designed for a different era. Today's multi-site, multi-region enterprises need something built for the cloud.</p>
+        </div>
+        <div class="pain-grid">
+            <div class="pain-card">
+                <div class="pain-icon">&#x1F4B8;</div>
+                <h3>Crushing Server Costs</h3>
+                <p>Milestone and Genetec require dedicated GPU servers at every site. With 50+ locations, you're looking at $500K+ in hardware refresh cycles every 3-5 years.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">&#x1F512;</div>
+                <h3>Vendor Lock-In</h3>
+                <p>Proprietary codecs, camera compatibility lists, and per-camera licensing models trap you into a single vendor ecosystem with no flexibility.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">&#x1F310;</div>
+                <h3>No Multi-Site Visibility</h3>
+                <p>Managing 200 sites across 10 countries with legacy VMS means 200 separate logins, no unified dashboard, and zero cross-site analytics.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">&#x23F3;</div>
+                <h3>Months-Long Deployment</h3>
+                <p>Traditional VMS takes 6-12 months to procure, install, and commission. By the time you're live, requirements have changed.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">&#x1F916;</div>
+                <h3>AI as an Afterthought</h3>
+                <p>Legacy platforms bolt on analytics with expensive add-ons. Each AI feature means another license, another server, another integration headache.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">&#x1F4CA;</div>
+                <h3>Scaling Nightmares</h3>
+                <p>Adding 500 cameras to a Milestone system means capacity planning, new server racks, storage expansion, and weeks of IT work. Every time.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SOLUTION ===== -->
+<section class="section solution-section">
+    <div class="section-inner">
+        <div class="section-header">
+            <div class="section-label">The Solution</div>
+            <h2 class="section-title">VMukti: Cloud-Native VMS Built for Global Enterprises</h2>
+            <p class="section-desc">One platform to manage all your cameras, all your sites, all your analytics. From the cloud, with zero hardware dependency.</p>
+        </div>
+        <div class="solution-grid">
+            <div class="solution-card">
+                <div class="solution-icon">&#x2601;</div>
+                <h3>True Cloud Architecture</h3>
+                <p>No on-premise servers required. Deploy in minutes across Microsoft Azure global regions or private cloud (Azure Stack Hub, Azure Arc). Multi-region data residency built in for GDPR/data sovereignty compliance.</p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-icon">&#x1F916;</div>
+                <h3>AI Analytics Included</h3>
+                <p>50+ pre-built AI models: intrusion detection, people counting, PPE compliance, vehicle ANPR, face recognition, smoke/fire detection. No add-on licenses.</p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-icon">&#x1F310;</div>
+                <h3>Unified Global Dashboard</h3>
+                <p>Single pane of glass for all sites across all countries. Role-based access, real-time alerts, and cross-site reporting from one browser tab.</p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-icon">&#x1F4F9;</div>
+                <h3>Camera Agnostic</h3>
+                <p>Works with any ONVIF/RTSP camera. Keep your existing Axis, Hanwha, Bosch, or Hikvision cameras. Zero rip-and-replace needed.</p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-icon">&#x1F4C8;</div>
+                <h3>Unlimited Scaling</h3>
+                <p>From 50 cameras to 50,000 — same platform, same dashboard, same price per camera. Auto-scaling infrastructure handles the rest.</p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-icon">&#x1F6E1;</div>
+                <h3>Enterprise Security</h3>
+                <p>End-to-end encryption (TLS 1.3), SSO/SAML integration, audit logs, RBAC, and data retention policies. SOC 2 Type II certification in progress.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== COMPARISON TABLE ===== -->
+<section class="section compare-section">
+    <div class="section-inner">
+        <div class="section-header">
+            <div class="section-label">Comparison</div>
+            <h2 class="section-title">VMukti vs. Legacy VMS Platforms</h2>
+        </div>
+        <div class="compare-table-wrap">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th class="highlight-col">VMukti Cloud VMS</th>
+                        <th>Milestone XProtect</th>
+                        <th>Genetec Security Center</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Deployment Model</td>
+                        <td class="highlight-col">100% Cloud / Hybrid</td>
+                        <td>On-Premise Only</td>
+                        <td>On-Premise (Cloud add-on)</td>
+                    </tr>
+                    <tr>
+                        <td>AI Analytics</td>
+                        <td class="highlight-col"><span class="check">&#10003;</span> 50+ models included</td>
+                        <td>Add-on licenses required</td>
+                        <td>Add-on licenses required</td>
+                    </tr>
+                    <tr>
+                        <td>Hardware Required</td>
+                        <td class="highlight-col"><span class="check">&#10003;</span> None (cloud-native)</td>
+                        <td><span class="cross">&#10007;</span> GPU servers per site</td>
+                        <td><span class="cross">&#10007;</span> Dedicated servers</td>
+                    </tr>
+                    <tr>
+                        <td>Multi-Site Management</td>
+                        <td class="highlight-col"><span class="check">&#10003;</span> Single global dashboard</td>
+                        <td>Federation (complex)</td>
+                        <td>Directory (complex)</td>
+                    </tr>
+                    <tr>
+                        <td>Time to Deploy</td>
+                        <td class="highlight-col">Hours to Days</td>
+                        <td>Weeks to Months</td>
+                        <td>Weeks to Months</td>
+                    </tr>
+                    <tr>
+                        <td>Camera Compatibility</td>
+                        <td class="highlight-col">Any ONVIF/RTSP</td>
+                        <td>Certified list only</td>
+                        <td>Certified list only</td>
+                    </tr>
+                    <tr>
+                        <td>Pricing Model</td>
+                        <td class="highlight-col">Per-camera/month (OpEx)</td>
+                        <td>Per-camera perpetual (CapEx)</td>
+                        <td>Per-camera perpetual (CapEx)</td>
+                    </tr>
+                    <tr>
+                        <td>Auto-Scaling</td>
+                        <td class="highlight-col"><span class="check">&#10003;</span> Automatic</td>
+                        <td><span class="cross">&#10007;</span> Manual capacity planning</td>
+                        <td><span class="cross">&#10007;</span> Manual capacity planning</td>
+                    </tr>
+                    <tr>
+                        <td>NDAA Compliant</td>
+                        <td class="highlight-col"><span class="check">&#10003;</span> Yes</td>
+                        <td><span class="check">&#10003;</span> Yes</td>
+                        <td><span class="check">&#10003;</span> Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Typical 5-Year TCO (500 cameras)</td>
+                        <td class="highlight-col">~$180,000</td>
+                        <td>~$420,000</td>
+                        <td>~$450,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- ===== USE CASES ===== -->
+<section class="section usecase-section">
+    <div class="section-inner">
+        <div class="section-header">
+            <div class="section-label">Industries</div>
+            <h2 class="section-title">Deployed Across Every Enterprise Vertical</h2>
+        </div>
+        <div class="usecase-grid">
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F3E6;</div>
+                <h3>Banking & Finance</h3>
+                <p>ATM monitoring, branch security, vault surveillance with AI-powered anomaly detection.</p>
+            </div>
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F3ED;</div>
+                <h3>Manufacturing</h3>
+                <p>PPE compliance, safety zone monitoring, quality inspection, and asset tracking across plants.</p>
+            </div>
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F3E5;</div>
+                <h3>Healthcare</h3>
+                <p>Patient monitoring, restricted area access, equipment tracking, and HIPAA-compliant storage.</p>
+            </div>
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F6D2;</div>
+                <h3>Retail</h3>
+                <p>Customer analytics, loss prevention, queue management, heat mapping across 1000+ stores.</p>
+            </div>
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F3EB;</div>
+                <h3>Education</h3>
+                <p>Campus-wide security, attendance monitoring, emergency lockdown integration across districts.</p>
+            </div>
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F3D7;</div>
+                <h3>Smart Cities</h3>
+                <p>ICCC command centers, traffic management, crowd monitoring, and emergency response coordination.</p>
+            </div>
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F6E2;</div>
+                <h3>Oil & Gas</h3>
+                <p>Remote pipeline monitoring, safety compliance, perimeter protection for critical infrastructure.</p>
+            </div>
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F6A2;</div>
+                <h3>Logistics</h3>
+                <p>Warehouse monitoring, dock management, fleet tracking, and supply chain visibility.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section testimonial-section">
+    <div class="section-inner">
+        <div class="section-header">
+            <div class="section-label">Customer Success</div>
+            <h2 class="section-title">What Enterprise Security Leaders Say</h2>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">"Migrating from Milestone to VMukti cut our infrastructure costs by 55% and gave us a single dashboard for all 120 sites. The AI analytics that came included would have cost us $200K extra with Milestone."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">RK</div>
+                    <div>
+                        <div class="testimonial-name">Security Director</div>
+                        <div class="testimonial-role">Multi-National Manufacturing Company, 120+ Sites</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">"We deployed VMukti across our entire banking network in 3 weeks. Our previous VMS vendor quoted 6 months for the same rollout. The speed and simplicity were game-changing for our compliance timeline."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">MT</div>
+                    <div>
+                        <div class="testimonial-name">VP of Physical Security</div>
+                        <div class="testimonial-role">Regional Banking Group, 200+ Branches</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+    <div class="section-inner">
+        <h2>Ready to Modernize Your Video Surveillance?</h2>
+        <p>Join 200+ enterprises that have already moved to cloud-native VMS. Get a personalized demo with your specific use case and camera count.</p>
+        <div class="cta-buttons">
+            <a href="#demo-form" class="btn-cta-primary">
+                Book Enterprise Demo &rarr;
+            </a>
+            <a href="mailto:sales@vmukti.com?subject=VMukti%20Enterprise%20Inquiry" class="btn-cta-secondary">
+                Email Sales Team
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section faq-section">
+    <div class="section-inner">
+        <div class="section-header">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item open">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    How does VMukti pricing work for enterprises?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">VMukti uses a simple per-camera, per-month subscription model. No upfront hardware costs, no per-feature add-ons. AI analytics, cloud storage, and multi-site management are all included. For enterprises with 500+ cameras, we offer custom volume pricing. Contact our sales team for a detailed quote.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Can I keep my existing cameras?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">Absolutely. VMukti works with any ONVIF-compliant or RTSP-capable camera. This includes Axis, Hanwha, Bosch, Hikvision, Dahua, and hundreds of other brands. There's zero rip-and-replace required — you simply point your existing cameras to VMukti.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Where is my video data stored?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">VMukti supports multi-region cloud deployment on Microsoft Azure. You choose where your data lives — US (Azure East US, West US 2), EU (West Europe, North Europe), Middle East (UAE North), UK (UK South), Asia-Pacific (Southeast Asia, Central India, Australia East), or your own private cloud via Azure Stack Hub or Azure Arc. Data residency controls are built-in for GDPR and local data sovereignty compliance.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    What's the migration process from Milestone/Genetec?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">We provide a dedicated migration team and a proven 4-phase process: (1) Discovery &amp; assessment of your current setup, (2) Parallel deployment alongside your existing VMS, (3) Gradual camera cutover with zero downtime, (4) Full transition with legacy decommission. Most enterprises complete migration in 2-4 weeks.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Is VMukti NDAA compliant?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">Yes. VMukti is fully NDAA (National Defense Authorization Act) compliant. Our software contains no components from banned entities (Hikvision, Dahua, Huawei). This makes VMukti suitable for US federal government, defense, and banking installations where NDAA compliance is mandatory.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    What SLA do you offer?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">Enterprise customers receive a 99.9% uptime SLA with guaranteed response times: P1 critical issues — 30 minute response, P2 high — 2 hour response, P3 medium — 8 hour response. We provide 24/7 support via dedicated account managers, phone, email, and a priority support portal.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="section-inner">
+        <p>&copy; 2026 VMukti Solutions. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://vmukti.com/privacy-policy">Privacy Policy</a>
+            <a href="https://vmukti.com/terms-and-conditions">Terms of Service</a>
+            <a href="mailto:sales@vmukti.com">sales@vmukti.com</a>
+        </div>
+    </div>
+</footer>
+
+<!-- ===== FLOATING MOBILE CTA ===== -->
+<div class="floating-cta">
+    <a href="#demo-form">Book Enterprise Demo &rarr;</a>
+</div>
+
+<!-- ===== CONVERSION TRACKING ===== -->
+<script>
+    // Form submission tracking
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+        // Fire Google Ads conversion
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'conversion', {
+                'send_to': 'AW-XXXXXXXXXX/YYYYYYYYYYYY', // Replace with actual conversion label
+                'value': 100.0,
+                'currency': 'USD'
+            });
+        }
+
+        // Fire Meta Pixel (if installed)
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Lead', {
+                content_name: 'VMukti Enterprise Demo',
+                content_category: 'Enterprise VMS',
+                value: 100.00,
+                currency: 'USD'
+            });
+        }
+
+        // Fire LinkedIn Insight Tag (if installed)
+        if (typeof lintrk !== 'undefined') {
+            lintrk('track', { conversion_id: 'XXXXXXX' });
+        }
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+</script>
+
+<!-- Google Ads Remarketing Tag -->
+<!-- Replace with actual remarketing tag from Google Ads account -->
+<script>
+    gtag('event', 'page_view', {
+        'send_to': 'AW-XXXXXXXXXX',
+        'ecomm_pagetype': 'product',
+        'ecomm_prodid': 'vmukti-cloud-vms-enterprise',
+        'ecomm_totalvalue': 100
+    });
+</script>
+
+</body>
+</html>
