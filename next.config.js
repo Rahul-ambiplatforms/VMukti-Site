@@ -3,7 +3,6 @@
 const path = require("path");
 
 const nextConfig = {
-  basePath: "/vmukti-site3",
   assetPrefix: "/vmukti-site3",
   trailingSlash: true,
 
