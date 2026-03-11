@@ -1,63 +1,62 @@
 /** @type {import('next').NextConfig} */
+
+const path = require("path");
+
 const nextConfig = {
-  // Image optimization
-  basePath:"/vmukti-site3",
+  basePath: "/vmukti-site3",
   assetPrefix: "/vmukti-site3",
+  trailingSlash: true,
+
   images: {
-    path:"/vmukti-site3/_next/images",
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'res.cloudinary.com',
-        pathname: '/dzs02ecai/**',
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        pathname: "/dzs02ecai/**",
       },
       {
-        protocol: 'https',
-        hostname: 'www.vmukti.com',
+        protocol: "https",
+        hostname: "www.vmukti.com",
       },
       {
-        protocol: 'https',
-        hostname: 'vmukti.com',
+        protocol: "https",
+        hostname: "vmukti.com",
       },
     ],
   },
 
-  // Proxy API requests to backend
   async rewrites() {
     return [
       {
-        source: '/backend/:path*',
-        destination: 'https://vmukti.com/backend/:path*',
+        source: "/backend/:path*",
+        destination: "https://vmukti.com/backend/:path*",
       },
     ];
   },
 
-  // Redirects for SEO
   async redirects() {
     return [
-      // Redirect non-www to www
       {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'vmukti.com' }],
-        destination: 'https://www.vmukti.com/:path*',
+        source: "/:path*",
+        has: [{ type: "host", value: "vmukti.com" }],
+        destination: "https://www.vmukti.com/:path*",
         permanent: true,
       },
     ];
   },
 
-  // Headers for SEO
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: "/(.*)",
         headers: [
           {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN',
+            key: "X-Frame-Options",
+            value: "SAMEORIGIN",
           },
           {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
+            key: "X-Content-Type-Options",
+            value: "nosniff",
           },
         ],
       },
@@ -65,16 +64,17 @@ const nextConfig = {
   },
 
   webpack: (config) => {
-    config.resolve.alias['react-router-dom'] = require('path').resolve(__dirname, 'lib/react-router-dom-mock.js');
+    config.resolve.alias["react-router-dom"] = path.resolve(
+      __dirname,
+      "lib/react-router-dom-mock.js"
+    );
     return config;
   },
 
-  // Transpile Chakra UI packages
-  transpilePackages: ['@chakra-ui/react', '@chakra-ui/next-js'],
+  transpilePackages: ["@chakra-ui/react", "@chakra-ui/next-js"],
 
-  // Increase memory for large data files
   experimental: {
-    largePageDataBytes: 512 * 1024, // 512KB
+    largePageDataBytes: 512 * 1024,
   },
 };
 
