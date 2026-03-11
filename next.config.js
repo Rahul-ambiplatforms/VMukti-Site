@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Image optimization
+  basePath: "/vmukti-site3",
   assetPrefix: "/vmukti-site3",
   images: {
     remotePatterns: [
