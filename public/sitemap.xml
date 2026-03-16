@@ -7,7 +7,160 @@
   <!-- Core Pages -->
   <url>
     <loc>https://www.vmukti.com/</loc>
-    <lastmod>2026-02-14</lastmod>
+<?xml version="1.0" encoding="UTF-8"?>
+          <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+                          xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+                  
+                    <!-- Core Pages -->
+                    <url>
+                                <loc>https://vmukti.com/</loc>
+                                <changefreq>weekly</changefreq>
+                                <priority>1.0</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/about</loc>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.7</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/contact</loc>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.7</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/pricing</loc>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.8</priority>
+                    </url>
+                  
+                    <!-- Solutions -->
+                    <url>
+                                <loc>https://vmukti.com/solutions</loc>
+                                <changefreq>weekly</changefreq>
+                                <priority>0.9</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/solutions/ai-video-analytics</loc>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.8</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/solutions/enterprise-command-center</loc>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.8</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/solutions/edge-ai</loc>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.8</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/solutions/cloud-vms</loc>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.8</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/solutions/smart-campus</loc>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.8</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/solutions-comparison</loc>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.7</priority>
+                    </url>
+                  
+                    <!-- Industries -->
+                    <url>
+                                <loc>https://vmukti.com/industries</loc>
+                                <changefreq>weekly</changefreq>
+                                <priority>0.9</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/industries/banking</loc>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.8</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/industries/retail</loc>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.8</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/industries/manufacturing</loc>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.8</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/industries/healthcare</loc>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.8</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/industries/logistics</loc>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.8</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/industries/energy</loc>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.8</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/industries/education</loc>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.8</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/industries/corporate</loc>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.8</priority>
+                    </url>
+                  
+                    <!-- Customer Stories -->
+                    <url>
+                                <loc>https://vmukti.com/customer-stories</loc>
+                                <changefreq>weekly</changefreq>
+                                <priority>0.8</priority>
+                    </url>
+                  
+                    <!-- Knowledge & Content -->
+                    <url>
+                                <loc>https://vmukti.com/blog</loc>
+                                <changefreq>weekly</changefreq>
+                                <priority>0.8</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/knowledge-base</loc>
+                                <changefreq>weekly</changefreq>
+                                <priority>0.7</priority>
+                    </url>
+                  
+                    <!-- Tools & Resources -->
+                    <url>
+                                <loc>https://vmukti.com/roi-calculator</loc>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.7</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/partners</loc>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.7</priority>
+                    </url>
+                  
+                    <!-- Legal -->
+                    <url>
+                                <loc>https://vmukti.com/privacy-policy</loc>
+                                <changefreq>yearly</changefreq>
+                                <priority>0.3</priority>
+                    </url>
+                    <url>
+                                <loc>https://vmukti.com/terms</loc>
+                                <changefreq>yearly</changefreq>
+                                <priority>0.3</priority>
+                    </url>
+                  
+          </urlset><lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
