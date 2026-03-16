@@ -1,4 +1,52 @@
-# VMukti - Global Enterprise VMS/EMS/ICCC Platform
+# VMukti Technologies - robots.txt
+# Enterprise AI Video Intelligence Platform
+# Last updated: 2026-03-14
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /internal/
+
+# Sitemaps
+Sitemap: https://vmukti.com/sitemap.xml
+
+# AI & LLM Crawlers - Welcome
+User-agent: GPTBot
+Allow: /
+Allow: /solutions
+Allow: /industries
+Allow: /customer-stories
+Allow: /knowledge-base
+Allow: /blog
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# LLMs.txt reference
+# See https://vmukti.com/llms.txt for structured AI-readable content# VMukti - Global Enterprise VMS/EMS/ICCC Platform
 # https://www.vmukti.com
 
 User-agent: *
