@@ -24,7 +24,7 @@ const industriesData = {
     para: "Keep your operations secure with our computer vision solution in manufacturing. Monitor every corner in real time, detect threats early and respond instantly. Simple to deploy and easy to use, it gives you full control and clear visibility anytime, anywhere.",
     large_image: "manufacturing_mockup.png",
     large_image_mobile: "manufacturing_mockup_mobile.png",
-    large_image_alt: "Closeup shot of a bee on a chamomile flower",
+    large_image_alt: "Manufactring Industry",
     keyApplications: [
       {
         id: "section1",

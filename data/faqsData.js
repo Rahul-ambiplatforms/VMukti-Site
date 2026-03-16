@@ -203,23 +203,32 @@ const faqsData = {
     ],
   },
   cloudai: {
-    title: "FAQs On Flying Squad Vehicle",
+    title: "FAQs On Cloud AI",
     qa: [
       {
-        question: "Can the FSV operate in remote or high-risk locations?",
+        question: "What is Cloud AI and how does it enhance video surveillance?",
         answer:
-          "Yes, The vehicle is designed for rugged terrains and can maintain connectivity and surveillance performance in remote or volatile environments.",
+          "Cloud AI combines artificial intelligence with cloud computing to provide advanced video analytics, real-time threat detection, and automated monitoring capabilities without requiring on-premise hardware infrastructure.",
       },
       {
-        question:
-          "Can we integrate the FSV system with our existing VMS or command setup?",
+        question: "Can Cloud AI integrate with existing surveillance systems?",
         answer:
-          "Yes, our FSV system is fully compatible with standard video management systems and command center platforms for seamless integration.",
+          "Yes, our Cloud AI solution seamlessly integrates with existing CCTV cameras, VMS platforms, and security infrastructure through APIs and standard protocols, enhancing your current setup with intelligent analytics.",
       },
       {
-        question: "How secure is the access to the FSV system?",
+        question: "How secure is data processing in Cloud AI systems?",
         answer:
-          "Access is controlled using user-specific credentials, role-based permissions and encrypted data channels to ensure maximum security.",
+          "Our Cloud AI platform uses enterprise-grade encryption, secure data transmission, role-based access controls, and compliance-ready architecture to ensure maximum data security and privacy protection.",
+      },
+      {
+        question: "What types of analytics can Cloud AI provide for surveillance?",
+        answer:
+          "Cloud AI offers comprehensive analytics including facial recognition, object detection, behavior analysis, crowd monitoring, intrusion detection, fire and smoke detection, and custom AI models tailored to specific use cases.",
+      },
+      {
+        question: "Is Cloud AI scalable for large enterprise deployments?",
+        answer:
+          "Absolutely. Cloud AI is designed for enterprise-scale deployments, supporting thousands of cameras across multiple locations with automatic scaling, load balancing, and high-availability infrastructure.",
       },
     ],
   },

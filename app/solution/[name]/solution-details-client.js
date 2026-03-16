@@ -11,12 +11,14 @@ export default function SolutionDetailsClient({ solutionName }) {
     'video-management-system': 'vms',
     'cloud-vms': 'cloudVMS',
     'enterprise-management-system': 'ems',
-    'iccc': 'iccc',
+    'iccc': 'integratedcommandcontrolcenter',
+    'integrated-command-control-center': 'integratedcommandcontrolcenter',
     'cloudai': 'aiAnalytics',
     'genai': 'genai',
     'visualbot': 'visualbot',
     'live-streaming': 'liveStreaming',
-    'face-surveillance': 'faceSurveillance',
+    'live-streaming-solution': 'liveStreaming',
+    'flying-squad-vehicle': 'flyingSquadVehicle',
   };
 
   const faqKey = solutionFaqMap[solutionName];
@@ -49,7 +51,14 @@ export default function SolutionDetailsClient({ solutionName }) {
       'iccc': {
         name: 'VMukti Integrated Command & Control Center',
         description: 'Unified command center integrating video, IoT, access control, and emergency systems for smart city operations.',
-        url: 'https://www.vmukti.com/solution/iccc',
+        url: 'https://www.vmukti.com/solution/integrated-command-control-center',
+        features: 'Unified Dashboard, Video Wall, GIS Integration, IoT Integration, Emergency Response, Multi-agency Coordination',
+        aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', bestRating: '5', ratingCount: '87', reviewCount: '52' },
+      },
+      'integrated-command-control-center': {
+        name: 'VMukti Integrated Command & Control Center',
+        description: 'Unified command center integrating video, IoT, access control, and emergency systems for smart city operations.',
+        url: 'https://www.vmukti.com/solution/integrated-command-control-center',
         features: 'Unified Dashboard, Video Wall, GIS Integration, IoT Integration, Emergency Response, Multi-agency Coordination',
         aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', bestRating: '5', ratingCount: '87', reviewCount: '52' },
       },
@@ -75,14 +84,20 @@ export default function SolutionDetailsClient({ solutionName }) {
       'live-streaming': {
         name: 'VMukti Live Streaming Platform',
         description: 'Enterprise live video streaming solution with adaptive bitrate, multi-CDN delivery, low latency, and secure viewing for surveillance and event broadcasting.',
-        url: 'https://www.vmukti.com/solution/live-streaming',
+        url: 'https://www.vmukti.com/solution/live-streaming-solution',
         features: 'Adaptive Bitrate, Multi-CDN, Low Latency Streaming, Secure Viewing, Live Event Broadcasting, DVR Playback',
       },
-      'face-surveillance': {
-        name: 'VMukti Face Surveillance System',
-        description: 'AI-powered facial recognition surveillance system for real-time identification, watchlist alerts, attendance tracking, and access control integration.',
-        url: 'https://www.vmukti.com/solution/face-surveillance',
-        features: 'Facial Recognition, Watchlist Alerts, Attendance Tracking, Access Control, Real-time Identification, Liveness Detection',
+      'live-streaming-solution': {
+        name: 'VMukti Live Streaming Platform',
+        description: 'Enterprise live video streaming solution with adaptive bitrate, multi-CDN delivery, low latency, and secure viewing for surveillance and event broadcasting.',
+        url: 'https://www.vmukti.com/solution/live-streaming-solution',
+        features: 'Adaptive Bitrate, Multi-CDN, Low Latency Streaming, Secure Viewing, Live Event Broadcasting, DVR Playback',
+      },
+      'flying-squad-vehicle': {
+        name: 'VMukti Flying Squad Vehicle Surveillance System',
+        description: 'Mobile surveillance and rapid-response platform with GPS tracking, moving video monitoring, geo-fencing alerts, PTZ camera control, and ICCC integration.',
+        url: 'https://www.vmukti.com/solution/flying-squad-vehicle',
+        features: 'Live GPS Tracking, Moving Vehicle Surveillance, Geo-Fencing Alerts, PTZ Camera Control, Control Room Monitoring, ICCC Integration',
       },
     };
     return configs[solutionName] || configs['video-management-system'];
@@ -91,7 +106,7 @@ export default function SolutionDetailsClient({ solutionName }) {
   // Breadcrumb items for current solution
   const breadcrumbItems = [
     { name: 'Home', url: 'https://www.vmukti.com' },
-    { name: 'Solutions', url: 'https://www.vmukti.com/solutions' },
+    { name: 'Solutions', url: 'https://www.vmukti.com/solution' },
     { name: productSchemaConfig.name, url: productSchemaConfig.url },
   ];
 

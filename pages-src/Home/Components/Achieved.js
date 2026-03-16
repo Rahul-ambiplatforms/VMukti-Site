@@ -17,53 +17,74 @@ import { keyframes } from "@emotion/react"; // ✅ Correct import
 const useCountUp = (target, duration = 1000) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => setIsVisible(entry.isIntersecting),
-      { threshold: 0.1 }
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
     );
 
-    const currentRef = ref.current; // Capture ref value
+    const currentRef = ref.current;
 
-    if (currentRef) observer.observe(currentRef);
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
 
     return () => {
-      if (currentRef) observer.unobserve(currentRef); // Use captured value in cleanup
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
     };
-  }, []);
+  }, [hasAnimated]);
 
   useEffect(() => {
-    if (!isVisible) return;
+    if (!isVisible || hasAnimated || target === 0) return;
 
-    let start = 0;
-    const increment = target / (duration / 16); // Approx. 60fps
-    const interval = setInterval(() => {
-      start += increment;
-      if (start >= target) {
-        setCount(target);
-        clearInterval(interval);
+    setHasAnimated(true);
+    
+    const startTime = Date.now();
+    const animate = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Easing function for smooth animation
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const currentCount = Math.floor(easeOutQuart * target);
+      
+      setCount(currentCount);
+      
+      if (progress < 1) {
+        requestAnimationFrame(animate);
       } else {
-        setCount(Math.ceil(start));
+        setCount(target);
       }
-    }, 16);
-
-    return () => clearInterval(interval);
-  }, [isVisible, target, duration]);
+    };
+    
+    requestAnimationFrame(animate);
+  }, [isVisible, target, duration, hasAnimated]);
 
   return { count, ref };
 };
 
 const AnimatedValue = ({ value }) => {
-  const firstNumberMatch = value.match(/\d+/);
-  const numericValue = firstNumberMatch ? parseInt(firstNumberMatch[0], 10) : 0;
+  // Handle special cases and extract number + suffix properly
+  const numberMatch = value.match(/^(\d+)(.*)$/);
+  
+  if (!numberMatch) {
+    // If no number found, return the value as-is
+    return <span>{value}</span>;
+  }
+  
+  const numericValue = parseInt(numberMatch[1], 10);
+  const suffix = numberMatch[2] || '';
 
-  const suffix = firstNumberMatch
-    ? value.replace(firstNumberMatch[0], "")
-    : value;
-
-  const { count, ref } = useCountUp(numericValue, 500);
+  const { count, ref } = useCountUp(numericValue, 1500);
 
   return (
     <span ref={ref}>
@@ -305,10 +326,7 @@ const Achieved = ({ heading, description, data = achievementsData }) => {
                   color={item.valueColor}
                   // as="h3"
                 >
-                  <AnimatedValue
-                    value={item.value}
-                    suffix={item.value.replace(/\d+/g, "")}
-                  />
+                  <AnimatedValue value={item.value} />
                 </Text>
 
                 <Text

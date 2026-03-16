@@ -6,6 +6,12 @@ import './globals.css';
 
 const SITE_URL = 'https://www.vmukti.com';
 
+// Viewport configuration (must be separate from metadata in Next.js 13+ App Router)
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 // Default metadata for all pages (can be overridden per page)
 export const metadata = {
   metadataBase: new URL(SITE_URL),

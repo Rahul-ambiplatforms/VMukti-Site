@@ -5,7 +5,7 @@ export const dynamic = 'force-dynamic';
 
 export function generateMetadata() {
   return {
-    title: 'Privacy Policy | VMukti Solutions',
+    title: 'Privacy Policy',
     description: 'VMukti Solutions privacy policy. Learn how we protect your data.',
     canonical: 'https://www.vmukti.com/privacy-policy',
   };

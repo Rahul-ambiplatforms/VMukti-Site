@@ -233,17 +233,15 @@ const SolutionContent = ({ content, solutionName }) => {
 
   return (
     <>
-      <script>
-        {schema.map((schema, index) => (
-          <script
-            key={`schema-${index}`}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(schema),
-            }}
-          />
-        ))}
-      </script>
+      {schema.map((schemaItem, index) => (
+        <script
+          key={`schema-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaItem),
+          }}
+        />
+      ))}
       <Helmet>
         {/* SEO Tags */}
         <title>{content.metetitle}</title>
@@ -350,7 +348,7 @@ const SolutionContent = ({ content, solutionName }) => {
 
             <Button
               as="a"
-              href="/contact-us"
+              href="/book-a-demo"
               bg="white"
               color="#3F77A5"
               fontSize="16px"

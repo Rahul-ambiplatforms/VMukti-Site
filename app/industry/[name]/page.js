@@ -1,6 +1,7 @@
 import { generatePageMetadata } from '../../../lib/metadata';
 import { seoConfig } from '../../../lib/seo-config';
 import IndustryDetailsClient from './industry-details-client';
+import { redirect } from 'next/navigation';
 
 export const dynamic = 'force-dynamic';
 
@@ -9,7 +10,7 @@ const industryMap = {
   'smart-city': 'industrySmartCity',
   'healthcare': 'industryHealthcare',
   'manufacturing': 'industryManufacturing',
-  'oil-gas': 'industryOilGas',
+  'oil-and-gas': 'industryOilGas',
   'government': 'industryGovernment',
   'defense': 'industryDefense',
   'warehouse': 'industryWarehouse',
@@ -40,5 +41,15 @@ export async function generateMetadata({ params }) {
 
 export default async function IndustryDetailsPage({ params }) {
   const { name } = await params;
+  
+  // Redirect non-canonical URLs to canonical ones
+  if (name === 'oil-gas') {
+    redirect('/industry/oil-and-gas');
+  }
+
+  if (name === 'sports-and-entertainment') {
+    redirect('/industry/sports-entertainment');
+  }
+  
   return <IndustryDetailsClient industryName={name} />;
 }

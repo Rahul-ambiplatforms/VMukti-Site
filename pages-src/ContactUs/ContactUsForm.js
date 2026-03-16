@@ -73,6 +73,22 @@ const formOptions = {
 
 const RequiredPlaceholder = ({ text, children, hasValue, isRequired }) => (
   <Box position="relative" w="100%">
+    <label
+      htmlFor={children?.props?.name}
+      style={{
+        position: 'absolute',
+        width: '1px',
+        height: '1px',
+        padding: 0,
+        margin: '-1px',
+        overflow: 'hidden',
+        clip: 'rect(0,0,0,0)',
+        whiteSpace: 'nowrap',
+        border: 0,
+      }}
+    >
+      {text}{isRequired ? ' (required)' : ''}
+    </label>
     {children}
     {!hasValue && (
       <HStack
@@ -635,6 +651,7 @@ const ContactUsForm = () => {
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
               {/* 1. Full name */}
               <Box sx={{ order: { base: 1, md: "initial" } }}>
+                <Text fontSize="13px" fontWeight="500" color="gray.600" mb={1}>Full Name <Text as="span" color="red.500">*</Text></Text>
                 <RequiredPlaceholder
                   text="Full name"
                   hasValue={!!formData.fullName}
@@ -655,6 +672,7 @@ const ContactUsForm = () => {
 
               {/* 2. Email Address */}
               <Box sx={{ order: { base: 2, md: "initial" } }}>
+                <Text fontSize="13px" fontWeight="500" color="gray.600" mb={1}>Email Address <Text as="span" color="red.500">*</Text></Text>
                 <RequiredPlaceholder
                   text="Email Address"
                   hasValue={!!formData.email}
@@ -676,6 +694,7 @@ const ContactUsForm = () => {
 
               {/* 3. Phone */}
               <Box sx={{ order: { base: 3, md: "initial" } }}>
+                <Text fontSize="13px" fontWeight="500" color="gray.600" mb={1}>Phone Number <Text as="span" color="red.500">*</Text></Text>
                 <PhoneInput
                   value={formData.phone}
                   onChange={handlePhoneChange}
@@ -687,6 +706,7 @@ const ContactUsForm = () => {
 
               {/* 4. Company Name */}
               <Box sx={{ order: { base: 4, md: "initial" } }}>
+                <Text fontSize="13px" fontWeight="500" color="gray.600" mb={1}>Company Name <Text as="span" color="red.500">*</Text></Text>
                 <RequiredPlaceholder
                   text="Company Name"
                   hasValue={!!formData.companyName}
@@ -707,6 +727,7 @@ const ContactUsForm = () => {
 
               {/* 5. Country */}
               <Box sx={{ order: { base: 5, md: "initial" } }}>
+                <Text fontSize="13px" fontWeight="500" color="gray.600" mb={1}>Country</Text>
                 <CustomRadioDropdown
                   placeholder="Country"
                   name="country"
@@ -721,6 +742,7 @@ const ContactUsForm = () => {
 
               {/* 6. City */}
               <Box sx={{ order: { base: 6, md: "initial" } }}>
+                <Text fontSize="13px" fontWeight="500" color="gray.600" mb={1}>City</Text>
                 <RequiredPlaceholder
                   text="City"
                   hasValue={!!formData.city}
@@ -740,6 +762,7 @@ const ContactUsForm = () => {
 
               {/* 7. I want cameras for */}
               <Box sx={{ order: { base: 7, md: "initial" } }}>
+                <Text fontSize="13px" fontWeight="500" color="gray.600" mb={1}>I want cameras for</Text>
                 <CustomRadioDropdown
                   placeholder="I want cameras for"
                   name="camerasFor"
@@ -752,6 +775,7 @@ const ContactUsForm = () => {
 
               {/* 8. I am a */}
               <Box sx={{ order: { base: 8, md: "initial" } }}>
+                <Text fontSize="13px" fontWeight="500" color="gray.600" mb={1}>I am a</Text>
                 <CustomRadioDropdown
                   placeholder="I am a"
                   name="businessProfile"
@@ -764,6 +788,7 @@ const ContactUsForm = () => {
 
               {/* 9. Inquiry Type */}
               <Box sx={{ order: { base: 9, md: "initial" } }}>
+                <Text fontSize="13px" fontWeight="500" color="gray.600" mb={1}>Inquiry Type</Text>
                 <CustomRadioDropdown
                   placeholder="Inquiry Type"
                   name="inquiryType"
@@ -776,6 +801,7 @@ const ContactUsForm = () => {
 
               {/* 10. No. of Cameras Needed */}
               <Box sx={{ order: { base: 10, md: "initial" } }}>
+                <Text fontSize="13px" fontWeight="500" color="gray.600" mb={1}>No. of Cameras Needed</Text>
                 <RequiredPlaceholder
                   text="No. of Cameras Needed"
                   hasValue={formData.customerQuantity !== ""}
@@ -797,7 +823,10 @@ const ContactUsForm = () => {
                 </RequiredPlaceholder>
               </Box>
             </SimpleGrid>
+            <Text fontSize="13px" fontWeight="500" color="gray.600" mt={5} mb={1}>Message</Text>
+            <label htmlFor="contact-message" style={{ position:'absolute', width:'1px', height:'1px', padding:0, margin:'-1px', overflow:'hidden', clip:'rect(0,0,0,0)', whiteSpace:'nowrap', border:0 }}>Message</label>
             <Textarea
+              id="contact-message"
               name="message"
               value={formData.message}
               onChange={handleChange}

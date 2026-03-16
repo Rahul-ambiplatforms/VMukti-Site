@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 /**
  * SEO Breadcrumbs Component
@@ -38,6 +38,7 @@ const ROUTE_LABELS = {
   'education': 'Education',
   'warehouse': 'Warehouse & Logistics',
   'oil-gas': 'Oil & Gas',
+  'oil-and-gas': 'Oil & Gas',
   'transportation': 'Transportation',
   'government': 'Government',
   'hospitality': 'Hospitality',
@@ -58,8 +59,8 @@ function formatSegment(segment) {
 }
 
 const Breadcrumbs = ({ customLabels = {}, className = '' }) => {
-  const location = useLocation();
-  const pathSegments = location.pathname.split('/').filter(Boolean);
+  const pathname = usePathname() || '/';
+  const pathSegments = pathname.split('/').filter(Boolean);
 
   if (pathSegments.length === 0) return null;
 
@@ -81,24 +82,26 @@ const Breadcrumbs = ({ customLabels = {}, className = '' }) => {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: \`https://www.vmukti.com\${item.path}\`,
+      item: `https://www.vmukti.com${item.path}`,
     })),
   };
 
   return (
     <>
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema)}
-        </script>
-      </Helmet>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <nav
         aria-label="Breadcrumb"
-        className={\`seo-breadcrumbs \${className}\`}
+        className={`seo-breadcrumbs ${className}`}
         style={{
-          padding: '12px 0',
-          fontSize: '14px',
-          color: '#6b7280',
+          padding: '6px 14px',
+          fontSize: '13px',
+          color: '#555e6d',
+          background: '#E7E7E7',
+          borderRadius: '0 0 8px 8px',
+          display: 'inline-flex',
         }}
       >
         <ol
@@ -124,20 +127,20 @@ const Breadcrumbs = ({ customLabels = {}, className = '' }) => {
                 }}
               >
                 {index > 0 && (
-                  <span style={{ color: '#9ca3af', margin: '0 2px' }}>/</span>
+                  <span style={{ color: '#8a9099', margin: '0 2px' }}>/</span>
                 )}
                 {isLast ? (
                   <span
-                    style={{ color: '#111827', fontWeight: 500 }}
+                    style={{ color: '#1e2a38', fontWeight: 500 }}
                     aria-current="page"
                   >
                     {item.name}
                   </span>
                 ) : (
                   <Link
-                    to={item.path}
+                    href={item.path}
                     style={{
-                      color: '#2563eb',
+                      color: '#3F77A5',
                       textDecoration: 'none',
                     }}
                   >

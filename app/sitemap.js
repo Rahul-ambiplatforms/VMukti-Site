@@ -21,14 +21,14 @@ export default async function sitemap() {
     // Solutions
     { url: `${SITE_URL}/solution/video-management-system`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/solution/enterprise-management-system`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/solution/intelligent-command-control-center`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/solution/cloud-ai-platform`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${SITE_URL}/solution/genai-visual-bot`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${SITE_URL}/solution/visual-bot`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${SITE_URL}/solution/live-streaming`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${SITE_URL}/solution/face-surveillance-system`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/solution/integrated-command-control-center`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/solution/cloudai`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/solution/genai`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/solution/visualbot`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/solution/live-streaming-solution`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${SITE_URL}/solution/flying-squad-vehicle`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     // Industries
-    ...['banking', 'smart-city', 'healthcare', 'manufacturing', 'oil-gas', 'government', 'defense',
+    ...['banking', 'smart-city', 'healthcare', 'manufacturing', 'oil-and-gas', 'government', 'defense',
       'warehouse', 'logistics', 'education', 'election', 'transportation', 'pharma', 'construction',
       'hospitality', 'sports-entertainment', 'enterprise', 'retail'
     ].map(name => ({

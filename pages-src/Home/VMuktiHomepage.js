@@ -25,7 +25,6 @@ import FaqsSection from "../../components/faqsSection";
 import faqsData from "../../data/faqsData";
 import schemaData from "../../data/schemaData";
 import BlogView from "./Components/BlogView";
-import { Helmet } from "react-helmet-async";
 import CertificationSection from "../Solutions/Components/CertificationsSection";
 const VMuktiHomepage = () => {
   const homepageSchemas = schemaData.homepage;
@@ -41,57 +40,6 @@ const VMuktiHomepage = () => {
           }}
         />
       ))}
-      <Helmet>
-        <title>
-          Cloud Video Surveillance Solutions In USA | VMukti Solutions
-        </title>
-        <meta
-          name="description"
-          content="We offers flexible cloud video surveillance solutions for USA businesses. Add cloud intelligence to your current CCTV infrastructure effortlessly."
-        />
-        <meta name="robots" content="index, follow" />
-        <meta
-          property="og:title"
-          content="Cloud Video Surveillance Solutions In USA | VMukti Solutions"
-        />
-        <meta
-          property="og:description"
-          content="We offers flexible cloud video surveillance solutions for USA businesses. Add cloud intelligence to your current CCTV infrastructure effortlessly."
-        />
-        <meta
-          property="og:image"
-          content="https://www.vmukti.com/assets/tablet1.webp"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://vmukti.com/" />
-        <meta property="og:site_name" content="VMukti Solutions" />
-        {/* <!-- Twitter Card Tags --> */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@vmukti" />
-        <meta
-          name="twitter:title"
-          content="Best Cloud Video Surveillance & AI Video Monitoring Platform in the USA"
-        />
-        <meta
-          name="twitter:description"
-          content="VMukti delivers enterprise-grade cloud video surveillance and AI video monitoring solutions in the USA with secure streaming, centralized management, advanced analytics, and scalable deployments."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.vmukti.com/assets/tablet1.webp"
-        />
-        <link rel="canonical" href="https://www.vmukti.com" />
-        {homepageSchemas.map((schema, index) => (
-          <script
-            key={`schema-${index}`}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(schema),
-            }}
-          />
-        ))}
-      </Helmet>
-
       <PageContentWrapper noPadding>
         <HeroSection id="section-hero" />
       </PageContentWrapper>

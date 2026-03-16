@@ -142,13 +142,10 @@ const dropdownItems = {
   ],
   ourServing: [
     { label: "Insights & Blog", path: "/blog" },
-    { label: "Solution Comparisons", path: "/compare" },
-    { label: "Customer Stories", path: "/customer-stories" },
-    { label: "Product Updates", path: "/blog?category=product-updates" },
   ],
-  global:[
-    {label: "USA", path:"/usa/video-surveillance-solutions"},
-    {label: "UK", path:"/uk/video-surveillance-solutions"},
+  global: [
+    { label: "USA", path: "/usa/video-surveillance-solutions" },
+    { label: "UK", path: "/uk/video-surveillance-solutions" },
   ],
   Whoweare: [
     { label: "About Us", path: "/about-us" },
@@ -178,6 +175,7 @@ const Navbar = () => {
 
   const navigateTo = (path, linkName, sliderId = null) => {
     setActiveLink(linkName);
+    if (!path) return;
     const state = sliderId ? { scrollTo: sliderId } : undefined;
 
     if (location.pathname === path) {
@@ -223,6 +221,7 @@ const Navbar = () => {
   }, []);
 
   function isPathActive(path) {
+    if (!path) return false;
     return (
       location.pathname === path || location.pathname.startsWith(path + "/")
     );
@@ -321,7 +320,7 @@ const Navbar = () => {
             justifyContent="space-between"
           >
             <Image loading="lazy"
-              src="../assets/VMukti_logo.png"
+              src="/assets/VMukti_logo.png"
               alt="Logo"
               height={logoHeight}
               style={{ cursor: "pointer" }}
@@ -1076,7 +1075,7 @@ const Navbar = () => {
                       fontWeight="600"
                       borderRadius="24px"
                       flexShrink={0}
-                      href="https://calendly.com/book-cloud-vms-demo/30min?utm_source=vmukti&utm_medium=website&utm_campaign=cloud_vms_demo"
+                      href="book-a-demo"
                       target="_blank"
                       rel="noopener noreferrer"
                       _hover={{

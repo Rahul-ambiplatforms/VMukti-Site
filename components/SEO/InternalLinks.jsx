@@ -32,7 +32,7 @@ const LINK_GROUPS = {
     { path: '/industry/manufacturing', label: 'Manufacturing' },
     { path: '/industry/education', label: 'Education' },
     { path: '/industry/government', label: 'Government' },
-    { path: '/industry/oil-gas', label: 'Oil & Gas' },
+    { path: '/industry/oil-and-gas', label: 'Oil & Gas' },
     { path: '/industry/transportation', label: 'Transportation' },
     { path: '/industry/hospitality', label: 'Hospitality' },
     { path: '/industry/warehouse', label: 'Warehouse & Logistics' },

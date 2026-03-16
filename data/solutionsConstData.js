@@ -10,7 +10,7 @@ export const solutionsData = {
     hero: {
       heading: "Next-Gen AI Video Management System",
       description:
-        "Our intelligent video management system empowers enterprises with AI-powered monitoring, automated threat detection and unified operationsâreducing overhead and maximizing control.",
+        "Our intelligent video management system empowers enterprises with AI-powered monitoring, automated threat detection and unified operations—reducing overhead and maximizing control.",
       image: "/assets/MainWebPageMockup1.1.png",
       image_certi: "/assets/solution_page_certi.png",
     },
@@ -19,7 +19,7 @@ export const solutionsData = {
     introduction: {
       heading: "What is a Video Management System (VMS)?",
       description: [
-        "A video management system is an intelligent software platform designed to simplify and optimize complex surveillance networks. Our best vms software unifies live video monitoring, long-term storage, and multi-location control into a single cloud-ready solutionâenabling enterprises to make informed security decisions, scale operations and securely manage their facilities from anywhere.",
+        "A video management system is an intelligent software platform designed to simplify and optimize complex surveillance networks. Our best vms software unifies live video monitoring, long-term storage, and multi-location control into a single cloud-ready solution—enabling enterprises to make informed security decisions, scale operations and securely manage their facilities from anywhere.",
       ],
       image: "/assets/VMS_intro.png",
     },
@@ -39,7 +39,7 @@ export const solutionsData = {
         {
           title: "AI-Based Video Analytics",
           content:
-            "Youâll experience our intelligent surveillance with AI that flags and tracks identities and smartly filters anomalies, giving you strategic visibility with no manual effort needed.",
+            "You’ll experience our intelligent surveillance with AI that flags and tracks identities and smartly filters anomalies, giving you strategic visibility with no manual effort needed.",
         },
         {
           title: "Centralized Dashboard for Multiple Cameras",
@@ -88,7 +88,7 @@ export const solutionsData = {
           image: "/assets/result_solution_vms_1.png",
           title: "Data Security",
           description:
-            "Experience VMuktiâs built-in encryption, access control and secure data channels your video intelligence stays untouchable, locked and enterprise-grade from capture to review.",
+            "Experience VMukti’s built-in encryption, access control and secure data channels your video intelligence stays untouchable, locked and enterprise-grade from capture to review.",
         },
         {
           image: "/assets/result_solution_vms_2.png",
@@ -118,7 +118,7 @@ export const solutionsData = {
           image: "/assets/result_solution_vms_6.png",
           title: "Storage Management",
           description:
-            "Get instant access to your surveillance universe seamlessly archived, indexed and retrievable on demand. Precision video intelligence, built for decision-makers who canât afford delays.",
+            "Get instant access to your surveillance universe seamlessly archived, indexed and retrievable on demand. Precision video intelligence, built for decision-makers who can’t afford delays.",
         },
       ],
     },
@@ -145,8 +145,8 @@ export const solutionsData = {
     whyChooseUs: {
       heading: "Why Choose VMukti for Video Management Systems (VMS)?",
       description: [
-        "VMukti delivers the best AI-powered video management solutions that keeps your operations secure, aware and in controlâanywhere in the world. From real-time threat detection to automated alerts, our system replaces outdated manual oversight with intelligence built right in.",
-        "Access encrypted multi-site footage anytime, scale seamlessly, and centralize control across the globe. Fast. Smart. Global. This is surveillance designed for decision-makers who demand speed, security, and scaleâwithout compromise.",
+        "VMukti delivers the best AI-powered video management solutions that keeps your operations secure, aware and in control—anywhere in the world. From real-time threat detection to automated alerts, our system replaces outdated manual oversight with intelligence built right in.",
+        "Access encrypted multi-site footage anytime, scale seamlessly, and centralize control across the globe. Fast. Smart. Global. This is surveillance designed for decision-makers who demand speed, security, and scale—without compromise.",
       ],
       images: [
         "/assets/solution_vms_choose_1.png",
@@ -163,7 +163,7 @@ export const solutionsData = {
         "@type": "WebPage",
         name: "Cloud-based Video Management System | AI-Powered VMS by VMukti",
         description:
-          "VMuktiâs cloud-based video management system delivers AI-powered monitoring, secure streaming, centralized control, and scalable enterprise deployments.",
+          "VMukti’s cloud-based video management system delivers AI-powered monitoring, secure streaming, centralized control, and scalable enterprise deployments.",
         url: "https://www.vmukti.com/solution/video-management-system/",
         datePublished: "2006-11-10",
         dateModified: "2026-02-20",
@@ -274,7 +274,7 @@ export const solutionsData = {
     metetitle:
       "Cloud-Based Enterprise Video Management System in the USA | VMukti",
     metadescription:
-      "VMuktiâs cloud enterprise video management system in the USA offers centralized monitoring, access control, user permissions, real-time alerts, flexible storage, and live and recorded video management.",
+      "VMukti’s cloud enterprise video management system in the USA offers centralized monitoring, access control, user permissions, real-time alerts, flexible storage, and live and recorded video management.",
     ogImage: "https://www.vmukti.com/assets/solution_evms_dash.png",
     slug: "enterprise-management-system",
     // Section 1: Hero section updated
@@ -311,7 +311,7 @@ export const solutionsData = {
         {
           title: "Flexible Storage Options",
           content:
-            "Choose scalable cloud storage or reliable on-premise control with VMuktiâs EMS. Both ensure high performance, real-time monitoring, and secure access without downtime.",
+            "Choose scalable cloud storage or reliable on-premise control with VMukti’s EMS. Both ensure high performance, real-time monitoring, and secure access without downtime.",
         },
         {
           title: "Admin Access Control",
@@ -336,7 +336,7 @@ export const solutionsData = {
         {
           title: "Storage and RAM Monitoring",
           content:
-            "VMuktiâs EMS continuously monitors storage and RAM usage across servers and connected cameras, delivering real-time alerts to prevent overload and ensure uninterrupted performance.",
+            "VMukti’s EMS continuously monitors storage and RAM usage across servers and connected cameras, delivering real-time alerts to prevent overload and ensure uninterrupted performance.",
         },
         {
           title: "Unique Customization",
@@ -372,7 +372,7 @@ export const solutionsData = {
           image: "/assets/result_solution_evms_4.png",
           title: "Scalability",
           description:
-            "VMuktiâs Enterprise Management Solution scales effortlessly, monitoring servers, cameras, and networks while ensuring reliable performance without downtime.",
+            "VMukti’s Enterprise Management Solution scales effortlessly, monitoring servers, cameras, and networks while ensuring reliable performance without downtime.",
         },
         {
           image: "/assets/result_solution_evms_5.png",
@@ -425,7 +425,7 @@ export const solutionsData = {
         "@type": "WebPage",
         name: "Cloud-based Enterprise Video Management System | VMukti Solutions",
         description:
-          "VMuktiâs Cloud enterprise management system delivers centralized monitoring, access control, user permissions, event alerts, flexible storage and live and recorded video.",
+          "VMukti’s Cloud enterprise management system delivers centralized monitoring, access control, user permissions, event alerts, flexible storage and live and recorded video.",
         url: "https://www.vmukti.com/solution/enterprise-management-system/",
         datePublished: "2006-11-10",
         dateModified: "2026-02-20",
@@ -493,7 +493,7 @@ export const solutionsData = {
             name: "What makes our EMS different from standard video management systems?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "With VMuktiâs EMS, you get infrastructure and health monitoring, real-time alerts, SLA compliance, and uptime analyticsâfar beyond standard systems built only for basic video management.",
+              text: "With VMukti’s EMS, you get infrastructure and health monitoring, real-time alerts, SLA compliance, and uptime analytics—far beyond standard systems built only for basic video management.",
             },
           },
           {
@@ -509,7 +509,7 @@ export const solutionsData = {
             name: "Can EVMS integrate with existing enterprise tools?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Yes, our EMS integrates seamlessly with systems like biometric attendance, RFID access control, and fire alarmsâproviding synchronized monitoring, automated alerts, and streamlined security operations.",
+              text: "Yes, our EMS integrates seamlessly with systems like biometric attendance, RFID access control, and fire alarms—providing synchronized monitoring, automated alerts, and streamlined security operations.",
             },
           },
         ],
@@ -520,7 +520,7 @@ export const solutionsData = {
   integratedcommandcontrolcenter: {
     metetitle: "Integrated Command and Control Center (ICCC) Solutions in the USA",
     metadescription:
-      "VMuktiâs integrated command and control center solutions in the USA combine live video, GIS mapping, AI alerts, and real-time coordination to enhance smart city operations and public safety.",
+      "VMukti’s integrated command and control center solutions in the USA combine live video, GIS mapping, AI alerts, and real-time coordination to enhance smart city operations and public safety.",
     ogImage: "https://www.vmukti.com/assets/solution_iccc_dash.png",
     slug: "integrated-command-control-center",
     // Section 1: Hero section from the first image
@@ -550,12 +550,12 @@ export const solutionsData = {
         {
           title: "Incident Management",
           content:
-            "Trigger instant, AI-prioritized emergency alertsâautonomously dispatching the right force and syncing your command center with field responders through secure, low-latency protocols.",
+            "Trigger instant, AI-prioritized emergency alerts—autonomously dispatching the right force and syncing your command center with field responders through secure, low-latency protocols.",
         },
         {
           title: "GIS-Based Monitoring",
           content:
-            "Experience real-time situational intelligence with dynamic video overlays on geo-mapped infrastructure. Instantly visualize critical zones through adaptive heatmapsâengineered for high-alert precision and operational foresight.",
+            "Experience real-time situational intelligence with dynamic video overlays on geo-mapped infrastructure. Instantly visualize critical zones through adaptive heatmaps—engineered for high-alert precision and operational foresight.",
         },
         {
           title: "Centralized Surveillance Oversight",
@@ -625,7 +625,7 @@ export const solutionsData = {
           image: "/assets/result_solution_iccc_5.png",
           title: "Centralized Control",
           description:
-            "Gain total operational command with a unified AI-powered interfaceâseamlessly orchestrating real-time feeds from rail cameras, IoT networks, and alarm systems with intelligent incident triage and cross-platform signal fusion.",
+            "Gain total operational command with a unified AI-powered interface—seamlessly orchestrating real-time feeds from rail cameras, IoT networks, and alarm systems with intelligent incident triage and cross-platform signal fusion.",
         },
         {
           image: "/assets/result_solution_iccc_6.png",
@@ -654,10 +654,10 @@ export const solutionsData = {
 
     // Section 7: Why Choose Us from the seventh image
     whyChooseUs: {
-      heading: "Why Choose Us for VMS?",
+      heading: "Why Choose Us for ICCC?",
       description: [
-        "At VMukti, we bring you surveillance without compromise. Our AI-powered VMS delivers real-time awareness and automated threat detection so you're never in the dark and never a second too late. Manual oversight is outdated. Our system replaces it with fast, intelligent response built right in.",
-        "You get secure, encrypted access to multi-site footage anytime. Our adaptive storage grows with you whether you're scaling up or centralizing control. This is surveillance mode for forward-thinking operations like yours.",
+        "At VMukti, we deliver integrated command and control solutions that unify your entire surveillance ecosystem. Our ICCC platform combines real-time video feeds, GIS mapping, AI analytics, and incident management into one centralized hub, ensuring you never miss a critical moment and can respond instantly to any situation.",
+        "You get seamless coordination between field units and command centers with encrypted communication channels and role-based access controls. Our scalable ICCC architecture grows with your operations, whether you're managing a single facility or coordinating citywide smart city initiatives.",
       ],
       images: ["/assets/solution_iccc_choose_1.png"],
     },
@@ -742,7 +742,7 @@ export const solutionsData = {
           },
           {
             "@type": "Question",
-            name: "What information is displayed on the ICCCâs geospatial interface?",
+            name: "What information is displayed on the ICCC’s geospatial interface?",
             acceptedAnswer: {
               "@type": "Answer",
               text: "The integrated command and control centre ICCC interface shows all active cameras, flying squad vehicle locations and key infrastructure points for situational awareness.",
@@ -764,7 +764,7 @@ export const solutionsData = {
   livestreamingsolution: {
     metetitle: "Live Video Surveillance & Secure Streaming Solutions in the USA | VMukti",
     metadescription:
-      "VMuktiâs live video surveillance solution in the USA delivers secure streaming, adaptive quality, OTP access, user reporting, and on-demand video playback for enterprises.",
+      "VMukti’s live video surveillance solution in the USA delivers secure streaming, adaptive quality, OTP access, user reporting, and on-demand video playback for enterprises.",
     ogImage: "https://www.vmukti.com/assets/solution_live_dash.png",
     slug: "live-streaming-solution",
     // Section 1: Hero section from the first image
@@ -782,7 +782,7 @@ export const solutionsData = {
     introduction: {
       heading: "Overview: Intelligent Live Feed Streaming Solutions",
       description: [
-        "VMuktiâs live streaming delivers secure, real-time CCTV feeds to Command & Control Centres with ultra-clear quality and scalability, enabling citywide monitoring, emergency response, and multi-site management. With adaptive streaming, strong security, and seamless remote access, it ensures every critical moment is instantly visible and actionable.",
+        "VMukti’s live streaming delivers secure, real-time CCTV feeds to Command & Control Centres with ultra-clear quality and scalability, enabling citywide monitoring, emergency response, and multi-site management. With adaptive streaming, strong security, and seamless remote access, it ensures every critical moment is instantly visible and actionable.",
       ],
       // image: "/assets/solution_evms_intro.png",
     },
@@ -826,7 +826,7 @@ export const solutionsData = {
         {
           title: "Detailed User Reports",
           content:
-            "Youâll unlock full-spectrum analyticsâwho accessed which feeds, how long they stayed, and what they monitoredâso every future operation is more effective.",
+            "You’ll unlock full-spectrum analytics—who accessed which feeds, how long they stayed, and what they monitored—so every future operation is more effective.",
         },
         {
           title: "OTP-Secured Streaming Access",
@@ -846,7 +846,7 @@ export const solutionsData = {
         {
           title: "2D Platform",
           content:
-            "Elevate your monitoring setup with VMuktiâs tailored 2D environments, built to mirror your operational layout and deliver seamless live feed integration.",
+            "Elevate your monitoring setup with VMukti’s tailored 2D environments, built to mirror your operational layout and deliver seamless live feed integration.",
         },
       ],
     },
@@ -865,25 +865,25 @@ export const solutionsData = {
           image: "/assets/result_solution_live_2.png",
           title: "Real-Time Engagement",
           description:
-            "Enhance operational coordination with instant communication toolsâreal-time alerts, incident updates, and secure chat flows that keep teams aligned without delay.",
+            "Enhance operational coordination with instant communication tools—real-time alerts, incident updates, and secure chat flows that keep teams aligned without delay.",
         },
         {
           image: "/assets/result_solution_live_3.png",
           title: "Global Reach",
           description:
-            "Monitor and manage feeds from any location using VMuktiâs intelligent network, delivering zero-glitch performance even under high-pressure conditions.",
+            "Monitor and manage feeds from any location using VMukti’s intelligent network, delivering zero-glitch performance even under high-pressure conditions.",
         },
         {
           image: "/assets/result_solution_live_4.png",
           title: "Scalability",
           description:
-            "Stream from multiple cameras and sites simultaneously without performance dropsâyour feeds stay sharp, stable, and consistent no matter the volume.",
+            "Stream from multiple cameras and sites simultaneously without performance drops—your feeds stay sharp, stable, and consistent no matter the volume.",
         },
         {
           image: "/assets/result_solution_live_5.png",
           title: "End-to-End Support",
           description:
-            "Count on expert assistance before, during, and after operationsâboth online and onsiteâensuring uninterrupted performance at every stage.",
+            "Count on expert assistance before, during, and after operations—both online and onsite—ensuring uninterrupted performance at every stage.",
         },
         {
           image: "/assets/result_solution_live_6.png",
@@ -897,7 +897,7 @@ export const solutionsData = {
     industry: {
       heading: "Explore Our Live Streaming Solutions Across Industries",
       description:
-        "Precision-crafted for enterprise-grade delivery, our live feed streaming architecture ensures seamless execution, secure scalability, and flawless operational communicationâbecause your mission deserves nothing less than world-class reliability.",
+        "Precision-crafted for enterprise-grade delivery, our live feed streaming architecture ensures seamless execution, secure scalability, and flawless operational communication—because your mission deserves nothing less than world-class reliability.",
     },
     // Section 5: CTA Banner from the fifth image
     cta: {
@@ -932,7 +932,7 @@ export const solutionsData = {
         "@type": "WebPage",
         name: "Live Video Surveillance & Secure Stream Monitoring System | VMukti",
         description:
-          "VMuktiâs live video surveillance system delivers secure streaming, adaptive quality, OTP access, user reports, and on-demand video playback.",
+          "VMukti’s live video surveillance system delivers secure streaming, adaptive quality, OTP access, user reports, and on-demand video playback.",
         url: "https://www.vmukti.com/solution/live-streaming-solution",
         datePublished: "2006-11-10",
         dateModified: "2026-02-20",
@@ -1034,7 +1034,7 @@ export const solutionsData = {
   flyingsquadvehicle: {
     metetitle: "Mobile Vehicle Surveillance & Monitoring System in the USA | VMukti FSV",
     metadescription:
-      "VMuktiâs mobile vehicle surveillance system in the USA enables real-time GPS tracking, moving video surveillance, geo-fencing alerts, PTZ camera control, and ICCC integration.",
+      "VMukti’s mobile vehicle surveillance system in the USA enables real-time GPS tracking, moving video surveillance, geo-fencing alerts, PTZ camera control, and ICCC integration.",
     ogImage: "https://www.vmukti.com/assets/solution_fsv_dash.png",
     slug: "flying-squad-vehicle",
     // Section 1: Hero section from the first image
@@ -1085,7 +1085,7 @@ export const solutionsData = {
         {
           title: "Remote PTZ Control",
           content:
-            "Remotely control pan, tilt and zoom functions to adjust focus and capture every angle. Developed in-house at VMuktiâs system giving your team full visual command without needing to be physically present.",
+            "Remotely control pan, tilt and zoom functions to adjust focus and capture every angle. Developed in-house at VMukti’s system giving your team full visual command without needing to be physically present.",
         },
         {
           title: "Recording and Playback Support",
@@ -1145,7 +1145,7 @@ export const solutionsData = {
           image: "/assets/result_solution_fsv_6.png",
           title: "Only the Right People Get Access",
           description:
-            "You can control who sees what. Team members only get access to the features and footage theyâre allowed to use.",
+            "You can control who sees what. Team members only get access to the features and footage they’re allowed to use.",
         },
       ],
     },
@@ -1186,7 +1186,7 @@ export const solutionsData = {
         "@type": "WebPage",
         name: "Flying Squad Vehicle Surveillance | FSV Video Monitoring System",
         description:
-          "VMuktiâs flying squad vehicle surveillance system enables live GPS tracking, moving video surveillance, geo-fencing alerts, PTZ camera control and ICCC monitoring.",
+          "VMukti’s flying squad vehicle surveillance system enables live GPS tracking, moving video surveillance, geo-fencing alerts, PTZ camera control and ICCC monitoring.",
         url: "https://www.vmukti.com/solution/flying-squad-vehicle/",
         datePublished: "2006-11-10",
         dateModified: "2026-02-20",
@@ -1392,7 +1392,7 @@ export const solutionsData = {
             id: "feat1-1",
             title: "Pre-Stampede Detection",
             description:
-              "VMuktiâs CloudAI solution helps identify and manage sudden crowd movements. It prevents accidents, supports emergency response and improves safety in crowded areas.",
+              "VMukti’s CloudAI solution helps identify and manage sudden crowd movements. It prevents accidents, supports emergency response and improves safety in crowded areas.",
             image: "/assets/feat1_industry_cloudai_1.png",
           },
           {
@@ -1420,7 +1420,7 @@ export const solutionsData = {
           //   id: "feat1-5",
           //   title: "Unauthorized Parking",
           //   description:
-          //     "Vehicles parked in restricted areas are quickly detected by the Vmuktiâs CloudAI security solution. It enables automated alerts and supports better space enforcement.",
+          //     "Vehicles parked in restricted areas are quickly detected by the Vmukti’s CloudAI security solution. It enables automated alerts and supports better space enforcement.",
           //   image: "/assets/feat1_industry_cloudai_5.png",
           // },
           // {
@@ -1448,7 +1448,7 @@ export const solutionsData = {
             id: "feat1-7",
             title: "Yawning While Driving",
             description:
-              "Monitors facial patterns to detect yawning using VMuktiâs cloud video surveillance which enables proactive fatigue management and promotes road safety in logistics and transport.",
+              "Monitors facial patterns to detect yawning using VMukti’s cloud video surveillance which enables proactive fatigue management and promotes road safety in logistics and transport.",
             image: "/assets/feat1_industry_cloudai_7.png",
           },
           {
@@ -1462,7 +1462,7 @@ export const solutionsData = {
             id: "feat1-9",
             title: "Unauthorized Entry Detection",
             description:
-              "An intelligent surveillance ecosystem developed by VMuktiâs Cloud AI to monitor secure areas for unauthorized access. Provides live alerts to quickly respond and prevent security breaches.",
+              "An intelligent surveillance ecosystem developed by VMukti’s Cloud AI to monitor secure areas for unauthorized access. Provides live alerts to quickly respond and prevent security breaches.",
             image: "/assets/feat1_industry_cloudai_9.png",
           },
           {
@@ -1538,7 +1538,7 @@ export const solutionsData = {
         mainHeading:
           "Transform Your Security with the Benefits of CloudAI Surveillance",
         description:
-          "Vmukitâs CloudAI surveillance delivers scalable storage and remote access with AI threat detection and instant alerts. It ensures security, easy integration, and Instant insights for faster decisions.",
+          "Vmukit’s CloudAI surveillance delivers scalable storage and remote access with AI threat detection and instant alerts. It ensures security, easy integration, and Instant insights for faster decisions.",
         bgColor: "white", // Or your desired background color
         features: [
           {
@@ -1580,7 +1580,7 @@ export const solutionsData = {
             id: "feat3-6",
             title: "Cut Down Costs and Hardware",
             description:
-              "Developed On-Site by VMuktiâs CloudAI reduces reliance on physical servers and hardware, lowering setup costs, energy use and maintenance efforts while ensuring reliable performance.",
+              "Developed On-Site by VMukti’s CloudAI reduces reliance on physical servers and hardware, lowering setup costs, energy use and maintenance efforts while ensuring reliable performance.",
             image: "/assets/feat3_industry_cloudai_6.png",
           },
         ],
@@ -1741,7 +1741,7 @@ export const solutionsData = {
     introduction: {
       heading: "What is a GenerativeAI?",
       description: [
-        "Generative AI is a class of artificial intelligence capable of producing original content text, images, audio and video by learning patterns from existing data and replicating human-like output. With VMuktiâs solution, Generative AI turns learned data into powerful surveillance capabilities real-time threat detection, smart search, automated reporting and visual summaries empowering you to monitor faster and make decisions with precision.",
+        "Generative AI is a class of artificial intelligence capable of producing original content text, images, audio and video by learning patterns from existing data and replicating human-like output. With VMukti’s solution, Generative AI turns learned data into powerful surveillance capabilities real-time threat detection, smart search, automated reporting and visual summaries empowering you to monitor faster and make decisions with precision.",
       ],
       // image: "/assets/solution_evms_intro.png",
     },
@@ -1830,7 +1830,7 @@ export const solutionsData = {
     industry: {
       heading: "Discover GenAI Video Intelligence Across Industries",
       description:
-        "VMuktiâs Generative AI solutions fuse real-time video understanding with contextual intelligence, empowering businesses to act faster and smarter at the edge. We serve sectors spanning from retail and manufacturing to education and public safety and deliver purpose-built deployments that elevate automation, insight and security where itâs needed most.",
+        "VMukti’s Generative AI solutions fuse real-time video understanding with contextual intelligence, empowering businesses to act faster and smarter at the edge. We serve sectors spanning from retail and manufacturing to education and public safety and deliver purpose-built deployments that elevate automation, insight and security where it’s needed most.",
     },
     // Section 5: CTA Banner from the fifth image
     cta: {
@@ -1852,10 +1852,10 @@ export const solutionsData = {
 
     // Section 7: Why Choose Us from the seventh image
     whyChooseUs: {
-      heading: "Why Choose Us for VMS?",
+      heading: "Why Choose Us for GenAI?",
       description: [
-        "At VMukti, we bring you surveillance without compromise. Our AI-powered VMS delivers real-time awareness and automated threat detection so you're never in the dark and never a second too late. Manual oversight is outdated. Our system replaces it with fast, intelligent response built right in.",
-        "You get secure, encrypted access to multi-site footage anytime. Our adaptive storage grows with you whether you're scaling up or centralizing control. This is surveillance mode for forward-thinking operations like yours.",
+        "At VMukti, we revolutionize surveillance with Generative AI that thinks, learns, and adapts in real-time. Our GenAI solution transforms how you search, analyze, and understand video data through natural language queries, automated report generation, and intelligent visual summaries that deliver actionable insights instantly.",
+        "You get the power to search through hours of footage using simple voice commands or text queries, while our AI generates comprehensive incident reports automatically. Our GenAI platform integrates seamlessly with existing systems, providing next-generation intelligence that evolves with your security needs.",
       ],
       images: ["/assets/solution_genai_choose_1.png"],
     },
@@ -1938,7 +1938,7 @@ export const solutionsData = {
       heading:
         "Streamline Your AI Workflow with VisualBot Computer Vision Software",
       description:
-        "VMuktiâs VisualBot transforms raw footage into immediate intelligence enabling you to detect objects, extract insights and automate decisions with precision, speed and agility. Our robust, developer-friendly APIs integrate seamlessly into your existing systems, unlocking advanced visual data mining and deep pattern discovery at enterprise scale.",
+        "VMukti’s VisualBot transforms raw footage into immediate intelligence enabling you to detect objects, extract insights and automate decisions with precision, speed and agility. Our robust, developer-friendly APIs integrate seamlessly into your existing systems, unlocking advanced visual data mining and deep pattern discovery at enterprise scale.",
       image: "/assets/solution_visbot_dash.png",
       image_certi: "/assets/solution_page_certi.png",
     },
@@ -1947,7 +1947,7 @@ export const solutionsData = {
     introduction: {
       heading: "Introduction to VisualBot",
       description: [
-        "VisualBot isnât just vision, itâs a strategic layer that transforms passive visuals into high-impact operational intelligence, recorded video and live camera feeds into real-time, actionable insights handling everything from data ingestion to full-scale model deployment to deliver fast, scalable and intelligent visual analysis.",
+        "VisualBot isn’t just vision, it’s a strategic layer that transforms passive visuals into high-impact operational intelligence, recorded video and live camera feeds into real-time, actionable insights handling everything from data ingestion to full-scale model deployment to deliver fast, scalable and intelligent visual analysis.",
         "We offer powerful, developer-friendly APIs through VisualBot that integrate effortlessly into your AI infrastructure, enabling you to enhance existing systems with enterprise-grade computer vision streamlining operations, reducing overhead, and unlocking new levels of performance.",
       ],
       image: "/assets/solution_bot_intro.png",
@@ -1973,12 +1973,12 @@ export const solutionsData = {
         {
           title: "Live Video-To-Text Detection",
           content:
-            "With VMuktiâs VisualBot, your live video is instantly translated into rich, real-time text detecting actions, objects and scenes to power live captioning, monitoring and intelligent analysis.",
+            "With VMukti’s VisualBot, your live video is instantly translated into rich, real-time text detecting actions, objects and scenes to power live captioning, monitoring and intelligent analysis.",
         },
         {
           title: "Image Detection",
           content:
-            "VMuktiâs high tech tool scans static images to detect and classify objects with precision delivering bounding boxes and insights for sharp, application-ready analysis.",
+            "VMukti’s high tech tool scans static images to detect and classify objects with precision delivering bounding boxes and insights for sharp, application-ready analysis.",
         },
 
         {
@@ -2023,13 +2023,13 @@ export const solutionsData = {
           image: "/assets/result_solution_visualbot_4.png",
           title: "Industry Versatility",
           description:
-            "Your operations gain unmatched adaptability with VMuktiâs Visual Bot built to serve automotive, electronics, F&B and medical sectors through highly flexible applications.",
+            "Your operations gain unmatched adaptability with VMukti’s Visual Bot built to serve automotive, electronics, F&B and medical sectors through highly flexible applications.",
         },
         {
           image: "/assets/result_solution_visualbot_5.png",
           title: "Democratizing AI",
           description:
-            "With VMuktiâs platform, you adopt advanced AI effortlessly with no need for a large team of data scientists or engineers, just powerful intelligence ready to deploy at your command.",
+            "With VMukti’s platform, you adopt advanced AI effortlessly with no need for a large team of data scientists or engineers, just powerful intelligence ready to deploy at your command.",
         },
         {
           image: "/assets/result_solution_visualbot_6.png",
@@ -2143,7 +2143,7 @@ export const solutionsData = {
             name: "Do I need AI or programming knowledge to use VisualBot?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "No, you donât need AI or coding skills. VisualBot is designed to be user-friendly with a simple interface.",
+              text: "No, you don’t need AI or coding skills. VisualBot is designed to be user-friendly with a simple interface.",
             },
           },
           {

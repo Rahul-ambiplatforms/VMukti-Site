@@ -1,4 +1,4 @@
-// seoPageDataExpansion4.js â VMukti SEO expansion wave 4
+// seoPageDataExpansion4.js — VMukti SEO expansion wave 4
 // Generated: 2026-02-25
 // 15 new pages: Global regions + industries + technology/product pages
 // Enterprise cloud VMS positioning throughout
@@ -133,7 +133,7 @@ const seoPageDataExpansion4 = {
     "title": "Cloud VMS for Healthcare & Hospitals | VMukti Solutions",
     "metaDescription": "HIPAA-ready cloud video management for hospitals and healthcare facilities. Patient safety monitoring, access control, pharmacy surveillance. VMukti enterprise VMS.",
     "keywords": ["hospital VMS", "healthcare video management", "HIPAA compliant surveillance", "patient safety monitoring", "hospital cloud VMS"],
-    "heroTitle": "Cloud VMS for Healthcare â Patient Safety at Scale",
+    "heroTitle": "Cloud VMS for Healthcare — Patient Safety at Scale",
     "heroSubtitle": "HIPAA-Ready, AI Analytics, Enterprise Scale",
     "heroDescription": "VMukti cloud VMS delivers HIPAA-ready video management for hospitals and healthcare systems with AI-powered patient safety, access control, and pharmacy surveillance.",
     "category": "industry",
@@ -164,7 +164,7 @@ const seoPageDataExpansion4 = {
     "title": "Cloud VMS for Logistics & Supply Chain | VMukti Solutions",
     "metaDescription": "Cloud video management for logistics centers, warehouses, and fleet operations. AI-powered dock monitoring, inventory tracking, route surveillance. VMukti enterprise VMS.",
     "keywords": ["logistics VMS", "warehouse video management", "supply chain surveillance", "fleet monitoring VMS", "logistics cloud security"],
-    "heroTitle": "Cloud VMS for Logistics â End-to-End Supply Chain Visibility",
+    "heroTitle": "Cloud VMS for Logistics — End-to-End Supply Chain Visibility",
     "heroSubtitle": "Dock Monitoring, Inventory AI, Fleet Tracking",
     "heroDescription": "VMukti cloud VMS delivers end-to-end visibility across logistics operations with AI-powered dock monitoring, inventory surveillance, and multi-facility management.",
     "category": "industry",
@@ -195,7 +195,7 @@ const seoPageDataExpansion4 = {
     "title": "Cloud VMS for Banking & Financial Services | VMukti Solutions",
     "metaDescription": "Enterprise cloud video management for banks, ATM networks, and financial institutions. Fraud prevention AI, compliance audit trails, multi-branch management. VMukti VMS.",
     "keywords": ["banking VMS", "bank surveillance system", "ATM video management", "financial services VMS", "bank compliance surveillance"],
-    "heroTitle": "Cloud VMS for Banking â Fraud Prevention at Enterprise Scale",
+    "heroTitle": "Cloud VMS for Banking — Fraud Prevention at Enterprise Scale",
     "heroSubtitle": "Compliance Audit, Multi-Branch, ATM Networks",
     "heroDescription": "VMukti cloud VMS secures banking operations across branches, ATM networks, and back offices with AI-powered fraud prevention, compliance auditing, and centralized management.",
     "category": "industry",
@@ -208,7 +208,7 @@ const seoPageDataExpansion4 = {
       },
       {
         "title": "Multi-Branch Banking Network",
-        "content": "Manage surveillance across thousands of bank branches and ATM locations from a unified VMukti cloud VMS dashboard. Regional managers get branch-level insights, security teams get real-time alerts, and compliance officers get automated audit reports â all from a single platform with role-based access controls.",
+        "content": "Manage surveillance across thousands of bank branches and ATM locations from a unified VMukti cloud VMS dashboard. Regional managers get branch-level insights, security teams get real-time alerts, and compliance officers get automated audit reports — all from a single platform with role-based access controls.",
         "stats": [{"value": "1000+", "label": "Branch Scale"}, {"value": "Role-based", "label": "Access Control"}, {"value": "Automated", "label": "Compliance Reports"}],
         "features": ["Multi-branch centralized management", "ATM network monitoring", "Automated compliance reporting", "Cash transit surveillance integration"]
       }
@@ -216,7 +216,7 @@ const seoPageDataExpansion4 = {
     "faqs": [
       {"q": "Does VMukti meet banking surveillance compliance?", "a": "VMukti cloud VMS meets banking compliance requirements with encrypted storage, automated retention, audit trail logging, and role-based access controls aligned with financial regulatory standards."},
       {"q": "Can VMukti monitor ATM networks?", "a": "Yes, VMukti cloud VMS manages entire ATM networks with AI-powered tampering detection, transaction correlation, and centralized monitoring from a banking security operations center."},
-      {"q": "How does VMukti prevent bank fraud?", "a": "VMukti AI analytics detect suspicious behaviors at teller counters, unusual activity patterns, tailgating at secure doors, and ATM tampering â generating instant alerts for security response."}
+      {"q": "How does VMukti prevent bank fraud?", "a": "VMukti AI analytics detect suspicious behaviors at teller counters, unusual activity patterns, tailgating at secure doors, and ATM tampering — generating instant alerts for security response."}
     ],
     "cta": {"title": "Deploy Banking Cloud VMS", "description": "Schedule a banking security assessment.", "buttonText": "Book a Demo", "buttonLink": "/book-a-demo"}
   },
@@ -226,20 +226,20 @@ const seoPageDataExpansion4 = {
     "title": "Cloud VMS for Oil & Gas Infrastructure | VMukti Solutions",
     "metaDescription": "Enterprise cloud video management for oil refineries, gas pipelines, and energy infrastructure. AI safety monitoring, explosion-proof cameras, critical infrastructure VMS.",
     "keywords": ["oil gas VMS", "refinery surveillance system", "pipeline monitoring VMS", "energy infrastructure security", "critical infrastructure VMS"],
-    "heroTitle": "Cloud VMS for Oil & Gas â Critical Infrastructure Protection",
+    "heroTitle": "Cloud VMS for Oil & Gas — Critical Infrastructure Protection",
     "heroSubtitle": "Safety AI, Explosion-Proof, Remote Site Management",
     "heroDescription": "VMukti cloud VMS protects oil refineries, gas pipelines, and energy infrastructure with AI safety monitoring, explosion-proof camera integration, and remote site management.",
     "category": "industry",
     "sections": [
       {
         "title": "Energy Sector Safety Intelligence",
-        "content": "Oil and gas operations face extreme safety risks requiring specialized surveillance. VMukti cloud VMS integrates with explosion-proof and ATEX-certified cameras to deliver AI-powered safety monitoring including gas leak visual detection, unauthorized access to restricted zones, and worker PPE compliance verification â all managed centrally from enterprise control rooms.",
+        "content": "Oil and gas operations face extreme safety risks requiring specialized surveillance. VMukti cloud VMS integrates with explosion-proof and ATEX-certified cameras to deliver AI-powered safety monitoring including gas leak visual detection, unauthorized access to restricted zones, and worker PPE compliance verification — all managed centrally from enterprise control rooms.",
         "stats": [{"value": "ATEX", "label": "Zone Compatible"}, {"value": "AI", "label": "Safety Monitoring"}, {"value": "Remote", "label": "Site Management"}],
         "features": ["Explosion-proof camera integration", "Gas leak visual detection AI", "PPE compliance monitoring", "Restricted zone access alerts"]
       },
       {
         "title": "Pipeline and Remote Site Monitoring",
-        "content": "Oil and gas pipelines and remote drilling sites require surveillance that works in harsh environments with limited connectivity. VMukti cloud VMS with edge processing and satellite backhaul support enables AI-powered monitoring of pipeline corridors, pump stations, and drilling operations â even in the most remote locations.",
+        "content": "Oil and gas pipelines and remote drilling sites require surveillance that works in harsh environments with limited connectivity. VMukti cloud VMS with edge processing and satellite backhaul support enables AI-powered monitoring of pipeline corridors, pump stations, and drilling operations — even in the most remote locations.",
         "stats": [{"value": "Satellite", "label": "Backhaul Support"}, {"value": "Edge", "label": "Local Processing"}, {"value": "24/7", "label": "Critical Monitoring"}],
         "features": ["Pipeline corridor surveillance", "Remote drilling site monitoring", "Satellite and 4G connectivity", "Solar power compatible systems"]
       }
@@ -247,7 +247,7 @@ const seoPageDataExpansion4 = {
     "faqs": [
       {"q": "Does VMukti support explosion-proof cameras?", "a": "Yes, VMukti cloud VMS integrates with ATEX and IECEx certified explosion-proof cameras from leading manufacturers for deployment in hazardous Zone 1 and Zone 2 areas."},
       {"q": "Can VMukti monitor remote pipeline locations?", "a": "Yes, VMukti edge processing with satellite and 4G backhaul enables AI-powered monitoring of remote pipeline corridors and pump stations with minimal bandwidth requirements."},
-      {"q": "How does VMukti help oil and gas safety?", "a": "VMukti AI detects safety violations including missing PPE, unauthorized zone access, gas leak visual indicators, and emergency situations â generating instant alerts to HSE teams."}
+      {"q": "How does VMukti help oil and gas safety?", "a": "VMukti AI detects safety violations including missing PPE, unauthorized zone access, gas leak visual indicators, and emergency situations — generating instant alerts to HSE teams."}
     ],
     "cta": {"title": "Deploy Oil & Gas Cloud VMS", "description": "Schedule a critical infrastructure assessment.", "buttonText": "Book a Demo", "buttonLink": "/book-a-demo"}
   },
@@ -258,19 +258,19 @@ const seoPageDataExpansion4 = {
     "metaDescription": "Enterprise AI video analytics: real-time detection, behavioral analysis, business intelligence from existing cameras. VMukti AI transforms surveillance into insight.",
     "keywords": ["AI video analytics", "enterprise video analytics", "intelligent video surveillance", "video analytics platform", "AI surveillance analytics"],
     "heroTitle": "Enterprise AI Video Analytics Platform",
-    "heroSubtitle": "Detection, Analysis, Intelligence â From Any Camera",
+    "heroSubtitle": "Detection, Analysis, Intelligence — From Any Camera",
     "heroDescription": "VMukti AI video analytics transforms existing camera infrastructure into an intelligent detection and business analytics platform for enterprises worldwide.",
     "category": "product",
     "sections": [
       {
         "title": "AI Analytics for Any Camera",
-        "content": "VMukti AI video analytics works with existing camera infrastructure â no camera replacement needed. Deploy AI models across your current ONVIF-compatible cameras to add real-time person detection, vehicle analytics, behavioral analysis, and business intelligence. The platform processes video at the edge for privacy and streams only insights to the cloud.",
+        "content": "VMukti AI video analytics works with existing camera infrastructure — no camera replacement needed. Deploy AI models across your current ONVIF-compatible cameras to add real-time person detection, vehicle analytics, behavioral analysis, and business intelligence. The platform processes video at the edge for privacy and streams only insights to the cloud.",
         "stats": [{"value": "ONVIF", "label": "Any Camera"}, {"value": "Edge AI", "label": "Local Processing"}, {"value": "50+", "label": "AI Models"}],
         "features": ["Works with existing camera infrastructure", "50+ pre-trained AI detection models", "Edge processing for privacy and speed", "Custom model training available"]
       },
       {
         "title": "From Surveillance to Business Intelligence",
-        "content": "VMukti AI analytics goes beyond security â it delivers business intelligence. Track foot traffic patterns, measure dwell times, analyze queue lengths, and generate heat maps that help enterprises optimize operations, improve customer experience, and make data-driven decisions from their existing video infrastructure.",
+        "content": "VMukti AI analytics goes beyond security — it delivers business intelligence. Track foot traffic patterns, measure dwell times, analyze queue lengths, and generate heat maps that help enterprises optimize operations, improve customer experience, and make data-driven decisions from their existing video infrastructure.",
         "stats": [{"value": "Business", "label": "Intelligence"}, {"value": "Heat Maps", "label": "Space Analytics"}, {"value": "ROI", "label": "Measured Impact"}],
         "features": ["Foot traffic and customer flow analytics", "Dwell time and engagement measurement", "Queue management and wait time alerts", "Occupancy counting and compliance"]
       }
@@ -278,7 +278,7 @@ const seoPageDataExpansion4 = {
     "faqs": [
       {"q": "Does VMukti AI analytics require new cameras?", "a": "No, VMukti AI video analytics works with existing ONVIF-compatible cameras. Deploy AI models on your current infrastructure without camera replacement."},
       {"q": "What types of AI analytics are available?", "a": "VMukti offers 50+ AI models including person detection, vehicle analytics, PPE compliance, crowd density, queue management, heat maps, and custom behavioral detection models."},
-      {"q": "How is AI analytics processed?", "a": "VMukti processes AI analytics at the edge for privacy and speed. Only insights, alerts, and metadata are sent to cloud dashboards â raw video stays local."}
+      {"q": "How is AI analytics processed?", "a": "VMukti processes AI analytics at the edge for privacy and speed. Only insights, alerts, and metadata are sent to cloud dashboards — raw video stays local."}
     ],
     "cta": {"title": "Add AI to Your Existing Cameras", "description": "See how VMukti AI analytics transforms your current camera investment.", "buttonText": "Book a Demo", "buttonLink": "/book-a-demo"}
   },
@@ -288,20 +288,20 @@ const seoPageDataExpansion4 = {
     "title": "Mobile VMS & Remote Video Monitoring | VMukti Solutions",
     "metaDescription": "Mobile video management system for remote monitoring on any device. Real-time alerts, multi-site management, secure mobile access. VMukti mobile VMS platform.",
     "keywords": ["mobile VMS", "remote video monitoring", "mobile surveillance app", "remote cloud VMS", "video management mobile"],
-    "heroTitle": "Mobile VMS â Monitor Anywhere, Anytime",
+    "heroTitle": "Mobile VMS — Monitor Anywhere, Anytime",
     "heroSubtitle": "Real-Time Alerts, Multi-Site, Any Device",
     "heroDescription": "VMukti mobile VMS puts your entire video management system in your pocket. Real-time alerts, live viewing, and multi-site management from any device, anywhere.",
     "category": "product",
     "sections": [
       {
         "title": "Complete VMS in Your Pocket",
-        "content": "Enterprise video management is no longer tethered to control rooms. VMukti mobile VMS delivers the full power of cloud video management on smartphones and tablets â live camera viewing, AI alert notifications, multi-site switching, and incident management from anywhere in the world with secure biometric authentication.",
+        "content": "Enterprise video management is no longer tethered to control rooms. VMukti mobile VMS delivers the full power of cloud video management on smartphones and tablets — live camera viewing, AI alert notifications, multi-site switching, and incident management from anywhere in the world with secure biometric authentication.",
         "stats": [{"value": "iOS/Android", "label": "Native Apps"}, {"value": "Real-time", "label": "Push Alerts"}, {"value": "Biometric", "label": "Secure Access"}],
         "features": ["Native iOS and Android applications", "Real-time AI alert push notifications", "Multi-site camera switching", "Biometric and 2FA authentication"]
       },
       {
         "title": "Executive Remote Oversight",
-        "content": "Security directors and C-suite executives need instant visibility without being at a desk. VMukti mobile VMS provides executive dashboards with KPI summaries, incident timelines, and one-tap access to any camera across your global operations â enabling informed decisions from anywhere.",
+        "content": "Security directors and C-suite executives need instant visibility without being at a desk. VMukti mobile VMS provides executive dashboards with KPI summaries, incident timelines, and one-tap access to any camera across your global operations — enabling informed decisions from anywhere.",
         "stats": [{"value": "Executive", "label": "Dashboard"}, {"value": "Global", "label": "Access"}, {"value": "KPI", "label": "Summaries"}],
         "features": ["Executive summary dashboards", "Incident timeline mobile view", "One-tap camera access globally", "Offline incident report access"]
       }
@@ -317,29 +317,29 @@ const seoPageDataExpansion4 = {
   "edge-cloud-hybrid-vms": {
     "slug": "/edge-cloud-hybrid-vms",
     "title": "Hybrid Edge-Cloud VMS Architecture | VMukti Solutions",
-    "metaDescription": "Hybrid edge-cloud VMS combining on-premise processing with cloud intelligence. Best of both worlds â local resilience with cloud scale. VMukti hybrid architecture.",
+    "metaDescription": "Hybrid edge-cloud VMS combining on-premise processing with cloud intelligence. Best of both worlds — local resilience with cloud scale. VMukti hybrid architecture.",
     "keywords": ["hybrid VMS", "edge cloud VMS", "hybrid video management", "edge computing surveillance", "cloud edge architecture"],
-    "heroTitle": "Hybrid Edge-Cloud VMS â Best of Both Worlds",
+    "heroTitle": "Hybrid Edge-Cloud VMS — Best of Both Worlds",
     "heroSubtitle": "Local Resilience + Cloud Intelligence",
-    "heroDescription": "VMukti hybrid architecture combines edge processing resilience with cloud intelligence â ensuring surveillance never stops while delivering AI-powered insights at enterprise scale.",
+    "heroDescription": "VMukti hybrid architecture combines edge processing resilience with cloud intelligence — ensuring surveillance never stops while delivering AI-powered insights at enterprise scale.",
     "category": "product",
     "sections": [
       {
         "title": "The Hybrid Advantage",
-        "content": "Pure cloud VMS depends on connectivity. Pure on-premise VMS lacks AI intelligence and scale. VMukti hybrid edge-cloud architecture delivers both â edge devices process video locally ensuring zero-gap recording during outages, while cloud intelligence delivers AI analytics, multi-site management, and unlimited storage without on-premise server hardware.",
+        "content": "Pure cloud VMS depends on connectivity. Pure on-premise VMS lacks AI intelligence and scale. VMukti hybrid edge-cloud architecture delivers both — edge devices process video locally ensuring zero-gap recording during outages, while cloud intelligence delivers AI analytics, multi-site management, and unlimited storage without on-premise server hardware.",
         "stats": [{"value": "Zero-gap", "label": "Local Recording"}, {"value": "Cloud AI", "label": "Analytics"}, {"value": "Auto-sync", "label": "When Connected"}],
-        "features": ["Edge recording â never miss a frame", "Cloud AI analytics and dashboards", "Automatic sync when connected", "No on-premise server hardware needed"]
+        "features": ["Edge recording — never miss a frame", "Cloud AI analytics and dashboards", "Automatic sync when connected", "No on-premise server hardware needed"]
       },
       {
         "title": "Enterprise Resilience Architecture",
-        "content": "For enterprises where surveillance cannot afford downtime, VMukti hybrid architecture provides multi-layer resilience. Edge devices store locally, regional nodes aggregate data, and cloud provides global management â with automatic failover between layers ensuring continuous surveillance regardless of network conditions.",
+        "content": "For enterprises where surveillance cannot afford downtime, VMukti hybrid architecture provides multi-layer resilience. Edge devices store locally, regional nodes aggregate data, and cloud provides global management — with automatic failover between layers ensuring continuous surveillance regardless of network conditions.",
         "stats": [{"value": "3-Layer", "label": "Resilience"}, {"value": "Auto", "label": "Failover"}, {"value": "99.99%", "label": "Effective Uptime"}],
         "features": ["Three-layer resilience architecture", "Automatic failover between layers", "Bandwidth-optimized sync", "Disaster recovery built-in"]
       }
     ],
     "faqs": [
       {"q": "What happens during internet outages with hybrid VMS?", "a": "VMukti edge devices continue recording locally during outages. All AI detection continues at the edge. When connectivity is restored, footage and events automatically sync to cloud with zero data loss."},
-      {"q": "Does hybrid VMS require on-premise servers?", "a": "No, VMukti hybrid architecture uses edge devices at each site â no traditional server hardware needed. Cloud provides the management layer, and edge provides local resilience."},
+      {"q": "Does hybrid VMS require on-premise servers?", "a": "No, VMukti hybrid architecture uses edge devices at each site — no traditional server hardware needed. Cloud provides the management layer, and edge provides local resilience."},
       {"q": "Is hybrid VMS more expensive than pure cloud?", "a": "VMukti hybrid VMS is competitively priced. Edge devices are lightweight and affordable, and the reduced bandwidth from edge processing often lowers overall operational costs compared to pure cloud approaches."}
     ],
     "cta": {"title": "Explore Hybrid Edge-Cloud VMS", "description": "See how hybrid architecture delivers maximum resilience.", "buttonText": "Book a Demo", "buttonLink": "/book-a-demo"}
@@ -347,10 +347,10 @@ const seoPageDataExpansion4 = {
 
   "vms-security-compliance": {
     "slug": "/vms-security-compliance",
-    "title": "VMS Security & Compliance â GDPR, HIPAA, SOC2 | VMukti Solutions",
+    "title": "VMS Security & Compliance — GDPR, HIPAA, SOC2 | VMukti Solutions",
     "metaDescription": "Enterprise VMS security and compliance for GDPR, HIPAA, SOC2, and ISO 27001. End-to-end encryption, audit trails, data residency. VMukti compliant cloud VMS.",
     "keywords": ["VMS security compliance", "GDPR VMS", "HIPAA video management", "SOC2 surveillance", "ISO 27001 VMS"],
-    "heroTitle": "VMS Security & Compliance â Built for Regulated Industries",
+    "heroTitle": "VMS Security & Compliance — Built for Regulated Industries",
     "heroSubtitle": "GDPR, HIPAA, SOC2, ISO 27001",
     "heroDescription": "VMukti cloud VMS is built for regulated industries with end-to-end encryption, automated compliance, and audit trails that meet GDPR, HIPAA, SOC2, and ISO 27001 standards.",
     "category": "product",
@@ -363,7 +363,7 @@ const seoPageDataExpansion4 = {
       },
       {
         "title": "Regulatory Framework Support",
-        "content": "VMukti cloud VMS includes pre-built compliance profiles for major regulatory frameworks. Select your compliance requirements, and VMukti automatically configures retention policies, access controls, encryption settings, and audit logging to meet the standard â reducing compliance workload for security and IT teams.",
+        "content": "VMukti cloud VMS includes pre-built compliance profiles for major regulatory frameworks. Select your compliance requirements, and VMukti automatically configures retention policies, access controls, encryption settings, and audit logging to meet the standard — reducing compliance workload for security and IT teams.",
         "stats": [{"value": "Pre-built", "label": "Compliance Profiles"}, {"value": "Automated", "label": "Configuration"}, {"value": "Audit-ready", "label": "Reports"}],
         "features": ["GDPR compliance profile with EU data residency", "HIPAA profile with BAA support", "SOC2 Type II audit trail support", "ISO 27001 security control mapping"]
       }
@@ -378,25 +378,25 @@ const seoPageDataExpansion4 = {
 
   "enterprise-vms-roi": {
     "slug": "/enterprise-vms-roi",
-    "title": "Enterprise VMS ROI â Cloud vs On-Premise Cost Analysis | VMukti Solutions",
+    "title": "Enterprise VMS ROI — Cloud vs On-Premise Cost Analysis | VMukti Solutions",
     "metaDescription": "Enterprise VMS ROI analysis: cloud vs on-premise total cost of ownership. Calculate savings from migrating to VMukti cloud VMS with 60% lower TCO.",
     "keywords": ["VMS ROI", "cloud VMS cost", "surveillance system ROI", "VMS total cost ownership", "cloud vs on-premise VMS cost"],
-    "heroTitle": "Enterprise VMS ROI â The Business Case for Cloud",
+    "heroTitle": "Enterprise VMS ROI — The Business Case for Cloud",
     "heroSubtitle": "60% Lower TCO, Faster Deployment, AI Included",
     "heroDescription": "VMukti cloud VMS delivers 60% lower total cost of ownership compared to traditional on-premise VMS. No server hardware, no manual updates, AI analytics included.",
     "category": "product",
     "sections": [
       {
         "title": "The TCO Advantage",
-        "content": "Traditional on-premise VMS requires significant capital expenditure â servers, storage, networking, installation, and ongoing maintenance. VMukti cloud VMS eliminates hardware costs entirely with a predictable operational expenditure model. Over a 5-year period, enterprises typically save 60% on total cost of ownership while gaining AI capabilities that on-premise systems simply cannot match.",
+        "content": "Traditional on-premise VMS requires significant capital expenditure — servers, storage, networking, installation, and ongoing maintenance. VMukti cloud VMS eliminates hardware costs entirely with a predictable operational expenditure model. Over a 5-year period, enterprises typically save 60% on total cost of ownership while gaining AI capabilities that on-premise systems simply cannot match.",
         "stats": [{"value": "60%", "label": "Lower TCO"}, {"value": "Zero", "label": "Server Hardware"}, {"value": "OpEx", "label": "Predictable Costs"}],
-        "features": ["No server hardware capital expenditure", "Predictable monthly operational costs", "AI analytics included â no separate license", "Automatic updates â no IT maintenance"]
+        "features": ["No server hardware capital expenditure", "Predictable monthly operational costs", "AI analytics included — no separate license", "Automatic updates — no IT maintenance"]
       },
       {
         "title": "Hidden Costs of On-Premise VMS",
         "content": "On-premise VMS has hidden costs that inflate TCO: hardware refreshes every 3-5 years, software license renewals, dedicated IT staff for maintenance, electricity for server rooms, and the opportunity cost of not having AI capabilities. VMukti cloud VMS eliminates every one of these hidden costs.",
         "stats": [{"value": "3-5 years", "label": "Hardware Refresh Saved"}, {"value": "No", "label": "License Renewals"}, {"value": "No", "label": "Server Room Costs"}],
-        "features": ["Eliminate hardware refresh cycles", "No annual software license renewals", "No dedicated server room or IT staff", "Free AI analytics â no additional licensing"]
+        "features": ["Eliminate hardware refresh cycles", "No annual software license renewals", "No dedicated server room or IT staff", "Free AI analytics — no additional licensing"]
       }
     ],
     "faqs": [
@@ -413,28 +413,28 @@ const seoPageDataExpansion4 = {
     "title": "Cloud VMS for Retail Enterprise | VMukti Solutions",
     "metaDescription": "Enterprise cloud VMS for retail chains: loss prevention, customer analytics, multi-store management. AI-powered retail surveillance platform from VMukti.",
     "keywords": ["retail VMS", "retail surveillance enterprise", "loss prevention VMS", "multi-store video management", "retail customer analytics"],
-    "heroTitle": "Cloud VMS for Retail Enterprise â Intelligence at Every Store",
+    "heroTitle": "Cloud VMS for Retail Enterprise — Intelligence at Every Store",
     "heroSubtitle": "Loss Prevention, Customer Analytics, Multi-Store Management",
     "heroDescription": "VMukti cloud VMS transforms retail surveillance into a business intelligence platform with AI-powered loss prevention, customer analytics, and multi-store management.",
     "category": "industry",
     "sections": [
       {
         "title": "Retail Intelligence Platform",
-        "content": "Enterprise retail demands more than security cameras â it needs a video intelligence platform. VMukti cloud VMS delivers AI-powered loss prevention that detects shrinkage patterns, customer analytics that optimize store layouts, and multi-store dashboards that compare performance across your entire retail network.",
+        "content": "Enterprise retail demands more than security cameras — it needs a video intelligence platform. VMukti cloud VMS delivers AI-powered loss prevention that detects shrinkage patterns, customer analytics that optimize store layouts, and multi-store dashboards that compare performance across your entire retail network.",
         "stats": [{"value": "40%", "label": "Shrinkage Reduction"}, {"value": "12%", "label": "Sales Lift Potential"}, {"value": "Multi-store", "label": "Analytics"}],
         "features": ["AI-powered loss prevention detection", "Customer foot traffic and flow analytics", "Store heat maps for layout optimization", "POS integration for transaction matching"]
       },
       {
         "title": "Multi-Store Enterprise Management",
-        "content": "Retail chains need unified visibility across hundreds of stores. VMukti cloud VMS provides enterprise dashboards that compare shrinkage rates, foot traffic patterns, and operational KPIs across all locations â giving regional managers and loss prevention teams the insights they need to drive performance.",
+        "content": "Retail chains need unified visibility across hundreds of stores. VMukti cloud VMS provides enterprise dashboards that compare shrinkage rates, foot traffic patterns, and operational KPIs across all locations — giving regional managers and loss prevention teams the insights they need to drive performance.",
         "stats": [{"value": "500+", "label": "Store Scale"}, {"value": "KPI", "label": "Dashboards"}, {"value": "Regional", "label": "Benchmarking"}],
         "features": ["Chain-wide executive dashboard", "Store-to-store performance comparison", "Regional loss prevention benchmarking", "Custom alert rules by store type"]
       }
     ],
     "faqs": [
       {"q": "How does VMukti reduce retail shrinkage?", "a": "VMukti AI analytics detect suspicious behavior patterns, employee pilferage indicators, and process exceptions. POS integration enables transaction matching to identify fraudulent returns and sweethearting."},
-      {"q": "Can VMukti analytics improve retail sales?", "a": "Yes, foot traffic analytics, heat maps, and dwell time data help retailers optimize store layouts, product placement, and staffing â with customers reporting 8-12% sales lift from data-driven layout changes."},
-      {"q": "How many retail stores can VMukti manage?", "a": "VMukti cloud VMS scales to thousands of retail locations with enterprise dashboards, regional management tools, and store-level analytics â all from a single platform."}
+      {"q": "Can VMukti analytics improve retail sales?", "a": "Yes, foot traffic analytics, heat maps, and dwell time data help retailers optimize store layouts, product placement, and staffing — with customers reporting 8-12% sales lift from data-driven layout changes."},
+      {"q": "How many retail stores can VMukti manage?", "a": "VMukti cloud VMS scales to thousands of retail locations with enterprise dashboards, regional management tools, and store-level analytics — all from a single platform."}
     ],
     "cta": {"title": "Deploy Retail Cloud VMS", "description": "See how VMukti transforms retail surveillance into business intelligence.", "buttonText": "Book a Demo", "buttonLink": "/book-a-demo"}
   }

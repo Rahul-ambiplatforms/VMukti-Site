@@ -6,7 +6,7 @@ import {
   VStack, Link, HStack, Badge
 } from '@chakra-ui/react';
 
-/* âââââââââââââââââââââââââââ HOME PAGE CONTENT âââââââââââââââââââââââââââ */
+/* ─────────────────────────── HOME PAGE CONTENT ─────────────────────────── */
 const HomeContent = () => (
   <Box py={{ base: 10, md: 16 }} bg="white">
     <Container maxW="1200px">
@@ -142,7 +142,7 @@ const HomeContent = () => (
   </Box>
 );
 
-/* âââââââââââââââââââââââââââ SOLUTIONS PAGE CONTENT âââââââââââââââââââââââ */
+/* ─────────────────────────── SOLUTIONS PAGE CONTENT ─────────────────────── */
 const SolutionsContent = () => (
   <Box py={{ base: 10, md: 16 }} bg="white">
     <Container maxW="1200px">
@@ -233,7 +233,7 @@ const SolutionsContent = () => (
   </Box>
 );
 
-/* âââââââââââââââââââââââââââ INDUSTRY PAGE CONTENT ââââââââââââââââââââââ */
+/* ─────────────────────────── INDUSTRY PAGE CONTENT ────────────────────── */
 const IndustriesContent = () => (
   <Box py={{ base: 10, md: 16 }} bg="white">
     <Container maxW="1200px">
@@ -319,7 +319,7 @@ const IndustriesContent = () => (
   </Box>
 );
 
-/* âââââââââââââââââââââââââââ ABOUT PAGE CONTENT âââââââââââââââââââââââââââ */
+/* ─────────────────────────── ABOUT PAGE CONTENT ─────────────────────────── */
 const AboutContent = () => (
   <Box py={{ base: 10, md: 16 }} bg="white">
     <Container maxW="1200px">
@@ -361,7 +361,7 @@ const AboutContent = () => (
   </Box>
 );
 
-/* âââââââââââââââââââââââââââ MAIN SEO CONTENT ROUTER ââââââââââââââââââââââ */
+/* ─────────────────────────── MAIN SEO CONTENT ROUTER ────────────────────── */
 const SEOContent = () => {
   const location = useLocation();
   const path = location.pathname;
