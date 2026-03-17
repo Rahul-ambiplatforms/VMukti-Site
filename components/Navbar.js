@@ -142,6 +142,9 @@ const dropdownItems = {
   ],
   ourServing: [
     { label: "Insights & Blog", path: "/blog" },
+    { label: "Customer Stories", path: "/customer-stories" },
+    { label: "Solution Comparisons", path: "/solutions-comparison" },
+    { label: "Enterprise Command Center", path: "/enterprise-command-center" },
   ],
   global: [
     { label: "USA", path: "/usa/video-surveillance-solutions" },
