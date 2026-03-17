@@ -24,13 +24,43 @@ import Link from 'next/link';
 
 const CLOUDINARY_BASE = 'https://res.cloudinary.com/dzs02ecai/image/upload/v1758361869/uploads';
 
+// Safely extract plain text from a Slate node tree (used as fallback)
+const extractPlainText = (nodes) => {
+  if (!nodes) return '';
+  if (typeof nodes === 'string') return nodes;
+  if (!Array.isArray(nodes)) {
+    if (typeof nodes === 'object' && nodes.text !== undefined) return String(nodes.text);
+    if (typeof nodes === 'object' && nodes.children) return extractPlainText(nodes.children);
+    return '';
+  }
+  return nodes.map((n) => {
+    if (!n) return '';
+    if (typeof n === 'string') return n;
+    if (n.text !== undefined) return String(n.text);
+    if (n.children) return extractPlainText(n.children);
+    return '';
+  }).join('');
+};
+
 // Slate content renderer (from original BlogsContents.js)
 const renderSlateContent = (content) => {
   if (!content) return null;
+  // If a single node object is passed instead of an array, wrap it
+  if (!Array.isArray(content)) {
+    if (typeof content === 'string') return content;
+    if (typeof content === 'object') {
+      if (content.text !== undefined) return String(content.text);
+      // Unwrap single node
+      return renderSlateContent([content]);
+    }
+    return null;
+  }
   return content.map((node, i) => {
     if (!node) return null;
+    // Pure text leaf
+    if (typeof node === 'string') return <span key={i}>{node}</span>;
     if (typeof node === 'object' && node.text !== undefined) {
-      let textElement = node.text;
+      let textElement = String(node.text);
       if (node.bold) textElement = <strong key={i}>{textElement}</strong>;
       if (node.italic) textElement = <em key={i}>{textElement}</em>;
       if (node.underline) textElement = <u key={i}>{textElement}</u>;
@@ -39,7 +69,7 @@ const renderSlateContent = (content) => {
           {textElement}
         </span>
       );
-    } else if (node.type) {
+    } else if (typeof node === 'object' && node.type) {
       const children = node.children ? renderSlateContent(node.children) : null;
       switch (node.type) {
         case 'paragraph':
@@ -50,6 +80,15 @@ const renderSlateContent = (content) => {
               </Text>
             </Box>
           );
+        case 'heading-one':
+        case 'h1':
+          return <Text key={i} as="h1" fontSize="2xl" fontWeight="700" mb={3}>{children}</Text>;
+        case 'heading-two':
+        case 'h2':
+          return <Text key={i} as="h2" fontSize="xl" fontWeight="700" color="#3F77A5" mb={3}>{children}</Text>;
+        case 'heading-three':
+        case 'h3':
+          return <Text key={i} as="h3" fontSize="lg" fontWeight="600" mb={2}>{children}</Text>;
         case 'bulleted-list':
           return (
             <UnorderedList key={i} spacing={2} my="2" pl={4}>
@@ -64,6 +103,8 @@ const renderSlateContent = (content) => {
           );
         case 'list-item':
           return <ListItem key={i}>{children}</ListItem>;
+        case 'list-item-child':
+          return <span key={i}>{children}</span>;
         case 'link':
           let relAttrs = 'noopener noreferrer';
           if (node.noFollow) relAttrs += ' nofollow';
@@ -83,8 +124,13 @@ const renderSlateContent = (content) => {
             </Box>
           );
         default:
-          return <div key={i}>{children}</div>;
+          // Fallback: render children if available, otherwise extract plain text
+          return <span key={i}>{children || extractPlainText(node.children)}</span>;
       }
+    }
+    // Last resort: if it's an object we don't recognize, extract text rather than crash
+    if (typeof node === 'object') {
+      return <span key={i}>{extractPlainText(node)}</span>;
     }
     return null;
   });
@@ -267,7 +313,13 @@ export default function BlogContentClient({ blogData, urlWords }) {
                       <AccordionIcon />
                     </AccordionButton>
                     <AccordionPanel pb={4} color="gray.700">
-                      {faq.answer || faq.a}
+                      {Array.isArray(faq.answer)
+                        ? renderSlateContent(faq.answer)
+                        : Array.isArray(faq.a)
+                        ? renderSlateContent(faq.a)
+                        : typeof (faq.answer || faq.a) === 'string'
+                        ? faq.answer || faq.a
+                        : extractPlainText(faq.answer || faq.a)}
                     </AccordionPanel>
                   </AccordionItem>
                 ))}
