@@ -18,10 +18,10 @@ export default function robots() {
       },
       // Allow AI crawlers
       {
-        userAgent: ['GPTBot', 'Claude-Web', 'PerplexityBot', 'Cohere-ai'],
+        userAgent: ['GPTBot', 'Claude-Web', 'PerplexityBot', 'Cohere-ai', 'ChatGPT-User', 'Google-Extended', 'Anthropic-ai', 'ClaudeBot', 'CCBot', 'Bytespider', 'YouBot', 'Meta-ExternalAgent', 'Baiduspider', 'DuckDuckBot'],
         allow: '/',
       },
     ],
-    sitemap: 'https://www.vmukti.com/sitemap.xml',
+    sitemap: 'https://vmukti.com/sitemap.xml',
   };
 }

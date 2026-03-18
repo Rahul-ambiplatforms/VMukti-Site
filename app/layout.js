@@ -4,7 +4,7 @@ import Script from 'next/script';
 import localFont from 'next/font/local';
 import './globals.css';
 
-const SITE_URL = 'https://www.vmukti.com';
+const SITE_URL = 'https://vmukti.com';
 
 // Viewport configuration (must be separate from metadata in Next.js 13+ App Router)
 export const viewport = {
@@ -16,10 +16,10 @@ export const viewport = {
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'VMukti | Enterprise Cloud VMS, EMS & Enterprise Command Center | 18+ Years',
+    default: 'Enterprise AI Video Intelligence Platform | Cloud VMS | VMukti',
     template: '%s | VMukti Solutions',
   },
-  description: 'VMukti Solutions: STQC-certified enterprise cloud VMS, EMS, and Enterprise Command Center platform. 900+ global deployments, 1B+ camera feeds processed. Trusted by governments and enterprises worldwide.',
+  description: 'VMukti: Enterprise AI video intelligence platform with 26+ AI analytics models. STQC-certified cloud VMS, EMS, and Enterprise Command Center. 900+ global deployments. Trusted by governments and enterprises worldwide.',
   keywords: ['enterprise cloud VMS', 'video management system', 'Enterprise Command Center platform', 'EMS enterprise management', 'STQC certified surveillance', 'global VMS provider'],
   authors: [{ name: 'VMukti Solutions' }],
   creator: 'VMukti Solutions',
@@ -34,8 +34,8 @@ export const metadata = {
     locale: 'en_US',
     url: SITE_URL,
     siteName: 'VMukti Solutions',
-    title: 'VMukti | Enterprise Cloud VMS, EMS & Enterprise Command Center',
-    description: 'STQC-certified enterprise cloud VMS, EMS, and Enterprise Command Center platform. 900+ global deployments.',
+    title: 'Enterprise AI Video Intelligence Platform | Cloud VMS | VMukti',
+    description: 'Enterprise AI video intelligence platform with 26+ AI analytics models. STQC-certified cloud VMS, EMS, and Enterprise Command Center. 900+ global deployments.',
     images: [
       {
         url: `${SITE_URL}/og-image.jpg`,
@@ -48,8 +48,8 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@VMuktiSolution',
-    title: 'VMukti | Enterprise Cloud VMS, EMS & Enterprise Command Center',
-    description: 'STQC-certified enterprise cloud VMS, EMS, and Enterprise Command Center platform.',
+    title: 'Enterprise AI Video Intelligence Platform | Cloud VMS | VMukti',
+    description: 'Enterprise AI video intelligence platform with 26+ AI analytics models. STQC-certified cloud VMS, EMS, and Enterprise Command Center.',
     images: [`${SITE_URL}/og-image.jpg`],
   },
   robots: {
@@ -91,8 +91,8 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'VMukti Solutions Pvt. Ltd.',
-  url: 'https://www.vmukti.com',
-  logo: 'https://www.vmukti.com/VMukti-logo.png',
+  url: 'https://vmukti.com',
+  logo: 'https://vmukti.com/VMukti-logo.png',
   foundingDate: '2007',
   description: 'Enterprise Cloud VMS, EMS & Enterprise Command Center Provider. 18+ years of innovation in video surveillance and intelligent operations management.',
   address: {
@@ -173,10 +173,10 @@ const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'VMukti Solutions',
-  url: 'https://www.vmukti.com',
+  url: 'https://vmukti.com',
   potentialAction: {
     '@type': 'SearchAction',
-    target: 'https://www.vmukti.com/blog?search={search_term_string}',
+    target: 'https://vmukti.com/blog?search={search_term_string}',
     'query-input': 'required name=search_term_string',
   },
 };
