@@ -22,6 +22,6 @@ export default function robots() {
         allow: '/',
       },
     ],
-    sitemap: 'https://vmukti.com/sitemap.xml',
+    sitemap: 'https://www.vmukti.com/sitemap.xml',
   };
 }

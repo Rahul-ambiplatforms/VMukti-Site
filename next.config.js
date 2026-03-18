@@ -26,6 +26,10 @@ const nextConfig = {
   async rewrites() {
     return [
       {
+        source: "/googlef9501ef859b4f0e0.html",
+        destination: "/api/google-verify",
+      },
+      {
         source: "/backend/:path*",
         destination: "https://vmukti.com/backend/:path*",
       },
