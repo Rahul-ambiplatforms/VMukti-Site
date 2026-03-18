@@ -4,7 +4,7 @@ import Script from 'next/script';
 import localFont from 'next/font/local';
 import './globals.css';
 
-const SITE_URL = 'https://vmukti.com';
+const SITE_URL = 'https://www.vmukti.com';
 
 // Viewport configuration (must be separate from metadata in Next.js 13+ App Router)
 export const viewport = {
@@ -91,8 +91,8 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'VMukti Solutions Pvt. Ltd.',
-  url: 'https://vmukti.com',
-  logo: 'https://vmukti.com/VMukti-logo.png',
+  url: 'https://www.vmukti.com',
+  logo: 'https://www.vmukti.com/VMukti-logo.png',
   foundingDate: '2007',
   description: 'Enterprise Cloud VMS, EMS & Enterprise Command Center Provider. 18+ years of innovation in video surveillance and intelligent operations management.',
   address: {
@@ -173,10 +173,10 @@ const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'VMukti Solutions',
-  url: 'https://vmukti.com',
+  url: 'https://www.vmukti.com',
   potentialAction: {
     '@type': 'SearchAction',
-    target: 'https://vmukti.com/blog?search={search_term_string}',
+    target: 'https://www.vmukti.com/blog?search={search_term_string}',
     'query-input': 'required name=search_term_string',
   },
 };
