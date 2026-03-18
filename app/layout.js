@@ -76,7 +76,7 @@ export const metadata = {
     },
   },
   verification: {
-    google: 'flDIui2sl1Ra_gCswQ3hySZ1JZSNVfEpoIIzPQonnM',
+    google: ['flDIui2sl1Ra_gCswQ3hySZ1JZSNVfEpoIIzPQonnM', 'xpBGpHVKKaxEJ6Ykwzl2vsw01uSyXXdcx4-8Qa6Rus8'],
   },
   other: {
     'geo.region': 'IN-GJ',
