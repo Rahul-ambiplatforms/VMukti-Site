@@ -587,7 +587,7 @@ export const emsSchema = {
   },
 };
 
-export const enterprise-command-centerSchema = {
+export const enterpriseCommandCenterSchema = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: 'VMukti Enterprise Command Center (Integrated Command and Control Center)',
@@ -662,7 +662,7 @@ const schemaData = {
     productpageSchema,
     cloudVmsSchema,
     emsSchema,
-    enterprise-command-centerSchema,
+    enterpriseCommandCenterSchema,
     organizationSchema,
   ],
 };
