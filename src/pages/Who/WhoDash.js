@@ -59,7 +59,7 @@ const gridItems = [
     description: (
       <>
         <b> STQC-Certified VMS,</b>
-        <br /> <b>EMS & ICCC</b> Platforms
+        <br /> <b>EMS & Enterprise Command Center</b> Platforms
       </>
     ),
     textColor: "white", // Add if needed

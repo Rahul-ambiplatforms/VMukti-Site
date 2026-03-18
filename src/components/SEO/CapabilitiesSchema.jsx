@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 /**
  * CapabilitiesSchema - VMukti AI Platform Capabilities JSON-LD
  * Based on real deployment use cases (Railway, Smart City, Enterprise)
- * Covers: VMS, EMS, ICCC, Cloud AI, Gen AI, 26+ AI Analytics
+ * Covers: VMS, EMS, Enterprise Command Center, Cloud AI, Gen AI, 26+ AI Analytics
  */
 
 // ── VMukti VMS Platform Schema ──
@@ -45,11 +45,11 @@ const EMS_PLATFORM_SCHEMA = {
   featureList: 'Face-Based Staff Attendance, Idle-Time Analysis, Workforce Productivity Monitoring, Booking Counter Occupancy Detection, Cleaning Staff Tracking, Uniform Compliance Verification, Task Assignment, Automated Reporting, Role-Based Access Control'
 };
 
-// ── VMukti ICCC Platform Schema ──
-const ICCC_PLATFORM_SCHEMA = {
+// ── VMukti Enterprise Command Center Schema ──
+const Enterprise Command Center_PLATFORM_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
-  name: 'VMukti ICCC - Integrated Command & Control Center',
+  name: 'VMukti Enterprise Command Center - Integrated Command & Control Center',
   description: 'VMukti Integrated Command and Control Center platform for smart cities, railways, airports, and critical infrastructure. Centralized real-time monitoring with AI-powered incident detection, automated alerting, GIS integration, and multi-agency coordination.',
   applicationCategory: 'GovernmentApplication',
   operatingSystem: 'Web, Cloud, On-Premise',
@@ -136,7 +136,7 @@ const INDUSTRIES_SCHEMA = {
   description: 'VMukti AI-powered video surveillance and management solutions across industries worldwide',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Railways & Transportation', description: 'AI surveillance for railway stations, airports, metros with 26+ use cases including crowd detection, face recognition, and safety monitoring' },
-    { '@type': 'ListItem', position: 2, name: 'Smart Cities & Government', description: 'ICCC platforms for smart city operations, traffic management, public safety, and urban analytics' },
+    { '@type': 'ListItem', position: 2, name: 'Smart Cities & Government', description: 'Enterprise Command Centers for smart city operations, traffic management, public safety, and urban analytics' },
     { '@type': 'ListItem', position: 3, name: 'Enterprise & Corporate', description: 'VMS and EMS for corporate campuses, data centers, and enterprise security operations' },
     { '@type': 'ListItem', position: 4, name: 'Oil & Gas', description: 'AI-powered safety monitoring for oil rigs, refineries, and pipeline infrastructure in Middle East and Africa' },
     { '@type': 'ListItem', position: 5, name: 'Banking & Finance', description: 'Branch surveillance, ATM monitoring, and compliance analytics for financial institutions' },
@@ -146,7 +146,7 @@ const INDUSTRIES_SCHEMA = {
   ]
 };
 
-const CapabilitiesSchema = ({ includeVMS = true, includeEMS = true, includeICCC = true, includeCloudAI = true, includeUseCases = true, includeIndustries = true }) => {
+const CapabilitiesSchema = ({ includeVMS = true, includeEMS = true, includeEnterprise Command Center = true, includeCloudAI = true, includeUseCases = true, includeIndustries = true }) => {
   return (
     <>
       {includeVMS && (
@@ -159,9 +159,9 @@ const CapabilitiesSchema = ({ includeVMS = true, includeEMS = true, includeICCC 
           <script type="application/ld+json">{JSON.stringify(EMS_PLATFORM_SCHEMA)}</script>
         </Helmet>
       )}
-      {includeICCC && (
+      {includeEnterprise Command Center && (
         <Helmet>
-          <script type="application/ld+json">{JSON.stringify(ICCC_PLATFORM_SCHEMA)}</script>
+          <script type="application/ld+json">{JSON.stringify(Enterprise Command Center_PLATFORM_SCHEMA)}</script>
         </Helmet>
       )}
       {includeCloudAI && (

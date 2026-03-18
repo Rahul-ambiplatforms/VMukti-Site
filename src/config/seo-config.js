@@ -1,6 +1,6 @@
 /**
  * SEO Configuration for VMukti Solutions
- * Global Enterprise Focus: Cloud VMS, EMS, ICCC Platform
+ * Global Enterprise Focus: Cloud VMS, EMS, Enterprise Command Center
  * Target Markets: Middle East, Africa, Southeast Asia, Latin America, Europe
  * Updated: Feb 2026
  */
@@ -8,9 +8,9 @@
 export const seoConfig = {
   // Home Page
   home: {
-    title: 'VMukti | Enterprise Cloud VMS, EMS & ICCC Platform | 18+ Years',
-    description: 'VMukti Solutions: STQC-certified enterprise cloud VMS, EMS, and ICCC platform. 900+ global deployments, 1B+ camera feeds processed. Trusted by governments and enterprises worldwide.',
-    keywords: 'enterprise cloud VMS, video management system, ICCC platform, EMS enterprise management, STQC certified surveillance, global VMS provider, intelligent command center',
+    title: 'VMukti | Enterprise Cloud VMS, EMS & Enterprise Command Center | 18+ Years',
+    description: 'VMukti Solutions: STQC-certified enterprise cloud VMS, EMS, and Enterprise Command Center. 900+ global deployments, 1B+ camera feeds processed. Trusted by governments and enterprises worldwide.',
+    keywords: 'enterprise cloud VMS, video management system, Enterprise Command Center, EMS enterprise management, STQC certified surveillance, global VMS provider, intelligent command center',
     canonicalUrl: 'https://www.vmukti.com',
     ogImage: 'https://www.vmukti.com/og/home.jpg',
     ogType: 'website',
@@ -20,7 +20,7 @@ export const seoConfig = {
   // About Page
   about: {
     title: 'About VMukti | 18+ Years Enterprise Surveillance Innovation | STQC Certified',
-    description: 'VMukti Solutions: Founded 2007, 18+ years building enterprise-grade cloud VMS, EMS, and ICCC platforms. NASSCOM Top 50, IIM-A incubated. 900+ projects across 3 continents.',
+    description: 'VMukti Solutions: Founded 2007, 18+ years building enterprise-grade cloud VMS, EMS, and Enterprise Command Centers. NASSCOM Top 50, IIM-A incubated. 900+ projects across 3 continents.',
     keywords: 'VMukti about, enterprise surveillance company, 18 years experience, NASSCOM Top 50, IIM-Ahmedabad, STQC certified, global VMS provider',
     canonicalUrl: 'https://www.vmukti.com/about-us',
     ogImage: 'https://www.vmukti.com/og/about.jpg',
@@ -30,9 +30,9 @@ export const seoConfig = {
 
   // Products Main Page
   products: {
-    title: 'Enterprise Surveillance Platforms: Cloud VMS, EMS, ICCC | VMukti',
-    description: 'VMukti enterprise platforms: STQC-certified Cloud VMS for multi-site video management, EMS for enterprise operations, and ICCC for smart city command centers. Deployed globally.',
-    keywords: 'enterprise cloud VMS, video management system, EMS platform, ICCC command center, multi-site surveillance, enterprise video platform, global surveillance solution',
+    title: 'Enterprise Surveillance Platforms: Cloud VMS, EMS, Enterprise Command Center | VMukti',
+    description: 'VMukti enterprise platforms: STQC-certified Cloud VMS for multi-site video management, EMS for enterprise operations, and Enterprise Command Center for smart city command centers. Deployed globally.',
+    keywords: 'enterprise cloud VMS, video management system, EMS platform, Enterprise Command Center command center, multi-site surveillance, enterprise video platform, global surveillance solution',
     canonicalUrl: 'https://www.vmukti.com/solution',
     ogImage: 'https://www.vmukti.com/og/products.jpg',
     ogType: 'website',
@@ -61,11 +61,11 @@ export const seoConfig = {
     noindex: false,
   },
 
-  // Products - ICCC
-  productICCC: {
-    title: 'ICCC Platform | Integrated Command & Control Center | Smart City | VMukti',
-    description: 'VMukti ICCC: Unified command and control center for smart cities and enterprise campuses. Traffic management, emergency response, crowd analytics, multi-agency coordination. Deployed across 50+ cities.',
-    keywords: 'ICCC platform, integrated command control center, smart city platform, unified command center, traffic management, emergency response, urban surveillance, city operations center',
+  // Products - Enterprise Command Center
+  productEnterprise Command Center: {
+    title: 'Enterprise Command Center | Integrated Command & Control Center | Smart City | VMukti',
+    description: 'VMukti Enterprise Command Center: Unified command and control center for smart cities and enterprise campuses. Traffic management, emergency response, crowd analytics, multi-agency coordination. Deployed across 50+ cities.',
+    keywords: 'Enterprise Command Center, integrated command control center, smart city platform, unified command center, traffic management, emergency response, urban surveillance, city operations center',
     canonicalUrl: 'https://www.vmukti.com/solution/iccc',
     ogImage: 'https://www.vmukti.com/og/iccc.jpg',
     ogType: 'website',
@@ -144,9 +144,9 @@ export const seoConfig = {
 
   // Industries Main Page
   industries: {
-    title: 'Enterprise Solutions Across Industries | Cloud VMS & ICCC | VMukti',
-    description: 'VMukti serves enterprises globally across banking, healthcare, smart cities, manufacturing, defense, oil & gas, transportation, and government with cloud VMS, EMS, and ICCC platforms.',
-    keywords: 'enterprise industry solutions, banking surveillance, healthcare monitoring, smart city ICCC, manufacturing safety, defense security, government surveillance platform',
+    title: 'Enterprise Solutions Across Industries | Cloud VMS & Enterprise Command Center | VMukti',
+    description: 'VMukti serves enterprises globally across banking, healthcare, smart cities, manufacturing, defense, oil & gas, transportation, and government with cloud VMS, EMS, and Enterprise Command Centers.',
+    keywords: 'enterprise industry solutions, banking surveillance, healthcare monitoring, smart city Enterprise Command Center, manufacturing safety, defense security, government surveillance platform',
     canonicalUrl: 'https://www.vmukti.com/industry',
     ogImage: 'https://www.vmukti.com/og/industries.jpg',
     ogType: 'website',
@@ -166,9 +166,9 @@ export const seoConfig = {
 
   // Industries - Smart City
   industrySmartCity: {
-    title: 'Smart City ICCC Platform | Urban Command Center | VMukti',
-    description: 'VMukti ICCC for smart cities: Unified urban command center with traffic management, crowd analytics, emergency coordination, and multi-agency integration. Deployed across 50+ cities.',
-    keywords: 'smart city ICCC, urban command center, city surveillance platform, traffic management, emergency response, crowd analytics, smart city solution',
+    title: 'Smart City Enterprise Command Center | Urban Command Center | VMukti',
+    description: 'VMukti Enterprise Command Center for smart cities: Unified urban command center with traffic management, crowd analytics, emergency coordination, and multi-agency integration. Deployed across 50+ cities.',
+    keywords: 'smart city Enterprise Command Center, urban command center, city surveillance platform, traffic management, emergency response, crowd analytics, smart city solution',
     canonicalUrl: 'https://www.vmukti.com/industry/smart-city',
     ogImage: 'https://www.vmukti.com/og/smart-city.jpg',
     ogType: 'website',
@@ -211,7 +211,7 @@ export const seoConfig = {
   // Industries - Government
   industryGovernment: {
     title: 'Government & Public Sector Surveillance Platform | STQC Certified | VMukti',
-    description: 'VMukti government solutions: STQC-certified cloud VMS and ICCC for public sector. Facility security, border monitoring, critical infrastructure protection. Trusted by 50+ government agencies.',
+    description: 'VMukti government solutions: STQC-certified cloud VMS and Enterprise Command Center for public sector. Facility security, border monitoring, critical infrastructure protection. Trusted by 50+ government agencies.',
     keywords: 'government VMS, public sector surveillance, STQC certified, critical infrastructure, border security, government command center, public safety platform',
     canonicalUrl: 'https://www.vmukti.com/industry/government',
     ogImage: 'https://www.vmukti.com/og/government.jpg',
@@ -357,9 +357,9 @@ export const seoConfig = {
 
   // Blog Page
   blog: {
-    title: 'VMukti Blog | Enterprise VMS, ICCC & Surveillance Technology Insights',
-    description: 'VMukti blog: Enterprise cloud VMS trends, ICCC smart city insights, AI video analytics, surveillance industry analysis, and thought leadership from 18+ years of experience.',
-    keywords: 'enterprise VMS blog, ICCC insights, surveillance technology, AI analytics trends, cloud VMS industry, smart city technology',
+    title: 'VMukti Blog | Enterprise VMS, Enterprise Command Center & Surveillance Technology Insights',
+    description: 'VMukti blog: Enterprise cloud VMS trends, Enterprise Command Center smart city insights, AI video analytics, surveillance industry analysis, and thought leadership from 18+ years of experience.',
+    keywords: 'enterprise VMS blog, Enterprise Command Center insights, surveillance technology, AI analytics trends, cloud VMS industry, smart city technology',
     canonicalUrl: 'https://www.vmukti.com/blog',
     ogImage: 'https://www.vmukti.com/og/blog.jpg',
     ogType: 'website',
@@ -368,9 +368,9 @@ export const seoConfig = {
 
   // Contact Page
   contact: {
-    title: 'Contact VMukti | Enterprise VMS & ICCC Solutions | Global Support',
-    description: 'Contact VMukti Solutions for enterprise cloud VMS, EMS, and ICCC platform inquiries. Global headquarters in Ahmedabad with support across Middle East, Africa, Southeast Asia, and Europe.',
-    keywords: 'contact VMukti, enterprise VMS inquiry, ICCC demo, surveillance consultation, global support, VMS pricing, enterprise surveillance contact',
+    title: 'Contact VMukti | Enterprise VMS & Enterprise Command Center Solutions | Global Support',
+    description: 'Contact VMukti Solutions for enterprise cloud VMS, EMS, and Enterprise Command Center inquiries. Global headquarters in Ahmedabad with support across Middle East, Africa, Southeast Asia, and Europe.',
+    keywords: 'contact VMukti, enterprise VMS inquiry, Enterprise Command Center demo, surveillance consultation, global support, VMS pricing, enterprise surveillance contact',
     canonicalUrl: 'https://www.vmukti.com/contact-us',
     ogImage: 'https://www.vmukti.com/og/contact.jpg',
     ogType: 'website',
@@ -380,7 +380,7 @@ export const seoConfig = {
   // Careers Page
   careers: {
     title: 'Careers at VMukti | NASSCOM Top 50 | AI & Cloud Engineering',
-    description: 'Join VMukti Solutions - NASSCOM Top 50 Emerging Product Company. Build enterprise VMS, ICCC, and AI surveillance platforms serving global markets.',
+    description: 'Join VMukti Solutions - NASSCOM Top 50 Emerging Product Company. Build enterprise VMS, Enterprise Command Center, and AI surveillance platforms serving global markets.',
     keywords: 'VMukti careers, AI engineering jobs, cloud VMS development, surveillance technology careers, NASSCOM Top 50',
     canonicalUrl: 'https://www.vmukti.com/careers',
     ogImage: 'https://www.vmukti.com/og/careers.jpg',
@@ -410,9 +410,9 @@ export const siteDefaults = {
   siteName: 'VMukti Solutions',
   siteUrl: 'https://www.vmukti.com',
   twitterHandle: '@VMuktiSolutions',
-  defaultTitle: 'VMukti | Enterprise Cloud VMS, EMS & ICCC Platform | 18+ Years',
-  defaultDescription: 'VMukti Solutions: STQC-certified enterprise cloud VMS, EMS, and ICCC platform. 900+ global deployments, 1B+ camera feeds processed. Trusted by governments and enterprises worldwide.',
-  defaultKeywords: 'enterprise cloud VMS, video management system, ICCC platform, EMS enterprise management, STQC certified, global surveillance platform',
+  defaultTitle: 'VMukti | Enterprise Cloud VMS, EMS & Enterprise Command Center | 18+ Years',
+  defaultDescription: 'VMukti Solutions: STQC-certified enterprise cloud VMS, EMS, and Enterprise Command Center. 900+ global deployments, 1B+ camera feeds processed. Trusted by governments and enterprises worldwide.',
+  defaultKeywords: 'enterprise cloud VMS, video management system, Enterprise Command Center, EMS enterprise management, STQC certified, global surveillance platform',
   locale: 'en',
   companyName: 'VMukti Solutions Pvt. Ltd.',
   founded: '2007',
@@ -427,7 +427,7 @@ export const siteDefaults = {
   // Target regions
   targetMarkets: ['Middle East', 'Africa', 'Southeast Asia', 'Latin America', 'Europe'],
   // Core platforms
-  corePlatforms: ['Cloud VMS', 'EMS', 'ICCC'],
+  corePlatforms: ['Cloud VMS', 'EMS', 'Enterprise Command Center'],
   // Certifications
   certifications: ['STQC', 'NASSCOM Top 50', 'IIM-A Incubated'],
 };

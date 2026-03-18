@@ -22,7 +22,7 @@ const ROUTE_LABELS = {
   'solution': 'Solutions',
   'video-management-system': 'Video Management System (VMS)',
   'enterprise-management-system': 'Enterprise Management System (EMS)',
-  'integrated-command-control-center': 'Integrated Command & Control Center (ICCC)',
+  'integrated-command-control-center': 'Enterprise Command Center',
   'ai-video-analytics': 'AI Video Analytics',
   'face-recognition': 'Face Recognition',
   'anpr-lpr': 'ANPR / LPR',

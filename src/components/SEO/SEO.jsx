@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 /**
  * SEO Component for VMukti Solutions
  * Handles all SEO meta tags, Open Graph tags, Twitter Card tags, and structured data
- * Global enterprise positioning for VMS, EMS, ICCC platforms
+ * Global enterprise positioning for VMS, EMS, Enterprise Command Centers
  *
  * Props:
  * - title (string): Page title
@@ -50,11 +50,11 @@ const SEO = ({
 
   // Fallback description if not provided
   const finalDescription = description ||
-    'VMukti Solutions: STQC-certified enterprise cloud VMS, EMS, and ICCC platform. 900+ global deployments, 1B+ camera feeds processed.';
+    'VMukti Solutions: STQC-certified enterprise cloud VMS, EMS, and Enterprise Command Center. 900+ global deployments, 1B+ camera feeds processed.';
 
   // Default keywords if not provided
   const finalKeywords = keywords ||
-    'enterprise cloud VMS, video management system, ICCC platform, EMS, STQC certified, global surveillance';
+    'enterprise cloud VMS, video management system, Enterprise Command Center, EMS, STQC certified, global surveillance';
 
   // Ensure absolute URL for og:image
   const finalOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;

@@ -11,7 +11,7 @@ import {
 
 /**
  * SEORouter - Automatically applies correct SEO meta tags based on current route
- * Global enterprise VMS/EMS/ICCC positioning
+ * Global enterprise VMS/EMS/Enterprise Command Center positioning
  * Drop this component inside your Router and it handles everything.
  */
 const SEORouter = () => {
@@ -40,8 +40,8 @@ const SEORouter = () => {
         'cloud-vms': 'productVMS',
         'enterprise-management-system': 'productEMS',
         'ems': 'productEMS',
-        'iccc': 'productICCC',
-        'command-control-center': 'productICCC',
+        'iccc': 'productEnterprise Command Center',
+        'command-control-center': 'productEnterprise Command Center',
         'cloudai': 'solutionCloudAI',
         'cloud-ai': 'solutionCloudAI',
         'genai': 'solutionGenAI',
@@ -103,7 +103,7 @@ const SEORouter = () => {
     // Product/platform pages (legacy URL patterns)
     if (clean.includes('vms')) return 'productVMS';
     if (clean.includes('ems')) return 'productEMS';
-    if (clean.includes('iccc')) return 'productICCC';
+    if (clean.includes('iccc')) return 'productEnterprise Command Center';
 
     // Skip SEO meta for SEO Landing Pages - they set their own Helmet
     // Check for expansion page routes: /:category/:pageSlug patterns
@@ -144,7 +144,7 @@ const SEORouter = () => {
     if (pageKey === 'productEMS') {
       schemas.push(vmuktiPlatforms.ems);
     }
-    if (pageKey === 'productICCC') {
+    if (pageKey === 'productEnterprise Command Center') {
       schemas.push(vmuktiPlatforms.iccc);
     }
 

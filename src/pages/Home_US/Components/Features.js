@@ -11,7 +11,7 @@ import {
 const featuresData = [
   {
     title: "Smart Cities & Public Safety",
-    description: "city-wide monitoring, Smart City Command \n Center USA, ICCC command centers",
+    description: "city-wide monitoring, Smart City Command \n Center USA, Enterprise Command Center command centers",
     image: "/assets/smart-cities-icon.png",
   },
   {

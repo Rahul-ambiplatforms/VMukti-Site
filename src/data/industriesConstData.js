@@ -154,7 +154,7 @@ const industriesData = {
           image: "../../assets/result_industry_man_5.png",
           heading: "Seamless Connectivity",
           description:
-            "Your surveillance network shouldn’t just be smart, it should be strategic. Seamlessly integrated with VMS, EMS, or ICCC, our system enables a unified command layer for faster, data-driven decisions across your factory floor.",
+            "Your surveillance network shouldn’t just be smart, it should be strategic. Seamlessly integrated with VMS, EMS, or Enterprise Command Center, our system enables a unified command layer for faster, data-driven decisions across your factory floor.",
         },
         {
           image: "../../assets/result_industry_man_6.png",
@@ -1383,7 +1383,7 @@ const industriesData = {
       benefits: [
         {
           image: "../../assets/result_industry_election_1.png",
-          heading: "Customised ICCC",
+          heading: "Customised Enterprise Command Center",
           description:
             "Your election operations demand precision, our surveillance platform delivers live visual command, GPS-synced tracking and seamless system integration for secure, real-time oversight and swift electoral coordination.",
         },
@@ -2159,14 +2159,14 @@ const industriesData = {
     ],
   },
   smartcity: {
-    metatitle: "AI Smart City Monitoring & ICCC Solutions in USA",
+    metatitle: "AI Enterprise Campus Monitoring & Enterprise Command Center Solutions in USA",
     metadescription:
-      "VMukti powers smart cities in the USA with AI video surveillance, ICCC platforms, GIS mapping, and real-time alerts to enhance urban safety and operational efficiency.",
+      "VMukti powers enterprise campuses in the USA with AI video surveillance, Enterprise Command Centers, GIS mapping, and real-time alerts to enhance urban safety and operational efficiency.",
     ogImage: "https://www.vmukti.com/assets/smartcity_mockup.png",
-    slug: "smart-city",
+    slug: "enterprise-campus",
     title: [
       {
-        text: "Elevating Urban Safety with Computer Vision in Smart City",
+        text: "Elevating Urban Safety with Computer Vision in Enterprise Campus",
         color: "black",
       },
     ],
@@ -2237,7 +2237,7 @@ const industriesData = {
       {
         id: "section2",
         mainHeading:
-          "Smart Monitoring of Urban Transit via Computer Vision for Smart City Operations",
+          "Smart Monitoring of Urban Transit via Computer Vision for Enterprise Campus Operations",
         bgColor: "blue",
         features: [
           {
@@ -2265,7 +2265,7 @@ const industriesData = {
             id: "feat2-4",
             title: "Pool Safety Alert",
             description:
-              "VMukti delivers high-precision drowning detection built for smart cities giving your teams real-time ponds, lakes, rivers surveillance for faster emergency coordination and unmatched safety assurance in high-density public zones.",
+              "VMukti delivers high-precision drowning detection built for enterprise campuses giving your teams real-time ponds, lakes, rivers surveillance for faster emergency coordination and unmatched safety assurance in high-density public zones.",
             image: "../../assets/feat2_industry_smcity_4.webp",
           },
           {
@@ -2317,7 +2317,7 @@ const industriesData = {
 
     keyBenefits: {
       heading:
-        "Greater Peace of Mind with a Smart City Video Surveillance Solution",
+        "Greater Peace of Mind with a Enterprise Campus Video Surveillance Solution",
       description:
         "VMukti empowers your city with real-time computer vision built for impact streamlining traffic, enhancing public safety and enabling data-driven governance that scales with your ambitions for smarter, faster and more sustainable urban environments.",
       benefits: [
@@ -2337,7 +2337,7 @@ const industriesData = {
           image: "../../assets/result_industry_smartcity_3.png",
           heading: "Improved Traffic Flow",
           description:
-            "Your smart city demands more than monitoring. VMukti's vision software delivers adaptive traffic intelligence, precision signal control, rule violation spotting and fluid mobility built for tomorrow's urban infrastructure.",
+            "Your enterprise campus demands more than monitoring. VMukti's vision software delivers adaptive traffic intelligence, precision signal control, rule violation spotting and fluid mobility built for tomorrow's urban infrastructure.",
         },
         {
           image: "../../assets/result_industry_smartcity_4.png",
@@ -2349,13 +2349,13 @@ const industriesData = {
           image: "../../assets/result_industry_smartcity_5.png",
           heading: "Sustainability",
           description:
-            "Our smart city video surveillance solution helps authorities make informed decisions to optimize resource consumption and drive energy-efficient practices and a sustainable urban environment.",
+            "Our enterprise campus video surveillance solution helps authorities make informed decisions to optimize resource consumption and drive energy-efficient practices and a sustainable urban environment.",
         },
         {
           image: "../../assets/result_industry_smartcity_6.png",
           heading: "Enhanced Security",
           description:
-            "VMukti delivers intelligent vision infrastructure for smart cities enabling instant threat detection, seamless emergency coordination and always-on urban oversight built for high-security, high-density environments.",
+            "VMukti delivers intelligent vision infrastructure for enterprise campuses enabling instant threat detection, seamless emergency coordination and always-on urban oversight built for high-security, high-density environments.",
         },
       ],
     },
@@ -2363,15 +2363,15 @@ const industriesData = {
 
     cta: {
       textLines: [
-        "Detect Issues in Real-Time – Experience Our Computer Vision Solution for Smart Cities",
-        // "Vision Solution for Smart Cities",
+        "Detect Issues in Real-Time – Experience Our Computer Vision Solution for Enterprise Campuses",
+        // "Vision Solution for Enterprise Campuses",
       ],
       href: "contact-us",
     },
 
     workflow: {
       heading:
-        "How We Provide Tailored Video Surveillance Solution for Smart City",
+        "How We Provide Tailored Video Surveillance Solution for Enterprise Campus",
       image: "smartcity_workflow.png",
       image_mobile: "smartcity_workflow_mobile.png",
     },
@@ -2380,10 +2380,10 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "AI-Powered Smart City Monitoring & ICCC Solutions | VMukti Solutions",
+        name: "AI-Powered Enterprise Campus Monitoring & Enterprise Command Center Solutions | VMukti Solutions",
         description:
-          "VMukti powers smart cities with AI video surveillance, ICCC, GIS mapping, and real-time alerts for efficient urban management and faster decision-making.",
-        url: "https://www.vmukti.com/industry/smart-city/",
+          "VMukti powers enterprise campuses with AI video surveillance, Enterprise Command Center, GIS mapping, and real-time alerts for efficient urban management and faster decision-making.",
+        url: "https://www.vmukti.com/industry/enterprise-campus/",
         datePublished: "2006-11-10",
         dateModified: "2026-02-20",
         publisher: {
@@ -2409,7 +2409,7 @@ const industriesData = {
           url: "Add Image Link",
           width: 174,
           height: 123,
-          caption: "Computer Vision for Smart City",
+          caption: "Computer Vision for Enterprise Campus",
         },
         inLanguage: "en-US",
       },
@@ -2434,8 +2434,8 @@ const industriesData = {
           {
             "@type": "ListItem",
             position: 3,
-            name: "Smart City",
-            item: "https://www.vmukti.com/industry/smart-city/",
+            name: "Enterprise Campus",
+            item: "https://www.vmukti.com/industry/enterprise-campus/",
           },
         ],
       },
@@ -2444,37 +2444,37 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "Service",
-        serviceType: "Computer Vision in Smart City",
-        url: "https://www.vmukti.com/industry/smart-city/",
+        serviceType: "Computer Vision in Enterprise Campus",
+        url: "https://www.vmukti.com/industry/enterprise-campus/",
         provider: { "@type": "Organization", name: "VMukti Solutions" },
         areaServed: {
           "@type": "Country",
           name: "India, United States, United Kingdom, UAE, Canada",
         },
         description:
-          "Improve urban safety with our smart city surveillance solutions using smart cameras providing traffic detection, real-time insights, proactive crime prevention.",
+          "Improve urban safety with our enterprise campus surveillance solutions using smart cameras providing traffic detection, real-time insights, proactive crime prevention.",
       },
       // FAQ Schema
 
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        url: "https://www.vmukti.com/industry/smart-city/",
+        url: "https://www.vmukti.com/industry/enterprise-campus/",
         mainEntity: [
           {
             "@type": "Question",
             name: "How does the AI model handle low-light or adverse weather conditions in real-time detection?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "VMukti’s visual solutions for smart city utilizes advanced AI algorithms and image processing techniques that enhance detection in low-light or adverse weather conditions, ensuring reliable surveillance even in challenging environments.",
+              text: "VMukti’s visual solutions for enterprise campus utilizes advanced AI algorithms and image processing techniques that enhance detection in low-light or adverse weather conditions, ensuring reliable surveillance even in challenging environments.",
             },
           },
           {
             "@type": "Question",
-            name: "How does edge processing reduce bandwidth consumption in smart city surveillance?",
+            name: "How does edge processing reduce bandwidth consumption in enterprise campus surveillance?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Our video analytics for smart city reduces bandwidth consumption by processing high-resolution video streams locally, wherever data is captured. This minimizes the need for transmitting large video files, enabling real-time monitoring while optimizing network usage.",
+              text: "Our video analytics for enterprise campus reduces bandwidth consumption by processing high-resolution video streams locally, wherever data is captured. This minimizes the need for transmitting large video files, enabling real-time monitoring while optimizing network usage.",
             },
           },
           {
@@ -2728,8 +2728,8 @@ const industriesData = {
           {
             "@type": "ListItem",
             position: 3,
-            name: "Smart City",
-            item: "https://www.vmukti.com/industry/smart-city/",
+            name: "Enterprise Campus",
+            item: "https://www.vmukti.com/industry/enterprise-campus/",
           },
         ],
       },
@@ -5014,7 +5014,7 @@ const industriesData = {
   government: {
     metatitle: "Government Video Surveillance & AI Monitoring Solutions in USA",
     metadescription:
-      "VMukti provides AI-driven surveillance solutions in the USA for government agencies with advanced analytics, multi-camera control, ICCC integration, and real-time threat detection.",
+      "VMukti provides AI-driven surveillance solutions in the USA for government agencies with advanced analytics, multi-camera control, Enterprise Command Center integration, and real-time threat detection.",
     ogImage: "https://www.vmukti.com/assets/government_mockup.png",
     slug: "government",
     title: [
