@@ -40,8 +40,8 @@ const SEORouter = () => {
         'cloud-vms': 'productVMS',
         'enterprise-management-system': 'productEMS',
         'ems': 'productEMS',
-        'iccc': 'productEnterprise Command Center',
-        'command-control-center': 'productEnterprise Command Center',
+        'iccc': 'productECC',
+        'command-control-center': 'productECC',
         'cloudai': 'solutionCloudAI',
         'cloud-ai': 'solutionCloudAI',
         'genai': 'solutionGenAI',
@@ -103,7 +103,7 @@ const SEORouter = () => {
     // Product/platform pages (legacy URL patterns)
     if (clean.includes('vms')) return 'productVMS';
     if (clean.includes('ems')) return 'productEMS';
-    if (clean.includes('iccc')) return 'productEnterprise Command Center';
+    if (clean.includes('iccc')) return 'productECC';
 
     // Skip SEO meta for SEO Landing Pages - they set their own Helmet
     // Check for expansion page routes: /:category/:pageSlug patterns
@@ -144,7 +144,7 @@ const SEORouter = () => {
     if (pageKey === 'productEMS') {
       schemas.push(vmuktiPlatforms.ems);
     }
-    if (pageKey === 'productEnterprise Command Center') {
+    if (pageKey === 'productECC') {
       schemas.push(vmuktiPlatforms.iccc);
     }
 

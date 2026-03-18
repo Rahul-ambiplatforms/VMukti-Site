@@ -62,7 +62,7 @@ export const seoConfig = {
   },
 
   // Products - Enterprise Command Center
-  productEnterprise Command Center: {
+  productECC: {
     title: 'Enterprise Command Center | Integrated Command & Control Center | Smart City | VMukti',
     description: 'VMukti Enterprise Command Center: Unified command and control center for smart cities and enterprise campuses. Traffic management, emergency response, crowd analytics, multi-agency coordination. Deployed across 50+ cities.',
     keywords: 'Enterprise Command Center, integrated command control center, smart city platform, unified command center, traffic management, emergency response, urban surveillance, city operations center',
