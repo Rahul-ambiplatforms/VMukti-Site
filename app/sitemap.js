@@ -1,7 +1,7 @@
 import { getAllPages } from '../lib/seo-pages';
 import { getAllBlogSlugs } from '../lib/api';
 
-const SITE_URL = 'https://www.vmukti.com';
+const SITE_URL = 'https://vmukti.com';
 
 export default async function sitemap() {
   // 1. Static pages
