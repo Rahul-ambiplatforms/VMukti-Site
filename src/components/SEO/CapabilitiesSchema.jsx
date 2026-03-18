@@ -46,7 +46,7 @@ const EMS_PLATFORM_SCHEMA = {
 };
 
 // ── VMukti Enterprise Command Center Schema ──
-const Enterprise Command Center_PLATFORM_SCHEMA = {
+const ECC_PLATFORM_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: 'VMukti Enterprise Command Center - Integrated Command & Control Center',
@@ -161,7 +161,7 @@ const CapabilitiesSchema = ({ includeVMS = true, includeEMS = true, includeEnter
       )}
       {includeEnterprise Command Center && (
         <Helmet>
-          <script type="application/ld+json">{JSON.stringify(Enterprise Command Center_PLATFORM_SCHEMA)}</script>
+          <script type="application/ld+json">{JSON.stringify(ECC_PLATFORM_SCHEMA)}</script>
         </Helmet>
       )}
       {includeCloudAI && (
