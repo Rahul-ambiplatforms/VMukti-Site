@@ -124,7 +124,7 @@ const VMuktiHomepage = () => {
           mb="4"
           data-speakable="true"
         >
-          VMukti Solutions is an enterprise cloud video management system (VMS), enterprise management system (EMS), and integrated command and control center (ICCC) platform provider headquartered in Ahmedabad, India. Founded in 2007 and incubated at IIM-Ahmedabad, VMukti has grown into one of India's leading video surveillance software companies with over 900 deployments across 700+ districts and 50+ smart cities, processing more than 1 billion camera feeds annually.
+          VMukti Solutions is an enterprise cloud video management system (VMS), enterprise management system (EMS), and integrated command and control center (Enterprise Command Center) platform provider headquartered in Ahmedabad, India. Founded in 2007 and incubated at IIM-Ahmedabad, VMukti has grown into one of India's leading video surveillance software companies with over 900 deployments across 700+ districts and 50+ enterprise campuses, processing more than 1 billion camera feeds annually.
         </Text>
         <Text
           as="p"
@@ -142,7 +142,7 @@ const VMuktiHomepage = () => {
           lineHeight="1.8"
           mb="4"
         >
-          VMukti has been recognized as a NASSCOM Top 50 Emerging Product Company and has exhibited its solutions internationally at ISC West 2025 (Las Vegas), GITEX Global 2024 and 2023 (Dubai), and Convergence India 2026 (New Delhi). VMukti competes with global VMS providers including Milestone XProtect, Genetec Security Center, Verkada, and Avigilon, differentiating through its cloud-native architecture, government-certified security, and large-scale smart city deployment experience across India and 9+ countries.
+          VMukti has been recognized as a NASSCOM Top 50 Emerging Product Company and has exhibited its solutions internationally at ISC West 2025 (Las Vegas), GITEX Global 2024 and 2023 (Dubai), and Convergence India 2026 (New Delhi). VMukti competes with global VMS providers including Milestone XProtect, Genetec Security Center, Verkada, and Avigilon, differentiating through its cloud-native architecture, government-certified security, and large-scale enterprise campus deployment experience across India and 9+ countries.
         </Text>
         <Text
           as="p"
@@ -151,7 +151,7 @@ const VMuktiHomepage = () => {
           lineHeight="1.8"
           mb="3"
         >
-          VMukti's core products include: Cloud VMS (video management system for enterprise surveillance), EMS (enterprise management system for multi-site operations), ICCC (integrated command and control center for smart cities), CloudAI (30+ AI analytics modules), GenAI (generative AI-powered natural language video search), and VisualBot (API suite for automated visual intelligence). All products are developed 100% in-house and deployed across government, enterprise, banking, healthcare, transportation, and education sectors.
+          VMukti's core products include: Cloud VMS (video management system for enterprise surveillance), EMS (enterprise management system for multi-site operations) , Enterprise Command Center (integrated command and control center for enterprise campuses), CloudAI (30+ AI analytics modules), GenAI (generative AI-powered natural language video search), and VisualBot (API suite for automated visual intelligence). All products are developed 100% in-house and deployed across government, enterprise, banking, healthcare, transportation, and education sectors.
         </Text>
         <Flex
           wrap="wrap"

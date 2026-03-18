@@ -17,11 +17,11 @@ const DEFAULT_FAQS = {
   home: [
     {
       question: 'What is VMukti?',
-      answer: 'VMukti is a global enterprise platform offering Video Management System (VMS), Enterprise Management System (EMS), and Integrated Command & Control Center (ICCC) solutions for video surveillance, AI analytics, and centralized security management across industries worldwide.',
+      answer: 'VMukti is a global enterprise platform offering Video Management System (VMS), Enterprise Management System (EMS), and Integrated Command & Control Center (Enterprise Command Center) solutions for video surveillance, AI analytics, and centralized security management across industries worldwide.',
     },
     {
       question: 'Which industries does VMukti serve?',
-      answer: 'VMukti serves 16+ industries including banking & finance, healthcare, smart cities, retail, manufacturing, education, oil & gas, transportation, government, hospitality, critical infrastructure, construction, agriculture, ports & maritime, and mining.',
+      answer: 'VMukti serves 16+ industries including banking & finance, healthcare, enterprise campuses, retail, manufacturing, education, oil & gas, transportation, government, hospitality, critical infrastructure, construction, agriculture, ports & maritime, and mining.',
     },
     {
       question: 'Does VMukti offer AI-powered video analytics?',
@@ -33,7 +33,7 @@ const DEFAULT_FAQS = {
     },
     {
       question: 'How can I request a demo of VMukti solutions?',
-      answer: 'You can request a free demo by visiting our Book a Demo page at vmukti.com/book-a-demo. Our team will schedule a personalized walkthrough of our VMS, EMS, or ICCC platform tailored to your industry needs.',
+      answer: 'You can request a free demo by visiting our Book a Demo page at vmukti.com/book-a-demo. Our team will schedule a personalized walkthrough of our VMS, EMS, or Enterprise Command Center platform tailored to your industry needs.',
     },
   ],
   vms: [
@@ -54,8 +54,8 @@ const DEFAULT_FAQS = {
   ],
   iccc: [
     {
-      question: 'What is an Integrated Command & Control Center (ICCC)?',
-      answer: 'An ICCC is a centralized command center that integrates multiple city/campus systems including CCTV surveillance, traffic management, emergency response, environmental monitoring, and public safety systems into a unified operational platform.',
+      question: 'What is an Integrated Command & Control Center (Enterprise Command Center)?',
+      answer: 'An Enterprise Command Center is a centralized command center that integrates multiple city/campus systems including CCTV surveillance, traffic management, emergency response, environmental monitoring, and public safety systems into a unified operational platform.',
     },
   ],
 };

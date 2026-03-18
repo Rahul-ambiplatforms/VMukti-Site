@@ -161,7 +161,7 @@ const HeroSection = () => {
                   </Text>
                   ,{" "}
                   <Text as="span" fontWeight="700">
-                    smart cities
+                    enterprise campuses
                   </Text>
                   ,{" "}
                   <Text as="span" fontWeight="700">

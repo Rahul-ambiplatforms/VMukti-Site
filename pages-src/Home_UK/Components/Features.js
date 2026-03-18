@@ -10,8 +10,8 @@ import {
 
 const featuresData = [
   {
-    title: "Smart Cities & Public Safety",
-    description: "city-wide command, emergency response, \n Smart City Command Center UK",
+    title: "Enterprise Campuses & Public Safety",
+    description: "city-wide command, emergency response, \n Enterprise Campus Command Center UK",
     image: "/assets/smart-cities-icon.png",
   },
   {

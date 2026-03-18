@@ -2,13 +2,13 @@
 export const homeSolutions = {
   heading: "End-to-End Cloud Video Surveillance System for All Industries",
   description:
-    "Power your operations with our next-gen AI surveillance suite featuring intelligent VMS, event-driven EMS, strategic ICCC integrations and advanced Cloud+AI orchestration. From enterprise campuses to critical infrastructure, our systems are designed for decision-makers who demand control, security and scale without compromise.",
+    "Power your operations with our next-gen AI surveillance suite featuring intelligent VMS, event-driven EMS, strategic Enterprise Command Center integrations and advanced Cloud+AI orchestration. From enterprise campuses to critical infrastructure, our systems are designed for decision-makers who demand control, security and scale without compromise.",
   solutions: [
     {
       heading1: "Cloud VMS",
       heading2: "Cloud Video Management System",
       content:
-        "A cloud based video surveillance and cloud video surveillance solution for centralized monitoring across multi-location enterprises—ideal for smart cities, retail chains, government agencies, and logistics networks.",
+        "A cloud based video surveillance and cloud video surveillance solution for centralized monitoring across multi-location enterprises—ideal for enterprise campuses, retail chains, government agencies, and logistics networks.",
       image_certi: "/assets/home_solution_certi.png",
       image: "/assets/home_solution_1.png",
       image_mobile: "/assets/home_solution_mobile_1.png",
@@ -25,10 +25,10 @@ export const homeSolutions = {
       path: "/solution/enterprise-management-system",
     },
     {
-      heading1: "ICCC",
+      heading1: "Enterprise Command Center",
       heading2: "Integrated Command & Control Center",
       content:
-        "Real-time emergency response center for smart city command center USA, public safety, transportation, and large government operations. Supports integrated command and control centre & integrated command control center requirements.",
+        "Real-time emergency response center for enterprise campus command center USA, public safety, transportation, and large government operations. Supports integrated command and control centre & integrated command control center requirements.",
       image_certi: "/assets/home_solution_certi.png",
       image: "/assets/home_solution_3.png",
       image_mobile: "/assets/home_solution_mobile_3.png",
@@ -68,7 +68,7 @@ export const homeSolutions = {
       heading1: "Flying Squad",
       heading2: "Flying Squad Vehicle",
       content:
-        "Mobile, vehicle-mounted ICCC surveillance platform USA for incident response, law enforcement, and field operations.",
+        "Mobile, vehicle-mounted Enterprise Command Center surveillance platform USA for incident response, law enforcement, and field operations.",
       image_certi: "/assets/home_solution_certi.png",
       image: "/assets/home_solution_7.png",
       image_mobile: "/assets/home_solution_mobile_7.png",

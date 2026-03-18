@@ -50,14 +50,14 @@ export default function SolutionDetailsClient({ solutionName }) {
       },
       'iccc': {
         name: 'VMukti Integrated Command & Control Center',
-        description: 'Unified command center integrating video, IoT, access control, and emergency systems for smart city operations.',
+        description: 'Unified command center integrating video, IoT, access control, and emergency systems for enterprise campus operations.',
         url: 'https://www.vmukti.com/solution/integrated-command-control-center',
         features: 'Unified Dashboard, Video Wall, GIS Integration, IoT Integration, Emergency Response, Multi-agency Coordination',
         aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', bestRating: '5', ratingCount: '87', reviewCount: '52' },
       },
       'integrated-command-control-center': {
         name: 'VMukti Integrated Command & Control Center',
-        description: 'Unified command center integrating video, IoT, access control, and emergency systems for smart city operations.',
+        description: 'Unified command center integrating video, IoT, access control, and emergency systems for enterprise campus operations.',
         url: 'https://www.vmukti.com/solution/integrated-command-control-center',
         features: 'Unified Dashboard, Video Wall, GIS Integration, IoT Integration, Emergency Response, Multi-agency Coordination',
         aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', bestRating: '5', ratingCount: '87', reviewCount: '52' },
@@ -95,9 +95,9 @@ export default function SolutionDetailsClient({ solutionName }) {
       },
       'flying-squad-vehicle': {
         name: 'VMukti Flying Squad Vehicle Surveillance System',
-        description: 'Mobile surveillance and rapid-response platform with GPS tracking, moving video monitoring, geo-fencing alerts, PTZ camera control, and ICCC integration.',
+        description: 'Mobile surveillance and rapid-response platform with GPS tracking, moving video monitoring, geo-fencing alerts, PTZ camera control, and Enterprise Command Center integration.',
         url: 'https://www.vmukti.com/solution/flying-squad-vehicle',
-        features: 'Live GPS Tracking, Moving Vehicle Surveillance, Geo-Fencing Alerts, PTZ Camera Control, Control Room Monitoring, ICCC Integration',
+        features: 'Live GPS Tracking, Moving Vehicle Surveillance, Geo-Fencing Alerts, PTZ Camera Control, Control Room Monitoring , Enterprise Command Center Integration',
       },
     };
     return configs[solutionName] || configs['video-management-system'];

@@ -24,7 +24,7 @@ const faqsData = {
         question:
           "What makes VMukti Solutions different from other surveillance providers?",
         answer:
-          "VMukti Solutions combines real-time threat detection, predictive analytics, and seamless integration with VMS, EMS, and ICCC. Our AI computer vision solution is powered by advanced software for delivering smarter, faster, and reliable surveillance than traditional CCTV.",
+          "VMukti Solutions combines real-time threat detection, predictive analytics, and seamless integration with VMS, EMS, and Enterprise Command Center. Our AI computer vision solution is powered by advanced software for delivering smarter, faster, and reliable surveillance than traditional CCTV.",
       },
     ],
   },
@@ -56,7 +56,7 @@ const faqsData = {
       {
         question: "Is VMukti's cloud video surveillance solution suitable for UK Enterprises and public sector?",
         answer:
-          "Yes. VMukti's platform is designed for enterprise and public sector requirements, supporting compliance-ready architecture, secure cloud infrastructure, and scalable deployments suitable for UK government, smart cities, and critical public services.",
+          "Yes. VMukti's platform is designed for enterprise and public sector requirements, supporting compliance-ready architecture, secure cloud infrastructure, and scalable deployments suitable for UK government, enterprise campuses, and critical public services.",
       },
       {
         question: "How secure is VMukti's cloud video surveillance platform?",
@@ -134,21 +134,21 @@ const faqsData = {
     title: "Answers to Frequently Asked Questions",
     qa: [
       {
-        question: "What are the benefits of ICCC over EVMS?",
+        question: "What are the benefits of Enterprise Command Center over EVMS?",
         answer:
-          "The benefits of ICCC include centralized monitoring, real-time coordination and integrated system response, offering faster, smarter decision-making than EVMS.",
+          "The benefits of Enterprise Command Center include centralized monitoring, real-time coordination and integrated system response, offering faster, smarter decision-making than EVMS.",
       },
       {
         question:
-          "What information is displayed on the ICCC’s geospatial interface?",
+          "What information is displayed on the Enterprise Command Center’s geospatial interface?",
         answer:
-          "The integrated command and control centre ICCC interface shows all active cameras, flying squad vehicle locations and key infrastructure points for situational awareness.",
+          "The integrated command and control centre Enterprise Command Center interface shows all active cameras, flying squad vehicle locations and key infrastructure points for situational awareness.",
       },
       {
         question:
-          "What detection analytics and reports are offered through ICCC?",
+          "What detection analytics and reports are offered through Enterprise Command Center?",
         answer:
-          "Our ICCC solutions features offer a wide range of ready-made analytics and also the flexibility to create custom analytics tailored to your specific needs.",
+          "Our Enterprise Command Center solutions features offer a wide range of ready-made analytics and also the flexibility to create custom analytics tailored to your specific needs.",
       },
     ],
   },
@@ -471,19 +471,19 @@ const faqsData = {
     ],
   },
   smartcity: {
-    title: "Frequently Asked Questions for Smart City Surveillance",
+    title: "Frequently Asked Questions for Enterprise Campus Surveillance",
     qa: [
       {
         question:
           "How does the AI model handle low-light or adverse weather conditions in real-time detection?",
         answer:
-          "VMukti’s visual solutions for smart city utilizes advanced AI algorithms and image processing techniques that enhance detection in low-light or adverse weather conditions, ensuring reliable surveillance even in challenging environments.",
+          "VMukti’s visual solutions for enterprise campus utilizes advanced AI algorithms and image processing techniques that enhance detection in low-light or adverse weather conditions, ensuring reliable surveillance even in challenging environments.",
       },
       {
         question:
-          "How does edge processing reduce bandwidth consumption in smart city surveillance?",
+          "How does edge processing reduce bandwidth consumption in enterprise campus surveillance?",
         answer:
-          "Our video analytics for smart city reduces bandwidth consumption by processing high-resolution video streams locally, wherever data is captured. This minimizes the need for transmitting large video files, enabling real-time monitoring while optimizing network usage.",
+          "Our video analytics for enterprise campus reduces bandwidth consumption by processing high-resolution video streams locally, wherever data is captured. This minimizes the need for transmitting large video files, enabling real-time monitoring while optimizing network usage.",
       },
       {
         question:

@@ -518,9 +518,9 @@ export const solutionsData = {
   },
 
   integratedcommandcontrolcenter: {
-    metetitle: "Integrated Command and Control Center (ICCC) Solutions in the USA",
+    metetitle: "Integrated Command and Control Center (Enterprise Command Center) Solutions in the USA",
     metadescription:
-      "VMukti’s integrated command and control center solutions in the USA combine live video, GIS mapping, AI alerts, and real-time coordination to enhance smart city operations and public safety.",
+      "VMukti’s integrated command and control center solutions in the USA combine live video, GIS mapping, AI alerts, and real-time coordination to enhance enterprise campus operations and public safety.",
     ogImage: "https://www.vmukti.com/assets/solution_iccc_dash.png",
     slug: "integrated-command-control-center",
     // Section 1: Hero section from the first image
@@ -543,9 +543,9 @@ export const solutionsData = {
 
     // Section 3: Features and Accordion from the third image
     features: {
-      heading: "Uplifting Urban Operations with ICCC Services",
+      heading: "Uplifting Urban Operations with Enterprise Command Center Services",
       description:
-        "The ICCC platform transforms urban safety with integrated live video, geo-mapping and AI analytics. It enables real-time oversight, rapid incident resolution, and connected communication between command centers and field units.",
+        "The Enterprise Command Center platform transforms urban safety with integrated live video, geo-mapping and AI analytics. It enables real-time oversight, rapid incident resolution, and connected communication between command centers and field units.",
       accordionItems: [
         {
           title: "Incident Management",
@@ -599,15 +599,15 @@ export const solutionsData = {
           // Image name changed from evms to iccc
           image: "/assets/result_solution_iccc_1.png",
           // Title and Description updated
-          title: "Smart City Coordination",
+          title: "Enterprise Campus Coordination",
           description:
-            "Our ICCC unites high-definition surveillance, autonomous incident management, and smart sensor fusion into a streamlined control suite crafted for flawless citywide response under any extreme condition.",
+            "Our Enterprise Command Center unites high-definition surveillance, autonomous incident management, and smart sensor fusion into a streamlined control suite crafted for flawless citywide response under any extreme condition.",
         },
         {
           image: "/assets/result_solution_iccc_2.png",
           title: "Compliance Readiness",
           description:
-            "With ICCC, every surveillance touchpoint is autonomously logged, AES-encrypted, and transformed into actionable compliance intelligence with zero manual effort required.",
+            "With Enterprise Command Center, every surveillance touchpoint is autonomously logged, AES-encrypted, and transformed into actionable compliance intelligence with zero manual effort required.",
         },
         {
           image: "/assets/result_solution_iccc_3.png",
@@ -631,21 +631,21 @@ export const solutionsData = {
           image: "/assets/result_solution_iccc_6.png",
           title: "Mass Event Management",
           description:
-            "ICCC Integrated Command and Control Centre prevents crowd disasters via AI-powered density tracking and facial recognition at stadiums/transit hubs.",
+            "Enterprise Command Center Integrated Command and Control Centre prevents crowd disasters via AI-powered density tracking and facial recognition at stadiums/transit hubs.",
         },
       ],
     },
     trusted: "Setting a New Benchmark for Control Centers",
     industry: {
-      heading: "Purpose-Built for ICCC Operations",
+      heading: "Purpose-Built for Enterprise Command Center Operations",
       description:
-        "Designed to strengthen command centers, our ICCC solutions enable real-time monitoring, smart detection and integrated response management. From public safety to traffic flow and emergency coordination. We support efficient, data-driven governance across critical urban zones.",
+        "Designed to strengthen command centers, our Enterprise Command Center solutions enable real-time monitoring, smart detection and integrated response management. From public safety to traffic flow and emergency coordination. We support efficient, data-driven governance across critical urban zones.",
     },
     // Section 5: CTA Banner from the fifth image
     cta: {
       textLines: [
-        "Upgrade Your Surveillance Network with Scalable ICCC Services for Any Industry",
-        // "ICCC Services for Any Industry",
+        "Upgrade Your Surveillance Network with Scalable Enterprise Command Center Services for Any Industry",
+        // "Enterprise Command Center Services for Any Industry",
       ],
       // text: "Elevate Your Surveillance Setup with Advanced Cloud VMS Service for Smarter Security",
       buttonText: "Let's talk",
@@ -654,10 +654,10 @@ export const solutionsData = {
 
     // Section 7: Why Choose Us from the seventh image
     whyChooseUs: {
-      heading: "Why Choose Us for ICCC?",
+      heading: "Why Choose Us for Enterprise Command Center?",
       description: [
-        "At VMukti, we deliver integrated command and control solutions that unify your entire surveillance ecosystem. Our ICCC platform combines real-time video feeds, GIS mapping, AI analytics, and incident management into one centralized hub, ensuring you never miss a critical moment and can respond instantly to any situation.",
-        "You get seamless coordination between field units and command centers with encrypted communication channels and role-based access controls. Our scalable ICCC architecture grows with your operations, whether you're managing a single facility or coordinating citywide smart city initiatives.",
+        "At VMukti, we deliver integrated command and control solutions that unify your entire surveillance ecosystem. Our Enterprise Command Center platform combines real-time video feeds, GIS mapping, AI analytics, and incident management into one centralized hub, ensuring you never miss a critical moment and can respond instantly to any situation.",
+        "You get seamless coordination between field units and command centers with encrypted communication channels and role-based access controls. Our scalable Enterprise Command Center architecture grows with your operations, whether you're managing a single facility or coordinating citywide enterprise campus initiatives.",
       ],
       images: ["/assets/solution_iccc_choose_1.png"],
     },
@@ -666,7 +666,7 @@ export const solutionsData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Integrated Command and Control Centre | Intelligent ICCC Solution",
+        name: "Integrated Command and Control Centre | Intelligent Enterprise Command Center Solution",
         description:
           "Delivering reliable and unmatched efficiency with our Integrated Command and Control Centre solutions which enhances operational control and decision-making.",
         url: "https://www.vmukti.com/solution/integrated-command-control-center/",
@@ -720,7 +720,7 @@ export const solutionsData = {
           {
             "@type": "ListItem",
             position: 3,
-            name: "ICCC",
+            name: "Enterprise Command Center",
             item: "https://www.vmukti.com/solution/integrated-command-control-center/",
           },
         ],
@@ -734,26 +734,26 @@ export const solutionsData = {
         mainEntity: [
           {
             "@type": "Question",
-            name: "What are the benefits of ICCC over EVMS?",
+            name: "What are the benefits of Enterprise Command Center over EVMS?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "The benefits of ICCC include centralized monitoring, real-time coordination and integrated system response, offering faster, smarter decision-making than EVMS.",
+              text: "The benefits of Enterprise Command Center include centralized monitoring, real-time coordination and integrated system response, offering faster, smarter decision-making than EVMS.",
             },
           },
           {
             "@type": "Question",
-            name: "What information is displayed on the ICCC’s geospatial interface?",
+            name: "What information is displayed on the Enterprise Command Center’s geospatial interface?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "The integrated command and control centre ICCC interface shows all active cameras, flying squad vehicle locations and key infrastructure points for situational awareness.",
+              text: "The integrated command and control centre Enterprise Command Center interface shows all active cameras, flying squad vehicle locations and key infrastructure points for situational awareness.",
             },
           },
           {
             "@type": "Question",
-            name: "What detection analytics and reports are offered through ICCC?",
+            name: "What detection analytics and reports are offered through Enterprise Command Center?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Our ICCC solutions features offer a wide range of ready-made analytics and also the flexibility to create custom analytics tailored to your specific needs.",
+              text: "Our Enterprise Command Center solutions features offer a wide range of ready-made analytics and also the flexibility to create custom analytics tailored to your specific needs.",
             },
           },
         ],
@@ -1034,7 +1034,7 @@ export const solutionsData = {
   flyingsquadvehicle: {
     metetitle: "Mobile Vehicle Surveillance & Monitoring System in the USA | VMukti FSV",
     metadescription:
-      "VMukti’s mobile vehicle surveillance system in the USA enables real-time GPS tracking, moving video surveillance, geo-fencing alerts, PTZ camera control, and ICCC integration.",
+      "VMukti’s mobile vehicle surveillance system in the USA enables real-time GPS tracking, moving video surveillance, geo-fencing alerts, PTZ camera control, and Enterprise Command Center integration.",
     ogImage: "https://www.vmukti.com/assets/solution_fsv_dash.png",
     slug: "flying-squad-vehicle",
     // Section 1: Hero section from the first image
@@ -1186,7 +1186,7 @@ export const solutionsData = {
         "@type": "WebPage",
         name: "Flying Squad Vehicle Surveillance | FSV Video Monitoring System",
         description:
-          "VMukti’s flying squad vehicle surveillance system enables live GPS tracking, moving video surveillance, geo-fencing alerts, PTZ camera control and ICCC monitoring.",
+          "VMukti’s flying squad vehicle surveillance system enables live GPS tracking, moving video surveillance, geo-fencing alerts, PTZ camera control and Enterprise Command Center monitoring.",
         url: "https://www.vmukti.com/solution/flying-squad-vehicle/",
         datePublished: "2006-11-10",
         dateModified: "2026-02-20",

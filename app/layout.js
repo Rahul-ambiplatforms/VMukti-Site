@@ -16,11 +16,11 @@ export const viewport = {
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'VMukti | Enterprise Cloud VMS, EMS & ICCC Platform | 18+ Years',
+    default: 'VMukti | Enterprise Cloud VMS, EMS & Enterprise Command Center | 18+ Years',
     template: '%s | VMukti Solutions',
   },
-  description: 'VMukti Solutions: STQC-certified enterprise cloud VMS, EMS, and ICCC platform. 900+ global deployments, 1B+ camera feeds processed. Trusted by governments and enterprises worldwide.',
-  keywords: ['enterprise cloud VMS', 'video management system', 'ICCC platform', 'EMS enterprise management', 'STQC certified surveillance', 'global VMS provider'],
+  description: 'VMukti Solutions: STQC-certified enterprise cloud VMS, EMS, and Enterprise Command Center platform. 900+ global deployments, 1B+ camera feeds processed. Trusted by governments and enterprises worldwide.',
+  keywords: ['enterprise cloud VMS', 'video management system', 'Enterprise Command Center platform', 'EMS enterprise management', 'STQC certified surveillance', 'global VMS provider'],
   authors: [{ name: 'VMukti Solutions' }],
   creator: 'VMukti Solutions',
   publisher: 'VMukti Solutions',
@@ -34,8 +34,8 @@ export const metadata = {
     locale: 'en_US',
     url: SITE_URL,
     siteName: 'VMukti Solutions',
-    title: 'VMukti | Enterprise Cloud VMS, EMS & ICCC Platform',
-    description: 'STQC-certified enterprise cloud VMS, EMS, and ICCC platform. 900+ global deployments.',
+    title: 'VMukti | Enterprise Cloud VMS, EMS & Enterprise Command Center',
+    description: 'STQC-certified enterprise cloud VMS, EMS, and Enterprise Command Center platform. 900+ global deployments.',
     images: [
       {
         url: `${SITE_URL}/og-image.jpg`,
@@ -48,8 +48,8 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@VMuktiSolution',
-    title: 'VMukti | Enterprise Cloud VMS, EMS & ICCC Platform',
-    description: 'STQC-certified enterprise cloud VMS, EMS, and ICCC platform.',
+    title: 'VMukti | Enterprise Cloud VMS, EMS & Enterprise Command Center',
+    description: 'STQC-certified enterprise cloud VMS, EMS, and Enterprise Command Center platform.',
     images: [`${SITE_URL}/og-image.jpg`],
   },
   robots: {
@@ -94,7 +94,7 @@ const organizationSchema = {
   url: 'https://www.vmukti.com',
   logo: 'https://www.vmukti.com/VMukti-logo.png',
   foundingDate: '2007',
-  description: 'Enterprise Cloud VMS, EMS & ICCC Platform Provider. 18+ years of innovation in video surveillance and intelligent operations management.',
+  description: 'Enterprise Cloud VMS, EMS & Enterprise Command Center Provider. 18+ years of innovation in video surveillance and intelligent operations management.',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'SG Business Hub, Off. SG Highway',
@@ -122,21 +122,21 @@ const organizationSchema = {
   ],
   award: ['NASSCOM Top 50 Emerging Companies', 'IIM-Ahmedabad Incubated', 'STQC Certified', 'ISO 27001:2022 Certified', 'ISO 9001:2015 Certified', 'Make in India Certified'],
   numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 50, maxValue: 200 },
-  knowsAbout: ['Cloud VMS', 'Enterprise Management System', 'ICCC', 'AI Video Analytics', 'Smart City Surveillance'],
+  knowsAbout: ['Cloud VMS', 'Enterprise Management System', 'Enterprise Command Center', 'AI Video Analytics', 'Enterprise Campus Surveillance'],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'VMukti Solutions Product Catalog',
     itemListElement: [
       { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti Cloud VMS', url: 'https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=vmukti' } },
       { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti EMS' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti ICCC Platform' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti Enterprise Command Center' } },
     ],
   },
   event: [
     {
       '@type': 'Event',
       name: 'VMukti at ISC West 2025',
-      description: 'VMukti Solutions exhibited its Cloud VMS, AI Video Analytics, and ICCC platform at ISC West 2025, the largest security industry trade show in the Americas.',
+      description: 'VMukti Solutions exhibited its Cloud VMS, AI Video Analytics, and Enterprise Command Center platform at ISC West 2025, the largest security industry trade show in the Americas.',
       startDate: '2025-04-02',
       endDate: '2025-04-04',
       eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
@@ -147,7 +147,7 @@ const organizationSchema = {
     {
       '@type': 'Event',
       name: 'VMukti at GITEX Global 2024',
-      description: 'VMukti Solutions showcased its enterprise Cloud VMS and smart city ICCC solutions at GITEX Global 2024, the world\'s largest tech exhibition in Dubai.',
+      description: 'VMukti Solutions showcased its enterprise Cloud VMS and enterprise campus Enterprise Command Center solutions at GITEX Global 2024, the world\'s largest tech exhibition in Dubai.',
       startDate: '2024-10-14',
       endDate: '2024-10-18',
       eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',

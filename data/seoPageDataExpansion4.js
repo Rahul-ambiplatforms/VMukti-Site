@@ -16,20 +16,20 @@ const seoPageDataExpansion4 = {
     "sections": [
       {
         "title": "Middle East Enterprise Surveillance",
-        "content": "The Middle East demands world-class surveillance infrastructure for mega-projects, critical oil and gas facilities, and smart city developments. VMukti cloud VMS delivers sub-100ms latency with edge nodes across GCC markets, full Arabic language support, and compliance with regional data residency requirements for UAE, Saudi Arabia, and Qatar enterprise deployments.",
+        "content": "The Middle East demands world-class surveillance infrastructure for mega-projects, critical oil and gas facilities, and enterprise campus developments. VMukti cloud VMS delivers sub-100ms latency with edge nodes across GCC markets, full Arabic language support, and compliance with regional data residency requirements for UAE, Saudi Arabia, and Qatar enterprise deployments.",
         "stats": [{"value": "Sub-100ms", "label": "Latency"}, {"value": "Arabic", "label": "Language Support"}, {"value": "99.9%", "label": "Uptime SLA"}],
         "features": ["Edge nodes across GCC markets", "Arabic language interface and support", "Regional data residency compliance", "Mega-project scalability to 50,000+ cameras"]
       },
       {
-        "title": "Smart City and Critical Infrastructure",
-        "content": "From NEOM and Riyadh smart city projects to Abu Dhabi critical infrastructure, VMukti cloud VMS provides the scalability and AI intelligence required for Middle East vision projects. AI-powered analytics, real-time dashboards, and multi-site management support the region ambitious infrastructure development goals.",
+        "title": "Enterprise Campus and Critical Infrastructure",
+        "content": "From NEOM and Riyadh enterprise campus projects to Abu Dhabi critical infrastructure, VMukti cloud VMS provides the scalability and AI intelligence required for Middle East vision projects. AI-powered analytics, real-time dashboards, and multi-site management support the region ambitious infrastructure development goals.",
         "stats": [{"value": "50,000+", "label": "Camera Scale"}, {"value": "AI", "label": "Analytics Built-in"}, {"value": "Multi-site", "label": "Unified Dashboard"}],
-        "features": ["Smart city ICCC integration", "Oil and gas facility monitoring", "Multi-site corporate campus management", "24/7 regional support team"]
+        "features": ["Smart city Enterprise Command Center integration", "Oil and gas facility monitoring", "Multi-site corporate campus management", "24/7 regional support team"]
       }
     ],
     "faqs": [
       {"q": "Does VMukti comply with UAE data residency requirements?", "a": "Yes, VMukti cloud VMS supports data residency configurations ensuring video data stays within UAE or specified GCC regions as required by local regulations."},
-      {"q": "Can VMukti handle mega-project scale in the Middle East?", "a": "VMukti cloud VMS scales from 100 to 50,000+ cameras without infrastructure changes, supporting mega-projects like smart cities, airports, and large-scale industrial complexes."},
+      {"q": "Can VMukti handle mega-project scale in the Middle East?", "a": "VMukti cloud VMS scales from 100 to 50,000+ cameras without infrastructure changes, supporting mega-projects like enterprise campuses, airports, and large-scale industrial complexes."},
       {"q": "Does VMukti support Arabic language?", "a": "Yes, VMukti cloud VMS includes full Arabic language interface, RTL support, and Arabic-speaking regional support teams for Middle East deployments."}
     ],
     "cta": {"title": "Deploy Cloud VMS in the Middle East", "description": "Schedule a regional deployment assessment for your GCC enterprise.", "buttonText": "Book a Demo", "buttonLink": "/book-a-demo"}
@@ -47,7 +47,7 @@ const seoPageDataExpansion4 = {
     "sections": [
       {
         "title": "ASEAN Market Coverage",
-        "content": "Southeast Asia rapidly growing economies demand scalable surveillance infrastructure for manufacturing hubs, smart cities, and enterprise campuses. VMukti cloud VMS delivers edge-optimized performance across ASEAN markets with local language support, regional compliance, and AI analytics that scale from single-site factories to multi-country enterprise deployments.",
+        "content": "Southeast Asia rapidly growing economies demand scalable surveillance infrastructure for manufacturing hubs, enterprise campuses, and enterprise campuses. VMukti cloud VMS delivers edge-optimized performance across ASEAN markets with local language support, regional compliance, and AI analytics that scale from single-site factories to multi-country enterprise deployments.",
         "stats": [{"value": "ASEAN", "label": "Market Coverage"}, {"value": "Multi-language", "label": "Local Support"}, {"value": "Edge", "label": "Optimized"}],
         "features": ["Regional edge nodes for low latency", "Multi-language support across ASEAN", "Local regulatory compliance", "Manufacturing and logistics focus"]
       },

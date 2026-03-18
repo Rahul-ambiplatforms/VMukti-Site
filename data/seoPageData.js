@@ -12,7 +12,7 @@ const seoPageData = {
     ],
     "heroTitle": "Enterprise Cloud-Native VMS for Middle East",
     "heroSubtitle": "Cloud-native video management system built for Middle East markets",
-    "heroDescription": "VMukti provides enterprise-grade video management system solutions tailored for Middle East. Our platform integrates seamlessly with Vision 2030 and Smart City initiatives, delivering AI-powered insights with local data residency and compliance.",
+    "heroDescription": "VMukti provides enterprise-grade video management system solutions tailored for Middle East. Our platform integrates seamlessly with Vision 2030 and Enterprise Campus initiatives, delivering AI-powered insights with local data residency and compliance.",
     "category": "geo",
     "sections": [
       {
@@ -44,7 +44,7 @@ const seoPageData = {
         "content": "VMukti combines global technology leadership with deep Middle East market expertise. Our solutions are designed to meet the unique requirements of Middle East enterprises, government agencies, and critical infrastructure operators.",
         "features": [
           "Proven deployments across Middle East enterprises and government agencies",
-          "Integration with regional systems and Vision 2030 and Smart City initiatives",
+          "Integration with regional systems and Vision 2030 and Enterprise Campus initiatives",
           "Scalable from single sites to nationwide deployments",
           "Open API architecture for seamless third-party integration"
         ]
@@ -53,7 +53,7 @@ const seoPageData = {
     "faqs": [
       {
         "question": "How does VMukti video management system comply with Middle East regulations?",
-        "answer": "VMukti maintains regional data centers in Middle East and complies with all local data sovereignty, privacy, and security regulations. Our platform supports Vision 2030 and Smart City initiatives requirements with full audit trails and encrypted data handling."
+        "answer": "VMukti maintains regional data centers in Middle East and complies with all local data sovereignty, privacy, and security regulations. Our platform supports Vision 2030 and Enterprise Campus initiatives requirements with full audit trails and encrypted data handling."
       },
       {
         "question": "What video management system solutions does VMukti offer in Middle East?",
@@ -84,7 +84,7 @@ const seoPageData = {
     ],
     "heroTitle": "Enterprise AI Video Analytics for Middle East",
     "heroSubtitle": "Cloud-native AI-powered video analytics built for Middle East markets",
-    "heroDescription": "VMukti provides enterprise-grade AI-powered video analytics solutions tailored for Middle East. Our platform integrates seamlessly with Vision 2030 and Smart City initiatives, delivering AI-powered insights with local data residency and compliance.",
+    "heroDescription": "VMukti provides enterprise-grade AI-powered video analytics solutions tailored for Middle East. Our platform integrates seamlessly with Vision 2030 and Enterprise Campus initiatives, delivering AI-powered insights with local data residency and compliance.",
     "category": "geo",
     "sections": [
       {
@@ -116,7 +116,7 @@ const seoPageData = {
         "content": "VMukti combines global technology leadership with deep Middle East market expertise. Our solutions are designed to meet the unique requirements of Middle East enterprises, government agencies, and critical infrastructure operators.",
         "features": [
           "Proven deployments across Middle East enterprises and government agencies",
-          "Integration with regional systems and Vision 2030 and Smart City initiatives",
+          "Integration with regional systems and Vision 2030 and Enterprise Campus initiatives",
           "Scalable from single sites to nationwide deployments",
           "Open API architecture for seamless third-party integration"
         ]
@@ -125,7 +125,7 @@ const seoPageData = {
     "faqs": [
       {
         "question": "How does VMukti AI-powered video analytics comply with Middle East regulations?",
-        "answer": "VMukti maintains regional data centers in Middle East and complies with all local data sovereignty, privacy, and security regulations. Our platform supports Vision 2030 and Smart City initiatives requirements with full audit trails and encrypted data handling."
+        "answer": "VMukti maintains regional data centers in Middle East and complies with all local data sovereignty, privacy, and security regulations. Our platform supports Vision 2030 and Enterprise Campus initiatives requirements with full audit trails and encrypted data handling."
       },
       {
         "question": "What AI-powered video analytics solutions does VMukti offer in Middle East?",
@@ -145,23 +145,23 @@ const seoPageData = {
   },
   "middle-east-smart-city-surveillance": {
     "slug": "/middle-east/smart-city-surveillance",
-    "title": "Smart City Surveillance in Middle East | VMukti Cloud Video Intelligence",
-    "metaDescription": "VMukti delivers smart city surveillance solutions in Middle East. Enterprise-grade ICCC platform with 99.99% uptime, AI analytics, and local compliance. Vision ",
+    "title": "Enterprise Campus Surveillance in Middle East | VMukti Cloud Video Intelligence",
+    "metaDescription": "VMukti delivers enterprise campus surveillance solutions in Middle East. Enterprise-grade Enterprise Command Center platform with 99.99% uptime, AI analytics, and local compliance. Vision ",
     "keywords": [
-      "smart city surveillance Middle East",
-      "ICCC platform Middle East",
+      "enterprise campus surveillance Middle East",
+      "Enterprise Command Center platform Middle East",
       "video surveillance Middle East",
-      "smart city surveillance Middle East",
+      "enterprise campus surveillance Middle East",
       "VMukti Middle East"
     ],
-    "heroTitle": "Enterprise Smart City Surveillance for Middle East",
-    "heroSubtitle": "Cloud-native smart city surveillance built for Middle East markets",
-    "heroDescription": "VMukti provides enterprise-grade smart city surveillance solutions tailored for Middle East. Our platform integrates seamlessly with Vision 2030 and Smart City initiatives, delivering AI-powered insights with local data residency and compliance.",
+    "heroTitle": "Enterprise Enterprise Campus Surveillance for Middle East",
+    "heroSubtitle": "Cloud-native enterprise campus surveillance built for Middle East markets",
+    "heroDescription": "VMukti provides enterprise-grade enterprise campus surveillance solutions tailored for Middle East. Our platform integrates seamlessly with Vision 2030 and Enterprise Campus initiatives, delivering AI-powered insights with local data residency and compliance.",
     "category": "geo",
     "sections": [
       {
-        "title": "Smart City Surveillance Market in Middle East",
-        "content": "The Middle East smart city surveillance market is projected to reach $4.2B with 28.5% CAGR. VMukti is positioned as the leading cloud-native provider with regional data centers and local support teams.",
+        "title": "Enterprise Campus Surveillance Market in Middle East",
+        "content": "The Middle East enterprise campus surveillance market is projected to reach $4.2B with 28.5% CAGR. VMukti is positioned as the leading cloud-native provider with regional data centers and local support teams.",
         "stats": [
           {
             "value": "$4.2B",
@@ -188,7 +188,7 @@ const seoPageData = {
         "content": "VMukti combines global technology leadership with deep Middle East market expertise. Our solutions are designed to meet the unique requirements of Middle East enterprises, government agencies, and critical infrastructure operators.",
         "features": [
           "Proven deployments across Middle East enterprises and government agencies",
-          "Integration with regional systems and Vision 2030 and Smart City initiatives",
+          "Integration with regional systems and Vision 2030 and Enterprise Campus initiatives",
           "Scalable from single sites to nationwide deployments",
           "Open API architecture for seamless third-party integration"
         ]
@@ -196,21 +196,21 @@ const seoPageData = {
     ],
     "faqs": [
       {
-        "question": "How does VMukti smart city surveillance comply with Middle East regulations?",
-        "answer": "VMukti maintains regional data centers in Middle East and complies with all local data sovereignty, privacy, and security regulations. Our platform supports Vision 2030 and Smart City initiatives requirements with full audit trails and encrypted data handling."
+        "question": "How does VMukti enterprise campus surveillance comply with Middle East regulations?",
+        "answer": "VMukti maintains regional data centers in Middle East and complies with all local data sovereignty, privacy, and security regulations. Our platform supports Vision 2030 and Enterprise Campus initiatives requirements with full audit trails and encrypted data handling."
       },
       {
-        "question": "What smart city surveillance solutions does VMukti offer in Middle East?",
-        "answer": "VMukti offers comprehensive smart city surveillance including cloud-native architecture, AI-powered analytics, edge computing capabilities, and centralized management. All solutions are optimized for Middle East infrastructure and network conditions."
+        "question": "What enterprise campus surveillance solutions does VMukti offer in Middle East?",
+        "answer": "VMukti offers comprehensive enterprise campus surveillance including cloud-native architecture, AI-powered analytics, edge computing capabilities, and centralized management. All solutions are optimized for Middle East infrastructure and network conditions."
       },
       {
-        "question": "Can VMukti scale smart city surveillance across multiple sites in Middle East?",
+        "question": "Can VMukti scale enterprise campus surveillance across multiple sites in Middle East?",
         "answer": "Yes. VMukti's cloud-native architecture scales from single cameras to millions of devices across Middle East. Our multi-tenant platform supports distributed deployments with centralized management and real-time monitoring across all locations."
       }
     ],
     "cta": {
-      "title": "Deploy Smart City Surveillance in Middle East",
-      "description": "See how VMukti transforms smart city surveillance for enterprises in Middle East.",
+      "title": "Deploy Enterprise Campus Surveillance in Middle East",
+      "description": "See how VMukti transforms enterprise campus surveillance for enterprises in Middle East.",
       "buttonText": "Book a Demo",
       "buttonLink": "/book-a-demo"
     }
@@ -228,7 +228,7 @@ const seoPageData = {
     ],
     "heroTitle": "Enterprise Enterprise Management System for Middle East",
     "heroSubtitle": "Cloud-native enterprise management built for Middle East markets",
-    "heroDescription": "VMukti provides enterprise-grade enterprise management solutions tailored for Middle East. Our platform integrates seamlessly with Vision 2030 and Smart City initiatives, delivering AI-powered insights with local data residency and compliance.",
+    "heroDescription": "VMukti provides enterprise-grade enterprise management solutions tailored for Middle East. Our platform integrates seamlessly with Vision 2030 and Enterprise Campus initiatives, delivering AI-powered insights with local data residency and compliance.",
     "category": "geo",
     "sections": [
       {
@@ -260,7 +260,7 @@ const seoPageData = {
         "content": "VMukti combines global technology leadership with deep Middle East market expertise. Our solutions are designed to meet the unique requirements of Middle East enterprises, government agencies, and critical infrastructure operators.",
         "features": [
           "Proven deployments across Middle East enterprises and government agencies",
-          "Integration with regional systems and Vision 2030 and Smart City initiatives",
+          "Integration with regional systems and Vision 2030 and Enterprise Campus initiatives",
           "Scalable from single sites to nationwide deployments",
           "Open API architecture for seamless third-party integration"
         ]
@@ -269,7 +269,7 @@ const seoPageData = {
     "faqs": [
       {
         "question": "How does VMukti enterprise management comply with Middle East regulations?",
-        "answer": "VMukti maintains regional data centers in Middle East and complies with all local data sovereignty, privacy, and security regulations. Our platform supports Vision 2030 and Smart City initiatives requirements with full audit trails and encrypted data handling."
+        "answer": "VMukti maintains regional data centers in Middle East and complies with all local data sovereignty, privacy, and security regulations. Our platform supports Vision 2030 and Enterprise Campus initiatives requirements with full audit trails and encrypted data handling."
       },
       {
         "question": "What enterprise management solutions does VMukti offer in Middle East?",
@@ -300,7 +300,7 @@ const seoPageData = {
     ],
     "heroTitle": "Enterprise Generative AI Surveillance for Middle East",
     "heroSubtitle": "Cloud-native generative AI surveillance built for Middle East markets",
-    "heroDescription": "VMukti provides enterprise-grade generative AI surveillance solutions tailored for Middle East. Our platform integrates seamlessly with Vision 2030 and Smart City initiatives, delivering AI-powered insights with local data residency and compliance.",
+    "heroDescription": "VMukti provides enterprise-grade generative AI surveillance solutions tailored for Middle East. Our platform integrates seamlessly with Vision 2030 and Enterprise Campus initiatives, delivering AI-powered insights with local data residency and compliance.",
     "category": "geo",
     "sections": [
       {
@@ -332,7 +332,7 @@ const seoPageData = {
         "content": "VMukti combines global technology leadership with deep Middle East market expertise. Our solutions are designed to meet the unique requirements of Middle East enterprises, government agencies, and critical infrastructure operators.",
         "features": [
           "Proven deployments across Middle East enterprises and government agencies",
-          "Integration with regional systems and Vision 2030 and Smart City initiatives",
+          "Integration with regional systems and Vision 2030 and Enterprise Campus initiatives",
           "Scalable from single sites to nationwide deployments",
           "Open API architecture for seamless third-party integration"
         ]
@@ -341,7 +341,7 @@ const seoPageData = {
     "faqs": [
       {
         "question": "How does VMukti generative AI surveillance comply with Middle East regulations?",
-        "answer": "VMukti maintains regional data centers in Middle East and complies with all local data sovereignty, privacy, and security regulations. Our platform supports Vision 2030 and Smart City initiatives requirements with full audit trails and encrypted data handling."
+        "answer": "VMukti maintains regional data centers in Middle East and complies with all local data sovereignty, privacy, and security regulations. Our platform supports Vision 2030 and Enterprise Campus initiatives requirements with full audit trails and encrypted data handling."
       },
       {
         "question": "What generative AI surveillance solutions does VMukti offer in Middle East?",
@@ -372,7 +372,7 @@ const seoPageData = {
     ],
     "heroTitle": "Enterprise Edge Computing IoT for Middle East",
     "heroSubtitle": "Cloud-native edge computing surveillance built for Middle East markets",
-    "heroDescription": "VMukti provides enterprise-grade edge computing surveillance solutions tailored for Middle East. Our platform integrates seamlessly with Vision 2030 and Smart City initiatives, delivering AI-powered insights with local data residency and compliance.",
+    "heroDescription": "VMukti provides enterprise-grade edge computing surveillance solutions tailored for Middle East. Our platform integrates seamlessly with Vision 2030 and Enterprise Campus initiatives, delivering AI-powered insights with local data residency and compliance.",
     "category": "geo",
     "sections": [
       {
@@ -404,7 +404,7 @@ const seoPageData = {
         "content": "VMukti combines global technology leadership with deep Middle East market expertise. Our solutions are designed to meet the unique requirements of Middle East enterprises, government agencies, and critical infrastructure operators.",
         "features": [
           "Proven deployments across Middle East enterprises and government agencies",
-          "Integration with regional systems and Vision 2030 and Smart City initiatives",
+          "Integration with regional systems and Vision 2030 and Enterprise Campus initiatives",
           "Scalable from single sites to nationwide deployments",
           "Open API architecture for seamless third-party integration"
         ]
@@ -413,7 +413,7 @@ const seoPageData = {
     "faqs": [
       {
         "question": "How does VMukti edge computing surveillance comply with Middle East regulations?",
-        "answer": "VMukti maintains regional data centers in Middle East and complies with all local data sovereignty, privacy, and security regulations. Our platform supports Vision 2030 and Smart City initiatives requirements with full audit trails and encrypted data handling."
+        "answer": "VMukti maintains regional data centers in Middle East and complies with all local data sovereignty, privacy, and security regulations. Our platform supports Vision 2030 and Enterprise Campus initiatives requirements with full audit trails and encrypted data handling."
       },
       {
         "question": "What edge computing surveillance solutions does VMukti offer in Middle East?",
@@ -577,23 +577,23 @@ const seoPageData = {
   },
   "saudi-arabia-smart-city-surveillance": {
     "slug": "/saudi-arabia/smart-city-surveillance",
-    "title": "Smart City Surveillance in Saudi Arabia | VMukti Cloud Video Intelligence",
-    "metaDescription": "VMukti delivers smart city surveillance solutions in Saudi Arabia. Enterprise-grade ICCC platform with 99.99% uptime, AI analytics, and local compliance. Saudi ",
+    "title": "Enterprise Campus Surveillance in Saudi Arabia | VMukti Cloud Video Intelligence",
+    "metaDescription": "VMukti delivers enterprise campus surveillance solutions in Saudi Arabia. Enterprise-grade Enterprise Command Center platform with 99.99% uptime, AI analytics, and local compliance. Saudi ",
     "keywords": [
-      "smart city surveillance Saudi Arabia",
-      "ICCC platform Saudi Arabia",
+      "enterprise campus surveillance Saudi Arabia",
+      "Enterprise Command Center platform Saudi Arabia",
       "video surveillance Saudi Arabia",
-      "smart city surveillance Saudi Arabia",
+      "enterprise campus surveillance Saudi Arabia",
       "VMukti Saudi Arabia"
     ],
-    "heroTitle": "Enterprise Smart City Surveillance for Saudi Arabia",
-    "heroSubtitle": "Cloud-native smart city surveillance built for Saudi Arabia markets",
-    "heroDescription": "VMukti provides enterprise-grade smart city surveillance solutions tailored for Saudi Arabia. Our platform integrates seamlessly with Saudi Vision 2030 and NEOM, delivering AI-powered insights with local data residency and compliance.",
+    "heroTitle": "Enterprise Enterprise Campus Surveillance for Saudi Arabia",
+    "heroSubtitle": "Cloud-native enterprise campus surveillance built for Saudi Arabia markets",
+    "heroDescription": "VMukti provides enterprise-grade enterprise campus surveillance solutions tailored for Saudi Arabia. Our platform integrates seamlessly with Saudi Vision 2030 and NEOM, delivering AI-powered insights with local data residency and compliance.",
     "category": "geo",
     "sections": [
       {
-        "title": "Smart City Surveillance Market in Saudi Arabia",
-        "content": "The Saudi Arabia smart city surveillance market is projected to reach $2.1B with 31.2% CAGR. VMukti is positioned as the leading cloud-native provider with regional data centers and local support teams.",
+        "title": "Enterprise Campus Surveillance Market in Saudi Arabia",
+        "content": "The Saudi Arabia enterprise campus surveillance market is projected to reach $2.1B with 31.2% CAGR. VMukti is positioned as the leading cloud-native provider with regional data centers and local support teams.",
         "stats": [
           {
             "value": "$2.1B",
@@ -628,21 +628,21 @@ const seoPageData = {
     ],
     "faqs": [
       {
-        "question": "How does VMukti smart city surveillance comply with Saudi Arabia regulations?",
+        "question": "How does VMukti enterprise campus surveillance comply with Saudi Arabia regulations?",
         "answer": "VMukti maintains regional data centers in Saudi Arabia and complies with all local data sovereignty, privacy, and security regulations. Our platform supports Saudi Vision 2030 and NEOM requirements with full audit trails and encrypted data handling."
       },
       {
-        "question": "What smart city surveillance solutions does VMukti offer in Saudi Arabia?",
-        "answer": "VMukti offers comprehensive smart city surveillance including cloud-native architecture, AI-powered analytics, edge computing capabilities, and centralized management. All solutions are optimized for Saudi Arabia infrastructure and network conditions."
+        "question": "What enterprise campus surveillance solutions does VMukti offer in Saudi Arabia?",
+        "answer": "VMukti offers comprehensive enterprise campus surveillance including cloud-native architecture, AI-powered analytics, edge computing capabilities, and centralized management. All solutions are optimized for Saudi Arabia infrastructure and network conditions."
       },
       {
-        "question": "Can VMukti scale smart city surveillance across multiple sites in Saudi Arabia?",
+        "question": "Can VMukti scale enterprise campus surveillance across multiple sites in Saudi Arabia?",
         "answer": "Yes. VMukti's cloud-native architecture scales from single cameras to millions of devices across Saudi Arabia. Our multi-tenant platform supports distributed deployments with centralized management and real-time monitoring across all locations."
       }
     ],
     "cta": {
-      "title": "Deploy Smart City Surveillance in Saudi Arabia",
-      "description": "See how VMukti transforms smart city surveillance for enterprises in Saudi Arabia.",
+      "title": "Deploy Enterprise Campus Surveillance in Saudi Arabia",
+      "description": "See how VMukti transforms enterprise campus surveillance for enterprises in Saudi Arabia.",
       "buttonText": "Book a Demo",
       "buttonLink": "/book-a-demo"
     }
@@ -1009,23 +1009,23 @@ const seoPageData = {
   },
   "uae-smart-city-surveillance": {
     "slug": "/uae/smart-city-surveillance",
-    "title": "Smart City Surveillance in UAE | VMukti Cloud Video Intelligence",
-    "metaDescription": "VMukti delivers smart city surveillance solutions in UAE. Enterprise-grade ICCC platform with 99.99% uptime, AI analytics, and local compliance. Smart Dubai and",
+    "title": "Enterprise Campus Surveillance in UAE | VMukti Cloud Video Intelligence",
+    "metaDescription": "VMukti delivers enterprise campus surveillance solutions in UAE. Enterprise-grade Enterprise Command Center platform with 99.99% uptime, AI analytics, and local compliance. Smart Dubai and",
     "keywords": [
-      "smart city surveillance UAE",
-      "ICCC platform UAE",
+      "enterprise campus surveillance UAE",
+      "Enterprise Command Center platform UAE",
       "video surveillance UAE",
-      "smart city surveillance UAE",
+      "enterprise campus surveillance UAE",
       "VMukti UAE"
     ],
-    "heroTitle": "Enterprise Smart City Surveillance for UAE",
-    "heroSubtitle": "Cloud-native smart city surveillance built for UAE markets",
-    "heroDescription": "VMukti provides enterprise-grade smart city surveillance solutions tailored for UAE. Our platform integrates seamlessly with Smart Dubai and UAE Strategy 2031, delivering AI-powered insights with local data residency and compliance.",
+    "heroTitle": "Enterprise Enterprise Campus Surveillance for UAE",
+    "heroSubtitle": "Cloud-native enterprise campus surveillance built for UAE markets",
+    "heroDescription": "VMukti provides enterprise-grade enterprise campus surveillance solutions tailored for UAE. Our platform integrates seamlessly with Smart Dubai and UAE Strategy 2031, delivering AI-powered insights with local data residency and compliance.",
     "category": "geo",
     "sections": [
       {
-        "title": "Smart City Surveillance Market in UAE",
-        "content": "The UAE smart city surveillance market is projected to reach $1.8B with 26.8% CAGR. VMukti is positioned as the leading cloud-native provider with regional data centers and local support teams.",
+        "title": "Enterprise Campus Surveillance Market in UAE",
+        "content": "The UAE enterprise campus surveillance market is projected to reach $1.8B with 26.8% CAGR. VMukti is positioned as the leading cloud-native provider with regional data centers and local support teams.",
         "stats": [
           {
             "value": "$1.8B",
@@ -1060,21 +1060,21 @@ const seoPageData = {
     ],
     "faqs": [
       {
-        "question": "How does VMukti smart city surveillance comply with UAE regulations?",
+        "question": "How does VMukti enterprise campus surveillance comply with UAE regulations?",
         "answer": "VMukti maintains regional data centers in UAE and complies with all local data sovereignty, privacy, and security regulations. Our platform supports Smart Dubai and UAE Strategy 2031 requirements with full audit trails and encrypted data handling."
       },
       {
-        "question": "What smart city surveillance solutions does VMukti offer in UAE?",
-        "answer": "VMukti offers comprehensive smart city surveillance including cloud-native architecture, AI-powered analytics, edge computing capabilities, and centralized management. All solutions are optimized for UAE infrastructure and network conditions."
+        "question": "What enterprise campus surveillance solutions does VMukti offer in UAE?",
+        "answer": "VMukti offers comprehensive enterprise campus surveillance including cloud-native architecture, AI-powered analytics, edge computing capabilities, and centralized management. All solutions are optimized for UAE infrastructure and network conditions."
       },
       {
-        "question": "Can VMukti scale smart city surveillance across multiple sites in UAE?",
+        "question": "Can VMukti scale enterprise campus surveillance across multiple sites in UAE?",
         "answer": "Yes. VMukti's cloud-native architecture scales from single cameras to millions of devices across UAE. Our multi-tenant platform supports distributed deployments with centralized management and real-time monitoring across all locations."
       }
     ],
     "cta": {
-      "title": "Deploy Smart City Surveillance in UAE",
-      "description": "See how VMukti transforms smart city surveillance for enterprises in UAE.",
+      "title": "Deploy Enterprise Campus Surveillance in UAE",
+      "description": "See how VMukti transforms enterprise campus surveillance for enterprises in UAE.",
       "buttonText": "Book a Demo",
       "buttonLink": "/book-a-demo"
     }
@@ -1441,23 +1441,23 @@ const seoPageData = {
   },
   "qatar-smart-city-surveillance": {
     "slug": "/qatar/smart-city-surveillance",
-    "title": "Smart City Surveillance in Qatar | VMukti Cloud Video Intelligence",
-    "metaDescription": "VMukti delivers smart city surveillance solutions in Qatar. Enterprise-grade ICCC platform with 99.99% uptime, AI analytics, and local compliance. Qatar Nationa",
+    "title": "Enterprise Campus Surveillance in Qatar | VMukti Cloud Video Intelligence",
+    "metaDescription": "VMukti delivers enterprise campus surveillance solutions in Qatar. Enterprise-grade Enterprise Command Center platform with 99.99% uptime, AI analytics, and local compliance. Qatar Nationa",
     "keywords": [
-      "smart city surveillance Qatar",
-      "ICCC platform Qatar",
+      "enterprise campus surveillance Qatar",
+      "Enterprise Command Center platform Qatar",
       "video surveillance Qatar",
-      "smart city surveillance Qatar",
+      "enterprise campus surveillance Qatar",
       "VMukti Qatar"
     ],
-    "heroTitle": "Enterprise Smart City Surveillance for Qatar",
-    "heroSubtitle": "Cloud-native smart city surveillance built for Qatar markets",
-    "heroDescription": "VMukti provides enterprise-grade smart city surveillance solutions tailored for Qatar. Our platform integrates seamlessly with Qatar National Vision 2030, delivering AI-powered insights with local data residency and compliance.",
+    "heroTitle": "Enterprise Enterprise Campus Surveillance for Qatar",
+    "heroSubtitle": "Cloud-native enterprise campus surveillance built for Qatar markets",
+    "heroDescription": "VMukti provides enterprise-grade enterprise campus surveillance solutions tailored for Qatar. Our platform integrates seamlessly with Qatar National Vision 2030, delivering AI-powered insights with local data residency and compliance.",
     "category": "geo",
     "sections": [
       {
-        "title": "Smart City Surveillance Market in Qatar",
-        "content": "The Qatar smart city surveillance market is projected to reach $890M with 24.5% CAGR. VMukti is positioned as the leading cloud-native provider with regional data centers and local support teams.",
+        "title": "Enterprise Campus Surveillance Market in Qatar",
+        "content": "The Qatar enterprise campus surveillance market is projected to reach $890M with 24.5% CAGR. VMukti is positioned as the leading cloud-native provider with regional data centers and local support teams.",
         "stats": [
           {
             "value": "$890M",
@@ -1492,21 +1492,21 @@ const seoPageData = {
     ],
     "faqs": [
       {
-        "question": "How does VMukti smart city surveillance comply with Qatar regulations?",
+        "question": "How does VMukti enterprise campus surveillance comply with Qatar regulations?",
         "answer": "VMukti maintains regional data centers in Qatar and complies with all local data sovereignty, privacy, and security regulations. Our platform supports Qatar National Vision 2030 requirements with full audit trails and encrypted data handling."
       },
       {
-        "question": "What smart city surveillance solutions does VMukti offer in Qatar?",
-        "answer": "VMukti offers comprehensive smart city surveillance including cloud-native architecture, AI-powered analytics, edge computing capabilities, and centralized management. All solutions are optimized for Qatar infrastructure and network conditions."
+        "question": "What enterprise campus surveillance solutions does VMukti offer in Qatar?",
+        "answer": "VMukti offers comprehensive enterprise campus surveillance including cloud-native architecture, AI-powered analytics, edge computing capabilities, and centralized management. All solutions are optimized for Qatar infrastructure and network conditions."
       },
       {
-        "question": "Can VMukti scale smart city surveillance across multiple sites in Qatar?",
+        "question": "Can VMukti scale enterprise campus surveillance across multiple sites in Qatar?",
         "answer": "Yes. VMukti's cloud-native architecture scales from single cameras to millions of devices across Qatar. Our multi-tenant platform supports distributed deployments with centralized management and real-time monitoring across all locations."
       }
     ],
     "cta": {
-      "title": "Deploy Smart City Surveillance in Qatar",
-      "description": "See how VMukti transforms smart city surveillance for enterprises in Qatar.",
+      "title": "Deploy Enterprise Campus Surveillance in Qatar",
+      "description": "See how VMukti transforms enterprise campus surveillance for enterprises in Qatar.",
       "buttonText": "Book a Demo",
       "buttonLink": "/book-a-demo"
     }
@@ -1873,23 +1873,23 @@ const seoPageData = {
   },
   "africa-smart-city-surveillance": {
     "slug": "/africa/smart-city-surveillance",
-    "title": "Smart City Surveillance in Africa | VMukti Cloud Video Intelligence",
-    "metaDescription": "VMukti delivers smart city surveillance solutions in Africa. Enterprise-grade ICCC platform with 99.99% uptime, AI analytics, and local compliance. Agenda 2063 ",
+    "title": "Enterprise Campus Surveillance in Africa | VMukti Cloud Video Intelligence",
+    "metaDescription": "VMukti delivers enterprise campus surveillance solutions in Africa. Enterprise-grade Enterprise Command Center platform with 99.99% uptime, AI analytics, and local compliance. Agenda 2063 ",
     "keywords": [
-      "smart city surveillance Africa",
-      "ICCC platform Africa",
+      "enterprise campus surveillance Africa",
+      "Enterprise Command Center platform Africa",
       "video surveillance Africa",
-      "smart city surveillance Africa",
+      "enterprise campus surveillance Africa",
       "VMukti Africa"
     ],
-    "heroTitle": "Enterprise Smart City Surveillance for Africa",
-    "heroSubtitle": "Cloud-native smart city surveillance built for Africa markets",
-    "heroDescription": "VMukti provides enterprise-grade smart city surveillance solutions tailored for Africa. Our platform integrates seamlessly with Agenda 2063 and Smart Africa, delivering AI-powered insights with local data residency and compliance.",
+    "heroTitle": "Enterprise Enterprise Campus Surveillance for Africa",
+    "heroSubtitle": "Cloud-native enterprise campus surveillance built for Africa markets",
+    "heroDescription": "VMukti provides enterprise-grade enterprise campus surveillance solutions tailored for Africa. Our platform integrates seamlessly with Agenda 2063 and Smart Africa, delivering AI-powered insights with local data residency and compliance.",
     "category": "geo",
     "sections": [
       {
-        "title": "Smart City Surveillance Market in Africa",
-        "content": "The Africa smart city surveillance market is projected to reach $1.5B with 35.2% CAGR. VMukti is positioned as the leading cloud-native provider with regional data centers and local support teams.",
+        "title": "Enterprise Campus Surveillance Market in Africa",
+        "content": "The Africa enterprise campus surveillance market is projected to reach $1.5B with 35.2% CAGR. VMukti is positioned as the leading cloud-native provider with regional data centers and local support teams.",
         "stats": [
           {
             "value": "$1.5B",
@@ -1924,21 +1924,21 @@ const seoPageData = {
     ],
     "faqs": [
       {
-        "question": "How does VMukti smart city surveillance comply with Africa regulations?",
+        "question": "How does VMukti enterprise campus surveillance comply with Africa regulations?",
         "answer": "VMukti maintains regional data centers in Africa and complies with all local data sovereignty, privacy, and security regulations. Our platform supports Agenda 2063 and Smart Africa requirements with full audit trails and encrypted data handling."
       },
       {
-        "question": "What smart city surveillance solutions does VMukti offer in Africa?",
-        "answer": "VMukti offers comprehensive smart city surveillance including cloud-native architecture, AI-powered analytics, edge computing capabilities, and centralized management. All solutions are optimized for Africa infrastructure and network conditions."
+        "question": "What enterprise campus surveillance solutions does VMukti offer in Africa?",
+        "answer": "VMukti offers comprehensive enterprise campus surveillance including cloud-native architecture, AI-powered analytics, edge computing capabilities, and centralized management. All solutions are optimized for Africa infrastructure and network conditions."
       },
       {
-        "question": "Can VMukti scale smart city surveillance across multiple sites in Africa?",
+        "question": "Can VMukti scale enterprise campus surveillance across multiple sites in Africa?",
         "answer": "Yes. VMukti's cloud-native architecture scales from single cameras to millions of devices across Africa. Our multi-tenant platform supports distributed deployments with centralized management and real-time monitoring across all locations."
       }
     ],
     "cta": {
-      "title": "Deploy Smart City Surveillance in Africa",
-      "description": "See how VMukti transforms smart city surveillance for enterprises in Africa.",
+      "title": "Deploy Enterprise Campus Surveillance in Africa",
+      "description": "See how VMukti transforms enterprise campus surveillance for enterprises in Africa.",
       "buttonText": "Book a Demo",
       "buttonLink": "/book-a-demo"
     }
@@ -2305,23 +2305,23 @@ const seoPageData = {
   },
   "europe-smart-city-surveillance": {
     "slug": "/europe/smart-city-surveillance",
-    "title": "Smart City Surveillance in Europe | VMukti Cloud Video Intelligence",
-    "metaDescription": "VMukti delivers smart city surveillance solutions in Europe. Enterprise-grade ICCC platform with 99.99% uptime, AI analytics, and local compliance. EU Digital S",
+    "title": "Enterprise Campus Surveillance in Europe | VMukti Cloud Video Intelligence",
+    "metaDescription": "VMukti delivers enterprise campus surveillance solutions in Europe. Enterprise-grade Enterprise Command Center platform with 99.99% uptime, AI analytics, and local compliance. EU Digital S",
     "keywords": [
-      "smart city surveillance Europe",
-      "ICCC platform Europe",
+      "enterprise campus surveillance Europe",
+      "Enterprise Command Center platform Europe",
       "video surveillance Europe",
-      "smart city surveillance Europe",
+      "enterprise campus surveillance Europe",
       "VMukti Europe"
     ],
-    "heroTitle": "Enterprise Smart City Surveillance for Europe",
-    "heroSubtitle": "Cloud-native smart city surveillance built for Europe markets",
-    "heroDescription": "VMukti provides enterprise-grade smart city surveillance solutions tailored for Europe. Our platform integrates seamlessly with EU Digital Strategy and GDPR compliance, delivering AI-powered insights with local data residency and compliance.",
+    "heroTitle": "Enterprise Enterprise Campus Surveillance for Europe",
+    "heroSubtitle": "Cloud-native enterprise campus surveillance built for Europe markets",
+    "heroDescription": "VMukti provides enterprise-grade enterprise campus surveillance solutions tailored for Europe. Our platform integrates seamlessly with EU Digital Strategy and GDPR compliance, delivering AI-powered insights with local data residency and compliance.",
     "category": "geo",
     "sections": [
       {
-        "title": "Smart City Surveillance Market in Europe",
-        "content": "The Europe smart city surveillance market is projected to reach $8.7B with 18.4% CAGR. VMukti is positioned as the leading cloud-native provider with regional data centers and local support teams.",
+        "title": "Enterprise Campus Surveillance Market in Europe",
+        "content": "The Europe enterprise campus surveillance market is projected to reach $8.7B with 18.4% CAGR. VMukti is positioned as the leading cloud-native provider with regional data centers and local support teams.",
         "stats": [
           {
             "value": "$8.7B",
@@ -2356,21 +2356,21 @@ const seoPageData = {
     ],
     "faqs": [
       {
-        "question": "How does VMukti smart city surveillance comply with Europe regulations?",
+        "question": "How does VMukti enterprise campus surveillance comply with Europe regulations?",
         "answer": "VMukti maintains regional data centers in Europe and complies with all local data sovereignty, privacy, and security regulations. Our platform supports EU Digital Strategy and GDPR compliance requirements with full audit trails and encrypted data handling."
       },
       {
-        "question": "What smart city surveillance solutions does VMukti offer in Europe?",
-        "answer": "VMukti offers comprehensive smart city surveillance including cloud-native architecture, AI-powered analytics, edge computing capabilities, and centralized management. All solutions are optimized for Europe infrastructure and network conditions."
+        "question": "What enterprise campus surveillance solutions does VMukti offer in Europe?",
+        "answer": "VMukti offers comprehensive enterprise campus surveillance including cloud-native architecture, AI-powered analytics, edge computing capabilities, and centralized management. All solutions are optimized for Europe infrastructure and network conditions."
       },
       {
-        "question": "Can VMukti scale smart city surveillance across multiple sites in Europe?",
+        "question": "Can VMukti scale enterprise campus surveillance across multiple sites in Europe?",
         "answer": "Yes. VMukti's cloud-native architecture scales from single cameras to millions of devices across Europe. Our multi-tenant platform supports distributed deployments with centralized management and real-time monitoring across all locations."
       }
     ],
     "cta": {
-      "title": "Deploy Smart City Surveillance in Europe",
-      "description": "See how VMukti transforms smart city surveillance for enterprises in Europe.",
+      "title": "Deploy Enterprise Campus Surveillance in Europe",
+      "description": "See how VMukti transforms enterprise campus surveillance for enterprises in Europe.",
       "buttonText": "Book a Demo",
       "buttonLink": "/book-a-demo"
     }
@@ -2737,23 +2737,23 @@ const seoPageData = {
   },
   "latin-america-smart-city-surveillance": {
     "slug": "/latin-america/smart-city-surveillance",
-    "title": "Smart City Surveillance in Latin America | VMukti Cloud Video Intelligence",
-    "metaDescription": "VMukti delivers smart city surveillance solutions in Latin America. Enterprise-grade ICCC platform with 99.99% uptime, AI analytics, and local compliance. digit",
+    "title": "Enterprise Campus Surveillance in Latin America | VMukti Cloud Video Intelligence",
+    "metaDescription": "VMukti delivers enterprise campus surveillance solutions in Latin America. Enterprise-grade Enterprise Command Center platform with 99.99% uptime, AI analytics, and local compliance. digit",
     "keywords": [
-      "smart city surveillance Latin America",
-      "ICCC platform Latin America",
+      "enterprise campus surveillance Latin America",
+      "Enterprise Command Center platform Latin America",
       "video surveillance Latin America",
-      "smart city surveillance Latin America",
+      "enterprise campus surveillance Latin America",
       "VMukti Latin America"
     ],
-    "heroTitle": "Enterprise Smart City Surveillance for Latin America",
-    "heroSubtitle": "Cloud-native smart city surveillance built for Latin America markets",
-    "heroDescription": "VMukti provides enterprise-grade smart city surveillance solutions tailored for Latin America. Our platform integrates seamlessly with digital transformation initiatives, delivering AI-powered insights with local data residency and compliance.",
+    "heroTitle": "Enterprise Enterprise Campus Surveillance for Latin America",
+    "heroSubtitle": "Cloud-native enterprise campus surveillance built for Latin America markets",
+    "heroDescription": "VMukti provides enterprise-grade enterprise campus surveillance solutions tailored for Latin America. Our platform integrates seamlessly with digital transformation initiatives, delivering AI-powered insights with local data residency and compliance.",
     "category": "geo",
     "sections": [
       {
-        "title": "Smart City Surveillance Market in Latin America",
-        "content": "The Latin America smart city surveillance market is projected to reach $2.3B with 22.1% CAGR. VMukti is positioned as the leading cloud-native provider with regional data centers and local support teams.",
+        "title": "Enterprise Campus Surveillance Market in Latin America",
+        "content": "The Latin America enterprise campus surveillance market is projected to reach $2.3B with 22.1% CAGR. VMukti is positioned as the leading cloud-native provider with regional data centers and local support teams.",
         "stats": [
           {
             "value": "$2.3B",
@@ -2788,21 +2788,21 @@ const seoPageData = {
     ],
     "faqs": [
       {
-        "question": "How does VMukti smart city surveillance comply with Latin America regulations?",
+        "question": "How does VMukti enterprise campus surveillance comply with Latin America regulations?",
         "answer": "VMukti maintains regional data centers in Latin America and complies with all local data sovereignty, privacy, and security regulations. Our platform supports digital transformation initiatives requirements with full audit trails and encrypted data handling."
       },
       {
-        "question": "What smart city surveillance solutions does VMukti offer in Latin America?",
-        "answer": "VMukti offers comprehensive smart city surveillance including cloud-native architecture, AI-powered analytics, edge computing capabilities, and centralized management. All solutions are optimized for Latin America infrastructure and network conditions."
+        "question": "What enterprise campus surveillance solutions does VMukti offer in Latin America?",
+        "answer": "VMukti offers comprehensive enterprise campus surveillance including cloud-native architecture, AI-powered analytics, edge computing capabilities, and centralized management. All solutions are optimized for Latin America infrastructure and network conditions."
       },
       {
-        "question": "Can VMukti scale smart city surveillance across multiple sites in Latin America?",
+        "question": "Can VMukti scale enterprise campus surveillance across multiple sites in Latin America?",
         "answer": "Yes. VMukti's cloud-native architecture scales from single cameras to millions of devices across Latin America. Our multi-tenant platform supports distributed deployments with centralized management and real-time monitoring across all locations."
       }
     ],
     "cta": {
-      "title": "Deploy Smart City Surveillance in Latin America",
-      "description": "See how VMukti transforms smart city surveillance for enterprises in Latin America.",
+      "title": "Deploy Enterprise Campus Surveillance in Latin America",
+      "description": "See how VMukti transforms enterprise campus surveillance for enterprises in Latin America.",
       "buttonText": "Book a Demo",
       "buttonLink": "/book-a-demo"
     }
@@ -3036,7 +3036,7 @@ const seoPageData = {
     ],
     "heroTitle": "Enterprise Cloud-Native VMS for Southeast Asia",
     "heroSubtitle": "Cloud-native video management system built for Southeast Asia markets",
-    "heroDescription": "VMukti provides enterprise-grade video management system solutions tailored for Southeast Asia. Our platform integrates seamlessly with ASEAN Smart Cities Network, delivering AI-powered insights with local data residency and compliance.",
+    "heroDescription": "VMukti provides enterprise-grade video management system solutions tailored for Southeast Asia. Our platform integrates seamlessly with ASEAN Enterprise Campuses Network, delivering AI-powered insights with local data residency and compliance.",
     "category": "geo",
     "sections": [
       {
@@ -3068,7 +3068,7 @@ const seoPageData = {
         "content": "VMukti combines global technology leadership with deep Southeast Asia market expertise. Our solutions are designed to meet the unique requirements of Southeast Asia enterprises, government agencies, and critical infrastructure operators.",
         "features": [
           "Proven deployments across Southeast Asia enterprises and government agencies",
-          "Integration with regional systems and ASEAN Smart Cities Network",
+          "Integration with regional systems and ASEAN Enterprise Campuses Network",
           "Scalable from single sites to nationwide deployments",
           "Open API architecture for seamless third-party integration"
         ]
@@ -3077,7 +3077,7 @@ const seoPageData = {
     "faqs": [
       {
         "question": "How does VMukti video management system comply with Southeast Asia regulations?",
-        "answer": "VMukti maintains regional data centers in Southeast Asia and complies with all local data sovereignty, privacy, and security regulations. Our platform supports ASEAN Smart Cities Network requirements with full audit trails and encrypted data handling."
+        "answer": "VMukti maintains regional data centers in Southeast Asia and complies with all local data sovereignty, privacy, and security regulations. Our platform supports ASEAN Enterprise Campuses Network requirements with full audit trails and encrypted data handling."
       },
       {
         "question": "What video management system solutions does VMukti offer in Southeast Asia?",
@@ -3108,7 +3108,7 @@ const seoPageData = {
     ],
     "heroTitle": "Enterprise AI Video Analytics for Southeast Asia",
     "heroSubtitle": "Cloud-native AI-powered video analytics built for Southeast Asia markets",
-    "heroDescription": "VMukti provides enterprise-grade AI-powered video analytics solutions tailored for Southeast Asia. Our platform integrates seamlessly with ASEAN Smart Cities Network, delivering AI-powered insights with local data residency and compliance.",
+    "heroDescription": "VMukti provides enterprise-grade AI-powered video analytics solutions tailored for Southeast Asia. Our platform integrates seamlessly with ASEAN Enterprise Campuses Network, delivering AI-powered insights with local data residency and compliance.",
     "category": "geo",
     "sections": [
       {
@@ -3140,7 +3140,7 @@ const seoPageData = {
         "content": "VMukti combines global technology leadership with deep Southeast Asia market expertise. Our solutions are designed to meet the unique requirements of Southeast Asia enterprises, government agencies, and critical infrastructure operators.",
         "features": [
           "Proven deployments across Southeast Asia enterprises and government agencies",
-          "Integration with regional systems and ASEAN Smart Cities Network",
+          "Integration with regional systems and ASEAN Enterprise Campuses Network",
           "Scalable from single sites to nationwide deployments",
           "Open API architecture for seamless third-party integration"
         ]
@@ -3149,7 +3149,7 @@ const seoPageData = {
     "faqs": [
       {
         "question": "How does VMukti AI-powered video analytics comply with Southeast Asia regulations?",
-        "answer": "VMukti maintains regional data centers in Southeast Asia and complies with all local data sovereignty, privacy, and security regulations. Our platform supports ASEAN Smart Cities Network requirements with full audit trails and encrypted data handling."
+        "answer": "VMukti maintains regional data centers in Southeast Asia and complies with all local data sovereignty, privacy, and security regulations. Our platform supports ASEAN Enterprise Campuses Network requirements with full audit trails and encrypted data handling."
       },
       {
         "question": "What AI-powered video analytics solutions does VMukti offer in Southeast Asia?",
@@ -3169,23 +3169,23 @@ const seoPageData = {
   },
   "southeast-asia-smart-city-surveillance": {
     "slug": "/southeast-asia/smart-city-surveillance",
-    "title": "Smart City Surveillance in Southeast Asia | VMukti Cloud Video Intelligence",
-    "metaDescription": "VMukti delivers smart city surveillance solutions in Southeast Asia. Enterprise-grade ICCC platform with 99.99% uptime, AI analytics, and local compliance. ASEA",
+    "title": "Enterprise Campus Surveillance in Southeast Asia | VMukti Cloud Video Intelligence",
+    "metaDescription": "VMukti delivers enterprise campus surveillance solutions in Southeast Asia. Enterprise-grade Enterprise Command Center platform with 99.99% uptime, AI analytics, and local compliance. ASEA",
     "keywords": [
-      "smart city surveillance Southeast Asia",
-      "ICCC platform Southeast Asia",
+      "enterprise campus surveillance Southeast Asia",
+      "Enterprise Command Center platform Southeast Asia",
       "video surveillance Southeast Asia",
-      "smart city surveillance Southeast Asia",
+      "enterprise campus surveillance Southeast Asia",
       "VMukti Southeast Asia"
     ],
-    "heroTitle": "Enterprise Smart City Surveillance for Southeast Asia",
-    "heroSubtitle": "Cloud-native smart city surveillance built for Southeast Asia markets",
-    "heroDescription": "VMukti provides enterprise-grade smart city surveillance solutions tailored for Southeast Asia. Our platform integrates seamlessly with ASEAN Smart Cities Network, delivering AI-powered insights with local data residency and compliance.",
+    "heroTitle": "Enterprise Enterprise Campus Surveillance for Southeast Asia",
+    "heroSubtitle": "Cloud-native enterprise campus surveillance built for Southeast Asia markets",
+    "heroDescription": "VMukti provides enterprise-grade enterprise campus surveillance solutions tailored for Southeast Asia. Our platform integrates seamlessly with ASEAN Enterprise Campuses Network, delivering AI-powered insights with local data residency and compliance.",
     "category": "geo",
     "sections": [
       {
-        "title": "Smart City Surveillance Market in Southeast Asia",
-        "content": "The Southeast Asia smart city surveillance market is projected to reach $3.1B with 29.7% CAGR. VMukti is positioned as the leading cloud-native provider with regional data centers and local support teams.",
+        "title": "Enterprise Campus Surveillance Market in Southeast Asia",
+        "content": "The Southeast Asia enterprise campus surveillance market is projected to reach $3.1B with 29.7% CAGR. VMukti is positioned as the leading cloud-native provider with regional data centers and local support teams.",
         "stats": [
           {
             "value": "$3.1B",
@@ -3212,7 +3212,7 @@ const seoPageData = {
         "content": "VMukti combines global technology leadership with deep Southeast Asia market expertise. Our solutions are designed to meet the unique requirements of Southeast Asia enterprises, government agencies, and critical infrastructure operators.",
         "features": [
           "Proven deployments across Southeast Asia enterprises and government agencies",
-          "Integration with regional systems and ASEAN Smart Cities Network",
+          "Integration with regional systems and ASEAN Enterprise Campuses Network",
           "Scalable from single sites to nationwide deployments",
           "Open API architecture for seamless third-party integration"
         ]
@@ -3220,21 +3220,21 @@ const seoPageData = {
     ],
     "faqs": [
       {
-        "question": "How does VMukti smart city surveillance comply with Southeast Asia regulations?",
-        "answer": "VMukti maintains regional data centers in Southeast Asia and complies with all local data sovereignty, privacy, and security regulations. Our platform supports ASEAN Smart Cities Network requirements with full audit trails and encrypted data handling."
+        "question": "How does VMukti enterprise campus surveillance comply with Southeast Asia regulations?",
+        "answer": "VMukti maintains regional data centers in Southeast Asia and complies with all local data sovereignty, privacy, and security regulations. Our platform supports ASEAN Enterprise Campuses Network requirements with full audit trails and encrypted data handling."
       },
       {
-        "question": "What smart city surveillance solutions does VMukti offer in Southeast Asia?",
-        "answer": "VMukti offers comprehensive smart city surveillance including cloud-native architecture, AI-powered analytics, edge computing capabilities, and centralized management. All solutions are optimized for Southeast Asia infrastructure and network conditions."
+        "question": "What enterprise campus surveillance solutions does VMukti offer in Southeast Asia?",
+        "answer": "VMukti offers comprehensive enterprise campus surveillance including cloud-native architecture, AI-powered analytics, edge computing capabilities, and centralized management. All solutions are optimized for Southeast Asia infrastructure and network conditions."
       },
       {
-        "question": "Can VMukti scale smart city surveillance across multiple sites in Southeast Asia?",
+        "question": "Can VMukti scale enterprise campus surveillance across multiple sites in Southeast Asia?",
         "answer": "Yes. VMukti's cloud-native architecture scales from single cameras to millions of devices across Southeast Asia. Our multi-tenant platform supports distributed deployments with centralized management and real-time monitoring across all locations."
       }
     ],
     "cta": {
-      "title": "Deploy Smart City Surveillance in Southeast Asia",
-      "description": "See how VMukti transforms smart city surveillance for enterprises in Southeast Asia.",
+      "title": "Deploy Enterprise Campus Surveillance in Southeast Asia",
+      "description": "See how VMukti transforms enterprise campus surveillance for enterprises in Southeast Asia.",
       "buttonText": "Book a Demo",
       "buttonLink": "/book-a-demo"
     }
@@ -3252,7 +3252,7 @@ const seoPageData = {
     ],
     "heroTitle": "Enterprise Enterprise Management System for Southeast Asia",
     "heroSubtitle": "Cloud-native enterprise management built for Southeast Asia markets",
-    "heroDescription": "VMukti provides enterprise-grade enterprise management solutions tailored for Southeast Asia. Our platform integrates seamlessly with ASEAN Smart Cities Network, delivering AI-powered insights with local data residency and compliance.",
+    "heroDescription": "VMukti provides enterprise-grade enterprise management solutions tailored for Southeast Asia. Our platform integrates seamlessly with ASEAN Enterprise Campuses Network, delivering AI-powered insights with local data residency and compliance.",
     "category": "geo",
     "sections": [
       {
@@ -3284,7 +3284,7 @@ const seoPageData = {
         "content": "VMukti combines global technology leadership with deep Southeast Asia market expertise. Our solutions are designed to meet the unique requirements of Southeast Asia enterprises, government agencies, and critical infrastructure operators.",
         "features": [
           "Proven deployments across Southeast Asia enterprises and government agencies",
-          "Integration with regional systems and ASEAN Smart Cities Network",
+          "Integration with regional systems and ASEAN Enterprise Campuses Network",
           "Scalable from single sites to nationwide deployments",
           "Open API architecture for seamless third-party integration"
         ]
@@ -3293,7 +3293,7 @@ const seoPageData = {
     "faqs": [
       {
         "question": "How does VMukti enterprise management comply with Southeast Asia regulations?",
-        "answer": "VMukti maintains regional data centers in Southeast Asia and complies with all local data sovereignty, privacy, and security regulations. Our platform supports ASEAN Smart Cities Network requirements with full audit trails and encrypted data handling."
+        "answer": "VMukti maintains regional data centers in Southeast Asia and complies with all local data sovereignty, privacy, and security regulations. Our platform supports ASEAN Enterprise Campuses Network requirements with full audit trails and encrypted data handling."
       },
       {
         "question": "What enterprise management solutions does VMukti offer in Southeast Asia?",
@@ -3324,7 +3324,7 @@ const seoPageData = {
     ],
     "heroTitle": "Enterprise Generative AI Surveillance for Southeast Asia",
     "heroSubtitle": "Cloud-native generative AI surveillance built for Southeast Asia markets",
-    "heroDescription": "VMukti provides enterprise-grade generative AI surveillance solutions tailored for Southeast Asia. Our platform integrates seamlessly with ASEAN Smart Cities Network, delivering AI-powered insights with local data residency and compliance.",
+    "heroDescription": "VMukti provides enterprise-grade generative AI surveillance solutions tailored for Southeast Asia. Our platform integrates seamlessly with ASEAN Enterprise Campuses Network, delivering AI-powered insights with local data residency and compliance.",
     "category": "geo",
     "sections": [
       {
@@ -3356,7 +3356,7 @@ const seoPageData = {
         "content": "VMukti combines global technology leadership with deep Southeast Asia market expertise. Our solutions are designed to meet the unique requirements of Southeast Asia enterprises, government agencies, and critical infrastructure operators.",
         "features": [
           "Proven deployments across Southeast Asia enterprises and government agencies",
-          "Integration with regional systems and ASEAN Smart Cities Network",
+          "Integration with regional systems and ASEAN Enterprise Campuses Network",
           "Scalable from single sites to nationwide deployments",
           "Open API architecture for seamless third-party integration"
         ]
@@ -3365,7 +3365,7 @@ const seoPageData = {
     "faqs": [
       {
         "question": "How does VMukti generative AI surveillance comply with Southeast Asia regulations?",
-        "answer": "VMukti maintains regional data centers in Southeast Asia and complies with all local data sovereignty, privacy, and security regulations. Our platform supports ASEAN Smart Cities Network requirements with full audit trails and encrypted data handling."
+        "answer": "VMukti maintains regional data centers in Southeast Asia and complies with all local data sovereignty, privacy, and security regulations. Our platform supports ASEAN Enterprise Campuses Network requirements with full audit trails and encrypted data handling."
       },
       {
         "question": "What generative AI surveillance solutions does VMukti offer in Southeast Asia?",
@@ -3396,7 +3396,7 @@ const seoPageData = {
     ],
     "heroTitle": "Enterprise Edge Computing IoT for Southeast Asia",
     "heroSubtitle": "Cloud-native edge computing surveillance built for Southeast Asia markets",
-    "heroDescription": "VMukti provides enterprise-grade edge computing surveillance solutions tailored for Southeast Asia. Our platform integrates seamlessly with ASEAN Smart Cities Network, delivering AI-powered insights with local data residency and compliance.",
+    "heroDescription": "VMukti provides enterprise-grade edge computing surveillance solutions tailored for Southeast Asia. Our platform integrates seamlessly with ASEAN Enterprise Campuses Network, delivering AI-powered insights with local data residency and compliance.",
     "category": "geo",
     "sections": [
       {
@@ -3428,7 +3428,7 @@ const seoPageData = {
         "content": "VMukti combines global technology leadership with deep Southeast Asia market expertise. Our solutions are designed to meet the unique requirements of Southeast Asia enterprises, government agencies, and critical infrastructure operators.",
         "features": [
           "Proven deployments across Southeast Asia enterprises and government agencies",
-          "Integration with regional systems and ASEAN Smart Cities Network",
+          "Integration with regional systems and ASEAN Enterprise Campuses Network",
           "Scalable from single sites to nationwide deployments",
           "Open API architecture for seamless third-party integration"
         ]
@@ -3437,7 +3437,7 @@ const seoPageData = {
     "faqs": [
       {
         "question": "How does VMukti edge computing surveillance comply with Southeast Asia regulations?",
-        "answer": "VMukti maintains regional data centers in Southeast Asia and complies with all local data sovereignty, privacy, and security regulations. Our platform supports ASEAN Smart Cities Network requirements with full audit trails and encrypted data handling."
+        "answer": "VMukti maintains regional data centers in Southeast Asia and complies with all local data sovereignty, privacy, and security regulations. Our platform supports ASEAN Enterprise Campuses Network requirements with full audit trails and encrypted data handling."
       },
       {
         "question": "What edge computing surveillance solutions does VMukti offer in Southeast Asia?",
@@ -3502,7 +3502,7 @@ const seoPageData = {
           "Proven deployments in Middle East banking & finance organizations",
           "Custom AI models trained for banking & finance scenarios",
           "Real-time dashboards for operations and security teams",
-          "Seamless integration with Vision 2030 and Smart City initiatives"
+          "Seamless integration with Vision 2030 and Enterprise Campus initiatives"
         ]
       }
     ],
@@ -3574,7 +3574,7 @@ const seoPageData = {
           "Proven deployments in Middle East oil & gas organizations",
           "Custom AI models trained for oil & gas scenarios",
           "Real-time dashboards for operations and security teams",
-          "Seamless integration with Vision 2030 and Smart City initiatives"
+          "Seamless integration with Vision 2030 and Enterprise Campus initiatives"
         ]
       }
     ],
@@ -3646,7 +3646,7 @@ const seoPageData = {
           "Proven deployments in Middle East transportation organizations",
           "Custom AI models trained for transportation scenarios",
           "Real-time dashboards for operations and security teams",
-          "Seamless integration with Vision 2030 and Smart City initiatives"
+          "Seamless integration with Vision 2030 and Enterprise Campus initiatives"
         ]
       }
     ],
@@ -3718,7 +3718,7 @@ const seoPageData = {
           "Proven deployments in Middle East retail organizations",
           "Custom AI models trained for retail scenarios",
           "Real-time dashboards for operations and security teams",
-          "Seamless integration with Vision 2030 and Smart City initiatives"
+          "Seamless integration with Vision 2030 and Enterprise Campus initiatives"
         ]
       }
     ],
@@ -5518,7 +5518,7 @@ const seoPageData = {
           "Proven deployments in Southeast Asia banking & finance organizations",
           "Custom AI models trained for banking & finance scenarios",
           "Real-time dashboards for operations and security teams",
-          "Seamless integration with ASEAN Smart Cities Network"
+          "Seamless integration with ASEAN Enterprise Campuses Network"
         ]
       }
     ],
@@ -5590,7 +5590,7 @@ const seoPageData = {
           "Proven deployments in Southeast Asia oil & gas organizations",
           "Custom AI models trained for oil & gas scenarios",
           "Real-time dashboards for operations and security teams",
-          "Seamless integration with ASEAN Smart Cities Network"
+          "Seamless integration with ASEAN Enterprise Campuses Network"
         ]
       }
     ],
@@ -5662,7 +5662,7 @@ const seoPageData = {
           "Proven deployments in Southeast Asia transportation organizations",
           "Custom AI models trained for transportation scenarios",
           "Real-time dashboards for operations and security teams",
-          "Seamless integration with ASEAN Smart Cities Network"
+          "Seamless integration with ASEAN Enterprise Campuses Network"
         ]
       }
     ],
@@ -5734,7 +5734,7 @@ const seoPageData = {
           "Proven deployments in Southeast Asia retail organizations",
           "Custom AI models trained for retail scenarios",
           "Real-time dashboards for operations and security teams",
-          "Seamless integration with ASEAN Smart Cities Network"
+          "Seamless integration with ASEAN Enterprise Campuses Network"
         ]
       }
     ],
@@ -6553,23 +6553,23 @@ const seoPageData = {
   },
   "smart-city-implementation": {
     "slug": "/resources/smart-city-implementation",
-    "title": "Smart City Implementation Guide | VMukti Resources",
-    "metaDescription": "Download VMukti's planning and deploying smart city surveillance infrastructure. Expert insights, best practices, and actionable frameworks for enterprise video",
+    "title": "Enterprise Campus Implementation Guide | VMukti Resources",
+    "metaDescription": "Download VMukti's planning and deploying enterprise campus surveillance infrastructure. Expert insights, best practices, and actionable frameworks for enterprise video",
     "keywords": [
-      "smart city implementation",
+      "enterprise campus implementation",
       "planning and deploying smart",
       "video surveillance guide",
       "VMS best practices",
       "enterprise surveillance planning"
     ],
-    "heroTitle": "Smart City Implementation Guide",
+    "heroTitle": "Enterprise Campus Implementation Guide",
     "heroSubtitle": "Expert guidance for enterprise video surveillance",
-    "heroDescription": "VMukti's planning and deploying smart city surveillance infrastructure. Built from real-world deployments across 50+ countries, this resource provides actionable insights for security professionals, IT leaders, and procurement teams.",
+    "heroDescription": "VMukti's planning and deploying enterprise campus surveillance infrastructure. Built from real-world deployments across 50+ countries, this resource provides actionable insights for security professionals, IT leaders, and procurement teams.",
     "category": "resources",
     "sections": [
       {
         "title": "What You'll Learn",
-        "content": "This comprehensive resource covers everything you need to know about planning and deploying smart city surveillance infrastructure. Drawing from VMukti's experience deploying cloud-native VMS across global enterprises, we share proven frameworks and best practices.",
+        "content": "This comprehensive resource covers everything you need to know about planning and deploying enterprise campus surveillance infrastructure. Drawing from VMukti's experience deploying cloud-native VMS across global enterprises, we share proven frameworks and best practices.",
         "stats": [
           {
             "value": "50+",
@@ -6604,7 +6604,7 @@ const seoPageData = {
     ],
     "faqs": [
       {
-        "question": "Who should read this smart city implementation guide?",
+        "question": "Who should read this enterprise campus implementation guide?",
         "answer": "This resource is designed for CISOs, security directors, IT leaders, procurement teams, and consultants involved in enterprise video surveillance decisions. It provides both strategic frameworks and technical implementation details."
       },
       {
@@ -6618,7 +6618,7 @@ const seoPageData = {
     ],
     "cta": {
       "title": "Get Expert Guidance",
-      "description": "Connect with our team for personalized advice on planning and deploying smart city surveillance infrastructure.",
+      "description": "Connect with our team for personalized advice on planning and deploying enterprise campus surveillance infrastructure.",
       "buttonText": "Talk to an Expert",
       "buttonLink": "/book-a-demo"
     }
@@ -7271,8 +7271,8 @@ const seoPageData = {
       "buttonLink": "/book-a-demo"
     }
   },
-  "government-defense-surveillance": {
-    "slug": "/industry/government-defense-surveillance",
+  "enterprise-security": {
+    "slug": "/industry/enterprise-security",
     "title": "Government & Defense Video Surveillance Solutions | VMukti",
     "metaDescription": "Enterprise government & defense video surveillance with AI analytics. Critical infrastructure protection, border security, and public safety. Cloud-native platf",
     "keywords": [
@@ -7561,23 +7561,23 @@ const seoPageData = {
   },
   "smart-cities": {
     "slug": "/solutions/smart-cities",
-    "title": "Smart City Solutions | VMukti - Cloud Video Intelligence",
-    "metaDescription": "Integrated smart city surveillance with ICCC platform, traffic management, and urban safety analytics.",
+    "title": "Enterprise Campus Solutions | VMukti - Cloud Video Intelligence",
+    "metaDescription": "Integrated enterprise campus surveillance with Enterprise Command Center platform, traffic management, and urban safety analytics.",
     "keywords": [
-      "smart city solutions",
-      "smart city solutions platform",
-      "enterprise smart city solutions",
-      "VMukti smart city solutions",
-      "cloud smart city solutions"
+      "enterprise campus solutions",
+      "enterprise campus solutions platform",
+      "enterprise enterprise campus solutions",
+      "VMukti enterprise campus solutions",
+      "cloud enterprise campus solutions"
     ],
-    "heroTitle": "Enterprise-Grade Smart City Solutions",
+    "heroTitle": "Enterprise-Grade Enterprise Campus Solutions",
     "heroSubtitle": "Cloud-native intelligence for global operations",
-    "heroDescription": "Integrated smart city surveillance with ICCC platform, traffic management, and urban safety analytics. Built on microservices architecture, VMukti scales from single cameras to millions of devices globally.",
+    "heroDescription": "Integrated enterprise campus surveillance with Enterprise Command Center platform, traffic management, and urban safety analytics. Built on microservices architecture, VMukti scales from single cameras to millions of devices globally.",
     "category": "technology",
     "sections": [
       {
-        "title": "Smart City Solutions Platform Capabilities",
-        "content": "VMukti delivers smart city solutions through cloud-native architecture. Our platform combines AI-powered analytics with enterprise reliability for mission-critical video surveillance operations.",
+        "title": "Enterprise Campus Solutions Platform Capabilities",
+        "content": "VMukti delivers enterprise campus solutions through cloud-native architecture. Our platform combines AI-powered analytics with enterprise reliability for mission-critical video surveillance operations.",
         "stats": [
           {
             "value": "99.99%",
@@ -7600,7 +7600,7 @@ const seoPageData = {
         ]
       },
       {
-        "title": "Why Choose VMukti Smart City Solutions",
+        "title": "Why Choose VMukti Enterprise Campus Solutions",
         "content": "VMukti combines global technology leadership with deep domain expertise. Our solutions are proven across 50+ countries serving enterprises, governments, and critical infrastructure.",
         "features": [
           "Proven global deployments across 50+ countries",
@@ -7612,11 +7612,11 @@ const seoPageData = {
     ],
     "faqs": [
       {
-        "question": "What makes VMukti smart city solutions different?",
+        "question": "What makes VMukti enterprise campus solutions different?",
         "answer": "VMukti is built cloud-native from the ground up, not retrofitted. This means true infinite scalability, automatic updates, and AI capabilities that improve continuously without manual intervention."
       },
       {
-        "question": "How quickly can VMukti smart city solutions be deployed?",
+        "question": "How quickly can VMukti enterprise campus solutions be deployed?",
         "answer": "Cloud deployment takes hours, not months. Our platform provisions automatically with pre-configured AI models, reducing time-to-value by 90% compared to traditional on-premise installations."
       },
       {
@@ -7625,7 +7625,7 @@ const seoPageData = {
       }
     ],
     "cta": {
-      "title": "Experience Smart City Solutions",
+      "title": "Experience Enterprise Campus Solutions",
       "description": "See VMukti in action with a personalized demo.",
       "buttonText": "Book a Demo",
       "buttonLink": "/book-a-demo"
@@ -7922,7 +7922,7 @@ const seoPageData = {
   "middle-east": {
     "slug": "/middle-east",
     "title": "Video Surveillance Solutions in Middle East | VMukti",
-    "metaDescription": "VMukti provides enterprise video surveillance in Middle East. Cloud-native VMS, AI analytics, and smart city platforms aligned with Vision 2030 and Smart City i",
+    "metaDescription": "VMukti provides enterprise video surveillance in Middle East. Cloud-native VMS, AI analytics, and enterprise campus platforms aligned with Vision 2030 and Enterprise Campus i",
     "keywords": [
       "video surveillance Middle East",
       "VMS Middle East",
@@ -7931,8 +7931,8 @@ const seoPageData = {
       "VMukti Middle East"
     ],
     "heroTitle": "Enterprise Video Surveillance for Middle East",
-    "heroSubtitle": "Cloud-native platform aligned with Vision 2030 and Smart City initiatives",
-    "heroDescription": "VMukti delivers comprehensive video surveillance solutions for Middle East. Our cloud-native platform supports Vision 2030 and Smart City initiatives with AI analytics, edge computing, and enterprise-grade reliability.",
+    "heroSubtitle": "Cloud-native platform aligned with Vision 2030 and Enterprise Campus initiatives",
+    "heroDescription": "VMukti delivers comprehensive video surveillance solutions for Middle East. Our cloud-native platform supports Vision 2030 and Enterprise Campus initiatives with AI analytics, edge computing, and enterprise-grade reliability.",
     "category": "geo",
     "sections": [
       {
@@ -7956,16 +7956,16 @@ const seoPageData = {
           "Regional data centers for low-latency Middle East operations",
           "Compliance with Middle East data sovereignty regulations",
           "Local technical teams and 24/7 regional support",
-          "Integration with Vision 2030 and Smart City initiatives"
+          "Integration with Vision 2030 and Enterprise Campus initiatives"
         ]
       },
       {
         "title": "VMukti Solutions for Middle East",
-        "content": "From smart city ICCC platforms to enterprise VMS deployments, VMukti offers the complete surveillance technology stack for Middle East organizations.",
+        "content": "From enterprise campus Enterprise Command Center platforms to enterprise VMS deployments, VMukti offers the complete surveillance technology stack for Middle East organizations.",
         "features": [
           "Cloud-native VMS for enterprise and government",
           "AI-powered analytics for security and operations",
-          "Smart city and ICCC platform integration",
+          "Smart city and Enterprise Command Center platform integration",
           "Edge computing for distributed Middle East deployments"
         ]
       }
@@ -7980,8 +7980,8 @@ const seoPageData = {
         "answer": "Yes. VMukti maintains full compliance with Middle East data sovereignty, privacy, and security regulations. Our platform supports regional data residency requirements."
       },
       {
-        "question": "How does VMukti support Vision 2030 and Smart City initiatives?",
-        "answer": "VMukti's platform is designed to align with Vision 2030 and Smart City initiatives, providing the technological foundation for smart city development, enterprise digitization, and public safety modernization."
+        "question": "How does VMukti support Vision 2030 and Enterprise Campus initiatives?",
+        "answer": "VMukti's platform is designed to align with Vision 2030 and Enterprise Campus initiatives, providing the technological foundation for enterprise campus development, enterprise digitization, and public safety modernization."
       }
     ],
     "cta": {
@@ -7994,7 +7994,7 @@ const seoPageData = {
   "saudi-arabia": {
     "slug": "/saudi-arabia",
     "title": "Video Surveillance Solutions in Saudi Arabia | VMukti",
-    "metaDescription": "VMukti provides enterprise video surveillance in Saudi Arabia. Cloud-native VMS, AI analytics, and smart city platforms aligned with Saudi Vision 2030 and NEOM.",
+    "metaDescription": "VMukti provides enterprise video surveillance in Saudi Arabia. Cloud-native VMS, AI analytics, and enterprise campus platforms aligned with Saudi Vision 2030 and NEOM.",
     "keywords": [
       "video surveillance Saudi Arabia",
       "VMS Saudi Arabia",
@@ -8033,11 +8033,11 @@ const seoPageData = {
       },
       {
         "title": "VMukti Solutions for Saudi Arabia",
-        "content": "From smart city ICCC platforms to enterprise VMS deployments, VMukti offers the complete surveillance technology stack for Saudi Arabia organizations.",
+        "content": "From enterprise campus Enterprise Command Center platforms to enterprise VMS deployments, VMukti offers the complete surveillance technology stack for Saudi Arabia organizations.",
         "features": [
           "Cloud-native VMS for enterprise and government",
           "AI-powered analytics for security and operations",
-          "Smart city and ICCC platform integration",
+          "Smart city and Enterprise Command Center platform integration",
           "Edge computing for distributed Saudi Arabia deployments"
         ]
       }
@@ -8053,7 +8053,7 @@ const seoPageData = {
       },
       {
         "question": "How does VMukti support Saudi Vision 2030 and NEOM?",
-        "answer": "VMukti's platform is designed to align with Saudi Vision 2030 and NEOM, providing the technological foundation for smart city development, enterprise digitization, and public safety modernization."
+        "answer": "VMukti's platform is designed to align with Saudi Vision 2030 and NEOM, providing the technological foundation for enterprise campus development, enterprise digitization, and public safety modernization."
       }
     ],
     "cta": {
@@ -8066,7 +8066,7 @@ const seoPageData = {
   "africa": {
     "slug": "/africa",
     "title": "Video Surveillance Solutions in Africa | VMukti",
-    "metaDescription": "VMukti provides enterprise video surveillance in Africa. Cloud-native VMS, AI analytics, and smart city platforms aligned with Agenda 2063 and Smart Africa.",
+    "metaDescription": "VMukti provides enterprise video surveillance in Africa. Cloud-native VMS, AI analytics, and enterprise campus platforms aligned with Agenda 2063 and Smart Africa.",
     "keywords": [
       "video surveillance Africa",
       "VMS Africa",
@@ -8105,11 +8105,11 @@ const seoPageData = {
       },
       {
         "title": "VMukti Solutions for Africa",
-        "content": "From smart city ICCC platforms to enterprise VMS deployments, VMukti offers the complete surveillance technology stack for Africa organizations.",
+        "content": "From enterprise campus Enterprise Command Center platforms to enterprise VMS deployments, VMukti offers the complete surveillance technology stack for Africa organizations.",
         "features": [
           "Cloud-native VMS for enterprise and government",
           "AI-powered analytics for security and operations",
-          "Smart city and ICCC platform integration",
+          "Smart city and Enterprise Command Center platform integration",
           "Edge computing for distributed Africa deployments"
         ]
       }
@@ -8125,7 +8125,7 @@ const seoPageData = {
       },
       {
         "question": "How does VMukti support Agenda 2063 and Smart Africa?",
-        "answer": "VMukti's platform is designed to align with Agenda 2063 and Smart Africa, providing the technological foundation for smart city development, enterprise digitization, and public safety modernization."
+        "answer": "VMukti's platform is designed to align with Agenda 2063 and Smart Africa, providing the technological foundation for enterprise campus development, enterprise digitization, and public safety modernization."
       }
     ],
     "cta": {
@@ -8138,7 +8138,7 @@ const seoPageData = {
   "europe": {
     "slug": "/europe",
     "title": "Video Surveillance Solutions in Europe | VMukti",
-    "metaDescription": "VMukti provides enterprise video surveillance in Europe. Cloud-native VMS, AI analytics, and smart city platforms aligned with EU Digital Strategy and GDPR comp",
+    "metaDescription": "VMukti provides enterprise video surveillance in Europe. Cloud-native VMS, AI analytics, and enterprise campus platforms aligned with EU Digital Strategy and GDPR comp",
     "keywords": [
       "video surveillance Europe",
       "VMS Europe",
@@ -8177,11 +8177,11 @@ const seoPageData = {
       },
       {
         "title": "VMukti Solutions for Europe",
-        "content": "From smart city ICCC platforms to enterprise VMS deployments, VMukti offers the complete surveillance technology stack for Europe organizations.",
+        "content": "From enterprise campus Enterprise Command Center platforms to enterprise VMS deployments, VMukti offers the complete surveillance technology stack for Europe organizations.",
         "features": [
           "Cloud-native VMS for enterprise and government",
           "AI-powered analytics for security and operations",
-          "Smart city and ICCC platform integration",
+          "Smart city and Enterprise Command Center platform integration",
           "Edge computing for distributed Europe deployments"
         ]
       }
@@ -8197,7 +8197,7 @@ const seoPageData = {
       },
       {
         "question": "How does VMukti support EU Digital Strategy and GDPR compliance?",
-        "answer": "VMukti's platform is designed to align with EU Digital Strategy and GDPR compliance, providing the technological foundation for smart city development, enterprise digitization, and public safety modernization."
+        "answer": "VMukti's platform is designed to align with EU Digital Strategy and GDPR compliance, providing the technological foundation for enterprise campus development, enterprise digitization, and public safety modernization."
       }
     ],
     "cta": {

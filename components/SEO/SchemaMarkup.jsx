@@ -1,7 +1,7 @@
 'use client';
 /**
  * Schema Markup Generator for VMukti Solutions
- * Creates JSON-LD structured data for enterprise VMS, EMS, ICCC platforms
+ * Creates JSON-LD structured data for enterprise VMS, EMS, Enterprise Command Center platforms
  */
 
 export const organizationSchema = {
@@ -11,7 +11,7 @@ export const organizationSchema = {
   legalName: 'VMukti Solutions Pvt. Ltd.',
   url: 'https://www.vmukti.com',
   logo: 'https://www.vmukti.com/logo.png',
-  description: 'Enterprise cloud VMS, EMS, and ICCC platform provider with STQC certification. 18+ years, 900+ deployments across 700+ districts, 1B+ camera feeds processed globally.',
+  description: 'Enterprise cloud VMS, EMS, and Enterprise Command Center platform provider with STQC certification. 18+ years, 900+ deployments across 700+ districts, 1B+ camera feeds processed globally.',
   foundingDate: '2007',
   foundingLocation: 'Ahmedabad, Gujarat, India',
   numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 200, maxValue: 500 },
@@ -35,14 +35,14 @@ export const organizationSchema = {
     { '@type': 'Place', name: 'Latin America' },
     { '@type': 'Place', name: 'Europe' },
   ],
-  knowsAbout: ['Video Management System', 'Enterprise Management System', 'Integrated Command and Control Center', 'Cloud Surveillance', 'AI Video Analytics', 'Smart City Solutions', 'GenAI Video Analytics', 'Edge Computing', 'ANPR', 'Face Recognition'],
+  knowsAbout: ['Video Management System', 'Enterprise Management System', 'Integrated Command and Control Center', 'Cloud Surveillance', 'AI Video Analytics', 'Enterprise Campus Solutions', 'GenAI Video Analytics', 'Edge Computing', 'ANPR', 'Face Recognition'],
   award: ['NASSCOM Top 50 Emerging Product Company', 'IIM-Ahmedabad Incubated', 'STQC Certified', 'Make in India Certified'],
   hasOfferCatalog: {
     '@type': 'OfferCatalog', name: 'VMukti Enterprise Platform Suite',
     itemListElement: [
       { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti Cloud VMS', image: 'https://www.vmukti.com/products/cloud-vms.jpg' } },
       { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti EMS', image: 'https://www.vmukti.com/products/ems.jpg' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti ICCC Platform', image: 'https://www.vmukti.com/products/iccc.jpg' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti Enterprise Command Center', image: 'https://www.vmukti.com/products/iccc.jpg' } },
     ],
   },
 };
@@ -51,7 +51,7 @@ export const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'VMukti Solutions',
-  alternateName: 'VMukti - Enterprise Cloud VMS & Smart City Platform',
+  alternateName: 'VMukti - Enterprise Cloud VMS & Enterprise Campus Platform',
   url: 'https://www.vmukti.com',
   potentialAction: { '@type': 'SearchAction', target: { '@type': 'EntryPoint', urlTemplate: 'https://www.vmukti.com/search?q={search_term_string}' }, 'query-input': 'required name=search_term_string' },
   publisher: { '@type': 'Organization', name: 'VMukti Solutions', logo: 'https://www.vmukti.com/logo.png' },
@@ -106,7 +106,7 @@ export const vmuktiPlatforms = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: 'VMukti Cloud VMS',
-    description: 'Enterprise-grade cloud-based Video Management System with STQC certification. Supports 1B+ concurrent camera feeds, AI-powered analytics, and smart city integration. 900+ deployments across 700+ districts.',
+    description: 'Enterprise-grade cloud-based Video Management System with STQC certification. Supports 1B+ concurrent camera feeds, AI-powered analytics, and enterprise campus integration. 900+ deployments across 700+ districts.',
     image: 'https://www.vmukti.com/products/cloud-vms.jpg',
     brand: { '@type': 'Brand', name: 'VMukti' },
     manufacturer: { '@type': 'Organization', name: 'VMukti Solutions Pvt. Ltd.', url: 'https://www.vmukti.com' },
@@ -143,8 +143,8 @@ export const vmuktiPlatforms = {
   iccc: {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: 'VMukti ICCC Platform',
-    description: 'Integrated Command and Control Center platform for unified emergency response, smart city operations, and cross-agency coordination. Features multi-agency dashboards, incident tracking, and real-time analytics.',
+    name: 'VMukti Enterprise Command Center',
+    description: 'Integrated Command and Control Center platform for unified emergency response, enterprise campus operations, and cross-agency coordination. Features multi-agency dashboards, incident tracking, and real-time analytics.',
     image: 'https://www.vmukti.com/products/iccc.jpg',
     brand: { '@type': 'Brand', name: 'VMukti' },
     manufacturer: { '@type': 'Organization', name: 'VMukti Solutions Pvt. Ltd.', url: 'https://www.vmukti.com' },
@@ -201,7 +201,7 @@ export const localBusinessSchema = {
   email: 'info@vmukti.com',
   url: 'https://www.vmukti.com',
   logo: 'https://www.vmukti.com/logo.png',
-  description: 'Enterprise cloud VMS, EMS, and ICCC platform provider with STQC certification. 18+ years of experience, 900+ deployments across 700+ districts.',
+  description: 'Enterprise cloud VMS, EMS, and Enterprise Command Center platform provider with STQC certification. 18+ years of experience, 900+ deployments across 700+ districts.',
   priceRange: '$$$',
   openingHoursSpecification: [
     {

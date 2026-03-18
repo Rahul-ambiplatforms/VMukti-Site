@@ -347,7 +347,7 @@ export const getFAQSchema = () => ({
       "name": "What industries does VMukti serve?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "VMukti serves diverse industries including Banking & Finance, Retail & Shopping Malls, Hospitality & Hotels, Manufacturing & Warehousing, Education & Campuses, Healthcare & Hospitals, Government & Public Safety, Smart Cities, Transportation & Logistics, and Critical Infrastructure. Each industry benefits from tailored AI analytics for security, compliance, and operational intelligence."
+        "text": "VMukti serves diverse industries including Banking & Finance, Retail & Shopping Malls, Hospitality & Hotels, Manufacturing & Warehousing, Education & Campuses, Healthcare & Hospitals, Government & Public Safety, Enterprise Campuses, Transportation & Logistics, and Critical Infrastructure. Each industry benefits from tailored AI analytics for security, compliance, and operational intelligence."
       }
     },
     {

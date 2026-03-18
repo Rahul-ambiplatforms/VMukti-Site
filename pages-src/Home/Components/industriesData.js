@@ -158,7 +158,7 @@ const industriesData = [
     path: "/industry/transportation",
   },
   {
-    name: "Smart City",
+    name: "Enterprise Campus",
     img:
       "data:image/svg+xml;charset=utf-8," +
       encodeURIComponent(

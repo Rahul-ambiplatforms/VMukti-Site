@@ -8,7 +8,7 @@ export default function ConvergenceClient() {
     <>
       <EventSchema
         name="VMukti at Convergence India 2026"
-        description="Visit VMukti Solutions at Convergence India 2026 to experience next-generation AI-powered video surveillance, Cloud VMS, Enterprise Management System, and ICCC solutions for smart cities and enterprises."
+        description="Visit VMukti Solutions at Convergence India 2026 to experience next-generation AI-powered video surveillance, Cloud VMS, Enterprise Management System, and Enterprise Command Center solutions for enterprise campuses and enterprises."
         startDate="2026-01-14T10:00:00+05:30"
         endDate="2026-01-16T18:00:00+05:30"
         locationName="Pragati Maidan"

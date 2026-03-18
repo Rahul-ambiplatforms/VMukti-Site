@@ -7,8 +7,8 @@
 export const homepageSchema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: 'VMukti Solutions - Enterprise Cloud VMS & Smart City Platform',
-  description: 'VMukti is a leading provider of enterprise cloud VMS, EMS, and ICCC platforms with STQC certification. 18+ years, 900+ deployments, 1B+ camera feeds processed globally.',
+  name: 'VMukti Solutions - Enterprise Cloud VMS & Enterprise Campus Platform',
+  description: 'VMukti is a leading provider of enterprise cloud VMS, EMS, and Enterprise Command Center platforms with STQC certification. 18+ years, 900+ deployments, 1B+ camera feeds processed globally.',
   url: 'https://www.vmukti.com',
   primaryImageOfPage: {
     '@type': 'ImageObject',
@@ -27,7 +27,7 @@ export const solutionpageSchema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
   name: 'VMukti Solutions & Products',
-  description: 'Enterprise video management, incident management, and command center solutions for smart cities and surveillance operations.',
+  description: 'Enterprise video management, incident management, and command center solutions for enterprise campuses and surveillance operations.',
   url: 'https://www.vmukti.com/solutions',
   primaryImageOfPage: {
     '@type': 'ImageObject',
@@ -74,7 +74,7 @@ export const solutionpageSchema = {
       {
         '@type': 'ListItem',
         position: 3,
-        name: 'ICCC',
+        name: 'Enterprise Command Center',
         description: 'Integrated Command and Control Center for emergency response',
         url: 'https://www.vmukti.com/solutions/iccc',
       },
@@ -93,7 +93,7 @@ export const industrypageSchema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
   name: 'VMukti Industries & Use Cases',
-  description: 'VMukti solutions for smart cities, transportation, healthcare, banking, retail, and government sectors.',
+  description: 'VMukti solutions for enterprise campuses, transportation, healthcare, banking, retail, and government sectors.',
   url: 'https://www.vmukti.com/industries',
   primaryImageOfPage: {
     '@type': 'ImageObject',
@@ -126,7 +126,7 @@ export const industrypageSchema = {
       {
         '@type': 'ListItem',
         position: 1,
-     name: 'Smart Cities',
+     name: 'Enterprise Campuses',
         description: 'Unified platform for city-wide surveillance and emergency response',
         url: 'https://www.vmukti.com/industries/smart-cities',
       },
@@ -173,7 +173,7 @@ export const productpageSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
   name: 'VMukti Cloud VMS',
-  description: 'Enterprise-grade cloud-based Video Management System with STQC certification, supporting 1B+ concurrent camera feeds with AI analytics and smart city integration.',
+  description: 'Enterprise-grade cloud-based Video Management System with STQC certification, supporting 1B+ concurrent camera feeds with AI analytics and enterprise campus integration.',
   url: 'https://www.vmukti.com/products/cloud-vms',
   primaryImageOfPage: {
     '@type': 'ImageObject',
@@ -234,7 +234,7 @@ export const localBusinessSchema = {
   name: 'VMukti Solutions Pvt. Ltd.',
   url: 'https://www.vmukti.com',
   logo: 'https://www.vmukti.com/logo.png',
-  description: 'Enterprise cloud VMS, EMS, and ICCC platform provider',
+  description: 'Enterprise cloud VMS, EMS, and Enterprise Command Center platform provider',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Arista@Eight Corporate House, Near Satyam House, Behind Rajpath Club, Bodakdev',
@@ -308,7 +308,7 @@ export const organizationSchema = {
     },
   url: 'https://www.vmukti.com',
   logo: 'https://www.vmukti.com/logo.png',
-  description: 'Enterprise cloud VMS, EMS, and ICCC platform provider with STQC certification. 18+ years, 900+ deployments across 700+ districts, 1B+ camera feeds processed globally.',
+  description: 'Enterprise cloud VMS, EMS, and Enterprise Command Center platform provider with STQC certification. 18+ years, 900+ deployments across 700+ districts, 1B+ camera feeds processed globally.',
   foundingDate: '2007',
   foundingLocation: 'Ahmedabad, Gujarat, India',
   numberOfEmployees: {
@@ -370,7 +370,7 @@ export const organizationSchema = {
     'Integrated Command and Control Center',
     'Cloud Surveillance',
     'AI Video Analytics',
-    'Smart City Solutions',
+    'Enterprise Campus Solutions',
     'GenAI Video Analytics',
     'Edge Computing',
     'ANPR',
@@ -388,7 +388,7 @@ export const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'VMukti Solutions',
-  alternateName: 'VMukti - Enterprise Cloud VMS & Smart City Platform',
+  alternateName: 'VMukti - Enterprise Cloud VMS & Enterprise Campus Platform',
   url: 'https://www.vmukti.com',
   potentialAction: {
     '@type': 'SearchAction',
@@ -422,7 +422,7 @@ export const faqSchema = {
       name: 'Does VMukti support integration with existing systems?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, VMukti platforms are designed with enterprise integration in mind. Our EMS and ICCC solutions seamlessly integrate with third-party VMS systems and legacy infrastructure.',
+        text: 'Yes, VMukti platforms are designed with enterprise integration in mind. Our EMS and Enterprise Command Center solutions seamlessly integrate with third-party VMS systems and legacy infrastructure.',
       },
     },
     {
@@ -430,7 +430,7 @@ export const faqSchema = {
       name: 'How many camera feeds can VMukti process?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'VMukti has processed over 1 billion camera feeds globally and supports unlimited scalability for enterprise deployments. Our infrastructure is designed to handle the largest smart city and surveillance projects.',
+        text: 'VMukti has processed over 1 billion camera feeds globally and supports unlimited scalability for enterprise deployments. Our infrastructure is designed to handle the largest enterprise campus and surveillance projects.',
       },
     },
     {
@@ -446,7 +446,7 @@ export const faqSchema = {
       name: 'What industries does VMukti serve?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'VMukti serves a wide range of industries including smart cities, transportation, healthcare, banking, retail, and government. We have 900+ deployments across 700+ districts globally.',
+        text: 'VMukti serves a wide range of industries including enterprise campuses, transportation, healthcare, banking, retail, and government. We have 900+ deployments across 700+ districts globally.',
       },
     },
     {
@@ -454,7 +454,7 @@ export const faqSchema = {
       name: 'How does VMukti compare to Milestone XProtect and Genetec?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'VMukti is a cloud-native VMS platform, unlike Milestone XProtect and Genetec Security Center which originated as on-premise solutions. VMukti offers STQC government certification, native ICCC integration for smart cities, and 50+ built-in AI analytics — capabilities that require third-party plugins with Milestone or Genetec. VMukti is also available on Microsoft Azure Marketplace for enterprise procurement.',
+        text: 'VMukti is a cloud-native VMS platform, unlike Milestone XProtect and Genetec Security Center which originated as on-premise solutions. VMukti offers STQC government certification, native Enterprise Command Center integration for enterprise campuses, and 50+ built-in AI analytics — capabilities that require third-party plugins with Milestone or Genetec. VMukti is also available on Microsoft Azure Marketplace for enterprise procurement.',
       },
     },
     {
@@ -462,7 +462,7 @@ export const faqSchema = {
       name: 'Is VMukti a good alternative to Verkada for cloud video surveillance?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'VMukti and Verkada are both cloud-native VMS platforms. VMukti differentiates with STQC government certification, sovereign cloud deployment options, ICCC command center integration, and availability on Azure Marketplace. VMukti has been deployed across 700+ government districts in India and exhibited at ISC West 2025 and GITEX 2023/2024.',
+        text: 'VMukti and Verkada are both cloud-native VMS platforms. VMukti differentiates with STQC government certification, sovereign cloud deployment options , Enterprise Command Center command center integration, and availability on Azure Marketplace. VMukti has been deployed across 700+ government districts in India and exhibited at ISC West 2025 and GITEX 2023/2024.',
       },
     },
     {
@@ -593,7 +593,7 @@ export const emsSchema = {
     },
     review: {
       '@type': 'Review',
-      author: { '@type': 'Organization', name: 'Smart City Solutions Review' },
+      author: { '@type': 'Organization', name: 'Enterprise Campus Solutions Review' },
       reviewRating: { '@type': 'Rating', ratingValue: '4.6', bestRating: '5' },
       reviewBody: 'VMukti EMS provides comprehensive event management with real-time incident detection and coordinated response.'
     },
@@ -622,7 +622,7 @@ export const emsSchema = {
 export const icccSchema = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
-  name: 'VMukti ICCC (Integrated Command and Control Center)',
+  name: 'VMukti Enterprise Command Center (Integrated Command and Control Center)',
   applicationCategory: 'SecurityApplication',
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -632,12 +632,12 @@ export const icccSchema = {
     },
     review: {
       '@type': 'Review',
-      author: { '@type': 'Organization', name: 'ICCC Platform Review' },
+      author: { '@type': 'Organization', name: 'Enterprise Command Center Review' },
       reviewRating: { '@type': 'Rating', ratingValue: '4.8', bestRating: '5' },
-      reviewBody: 'VMukti ICCC Platform delivers comprehensive command and control capabilities for smart city operations.'
+      reviewBody: 'VMukti Enterprise Command Center delivers comprehensive command and control capabilities for enterprise campus operations.'
     },
   operatingSystem: 'Cloud-based (Web)',
-  description: 'Unified command and control platform integrating video surveillance, IoT sensors, access control, emergency response, and operational systems into a single situational awareness dashboard. Deployed across 900+ smart city and enterprise installations for real-time monitoring and incident management.',
+  description: 'Unified command and control platform integrating video surveillance, IoT sensors, access control, emergency response, and operational systems into a single situational awareness dashboard. Deployed across 900+ enterprise campus and enterprise installations for real-time monitoring and incident management.',
   offers: {
     '@type': 'Offer',
     category: 'Enterprise Software',

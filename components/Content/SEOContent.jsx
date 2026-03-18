@@ -18,7 +18,7 @@ const HomeContent = () => (
           </Heading>
           <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.600" maxW="900px" mx="auto">
             VMukti delivers cloud-native video management software (VMS), enterprise management
-            systems (EMS), and integrated command &amp; control center (ICCC) solutions powered by
+            systems (EMS), and integrated command &amp; control center (Enterprise Command Center) solutions powered by
             advanced AI analytics and Generative AI capabilities for global enterprises.
           </Text>
         </Box>
@@ -59,13 +59,13 @@ const HomeContent = () => (
               Command &amp; Control Center
             </Heading>
             <Text color="gray.600" fontSize="sm" mb={3}>
-              Integrated command and control center (ICCC) for smart city operations, centralized
+              Integrated command and control center (Enterprise Command Center) for enterprise campus operations, centralized
               multi-site surveillance, and real-time incident management. Purpose-built for
               government agencies, transportation networks, and critical infrastructure with video
               wall integration and GIS mapping.
             </Text>
             <Link as={RouterLink} to="/solution" color="#0057B8" fontWeight="600" fontSize="sm">
-              Explore ICCC Solutions &rarr;
+              Explore Enterprise Command Center Solutions &rarr;
             </Link>
           </Box>
         </SimpleGrid>
@@ -76,7 +76,7 @@ const HomeContent = () => (
           </Heading>
           <Text color="gray.600" mb={4}>
             VMukti's computer vision platform delivers intelligent video analytics across 8 major
-            industries including Railways, Smart Cities, Enterprise Security, Oil &amp; Gas,
+            industries including Railways, Enterprise Campuses, Enterprise Security, Oil &amp; Gas,
             Banking &amp; Finance, Manufacturing, Retail, and Healthcare. Our deep learning AI
             models process video streams in real-time to detect anomalies, automate compliance
             monitoring, and generate actionable insights that transform raw surveillance footage
@@ -262,9 +262,9 @@ const IndustriesContent = () => (
             </Text>
           </Box>
           <Box p={6} bg="gray.50" borderRadius="xl">
-            <Heading as="h3" fontSize="md" color="#0057B8" mb={2}>Smart Cities &amp; Government</Heading>
+            <Heading as="h3" fontSize="md" color="#0057B8" mb={2}>Enterprise Campuses &amp; Government</Heading>
             <Text color="gray.600" fontSize="sm">
-              Integrated command and control center (ICCC) solutions for smart city operations
+              Integrated command and control center (Enterprise Command Center) solutions for enterprise campus operations
               including traffic management, public safety monitoring, emergency response
               coordination, environmental monitoring, and citizen services. Multi-agency
               collaboration with unified dashboards, GIS integration, and video wall support.
@@ -329,7 +329,7 @@ const AboutContent = () => (
         </Heading>
         <Text color="gray.600" fontSize="lg" textAlign="center" maxW="900px" mx="auto">
           VMukti is a global leader in AI-powered video surveillance and enterprise security
-          platforms, delivering cloud-native VMS, EMS, and ICCC solutions to organizations across
+          platforms, delivering cloud-native VMS, EMS, and Enterprise Command Center solutions to organizations across
           50+ countries. Our mission is to transform passive video monitoring into proactive
           security intelligence through computer vision and Generative AI.
         </Text>

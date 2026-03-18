@@ -170,7 +170,7 @@ const industriesData = [
     link: "transportation",
   },
   {
-    name: "Smart City",
+    name: "Enterprise Campus",
     img:
       "data:image/svg+xml;charset=utf-8," +
       encodeURIComponent(
@@ -631,7 +631,7 @@ export default function IndustryDashboard() {
         <title>Industries We Serve – AI Video Surveillance Solutions in USA</title>
         <meta
           name="description"
-          content="VMukti delivers AI-enabled video surveillance solutions in the USA for retail, manufacturing, logistics, healthcare, education, and smart cities to improve security and operations."
+          content="VMukti delivers AI-enabled video surveillance solutions in the USA for retail, manufacturing, logistics, healthcare, education, and enterprise campuses to improve security and operations."
         />
         <meta name="robots" content="index, follow" />
         {/* Open Graph (OG) Tags for Social Media Sharing */}
@@ -641,7 +641,7 @@ export default function IndustryDashboard() {
         />
         <meta
           property="og:description"
-          content="VMukti delivers AI-enabled video surveillance solutions in the USA for retail, manufacturing, logistics, healthcare, education, and smart cities to improve security and operations."
+          content="VMukti delivers AI-enabled video surveillance solutions in the USA for retail, manufacturing, logistics, healthcare, education, and enterprise campuses to improve security and operations."
         />
         <meta
           property="og:image"
@@ -659,7 +659,7 @@ export default function IndustryDashboard() {
         />
         <meta
           name="twitter:description"
-          content="VMukti delivers AI-enabled video surveillance solutions in the USA for retail, manufacturing, logistics, healthcare, education, and smart cities to improve security and operations."
+          content="VMukti delivers AI-enabled video surveillance solutions in the USA for retail, manufacturing, logistics, healthcare, education, and enterprise campuses to improve security and operations."
         />
         <meta
           name="twitter:image"

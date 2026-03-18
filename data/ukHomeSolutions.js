@@ -2,7 +2,7 @@
 export const homeSolutions = {
   heading: "Complete Cloud Video Surveillance Ecosystem for UK Operations",
 //   description:
-//     "Power your operations with our next-gen AI surveillance suite featuring intelligent VMS, event-driven EMS, strategic ICCC integrations and advanced Cloud+AI orchestration. From enterprise campuses to critical infrastructure, our systems are designed for decision-makers who demand control, security and scale without compromise.",
+//     "Power your operations with our next-gen AI surveillance suite featuring intelligent VMS, event-driven EMS, strategic Enterprise Command Center integrations and advanced Cloud+AI orchestration. From enterprise campuses to critical infrastructure, our systems are designed for decision-makers who demand control, security and scale without compromise.",
   solutions: [
     {
       heading1: "Cloud VMS",
@@ -25,10 +25,10 @@ export const homeSolutions = {
       path: "/solution/enterprise-management-system",
     },
     {
-      heading1: "ICCC",
+      heading1: "Enterprise Command Center",
       heading2: "Integrated Command & Control Center",
       content:
-        "Mission-critical platform for smart city command center UK, emergency response, public safety, transport and blue-light services.",
+        "Mission-critical platform for enterprise campus command center UK, emergency response, public safety, transport and blue-light services.",
       image_certi: "/assets/home_solution_certi.png",
       image: "/assets/home_solution_3.png",
       image_mobile: "/assets/home_solution_mobile_3.png",

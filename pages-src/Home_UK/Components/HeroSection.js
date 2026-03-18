@@ -22,7 +22,7 @@ const MotionButton = motion(Button);
 
 // Array of words for the typewriter animation
 const industries = [
-  "Smart Cities"
+  "Enterprise Campuses"
 ];
 
 const HeroSection = () => {

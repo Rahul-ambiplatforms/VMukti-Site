@@ -100,7 +100,7 @@ const dropdownItems = {
       path: "/industry/transportation",
     },
     {
-      label: "Smart City Monitoring",
+      label: "Enterprise Campus Monitoring",
       path: "/industry/smart-city",
     },
     {

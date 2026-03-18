@@ -8,7 +8,7 @@
  * - 900+ global deployments
  * - 700+ districts covered
  * - 1B+ camera feeds processed
- * - 50+ smart cities
+ * - 50+ enterprise campuses
  * - ISO 27001:2022 certified
  */
 
@@ -20,7 +20,7 @@ export const faqData = {
       {
         question: 'What is VMukti VMS (Video Management System)?',
         answer:
-          'VMukti Cloud VMS is an enterprise-grade, STQC-certified video management system supporting 100,000+ concurrent camera feeds with AI-powered analytics. Deployed across 900+ projects globally, it processes over 1 billion camera feeds annually. It features cloud-native architecture, edge-to-cloud processing, ONVIF compatibility, and built-in AI analytics for ANPR, facial recognition, and crowd analysis. With 18+ years of innovation, VMukti VMS is trusted by governments, smart cities, and enterprises across 50+ smart cities worldwide.',
+          'VMukti Cloud VMS is an enterprise-grade, STQC-certified video management system supporting 100,000+ concurrent camera feeds with AI-powered analytics. Deployed across 900+ projects globally, it processes over 1 billion camera feeds annually. It features cloud-native architecture, edge-to-cloud processing, ONVIF compatibility, and built-in AI analytics for ANPR, facial recognition, and crowd analysis. With 18+ years of innovation, VMukti VMS is trusted by governments, enterprise campuses, and enterprises across 50+ enterprise campuses worldwide.',
       },
       {
         question: 'Should I choose cloud VMS or on-premise VMS?',
@@ -30,12 +30,12 @@ export const faqData = {
       {
         question: 'How many cameras can VMukti VMS support?',
         answer:
-          'VMukti Cloud VMS supports unlimited scalability—proven with 100,000+ concurrent camera feeds in single deployments and 1B+ feeds processed annually across all customer installations. The system has been deployed in 900+ projects across 700+ districts globally. It scales elastically to meet enterprise needs, whether managing 100 cameras or 1 million across smart cities, transportation networks, and large government projects. Linear scaling ensures consistent performance regardless of camera count.',
+          'VMukti Cloud VMS supports unlimited scalability—proven with 100,000+ concurrent camera feeds in single deployments and 1B+ feeds processed annually across all customer installations. The system has been deployed in 900+ projects across 700+ districts globally. It scales elastically to meet enterprise needs, whether managing 100 cameras or 1 million across enterprise campuses, transportation networks, and large government projects. Linear scaling ensures consistent performance regardless of camera count.',
       },
       {
         question: 'What is VMukti VMS pricing model?',
         answer:
-          'VMukti Cloud VMS uses enterprise licensing based on camera count, concurrent streams, storage, and analytics features. Flexible options include consumption-based (pay-per-camera-per-month), subscription models, and hybrid deployments. Pricing scales from small deployments (500+ cameras) to massive smart city projects (100,000+ cameras). Contact VMukti sales for enterprise quotes. No upfront capital expenditure required for cloud models, with transparent per-camera or per-feed pricing. ISO 27001:2022 certified infrastructure ensures cost-effective security.',
+          'VMukti Cloud VMS uses enterprise licensing based on camera count, concurrent streams, storage, and analytics features. Flexible options include consumption-based (pay-per-camera-per-month), subscription models, and hybrid deployments. Pricing scales from small deployments (500+ cameras) to massive enterprise campus projects (100,000+ cameras). Contact VMukti sales for enterprise quotes. No upfront capital expenditure required for cloud models, with transparent per-camera or per-feed pricing. ISO 27001:2022 certified infrastructure ensures cost-effective security.',
       },
       {
         question: 'Does VMukti VMS integrate with third-party cameras?',
@@ -45,7 +45,7 @@ export const faqData = {
       {
         question: 'What AI analytics features does VMukti VMS include?',
         answer:
-          'VMukti Cloud VMS includes advanced AI analytics: ANPR (automatic number plate recognition), facial recognition, crowd analytics and density detection, intrusion detection, fire and smoke detection, behavior analysis, loitering detection, object tracking, and custom analytics. Edge processing ensures real-time detection (sub-100ms latency) while cloud processing handles complex queries across 1B+ processed feeds. All analytics are STQC-certified and deployed in 50+ smart cities. Models are continuously updated for improved accuracy and new use cases.',
+          'VMukti Cloud VMS includes advanced AI analytics: ANPR (automatic number plate recognition), facial recognition, crowd analytics and density detection, intrusion detection, fire and smoke detection, behavior analysis, loitering detection, object tracking, and custom analytics. Edge processing ensures real-time detection (sub-100ms latency) while cloud processing handles complex queries across 1B+ processed feeds. All analytics are STQC-certified and deployed in 50+ enterprise campuses. Models are continuously updated for improved accuracy and new use cases.',
       },
       {
         question: 'Does VMukti VMS have mobile access?',
@@ -60,12 +60,12 @@ export const faqData = {
       {
         question: 'How long does VMukti VMS deployment take?',
         answer:
-          'VMukti Cloud VMS deployment timelines vary: cloud-only (2-4 weeks), hybrid (4-8 weeks), and large smart city projects (3-6 months). Speed depends on infrastructure readiness, camera integration scope, analytics customization, and compliance requirements. VMukti has deployed in 900+ projects globally, with experienced teams handling parallel integration, testing, and training. Government projects like smart cities require additional compliance validation (STQC certification verified), adding 4-8 weeks. Enterprise support includes zero-downtime migration from legacy VMS systems.',
+          'VMukti Cloud VMS deployment timelines vary: cloud-only (2-4 weeks), hybrid (4-8 weeks), and large enterprise campus projects (3-6 months). Speed depends on infrastructure readiness, camera integration scope, analytics customization, and compliance requirements. VMukti has deployed in 900+ projects globally, with experienced teams handling parallel integration, testing, and training. Government projects like enterprise campuses require additional compliance validation (STQC certification verified), adding 4-8 weeks. Enterprise support includes zero-downtime migration from legacy VMS systems.',
       },
       {
         question: 'How does VMukti VMS compare to competitors like Hikvision, Uniview, or Milestone?',
         answer:
-          'VMukti differentiates through STQC certification (government-approved in India), cloud-native architecture with 100,000+ concurrent feed capacity, processing 1B+ feeds annually, and deep AI analytics built-in (not third-party bolt-ons). Unlike Hikvision/Uniview (primarily camera hardware vendors), VMukti is pure software focused on enterprise scalability and smart cities. Compared to Milestone (legacy on-premise architecture), VMukti offers modern cloud-edge hybrid deployment, ISO 27001 compliance, and deployment across 50+ smart cities. 18+ years of innovation in surveillance software provides proven reliability across 900+ deployments.',
+          'VMukti differentiates through STQC certification (government-approved in India), cloud-native architecture with 100,000+ concurrent feed capacity, processing 1B+ feeds annually, and deep AI analytics built-in (not third-party bolt-ons). Unlike Hikvision/Uniview (primarily camera hardware vendors), VMukti is pure software focused on enterprise scalability and enterprise campuses. Compared to Milestone (legacy on-premise architecture), VMukti offers modern cloud-edge hybrid deployment, ISO 27001 compliance, and deployment across 50+ enterprise campuses. 18+ years of innovation in surveillance software provides proven reliability across 900+ deployments.',
       },
     ],
   },
@@ -82,12 +82,12 @@ export const faqData = {
       {
         question: 'What is the difference between VMS and EMS?',
         answer:
-          'VMS (Video Management System) focuses on recording, playback, and basic video analytics from cameras. EMS (Enterprise Management System) adds layers: multi-site coordination, infrastructure health monitoring, SLA tracking, automated incident response, bandwidth and storage optimization, visitor management integration, and enterprise reporting. While VMS is camera-centric, EMS is operations-centric. A 100-camera single-site deployment uses VMS; a 10,000-camera multi-state smart city project uses EMS. VMukti offers both as integrated suite—EMS built on top of VMS for seamless scaling.',
+          'VMS (Video Management System) focuses on recording, playback, and basic video analytics from cameras. EMS (Enterprise Management System) adds layers: multi-site coordination, infrastructure health monitoring, SLA tracking, automated incident response, bandwidth and storage optimization, visitor management integration, and enterprise reporting. While VMS is camera-centric, EMS is operations-centric. A 100-camera single-site deployment uses VMS; a 10,000-camera multi-state enterprise campus project uses EMS. VMukti offers both as integrated suite—EMS built on top of VMS for seamless scaling.',
       },
       {
         question: 'Can VMukti EMS manage multiple sites and locations?',
         answer:
-          'Yes, VMukti EMS excels at multi-site management—deployed across 900+ projects spanning 700+ districts globally, managing 50+ smart cities. Centralized dashboard provides unified view of all sites with real-time status, health metrics, incident prioritization, and resource allocation. Bandwidth-aware streaming scales quality based on network conditions. Role-based access control allows local operators to manage their site while central NOC (Network Operations Center) oversees all locations. Enterprise APIs enable integration with corporate systems for comprehensive operational visibility.',
+          'Yes, VMukti EMS excels at multi-site management—deployed across 900+ projects spanning 700+ districts globally, managing 50+ enterprise campuses. Centralized dashboard provides unified view of all sites with real-time status, health metrics, incident prioritization, and resource allocation. Bandwidth-aware streaming scales quality based on network conditions. Role-based access control allows local operators to manage their site while central NOC (Network Operations Center) oversees all locations. Enterprise APIs enable integration with corporate systems for comprehensive operational visibility.',
       },
       {
         question: 'Does VMukti EMS integrate with access control systems?',
@@ -102,12 +102,12 @@ export const faqData = {
       {
         question: 'How scalable is VMukti EMS for enterprise deployments?',
         answer:
-          'VMukti EMS scales to 1B+ processed feeds annually across 900+ deployments in 700+ districts. Cloud-native microservices architecture enables horizontal scaling—add servers to handle more cameras, analytics, and users. Tested configurations support 100,000+ concurrent cameras, 10,000+ users, and petabytes of storage. Linear performance scaling means moving from 1,000 to 100,000 cameras requires no architecture changes. Government projects like smart cities rely on this proven scalability with 99.99% uptime SLA.',
+          'VMukti EMS scales to 1B+ processed feeds annually across 900+ deployments in 700+ districts. Cloud-native microservices architecture enables horizontal scaling—add servers to handle more cameras, analytics, and users. Tested configurations support 100,000+ concurrent cameras, 10,000+ users, and petabytes of storage. Linear performance scaling means moving from 1,000 to 100,000 cameras requires no architecture changes. Government projects like enterprise campuses rely on this proven scalability with 99.99% uptime SLA.',
       },
       {
         question: 'What is the typical EMS deployment architecture?',
         answer:
-          'VMukti EMS typically uses: central cloud control room (processing, storage, analytics), local edge servers at each site (local recording, real-time detection), and secure encrypted links between locations. This hybrid approach ensures: (1) local resilience—if cloud link fails, edge continues recording; (2) bandwidth efficiency—only alerts and metadata sent to cloud; (3) compliance—sensitive video can stay on-premise while insights move to cloud. Deployment across 50+ smart cities uses this architecture for city-scale operations.',
+          'VMukti EMS typically uses: central cloud control room (processing, storage, analytics), local edge servers at each site (local recording, real-time detection), and secure encrypted links between locations. This hybrid approach ensures: (1) local resilience—if cloud link fails, edge continues recording; (2) bandwidth efficiency—only alerts and metadata sent to cloud; (3) compliance—sensitive video can stay on-premise while insights move to cloud. Deployment across 50+ enterprise campuses uses this architecture for city-scale operations.',
       },
       {
         question: 'How does VMukti EMS support enterprise security and compliance?',
@@ -119,47 +119,47 @@ export const faqData = {
 
   // Integrated Command & Control Center FAQs
   iccc: {
-    title: 'Integrated Command & Control Center (ICCC) FAQs',
+    title: 'Integrated Command & Control Center (Enterprise Command Center) FAQs',
     qa: [
       {
-        question: 'What is VMukti ICCC (Integrated Command & Control Center)?',
+        question: 'What is VMukti Enterprise Command Center (Integrated Command & Control Center)?',
         answer:
-          'VMukti ICCC is an advanced command center platform integrating video surveillance, IoT sensors, access control, emergency systems, and traffic management into a unified operational dashboard. Deployed across 50+ smart cities managing 900+ projects in 700+ districts, it provides real-time situational awareness and coordinated response capabilities. ICCC goes beyond VMS/EMS by adding GIS integration, video wall support, automatic incident prioritization, cross-system event correlation, and emergency response orchestration. Critical for government smart city projects and enterprise crisis management.',
+          'VMukti Enterprise Command Center is an advanced command center platform integrating video surveillance, IoT sensors, access control, emergency systems, and traffic management into a unified operational dashboard. Deployed across 50+ enterprise campuses managing 900+ projects in 700+ districts, it provides real-time situational awareness and coordinated response capabilities. Enterprise Command Center goes beyond VMS/EMS by adding GIS integration, video wall support, automatic incident prioritization, cross-system event correlation, and emergency response orchestration. Critical for government enterprise campus projects and enterprise crisis management.',
       },
       {
-        question: 'What smart city use cases does VMukti ICCC support?',
+        question: 'What enterprise campus use cases does VMukti Enterprise Command Center support?',
         answer:
-          'VMukti ICCC powers: traffic management (ANPR, congestion detection), public safety (incident detection, officer dispatch), emergency response (fire, medical, natural disaster), critical infrastructure protection (water, power, utilities), event management (crowds, VIP security), and utilities coordination. Deployed in 50+ smart cities globally, ICCC integrates with city traffic signals, emergency services (police/fire/ambulance), weather systems, and public notifications. GIS mapping shows real-time incident locations with nearest resources, enabling rapid response. STQC-certified for government use.',
+          'VMukti Enterprise Command Center powers: traffic management (ANPR, congestion detection), public safety (incident detection, officer dispatch), emergency response (fire, medical, natural disaster), critical infrastructure protection (water, power, utilities), event management (crowds, VIP security), and utilities coordination. Deployed in 50+ enterprise campuses globally , Enterprise Command Center integrates with city traffic signals, emergency services (police/fire/ambulance), weather systems, and public notifications. GIS mapping shows real-time incident locations with nearest resources, enabling rapid response. STQC-certified for government use.',
       },
       {
-        question: 'Can VMukti ICCC integrate with external systems?',
+        question: 'Can VMukti Enterprise Command Center integrate with external systems?',
         answer:
-          'Yes, VMukti ICCC features comprehensive integration through REST APIs, webhooks, and standard protocols (MQTT, ONVIF). Integrated systems include: third-party VMS (Hikvision, Uniview, Milestone), emergency dispatch (CAD - Computer Aided Dispatch), traffic management systems, weather feeds, IoT sensors, access control, city infrastructure databases. Enterprise-grade integration handles real-time data flows from 1000+ sensors/systems. The 900+ deployments include complex smart city integrations coordinating dozens of external systems.',
+          'Yes, VMukti Enterprise Command Center features comprehensive integration through REST APIs, webhooks, and standard protocols (MQTT, ONVIF). Integrated systems include: third-party VMS (Hikvision, Uniview, Milestone), emergency dispatch (CAD - Computer Aided Dispatch), traffic management systems, weather feeds, IoT sensors, access control, city infrastructure databases. Enterprise-grade integration handles real-time data flows from 1000+ sensors/systems. The 900+ deployments include complex enterprise campus integrations coordinating dozens of external systems.',
       },
       {
-        question: 'What real-time monitoring capabilities does ICCC provide?',
+        question: 'What real-time monitoring capabilities does Enterprise Command Center provide?',
         answer:
-          'VMukti ICCC provides: live camera view with instant playback, real-time AI alerts (ANPR, faces, intrusions, fires), geospatial mapping with resource locations, incident heatmaps, traffic flow visualization, crowd density monitoring, and system health dashboards. Operators see all incidents color-coded by priority (red=critical, yellow=warning), enabling rapid triage. Processing 1B+ camera feeds annually ensures minimal detection latency. Multi-monitor video wall support shows up to 64 camera feeds simultaneously. Mobile access lets incident commanders monitor from field.',
+          'VMukti Enterprise Command Center provides: live camera view with instant playback, real-time AI alerts (ANPR, faces, intrusions, fires), geospatial mapping with resource locations, incident heatmaps, traffic flow visualization, crowd density monitoring, and system health dashboards. Operators see all incidents color-coded by priority (red=critical, yellow=warning), enabling rapid triage. Processing 1B+ camera feeds annually ensures minimal detection latency. Multi-monitor video wall support shows up to 64 camera feeds simultaneously. Mobile access lets incident commanders monitor from field.',
       },
       {
-        question: 'What AI features are built into VMukti ICCC?',
+        question: 'What AI features are built into VMukti Enterprise Command Center?',
         answer:
-          'VMukti ICCC includes: automatic number plate recognition (ANPR), facial recognition, crowd density and anomaly detection, vehicle classification, behavior analysis (loitering, fighting), fire/smoke detection, intrusion detection, and custom analytics. AI runs at edge (sub-100ms latency) and cloud (complex queries). The system learns from 1B+ processed feeds to improve accuracy continuously. All STQC-certified analytics meet government security standards. 50+ smart city deployments rely on these AI features for automated threat detection.',
+          'VMukti Enterprise Command Center includes: automatic number plate recognition (ANPR), facial recognition, crowd density and anomaly detection, vehicle classification, behavior analysis (loitering, fighting), fire/smoke detection, intrusion detection, and custom analytics. AI runs at edge (sub-100ms latency) and cloud (complex queries). The system learns from 1B+ processed feeds to improve accuracy continuously. All STQC-certified analytics meet government security standards. 50+ enterprise campus deployments rely on these AI features for automated threat detection.',
       },
       {
-        question: 'Does VMukti ICCC meet government compliance standards?',
+        question: 'Does VMukti Enterprise Command Center meet government compliance standards?',
         answer:
-          'Yes, VMukti ICCC is STQC (Security Testing and Quality Certification) certified by the Government of India (Ministry of Electronics & IT), ensuring it meets national security standards. Additional certifications: ISO 27001:2022 (information security), ISO 9001:2015 (quality), and Make in India certified. Government projects like smart cities require STQC certification; VMukti meets all requirements. Compliance includes: data residency (all sensitive data stays in India), encryption standards, audit trails, and regular security assessments.',
+          'Yes, VMukti Enterprise Command Center is STQC (Security Testing and Quality Certification) certified by the Government of India (Ministry of Electronics & IT), ensuring it meets national security standards. Additional certifications: ISO 27001:2022 (information security), ISO 9001:2015 (quality), and Make in India certified. Government projects like enterprise campuses require STQC certification; VMukti meets all requirements. Compliance includes: data residency (all sensitive data stays in India), encryption standards, audit trails, and regular security assessments.',
       },
       {
-        question: 'How scalable is VMukti ICCC for large smart city projects?',
+        question: 'How scalable is VMukti Enterprise Command Center for large enterprise campus projects?',
         answer:
-          'VMukti ICCC scales to 1B+ processed feeds across 900+ deployments in 700+ districts globally. The largest implementations manage 100,000+ cameras across entire cities. Cloud-native microservices architecture enables elastic scaling—add servers during peak hours (rush hour, events), reduce during off-hours. 99.99% uptime SLA ensures 24/7 operations. Tested configurations support 10,000+ simultaneous operators, essential for government projects with multiple agencies (police, fire, traffic) coordinating response.',
+          'VMukti Enterprise Command Center scales to 1B+ processed feeds across 900+ deployments in 700+ districts globally. The largest implementations manage 100,000+ cameras across entire cities. Cloud-native microservices architecture enables elastic scaling—add servers during peak hours (rush hour, events), reduce during off-hours. 99.99% uptime SLA ensures 24/7 operations. Tested configurations support 10,000+ simultaneous operators, essential for government projects with multiple agencies (police, fire, traffic) coordinating response.',
       },
       {
-        question: 'What case studies demonstrate VMukti ICCC impact?',
+        question: 'What case studies demonstrate VMukti Enterprise Command Center impact?',
         answer:
-          'VMukti ICCC is deployed in 50+ smart cities managing public safety for millions of residents. Key metrics: 900+ total deployments, 700+ districts covered, 1B+ feeds processed annually, 99.99% uptime. Applications include: major traffic intersections (automated incident detection reducing response time by 40%), public events (crowd monitoring preventing stampedes), emergency response (correlated alarms accelerating dispatch), and infrastructure protection (leak detection, power outage prevention). Government testimonials highlight improved safety, reduced response times, and operational efficiency.',
+          'VMukti Enterprise Command Center is deployed in 50+ enterprise campuses managing public safety for millions of residents. Key metrics: 900+ total deployments, 700+ districts covered, 1B+ feeds processed annually, 99.99% uptime. Applications include: major traffic intersections (automated incident detection reducing response time by 40%), public events (crowd monitoring preventing stampedes), emergency response (correlated alarms accelerating dispatch), and infrastructure protection (leak detection, power outage prevention). Government testimonials highlight improved safety, reduced response times, and operational efficiency.',
       },
     ],
   },
@@ -233,7 +233,7 @@ export const faqData = {
       {
         question: 'Can VMukti AI generate real-time alerts?',
         answer:
-          'Yes, VMukti generates real-time alerts with sub-second latency (detected in <100ms at edge, alert delivered in <1 second). Alert types: (1) email/SMS for critical incidents, (2) push notifications to mobile apps, (3) in-app notifications for operators, (4) API webhooks for third-party systems (emergency dispatch, traffic signals). Alerts include: incident photo, timestamp, camera location, confidence score. Enterprise deployments configure alert rules (time-based, zone-based, severity-based). 50+ smart cities rely on these instant alerts for emergency response.',
+          'Yes, VMukti generates real-time alerts with sub-second latency (detected in <100ms at edge, alert delivered in <1 second). Alert types: (1) email/SMS for critical incidents, (2) push notifications to mobile apps, (3) in-app notifications for operators, (4) API webhooks for third-party systems (emergency dispatch, traffic signals). Alerts include: incident photo, timestamp, camera location, confidence score. Enterprise deployments configure alert rules (time-based, zone-based, severity-based). 50+ enterprise campuses rely on these instant alerts for emergency response.',
       },
       {
         question: 'Can VMukti perform facial recognition?',
@@ -243,12 +243,12 @@ export const faqData = {
       {
         question: 'Does VMukti provide ANPR (Automatic Number Plate Recognition)?',
         answer:
-          'Yes, VMukti ANPR recognizes license plates at vehicle speeds (up to 200 km/h) with 95%+ accuracy. Features: (1) multi-lane detection; (2) international plate support (India, US, EU formats); (3) vehicle tracking across locations; (4) stolen vehicle alerts; (5) toll/parking integration. Processing 1B+ vehicle feeds annually ensures reliable performance. Applications: traffic enforcement, stolen vehicle recovery, suspect vehicles, parking management. STQC-certified for government use in 50+ smart cities.',
+          'Yes, VMukti ANPR recognizes license plates at vehicle speeds (up to 200 km/h) with 95%+ accuracy. Features: (1) multi-lane detection; (2) international plate support (India, US, EU formats); (3) vehicle tracking across locations; (4) stolen vehicle alerts; (5) toll/parking integration. Processing 1B+ vehicle feeds annually ensures reliable performance. Applications: traffic enforcement, stolen vehicle recovery, suspect vehicles, parking management. STQC-certified for government use in 50+ enterprise campuses.',
       },
       {
         question: 'Can VMukti AI count people and detect crowd anomalies?',
         answer:
-          'Yes, VMukti crowd analytics: (1) people counting—real-time headcount; (2) density mapping—shows crowded zones; (3) flow analysis—tracks crowd movement; (4) anomaly detection—detects sudden density spikes (panic, rush); (5) occupancy monitoring—enforces capacity limits. Accuracy 99%+ even in dense crowds (10,000+ people). Applications: public events, transit stations, retail stores, emergency evacuation. 50+ smart city deployments use this for public space management and emergency response.',
+          'Yes, VMukti crowd analytics: (1) people counting—real-time headcount; (2) density mapping—shows crowded zones; (3) flow analysis—tracks crowd movement; (4) anomaly detection—detects sudden density spikes (panic, rush); (5) occupancy monitoring—enforces capacity limits. Accuracy 99%+ even in dense crowds (10,000+ people). Applications: public events, transit stations, retail stores, emergency evacuation. 50+ enterprise campus deployments use this for public space management and emergency response.',
       },
       {
         question: 'How does VMukti integrate AI analytics with VMS and EMS?',
@@ -324,7 +324,7 @@ export const faqData = {
       {
         question: 'Is VMukti Live Streaming secure for government and enterprise use?',
         answer:
-          'Yes, VMukti Live Streaming includes enterprise-grade security: (1) end-to-end encryption (AES-256); (2) token-based access control; (3) IP whitelisting; (4) role-based viewing permissions; (5) DRM protection; (6) audit logging of all viewer activity. The platform is STQC-certified and deployed across 50+ smart city projects in India for government use. Data sovereignty options ensure streams are processed and stored within specified geographic boundaries. Supports private cloud and on-premise deployment models.',
+          'Yes, VMukti Live Streaming includes enterprise-grade security: (1) end-to-end encryption (AES-256); (2) token-based access control; (3) IP whitelisting; (4) role-based viewing permissions; (5) DRM protection; (6) audit logging of all viewer activity. The platform is STQC-certified and deployed across 50+ enterprise campus projects in India for government use. Data sovereignty options ensure streams are processed and stored within specified geographic boundaries. Supports private cloud and on-premise deployment models.',
       },
     ],
   },
@@ -341,7 +341,7 @@ export const faqData = {
       {
         question: 'What are the main use cases for VMukti Face Surveillance?',
         answer:
-          'VMukti Face Surveillance supports: (1) law enforcement watchlist monitoring—real-time alerts when persons of interest appear; (2) enterprise access control—facial authentication for secure areas; (3) attendance management—automated check-in/out without cards; (4) VIP identification—instant recognition for hospitality and events; (5) missing persons—scan crowds against databases; (6) repeat offender detection—retail loss prevention. Deployed across smart cities (50+), airports, corporate campuses, educational institutions, and banking facilities.',
+          'VMukti Face Surveillance supports: (1) law enforcement watchlist monitoring—real-time alerts when persons of interest appear; (2) enterprise access control—facial authentication for secure areas; (3) attendance management—automated check-in/out without cards; (4) VIP identification—instant recognition for hospitality and events; (5) missing persons—scan crowds against databases; (6) repeat offender detection—retail loss prevention. Deployed across enterprise campuses (50+), airports, corporate campuses, educational institutions, and banking facilities.',
       },
       {
         question: 'Does VMukti Face Surveillance comply with privacy regulations?',
@@ -363,17 +363,17 @@ export const faqData = {
       {
         question: 'Who is VMukti Solutions and how long have they been in business?',
         answer:
-          'VMukti Solutions Pvt. Ltd. is India\'s leading AI-powered video surveillance software company founded in 2007, with 18+ years of innovation in enterprise surveillance platforms. Headquartered in Ahmedabad, Gujarat, India, with offices in US, UK, and Middle East. 900+ global deployments across 700+ districts in 50+ smart cities demonstrate proven reliability. STQC-certified (government approved) with ISO 27001:2022 and ISO 9001:2015 certifications. Named NASSCOM Top 50 Emerging Companies and IIM-Ahmedabad Incubated. Leadership team combines deep surveillance software expertise and enterprise technology background.',
+          'VMukti Solutions Pvt. Ltd. is India\'s leading AI-powered video surveillance software company founded in 2007, with 18+ years of innovation in enterprise surveillance platforms. Headquartered in Ahmedabad, Gujarat, India, with offices in US, UK, and Middle East. 900+ global deployments across 700+ districts in 50+ enterprise campuses demonstrate proven reliability. STQC-certified (government approved) with ISO 27001:2022 and ISO 9001:2015 certifications. Named NASSCOM Top 50 Emerging Companies and IIM-Ahmedabad Incubated. Leadership team combines deep surveillance software expertise and enterprise technology background.',
       },
       {
         question: 'How many deployments does VMukti have globally?',
         answer:
-          'VMukti has 900+ deployments across 700+ districts globally spanning 50+ smart cities in India, US, UK, UAE, Singapore, Saudi Arabia, and Australia. This scales from small 50-camera deployments to massive smart city projects with 100,000+ cameras. Processing 1B+ camera feeds annually demonstrates scale and reliability. Customer base includes government agencies, smart city authorities, enterprises (banking, retail, healthcare, transportation), and international organizations. Global footprint ensures localized support across all time zones.',
+          'VMukti has 900+ deployments across 700+ districts globally spanning 50+ enterprise campuses in India, US, UK, UAE, Singapore, Saudi Arabia, and Australia. This scales from small 50-camera deployments to massive enterprise campus projects with 100,000+ cameras. Processing 1B+ camera feeds annually demonstrates scale and reliability. Customer base includes government agencies, enterprise campus authorities, enterprises (banking, retail, healthcare, transportation), and international organizations. Global footprint ensures localized support across all time zones.',
       },
       {
         question: 'What industries and sectors does VMukti serve?',
         answer:
-          'VMukti serves: (1) government & smart cities (50+ cities, 900+ projects); (2) transportation (traffic, ANPR, public transit); (3) banking & finance (branch security, vault monitoring); (4) retail (loss prevention, traffic analytics); (5) healthcare (facility security, access control); (6) education (campus monitoring); (7) utilities (infrastructure protection); (8) manufacturing (safety, process monitoring). Vertical-specific solutions address unique requirements—smart cities need GIS integration, retail needs people counting, banking needs compliance auditing.',
+          'VMukti serves: (1) government & enterprise campuses (50+ cities, 900+ projects); (2) transportation (traffic, ANPR, public transit); (3) banking & finance (branch security, vault monitoring); (4) retail (loss prevention, traffic analytics); (5) healthcare (facility security, access control); (6) education (campus monitoring); (7) utilities (infrastructure protection); (8) manufacturing (safety, process monitoring). Vertical-specific solutions address unique requirements—enterprise campuses need GIS integration, retail needs people counting, banking needs compliance auditing.',
       },
       {
         question: 'What customer support does VMukti provide?',

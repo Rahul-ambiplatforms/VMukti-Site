@@ -11,13 +11,13 @@ const seoPageDataGeoIntl = {
     sections: [
       {
         title: "Why UAE Enterprises Choose VMukti Cloud VMS",
-        content: "The UAE's smart city ambitions require a video management platform that scales. VMukti Cloud VMS manages 50,000+ cameras per deployment with sub-second latency. Our platform supports Arabic language interfaces, UAE data sovereignty requirements, and integrates with existing infrastructure across all 7 emirates.",
+        content: "The UAE's enterprise campus ambitions require a video management platform that scales. VMukti Cloud VMS manages 50,000+ cameras per deployment with sub-second latency. Our platform supports Arabic language interfaces, UAE data sovereignty requirements, and integrates with existing infrastructure across all 7 emirates.",
         stats: [{ value: "7", label: "Emirates Covered" }, { value: "50K+", label: "Cameras Per Deployment" }, { value: "99.99%", label: "Uptime SLA" }],
         features: ["Arabic Language UI", "UAE Data Sovereignty", "NDAA Compliant"]
       },
       {
-        title: "Smart City & Enterprise Deployments",
-        content: "From Dubai's smart city projects to Abu Dhabi's industrial zones, VMukti provides unified video management with AI-powered analytics. Our edge processing ensures data stays local while cloud coordination enables multi-site management across the UAE and GCC region.",
+        title: "Enterprise Campus & Enterprise Deployments",
+        content: "From Dubai's enterprise campus projects to Abu Dhabi's industrial zones, VMukti provides unified video management with AI-powered analytics. Our edge processing ensures data stays local while cloud coordination enables multi-site management across the UAE and GCC region.",
         stats: [{ value: "200+", label: "Enterprise Clients" }, { value: "24/7", label: "UAE NOC Support" }, { value: "<500ms", label: "Alert Latency" }],
         features: ["Multi-Site Management", "Edge AI Processing", "GCC Region Support"]
       }
@@ -34,12 +34,12 @@ const seoPageDataGeoIntl = {
     keywords: ["Cloud VMS Saudi Arabia", "video management Riyadh", "surveillance platform KSA", "Hajj crowd management", "Vision 2030 security", "enterprise VMS Jeddah"],
     heroTitle: "Cloud VMS for Saudi Arabia's Vision 2030",
     heroSubtitle: "Scale Security Across the Kingdom",
-    heroDescription: "Support Vision 2030 smart city transformation with VMukti's Cloud VMS. Crowd analytics for Hajj, enterprise security for NEOM, and unified management across all 13 regions.",
+    heroDescription: "Support Vision 2030 enterprise campus transformation with VMukti's Cloud VMS. Crowd analytics for Hajj, enterprise security for NEOM, and unified management across all 13 regions.",
     category: "geo",
     sections: [
       {
         title: "Powering Vision 2030 Security Infrastructure",
-        content: "Saudi Arabia's Vision 2030 demands world-class security management. VMukti Cloud VMS provides crowd analytics for Hajj management handling millions of pilgrims, enterprise surveillance for Aramco facilities, and smart city infrastructure for NEOM and other mega-projects.",
+        content: "Saudi Arabia's Vision 2030 demands world-class security management. VMukti Cloud VMS provides crowd analytics for Hajj management handling millions of pilgrims, enterprise surveillance for Aramco facilities, and enterprise campus infrastructure for NEOM and other mega-projects.",
         stats: [{ value: "13", label: "Regions Supported" }, { value: "142K+", label: "Cameras Managed" }, { value: "1M+", label: "Daily Analytics Events" }],
         features: ["Hajj Crowd Analytics", "Vision 2030 Compatible", "Arabic Interface"]
       }
@@ -60,7 +60,7 @@ const seoPageDataGeoIntl = {
     sections: [
       {
         title: "Enterprise Video Management for Singapore",
-        content: "Singapore's Smart Nation initiative requires sophisticated video management. VMukti Cloud VMS delivers PDPA-compliant surveillance management with AI analytics, behavioral detection, and integration with Singapore's smart city infrastructure.",
+        content: "Singapore's Smart Nation initiative requires sophisticated video management. VMukti Cloud VMS delivers PDPA-compliant surveillance management with AI analytics, behavioral detection, and integration with Singapore's enterprise campus infrastructure.",
         stats: [{ value: "100%", label: "PDPA Compliant" }, { value: "99.99%", label: "Uptime" }, { value: "24/7", label: "SGT Support" }],
         features: ["PDPA Data Compliance", "Smart Nation Integration", "Multi-Ethnic Analytics"]
       }
@@ -118,12 +118,12 @@ const seoPageDataGeoIntl = {
     keywords: ["Cloud VMS Australia", "video management Sydney", "enterprise surveillance Melbourne", "Privacy Act VMS", "remote site monitoring Australia"],
     heroTitle: "Enterprise Cloud VMS for Australia",
     heroSubtitle: "Privacy Act Compliant Video Management",
-    heroDescription: "Deploy Privacy Act-compliant Cloud VMS across Australia. Remote site monitoring for mining, multi-site management for retail, and smart city solutions.",
+    heroDescription: "Deploy Privacy Act-compliant Cloud VMS across Australia. Remote site monitoring for mining, multi-site management for retail, and enterprise campus solutions.",
     category: "geo",
     sections: [
       {
         title: "Video Management Across Australia",
-        content: "Australia's vast geography requires video management that works everywhere. VMukti Cloud VMS provides remote site monitoring for mining operations in Western Australia, multi-site retail management in Victoria, and smart city surveillance in NSW — all from a single platform.",
+        content: "Australia's vast geography requires video management that works everywhere. VMukti Cloud VMS provides remote site monitoring for mining operations in Western Australia, multi-site retail management in Victoria, and enterprise campus surveillance in NSW — all from a single platform.",
         stats: [{ value: "6", label: "States Covered" }, { value: "99.9%", label: "Uptime SLA" }, { value: "24/7", label: "AEST Support" }],
         features: ["Remote Site Monitoring", "Privacy Act Compliant", "Low-Bandwidth Mode"]
       }

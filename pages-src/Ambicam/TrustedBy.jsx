@@ -28,9 +28,9 @@ const TrustedBy = () => {
       alt: "Retail & Hospitality",
     },
     {
-      title: "Smart Cities",
+      title: "Enterprise Campuses",
       image: "../assets/Smart_Cities.png",
-      alt: "Smart Cities",
+      alt: "Enterprise Campuses",
     },
     {
       title: "Homes & Communities",

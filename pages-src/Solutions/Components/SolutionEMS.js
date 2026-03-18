@@ -106,9 +106,9 @@ const SolutionEMS = () => {
     {
       id: 'icc',
       title1: 'Integrated Command & Control Center',
-      title2: '(ICCC)',
+      title2: '(Enterprise Command Center)',
       description: [
-        'The ICCC is a centralized intelligence hub that integrates live video feeds, IoT sensors, and AI-powered analytics across security systems. Designed for smart city management, critical infrastructure monitoring, and emergency response, it ensures real-time situational awareness and security coordination.',
+        'The Enterprise Command Center is a centralized intelligence hub that integrates live video feeds, IoT sensors, and AI-powered analytics across security systems. Designed for enterprise campus management, critical infrastructure monitoring, and emergency response, it ensures real-time situational awareness and security coordination.',
       ],
       description2: [
         <>

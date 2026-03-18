@@ -12,7 +12,7 @@ import CapabilitiesSchema from './CapabilitiesSchema';
  *  - FAQ rich snippets (FAQSchema)
  *  - Organization & Regional JSON-LD (LocalBusinessSchema)
  *  - Geo meta tags (GeoTargeting)
- *  - VMS, EMS, ICCC, Cloud AI, Use Cases, Industries (CapabilitiesSchema)
+ *  - VMS, EMS, Enterprise Command Center, Cloud AI, Use Cases, Industries (CapabilitiesSchema)
  */
 const SEOIntegration = () => {
   const location = useLocation();
@@ -42,7 +42,7 @@ const SEOIntegration = () => {
       {/* Regional geo-targeting meta tags */}
       <GeoTargeting region={getRegion()} />
 
-      {/* Full Platform Capabilities: VMS, EMS, ICCC, Cloud AI, Use Cases, Industries */}
+      {/* Full Platform Capabilities: VMS, EMS, Enterprise Command Center, Cloud AI, Use Cases, Industries */}
       <CapabilitiesSchema
         includeVMS={true}
         includeEMS={true}

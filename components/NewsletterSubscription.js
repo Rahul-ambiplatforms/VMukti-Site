@@ -79,7 +79,7 @@ const ourSolutionsLinks = [
     path: "/solution/enterprise-management-system",
   },
   {
-    text: "ICCC",
+    text: "Enterprise Command Center",
     path: "/solution/integrated-command-control-center",
   },
   {
@@ -113,7 +113,7 @@ const industriesWeServeLinks = [
   { text: "Election", path: "/industry/election" },
   { text: "Education", path: "/industry/education" },
   { text: "Transportation", path: "/industry/transportation" },
-  { text: "Smart City", path: "/industry/smart-city" },
+  { text: "Enterprise Campus", path: "/industry/smart-city" },
   { text: "Pharma", path: "/industry/pharma" },
   { text: "Logistics", path: "/industry/logistics" },
   { text: "Banking", path: "/industry/banking" },

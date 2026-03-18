@@ -111,7 +111,7 @@
                       <Text mb="4">
                         From <strong>real-time remote monitoring</strong> to{" "}
                         <strong>AI-driven analytics</strong>, Ambicam is built to
-                        empower individuals, enterprises, and smart cities with
+                        empower individuals, enterprises, and enterprise campuses with
                         actionable insights and reliable protection—anytime,
                         anywhere.
                       </Text>
@@ -247,7 +247,7 @@
             <Text mb="4">
               From <strong>real-time remote monitoring</strong> to{" "}
               <strong>AI-driven analytics</strong>, Ambicam is built to empower
-              individuals, enterprises, and smart cities with actionable insights
+              individuals, enterprises, and enterprise campuses with actionable insights
               and reliable protection—anytime, anywhere.
             </Text>
           </Box>

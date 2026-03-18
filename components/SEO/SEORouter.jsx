@@ -12,7 +12,7 @@ import {
 
 /**
  * SEORouter - Automatically applies correct SEO meta tags based on current route
- * Global enterprise VMS/EMS/ICCC positioning
+ * Global enterprise VMS/EMS/Enterprise Command Center positioning
  * Drop this component inside your Router and it handles everything.
  */
 const SEORouter = () => {

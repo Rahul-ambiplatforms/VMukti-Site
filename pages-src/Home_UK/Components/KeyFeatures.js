@@ -24,8 +24,8 @@ const keyFeaturesData = [
         image: "/assets/api-integration-icon.png",
     },
     {
-        title: "Proven in UK public sector, smart cities & enterprise deployments",
-        description: "Proven in UK public sector, \n smart cities & enterprise deployments",
+        title: "Proven in UK public sector, enterprise campuses & enterprise deployments",
+        description: "Proven in UK public sector, \n enterprise campuses & enterprise deployments",
         image: "/assets/government-deployment-icon.png",
     },
     {

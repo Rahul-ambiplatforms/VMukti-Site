@@ -97,17 +97,17 @@ const seoPageDataInnovation = {
 
   "visual-bot-smart-city": {
     "slug": "/product/visual-bot-smart-city",
-    "title": "Visual Bot for Smart Cities | AI-Powered ICCC | VMukti",
-    "metaDescription": "Integrate Visual Bot into your ICCC platform for city-wide video intelligence. Real-time public safety alerts, traffic optimization, emergency response coordination.",
-    "keywords": ["Visual Bot smart city", "ICCC platform", "city video intelligence", "public safety AI", "smart city surveillance", "emergency response video", "traffic incident detection", "command control center"],
-    "heroTitle": "Visual Bot for Smart City Command & Control Centers",
+    "title": "Visual Bot for Enterprise Campuses | AI-Powered Enterprise Command Center | VMukti",
+    "metaDescription": "Integrate Visual Bot into your Enterprise Command Center platform for city-wide video intelligence. Real-time public safety alerts, traffic optimization, emergency response coordination.",
+    "keywords": ["Visual Bot enterprise campus", "Enterprise Command Center platform", "city video intelligence", "public safety AI", "enterprise campus surveillance", "emergency response video", "traffic incident detection", "command control center"],
+    "heroTitle": "Visual Bot for Enterprise Campus Command & Control Centers",
     "heroSubtitle": "City-wide video intelligence for real-time public safety and emergency response",
-    "heroDescription": "City ICCC operators manage thousands of cameras across sprawling jurisdictions with limited personnel. Visual Bot's GPT-powered video assistant gives command centers superhuman intelligence—instantly detecting incidents, coordinating emergency response, and optimizing traffic flow across entire metropolitan areas.",
+    "heroDescription": "City Enterprise Command Center operators manage thousands of cameras across sprawling jurisdictions with limited personnel. Visual Bot's GPT-powered video assistant gives command centers superhuman intelligence—instantly detecting incidents, coordinating emergency response, and optimizing traffic flow across entire metropolitan areas.",
     "category": "product",
     "sections": [
       {
         "title": "Real-Time Public Safety Intelligence",
-        "content": "Visual Bot monitors city-wide camera networks 24/7, automatically detecting and alerting operators to critical events—accidents, congestion, suspicious activity, medical emergencies. The AI correlates events across cameras to give ICCC teams complete situational awareness, enabling faster emergency response and better resource allocation.",
+        "content": "Visual Bot monitors city-wide camera networks 24/7, automatically detecting and alerting operators to critical events—accidents, congestion, suspicious activity, medical emergencies. The AI correlates events across cameras to give Enterprise Command Center teams complete situational awareness, enabling faster emergency response and better resource allocation.",
         "stats": [
           { "value": "15 min", "label": "Average Emergency Response Time (Improved)" },
           { "value": "3,500+", "label": "Events Detected Daily" },
@@ -133,12 +133,12 @@ const seoPageDataInnovation = {
     ],
     "faqs": [
       { "question": "How does Visual Bot handle privacy concerns in public spaces?", "answer": "Visual Bot processes video at the edge with no faces or PII stored long-term. The system detects events and behavior (not individuals), generates alerts based on public safety criteria, and meets GDPR, CCPA, and local privacy regulations for public surveillance." },
-      { "question": "Can Visual Bot integrate with our existing ICCC platform?", "answer": "Yes. Visual Bot's open API integrates with any ICCC software—including Genetec, Milestone, and proprietary city systems. The AI layer sits on top of your existing infrastructure, requiring minimal configuration changes." },
+      { "question": "Can Visual Bot integrate with our existing Enterprise Command Center platform?", "answer": "Yes. Visual Bot's open API integrates with any Enterprise Command Center software—including Genetec, Milestone, and proprietary city systems. The AI layer sits on top of your existing infrastructure, requiring minimal configuration changes." },
       { "question": "What kind of incidents can Visual Bot detect automatically?", "answer": "Visual Bot detects accidents, congestion, disabled vehicles, crowd gathering, abandoned objects, loitering, traffic violations, and structural hazards. Cities customize detection rules based on local priorities and can add new incident types through the system." }
     ],
     "cta": {
       "title": "Transform Your City's Command Center",
-      "description": "See how leading smart cities are using Visual Bot for real-time public safety",
+      "description": "See how leading enterprise campuses are using Visual Bot for real-time public safety",
       "buttonText": "Schedule City Briefing"
     }
   },
@@ -757,7 +757,7 @@ const seoPageDataInnovation = {
     ],
     "faqs": [
       { "question": "How does AI identify the same person across different cameras?", "answer": "VMukti's ReID models analyze hundreds of visual features—gait, clothing, body shape, accessories—that remain consistent across camera transitions. Combined with temporal data (time between cameras) and facility layout, the system maintains person identity with 94% accuracy even through clothing changes." },
-      { "question": "Can multi-camera tracking work across multiple buildings or sites?", "answer": "Yes. VMukti supports tracking across unlimited locations—campus-wide, multi-building facilities, or even city-wide ICCC deployments. The system correlates footage from all locations to track movements across your entire organization." },
+      { "question": "Can multi-camera tracking work across multiple buildings or sites?", "answer": "Yes. VMukti supports tracking across unlimited locations—campus-wide, multi-building facilities, or even city-wide Enterprise Command Center deployments. The system correlates footage from all locations to track movements across your entire organization." },
       { "question": "Is person tracking and re-identification compliant with privacy laws?", "answer": "Yes. VMukti's tracking focuses on security-relevant scenarios—suspect movement during incidents, unauthorized access. The system complies with GDPR, CCPA, and local privacy laws. Organizations using tracking for non-security purposes should implement appropriate consent and notification." }
     ],
     "cta": {
@@ -1019,7 +1019,7 @@ const seoPageDataInnovation = {
     "sections": [
       {
         "title": "What to Expect at VMukti's ISC West 2026 Booth",
-        "content": "VMukti's booth features live Visual Bot demonstrations across multiple industry scenarios—retail loss prevention, enterprise security, smart city operations, and manufacturing safety. Interactive demonstrations let security professionals ask Visual Bot questions in real-time. Industry experts are on-site to discuss your specific challenges.",
+        "content": "VMukti's booth features live Visual Bot demonstrations across multiple industry scenarios—retail loss prevention, enterprise security, enterprise campus operations, and manufacturing safety. Interactive demonstrations let security professionals ask Visual Bot questions in real-time. Industry experts are on-site to discuss your specific challenges.",
         "stats": [
           { "value": "8,000+", "label": "Projected Security Professionals to Visit" },
           { "value": "500+", "label": "Expected Private Demo Slots" },
@@ -1045,7 +1045,7 @@ const seoPageDataInnovation = {
     ],
     "faqs": [
       { "question": "How can I schedule a private demonstration at ISC West 2026?", "answer": "Visit VMukti's website and register for ISC West 2026. Select 'Schedule Private Demo' and our team will book a time slot during the conference. Private demos are ideal for discussing your facility's specific security challenges and seeing Visual Bot tailored to your needs." },
-      { "question": "What industry scenarios will be demonstrated at VMukti's booth?", "answer": "ISC West 2026 will showcase Visual Bot across retail loss prevention, enterprise security operations, smart city surveillance, manufacturing safety, banking security, healthcare facility protection, warehouse operations, and logistics management. Your industry will be represented." },
+      { "question": "What industry scenarios will be demonstrated at VMukti's booth?", "answer": "ISC West 2026 will showcase Visual Bot across retail loss prevention, enterprise security operations, enterprise campus surveillance, manufacturing safety, banking security, healthcare facility protection, warehouse operations, and logistics management. Your industry will be represented." },
       { "question": "Will VMukti host educational sessions at ISC West 2026?", "answer": "Yes. VMukti is hosting multiple educational sessions during ISC West 2026—covering generative AI for video, multi-camera tracking, AI-powered incident investigation, and integration with security operations centers. Register for sessions on the conference website." }
     ],
     "cta": {
@@ -1058,10 +1058,10 @@ const seoPageDataInnovation = {
   "intersec-dubai-video-intelligence": {
     "slug": "/resources/intersec-dubai-video-intelligence",
     "title": "Intersec Dubai | VMukti Cloud VMS & AI Video Intelligence",
-    "metaDescription": "Intersec Dubai 2025: VMukti's cloud-native VMS and AI video analytics platform for Middle East security and smart city solutions.",
-    "keywords": ["Intersec Dubai", "VMukti Intersec Dubai", "Middle East video intelligence", "cloud VMS Middle East", "AI surveillance Dubai", "smart city surveillance Middle East", "security conference Dubai", "video analytics Intersec"],
+    "metaDescription": "Intersec Dubai 2025: VMukti's cloud-native VMS and AI video analytics platform for Middle East security and enterprise campus solutions.",
+    "keywords": ["Intersec Dubai", "VMukti Intersec Dubai", "Middle East video intelligence", "cloud VMS Middle East", "AI surveillance Dubai", "enterprise campus surveillance Middle East", "security conference Dubai", "video analytics Intersec"],
     "heroTitle": "Intersec Dubai: Cloud VMS & AI Intelligence for the Region",
-    "heroSubtitle": "VMukti's solutions powering Middle East security and smart cities",
+    "heroSubtitle": "VMukti's solutions powering Middle East security and enterprise campuses",
     "heroDescription": "Intersec Dubai brings together security leaders from across the Middle East, Africa, and beyond. VMukti showcases cloud-native video management and AI video intelligence solutions purpose-built for regional deployments—addressing data residency requirements, scaling challenges, and emerging threats.",
     "category": "resources",
     "sections": [
@@ -1077,12 +1077,12 @@ const seoPageDataInnovation = {
           "MENA region data residency and sovereignty options",
           "Multi-language interface (Arabic, English, others)",
           "Regional compliance and regulatory support",
-          "Smart city and ICCC platform deployment expertise"
+          "Smart city and Enterprise Command Center platform deployment expertise"
         ]
       },
       {
-        "title": "Smart City Solutions for Dubai and Beyond",
-        "content": "Dubai and other MENA cities are embracing smart city initiatives. VMukti's cloud-native ICCC platform powers city-wide video intelligence—coordinating public safety, traffic management, and emergency response across metropolitan areas. The platform scales to manage thousands of cameras in emerging smart cities.",
+        "title": "Enterprise Campus Solutions for Dubai and Beyond",
+        "content": "Dubai and other MENA cities are embracing enterprise campus initiatives. VMukti's cloud-native Enterprise Command Center platform powers city-wide video intelligence—coordinating public safety, traffic management, and emergency response across metropolitan areas. The platform scales to manage thousands of cameras in emerging enterprise campuses.",
         "features": [
           "City-wide command and control center integration",
           "Traffic flow optimization and incident detection",
@@ -1094,11 +1094,11 @@ const seoPageDataInnovation = {
     "faqs": [
       { "question": "Does VMukti have data centers in the Middle East?", "answer": "Yes. VMukti operates regional data centers across the MENA region to meet data sovereignty requirements and local regulations. Organizations can choose MENA data residency ensuring video data stays within the region." },
       { "question": "How does VMukti support Arabic and local languages?", "answer": "VMukti's platform supports Arabic interface, Arabic natural language queries for Visual Bot, and localized documentation. Regional deployments benefit from native language support and cultural customization." },
-      { "question": "Has VMukti deployed in Middle East smart cities before?", "answer": "Yes. VMukti's video intelligence platform powers command and control centers across several Gulf region cities. We've successfully deployed cloud VMS and AI video analytics for traffic management, public safety, and emergency response coordination." }
+      { "question": "Has VMukti deployed in Middle East enterprise campuses before?", "answer": "Yes. VMukti's video intelligence platform powers command and control centers across several Gulf region cities. We've successfully deployed cloud VMS and AI video analytics for traffic management, public safety, and emergency response coordination." }
     ],
     "cta": {
       "title": "Explore Middle East Solutions",
-      "description": "See how VMukti powers smart cities and security across the MENA region",
+      "description": "See how VMukti powers enterprise campuses and security across the MENA region",
       "buttonText": "Schedule Intersec Meeting"
     }
   },

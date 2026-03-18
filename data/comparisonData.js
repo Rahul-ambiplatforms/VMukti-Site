@@ -9,7 +9,7 @@ export const vmsVsMilestoneComparison = {
   subtitle: 'Enterprise video management system comparison for large-scale deployments',
   product1: {
     name: 'VMukti Cloud VMS',
-    description: 'STQC-certified enterprise cloud video management system processing 1B+ camera feeds annually. Cloud-native architecture supports 100,000+ concurrent cameras with built-in AI analytics (ANPR, facial recognition, crowd detection) and deployed across 900+ projects in 50+ smart cities.',
+    description: 'STQC-certified enterprise cloud video management system processing 1B+ camera feeds annually. Cloud-native architecture supports 100,000+ concurrent cameras with built-in AI analytics (ANPR, facial recognition, crowd detection) and deployed across 900+ projects in 50+ enterprise campuses.',
     url: 'https://www.vmukti.com/solution/cloud-vms',
     image: 'https://www.vmukti.com/images/vmukti-cloud-vms-hero.jpg',
     category: 'Cloud Video Management',
@@ -25,10 +25,10 @@ export const vmsVsMilestoneComparison = {
       { name: 'Edge-to-Cloud', value: 'Yes' },
       { name: 'Government Approved', value: 'Yes (STQC)' },
       { name: 'Deployments', value: '900+' },
-      { name: 'Smart Cities', value: '50+' },
+      { name: 'Enterprise Campuses', value: '50+' },
     ],
     bestFor: [
-      'Government and smart city projects',
+      'Government and enterprise campus projects',
       'Large-scale enterprise surveillance',
       'Deployments requiring STQC certification',
       'International expansion (multi-region)',
@@ -38,7 +38,7 @@ export const vmsVsMilestoneComparison = {
       'STQC-certified for government use',
       'Cloud-native scalability (1B+ feeds proven)',
       'Advanced AI built-in (ANPR, face, crowd analytics)',
-      'Deployed in 50+ smart cities globally',
+      'Deployed in 50+ enterprise campuses globally',
       'ISO 27001:2022 certified security',
       'Edge-to-cloud hybrid architecture',
       'Real-time detection (<100ms latency)',
@@ -67,7 +67,7 @@ export const vmsVsMilestoneComparison = {
       { name: 'Edge-to-Cloud', value: 'Limited' },
       { name: 'Government Approved', value: 'Country-specific' },
       { name: 'Deployments', value: '100,000+' },
-      { name: 'Smart Cities', value: '10+' },
+      { name: 'Enterprise Campuses', value: '10+' },
     ],
     bestFor: [
       'Mid-market enterprises with stable infrastructure',
@@ -89,7 +89,7 @@ export const vmsVsMilestoneComparison = {
       'Higher CapEx (hardware investment)',
       'AI analytics are third-party add-ons',
       'Scaling beyond 10,000 cameras becomes complex',
-      'Limited smart city deployments',
+      'Limited enterprise campus deployments',
       'No STQC certification (India-specific)',
       'Manual updates and maintenance burden',
     ],
@@ -97,7 +97,7 @@ export const vmsVsMilestoneComparison = {
   faqs: [
     {
       question: 'Should we choose cloud VMS or on-premise VMS?',
-      answer: 'VMukti Cloud VMS offers scalability, automatic updates, lower infrastructure costs, and built-in AI analytics—ideal for enterprises spanning multiple locations and smart city projects. Milestone XProtect is better for organizations with stable, localized infrastructure and teams comfortable managing on-premise systems. Cloud excels for rapid growth and innovation; on-premise excels for control and customization.',
+      answer: 'VMukti Cloud VMS offers scalability, automatic updates, lower infrastructure costs, and built-in AI analytics—ideal for enterprises spanning multiple locations and enterprise campus projects. Milestone XProtect is better for organizations with stable, localized infrastructure and teams comfortable managing on-premise systems. Cloud excels for rapid growth and innovation; on-premise excels for control and customization.',
     },
     {
       question: 'What is the total cost of ownership?',
@@ -109,7 +109,7 @@ export const vmsVsMilestoneComparison = {
     },
     {
       question: 'Which system supports more cameras?',
-      answer: 'VMukti Cloud VMS supports 100,000+ concurrent cameras in single deployments, proven with 1B+ feeds processed annually. Milestone XProtect scales to ~10,000 cameras per installation before complexity increases significantly. For massive smart city projects, VMukti is more suitable.',
+      answer: 'VMukti Cloud VMS supports 100,000+ concurrent cameras in single deployments, proven with 1B+ feeds processed annually. Milestone XProtect scales to ~10,000 cameras per installation before complexity increases significantly. For massive enterprise campus projects, VMukti is more suitable.',
     },
     {
       question: 'What analytics capabilities does each provide?',
@@ -117,7 +117,7 @@ export const vmsVsMilestoneComparison = {
     },
     {
       question: 'Is one system better for government projects?',
-      answer: 'VMukti Cloud VMS is STQC-certified (government-approved in India) and deployed in 50+ smart cities. Milestone XProtect has limited government adoption outside specific regions. For Indian government projects, VMukti is the default choice. For international projects, it depends on regional requirements.',
+      answer: 'VMukti Cloud VMS is STQC-certified (government-approved in India) and deployed in 50+ enterprise campuses. Milestone XProtect has limited government adoption outside specific regions. For Indian government projects, VMukti is the default choice. For international projects, it depends on regional requirements.',
     },
   ],
   breadcrumbs: [
@@ -132,7 +132,7 @@ export const vmsMsVsUniviewComparison = {
   subtitle: 'Comparing next-generation cloud VMS with legacy camera-vendor VMS',
   product1: {
     name: 'VMukti Cloud VMS',
-    description: 'Pure software platform for video management and AI analytics, independent of camera hardware. STQC-certified, cloud-native, supporting 100,000+ cameras, 1B+ feeds annually, deployed in 50+ smart cities.',
+    description: 'Pure software platform for video management and AI analytics, independent of camera hardware. STQC-certified, cloud-native, supporting 100,000+ cameras, 1B+ feeds annually, deployed in 50+ enterprise campuses.',
     url: 'https://www.vmukti.com/solution/cloud-vms',
     image: 'https://www.vmukti.com/images/vmukti-logo.png',
     category: 'Cloud Software Platform',
@@ -146,11 +146,11 @@ export const vmsMsVsUniviewComparison = {
       { name: 'Cloud Architecture', value: 'Native' },
       { name: 'Government Certification', value: 'STQC' },
       { name: 'India Focused', value: 'Yes' },
-      { name: 'Smart City Ready', value: 'Yes (50+ deployments)' },
+      { name: 'Enterprise Campus Ready', value: 'Yes (50+ deployments)' },
     ],
     bestFor: [
       'Organizations wanting camera hardware flexibility',
-      'Government and smart city projects',
+      'Government and enterprise campus projects',
       'Large-scale distributed deployments',
       'AI-first surveillance strategies',
       'Multi-vendor environments',
@@ -185,7 +185,7 @@ export const vmsMsVsUniviewComparison = {
       { name: 'Cloud Architecture', value: 'Partial' },
       { name: 'Government Certification', value: 'Regional' },
       { name: 'India Focused', value: 'Emerging' },
-      { name: 'Smart City Ready', value: 'Limited' },
+      { name: 'Enterprise Campus Ready', value: 'Limited' },
     ],
     bestFor: [
       'Organizations comfortable with single vendor',
@@ -212,7 +212,7 @@ export const vmsMsVsUniviewComparison = {
   faqs: [
     {
       question: 'What is the difference between pure software and integrated solutions?',
-      answer: 'VMukti is pure software—you choose any ONVIF camera. Uniview bundles camera hardware + software. Pure software offers flexibility and cost optimization; integrated solutions offer simplicity but vendor lock-in. For smart cities and large enterprises, VMukti\'s flexibility is advantageous.',
+      answer: 'VMukti is pure software—you choose any ONVIF camera. Uniview bundles camera hardware + software. Pure software offers flexibility and cost optimization; integrated solutions offer simplicity but vendor lock-in. For enterprise campuses and large enterprises, VMukti\'s flexibility is advantageous.',
     },
     {
       question: 'Why does camera choice matter?',
@@ -239,14 +239,14 @@ export const vmsMsVsUniviewComparison = {
 };
 
 export const icccVsTraditionalVmsComparison = {
-  title: 'VMukti ICCC vs Traditional VMS',
+  title: 'VMukti Enterprise Command Center vs Traditional VMS',
   subtitle: 'Integrated Command Center vs basic video playback systems',
   product1: {
-    name: 'VMukti ICCC',
-    description: 'Integrated Command & Control Center unifying video surveillance, IoT sensors, access control, emergency systems, and city infrastructure into single operational dashboard. Deployed in 50+ smart cities managing 900+ projects for real-time situational awareness and coordinated emergency response.',
+    name: 'VMukti Enterprise Command Center',
+    description: 'Integrated Command & Control Center unifying video surveillance, IoT sensors, access control, emergency systems, and city infrastructure into single operational dashboard. Deployed in 50+ enterprise campuses managing 900+ projects for real-time situational awareness and coordinated emergency response.',
     url: 'https://www.vmukti.com/solution/iccc',
     image: 'https://www.vmukti.com/images/vmukti-iccc-hero.jpg',
-    category: 'Smart City Command Center',
+    category: 'Enterprise Campus Command Center',
     features: [
       { name: 'Primary Purpose', value: 'Situational Awareness' },
       { name: 'Integration Scope', value: 'Video + IoT + Access + Emergency' },
@@ -270,7 +270,7 @@ export const icccVsTraditionalVmsComparison = {
       'Rapid emergency response (minutes to seconds)',
       'GIS mapping for resource dispatch',
       'Situational awareness for decision makers',
-      'Proven in 50+ smart cities',
+      'Proven in 50+ enterprise campuses',
     ],
     cons: [
       'Requires integration of external systems',
@@ -312,28 +312,28 @@ export const icccVsTraditionalVmsComparison = {
       'Manual incident response',
       'No real-time coordination',
       'Poor for multi-site operations',
-      'Cannot scale to smart city operations',
+      'Cannot scale to enterprise campus operations',
       'Purely reactive (post-incident only)',
     ],
   },
   faqs: [
     {
-      question: 'When do I need ICCC vs traditional VMS?',
-      answer: 'Traditional VMS for single-site recording (store, office). ICCC for multi-agency coordination (smart cities, governments). VMS records video; ICCC automates response. Traditional VMS asks "What happened?" ICCC answers "What\'s happening now and what should we do?"',
+      question: 'When do I need Enterprise Command Center vs traditional VMS?',
+      answer: 'Traditional VMS for single-site recording (store, office). Enterprise Command Center for multi-agency coordination (enterprise campuses, governments). VMS records video; Enterprise Command Center automates response. Traditional VMS asks "What happened?" Enterprise Command Center answers "What\'s happening now and what should we do?"',
     },
     {
-      question: 'Can I upgrade from VMS to ICCC?',
-      answer: 'Yes, VMukti ICCC is built on top of Cloud VMS. Start with VMS for cameras, add ICCC layer when you need coordination. Many smart cities start with basic VMS, then add ICCC as they grow.',
+      question: 'Can I upgrade from VMS to Enterprise Command Center?',
+      answer: 'Yes, VMukti Enterprise Command Center is built on top of Cloud VMS. Start with VMS for cameras, add Enterprise Command Center layer when you need coordination. Many enterprise campuses start with basic VMS, then add Enterprise Command Center as they grow.',
     },
     {
       question: 'What is "incident correlation"?',
-      answer: 'ICCC automatically connects events: ANPR detects stolen vehicle → checks access control (gate opened) → searches traffic cameras → alerts nearby police units with video. Traditional VMS requires manual checking of each system.',
+      answer: 'Enterprise Command Center automatically connects events: ANPR detects stolen vehicle → checks access control (gate opened) → searches traffic cameras → alerts nearby police units with video. Traditional VMS requires manual checking of each system.',
     },
   ],
   breadcrumbs: [
     { name: 'Home', url: 'https://www.vmukti.com' },
     { name: 'Solutions', url: 'https://www.vmukti.com/solutions' },
-    { name: 'ICCC vs VMS', url: 'https://www.vmukti.com/compare/iccc-vs-vms' },
+    { name: 'Enterprise Command Center vs VMS', url: 'https://www.vmukti.com/compare/iccc-vs-vms' },
   ],
 };
 

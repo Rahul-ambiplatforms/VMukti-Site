@@ -17,7 +17,7 @@ const LINK_GROUPS = {
   solutions: [
     { path: '/solution/video-management-system', label: 'Video Management System (VMS)', description: 'Manage 10,000+ cameras with AI analytics' },
     { path: '/solution/enterprise-management-system', label: 'Enterprise Management System', description: 'Unified security management platform' },
-    { path: '/solution/integrated-command-control-center', label: 'Command & Control Center', description: 'Centralized monitoring for smart cities' },
+    { path: '/solution/integrated-command-control-center', label: 'Command & Control Center', description: 'Centralized monitoring for enterprise campuses' },
     { path: '/solution/ai-video-analytics', label: 'AI Video Analytics', description: 'Deep learning powered video intelligence' },
     { path: '/solution/face-recognition', label: 'Face Recognition', description: 'Real-time facial identification system' },
     { path: '/solution/anpr-lpr', label: 'ANPR / LPR', description: 'Automatic number plate recognition' },
@@ -27,7 +27,7 @@ const LINK_GROUPS = {
   industries: [
     { path: '/industry/banking', label: 'Banking & Finance' },
     { path: '/industry/healthcare', label: 'Healthcare' },
-    { path: '/industry/smart-city', label: 'Smart City' },
+    { path: '/industry/smart-city', label: 'Enterprise Campus' },
     { path: '/industry/retail', label: 'Retail' },
     { path: '/industry/manufacturing', label: 'Manufacturing' },
     { path: '/industry/education', label: 'Education' },

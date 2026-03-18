@@ -62,7 +62,7 @@ const formOptions = {
     "AI Cameras",
     "VMS",
     "EMS",
-    "ICCC",
+    "Enterprise Command Center",
     "Government Projects",
     "Custom solutions",
     "Others",
