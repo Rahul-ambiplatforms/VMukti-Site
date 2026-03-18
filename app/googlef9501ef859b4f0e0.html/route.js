@@ -1,0 +1,5 @@
+export async function GET() {
+  return new Response('google-site-verification: googlef9501ef859b4f0e0.html', {
+    headers: { 'Content-Type': 'text/html' },
+  });
+}
