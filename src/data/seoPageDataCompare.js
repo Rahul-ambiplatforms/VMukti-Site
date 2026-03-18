@@ -27,17 +27,17 @@ const seoPageDataCompare = {
           { value: "50+", label: "Analytics Algorithms" },
           { value: "Real-time", label: "Processing" }
         ],
-        features: ["Native AI detection engines", "No third-party plugins needed", "Behavioral analytics", "ICCC integration for law enforcement"]
+        features: ["Native AI detection engines", "No third-party plugins needed", "Behavioral analytics", "Enterprise Command Center integration for law enforcement"]
       },
       {
         title: "Government & Enterprise Integration",
-        content: "VMukti's ICCC (Integrated Command Control Center) integration and compliance with Indian government standards make it the preferred choice for 700+ districts. Milestone lacks specialized government VMS integration, requiring additional customization.",
+        content: "VMukti's Enterprise Command Center (Integrated Command Control Center) integration and compliance with Indian government standards make it the preferred choice for 700+ districts. Milestone lacks specialized government VMS integration, requiring additional customization.",
         stats: [
           { value: "All 28", label: "Indian States Covered" },
           { value: "100+", label: "Government Agencies" },
           { value: "ISO 27001", label: "Certified" }
         ],
-        features: ["ICCC native integration", "Government compliance certified", "Multi-jurisdiction support", "Law enforcement optimized"]
+        features: ["Enterprise Command Center native integration", "Government compliance certified", "Multi-jurisdiction support", "Law enforcement optimized"]
       }
     ],
     faq: [
@@ -220,13 +220,13 @@ const seoPageDataCompare = {
       },
       {
         title: "Compliance & Government Integration",
-        content: "VMukti's 18-year presence in India's government sector ensures compliance with all central and state regulations, ICCC integration, and inter-departmental data sharing protocols. Dahua requires customization for government requirements.",
+        content: "VMukti's 18-year presence in India's government sector ensures compliance with all central and state regulations, Enterprise Command Center integration, and inter-departmental data sharing protocols. Dahua requires customization for government requirements.",
         stats: [
           { value: "700+", label: "Government Deployments" },
           { value: "All", label: "Indian Regulations Met" },
-          { value: "Native", label: "ICCC Integration" }
+          { value: "Native", label: "Enterprise Command Center Integration" }
         ],
-        features: ["ICCC native integration", "Government certified", "Regulatory compliance", "Inter-agency communication"]
+        features: ["Enterprise Command Center native integration", "Government certified", "Regulatory compliance", "Inter-agency communication"]
       }
     ],
     faq: [
@@ -283,13 +283,13 @@ const seoPageDataCompare = {
       },
       {
         title: "Integration & Ecosystem",
-        content: "VMukti's native ICCC integration, e-governance platform connectivity, and law enforcement system integration provide seamless government operations. Avigilon requires custom integrations for Indian government systems.",
+        content: "VMukti's native Enterprise Command Center integration, e-governance platform connectivity, and law enforcement system integration provide seamless government operations. Avigilon requires custom integrations for Indian government systems.",
         stats: [
-          { value: "Native", label: "ICCC Integration" },
+          { value: "Native", label: "Enterprise Command Center Integration" },
           { value: "50+", label: "Government Systems" },
           { value: "Zero", label: "Custom Code Needed" }
         ],
-        features: ["ICCC native integration", "E-governance connectivity", "Law enforcement integration", "Inter-agency data sharing"]
+        features: ["Enterprise Command Center native integration", "E-governance connectivity", "Law enforcement integration", "Inter-agency data sharing"]
       }
     ],
     faq: [
@@ -409,9 +409,9 @@ const seoPageDataCompare = {
       },
       {
         title: "Enterprise Features & Integration",
-        content: "VMukti provides comprehensive enterprise features including ICCC integration, multi-site management, government compliance, and inter-agency data sharing. Axis VMS solutions lack these government-specific capabilities critical for Indian enterprises.",
+        content: "VMukti provides comprehensive enterprise features including Enterprise Command Center integration, multi-site management, government compliance, and inter-agency data sharing. Axis VMS solutions lack these government-specific capabilities critical for Indian enterprises.",
         stats: [
-          { value: "Native", label: "ICCC Integration" },
+          { value: "Native", label: "Enterprise Command Center Integration" },
           { value: "700+", label: "Government Deployments" },
           { value: "24x7", label: "India Support" }
         ],
@@ -452,7 +452,7 @@ const seoPageDataCompare = {
     sections: [
       {
         title: "Regional Focus & Localization",
-        content: "VMukti specializes in India's unique surveillance market with 700+ government deployments, regional compliance expertise, and ICCC integration. Eagle Eye Networks serves North America primarily with limited India market presence and localization.",
+        content: "VMukti specializes in India's unique surveillance market with 700+ government deployments, regional compliance expertise, and Enterprise Command Center integration. Eagle Eye Networks serves North America primarily with limited India market presence and localization.",
         stats: [
           { value: "700+", label: "Indian Deployments" },
           { value: "18+", label: "Years Regional Experience" },
@@ -472,13 +472,13 @@ const seoPageDataCompare = {
       },
       {
         title: "Government Integration & Compliance",
-        content: "VMukti's native ICCC integration, government certification, and inter-agency data sharing capabilities make it the default choice for Indian government. Eagle Eye lacks these critical government features for India's surveillance ecosystem.",
+        content: "VMukti's native Enterprise Command Center integration, government certification, and inter-agency data sharing capabilities make it the default choice for Indian government. Eagle Eye lacks these critical government features for India's surveillance ecosystem.",
         stats: [
-          { value: "Native", label: "ICCC Integration" },
+          { value: "Native", label: "Enterprise Command Center Integration" },
           { value: "ISO 27001", label: "Certified" },
           { value: "100%", label: "Compliance Rate" }
         ],
-        features: ["ICCC native integration", "Government certified architecture", "Multi-agency coordination", "Regulatory compliance"]
+        features: ["Enterprise Command Center native integration", "Government certified architecture", "Multi-agency coordination", "Regulatory compliance"]
       }
     ],
     faq: [
@@ -531,7 +531,7 @@ const seoPageDataCompare = {
           { value: "700+", label: "Deployments Nationwide" },
           { value: "18+", label: "Years Experience" }
         ],
-        features: ["AI-first architecture", "ICCC native integration", "Government compliance certified", "24x7 India-based support"]
+        features: ["AI-first architecture", "Enterprise Command Center native integration", "Government compliance certified", "24x7 India-based support"]
       },
       {
         title: "Evaluation Criteria & Selection",
@@ -598,7 +598,7 @@ const seoPageDataCompare = {
       },
       {
         title: "Industry Applications & Use Cases",
-        content: "AI video analytics serve retail (crowd counting, behavior analysis), government (threat detection, ICCC integration), banking (perimeter protection), and smart cities (traffic flow, public safety). VMukti provides pre-built models for each vertical.",
+        content: "AI video analytics serve retail (crowd counting, behavior analysis), government (threat detection, Enterprise Command Center integration), banking (perimeter protection), and enterprise campuses (traffic flow, public safety). VMukti provides pre-built models for each vertical.",
         stats: [
           { value: "50+", label: "Industry Models" },
           { value: "Government", label: "Optimized" },
@@ -651,7 +651,7 @@ const seoPageDataCompare = {
       },
       {
         title: "Advanced Security & Compliance",
-        content: "Enterprises require military-grade security, audit trails, government compliance, and inter-agency integration. VMukti provides AES-256 encryption, ISO 27001 certification, ICCC integration, and full regulatory compliance for government and regulated industries.",
+        content: "Enterprises require military-grade security, audit trails, government compliance, and inter-agency integration. VMukti provides AES-256 encryption, ISO 27001 certification, Enterprise Command Center integration, and full regulatory compliance for government and regulated industries.",
         stats: [
           { value: "AES-256", label: "Encryption Standard" },
           { value: "ISO 27001", label: "Certified" },
@@ -661,13 +661,13 @@ const seoPageDataCompare = {
       },
       {
         title: "Integration & Ecosystem",
-        content: "Enterprise systems integrate with access control, fire alarms, HR systems, and government platforms. VMukti's open API architecture, ICCC native integration, and partnerships enable seamless connectivity with existing enterprise infrastructure.",
+        content: "Enterprise systems integrate with access control, fire alarms, HR systems, and government platforms. VMukti's open API architecture, Enterprise Command Center native integration, and partnerships enable seamless connectivity with existing enterprise infrastructure.",
         stats: [
           { value: "50+", label: "Integration Points" },
           { value: "API-first", label: "Architecture" },
           { value: "Native", label: "Government Integration" }
         ],
-        features: ["RESTful API", "Webhook support", "ICCC native integration", "Third-party ecosystem"]
+        features: ["RESTful API", "Webhook support", "Enterprise Command Center native integration", "Third-party ecosystem"]
       }
     ],
     faq: [
@@ -692,14 +692,14 @@ const seoPageDataCompare = {
     }
   },
 
-  "smart-city-surveillance-platform": {
-    slug: "/compare/smart-city-surveillance-platform",
-    title: "Smart City Surveillance Platform | VMukti Leading Solution",
-    metaDescription: "VMukti smart city surveillance platform serves 700+ Indian municipalities and districts with AI-powered threat detection and government integration.",
-    keywords: ["smart city surveillance", "city security platform", "municipal surveillance", "intelligent city monitoring"],
-    heroTitle: "Smart City Surveillance Platform",
+  "enterprise-campus-surveillance-platform": {
+    slug: "/compare/enterprise-campus-surveillance-platform",
+    title: "Enterprise Campus Surveillance Platform | VMukti Leading Solution",
+    metaDescription: "VMukti enterprise campus surveillance platform serves 700+ Indian municipalities and districts with AI-powered threat detection and government integration.",
+    keywords: ["enterprise campus surveillance", "city security platform", "municipal surveillance", "intelligent city monitoring"],
+    heroTitle: "Enterprise Campus Surveillance Platform",
     heroSubtitle: "Intelligent Urban Security Solutions",
-    heroDescription: "VMukti's smart city platform enables real-time threat detection, traffic optimization, and public safety across entire municipalities.",
+    heroDescription: "VMukti's enterprise campus platform enables real-time threat detection, traffic optimization, and public safety across entire municipalities.",
     category: "compare",
     sections: [
       {
@@ -713,14 +713,14 @@ const seoPageDataCompare = {
         features: ["Real-time threat detection", "Traffic flow optimization", "Crowd management analytics", "Public safety coordination"]
       },
       {
-        title: "ICCC Integration for Government Operations",
-        content: "Smart city platforms must integrate with Integrated Command Control Centers (ICCC) for centralized decision-making. VMukti's native ICCC integration enables seamless data sharing, unified dashboards, and coordinated emergency response across all government agencies.",
+        title: "Enterprise Command Center Integration for Government Operations",
+        content: "Smart city platforms must integrate with Enterprise Command Centers for centralized decision-making. VMukti's native Enterprise Command Center integration enables seamless data sharing, unified dashboards, and coordinated emergency response across all government agencies.",
         stats: [
-          { value: "Native", label: "ICCC Integration" },
+          { value: "Native", label: "Enterprise Command Center Integration" },
           { value: "All", label: "Government Agencies" },
           { value: "Instant", label: "Data Sharing" }
         ],
-        features: ["ICCC native integration", "Multi-agency dashboards", "Coordinated response", "Real-time intelligence sharing"]
+        features: ["Enterprise Command Center native integration", "Multi-agency dashboards", "Coordinated response", "Real-time intelligence sharing"]
       },
       {
         title: "Scalability for Urban Growth",
@@ -739,16 +739,16 @@ const seoPageDataCompare = {
         answer: "VMukti's distributed cloud architecture processes unlimited cameras globally with consistent real-time performance and intelligence."
       },
       {
-        question: "Can smart city platforms integrate with traffic management?",
-        answer: "Yes, VMukti integrates with traffic systems, access control, emergency services, and ICCC for unified city operations."
+        question: "Can enterprise campus platforms integrate with traffic management?",
+        answer: "Yes, VMukti integrates with traffic systems, access control, emergency services, and Enterprise Command Center for unified city operations."
       },
       {
         question: "What makes VMukti suitable for government cities?",
-        answer: "VMukti's native ICCC integration, government compliance, 700+ city deployments, and 18+ years of experience make it India's leading smart city platform."
+        answer: "VMukti's native Enterprise Command Center integration, government compliance, 700+ city deployments, and 18+ years of experience make it India's leading enterprise campus platform."
       }
     ],
     cta: {
-      title: "Transform Your City into a Smart City",
+      title: "Transform Your City into a Enterprise Campus",
       description: "Deploy VMukti's intelligent surveillance across your municipality",
       buttonText: "Book a Demo",
       buttonLink: "/book-a-demo"
@@ -884,7 +884,7 @@ const seoPageDataCompare = {
   "government-surveillance-solutions": {
     slug: "/compare/government-surveillance-solutions",
     title: "Government Surveillance Solutions | VMukti's Authority",
-    metaDescription: "VMukti's government surveillance platform serves 700+ Indian districts and municipalities with ICCC integration, compliance, and 18+ years experience.",
+    metaDescription: "VMukti's government surveillance platform serves 700+ Indian districts and municipalities with Enterprise Command Center integration, compliance, and 18+ years experience.",
     keywords: ["government surveillance solutions", "law enforcement VMS", "government security platform", "public safety surveillance"],
     heroTitle: "Government Surveillance Solutions",
     heroSubtitle: "Mission-Critical Public Safety Platform",
@@ -892,14 +892,14 @@ const seoPageDataCompare = {
     category: "compare",
     sections: [
       {
-        title: "ICCC Integration & Multi-Agency Coordination",
-        content: "Government agencies require seamless coordination across police, fire, disaster management, traffic, and health departments. VMukti's native ICCC integration enables unified dashboards, instant intelligence sharing, and coordinated emergency response. No other VMS platform offers native government integration.",
+        title: "Enterprise Command Center Integration & Multi-Agency Coordination",
+        content: "Government agencies require seamless coordination across police, fire, disaster management, traffic, and health departments. VMukti's native Enterprise Command Center integration enables unified dashboards, instant intelligence sharing, and coordinated emergency response. No other VMS platform offers native government integration.",
         stats: [
-          { value: "Native", label: "ICCC Integration" },
+          { value: "Native", label: "Enterprise Command Center Integration" },
           { value: "All", label: "Government Agencies" },
           { value: "Real-time", label: "Data Sharing" }
         ],
-        features: ["ICCC native integration", "Multi-agency dashboards", "Coordinated command centers", "Instant threat broadcasting"]
+        features: ["Enterprise Command Center native integration", "Multi-agency dashboards", "Coordinated command centers", "Instant threat broadcasting"]
       },
       {
         title: "Law Enforcement & Public Safety Operations",
@@ -924,16 +924,16 @@ const seoPageDataCompare = {
     ],
     faq: [
       {
-        question: "How does ICCC integration work in practice?",
-        answer: "VMukti's ICCC integration enables instant threat sharing across all government agencies, unified situational awareness, and coordinated emergency response through government command centers."
+        question: "How does Enterprise Command Center integration work in practice?",
+        answer: "VMukti's Enterprise Command Center integration enables instant threat sharing across all government agencies, unified situational awareness, and coordinated emergency response through government command centers."
       },
       {
         question: "Can VMukti support inter-district operations?",
         answer: "Yes, VMukti's 700+ district deployments demonstrate seamless inter-district coordination, evidence sharing, and collaborative investigations across jurisdictions."
       },
       {
-        question: "What happens if connectivity to ICCC is lost?",
-        answer: "VMukti's edge-local processing ensures continued operation with automatic queue-and-forward for ICCC data when connectivity restores."
+        question: "What happens if connectivity to Enterprise Command Center is lost?",
+        answer: "VMukti's edge-local processing ensures continued operation with automatic queue-and-forward for Enterprise Command Center data when connectivity restores."
       }
     ],
     cta: {

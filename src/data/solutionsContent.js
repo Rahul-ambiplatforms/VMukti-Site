@@ -1,7 +1,7 @@
 export const homeSolutions = {
   heading: "Intelligent Video Surveillance Services for Enterprises",
   description:
-    "Our cloud video management system and intelligent video surveillance solutions help enterprises gain real-time visibility and control. Powered by an advanced AI surveillance suite with VMS, EMS, ICCC, and Cloud AI, VMukti delivers scalable, secure, and intelligent video surveillance for enterprise and critical infrastructure.",
+    "Our cloud video management system and intelligent video surveillance solutions help enterprises gain real-time visibility and control. Powered by an advanced AI surveillance suite with VMS, EMS, Enterprise Command Center, and Cloud AI, VMukti delivers scalable, secure, and intelligent video surveillance for enterprise and critical infrastructure.",
   solutions: [
     {
       heading1: "VMS",
@@ -24,10 +24,10 @@ export const homeSolutions = {
       path: "/solution/enterprise-management-system",
     },
     {
-      heading1: "ICCC",
+      heading1: "Enterprise Command Center",
       heading2: "Integrated Command & Control Center",
       content:
-        "ICCC is your command nerve center unifying surveillance, emergency response, and citywide systems under one intelligent architecture. Powered by real-time analytics and multi-source data fusion, it empowers you to act decisively, secure proactively, and govern with unmatched situational clarity.",
+        "Enterprise Command Center is your command nerve center unifying surveillance, emergency response, and citywide systems under one intelligent architecture. Powered by real-time analytics and multi-source data fusion, it empowers you to act decisively, secure proactively, and govern with unmatched situational clarity.",
       image_certi: "./assets/home_solution_certi.png",
       image: "./assets/home_solution_3.png",
       image_mobile: "./assets/home_solution_mobile_3.png",

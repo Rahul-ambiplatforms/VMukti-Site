@@ -1,6 +1,6 @@
 /**
  * Schema Markup Generator for VMukti Solutions
- * Creates JSON-LD structured data for enterprise VMS, EMS, ICCC platforms
+ * Creates JSON-LD structured data for enterprise VMS, EMS, Enterprise Command Centers
  */
 
 export const organizationSchema = {
@@ -10,7 +10,7 @@ export const organizationSchema = {
   legalName: 'VMukti Solutions Pvt. Ltd.',
   url: 'https://www.vmukti.com',
   logo: 'https://www.vmukti.com/logo.png',
-  description: 'Enterprise cloud VMS, EMS, and ICCC platform provider with STQC certification. 18+ years, 900+ deployments across 700+ districts, 1B+ camera feeds processed globally.',
+  description: 'Enterprise cloud VMS, EMS, and Enterprise Command Center provider with STQC certification. 18+ years, 900+ deployments across 700+ districts, 1B+ camera feeds processed globally.',
   foundingDate: '2007',
   foundingLocation: 'Ahmedabad, Gujarat, India',
   numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 200, maxValue: 500 },
@@ -41,7 +41,7 @@ export const organizationSchema = {
     itemListElement: [
       { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti Cloud VMS', image: 'https://www.vmukti.com/products/cloud-vms.jpg' } },
       { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti EMS', image: 'https://www.vmukti.com/products/ems.jpg' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti ICCC Platform', image: 'https://www.vmukti.com/products/iccc.jpg' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'VMukti Enterprise Command Center', image: 'https://www.vmukti.com/products/iccc.jpg' } },
     ],
   },
 };
@@ -142,7 +142,7 @@ export const vmuktiPlatforms = {
   iccc: {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: 'VMukti ICCC Platform',
+    name: 'VMukti Enterprise Command Center',
     description: 'Integrated Command and Control Center platform for unified emergency response, smart city operations, and cross-agency coordination. Features multi-agency dashboards, incident tracking, and real-time analytics.',
     image: 'https://www.vmukti.com/products/iccc.jpg',
     brand: { '@type': 'Brand', name: 'VMukti' },
@@ -200,7 +200,7 @@ export const localBusinessSchema = {
   email: 'info@vmukti.com',
   url: 'https://www.vmukti.com',
   logo: 'https://www.vmukti.com/logo.png',
-  description: 'Enterprise cloud VMS, EMS, and ICCC platform provider with STQC certification. 18+ years of experience, 900+ deployments across 700+ districts.',
+  description: 'Enterprise cloud VMS, EMS, and Enterprise Command Center provider with STQC certification. 18+ years of experience, 900+ deployments across 700+ districts.',
   priceRange: '$$$',
   openingHoursSpecification: [
     {

@@ -10,7 +10,7 @@ const BlogsDashboard = () => {
         <title>Latest Trends & Insights for AI Video Surveillance & Cloud VMS | VMukti </title>
         <meta
           name="description"
-          content="Explore expert insights on AI surveillance, Cloud VMS, EMS ICCC, video intelligence and smart security solutions. Stay updated with VMukti’s latest blogs and key trends."
+          content="Explore expert insights on AI surveillance, Cloud VMS, EMS Enterprise Command Center, video intelligence and smart security solutions. Stay updated with VMukti’s latest blogs and key trends."
         />
         <meta name="robots" content="index, follow" />
         <meta
@@ -19,7 +19,7 @@ const BlogsDashboard = () => {
         />
         <meta
           property="og:description"
-          content="Explore expert insights on AI surveillance, Cloud VMS, EMS ICCC, video intelligence and smart security solutions. Stay updated with VMukti’s latest blogs and key trends."
+          content="Explore expert insights on AI surveillance, Cloud VMS, EMS Enterprise Command Center, video intelligence and smart security solutions. Stay updated with VMukti’s latest blogs and key trends."
         />
         <meta
           property="og:image"
@@ -37,7 +37,7 @@ const BlogsDashboard = () => {
         />
         <meta
           name="twitter:description"
-          content="Explore expert insights on AI surveillance, Cloud VMS, EMS ICCC, video intelligence and smart security solutions. Stay updated with VMukti’s latest blogs and key trends."
+          content="Explore expert insights on AI surveillance, Cloud VMS, EMS Enterprise Command Center, video intelligence and smart security solutions. Stay updated with VMukti’s latest blogs and key trends."
         />
         <meta
           name="twitter:image"

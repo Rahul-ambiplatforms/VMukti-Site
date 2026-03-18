@@ -77,7 +77,7 @@ const ourSolutionsLinks = [
     path: "/solution/enterprise-management-system",
   },
   {
-    text: "ICCC",
+    text: "Enterprise Command Center",
     path: "/solution/integrated-command-control-center",
   },
   {

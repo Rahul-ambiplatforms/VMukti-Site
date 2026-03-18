@@ -1,45 +1,45 @@
-// seoPageDataExpansion2.js - Phase 4A: VMS, ICCC & EMS Expansion Pages
+// seoPageDataExpansion2.js - Phase 4A: VMS, Enterprise Command Center & EMS Expansion Pages
 // Auto-generated SEO content for VMukti Solutions
 // Production-ready comprehensive SEO data for 15 critical pages
 
 const seoPageDataExpansion2 = {
-  "/vms-for-smart-city": {
-    title: "Cloud VMS for Smart City Projects | VMukti India",
-    description: "Enterprise Cloud VMS with AI video analytics for smart city ICCC integration. Non-Chinese, NDAA compliant. Deployed in 700+ Indian districts.",
+  "/vms-for-enterprise-campus": {
+    title: "Cloud VMS for Enterprise Campus Projects | VMukti India",
+    description: "Enterprise Cloud VMS with AI video analytics for enterprise campus Enterprise Command Center integration. Non-Chinese, NDAA compliant. Deployed in 700+ Indian districts.",
     keywords: [
-      "cloud VMS smart city",
-      "smart city video management system",
-      "ICCC video management",
-      "cloud video surveillance smart cities",
-      "AI video analytics smart city",
+      "cloud VMS enterprise campus",
+      "enterprise campus video management system",
+      "Enterprise Command Center video management",
+      "cloud video surveillance enterprise campuses",
+      "AI video analytics enterprise campus",
       "government VMS India",
       "non-Chinese VMS",
       "NDAA compliant VMS",
-      "smart city surveillance platform",
-      "ICCC integration VMS",
+      "enterprise campus surveillance platform",
+      "Enterprise Command Center integration VMS",
       "edge AI video processing",
-      "smart city infrastructure",
+      "enterprise campus infrastructure",
       "government grade VMS",
       "cloud VMS deployment",
-      "intelligent surveillance smart city",
-      "video management ICCC center",
-      "smart city technology India",
+      "intelligent surveillance enterprise campus",
+      "video management Enterprise Command Center center",
+      "enterprise campus technology India",
       "distributed VMS architecture",
       "real-time video analytics",
-      "secure smart city solutions"
+      "secure enterprise campus solutions"
     ],
-    canonical: "https://vmukti.com/vms-for-smart-city",
+    canonical: "https://vmukti.com/vms-for-enterprise-campus",
     og: {
-      title: "Cloud VMS for Smart City Projects | VMukti",
-      description: "AI-powered Cloud VMS with ICCC integration for smart city deployments across India",
-      image: "https://vmukti.com/og-vms-smart-city.jpg",
+      title: "Cloud VMS for Enterprise Campus Projects | VMukti",
+      description: "AI-powered Cloud VMS with Enterprise Command Center integration for enterprise campus deployments across India",
+      image: "https://vmukti.com/og-vms-enterprise-campus.jpg",
       type: "website"
     },
     schema: {
       "@context": "https://schema.org",
       "@type": ["Product", "Service"],
-      name: "Cloud VMS for Smart Cities",
-      description: "Enterprise Cloud Video Management System with AI analytics for smart city ICCC integration",
+      name: "Cloud VMS for Enterprise Campuses",
+      description: "Enterprise Cloud Video Management System with AI analytics for enterprise campus Enterprise Command Center integration",
       brand: { "@type": "Brand", name: "VMukti" },
       manufacturer: {
         "@type": "Organization",
@@ -63,10 +63,10 @@ const seoPageDataExpansion2 = {
       mainEntity: [
         {
           "@type": "Question",
-          name: "What makes VMukti's Cloud VMS ideal for smart city ICCC integration?",
+          name: "What makes VMukti's Cloud VMS ideal for enterprise campus Enterprise Command Center integration?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "VMukti's Cloud VMS is purpose-built for smart city ICCC (Integrated Command & Control Center) integration with native support for multi-camera coordination, real-time AI analytics, and zero-latency video feeds. Our non-Chinese origin, NDAA compliance, and edge processing architecture ensure government-grade security and performance."
+            text: "VMukti's Cloud VMS is purpose-built for enterprise campus Enterprise Command Center (Integrated Command & Control Center) integration with native support for multi-camera coordination, real-time AI analytics, and zero-latency video feeds. Our non-Chinese origin, NDAA compliance, and edge processing architecture ensure government-grade security and performance."
           }
         }
       ]
@@ -74,17 +74,17 @@ const seoPageDataExpansion2 = {
   },
   content: {
     hero: {
-      headline: "Transform Smart Cities with VMukti Cloud VMS",
+      headline: "Transform Enterprise Campuses with VMukti Cloud VMS",
       subheadline: "AI-powered video management for Integrated Command & Control Centers across India",
       cta: "Schedule a Demo",
       ctaLink: "https://vmukti.com/demo"
     },
     sections: [
       {
-        title: "Smart City VMS: Unified Video Intelligence for ICCC",
-        content: "Smart cities demand real-time situational awareness across hundreds of connected cameras, and VMukti's Cloud VMS delivers exactly that. Our platform is engineered for Integrated Command & Control Centers (ICCC), enabling operators to monitor, analyze, and respond to city-wide events with unprecedented speed and precision. Unlike fragmented legacy systems, VMukti provides a unified video management ecosystem where every camera feeds intelligent analytics directly to your command center. Our 4-layer architecture—Camera → Edge AI → Cloud VMS → Analytics—ensures that critical intelligence is processed at the edge, eliminating latency and bandwidth constraints that plague traditional centralized systems. With deployments in 700+ Indian districts, VMukti understands the unique requirements of Indian smart cities: challenging network conditions, diverse camera ecosystems, and the need for 24/7 operational reliability. The platform automatically handles multi-site coordination, synchronized recording across geographically distributed locations, and federated search capabilities that let operators query video across entire city networks in seconds. VMukti's zero data transmission architecture means raw video never leaves your infrastructure—only processed intelligence flows through the cloud, dramatically reducing bandwidth costs and enhancing privacy compliance for citizen data captured in public spaces.",
+        title: "Enterprise Campus VMS: Unified Video Intelligence for Enterprise Command Center",
+        content: "Smart cities demand real-time situational awareness across hundreds of connected cameras, and VMukti's Cloud VMS delivers exactly that. Our platform is engineered for Integrated Command & Control Centers (Enterprise Command Center), enabling operators to monitor, analyze, and respond to city-wide events with unprecedented speed and precision. Unlike fragmented legacy systems, VMukti provides a unified video management ecosystem where every camera feeds intelligent analytics directly to your command center. Our 4-layer architecture—Camera → Edge AI → Cloud VMS → Analytics—ensures that critical intelligence is processed at the edge, eliminating latency and bandwidth constraints that plague traditional centralized systems. With deployments in 700+ Indian districts, VMukti understands the unique requirements of Indian enterprise campuses: challenging network conditions, diverse camera ecosystems, and the need for 24/7 operational reliability. The platform automatically handles multi-site coordination, synchronized recording across geographically distributed locations, and federated search capabilities that let operators query video across entire city networks in seconds. VMukti's zero data transmission architecture means raw video never leaves your infrastructure—only processed intelligence flows through the cloud, dramatically reducing bandwidth costs and enhancing privacy compliance for citizen data captured in public spaces.",
         features: [
-          "Native ICCC integration with multi-camera coordination",
+          "Native Enterprise Command Center integration with multi-camera coordination",
           "Edge AI processing eliminates latency and bandwidth costs",
           "Unified interface for city-wide surveillance coordination",
           "Real-time analytics directly to command center operators",
@@ -93,8 +93,8 @@ const seoPageDataExpansion2 = {
         ]
       },
       {
-        title: "Government-Grade Security for Smart City Infrastructure",
-        content: "Protecting critical urban infrastructure requires absolute certainty in your video management system's origin and compliance posture. VMukti is built in India, by Indians, with no Chinese component dependencies—a critical advantage in government procurement where supply chain security is non-negotiable. Our NDAA compliance certification removes barriers to adoption in government tenders, while our GDPR and PDPL certifications ensure that citizen data captured in public spaces meets the highest privacy standards. Every data packet flowing through VMukti's infrastructure is protected by defense-grade encryption, and our architecture ensures that video intelligence never transits through foreign servers. This matters profoundly for smart cities: when your platform manages video feeds from traffic systems, public health monitoring, and emergency response coordination, the origin and compliance posture of that platform directly impacts national security. VMukti's deployment across 700+ Indian districts—including major metros, tier-2 cities, and critical infrastructure zones—demonstrates proven track record in securing India's urban infrastructure. Our commitment to 'Made in India' technology means that India's smart cities strengthen India's technological sovereignty while reducing dependence on foreign vendors for critical digital infrastructure.",
+        title: "Government-Grade Security for Enterprise Campus Infrastructure",
+        content: "Protecting critical urban infrastructure requires absolute certainty in your video management system's origin and compliance posture. VMukti is built in India, by Indians, with no Chinese component dependencies—a critical advantage in government procurement where supply chain security is non-negotiable. Our NDAA compliance certification removes barriers to adoption in government tenders, while our GDPR and PDPL certifications ensure that citizen data captured in public spaces meets the highest privacy standards. Every data packet flowing through VMukti's infrastructure is protected by defense-grade encryption, and our architecture ensures that video intelligence never transits through foreign servers. This matters profoundly for enterprise campuses: when your platform manages video feeds from traffic systems, public health monitoring, and emergency response coordination, the origin and compliance posture of that platform directly impacts national security. VMukti's deployment across 700+ Indian districts—including major metros, tier-2 cities, and critical infrastructure zones—demonstrates proven track record in securing India's urban infrastructure. Our commitment to 'Made in India' technology means that India's enterprise campuses strengthen India's technological sovereignty while reducing dependence on foreign vendors for critical digital infrastructure.",
         features: [
           "100% Indian company with no foreign ownership",
           "NDAA compliant—cleared for government procurement",
@@ -106,7 +106,7 @@ const seoPageDataExpansion2 = {
       },
       {
         title: "Edge AI: Intelligence Where It Matters",
-        content: "Traditional cloud-only video systems process all intelligence in remote data centers, creating latency, bandwidth waste, and privacy concerns. VMukti's edge AI architecture processes video intelligence directly at camera locations or regional processing nodes, with only final analytics flowing to the cloud. This fundamental architectural difference delivers transformative benefits for smart city operators: emergency response systems get millisecond reaction times instead of seconds of delay, traffic management systems adapt to congestion in real-time, and public safety operations maintain responsiveness even if cloud connectivity degrades. The edge processing layer runs sophisticated AI models—people detection, vehicle classification, anomaly detection, crowd density estimation—consuming a fraction of the bandwidth of raw video transmission. For a smart city with 5,000 cameras running 24/7, this architectural choice means bandwidth requirements drop by 95%, cloud computing costs plummet, and system responsiveness improves dramatically. VMukti's edge nodes can run completely disconnected from cloud infrastructure, maintaining local video intelligence gathering and analysis even in adverse connectivity scenarios. This resilience is critical for cities: when an emergency strikes and network stress peaks, your video intelligence system must remain operational and responsive. VMukti's distributed intelligence model ensures your ICCC never goes blind.",
+        content: "Traditional cloud-only video systems process all intelligence in remote data centers, creating latency, bandwidth waste, and privacy concerns. VMukti's edge AI architecture processes video intelligence directly at camera locations or regional processing nodes, with only final analytics flowing to the cloud. This fundamental architectural difference delivers transformative benefits for enterprise campus operators: emergency response systems get millisecond reaction times instead of seconds of delay, traffic management systems adapt to congestion in real-time, and public safety operations maintain responsiveness even if cloud connectivity degrades. The edge processing layer runs sophisticated AI models—people detection, vehicle classification, anomaly detection, crowd density estimation—consuming a fraction of the bandwidth of raw video transmission. For a enterprise campus with 5,000 cameras running 24/7, this architectural choice means bandwidth requirements drop by 95%, cloud computing costs plummet, and system responsiveness improves dramatically. VMukti's edge nodes can run completely disconnected from cloud infrastructure, maintaining local video intelligence gathering and analysis even in adverse connectivity scenarios. This resilience is critical for cities: when an emergency strikes and network stress peaks, your video intelligence system must remain operational and responsive. VMukti's distributed intelligence model ensures your Enterprise Command Center never goes blind.",
         features: [
           "AI processing at the edge eliminates cloud latency",
           "95% reduction in bandwidth requirements vs raw video",
@@ -118,7 +118,7 @@ const seoPageDataExpansion2 = {
       },
       {
         title: "Scalable Deployment Across City Districts",
-        content: "Managing video systems across multiple city districts, jurisdictions, and administrative boundaries requires careful architectural planning. VMukti's multi-site architecture supports unlimited geographic distribution with unified management from a single ICCC interface. Operators can manage 500 cameras in one district and 50,000 across the city with identical, intuitive tools. The platform handles federation seamlessly: a traffic incident in North District automatically triggers alerts in South District traffic management, CCTV footage archives to appropriate district storage, and incident investigation spans jurisdictional boundaries without administrative friction. This matters enormously for Indian smart cities where administrative structures often create silos that hamper coordinated response. VMukti removes those technical barriers, enabling your city government to operate as a unified response entity. Video from any district is searchable from any authorized ICCC workstation, incident documentation automatically routes to relevant jurisdictions, and resource allocation decisions benefit from city-wide situational awareness. With experience managing systems across 700+ Indian districts—ranging from metros with 50,000+ cameras to smaller towns with 100 cameras—VMukti understands smart city scaling challenges intimately. Our platform scales linearly: adding a new district adds proportional costs but zero architectural complexity.",
+        content: "Managing video systems across multiple city districts, jurisdictions, and administrative boundaries requires careful architectural planning. VMukti's multi-site architecture supports unlimited geographic distribution with unified management from a single Enterprise Command Center interface. Operators can manage 500 cameras in one district and 50,000 across the city with identical, intuitive tools. The platform handles federation seamlessly: a traffic incident in North District automatically triggers alerts in South District traffic management, CCTV footage archives to appropriate district storage, and incident investigation spans jurisdictional boundaries without administrative friction. This matters enormously for Indian enterprise campuses where administrative structures often create silos that hamper coordinated response. VMukti removes those technical barriers, enabling your city government to operate as a unified response entity. Video from any district is searchable from any authorized Enterprise Command Center workstation, incident documentation automatically routes to relevant jurisdictions, and resource allocation decisions benefit from city-wide situational awareness. With experience managing systems across 700+ Indian districts—ranging from metros with 50,000+ cameras to smaller towns with 100 cameras—VMukti understands enterprise campus scaling challenges intimately. Our platform scales linearly: adding a new district adds proportional costs but zero architectural complexity.",
         features: [
           "Unified management across unlimited districts",
           "Federation of video systems across jurisdictions",
@@ -131,8 +131,8 @@ const seoPageDataExpansion2 = {
     ],
     faq: [
       {
-        question: "How does VMukti's Cloud VMS integrate with existing ICCC infrastructure?",
-        answer: "VMukti Cloud VMS integrates seamlessly with existing ICCC command centers through standard API interfaces, ONVIF protocol support, and native ICCC dashboard plugins. We provide white-label integration options and work with your ICCC software provider to ensure unified operator experience. Our integration specialists handle the technical coordination, ensuring minimal disruption to operational systems during deployment. The platform supports bi-directional data flow: ICCC sends PTZ commands to cameras through VMukti, while VMukti delivers intelligent alerts and video streams directly to ICCC operators."
+        question: "How does VMukti's Cloud VMS integrate with existing Enterprise Command Center infrastructure?",
+        answer: "VMukti Cloud VMS integrates seamlessly with existing Enterprise Command Center command centers through standard API interfaces, ONVIF protocol support, and native Enterprise Command Center dashboard plugins. We provide white-label integration options and work with your Enterprise Command Center software provider to ensure unified operator experience. Our integration specialists handle the technical coordination, ensuring minimal disruption to operational systems during deployment. The platform supports bi-directional data flow: Enterprise Command Center sends PTZ commands to cameras through VMukti, while VMukti delivers intelligent alerts and video streams directly to Enterprise Command Center operators."
       },
       {
         question: "What compliance certifications does VMukti Cloud VMS hold?",
@@ -144,61 +144,61 @@ const seoPageDataExpansion2 = {
       },
       {
         question: "Can VMukti VMS operate if cloud connectivity fails?",
-        answer: "Absolutely. VMukti's architecture is designed for resilience: edge nodes operate completely autonomously, continuing to record, process, and analyze video even if cloud connectivity degrades. Local storage systems maintain video archives, and critical alerts are queued for transmission when connectivity returns. Operators can access local video through edge interfaces, maintaining situational awareness during outages. This resilience is critical for smart city infrastructure: your video intelligence system must never depend on cloud uptime to keep cities safe."
+        answer: "Absolutely. VMukti's architecture is designed for resilience: edge nodes operate completely autonomously, continuing to record, process, and analyze video even if cloud connectivity degrades. Local storage systems maintain video archives, and critical alerts are queued for transmission when connectivity returns. Operators can access local video through edge interfaces, maintaining situational awareness during outages. This resilience is critical for enterprise campus infrastructure: your video intelligence system must never depend on cloud uptime to keep cities safe."
       },
       {        question: "How many cameras can a single VMukti Cloud VMS deployment support?",
-        answer: "VMukti Cloud VMS supports unlimited camera scaling through distributed architecture. Single ICCC instances manage 1,000+ simultaneous streams with full AI analytics processing. For larger deployments, multiple ICCC instances federation together, supporting 50,000+ cameras across a city with unified management. We've deployed systems managing 700+ districts in India, from small towns with 50 cameras to metros with 50,000+ cameras, all within a single unified platform."
+        answer: "VMukti Cloud VMS supports unlimited camera scaling through distributed architecture. Single Enterprise Command Center instances manage 1,000+ simultaneous streams with full AI analytics processing. For larger deployments, multiple Enterprise Command Center instances federation together, supporting 50,000+ cameras across a city with unified management. We've deployed systems managing 700+ districts in India, from small towns with 50 cameras to metros with 50,000+ cameras, all within a single unified platform."
       },
       {
-        question: "What is VMukti's experience with Indian government smart city deployments?",
-        answer: "VMukti has deployed video management systems across 700+ Indian districts, making us the largest Indian VMS provider serving government projects. We understand Indian smart city requirements intimately: diverse camera ecosystems, challenging network conditions, multi-jurisdictional coordination needs, and government compliance requirements. Our deployment experience spans metros like Delhi and Bangalore to tier-2 cities and critical infrastructure zones. This extensive track record provides confidence that our platform will work reliably in your city's specific environment."
+        question: "What is VMukti's experience with Indian government enterprise campus deployments?",
+        answer: "VMukti has deployed video management systems across 700+ Indian districts, making us the largest Indian VMS provider serving government projects. We understand Indian enterprise campus requirements intimately: diverse camera ecosystems, challenging network conditions, multi-jurisdictional coordination needs, and government compliance requirements. Our deployment experience spans metros like Delhi and Bangalore to tier-2 cities and critical infrastructure zones. This extensive track record provides confidence that our platform will work reliably in your city's specific environment."
       }
     ],
     cta: {
-      headline: "Deploy Smart City VMS in Your ICCC Today",
+      headline: "Deploy Enterprise Campus VMS in Your Enterprise Command Center Today",
       description: "VMukti Cloud VMS integrates seamlessly with your command center. Non-Chinese, NDAA compliant, proven across 700+ Indian districts.",
-      buttonText: "Schedule Your ICCC Integration Demo",
+      buttonText: "Schedule Your Enterprise Command Center Integration Demo",
       buttonLink: "https://vmukti.com/contact"
     }
   }
 },
 
-"/iccc-video-management": {
-  title: "ICCC Video Management System | AI Analytics VMukti",
+"/enterprise-command-center-video-management": {
+  title: "Enterprise Command Center Video Management System | AI Analytics VMukti",
   description: "Purpose-built Cloud VMS for Integrated Command & Control Centers with real-time AI video analytics, non-Chinese origin, NDAA compliance.",
   keywords: [
-    "ICCC video management",
+    "Enterprise Command Center video management",
     "integrated command control center VMS",
-    "ICCC software solution",
+    "Enterprise Command Center software solution",
     "command center video management",
-    "real-time ICCC analytics",
-    "multi-agency ICCC platform",
-    "ICCC camera management",
+    "real-time Enterprise Command Center analytics",
+    "multi-agency Enterprise Command Center",
+    "Enterprise Command Center camera management",
     "integrated control center technology",
-    "ICCC AI video analytics",
+    "Enterprise Command Center AI video analytics",
     "command center operations software",
-    "centralized video monitoring ICCC",
-    "ICCC emergency management",
-    "smart city ICCC integration",
+    "centralized video monitoring Enterprise Command Center",
+    "Enterprise Command Center emergency management",
+    "enterprise campus Enterprise Command Center integration",
     "video analytics command center",
-    "ICCC dispatch system",
+    "Enterprise Command Center dispatch system",
     "unified command center platform",
-    "ICCC coordination software",
-    "government ICCC system",
-    "Indian ICCC solution",
-    "defense grade ICCC platform"
+    "Enterprise Command Center coordination software",
+    "government Enterprise Command Center system",
+    "Indian Enterprise Command Center solution",
+    "defense grade Enterprise Command Center"
   ],
-  canonical: "https://vmukti.com/iccc-video-management",
+  canonical: "https://vmukti.com/enterprise-command-center-video-management",
   og: {
-    title: "ICCC Video Management System | VMukti",
+    title: "Enterprise Command Center Video Management System | VMukti",
     description: "Real-time AI video analytics for Integrated Command & Control Centers",
-    image: "https://vmukti.com/og-iccc-vms.jpg",
+    image: "https://vmukti.com/og-enterprise-command-center-vms.jpg",
     type: "website"
   },
   schema: {
     "@context": "https://schema.org",
     "@type": ["Product", "Service"],
-    name: "ICCC Video Management System",
+    name: "Enterprise Command Center Video Management System",
     description: "Purpose-built video management platform for Integrated Command & Control Centers with AI analytics",
     brand: { "@type": "Brand", name: "VMukti" },
     manufacturer: {
@@ -210,15 +210,15 @@ const seoPageDataExpansion2 = {
   },
   content: {
     hero: {
-      headline: "ICCC Video Management Designed for Command Centers",
-      subheadline: "Real-time intelligence hub for coordinated emergency and smart city operations",
-      cta: "Request ICCC Integration Demo",
+      headline: "Enterprise Command Center Video Management Designed for Command Centers",
+      subheadline: "Real-time intelligence hub for coordinated emergency and enterprise campus operations",
+      cta: "Request Enterprise Command Center Integration Demo",
       ctaLink: "https://vmukti.com/demo"
     },
     sections: [
       {
-        title: "Purpose-Built ICCC Video Intelligence Platform",
-        content: "An Integrated Command & Control Center demands video management systems engineered specifically for command center workflows, not retrofitted from enterprise surveillance platforms. VMukti's ICCC Video Management System is built ground-up with command center operators in mind: rapid video access for incident response, multi-agency coordination across jurisdictional boundaries, real-time intelligence delivery, and absolute reliability under stress. Unlike generic video surveillance platforms, VMukti understands that ICCC operators need instant access to specific locations, rapid forensic analysis of incidents, and coordinated response across multiple agencies. Our platform delivers purpose-built tools: incident-centric video retrieval where operators search by incident type and location to get relevant footage instantly, multi-window layouts optimized for command center wall displays, integrated alert systems that route video intelligence directly to responsible officers, and federated search that queries video across entire city networks in seconds. The platform is designed to reduce cognitive load on operators: instead of hunting for cameras and timelines, VMukti delivers context-aware video intelligence—when an incident is reported, the system automatically identifies relevant cameras, pre-loads footage, and surfaces key analytics without operator intervention. For 24/7 command centers managing public safety and emergency response, this intelligent delivery of video intelligence translates directly into faster response times and better incident outcomes.",
+        title: "Purpose-Built Enterprise Command Center Video Intelligence Platform",
+        content: "An Integrated Command & Control Center demands video management systems engineered specifically for command center workflows, not retrofitted from enterprise surveillance platforms. VMukti's Enterprise Command Center Video Management System is built ground-up with command center operators in mind: rapid video access for incident response, multi-agency coordination across jurisdictional boundaries, real-time intelligence delivery, and absolute reliability under stress. Unlike generic video surveillance platforms, VMukti understands that Enterprise Command Center operators need instant access to specific locations, rapid forensic analysis of incidents, and coordinated response across multiple agencies. Our platform delivers purpose-built tools: incident-centric video retrieval where operators search by incident type and location to get relevant footage instantly, multi-window layouts optimized for command center wall displays, integrated alert systems that route video intelligence directly to responsible officers, and federated search that queries video across entire city networks in seconds. The platform is designed to reduce cognitive load on operators: instead of hunting for cameras and timelines, VMukti delivers context-aware video intelligence—when an incident is reported, the system automatically identifies relevant cameras, pre-loads footage, and surfaces key analytics without operator intervention. For 24/7 command centers managing public safety and emergency response, this intelligent delivery of video intelligence translates directly into faster response times and better incident outcomes.",
         features: [
           "Incident-centric video retrieval system",
           "Multi-agency coordination and federation",
@@ -230,7 +230,7 @@ const seoPageDataExpansion2 = {
       },
       {
         title: "Multi-Agency Coordination for Emergency Response",
-        content: "Emergency response requires seamless coordination between police, fire, medical, and traffic management agencies. Traditional siloed video systems force agencies to operate independently, with each maintaining separate cameras, archives, and analysis tools. VMukti's ICCC platform breaks down these silos through unified federation: police can instantly access fire department cameras for coordinated response, medical dispatch gets traffic video to avoid congestion en route to incidents, and command center supervisors maintain real-time view across all agency resources. The federation works both ways: incident alerts from one agency automatically trigger video from relevant other agencies, creating a shared intelligence picture. Multi-agency coordination extends to access control: each agency sees only cameras and incidents relevant to their role, with automatic redaction of sensitive footage and privacy-protected views. Investigation workflows span agencies: when an incident occurs, investigating officers can trace event progression through multiple camera networks, build incident timelines that integrate police, fire, and traffic video, and share investigation evidence with stakeholders automatically. This capability is transformative for complex emergencies requiring multi-agency response: a traffic accident becomes a coordinated incident with medical responders getting traffic conditions, fire getting hazmat information, and police managing scene security—all coordinated through unified video intelligence.",
+        content: "Emergency response requires seamless coordination between police, fire, medical, and traffic management agencies. Traditional siloed video systems force agencies to operate independently, with each maintaining separate cameras, archives, and analysis tools. VMukti's Enterprise Command Center breaks down these silos through unified federation: police can instantly access fire department cameras for coordinated response, medical dispatch gets traffic video to avoid congestion en route to incidents, and command center supervisors maintain real-time view across all agency resources. The federation works both ways: incident alerts from one agency automatically trigger video from relevant other agencies, creating a shared intelligence picture. Multi-agency coordination extends to access control: each agency sees only cameras and incidents relevant to their role, with automatic redaction of sensitive footage and privacy-protected views. Investigation workflows span agencies: when an incident occurs, investigating officers can trace event progression through multiple camera networks, build incident timelines that integrate police, fire, and traffic video, and share investigation evidence with stakeholders automatically. This capability is transformative for complex emergencies requiring multi-agency response: a traffic accident becomes a coordinated incident with medical responders getting traffic conditions, fire getting hazmat information, and police managing scene security—all coordinated through unified video intelligence.",
         features: [
           "Federation across police, fire, medical, traffic agencies",
           "Automatic alert routing to relevant agencies",
@@ -253,7 +253,7 @@ const seoPageDataExpansion2 = {
       },
       {
         title: "Compliance and Sovereignty for Command Center Infrastructure",
-        content: "Command and Control Centers manage the most sensitive aspects of city operations and emergency response. These systems must be built by trusted entities with absolute clarity on data handling, code origins, and compliance posture. VMukti's ICCC platform is built by an Indian company, in India, using no Chinese components or dependencies—critical for government procurement in sensitive infrastructure. Our NDAA compliance certification proves that even for defense procurement, VMukti meets U.S. defense supply chain standards. GDPR and PDPL certifications ensure compliance with privacy regulations as ICCC systems capture extensive citizen data during emergency response. The platform's zero data transmission architecture means that raw video captured from public spaces stays local, with only processed intelligence—metadata, alerts, analytics—flowing through infrastructure. For citizen privacy and data localization requirements, this is transformative. ICCC operators can focus on incident management without privacy concerns about raw video handling. Regular security audits, penetration testing, and compliance verification ensure that your ICCC's video intelligence system maintains the security posture demanded by command center operations.",
+        content: "Command and Control Centers manage the most sensitive aspects of city operations and emergency response. These systems must be built by trusted entities with absolute clarity on data handling, code origins, and compliance posture. VMukti's Enterprise Command Center is built by an Indian company, in India, using no Chinese components or dependencies—critical for government procurement in sensitive infrastructure. Our NDAA compliance certification proves that even for defense procurement, VMukti meets U.S. defense supply chain standards. GDPR and PDPL certifications ensure compliance with privacy regulations as Enterprise Command Center systems capture extensive citizen data during emergency response. The platform's zero data transmission architecture means that raw video captured from public spaces stays local, with only processed intelligence—metadata, alerts, analytics—flowing through infrastructure. For citizen privacy and data localization requirements, this is transformative. Enterprise Command Center operators can focus on incident management without privacy concerns about raw video handling. Regular security audits, penetration testing, and compliance verification ensure that your Enterprise Command Center's video intelligence system maintains the security posture demanded by command center operations.",
         features: [
           "Indian-built platform with no foreign ownership",
           "NDAA certified for defense procurement",
@@ -266,34 +266,34 @@ const seoPageDataExpansion2 = {
     ],
     faq: [
       {
-        question: "How does VMukti's ICCC VMS integrate with existing command center software?",
-        answer: "VMukti provides extensive integration capabilities: REST APIs for data exchange, ONVIF protocol for camera management, WebSocket connections for real-time alerts, and SIEM integration for security event correlation. We work with major ICCC software providers to ensure seamless integration. Our integration team handles technical coordination, API development, and testing to ensure your ICCC software and VMukti platform operate as a unified system. We support both plug-in integration (where VMukti runs as a module within your ICCC) and federation (where VMukti operates independently with bi-directional alert exchange)."
+        question: "How does VMukti's Enterprise Command Center VMS integrate with existing command center software?",
+        answer: "VMukti provides extensive integration capabilities: REST APIs for data exchange, ONVIF protocol for camera management, WebSocket connections for real-time alerts, and SIEM integration for security event correlation. We work with major Enterprise Command Center software providers to ensure seamless integration. Our integration team handles technical coordination, API development, and testing to ensure your Enterprise Command Center software and VMukti platform operate as a unified system. We support both plug-in integration (where VMukti runs as a module within your Enterprise Command Center) and federation (where VMukti operates independently with bi-directional alert exchange)."
       },
       {
-        question: "What alert types does VMukti's AI system detect for ICCC operations?",
-        answer: "VMukti detects hundreds of alert types including: people detection and tracking, vehicle classification and tracking, abandoned object detection, crowd gathering and density estimation, traffic congestion and flow anomalies, perimeter breaches, loitering detection, traffic rule violations, parking violations, and custom anomalies specific to your city. Alerts are configurable—your ICCC can enable specific detection types relevant to your operations and tune sensitivity thresholds. Each alert includes video clip, timestamp, affected area, and contextual information supporting officer response."
+        question: "What alert types does VMukti's AI system detect for Enterprise Command Center operations?",
+        answer: "VMukti detects hundreds of alert types including: people detection and tracking, vehicle classification and tracking, abandoned object detection, crowd gathering and density estimation, traffic congestion and flow anomalies, perimeter breaches, loitering detection, traffic rule violations, parking violations, and custom anomalies specific to your city. Alerts are configurable—your Enterprise Command Center can enable specific detection types relevant to your operations and tune sensitivity thresholds. Each alert includes video clip, timestamp, affected area, and contextual information supporting officer response."
       },
       {
-        question: "Can VMukti's ICCC VMS handle multi-site federation across different cities?",
-        answer: "Yes. VMukti is purpose-built for multi-site federation. We support command centers that manage multiple cities, districts, or jurisdictions. Operators at a regional command center can monitor city-wide networks, coordinate response across cities, and share intelligence between jurisdictions. Federation includes separate storage domains (each city maintains local video), unified management from regional ICCC, and automatic incident escalation between command centers."
+        question: "Can VMukti's Enterprise Command Center VMS handle multi-site federation across different cities?",
+        answer: "Yes. VMukti is purpose-built for multi-site federation. We support command centers that manage multiple cities, districts, or jurisdictions. Operators at a regional command center can monitor city-wide networks, coordinate response across cities, and share intelligence between jurisdictions. Federation includes separate storage domains (each city maintains local video), unified management from regional Enterprise Command Center, and automatic incident escalation between command centers."
       },
       {
-        question: "How does VMukti ensure ICCC system reliability and uptime?",
-        answer: "VMukti's ICCC platform is engineered for continuous operation: redundant processing nodes, automatic failover, distributed storage across multiple locations, and edge-based recording that continues even if cloud connectivity fails. We support 99.99% uptime SLAs with documented recovery procedures. For critical incidents, the platform operates in degraded mode: ICCC operators can access locally-stored video even if remote connectivity fails, emergency alerts continue flowing, and investigation capabilities remain available."
+        question: "How does VMukti ensure Enterprise Command Center system reliability and uptime?",
+        answer: "VMukti's Enterprise Command Center is engineered for continuous operation: redundant processing nodes, automatic failover, distributed storage across multiple locations, and edge-based recording that continues even if cloud connectivity fails. We support 99.99% uptime SLAs with documented recovery procedures. For critical incidents, the platform operates in degraded mode: Enterprise Command Center operators can access locally-stored video even if remote connectivity fails, emergency alerts continue flowing, and investigation capabilities remain available."
       },
       {
-        question: "What is the typical deployment timeline for VMukti ICCC integration?",
+        question: "What is the typical deployment timeline for VMukti Enterprise Command Center integration?",
         answer: "Integration timeline depends on scope: a basic integration with incident alert routing takes 4-8 weeks, comprehensive integration including multi-agency coordination and custom alerts takes 12-16 weeks. Timelines include requirements gathering, API development, testing, training, and go-live support. VMukti provides dedicated integration engineers throughout the process, with regular milestone reviews and agile adjustments based on operational feedback."
       },
       {
-        question: "How does VMukti protect sensitive investigation video in ICCC systems?",
+        question: "How does VMukti protect sensitive investigation video in Enterprise Command Center systems?",
         answer: "Investigation video access is controlled through role-based access control: investigators see video relevant to their investigations, with automatic redaction of footage containing unrelated sensitive information. Access logs record who accessed which video when, supporting investigation chain-of-custody requirements. Archive management includes retention policies specific to incident type and jurisdiction, ensuring compliance with records retention regulations. Video encryption ensures that even if storage is compromised, video remains protected."
       }
     ],
     cta: {
-      headline: "Integrate VMukti ICCC VMS Into Your Command Center",
+      headline: "Integrate VMukti Enterprise Command Center VMS Into Your Command Center",
       description: "Real-time AI video intelligence for coordinated emergency response. Non-Chinese, NDAA compliant, proven in 700+ Indian districts.",
-      buttonText: "Schedule ICCC Integration Consultation",
+      buttonText: "Schedule Enterprise Command Center Integration Consultation",
       buttonLink: "https://vmukti.com/contact"
     }
   }
@@ -484,7 +484,7 @@ const seoPageDataExpansion2 = {
     sections: [
       {
         title: "Sovereignty Through Technological Independence",
-        content: "India's critical infrastructure—smart cities, defense facilities, emergency response systems, and essential services—must rest on foundations built and controlled by trustworthy Indian entities. VMukti is precisely that: an Indian company, founded and owned by Indians, building video management systems with zero dependencies on foreign entities. This matters profoundly for government procurement: when you select VMukti, you're not betting your critical infrastructure on foreign supply chains, not trusting your video security to foreign-controlled code repositories, and not depending on foreign entities for system maintenance and updates. Every line of VMukti's code is built in India and remains under Indian control. We have zero Chinese component dependencies—no Chinese chips in our hardware, no Chinese cloud infrastructure, no Chinese software libraries in our codebase. This architectural choice has direct implications for sovereignty: India's smart cities remain secure from foreign surveillance dependencies, government operations don't depend on foreign-controlled technology, and critical infrastructure security doesn't hinge on foreign geopolitical decisions. The geopolitical context is clear: major democracies worldwide are re-evaluating technology supply chains to ensure critical infrastructure independence. India's government has explicitly prioritized indigenous technology solutions through 'Atmanirbhar Bharat' (Self-Reliant India) initiatives, Make in India programs, and preferential procurement policies for domestic technology. VMukti aligns perfectly with these national priorities: we are the embodiment of government objectives to strengthen India's technological sovereignty.",
+        content: "India's critical infrastructure—enterprise campuses, defense facilities, emergency response systems, and essential services—must rest on foundations built and controlled by trustworthy Indian entities. VMukti is precisely that: an Indian company, founded and owned by Indians, building video management systems with zero dependencies on foreign entities. This matters profoundly for government procurement: when you select VMukti, you're not betting your critical infrastructure on foreign supply chains, not trusting your video security to foreign-controlled code repositories, and not depending on foreign entities for system maintenance and updates. Every line of VMukti's code is built in India and remains under Indian control. We have zero Chinese component dependencies—no Chinese chips in our hardware, no Chinese cloud infrastructure, no Chinese software libraries in our codebase. This architectural choice has direct implications for sovereignty: India's enterprise campuses remain secure from foreign surveillance dependencies, government operations don't depend on foreign-controlled technology, and critical infrastructure security doesn't hinge on foreign geopolitical decisions. The geopolitical context is clear: major democracies worldwide are re-evaluating technology supply chains to ensure critical infrastructure independence. India's government has explicitly prioritized indigenous technology solutions through 'Atmanirbhar Bharat' (Self-Reliant India) initiatives, Make in India programs, and preferential procurement policies for domestic technology. VMukti aligns perfectly with these national priorities: we are the embodiment of government objectives to strengthen India's technological sovereignty.",
         features: [
           "100% Indian ownership with no foreign stakeholders",
           "Entirely built in India by Indian engineering teams",
@@ -507,7 +507,7 @@ const seoPageDataExpansion2 = {
         ]
       },
       {
-        title: "Government Procurement for Smart Cities and Infrastructure",
+        title: "Government Procurement for Enterprise Campuses and Infrastructure",
         content: "VMukti's VMS has been selected for deployment across 700+ Indian districts through government procurement processes. This extensive track record demonstrates that government procurement agencies have evaluated VMukti's sourcing, compliance, and capability and found them superior to alternatives. The procurement success comes from multiple advantages: first, our Indian origin eliminates sourcing complications that plague foreign vendors; second, our compliance certifications (NDAA, GDPR, PDPL) provide confidence that government regulations are met; third, our extensive deployment experience across Indian districts proves that we understand government requirements. Procurement officers consistently choose VMukti because we reduce their vendor qualification burden: we're not an experiment with an unknown Indian startup, we're a proven Indian company with 700+ district deployments. Our government relationships span metros, tier-2 cities, and specialized critical infrastructure installations. We understand government procurement cycles, budget constraints, and compliance requirements. We've successfully navigated government tender processes, met government evaluation criteria, and delivered systems that government agencies continue expanding rather than replacing. For procuring agencies considering VMS solutions, choosing a proven Indian vendor with extensive government deployment track record and full compliance certifications is both a strategic choice (supporting indigenous technology) and a practical choice (reducing procurement risk).",
         features: [
           "Proven government vendor selection",
@@ -829,7 +829,7 @@ const seoPageDataExpansion2 = {
 },
 
 "/ai-video-analytics-government": {
-  title: "AI Video Analytics for Government & Defense | VMukti",
+  title: "AI Video Analytics for Enterprise Security | VMukti",
   description: "Intelligent video analytics for government operations. Real-time detection, multi-camera tracking, incident response. Non-Chinese, NDAA compliant.",
   keywords: [
     "AI video analytics government",
@@ -854,7 +854,7 @@ const seoPageDataExpansion2 = {
   ],
   canonical: "https://vmukti.com/ai-video-analytics-government",
   og: {
-    title: "AI Video Analytics for Government & Defense | VMukti",
+    title: "AI Video Analytics for Enterprise Security | VMukti",
     description: "Intelligent video analytics delivering real-time intelligence for government and defense operations",
     image: "https://vmukti.com/og-ai-analytics.jpg",
     type: "website"
@@ -945,7 +945,7 @@ const seoPageDataExpansion2 = {
       },
       {
         question: "Can VMukti analytics integrate with government command centers and emergency dispatch?",
-        answer: "Yes. VMukti provides integration with government command centers, emergency dispatch systems, and ICCC platforms through standard APIs. Alerts flow directly to command center operator workstations, dispatch systems receive incident information automatically, and investigation teams access analytics-generated intelligence. Integration is customized for your existing systems: if you use specific dispatch software or command center platform, we integrate VMukti analytics seamlessly. The goal is for analytics intelligence to flow naturally into government decision-making workflows."
+        answer: "Yes. VMukti provides integration with government command centers, emergency dispatch systems, and Enterprise Command Centers through standard APIs. Alerts flow directly to command center operator workstations, dispatch systems receive incident information automatically, and investigation teams access analytics-generated intelligence. Integration is customized for your existing systems: if you use specific dispatch software or command center platform, we integrate VMukti analytics seamlessly. The goal is for analytics intelligence to flow naturally into government decision-making workflows."
       }
     ],
     cta: {
@@ -1040,7 +1040,7 @@ const seoPageDataExpansion2 = {
       },
       {
         title: "Resilience and Autonomous Operation",
-        content: "Cloud-dependent surveillance systems become blind if cloud connectivity fails: if internet connectivity drops, cloud systems cannot record or process video, leaving infrastructure unmonitored. Edge computing eliminates this vulnerability: edge devices operate completely autonomously, recording and processing video even if central connectivity fails. For critical infrastructure and public safety systems that cannot tolerate monitoring outages, edge resilience is essential. A power plant remains monitored for security breaches even if wide-area network fails; a hospital remains monitored even if internet connectivity drops; a city's traffic remains monitored even if ICCC connectivity becomes unavailable. This autonomous operation capability is particularly valuable in emerging economies where network reliability may be challenged: instead of betting infrastructure safety on perfect network uptime, edge computing maintains safety regardless of network conditions. When connectivity returns, edge devices synchronize: recorded video uploads to central storage, queued alerts transmit to command centers, and analysis resumes. This synchronization model is elegant: central systems never depend on edge connectivity, so network failure never compromises central operations, yet when connectivity returns, central systems gain complete intelligence. For 24/7 operations across 700+ districts, this resilience model is critical: you cannot afford monitoring outages during network failures; edge autonomy ensures surveillance continues. The resilience capability also extends to deliberate disconnection: sensitive facilities can operate edge systems completely disconnected from cloud infrastructure, maintaining full surveillance capability while ensuring no video flows to external systems.",
+        content: "Cloud-dependent surveillance systems become blind if cloud connectivity fails: if internet connectivity drops, cloud systems cannot record or process video, leaving infrastructure unmonitored. Edge computing eliminates this vulnerability: edge devices operate completely autonomously, recording and processing video even if central connectivity fails. For critical infrastructure and public safety systems that cannot tolerate monitoring outages, edge resilience is essential. A power plant remains monitored for security breaches even if wide-area network fails; a hospital remains monitored even if internet connectivity drops; a city's traffic remains monitored even if Enterprise Command Center connectivity becomes unavailable. This autonomous operation capability is particularly valuable in emerging economies where network reliability may be challenged: instead of betting infrastructure safety on perfect network uptime, edge computing maintains safety regardless of network conditions. When connectivity returns, edge devices synchronize: recorded video uploads to central storage, queued alerts transmit to command centers, and analysis resumes. This synchronization model is elegant: central systems never depend on edge connectivity, so network failure never compromises central operations, yet when connectivity returns, central systems gain complete intelligence. For 24/7 operations across 700+ districts, this resilience model is critical: you cannot afford monitoring outages during network failures; edge autonomy ensures surveillance continues. The resilience capability also extends to deliberate disconnection: sensitive facilities can operate edge systems completely disconnected from cloud infrastructure, maintaining full surveillance capability while ensuring no video flows to external systems.",
         features: [
           "Autonomous operation during connectivity failures",
           "24/7 monitoring regardless of network status",
@@ -1158,7 +1158,7 @@ const seoPageDataExpansion2 = {
       },
       {
         title: "Bandwidth and Cost Efficiency",
-        content: "Transmitting raw video is the largest bandwidth consumer in surveillance systems: a single HD camera requires 3-5 Mbps continuously; 1,000 cameras require gigabits of bandwidth per second. Over a month, this is hundreds of terabytes of data transfer. At typical cloud bandwidth costs (₹5-10 per GB), this translates to ₹5-10 crore annually just in data transfer costs for 1,000 cameras. VMukti's zero data transmission eliminates this cost: instead of transmitting gigabits of video, you transmit megabits of metadata. Bandwidth requirements drop from gigabits to megabits—a 99% reduction. For 1,000 cameras, instead of ₹5-10 crore annual bandwidth cost, you pay ₹50 lakh annually. Over a 5-year deployment, this is ₹24-47 crore in bandwidth cost savings. This cost structure completely changes deployment economics: organizations that couldn't afford large-scale surveillance due to bandwidth costs suddenly can deploy everywhere. For government smart cities, the implications are transformative: instead of deploying 1,000 cameras at high cost, governments can deploy 10,000 cameras at the same cost when bandwidth is reduced by 99%. This architectural choice fundamentally enables different surveillance scales: every street can be monitored, every public space can have coverage, because bandwidth isn't the limiting factor anymore. The bandwidth efficiency also enables deployment in bandwidth-constrained areas: rural locations, remote facilities, and areas with limited internet connectivity can have sophisticated surveillance without requiring expensive bandwidth infrastructure.",
+        content: "Transmitting raw video is the largest bandwidth consumer in surveillance systems: a single HD camera requires 3-5 Mbps continuously; 1,000 cameras require gigabits of bandwidth per second. Over a month, this is hundreds of terabytes of data transfer. At typical cloud bandwidth costs (₹5-10 per GB), this translates to ₹5-10 crore annually just in data transfer costs for 1,000 cameras. VMukti's zero data transmission eliminates this cost: instead of transmitting gigabits of video, you transmit megabits of metadata. Bandwidth requirements drop from gigabits to megabits—a 99% reduction. For 1,000 cameras, instead of ₹5-10 crore annual bandwidth cost, you pay ₹50 lakh annually. Over a 5-year deployment, this is ₹24-47 crore in bandwidth cost savings. This cost structure completely changes deployment economics: organizations that couldn't afford large-scale surveillance due to bandwidth costs suddenly can deploy everywhere. For government enterprise campuses, the implications are transformative: instead of deploying 1,000 cameras at high cost, governments can deploy 10,000 cameras at the same cost when bandwidth is reduced by 99%. This architectural choice fundamentally enables different surveillance scales: every street can be monitored, every public space can have coverage, because bandwidth isn't the limiting factor anymore. The bandwidth efficiency also enables deployment in bandwidth-constrained areas: rural locations, remote facilities, and areas with limited internet connectivity can have sophisticated surveillance without requiring expensive bandwidth infrastructure.",
         features: [
           "99% bandwidth reduction vs raw video transmission",
           "Dramatically lower operating costs",
@@ -1215,55 +1215,55 @@ const seoPageDataExpansion2 = {
   }
 },
 
-"/smart-city-surveillance-india": {
-  title: "Smart City Surveillance Solutions India | VMukti VMS",
-  description: "AI video surveillance for Indian smart cities. 700+ districts deployed. Non-Chinese, NDAA compliant, government-grade.",
+"/enterprise-campus-surveillance-india": {
+  title: "Enterprise Campus Surveillance Solutions India | VMukti VMS",
+  description: "AI video surveillance for Indian enterprise campuses. 700+ districts deployed. Non-Chinese, NDAA compliant, government-grade.",
   keywords: [
-    "smart city surveillance India",
-    "Indian smart city VMS",
-    "smart city video management",
-    "India smart city deployment",
-    "smart city CCTV system",
+    "enterprise campus surveillance India",
+    "Indian enterprise campus VMS",
+    "enterprise campus video management",
+    "India enterprise campus deployment",
+    "enterprise campus CCTV system",
     "urban surveillance India",
     "traffic management video",
     "public safety surveillance",
-    "smart city analytics",
+    "enterprise campus analytics",
     "Indian government surveillance",
     "distributed surveillance India",
     "city-wide video network",
-    "smart city infrastructure",
+    "enterprise campus infrastructure",
     "integrated surveillance system",
-    "smart city technology India",
+    "enterprise campus technology India",
     "video intelligence platform",
     "surveillance network India",
     "government surveillance India",
     "cities surveillance platform",
     "India surveillance technology"
   ],
-  canonical: "https://vmukti.com/smart-city-surveillance-india",
+  canonical: "https://vmukti.com/enterprise-campus-surveillance-india",
   og: {
-    title: "Smart City Surveillance Solutions India | VMukti",
-    description: "AI-powered video surveillance for Indian smart cities deployed across 700+ districts",
-    image: "https://vmukti.com/og-smart-city-india.jpg",
+    title: "Enterprise Campus Surveillance Solutions India | VMukti",
+    description: "AI-powered video surveillance for Indian enterprise campuses deployed across 700+ districts",
+    image: "https://vmukti.com/og-enterprise-campus-india.jpg",
     type: "website"
   },
   schema: {
     "@context": "https://schema.org",
     "@type": ["Product", "Service"],
-    name: "Smart City Surveillance India",
-    description: "Comprehensive smart city video management solutions for Indian municipalities and government"
+    name: "Enterprise Campus Surveillance India",
+    description: "Comprehensive enterprise campus video management solutions for Indian municipalities and government"
   },
   content: {
     hero: {
-      headline: "Smart City Surveillance for India's Urban Transformation",
+      headline: "Enterprise Campus Surveillance for India's Urban Transformation",
       subheadline: "AI video management deployed across 700+ Indian districts. Made in India, government-grade.",
-      cta: "Explore Smart City Solutions",
+      cta: "Explore Enterprise Campus Solutions",
       ctaLink: "https://vmukti.com/demo"
     },
     sections: [
       {
-        title: "Proven Smart City Deployment Across 700+ Indian Districts",
-        content: "India's smart city transformation is one of the world's largest urban modernization initiatives: 100+ smart city projects deployed across major metros, tier-2 cities, and smaller municipalities. VMukti is trusted partner in this transformation, with deployments across 700+ Indian districts. This extensive deployment record demonstrates that VMukti understands Indian smart city requirements uniquely: diverse camera ecosystems (cameras from multiple manufacturers with different capabilities), challenging network conditions (varying bandwidth availability across regions), multi-jurisdictional coordination (different police, traffic, and municipal departments), and government compliance requirements (PDPL, public sector accounting standards, budget constraints). No other Indian VMS vendor has comparable deployment scale: VMukti's experience spans metros (Delhi, Mumbai, Bangalore) with 50,000+ cameras to smaller towns with 100 cameras. We've deployed systems managing every type of smart city application: traffic management systems detecting congestion and optimizing signal timing, public safety systems coordinating police response, emergency management systems routing ambulances through traffic, and critical infrastructure monitoring protecting power and water systems. The deployment breadth means VMukti has solved virtually every smart city technical challenge: how to manage systems across 10 time zones, how to maintain central command centers that coordinate across states, how to federate video systems with different ownership and control structures. This experience becomes your advantage: you don't inherit untested architecture; you inherit proven solutions refined across 700+ district deployments.",
+        title: "Proven Enterprise Campus Deployment Across 700+ Indian Districts",
+        content: "India's enterprise campus transformation is one of the world's largest urban modernization initiatives: 100+ enterprise campus projects deployed across major metros, tier-2 cities, and smaller municipalities. VMukti is trusted partner in this transformation, with deployments across 700+ Indian districts. This extensive deployment record demonstrates that VMukti understands Indian enterprise campus requirements uniquely: diverse camera ecosystems (cameras from multiple manufacturers with different capabilities), challenging network conditions (varying bandwidth availability across regions), multi-jurisdictional coordination (different police, traffic, and municipal departments), and government compliance requirements (PDPL, public sector accounting standards, budget constraints). No other Indian VMS vendor has comparable deployment scale: VMukti's experience spans metros (Delhi, Mumbai, Bangalore) with 50,000+ cameras to smaller towns with 100 cameras. We've deployed systems managing every type of enterprise campus application: traffic management systems detecting congestion and optimizing signal timing, public safety systems coordinating police response, emergency management systems routing ambulances through traffic, and critical infrastructure monitoring protecting power and water systems. The deployment breadth means VMukti has solved virtually every enterprise campus technical challenge: how to manage systems across 10 time zones, how to maintain central command centers that coordinate across states, how to federate video systems with different ownership and control structures. This experience becomes your advantage: you don't inherit untested architecture; you inherit proven solutions refined across 700+ district deployments.",
         features: [
           "700+ district deployments across India",
           "Experience with metros, tier-2 cities, and smaller towns",
@@ -1274,8 +1274,8 @@ const seoPageDataExpansion2 = {
         ]
       },
       {
-        title: "Integrated Smart City Ecosystem",
-        content: "Smart cities demand integration across multiple systems: traffic management systems, emergency dispatch, public safety, municipal services, and citizen engagement. VMukti's platform acts as the video intelligence hub, connecting all these systems through unified video analytics. Traffic management integration automatically detects congestion, optimizes signal timing, and informs traffic operators. Emergency dispatch receives real-time incident location from video analytics, improving response. Public safety systems access city-wide video for investigation and prevention. Municipal services use video analytics for infrastructure monitoring (road damage detection, pothole identification, illegal construction). Citizen engagement improves: city residents report incidents to video-monitored locations for immediate response. The integration extends to data sharing: traffic systems share congestion data with emergency dispatch for route optimization; public safety shares incident information with citizen alert systems; and emergency systems share safety information with traffic to prevent congestion. This integrated approach transforms smart city operations: instead of multiple siloed systems, you have unified intelligence ecosystem. The central command center becomes the coordination hub where all agencies see shared intelligence and make coordinated decisions. Data sharing isn't manual—it's automatic and structured: systems exchange intelligence through APIs with defined schemas, enabling orchestrated multi-agency response to complex situations. For emergencies requiring coordinated response (major accident, natural disaster, security incident), this integration enables response faster and more effectively than traditional silos.",
+        title: "Integrated Enterprise Campus Ecosystem",
+        content: "Smart cities demand integration across multiple systems: traffic management systems, emergency dispatch, public safety, municipal services, and citizen engagement. VMukti's platform acts as the video intelligence hub, connecting all these systems through unified video analytics. Traffic management integration automatically detects congestion, optimizes signal timing, and informs traffic operators. Emergency dispatch receives real-time incident location from video analytics, improving response. Public safety systems access city-wide video for investigation and prevention. Municipal services use video analytics for infrastructure monitoring (road damage detection, pothole identification, illegal construction). Citizen engagement improves: city residents report incidents to video-monitored locations for immediate response. The integration extends to data sharing: traffic systems share congestion data with emergency dispatch for route optimization; public safety shares incident information with citizen alert systems; and emergency systems share safety information with traffic to prevent congestion. This integrated approach transforms enterprise campus operations: instead of multiple siloed systems, you have unified intelligence ecosystem. The central command center becomes the coordination hub where all agencies see shared intelligence and make coordinated decisions. Data sharing isn't manual—it's automatic and structured: systems exchange intelligence through APIs with defined schemas, enabling orchestrated multi-agency response to complex situations. For emergencies requiring coordinated response (major accident, natural disaster, security incident), this integration enables response faster and more effectively than traditional silos.",
         features: [
           "Integration with traffic management systems",
           "Emergency dispatch coordination",
@@ -1287,7 +1287,7 @@ const seoPageDataExpansion2 = {
       },
       {
         title: "Scalable Architecture for Growing Cities",
-        content: "Indian smart cities grow continuously: initial deployments of 500 cameras expand to 2,000 cameras within 2-3 years, then to 5,000+ cameras as city invests further. VMukti's architecture scales linearly: adding cameras doesn't require architectural redesign or system replacement. Adding 1,000 new cameras uses same system architecture as initial 500 cameras; adding 10,000 cameras uses same fundamental design. This linear scalability means your initial investment doesn't become obsolete as city grows. Traditional systems often require replacement when deployment scales beyond initial design capacity; VMukti's distributed architecture grows smoothly. The scaling also includes geographic growth: as city incorporates new municipalities or extends into suburbs, VMukti's system naturally expands to include new areas without requiring central replacement. For instance, Bangalore's metropolitan growth annexes surrounding towns; VMukti's system naturally federates these new areas into existing city-wide system without disruption. The architecture also supports feature growth: as your smart city matures, new requirements emerge (traffic prediction, crowd management, environmental monitoring); VMukti's AI analytics platform enables adding new detection capabilities without system redesign. City operators add new detection types through software updates rather than hardware replacement. This growth flexibility is critical for government: a smart city system must remain viable through years of evolution, not requiring costly replacement within 3-5 years.",
+        content: "Indian enterprise campuses grow continuously: initial deployments of 500 cameras expand to 2,000 cameras within 2-3 years, then to 5,000+ cameras as city invests further. VMukti's architecture scales linearly: adding cameras doesn't require architectural redesign or system replacement. Adding 1,000 new cameras uses same system architecture as initial 500 cameras; adding 10,000 cameras uses same fundamental design. This linear scalability means your initial investment doesn't become obsolete as city grows. Traditional systems often require replacement when deployment scales beyond initial design capacity; VMukti's distributed architecture grows smoothly. The scaling also includes geographic growth: as city incorporates new municipalities or extends into suburbs, VMukti's system naturally expands to include new areas without requiring central replacement. For instance, Bangalore's metropolitan growth annexes surrounding towns; VMukti's system naturally federates these new areas into existing city-wide system without disruption. The architecture also supports feature growth: as your enterprise campus matures, new requirements emerge (traffic prediction, crowd management, environmental monitoring); VMukti's AI analytics platform enables adding new detection capabilities without system redesign. City operators add new detection types through software updates rather than hardware replacement. This growth flexibility is critical for government: a enterprise campus system must remain viable through years of evolution, not requiring costly replacement within 3-5 years.",
         features: [
           "Linear scaling to 10,000+ cameras",
           "Geographic growth through federation",
@@ -1299,7 +1299,7 @@ const seoPageDataExpansion2 = {
       },
       {
         title: "Government Compliance and Procurement Success",
-        content: "Smart city systems must navigate complex government procurement and compliance requirements: GDPR for cross-border data, PDPL for citizen privacy, government financial regulations for public expenditure, and increasingly, indigenous technology preferences. VMukti has successfully navigated these requirements across 700+ deployments, delivering government-compliant solutions that pass procurement approval and maintain operational compliance. The compliance includes: NDAA certification (proving non-Chinese origin and compliance with allied defense standards), GDPR certification (for international city cooperation and cross-border operations), PDPL certification (for citizen data protection), and Made in India certification (demonstrating alignment with government indigenous technology initiatives). This multi-dimensional compliance isn't theoretical—it's proven in practice across extensive government deployments. When new government compliance requirements emerge (as they do regularly), VMukti has capability to adapt systems to new standards without requiring complete replacement. For cities investing ₹10-20 crore in smart city systems, government compliance certainty and vendor experience with compliance are critical procurement factors.",
+        content: "Smart city systems must navigate complex government procurement and compliance requirements: GDPR for cross-border data, PDPL for citizen privacy, government financial regulations for public expenditure, and increasingly, indigenous technology preferences. VMukti has successfully navigated these requirements across 700+ deployments, delivering government-compliant solutions that pass procurement approval and maintain operational compliance. The compliance includes: NDAA certification (proving non-Chinese origin and compliance with allied defense standards), GDPR certification (for international city cooperation and cross-border operations), PDPL certification (for citizen data protection), and Made in India certification (demonstrating alignment with government indigenous technology initiatives). This multi-dimensional compliance isn't theoretical—it's proven in practice across extensive government deployments. When new government compliance requirements emerge (as they do regularly), VMukti has capability to adapt systems to new standards without requiring complete replacement. For cities investing ₹10-20 crore in enterprise campus systems, government compliance certainty and vendor experience with compliance are critical procurement factors.",
         features: [
           "700+ successful government deployments",
           "NDAA, GDPR, PDPL certified",
@@ -1316,11 +1316,11 @@ const seoPageDataExpansion2 = {
         answer: "VMukti manages video from 100,000+ cameras across 700+ districts. This represents the largest Indian video management deployment by a domestic vendor. The diversity is significant: from small towns with 50-100 cameras to metros with 50,000+ cameras, VMukti systems manage every scale. This experience with diverse scales makes VMukti uniquely capable: we understand small-town constraints (limited IT staff, budget constraints, low bandwidth) as well as metro complexity (thousands of cameras, multi-jurisdictional coordination, sophisticated operations)."
       },
       {
-        question: "Which major Indian smart cities deploy VMukti VMS?",
-        answer: "VMukti deployments span major metros and tier-2 cities: we serve police departments, traffic management authorities, and municipal governments across metro areas, capital cities, and important tier-2 cities. While specific city names depend on confidentiality agreements with government partners, our deployment scale (700+ districts, 100,000+ cameras) demonstrates comprehensive presence across India's smart city ecosystem. Any major smart city project in India likely involves VMukti systems."
+        question: "Which major Indian enterprise campuses deploy VMukti VMS?",
+        answer: "VMukti deployments span major metros and tier-2 cities: we serve police departments, traffic management authorities, and municipal governments across metro areas, capital cities, and important tier-2 cities. While specific city names depend on confidentiality agreements with government partners, our deployment scale (700+ districts, 100,000+ cameras) demonstrates comprehensive presence across India's enterprise campus ecosystem. Any major enterprise campus project in India likely involves VMukti systems."
       },
       {
-        question: "Can VMukti systems support multiple smart city agencies simultaneously?",
+        question: "Can VMukti systems support multiple enterprise campus agencies simultaneously?",
         answer: "Yes, this is core to VMukti's design: the same system serves police, traffic, emergency services, and municipal agencies simultaneously. Role-based access control means each agency sees only relevant cameras and data (police see incident-relevant cameras, traffic sees traffic-relevant cameras, medical sees incident-location cameras). Despite independent access and operations, unified backend means all agencies benefit from shared intelligence: when one agency detects an incident, all other agencies are notified, enabling coordinated response."
       },
       {
@@ -1328,18 +1328,18 @@ const seoPageDataExpansion2 = {
         answer: "VMukti's edge-first architecture is specifically designed for India's bandwidth constraints: instead of requiring gigabits of bandwidth for raw video (impossible in most Indian cities), VMukti requires only megabits of bandwidth for intelligence metadata. This architectural decision makes deployments feasible in cities with limited connectivity. Smaller cities with 100-500 cameras can deploy sophisticated VMS without expensive bandwidth infrastructure. This is why VMukti dominates government deployments in smaller cities where cloud-only competitors cannot operate economically."
       },
       {
-        question: "What is typical ROI for a smart city surveillance deployment?",
-        answer: "Smart city VMS ROI comes from multiple sources: traffic optimization reducing fuel waste and emissions (₹1-2 crore annually for medium city), public safety incident response improvement reducing crime and improving response (quantifiable through crime reduction and incident metrics), emergency response coordination reducing response time (directly improves outcomes), and infrastructure monitoring reducing damage and maintenance costs. A medium-city smart city system typically pays for itself within 2-3 years through measurable benefits. Over 5-year deployment, the return typically exceeds investment cost by 2-3x."
+        question: "What is typical ROI for a enterprise campus surveillance deployment?",
+        answer: "Smart city VMS ROI comes from multiple sources: traffic optimization reducing fuel waste and emissions (₹1-2 crore annually for medium city), public safety incident response improvement reducing crime and improving response (quantifiable through crime reduction and incident metrics), emergency response coordination reducing response time (directly improves outcomes), and infrastructure monitoring reducing damage and maintenance costs. A medium-city enterprise campus system typically pays for itself within 2-3 years through measurable benefits. Over 5-year deployment, the return typically exceeds investment cost by 2-3x."
       },
       {
-        question: "How does VMukti support continuous smart city evolution?",
-        answer: "Smart cities evolve continuously as technology advances and needs change. VMukti provides: regular feature releases adding new AI detection capabilities, continuous performance optimization improving efficiency, security updates keeping systems protected, and architectural flexibility supporting new use cases. Your smart city system improves continuously without requiring replacement. As emerging technologies (5G, IoT, advanced analytics) become available, VMukti integrates them into existing systems rather than requiring wholesale replacement."
+        question: "How does VMukti support continuous enterprise campus evolution?",
+        answer: "Smart cities evolve continuously as technology advances and needs change. VMukti provides: regular feature releases adding new AI detection capabilities, continuous performance optimization improving efficiency, security updates keeping systems protected, and architectural flexibility supporting new use cases. Your enterprise campus system improves continuously without requiring replacement. As emerging technologies (5G, IoT, advanced analytics) become available, VMukti integrates them into existing systems rather than requiring wholesale replacement."
       }
     ],
     cta: {
-      headline: "Deploy Smart City VMS Across Your Municipality",
+      headline: "Deploy Enterprise Campus VMS Across Your Municipality",
       description: "Proven across 700+ Indian districts. Made in India, government-compliant, cost-effective scaling.",
-      buttonText: "Request Smart City Solution Demo",
+      buttonText: "Request Enterprise Campus Solution Demo",
       buttonLink: "https://vmukti.com/contact"
     }
   }

@@ -26,7 +26,7 @@ const seoPageDataGenAI = {
       },
       {
         title: "Use Cases for AI Video Chatbot",
-        content: "From smart city command centers to corporate security operations, VMukti's Visual Bot serves diverse use cases. City officials can ask 'How many people gathered at the main square today?' while retail managers query 'Show customer flow patterns near the entrance this week.' The system handles complex multi-step queries, correlates data across cameras, and generates visual reports automatically.",
+        content: "From enterprise campus command centers to corporate security operations, VMukti's Visual Bot serves diverse use cases. City officials can ask 'How many people gathered at the main square today?' while retail managers query 'Show customer flow patterns near the entrance this week.' The system handles complex multi-step queries, correlates data across cameras, and generates visual reports automatically.",
         features: ["Smart city incident investigation", "Retail footfall and behavior analysis", "Traffic pattern queries", "Workplace safety compliance checks", "Forensic video evidence retrieval"]
       }
     ],
@@ -189,10 +189,10 @@ const seoPageDataGenAI = {
     slug: "/genai/conversational-ai-command-center",
     title: "Conversational AI Command Center | Voice-Controlled Surveillance",
     metaDescription: "VMukti's Conversational AI Command Center enables voice and chat-controlled surveillance operations. Manage your entire camera network through natural conversation with AI-powered command interface.",
-    keywords: ["conversational AI command center", "voice controlled surveillance", "AI command center", "ICCC AI interface", "smart city command center AI", "voice security operations"],
+    keywords: ["conversational AI command center", "voice controlled surveillance", "AI command center", "Enterprise Command Center AI interface", "enterprise campus command center AI", "voice security operations"],
     heroTitle: "Conversational AI Command Center",
     heroSubtitle: "Voice-Controlled Surveillance Operations",
-    heroDescription: "Transform your ICCC into an AI-powered command center. VMukti's Conversational AI lets operators control cameras, query feeds, generate reports, and manage incidents through voice commands and natural conversation.",
+    heroDescription: "Transform your Enterprise Command Center into an AI-powered command center. VMukti's Conversational AI lets operators control cameras, query feeds, generate reports, and manage incidents through voice commands and natural conversation.",
     category: "genai",
     sections: [
       {
@@ -211,9 +211,9 @@ const seoPageDataGenAI = {
         features: ["Real-time situation assessment", "Data-driven action recommendations", "Crowd density analysis", "Optimal camera view selection", "Historical incident comparison"]
       },
       {
-        title: "Seamless Integration with ICCC",
-        content: "The Conversational AI layer integrates seamlessly with VMukti's Integrated Command & Control Center (ICCC) platform. It becomes the unified interface for managing cameras, sensors, access control, and emergency response — all through natural conversation. Multi-operator support ensures that several team members can interact with the AI simultaneously without conflicts.",
-        features: ["Full ICCC platform integration", "Multi-sensor unified control", "Multi-operator simultaneous access", "Role-based command permissions", "Audit trail for all AI interactions"]
+        title: "Seamless Integration with Enterprise Command Center",
+        content: "The Conversational AI layer integrates seamlessly with VMukti's Enterprise Command Center platform. It becomes the unified interface for managing cameras, sensors, access control, and emergency response — all through natural conversation. Multi-operator support ensures that several team members can interact with the AI simultaneously without conflicts.",
+        features: ["Full Enterprise Command Center integration", "Multi-sensor unified control", "Multi-operator simultaneous access", "Role-based command permissions", "Audit trail for all AI interactions"]
       }
     ],
     faq: [
@@ -257,8 +257,8 @@ const seoPageDataGenAI = {
   "genai-crowd-analytics": {
     slug: "/genai/genai-crowd-analytics",
     title: "GenAI Crowd Analytics | AI-Powered Crowd Intelligence Platform",
-    metaDescription: "VMukti's GenAI Crowd Analytics provides real-time crowd density monitoring, behavior analysis, and predictive crowd management. Ideal for smart cities, events, transport hubs, and public safety.",
-    keywords: ["GenAI crowd analytics", "AI crowd monitoring", "crowd density analysis", "crowd behavior prediction", "smart city crowd management", "event crowd safety AI"],
+    metaDescription: "VMukti's GenAI Crowd Analytics provides real-time crowd density monitoring, behavior analysis, and predictive crowd management. Ideal for enterprise campuses, events, transport hubs, and public safety.",
+    keywords: ["GenAI crowd analytics", "AI crowd monitoring", "crowd density analysis", "crowd behavior prediction", "enterprise campus crowd management", "event crowd safety AI"],
     heroTitle: "GenAI Crowd Analytics",
     heroSubtitle: "Intelligent Crowd Understanding",
     heroDescription: "VMukti's GenAI Crowd Analytics goes beyond counting heads. It understands crowd behavior, predicts density patterns, detects anomalous gatherings, and generates real-time natural language situation reports for command centers.",

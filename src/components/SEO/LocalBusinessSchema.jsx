@@ -17,7 +17,7 @@ const ORGANIZATION_SCHEMA = {
   url: 'https://www.vmukti.com',
   logo: 'https://www.vmukti.com/logo.png',
   description:
-    'VMukti is a global enterprise platform offering Video Management System (VMS), Enterprise Management System (EMS), and Integrated Command & Control Center (ICCC) solutions for AI-powered video surveillance across 16+ industries.',
+    'VMukti is a global enterprise platform offering Video Management System (VMS), Enterprise Management System (EMS), and Enterprise Command Center solutions for AI-powered video surveillance across 16+ industries.',
   foundingDate: '2007',
   numberOfEmployees: {
     '@type': 'QuantitativeValue',
@@ -68,7 +68,7 @@ const ORGANIZATION_SCHEMA = {
   knowsAbout: [
     'Video Management System',
     'Enterprise Management System',
-    'ICCC',
+    'Enterprise Command Center',
     'AI Video Analytics',
     'Face Recognition',
     'ANPR',
@@ -97,7 +97,7 @@ const ORGANIZATION_SCHEMA = {
       '@type': 'Offer',
       itemOffered: {
         '@type': 'SoftwareApplication',
-        name: 'VMukti ICCC',
+        name: 'VMukti Enterprise Command Center',
         applicationCategory: 'SecurityApplication',
       },
     },
@@ -112,7 +112,7 @@ const REGIONAL_SCHEMAS = {
     '@id': 'https://www.vmukti.com/usa/video-surveillance-solutions#business',
     name: 'VMukti Solutions - USA',
     description:
-      'VMukti provides enterprise video surveillance, VMS, EMS, and ICCC solutions for businesses across the United States. AI-powered security for banking, healthcare, retail, smart cities, and more.',
+      'VMukti provides enterprise video surveillance, VMS, EMS, and Enterprise Command Center solutions for businesses across the United States. AI-powered security for banking, healthcare, retail, smart cities, and more.',
     url: 'https://www.vmukti.com/usa/video-surveillance-solutions',
     telephone: '+91-79-40370104',
     priceRange: '$$$$',
@@ -142,7 +142,7 @@ const REGIONAL_SCHEMAS = {
     '@id': 'https://www.vmukti.com/uk/video-surveillance-solutions#business',
     name: 'VMukti Solutions - UK',
     description:
-      'VMukti delivers enterprise-grade video surveillance, VMS, EMS, and ICCC platforms for organisations across the United Kingdom. GDPR-compliant AI security solutions.',
+      'VMukti delivers enterprise-grade video surveillance, VMS, EMS, and Enterprise Command Centers for organisations across the United Kingdom. GDPR-compliant AI security solutions.',
     url: 'https://www.vmukti.com/uk/video-surveillance-solutions',
     telephone: '+91-79-40370104',
     priceRange: '$$$$',
@@ -162,7 +162,7 @@ const REGIONAL_SCHEMAS = {
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Video Management System (VMS)' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Enterprise Management System (EMS)' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'GDPR-Compliant AI Analytics' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Smart City ICCC Platform' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Smart City Enterprise Command Center' } },
       ],
     },
   },

@@ -27,7 +27,7 @@ const REGION_CONFIG = {
     contentLanguage: 'en-US',
     distributionTarget: 'US',
     title: 'VMukti USA - Enterprise Video Surveillance & AI Analytics',
-    description: 'VMukti provides enterprise VMS, EMS, and ICCC platforms for businesses across the United States. AI-powered video surveillance for banking, healthcare, retail, and smart cities.',
+    description: 'VMukti provides enterprise VMS, EMS, and Enterprise Command Centers for businesses across the United States. AI-powered video surveillance for banking, healthcare, retail, and smart cities.',
     keywords: 'video surveillance USA, VMS software America, enterprise security platform US, AI video analytics United States, CCTV management system USA',
   },
   uk: {
@@ -41,7 +41,7 @@ const REGION_CONFIG = {
     contentLanguage: 'en-GB',
     distributionTarget: 'GB',
     title: 'VMukti UK - Enterprise Video Surveillance & GDPR-Compliant AI',
-    description: 'VMukti delivers enterprise-grade VMS, EMS, and ICCC platforms for organisations across the UK. GDPR-compliant AI video surveillance for security and smart city deployments.',
+    description: 'VMukti delivers enterprise-grade VMS, EMS, and Enterprise Command Centers for organisations across the UK. GDPR-compliant AI video surveillance for security and smart city deployments.',
     keywords: 'video surveillance UK, VMS software Britain, enterprise security platform UK, GDPR compliant CCTV, AI analytics United Kingdom',
   },
   'middle-east': {
@@ -54,9 +54,9 @@ const REGION_CONFIG = {
     currency: 'USD',
     contentLanguage: 'en',
     distributionTarget: 'AE,SA,QA,KW,BH,OM',
-    title: 'VMukti Middle East - Enterprise Video Surveillance & Smart City ICCC',
-    description: 'VMukti provides enterprise VMS, EMS, and ICCC platforms for businesses across the Middle East including UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, and Oman.',
-    keywords: 'video surveillance Middle East, VMS software Dubai, enterprise security UAE, smart city ICCC Saudi Arabia, AI video analytics Gulf',
+    title: 'VMukti Middle East - Enterprise Video Surveillance & Smart City Enterprise Command Center',
+    description: 'VMukti provides enterprise VMS, EMS, and Enterprise Command Centers for businesses across the Middle East including UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, and Oman.',
+    keywords: 'video surveillance Middle East, VMS software Dubai, enterprise security UAE, smart city Enterprise Command Center Saudi Arabia, AI video analytics Gulf',
   },
   africa: {
     name: 'Africa',
@@ -69,7 +69,7 @@ const REGION_CONFIG = {
     contentLanguage: 'en',
     distributionTarget: 'ZA,NG,KE,EG,GH',
     title: 'VMukti Africa - Enterprise Video Surveillance & Security Solutions',
-    description: 'VMukti provides enterprise VMS, EMS, and ICCC solutions for businesses across Africa including South Africa, Nigeria, Kenya, Egypt, and Ghana.',
+    description: 'VMukti provides enterprise VMS, EMS, and Enterprise Command Center solutions for businesses across Africa including South Africa, Nigeria, Kenya, Egypt, and Ghana.',
     keywords: 'video surveillance Africa, VMS software South Africa, enterprise security Nigeria, CCTV management Kenya, AI analytics Africa',
   },
   'southeast-asia': {
@@ -83,7 +83,7 @@ const REGION_CONFIG = {
     contentLanguage: 'en',
     distributionTarget: 'SG,MY,TH,ID,PH,VN',
     title: 'VMukti Southeast Asia - Enterprise Video Surveillance & AI Analytics',
-    description: 'VMukti delivers enterprise VMS, EMS, and ICCC platforms for businesses across Southeast Asia including Singapore, Malaysia, Thailand, Indonesia, and Philippines.',
+    description: 'VMukti delivers enterprise VMS, EMS, and Enterprise Command Centers for businesses across Southeast Asia including Singapore, Malaysia, Thailand, Indonesia, and Philippines.',
     keywords: 'video surveillance Southeast Asia, VMS software Singapore, enterprise security Malaysia, AI analytics ASEAN, smart city solutions Asia',
   },
   global: {
@@ -96,9 +96,9 @@ const REGION_CONFIG = {
     currency: 'USD',
     contentLanguage: 'en',
     distributionTarget: 'global',
-    title: 'VMukti - Global Enterprise Video Surveillance, VMS, EMS & ICCC Platform',
-    description: 'VMukti is a global enterprise platform offering Video Management System (VMS), Enterprise Management System (EMS), and Integrated Command & Control Center (ICCC) solutions across 16+ industries worldwide.',
-    keywords: 'video management system, VMS, enterprise management system, EMS, ICCC, AI video analytics, video surveillance, smart city, face recognition, ANPR',
+    title: 'VMukti - Global Enterprise Video Surveillance, VMS, EMS & Enterprise Command Center',
+    description: 'VMukti is a global enterprise platform offering Video Management System (VMS), Enterprise Management System (EMS), and Enterprise Command Center solutions across 16+ industries worldwide.',
+    keywords: 'video management system, VMS, enterprise management system, EMS, Enterprise Command Center, AI video analytics, video surveillance, smart city, face recognition, ANPR',
   },
 };
 

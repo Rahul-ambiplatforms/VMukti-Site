@@ -28,7 +28,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Mumbai",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in Maharashtra",
+      "Enterprise Campus & Traffic Monitoring in Maharashtra",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
@@ -75,7 +75,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Delhi",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in Delhi NCR",
+      "Enterprise Campus & Traffic Monitoring in Delhi NCR",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
@@ -122,7 +122,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Bangalore",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in Karnataka",
+      "Enterprise Campus & Traffic Monitoring in Karnataka",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
@@ -169,7 +169,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Chennai",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in Tamil Nadu",
+      "Enterprise Campus & Traffic Monitoring in Tamil Nadu",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
@@ -216,7 +216,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Kolkata",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in West Bengal",
+      "Enterprise Campus & Traffic Monitoring in West Bengal",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
@@ -263,7 +263,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Hyderabad",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in Telangana",
+      "Enterprise Campus & Traffic Monitoring in Telangana",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
@@ -310,7 +310,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Pune",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in Maharashtra",
+      "Enterprise Campus & Traffic Monitoring in Maharashtra",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
@@ -357,7 +357,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Ahmedabad",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in Gujarat",
+      "Enterprise Campus & Traffic Monitoring in Gujarat",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
@@ -404,7 +404,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Jaipur",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in Rajasthan",
+      "Enterprise Campus & Traffic Monitoring in Rajasthan",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
@@ -451,7 +451,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Lucknow",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in Uttar Pradesh",
+      "Enterprise Campus & Traffic Monitoring in Uttar Pradesh",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
@@ -498,7 +498,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Chandigarh",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in Punjab & Haryana",
+      "Enterprise Campus & Traffic Monitoring in Punjab & Haryana",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
@@ -545,7 +545,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Indore",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in Madhya Pradesh",
+      "Enterprise Campus & Traffic Monitoring in Madhya Pradesh",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
@@ -592,7 +592,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Nagpur",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in Maharashtra",
+      "Enterprise Campus & Traffic Monitoring in Maharashtra",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
@@ -639,7 +639,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Bhopal",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in Madhya Pradesh",
+      "Enterprise Campus & Traffic Monitoring in Madhya Pradesh",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
@@ -686,7 +686,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Vadodara",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in Gujarat",
+      "Enterprise Campus & Traffic Monitoring in Gujarat",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
@@ -733,7 +733,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Surat",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in Gujarat",
+      "Enterprise Campus & Traffic Monitoring in Gujarat",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
@@ -780,7 +780,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Coimbatore",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in Tamil Nadu",
+      "Enterprise Campus & Traffic Monitoring in Tamil Nadu",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
@@ -827,7 +827,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Visakhapatnam",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in Andhra Pradesh",
+      "Enterprise Campus & Traffic Monitoring in Andhra Pradesh",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
@@ -874,7 +874,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Patna",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in Bihar",
+      "Enterprise Campus & Traffic Monitoring in Bihar",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
@@ -921,7 +921,7 @@ const seoPageDataGeo = {
     useCases: [
       "Retail & Commercial Security in Kochi",
       "Industrial & Manufacturing Surveillance",
-      "Smart City & Traffic Monitoring in Kerala",
+      "Enterprise Campus & Traffic Monitoring in Kerala",
       "Banking & Financial Institution Security",
       "Healthcare Facility Monitoring",
       "Educational Campus Security"
