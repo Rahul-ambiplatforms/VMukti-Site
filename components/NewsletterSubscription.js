@@ -745,26 +745,7 @@ const NewsletterSubscription = () => {
                     ))}
                   </Box>
 
-                  <Box align="left" mt="20px">
-                    <Link href={"/Ambicam"}>
-                      <Button
-                        width={buttonWidth}
-                        height={buttonHeight}
-                        background="#4CC9F0"
-                        color="#FFFFFF"
-                        fontSize={"16px"}
-                        fontWeight="600"
-                        borderRadius="20px"
-                        flexShrink={0}
-                        _hover={{
-                          background: "#3bb9e0",
-                          color: "#FFFFFF",
-                        }}
-                      >
-                        Ambicam
-                      </Button>
-                    </Link>
-                  </Box>
+                  {/* Ambicam button removed — VMukti positioned as camera-agnostic platform */}
                 </Box>
               )}
             </Box>
