@@ -142,26 +142,48 @@ const CTASection = ({ cta }) => (
   >
     <Container maxW="3xl">
       <Heading as="h2" size="xl" mb={4}>
-        Ready to Transform Your Surveillance?
+        {cta?.title || "Ready to See VMukti in Action?"}
       </Heading>
-      <Text fontSize="lg" mb={8} opacity={0.9}>
-        Join enterprises worldwide using VMukti cloud-native VMS with AI analytics.
+      <Text fontSize="lg" mb={4} opacity={0.9}>
+        {cta?.description || "Get a personalized demo of our Cloud VMS with 26+ AI analytics models. See how 900+ enterprises across 50+ countries use VMukti."}
       </Text>
-      <Button
-        as={Link}
-        href={cta?.buttonLink || cta?.link || "/book-a-demo"}
-        size="lg"
-        colorScheme="orange"
-        px={10}
-        py={7}
-        fontSize="lg"
-        fontWeight="700"
-        borderRadius="full"
-        _hover={{ transform: 'scale(1.05)' }}
-        transition="all 0.2s"
-      >
-        {cta?.buttonText || cta?.text || "Book a Demo"}
-      </Button>
+      <Flex gap={4} justify="center" mb={6} direction={{ base: 'column', sm: 'row' }} align="center">
+        <Button
+          as={Link}
+          href={cta?.buttonLink || cta?.link || "/book-a-demo"}
+          size="lg"
+          colorScheme="orange"
+          px={10}
+          py={7}
+          fontSize="lg"
+          fontWeight="700"
+          borderRadius="full"
+          _hover={{ transform: 'scale(1.05)' }}
+          transition="all 0.2s"
+        >
+          {cta?.buttonText || cta?.text || "Book Your Free Demo"}
+        </Button>
+        <Button
+          as={Link}
+          href="/contact-us"
+          size="lg"
+          variant="outline"
+          borderColor="white"
+          color="white"
+          px={10}
+          py={7}
+          fontSize="lg"
+          fontWeight="600"
+          borderRadius="full"
+          _hover={{ bg: 'rgba(255,255,255,0.1)', transform: 'scale(1.05)' }}
+          transition="all 0.2s"
+        >
+          Contact Sales
+        </Button>
+      </Flex>
+      <Text fontSize="sm" opacity={0.7}>
+        STQC & ISO 27001 Certified | Camera-Agnostic | 40-60% Lower TCO vs Competitors
+      </Text>
     </Container>
   </Box>
 );

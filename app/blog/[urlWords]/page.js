@@ -1,6 +1,8 @@
 import { getBlogByUrlWords } from '../../../lib/api';
 import { generateBlogMetadata } from '../../../lib/metadata';
 import BlogContentClient from './blog-content-client';
+import BlogCTA from '../../../components/BlogCTA';
+import StickyDemoBanner from '../../../components/StickyDemoBanner';
 import { notFound } from 'next/navigation';
 
 // Revalidate every hour for ISR
@@ -118,6 +120,12 @@ export default async function BlogPostPage({ params }) {
 
       {/* Client-side interactive blog (same visual as current site) */}
       <BlogContentClient blogData={blog} urlWords={urlWords} />
+
+      {/* Lead Generation: Demo CTA at end of every blog post */}
+      <BlogCTA />
+
+      {/* Lead Generation: Sticky demo banner on scroll */}
+      <StickyDemoBanner />
     </>
   );
 }
