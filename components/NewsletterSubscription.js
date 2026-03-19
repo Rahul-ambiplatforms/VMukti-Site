@@ -62,7 +62,7 @@ const globalPresence = [
 const resources = [
   // Column 1
   { text: "Insights & Blogs", path: "/blog" },
-  { text: "Customer Stories", path: "/customer-stories" },
+  // { text: "Customer Stories", path: "/customer-stories" },
   // { text: "Company News" },
 
   // Column 2

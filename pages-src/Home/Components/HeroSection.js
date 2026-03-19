@@ -217,8 +217,6 @@ const HeroSection = () => {
                 repeat={Infinity}
                 cursor={true}
               />
-              {/* SSR fallback — visible before JS hydrates, then replaced by TypeAnimation */}
-              <noscript>Enterprises & Governments</noscript>
             </span>
             {/* --- END OF UPDATE --- */}
           </MotionBox>
