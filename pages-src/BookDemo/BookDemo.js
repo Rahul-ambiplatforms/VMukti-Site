@@ -754,6 +754,60 @@ export default function BookDemo() {
                             </VStack>
                         </Box>
                     </Flex>
+
+                    {/* Fallback Contact — Always visible for users when scheduler fails */}
+                    <Box
+                        mt={8}
+                        p={6}
+                        bg="#F0F7FF"
+                        borderRadius="12px"
+                        border="1px solid #D0E3F5"
+                        textAlign="center"
+                    >
+                        <Text fontSize="16px" fontWeight="600" color="#1B3A5C" mb={2}>
+                            Prefer to talk directly?
+                        </Text>
+                        <Text fontSize="14px" color="#4A5568" mb={4}>
+                            Our enterprise team is available to schedule your demo personally.
+                        </Text>
+                        <Flex gap={4} justify="center" flexWrap="wrap">
+                            <Button
+                                as="a"
+                                href="tel:+919687770000"
+                                bg="#3F77A5"
+                                color="white"
+                                size="md"
+                                borderRadius="8px"
+                                _hover={{ bg: '#35668E' }}
+                            >
+                                Call +91 968 777 0000
+                            </Button>
+                            <Button
+                                as="a"
+                                href="https://wa.me/919687770000?text=Hi%2C%20I%20would%20like%20to%20schedule%20a%20demo%20of%20VMukti%20Cloud%20VMS"
+                                target="_blank"
+                                bg="#25D366"
+                                color="white"
+                                size="md"
+                                borderRadius="8px"
+                                _hover={{ bg: '#1EB954' }}
+                            >
+                                WhatsApp Us
+                            </Button>
+                            <Button
+                                as="a"
+                                href="mailto:sales@vmukti.com?subject=Demo%20Request%20-%20Enterprise%20VMS"
+                                variant="outline"
+                                borderColor="#3F77A5"
+                                color="#3F77A5"
+                                size="md"
+                                borderRadius="8px"
+                                _hover={{ bg: '#F0F4F8' }}
+                            >
+                                Email sales@vmukti.com
+                            </Button>
+                        </Flex>
+                    </Box>
                 </PageContentWrapper>
             </Box>
         </>

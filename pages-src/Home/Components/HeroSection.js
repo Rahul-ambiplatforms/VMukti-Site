@@ -209,14 +209,17 @@ const HeroSection = () => {
             <Text as="span" color="#000">
               Solution for{" "}
             </Text>
-            <TypeAnimation
-              sequence={typewriterSequence}
-              speed={50}
-              style={{ color: "#DB7B3A" }}
-              wrapper="span"
-              repeat={Infinity}
-              cursor={true}
-            />
+            <span style={{ color: "#DB7B3A" }}>
+              <TypeAnimation
+                sequence={typewriterSequence}
+                speed={50}
+                wrapper="span"
+                repeat={Infinity}
+                cursor={true}
+              />
+              {/* SSR fallback — visible before JS hydrates, then replaced by TypeAnimation */}
+              <noscript>Enterprises & Governments</noscript>
+            </span>
             {/* --- END OF UPDATE --- */}
           </MotionBox>
           <Flex>

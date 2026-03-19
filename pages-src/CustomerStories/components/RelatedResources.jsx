@@ -19,19 +19,19 @@ const RelatedResources = () => {
     },
     {
       id: "roi",
-      href: "/blog", // currently added wrong path
-      label: "ROI Calculator",
+      href: "/book-a-demo",
+      label: "Get a Personalized Demo",
       description:
-        "Estimate the financial impact of deploying our enterprise solutions and calculate the return on your investment.",
+        "See VMukti in action with a live demo tailored to your industry. Our team will show you exactly how 26+ AI models work for your use case.",
       image: "/assets/Related_Resource.png",
       bg: "#EBEBEB",
     },
     {
       id: "guide",
-      href: "/blog", // currently added wrong path
-      label: "Enterprise Buyer's Guide",
+      href: "/contact-us",
+      label: "Talk to Our Enterprise Team",
       description:
-        "A comprehensive guide to help enterprise teams evaluate, compare, and choose the right security platform.",
+        "Speak directly with our solutions team about your surveillance requirements. Get pricing, deployment timelines, and technical specifications.",
       image: "/assets/Related_Resource.png",
       bg: "#BECEDC",
     },
