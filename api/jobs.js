@@ -6,7 +6,8 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://vmukti.com/backend/a
 export const getJobs = async (page = 1, limit = 10, status = 'OPEN') => {
   try {
     const response = await axios.get(`${API_URL}/jobs`, {
-      params: { page, limit, status }
+      params: { page, limit, status },
+      timeout: 5000,
     });
     return response.data;
   } catch (error) {

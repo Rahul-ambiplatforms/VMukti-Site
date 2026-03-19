@@ -15,7 +15,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { gsap } from "gsap";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 // import { solutionsData } from "../data/solutionsContent";
 
 const Solutions = ({ data }) => {
@@ -108,10 +108,9 @@ const Solutions = ({ data }) => {
           }}
         >
           <Flex
-            // wrap={{ base: "nowrap", md: "wrap" }}
             wrap={["nowrap", "nowrap", "wrap", "wrap"]}
-            justifyContent={{ base: "flex-start", md: "center" }}
-            w={["", "", "100%", "80%"]}
+            justifyContent="center"
+            w="100%"
             mx="auto"
             mt="2%"
           >
@@ -133,10 +132,10 @@ const Solutions = ({ data }) => {
                 height={{ base: "34px", md: "48px" }}
                 borderRadius="24px"
                 fontSize="16px"
-                // --- Static Size Enforcement ---
-                flexShrink={0} // Prevents shrinking on mobile.
-                w={["125px", "125px", "125px", "170px"]}
-                // as="h3"
+                flexShrink={0}
+                w="auto"
+                px={{ base: "16px", md: "24px" }}
+                whiteSpace="nowrap"
                 as="p"
               >
                 {solution.heading1}
@@ -218,7 +217,7 @@ const Solutions = ({ data }) => {
                 </Box>
               <Flex gap="2" justifyContent="center" align="center">
                 <Link
-                  to={activeSolution.path}
+                  href={activeSolution.path}
                   style={{ textDecoration: "none" }}
                 >
                   <Button

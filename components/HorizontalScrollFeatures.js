@@ -138,7 +138,6 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
           key={sectionData.id}
           className="horizontal-section"
           direction="column"
-          justify="center"
           h={["80vh", "80vh", "80vh", "85vh"]}
           w="100%"
           position="relative"
@@ -147,20 +146,20 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
           borderRadius="24px"
           mt="2%"
           mb="-4%"
+          pt={{ base: 4, md: 6 }}
         >
           <Heading
             as="h2"
-            fontSize={{ base: "20px", md: "36px" }}
+            fontSize={{ base: "18px", md: "36px" }}
             fontWeight="500"
-            lineHeight={{ base: "25px", md: "45px" }}
+            lineHeight={{ base: "24px", md: "45px" }}
             w={["90%", "90%", "90%", "60%"]}
-            position="absolute"
-            top={{ base: "3%", md: "2%" }}
-            left="50%"
-            transform="translateX(-50%)"
+            mx="auto"
             textAlign="center"
+            flexShrink={0}
             zIndex={2}
             color={sectionData.bgColor === "blue" ? "white" : "black"}
+            mb={{ base: 2, md: 3 }}
           >
             {sectionData.mainHeading}
           </Heading>
@@ -168,10 +167,9 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
           <Flex
             className="horizontal-track"
             w="max-content"
-            h="100%"
+            flex="1"
             align="center"
             pl={{ base: "5vw", md: "2vw" }}
-            mt={["15%", "10%", "10%", "2%"]}
           >
             {sectionData.features.map((feature) => (
               <FeatureCard

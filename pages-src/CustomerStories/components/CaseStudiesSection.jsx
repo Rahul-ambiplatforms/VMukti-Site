@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const filters = ["All", "Banking", "Retail", "Manufacturing", "Healthcare", "Corporate"];
 
-const caseStudies = [
+export const caseStudies = [
   {
     id: 1,
     title: "Enterprise Campus Security Transformation",

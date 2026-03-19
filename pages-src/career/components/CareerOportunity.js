@@ -68,8 +68,7 @@ const CareerOportunity = () => {
           setError("Failed to fetch jobs");
         }
       } catch (err) {
-        // console.error("Error fetching jobs:", err);
-        // setError("Failed to load job opportunities");
+        setError("Failed to load job opportunities");
       } finally {
         setLoading(false);
       }
@@ -399,6 +398,34 @@ const CareerOportunity = () => {
               ))}
             </VStack>
           )}
+        </Box>
+
+        {/* CV Fallback — always visible */}
+        <Box
+          mt={6}
+          p={6}
+          bg="#F0F7FF"
+          borderRadius="12px"
+          border="1px solid #D0E3F5"
+          textAlign="center"
+        >
+          <Text fontSize="16px" fontWeight="600" color="#1B3A5C" mb={1}>
+            Don't see a role that fits?
+          </Text>
+          <Text fontSize="14px" color="#4A5568" mb={4}>
+            Send your CV directly to our HR team and we'll reach out when the right opportunity opens.
+          </Text>
+          <Button
+            as="a"
+            href="mailto:hr@vmukti.com?subject=CV%20Submission%20-%20VMukti%20Careers"
+            bg="#3F77A5"
+            color="white"
+            size="md"
+            borderRadius="8px"
+            _hover={{ bg: "#35668E" }}
+          >
+            Send CV to hr@vmukti.com
+          </Button>
         </Box>
 
         {/* Application Modal */}
