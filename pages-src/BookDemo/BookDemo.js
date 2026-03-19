@@ -45,9 +45,15 @@ export default function BookDemo() {
     // Fetch country codes from API
     useEffect(() => {
         const fetchCountryCodes = async () => {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 5000);
+
             try {
                 setLoadingCountries(true);
-                const response = await fetch('https://restcountries.com/v3.1/all?fields=name,idd,flag');
+                const response = await fetch('https://restcountries.com/v3.1/all?fields=name,idd,flag', {
+                    signal: controller.signal,
+                });
+                clearTimeout(timeoutId);
                 const countries = await response.json();
                 
                 const formattedCountries = countries
@@ -70,8 +76,8 @@ export default function BookDemo() {
 
                 setCountryCodes(formattedCountries);
             } catch (error) {
-                console.error('Error fetching country codes:', error);
-                // Fallback to a few common country codes
+                clearTimeout(timeoutId);
+                // Fallback to common country codes on timeout or any error
                 setCountryCodes([
                     { code: "+91", country: "India", flag: "🇮🇳" },
                     { code: "+1", country: "United States", flag: "🇺🇸" },

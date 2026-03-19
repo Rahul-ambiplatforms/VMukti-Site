@@ -1,24 +1,42 @@
 'use client';
-import React from "react";
 import { Box, Flex, Heading, Text, Image, SimpleGrid } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
-const stats = [
+const DEFAULT_STATS = [
   { value: "900+", label: "Deployments" },
   { value: "1BN+", label: "Camera Feeds" },
   { value: "3M+", label: "Users" },
   { value: "18+", label: "Years" },
 ];
 
-const HeroSection = () => {
+const DEFAULT_TITLE_LINES = [
+  { text: "Enterprise", color: "#3F77A5" },
+  { parts: [{ text: "Customer ", color: "#000000" }, { text: "Stories", color: "#DB7B3A" }] },
+];
+
+const DEFAULT_DESCRIPTION = "See how organizations worldwide transform their security infrastructure with VMukti\u2019s AI-powered video surveillance platform \u2014 delivering measurable ROI and operational excellence.";
+
+const DEFAULT_IMAGE = {
+  src: "/assets/customer-stories-hero.png",
+  alt: "Enterprise video surveillance deployments worldwide",
+};
+
+const HeroSection = ({
+  titleLines = DEFAULT_TITLE_LINES,
+  description = DEFAULT_DESCRIPTION,
+  stats = DEFAULT_STATS,
+  image = DEFAULT_IMAGE,
+  buttons = [],
+}) => {
   return (
-    <Box bg="#E7E7E7" pt={{ base: "80px", md: "20px" }} pb={{ base: "40px", md: "60px" }}>
+    <Box bg="#E7E7E7" pt={{ base: "25px", md: "20px" }} pb={{ base: "40px", md: "60px" }}>
       <Flex
         direction={{ base: "column", lg: "row" }}
         align={{ base: "flex-start", lg: "center" }}
-        px={{ base: "16px", md: "32px" }}
+        px={{ base: "16px", md: "33px" }}
         gap={{ base: "28px", lg: "20px" }}
-        maxW="1500px"
+        maxW="1512px"
         mx="auto"
       >
         {/* Left Content */}
@@ -37,25 +55,32 @@ const HeroSection = () => {
               lineHeight="1.15"
               mb={{ base: "14px", md: "20px" }}
             >
-              <Text
-                as="span"
-                display="block"
-                fontSize={{ base: "32px", md: "48px", lg: "60px" }}
-                color="#3F77A5"
-              >
-                Enterprise
-              </Text>
-              <Text
-                as="span"
-                display="block"
-                fontSize={{ base: "32px", md: "48px", lg: "60px" }}
-                color="#000000"
-              >
-                Customer{" "}
-                <Text as="span" color="#DB7B3A">
-                  Stories
-                </Text>
-              </Text>
+              {titleLines.map((line, i) =>
+                line.parts ? (
+                  <Text
+                    key={i}
+                    as="span"
+                    display="block"
+                    fontSize={{ base: "32px", md: "48px", lg: "60px" }}
+                  >
+                    {line.parts.map((part, j) => (
+                      <Text key={j} as="span" color={part.color}>
+                        {part.text}
+                      </Text>
+                    ))}
+                  </Text>
+                ) : (
+                  <Text
+                    key={i}
+                    as="span"
+                    display="block"
+                    fontSize={{ base: "32px", md: "48px", lg: "60px" }}
+                    color={line.color}
+                  >
+                    {line.text}
+                  </Text>
+                )
+              )}
             </Heading>
           </motion.div>
 
@@ -82,12 +107,64 @@ const HeroSection = () => {
                 lineHeight="1.6"
                 color="#444444"
               >
-                See how organizations worldwide transform their security
-                infrastructure with VMukti&apos;s AI-powered video surveillance
-                platform — delivering measurable ROI and operational excellence.
+                {description}
               </Text>
             </Flex>
           </motion.div>
+
+          {/* Buttons */}
+          {buttons.length > 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
+              viewport={{ once: true, amount: 0.2 }}
+            >
+              <Flex gap="12px" mb={{ base: "20px", md: "32px" }} flexWrap="wrap">
+                {buttons.map((btn, i) =>
+                  btn.variant === "outline" ? (
+                    <Link key={i} href={btn.href}>
+                      <Box
+                        as="span"
+                        display="inline-block"
+                        px={{ base: "20px", md: "28px" }}
+                        py={{ base: "12px", md: "14px" }}
+                        borderRadius="999px"
+                        border="2px solid #3F77A5"
+                        color="#3F77A5"
+                        fontSize={{ base: "14px", md: "15px" }}
+                        fontWeight="500"
+                        cursor="pointer"
+                        transition="all 0.2s ease"
+                        _hover={{ bg: "#3F77A5", color: "white" }}
+                      >
+                        {btn.label}
+                      </Box>
+                    </Link>
+                  ) : (
+                    <Link key={i} href={btn.href}>
+                      <Box
+                        as="span"
+                        display="inline-block"
+                        px={{ base: "20px", md: "28px" }}
+                        py={{ base: "12px", md: "14px" }}
+                        borderRadius="999px"
+                        bg="#3F77A5"
+                        color="white"
+                        fontSize={{ base: "14px", md: "15px" }}
+                        fontWeight="500"
+                        cursor="pointer"
+                        transition="all 0.2s ease"
+                        _hover={{ bg: "#2d5f8a" }}
+                      >
+                        {btn.label}
+                      </Box>
+                    </Link>
+                  )
+                )}
+              </Flex>
+            </motion.div>
+          )}
 
           {/* Stats Grid — 2×2 on mobile, 4 in a row on md+ */}
           <motion.div
@@ -162,8 +239,8 @@ const HeroSection = () => {
           >
             <Image
               loading="lazy"
-              src="/assets/customer-stories-hero.png"
-              alt="Enterprise video surveillance deployments worldwide"
+              src={image.src}
+              alt={image.alt}
               w="100%"
               h="100%"
               objectFit="cover"

@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const reviews = [
   { name: "Rajesh Kumar", role: "CTO, TechVision India", text: "VMukti video surveillance solutions transformed our security infrastructure with AI-powered analytics.", rating: 5 },
@@ -9,13 +9,23 @@ const reviews = [
   { name: "David Chen", role: "VP Security, GlobalBank", text: "Best-in-class multi-site management. We monitor 200+ branches from a single dashboard effortlessly.", rating: 5 },
 ];
 
-const VISIBLE = 3;
+function useVisibleCount() {
+  const [count, setCount] = useState(3);
+  useEffect(() => {
+    const update = () => {
+      const w = window.innerWidth;
+      setCount(w < 640 ? 1 : w < 1024 ? 2 : 3);
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+  return count;
+}
 
 const Reviews = () => {
   const [start, setStart] = useState(0);
-
-  const canPrev = true;
-  const canNext = true;
+  const VISIBLE = useVisibleCount();
 
   const prev = () => setStart((s) => (s === 0 ? reviews.length - VISIBLE : s - 1));
   const next = () => setStart((s) => (s + VISIBLE >= reviews.length ? 0 : s + 1));
@@ -28,7 +38,7 @@ const Reviews = () => {
       aria-label={label}
       style={{
         flexShrink: 0,
-        width: "44px", height: "44px",
+        width: "40px", height: "40px",
         borderRadius: "50%",
         border: "2px solid #3F77A5",
         background: "#fff",
@@ -47,36 +57,40 @@ const Reviews = () => {
 
   return (
     <section
-      style={{ margin: "32px 0", padding: "48px 0", background: "#ffffff", borderRadius: "24px" }}
+      style={{ margin: "32px 0", padding: "48px 16px", background: "#ffffff", borderRadius: "24px" }}
       aria-label="Client testimonials"
     >
-      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 15px" }}>
-        <h2 style={{ marginTop: 0, textAlign: "center", marginBottom: "32px", fontSize: "2rem", color: "#1a1a2e" }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+        <h2 style={{ marginTop: 0, textAlign: "center", marginBottom: "32px", fontSize: "clamp(1.4rem, 4vw, 2rem)", color: "#1a1a2e" }}>
           What Our Clients Say
         </h2>
 
-        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
           <ArrowBtn onClick={prev} label="Previous testimonials">‹</ArrowBtn>
 
-          {/* 3-card grid */}
-          <div style={{ flex: 1, display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}>
+          <div style={{
+            flex: 1,
+            display: "grid",
+            gridTemplateColumns: `repeat(${VISIBLE}, 1fr)`,
+            gap: "16px",
+          }}>
             {visible.map((review, i) => (
               <div
                 key={start + i}
                 style={{
                   background: "#fff",
                   borderRadius: "12px",
-                  padding: "28px",
+                  padding: "20px",
                   boxShadow: "0 4px 20px rgba(0,0,0,0.09)",
                   display: "flex", flexDirection: "column",
                 }}
               >
-                <div style={{ display: "flex", marginBottom: "12px" }}>
+                <div style={{ display: "flex", marginBottom: "10px" }}>
                   {[...Array(review.rating)].map((_, j) => (
-                    <span key={j} style={{ color: "#ffc107", fontSize: "1.2rem" }}>★</span>
+                    <span key={j} style={{ color: "#ffc107", fontSize: "1.1rem" }}>★</span>
                   ))}
                 </div>
-                <p style={{ color: "#555", lineHeight: "1.7", marginBottom: "20px", fontStyle: "italic", flex: 1 }}>
+                <p style={{ color: "#555", lineHeight: "1.7", marginBottom: "16px", fontStyle: "italic", flex: 1, fontSize: "0.95rem" }}>
                   "{review.text}"
                 </p>
                 <div>

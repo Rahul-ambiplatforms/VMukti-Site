@@ -1,6 +1,7 @@
 'use client';
 import { useState } from "react";
 import { Box, Flex, Text, Image } from "@chakra-ui/react";
+import Link from "next/link";
 
 const tabs = [
   {
@@ -14,7 +15,8 @@ const tabs = [
       "Centralized access control management",
       "Executive-level security reporting",
     ],
-    image: "/assets/industry-enterprise.png",
+    image: "/assets/Enterprise-Campus.png",
+    link: "/industry/enterprise",
     bg: "#F2F4F7",
   },
   {
@@ -28,7 +30,8 @@ const tabs = [
       "Regulatory compliance audit trails",
       "Instant escalation to security teams",
     ],
-    image: "/assets/industry-enterprise.png",
+    image: "/assets/BankingIndustry.png",
+    link: "/industry/banking",
     bg: "#EBEBEB",
   },
   {
@@ -42,7 +45,8 @@ const tabs = [
       "Centralized incident management",
       "Remote store health monitoring",
     ],
-    image: "/assets/industry-enterprise.png",
+    image: "/assets/Retail_Hospitality.png",
+    link: "/industry/hospitality",
     bg: "#BECEDC",
   },
   {
@@ -56,7 +60,8 @@ const tabs = [
       "Multi-plant operational dashboard",
       "Automated safety incident reports",
     ],
-    image: "/assets/industry-enterprise.png",
+    image: "/assets/ManufacturingIndustry.png",
+    link: "/industry/manufacturing",
     bg: "#D6E4F0",
   },
 ];
@@ -170,14 +175,16 @@ const IndustryUseCases = () => {
                       </Box>
 
                       {/* Know More */}
-                      <Flex align="center" gap="8px" mt="20px">
-                        <Text fontSize="14px" fontWeight="600" fontFamily="'Wix Madefor Display', sans-serif" color="#1A1A2E">
-                          Know More
-                        </Text>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#1A1A2E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </Flex>
+                      <Link href={tab.link} style={{ textDecoration: "none" }}>
+                        <Flex align="center" gap="8px" mt="20px" _hover={{ opacity: 0.75 }}>
+                          <Text fontSize="14px" fontWeight="600" fontFamily="'Wix Madefor Display', sans-serif" color="#1A1A2E">
+                            Know More
+                          </Text>
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#1A1A2E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        </Flex>
+                      </Link>
                     </Box>
 
                     {/* Image */}

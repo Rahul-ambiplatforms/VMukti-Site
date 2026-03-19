@@ -15,8 +15,8 @@ import { keyframes } from "@emotion/react"; // ✅ Correct import
 
 // Custom hook for count-up animation with viewport detection
 const useCountUp = (target, duration = 1000) => {
-  const [count, setCount] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  // Initialize to target so the final value renders immediately (no "0+" flash)
+  const [count, setCount] = useState(target);
   const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef();
 
@@ -24,50 +24,36 @@ const useCountUp = (target, duration = 1000) => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated) {
-          setIsVisible(true);
+          setHasAnimated(true);
         }
       },
       { threshold: 0.3 }
     );
 
     const currentRef = ref.current;
-
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
-    };
+    if (currentRef) observer.observe(currentRef);
+    return () => { if (currentRef) observer.unobserve(currentRef); };
   }, [hasAnimated]);
 
   useEffect(() => {
-    if (!isVisible || hasAnimated || target === 0) return;
+    if (!hasAnimated || target === 0) return;
 
-    setHasAnimated(true);
-    
+    // Reset to 0 then animate up to target
+    setCount(0);
     const startTime = Date.now();
     const animate = () => {
       const elapsed = Date.now() - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      
-      // Easing function for smooth animation
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const currentCount = Math.floor(easeOutQuart * target);
-      
-      setCount(currentCount);
-      
+      setCount(Math.floor(easeOutQuart * target));
       if (progress < 1) {
         requestAnimationFrame(animate);
       } else {
         setCount(target);
       }
     };
-    
     requestAnimationFrame(animate);
-  }, [isVisible, target, duration, hasAnimated]);
+  }, [hasAnimated, target, duration]);
 
   return { count, ref };
 };
@@ -88,7 +74,7 @@ const AnimatedValue = ({ value }) => {
 
   return (
     <span ref={ref}>
-      {count || numericValue}
+      {count}
       {suffix}
     </span>
   );
