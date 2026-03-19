@@ -59,7 +59,7 @@ export const websiteSchema = {
 
 export const createProductSchema = (productData) => ({
   '@context': 'https://schema.org',
-  '@type': 'Product',
+  '@type': 'SoftwareApplication',
   name: productData.name,
   description: productData.description,
   image: productData.image,
@@ -104,7 +104,7 @@ export const createFAQSchema = (faqs) => ({
 export const vmuktiPlatforms = {
   cloudVMS: {
     '@context': 'https://schema.org',
-    '@type': 'Product',
+    '@type': 'SoftwareApplication',
     name: 'VMukti Cloud VMS',
     description: 'Enterprise-grade cloud-based Video Management System with STQC certification. Supports 1B+ concurrent camera feeds, AI-powered analytics, and enterprise campus integration. 900+ deployments across 700+ districts.',
     image: 'https://www.vmukti.com/products/cloud-vms.jpg',
@@ -123,7 +123,7 @@ export const vmuktiPlatforms = {
 
   ems: {
     '@context': 'https://schema.org',
-    '@type': 'Product',
+    '@type': 'SoftwareApplication',
     name: 'VMukti EMS (Enterprise Management System)',
     description: 'Comprehensive Enterprise Management System for coordinated surveillance operations, incident management, and cross-platform control. Seamlessly integrates with VMukti Cloud VMS and third-party systems.',
     image: 'https://www.vmukti.com/products/ems.jpg',
@@ -142,7 +142,7 @@ export const vmuktiPlatforms = {
 
   iccc: {
     '@context': 'https://schema.org',
-    '@type': 'Product',
+    '@type': 'SoftwareApplication',
     name: 'VMukti Enterprise Command Center',
     description: 'Integrated Command and Control Center platform for unified emergency response, enterprise campus operations, and cross-agency coordination. Features multi-agency dashboards, incident tracking, and real-time analytics.',
     image: 'https://www.vmukti.com/products/iccc.jpg',
@@ -161,7 +161,7 @@ export const vmuktiPlatforms = {
 
   genaiAnalytics: {
     '@context': 'https://schema.org',
-    '@type': 'Product',
+    '@type': 'SoftwareApplication',
     name: 'VMukti GenAI Video Analytics',
     description: 'Next-generation AI-powered video analytics engine for intelligent surveillance. Provides real-time object detection, behavioral analysis, crowd monitoring, and predictive insights. Processes 1B+ camera feeds globally.',
     image: 'https://www.vmukti.com/products/genai-analytics.jpg',

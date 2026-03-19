@@ -33,8 +33,9 @@ const SEOIntegration = () => {
 
   return (
     <>
-      {/* FAQ Schema */}
-      <FAQSchema pageType={getPageType()} />
+      {/* FAQ Schema — REMOVED from global integration to prevent duplicate FAQPage errors.
+          Individual pages (industry, solution, blog) render their own FAQ schemas with
+          page-specific questions. Having both causes "Duplicate field FAQPage" in GSC. */}
 
       {/* Organization + LocalBusiness JSON-LD */}
       <LocalBusinessSchema region={getRegion()} />
