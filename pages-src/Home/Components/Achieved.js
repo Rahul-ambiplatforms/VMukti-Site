@@ -88,7 +88,7 @@ const AnimatedValue = ({ value }) => {
 
   return (
     <span ref={ref}>
-      {count}
+      {count || numericValue}
       {suffix}
     </span>
   );
