@@ -24,7 +24,7 @@ const ServingsAdvantages = ({ title, advantages }) => {
                                     alignItems="center"
                                     justifyContent="flex-start" // Aligns icon to the left
                                 >
-                                    <Image loading="lazy" src={advantage.svg} />
+                                    <Image loading="lazy" src={advantage.svg} alt={advantage.title || ""} />
                                 </Box>
                                 <Flex direction="column">
                                     <Text color="black" fontSize={{ base: "14px", md: "16px" }} fontWeight="700">{advantage.title}</Text>

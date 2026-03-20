@@ -287,7 +287,8 @@ export default function BlogsContent() {
                 >
                   <Image loading="lazy"
                     src={`${IMAGE_BASE_URL}/${post.content.mainImage}`}
-                    alt={post.content?.imageText || "Blog image"}
+                    alt={post.content?.imageText || post.content?.title || "Blog post image"}
+                    fallbackSrc="/assets/blog-placeholder.png"
                     w="full"
                     // h="400px"
                     aspectRatio="16/9"

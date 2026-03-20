@@ -662,22 +662,21 @@ export const icccSchema = {
 // Pages import: import schemaData from "../../data/schemaData"
 // and access: schemaData.homepage, schemaData.solutionpage, etc.
 const schemaData = {
+  // NOTE: organizationSchema and websiteSchema are already injected globally
+  // in app/layout.js. They must NOT be repeated here to avoid Google seeing
+  // duplicate Organization (3x) and WebSite (2x) on the homepage.
   homepage: [
     homepageSchema,
-    organizationSchema,
-    websiteSchema,
     localBusinessSchema,
     faqSchema,
     breadcrumbHomepage,
   ],
   homepage_us: [
     homepageSchema,
-    organizationSchema,
     localBusinessSchema,
   ],
   homepage_uk: [
     homepageSchema,
-    organizationSchema,
     localBusinessSchema,
   ],
   solutionpage: [

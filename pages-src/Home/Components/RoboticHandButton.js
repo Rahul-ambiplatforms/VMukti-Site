@@ -49,7 +49,7 @@ const RoboticHandButton = () => {
           ease: "easeInOut",
         }}
       >
-        Book Demo
+        Book a Free Demo
         <svg
           width="14"
           height="14"

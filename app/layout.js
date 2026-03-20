@@ -19,7 +19,7 @@ export const metadata = {
     default: 'Enterprise AI Video Intelligence Platform | Cloud VMS | VMukti',
     template: '%s | VMukti Solutions',
   },
-  description: 'VMukti: Enterprise AI video intelligence platform with 26+ AI analytics models. STQC-certified cloud VMS, EMS, and Enterprise Command Center. 900+ global deployments. Trusted by governments and enterprises worldwide.',
+  description: 'VMukti: Enterprise AI video intelligence platform with 26+ AI analytics models. STQC-certified cloud VMS, EMS, and Enterprise Command Center. 900+ global deployments. Trusted by enterprises worldwide.',
   keywords: ['enterprise cloud VMS', 'video management system', 'Enterprise Command Center platform', 'EMS enterprise management', 'STQC certified surveillance', 'global VMS provider'],
   authors: [{ name: 'VMukti Solutions' }],
   creator: 'VMukti Solutions',
@@ -66,6 +66,8 @@ export const metadata = {
   alternates: {
     canonical: SITE_URL,
     languages: {
+      'x-default': SITE_URL,
+      'en': SITE_URL,
       'en-US': `${SITE_URL}/usa/video-surveillance-solutions`,
       'en-GB': `${SITE_URL}/uk/video-surveillance-solutions`,
       'en-IN': SITE_URL,
@@ -97,7 +99,7 @@ const organizationSchema = {
   description: 'Enterprise Cloud VMS, EMS & Enterprise Command Center Provider. 18+ years of innovation in video surveillance and intelligent operations management.',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'SG Business Hub, Off. SG Highway',
+    streetAddress: '7, Arista@Eight Corporate House, Near Satyam House, Behind Rajpath Club, Bodakdev',
     addressLocality: 'Ahmedabad',
     addressRegion: 'Gujarat',
     postalCode: '380054',
@@ -135,10 +137,10 @@ const organizationSchema = {
   event: [
     {
       '@type': 'Event',
-      name: 'VMukti at ISC West 2025',
-      description: 'VMukti Solutions exhibited its Cloud VMS, AI Video Analytics, and Enterprise Command Center platform at ISC West 2025, the largest security industry trade show in the Americas.',
-      startDate: '2025-04-02',
-      endDate: '2025-04-04',
+      name: 'VMukti at ISC West 2026',
+      description: 'VMukti Solutions is exhibiting its Cloud VMS, AI Video Analytics, and Enterprise Command Center platform at ISC West 2026, the largest security industry trade show in the Americas.',
+      startDate: '2026-04-01',
+      endDate: '2026-04-03',
       eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
       eventStatus: 'https://schema.org/EventScheduled',
       location: { '@type': 'Place', name: 'Venetian Expo', address: { '@type': 'PostalAddress', addressLocality: 'Las Vegas', addressRegion: 'NV', addressCountry: 'US' } },
@@ -146,10 +148,10 @@ const organizationSchema = {
     },
     {
       '@type': 'Event',
-      name: 'VMukti at GITEX Global 2024',
-      description: 'VMukti Solutions showcased its enterprise Cloud VMS and enterprise campus Enterprise Command Center solutions at GITEX Global 2024, the world\'s largest tech exhibition in Dubai.',
-      startDate: '2024-10-14',
-      endDate: '2024-10-18',
+      name: 'VMukti at GITEX Global 2025',
+      description: 'VMukti Solutions showcased its enterprise Cloud VMS and Enterprise Command Center solutions at GITEX Global 2025, the world\'s largest tech exhibition in Dubai.',
+      startDate: '2025-10-13',
+      endDate: '2025-10-17',
       eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
       eventStatus: 'https://schema.org/EventScheduled',
       location: { '@type': 'Place', name: 'Dubai World Trade Centre', address: { '@type': 'PostalAddress', addressLocality: 'Dubai', addressCountry: 'AE' } },
@@ -157,10 +159,10 @@ const organizationSchema = {
     },
     {
       '@type': 'Event',
-      name: 'VMukti at GITEX Global 2023',
-      description: 'VMukti Solutions exhibited its AI-powered video surveillance and cloud VMS platform at GITEX Global 2023 in Dubai.',
-      startDate: '2023-10-16',
-      endDate: '2023-10-20',
+      name: 'VMukti at GITEX Global 2024',
+      description: 'VMukti Solutions showcased its enterprise Cloud VMS and Enterprise Command Center solutions at GITEX Global 2024, the world\'s largest tech exhibition in Dubai.',
+      startDate: '2024-10-14',
+      endDate: '2024-10-18',
       eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
       eventStatus: 'https://schema.org/EventScheduled',
       location: { '@type': 'Place', name: 'Dubai World Trade Centre', address: { '@type': 'PostalAddress', addressLocality: 'Dubai', addressCountry: 'AE' } },
@@ -189,9 +191,26 @@ const wixFont = localFont({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={wixFont.variable}>
+    <html lang="en" className={wixFont.variable} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Issue #4 — Preconnect hints for third-party domains */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.clarity.ms" />
+        <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.clarity.ms" />
+        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+
+        {/* Issue #3 — Preload hero image to improve LCP */}
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/tablet2.png"
+          fetchPriority="high"
+        />
+
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
@@ -202,7 +221,10 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body>
+      {/* Issue #2 — suppressHydrationWarning prevents React from throwing on SSR/CSR
+          mismatches caused by ChakraUI color-mode attribute injected by the browser
+          extension, or minor differences in client-only hooks (useInView, etc.). */}
+      <body suppressHydrationWarning>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

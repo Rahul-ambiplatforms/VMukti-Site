@@ -276,6 +276,7 @@ const PhoneInput = ({ value, onChange, isRequired, inputRef, hasError }) => {
             variant="unstyled"
             h="100%"
             w="40%"
+            aria-label={`Country code: ${currentCountry.dial_code || '+91'}`}
             _active={{ bg: "transparent" }}
             onClick={() => (isOpen ? onClose() : onOpen())}
           >
@@ -332,6 +333,9 @@ const PhoneInput = ({ value, onChange, isRequired, inputRef, hasError }) => {
           value={value.number}
           onChange={handleNumberChange}
           type="tel"
+          aria-label="Phone number"
+          required={isRequired}
+          aria-required={isRequired ? "true" : undefined}
           onFocus={(e) => {
             try {
               e.target.setSelectionRange(0, 0);
@@ -666,8 +670,15 @@ const ContactUsForm = () => {
                     border={errors.fullName ? "1px solid #E53E3E" : "none"}
                     borderRadius="10px"
                     h="48px"
+                    required
+                    aria-required="true"
+                    aria-invalid={errors.fullName ? "true" : "false"}
+                    aria-describedby={errors.fullName ? "fullName-error" : undefined}
                   />
                 </RequiredPlaceholder>
+                {errors.fullName && (
+                  <Text id="fullName-error" role="alert" aria-live="polite" fontSize="12px" color="red.500" mt={1}>Full name is required.</Text>
+                )}
               </Box>
 
               {/* 2. Email Address */}
@@ -688,8 +699,15 @@ const ContactUsForm = () => {
                     border={errors.email ? "1px solid #E53E3E" : "none"}
                     borderRadius="10px"
                     h="48px"
+                    required
+                    aria-required="true"
+                    aria-invalid={errors.email ? "true" : "false"}
+                    aria-describedby={errors.email ? "email-error" : undefined}
                   />
                 </RequiredPlaceholder>
+                {errors.email && (
+                  <Text id="email-error" role="alert" aria-live="polite" fontSize="12px" color="red.500" mt={1}>Email address is required.</Text>
+                )}
               </Box>
 
               {/* 3. Phone */}
@@ -702,6 +720,9 @@ const ContactUsForm = () => {
                   inputRef={phoneRef}
                   hasError={errors.phone}
                 />
+                {errors.phone && (
+                  <Text id="phone-error" role="alert" aria-live="polite" fontSize="12px" color="red.500" mt={1}>Phone number is required.</Text>
+                )}
               </Box>
 
               {/* 4. Company Name */}
@@ -721,8 +742,15 @@ const ContactUsForm = () => {
                     border={errors.companyName ? "1px solid #E53E3E" : "none"}
                     borderRadius="10px"
                     h="48px"
+                    required
+                    aria-required="true"
+                    aria-invalid={errors.companyName ? "true" : "false"}
+                    aria-describedby={errors.companyName ? "companyName-error" : undefined}
                   />
                 </RequiredPlaceholder>
+                {errors.companyName && (
+                  <Text id="companyName-error" role="alert" aria-live="polite" fontSize="12px" color="red.500" mt={1}>Company name is required.</Text>
+                )}
               </Box>
 
               {/* 5. Country */}

@@ -36,7 +36,7 @@ import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 
 const whoWeAreLinks = [
   { text: "About Us", path: "/about-us" },
-  { text: "Terms & Condition", path: "/terms-and-conditions" },
+  { text: "Terms & Conditions", path: "/terms-and-conditions" },
   { text: "Privacy Policy ", path: "/privacy-policy" },
   { text: "Careers", path: "/careers" },
   // { text: "Trademark Policy" },
@@ -61,7 +61,7 @@ const globalPresence = [
 // ];
 const resources = [
   // Column 1
-  { text: "Insights & Blogs", path: "/blog" },
+  { text: "Blog", path: "/blog" },
   // { text: "Customer Stories", path: "/customer-stories" },
   // { text: "Company News" },
 
@@ -94,14 +94,6 @@ const ourSolutionsLinks = [
     text: "Live Streaming",
     path: "/solution/live-streaming-solution",
   },
-  {
-    text: "Flying Squad Vehicle",
-    path: "/solution/flying-squad-vehicle",
-  },
-  {
-    text: "VisualBot",
-    path: "/solution/visualbot",
-  },
 ];
 
 const industriesWeServeLinks = [
@@ -110,21 +102,18 @@ const industriesWeServeLinks = [
   { text: "Warehouse", path: "/industry/warehouse" },
   { text: "Healthcare", path: "/industry/healthcare" },
   { text: "Oil & Gas", path: "/industry/oil-and-gas" },
-  { text: "Election", path: "/industry/election" },
   { text: "Education", path: "/industry/education" },
   { text: "Transportation", path: "/industry/transportation" },
-  { text: "Enterprise Campus", path: "/industry/smart-city" },
+  { text: "Enterprise Campus", path: "/industry/enterprise-campus" },
   { text: "Pharma", path: "/industry/pharma" },
   { text: "Logistics", path: "/industry/logistics" },
   { text: "Banking", path: "/industry/banking" },
   { text: "Sports & Entertainment", path: "/industry/sports-entertainment" },
-  { text: "Defense", path: "/industry/defense" },
 
   // Column 2
   { text: "Hospitality", path: "/industry/hospitality" },
   { text: "Construction", path: "/industry/construction" },
   { text: "Enterprise", path: "/industry/enterprise" },
-  { text: "Government", path: "/industry/government" },
 ];
 
 const NewsletterSubscription = () => {
@@ -181,6 +170,9 @@ const NewsletterSubscription = () => {
   return (
     <>
       <Box
+        as="footer"
+        role="contentinfo"
+        aria-label="Site footer"
         // padding={{base:"4% 4% 1% 4%",md:"4% 2% 1% 2%"}}
         // fontFamily="'Wix Madefor Display', sans-serif"
         fontWeight={600}
@@ -191,6 +183,8 @@ const NewsletterSubscription = () => {
 
         {/* Information Section */}
         <Flex
+          as="nav"
+          aria-label="Footer navigation"
           flexWrap="wrap"
           gap="20px"
           width={{ base: "100%" }}

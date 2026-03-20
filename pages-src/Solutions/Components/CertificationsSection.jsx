@@ -59,7 +59,7 @@ const CertificationsSection = () => {
             },
           }}
         >
-          {/* first copy */}
+          {/* first copy — visible to screen readers */}
           <Flex as="div" align="center" gap={{ base: 4, md: 6 }}>
             {CertificationsData.map((cert, index) => (
               <Flex
@@ -92,8 +92,8 @@ const CertificationsSection = () => {
             ))}
           </Flex>
 
-          {/* second copy (duplicate) */}
-          <Flex as="div" align="center" gap={{ base: 4, md: 6 }}>
+          {/* second copy (duplicate for seamless loop) — hidden from screen readers */}
+          <Flex as="div" aria-hidden="true" align="center" gap={{ base: 4, md: 6 }}>
             {CertificationsData.map((cert, index) => (
               <Flex
                 key={`second-${index}`}

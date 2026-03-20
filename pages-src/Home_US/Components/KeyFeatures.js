@@ -25,8 +25,8 @@ const keyFeaturesData = [
         image: "/assets/Onvif.png",
     },
     {
-        title: "Proven deployments in Government, Enterprise Campuses & Enterprises",
-        description: "Proven deployments in Government, \n Enterprise Campuses & Enterprises",
+        title: "Proven deployments across Enterprise Campuses & Industries",
+        description: "Proven deployments across Enterprise Campuses \n & Industries worldwide",
         image: "/assets/government-deployment-icon.png",
     },
     {

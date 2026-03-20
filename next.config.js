@@ -6,6 +6,8 @@ const nextConfig = {
   trailingSlash: true,
 
   images: {
+    // Issue #5 — Enable WebP/AVIF automatic conversion for next/image components
+    formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
         protocol: "https",
@@ -84,22 +86,58 @@ const nextConfig = {
       { source: "/exam-surveillance-solutions-ensuring-the-integrity-of-your-exams/", destination: "/industry/education", permanent: true },
       // Industry contact-us subpages → main contact page
       { source: "/industry/:name/contact-us", destination: "/contact-us", permanent: true },
+      // Brand naming: smart-city → enterprise-campus
+      { source: "/industry/smart-city", destination: "/industry/enterprise-campus", permanent: true },
+      { source: "/industry/smart-city/", destination: "/industry/enterprise-campus/", permanent: true },
     ];
   },
 
   async headers() {
+    // Issue #1 — Content-Security-Policy
+    // 'unsafe-inline' is required for Chakra UI (emotion inline styles) and GTM inline bootstrap.
+    // For a stricter setup, migrate to nonce-based CSP via Next.js middleware (Issue #7).
+    const ContentSecurityPolicy = [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.clarity.ms https://connect.facebook.net",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "font-src 'self' data: https://fonts.gstatic.com",
+      "img-src 'self' data: blob: https://res.cloudinary.com https://*.clarity.ms https://www.googletagmanager.com https://www.vmukti.com https://vmukti.com",
+      "connect-src 'self' https://www.googletagmanager.com https://*.clarity.ms https://vmukti.com https://www.vmukti.com https://res.cloudinary.com",
+      "frame-src 'self' https://www.googletagmanager.com",
+      "object-src 'none'",
+      "base-uri 'self'",
+      "form-action 'self'",
+      "upgrade-insecure-requests",
+    ].join("; ");
+
     return [
       {
         source: "/(.*)",
         headers: [
-          {
-            key: "X-Frame-Options",
-            value: "SAMEORIGIN",
-          },
-          {
-            key: "X-Content-Type-Options",
-            value: "nosniff",
-          },
+          // Issue #1 — CSP
+          { key: "Content-Security-Policy", value: ContentSecurityPolicy },
+          // Issue #2 — HSTS
+          { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains; preload" },
+          // Issue #3 — Clickjacking protection (already present, kept)
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          // Issue #4 — MIME sniffing protection (already present, kept)
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          // Issue #5 — Referrer policy
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          // Issue #6 — Permissions policy
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+          // Issue #8 — Obfuscate server identity
+          { key: "Server", value: "webserver" },
+        ],
+      },
+      // Issue #9 — Cache-Control: no-cache for HTML/dynamic pages
+      // Static assets under /_next/static/ already get immutable long-cache from Next.js
+      {
+        source: "/((?!_next/static|_next/image|favicon\\.ico|assets/).*)",
+        headers: [
+          { key: "Cache-Control", value: "no-cache, no-store, must-revalidate" },
+          { key: "Pragma", value: "no-cache" },
+          { key: "Expires", value: "0" },
         ],
       },
     ];

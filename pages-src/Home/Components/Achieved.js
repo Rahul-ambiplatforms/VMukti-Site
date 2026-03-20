@@ -38,8 +38,6 @@ const useCountUp = (target, duration = 1000) => {
   useEffect(() => {
     if (!hasAnimated || target === 0) return;
 
-    // Reset to 0 then animate up to target
-    setCount(0);
     const startTime = Date.now();
     const animate = () => {
       const elapsed = Date.now() - startTime;
@@ -91,7 +89,7 @@ const achievementsData = [
   },
   {
     value: "1B+",
-    label: "Number of cameras feeds",
+    label: "Camera Feeds Processed",
     bgColor: "#3F77A5",
     valueColor: "#FFFFFF",
     labelColor: "#FFFFFF",
@@ -99,7 +97,7 @@ const achievementsData = [
   },
   {
     value: "200M+",
-    label: "Number of minutes streamed",
+    label: "Minutes of Video Streamed",
     bgColor: "#BECEDC",
     valueColor: "#3F77A5",
     labelColor: "#000000",
@@ -283,6 +281,8 @@ const Achieved = ({ heading, description, data = achievementsData }) => {
             {[...achievementsData, ...achievementsData].map((item, index) => (
               <Box
                 key={index} // Added unique key for mapping
+                role="img"
+                aria-label={`${item.value} — ${item.label}`}
                 // width={{
                 //   base: "166px",
                 //   md: "280px",
@@ -302,6 +302,7 @@ const Achieved = ({ heading, description, data = achievementsData }) => {
               >
                 <Text
                   as="div"
+                  aria-hidden="true"
                   fontSize={valueFontSize}
                   fontWeight="600"
                   position="absolute"
@@ -317,6 +318,7 @@ const Achieved = ({ heading, description, data = achievementsData }) => {
 
                 <Text
                   as="div"
+                  aria-hidden="true"
                   fontSize={labelFontSize}
                   fontWeight="700"
                   position="absolute"
@@ -327,7 +329,7 @@ const Achieved = ({ heading, description, data = achievementsData }) => {
                   left="50%"
                   transform="translateX(-50%)"
                   wordBreak={
-                    item.label === "Number of minutes streamed"
+                    item.label === "Minutes of Video Streamed"
                       ? "break-word"
                       : "normal"
                   }

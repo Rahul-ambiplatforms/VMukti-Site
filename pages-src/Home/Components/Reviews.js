@@ -2,11 +2,11 @@
 import React, { useState, useEffect } from "react";
 
 const reviews = [
-  { name: "Rajesh Kumar", role: "CTO, TechVision India", text: "VMukti video surveillance solutions transformed our security infrastructure with AI-powered analytics.", rating: 5 },
-  { name: "Sarah Mitchell", role: "Operations Director, SecureNet", text: "The cloud-based VMS platform is incredibly reliable and scalable across 50+ locations.", rating: 5 },
-  { name: "Amit Patel", role: "Security Head, SmartCity Corp", text: "Outstanding computer vision capabilities with best-in-class facial recognition and object detection.", rating: 5 },
-  { name: "Priya Sharma", role: "IT Manager, UrbanSafe Ltd", text: "Seamless integration with our existing CCTV infrastructure. The AI alerts have reduced incident response time by 60%.", rating: 5 },
-  { name: "David Chen", role: "VP Security, GlobalBank", text: "Best-in-class multi-site management. We monitor 200+ branches from a single dashboard effortlessly.", rating: 5 },
+  { name: "State Government Client", role: "Command Control Center, India", text: "VMukti's Enterprise Command Center enabled real-time visibility across multiple agencies. The AI-powered analytics significantly improved our incident response capability.", rating: 5 },
+  { name: "Enterprise Campus Deployment", role: "Large Manufacturing Group, India", text: "The cloud-based VMS platform scaled seamlessly across 50+ facilities. Integration with our existing infrastructure was smooth and the VMukti team provided excellent support.", rating: 5 },
+  { name: "Smart City Project", role: "Urban Development Authority, India", text: "Outstanding AI analytics capabilities — ANPR, crowd monitoring, and intrusion detection all work reliably at scale. VMukti delivered on every commitment.", rating: 5 },
+  { name: "Healthcare Campus", role: "Multi-Site Hospital Group, India", text: "We monitor over 3,000 cameras from a single VMukti dashboard. The AI alerts have dramatically reduced security incidents and improved staff response times.", rating: 5 },
+  { name: "Transportation Authority", role: "Public Transit Network, India", text: "VMukti's cloud VMS handles our 24x7 operational requirements with zero downtime. The STQC certification gave us confidence in the platform's security standards.", rating: 5 },
 ];
 
 function useVisibleCount() {

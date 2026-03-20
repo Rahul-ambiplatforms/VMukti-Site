@@ -424,7 +424,7 @@ const CareerOportunity = () => {
             borderRadius="8px"
             _hover={{ bg: "#35668E" }}
           >
-            Send CV to hr@vmukti.com
+            Email Your CV
           </Button>
         </Box>
 

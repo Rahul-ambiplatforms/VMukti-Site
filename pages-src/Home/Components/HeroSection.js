@@ -24,24 +24,20 @@ const MotionButton = motion(Button);
 
 // Array of words for the typewriter animation
 const industries = [
+  "ENTERPRISES",
   "MANUFACTURING",
   "WAREHOUSE",
   "HEALTHCARE",
   "OIL & GAS",
-  "ELECTION",
   "EDUCATION",
   "TRANSPORTATION",
-  "SMART CITY",
+  "SMART CITIES",
   "PHARMA",
   "BANKING",
-  "ENTERPRISE",
   "LOGISTICS",
-  "GOVERNMENT",
-  "SPORTS",
-  "ENTERTAINMENT",
-  "DEFENSE",
   "HOSPITALITY",
   "CONSTRUCTION",
+  "SPORTS",
 ];
 
 const HeroSection = () => {
@@ -163,6 +159,7 @@ const HeroSection = () => {
               mt="1%"
               src="/assets/tablet.png"
               alt="Computer Vision Solution for Smart Surveillance"
+              fetchpriority="high"
               zIndex={1}
               w="100%"
               h="100%"
@@ -310,7 +307,7 @@ const HeroSection = () => {
                     }}
                     fontSize={{ base: "14px", sm: "16px" }}
                   >
-                    Book Demo
+                    Book a Free Demo
                     <svg
                       width="14"
                       height="14"
@@ -332,6 +329,7 @@ const HeroSection = () => {
               <MotionImage
                 alt="VMukti Cloud-based Video Surveillance Tablet Dashboard"
                 src={`/assets/tablet2.png`}
+                fetchpriority="high"
                 position="absolute"
                 top={["", "", "44%", "25%"]}
                 right={["-10px", "-20px", "-30px", "-45px"]}

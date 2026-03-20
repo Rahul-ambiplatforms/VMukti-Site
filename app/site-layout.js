@@ -13,8 +13,9 @@ export default function SiteLayout({ children }) {
 
   return (
     <>
+      <a href="#main-content" className="skip-link">Skip to main content</a>
       <Navbar />
-      <Box pt={{ base: "20%", sm: "20%", md: "100px" }} bg="#E7E7E7">
+      <Box id="main-content" pt={{ base: "20%", sm: "20%", md: "100px" }} bg="#E7E7E7">
         {!isHomepage && (
           <PageContentWrapper>
             <Breadcrumbs />

@@ -275,6 +275,7 @@ export default function ComparisonTable() {
               <tr>
                 {/* Feature column header */}
                 <th
+                  scope="col"
                   style={{
                     padding: '14px 20px',
                     textAlign: 'left',
@@ -295,6 +296,7 @@ export default function ComparisonTable() {
                   return (
                     <th
                       key={col.key}
+                      scope="col"
                       style={{
                         width: '234px',
                         height: '57px',
@@ -339,7 +341,7 @@ export default function ComparisonTable() {
                   {/* Feature rows */}
                   {section.rows.map((row) => (
                     <tr key={row.feature}>
-                      <td style={featureTd}>{row.feature}</td>
+                      <th scope="row" style={featureTd}>{row.feature}</th>
                       {visibleCols.map((col) => (
                           <td
                             key={col.key}

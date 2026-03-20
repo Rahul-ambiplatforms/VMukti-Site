@@ -62,7 +62,7 @@ const HeroSection = () => {
             mx="auto"
             mb={{ base: '28px', md: '40px' }}
           >
-            Make an informed decision. See how VMukti stacks up against the industry.
+            Make an informed decision. See how VMukti compares to leading VMS platforms.
           </Text>
         </motion.div>
 

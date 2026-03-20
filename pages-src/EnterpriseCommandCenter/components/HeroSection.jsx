@@ -122,6 +122,7 @@ const HeroSection = () => {
             >
               <HStack gap="0" align="center">
                 <Image
+                  loading="lazy"
                   src="/assets/stqc.svg"
                   alt="STQC Certified"
                   w={{ base: "44px", lg: "clamp(36px, 3.5vw, 53px)" }}
@@ -131,6 +132,7 @@ const HeroSection = () => {
                 />
                 <Box position="relative" top="6px" ml={{ base: "16px", lg: "23px" }}>
                   <Image
+                    loading="lazy"
                     src="/assets/onvif.svg"
                     alt="ONVIF"
                     w={{ base: "85px", lg: "clamp(70px, 6.8vw, 103px)" }}
@@ -158,6 +160,7 @@ const HeroSection = () => {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             >
               <Image
+                loading="lazy"
                 src="/assets/enterprise-command-center-dashboard.png"
                 alt="Enterprise Command Center Dashboard"
                 w="100%"

@@ -189,7 +189,7 @@ const IndustryUseCases = () => {
 
                     {/* Image */}
                     <Box flex="1" minW={0}>
-                      <Image src={tab.image} alt={tab.label} w="100%" h="100%" objectFit="cover" />
+                      <Image loading="lazy" src={tab.image} alt={tab.label} w="100%" h="100%" objectFit="cover" />
                     </Box>
                   </Flex>
 

@@ -7,6 +7,7 @@ export const dynamic = 'force-dynamic';
 
 const industryMap = {
   'banking': 'industryBanking',
+  'enterprise-campus': 'industrySmartCity',
   'smart-city': 'industrySmartCity',
   'healthcare': 'industryHealthcare',
   'manufacturing': 'industryManufacturing',

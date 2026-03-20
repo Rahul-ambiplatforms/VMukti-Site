@@ -46,16 +46,12 @@ const dropdownItems = {
       path: "/solution/enterprise-management-system",
     },
     {
-      label: "Integrated Command & Control Center",
+      label: "Enterprise Command Center",
       path: "/solution/integrated-command-control-center",
     },
     {
       label: "Live Webcasting & Streaming",
       path: "/solution/live-streaming-solution",
-    },
-    {
-      label: "Flying Squad Vehicle",
-      path: "/solution/flying-squad-vehicle",
     },
     {
       label: "CloudAI",
@@ -64,10 +60,6 @@ const dropdownItems = {
     {
       label: "Generative AI",
       path: "/solution/genai",
-    },
-    {
-      label: "Visual Bot",
-      path: "/solution/visualbot",
     },
   ],
   industries: [
@@ -88,10 +80,6 @@ const dropdownItems = {
       path: "/industry/oil-and-gas",
     },
     {
-      label: "Election",
-      path: "/industry/election",
-    },
-    {
       label: "Education",
       path: "/industry/education",
     },
@@ -100,8 +88,8 @@ const dropdownItems = {
       path: "/industry/transportation",
     },
     {
-      label: "Enterprise Campus Monitoring",
-      path: "/industry/smart-city",
+      label: "Enterprise Campus",
+      path: "/industry/enterprise-campus",
     },
     {
       label: "Pharma",
@@ -120,10 +108,6 @@ const dropdownItems = {
       path: "/industry/sports-entertainment",
     },
     {
-      label: "Defense",
-      path: "/industry/defense",
-    },
-    {
       label: "Hospitality",
       path: "/industry/hospitality",
     },
@@ -136,8 +120,8 @@ const dropdownItems = {
       path: "/industry/enterprise",
     },
     {
-      label: "Government",
-      path: "/industry/government",
+      label: "Retail",
+      path: "/industry/retail",
     },
   ],
   ourServing: [
@@ -324,7 +308,7 @@ const Navbar = () => {
           >
             <Image loading="lazy"
               src="/assets/VMukti_logo.png"
-              alt="Logo"
+              alt="VMukti Solutions Logo"
               height={logoHeight}
               style={{ cursor: "pointer" }}
               onClick={() => navigateTo("/", "Home")}

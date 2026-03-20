@@ -29,7 +29,7 @@ const CareerDashboard = () => {
             lineHeight={{base:"40px",md:"60px",lg:"81px"}}
             w={{base:"100%",md:"70%"}}
           >
-            Meet the team work behind our success
+            Meet the Team Behind Our Success
           </Heading>
           <Flex
             align="start"
@@ -67,7 +67,7 @@ const CareerDashboard = () => {
         <Box flex="1" w="100%">
           <Image loading="lazy"
             src={`/assets/CareerDash.png`}
-            alt="Meet the team work behind our successes"
+            alt="Meet the Team Behind Our Success"
             borderRadius="24px"
             objectFit="cover"
             w="100%"

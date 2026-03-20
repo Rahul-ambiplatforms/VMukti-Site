@@ -656,6 +656,9 @@ export default function BookDemo() {
                                     <Flex gap={2}>
                                         <Select
                                             name="countryCode"
+                                            id="country-code"
+                                            aria-label="Country Code"
+                                            aria-busy={loadingCountries}
                                             value={formData.countryCode}
                                             onChange={handleInputChange}
                                             width="200px"
@@ -665,7 +668,7 @@ export default function BookDemo() {
                                             isDisabled={loadingCountries}
                                         >
                                             {loadingCountries ? (
-                                                <option value="+91">Loading...</option>
+                                                <option value="+91">Loading country codes…</option>
                                             ) : (
                                                 countryCodes.map((country) => (
                                                     <option key={`${country.code}-${country.country}`} value={country.code}>

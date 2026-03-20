@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 
 const CustomCursor = () => {
     const cursorRef = useRef(null);
-    const [isDesktop, setIsDesktop] = React.useState(true);
+    const [isDesktop, setIsDesktop] = React.useState(false);
 
     useEffect(() => {
         const checkIsDesktop = () => {

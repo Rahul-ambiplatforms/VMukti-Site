@@ -15,7 +15,7 @@ const FeatureCard = ({ icon, title, description, bg, textColor = "#1A1A2E", acce
     gap="10px"
     borderTop={borderTop}
   >
-    <Image src={icon} alt={title} w="36px" h="36px" objectFit="contain" flexShrink={0} />
+    <Image loading="lazy" src={icon} alt={title} w="36px" h="36px" objectFit="contain" flexShrink={0} />
     <Box>
       <Heading
         as="h3"
@@ -113,6 +113,7 @@ const FeaturesSection = () => {
 
       {/* Background robot image */}
       <Image
+        loading="lazy"
         src="/assets/features-bg.svg"
         alt="background graphic"
         position="absolute"

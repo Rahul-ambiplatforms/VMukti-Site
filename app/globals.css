@@ -1,53 +1,17 @@
 /* Global styles for VMukti Next.js */
 
-/* Local WixMadeforDisplay Font */
-@font-face {
-  font-family: 'WixMadeforDisplay';
-  src: url('/assets/Wix_Madefor_Display/WixMadeforDisplay-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'WixMadeforDisplay';
-  src: url('/assets/Wix_Madefor_Display/static/WixMadeforDisplay-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'WixMadeforDisplay';
-  src: url('/assets/Wix_Madefor_Display/static/WixMadeforDisplay-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'WixMadeforDisplay';
-  src: url('/assets/Wix_Madefor_Display/static/WixMadeforDisplay-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'WixMadeforDisplay';
-  src: url('/assets/Wix_Madefor_Display/static/WixMadeforDisplay-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'WixMadeforDisplay';
-  src: url('/assets/Wix_Madefor_Display/static/WixMadeforDisplay-ExtraBold.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
+/*
+ * Issue #10 — Font loading optimisation
+ * The WixMadeforDisplay variable font is registered via next/font/local in app/layout.js,
+ * which generates optimised <link> preload tags and inlines only used subsets.
+ * The static-weight TTF @font-face declarations below are intentionally removed
+ * to avoid loading 6 separate TTF files (≈400 KB total) on every page.
+ *
+ * NOTE: To further reduce font payload, convert
+ *   WixMadeforDisplay-VariableFont_wght.ttf → WixMadeforDisplay-VariableFont_wght.woff2
+ * using: https://www.fontsquirrel.com/tools/webfont-generator  or `woff2_compress` CLI.
+ * Then update the src path in app/layout.js to point to the .woff2 file.
+ */
 
 * {
   box-sizing: border-box;
@@ -60,7 +24,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: var(--font-wix), 'WixMadeforDisplay', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-wix), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background: #E7E7E7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -71,6 +35,30 @@ code {
 }
 
 
+
+/* Skip to main content link (WCAG 2.4.1) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 10000;
+  background: #3F77A5;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
 
 /* Slick Carousel */
 @import "~slick-carousel/slick/slick.css";

@@ -14,6 +14,7 @@ import StickySection from "../Home/Data/StickySection";
 import CertificationsSection from "../Solutions/Components/CertificationsSection";
 // import Reviews from "../Home/Components/Reviews";  // Removed: component does not exist
 import { Helmet } from "react-helmet-async";
+import CtaBanner from "../../components/CtaBanner";
 
 const gridItems = [
   {
@@ -168,6 +169,9 @@ const WhoWeare = () => {
       <PageContentWrapper>
         {/* <Reviews /> */}
         {/* <ReviewsSection /> */}
+        <CtaBanner href="/book-a-demo">
+          Ready to See VMukti in Action? Book a Free Demo
+        </CtaBanner>
       </PageContentWrapper>
     </>
   );

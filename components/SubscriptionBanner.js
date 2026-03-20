@@ -168,7 +168,7 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
 
         {/* Email Input Section */}
 
-        <Flex direction="column" width="100%" maxW="611px">
+        <Flex direction="column" width="100%" maxW="611px" aria-live="polite" aria-atomic="true">
           <Flex
             position="relative"
             width="100%"
@@ -213,7 +213,8 @@ const SubscriptionBanner = ({ bgColor = "white" }) => {
             {/* Input Field */}
             <Input
               type="email"
-              placeholder="Your Email"
+              placeholder="Enter your work email"
+              aria-label="Email address for newsletter subscription"
               border="none"
               outline="none"
               bg="transparent"

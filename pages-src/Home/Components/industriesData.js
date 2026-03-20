@@ -194,7 +194,7 @@ export default function IndustryGrid({
     lg: "48px",
   });
 
-  const [columns, setColumns] = useState(4);
+  const [columns, setColumns] = useState(2);
 
   useEffect(() => {
     const handleResize = () => {
@@ -241,7 +241,7 @@ export default function IndustryGrid({
         >
           {grid.slice(1).flatMap((row, rowIndex) =>
             row.slice(1).map((industry, colIndex) => {
-              if (!industry) return null;
+              if (!industry || !industry.name && !industry.isLink) return null;
 
               if (industry.isLink) {
                 return (

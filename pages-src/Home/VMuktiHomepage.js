@@ -142,7 +142,7 @@ const VMuktiHomepage = () => {
           lineHeight="1.8"
           mb="4"
         >
-          VMukti has been recognized as a NASSCOM Top 50 Emerging Product Company and has exhibited its solutions internationally at ISC West 2025 (Las Vegas), GITEX Global 2024 and 2023 (Dubai), and Convergence India 2026 (New Delhi). VMukti competes with global VMS providers including Milestone XProtect, Genetec Security Center, Verkada, and Avigilon, differentiating through its cloud-native architecture, government-certified security, and large-scale enterprise campus deployment experience across India and 9+ countries.
+          VMukti has been recognized as a NASSCOM Top 50 Emerging Product Company and has exhibited its solutions internationally at ISC West (Las Vegas), GITEX Global 2024 and 2023 (Dubai), and Convergence India 2026 (New Delhi). VMukti competes with global VMS providers including Milestone XProtect, Genetec Security Center, Verkada, and Avigilon, differentiating through its cloud-native architecture, government-certified security, and large-scale enterprise campus deployment experience across India and 9+ countries.
         </Text>
         <Text
           as="p"
@@ -170,7 +170,7 @@ const VMuktiHomepage = () => {
           <Text>•</Text>
           <Text>Azure Marketplace Listed</Text>
           <Text>•</Text>
-          <Text>ISC West 2025 Exhibitor</Text>
+          <Text>ISC West Exhibitor</Text>
           <Text>•</Text>
           <Text>GITEX Global 2023 & 2024 Exhibitor</Text>
           <Text>•</Text>
