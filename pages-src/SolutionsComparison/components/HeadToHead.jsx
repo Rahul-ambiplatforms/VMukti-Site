@@ -118,35 +118,6 @@ export default function HeadToHead() {
 
             {/* Nav buttons */}
             <Flex justify="flex-end" gap="10px" mt={{ base: '20px', lg: '32px' }}>
-              {/* Prev */}
-              {/* Prev */}
-              <Box
-                as="button"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                cursor={page === 0 ? 'not-allowed' : 'pointer'}
-                onClick={() => page > 0 && setPage(page - 1)}
-              >
-                <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="30.7692" height="30.7692" rx="5" fill="white"/>
-                  <path d="M11.0763 14.7716L18.4609 22.1562L18.4609 7.38702L11.0763 14.7716Z" fill="#3F77A5"/>
-                </svg>
-              </Box>
-              {/* Next */}
-              <Box
-                as="button"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                cursor={page === totalPages - 1 ? 'not-allowed' : 'pointer'}
-                onClick={() => page < totalPages - 1 && setPage(page + 1)}
-              >
-                <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="30.7656" y="30.7656" width="30.7692" height="30.7692" rx="5" transform="rotate(-180 30.7656 30.7656)" fill="white"/>
-                  <path d="M19.6893 15.994L12.3047 8.60938L12.3047 23.3786L19.6893 15.994Z" fill="#3F77A5"/>
-                </svg>
-              </Box>
             </Flex>
           </Box>
 
