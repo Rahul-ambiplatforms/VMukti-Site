@@ -287,6 +287,43 @@ const faqsData = {
     ],
   },
 
+  // Pricing page
+  pricing: {
+    title: "Frequently Asked Questions",
+    qa: [
+      {
+        question: "What is included in the free trial?",
+        answer:
+          "The free trial includes full access to all Starter plan features for 14 days, supporting up to 10 cameras. No credit card required. You can test Cloud VMS, basic AI analytics, and email support during the trial period.",
+      },
+      {
+        question: "How does per-camera pricing work?",
+        answer:
+          "You are billed based on the number of cameras connected to the platform each month. You can add or remove cameras at any time, and your invoice reflects your peak usage for the billing period.",
+      },
+      {
+        question: "Can I mix cloud and on-premise?",
+        answer:
+          "Yes, our Enterprise plan supports hybrid deployments, allowing you to combine cloud-based management with on-premise video storage and processing. This gives you the flexibility to meet specific data residency or bandwidth requirements.",
+      },
+      {
+        question: "What are the volume discount tiers?",
+        answer:
+          "Volume discounts are available starting at 100 cameras. Discounts range from 10% for 100–499 cameras to up to 30% for deployments above 1,000 cameras. Contact our sales team for a custom quote.",
+      },
+      {
+        question: "Is there a minimum contract period?",
+        answer:
+          "Monthly plans have no minimum commitment — you can cancel anytime. Annual plans require a 12-month commitment and come with a 20% discount compared to monthly billing.",
+      },
+      {
+        question: "How does migration from another VMS work?",
+        answer:
+          "Our team provides a dedicated migration specialist for Enterprise customers. We support import from Milestone XProtect, Genetec Security Center, and other major VMS platforms. Typical migrations are completed within 2–4 weeks.",
+      },
+    ],
+  },
+
   // Sub Industry page
   manufacturing: {
     title: "Frequently Asked Questions",

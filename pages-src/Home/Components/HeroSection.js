@@ -40,7 +40,7 @@ const industries = [
   "SPORTS",
 ];
 
-const HeroSection = () => {
+const HeroSection = ({ titleContent, description, buttonText, buttonHref }) => {
   const imageRef = useRef(null);
   const sectionRef = useRef(null);
   const ref = useRef(null);
@@ -261,11 +261,7 @@ const HeroSection = () => {
                         color="#444444"
                         textAlign="justify"
                       >
-                        With over 18 years of domain excellence, we safeguard
-                        700+ districts through state-backed and enterprise-grade
-                        deployments powered by proprietary visual intelligence
-                        and precision-tuned computer vision frameworks for
-                        mission-critical surveillance.
+                        {description ?? "With over 18 years of domain excellence, we safeguard 700+ districts through state-backed and enterprise-grade deployments powered by proprietary visual intelligence and precision-tuned computer vision frameworks for mission-critical surveillance."}
                       </Text>
                     </Flex>
                   </MotionBox>
@@ -286,7 +282,7 @@ const HeroSection = () => {
                   display={{ base: "none", md: "block" }}
                   width={["", "", "55%", "90%"]}
                 />
-                <Link href="/book-a-demo">
+                <Link href={buttonHref ?? "/book-a-demo"}>
                   <MotionButton
                     onMouseEnter={handleImageHover}
                     onMouseLeave={handleImageLeave}

@@ -11,12 +11,10 @@ import countryData from "../../../data/Country_Code.json";
 
 const MotionBox = motion(Box);
 
-// ── Shared field bg ──────────────────────────────────────────────
 const FIELD_BG = "#F0F0F0";
 const FIELD_RADIUS = "10px";
 const FIELD_H = "48px";
 
-// ── RequiredPlaceholder ──────────────────────────────────────────
 const RequiredPlaceholder = ({ text, children, hasValue, isRequired }) => (
   <Box position="relative" w="100%">
     {children}
@@ -37,7 +35,6 @@ const RequiredPlaceholder = ({ text, children, hasValue, isRequired }) => (
   </Box>
 );
 
-// ── CustomRadioDropdown ──────────────────────────────────────────
 const DropdownIcon = () => (
   <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
     <path d="M7 7.5L14 0.5L0 0.5L7 7.5Z" fill="#3F77A5" />
@@ -107,7 +104,6 @@ const CustomDropdown = ({ placeholder, options, value, onChange, name, isRequire
   );
 };
 
-// ── PhoneInput (same logic as ContactUsForm) ─────────────────────
 const PhoneInput = ({ value, onChange, isRequired, inputRef, hasError }) => {
   const currentCountry = countryData.find((c) => c.dial_code === value.code) || countryData[0];
   const [search, setSearch] = useState("");
@@ -192,15 +188,13 @@ const PhoneInput = ({ value, onChange, isRequired, inputRef, hasError }) => {
   );
 };
 
-// ── FieldLabel ───────────────────────────────────────────────────
 const FieldLabel = ({ label, required }) => (
   <Text fontSize="13px" fontWeight="500" color="gray.600" mb={1} fontFamily="'Wix Madefor Display', sans-serif">
     {label}{required && <Text as="span" color="red.500"> *</Text>}
   </Text>
 );
 
-// ── Main Component ───────────────────────────────────────────────
-const BookDemoSection = () => {
+const KBBookDemoSection = () => {
   const router = useRouter();
   const toast = useToast();
   const [isLoading, setIsLoading] = useState(false);
@@ -255,7 +249,7 @@ const BookDemoSection = () => {
         body: JSON.stringify({
           ...form,
           phoneFull: `${form.phone.code}${form.phone.number}`,
-          formType: "Enterprise Demo",
+          formType: "Knowledge Base Demo",
           leadType: "VMukti",
         }),
       });
@@ -297,55 +291,37 @@ const BookDemoSection = () => {
           pb={{ base: "40px", md: "48px", lg: "56px" }}
           display="flex"
           flexDirection="column"
-          justifyContent="space-between"
+          justifyContent="center"
         >
-          <Box>
-            <Heading
-              as="h2"
-              fontSize={{ base: "2rem", md: "2.5rem", lg: "clamp(32px, 3.17vw, 48px)" }}
-              fontWeight="600"
-              fontFamily="'Wix Madefor Display', sans-serif"
-              color="white"
-              lineHeight="1"
-              letterSpacing="0"
-              mb={{ base: "20px", lg: "28px" }}
-            >
-              See Your Enterprise<br />Command Center
-            </Heading>
+          <Heading
+            as="h2"
+            fontSize={{ base: "2rem", md: "2.5rem", lg: "clamp(32px, 3.17vw, 48px)" }}
+            fontWeight="600"
+            fontFamily="'Wix Madefor Display', sans-serif"
+            color="white"
+            lineHeight="1.15"
+            letterSpacing="0"
+            mb={{ base: "20px", lg: "24px" }}
+          >
+            Can&apos;t find what<br />you&apos;re looking for?
+          </Heading>
 
-            {/* Arrow icon */}
-            <Box mb={{ base: "20px", lg: "28px" }}>
-              <svg width="34" height="34" viewBox="0 0 33 33" fill="none">
-                <path d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z" fill="white" />
-              </svg>
-            </Box>
-
-            <Text
-              fontSize={{ base: "0.9375rem", lg: "1rem" }}
-              fontWeight="500"
-              fontFamily="'Wix Madefor Display', sans-serif"
-              color="rgba(255,255,255,0.85)"
-              lineHeight="1.6"
-            >
-              Get a live demo tailored to your multi-site setup. Our team will walk you through the platform with your specific requirements.
-            </Text>
+          {/* Diagonal arrow */}
+          <Box mb={{ base: "20px", lg: "24px" }}>
+            <svg width="34" height="34" viewBox="0 0 33 33" fill="none">
+              <path d="M30 33C31.6569 33 33 31.6569 33 30V3C33 1.34315 31.6569 0 30 0C28.3431 0 27 1.34315 27 3V27H3C1.34315 27 0 28.3431 0 30C-4.76837e-07 31.6569 1.34315 33 3 33H30ZM2.87868 7.12132L27.8787 32.1213L32.1213 27.8787L7.12132 2.87868L2.87868 7.12132Z" fill="white" />
+            </svg>
           </Box>
 
-          {/* Bottom — shield icon + trust text */}
-          <Box mt={{ base: "40px", lg: "56px" }}>
-            <Box mb="12px">
-              <img src="/assets/shield.svg" alt="Trusted" width="52" height="60" />
-            </Box>
-            <Text
-              fontSize="1rem"
-              fontWeight="600"
-              fontFamily="'Wix Madefor Display', sans-serif"
-              color="white"
-              lineHeight="1"
-            >
-              Trusted by 900+ enterprises worldwide
-            </Text>
-          </Box>
+          <Text
+            fontSize={{ base: "0.9375rem", lg: "1rem" }}
+            fontWeight="500"
+            fontFamily="'Wix Madefor Display', sans-serif"
+            color="rgba(255,255,255,0.85)"
+            lineHeight="1.6"
+          >
+            Our surveillance experts are ready to answer your specific questions and help you find the right solution.
+          </Text>
         </MotionBox>
 
         {/* ── RIGHT PANEL ── */}
@@ -363,7 +339,6 @@ const BookDemoSection = () => {
           as="form"
           onSubmit={handleSubmit}
         >
-          {/* Form title — centered */}
           <Heading
             as="h3"
             fontSize={{ base: "1.75rem", md: "2rem", lg: "clamp(24px, 2.37vw, 36px)" }}
@@ -378,10 +353,8 @@ const BookDemoSection = () => {
             <Box as="span" color="#DB7B3A">Live Demo</Box>
           </Heading>
 
-          {/* Form grid */}
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
 
-            {/* Full Name */}
             <Box>
               <FieldLabel label="Full Name" required />
               <RequiredPlaceholder text="e.g. John Smith" hasValue={!!form.fullName} isRequired>
@@ -394,7 +367,6 @@ const BookDemoSection = () => {
               </RequiredPlaceholder>
             </Box>
 
-            {/* Country */}
             <Box>
               <FieldLabel label="Country" />
               <CustomDropdown
@@ -404,7 +376,6 @@ const BookDemoSection = () => {
               />
             </Box>
 
-            {/* Email */}
             <Box>
               <FieldLabel label="Email Address" required />
               <RequiredPlaceholder text="e.g. john@company.com" hasValue={!!form.email} isRequired>
@@ -417,7 +388,6 @@ const BookDemoSection = () => {
               </RequiredPlaceholder>
             </Box>
 
-            {/* City */}
             <Box>
               <FieldLabel label="City" required />
               <RequiredPlaceholder text="e.g. Mumbai" hasValue={!!form.city} isRequired>
@@ -429,7 +399,6 @@ const BookDemoSection = () => {
               </RequiredPlaceholder>
             </Box>
 
-            {/* Phone */}
             <Box>
               <FieldLabel label="Phone Number" required />
               <PhoneInput
@@ -438,7 +407,6 @@ const BookDemoSection = () => {
               />
             </Box>
 
-            {/* Business Profile */}
             <Box>
               <FieldLabel label="Business Profile" />
               <CustomDropdown
@@ -448,7 +416,6 @@ const BookDemoSection = () => {
               />
             </Box>
 
-            {/* Company Name */}
             <Box>
               <FieldLabel label="Company Name" required />
               <RequiredPlaceholder text="e.g. Acme Corporation" hasValue={!!form.companyName} isRequired>
@@ -461,7 +428,6 @@ const BookDemoSection = () => {
               </RequiredPlaceholder>
             </Box>
 
-            {/* Number of Sites */}
             <Box>
               <FieldLabel label="Number of Sites" />
               <CustomDropdown
@@ -473,7 +439,6 @@ const BookDemoSection = () => {
 
           </SimpleGrid>
 
-          {/* Book Demo button */}
           <Box mt={{ base: "20px", md: "28px" }}>
             <Button
               type="submit"
@@ -498,4 +463,4 @@ const BookDemoSection = () => {
   );
 };
 
-export default BookDemoSection;
+export default KBBookDemoSection;

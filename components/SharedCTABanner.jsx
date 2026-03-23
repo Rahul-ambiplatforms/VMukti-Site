@@ -6,7 +6,7 @@ export default function SharedCTABanner({
   title = "Ready to Transform Your Enterprise Security?",
   subtitle = "Join 900+ enterprises worldwide using VMukti's AI-powered surveillance platform.",
   wrapperBg = 'transparent',
-  wrapperPx = { base: '16px', md: '32px' },
+  wrapperPx = { base: '16px', md: '33px' },
   wrapperPb,
   wrapperMb,
 }) {
@@ -16,7 +16,7 @@ export default function SharedCTABanner({
       px={wrapperPx}
       pb={wrapperPb}
       mb={wrapperMb}
-      maxW="1448px"
+      maxW="1512px"
       mx="auto"
     >
       <Flex

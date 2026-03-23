@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Box, Flex, Text, Image } from "@chakra-ui/react";
 import Link from "next/link";
 
-const tabs = [
+const DEFAULT_TABS = [
   {
     id: "enterprise",
     label: "Multi-Campus Enterprise",
@@ -66,11 +66,25 @@ const tabs = [
   },
 ];
 
-const IndustryUseCases = () => {
-  const [activeTab, setActiveTab] = useState("enterprise");
+const DEFAULT_HEADING = (
+  <>
+    Built for{" "}
+    <Box as="span" color="#000000" fontWeight="700">Every</Box>{" "}
+    <Box as="span" color="#DB7B3A" fontWeight="700">Industry</Box>
+  </>
+);
+
+const DEFAULT_SUBHEADING = "See how enterprises across industries leverage the Command Center for their unique operational needs.";
+
+const IndustryUseCases = ({
+  heading,
+  subheading = DEFAULT_SUBHEADING,
+  tabs = DEFAULT_TABS,
+}) => {
+  const [activeTab, setActiveTab] = useState(tabs[0]?.id);
 
   return (
-    <Box py={{ base: "24px", md: "32px" }} maxW="1512px" mx="auto" px={{ base: "16px", lg: "33px" }}>
+    <Box py={{ base: "24px", md: "32px" }} maxW="1512px" mx="auto" px={{ base: "16px", md: "33px" }}>
       <Box
         bg="white"
         borderRadius="24px"
@@ -89,9 +103,7 @@ const IndustryUseCases = () => {
           color="#3F77A5"
           mb="4px"
         >
-          Built for{" "}
-          <Box as="span" color="#000000" fontWeight="700">Every</Box>{" "}
-          <Box as="span" color="#DB7B3A" fontWeight="700">Industry</Box>
+          {heading ?? DEFAULT_HEADING}
         </Text>
         <Text
           fontSize={{ base: "0.875rem", md: "1rem" }}
@@ -100,14 +112,69 @@ const IndustryUseCases = () => {
           mb={{ base: "28px", md: "40px", lg: "56px" }}
           maxW="440px"
         >
-          See how enterprises across industries leverage the Command Center for their unique operational needs.
+          {subheading}
         </Text>
 
-        {/* Cards row */}
+        {/* Mobile accordion layout */}
+        <Box display={{ base: "block", md: "none" }}>
+          {tabs.map((tab) => {
+            const isActive = activeTab === tab.id;
+            return (
+              <Box
+                key={tab.id}
+                bg={tab.bg}
+                borderRadius="16px"
+                mb="12px"
+                overflow="hidden"
+                cursor="pointer"
+                onClick={() => setActiveTab(tab.id)}
+              >
+                {isActive ? (
+                  <Box p="20px">
+                    <Text fontSize="15px" fontWeight="700" fontFamily="'Wix Madefor Display', sans-serif" mb="10px">
+                      {tab.label}
+                    </Text>
+                    <Box w="28px" h="2px" bg="#3F77A5" mb="14px" borderRadius="1px" />
+                    <Text fontSize="13px" color="#555" lineHeight="1.65" fontFamily="'Wix Madefor Display', sans-serif" mb="16px">
+                      {tab.description}
+                    </Text>
+                    <Box display="flex" flexDirection="column" gap="8px" mb="20px">
+                      {tab.bullets.map((b) => (
+                        <Flex key={b} align="flex-start" gap="8px">
+                          <Text color="#3F77A5" fontSize="13px" flexShrink={0} mt="1px">✓</Text>
+                          <Text fontSize="13px" color="#444" lineHeight="1.5" fontFamily="'Wix Madefor Display', sans-serif">{b}</Text>
+                        </Flex>
+                      ))}
+                    </Box>
+                    <Flex align="center" gap="8px">
+                      <Text fontSize="14px" fontWeight="600" fontFamily="'Wix Madefor Display', sans-serif" color="#1A1A2E">
+                        Know More
+                      </Text>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#1A1A2E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </Flex>
+                  </Box>
+                ) : (
+                  <Box px="20px" py="16px">
+                    <Flex align="center" gap="10px">
+                      <Text fontSize="14px" fontWeight="600" fontFamily="'Wix Madefor Display', sans-serif" color="#1A1A2E">
+                        {tab.label}
+                      </Text>
+                      <Box w="2px" h="20px" bg="#3F77A5" borderRadius="1px" flexShrink={0} />
+                    </Flex>
+                  </Box>
+                )}
+              </Box>
+            );
+          })}
+        </Box>
+
+        {/* Desktop expand layout */}
         <Flex
-          direction={{ base: "column", md: "row" }}
+          display={{ base: "none", md: "flex" }}
           gap="16px"
-          h={{ base: "auto", md: "439px" }}
+          h="439px"
         >
           {tabs.map((tab) => {
             const isActive = activeTab === tab.id;
@@ -123,8 +190,7 @@ const IndustryUseCases = () => {
                 }}
               >
                 <Flex
-                  h={{ base: "auto", md: "439px" }}
-                  minH={{ base: "120px", md: "unset" }}
+                  h="439px"
                   borderRadius="24px"
                   overflow="hidden"
                   bg={tab.bg}
@@ -149,8 +215,8 @@ const IndustryUseCases = () => {
                   >
                     {/* Text panel */}
                     <Box
-                      p={{ base: "20px", md: "28px", lg: "32px" }}
-                      w={{ base: "100%", md: "280px", lg: "320px" }}
+                      p={{ md: "28px", lg: "32px" }}
+                      w={{ md: "280px", lg: "320px" }}
                       flexShrink={0}
                       display="flex"
                       flexDirection="column"
@@ -208,10 +274,7 @@ const IndustryUseCases = () => {
                         fontSize="14px"
                         fontWeight="600"
                         fontFamily="'Wix Madefor Display', sans-serif"
-                        sx={{
-                          writingMode: { base: "horizontal-tb", md: "vertical-rl" },
-                          transform: { base: "none", md: "rotate(180deg)" },
-                        }}
+                        sx={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
                       >
                         {tab.label}
                       </Text>
@@ -229,33 +292,23 @@ const IndustryUseCases = () => {
         <Flex justify="flex-end" gap="8px" mt="24px">
           <Box
             as="button"
-            w="36px" h="36px"
-            borderRadius="50%"
-            border="1.5px solid #D1D5DB"
-            display="flex" alignItems="center" justifyContent="center"
             cursor="pointer"
-            _hover={{ bg: "#F2F4F7" }}
             onClick={() => {
               const idx = tabs.findIndex(t => t.id === activeTab);
               setActiveTab(tabs[(idx - 1 + tabs.length) % tabs.length].id);
             }}
           >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#1A1A2E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            <Image src="/assets/nevigate-left.svg" alt="Previous" w="31px" h="31px" />
           </Box>
           <Box
             as="button"
-            w="36px" h="36px"
-            borderRadius="50%"
-            border="1.5px solid #D1D5DB"
-            display="flex" alignItems="center" justifyContent="center"
             cursor="pointer"
-            _hover={{ bg: "#F2F4F7" }}
             onClick={() => {
               const idx = tabs.findIndex(t => t.id === activeTab);
               setActiveTab(tabs[(idx + 1) % tabs.length].id);
             }}
           >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#1A1A2E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            <Image src="/assets/nevigate-right.svg" alt="Next" w="31px" h="31px" />
           </Box>
         </Flex>
 

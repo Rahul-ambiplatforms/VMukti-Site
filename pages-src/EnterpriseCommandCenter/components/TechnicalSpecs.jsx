@@ -59,8 +59,87 @@ const TechnicalSpecs = () => {
         Built for scale, security, and compliance from day one.
       </Text>
 
-      {/* Table card */}
+      {/* Mobile layout — two stacked 2-column tables */}
+      <Box display={{ base: "block", md: "none" }} maxW="600px" mx="auto">
+        {[
+          { title: "INFRASTRUCTURE", rows: infraRows },
+          { title: "PLATFORM", rows: platformRows },
+        ].map((section) => (
+          <MotionBox
+            key={section.title}
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+            bg="white"
+            borderRadius="16px"
+            overflow="hidden"
+            border="1px solid #E2E8F0"
+            mb="16px"
+          >
+            {/* Section header */}
+            <Box
+              bg="#4A7FA8"
+              px="20px"
+              py="14px"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <Text
+                fontSize="0.75rem"
+                fontWeight="700"
+                letterSpacing="0.12em"
+                color="white"
+                fontFamily="'Wix Madefor Display', sans-serif"
+              >
+                {section.title}
+              </Text>
+            </Box>
+            {/* Rows */}
+            {section.rows.map((row) => (
+              <Flex key={row.label} borderTop="1px solid #E2E8F0" minH="52px">
+                <Box
+                  flex="1"
+                  display="flex"
+                  alignItems="center"
+                  px="16px"
+                  py="12px"
+                  borderRight="1.5px solid #E2E8F0"
+                >
+                  <Text
+                    fontSize="0.875rem"
+                    color="#555"
+                    fontFamily="'Wix Madefor Display', sans-serif"
+                  >
+                    {row.label}
+                  </Text>
+                </Box>
+                <Box
+                  flex="1"
+                  display="flex"
+                  alignItems="center"
+                  px="16px"
+                  py="12px"
+                >
+                  <Text
+                    fontSize="0.875rem"
+                    fontWeight="700"
+                    color="#1A1A2E"
+                    fontFamily="'Wix Madefor Display', sans-serif"
+                  >
+                    {row.value}
+                  </Text>
+                </Box>
+              </Flex>
+            ))}
+          </MotionBox>
+        ))}
+      </Box>
+
+      {/* Desktop layout — 4-column table */}
       <MotionBox
+        display={{ base: "none", md: "block" }}
         initial={{ opacity: 0, y: 28 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

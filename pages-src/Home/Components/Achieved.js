@@ -278,7 +278,7 @@ const Achieved = ({ heading, description, data = achievementsData }) => {
             // minW="100%"
             animation={`${marqueeScroll} 15s linear infinite`}
           >
-            {[...achievementsData, ...achievementsData].map((item, index) => (
+            {[...data, ...data].map((item, index) => (
               <Box
                 key={index} // Added unique key for mapping
                 role="img"

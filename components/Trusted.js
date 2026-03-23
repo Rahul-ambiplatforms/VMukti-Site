@@ -60,7 +60,7 @@ const scrollLTR = keyframes`
   100% { transform: translateX(0); }
 `;
 
-const Trusted = () => {
+const Trusted = ({ title = "Trusted By" }) => {
   return (
     <Box my="2%" w="100vw">
       <Center>
@@ -71,7 +71,7 @@ const Trusted = () => {
           color="black"
           fontWeight={{ base: "600", md: "500" }}
         >
-          Trusted By
+          {title}
         </Heading>
       </Center>
 
