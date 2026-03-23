@@ -1,5 +1,5 @@
 'use client';
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
@@ -122,6 +122,67 @@ function Cell({ value }) {
   return <DashIcon />;
 }
 
+// ─── Animated accordion panel ─────────────────────────────────────────────────
+
+function AnimatedPanel({ isOpen, children }) {
+  const contentRef = useRef(null);
+  const [height, setHeight] = useState(isOpen ? 'auto' : 0);
+  const [overflow, setOverflow] = useState(isOpen ? 'visible' : 'hidden');
+  const isFirstRender = useRef(true);
+
+  const measureHeight = useCallback(() => {
+    if (contentRef.current) {
+      return contentRef.current.scrollHeight;
+    }
+    return 0;
+  }, []);
+
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+
+    if (isOpen) {
+      const measuredHeight = measureHeight();
+      setOverflow('hidden');
+      setHeight(measuredHeight + 'px');
+
+      const timer = setTimeout(() => {
+        setHeight('auto');
+        setOverflow('visible');
+      }, 350);
+      return () => clearTimeout(timer);
+    } else {
+      const measuredHeight = measureHeight();
+      setHeight(measuredHeight + 'px');
+      setOverflow('hidden');
+
+      // Force reflow then collapse
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setHeight(0);
+        });
+      });
+    }
+  }, [isOpen, measureHeight]);
+
+  return (
+    <div
+      style={{
+        height,
+        overflow,
+        transition: 'height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease',
+        opacity: isOpen ? 1 : 0,
+      }}
+    >
+      <div ref={contentRef}>
+        {children}
+      </div>
+    </div>
+  );
+}
+
 // ─── Component ────────────────────────────────────────────────────────────────
 
 const CompareFeatures = () => {
@@ -200,8 +261,8 @@ const CompareFeatures = () => {
                   <ChevronIcon isOpen={isOpen} />
                 </Flex>
 
-                {/* Expanded table — width 1372 */}
-                {isOpen && (
+                {/* Expanded table — animated */}
+                <AnimatedPanel isOpen={isOpen}>
                   <Box overflowX="auto" sx={{ WebkitOverflowScrolling: 'touch' }}>
                     <table
                       style={{
@@ -288,7 +349,7 @@ const CompareFeatures = () => {
                       </tbody>
                     </table>
                   </Box>
-                )}
+                </AnimatedPanel>
               </Box>
             );
           })}
