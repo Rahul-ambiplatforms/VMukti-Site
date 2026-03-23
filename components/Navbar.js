@@ -129,9 +129,10 @@ const dropdownItems = {
     // { label: "Customer Stories", path: "/customer-stories" },
     { label: "Solution Comparisons", path: "/solutions-comparison" },
     { label: "Enterprise Command Center", path: "/enterprise-command-center" },
-    { label: "Knowledge Base", path: "/knowledge-base" },
-    { label: "ROI Calculator", path: "/roi-calculator" },
-    { label: "Pricing", path: "/pricing" },
+    
+    // { label: "Knowledge Base", path: "/knowledge-base" },
+    // { label: "ROI Calculator", path: "/roi-calculator" },
+    // { label: "Pricing", path: "/pricing" },
   ],
   global: [
     { label: "USA", path: "/usa/video-surveillance-solutions" },
@@ -144,7 +145,8 @@ const dropdownItems = {
     // { label: 'Achievements', path: '/whoweare/achievements' },
     // { label: "Blogs", path: "/blog" },
     { label: "Careers", path: "/careers" },
-    { label: "Partners", path: "/partners" },
+    // { label: "Partners", path: "/partners" },
+    
     // { label: 'Help Desk', path: '/whoweare/help-desk' },
     // { label: 'Terms & Condition', path: '/whoweare/terms' },
     // { label: 'Warranty Policy', path: '/whoweare/warranty' },

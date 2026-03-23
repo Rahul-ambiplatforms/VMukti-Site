@@ -39,7 +39,8 @@ const whoWeAreLinks = [
   { text: "Terms & Conditions", path: "/terms-and-conditions" },
   { text: "Privacy Policy ", path: "/privacy-policy" },
   { text: "Careers", path: "/careers" },
-  { text: "Partners", path: "/partners" },
+  // { text: "Partners", path: "/partners" },
+
   // { text: "Trademark Policy" },
   // { text: "Event Spotlight", path: "/whoweare/eventspotlight" },
   // { text: "Social Impact", path: "/whoweare/socialimpact" },
@@ -68,9 +69,9 @@ const resources = [
 
   // Column 2
   { text: "Solution Comparisons", path: "/solutions-comparison" },
-  { text: "Knowledge Base", path: "/knowledge-base" },
-  { text: "ROI Calculator", path: "/roi-calculator" },
-  { text: "Pricing", path: "/pricing" },
+  // { text: "Knowledge Base", path: "/knowledge-base" },
+  // { text: "ROI Calculator", path: "/roi-calculator" },
+  // { text: "Pricing", path: "/pricing" },
 ];
 
 const ourSolutionsLinks = [
