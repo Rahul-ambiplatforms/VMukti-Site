@@ -3716,7 +3716,7 @@ const seoPageDataExpansion = {
     }
   },
   "vmukti-vs-milestone": {
-    "slug": "/compare/vmukti-vs-milestone",
+    "slug": "/solutions-comparison/vmukti-vs-milestone",
     "title": "Cloud Video Surveillance Milestone | VMukti Enterprise Security",
     "metaDescription": "Enterprise cloud video surveillance for Milestone. AI-powered analytics, 99.99% uptime, multi-site management. VMukti cloud VMS.",
     "keywords": [
@@ -3802,7 +3802,7 @@ const seoPageDataExpansion = {
     }
   },
   "vmukti-vs-genetec": {
-    "slug": "/compare/vmukti-vs-genetec",
+    "slug": "/solutions-comparison/vmukti-vs-genetec",
     "title": "Cloud Video Surveillance Genetec | VMukti Enterprise Security",
     "metaDescription": "Enterprise cloud video surveillance for Genetec. AI-powered analytics, 99.99% uptime, multi-site management. VMukti cloud VMS.",
     "keywords": [
@@ -3888,7 +3888,7 @@ const seoPageDataExpansion = {
     }
   },
   "vmukti-vs-avigilon": {
-    "slug": "/compare/vmukti-vs-avigilon",
+    "slug": "/solutions-comparison/vmukti-vs-avigilon",
     "title": "Cloud Video Surveillance Avigilon | VMukti Enterprise Security",
     "metaDescription": "Enterprise cloud video surveillance for Avigilon. AI-powered analytics, 99.99% uptime, multi-site management. VMukti cloud VMS.",
     "keywords": [
@@ -3974,7 +3974,7 @@ const seoPageDataExpansion = {
     }
   },
   "vmukti-vs-verkada": {
-    "slug": "/compare/vmukti-vs-verkada",
+    "slug": "/solutions-comparison/vmukti-vs-verkada",
     "title": "Cloud Video Surveillance Verkada | VMukti Enterprise Security",
     "metaDescription": "Enterprise cloud video surveillance for Verkada. AI-powered analytics, 99.99% uptime, multi-site management. VMukti cloud VMS.",
     "keywords": [
@@ -4060,7 +4060,7 @@ const seoPageDataExpansion = {
     }
   },
   "vmukti-vs-rhombus": {
-    "slug": "/compare/vmukti-vs-rhombus",
+    "slug": "/solutions-comparison/vmukti-vs-rhombus",
     "title": "Cloud Video Surveillance Rhombus | VMukti Enterprise Security",
     "metaDescription": "Enterprise cloud video surveillance for Rhombus. AI-powered analytics, 99.99% uptime, multi-site management. VMukti cloud VMS.",
     "keywords": [

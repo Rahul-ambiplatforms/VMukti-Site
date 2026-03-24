@@ -1,6 +1,6 @@
 const seoPageDataCompare = {
   "vmukti-vs-milestone": {
-    slug: "/compare/vmukti-vs-milestone",
+    slug: "/solutions-comparison/vmukti-vs-milestone",
     title: "VMukti vs Milestone XProtect | Cloud VMS Comparison",
     metaDescription: "Compare VMukti cloud VMS with Milestone XProtect. See why VMukti's AI-powered platform serves 700+ districts with advanced analytics and true cloud architecture.",
     keywords: ["VMukti vs Milestone", "cloud VMS comparison", "XProtect alternative", "AI video management"],
@@ -63,7 +63,7 @@ const seoPageDataCompare = {
   },
 
   "vmukti-vs-genetec": {
-    slug: "/compare/vmukti-vs-genetec",
+    slug: "/solutions-comparison/vmukti-vs-genetec",
     title: "VMukti vs Genetec Security Center | VMS Comparison 2025",
     metaDescription: "VMukti vs Genetec: Compare cloud VMS platforms. Discover why VMukti's integrated AI and government integration suit Indian enterprises better.",
     keywords: ["VMukti vs Genetec", "Security Center alternative", "cloud VMS platform", "video management system"],
@@ -126,7 +126,7 @@ const seoPageDataCompare = {
   },
 
   "vmukti-vs-hikvision": {
-    slug: "/compare/vmukti-vs-hikvision",
+    slug: "/solutions-comparison/vmukti-vs-hikvision",
     title: "VMukti vs Hikvision | Cloud VMS Platform Comparison",
     metaDescription: "VMukti vs Hikvision: Compare enterprise VMS solutions. Learn why VMukti's cloud architecture serves 700+ Indian districts better than hardware-centric platforms.",
     keywords: ["VMukti vs Hikvision", "VMS comparison", "cloud surveillance", "AI video analytics"],
@@ -189,7 +189,7 @@ const seoPageDataCompare = {
   },
 
   "vmukti-vs-dahua": {
-    slug: "/compare/vmukti-vs-dahua",
+    slug: "/solutions-comparison/vmukti-vs-dahua",
     title: "VMukti vs Dahua | Enterprise VMS Comparison",
     metaDescription: "VMukti vs Dahua: Compare cloud and hybrid VMS solutions. See why VMukti's platform is trusted by 700+ Indian government and enterprise deployments.",
     keywords: ["VMukti vs Dahua", "VMS platform comparison", "surveillance system", "enterprise video management"],
@@ -252,7 +252,7 @@ const seoPageDataCompare = {
   },
 
   "vmukti-vs-avigilon": {
-    slug: "/compare/vmukti-vs-avigilon",
+    slug: "/solutions-comparison/vmukti-vs-avigilon",
     title: "VMukti vs Avigilon Motorola | Cloud VMS Comparison",
     metaDescription: "VMukti vs Avigilon: Compare enterprise cloud VMS platforms. Learn why VMukti's AI and government integration serve Indian enterprises better.",
     keywords: ["VMukti vs Avigilon", "Motorola Solutions", "cloud VMS", "enterprise surveillance"],
@@ -315,7 +315,7 @@ const seoPageDataCompare = {
   },
 
   "vmukti-vs-cp-plus": {
-    slug: "/compare/vmukti-vs-cp-plus",
+    slug: "/solutions-comparison/vmukti-vs-cp-plus",
     title: "VMukti vs CP Plus | Cloud VMS Comparison",
     metaDescription: "VMukti vs CP Plus: Compare Indian VMS platforms. Discover why VMukti's cloud-native architecture and AI serve enterprises better.",
     keywords: ["VMukti vs CP Plus", "Indian VMS comparison", "cloud surveillance", "video management system"],
@@ -378,7 +378,7 @@ const seoPageDataCompare = {
   },
 
   "vmukti-vs-axis": {
-    slug: "/compare/vmukti-vs-axis",
+    slug: "/solutions-comparison/vmukti-vs-axis",
     title: "VMukti vs Axis Communications | VMS Comparison",
     metaDescription: "VMukti vs Axis: Compare enterprise VMS platforms. Learn why VMukti's integrated AI and cloud architecture serve 700+ Indian deployments.",
     keywords: ["VMukti vs Axis", "Communications VMS", "enterprise surveillance", "video management platform"],
@@ -441,7 +441,7 @@ const seoPageDataCompare = {
   },
 
   "vmukti-vs-eagle-eye": {
-    slug: "/compare/vmukti-vs-eagle-eye",
+    slug: "/solutions-comparison/vmukti-vs-eagle-eye",
     title: "VMukti vs Eagle Eye Networks | Cloud VMS Comparison",
     metaDescription: "VMukti vs Eagle Eye: Compare cloud VMS platforms. See why VMukti's AI and government integration suit Indian enterprises better.",
     keywords: ["VMukti vs Eagle Eye Networks", "cloud VMS", "video management system", "surveillance platform"],
@@ -882,7 +882,7 @@ const seoPageDataCompare = {
   },
 
   "vmukti-vs-verkada": {
-    slug: "/compare/vmukti-vs-verkada",
+    slug: "/solutions-comparison/vmukti-vs-verkada",
     title: "VMukti vs Verkada | Cloud VMS Comparison 2026",
     metaDescription: "Compare VMukti Cloud VMS with Verkada. Both cloud-native, but VMukti offers STQC certification, government Enterprise Command Center integration, and Azure Marketplace availability.",
     keywords: ["VMukti vs Verkada", "cloud VMS comparison", "Verkada alternative", "cloud video surveillance", "enterprise VMS"],

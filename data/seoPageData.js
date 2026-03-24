@@ -5760,7 +5760,7 @@ const seoPageData = {
     }
   },
   "vmukti-vs-milestone": {
-    "slug": "/compare/vmukti-vs-milestone",
+    "slug": "/solutions-comparison/vmukti-vs-milestone",
     "title": "VMukti vs Milestone XProtect - Comprehensive Comparison | VMukti",
     "metaDescription": "Compare VMukti vs Milestone XProtect. Detailed analysis of features, pricing, scalability, and AI capabilities. Find the best VMS solution for your enterprise.",
     "keywords": [
@@ -5832,7 +5832,7 @@ const seoPageData = {
     }
   },
   "vmukti-vs-genetec": {
-    "slug": "/compare/vmukti-vs-genetec",
+    "slug": "/solutions-comparison/vmukti-vs-genetec",
     "title": "VMukti vs Genetec Security Center - Comprehensive Comparison | VMukti",
     "metaDescription": "Compare VMukti vs Genetec Security Center. Detailed analysis of features, pricing, scalability, and AI capabilities. Find the best VMS solution for your enterpr",
     "keywords": [
@@ -5904,7 +5904,7 @@ const seoPageData = {
     }
   },
   "vmukti-vs-avigilon": {
-    "slug": "/compare/vmukti-vs-avigilon",
+    "slug": "/solutions-comparison/vmukti-vs-avigilon",
     "title": "VMukti vs Avigilon Unity - Comprehensive Comparison | VMukti",
     "metaDescription": "Compare VMukti vs Avigilon Unity. Detailed analysis of features, pricing, scalability, and AI capabilities. Find the best VMS solution for your enterprise.",
     "keywords": [
@@ -5976,7 +5976,7 @@ const seoPageData = {
     }
   },
   "vmukti-vs-hikvision": {
-    "slug": "/compare/vmukti-vs-hikvision",
+    "slug": "/solutions-comparison/vmukti-vs-hikvision",
     "title": "VMukti vs Hikvision - Comprehensive Comparison | VMukti",
     "metaDescription": "Compare VMukti vs Hikvision. Detailed analysis of features, pricing, scalability, and AI capabilities. Find the best VMS solution for your enterprise.",
     "keywords": [
