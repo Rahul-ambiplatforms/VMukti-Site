@@ -38,7 +38,7 @@ const CARDS = [
       'Edge + Cloud hybrid vs cloud-only',
       'Enterprise-grade vs SMB-focused',
     ],
-    slug: 'vmukti-vs-verkada-vms',
+    slug: 'vmukti-vs-verkada',
   },
 ];
 
@@ -181,7 +181,7 @@ export default function HeadToHead() {
                   as="button"
                   align="center"
                   gap="8px"
-                  onClick={() => navigate(`/compare/${card.slug}`)}
+                  onClick={() => navigate(`/solutions-comparison/${card.slug}`)}
                   cursor="pointer"
                   _hover={{ opacity: 0.75 }}
                   transition="opacity 0.18s"
