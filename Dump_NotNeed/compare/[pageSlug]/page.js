@@ -3,7 +3,7 @@ import path from 'path';
 import { getPageData, getAllSlugsForCategory } from '../../../lib/seo-pages';
 import { generateLandingPageMetadata } from '../../../lib/metadata';
 import SEOLandingPageContent from '../../../components/SEOLandingPageContent';
-import ComparisonDetail from '../../../pages-src/ComparisonDetail/ComparisonDetail';
+import ComparisonDetail from '../../ComparisonDetail/ComparisonDetail';
 import { notFound } from 'next/navigation';
 
 const CATEGORY = 'compare';
