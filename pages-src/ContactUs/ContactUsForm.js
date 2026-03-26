@@ -505,7 +505,7 @@ const ContactUsForm = () => {
                 : Math.max(0, Number(formData.customerQuantity)),
             phoneFull: `${formData.phone.code}${formData.phone.number}`,
             formType: "Contact",
-            leadType: "VMukti",
+            leadType: "VMukti Website",
           }),
         }
       );
