@@ -169,8 +169,6 @@ const ContentSection = ({ sections }) => {
                     align="center"
                     maxW="781px"
                     mx="auto"
-                    // borderTop="1px solid #3F77A5"
-                    // borderBottom="1px solid #3F77A5"
                     py={{ base: '16px', md: '20px' }}
                   >
                     {section.stats.map((stat, i) => (

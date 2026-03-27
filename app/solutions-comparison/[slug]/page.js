@@ -3,7 +3,7 @@ import path from 'path';
 import { getPageData, getAllSlugsForCategory } from '../../../lib/seo-pages';
 import { generateLandingPageMetadata } from '../../../lib/metadata';
 import SEOLandingPageContent from '../../../components/SEOLandingPageContent';
-import ComparisonDetail from '../../ComparisonDetail/ComparisonDetail';
+import ComparisonDetail from '../../../pages-src/ComparisonDetail/ComparisonDetail';
 import { notFound } from 'next/navigation';
 
 const CATEGORY = 'compare';
@@ -19,15 +19,28 @@ function getComparisonJSON(slug) {
 }
 
 export async function generateStaticParams() {
-  const slugs = getAllSlugsForCategory(CATEGORY);
-  return slugs.map(slug => ({ pageSlug: slug }));
+  const seoSlugs = getAllSlugsForCategory(CATEGORY);
+
+  // Also include slugs from comparison JSON files
+  const comparisonsDir = path.join(process.cwd(), 'data', 'comparisons');
+  let jsonSlugs = [];
+  try {
+    jsonSlugs = fs.readdirSync(comparisonsDir)
+      .filter(f => f.endsWith('.json'))
+      .map(f => f.replace('.json', ''));
+  } catch {
+    // directory may not exist
+  }
+
+  const allSlugs = Array.from(new Set([...seoSlugs, ...jsonSlugs]));
+  return allSlugs.map(slug => ({ slug }));
 }
 
 export async function generateMetadata({ params }) {
-  const { pageSlug } = await params;
+  const { slug } = await params;
 
   // Try JSON file first for richer meta
-  const jsonData = getComparisonJSON(pageSlug);
+  const jsonData = getComparisonJSON(slug);
   if (jsonData?.meta) {
     return {
       title: jsonData.meta.title,
@@ -37,21 +50,20 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const pageData = getPageData(CATEGORY, pageSlug);
+  const pageData = getPageData(CATEGORY, slug);
   if (!pageData) return { title: 'Page Not Found' };
   return generateLandingPageMetadata(pageData);
 }
 
 export default async function Page({ params }) {
-  const { pageSlug } = await params;
+  const { slug } = await params;
 
   // Try loading rich JSON comparison data first
-  const jsonData = getComparisonJSON(pageSlug);
-  // Try seoData by URL slug, then strip trailing segments for mismatches (e.g. verkada-vms → verkada)
-  let seoData = getPageData(CATEGORY, pageSlug);
-  if (!seoData && pageSlug.includes('-')) {
-    // Try progressively shorter slugs to find a match
-    const parts = pageSlug.split('-');
+  const jsonData = getComparisonJSON(slug);
+  // Try seoData by URL slug, then strip trailing segments for mismatches
+  let seoData = getPageData(CATEGORY, slug);
+  if (!seoData && slug.includes('-')) {
+    const parts = slug.split('-');
     for (let i = parts.length - 1; i >= 3 && !seoData; i--) {
       seoData = getPageData(CATEGORY, parts.slice(0, i).join('-'));
     }

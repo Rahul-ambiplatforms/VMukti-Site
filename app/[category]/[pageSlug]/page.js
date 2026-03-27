@@ -4,7 +4,7 @@ import SEOLandingPageContent from '../../../components/SEOLandingPageContent';
 import { notFound } from 'next/navigation';
 
 // Routes that have their OWN dedicated folders in app/ (exclude from catch-all)
-const EXCLUDED_CATEGORIES = ['blog', 'solution', 'industry', 'uk', 'usa', 'events', 'Ambicam'];
+const EXCLUDED_CATEGORIES = ['blog', 'solution', 'industry', 'uk', 'usa', 'events', 'Ambicam', 'solutions-comparison'];
 
 export async function generateStaticParams() {
   const allPairs = getAllCategorySlugPairs();
