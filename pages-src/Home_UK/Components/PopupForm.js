@@ -469,7 +469,7 @@ const PopupForm = ({ isOpen, setIsOpen }) => {
                 : Math.max(0, Number(formData.customerQuantity)),
             phoneFull: `${formData.phone.code}${formData.phone.number}`,
             formType: "UK Inquiry",
-            leadType: "VMukti UK",
+            leadType: "VMukti Website - UK Inquiry",
           }),
         }
       );
