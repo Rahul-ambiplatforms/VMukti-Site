@@ -1,7 +1,6 @@
 'use client';
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 const ArrowSVG = () => (
   <svg width="33" height="34" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -144,14 +143,12 @@ const ContentSection = ({ sections }) => {
                   borderRadius="24px"
                   overflow="hidden"
                   minH={{ base: '300px', lg: '682px' }}
-                  position="relative"
+                  h={{ base: '300px', lg: '682px' }}
                 >
-                  <Image
-                    src={'/assets/home_solution_3.png'}
+                  <img
+                    src={section.image || '/assets/home_solution_3.png'}
                     alt={section.title}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    sizes="(max-width: 1024px) 100vw, 820px"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 </Box>
               </Flex>
