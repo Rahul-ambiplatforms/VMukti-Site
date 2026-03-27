@@ -147,7 +147,7 @@ const ContentSection = ({ sections }) => {
                   position="relative"
                 >
                   <Image
-                    src={section.image || '/assets/home_solution_3.png'}
+                    src={'/assets/home_solution_3.png'}
                     alt={section.title}
                     fill
                     style={{ objectFit: 'cover' }}
