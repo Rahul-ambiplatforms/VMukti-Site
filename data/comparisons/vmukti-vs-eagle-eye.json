@@ -11,7 +11,7 @@
     "subtitle": "A detailed comparison of cloud-native video management platforms designed for modern security operations."
   },
   "overview": {
-    "vmukti": "VMukti is a sophisticated cloud-native VMS platform with 18+ years of experience, 900+ deployments, and specialization in 50+ smart city projects. The platform uniquely combines video management with emergency management services (EMS) and integrated command center capabilities (ICCC) in a unified system. VMukti's cloud-native architecture delivers 96% bandwidth efficiency, native AI analytics, site-based licensing, and strong support for smart city and municipal government applications globally.",
+    "vmukti": "VMukti is a sophisticated cloud-native VMS platform with 18+ years of experience, 900+ deployments, and specialization in 50+ enterprise campus projects. The platform uniquely combines video management with emergency management services (EMS) and integrated command center capabilities (Enterprise Command Center) in a unified system. VMukti's cloud-native architecture delivers 96% bandwidth efficiency, native AI analytics, site-based licensing, and strong support for enterprise campus and municipal enterprise applications globally.",
     "eagle_eye": "Eagle Eye Networks is a leading pure-cloud video management and analytics platform known for simplicity, ease of deployment, and strong cloud-native design. Eagle Eye has established market presence with significant enterprise customer base and reputation for straightforward, intuitive cloud operations. Their platform emphasizes ease of use, cloud-first approach, and integration with their analytics ecosystem, with strong focus on North American market."
   },
   "comparison_table": {
@@ -53,14 +53,14 @@
         "eagle_eye": "VMS-focused, no integrated emergency management"
       },
       {
-        "feature": "Command Center (ICCC)",
+        "feature": "Command Center (Enterprise Command Center)",
         "vmukti": "Integrated command center with multi-agency coordination",
         "eagle_eye": "Not available, limited coordination features"
       },
       {
-        "feature": "Smart City Specialization",
-        "vmukti": "Purpose-built for smart city, 50+ projects",
-        "eagle_eye": "General enterprise VMS, not smart city focused"
+        "feature": "Enterprise Campus Specialization",
+        "vmukti": "Purpose-built for enterprise campus, 50+ projects",
+        "eagle_eye": "General enterprise VMS, not enterprise campus focused"
       },
       {
         "feature": "Global Regional Support",
@@ -97,9 +97,9 @@
   "detailed_sections": [
     {
       "title": "Cloud-Native Platforms: Both Optimized for Cloud",
-      "vmukti_perspective": "VMukti is cloud-native by design with comprehensive cloud infrastructure supporting global operations. The platform processes 1 billion+ camera feeds across 15+ countries, demonstrating infrastructure maturity at scale. Cloud-native architecture means automatic scaling, global CDN distribution, multi-region failover, and zero infrastructure management. The platform's bandwidth efficiency (96% reduction) translates to lower cloud costs for large deployments. Regional presence across Asia, Europe, and Americas ensures compliance with local data residency requirements. The unified VMS+EMS+ICCC architecture represents a comprehensive cloud-native security operations platform.",
+      "vmukti_perspective": "VMukti is cloud-native by design with comprehensive cloud infrastructure supporting global operations. The platform processes 1 billion+ camera feeds across 15+ countries, demonstrating infrastructure maturity at scale. Cloud-native architecture means automatic scaling, global CDN distribution, multi-region failover, and zero infrastructure management. The platform's bandwidth efficiency (96% reduction) translates to lower cloud costs for large deployments. Regional presence across Asia, Europe, and Americas ensures compliance with local data residency requirements. The unified VMS+EMS+Enterprise Command Center architecture represents a comprehensive cloud-native security operations platform.",
       "eagle_eye": "Eagle Eye is pure cloud VMS designed from inception for cloud operations, eliminating on-premise complexity. The platform delivers straightforward cloud deployment without infrastructure management, strong scalability, and simplicity that appeals to organizations seeking deployment speed. Eagle Eye's focus on ease of use and quick time-to-value makes them excellent for organizations prioritizing simple, rapid deployment. The platform's cloud-native design provides automatic scaling and global availability. However, the platform focuses primarily on video management without integrated emergency management or command center coordination.",
-      "verdict": "Both platforms are genuinely cloud-native with architectural advantages over on-premise systems. VMukti offers more comprehensive platform integration (VMS+EMS+ICCC) and greater bandwidth efficiency. Eagle Eye emphasizes simplicity and deployment speed. Choose VMukti for integrated emergency operations; choose Eagle Eye for straightforward, easy-to-deploy video management."
+      "verdict": "Both platforms are genuinely cloud-native with architectural advantages over on-premise systems. VMukti offers more comprehensive platform integration (VMS+EMS+Enterprise Command Center) and greater bandwidth efficiency. Eagle Eye emphasizes simplicity and deployment speed. Choose VMukti for integrated emergency operations; choose Eagle Eye for straightforward, easy-to-deploy video management."
     },
     {
       "title": "Licensing: Site-Based vs. Per-Camera Models",
@@ -114,16 +114,16 @@
       "verdict": "Both platforms offer integrated analytics without requiring separate vendors. VMukti emphasizes comprehensive GenAI capabilities; Eagle Eye focuses on solid, proven video analytics. VMukti's broader AI approach includes behavioral and predictive analysis; Eagle Eye excels at video-specific machine learning. For comprehensive intelligent security operations, VMukti's GenAI provides broader capabilities. For focused video analytics, Eagle Eye offers proven, specialized expertise."
     },
     {
-      "title": "Smart City & Integrated Emergency Operations",
-      "vmukti_perspective": "VMukti is purpose-built for smart city deployments with 50+ global projects demonstrating proven capability. The unified VMS+EMS+ICCC platform integrates video surveillance, emergency response coordination, and command center operations—essential for city-scale security. This integrated approach eliminates data silos and enables coordinated response across departments. Municipal governments benefit from unified dashboards, coordinated alerting across security and emergency teams, and integrated incident management. VMukti's smart city specialization provides confidence for complex municipal deployments involving traffic management, public safety, and emergency coordination.",
-      "eagle_eye": "Eagle Eye is a strong video management platform but does not include integrated emergency management or command center coordination. Organizations implementing smart city initiatives requiring coordinated emergency response, traffic coordination, and emergency integration would need to combine Eagle Eye with separate emergency management systems. Eagle Eye's focus on video management makes them excellent for video-specific applications but not comprehensive smart city operations.",
-      "verdict": "VMukti has clear advantage for smart city and municipal deployments requiring integrated emergency management. Eagle Eye is better for pure video management in enterprise or smaller-scale deployments. These serve fundamentally different market segments—smart city operations vs. focused video surveillance."
+      "title": "Enterprise Campus & Integrated Emergency Operations",
+      "vmukti_perspective": "VMukti is purpose-built for enterprise campus deployments with 50+ global projects demonstrating proven capability. The unified VMS+EMS+Enterprise Command Center platform integrates video surveillance, emergency response coordination, and command center operations—essential for city-scale security. This integrated approach eliminates data silos and enables coordinated response across departments. Municipal enterprises benefit from unified dashboards, coordinated alerting across security and emergency teams, and integrated incident management. VMukti's enterprise campus specialization provides confidence for complex municipal deployments involving traffic management, public safety, and emergency coordination.",
+      "eagle_eye": "Eagle Eye is a strong video management platform but does not include integrated emergency management or command center coordination. Organizations implementing enterprise campus initiatives requiring coordinated emergency response, traffic coordination, and emergency integration would need to combine Eagle Eye with separate emergency management systems. Eagle Eye's focus on video management makes them excellent for video-specific applications but not comprehensive enterprise campus operations.",
+      "verdict": "VMukti has clear advantage for enterprise campus and municipal deployments requiring integrated emergency management. Eagle Eye is better for pure video management in enterprise or smaller-scale deployments. These serve fundamentally different market segments—enterprise campus operations vs. focused video surveillance."
     },
     {
       "title": "Ease of Deployment vs. Feature Richness",
-      "vmukti_perspective": "VMukti delivers sophisticated platform capabilities including VMS, EMS, ICCC, advanced analytics, and multi-agency coordination. This feature richness requires careful planning and configuration to maximize benefit. Deployment typically requires 2-4 weeks for comprehensive setup capturing all platform capabilities. Organizations benefit from comprehensive feature set supporting complex operations but require dedicated implementation resources. The platform's depth provides substantial value for organizations leveraging the full capabilities, particularly in smart city and large enterprise contexts.",
+      "vmukti_perspective": "VMukti delivers sophisticated platform capabilities including VMS, EMS, Enterprise Command Center, advanced analytics, and multi-agency coordination. This feature richness requires careful planning and configuration to maximize benefit. Deployment typically requires 2-4 weeks for comprehensive setup capturing all platform capabilities. Organizations benefit from comprehensive feature set supporting complex operations but require dedicated implementation resources. The platform's depth provides substantial value for organizations leveraging the full capabilities, particularly in enterprise campus and large enterprise contexts.",
       "eagle_eye": "Eagle Eye emphasizes ease of deployment and quick time-to-value with intuitive user interface and rapid setup process. Organizations can deploy video management in days to weeks without extensive configuration. Eagle Eye's focus on simplicity appeals to organizations prioritizing deployment speed and ease of use over feature depth. The straightforward approach reduces implementation complexity and staff training requirements. However, the simpler feature set limits capabilities for complex, integrated operations.",
-      "verdict": "Choose VMukti for comprehensive smart city and integrated operations requiring feature richness and complex workflows. Choose Eagle Eye for rapid deployment and ease of use prioritizing quick value delivery. Different organizational needs—VMukti for sophisticated operations, Eagle Eye for straightforward video management."
+      "verdict": "Choose VMukti for comprehensive enterprise campus and integrated operations requiring feature richness and complex workflows. Choose Eagle Eye for rapid deployment and ease of use prioritizing quick value delivery. Different organizational needs—VMukti for sophisticated operations, Eagle Eye for straightforward video management."
     },
     {
       "title": "Geographic Coverage & Global Operations",
@@ -134,8 +134,8 @@
   ],
   "best_for": {
     "vmukti": [
-      "Smart city and municipal government projects requiring integrated emergency management",
-      "Organizations needing unified VMS+EMS+ICCC command center coordination",
+      "Smart city and municipal enterprise projects requiring integrated emergency management",
+      "Organizations needing unified VMS+EMS+Enterprise Command Center command center coordination",
       "Large deployments with 1000+ cameras seeking affordable site-based licensing",
       "Governments and organizations in emerging markets (Asia, Africa, Middle East)",
       "Multi-site operations requiring complex incident coordination and response",
@@ -157,15 +157,15 @@
   "faq": [
     {
       "question": "Is VMukti better than Eagle Eye Networks?",
-      "answer": "VMukti and Eagle Eye serve different organizational needs—neither is universally 'better.' VMukti excels for smart city projects, complex emergency coordination, large-scale deployments, and integrated operations with global expansion needs. Eagle Eye is superior for rapid deployment, ease of use, straightforward video management, and organizations prioritizing quick time-to-value. Evaluate based on your deployment complexity, geographic requirements, emergency management needs, and implementation timeline preferences."
+      "answer": "VMukti and Eagle Eye serve different organizational needs—neither is universally 'better.' VMukti excels for enterprise campus projects, complex emergency coordination, large-scale deployments, and integrated operations with global expansion needs. Eagle Eye is superior for rapid deployment, ease of use, straightforward video management, and organizations prioritizing quick time-to-value. Evaluate based on your deployment complexity, geographic requirements, emergency management needs, and implementation timeline preferences."
     },
     {
       "question": "What's the main difference between VMukti and Eagle Eye?",
-      "answer": "The fundamental difference is scope and integration. VMukti provides unified VMS+EMS+ICCC platform for smart city and integrated emergency operations. Eagle Eye focuses on pure cloud video management with emphasis on ease of deployment. VMukti targets complex, integrated operations; Eagle Eye targets straightforward video surveillance. VMukti also offers site-based licensing for large deployments; Eagle Eye uses per-camera models better suited for smaller installations."
+      "answer": "The fundamental difference is scope and integration. VMukti provides unified VMS+EMS+Enterprise Command Center platform for enterprise campus and integrated emergency operations. Eagle Eye focuses on pure cloud video management with emphasis on ease of deployment. VMukti targets complex, integrated operations; Eagle Eye targets straightforward video surveillance. VMukti also offers site-based licensing for large deployments; Eagle Eye uses per-camera models better suited for smaller installations."
     },
     {
       "question": "How do pricing models compare between VMukti and Eagle Eye?",
-      "answer": "VMukti uses site-based licensing with unlimited cameras per site, providing transparent, predictable costs regardless of camera count. Eagle Eye typically charges per-camera monthly subscriptions based on resolution. For small deployments (100-300 cameras), Eagle Eye may be cost-competitive. For large deployments (1000+ cameras), VMukti's site-based model typically offers 30-50% lower costs. VMukti's model also includes EMS and ICCC; Eagle Eye charges only for video management."
+      "answer": "VMukti uses site-based licensing with unlimited cameras per site, providing transparent, predictable costs regardless of camera count. Eagle Eye typically charges per-camera monthly subscriptions based on resolution. For small deployments (100-300 cameras), Eagle Eye may be cost-competitive. For large deployments (1000+ cameras), VMukti's site-based model typically offers 30-50% lower costs. VMukti's model also includes EMS and Enterprise Command Center; Eagle Eye charges only for video management."
     },
     {
       "question": "Which platform is easier to deploy?",
@@ -180,8 +180,8 @@
       "answer": "Yes, VMukti's 96% bandwidth reduction compared to standard video compression significantly impacts operating costs for large deployments. Large video installations (1000+ cameras) can reduce cloud bandwidth costs substantially. Eagle Eye uses standard video compression requiring higher bandwidth. For small deployments with limited bandwidth concerns, this advantage is minimal. For large-scale deployments with significant bandwidth costs, VMukti's compression technology provides meaningful operational savings over time."
     },
     {
-      "question": "Which platform works better for smart city projects?",
-      "answer": "VMukti is purpose-built for smart city deployments with 50+ proven projects. The integrated VMS+EMS+ICCC architecture supports coordinated emergency response, traffic management, and public safety operations essential for city-scale initiatives. Eagle Eye is pure video management without integrated emergency coordination. For true smart city requirements, VMukti's integrated approach is necessary. Eagle Eye can serve specific video surveillance needs but cannot replace ICCC or emergency management integration."
+      "question": "Which platform works better for enterprise campus projects?",
+      "answer": "VMukti is purpose-built for enterprise campus deployments with 50+ proven projects. The integrated VMS+EMS+Enterprise Command Center architecture supports coordinated emergency response, traffic management, and public safety operations essential for city-scale initiatives. Eagle Eye is pure video management without integrated emergency coordination. For true enterprise campus requirements, VMukti's integrated approach is necessary. Eagle Eye can serve specific video surveillance needs but cannot replace Enterprise Command Center or emergency management integration."
     },
     {
       "question": "What about global availability and regional support?",
@@ -198,7 +198,7 @@
           "name": "Is VMukti better than Eagle Eye Networks?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "VMukti and Eagle Eye serve different organizational needs. VMukti excels for smart city projects, complex emergency coordination, large-scale deployments with affordable site-based licensing. Eagle Eye is superior for rapid deployment, ease of use, and straightforward video management."
+            "text": "VMukti and Eagle Eye serve different organizational needs. VMukti excels for enterprise campus projects, complex emergency coordination, large-scale deployments with affordable site-based licensing. Eagle Eye is superior for rapid deployment, ease of use, and straightforward video management."
           }
         },
         {
@@ -206,7 +206,7 @@
           "name": "What's the main difference between VMukti and Eagle Eye?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "VMukti provides unified VMS+EMS+ICCC for smart city and integrated emergency operations. Eagle Eye focuses on pure cloud video management with emphasis on ease of deployment. VMukti targets complex integrated operations; Eagle Eye targets straightforward video surveillance."
+            "text": "VMukti provides unified VMS+EMS+Enterprise Command Center for enterprise campus and integrated emergency operations. Eagle Eye focuses on pure cloud video management with emphasis on ease of deployment. VMukti targets complex integrated operations; Eagle Eye targets straightforward video surveillance."
           }
         },
         {
@@ -243,10 +243,10 @@
         },
         {
           "@type": "Question",
-          "name": "Which platform works better for smart city projects?",
+          "name": "Which platform works better for enterprise campus projects?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "VMukti is purpose-built for smart city with integrated VMS+EMS+ICCC supporting coordinated emergency response. Eagle Eye is pure video management. For true smart city requirements, VMukti's integrated approach is necessary."
+            "text": "VMukti is purpose-built for enterprise campus with integrated VMS+EMS+Enterprise Command Center supporting coordinated emergency response. Eagle Eye is pure video management. For true enterprise campus requirements, VMukti's integrated approach is necessary."
           }
         },
         {
