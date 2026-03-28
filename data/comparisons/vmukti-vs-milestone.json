@@ -11,7 +11,7 @@
     "subtitle": "Enterprise VMS Comparison"
   },
   "overview": {
-    "vmukti": "VMukti is a cloud-native, AI-powered video management system with 18+ years of experience and 900+ deployments across 50+ smart city projects globally. Built for the cloud from inception, VMukti combines video management, emergency management services (EMS), and integrated command center capabilities (ICCC) into a unified platform, offering affordable pricing with site-based licensing and 96% bandwidth efficiency.",
+    "vmukti": "VMukti is a cloud-native, AI-powered video management system with 18+ years of experience and 900+ deployments across 50+ enterprise campus projects globally. Built for the cloud from inception, VMukti combines video management, emergency management services (EMS), and integrated command center capabilities (Enterprise Command Center) into a unified platform, offering affordable pricing with site-based licensing and 96% bandwidth efficiency.",
     "milestone": "Milestone XProtect is one of the most recognized names in video management software, known for its open platform architecture and extensive hardware compatibility. With a strong global presence and a mature ecosystem of integrations, Milestone has been a go-to choice for enterprise deployments. Their platform supports a wide range of cameras and integrations, but remains primarily rooted in on-premise infrastructure with growing cloud options."
   },
   "comparison_table": {
@@ -48,14 +48,14 @@
         "milestone": "Depends on server hardware and edition tier"
       },
       {
-        "feature": "Integrated EMS & ICCC",
-        "vmukti": "VMS + EMS + ICCC unified in single platform",
+        "feature": "Integrated EMS & Enterprise Command Center",
+        "vmukti": "VMS + EMS + Enterprise Command Center unified in single platform",
         "milestone": "VMS-only, no native emergency management"
       },
       {
-        "feature": "Smart City Capability",
-        "vmukti": "Purpose-built for smart city deployments, 50+ projects",
-        "milestone": "Enterprise focus, limited smart city specialization"
+        "feature": "Enterprise Campus Capability",
+        "vmukti": "Purpose-built for enterprise campus deployments, 50+ projects",
+        "milestone": "Enterprise focus, limited enterprise campus specialization"
       },
       {
         "feature": "Hardware Compatibility",
@@ -104,10 +104,10 @@
       "verdict": "VMukti's site-based licensing offers dramatically better economics for large-scale deployments. Milestone's per-camera model with hardware costs results in higher TCO at scale. Organizations typically see 40-60% lower total cost of ownership with VMukti for deployments exceeding 500 cameras."
     },
     {
-      "title": "Smart City & Government Capabilities",
-      "vmukti_perspective": "VMukti was purpose-built for smart city deployments with proven success across 50+ smart city projects globally. The platform's unified VMS + EMS + ICCC architecture is specifically designed for city-scale coordination, combining video management with emergency management services and integrated command center capabilities. This integrated approach eliminates data silos between security, emergency response, and operations teams.",
+      "title": "Enterprise Campus & Government Capabilities",
+      "vmukti_perspective": "VMukti was purpose-built for enterprise campus deployments with proven success across 50+ enterprise campus projects globally. The platform's unified VMS + EMS + Enterprise Command Center architecture is specifically designed for city-scale coordination, combining video management with emergency management services and integrated command center capabilities. This integrated approach eliminates data silos between security, emergency response, and operations teams.",
       "milestone_perspective": "Milestone XProtect excels in enterprise environments and has been deployed in some city projects. However, its primary focus is video management without native emergency management or command center capabilities. Smart city implementations require additional integrations and third-party solutions to achieve the coordination capabilities that VMukti provides natively. Government deployments may require customization for compliance with local standards.",
-      "verdict": "VMukti has a clear advantage for smart city and government projects requiring integrated emergency management and command center coordination. Milestone is better suited for traditional enterprise security deployments where VMS is the primary requirement without city-scale coordination needs."
+      "verdict": "VMukti has a clear advantage for enterprise campus and enterprise projects requiring integrated emergency management and command center coordination. Milestone is better suited for traditional enterprise security deployments where VMS is the primary requirement without city-scale coordination needs."
     },
     {
       "title": "Scalability & Global Operations",
@@ -118,7 +118,7 @@
   ],
   "best_for": {
     "vmukti": [
-      "Smart city and municipal government deployments requiring integrated emergency management",
+      "Smart city and municipal enterprise deployments requiring integrated emergency management",
       "Organizations seeking pure cloud deployment without on-premise infrastructure",
       "Multi-site operations with 500+ cameras requiring affordable, scalable licensing",
       "Deployments prioritizing AI-powered analytics integrated into the VMS",
@@ -209,7 +209,7 @@
         {
           "@type": "SoftwareApplication",
           "name": "VMukti",
-          "description": "Cloud-native VMS platform with integrated EMS and ICCC capabilities",
+          "description": "Cloud-native VMS platform with integrated EMS and Enterprise Command Center capabilities",
           "applicationCategory": "VideoManagementSystem",
           "operatingSystem": "Cloud-based, all platforms"
         },
