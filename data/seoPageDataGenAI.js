@@ -212,7 +212,7 @@ const seoPageDataGenAI = {
       },
       {
         title: "Seamless Integration with Enterprise Command Center",
-        content: "The Conversational AI layer integrates seamlessly with VMukti's Integrated Command & Control Center (Enterprise Command Center) platform. It becomes the unified interface for managing cameras, sensors, access control, and emergency response — all through natural conversation. Multi-operator support ensures that several team members can interact with the AI simultaneously without conflicts.",
+        content: "The Conversational AI layer integrates seamlessly with VMukti's Enterprise Command Center (Enterprise Command Center) platform. It becomes the unified interface for managing cameras, sensors, access control, and emergency response — all through natural conversation. Multi-operator support ensures that several team members can interact with the AI simultaneously without conflicts.",
         features: ["Full Enterprise Command Center platform integration", "Multi-sensor unified control", "Multi-operator simultaneous access", "Role-based command permissions", "Audit trail for all AI interactions"]
       }
     ],
