@@ -11,7 +11,7 @@
     "subtitle": "Comparing cloud VMS platforms designed for modern enterprises seeking integrated security operations."
   },
   "overview": {
-    "vmukti": "VMukti is a cloud-native software VMS platform with 18+ years of experience and 900+ deployments. The platform uniquely integrates video management with emergency management services (EMS) and integrated command center capabilities (ICCC), specializing in smart city and municipal deployments globally. VMukti's software-only approach provides flexibility across hardware ecosystems, offers 96% bandwidth efficiency through proprietary compression, includes native AI analytics, and emphasizes affordable pricing with site-based licensing.",
+    "vmukti": "VMukti is a cloud-native software VMS platform with 18+ years of experience and 900+ deployments. The platform uniquely integrates video management with emergency management services (EMS) and integrated command center capabilities (Enterprise Command Center), specializing in enterprise campus and municipal deployments globally. VMukti's software-only approach provides flexibility across hardware ecosystems, offers 96% bandwidth efficiency through proprietary compression, includes native AI analytics, and emphasizes affordable pricing with site-based licensing.",
     "verkada": "Verkada is a comprehensive unified security platform combining video management, physical access control, environmental controls, and workplace analytics. Verkada's integrated hardware and software ecosystem provides a complete security solution with emphasis on enterprise ease of management. Their platform combines proprietary hardware (cameras, intercoms, sensors) with cloud-based management, offering unified control across multiple security domains. Verkada focuses on enterprise workplaces, campuses, and complex facilities requiring integrated physical security."
   },
   "comparison_table": {
@@ -63,14 +63,14 @@
         "verkada": "Not available"
       },
       {
-        "feature": "Command Center (ICCC)",
+        "feature": "Command Center (Enterprise Command Center)",
         "vmukti": "Integrated command center coordination",
         "verkada": "Multi-site dashboard, limited coordination"
       },
       {
-        "feature": "Smart City Capability",
-        "vmukti": "Purpose-built for smart city, 50+ projects",
-        "verkada": "Enterprise focus, not smart city designed"
+        "feature": "Enterprise Campus Capability",
+        "vmukti": "Purpose-built for enterprise campus, 50+ projects",
+        "verkada": "Enterprise focus, not enterprise campus designed"
       },
       {
         "feature": "Hardware Flexibility",
@@ -114,10 +114,10 @@
       "verdict": "VMukti is superior for organizations requiring best-of-breed video management and emergency coordination with flexibility to integrate specialized systems. Verkada is superior for enterprises seeking unified security across all domains with single vendor management. Different platforms serve different needs—video specialists vs. unified security providers."
     },
     {
-      "title": "Smart City & Emergency Management Capabilities",
-      "vmukti_perspective": "VMukti is purpose-built for smart city deployments with proven success across 50+ projects globally. The integrated VMS+EMS+ICCC architecture coordinates video surveillance, emergency response, and command center operations across city departments. This specialization means VMukti has specific features, workflows, and support optimized for municipal government needs. Smart city deployments benefit from integrated alerting, multi-agency coordination, traffic management integration, and public health response coordination. VMukti's emergency management services and command center coordination are specifically designed for city-scale operations.",
-      "verkada": "Verkada is an enterprise security platform without emergency management or command center coordination. The platform excels at managing security across corporate campuses and enterprise facilities but doesn't include emergency services integration or city-scale coordination features. Organizations requiring emergency management coordination or smart city capabilities would need to add separate emergency management systems alongside Verkada.",
-      "verdict": "VMukti has clear advantage for smart city and municipal government projects requiring integrated emergency services. Verkada is superior for enterprise security without emergency management needs. These serve fundamentally different market segments—smart cities vs. enterprise security."
+      "title": "Enterprise Campus & Emergency Management Capabilities",
+      "vmukti_perspective": "VMukti is purpose-built for enterprise campus deployments with proven success across 50+ projects globally. The integrated VMS+EMS+Enterprise Command Center architecture coordinates video surveillance, emergency response, and command center operations across city departments. This specialization means VMukti has specific features, workflows, and support optimized for municipal enterprise needs. Smart city deployments benefit from integrated alerting, multi-agency coordination, traffic management integration, and public health response coordination. VMukti's emergency management services and command center coordination are specifically designed for city-scale operations.",
+      "verkada": "Verkada is an enterprise security platform without emergency management or command center coordination. The platform excels at managing security across corporate campuses and enterprise facilities but doesn't include emergency services integration or city-scale coordination features. Organizations requiring emergency management coordination or enterprise campus capabilities would need to add separate emergency management systems alongside Verkada.",
+      "verdict": "VMukti has clear advantage for enterprise campus and municipal enterprise projects requiring integrated emergency services. Verkada is superior for enterprise security without emergency management needs. These serve fundamentally different market segments—enterprise campuses vs. enterprise security."
     },
     {
       "title": "Bandwidth Efficiency & Operating Costs",
@@ -134,7 +134,7 @@
   ],
   "best_for": {
     "vmukti": [
-      "Smart city and municipal government deployments requiring emergency management",
+      "Smart city and municipal enterprise deployments requiring emergency management",
       "Organizations with existing camera infrastructure seeking affordable management",
       "Global enterprises planning rapid geographic expansion without infrastructure complexity",
       "Large deployments (1000+ cameras) sensitive to bandwidth costs",
@@ -161,7 +161,7 @@
     },
     {
       "question": "What's the key difference between VMukti and Verkada?",
-      "answer": "VMukti is a software-only VMS that works with any cameras and specializes in smart city, emergency management, and command center coordination. Verkada is an integrated hardware and software platform combining cameras, access control, sensors, and management in one proprietary ecosystem. VMukti offers flexibility and specialization; Verkada offers unified integration."
+      "answer": "VMukti is a software-only VMS that works with any cameras and specializes in enterprise campus, emergency management, and command center coordination. Verkada is an integrated hardware and software platform combining cameras, access control, sensors, and management in one proprietary ecosystem. VMukti offers flexibility and specialization; Verkada offers unified integration."
     },
     {
       "question": "Can we use our existing cameras with VMukti but not with Verkada?",
@@ -173,11 +173,11 @@
     },
     {
       "question": "Does Verkada VMS have emergency management like VMukti?",
-      "answer": "No. Verkada focuses on enterprise security without emergency management services (EMS) or command center (ICCC) capabilities. Verkada is excellent for corporate security but doesn't include emergency coordination features. VMukti integrates emergency management directly into the platform, essential for smart city and municipal government deployments."
+      "answer": "No. Verkada focuses on enterprise security without emergency management services (EMS) or command center (Enterprise Command Center) capabilities. Verkada is excellent for corporate security but doesn't include emergency coordination features. VMukti integrates emergency management directly into the platform, essential for enterprise campus and municipal enterprise deployments."
     },
     {
-      "question": "Which platform is better for smart city projects?",
-      "answer": "VMukti is purpose-built for smart city deployments with 50+ proven projects. The integrated VMS+EMS+ICCC architecture specifically supports city-wide emergency coordination, traffic management, and multi-agency response. Verkada is an enterprise security platform without smart city specialization or emergency management capabilities. For smart city initiatives, VMukti is the clear choice."
+      "question": "Which platform is better for enterprise campus projects?",
+      "answer": "VMukti is purpose-built for enterprise campus deployments with 50+ proven projects. The integrated VMS+EMS+Enterprise Command Center architecture specifically supports city-wide emergency coordination, traffic management, and multi-agency response. Verkada is an enterprise security platform without enterprise campus specialization or emergency management capabilities. For enterprise campus initiatives, VMukti is the clear choice."
     },
     {
       "question": "Is VMukti or Verkada better for bandwidth efficiency?",
@@ -198,7 +198,7 @@
           "name": "Should we choose VMukti or Verkada for our enterprise security?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "VMukti is software-only for any cameras with flexibility and smart city specialization. Verkada is integrated hardware and software for unified security. Choose VMukti if you have existing cameras or need emergency management; choose Verkada if you're building new facilities and want unified security."
+            "text": "VMukti is software-only for any cameras with flexibility and enterprise campus specialization. Verkada is integrated hardware and software for unified security. Choose VMukti if you have existing cameras or need emergency management; choose Verkada if you're building new facilities and want unified security."
           }
         },
         {
@@ -206,7 +206,7 @@
           "name": "What's the key difference between VMukti and Verkada?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "VMukti is a software-only VMS working with any cameras, specialized in smart city and emergency management. Verkada is integrated hardware and software with proprietary cameras, access control, and sensors in one ecosystem."
+            "text": "VMukti is a software-only VMS working with any cameras, specialized in enterprise campus and emergency management. Verkada is integrated hardware and software with proprietary cameras, access control, and sensors in one ecosystem."
           }
         },
         {
@@ -230,15 +230,15 @@
           "name": "Does Verkada VMS have emergency management like VMukti?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Verkada focuses on enterprise security without emergency management services or command center capabilities. VMukti integrates emergency management directly into the platform, essential for smart city and municipal deployments."
+            "text": "No. Verkada focuses on enterprise security without emergency management services or command center capabilities. VMukti integrates emergency management directly into the platform, essential for enterprise campus and municipal deployments."
           }
         },
         {
           "@type": "Question",
-          "name": "Which platform is better for smart city projects?",
+          "name": "Which platform is better for enterprise campus projects?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "VMukti is purpose-built for smart city deployments with 50+ proven projects. The integrated VMS+EMS+ICCC architecture supports city-wide emergency coordination. Verkada lacks smart city specialization and emergency management. VMukti is the clear choice for smart cities."
+            "text": "VMukti is purpose-built for enterprise campus deployments with 50+ proven projects. The integrated VMS+EMS+Enterprise Command Center architecture supports city-wide emergency coordination. Verkada lacks enterprise campus specialization and emergency management. VMukti is the clear choice for enterprise campuses."
           }
         },
         {
