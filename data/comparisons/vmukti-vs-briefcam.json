@@ -11,7 +11,7 @@
     "subtitle": "Comparing different approaches to video intelligence: unified platform vs. specialized analytics focus."
   },
   "overview": {
-    "vmukti": "VMukti is a comprehensive cloud-native VMS platform with 18+ years of experience and 900+ deployments. The platform integrates video management, AI analytics, emergency management services (EMS), and command center capabilities (ICCC) into a unified system. VMukti's native GenAI analytics are purpose-built for the platform, providing behavioral analysis, anomaly detection, and predictive intelligence without requiring separate vendor integration. Site-based licensing and cloud-native architecture serve diverse global deployments from small installations to 50+ smart city projects.",
+    "vmukti": "VMukti is a comprehensive cloud-native VMS platform with 18+ years of experience and 900+ deployments. The platform integrates video management, AI analytics, emergency management services (EMS), and command center capabilities (Enterprise Command Center) into a unified system. VMukti's native GenAI analytics are purpose-built for the platform, providing behavioral analysis, anomaly detection, and predictive intelligence without requiring separate vendor integration. Site-based licensing and cloud-native architecture serve diverse global deployments from small installations to 50+ enterprise campus projects.",
     "briefcam": "BriefCam is a specialized video analytics and intelligent search platform known for powerful video analysis and investigation capabilities. Originally focused on forensic investigation and after-the-fact video search, BriefCam provides sophisticated tools for law enforcement and security professionals seeking detailed video intelligence. The platform excels at video summarization, intelligent search across archived video, behavior analysis, and investigation workflows. BriefCam integrates with multiple VMS platforms through APIs and partnerships."
   },
   "comparison_table": {
@@ -19,7 +19,7 @@
     "rows": [
       {
         "feature": "Platform Type",
-        "vmukti": "Integrated VMS + Analytics + EMS + ICCC",
+        "vmukti": "Integrated VMS + Analytics + EMS + Enterprise Command Center",
         "briefcam": "Specialized analytics and intelligent search"
       },
       {
@@ -83,7 +83,7 @@
         "briefcam": "Not available"
       },
       {
-        "feature": "Command Center (ICCC)",
+        "feature": "Command Center (Enterprise Command Center)",
         "vmukti": "Integrated command center coordination",
         "briefcam": "Not available"
       },
@@ -103,15 +103,15 @@
     },
     {
       "title": "Real-Time Monitoring vs. Forensic Investigation Focus",
-      "vmukti_perspective": "VMukti is designed for real-time security operations with native live monitoring, instant alerts on detected events, and immediate response capabilities. The platform's AI analytics continuously analyze live feeds, detecting behavioral anomalies, threats, and incidents as they occur. Security teams benefit from real-time dashboards, instant notifications of events, and ability to respond while incidents are happening. The platform's unified EMS and ICCC capabilities enable coordinated response to real-time threats across multiple agencies and departments. VMukti's architecture optimizes for prevention and real-time response.",
+      "vmukti_perspective": "VMukti is designed for real-time security operations with native live monitoring, instant alerts on detected events, and immediate response capabilities. The platform's AI analytics continuously analyze live feeds, detecting behavioral anomalies, threats, and incidents as they occur. Security teams benefit from real-time dashboards, instant notifications of events, and ability to respond while incidents are happening. The platform's unified EMS and Enterprise Command Center capabilities enable coordinated response to real-time threats across multiple agencies and departments. VMukti's architecture optimizes for prevention and real-time response.",
       "briefcam": "BriefCam is optimized for after-the-fact investigation and forensic analysis rather than real-time operations. Security professionals use BriefCam to search archived video, understand incident timelines, identify subjects, and reconstruct events after they've occurred. BriefCam's video summarization and intelligent search tools excel at quickly finding relevant footage in massive archives. The platform is purpose-built for investigation workflows, law enforcement needs, and detailed forensic analysis. BriefCam's optimization is for investigation speed and forensic comprehensiveness, not real-time prevention.",
       "verdict": "VMukti is superior for organizations prioritizing real-time monitoring and prevention. BriefCam is superior for organizations emphasizing investigation and forensic analysis. These serve different operational models—prevention-focused vs. investigation-focused security operations."
     },
     {
-      "title": "Smart City & Emergency Management Capabilities",
-      "vmukti_perspective": "VMukti is purpose-built for smart city deployments with integrated emergency management services (EMS) and command center (ICCC) capabilities. The unified platform enables coordinated response across city departments, emergency services, and multi-agency coordination. Smart city deployments benefit from integrated alerting, incident tracking across agencies, and unified operational dashboards. VMukti's architecture supports city-scale operations with complex workflows, multi-departmental coordination, and emergency response prioritization. The platform's 50+ smart city projects demonstrate proven capability for complex municipal government needs.",
+      "title": "Enterprise Campus & Emergency Management Capabilities",
+      "vmukti_perspective": "VMukti is purpose-built for enterprise campus deployments with integrated emergency management services (EMS) and command center (Enterprise Command Center) capabilities. The unified platform enables coordinated response across city departments, emergency services, and multi-agency coordination. Smart city deployments benefit from integrated alerting, incident tracking across agencies, and unified operational dashboards. VMukti's architecture supports city-scale operations with complex workflows, multi-departmental coordination, and emergency response prioritization. The platform's 50+ enterprise campus projects demonstrate proven capability for complex municipal enterprise needs.",
       "briefcam": "BriefCam does not include emergency management or command center coordination. BriefCam is optimized for video analysis and investigation, not emergency response coordination. Organizations requiring emergency management and multi-agency coordination would need separate systems alongside BriefCam.",
-      "verdict": "VMukti is essential for smart city and municipal government deployments requiring emergency management. BriefCam is forensic analysis tool without emergency management capabilities. For smart cities requiring coordinated response, VMukti provides necessary functionality; BriefCam serves investigative needs within that ecosystem."
+      "verdict": "VMukti is essential for enterprise campus and municipal enterprise deployments requiring emergency management. BriefCam is forensic analysis tool without emergency management capabilities. For enterprise campuses requiring coordinated response, VMukti provides necessary functionality; BriefCam serves investigative needs within that ecosystem."
     },
     {
       "title": "Video Search & Investigation Workflows",
@@ -127,7 +127,7 @@
     },
     {
       "title": "Deployment, Licensing & Total Cost of Ownership",
-      "vmukti_perspective": "VMukti is cloud-native SaaS with site-based licensing that includes all VMS, analytics, EMS, and ICCC capabilities. Organizations pay one monthly or annual fee covering complete video management and intelligence. There's no separate analytics licensing—all AI capabilities are included. Total cost of ownership covers the entire platform with no additional costs for analytics, emergency management, or command center features. The cloud-native delivery model eliminates infrastructure and hardware costs.",
+      "vmukti_perspective": "VMukti is cloud-native SaaS with site-based licensing that includes all VMS, analytics, EMS, and Enterprise Command Center capabilities. Organizations pay one monthly or annual fee covering complete video management and intelligence. There's no separate analytics licensing—all AI capabilities are included. Total cost of ownership covers the entire platform with no additional costs for analytics, emergency management, or command center features. The cloud-native delivery model eliminates infrastructure and hardware costs.",
       "briefcam": "BriefCam is additional software layered on top of existing VMS infrastructure. Organizations already paying for their VMS (Milestone, Genetec, etc.) add BriefCam for specialized analytics. This means BriefCam is additional recurring cost on top of VMS licensing. For organizations with existing VMS investments, adding BriefCam represents incremental cost. For new deployments, choosing VMukti vs. BriefCam+VMS is a total platform comparison.",
       "verdict": "VMukti provides single comprehensive platform with complete analytics included. BriefCam adds incremental cost on top of VMS. For organizations comparing total cost—VMukti's integrated approach vs. separate BriefCam+VMS—VMukti typically provides better value when deploying fresh. For organizations already invested in existing VMS, adding BriefCam may be more economical than replacing entire VMS."
     }
@@ -135,7 +135,7 @@
   "best_for": {
     "vmukti": [
       "Organizations deploying new video management platforms with comprehensive analytics",
-      "Smart city and municipal government projects requiring emergency management",
+      "Smart city and municipal enterprise projects requiring emergency management",
       "Real-time monitoring operations requiring instant alerts and response",
       "Unified security operations centers managing multiple sites and departments",
       "Organizations seeking single integrated platform for all video security needs",
@@ -157,7 +157,7 @@
   "faq": [
     {
       "question": "Is VMukti better than BriefCam?",
-      "answer": "VMukti and BriefCam serve fundamentally different purposes, so 'better' depends on your needs. VMukti is a complete VMS platform with integrated analytics for real-time operations, emergency management, and smart cities. BriefCam is a specialized analytics and investigation tool for forensic search and after-the-fact analysis. Choose VMukti for comprehensive platform; choose BriefCam to add forensic capabilities to existing VMS. Many organizations deploy both—VMukti for operations, BriefCam for investigation."
+      "answer": "VMukti and BriefCam serve fundamentally different purposes, so 'better' depends on your needs. VMukti is a complete VMS platform with integrated analytics for real-time operations, emergency management, and enterprise campuses. BriefCam is a specialized analytics and investigation tool for forensic search and after-the-fact analysis. Choose VMukti for comprehensive platform; choose BriefCam to add forensic capabilities to existing VMS. Many organizations deploy both—VMukti for operations, BriefCam for investigation."
     },
     {
       "question": "Can BriefCam work with VMukti?",
