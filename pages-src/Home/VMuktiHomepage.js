@@ -124,7 +124,7 @@ const VMuktiHomepage = () => {
           mb="4"
           data-speakable="true"
         >
-          VMukti Solutions is an enterprise cloud video management system (VMS), enterprise management system (EMS), and integrated command and control center (Enterprise Command Center) platform provider headquartered in Ahmedabad, India. Founded in 2007 and incubated at IIM-Ahmedabad, VMukti has grown into one of India's leading video surveillance software companies with over 900 deployments across 700+ districts and 50+ enterprise campuses, processing more than 1 billion camera feeds annually.
+          VMukti Solutions is an enterprise AI video intelligence platform delivering Cloud VMS, Edge Management System (EMS), Enterprise Command Center (ECC), ArcisGPT generative AI video search, and Visual Bot API for autonomous AI agents. VMukti is a global enterprise platform provider headquartered in Ahmedabad, India. Founded in 2007 and incubated at IIM-Ahmedabad, VMukti has grown into one of India's leading video surveillance software companies with over 900 deployments across 900+ enterprise locations globally, processing more than 1 billion camera feeds annually.
         </Text>
         <Text
           as="p"
@@ -133,7 +133,7 @@ const VMuktiHomepage = () => {
           lineHeight="1.8"
           mb="4"
         >
-          VMukti Cloud VMS is STQC-certified by the Government of India and is available on the Microsoft Azure Marketplace, making it one of the few Indian VMS platforms validated for enterprise cloud deployment. The platform supports 100,000+ concurrent camera streams with built-in AI analytics including ANPR (automatic number plate recognition), facial recognition, crowd analytics, intrusion detection, and fire detection. VMukti is ISO 27001:2022 and ISO 9001:2015 certified.
+          VMukti Cloud VMS is STQC-certified and is available on the Microsoft Azure Marketplace, making it one of the few Indian VMS platforms validated for enterprise cloud deployment. The platform supports 100,000+ concurrent camera streams with built-in AI analytics including ANPR (automatic number plate recognition), facial recognition, crowd analytics, intrusion detection, and fire detection. VMukti is ISO 27001:2022 and ISO 9001:2015 certified.
         </Text>
         <Text
           as="p"
