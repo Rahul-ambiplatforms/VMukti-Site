@@ -261,7 +261,7 @@ const HeroSection = ({ titleContent, description, buttonText, buttonHref }) => {
                         color="#444444"
                         textAlign="justify"
                       >
-                        {description ?? "With over 18 years of domain excellence, we safeguard 700+ districts through state-backed and enterprise-grade deployments powered by proprietary visual intelligence and precision-tuned computer vision frameworks for mission-critical surveillance."}
+                        {description ?? "With over 18 years of enterprise innovation, we power 900+ deployments across global enterprises through cloud-native video intelligence and precision-tuned AI vision frameworks for scalable, enterprise-grade surveillance."}
                       </Text>
                     </Flex>
                   </MotionBox>
