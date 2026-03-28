@@ -5013,9 +5013,9 @@ const industriesData = {
     ],
   },
   government: {
-    metatitle: "Government Video Surveillance & AI Monitoring Solutions in USA",
+    metatitle: "Enterprise Video Surveillance & AI Monitoring Solutions in USA",
     metadescription:
-      "VMukti provides AI-driven surveillance solutions in the USA for government agencies with advanced analytics, multi-camera control, Enterprise Command Center integration, and real-time threat detection.",
+      "VMukti provides AI-driven surveillance solutions in the USA for enterprise organizations with advanced analytics, multi-camera control, Enterprise Command Center integration, and real-time threat detection.",
     ogImage: "https://www.vmukti.com/assets/government_mockup.png",
     slug: "government",
     title: [
@@ -5024,7 +5024,7 @@ const industriesData = {
         color: "black",
       },
     ],
-    para: "For you every detail matters in governance, where overlooked incidents or delayed responses can impact public safety and trust. VMukti Solutions delivers advanced government security solutions through a visual solution for government, offering real-time insights and intelligent monitoring to enhance operational control and civic efficiency.",
+    para: "For you every detail matters in governance, where overlooked incidents or delayed responses can impact public safety and trust. VMukti Solutions delivers advanced enterprise security solutions through a visual solution for enterprise operations, offering real-time insights and intelligent monitoring to enhance operational control and operational efficiency.",
 
     large_image: "government_mockup.png",
     large_image_mobile: "government_mockup_mobile.png",
@@ -5034,7 +5034,7 @@ const industriesData = {
       {
         id: "section1",
         mainHeading:
-          "Crafting Advanced Government Video Surveillance Solutions for Smarter Management",
+          "Crafting Advanced Enterprise Video Surveillance Solutions for Smarter Management",
         bgColor: "white",
         features: [
           {
@@ -5062,7 +5062,7 @@ const industriesData = {
             id: "feat1-4",
             title: "GPS Tracking",
             description:
-              "Our advanced GPS telemetry platform empowers you to track government fleets and mission-critical assets with precision enabling real-time visibility, streamlined control and zero tolerance for misuse.",
+              "Our advanced GPS telemetry platform empowers you to track enterprise fleets and mission-critical assets with precision enabling real-time visibility, streamlined control and zero tolerance for misuse.",
             image: "/assets/feat1_industry_government_4.webp",
           },
           {
@@ -5112,7 +5112,7 @@ const industriesData = {
       {
         id: "section2",
         mainHeading:
-          "Reinventing Government Security with Real-Time Visual Intelligence",
+          "Reinventing Enterprise Security with Real-Time Visual Intelligence",
         bgColor: "blue",
         features: [
           {
@@ -5154,7 +5154,7 @@ const industriesData = {
             id: "feat2-6",
             title: "Public Property Protection",
             description:
-              "Your government operations demand more than monitoring. Our AI-powered surveillance ecosystem ensures real-time threat detection, asset protection and uninterrupted situational control.",
+              "Your enterprise operations demand more than monitoring. Our AI-powered surveillance ecosystem ensures real-time threat detection, asset protection and uninterrupted situational control.",
             image: "/assets/feat2_industry_government_6.webp",
           },
         ],
@@ -5193,7 +5193,7 @@ const industriesData = {
           image: "/assets/result_industry_government_1.png",
           heading: "Central Hub",
           description:
-            "We unify your fragmented surveillance systems into one high-performance government-grade dashboard built for instant access, strategic oversight and real-time command at the highest level.",
+            "We unify your fragmented surveillance systems into one high-performance enterprise-grade dashboard built for instant access, strategic oversight and real-time command at the highest level.",
         },
         {
           image: "/assets/result_industry_government_2.png",
@@ -5246,9 +5246,9 @@ const industriesData = {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Government & Public Sector Surveillance Solutions | VMukti",
+        name: "Enterprise & Corporate Surveillance Solutions | VMukti",
         description:
-          "AI-powered government surveillance delivers public safety monitoring, traffic management, citizen services optimization, and intelligent civic infrastructure oversight.",
+          "AI-powered enterprise surveillance delivers public safety monitoring, traffic management, citizen services optimization, and intelligent civic infrastructure oversight.",
         url: "https://www.vmukti.com/industry/government/",
         datePublished: "2006-11-10",
         dateModified: "2026-02-20",
@@ -5333,7 +5333,7 @@ const industriesData = {
             name: "Can your system function as a centralized hub for managing multiple surveillance at once?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "For you, Our government security solutions enable seamless integration, offering a centralized hub to manage multiple surveillance feeds from different locations efficiently.",
+              text: "For you, Our enterprise security solutions enable seamless integration, offering a centralized hub to manage multiple surveillance feeds from different locations efficiently.",
             },
           },
           {
