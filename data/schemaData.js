@@ -75,7 +75,7 @@ export const solutionpageSchema = {
         '@type': 'ListItem',
         position: 3,
         name: 'Enterprise Command Center',
-        description: 'Integrated Command and Control Center for emergency response',
+        description: 'Enterprise Command Center for emergency response',
         url: 'https://www.vmukti.com/solutions/iccc',
       },
       {
@@ -93,7 +93,7 @@ export const industrypageSchema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
   name: 'VMukti Industries & Use Cases',
-  description: 'VMukti solutions for enterprise campuses, transportation, healthcare, banking, retail, and government sectors.',
+  description: 'VMukti solutions for enterprise campuses, transportation, healthcare, banking, retail, and enterprise sectors.',
   url: 'https://www.vmukti.com/industries',
   primaryImageOfPage: {
     '@type': 'ImageObject',
@@ -161,7 +161,7 @@ export const industrypageSchema = {
       {
         '@type': 'ListItem',
         position: 6,
-        name: 'Government',
+        name: 'Enterprise',
         description: 'Public safety and cross-agency coordination',
         url: 'https://www.vmukti.com/industries/government',
       },
@@ -204,7 +204,7 @@ export const aboutpageSchema = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
   name: 'About VMukti Solutions',
-  description: 'Learn about VMukti Solutions - 18+ years of innovation in enterprise surveillance platforms, with 900+ deployments across 700+ districts.',
+  description: 'Learn about VMukti Solutions - 18+ years of innovation in enterprise surveillance platforms, with 900+ deployments across 900+ enterprise locations.',
   url: 'https://www.vmukti.com/about',
   primaryImageOfPage: {
     '@type': 'ImageObject',
@@ -285,9 +285,9 @@ export const organizationSchema = {
     hasCredential: [
       {
         '@type': 'EducationalOccupationalCredential',
-        credentialCategory: 'Government Certification',
+        credentialCategory: 'Enterprise Certification',
         name: 'STQC Certification',
-        recognizedBy: { '@type': 'Organization', name: 'STQC, Ministry of Electronics & IT, Government of India' }
+        recognizedBy: { '@type': 'Organization', name: 'STQC, Ministry of Electronics & IT, Enterprise of India' }
       },
       {
         '@type': 'EducationalOccupationalCredential',
@@ -308,7 +308,7 @@ export const organizationSchema = {
     },
   url: 'https://www.vmukti.com',
   logo: 'https://www.vmukti.com/logo.png',
-  description: 'Enterprise cloud VMS, EMS, and Enterprise Command Center platform provider with STQC certification. 18+ years, 900+ deployments across 700+ districts, 1B+ camera feeds processed globally.',
+  description: 'Enterprise cloud VMS, EMS, and Enterprise Command Center platform provider with STQC certification. 18+ years, 900+ deployments across 900+ enterprise locations, 1B+ camera feeds processed globally.',
   foundingDate: '2007',
   foundingLocation: 'Ahmedabad, Gujarat, India',
   numberOfEmployees: {
@@ -367,7 +367,7 @@ export const organizationSchema = {
   knowsAbout: [
     'Video Management System',
     'Enterprise Management System',
-    'Integrated Command and Control Center',
+    'Enterprise Command Center',
     'Cloud Surveillance',
     'AI Video Analytics',
     'Enterprise Campus Solutions',
@@ -446,7 +446,7 @@ export const faqSchema = {
       name: 'What industries does VMukti serve?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'VMukti serves a wide range of industries including enterprise campuses, transportation, healthcare, banking, retail, and government. We have 900+ deployments across 700+ districts globally.',
+        text: 'VMukti serves a wide range of industries including enterprise campuses, transportation, healthcare, banking, retail, and government. We have 900+ deployments across 900+ enterprise locations globally.',
       },
     },
     {
@@ -622,7 +622,7 @@ export const emsSchema = {
 export const icccSchema = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
-  name: 'VMukti Enterprise Command Center (Integrated Command and Control Center)',
+  name: 'VMukti Enterprise Command Center (Enterprise Command Center)',
   applicationCategory: 'SecurityApplication',
     aggregateRating: {
       '@type': 'AggregateRating',
