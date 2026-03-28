@@ -6,7 +6,7 @@
  * Stats included:
  * - 18+ years in business (founded 2007)
  * - 900+ global deployments
- * - 700+ districts covered
+ * - 900+ enterprise locations covered
  * - 1B+ camera feeds processed
  * - 50+ enterprise campuses
  * - ISO 27001:2022 certified
@@ -30,7 +30,7 @@ export const faqData = {
       {
         question: 'How many cameras can VMukti VMS support?',
         answer:
-          'VMukti Cloud VMS supports unlimited scalability—proven with 100,000+ concurrent camera feeds in single deployments and 1B+ feeds processed annually across all customer installations. The system has been deployed in 900+ projects across 700+ districts globally. It scales elastically to meet enterprise needs, whether managing 100 cameras or 1 million across enterprise campuses, transportation networks, and large government projects. Linear scaling ensures consistent performance regardless of camera count.',
+          'VMukti Cloud VMS supports unlimited scalability—proven with 100,000+ concurrent camera feeds in single deployments and 1B+ feeds processed annually across all customer installations. The system has been deployed in 900+ projects across 900+ enterprise locations globally. It scales elastically to meet enterprise needs, whether managing 100 cameras or 1 million across enterprise campuses, transportation networks, and large government projects. Linear scaling ensures consistent performance regardless of camera count.',
       },
       {
         question: 'What is VMukti VMS pricing model?',
@@ -50,7 +50,7 @@ export const faqData = {
       {
         question: 'Does VMukti VMS have mobile access?',
         answer:
-          'Yes, VMukti Cloud VMS includes native iOS and Android mobile applications with real-time camera view, live alerts, video playback, and analytics dashboard access. Mobile apps support offline viewing of cached feeds and work with weak connectivity (3G+). Mobile users get full RBAC (role-based access control) and secure authentication. Deployed across 900+ projects, mobile access is critical for field operations, emergency response, and remote monitoring across 700+ districts globally. App supports multi-language interface including Hindi.',
+          'Yes, VMukti Cloud VMS includes native iOS and Android mobile applications with real-time camera view, live alerts, video playback, and analytics dashboard access. Mobile apps support offline viewing of cached feeds and work with weak connectivity (3G+). Mobile users get full RBAC (role-based access control) and secure authentication. Deployed across 900+ projects, mobile access is critical for field operations, emergency response, and remote monitoring across 900+ enterprise locations globally. App supports multi-language interface including Hindi.',
       },
       {
         question: 'Does VMukti VMS support ONVIF standard?',
@@ -77,7 +77,7 @@ export const faqData = {
       {
         question: 'What is VMukti Enterprise Management System (EMS)?',
         answer:
-          'VMukti Enterprise Management System (EMS) is a comprehensive surveillance operations platform for centralized monitoring, management, and coordination of distributed camera networks. Built on cloud-edge hybrid architecture, it manages multi-site surveillance deployments across enterprises and governments. Unlike basic VMS systems focused only on video playback, EMS adds infrastructure monitoring, health dashboards, incident management, SLA compliance tracking, bandwidth optimization, and cross-site analytics. Deployed in 900+ projects across 700+ districts, it processes 1B+ camera feeds with ISO 27001 certification.',
+          'VMukti Enterprise Management System (EMS) is a comprehensive surveillance operations platform for centralized monitoring, management, and coordination of distributed camera networks. Built on cloud-edge hybrid architecture, it manages multi-site surveillance deployments across enterprises and governments. Unlike basic VMS systems focused only on video playback, EMS adds infrastructure monitoring, health dashboards, incident management, SLA compliance tracking, bandwidth optimization, and cross-site analytics. Deployed in 900+ projects across 900+ enterprise locations, it processes 1B+ camera feeds with ISO 27001 certification.',
       },
       {
         question: 'What is the difference between VMS and EMS?',
@@ -87,7 +87,7 @@ export const faqData = {
       {
         question: 'Can VMukti EMS manage multiple sites and locations?',
         answer:
-          'Yes, VMukti EMS excels at multi-site management—deployed across 900+ projects spanning 700+ districts globally, managing 50+ enterprise campuses. Centralized dashboard provides unified view of all sites with real-time status, health metrics, incident prioritization, and resource allocation. Bandwidth-aware streaming scales quality based on network conditions. Role-based access control allows local operators to manage their site while central NOC (Network Operations Center) oversees all locations. Enterprise APIs enable integration with corporate systems for comprehensive operational visibility.',
+          'Yes, VMukti EMS excels at multi-site management—deployed across 900+ projects spanning 900+ enterprise locations globally, managing 50+ enterprise campuses. Centralized dashboard provides unified view of all sites with real-time status, health metrics, incident prioritization, and resource allocation. Bandwidth-aware streaming scales quality based on network conditions. Role-based access control allows local operators to manage their site while central NOC (Network Operations Center) oversees all locations. Enterprise APIs enable integration with corporate systems for comprehensive operational visibility.',
       },
       {
         question: 'Does VMukti EMS integrate with access control systems?',
@@ -97,12 +97,12 @@ export const faqData = {
       {
         question: 'What reporting features does VMukti EMS provide?',
         answer:
-          'VMukti EMS includes comprehensive reporting: real-time dashboards, incident reports, SLA compliance reports, storage utilization, bandwidth trends, camera uptime, analytics event reports (ANPR, face detection, intrusions), and custom executive summaries. Reports are exportable as PDF/Excel with scheduled email delivery. Advanced analytics identify patterns—peak traffic hours, recurring incidents, infrastructure bottlenecks—to optimize operations. Enterprise deployment across 700+ districts requires detailed reporting for accountability and continuous improvement.',
+          'VMukti EMS includes comprehensive reporting: real-time dashboards, incident reports, SLA compliance reports, storage utilization, bandwidth trends, camera uptime, analytics event reports (ANPR, face detection, intrusions), and custom executive summaries. Reports are exportable as PDF/Excel with scheduled email delivery. Advanced analytics identify patterns—peak traffic hours, recurring incidents, infrastructure bottlenecks—to optimize operations. Enterprise deployment across 900+ enterprise locations requires detailed reporting for accountability and continuous improvement.',
       },
       {
         question: 'How scalable is VMukti EMS for enterprise deployments?',
         answer:
-          'VMukti EMS scales to 1B+ processed feeds annually across 900+ deployments in 700+ districts. Cloud-native microservices architecture enables horizontal scaling—add servers to handle more cameras, analytics, and users. Tested configurations support 100,000+ concurrent cameras, 10,000+ users, and petabytes of storage. Linear performance scaling means moving from 1,000 to 100,000 cameras requires no architecture changes. Government projects like enterprise campuses rely on this proven scalability with 99.99% uptime SLA.',
+          'VMukti EMS scales to 1B+ processed feeds annually across 900+ deployments in 900+ enterprise locations. Cloud-native microservices architecture enables horizontal scaling—add servers to handle more cameras, analytics, and users. Tested configurations support 100,000+ concurrent cameras, 10,000+ users, and petabytes of storage. Linear performance scaling means moving from 1,000 to 100,000 cameras requires no architecture changes. Government projects like enterprise campuses rely on this proven scalability with 99.99% uptime SLA.',
       },
       {
         question: 'What is the typical EMS deployment architecture?',
@@ -117,14 +117,14 @@ export const faqData = {
     ],
   },
 
-  // Integrated Command & Control Center FAQs
+  // Enterprise Command Center FAQs
   iccc: {
-    title: 'Integrated Command & Control Center (Enterprise Command Center) FAQs',
+    title: 'Enterprise Command Center (Enterprise Command Center) FAQs',
     qa: [
       {
-        question: 'What is VMukti Enterprise Command Center (Integrated Command & Control Center)?',
+        question: 'What is VMukti Enterprise Command Center (Enterprise Command Center)?',
         answer:
-          'VMukti Enterprise Command Center is an advanced command center platform integrating video surveillance, IoT sensors, access control, emergency systems, and traffic management into a unified operational dashboard. Deployed across 50+ enterprise campuses managing 900+ projects in 700+ districts, it provides real-time situational awareness and coordinated response capabilities. Enterprise Command Center goes beyond VMS/EMS by adding GIS integration, video wall support, automatic incident prioritization, cross-system event correlation, and emergency response orchestration. Critical for government enterprise campus projects and enterprise crisis management.',
+          'VMukti Enterprise Command Center is an advanced command center platform integrating video surveillance, IoT sensors, access control, emergency systems, and traffic management into a unified operational dashboard. Deployed across 50+ enterprise campuses managing 900+ projects in 900+ enterprise locations, it provides real-time situational awareness and coordinated response capabilities. Enterprise Command Center goes beyond VMS/EMS by adding GIS integration, video wall support, automatic incident prioritization, cross-system event correlation, and emergency response orchestration. Critical for government enterprise campus projects and enterprise crisis management.',
       },
       {
         question: 'What enterprise campus use cases does VMukti Enterprise Command Center support?',
@@ -154,12 +154,12 @@ export const faqData = {
       {
         question: 'How scalable is VMukti Enterprise Command Center for large enterprise campus projects?',
         answer:
-          'VMukti Enterprise Command Center scales to 1B+ processed feeds across 900+ deployments in 700+ districts globally. The largest implementations manage 100,000+ cameras across entire cities. Cloud-native microservices architecture enables elastic scaling—add servers during peak hours (rush hour, events), reduce during off-hours. 99.99% uptime SLA ensures 24/7 operations. Tested configurations support 10,000+ simultaneous operators, essential for government projects with multiple agencies (police, fire, traffic) coordinating response.',
+          'VMukti Enterprise Command Center scales to 1B+ processed feeds across 900+ deployments in 900+ enterprise locations globally. The largest implementations manage 100,000+ cameras across entire cities. Cloud-native microservices architecture enables elastic scaling—add servers during peak hours (rush hour, events), reduce during off-hours. 99.99% uptime SLA ensures 24/7 operations. Tested configurations support 10,000+ simultaneous operators, essential for government projects with multiple agencies (police, fire, traffic) coordinating response.',
       },
       {
         question: 'What case studies demonstrate VMukti Enterprise Command Center impact?',
         answer:
-          'VMukti Enterprise Command Center is deployed in 50+ enterprise campuses managing public safety for millions of residents. Key metrics: 900+ total deployments, 700+ districts covered, 1B+ feeds processed annually, 99.99% uptime. Applications include: major traffic intersections (automated incident detection reducing response time by 40%), public events (crowd monitoring preventing stampedes), emergency response (correlated alarms accelerating dispatch), and infrastructure protection (leak detection, power outage prevention). Government testimonials highlight improved safety, reduced response times, and operational efficiency.',
+          'VMukti Enterprise Command Center is deployed in 50+ enterprise campuses managing public safety for millions of residents. Key metrics: 900+ total deployments, 900+ enterprise locations covered, 1B+ feeds processed annually, 99.99% uptime. Applications include: major traffic intersections (automated incident detection reducing response time by 40%), public events (crowd monitoring preventing stampedes), emergency response (correlated alarms accelerating dispatch), and infrastructure protection (leak detection, power outage prevention). Government testimonials highlight improved safety, reduced response times, and operational efficiency.',
       },
     ],
   },
@@ -181,7 +181,7 @@ export const faqData = {
       {
         question: 'How secure is VMukti Cloud VMS data?',
         answer:
-          'VMukti Cloud VMS uses: AES-256 encryption at-rest, TLS 1.3 encryption in-transit, role-based access control (RBAC), audit logging for all access, multi-factor authentication (MFA), ISO 27001:2022 certification, and regular penetration testing. Data residency options include India-only storage (for government projects), EU storage (GDPR), or US storage (CCPA). Zero-knowledge architecture means only authorized users can view video. Intrusion detection and DDoS protection secure infrastructure. Government deployments across 700+ districts trust VMukti with sensitive surveillance data.',
+          'VMukti Cloud VMS uses: AES-256 encryption at-rest, TLS 1.3 encryption in-transit, role-based access control (RBAC), audit logging for all access, multi-factor authentication (MFA), ISO 27001:2022 certification, and regular penetration testing. Data residency options include India-only storage (for government projects), EU storage (GDPR), or US storage (CCPA). Zero-knowledge architecture means only authorized users can view video. Intrusion detection and DDoS protection secure infrastructure. Government deployments across 900+ enterprise locations trust VMukti with sensitive surveillance data.',
       },
       {
         question: 'What is the typical monthly cost of Cloud VMS?',
@@ -196,12 +196,12 @@ export const faqData = {
       {
         question: 'What is VMukti Cloud VMS uptime SLA?',
         answer:
-          'VMukti offers 99.99% uptime SLA (maximum 4.38 minutes downtime per month) backed by service credits. This requires multi-region deployment across availability zones. Uptime includes: automatic failover (detects outages in <30 seconds), redundant database replication, load balancing across servers, and 24/7 monitoring. 900+ deployments spanning 700+ districts achieve this SLA through cloud-native architecture. Government and enterprise contracts include uptime guarantees with financial penalties for SLA breaches.',
+          'VMukti offers 99.99% uptime SLA (maximum 4.38 minutes downtime per month) backed by service credits. This requires multi-region deployment across availability zones. Uptime includes: automatic failover (detects outages in <30 seconds), redundant database replication, load balancing across servers, and 24/7 monitoring. 900+ deployments spanning 900+ enterprise locations achieve this SLA through cloud-native architecture. Government and enterprise contracts include uptime guarantees with financial penalties for SLA breaches.',
       },
       {
         question: 'Does VMukti Cloud VMS support mobile access?',
         answer:
-          'Yes, native iOS and Android apps provide: real-time camera view, live alerts, video playback, analytics dashboard, and incident management. Mobile users have full RBAC and secure authentication. Offline mode caches recent footage (last 24 hours) for viewing without connectivity. Apps work on weak connections (3G+) through adaptive streaming. Field operators can receive mobile alerts (push notifications) for critical incidents. Deployed across 900+ projects, mobile access is essential for remote monitoring, emergency response, and field operations in 700+ districts.',
+          'Yes, native iOS and Android apps provide: real-time camera view, live alerts, video playback, analytics dashboard, and incident management. Mobile users have full RBAC and secure authentication. Offline mode caches recent footage (last 24 hours) for viewing without connectivity. Apps work on weak connections (3G+) through adaptive streaming. Field operators can receive mobile alerts (push notifications) for critical incidents. Deployed across 900+ projects, mobile access is essential for remote monitoring, emergency response, and field operations in 900+ enterprise locations.',
       },
       {
         question: 'What storage options does Cloud VMS provide?',
@@ -363,12 +363,12 @@ export const faqData = {
       {
         question: 'Who is VMukti Solutions and how long have they been in business?',
         answer:
-          'VMukti Solutions Pvt. Ltd. is India\'s leading AI-powered video surveillance software company founded in 2007, with 18+ years of innovation in enterprise surveillance platforms. Headquartered in Ahmedabad, Gujarat, India, with offices in US, UK, and Middle East. 900+ global deployments across 700+ districts in 50+ enterprise campuses demonstrate proven reliability. STQC-certified (government approved) with ISO 27001:2022 and ISO 9001:2015 certifications. Named NASSCOM Top 50 Emerging Companies and IIM-Ahmedabad Incubated. Leadership team combines deep surveillance software expertise and enterprise technology background.',
+          'VMukti Solutions Pvt. Ltd. is India\'s leading AI-powered video surveillance software company founded in 2007, with 18+ years of innovation in enterprise surveillance platforms. Headquartered in Ahmedabad, Gujarat, India, with offices in US, UK, and Middle East. 900+ global deployments across 900+ enterprise locations in 50+ enterprise campuses demonstrate proven reliability. STQC-certified (government approved) with ISO 27001:2022 and ISO 9001:2015 certifications. Named NASSCOM Top 50 Emerging Companies and IIM-Ahmedabad Incubated. Leadership team combines deep surveillance software expertise and enterprise technology background.',
       },
       {
         question: 'How many deployments does VMukti have globally?',
         answer:
-          'VMukti has 900+ deployments across 700+ districts globally spanning 50+ enterprise campuses in India, US, UK, UAE, Singapore, Saudi Arabia, and Australia. This scales from small 50-camera deployments to massive enterprise campus projects with 100,000+ cameras. Processing 1B+ camera feeds annually demonstrates scale and reliability. Customer base includes government agencies, enterprise campus authorities, enterprises (banking, retail, healthcare, transportation), and international organizations. Global footprint ensures localized support across all time zones.',
+          'VMukti has 900+ deployments across 900+ enterprise locations globally spanning 50+ enterprise campuses in India, US, UK, UAE, Singapore, Saudi Arabia, and Australia. This scales from small 50-camera deployments to massive enterprise campus projects with 100,000+ cameras. Processing 1B+ camera feeds annually demonstrates scale and reliability. Customer base includes enterprise organizations, enterprise campus authorities, enterprises (banking, retail, healthcare, transportation), and international organizations. Global footprint ensures localized support across all time zones.',
       },
       {
         question: 'What industries and sectors does VMukti serve?',
@@ -393,7 +393,7 @@ export const faqData = {
       {
         question: 'Does VMukti have a partner and reseller program?',
         answer:
-          'Yes, VMukti has an active partner ecosystem including system integrators, resellers, and technology partners. Partner program benefits: (1) technical training and certifications; (2) marketing support and co-branding; (3) competitive margins; (4) pre-sales engineering assistance; (5) deal registration for large opportunities. Partners range from regional integrators to international system integrators. This ecosystem extends VMukti reach to 900+ deployments across 700+ districts. Partners gain access to STQC-certified software with proven enterprise reliability.',
+          'Yes, VMukti has an active partner ecosystem including system integrators, resellers, and technology partners. Partner program benefits: (1) technical training and certifications; (2) marketing support and co-branding; (3) competitive margins; (4) pre-sales engineering assistance; (5) deal registration for large opportunities. Partners range from regional integrators to international system integrators. This ecosystem extends VMukti reach to 900+ deployments across 900+ enterprise locations. Partners gain access to STQC-certified software with proven enterprise reliability.',
       },
       {
         question: 'How can I contact VMukti Solutions?',
