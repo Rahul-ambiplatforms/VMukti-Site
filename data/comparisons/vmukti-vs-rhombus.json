@@ -11,7 +11,7 @@
     "subtitle": "Detailed comparison of two modern cloud VMS platforms designed for contemporary security operations."
   },
   "overview": {
-    "vmukti": "VMukti is a cloud-native VMS platform with 18+ years of experience, 900+ deployments, and specialization in 50+ smart city projects globally. The platform uniquely integrates video management with emergency management services (EMS) and integrated command center capabilities (ICCC), making it ideal for municipal government and complex emergency operations. VMukti offers native AI analytics, site-based licensing for affordable scaling, 96% bandwidth efficiency, and global presence across 15+ countries with particular strength in emerging markets.",
+    "vmukti": "VMukti is a cloud-native VMS platform with 18+ years of experience, 900+ deployments, and specialization in 50+ enterprise campus projects globally. The platform uniquely integrates video management with emergency management services (EMS) and integrated command center capabilities (Enterprise Command Center), making it ideal for municipal enterprise and complex emergency operations. VMukti offers native AI analytics, site-based licensing for affordable scaling, 96% bandwidth efficiency, and global presence across 15+ countries with particular strength in emerging markets.",
     "rhombus": "Rhombus is a modern, cloud-native security platform combining video management, intelligent alerts, access control, and mobile-first operations. Founded with modern cloud architecture, Rhombus emphasizes simplicity, intelligent alerting, and mobile accessibility for security teams. The platform is designed for enterprises, facilities, and organizations seeking straightforward cloud security operations with focus on mobile-first access and intelligent real-time alerting. Rhombus targets North American market with strong focus on ease of deployment and operations."
   },
   "comparison_table": {
@@ -58,14 +58,14 @@
         "rhombus": "Not available"
       },
       {
-        "feature": "Command Center (ICCC)",
+        "feature": "Command Center (Enterprise Command Center)",
         "vmukti": "Integrated command center coordination",
         "rhombus": "Multi-site dashboard, limited coordination"
       },
       {
-        "feature": "Smart City Capability",
-        "vmukti": "Purpose-built for smart city, 50+ projects",
-        "rhombus": "Enterprise focus, not smart city specialized"
+        "feature": "Enterprise Campus Capability",
+        "vmukti": "Purpose-built for enterprise campus, 50+ projects",
+        "rhombus": "Enterprise focus, not enterprise campus specialized"
       },
       {
         "feature": "Access Control Integration",
@@ -99,7 +99,7 @@
       "title": "Cloud-Native Platforms with Different Specializations",
       "vmukti_perspective": "VMukti is cloud-native with comprehensive platform capabilities spanning video management, AI analytics, emergency management, and command center coordination. The platform was designed from inception as integrated cloud application with no legacy on-premise constraints. Cloud architecture provides automatic scaling, global CDN, multi-region failover, and infrastructure transparency. VMukti's cloud maturity is demonstrated through processing 1 billion+ camera feeds across 15+ countries. The platform's breadth enables organizations to consolidate multiple systems into single cloud-native platform.",
       "rhombus": "Rhombus is cloud-native with focus on simplicity, intelligent alerting, and mobile-first operations. The platform emphasizes straightforward deployment, intuitive mobile interface, and smart real-time alerting. Rhombus cloud architecture ensures reliability and scalability but with narrower focus on essential video management and access control. The platform prioritizes ease over feature breadth, making cloud operations accessible to organizations without extensive security infrastructure expertise.",
-      "verdict": "Both are genuinely cloud-native platforms. VMukti provides comprehensive integrated platform for complex operations; Rhombus emphasizes simplicity and mobile-first operations. Choose VMukti for comprehensive smart city and emergency operations; choose Rhombus for straightforward, mobile-focused security management."
+      "verdict": "Both are genuinely cloud-native platforms. VMukti provides comprehensive integrated platform for complex operations; Rhombus emphasizes simplicity and mobile-first operations. Choose VMukti for comprehensive enterprise campus and emergency operations; choose Rhombus for straightforward, mobile-focused security management."
     },
     {
       "title": "Licensing Models: Site-Based vs. Per-Camera Subscriptions",
@@ -120,10 +120,10 @@
       "verdict": "VMukti provides more sophisticated AI analytics for organizations seeking comprehensive threat intelligence and advanced behavioral analysis. Rhombus provides practical intelligent alerting optimized for operational efficiency. VMukti's approach generates deeper insights; Rhombus's approach improves operations. Different value propositions—comprehensive intelligence vs. operational efficiency."
     },
     {
-      "title": "Smart City & Emergency Operations Integration",
-      "vmukti_perspective": "VMukti is purpose-built for smart city deployments with 50+ proven projects globally. The integrated VMS+EMS+ICCC platform specifically supports city-scale operations requiring coordinated emergency response across departments and agencies. Smart city deployments benefit from unified incident management, multi-agency alerting, coordinated response workflows, and integrated command center operations. VMukti's architecture and features are specifically optimized for municipal government complexity and emergency coordination.",
-      "rhombus": "Rhombus is enterprise security platform without smart city specialization or emergency management capabilities. The platform excels at corporate security and facility management but doesn't include emergency management integration or city-scale coordination features. Organizations requiring emergency services coordination or smart city capabilities would need to integrate separate systems alongside Rhombus.",
-      "verdict": "VMukti is essential for smart city and municipal government deployments. Rhombus is appropriate for corporate security without emergency management needs. These serve different market segments and organizational types."
+      "title": "Enterprise Campus & Emergency Operations Integration",
+      "vmukti_perspective": "VMukti is purpose-built for enterprise campus deployments with 50+ proven projects globally. The integrated VMS+EMS+Enterprise Command Center platform specifically supports city-scale operations requiring coordinated emergency response across departments and agencies. Smart city deployments benefit from unified incident management, multi-agency alerting, coordinated response workflows, and integrated command center operations. VMukti's architecture and features are specifically optimized for municipal enterprise complexity and emergency coordination.",
+      "rhombus": "Rhombus is enterprise security platform without enterprise campus specialization or emergency management capabilities. The platform excels at corporate security and facility management but doesn't include emergency management integration or city-scale coordination features. Organizations requiring emergency services coordination or enterprise campus capabilities would need to integrate separate systems alongside Rhombus.",
+      "verdict": "VMukti is essential for enterprise campus and municipal enterprise deployments. Rhombus is appropriate for corporate security without emergency management needs. These serve different market segments and organizational types."
     },
     {
       "title": "Access Control & Physical Security Integration",
@@ -140,7 +140,7 @@
   ],
   "best_for": {
     "vmukti": [
-      "Smart city and municipal government projects with emergency management needs",
+      "Smart city and municipal enterprise projects with emergency management needs",
       "Organizations planning global expansion across 15+ countries",
       "Large deployments (1000+ cameras) sensitive to bandwidth and licensing costs",
       "Emerging market deployments in Asia, Africa, or Middle East",
@@ -163,11 +163,11 @@
   "faq": [
     {
       "question": "Is VMukti better than Rhombus for our organization?",
-      "answer": "VMukti and Rhombus serve different organizational needs. VMukti is better for smart city projects, global expansion, complex emergency operations, and large-scale deployments. Rhombus is better for North American enterprises prioritizing mobile-first operations, ease of deployment, and integrated access control. Evaluate based on your geographic scope, emergency management needs, camera scale, and operational complexity preferences."
+      "answer": "VMukti and Rhombus serve different organizational needs. VMukti is better for enterprise campus projects, global expansion, complex emergency operations, and large-scale deployments. Rhombus is better for North American enterprises prioritizing mobile-first operations, ease of deployment, and integrated access control. Evaluate based on your geographic scope, emergency management needs, camera scale, and operational complexity preferences."
     },
     {
       "question": "What's the main difference between VMukti and Rhombus?",
-      "answer": "VMukti is comprehensive cloud-native platform with integrated EMS, ICCC, advanced AI analytics, and global presence across 15+ countries. Rhombus is mobile-first cloud security platform with strong North American presence and focus on simplicity and intelligent alerting. VMukti targets smart city and complex operations; Rhombus targets straightforward corporate security."
+      "answer": "VMukti is comprehensive cloud-native platform with integrated EMS, Enterprise Command Center, advanced AI analytics, and global presence across 15+ countries. Rhombus is mobile-first cloud security platform with strong North American presence and focus on simplicity and intelligent alerting. VMukti targets enterprise campus and complex operations; Rhombus targets straightforward corporate security."
     },
     {
       "question": "How do licensing models compare?",
@@ -182,8 +182,8 @@
       "answer": "No. Rhombus focuses on enterprise security without integrated emergency management services. VMukti includes EMS and integrated command center capabilities specifically designed for emergency coordination. Organizations requiring emergency management should choose VMukti; those needing corporate security should evaluate Rhombus."
     },
     {
-      "question": "Which platform is better for smart cities?",
-      "answer": "VMukti is purpose-built for smart city deployments with 50+ proven projects and integrated EMS+ICCC for emergency coordination. Rhombus is enterprise security platform without smart city specialization. For smart city projects, VMukti is the appropriate choice."
+      "question": "Which platform is better for enterprise campuses?",
+      "answer": "VMukti is purpose-built for enterprise campus deployments with 50+ proven projects and integrated EMS+Enterprise Command Center for emergency coordination. Rhombus is enterprise security platform without enterprise campus specialization. For enterprise campus projects, VMukti is the appropriate choice."
     },
     {
       "question": "Can VMukti or Rhombus integrate with access control systems?",
@@ -204,7 +204,7 @@
           "name": "Is VMukti better than Rhombus for our organization?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "VMukti and Rhombus serve different needs. VMukti is better for smart city projects, global expansion, and complex emergency operations. Rhombus is better for North American enterprises prioritizing mobile-first operations and simplicity."
+            "text": "VMukti and Rhombus serve different needs. VMukti is better for enterprise campus projects, global expansion, and complex emergency operations. Rhombus is better for North American enterprises prioritizing mobile-first operations and simplicity."
           }
         },
         {
@@ -212,7 +212,7 @@
           "name": "What's the main difference between VMukti and Rhombus?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "VMukti is comprehensive platform with integrated EMS, ICCC, advanced AI analytics across 15+ countries. Rhombus is mobile-first North American security platform emphasizing simplicity and intelligent alerting."
+            "text": "VMukti is comprehensive platform with integrated EMS, Enterprise Command Center, advanced AI analytics across 15+ countries. Rhombus is mobile-first North American security platform emphasizing simplicity and intelligent alerting."
           }
         },
         {
@@ -241,10 +241,10 @@
         },
         {
           "@type": "Question",
-          "name": "Which platform is better for smart cities?",
+          "name": "Which platform is better for enterprise campuses?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "VMukti is purpose-built for smart cities with 50+ projects and integrated emergency coordination. Rhombus is enterprise security platform. For smart cities, VMukti is the appropriate choice."
+            "text": "VMukti is purpose-built for enterprise campuses with 50+ projects and integrated emergency coordination. Rhombus is enterprise security platform. For enterprise campuses, VMukti is the appropriate choice."
           }
         },
         {
