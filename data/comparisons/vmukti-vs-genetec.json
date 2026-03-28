@@ -11,7 +11,7 @@
     "subtitle": "A fair, feature-by-feature comparison of two capable video management platforms with different architectural approaches."
   },
   "overview": {
-    "vmukti": "VMukti is a cloud-native, AI-powered video management system with 18+ years of experience and 900+ deployments across 50+ smart city projects globally. Built for the cloud from inception, VMukti combines video management, emergency management services (EMS), and integrated command center capabilities (ICCC) into a unified platform, offering affordable pricing with site-based licensing and 96% bandwidth efficiency.",
+    "vmukti": "VMukti is a cloud-native, AI-powered video management system with 18+ years of experience and 900+ deployments across 50+ enterprise campus projects globally. Built for the cloud from inception, VMukti combines video management, emergency management services (EMS), and integrated command center capabilities (Enterprise Command Center) into a unified platform, offering affordable pricing with site-based licensing and 96% bandwidth efficiency.",
     "genetec": "Genetec is a well-established security systems company offering comprehensive video management, access control, and analytics capabilities. Genex (formerly Genetec) has built a strong reputation with enterprise deployments worldwide, offering flexible deployment options and a mature ecosystem of integrations. Their platform emphasizes interoperability and multi-site management across large organizations."
   },
   "comparison_table": {
@@ -48,14 +48,14 @@
         "genetec": "Enterprise-scale, limited by server specifications"
       },
       {
-        "feature": "Integrated EMS & ICCC",
-        "vmukti": "VMS + EMS + ICCC unified in single platform",
+        "feature": "Integrated EMS & Enterprise Command Center",
+        "vmukti": "VMS + EMS + Enterprise Command Center unified in single platform",
         "genetec": "VMS-focused, separate emergency management solutions"
       },
       {
-        "feature": "Smart City Capability",
-        "vmukti": "Purpose-built for smart city deployments, 50+ projects",
-        "genetec": "Enterprise focus, limited smart city specialization"
+        "feature": "Enterprise Campus Capability",
+        "vmukti": "Purpose-built for enterprise campus deployments, 50+ projects",
+        "genetec": "Enterprise focus, limited enterprise campus specialization"
       },
       {
         "feature": "Geographic Coverage",
@@ -114,10 +114,10 @@
       "verdict": "VMukti's native, integrated analytics provide faster deployment and simpler operations. Genetec's ecosystem approach offers greater flexibility for organizations requiring highly specialized analytical capabilities or integrations with established analytics vendors. For most organizations, VMukti's integrated approach delivers better value and faster time-to-insight."
     },
     {
-      "title": "Smart City & Integrated Command Center Capabilities",
-      "vmukti_perspective": "VMukti was purpose-built for smart city deployments with proven success across 50+ smart city projects globally. The platform's unified VMS + EMS + ICCC architecture is specifically designed for city-scale coordination, combining video management with emergency management services and integrated command center capabilities. This integrated approach eliminates data silos between security, emergency response, and operations teams. Smart city deployments benefit from unified alerting, coordinated response workflows, and centralized intelligence. The platform's experience managing complex municipal deployments provides confidence for large-scale smart city initiatives.",
-      "genetec_perspective": "Genetec excels in enterprise security management with strong video and access control integration. Their platform supports sophisticated multi-site deployments with robust federation capabilities for managing distributed organizations. However, Genetec's primary focus is security operations rather than city-wide emergency coordination. Organizations implementing smart city initiatives requiring emergency management integration, traffic control coordination, and public health response would need to integrate separate systems alongside the VMS.",
-      "verdict": "VMukti has clear advantage for dedicated smart city projects requiring integrated emergency management and command center coordination. Genetec is superior for enterprises prioritizing integrated security and access control across multiple sites. Different platforms serve different organizational needs—VMukti for smart cities, Genetec for enterprise security."
+      "title": "Enterprise Campus & Integrated Command Center Capabilities",
+      "vmukti_perspective": "VMukti was purpose-built for enterprise campus deployments with proven success across 50+ enterprise campus projects globally. The platform's unified VMS + EMS + Enterprise Command Center architecture is specifically designed for city-scale coordination, combining video management with emergency management services and integrated command center capabilities. This integrated approach eliminates data silos between security, emergency response, and operations teams. Smart city deployments benefit from unified alerting, coordinated response workflows, and centralized intelligence. The platform's experience managing complex municipal deployments provides confidence for large-scale enterprise campus initiatives.",
+      "genetec_perspective": "Genetec excels in enterprise security management with strong video and access control integration. Their platform supports sophisticated multi-site deployments with robust federation capabilities for managing distributed organizations. However, Genetec's primary focus is security operations rather than city-wide emergency coordination. Organizations implementing enterprise campus initiatives requiring emergency management integration, traffic control coordination, and public health response would need to integrate separate systems alongside the VMS.",
+      "verdict": "VMukti has clear advantage for dedicated enterprise campus projects requiring integrated emergency management and command center coordination. Genetec is superior for enterprises prioritizing integrated security and access control across multiple sites. Different platforms serve different organizational needs—VMukti for enterprise campuses, Genetec for enterprise security."
     },
     {
       "title": "Scalability & Global Operations",
@@ -134,7 +134,7 @@
   ],
   "best_for": {
     "vmukti": [
-      "Smart city and municipal government deployments requiring integrated emergency management",
+      "Smart city and municipal enterprise deployments requiring integrated emergency management",
       "Organizations seeking pure cloud deployment without on-premise infrastructure",
       "Multi-site operations with 500+ cameras requiring affordable, scalable licensing",
       "Deployments prioritizing AI-powered analytics integrated into the VMS",
@@ -155,7 +155,7 @@
   "faq": [
     {
       "question": "Is VMukti better than Genetec for our organization?",
-      "answer": "Neither is universally 'better'—they serve different organizational needs. VMukti excels for cloud-forward organizations, smart city projects, and deployments prioritizing integrated emergency management with affordable licensing. Genetec is superior for enterprises with existing on-premise investments, sophisticated access control requirements, or established vendor ecosystems. Evaluate based on your deployment preferences (cloud vs. hybrid), organizational scale, smart city needs, and existing infrastructure investments. Both platforms deliver robust video management—the choice depends on alignment with your specific requirements."
+      "answer": "Neither is universally 'better'—they serve different organizational needs. VMukti excels for cloud-forward organizations, enterprise campus projects, and deployments prioritizing integrated emergency management with affordable licensing. Genetec is superior for enterprises with existing on-premise investments, sophisticated access control requirements, or established vendor ecosystems. Evaluate based on your deployment preferences (cloud vs. hybrid), organizational scale, enterprise campus needs, and existing infrastructure investments. Both platforms deliver robust video management—the choice depends on alignment with your specific requirements."
     },
     {
       "question": "How does VMukti's cloud-native architecture compare to Genetec's hybrid approach?",
@@ -166,8 +166,8 @@
       "answer": "VMukti uses site-based licensing with unlimited cameras per site, eliminating per-camera fees and providing predictable costs at any scale. Genetec uses per-camera and per-server licensing, creating scaling costs proportional to camera count. For small deployments (under 100 cameras), licensing costs may be comparable. For large deployments (1000+ cameras), VMukti's site-based model typically offers 40-60% lower costs. VMukti's cloud model also eliminates capital expenditure for servers and ongoing infrastructure maintenance required in Genetec's on-premise approach."
     },
     {
-      "question": "Which platform is better for smart city deployments?",
-      "answer": "VMukti is purpose-built for smart city projects with proven success across 50+ smart city implementations globally. The platform's unified VMS + EMS + ICCC architecture coordinates video management, emergency response, and command center operations—critical for city-scale operations. Genetec focuses primarily on security management without integrated emergency operations coordination. For true smart city requirements involving coordinated emergency response, traffic management, and public health integration, VMukti's specialized architecture provides significant advantages."
+      "question": "Which platform is better for enterprise campus deployments?",
+      "answer": "VMukti is purpose-built for enterprise campus projects with proven success across 50+ enterprise campus implementations globally. The platform's unified VMS + EMS + Enterprise Command Center architecture coordinates video management, emergency response, and command center operations—critical for city-scale operations. Genetec focuses primarily on security management without integrated emergency operations coordination. For true enterprise campus requirements involving coordinated emergency response, traffic management, and public health integration, VMukti's specialized architecture provides significant advantages."
     },
     {
       "question": "How do AI analytics compare between VMukti and Genetec?",
@@ -196,7 +196,7 @@
           "name": "Is VMukti better than Genetec for our organization?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Neither is universally 'better'—they serve different organizational needs. VMukti excels for cloud-forward organizations, smart city projects, and deployments prioritizing integrated emergency management with affordable licensing. Genetec is superior for enterprises with existing on-premise investments, sophisticated access control requirements, or established vendor ecosystems."
+            "text": "Neither is universally 'better'—they serve different organizational needs. VMukti excels for cloud-forward organizations, enterprise campus projects, and deployments prioritizing integrated emergency management with affordable licensing. Genetec is superior for enterprises with existing on-premise investments, sophisticated access control requirements, or established vendor ecosystems."
           }
         },
         {
@@ -217,10 +217,10 @@
         },
         {
           "@type": "Question",
-          "name": "Which platform is better for smart city deployments?",
+          "name": "Which platform is better for enterprise campus deployments?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "VMukti is purpose-built for smart city projects with proven success across 50+ implementations. The unified VMS + EMS + ICCC architecture coordinates emergency response and command center operations. Genetec focuses primarily on security without integrated emergency coordination."
+            "text": "VMukti is purpose-built for enterprise campus projects with proven success across 50+ implementations. The unified VMS + EMS + Enterprise Command Center architecture coordinates emergency response and command center operations. Genetec focuses primarily on security without integrated emergency coordination."
           }
         },
         {
@@ -265,7 +265,7 @@
         {
           "@type": "SoftwareApplication",
           "name": "VMukti",
-          "description": "Cloud-native VMS platform with integrated EMS and ICCC capabilities",
+          "description": "Cloud-native VMS platform with integrated EMS and Enterprise Command Center capabilities",
           "applicationCategory": "VideoManagementSystem",
           "operatingSystem": "Cloud-based, all platforms",
           "offers": {
