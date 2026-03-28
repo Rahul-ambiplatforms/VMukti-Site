@@ -21,7 +21,7 @@ export default async function sitemap() {
     // Solutions
     { url: `${SITE_URL}/solution/video-management-system`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/solution/enterprise-management-system`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/solution/integrated-command-control-center`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/solution/enterprise-command-center`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/solution/cloudai`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/solution/genai`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/solution/live-streaming-solution`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
