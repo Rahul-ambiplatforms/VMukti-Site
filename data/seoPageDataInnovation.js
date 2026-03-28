@@ -1071,7 +1071,7 @@ const seoPageDataInnovation = {
         "stats": [
           { "value": "12", "label": "MENA Data Center Locations" },
           { "value": "99.99%", "label": "Regional Infrastructure Uptime SLA" },
-          { "value": "15+", "label": "Governments Using VMukti Platforms" }
+          { "value": "15+", "label": "Enterprises Using VMukti Platforms" }
         ],
         "features": [
           "MENA region data residency and sovereignty options",
