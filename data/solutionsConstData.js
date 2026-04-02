@@ -912,10 +912,10 @@ export const solutionsData = {
 
     // Section 7: Why Choose Us from the seventh image
     whyChooseUs: {
-      heading: "Why Choose Us for VMS?",
+      heading: "Why Leading Organizations Trust VMukti for Live CCTV Feed Streaming",
       description: [
-        "At VMukti, we bring you surveillance without compromise. Our AI-powered VMS delivers real-time awareness and automated threat detection so you're never in the dark and never a second too late. Manual oversight is outdated. Our system replaces it with fast, intelligent response built right in.",
-        "You get secure, encrypted access to multi-site footage anytime. Our adaptive storage grows with you whether you're scaling up or centralizing control. This is surveillance mode for forward-thinking operations like yours.",
+        "Enterprises and agencies trust VMukti to manage their most critical surveillance with precision, security, and reliability. Our live feed streaming is purpose-built for secure, high-quality delivery from CCTV cameras to Command & Control Centres—ensuring every visual reaches the right teams instantly across locations and devices.",
+        "What sets us apart is combining smooth, uninterrupted streaming with mission-critical features like custom monitoring dashboards, role-based access control, incident alerts, and detailed analytics. Backed by expert support and scalable infrastructure, VMukti empowers organizations to boost situational awareness, coordinate faster, and make better decisions when every second counts.",
       ],
       images: [
         "/assets/solution_live_choose_1.png",
