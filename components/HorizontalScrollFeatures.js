@@ -18,17 +18,17 @@ const FeatureCard = ({ feature, bgColor }) => (
   <Flex
     direction="column"
     w={["85vw", "85vw", "92vw", "92vw"]}
-    h={["60vh", "60vh", "60vh", "65vh"]}
+    h={["55vh", "55vh", "55vh", "62vh"]}
     flexShrink={0}
     mr={["5vw", "5vw", "5vw", "2vw"]}
     align="center"
     justify="center"
-    mt="1%"
+    mt="0"
   >
     <Box
       position="relative"
       w="100%"
-      h={["60vh", "60vh", "60vh", "65vh"]}
+      h={["55vh", "55vh", "55vh", "62vh"]}
       borderRadius="20px"
       overflow="hidden"
       justifyContent={["center", "", "", ""]}
@@ -115,7 +115,7 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
           ease: "none",
           scrollTrigger: {
             trigger: section,
-            start: "top 16% top",
+            start: "top 10% top",
             pin: true,
             scrub: 1.5,
             end: () => `+=${scrollAmount}`,
@@ -138,7 +138,7 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
           key={sectionData.id}
           className="horizontal-section"
           direction="column"
-          h={["80vh", "80vh", "80vh", "85vh"]}
+          h={["75vh", "75vh", "75vh", "80vh"]}
           w="100%"
           position="relative"
           overflow="hidden"
@@ -146,7 +146,7 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
           borderRadius="24px"
           mt="2%"
           mb="-4%"
-          pt={{ base: 4, md: 6 }}
+          pt={{ base: 2, md: 3 }}
         >
           <Heading
             as="h2"
@@ -159,7 +159,7 @@ const HorizontalScrollFeatures = ({ scrollData = [] }) => {
             flexShrink={0}
             zIndex={2}
             color={sectionData.bgColor === "blue" ? "white" : "black"}
-            mb={{ base: 2, md: 3 }}
+            mb={{ base: 1, md: 1 }}
           >
             {sectionData.mainHeading}
           </Heading>

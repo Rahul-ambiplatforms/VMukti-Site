@@ -109,7 +109,7 @@ const Trusted = ({ title = "Trusted By" }) => {
       >
         <Flex
           w="max-content"
-          animation={`${scrollRTL} 30s linear infinite`}
+          animation={`${scrollRTL} 50s linear infinite`}
         >
           {/* First set — visible to screen readers */}
           {logosRow1.map((logo, index) => (
@@ -170,7 +170,7 @@ const Trusted = ({ title = "Trusted By" }) => {
       >
         <Flex
           w="max-content"
-          animation={`${scrollLTR} 30s linear infinite`}
+          animation={`${scrollLTR} 50s linear infinite`}
         >
           {/* First set — visible to screen readers */}
           {logosRow2.map((logo, index) => (
