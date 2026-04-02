@@ -18,10 +18,19 @@ export default async function sitemap() {
     { url: `${SITE_URL}/terms-and-conditions`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
     { url: `${SITE_URL}/usa/video-surveillance-solutions`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/uk/video-surveillance-solutions`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    // Geo Landing Pages (International)
+    { url: `${SITE_URL}/india/ai-video-analytics`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/uae/smart-city-surveillance`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/singapore/enterprise-vms`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/saudi-arabia/ai-video-analytics`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    // Knowledge Base (GEO AI Optimization)
+    { url: `${SITE_URL}/knowledge-base`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${SITE_URL}/knowledge-base/faq`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${SITE_URL}/knowledge-base/stats`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/knowledge-base/glossary`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     // Solutions
     { url: `${SITE_URL}/solution/video-management-system`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/solution/enterprise-management-system`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/solution/enterprise-command-center`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/solution/cloudai`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/solution/genai`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/solution/live-streaming-solution`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
