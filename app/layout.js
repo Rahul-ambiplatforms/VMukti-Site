@@ -70,11 +70,10 @@ export const metadata = {
       'en': SITE_URL,
       'en-US': `${SITE_URL}/usa/video-surveillance-solutions`,
       'en-GB': `${SITE_URL}/uk/video-surveillance-solutions`,
-      'en-IN': SITE_URL,
-      'en-AE': SITE_URL,
-      'en-SG': SITE_URL,
-      'en-SA': SITE_URL,
-      'en-AU': SITE_URL,
+      'en-IN': `${SITE_URL}/india/ai-video-analytics`,
+      'en-AE': `${SITE_URL}/uae/smart-city-surveillance`,
+      'en-SG': `${SITE_URL}/singapore/enterprise-vms`,
+      'en-SA': `${SITE_URL}/saudi-arabia/ai-video-analytics`,
     },
   },
   verification: {
@@ -85,6 +84,8 @@ export const metadata = {
     'geo.placename': 'Ahmedabad',
     'geo.position': '23.03;72.51',
     'ICBM': '23.03, 72.51',
+    'X-Content-Type-Options': 'nosniff',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
   },
 };
 
@@ -183,6 +184,17 @@ const websiteSchema = {
   },
 };
 
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'VMukti Solutions - Enterprise AI Video Intelligence',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', '.speakable', '[data-speakable]', '.hero-description']
+  },
+  url: 'https://www.vmukti.com'
+};
+
 const wixFont = localFont({
   src: '../public/assets/Wix_Madefor_Display/WixMadeforDisplay-VariableFont_wght.ttf',
   variable: '--font-wix',
@@ -195,7 +207,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.ico" />
 
-        {/* Issue #4 — Preconnect hints for third-party domains */}
+        {/* Issue #4 â Preconnect hints for third-party domains */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.clarity.ms" />
         <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
@@ -203,7 +215,7 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://www.clarity.ms" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
 
-        {/* Issue #3 — Preload hero image to improve LCP */}
+        {/* Issue #3 â Preload hero image to improve LCP */}
         <link
           rel="preload"
           as="image"
@@ -220,8 +232,12 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
+        />
       </head>
-      {/* Issue #2 — suppressHydrationWarning prevents React from throwing on SSR/CSR
+      {/* Issue #2 â suppressHydrationWarning prevents React from throwing on SSR/CSR
           mismatches caused by ChakraUI color-mode attribute injected by the browser
           extension, or minor differences in client-only hooks (useInView, etc.). */}
       <body suppressHydrationWarning>
