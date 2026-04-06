@@ -59,18 +59,18 @@ const nextConfig = {
       { source: "/industries", destination: "/industry", permanent: true },
       // Old product URLs → new solution pages
       { source: "/products/vms", destination: "/products/vms-vas/", permanent: true },
-      { source: "/products/edge-ai-camera", destination: "/solution/edge-ai", permanent: true },
-      { source: "/products/edge-ai-camera/", destination: "/solution/edge-ai", permanent: true },
-      { source: "/products/smart-city-camera", destination: "/industry/smart-city", permanent: true },
-      { source: "/products/smart-city-camera/", destination: "/industry/smart-city", permanent: true },
-      { source: "/products/face-recognation-camera", destination: "/solution/face-recognition", permanent: true },
-      { source: "/products/face-recognation-camera/", destination: "/solution/face-recognition", permanent: true },
-      { source: "/products/anpr-camera", destination: "/solution/anpr-lpr", permanent: true },
-      { source: "/products/anpr-camera/", destination: "/solution/anpr-lpr", permanent: true },
+      { source: "/products/edge-ai-camera", destination: "/solution/cloudai", permanent: true },
+      { source: "/products/edge-ai-camera/", destination: "/solution/cloudai", permanent: true },
+      { source: "/products/smart-city-camera", destination: "/industry/enterprise-campus", permanent: true },
+      { source: "/products/smart-city-camera/", destination: "/industry/enterprise-campus", permanent: true },
+      { source: "/products/face-recognation-camera", destination: "/solution/cloudai", permanent: true },
+      { source: "/products/face-recognation-camera/", destination: "/solution/cloudai", permanent: true },
+      { source: "/products/anpr-camera", destination: "/solution/cloudai", permanent: true },
+      { source: "/products/anpr-camera/", destination: "/solution/cloudai", permanent: true },
       { source: "/products/ambicam-4g-camera", destination: "/Ambicam", permanent: true },
       { source: "/products/ambicam-4g-camera/", destination: "/Ambicam", permanent: true },
-      { source: "/products/object-detection-camera", destination: "/solution/ai-video-analytics", permanent: true },
-      { source: "/products/object-detection-camera/", destination: "/solution/ai-video-analytics", permanent: true },
+      { source: "/products/object-detection-camera", destination: "/solution/cloudai", permanent: true },
+      { source: "/products/object-detection-camera/", destination: "/solution/cloudai", permanent: true },
       // Old regional URLs
       { source: "/video-surveillance-solutions-usa", destination: "/usa/video-surveillance-solutions", permanent: true },
       { source: "/video-surveillance-solutions-uk", destination: "/uk/video-surveillance-solutions", permanent: true },
@@ -79,8 +79,8 @@ const nextConfig = {
       { source: "/cloud-based-video-security-solution/", destination: "/blog/cloud-based-video-surveillance-benefits", permanent: true },
       { source: "/best-live-streaming-services-provider-in-india/", destination: "/blog/best-live-streaming-services-provider-in-india", permanent: true },
       { source: "/10-great-advantages-of-remote-security-and-video-surveillance/", destination: "/blog/advantages-of-remote-security-and-video-surveillance", permanent: true },
-      { source: "/artificial-intelligence-edge-ai-camera-solutions-with-video-monitoring-technology/", destination: "/solution/edge-ai", permanent: true },
-      { source: "/7-benefits-of-ai-powered-cctv-cameras-for-business-surveillance/", destination: "/solution/ai-video-analytics", permanent: true },
+      { source: "/artificial-intelligence-edge-ai-camera-solutions-with-video-monitoring-technology/", destination: "/solution/cloudai", permanent: true },
+      { source: "/7-benefits-of-ai-powered-cctv-cameras-for-business-surveillance/", destination: "/solution/cloudai", permanent: true },
       { source: "/the-latest-technology-of-cctv-surveillance-systems/", destination: "/blog/latest-technology-of-cctv-surveillance-systems", permanent: true },
       { source: "/best-streaming-engine/", destination: "/blog/best-streaming-engine-for-webcast", permanent: true },
       { source: "/exam-surveillance-solutions-ensuring-the-integrity-of-your-exams/", destination: "/industry/education", permanent: true },
@@ -89,6 +89,11 @@ const nextConfig = {
       // Brand naming: smart-city → enterprise-campus
       { source: "/industry/smart-city", destination: "/industry/enterprise-campus", permanent: true },
       { source: "/industry/smart-city/", destination: "/industry/enterprise-campus/", permanent: true },
+      // NOTE: /solution/ai-video-analytics, face-recognition, anpr-lpr, cloud-surveillance,
+      // edge-ai and /industry/retail are now real pages with SEO configs — redirects removed.
+      // Typo fix: /partner → /partners
+      { source: "/partner", destination: "/partners", permanent: true },
+      { source: "/partner/", destination: "/partners/", permanent: true },
     ];
   },
 

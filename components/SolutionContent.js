@@ -200,7 +200,6 @@ const SolutionContent = ({ content, solutionName }) => {
   const { keyBenefits } = content;
   const { workflow } = content;
   const { whyChooseUs } = content;
-  const { schema } = content;
 
   const params = useParams();
   const name = solutionName || params?.name || '';
@@ -233,15 +232,6 @@ const SolutionContent = ({ content, solutionName }) => {
 
   return (
     <>
-      {schema.map((schemaItem, index) => (
-        <script
-          key={`schema-${index}`}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schemaItem),
-          }}
-        />
-      ))}
       <Helmet>
         {/* SEO Tags */}
         <title>{content.metetitle}</title>

@@ -31,13 +31,22 @@ export default async function sitemap() {
     // Solutions
     { url: `${SITE_URL}/solution/video-management-system`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/solution/enterprise-management-system`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/solution/integrated-command-control-center`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/solution/cloudai`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/solution/genai`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/solution/visualbot`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/solution/live-streaming-solution`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${SITE_URL}/solution/flying-squad-vehicle`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${SITE_URL}/solution/ai-video-analytics`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/solution/face-recognition`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/solution/anpr-lpr`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/solution/cloud-surveillance`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/solution/edge-ai`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     // Industries
     ...['banking', 'enterprise-campus', 'healthcare', 'manufacturing', 'oil-and-gas',
-      'warehouse', 'logistics', 'education', 'transportation', 'pharma', 'construction',
-      'hospitality', 'sports-entertainment', 'enterprise', 'retail'
+      'government', 'defense', 'warehouse', 'logistics', 'education', 'election',
+      'transportation', 'pharma', 'construction', 'hospitality', 'sports-entertainment',
+      'enterprise', 'retail'
     ].map(name => ({
       url: `${SITE_URL}/industry/${name}`,
       lastModified: new Date(),

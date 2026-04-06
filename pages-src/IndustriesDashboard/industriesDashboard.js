@@ -615,17 +615,15 @@ export default function IndustryDashboard() {
 
   return (
     <>
-      <script>
-        {industrypageSchemas.map((schema, index) => (
-          <script
-            key={`schema-${index}`}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(schema),
-            }}
-          />
-        ))}
-      </script>
+      {industrypageSchemas.map((schema, index) => (
+        <script
+          key={`schema-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schema),
+          }}
+        />
+      ))}
       <Helmet>
         {/* SEO Tags */}
         <title>Industries We Serve – AI Video Surveillance Solutions in USA</title>

@@ -681,12 +681,10 @@ const schemaData = {
   ],
   solutionpage: [
     solutionpageSchema,
-    organizationSchema,
     breadcrumbSolution,
   ],
   industrypage: [
     industrypageSchema,
-    organizationSchema,
     breadcrumbIndustry,
   ],
   productpage: [

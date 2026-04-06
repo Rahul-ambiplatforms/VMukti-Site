@@ -226,7 +226,7 @@ const GlossaryPage = () => {
     '@context': 'https://schema.org',
     '@type': 'DefinedTermSet',
     name: 'VMukti Glossary',
-    description: 'Industry glossary of video surveillance and AI anaytics terminology',
+    description: 'Industry glossary of video surveillance and AI analytics terminology',
     url: 'https://vmukti.com/knowledge-base/glossary',
     hasDefinedTerm: sortedTerms.map((term) => ({
       '@type': 'DefinedTerm',

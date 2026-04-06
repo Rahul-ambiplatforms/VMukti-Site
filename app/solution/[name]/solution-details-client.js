@@ -1,7 +1,7 @@
 'use client';
 
 import SolutionDetails from '../../../components/SolutionDetails';
-import { FAQSchema, ProductSchema, BreadcrumbSchema } from '../../../components/SchemaMarkup';
+import { FAQSchema, ProductSchema } from '../../../components/SchemaMarkup';
 import { faqData } from '../../../data/faqData';
 import { useMemo } from 'react';
 
@@ -103,13 +103,6 @@ export default function SolutionDetailsClient({ solutionName }) {
     return configs[solutionName] || configs['video-management-system'];
   }, [solutionName]);
 
-  // Breadcrumb items for current solution
-  const breadcrumbItems = [
-    { name: 'Home', url: 'https://www.vmukti.com' },
-    { name: 'Solutions', url: 'https://www.vmukti.com/solution' },
-    { name: productSchemaConfig.name, url: productSchemaConfig.url },
-  ];
-
   return (
     <>
       {/* Product Schema Markup */}
@@ -124,8 +117,7 @@ export default function SolutionDetailsClient({ solutionName }) {
       {/* FAQ Schema Markup */}
       {faqContent.length > 0 && <FAQSchema faqs={faqContent} />}
 
-      {/* Breadcrumb Schema Markup */}
-      <BreadcrumbSchema items={breadcrumbItems} />
+      {/* Breadcrumb schema is handled globally by SEO/Breadcrumbs.jsx in site-layout */}
 
       {/* Solution Details Component */}
       <SolutionDetails solutionName={solutionName} />

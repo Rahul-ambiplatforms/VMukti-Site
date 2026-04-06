@@ -32,17 +32,15 @@ const Hero = () => {
 
   return (
     <>
-      <script>
-        {solutionpageSchemas.map((schema, index) => (
-          <script
-            key={`schema-${index}`}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(schema),
-            }}
-          />
-        ))}
-      </script>
+      {solutionpageSchemas.map((schema, index) => (
+        <script
+          key={`schema-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schema),
+          }}
+        />
+      ))}
       <Helmet>
         {/* SEO Tags */}
         <title>

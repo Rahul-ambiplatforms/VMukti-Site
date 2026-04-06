@@ -1,7 +1,7 @@
 import { generatePageMetadata } from '../../../lib/metadata';
 import { seoConfig } from '../../../lib/seo-config';
 import IndustryDetailsClient from './industry-details-client';
-import { redirect } from 'next/navigation';
+import { redirect, notFound } from 'next/navigation';
 
 export const dynamic = 'force-dynamic';
 
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }) {
   const { name } = await params;
   const configKey = industryMap[name];
   if (!configKey || !seoConfig[configKey]) {
-    return { title: 'Page Not Found' };
+    return { title: 'Page Not Found', robots: { index: false, follow: false } };
   }
   return generatePageMetadata(seoConfig[configKey], `/industry/${name}`);
 }
@@ -51,6 +51,12 @@ export default async function IndustryDetailsPage({ params }) {
   if (name === 'sports-and-entertainment') {
     redirect('/industry/sports-entertainment');
   }
-  
+
+  // Return proper 404 for unknown industry slugs
+  const configKey = industryMap[name];
+  if (!configKey || !seoConfig[configKey]) {
+    notFound();
+  }
+
   return <IndustryDetailsClient industryName={name} />;
 }
