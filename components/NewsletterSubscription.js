@@ -68,7 +68,6 @@ const resources = [
   // { text: "Company News" },
 
   // Column 2
-  { text: "Solution Comparisons", path: "/solutions-comparison" },
   // { text: "Knowledge Base", path: "/knowledge-base" },
   // { text: "ROI Calculator", path: "/roi-calculator" },
   // { text: "Pricing", path: "/pricing" },

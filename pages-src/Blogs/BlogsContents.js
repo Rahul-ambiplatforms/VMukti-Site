@@ -272,6 +272,7 @@ const BlogsOverviewDash = () => {
             ...formData,
             formType: "Blog",
             pageUrl: currentUrl,
+            leadType: `VMukti Website-(Blog)`, // You can customize this as needed
           }),
         }
       );

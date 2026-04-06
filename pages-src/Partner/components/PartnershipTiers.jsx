@@ -111,7 +111,7 @@ const PartnershipTiers = () => {
           <Flex
             direction={{ base: "column", lg: "row" }}
             gap={{ base: "20px", md: "24px" }}
-            align="flex-start"
+            align="stretch"
           >
             {tiers.map((tier, i) => (
               <MotionBox
@@ -121,9 +121,8 @@ const PartnershipTiers = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: i * 0.1 }}
                 flex="1"
-                w={{ base: "100%", lg: "410.67px" }}
-                minW={{ base: "auto", lg: "410.67px" }}
-                h={{ base: "auto", lg: "535.29px" }}
+                w={{ base: "100%", lg: "0" }}
+                minW="0"
                 bg={tier.highlight ? "#3F77A5" : "white"}
                 borderRadius="24px"
                 border={`1.11px solid ${tier.highlight ? "#3F77A5" : "#E2E8F0"}`}

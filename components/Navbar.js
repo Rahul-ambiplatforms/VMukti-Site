@@ -127,7 +127,7 @@ const dropdownItems = {
   ourServing: [
     { label: "Insights & Blog", path: "/blog" },
     // { label: "Customer Stories", path: "/customer-stories" },
-    { label: "Solution Comparisons", path: "/solutions-comparison" },
+    // { label: "Solution Comparisons", path: "/solutions-comparison" },
     { label: "Enterprise Command Center", path: "/enterprise-command-center" },
     
     // { label: "Knowledge Base", path: "/knowledge-base" },
