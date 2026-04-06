@@ -209,7 +209,7 @@ const Solutions = ({ data }) => {
                 <Box w="180px" h="52px">
                   <img 
                     src={activeSolution.image_certi}
-                    alt={activeSolution.heading}
+                    alt={activeSolution.heading || "VMukti Certifications - STQC, ISO 27001, Make in India"}
                     w="100%"
                     h="100%"
                     objectFit="cover"
