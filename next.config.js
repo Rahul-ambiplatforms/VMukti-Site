@@ -107,7 +107,7 @@ const nextConfig = {
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' data: https://fonts.gstatic.com",
       "img-src 'self' data: blob: https://res.cloudinary.com https://*.clarity.ms https://www.googletagmanager.com https://www.vmukti.com https://vmukti.com",
-      "connect-src 'self' https://www.googletagmanager.com https://*.clarity.ms https://vmukti.com https://www.vmukti.com https://res.cloudinary.com",
+      "connect-src 'self' https://www.googletagmanager.com https://*.clarity.ms https://vmukti.com https://www.vmukti.com https://res.cloudinary.com http://localhost:5000",
       "frame-src 'self' https://www.googletagmanager.com",
       "object-src 'none'",
       "base-uri 'self'",

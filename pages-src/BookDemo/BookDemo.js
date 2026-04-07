@@ -341,11 +341,13 @@ export default function BookDemo() {
                     body: JSON.stringify({
                         fullName: formData.fullName,
                         email: formData.email,
+                        phoneFull: `${formData.countryCode}${formData.mobileNumber}`,
                         mobileNumber: `${formData.countryCode} ${formData.mobileNumber}`,
                         message: formData.requirements,
                         selectedDate: formattedDate,
                         selectedTime: selectedTime,
                         formType: "Demo Booking",
+                        leadType: "VMukti Website-(Demo)",
                     }),
                 }
             );
