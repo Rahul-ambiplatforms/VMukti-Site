@@ -109,7 +109,7 @@ const industriesData = [
     description:
       "VMukti’s advanced computer vision continuously monitors your high-risk zones, identifies leaks, unsafe actions and enforces critical safety protocols delivering secure, efficient and fully compliant energy operations, even in the harshest conditions.",
     isWide: true,
-    link: "oilandgas",
+    link: "oil-and-gas",
   },
   {
     name: "",
@@ -183,7 +183,7 @@ const industriesData = [
     dashColor: "#3F77A5",
     description:
       "VMukti’s vision AI empowers you with real-time traffic analytics, crowd control and incident detection making your urban infrastructure smarter, safer and more responsive to dynamic challenges.",
-    link: "smartcity",
+    link: "enterprise-campus",
   },
   {
     name: "",
@@ -267,7 +267,7 @@ const industriesData = [
     dashColor: "#3F77A5",
     description:
       "VMukti’s computer vision actively monitors crowd behavior, manages entry flows and detects anomalies to elevate safety during large-scale events ensuring smooth operations, improved crowd control and a secure, seamless experience for your attendees.",
-    link: "sportsentertainment",
+    link: "sports-entertainment",
   },
   {
     name: "Defense",

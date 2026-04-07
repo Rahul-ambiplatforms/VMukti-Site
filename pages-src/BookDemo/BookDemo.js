@@ -813,7 +813,7 @@ export default function BookDemo() {
                                 borderRadius="8px"
                                 _hover={{ bg: '#F0F4F8' }}
                             >
-                                Email sales@vmukti.com
+                                sales@vmukti.com
                             </Button>
                         </Flex>
                     </Box>

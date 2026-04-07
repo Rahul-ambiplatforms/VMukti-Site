@@ -5358,4 +5358,7 @@ const industriesData = {
   },
 };
 
+// Alias: enterprise-campus → smartcity (IndustryDetails converts slug via replace(/-/g,""))
+industriesData.enterprisecampus = industriesData.smartcity;
+
 export default industriesData;
