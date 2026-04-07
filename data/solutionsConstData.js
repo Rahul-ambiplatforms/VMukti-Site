@@ -2166,4 +2166,809 @@ export const solutionsData = {
       },
     ],
   },
+
+  aivideoanalytics: {
+    metetitle: 'AI Video Analytics Platform | 26+ Intelligent Models | VMukti',
+    metadescription:
+      'VMukti AI Video Analytics: Enterprise-grade platform with 26+ AI models for intrusion detection, PPE compliance, crowd analytics, ANPR, face recognition, and real-time threat assessment.',
+    ogImage: 'https://www.vmukti.com/og/ai-video-analytics.png',
+    slug: 'ai-video-analytics',
+    hero: {
+      heading: 'AI Video Analytics with 26+ Intelligent Models',
+      description:
+        'VMukti AI Video Analytics empowers enterprises with 26+ AI models delivering intrusion detection, PPE compliance monitoring, crowd analytics, ANPR, and face recognition—all in real time across your entire camera network.',
+      image: '/assets/solution_cloud_dash.png',
+      image_certi: '/assets/solution_page_certi.png',
+    },
+    introduction: {
+      heading: 'What is AI Video Analytics?',
+      description: [
+        'AI Video Analytics is an intelligent surveillance technology that automatically analyzes video feeds using machine learning and computer vision models. It detects objects, behaviors, and events in real time without manual intervention.',
+        'VMukti\'s platform integrates 26+ AI models covering safety compliance, perimeter security, crowd management, vehicle tracking, and more—giving enterprises actionable insights at scale.',
+      ],
+      image: '/assets/AISurveillance_1.png',
+    },
+    features: {
+      heading: 'Comprehensive AI Analytics Capabilities',
+      description:
+        'From intrusion detection to PPE compliance and crowd density monitoring, VMukti\'s AI analytics suite delivers precision intelligence across every industry and environment.',
+      accordionItems: [
+        {
+          title: 'Intrusion Detection',
+          content:
+            'Instantly detects unauthorized entry into restricted zones and triggers real-time alerts to security personnel, preventing incidents before they escalate.',
+        },
+        {
+          title: 'PPE Compliance Monitoring',
+          content:
+            'Automatically verifies that workers are wearing required safety gear including helmets, vests, gloves, and safety shoes across industrial and construction sites.',
+        },
+        {
+          title: 'Crowd Analytics',
+          content:
+            'Monitors crowd density, flow patterns, and anomalies in real time to support safe occupancy management, event security, and emergency response.',
+        },
+        {
+          title: 'ANPR / License Plate Recognition',
+          content:
+            'Captures and identifies vehicle number plates across entry points, parking facilities, and toll systems with high accuracy in all lighting conditions.',
+        },
+        {
+          title: 'Face Recognition',
+          content:
+            'Matches individuals against watchlists for access control, attendance automation, and VIP or threat identification across multi-site camera networks.',
+        },
+        {
+          title: 'Object & Weapon Detection',
+          content:
+            'Detects unattended objects, prohibited items, and potential weapons in real time, enabling proactive security response in high-risk environments.',
+        },
+      ],
+    },
+    keyBenefits: {
+      heading: 'Key Benefits of AI Video Analytics',
+      benefits: [
+        {
+          image: '/assets/result_solution_vms_1.png',
+          title: 'Real-Time Threat Detection',
+          description:
+            'AI models analyze video feeds continuously, flagging threats and anomalies instantly so your security team can respond before incidents occur.',
+        },
+        {
+          image: '/assets/result_solution_vms_2.png',
+          title: '26+ Specialized AI Models',
+          description:
+            'A comprehensive library of purpose-built AI models covers every use case from safety compliance to perimeter security and behavioral analysis.',
+        },
+        {
+          image: '/assets/result_solution_vms_3.png',
+          title: 'Scalable Across Sites',
+          description:
+            'Deploy AI analytics across thousands of cameras and multiple locations from a single centralized platform without additional hardware investment.',
+        },
+        {
+          image: '/assets/result_solution_vms_4.png',
+          title: 'Reduced Manual Monitoring',
+          description:
+            'Automated alerts and intelligent event filtering eliminate the need for constant manual video review, freeing operators to focus on critical decisions.',
+        },
+        {
+          image: '/assets/result_solution_vms_5.png',
+          title: 'Seamless VMS Integration',
+          description:
+            'Integrates natively with VMukti Cloud VMS and third-party systems to enrich your existing surveillance infrastructure with AI capabilities.',
+        },
+        {
+          image: '/assets/result_solution_vms_6.png',
+          title: 'Industry-Ready Compliance',
+          description:
+            'Pre-built compliance models for PPE, restricted zone access, and workforce safety help enterprises meet regulatory requirements automatically.',
+        },
+      ],
+    },
+    industry: {
+      heading: 'AI Video Analytics Across Every Industry',
+      description:
+        'From manufacturing plants and logistics hubs to campuses and government facilities, VMukti AI Video Analytics scales to meet the demands of any enterprise environment.',
+    },
+    trusted: 'AI-Powered Security Backed by Numbers',
+    cta: {
+      textLines: [
+        'Transform Your Surveillance with 26+ AI Models',
+      ],
+      buttonText: "Let's talk",
+      href: '/contact-us',
+    },
+    whyChooseUs: {
+      heading: 'Why Choose VMukti for AI Video Analytics?',
+      description: [
+        'VMukti delivers enterprise-grade AI video analytics with 26+ specialized models trained on real-world surveillance scenarios. Our platform processes feeds from thousands of cameras simultaneously with sub-second latency.',
+        'Backed by 18+ years of enterprise surveillance expertise and STQC certification, VMukti provides reliable, scalable AI analytics with dedicated support and seamless integration into your existing infrastructure.',
+      ],
+    },
+    schema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'AI Video Analytics Platform | 26+ Intelligent Models | VMukti',
+        description:
+          'VMukti AI Video Analytics: Enterprise-grade platform with 26+ AI models for intrusion detection, PPE compliance, crowd analytics, ANPR, face recognition, and real-time threat assessment.',
+        url: 'https://www.vmukti.com/solution/ai-video-analytics/',
+        datePublished: '2006-11-10',
+        dateModified: '2026-04-07',
+        publisher: {
+          '@type': 'Organization',
+          name: 'VMukti Solutions',
+          url: 'https://www.vmukti.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.vmukti.com/assets/vmuktilogo.png',
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            'https://www.facebook.com/VMuktisolutions',
+            'https://www.instagram.com/vmuktisolutions/',
+            'https://www.linkedin.com/company/vmuktisolutions',
+            'https://x.com/VMukti',
+            'https://www.youtube.com/@VMukti1',
+          ],
+        },
+        inLanguage: 'en-US',
+      },
+      {
+        '@context': 'https://schema.org/',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'VMukti Solutions', item: 'https://www.vmukti.com/' },
+          { '@type': 'ListItem', position: 2, name: 'Solutions', item: 'https://www.vmukti.com/solution/' },
+          { '@type': 'ListItem', position: 3, name: 'AI Video Analytics', item: 'https://www.vmukti.com/solution/ai-video-analytics/' },
+        ],
+      },
+    ],
+  },
+
+  facerecognition: {
+    metetitle: 'Enterprise Face Recognition System | Real-Time Identification | VMukti',
+    metadescription:
+      'VMukti Face Recognition: Enterprise-scale facial identification with watchlist matching, VIP alerts, attendance automation, and access control integration across multi-site deployments.',
+    ogImage: 'https://www.vmukti.com/og/face-recognition.jpg',
+    slug: 'face-recognition',
+    hero: {
+      heading: 'Enterprise Face Recognition for Real-Time Identification',
+      description:
+        'VMukti Face Recognition delivers accurate, real-time facial identification across thousands of cameras. Match individuals against watchlists, automate attendance, and integrate with access control systems for seamless security management.',
+      image: '/assets/solution_genai_dash.png',
+      image_certi: '/assets/solution_page_certi.png',
+    },
+    introduction: {
+      heading: 'What is Enterprise Face Recognition?',
+      description: [
+        'Enterprise face recognition uses AI to detect and identify individuals from live or recorded video feeds in real time. It matches faces against pre-enrolled databases to verify identity, flag threats, and automate access.',
+        'VMukti\'s face recognition system scales to multi-site deployments with centralized watchlist management, VIP identification, and seamless integration with access control and attendance systems.',
+      ],
+      image: '/assets/solution_evms_intro.png',
+    },
+    features: {
+      heading: 'Advanced Face Recognition Capabilities',
+      description:
+        'VMukti Face Recognition combines speed, accuracy, and scale to deliver reliable identification across high-traffic environments, controlled access points, and large enterprise campuses.',
+      accordionItems: [
+        {
+          title: 'Watchlist Matching',
+          content:
+            'Instantly matches detected faces against custom watchlists to identify persons of interest, known threats, or restricted individuals and trigger immediate alerts.',
+        },
+        {
+          title: 'VIP & Staff Identification',
+          content:
+            'Automatically recognizes VIPs, executives, and authorized staff to provide seamless access, personalized service, and priority security response.',
+        },
+        {
+          title: 'Attendance Automation',
+          content:
+            'Eliminates manual attendance tracking by automatically recording entry and exit times via facial identification, reducing errors and administrative overhead.',
+        },
+        {
+          title: 'Access Control Integration',
+          content:
+            'Integrates with door controllers, turnstiles, and barrier systems to grant or deny access based on facial recognition results in real time.',
+        },
+        {
+          title: 'Multi-Camera Tracking',
+          content:
+            'Tracks an identified individual across multiple cameras throughout a facility, providing a complete movement trail for investigations.',
+        },
+        {
+          title: 'Low-Light & Mask Detection',
+          content:
+            'Advanced AI models maintain high accuracy in low-light conditions and can detect face coverings to flag partially obscured individuals.',
+        },
+      ],
+    },
+    keyBenefits: {
+      heading: 'Benefits of VMukti Face Recognition',
+      benefits: [
+        {
+          image: '/assets/result_solution_vms_1.png',
+          title: 'Real-Time Identification',
+          description:
+            'Identify individuals in milliseconds from live video feeds across your entire camera network without any manual intervention.',
+        },
+        {
+          image: '/assets/result_solution_vms_2.png',
+          title: 'Scalable Multi-Site Deployment',
+          description:
+            'Centrally manage face databases and watchlists across thousands of cameras and multiple geographic locations from one platform.',
+        },
+        {
+          image: '/assets/result_solution_vms_3.png',
+          title: 'Automated Attendance',
+          description:
+            'Replace manual registers and card-based systems with contactless, tamper-proof facial attendance that integrates with HR systems.',
+        },
+        {
+          image: '/assets/result_solution_vms_4.png',
+          title: 'Seamless Access Control',
+          description:
+            'Integrate facial identification with physical access systems to enable touchless, secure entry management across all entry points.',
+        },
+        {
+          image: '/assets/result_solution_vms_5.png',
+          title: 'Instant Threat Alerts',
+          description:
+            'Automatically alert security teams when a watchlisted individual is detected anywhere across your surveillance network.',
+        },
+        {
+          image: '/assets/result_solution_vms_6.png',
+          title: 'High Accuracy AI Models',
+          description:
+            'Deep learning models trained on diverse datasets deliver high recognition accuracy across varied lighting, angles, and demographic groups.',
+        },
+      ],
+    },
+    industry: {
+      heading: 'Face Recognition Across Industries',
+      description:
+        'From corporate campuses and banking to healthcare, government, and hospitality, VMukti Face Recognition adapts to the security and operational needs of any enterprise.',
+    },
+    trusted: 'Trusted Face Recognition at Enterprise Scale',
+    cta: {
+      textLines: [
+        'Deploy Enterprise Face Recognition Across Your Sites',
+      ],
+      buttonText: "Let's talk",
+      href: '/contact-us',
+    },
+    whyChooseUs: {
+      heading: 'Why Choose VMukti for Face Recognition?',
+      description: [
+        'VMukti delivers enterprise-scale face recognition built for real-world conditions—high crowds, variable lighting, multiple camera angles, and multi-site complexity. Our AI models maintain accuracy where others fail.',
+        'With 18+ years of enterprise surveillance expertise, STQC certification, and deployments across 900+ sites, VMukti provides the reliability, support, and integration depth that enterprise security demands.',
+      ],
+    },
+    schema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Enterprise Face Recognition System | Real-Time Identification | VMukti',
+        description:
+          'VMukti Face Recognition: Enterprise-scale facial identification with watchlist matching, VIP alerts, attendance automation, and access control integration.',
+        url: 'https://www.vmukti.com/solution/face-recognition/',
+        datePublished: '2006-11-10',
+        dateModified: '2026-04-07',
+        publisher: {
+          '@type': 'Organization',
+          name: 'VMukti Solutions',
+          url: 'https://www.vmukti.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.vmukti.com/assets/vmuktilogo.png',
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            'https://www.facebook.com/VMuktisolutions',
+            'https://www.instagram.com/vmuktisolutions/',
+            'https://www.linkedin.com/company/vmuktisolutions',
+            'https://x.com/VMukti',
+            'https://www.youtube.com/@VMukti1',
+          ],
+        },
+        inLanguage: 'en-US',
+      },
+      {
+        '@context': 'https://schema.org/',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'VMukti Solutions', item: 'https://www.vmukti.com/' },
+          { '@type': 'ListItem', position: 2, name: 'Solutions', item: 'https://www.vmukti.com/solution/' },
+          { '@type': 'ListItem', position: 3, name: 'Face Recognition', item: 'https://www.vmukti.com/solution/face-recognition/' },
+        ],
+      },
+    ],
+  },
+
+  anprlpr: {
+    metetitle: 'ANPR & License Plate Recognition System | Vehicle Tracking | VMukti',
+    metadescription:
+      'VMukti ANPR/LPR: Automatic number plate recognition for toll management, parking automation, traffic enforcement, fleet tracking, and law enforcement vehicle identification.',
+    ogImage: 'https://www.vmukti.com/og/anpr.jpg',
+    slug: 'anpr-lpr',
+    hero: {
+      heading: 'ANPR & License Plate Recognition for Intelligent Vehicle Tracking',
+      description:
+        'VMukti ANPR/LPR delivers high-accuracy automatic number plate recognition for toll management, parking automation, fleet tracking, and law enforcement—operating reliably day and night across all vehicle types.',
+      image: '/assets/solution_cloud_dash.png',
+      image_certi: '/assets/solution_page_certi.png',
+    },
+    introduction: {
+      heading: 'What is ANPR / License Plate Recognition?',
+      description: [
+        'Automatic Number Plate Recognition (ANPR), also known as License Plate Recognition (LPR), uses AI-powered cameras and software to capture, extract, and read vehicle registration plates in real time.',
+        'VMukti\'s ANPR system integrates with traffic management, parking systems, toll collection, and law enforcement databases to enable automated vehicle identification and access control at scale.',
+      ],
+      image: '/assets/solution_ems_intro.png',
+    },
+    features: {
+      heading: 'Intelligent ANPR Capabilities',
+      description:
+        'VMukti\'s ANPR platform combines high-speed plate capture with deep learning recognition to deliver accurate vehicle identification across diverse traffic conditions and camera angles.',
+      accordionItems: [
+        {
+          title: 'Real-Time Plate Capture',
+          content:
+            'Captures and reads vehicle number plates in real time from moving traffic, parking entries, and toll plazas with millisecond response times.',
+        },
+        {
+          title: 'Toll Management Integration',
+          content:
+            'Automates toll collection by identifying vehicles and triggering payment processing without stopping traffic, reducing congestion and operational costs.',
+        },
+        {
+          title: 'Parking Automation',
+          content:
+            'Enables barrier-free parking entry and exit by automatically recognizing registered vehicles, removing the need for tickets or manual checks.',
+        },
+        {
+          title: 'Stolen Vehicle & Watchlist Alerts',
+          content:
+            'Cross-references detected plates against law enforcement databases and custom watchlists to instantly alert operators when flagged vehicles are detected.',
+        },
+        {
+          title: 'Fleet Tracking & Reporting',
+          content:
+            'Tracks fleet vehicle movements across multiple sites, generating detailed entry/exit logs and route analytics for operations and compliance reporting.',
+        },
+        {
+          title: 'Multi-Lane & High-Speed Detection',
+          content:
+            'Handles multi-lane highways and high-speed vehicles with specialized cameras and AI models optimized for rapid, accurate recognition under challenging conditions.',
+        },
+      ],
+    },
+    keyBenefits: {
+      heading: 'Benefits of VMukti ANPR / LPR System',
+      benefits: [
+        {
+          image: '/assets/result_solution_vms_1.png',
+          title: 'All-Weather Accuracy',
+          description:
+            'AI models trained for night, rain, fog, and glare conditions ensure reliable plate recognition 24/7 regardless of environment.',
+        },
+        {
+          image: '/assets/result_solution_vms_2.png',
+          title: 'Automated Vehicle Access',
+          description:
+            'Eliminate manual gate checks by automatically granting or denying vehicle access based on recognized plates and authorization lists.',
+        },
+        {
+          image: '/assets/result_solution_vms_3.png',
+          title: 'Law Enforcement Support',
+          description:
+            'Instant watchlist matching enables police and security agencies to identify stolen vehicles, suspects, and wanted persons in real time.',
+        },
+        {
+          image: '/assets/result_solution_vms_4.png',
+          title: 'Traffic Analytics',
+          description:
+            'Generate detailed traffic flow reports, peak hour analysis, and vehicle count data to optimize road and facility management.',
+        },
+        {
+          image: '/assets/result_solution_vms_5.png',
+          title: 'Scalable Deployment',
+          description:
+            'Deploy across city-wide traffic networks, campuses, ports, and industrial sites from a single centralized management platform.',
+        },
+        {
+          image: '/assets/result_solution_vms_6.png',
+          title: 'Seamless System Integration',
+          description:
+            'Integrates with existing toll, parking, VMS, and law enforcement systems via APIs for a unified vehicle management ecosystem.',
+        },
+      ],
+    },
+    industry: {
+      heading: 'ANPR Deployed Across Transport & Security Sectors',
+      description:
+        'VMukti ANPR/LPR powers highway tolling, smart parking, airport perimeters, industrial gates, and law enforcement operations across 17+ industry verticals.',
+    },
+    trusted: 'Vehicle Intelligence at Scale',
+    cta: {
+      textLines: [
+        'Automate Vehicle Identification with VMukti ANPR',
+      ],
+      buttonText: "Let's talk",
+      href: '/contact-us',
+    },
+    whyChooseUs: {
+      heading: 'Why Choose VMukti for ANPR / LPR?',
+      description: [
+        'VMukti ANPR combines high-speed plate capture with enterprise-grade AI recognition, delivering accuracy rates that hold up across all lighting conditions, vehicle speeds, and plate formats.',
+        'With native integration into VMukti Cloud VMS, EMS, and Command Center platforms, our ANPR solution becomes part of a unified intelligence layer covering your entire operational footprint.',
+      ],
+    },
+    schema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'ANPR & License Plate Recognition System | Vehicle Tracking | VMukti',
+        description:
+          'VMukti ANPR/LPR: Automatic number plate recognition for toll management, parking automation, traffic enforcement, fleet tracking, and law enforcement.',
+        url: 'https://www.vmukti.com/solution/anpr-lpr/',
+        datePublished: '2006-11-10',
+        dateModified: '2026-04-07',
+        publisher: {
+          '@type': 'Organization',
+          name: 'VMukti Solutions',
+          url: 'https://www.vmukti.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.vmukti.com/assets/vmuktilogo.png',
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            'https://www.facebook.com/VMuktisolutions',
+            'https://www.instagram.com/vmuktisolutions/',
+            'https://www.linkedin.com/company/vmuktisolutions',
+            'https://x.com/VMukti',
+            'https://www.youtube.com/@VMukti1',
+          ],
+        },
+        inLanguage: 'en-US',
+      },
+      {
+        '@context': 'https://schema.org/',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'VMukti Solutions', item: 'https://www.vmukti.com/' },
+          { '@type': 'ListItem', position: 2, name: 'Solutions', item: 'https://www.vmukti.com/solution/' },
+          { '@type': 'ListItem', position: 3, name: 'ANPR & LPR', item: 'https://www.vmukti.com/solution/anpr-lpr/' },
+        ],
+      },
+    ],
+  },
+
+  cloudsurveillance: {
+    metetitle: 'Cloud Surveillance Platform | Scalable Video Management | VMukti',
+    metadescription:
+      'VMukti Cloud Surveillance: Fully cloud-native video management with auto-scaling, multi-tenant architecture, edge-to-cloud recording, and global accessibility for enterprise surveillance.',
+    ogImage: 'https://www.vmukti.com/og/cloud-surveillance.jpg',
+    slug: 'cloud-surveillance',
+    hero: {
+      heading: 'Cloud Surveillance Platform for Scalable Enterprise Security',
+      description:
+        'VMukti Cloud Surveillance delivers fully cloud-native video management with auto-scaling infrastructure, multi-tenant architecture, and edge-to-cloud recording—giving enterprises global visibility from a single platform.',
+      image: '/assets/solution_cloud_dash.png',
+      image_certi: '/assets/solution_page_certi.png',
+    },
+    introduction: {
+      heading: 'What is Cloud Surveillance?',
+      description: [
+        'Cloud surveillance moves video management infrastructure to the cloud, eliminating the need for on-site servers and DVRs. Video feeds are processed, stored, and accessed entirely through secure cloud platforms.',
+        'VMukti\'s Cloud Surveillance platform provides auto-scaling capacity, multi-tenant management, global accessibility, and enterprise-grade security—making it the ideal foundation for modern enterprise surveillance.',
+      ],
+      image: '/assets/VMS_intro.png',
+    },
+    features: {
+      heading: 'Cloud Surveillance Features Built for Enterprise Scale',
+      description:
+        'VMukti Cloud Surveillance combines elastic infrastructure with enterprise security to deliver a platform that grows with your organization while maintaining the reliability and performance your operations demand.',
+      accordionItems: [
+        {
+          title: 'Auto-Scaling Infrastructure',
+          content:
+            'Dynamically scale compute and storage resources up or down based on the number of cameras and retention requirements—paying only for what you use.',
+        },
+        {
+          title: 'Multi-Tenant Architecture',
+          content:
+            'Manage multiple clients or business units on a single platform with complete data isolation, role-based access, and separate dashboards per tenant.',
+        },
+        {
+          title: 'Edge-to-Cloud Recording',
+          content:
+            'Record at the edge for resilience and stream to the cloud for central management, ensuring footage is preserved even during network disruptions.',
+        },
+        {
+          title: 'Global Remote Access',
+          content:
+            'Access live and recorded video from any location through a secure web or mobile interface, enabling remote security management across geographies.',
+        },
+        {
+          title: 'AI Analytics Integration',
+          content:
+            'Integrate cloud-native AI analytics including intrusion detection, crowd monitoring, and ANPR directly into your cloud video streams without additional hardware.',
+        },
+        {
+          title: 'Flexible Retention Policies',
+          content:
+            'Configure retention periods per camera, site, or event type with intelligent tiered storage that reduces costs while meeting compliance requirements.',
+        },
+      ],
+    },
+    keyBenefits: {
+      heading: 'Benefits of VMukti Cloud Surveillance',
+      benefits: [
+        {
+          image: '/assets/result_solution_vms_1.png',
+          title: 'Zero On-Site Server Costs',
+          description:
+            'Eliminate capital expenditure on DVRs, NVRs, and on-premise servers by moving your surveillance infrastructure entirely to the cloud.',
+        },
+        {
+          image: '/assets/result_solution_vms_2.png',
+          title: 'Infinite Scalability',
+          description:
+            'Add cameras, users, and storage without infrastructure upgrades—the platform scales automatically to match your growth.',
+        },
+        {
+          image: '/assets/result_solution_vms_3.png',
+          title: 'Global Accessibility',
+          description:
+            'Monitor all sites from anywhere in the world through a unified cloud dashboard with enterprise-grade encryption and access controls.',
+        },
+        {
+          image: '/assets/result_solution_vms_4.png',
+          title: 'High Availability',
+          description:
+            'Cloud-native redundancy ensures 99.9%+ uptime with automatic failover, keeping your surveillance operational even during infrastructure events.',
+        },
+        {
+          image: '/assets/result_solution_vms_5.png',
+          title: 'Rapid Deployment',
+          description:
+            'Deploy new cameras and sites in hours rather than weeks—no server procurement, cabling infrastructure, or lengthy commissioning cycles.',
+        },
+        {
+          image: '/assets/result_solution_vms_6.png',
+          title: 'Cost-Effective Storage',
+          description:
+            'Intelligent tiered cloud storage reduces retention costs while maintaining compliance with industry and regulatory requirements.',
+        },
+      ],
+    },
+    industry: {
+      heading: 'Cloud Surveillance for Every Enterprise Vertical',
+      description:
+        'VMukti Cloud Surveillance serves banking, healthcare, retail, manufacturing, government, and more—delivering the same enterprise-grade performance across every industry.',
+    },
+    trusted: 'Cloud-Native Security at Enterprise Scale',
+    cta: {
+      textLines: [
+        'Move Your Surveillance to the Cloud with VMukti',
+      ],
+      buttonText: "Let's talk",
+      href: '/contact-us',
+    },
+    whyChooseUs: {
+      heading: 'Why Choose VMukti for Cloud Surveillance?',
+      description: [
+        'VMukti Cloud Surveillance is built on a proven, STQC-certified platform that has processed over 1 billion camera feeds annually. Our cloud-native architecture delivers the performance and reliability that enterprise security demands.',
+        'With 18+ years of experience, 900+ global deployments, and deep expertise in enterprise surveillance, VMukti provides the trusted partner that organizations need to transition to cloud-based security operations.',
+      ],
+    },
+    schema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Cloud Surveillance Platform | Scalable Video Management | VMukti',
+        description:
+          'VMukti Cloud Surveillance: Fully cloud-native video management with auto-scaling, multi-tenant architecture, edge-to-cloud recording, and global accessibility.',
+        url: 'https://www.vmukti.com/solution/cloud-surveillance/',
+        datePublished: '2006-11-10',
+        dateModified: '2026-04-07',
+        publisher: {
+          '@type': 'Organization',
+          name: 'VMukti Solutions',
+          url: 'https://www.vmukti.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.vmukti.com/assets/vmuktilogo.png',
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            'https://www.facebook.com/VMuktisolutions',
+            'https://www.instagram.com/vmuktisolutions/',
+            'https://www.linkedin.com/company/vmuktisolutions',
+            'https://x.com/VMukti',
+            'https://www.youtube.com/@VMukti1',
+          ],
+        },
+        inLanguage: 'en-US',
+      },
+      {
+        '@context': 'https://schema.org/',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'VMukti Solutions', item: 'https://www.vmukti.com/' },
+          { '@type': 'ListItem', position: 2, name: 'Solutions', item: 'https://www.vmukti.com/solution/' },
+          { '@type': 'ListItem', position: 3, name: 'Cloud Surveillance', item: 'https://www.vmukti.com/solution/cloud-surveillance/' },
+        ],
+      },
+    ],
+  },
+
+  edgeai: {
+    metetitle: 'Edge AI Computing | On-Device Video Intelligence | VMukti',
+    metadescription:
+      'VMukti Edge AI: Deploy AI analytics directly on edge devices for real-time processing, reduced bandwidth, offline operation, and instant threat response without cloud dependency.',
+    ogImage: 'https://www.vmukti.com/og/edge-ai.jpg',
+    slug: 'edge-ai',
+    hero: {
+      heading: 'Edge AI: On-Device Video Intelligence for Instant Response',
+      description:
+        'VMukti Edge AI deploys powerful AI analytics directly on edge devices, enabling real-time threat detection, reduced bandwidth consumption, and offline operation—delivering instant intelligence without cloud dependency.',
+      image: '/assets/solution_cloud_dash.png',
+      image_certi: '/assets/solution_page_certi.png',
+    },
+    introduction: {
+      heading: 'What is Edge AI for Surveillance?',
+      description: [
+        'Edge AI processes video and runs AI analytics directly on the camera or edge device rather than sending data to a central server or cloud. This eliminates latency, reduces bandwidth, and enables surveillance that works even without network connectivity.',
+        'VMukti Edge AI embeds 26+ specialized AI models into edge hardware, delivering the same enterprise-grade intelligence as cloud analytics but with the speed and resilience that critical environments demand.',
+      ],
+      image: '/assets/solution_bot_intro.png',
+    },
+    features: {
+      heading: 'Edge AI Capabilities for Real-Time Surveillance',
+      description:
+        'VMukti Edge AI brings the full power of enterprise video analytics to the camera level, enabling instant decision-making without the latency, cost, or dependency of cloud-only architectures.',
+      accordionItems: [
+        {
+          title: 'On-Device AI Inference',
+          content:
+            'AI models run directly on edge hardware, analyzing video frames and detecting events in milliseconds without sending data to a remote server.',
+        },
+        {
+          title: 'Offline Operation',
+          content:
+            'Edge AI devices continue to detect, alert, and record even when network connectivity is lost, ensuring uninterrupted surveillance in remote or unreliable network environments.',
+        },
+        {
+          title: 'Bandwidth Optimization',
+          content:
+            'Only event-triggered clips and metadata are transmitted to the cloud, dramatically reducing network bandwidth requirements compared to continuous cloud streaming.',
+        },
+        {
+          title: 'Instant Local Alerts',
+          content:
+            'Trigger alarms, sirens, door locks, or notifications directly from the edge device without waiting for cloud processing—critical for time-sensitive security events.',
+        },
+        {
+          title: 'Edge-to-Cloud Synchronization',
+          content:
+            'Seamlessly synchronize edge-processed events, clips, and analytics data to VMukti Cloud VMS for centralized management and long-term storage.',
+        },
+        {
+          title: 'Multi-Model Edge Deployment',
+          content:
+            'Deploy multiple AI models simultaneously on a single edge device—running ANPR, PPE detection, and intrusion monitoring concurrently from one camera.',
+        },
+      ],
+    },
+    keyBenefits: {
+      heading: 'Benefits of VMukti Edge AI',
+      benefits: [
+        {
+          image: '/assets/result_solution_vms_1.png',
+          title: 'Ultra-Low Latency',
+          description:
+            'On-device processing delivers threat detection and alerting in milliseconds, enabling response times that cloud-only architectures cannot match.',
+        },
+        {
+          image: '/assets/result_solution_vms_2.png',
+          title: 'Network Independence',
+          description:
+            'Surveillance continues to operate and record locally during network outages, ensuring no gaps in coverage at remote or critical sites.',
+        },
+        {
+          image: '/assets/result_solution_vms_3.png',
+          title: 'Reduced Infrastructure Cost',
+          description:
+            'Processing at the edge reduces cloud compute costs and eliminates the need for expensive high-bandwidth network links at every camera location.',
+        },
+        {
+          image: '/assets/result_solution_vms_4.png',
+          title: 'Enhanced Data Privacy',
+          description:
+            'Sensitive video data can be processed locally and never transmitted to the cloud, satisfying strict data sovereignty and privacy requirements.',
+        },
+        {
+          image: '/assets/result_solution_vms_5.png',
+          title: 'Scalable Edge Deployment',
+          description:
+            'Centrally manage and update AI models across thousands of edge devices simultaneously from VMukti\'s cloud management console.',
+        },
+        {
+          image: '/assets/result_solution_vms_6.png',
+          title: 'Unified Edge + Cloud Architecture',
+          description:
+            'Combine the speed of edge processing with the scale of cloud management for a surveillance architecture that delivers the best of both worlds.',
+        },
+      ],
+    },
+    industry: {
+      heading: 'Edge AI for Mission-Critical Environments',
+      description:
+        'VMukti Edge AI is deployed across oil & gas facilities, defense installations, remote construction sites, transportation hubs, and industrial plants where low latency and network resilience are non-negotiable.',
+    },
+    trusted: 'Edge Intelligence for the Most Demanding Environments',
+    cta: {
+      textLines: [
+        'Deploy AI Intelligence at the Edge with VMukti',
+      ],
+      buttonText: "Let's talk",
+      href: '/contact-us',
+    },
+    whyChooseUs: {
+      heading: 'Why Choose VMukti for Edge AI?',
+      description: [
+        'VMukti Edge AI combines purpose-built AI models with enterprise-grade edge hardware management, giving you the analytics power of cloud AI with the speed and resilience of on-device processing.',
+        'Backed by STQC certification, 18+ years of surveillance expertise, and proven deployments in mission-critical environments, VMukti delivers Edge AI solutions that perform reliably when it matters most.',
+      ],
+    },
+    schema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Edge AI Computing | On-Device Video Intelligence | VMukti',
+        description:
+          'VMukti Edge AI: Deploy AI analytics directly on edge devices for real-time processing, reduced bandwidth, offline operation, and instant threat response.',
+        url: 'https://www.vmukti.com/solution/edge-ai/',
+        datePublished: '2006-11-10',
+        dateModified: '2026-04-07',
+        publisher: {
+          '@type': 'Organization',
+          name: 'VMukti Solutions',
+          url: 'https://www.vmukti.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.vmukti.com/assets/vmuktilogo.png',
+            width: 25,
+            height: 6,
+          },
+          sameAs: [
+            'https://www.facebook.com/VMuktisolutions',
+            'https://www.instagram.com/vmuktisolutions/',
+            'https://www.linkedin.com/company/vmuktisolutions',
+            'https://x.com/VMukti',
+            'https://www.youtube.com/@VMukti1',
+          ],
+        },
+        inLanguage: 'en-US',
+      },
+      {
+        '@context': 'https://schema.org/',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'VMukti Solutions', item: 'https://www.vmukti.com/' },
+          { '@type': 'ListItem', position: 2, name: 'Solutions', item: 'https://www.vmukti.com/solution/' },
+          { '@type': 'ListItem', position: 3, name: 'Edge AI', item: 'https://www.vmukti.com/solution/edge-ai/' },
+        ],
+      },
+    ],
+  },
 };
