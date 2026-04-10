@@ -63,7 +63,7 @@ const Hero = () => {
         />
         <meta
           property="og:image"
-          content="https://www.vmukti.com/assets/solution_dash.png"
+          content="https://www.vmukti.com/assets/solution_dash.webp"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://vmukti.com/solution" />
@@ -82,7 +82,7 @@ const Hero = () => {
         />
         <meta
           name="twitter:image"
-          content="https://www.vmukti.com/assets/solution_dash.png"
+          content="https://www.vmukti.com/assets/solution_dash.webp"
         />
 
         {/* Canonical Link */}

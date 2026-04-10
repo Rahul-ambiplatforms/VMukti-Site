@@ -157,7 +157,7 @@ const HeroSection = ({ titleContent, description, buttonText, buttonHref }) => {
           >
             <MotionImage
               mt="1%"
-              src="/assets/tablet.png"
+              src="/assets/tablet.webp"
               alt="Computer Vision Solution for Smart Surveillance"
               fetchpriority="high"
               zIndex={1}
@@ -277,7 +277,7 @@ const HeroSection = ({ titleContent, description, buttonText, buttonHref }) => {
               >
                 <Image loading="lazy"
                   ref={imageRef}
-                  src="/assets/robohand.png"
+                  src="/assets/robohand.webp"
                   alt="Robotic Hand"
                   display={{ base: "none", md: "block" }}
                   width={["", "", "55%", "90%"]}
@@ -324,7 +324,7 @@ const HeroSection = ({ titleContent, description, buttonText, buttonHref }) => {
             {!useBreakpointValue({ base: true, md: false }) && ( // Show on md and up
               <MotionImage
                 alt="VMukti Cloud-based Video Surveillance Tablet Dashboard"
-                src={`/assets/tablet2.png`}
+                src={`/assets/tablet2.webp`}
                 fetchpriority="high"
                 position="absolute"
                 top={["", "", "44%", "25%"]}

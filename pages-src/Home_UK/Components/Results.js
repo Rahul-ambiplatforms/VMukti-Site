@@ -12,27 +12,27 @@ import {
 const featuresData = [
   {
     title: "ONVIF-compatible and \n NDAA-aligned installations",
-    image: "/assets/Onvif.png", 
+    image: "/assets/Onvif.webp", 
   },
   {
     title: "Cloud, On-Prem & Hybrid \n deployments across the UK",
-    image: "/assets/Cloud.png",
+    image: "/assets/Cloud.webp",
   },
   {
     title: "Works with existing cameras, \n servers & network devices",
-    image: "/assets/CCTV.png", 
+    image: "/assets/CCTV.webp", 
   },
   {
     title: "Unified command centre via \n Cloud VMS for enterprises UK",
-    image: "/assets/MultiLocation.png",
+    image: "/assets/MultiLocation.webp",
   },
   {
     title: "Enterprise-grade AI built \n for UK compliance frameworks",
-    image: "/assets/MordanAI.png", 
+    image: "/assets/MordanAI.webp", 
   },
   {
     title: "Supports AI security camera \n system for business UK",
-    image: "/assets/SupportsAI.png",
+    image: "/assets/SupportsAI.webp",
   },
 ];
 

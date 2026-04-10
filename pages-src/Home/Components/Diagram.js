@@ -118,14 +118,14 @@ const Diagram = () => {
         {/* Desktop Image */}
         <Image loading="lazy"
           alt="VMukti AI Implementation Architecture Diagram"
-          src={`/assets/ai_implementation.png`}
+          src={`/assets/ai_implementation.webp`}
           display={{ base: "none", md: "block" }}
         />
 
         {/* Mobile Image */}
         <Image loading="lazy"
           alt="VMukti AI Implementation Architecture Diagram - Mobile View"
-          src={`/assets/ai_implementation_mobile.png`}
+          src={`/assets/ai_implementation_mobile.webp`}
           display={{ base: "block", md: "none" }}
         />
       </Flex>

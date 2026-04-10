@@ -261,7 +261,7 @@ export default function VMSComparison() {
       name: "VMukti Cloud VMS",
       description: "STQC-certified, 900+ deployments...",
       url: "https://www.vmukti.com/solution/cloud-vms",
-      image: "/images/vmukti-logo.png",
+      image: "/images/vmukti-logo.webp",
       features: [
         { name: "ANPR", value: "95%+ accuracy" },
         { name: "Max Cameras", value: "100,000+" },

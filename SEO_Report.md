@@ -368,7 +368,7 @@ After the patch, all solution and industry pages now also emit these same 7 lang
 ### 11.1 Image Optimization
 - AVIF + WebP automatic conversion enabled ✅
 - Cloudinary CDN used for blog and dynamic images ✅
-- Hero image (`/assets/tablet2.png`) has `rel="preload"` in `next.config.js` ✅
+- Hero image (`/assets/tablet2.webp`) has `rel="preload"` in `next.config.js` ✅
 - Remote pattern whitelist configured for `res.cloudinary.com` and `vmukti.com` ✅
 
 ### 11.2 Resource Hints

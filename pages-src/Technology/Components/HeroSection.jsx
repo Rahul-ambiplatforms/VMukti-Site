@@ -71,7 +71,7 @@ const HeroSection = ({ isAnimationTriggered }) => {
         zIndex={2}
       >
         <Image loading="lazy"
-          src="/assets/VMukti Brochure O2 1.png"
+          src="/assets/VMukti Brochure O2 1.webp"
           alt="VMukti Brochure"
           width="100%"
           height="100%"
@@ -91,7 +91,7 @@ const HeroSection = ({ isAnimationTriggered }) => {
         zIndex={2}
       />
       <MotionImage
-        src="/assets/Dashboard.png"
+        src="/assets/Dashboard.webp"
         alt="AI Dashboard Interface"
         position="absolute"
         top={{ base: "10%", md: "25%", lg: "28%" }}
@@ -212,7 +212,7 @@ const HeroSection = ({ isAnimationTriggered }) => {
             // bg="red"
           >
             <MotionImage
-              src={`/assets/Dashboard.png`}
+              src={`/assets/Dashboard.webp`}
               alt="AI Dashboard Interface"
               w="100%"
               h="auto" //auto
@@ -320,7 +320,7 @@ export default HeroSection;
             // bg="blue"
           >
             <MotionImage
-              src={`/assets/Dashboard.png`}
+              src={`/assets/Dashboard.webp`}
               alt="AI Dashboard Interface"
               w="100%" //100%
               h="350px" //auto

@@ -9,9 +9,9 @@ export const homeSolutions = {
       heading2: "Cloud Video Management System",
       content:
         "Centralised cloud video surveillance solution enabling unified, real-time monitoring across nationwide operations—ideal for retail groups, logistics networks, government authorities, and smart transport ecosystems.",
-      image_certi: "/assets/home_solution_certi.png",
-      image: "/assets/home_solution_1.png",
-      image_mobile: "/assets/home_solution_mobile_1.png",
+      image_certi: "/assets/home_solution_certi.webp",
+      image: "/assets/home_solution_1.webp",
+      image_mobile: "/assets/home_solution_mobile_1.webp",
       path: "/solution/video-management-system",
     },
     {
@@ -19,9 +19,9 @@ export const homeSolutions = {
       heading2: "Enterprise Management System",
       content:
         "Predictive maintenance, automated device health checks and real-time performance visibility for robust cloud based video surveillance support.",
-      image_certi: "/assets/home_solution_certi.png",
-      image: "/assets/home_solution_2.png",
-      image_mobile: "/assets/home_solution_mobile_2.png",
+      image_certi: "/assets/home_solution_certi.webp",
+      image: "/assets/home_solution_2.webp",
+      image_mobile: "/assets/home_solution_mobile_2.webp",
       path: "/solution/enterprise-management-system",
     },
     {
@@ -29,9 +29,9 @@ export const homeSolutions = {
       heading2: "Integrated Command & Control Center",
       content:
         "Mission-critical platform for enterprise campus command center UK, emergency response, public safety, transport and blue-light services.",
-      image_certi: "/assets/home_solution_certi.png",
-      image: "/assets/home_solution_3.png",
-      image_mobile: "/assets/home_solution_mobile_3.png",
+      image_certi: "/assets/home_solution_certi.webp",
+      image: "/assets/home_solution_3.webp",
+      image_mobile: "/assets/home_solution_mobile_3.webp",
       path: "/solution/integrated-command-control-center",
     },
     {
@@ -39,9 +39,9 @@ export const homeSolutions = {
       heading2: "Cloud AI",
       content:
         "Includes motion intelligence, vehicle & human tracking, queue intelligence and behaviour analysis.",
-      image_certi: "/assets/home_solution_certi.png",
-      image: "/assets/home_solution_4.png",
-      image_mobile: "/assets/home_solution_mobile_4.png",
+      image_certi: "/assets/home_solution_certi.webp",
+      image: "/assets/home_solution_4.webp",
+      image_mobile: "/assets/home_solution_mobile_4.webp",
       path: "/solution/cloudai",
     },
     {
@@ -49,9 +49,9 @@ export const homeSolutions = {
       heading2: "Generative AI",
       content:
         "Next-gen AI video surveillance solutions UK supporting natural-language search and automated reporting.",
-      image_certi: "/assets/home_solution_certi.png",
-      image: "/assets/home_solution_5.png",
-      image_mobile: "/assets/home_solution_mobile_5.png",
+      image_certi: "/assets/home_solution_certi.webp",
+      image: "/assets/home_solution_5.webp",
+      image_mobile: "/assets/home_solution_mobile_5.webp",
       path: "/solution/genai",
     },
     {
@@ -59,9 +59,9 @@ export const homeSolutions = {
       heading2: "Live Streaming",
       content:
         "Secure low-latency live video monitoring system for elections, events and emergency operations.",
-      image_certi: "/assets/home_solution_certi.png",
-      image: "/assets/home_solution_6.png",
-      image_mobile: "/assets/home_solution_mobile_6.png",
+      image_certi: "/assets/home_solution_certi.webp",
+      image: "/assets/home_solution_6.webp",
+      image_mobile: "/assets/home_solution_mobile_6.webp",
       path: "/solution/live-streaming-solution",
     },
     {
@@ -69,9 +69,9 @@ export const homeSolutions = {
       heading2: "Flying Squad Vehicle",
       content:
         "Vehicle-mounted rapid surveillance solution for enforcement, defence, policing & field security.",
-      image_certi: "/assets/home_solution_certi.png",
-      image: "/assets/home_solution_7.png",
-      image_mobile: "/assets/home_solution_mobile_7.png",
+      image_certi: "/assets/home_solution_certi.webp",
+      image: "/assets/home_solution_7.webp",
+      image_mobile: "/assets/home_solution_mobile_7.webp",
       path: "/solution/flying-squad-vehicle",
     },
     {
@@ -79,9 +79,9 @@ export const homeSolutions = {
       heading2: "VisualBot",
       content:
         "AI-powered visual analytics for decision intelligence and real-time incident prevention.",
-      image_certi: "/assets/home_solution_certi.png",
-      image: "/assets/home_solution_8.png",
-      image_mobile: "/assets/home_solution_mobile_8.png",
+      image_certi: "/assets/home_solution_certi.webp",
+      image: "/assets/home_solution_8.webp",
+      image_mobile: "/assets/home_solution_mobile_8.webp",
       path: "/solution/visualbot",
     },
   ],
@@ -98,8 +98,8 @@ export const solutionSolutions = {
       heading2: "Cloud AI",
       content:
         "We offer Cloud AI surveillance for smart monitoring with features like pre-stampede detection, smoke and fire detection, threat detection, facial recognition, PPE kit detection and many more. It ensures instant alerts, secure access and continuous protection for people and assets.",
-      image: "/assets/sol_solution_1.png",
-      image_mobile: "/assets/sol_solution_1.png",
+      image: "/assets/sol_solution_1.webp",
+      image_mobile: "/assets/sol_solution_1.webp",
       path: "/solution/cloudai",
     },
     {
@@ -107,8 +107,8 @@ export const solutionSolutions = {
       heading2: "Generative AI",
       content:
         "We provide GenAI transformed surveillance with smart search, automated reports and visual summaries while integrating with VMS for direct access to camera settings and seamless monitoring.",
-      image: "/assets/sol_solution_2.png",
-      image_mobile: "/assets/sol_solution_2.png",
+      image: "/assets/sol_solution_2.webp",
+      image_mobile: "/assets/sol_solution_2.webp",
       path: "/solution/genai",
     },
     {
@@ -116,8 +116,8 @@ export const solutionSolutions = {
       heading2: "AI VisualBot",
       content:
         "Our AI-powered analytics turn video into instant insights. Provides API keys for easy integration so systems can quickly process footage and receive actionable results within seconds.",
-      image: "/assets/sol_solution_3.png",
-      image_mobile: "/assets/sol_solution_3.png",
+      image: "/assets/sol_solution_3.webp",
+      image_mobile: "/assets/sol_solution_3.webp",
       path: "/solution/visualbot",
     },
   ],

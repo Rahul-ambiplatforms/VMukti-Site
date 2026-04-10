@@ -146,7 +146,7 @@ const ContentSection = ({ sections }) => {
                   h={{ base: '300px', lg: '682px' }}
                 >
                   <img
-                    src={section.image || '/assets/home_solution_3.png'}
+                    src={section.image || '/assets/home_solution_3.webp'}
                     alt={section.title}
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />

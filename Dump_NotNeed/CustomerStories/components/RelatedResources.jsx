@@ -14,7 +14,7 @@ const RelatedResources = () => {
       label: "Solutions Comparison",
       description:
         "Explore innovative, scalable solutions designed to meet the unique security and operational needs of enterprises.",
-      image: "/assets/Related_Resource.png",
+      image: "/assets/Related_Resource.webp",
       bg: "#F2F4F7",
     },
     {
@@ -23,7 +23,7 @@ const RelatedResources = () => {
       label: "ROI Calculator",
       description:
         "Estimate the financial impact of deploying our enterprise solutions and calculate the return on your investment.",
-      image: "/assets/Related_Resource.png",
+      image: "/assets/Related_Resource.webp",
       bg: "#EBEBEB",
     },
     {
@@ -32,7 +32,7 @@ const RelatedResources = () => {
       label: "Enterprise Buyer's Guide",
       description:
         "A comprehensive guide to help enterprise teams evaluate, compare, and choose the right security platform.",
-      image: "/assets/Related_Resource.png",
+      image: "/assets/Related_Resource.webp",
       bg: "#BECEDC",
     },
   ];

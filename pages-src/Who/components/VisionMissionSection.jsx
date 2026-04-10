@@ -233,8 +233,8 @@ const VisionMissionSection = () => {
           zIndex={1}
           left="14%"
           position="relative"
-          // src="/assets/robowho3.png"
-          src={`/assets/robowho3.png`}
+          // src="/assets/robowho3.webp"
+          src={`/assets/robowho3.webp`}
           alt="VMukti"
         />
       </Box>

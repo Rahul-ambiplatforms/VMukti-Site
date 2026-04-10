@@ -14,27 +14,27 @@ const TrustedBy = () => {
   const cards = [
     {
       title: "Banking & Finance",
-      image: "../assets/Banking_Industry.png",
+      image: "../assets/Banking_Industry.webp",
       alt: "Banking & Finance",
     },
     {
       title: "Education & Healthcare",
-      image: "../assets/Education_Industry.png",
+      image: "../assets/Education_Industry.webp",
       alt: "Education & Healthcare",
     },
     {
       title: "Retail & Hospitality",
-      image: "../assets/Retail_Hospitality.png",
+      image: "../assets/Retail_Hospitality.webp",
       alt: "Retail & Hospitality",
     },
     {
       title: "Enterprise Campuses",
-      image: "../assets/Smart_Cities.png",
+      image: "../assets/Smart_Cities.webp",
       alt: "Enterprise Campuses",
     },
     {
       title: "Homes & Communities",
-      image: "../assets/Homes_Communities.png",
+      image: "../assets/Homes_Communities.webp",
       alt: "Homes & Communities",
     },
   ];

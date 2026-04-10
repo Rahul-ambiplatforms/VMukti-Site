@@ -18,7 +18,7 @@ const DEFAULT_TITLE_LINES = [
 const DEFAULT_DESCRIPTION = "See how organizations worldwide transform their security infrastructure with VMukti\u2019s AI-powered video surveillance platform \u2014 delivering measurable ROI and operational excellence.";
 
 const DEFAULT_IMAGE = {
-  src: "/assets/customer-stories-hero.png",
+  src: "/assets/customer-stories-hero.webp",
   alt: "Enterprise video surveillance deployments worldwide",
 };
 

@@ -322,7 +322,7 @@ const CareerOportunity = () => {
         />
         <meta
           property="og:image"
-          content="https://vmukti.com/assets/CareerDash.png"
+          content="https://vmukti.com/assets/CareerDash.webp"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://vmukti.com/careers" />{" "}
@@ -341,7 +341,7 @@ const CareerOportunity = () => {
         />
         <meta
           name="twitter:image"
-          content="https://vmukti.com/assets/CareerDash.png"
+          content="https://vmukti.com/assets/CareerDash.webp"
         />
         <link rel="canonical" href="https://www.vmukti.com/careers" />{" "}
         {/* {careerPageSchemas.map((schema, index) => (

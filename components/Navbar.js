@@ -313,7 +313,7 @@ const Navbar = () => {
             justifyContent="space-between"
           >
             <Image loading="lazy"
-              src="/assets/VMukti_logo.png"
+              src="/assets/VMukti_logo.webp"
               alt="VMukti Solutions Logo"
               height={logoHeight}
               style={{ cursor: "pointer" }}
@@ -1006,7 +1006,7 @@ const Navbar = () => {
                   overflow="hidden"
                 >
                   <Image loading="lazy"
-                    src={`/assets/robot.png`}
+                    src={`/assets/robot.webp`}
                     alt="AI Robot"
                     width="100%"
                     height="auto"

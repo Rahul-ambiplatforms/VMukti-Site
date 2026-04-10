@@ -182,9 +182,9 @@ const SurveillanceSoftware = () => {
           <Image loading="lazy"
             ref={imageRef} // Apply ref to the image
             // height="100%"
-            // src="../assets/surveillancemock.png"
+            // src="../assets/surveillancemock.webp"
             alt="VMukti Surveillance Software Dashboard Mockup"
-            src={`/assets/surveillancemock.png`}
+            src={`/assets/surveillancemock.webp`}
             onLoad={handleImageLoad}
             transform={{ base: "scale(1.2)", md: "scale(0.6)" }}
             clipPath="inset(0)" // Ensures image does not affect layout

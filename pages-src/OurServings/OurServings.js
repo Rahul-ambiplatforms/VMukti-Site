@@ -36,7 +36,7 @@ const OurServings = () => {
   ];
   const description =
     "Unlock smarter security with AI-driven surveillance solutions for real-time monitoring, proactive threat detection, and seamless video management. Enhance safety and efficiency with scalable, future-ready technology.";
-  const image = "Responsive_Screen_Mockup.png";
+  const image = "Responsive_Screen_Mockup.webp";
   return (
     <>
       {isLoaded && (

@@ -208,7 +208,7 @@ const generateSchemas = (pageData) => {
       '@type': 'Organization',
       name: 'VMukti',
       url: 'https://www.vmukti.com',
-      logo: { '@type': 'ImageObject', url: 'https://www.vmukti.com/logo.png' }
+      logo: { '@type': 'ImageObject', url: 'https://www.vmukti.com/logo.webp' }
     }
   });
 

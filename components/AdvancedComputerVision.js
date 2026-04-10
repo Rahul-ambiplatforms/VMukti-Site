@@ -18,33 +18,33 @@ const AdvancedComputerVision = ({
     {
       type: "image",
       label: "Real-Time Monitoring",
-      media: "/assets/car.png",
+      media: "/assets/car.webp",
       description:
         "IoT-enabled cameras and sensors continuously track environmental changes and security events.",
     },
     {
       type: "image",
       label: "End-to-End Security",
-      media: "/assets/ete.png",
+      media: "/assets/ete.webp",
       description:
         "Ensures encrypted data transmission and secure cloud or on-prem storage",
     },
     {
       type: "image",
       label: "Seamless System Integration",
-      media: "/assets/ssi.png",
+      media: "/assets/ssi.webp",
       description:
         "Connects effortlessly with third-party platforms for enhanced situational awareness.",
     },
     {
       type: "image",
       label: "Automated Insights",
-      media: "/assets/ssi1.png",
+      media: "/assets/ssi1.webp",
       description:
         "Transforms sensor data into actionable alerts for proactive decision-making",
     },
   ],
-  backgroundImage = "/assets/VMuktidot.png",
+  backgroundImage = "/assets/VMuktidot.webp",
   bgColor = "white",
   myMargin = "3%",
   myZIndex = "1",

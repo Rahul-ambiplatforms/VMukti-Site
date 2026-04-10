@@ -45,7 +45,7 @@ export default async function BlogPostPage({ params }) {
       name: 'VMukti Solutions',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.vmukti.com/VMukti-logo.png',
+        url: 'https://www.vmukti.com/VMukti-logo.webp',
       },
     },
     datePublished: blog.createdAt,

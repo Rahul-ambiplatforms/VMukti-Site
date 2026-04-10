@@ -54,7 +54,7 @@ export default function WhyVMukti() {
         {/* Background brochure image */}
         <Box
           as="img"
-          src="/assets/vmukti-brocher.png"
+          src="/assets/vmukti-brocher.webp"
           position="absolute"
           top="0px"
           left="10px"

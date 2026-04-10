@@ -16,7 +16,7 @@ const ORGANIZATION_SCHEMA = {
   name: 'VMukti Solutions',
   alternateName: 'VMukti',
   url: 'https://www.vmukti.com',
-  logo: 'https://www.vmukti.com/logo.png',
+  logo: 'https://www.vmukti.com/logo.webp',
   description:
     'VMukti is a global enterprise platform offering Video Management System (VMS), Enterprise Management System (EMS), and Integrated Command & Control Center (Enterprise Command Center) solutions for AI-powered video surveillance across 16+ industries.',
   foundingDate: '2007',

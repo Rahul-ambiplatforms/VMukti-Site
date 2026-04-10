@@ -34,7 +34,7 @@ const ThankyouDemo = () => {
           {/* Left side: Illustration */}
           <Box w={{ base: "100%", md: "60%" }} mt="8%">
             <Image loading="lazy"
-              src="/assets/thankyou.png"
+              src="/assets/thankyou.webp"
               alt="Illustration of a robot catching a flying letter with a net"
             />
           </Box>

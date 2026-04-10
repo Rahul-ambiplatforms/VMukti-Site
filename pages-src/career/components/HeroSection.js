@@ -118,8 +118,8 @@ export default function HeroSection() {
         <Box zIndex={1}>
           <ImagePop>
             <Image loading="lazy"
-              src={`/assets/career.png`}
-              // src={ /assets/career.png}
+              src={`/assets/career.webp`}
+              // src={ /assets/career.webp}
               alt="Team collaboration"
               borderRadius="md"
               aspectRatio={137 / 100}

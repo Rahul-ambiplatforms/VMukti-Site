@@ -643,7 +643,7 @@ export default function IndustryDashboard() {
         />
         <meta
           property="og:image"
-          content="https://www.vmukti.com/assets/industry_dashboard.png"
+          content="https://www.vmukti.com/assets/industry_dashboard.webp"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://vmukti.com/industry/" />
@@ -661,7 +661,7 @@ export default function IndustryDashboard() {
         />
         <meta
           name="twitter:image"
-          content="https://www.vmukti.com/assets/industry_dashboard.png"
+          content="https://www.vmukti.com/assets/industry_dashboard.webp"
         />
         {/* Canonical Link */}
         <link rel="canonical" href="https://www.vmukti.com/industry" />
@@ -707,7 +707,7 @@ export default function IndustryDashboard() {
           }}
         >
           <Image loading="lazy"
-            src="/assets/industry_dashboard.png"
+            src="/assets/industry_dashboard.webp"
             alt="Transforming Industries with AI-Powered Intelligence"
             position="absolute"
             top="16%"
