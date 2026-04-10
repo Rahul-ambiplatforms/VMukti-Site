@@ -39,7 +39,7 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-      image: './assets/solution_1.png',
+      image: './assets/solution_1.webp',
       benefits: {
         title: 'Business Benefits',
         data: [
@@ -80,7 +80,7 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-      image: './assets/solution_2.png',
+      image: './assets/solution_2.webp',
       benefits: {
         title: 'Business Benefits',
         data: [
@@ -125,7 +125,7 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-      image: './assets/solution_3.png',
+      image: './assets/solution_3.webp',
       benefits: {
         title: 'Business Benefits',
         data: [
@@ -178,7 +178,7 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-      image: './assets/solution_4.png',
+      image: './assets/solution_4.webp',
       benefits: {
         title: 'Business Benefits',
         data: [
@@ -228,7 +228,7 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-      image: './assets/solution_5.png',
+      image: './assets/solution_5.webp',
       benefits: {
         title: 'Business Benefits',
         data: [
@@ -284,7 +284,7 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-      image: './assets/solution_6.png',
+      image: './assets/solution_6.webp',
       benefits: {
         title: 'Business Benefits',
         data: [
@@ -325,7 +325,7 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-      image: './assets/sol_solution_8_1.png',//change here
+      image: './assets/sol_solution_8_1.webp',//change here
       benefits: {
         title: 'Business Benefits',
         data: [
@@ -369,7 +369,7 @@ const SolutionEMS = () => {
           </ul>
         </>,
       ],
-      image: './assets/solution_9.png',
+      image: './assets/solution_9.webp',
       benefits: {
         title: 'Business Benefits',
         data: [

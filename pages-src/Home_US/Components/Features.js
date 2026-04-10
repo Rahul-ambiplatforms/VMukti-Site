@@ -13,32 +13,32 @@ const featuresData = [
   {
     title: "Enterprise Campuses & Public Safety",
     description: "city-wide monitoring, Enterprise Campus Command \n Center USA , Enterprise Command Center command centers",
-    image: "/assets/smart-cities-icon.png",
+    image: "/assets/smart-cities-icon.webp",
   },
   {
     title: "Manufacturing & Warehousing",
     description: "worker safety, SOP compliance, \n theft & intrusion detection",
-    image: "/assets/manufacturing-icon.png",
+    image: "/assets/manufacturing-icon.webp",
   },
   {
     title: "Retail Chains & Shopping Malls",
     description: "customer analytics, loss prevention, \n occupancy tracking",
-    image: "/assets/retail-icon.png",
+    image: "/assets/retail-icon.webp",
   },
   {
     title: "Transportation & Logistics",
     description: "ANPR, yard surveillance, cargo safety, \n fleet monitoring",
-    image: "/assets/transportation-icon.png",
+    image: "/assets/transportation-icon.webp",
   },
   {
     title: "Education & Campus Security",
     description: "school safety, perimeter \n monitoring, real-time alerts",
-    image: "/assets/education-icon.png",
+    image: "/assets/education-icon.webp",
   },
   {
     title: "Banking & Financial Institutions",
     description: "ATM surveillance, branch monitoring, \n audit-ready reports",
-    image: "/assets/banking-icon.png",
+    image: "/assets/banking-icon.webp",
   },
 ];
 

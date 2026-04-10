@@ -94,7 +94,7 @@ const organizationSchema = {
   '@type': 'Organization',
   name: 'VMukti Solutions Pvt. Ltd.',
   url: 'https://www.vmukti.com',
-  logo: 'https://www.vmukti.com/VMukti-logo.png',
+  logo: 'https://www.vmukti.com/VMukti-logo.webp',
   foundingDate: '2007',
   description: 'Enterprise Cloud VMS, EMS & Enterprise Command Center Provider. 18+ years of innovation in video surveillance and intelligent operations management.',
   address: {
@@ -215,11 +215,21 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
 
         {/* Issue #3 â Preload hero image to improve LCP */}
+        {/* Preload hero image for desktop */}
         <link
           rel="preload"
           as="image"
-          href="/assets/tablet2.png"
+          href="/assets/tablet2.webp"
           fetchPriority="high"
+          media="(min-width: 768px)"
+        />
+        {/* Preload hero image for mobile */}
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/tablet.webp"
+          fetchPriority="high"
+          media="(max-width: 767px)"
         />
 
         {/* JSON-LD Structured Data */}

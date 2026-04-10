@@ -19,7 +19,7 @@ const AITechnologies = () => {
         'AI-powered computer vision analyzes and interprets visual data with unmatched accuracy, recognizing faces, objects, and patterns. It enhances surveillance, automates processes, and optimizes decision-making across industries like security, retail, healthcare, and manufacturing.\n\n Beyond simple recognition, AI-driven computer vision tracks movement, monitors crowd behavior, and predicts potential threats. Integrated with edge AI and cloud computing, it enables real-time responses, improving security and efficiency.',
         // "Beyond simple recognition, AI-driven computer vision tracks movement, monitors crowd behavior, and predicts potential threats. Integrated with edge AI and cloud computing, it enables real-time responses, improving security and efficiency.",
       ],
-      image: './assets/comvi.png',
+      image: './assets/comvi.webp',
     },
     {
       title: 'Object\nDetection',
@@ -27,7 +27,7 @@ const AITechnologies = () => {
         'AI-driven object detection identifies and classifies objects, people, and vehicles with high accuracy. It enables automated tracking, suspicious activity detection, and seamless security system integration.\n\nIn surveillance, real-time object detection triggers instant alerts for unauthorized access or unusual movement. Combined with predictive analytics, it enhances risk assessment and operational intelligence.',
         // "In surveillance, real-time object detection triggers instant alerts for unauthorized access or unusual movement. Combined with predictive analytics, it enhances risk assessment and operational intelligence.",
       ],
-      image: './assets/objd.png',
+      image: './assets/objd.webp',
     },
     {
       title: 'Deep Learning Algorithms',
@@ -35,7 +35,7 @@ const AITechnologies = () => {
         'Deep learning enables AI to analyse complex data, detect patterns, and make precise decisions. Neural networks process vast information efficiently, continuously learning and improving.\n\nIn video analytics, deep learning enhances facial recognition, behaviour analysis, and anomaly detection. These self-learning models adapt to threats, improving accuracy and reducing false alarms.',
         // "In video analytics, deep learning enhances facial recognition, behaviour analysis, and anomaly detection. These self-learning models adapt to threats, improving accuracy and reducing false alarms.",
       ],
-      image: './assets/dla.png',
+      image: './assets/dla.webp',
     },
     {
       title: 'Neural Networks & Predictive Analytics',
@@ -43,7 +43,7 @@ const AITechnologies = () => {
         'Advanced neural networks process video data with precision, identifying threats and recognizing patterns. Unlike traditional surveillance, AI actively analyses movements, behaviours, and anomalies in real time.\n\nPredictive analytics anticipates security threats by analysing historical patterns and real-time data. This proactive approach minimizes risks, optimizes response times, and enhances situational awareness.',
         // "Predictive analytics anticipates security threats by analysing historical patterns and real-time data. This proactive approach minimizes risks, optimizes response times, and enhances situational awareness.",
       ],
-      image: './assets/npd.png',
+      image: './assets/npd.webp',
     },
     {
       title: 'AI-Driven\nAutomation',
@@ -51,7 +51,7 @@ const AITechnologies = () => {
         'AI-driven automation streamlines processes, reduces human intervention, and improves efficiency. Machine learning algorithms detect patterns, make intelligent decisions, and automate workflows.\n\nIn surveillance, AI minimizes false alarms and optimizes resource allocation. Automated monitoring of live feeds and video analysis ensures faster decision-making and cost savings.',
         // "In surveillance, AI minimizes false alarms and optimizes resource allocation. Automated monitoring of live feeds and video analysis ensures faster decision-making and cost savings.",
       ],
-      image: './assets/objectdetection.png',
+      image: './assets/objectdetection.webp',
     },
     {
       title: 'GPT in Video Surveillance',
@@ -59,7 +59,7 @@ const AITechnologies = () => {
         'GPT-powered surveillance enhances security by analyzing footage, identifying patterns, and generating real-time alerts. Unlike rule-based systems, it adapts to new threats and improves response times.\n\nBy automating report generation and anomaly detection, GPT reduces human workload. It provides precise monitoring, summarizes long video recordings, and enhances security accuracy.',
         // "In surveillance, AI minimizes false alarms and optimizes resource allocation. Automated monitoring of live feeds and video analysis ensures faster decision-making and cost savings.",
       ],
-      image: './assets/gptr.png',
+      image: './assets/gptr.webp',
     },
   ]
 

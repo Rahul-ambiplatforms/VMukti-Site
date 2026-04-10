@@ -161,7 +161,7 @@ const HeroSection = () => {
             >
               <Image
                 loading="lazy"
-                src="/assets/enterprise-command-center-dashboard.png"
+                src="/assets/enterprise-command-center-dashboard.webp"
                 alt="Enterprise Command Center Dashboard"
                 w="100%"
                 h={{ base: "auto", lg: "clamp(360px, 41.5vw, 500px)" }}

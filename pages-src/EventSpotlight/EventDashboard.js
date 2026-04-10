@@ -112,23 +112,23 @@ const NavigationButton = ({ onClick, direction }) => (
 // Memoized dashboard items to avoid unnecessary re-renders
 const dashboardItems = [
   {
-    image: './assets/EventSpot.png',
+    image: './assets/EventSpot.webp',
     title: 'AI Surveillance',
     description: 'Convergence 2025',
   },
   {
-    image: './assets/EventSpot.png',
+    image: './assets/EventSpot.webp',
     title: 'Smart Automation',
     description: 'Convergence 2025',
   },
   {
-    image: './assets/EventSpot.png',
+    image: './assets/EventSpot.webp',
     title: 'Security Systems',
     // description: "Next-gen protection",
     description: 'Convergence 2025',
   },
   {
-    image: './assets/EventSpot.png',
+    image: './assets/EventSpot.webp',
     title: 'Connected World',
     // description: "Seamless integration",
     description: 'Convergence 2025',

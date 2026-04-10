@@ -195,7 +195,7 @@ export default function ContactUs() {
         />
         <meta
           property="og:image"
-          content="https://www.vmukti.com/assets/Contactus.png"
+          content="https://www.vmukti.com/assets/Contactus.webp"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.vmukti.com/contact-us/" />
@@ -210,7 +210,7 @@ export default function ContactUs() {
         />
         <meta
           name="twitter:image"
-          content="https://www.vmukti.com/assets/Contactus.png"
+          content="https://www.vmukti.com/assets/Contactus.webp"
         />
         {/* Canonical Link */}
         <link rel="canonical" href="https://www.vmukti.com/contact-us" />
@@ -234,7 +234,7 @@ export default function ContactUs() {
             zIndex="1"
           >
             <Image loading="lazy"
-              src={`/assets/Contactus.png`}
+              src={`/assets/Contactus.webp`}
               alt="Contact VMukti Solutions"
               position="absolute"
               top="0"
@@ -289,8 +289,8 @@ export default function ContactUs() {
               left="0"
               right="0"
               bottom="0"
-              // bgImage="url('./assets/BannerBrochure6.png')"
-              bgImage={`url(/assets/BannerBrochure6.png)`}
+              // bgImage="url('./assets/BannerBrochure6.webp')"
+              bgImage={`url(/assets/BannerBrochure6.webp)`}
               bgSize="contain"
               bgRepeat="no-repeat"
               w="150%"
@@ -302,8 +302,8 @@ export default function ContactUs() {
               }}
             />
             <Image loading="lazy"
-              // src="/assets/robowho2.png"
-              src={`/assets/robowho2.png`}
+              // src="/assets/robowho2.webp"
+              src={`/assets/robowho2.webp`}
               alt="Robot hand"
               mt={{ base: '0', md: '30%' }}
               maxH="55%"

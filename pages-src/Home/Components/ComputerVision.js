@@ -18,36 +18,36 @@ const computerVisionSteps = [
       heading: "Data Input",
       content:
         "Input raw data (e.g., images, videos, live link) from relevant sources like surveillance feeds, cloud server, physical storage, etc.",
-      image: "/assets/ComputerVision1.png",
-      image_mobile: "/assets/ComputerVision1_mobile.png", 
+      image: "/assets/ComputerVision1.webp",
+      image_mobile: "/assets/ComputerVision1_mobile.webp", 
     },
     {
       heading: "Model Selection",
       content:
         "Find the API model that suits your application. (Agentic Live Summarization, Agentic Video Summarization, Agentic Pose Detection, Zero Shot Object Detection, etc).",
-      image: "/assets/ComputerVision2.png",
-      image_mobile: "/assets/ComputerVision2_mobile.png",
+      image: "/assets/ComputerVision2.webp",
+      image_mobile: "/assets/ComputerVision2_mobile.webp",
     },
     {
       heading: "API Wrapping",
       content:
         "We wrap the model in a RESTful API using frameworks like Flask or FastAPI, adding endpoints for easy input, prediction, and integration.",
-      image: "/assets/ComputerVision3.png",
-      image_mobile: "/assets/ComputerVision3_mobile.png",
+      image: "/assets/ComputerVision3.webp",
+      image_mobile: "/assets/ComputerVision3_mobile.webp",
     },
     {
       heading: "Integration",
       content:
         "Provide the API key, documentation and SDKs to developers/clients to integrate the AI features into their apps or systems.",
-      image: "/assets/ComputerVision4.png",
-      image_mobile: "/assets/ComputerVision4_mobile.png",
+      image: "/assets/ComputerVision4.webp",
+      image_mobile: "/assets/ComputerVision4_mobile.webp",
     },
     {
       heading: "Deployment",
       content:
         "Deploy the API on cloud servers or edge devices (depending on the use case), ensuring scalability and low-latency access.",
-      image: "/assets/ComputerVision5.png",
-      image_mobile: "/assets/ComputerVision5_mobile.png",
+      image: "/assets/ComputerVision5.webp",
+      image_mobile: "/assets/ComputerVision5_mobile.webp",
     },
   ];
 

@@ -28,7 +28,7 @@ const FeaturedBlogCard = memo(({ post }) => {
   const title = post.content?.title || "Untitled Blog";
   const imageUrl = post.content?.mainImage
     ? `${IMAGE_BASE_URL}${post.content.mainImage}`
-    : "/assets/blog-placeholder.png";
+    : "/assets/blog-placeholder.webp";
   const brief =
     post.content?.brief?.[0]?.children?.[0]?.text ||
     "No description available.";
@@ -58,7 +58,7 @@ const FeaturedBlogCard = memo(({ post }) => {
             loading="lazy"
             src={imageUrl}
             alt={title}
-            fallbackSrc="/assets/blog-placeholder.png"
+            fallbackSrc="/assets/blog-placeholder.webp"
             objectFit="cover"
             w="100%"
             h="100%"

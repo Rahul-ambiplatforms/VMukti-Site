@@ -13,7 +13,7 @@ const industriesData = {
     metatitle: "Manufacturing & Industrial Surveillance Solutions in USA | VMukti",
     metadescription:
       "VMukti’s AI-powered manufacturing video surveillance system in the USA enhances factory safety, quality control, operational visibility, and real-time monitoring with smart analytics.",
-    ogImage: "https://www.vmukti.com/assets/manufacturing_mockup.png",
+    ogImage: "https://www.vmukti.com/assets/manufacturing_mockup.webp",
     slug: "manufacturing",
     title: [
       {
@@ -22,8 +22,8 @@ const industriesData = {
       },
     ],
     para: "Keep your operations secure with our computer vision solution in manufacturing. Monitor every corner in real time, detect threats early and respond instantly. Simple to deploy and easy to use, it gives you full control and clear visibility anytime, anywhere.",
-    large_image: "manufacturing_mockup.png",
-    large_image_mobile: "manufacturing_mockup_mobile.png",
+    large_image: "manufacturing_mockup.webp",
+    large_image_mobile: "manufacturing_mockup_mobile.webp",
     large_image_alt: "Manufactring Industry",
     keyApplications: [
       {
@@ -128,37 +128,37 @@ const industriesData = {
         "Experience precision control with our computer vision solution real-time visual intelligence that empowers your manufacturing floor to enforce quality, elevate safety, and detect anomalies instantly. Stay ahead with surveillance built for speed, accuracy, and zero operational blind spots.",
       benefits: [
         {
-          image: "/assets/result_industry_man_1.png",
+          image: "/assets/result_industry_man_1.webp",
           heading: "Workforce Productivity Analytics",
           description:
             "We deploy advanced computer vision to analyze movement patterns and reveal workflow friction points empowering you to optimize operations, enhance floor dynamics, and elevate team productivity at scale.",
         },
         {
-          image: "/assets/result_industry_man_2.png",
+          image: "/assets/result_industry_man_2.webp",
           heading: "24/7 Real-Time Monitoring",
           description:
             "Stay ahead of disruption with enterprise-grade visual oversight. Our remote surveillance framework delivers instant situational awareness, live anomaly alerts, and continuous production visibility all in real time.",
         },
         {
-          image: "/assets/result_industry_man_3.png",
+          image: "/assets/result_industry_man_3.webp",
           heading: "Error Reduction",
           description:
             "Our automated visual systems eliminate inconsistency at the source delivering precision-level inspection that drives down defect rates, slashes rework, and upholds your brand's quality promise at scale.",
         },
         {
-          image: "/assets/result_industry_man_4.png",
+          image: "/assets/result_industry_man_4.webp",
           heading: "Rapid Scalability",
           description:
             "Expand your surveillance footprint across new production lines, facilities, or zones without operational delays or capital strain. VMukti scales with your growth, delivering seamless control and precision deployment.",
         },
         {
-          image: "/assets/result_industry_man_5.png",
+          image: "/assets/result_industry_man_5.webp",
           heading: "Seamless Connectivity",
           description:
             "Your surveillance network shouldn’t just be smart, it should be strategic. Seamlessly integrated with VMS, EMS, or Enterprise Command Center, our system enables a unified command layer for faster, data-driven decisions across your factory floor.",
         },
         {
-          image: "/assets/result_industry_man_6.png",
+          image: "/assets/result_industry_man_6.webp",
           heading: "Stronger Security",
           description:
             "Our visual system locks in asset protection by identifying threats the instant they occur from unauthorized access to safety lapses so your environment stays secure, compliant, and always under control.",
@@ -175,8 +175,8 @@ const industriesData = {
     workflow: {
       heading:
         "How We Deliver Custom Manufacturing Video Surveillance Solutions",
-      image: "manufacturing_workflow.png",
-      image_mobile: "manufacturing_workflow_mobile.png",
+      image: "manufacturing_workflow.webp",
+      image_mobile: "manufacturing_workflow_mobile.webp",
     },
     schema: [
       // Webpage Schema
@@ -195,7 +195,7 @@ const industriesData = {
           url: "https://www.vmukti.com/",
           logo: {
             "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            url: "https://www.vmukti.com/assets/vmuktilogo.webp",
             width: 25,
             height: 6,
           },
@@ -301,7 +301,7 @@ const industriesData = {
     metatitle: "Warehouse Video Surveillance & Monitoring Solutions in USA",
     metadescription:
       "VMukti’s AI-powered manufacturing video surveillance system in the USA enhances factory safety, quality control, operational visibility, and real-time monitoring with smart analytics.",
-    ogImage: "https://www.vmukti.com/assets/warehouse_mockup.png",
+    ogImage: "https://www.vmukti.com/assets/warehouse_mockup.webp",
     slug: "warehouse",
     title: [
       {
@@ -311,8 +311,8 @@ const industriesData = {
     ],
     para: "Gain full control of your warehouse operations with our computer vision solution. Track inventory with precision, strengthen safety measures and monitor every activity in real time. From sack handling to fire detection and restricted zone alerts. Our system helps you respond instantly, minimize costly errors and protect every inch of your facility.",
 
-    large_image: "warehouse_mockup.png",
-    large_image_mobile: "warehouse_mockup_mobile.png",
+    large_image: "warehouse_mockup.webp",
+    large_image_mobile: "warehouse_mockup_mobile.webp",
     large_image_alt: "Warehouse surveillance monitoring illustration",
 
     keyApplications: [
@@ -441,42 +441,42 @@ const industriesData = {
       //       title: "Asset Protection",
       //       description:
       //         "Our proactive surveillance doesn’t wait for losses to occur. It flags breaches the moment they happen, deters theft attempts before they escalate, and keeps critical zones in close monitoring with fast alerts.",
-      //       image: "/assets/feat4_industry_wh_1.png",
+      //       image: "/assets/feat4_industry_wh_1.webp",
       //     },
       //     {
       //       id: "feat4-2",
       //       title: "Centralized Management",
       //       description:
       //         "VMukti helps you oversee multi-site operations via a unified control interface, accelerate post-event analysis with edge-powered insights and slash your response time from hours to actionable minutes.",
-      //       image: "/assets/feat4_industry_wh_2.png",
+      //       image: "/assets/feat4_industry_wh_2.webp",
       //     },
       //     {
       //       id: "feat4-3",
       //       title: "Smarter Storage Control",
       //       description:
       //         "Using our solution, track assets in real time with system-level accuracy, validate every move, remove human error, and drive warehouse precision with smart spatial analytics engineered for scale and speed.",
-      //       image: "/assets/feat4_industry_wh_3.png",
+      //       image: "/assets/feat4_industry_wh_3.webp",
       //     },
       //     {
       //       id: "feat4-4",
       //       title: "Continuous Monitoring",
       //       description:
       //         "You get ultra-clear imaging in all conditions with intelligent bandwidth compression that slashes storage use by 70% and airtight protection across assets which means no compromises, no gaps, just performance.",
-      //       image: "/assets/feat4_industry_wh_4.png",
+      //       image: "/assets/feat4_industry_wh_4.webp",
       //     },
       //     {
       //       id: "feat4-5",
       //       title: "Improved Operational Efficiency",
       //       description:
       //         "We eliminate workflow friction with precision visual solution, real-time operational intelligence, and unified task orchestration built to keep your production agile, aligned and outperforming expectations.",
-      //       image: "/assets/feat4_industry_wh_5.png",
+      //       image: "/assets/feat4_industry_wh_5.webp",
       //     },
       //     {
       //       id: "feat4-6",
       //       title: "Behavior Monitoring for Safety",
       //       description:
       //         "VMukti delivers real-time hazard interception and predictive oversight so you don’t react to incidents, you prevent them. Every shift operates under intelligent, compliant automation built for zero compromise.",
-      //       image: "/assets/feat4_industry_wh_6.png",
+      //       image: "/assets/feat4_industry_wh_6.webp",
       //     },
       //   ],
       // },
@@ -488,37 +488,37 @@ const industriesData = {
         "VMukti empowers your warehouse with real-time computer vision intelligence streamlining inventory, strengthening security and enabling compliance-driven operations that scale with enterprise demands.",
       benefits: [
         {
-          image: "/assets/result_industry_wh_1.png",
+          image: "/assets/result_industry_wh_1.webp",
           heading: "Inventory Accuracy",
           description:
             "Ensure precise inventory counts, eliminate discrepancies and maintain operational efficiency with AI-powered tracking.",
         },
         {
-          image: "/assets/result_industry_wh_2.png",
+          image: "/assets/result_industry_wh_2.webp",
           heading: "Improved Security",
           description:
             "Advanced surveillance systems secure assets, detect breaches instantly and deter theft before it escalates.",
         },
         {
-          image: "/assets/result_industry_wh_3.png",
+          image: "/assets/result_industry_wh_3.webp",
           heading: "Operational Efficiency",
           description:
             "Optimize workflows, reduce downtime and maximize throughput with intelligent oversight across every shift.",
         },
         {
-          image: "/assets/result_industry_wh_4.png",
+          image: "/assets/result_industry_wh_4.webp",
           heading: "Cost Savings",
           description:
             "Automated oversight reduces operational overhead and prevents costly losses with proactive monitoring.",
         },
         {
-          image: "/assets/result_industry_wh_5.png",
+          image: "/assets/result_industry_wh_5.webp",
           heading: "Compliance Assurance",
           description:
             "Maintain safety standards, enforce PPE compliance and meet regulatory requirements effortlessly.",
         },
         {
-          image: "/assets/result_industry_wh_6.png",
+          image: "/assets/result_industry_wh_6.webp",
           heading: "Scalable Oversight",
           description:
             "Our solution grows with your operations delivering consistent intelligence across multi-site warehouses.",
@@ -537,8 +537,8 @@ const industriesData = {
     workflow: {
       heading:
         "How We Provide Tailored Video Surveillance Solution for Warehouse",
-      image: "warehouse_workflow.png",
-      image_mobile: "warehouse_workflow_mobile.png",
+      image: "warehouse_workflow.webp",
+      image_mobile: "warehouse_workflow_mobile.webp",
     },
     schema: [
       //  Webpage Schema
@@ -557,7 +557,7 @@ const industriesData = {
           url: "https://www.vmukti.com/",
           logo: {
             "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            url: "https://www.vmukti.com/assets/vmuktilogo.webp",
             width: 25,
             height: 6,
           },
@@ -656,7 +656,7 @@ const industriesData = {
     metatitle: "AI Video Surveillance for Hospitals & Healthcare in USA",
     metadescription:
       "VMukti’s AI healthcare video surveillance solution in the USA improves hospital security, staff monitoring, compliance tracking, and patient safety with real-time alerts and analytics.",
-    ogImage: "https://www.vmukti.com/assets/healthcare_mockup.png",
+    ogImage: "https://www.vmukti.com/assets/healthcare_mockup.webp",
     slug: "healthcare",
     title: [
       {
@@ -666,8 +666,8 @@ const industriesData = {
     ],
     para: "We understand what’s at stake: patient’s life, response delays, security breaches. Our solution ensures uninterrupted care, operational control, and brand trust at scale. VMukti Solutions is leveraging computer vision in the healthcare industry to provide intelligent surveillance that enhances safety, improves response times, and keeps your facility running smoothly.",
 
-    large_image: "healthcare_mockup.png",
-    large_image_mobile: "healthcare_mockup_mobile.png",
+    large_image: "healthcare_mockup.webp",
+    large_image_mobile: "healthcare_mockup_mobile.webp",
     large_image_alt: "Healthcare surveillance monitoring illustration",
 
     keyApplications: [
@@ -795,37 +795,37 @@ const industriesData = {
         "Your healthcare facility demands more than surveillance, it requires intelligent oversight. Our advanced video intelligence accelerates response, optimizes workflows and safeguards patients with precision built for modern, high-acuity environments.",
       benefits: [
         {
-          image: "/assets/result_industry_healthcare_1.png",
+          image: "/assets/result_industry_healthcare_1.webp",
           heading: "Data-Driven Decision Making",
           description:
             "With VMukti’s advanced computer vision, you get help with refining staff allocation, predicting resource demand and ensuring every square foot works harder for your patients and your bottom line.",
         },
         {
-          image: "/assets/result_industry_healthcare_2.png",
+          image: "/assets/result_industry_healthcare_2.webp",
           heading: "Improved Patient Safety",
           description:
             "Our intelligent hospital surveillance ecosystem delivers 24/7 real-time visibility across critical zones empowering your staff to respond faster to falls, anomalies and emergencies with zero blind spots and full operational clarity.",
         },
         {
-          image: "/assets/result_industry_healthcare_3.png",
+          image: "/assets/result_industry_healthcare_3.webp",
           heading: "Enhanced Security",
           description:
             "VMukti equips your facility with vision-enabled access systems that restrict unauthorized movement across critical medical zones safeguarding sensitive data, high-risk areas and every person under your care.",
         },
         {
-          image: "/assets/result_industry_healthcare_4.png",
+          image: "/assets/result_industry_healthcare_4.webp",
           heading: "Faster Response Times",
           description:
             "Your care environment deserves more than static monitoring. Our edge-driven video analytics detect anomalies in real time, empowering swift clinical response and reducing harm before it escalates.",
         },
         {
-          image: "/assets/result_industry_healthcare_5.png",
+          image: "/assets/result_industry_healthcare_5.webp",
           heading: "Increased Staff Efficiency",
           description:
             "We integrate enterprise-grade computer vision into your healthcare environment to reduce staff fatigue and elevate care delivery so your professionals focus on patients while the system handles precision-driven monitoring.",
         },
         {
-          image: "/assets/result_industry_healthcare_6.png",
+          image: "/assets/result_industry_healthcare_6.webp",
           heading: "Smarter Resource & Hygiene Management",
           description:
             "Our vision-driven system brings asset traceability and hygiene compliance under one lens mitigating infection risk, optimizing resource use and ensuring operational integrity across healthcare facilities.",
@@ -845,8 +845,8 @@ const industriesData = {
     workflow: {
       heading:
         "Our Strategic Approach to Planning Video Surveillance for Healthcare",
-      image: "healthcare_workflow.png",
-      image_mobile: "healthcare_workflow_mobile.png",
+      image: "healthcare_workflow.webp",
+      image_mobile: "healthcare_workflow_mobile.webp",
     },
     schema: [
       // Webpage Schema
@@ -865,7 +865,7 @@ const industriesData = {
           url: "https://www.vmukti.com/",
           logo: {
             "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            url: "https://www.vmukti.com/assets/vmuktilogo.webp",
             width: 25,
             height: 6,
           },
@@ -964,7 +964,7 @@ const industriesData = {
     metatitle: "Oil & Gas Video Surveillance Solutions in USA | VMukti",
     metadescription:
       "VMukti delivers AI-powered surveillance for oil and gas operations in the USA with pipeline monitoring, remote site visibility, worker safety insights, and centralized control.",
-    ogImage: "https://www.vmukti.com/assets/oilandgas_mockup.png",
+    ogImage: "https://www.vmukti.com/assets/oilandgas_mockup.webp",
     slug: "oil-and-gas",
     title: [
       {
@@ -974,8 +974,8 @@ const industriesData = {
     ],
     para: "Your Oil and Gas sites deal with high-risk environments involving flammable materials, remote locations and complex operations. Manual monitoring often results in delayed detection of leaks, equipment faults or unauthorized access. VMukti Solution uses computer vision in power, oil & gas to offer smart surveillance with real-time alerts and safety violation tracking. Our visual intelligence system ensures faster responses, remote monitoring and better control to keep people and assets safe.",
 
-    large_image: "oilandgas_mockup.png",
-    large_image_mobile: "oilandgas_mockup_mobile.png",
+    large_image: "oilandgas_mockup.webp",
+    large_image_mobile: "oilandgas_mockup_mobile.webp",
     large_image_alt: "Oil and gas site surveillance illustration",
 
     keyApplications: [
@@ -1095,37 +1095,37 @@ const industriesData = {
         "VMukti empowers your oil and gas operations with elite computer vision tech providing real-time equipment status and site monitoring. This precision-driven insight accelerates your decisions, heightens control and eliminates delays, ensuring your team stays ahead in safety and operational excellence every day.",
       benefits: [
         {
-          image: "/assets/result_industry_oilandgas_1.png",
+          image: "/assets/result_industry_oilandgas_1.webp",
           heading: "Enhanced Safety",
           description:
             "Our cutting-edge visual intelligence leverages the latest in computer vision and industrial tech to preemptively detect site dangers, enabling your operations to maintain flawless safety standards across the workforce.",
         },
         {
-          image: "/assets/result_industry_oilandgas_2.png",
+          image: "/assets/result_industry_oilandgas_2.webp",
           heading: "Downtime Reduction",
           description:
             "For your oil and gas operations, we deliver cutting-edge video analytics that spot equipment anomalies instantly minimizing costly downtime and maximizing uptime with precision designed for mission-critical reliability.",
         },
         {
-          image: "/assets/result_industry_oilandgas_3.png",
+          image: "/assets/result_industry_oilandgas_3.webp",
           heading: "Theft Prevention",
           description:
             "With precision-driven video surveillance, we deliver instant, actionable alerts that safeguard your oil and gas assets stopping unauthorized access before it happens and ensuring uninterrupted, top-tier operational security.",
         },
         {
-          image: "/assets/result_industry_oilandgas_4.png",
+          image: "/assets/result_industry_oilandgas_4.webp",
           heading: "Regulatory Compliance",
           description:
             "You can leverage advanced computer vision, we deliver real-time surveillance that enforces compliance in high-risk areas empowering you to mitigate hazards and maintain seamless operational integrity.",
         },
         {
-          image: "/assets/result_industry_oilandgas_5.png",
+          image: "/assets/result_industry_oilandgas_5.webp",
           heading: "Operational Efficiency",
           description:
             "We transform your energy inspections with AI-powered vision that reduces errors and accelerates workflows. Experience the power of visual solution that focuses on what matters most, maximizing performance.",
         },
         {
-          image: "/assets/result_industry_oilandgas_6.png",
+          image: "/assets/result_industry_oilandgas_6.webp",
           heading: "Data-Driven Decisions",
           description:
             "Our advanced video intelligence platform transforms your surveillance into a strategic asset, providing real-time risk detection and operational clarity so you stay ahead in oil & gas with unmatched precision and control.",
@@ -1144,8 +1144,8 @@ const industriesData = {
     workflow: {
       heading:
         "Complete Setup Process for Computer Vision Oil and Gas Surveillance Solution",
-      image: "oilandgas_workflow.png",
-      image_mobile: "oilandgas_workflow_mobile.png",
+      image: "oilandgas_workflow.webp",
+      image_mobile: "oilandgas_workflow_mobile.webp",
     },
 
     schema: [
@@ -1165,7 +1165,7 @@ const industriesData = {
           url: "https://www.vmukti.com/",
           logo: {
             "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            url: "https://www.vmukti.com/assets/vmuktilogo.webp",
             width: 25,
             height: 6,
           },
@@ -1272,7 +1272,7 @@ const industriesData = {
     metatitle: "AI Election Surveillance & Monitoring Solutions in USA",
     metadescription:
       "Ensure transparent elections in the USA with VMukti’s AI-powered election surveillance system offering live monitoring, crowd insights, incident alerts, and command center integration.",
-    ogImage: "https://www.vmukti.com/assets/election_mockup.png",
+    ogImage: "https://www.vmukti.com/assets/election_mockup.webp",
     slug: "election",
     title: [
       {
@@ -1282,8 +1282,8 @@ const industriesData = {
     ],
     para: "Every vote matters in your elections because even a single flaw, like voter fraud or misinformation, can quickly escalate into distrust and damage the credibility of the entire process. VMukti Solutions enhances election security with its offering of real-time monitoring, fraud vote prevention and transparent evidence through the election surveillance system.",
 
-    large_image: "election_mockup.png",
-    large_image_mobile: "election_mockup_mobile.png",
+    large_image: "election_mockup.webp",
+    large_image_mobile: "election_mockup_mobile.webp",
     large_image_alt: "Election surveillance monitoring illustration",
 
     keyApplications: [
@@ -1383,37 +1383,37 @@ const industriesData = {
         "VMukti brings precision to election oversight with its computer vision modeled solution that delivers real-time surveillance, anomaly detection and rapid incident response so you maintain transparency, full control and trust without missing a single frame.",
       benefits: [
         {
-          image: "/assets/result_industry_election_1.png",
+          image: "/assets/result_industry_election_1.webp",
           heading: "Customised Enterprise Command Center",
           description:
             "Your election operations demand precision, our surveillance platform delivers live visual command, GPS-synced tracking and seamless system integration for secure, real-time oversight and swift electoral coordination.",
         },
         {
-          image: "/assets/result_industry_election_2.png",
+          image: "/assets/result_industry_election_2.webp",
           heading: "Transparency and Trust",
           description:
             "We equip your election command with a real-time visual intelligence solution that gives you control, encrypted feeds and automated anomaly alerts ensuring every vote is watched, verified and protected without question.",
         },
         {
-          image: "/assets/result_industry_election_3.png",
+          image: "/assets/result_industry_election_3.webp",
           heading: "Deterrence of Malpractices",
           description:
             "Our election monitoring infrastructure combines real-time video intelligence and encrypted oversight to visibly deter tampering, reinforce transparency, and uphold the integrity of every ballot cast.",
         },
         {
-          image: "/assets/result_industry_election_4.png",
+          image: "/assets/result_industry_election_4.webp",
           heading: "Fraud Prevention",
           description:
             "Your command over election integrity starts with intelligent vision real-time analytics flag voter anomalies, unauthorized access and suspicious behavior, empowering you to act decisively before risks escalate.",
         },
         {
-          image: "/assets/result_industry_election_5.png",
+          image: "/assets/result_industry_election_5.webp",
           heading: "Enhanced Voter Confidence",
           description:
             "We deliver election-grade video intelligence that ensures procedural integrity, deters tampering in real time and reinforces public trust because your democracy deserves uncompromised oversight.",
         },
         {
-          image: "/assets/result_industry_election_6.png",
+          image: "/assets/result_industry_election_6.webp",
           heading: "Two-way Communication",
           description:
             "Our advanced visual platform transforms election oversight with dynamic live feeds, instant field updates and intelligent incident alerts giving your team unmatched speed, clarity and control from booth to command center.",
@@ -1433,8 +1433,8 @@ const industriesData = {
     workflow: {
       heading:
         "Step-by-Step Plan for Delivering Security in Election Surveillance Solutions",
-      image: "election_workflow.png",
-      image_mobile: "election_workflow_mobile.png",
+      image: "election_workflow.webp",
+      image_mobile: "election_workflow_mobile.webp",
     },
     schema: [
       // Webpage Schema
@@ -1453,7 +1453,7 @@ const industriesData = {
           url: "https://www.vmukti.com/",
           logo: {
             "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            url: "https://www.vmukti.com/assets/vmuktilogo.webp",
             width: 25,
             height: 6,
           },
@@ -1552,7 +1552,7 @@ const industriesData = {
     metatitle: "AI Surveillance for Schools, Colleges & Universities in USA",
     metadescription:
       "Improve campus safety in the USA with VMukti’s AI education surveillance system providing smart monitoring, threat detection, incident alerts, and centralized security management.",
-    ogImage: "https://www.vmukti.com/assets/education_mockup.png",
+    ogImage: "https://www.vmukti.com/assets/education_mockup.webp",
     slug: "education",
     title: [
       {
@@ -1562,8 +1562,8 @@ const industriesData = {
     ],
     para: "In a world where campus environments face rising complexity and risk, your institution needs more than just surveillance, it needs strategic visual intelligence. VMukti delivers intelligent video infrastructure with real-time situational awareness, proactive threat detection and seamless oversight ensuring your campus stays secure, compliant and future-ready without disrupting the learning experience.",
 
-    large_image: "education_mockup.png",
-    large_image_mobile: "education_mockup_mobile.png",
+    large_image: "education_mockup.webp",
+    large_image_mobile: "education_mockup_mobile.webp",
     large_image_alt: "Education surveillance monitoring illustration",
 
     keyApplications: [
@@ -1697,37 +1697,37 @@ const industriesData = {
         "We bring precision to campus surveillance with edge-enabled video intelligence, encrypted multi-feed visibility and instant alerting giving you full command over student safety, staff compliance and rapid incident resolution without operational friction.",
       benefits: [
         {
-          image: "/assets/result_industry_education_1.png",
+          image: "/assets/result_industry_education_1.webp",
           heading: "Better Safety",
           description:
             "Your campus demands more than visibility, it needs command. Our real-time surveillance architecture safeguards every corridor, blending AI precision with zero-delay response to keep your students and staff secure at all times.",
         },
         {
-          image: "/assets/result_industry_education_2.png",
+          image: "/assets/result_industry_education_2.webp",
           heading: "Quick Alerts",
           description:
             "VMukti deploys intelligent threat detection that identifies fire, intrusion or unauthorized presence in real time delivering decisive alerts to your Educational command center before risk becomes disruption.",
         },
         {
-          image: "/assets/result_industry_education_3.png",
+          image: "/assets/result_industry_education_3.webp",
           heading: "Clear Insights",
           description:
             "Our solution monitors student behavior using high-fidelity analytics, empowering your leadership to create safer, smarter environments without guesswork and only sharp, data-backed decisions.",
         },
         {
-          image: "/assets/result_industry_education_4.png",
+          image: "/assets/result_industry_education_4.webp",
           heading: "Fair Exams",
           description:
             "We help you safeguard the integrity of your examinations with AI-powered vigilance, eliminating malpractice, preserving academic standards and delivering trust you can measure, every single session.",
         },
         {
-          image: "/assets/result_industry_education_5.png",
+          image: "/assets/result_industry_education_5.webp",
           heading: "24/7 Real-Time Monitoring",
           description:
             "We equip your campus with edge-optimized video intelligence that reacts before you do real-time alerts, zero lag and smart visibility that redefines how you protect students and secure every corner.",
         },
         {
-          image: "/assets/result_industry_education_6.png",
+          image: "/assets/result_industry_education_6.webp",
           heading: "Safe Assets",
           description:
             "Your institution deserves intelligent asset visibility. Our advanced object recognition system safeguards school property, reduces loss and reinforces trust across every corridor, classroom, and control center.",
@@ -1746,8 +1746,8 @@ const industriesData = {
 
     workflow: {
       heading: "Efficient Workflow for Your Education Surveillance System",
-      image: "education_workflow.png",
-      image_mobile: "education_workflow_mobile.png",
+      image: "education_workflow.webp",
+      image_mobile: "education_workflow_mobile.webp",
     },
     schema: [
       // Webpage Schema
@@ -1766,7 +1766,7 @@ const industriesData = {
           url: "https://www.vmukti.com/",
           logo: {
             "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            url: "https://www.vmukti.com/assets/vmuktilogo.webp",
             width: 25,
             height: 6,
           },
@@ -1873,7 +1873,7 @@ const industriesData = {
     metatitle: "Transportation Security & Video Monitoring Solutions in USA",
     metadescription:
       "VMukti delivers AI-powered transportation surveillance solutions in the USA with real-time alerts, tracking, analytics, and centralized monitoring for fleets and infrastructure.",
-    ogImage: "https://www.vmukti.com/assets/transportation_mockup.png",
+    ogImage: "https://www.vmukti.com/assets/transportation_mockup.webp",
     slug: "transportation",
     title: [
       {
@@ -1882,8 +1882,8 @@ const industriesData = {
       },
     ],
     para: "In transportation, timely deliveries and safety are crucial, as even minor disruptions can cause major delays. VMukti Solutions enhances operations with advanced GPS tracking and video analytics for transportation, providing real-time insights, optimizing routes and ensuring fleet safety to drive efficiency.",
-    large_image: "transportation_mockup.png",
-    large_image_mobile: "transportation_mockup_mobile.png",
+    large_image: "transportation_mockup.webp",
+    large_image_mobile: "transportation_mockup_mobile.webp",
     large_image_alt: "Transportation surveillance monitoring illustration",
     keyApplications: [
       {
@@ -1995,37 +1995,37 @@ const industriesData = {
         "VMukti Solution’s integrated fleet solution fuses GPS intelligence with real-time video oversight delivering unmatched visibility, route optimization, and compliance control for transportation networks that demand precision at every mile.",
       benefits: [
         {
-          image: "/assets/result_industry_transportation_1.png",
+          image: "/assets/result_industry_transportation_1.webp",
           heading: "Incident Reporting",
           description:
             "Our intelligent transport surveillance instantly detects accidents and critical hazards, triggering immediate alerts so your response teams act faster, smarter, and with exact operational precision.",
         },
         {
-          image: "/assets/result_industry_transportation_2.png",
+          image: "/assets/result_industry_transportation_2.webp",
           heading: "Smart Parking",
           description:
             "With intelligent vision and deep-learning algorithms, our parking solutions unlock real-time space optimization maximizing throughput and reducing urban congestion without operational compromise.",
         },
         {
-          image: "/assets/result_industry_transportation_3.png",
+          image: "/assets/result_industry_transportation_3.webp",
           heading: "Optimized Routing",
           description:
             "Your transportation operation gains sharper precision as computer vision reduces idle time, trims fuel costs, and accelerates dispatches delivering measurable efficiency across your entire fleet.",
         },
         {
-          image: "/assets/result_industry_transportation_4.png",
+          image: "/assets/result_industry_transportation_4.webp",
           heading: "Centralized Control",
           description:
             "We give you real-time oversight of every vehicle and checkpoint live streams, AI alerts, and GPS intelligence all fused into a single, scalable dashboard built to accelerate response and optimize movement.",
         },
         {
-          image: "/assets/result_industry_transportation_5.png",
+          image: "/assets/result_industry_transportation_5.webp",
           heading: "Traffic Compliance",
           description:
             "Our Vision AI delivers precision enforcement—tracking speed, lane discipline, and infractions in real time so your teams can prevent incidents, not just respond, using data-backed road intelligence.",
         },
         {
-          image: "/assets/result_industry_transportation_6.png",
+          image: "/assets/result_industry_transportation_6.webp",
           heading: "Passenger Safety Monitoring",
           description:
             "VMukti empowers your transit operations with real-time behavioral surveillance enabling instant threat detection, elevated passenger safety, and unmatched situational awareness across every moving zone.",
@@ -2044,8 +2044,8 @@ const industriesData = {
     workflow: {
       heading:
         "Crafting Precision with Every Surveillance Solution for Transportation",
-      image: "transportation_workflow.png",
-      image_mobile: "transportation_workflow_mobile.png",
+      image: "transportation_workflow.webp",
+      image_mobile: "transportation_workflow_mobile.webp",
     },
     schema: [
       // Webpage Schema
@@ -2064,7 +2064,7 @@ const industriesData = {
           url: "https://www.vmukti.com/",
           logo: {
             "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            url: "https://www.vmukti.com/assets/vmuktilogo.webp",
             width: 25,
             height: 6,
           },
@@ -2163,7 +2163,7 @@ const industriesData = {
     metatitle: "AI Enterprise Campus Monitoring & Enterprise Command Center Solutions in USA",
     metadescription:
       "VMukti powers enterprise campuses in the USA with AI video surveillance, Enterprise Command Center platforms, GIS mapping, and real-time alerts to enhance urban safety and operational efficiency.",
-    ogImage: "https://www.vmukti.com/assets/smartcity_mockup.png",
+    ogImage: "https://www.vmukti.com/assets/smartcity_mockup.webp",
     slug: "smart-city",
     title: [
       {
@@ -2173,8 +2173,8 @@ const industriesData = {
     ],
     para: "VMukti solution computer vision brings smart surveillance to your streets, helping you spot problems as they happen and act immediately without delay. With quick setup and remote access from anywhere, it supports smooth, efficient city operations without hassle.",
 
-    large_image: "smartcity_mockup.png",
-    large_image_mobile: "smartcity_mockup_mobile.png",
+    large_image: "smartcity_mockup.webp",
+    large_image_mobile: "smartcity_mockup_mobile.webp",
     large_image_alt: "Smart city surveillance monitoring illustration",
 
     keyApplications: [
@@ -2323,37 +2323,37 @@ const industriesData = {
         "VMukti empowers your city with real-time computer vision built for impact streamlining traffic, enhancing public safety and enabling data-driven governance that scales with your ambitions for smarter, faster and more sustainable urban environments.",
       benefits: [
         {
-          image: "/assets/result_industry_smartcity_1.png",
+          image: "/assets/result_industry_smartcity_1.webp",
           heading: "Proactive Crime Prevention",
           description:
             "Our real-time behavioral intelligence uses edge-deployed vision systems to flag unusual movements, unauthorized access and object abandonment enabling decisive intervention in high-density urban spaces.",
         },
         {
-          image: "/assets/result_industry_smartcity_2.png",
+          image: "/assets/result_industry_smartcity_2.webp",
           heading: "Data-Driven Decision Making",
           description:
             "With real-time computer vision layered into your urban fabric, you unlock actionable insights on traffic density, behavioral anomalies and safety trends driving smarter governance with precision, speed and predictive intelligence.",
         },
         {
-          image: "/assets/result_industry_smartcity_3.png",
+          image: "/assets/result_industry_smartcity_3.webp",
           heading: "Improved Traffic Flow",
           description:
             "Your enterprise campus demands more than monitoring. VMukti's vision software delivers adaptive traffic intelligence, precision signal control, rule violation spotting and fluid mobility built for tomorrow's urban infrastructure.",
         },
         {
-          image: "/assets/result_industry_smartcity_4.png",
+          image: "/assets/result_industry_smartcity_4.webp",
           heading: "Cost Savings",
           description:
             "We integrate advanced video infrastructure into your city’s core, streamlining workflows, automating oversight and reducing operational overhead with scalable, sensor-driven monitoring.",
         },
         {
-          image: "/assets/result_industry_smartcity_5.png",
+          image: "/assets/result_industry_smartcity_5.webp",
           heading: "Sustainability",
           description:
             "Our enterprise campus video surveillance solution helps authorities make informed decisions to optimize resource consumption and drive energy-efficient practices and a sustainable urban environment.",
         },
         {
-          image: "/assets/result_industry_smartcity_6.png",
+          image: "/assets/result_industry_smartcity_6.webp",
           heading: "Enhanced Security",
           description:
             "VMukti delivers intelligent vision infrastructure for enterprise campuses enabling instant threat detection, seamless emergency coordination and always-on urban oversight built for high-security, high-density environments.",
@@ -2373,8 +2373,8 @@ const industriesData = {
     workflow: {
       heading:
         "How We Provide Tailored Video Surveillance Solution for Enterprise Campus",
-      image: "smartcity_workflow.png",
-      image_mobile: "smartcity_workflow_mobile.png",
+      image: "smartcity_workflow.webp",
+      image_mobile: "smartcity_workflow_mobile.webp",
     },
     schema: [
       // Webpage Schema
@@ -2393,7 +2393,7 @@ const industriesData = {
           url: "https://www.vmukti.com/",
           logo: {
             "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            url: "https://www.vmukti.com/assets/vmuktilogo.webp",
             width: 25,
             height: 6,
           },
@@ -2494,7 +2494,7 @@ const industriesData = {
     metatitle: "Pharma Industry Video Surveillance & Monitoring in USA",
     metadescription:
       "VMukti’s AI pharmaceutical monitoring solution in the USA helps ensure GMP compliance, track production processes, prevent risks, and secure pharma facilities end to end.",
-    ogImage: "https://www.vmukti.com/assets/pharma_mockup.png",
+    ogImage: "https://www.vmukti.com/assets/pharma_mockup.webp",
     slug: "pharma",
     title: [
       {
@@ -2504,8 +2504,8 @@ const industriesData = {
     ],
     para: "VMukti empowers your pharma operations with cutting-edge vision systems, offering unparalleled oversight of personnel and production. Our solution ensures flawless adherence to safety standards and regulatory mandates, securing product quality while optimizing your operational excellence at every level.",
 
-    large_image: "pharma_mockup.png",
-    large_image_mobile: "pharma_mockup_mobile.png",
+    large_image: "pharma_mockup.webp",
+    large_image_mobile: "pharma_mockup_mobile.webp",
     large_image_alt: "Pharmaceutical site surveillance illustration",
 
     keyApplications: [
@@ -2618,37 +2618,37 @@ const industriesData = {
         "VMukti brings precision-grade computer vision to pharmaceutical operations empowering your teams with real-time visual intelligence, automated deviation alerts and compliance-ready oversight. We help you enforce standards, reduce risk and maintain operational excellence without disruption.",
       benefits: [
         {
-          image: "/assets/result_industry_pharma_1.png",
+          image: "/assets/result_industry_pharma_1.webp",
           heading: "Access Control and Security",
           description:
             "With intelligent access orchestration, you secure critical pharma zones, eliminate unauthorized movement and stay audit-ready ensuring every entry aligns with your regulatory and operational mandates.",
         },
         {
-          image: "/assets/result_industry_pharma_2.png",
+          image: "/assets/result_industry_pharma_2.webp",
           heading: "Accurate Inventory Tracking",
           description:
             "We equip your pharma operations with precision-grade visual tracking, monitoring item flow in real time to eliminate shrinkage, ensure audit accuracy and reinforce inventory accountability across every batch.",
         },
         {
-          image: "/assets/result_industry_pharma_3.png",
+          image: "/assets/result_industry_pharma_3.webp",
           heading: "Contamination Prevention",
           description:
             "You can use our system to enforce hygiene compliance by detecting protocol breaches in real time, safeguarding your production flow, preserving product integrity and ensuring brand trust at every critical stage.",
         },
         {
-          image: "/assets/result_industry_pharma_4.png",
+          image: "/assets/result_industry_pharma_4.webp",
           heading: "Simplify Investigations",
           description:
             "VMukti equips your operations with intelligent vision AI that captures, classifies and contextualizes every critical event accelerating audits, resolving risks and streamlining compliance response.",
         },
         {
-          image: "/assets/result_industry_pharma_5.png",
+          image: "/assets/result_industry_pharma_5.webp",
           heading: "Sterile Zone Intrusion",
           description:
             "Our system enforces sterile zone integrity with intelligent breach detection, instant alerts and regulatory-grade precision giving you complete operational control where contamination is not an option.",
         },
         {
-          image: "/assets/result_industry_pharma_6.png",
+          image: "/assets/result_industry_pharma_6.webp",
           heading: "Improve Operational Discipline",
           description:
             "With precision-grade video intelligence, you gain continuous oversight into staff behavior and protocol adherence minimizing deviations, enforcing SOPs and safeguarding pharmaceutical integrity at every step.",
@@ -2666,8 +2666,8 @@ const industriesData = {
     },
     workflow: {
       heading: "The Pharma Video Surveillance Solution Process",
-      image: "pharma_workflow.png",
-      image_mobile: "pharma_workflow_mobile.png",
+      image: "pharma_workflow.webp",
+      image_mobile: "pharma_workflow_mobile.webp",
     },
 
     schema: [
@@ -2687,7 +2687,7 @@ const industriesData = {
           url: "https://www.vmukti.com/",
           logo: {
             "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            url: "https://www.vmukti.com/assets/vmuktilogo.webp",
             width: 25,
             height: 6,
           },
@@ -2788,7 +2788,7 @@ const industriesData = {
     metatitle: "Logistics & Supply Chain Surveillance Solutions in USA",
     metadescription:
       "VMukti’s AI logistics surveillance system in the USA improves cargo tracking, yard monitoring, loading operations, theft prevention, and real-time visibility across supply chains.",
-    ogImage: "https://www.vmukti.com/assets/logistic_mockup.png",
+    ogImage: "https://www.vmukti.com/assets/logistic_mockup.webp",
     slug: "logistics",
     title: [
       {
@@ -2798,8 +2798,8 @@ const industriesData = {
     ],
     para: "Your operations deserve precision at every touchpoint. One wrong pick or mislabeled box can ripple into costly setbacks, reputational risk and delivery chaos. At VMukti, we integrate advanced computer vision into logistics infrastructure elevating safety, accelerating efficiency and productivity and helping you make sure you are following compliance in your entire workflow without any disruption, in real time.",
 
-    large_image: "logistic_mockup.png",
-    large_image_mobile: "logistic_mockup_mobile.png",
+    large_image: "logistic_mockup.webp",
+    large_image_mobile: "logistic_mockup_mobile.webp",
     large_image_alt: "Logistics and supply chain surveillance illustration",
 
     keyApplications: [
@@ -2926,37 +2926,37 @@ const industriesData = {
         "In an era where speed and precision are crucial, logistics companies are turning to next-gen solutions to stay ahead. Our logistics real time video surveillance offers cutting-edge technology that’s revolutionizing the industry.",
       benefits: [
         {
-          image: "/assets/result_industry_logistics_1.png",
+          image: "/assets/result_industry_logistics_1.webp",
           heading: "Improved Accuracy",
           description:
             "Our enterprise-grade video systems reduce manual missteps, giving your logistics operations pinpoint inventory visibility, flawless order routing, and total delivery traceability no guesswork, no compromise.",
         },
         {
-          image: "/assets/result_industry_logistics_2.png",
+          image: "/assets/result_industry_logistics_2.webp",
           heading: "Increased Safety",
           description:
             "We equip your logistics operations with enterprise-grade video intelligence that flags safety violations, detects real-time hazards and ensures protocol adherence without disrupting your workflow.",
         },
         {
-          image: "/assets/result_industry_logistics_3.png",
+          image: "/assets/result_industry_logistics_3.webp",
           heading: "Enhance Efficiency",
           description:
             "VMukti's Solutions accelerate your logistics workflow with Computer Vision AI automating sorting, streamlining package flow and delivering precision at scale across every node of your supply chain.",
         },
         {
-          image: "/assets/result_industry_logistics_4.png",
+          image: "/assets/result_industry_logistics_4.webp",
           heading: "Scalability",
           description:
             "Your logistics deserves more than basic oversight. Our premium surveillance framework delivers seamless data flow, transaction clarity and operational finesse engineered to elevate enterprise performance.",
         },
         {
-          image: "/assets/result_industry_logistics_5.png",
+          image: "/assets/result_industry_logistics_5.webp",
           heading: "Cost Reduction",
           description:
             "Our advanced video analytics platform minimizes manual oversight, slashes inefficiencies and ensures flawless goods movement eliminating stockouts, damage and delays across your logistics chain.",
         },
         {
-          image: "/assets/result_industry_logistics_6.png",
+          image: "/assets/result_industry_logistics_6.webp",
           heading: "Problem Identification",
           description:
             "We equip your logistics chain system with real-time visual intelligence instantly detecting damage, delays or disruptions so your teams act fast, reduce losses and maintain delivery precision.",
@@ -2974,8 +2974,8 @@ const industriesData = {
     },
     workflow: {
       heading: "Building Smart Processes for Logistics Surveillance Systems",
-      image: "logistics_workflow.png",
-      image_mobile: "logistics_workflow_mobile.png",
+      image: "logistics_workflow.webp",
+      image_mobile: "logistics_workflow_mobile.webp",
     },
     schema: [
       // Webpage Schema
@@ -2994,7 +2994,7 @@ const industriesData = {
           url: "https://www.vmukti.com/",
           logo: {
             "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            url: "https://www.vmukti.com/assets/vmuktilogo.webp",
             width: 25,
             height: 6,
           },
@@ -3096,7 +3096,7 @@ const industriesData = {
     metatitle: "Bank Video Surveillance & Monitoring Systems in USA",
     metadescription:
       "Secure banking operations in the USA with VMukti’s AI surveillance system for ATMs, branches, and cash zones with proactive alerts, smart analytics, and reliable video access.",
-    ogImage: "https://www.vmukti.com/assets/banking_mockup.png",
+    ogImage: "https://www.vmukti.com/assets/banking_mockup.webp",
     slug: "banking",
     title: [
       {
@@ -3106,8 +3106,8 @@ const industriesData = {
     ],
     para: "A single missed moment in surveillance can result in unauthorized access, critical data loss and costly trust issues that impact your bank’s bottom line. VMukti Solutions provides advanced bank video surveillance to help financial institutions eliminate blind spots, detect threats in real time and maintain secure, uninterrupted operations while safeguarding assets and customer trust.",
 
-    large_image: "banking_mockup.png",
-    large_image_mobile: "banking_mockup_mobile.png",
+    large_image: "banking_mockup.webp",
+    large_image_mobile: "banking_mockup_mobile.webp",
     large_image_alt: "Banking and financial surveillance illustration",
 
     keyApplications: [
@@ -3256,37 +3256,37 @@ const industriesData = {
         "In today’s high-stakes financial landscape, you demand nothing less than precision. Our AI-powered computer vision increases efficiency, safeguards your assets, ensures regulatory compliance and fortifies customer trust.",
       benefits: [
         {
-          image: "/assets/result_industry_banking_1.png",
+          image: "/assets/result_industry_banking_1.webp",
           heading: "Suspicious Activity Detection",
           description:
             "Protect your bank with cutting-edge AI analytics that spot anomalies in ATM use and branch flow delivering real-time threat detection that empowers your security team to act swiftly and maintain trust without compromise.",
         },
         {
-          image: "/assets/result_industry_banking_2.png",
+          image: "/assets/result_industry_banking_2.webp",
           heading: "Faster Incident Response",
           description:
             "Our advanced banking video surveillance delivers immediate breach detection and proactive alerts. Stay steps ahead of threats with intelligent monitoring designed to safeguard your operations and maintain trust.",
         },
         {
-          image: "/assets/result_industry_banking_3.png",
+          image: "/assets/result_industry_banking_3.webp",
           heading: "Regulatory Compliance",
           description:
             "We power your banking security with relentless video oversight and audit capabilities. Our solution sharpens compliance and boosts transparency with instant insights turning complex investigations into resolutions.",
         },
         {
-          image: "/assets/result_industry_banking_4.png",
+          image: "/assets/result_industry_banking_4.webp",
           heading: "Improved Customer Experience",
           description:
             "VMukti's Solutions create a secure environment where your customers feel genuinely protected and respected. This peace of mind deepens trust and cultivates lasting loyalty because at your bank, safety is a premium experience.",
         },
         {
-          image: "/assets/result_industry_banking_5.png",
+          image: "/assets/result_industry_banking_5.webp",
           heading: "Cost Efficiency",
           description:
             "Elevate your bank’s security posture by deploying cutting-edge surveillance that intelligently replaces manual oversight slashing risks and optimizing operational spend without ever compromising safety standards.",
         },
         {
-          image: "/assets/result_industry_banking_6.png",
+          image: "/assets/result_industry_banking_6.webp",
           heading: "Scalability",
           description:
             "VMukti empowers your banking with visual solutions designed for elite control and future-proof adaptability. We streamline your surveillance, making complex management effortless, so you maintain dominance over threats.",
@@ -3305,8 +3305,8 @@ const industriesData = {
     workflow: {
       heading:
         "Developing a Future-Ready Bank Surveillance System With Structured Implementation",
-      image: "banking_workflow.png",
-      image_mobile: "banking_workflow_mobile.png",
+      image: "banking_workflow.webp",
+      image_mobile: "banking_workflow_mobile.webp",
     },
     schema: [
       // Webpage Schema
@@ -3325,7 +3325,7 @@ const industriesData = {
           url: "https://www.vmukti.com/",
           logo: {
             "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            url: "https://www.vmukti.com/assets/vmuktilogo.webp",
             width: 25,
             height: 6,
           },
@@ -3427,7 +3427,7 @@ const industriesData = {
     metatitle: "Sports & Entertainment Video Surveillance Solutions in USA",
     metadescription:
       "VMukti delivers AI surveillance solutions in the USA for sports and entertainment venues with crowd analysis, live monitoring, emergency alerts, and advanced event security.",
-    ogImage: "https://www.vmukti.com/assets/sportsentertainment_mockup.png",
+    ogImage: "https://www.vmukti.com/assets/sportsentertainment_mockup.webp",
     slug: "sports-entertainment",
     title: [
       {
@@ -3437,8 +3437,8 @@ const industriesData = {
     ],
     para: "Every moment counts in sports and entertainment where audience experience, performance and safety define success. VMukti Solutions brings precision to the spotlight with visual AI solutions that deliver real-time insights, streamline operations and transform the way games and events are experienced.",
 
-    large_image: "sportsentertainment_mockup.png",
-    large_image_mobile: "sportsentertainment_mockup_mobile.png",
+    large_image: "sportsentertainment_mockup.webp",
+    large_image_mobile: "sportsentertainment_mockup_mobile.webp",
     large_image_alt: "Sports and entertainment surveillance illustration",
 
     keyApplications: [
@@ -3566,37 +3566,37 @@ const industriesData = {
         "Your competitive edge begins with vision AI analyzing player dynamics, audience behavior and event flow in real time. We turn your live moments into operational intelligence, unlocking performance gains, operational precision and unmatched spectator engagement.",
       benefits: [
         {
-          image: "/assets/result_industry_sport_1.png",
+          image: "/assets/result_industry_sport_1.webp",
           heading: "High Resolution Imaging",
           description:
             "We deliver precision-calibrated visuals with advanced resolution dynamics ensuring crystal clarity, seamless monitoring and uncompromised playback in high-security, high-demand environments.",
         },
         {
-          image: "/assets/result_industry_sport_2.png",
+          image: "/assets/result_industry_sport_2.webp",
           heading: "Improved Safety at Events",
           description:
             "VMukti transforms your live environments with real-time situational awareness fusing behavioral recognition and automated incident alerts to elevate safety and response precision during high-density gatherings.",
         },
         {
-          image: "/assets/result_industry_sport_3.png",
+          image: "/assets/result_industry_sport_3.webp",
           heading: "Reduces Human Mistakes",
           description:
             "Our platform eliminates manual lapses by fusing integration with our intelligent video workflows that helps in delivering precision, consistency and control in even the most fast-paced operational settings.",
         },
         {
-          image: "/assets/result_industry_sport_4.png",
+          image: "/assets/result_industry_sport_4.webp",
           heading: "Integration with Other Systems",
           description:
             "VMukti integrates our solution seamlessly with your infrastructure, syncing real-time data and intelligent systems to deliver a streamlined, future-ready command environment with zero operational friction.",
         },
         {
-          image: "/assets/result_industry_sport_5.png",
+          image: "/assets/result_industry_sport_5.webp",
           heading: "Event Incident Review",
           description:
             "Your footage isn’t just stored, it's searchable. With advanced event tagging, you pinpoint moments like object throws or pitch breaches instantly, streamlining reviews and accelerating response.",
         },
         {
-          image: "/assets/result_industry_sport_6.png",
+          image: "/assets/result_industry_sport_6.webp",
           heading: "Staff Activity Monitoring",
           description:
             "We equip you with real-time operational intelligence that streamlines workforce deployment, eliminates lag and accelerates on-ground responsiveness driving measurable efficiency at every layer.",
@@ -3616,8 +3616,8 @@ const industriesData = {
     workflow: {
       heading:
         "How We Provide Tailored Video Surveillance Solution for Sports & Entertainment",
-      image: "sportsentertainment_workflow.png",
-      image_mobile: "sportsentertainment_workflow_mobile.png",
+      image: "sportsentertainment_workflow.webp",
+      image_mobile: "sportsentertainment_workflow_mobile.webp",
     },
     schema: [
       // Webpage Schema
@@ -3636,7 +3636,7 @@ const industriesData = {
           url: "https://www.vmukti.com/",
           logo: {
             "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            url: "https://www.vmukti.com/assets/vmuktilogo.webp",
             width: 25,
             height: 6,
           },
@@ -3730,7 +3730,7 @@ const industriesData = {
     metatitle: "Defense & Armed Forces Video Surveillance Solutions in USA",
     metadescription:
       "VMukti’s AI defense surveillance system in the USA provides real-time threat detection, centralized command visibility, and secure video analytics for situational awareness.",
-    ogImage: "https://www.vmukti.com/assets/defense_mockup.png",
+    ogImage: "https://www.vmukti.com/assets/defense_mockup.webp",
     slug: "defense",
     title: [
       {
@@ -3740,8 +3740,8 @@ const industriesData = {
     ],
     para: "In the world of defense, silence isn't safe because what's unseen can be your greatest threat, like undetected movements or blind spots that can put entire operations at risk. VMukti solutions provides a surveillance solution for defense that detects anomalies, tracks movements and alerts security instantly, which offers faster and more accurate monitoring.",
 
-    large_image: "defense_mockup.png",
-    large_image_mobile: "defense_mockup_mobile.png",
+    large_image: "defense_mockup.webp",
+    large_image_mobile: "defense_mockup_mobile.webp",
     large_image_alt: "Defense surveillance monitoring illustration",
 
     keyApplications: [
@@ -3861,37 +3861,37 @@ const industriesData = {
         "VMukti empowers your high-security zones with a defense-grade surveillance ecosystem offering real-time threat identification, intelligent alerting and uninterrupted situational oversight. You stay ahead of risk, with every second accounted for.",
       benefits: [
         {
-          image: "/assets/result_industry_defence_1.png",
+          image: "/assets/result_industry_defence_1.webp",
           heading: "Real-Time Threat Detection",
           description:
             "Your defense infrastructure stays mission-ready with real-time threat detection and instant situational response powered by precision-grade surveillance that protects what matters, when it matters most.",
         },
         {
-          image: "/assets/result_industry_defence_2.png",
+          image: "/assets/result_industry_defence_2.webp",
           heading: "Quick Incident Response",
           description:
             "With our high-performance surveillance infrastructure, real-time breach detection activates advanced alerting protocols enabling coordinated, zero-lag response across your security network when every second counts.",
         },
         {
-          image: "/assets/result_industry_defence_3.png",
+          image: "/assets/result_industry_defence_3.webp",
           heading: "Data-Driven Decision Making",
           description:
             "Our computer vision framework empowers your defense operations with mission-critical insight extracting tactical patterns from video intelligence to refine command decisions and elevate strategic superiority.",
         },
         {
-          image: "/assets/result_industry_defence_4.png",
+          image: "/assets/result_industry_defence_4.webp",
           heading: "24/7 Monitoring Capability",
           description:
             "We deploy tactical video intelligence with always-on surveillance, AI-powered threat recognition and automated perimeter alerts built to safeguard critical outposts without needing boots on the ground.",
         },
         {
-          image: "/assets/result_industry_defence_5.png",
+          image: "/assets/result_industry_defence_5.webp",
           heading: "Evidence Collection and Audit Trail",
           description:
             "Your defense operations demand precision. Our visual surveillance delivers high-fidelity footage, real-time visibility and a secure audit trail specifically engineered for mission-critical post-event analysis.",
         },
         {
-          image: "/assets/result_industry_defence_6.png",
+          image: "/assets/result_industry_defence_6.webp",
           heading: "Data Security",
           description:
             "With enterprise-grade encryption, intelligent access layers, and forensic-level monitoring, your surveillance data stays locked down confidential, compliant, and breach-proof at every touchpoint.",
@@ -3911,8 +3911,8 @@ const industriesData = {
     workflow: {
       heading:
         "Crafting Our Blueprint for an Advanced Defense Video Surveillance Solution",
-      image: "defence_workflow.png",
-      image_mobile: "defence_workflow_mobile.png",
+      image: "defence_workflow.webp",
+      image_mobile: "defence_workflow_mobile.webp",
     },
     schema: [
       // Webpage Schema
@@ -3931,7 +3931,7 @@ const industriesData = {
           url: "https://www.vmukti.com/",
           logo: {
             "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            url: "https://www.vmukti.com/assets/vmuktilogo.webp",
             width: 25,
             height: 6,
           },
@@ -4040,7 +4040,7 @@ const industriesData = {
     metatitle: "Hospitality Video Surveillance Solutions in USA | VMukti",
     metadescription:
       "VMukti’s AI hospitality surveillance solution in the USA enhances guest security, operational visibility, smart alerts, and seamless multi-site monitoring for hotels and resorts.",
-    ogImage: "https://www.vmukti.com/assets/hospitality_mockup.png",
+    ogImage: "https://www.vmukti.com/assets/hospitality_mockup.webp",
     slug: "hospitality",
     title: [
       {
@@ -4050,8 +4050,8 @@ const industriesData = {
     ],
     para: "In hospitality, every interaction counts as guest satisfaction and security directly influence reputation and success. VMukti Solutions drives excellence with computer vision, offering real-time monitoring and intelligent analytics to enhance guest experiences, improve security and streamline operations.",
 
-    large_image: "hospitality_mockup.png",
-    large_image_mobile: "hospitality_mockup_mobile.png",
+    large_image: "hospitality_mockup.webp",
+    large_image_mobile: "hospitality_mockup_mobile.webp",
     large_image_alt: "Hospitality surveillance monitoring illustration",
 
     keyApplications: [
@@ -4200,37 +4200,37 @@ const industriesData = {
         "Our enterprise-grade surveillance redefines hospitality oversight delivering real-time visibility across guest zones and operations, powered by intelligent video analytics for proactive incident response, elevated service assurance and discreet, uninterrupted guest protection.",
       benefits: [
         {
-          image: "/assets/result_industry_hospitality_1.png",
+          image: "/assets/result_industry_hospitality_1.webp",
           heading: "Improved Guest Privacy",
           description:
             "Your privacy standards are non-negotiable, our solution tech enforces zone-specific surveillance with anonymized intelligence, safeguarding guest dignity while maintaining elite operational control.",
         },
         {
-          image: "/assets/result_industry_hospitality_2.png",
+          image: "/assets/result_industry_hospitality_2.webp",
           heading: "Remote Access",
           description:
             "VMukti puts your entire surveillance network in your palm stream high-fidelity video, monitors events as they unfold and takes decisive action without being bound to a screen, room or geography.",
         },
         {
-          image: "/assets/result_industry_hospitality_3.png",
+          image: "/assets/result_industry_hospitality_3.webp",
           heading: "Improved Resource Security",
           description:
             "Our video intelligence platform gives you round-the-clock command over every critical asset point detecting, flagging and preventing theft across back-end operations without disrupting guest-facing excellence.",
         },
         {
-          image: "/assets/result_industry_hospitality_4.png",
+          image: "/assets/result_industry_hospitality_4.webp",
           heading: "Better Operational Efficiency",
           description:
             "We replace manual routines with intelligent visual automation freeing your staff to elevate guest interactions while our system ensures compliance, efficiency and operational excellence behind the scenes.",
         },
         {
-          image: "/assets/result_industry_hospitality_5.png",
+          image: "/assets/result_industry_hospitality_5.webp",
           heading: "Optimized Resource Allocation",
           description:
             "Your property runs leaner and smarter with intelligent visual insights uncover inefficiencies, realign resource flow and ensure every guest touchpoint is staffed and serviced with intent, not guesswork.",
         },
         {
-          image: "/assets/result_industry_hospitality_6.png",
+          image: "/assets/result_industry_hospitality_6.webp",
           heading: "Continuous Monitoring",
           description:
             "With seamless system orchestration across critical zones, you gain uninterrupted situational awareness, accelerated incident response and intelligent uptime engineered for environments where failure isn’t an option.",
@@ -4249,8 +4249,8 @@ const industriesData = {
 
     workflow: {
       heading: "Crafting Hospitality Surveillance Solutions for Every Need",
-      image: "hospitality_workflow.png",
-      image_mobile: "hospitality_workflow_mobile.png",
+      image: "hospitality_workflow.webp",
+      image_mobile: "hospitality_workflow_mobile.webp",
     },
     schema: [
       // Webpage Schema
@@ -4269,7 +4269,7 @@ const industriesData = {
           url: "https://www.vmukti.com/",
           logo: {
             "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            url: "https://www.vmukti.com/assets/vmuktilogo.webp",
             width: 25,
             height: 6,
           },
@@ -4378,7 +4378,7 @@ const industriesData = {
     metatitle: "Construction Site Video Surveillance Solutions in USA",
     metadescription:
       "VMukti’s smart construction surveillance system in the USA improves site safety, tracks activities, prevents theft, and delivers real-time visibility with AI-powered insights.",
-    ogImage: "https://www.vmukti.com/assets/construction_mockup.png",
+    ogImage: "https://www.vmukti.com/assets/construction_mockup.webp",
     slug: "construction",
     title: [
       {
@@ -4388,8 +4388,8 @@ const industriesData = {
     ],
     para: "Minor lapses like misaligned resources or bypassed SOPs silently compound disrupting critical milestones and inflating costs before you can course-correct. Our computer vision systems bring clarity to complexity, offering AI analytics and smart detection that elevate your safety standards, ensure compliance and streamline progress across every phase.",
 
-    large_image: "construction_mockup.png",
-    large_image_mobile: "construction_mockup_mobile.png",
+    large_image: "construction_mockup.webp",
+    large_image_mobile: "construction_mockup_mobile.webp",
     large_image_alt: "Construction site surveillance illustration",
 
     keyApplications: [
@@ -4523,37 +4523,37 @@ const industriesData = {
         "Gain unmatched visibility, control, and intelligence for every build — from safety compliance to workflow optimization — with adaptive video analytics designed for the unique demands of construction environments.",
       benefits: [
         {
-          image: "/assets/result_industry_construction_1.png",
+          image: "/assets/result_industry_construction_1.webp",
           heading: "Project Management",
           description:
             "Our vision-powered infrastructure gives you command over complex construction environments optimizing task flows, syncing stakeholders instantly and ensuring execution runs sharp, fast and fault-free.",
         },
         {
-          image: "/assets/result_industry_construction_2.png",
+          image: "/assets/result_industry_construction_2.webp",
           heading: "Increased Accountability",
           description:
             "We deliver intelligent construction surveillance that captures every on-site detail with timestamped precision enabling you to enforce accountability, validate timelines and mitigate risk across every phase.",
         },
         {
-          image: "/assets/result_industry_construction_3.png",
+          image: "/assets/result_industry_construction_3.webp",
           heading: "Better Compliance",
           description:
             "VMukti delivers intelligent surveillance that actively monitors construction workflows, ensuring your teams meet all safety and regulatory benchmarks with zero friction and helps in taking full accountability.",
         },
         {
-          image: "/assets/result_industry_construction_4.png",
+          image: "/assets/result_industry_construction_4.webp",
           heading: "Improved Monitoring",
           description:
             "Our AI-driven construction monitoring solutions redefine site oversight offering real-time analytics, smart threat detection and unmatched clarity to help you lead safer, more efficient builds without compromise.",
         },
         {
-          image: "/assets/result_industry_construction_5.png",
+          image: "/assets/result_industry_construction_5.webp",
           heading: "Centralised Video Access",
           description:
             "We deliver a unified video intelligence layer that puts you in command of every single site streamlining oversight, incident review and live access from any device, no matter where you operate.",
         },
         {
-          image: "/assets/result_industry_construction_6.png",
+          image: "/assets/result_industry_construction_6.webp",
           heading: "Custom AI Analytics",
           description:
             "Your construction sites demand more than surveillance, we deliver adaptive computer vision calibrated to your operations, enabling predictive maintenance, real-time risk detection and insight-driven performance at scale.",
@@ -4572,8 +4572,8 @@ const industriesData = {
     workflow: {
       heading:
         "Guiding You Through the Implementation of Video Surveillance for Construction Sites",
-      image: "construction_workflow.png",
-      image_mobile: "construction_workflow_mobile.png",
+      image: "construction_workflow.webp",
+      image_mobile: "construction_workflow_mobile.webp",
     },
     schema: [
       // Webpage Schema
@@ -4592,7 +4592,7 @@ const industriesData = {
           url: "https://www.vmukti.com/",
           logo: {
             "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            url: "https://www.vmukti.com/assets/vmuktilogo.webp",
             width: 25,
             height: 6,
           },
@@ -4701,7 +4701,7 @@ const industriesData = {
     metatitle: "Enterprise Video Surveillance & Management Systems in USA",
     metadescription:
       "VMukti delivers enterprise-grade surveillance solutions in the USA with AI analytics, smart alerts, centralized monitoring, and scalable video management for large organizations.",
-    ogImage: "https://www.vmukti.com/assets/enterprise_mockup.png",
+    ogImage: "https://www.vmukti.com/assets/enterprise_mockup.webp",
     slug: "enterprise",
     title: [
       {
@@ -4711,8 +4711,8 @@ const industriesData = {
     ],
     para: "Your operations demand precision without subtle deviations that ripple into costly breaches, delaying transformation and undermining enterprise-grade performance. VMukti Solutions enables live surveillance, smart threat detection and centralized monitoring to protect your assets and streamline operations using computer vision enterprise solutions.",
 
-    large_image: "enterprise_mockup.png",
-    large_image_mobile: "enterprise_mockup_mobile.png",
+    large_image: "enterprise_mockup.webp",
+    large_image_mobile: "enterprise_mockup_mobile.webp",
     large_image_alt: "Enterprise surveillance illustration",
 
     keyApplications: [
@@ -4846,37 +4846,37 @@ const industriesData = {
         "VMukti empowers your enterprise with next-gen surveillance infrastructure, AI-fueled, precision-built and engineered for total visibility, rapid threat response and uncompromising control across your environment.",
       benefits: [
         {
-          image: "/assets/result_industry_enterprise_1.png",
+          image: "/assets/result_industry_enterprise_1.webp",
           heading: "Enhanced Workplace Security",
           description:
             "Our advanced monitoring suite gives your team instant command over every zone seamless integration, encrypted visibility and intelligent alerts ensure your environment remains protected and in your control.",
         },
         {
-          image: "/assets/result_industry_enterprise_2.png",
+          image: "/assets/result_industry_enterprise_2.webp",
           heading: "Alerts for Unusual Activity",
           description:
             "We equip you with precision-led computer vision oversight, triggering instant alerts on anomalies so your response is proactive, your assets are protected and your operations never blindsided.",
         },
         {
-          image: "/assets/result_industry_enterprise_3.png",
+          image: "/assets/result_industry_enterprise_3.webp",
           heading: "Operational Transparency",
           description:
             "Your critical environments deserve uncompromised visibility. With our enterprise-grade video intelligence, you gain instant awareness, faster response and unmatched operational command at scale.",
         },
         {
-          image: "/assets/result_industry_enterprise_4.png",
+          image: "/assets/result_industry_enterprise_4.webp",
           heading: "Reduced Theft and Vandalism",
           description:
             "With precision-calibrated video intelligence and AI at the edge, we help you neutralize internal breaches and external threats protecting your people, IP and physical assets without missing a frame.",
         },
         {
-          image: "/assets/result_industry_enterprise_5.png",
+          image: "/assets/result_industry_enterprise_5.webp",
           heading: "Remote Oversight",
           description:
             "For your critical environments, our enterprise-grade surveillance delivers precision visibility, intelligent threat detection and uncompromised control onsite or remote, uptime and oversight are always yours.",
         },
         {
-          image: "/assets/result_industry_enterprise_6.png",
+          image: "/assets/result_industry_enterprise_6.webp",
           heading: "Optimized Resource Allocation",
           description:
             "VMukti delivers precision-driven visual intelligence that converts your operational footage into real-time insights, closing inefficiencies, accelerating execution and refining end-to-end performance.",
@@ -4895,8 +4895,8 @@ const industriesData = {
     workflow: {
       heading:
         "Building a Future-Ready Video Surveillance System for Enterprise",
-      image: "enterprise_workflow.png",
-      image_mobile: "enterprise_workflow_mobile.png",
+      image: "enterprise_workflow.webp",
+      image_mobile: "enterprise_workflow_mobile.webp",
     },
     schema: [
       // Webpage Schema
@@ -4915,7 +4915,7 @@ const industriesData = {
           url: "https://www.vmukti.com/",
           logo: {
             "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            url: "https://www.vmukti.com/assets/vmuktilogo.webp",
             width: 25,
             height: 6,
           },
@@ -5016,7 +5016,7 @@ const industriesData = {
     metatitle: "Enterprise Video Surveillance & AI Monitoring Solutions in USA",
     metadescription:
       "VMukti provides AI-driven surveillance solutions in the USA for enterprise organizations with advanced analytics, multi-camera control, Enterprise Command Center integration, and real-time threat detection.",
-    ogImage: "https://www.vmukti.com/assets/government_mockup.png",
+    ogImage: "https://www.vmukti.com/assets/government_mockup.webp",
     slug: "government",
     title: [
       {
@@ -5026,8 +5026,8 @@ const industriesData = {
     ],
     para: "For you every detail matters in governance, where overlooked incidents or delayed responses can impact public safety and trust. VMukti Solutions delivers advanced enterprise security solutions through a visual solution for enterprise operations, offering real-time insights and intelligent monitoring to enhance operational control and operational efficiency.",
 
-    large_image: "government_mockup.png",
-    large_image_mobile: "government_mockup_mobile.png",
+    large_image: "government_mockup.webp",
+    large_image_mobile: "government_mockup_mobile.webp",
     large_image_alt: "Government surveillance illustration",
 
     keyApplications: [
@@ -5190,37 +5190,37 @@ const industriesData = {
         "VMukti empowers your department with mission-grade video surveillance delivering real-time situational awareness, centralized command and AI-driven threat detection built to safeguard, comply and increase productivity for both people and infrastructure at scale.",
       benefits: [
         {
-          image: "/assets/result_industry_government_1.png",
+          image: "/assets/result_industry_government_1.webp",
           heading: "Central Hub",
           description:
             "We unify your fragmented surveillance systems into one high-performance enterprise-grade dashboard built for instant access, strategic oversight and real-time command at the highest level.",
         },
         {
-          image: "/assets/result_industry_government_2.png",
+          image: "/assets/result_industry_government_2.webp",
           heading: "Seamless Integration",
           description:
             "Our system integrates seamlessly into your current infrastructure, enhancing operational continuity while unlocking greater surveillance precision, network agility and long-term performance gains.",
         },
         {
-          image: "/assets/result_industry_government_3.png",
+          image: "/assets/result_industry_government_3.webp",
           heading: "Traffic Management",
           description:
             "Your city gains precision control with our intelligent video infrastructure analyzing real-time traffic patterns and autonomously optimizing flow to reduce congestion and elevate commuter experience.",
         },
         {
-          image: "/assets/result_industry_government_4.png",
+          image: "/assets/result_industry_government_4.webp",
           heading: "High Quality Capture",
           description:
             "VMukti delivers precision-grade imaging with ultra-HD clarity and forensic-level detail empowering your team to monitor high-risk zones and assess threats in real time with complete operational confidence.",
         },
         {
-          image: "/assets/result_industry_government_5.png",
+          image: "/assets/result_industry_government_5.webp",
           heading: "Hazard Safety",
           description:
             "We deliver real-time situational visual intelligence through advanced video analytics empowering your agency to neutralize threats instantly and safeguard lives in complex public environments.",
         },
         {
-          image: "/assets/result_industry_government_6.png",
+          image: "/assets/result_industry_government_6.webp",
           heading: "Night Monitoring",
           description:
             "Our advanced imaging technology ensures uninterrupted visibility, delivering precision-grade surveillance in low-light conditions because your operations never stop and neither should your oversight.",
@@ -5238,8 +5238,8 @@ const industriesData = {
     },
     workflow: {
       heading: "How We Deliver Custom Visual Solutions for Government",
-      image: "government_workflow.png",
-      image_mobile: "government_workflow_mobile.png",
+      image: "government_workflow.webp",
+      image_mobile: "government_workflow_mobile.webp",
     },
     schema: [
       // Webpage Schema
@@ -5258,7 +5258,7 @@ const industriesData = {
           url: "https://www.vmukti.com/",
           logo: {
             "@type": "ImageObject",
-            url: "https://www.vmukti.com/assets/vmuktilogo.png",
+            url: "https://www.vmukti.com/assets/vmuktilogo.webp",
             width: 25,
             height: 6,
           },

@@ -95,10 +95,10 @@ export default function WhyAmbicamPage() {
     <PageContentWrapper noPadding="force">
       <Box
         position="relative"
-        // backgroundImage="url('/assets/camerapower.png')"
+        // backgroundImage="url('/assets/camerapower.webp')"
         backgroundImage={{
-          base: "url('/assets/camerapower-mobile.png')",
-          md: "url('/assets/camerapower.png')",
+          base: "url('/assets/camerapower-mobile.webp')",
+          md: "url('/assets/camerapower.webp')",
         }}
         backgroundSize="cover"
         backgroundPosition={{ base: "center 20px", md: "center" }}
@@ -116,7 +116,7 @@ export default function WhyAmbicamPage() {
             width="1050px"
             height="525px"
             // backgroundImage="url('/assets/VMukti Brochure O2 1.svg')"
-            backgroundImage="url('/assets/VMukti Brochure O2 1.png')"
+            backgroundImage="url('/assets/VMukti Brochure O2 1.webp')"
             backgroundSize="cover"
             backgroundRepeat="no-repeat"
             backgroundPosition="bottom right"

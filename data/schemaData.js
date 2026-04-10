@@ -233,7 +233,7 @@ export const localBusinessSchema = {
   '@type': 'LocalBusiness',
   name: 'VMukti Solutions Pvt. Ltd.',
   url: 'https://www.vmukti.com',
-  logo: 'https://www.vmukti.com/logo.png',
+  logo: 'https://www.vmukti.com/logo.webp',
   description: 'Enterprise cloud VMS, EMS, and Enterprise Command Center platform provider',
   address: {
     '@type': 'PostalAddress',
@@ -307,7 +307,7 @@ export const organizationSchema = {
       description: 'Hardware manufacturing subsidiary — makers of ArcisAI AI CCTV cameras'
     },
   url: 'https://www.vmukti.com',
-  logo: 'https://www.vmukti.com/logo.png',
+  logo: 'https://www.vmukti.com/logo.webp',
   description: 'Enterprise cloud VMS, EMS, and Enterprise Command Center platform provider with STQC certification. 18+ years, 900+ deployments across 900+ enterprise locations, 1B+ camera feeds processed globally.',
   foundingDate: '2007',
   foundingLocation: 'Ahmedabad, Gujarat, India',
@@ -401,7 +401,7 @@ export const websiteSchema = {
   publisher: {
     '@type': 'Organization',
     name: 'VMukti Solutions',
-    logo: 'https://www.vmuti.com/logo.png',
+    logo: 'https://www.vmuti.com/logo.webp',
   },
 };
 

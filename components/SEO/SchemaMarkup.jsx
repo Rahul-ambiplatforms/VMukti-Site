@@ -10,7 +10,7 @@ export const organizationSchema = {
   name: 'VMukti Solutions',
   legalName: 'VMukti Solutions Pvt. Ltd.',
   url: 'https://www.vmukti.com',
-  logo: 'https://www.vmukti.com/logo.png',
+  logo: 'https://www.vmukti.com/logo.webp',
   description: 'Enterprise cloud VMS, EMS, and Enterprise Command Center platform provider with STQC certification. 18+ years, 900+ deployments across 700+ districts, 1B+ camera feeds processed globally.',
   foundingDate: '2007',
   foundingLocation: 'Ahmedabad, Gujarat, India',
@@ -54,7 +54,7 @@ export const websiteSchema = {
   alternateName: 'VMukti - Enterprise Cloud VMS & Enterprise Campus Platform',
   url: 'https://www.vmukti.com',
   potentialAction: { '@type': 'SearchAction', target: { '@type': 'EntryPoint', urlTemplate: 'https://www.vmukti.com/search?q={search_term_string}' }, 'query-input': 'required name=search_term_string' },
-  publisher: { '@type': 'Organization', name: 'VMukti Solutions', logo: 'https://www.vmukti.com/logo.png' },
+  publisher: { '@type': 'Organization', name: 'VMukti Solutions', logo: 'https://www.vmukti.com/logo.webp' },
 };
 
 export const createProductSchema = (productData) => ({
@@ -88,7 +88,7 @@ export const createArticleSchema = (articleData) => ({
   datePublished: articleData.datePublished,
   dateModified: articleData.dateModified || articleData.datePublished,
   author: { '@type': 'Organization', name: 'VMukti Solutions' },
-  publisher: { '@type': 'Organization', name: 'VMukti Solutions', logo: 'https://www.vmukti.com/logo.png' },
+  publisher: { '@type': 'Organization', name: 'VMukti Solutions', logo: 'https://www.vmukti.com/logo.webp' },
 });
 
 export const createFAQSchema = (faqs) => ({
@@ -200,7 +200,7 @@ export const localBusinessSchema = {
   telephone: '+91-79-6160-0000',
   email: 'info@vmukti.com',
   url: 'https://www.vmukti.com',
-  logo: 'https://www.vmukti.com/logo.png',
+  logo: 'https://www.vmukti.com/logo.webp',
   description: 'Enterprise cloud VMS, EMS, and Enterprise Command Center platform provider with STQC certification. 18+ years of experience, 900+ deployments across 700+ districts.',
   priceRange: '$$$',
   openingHoursSpecification: [
@@ -268,7 +268,7 @@ export const getArticleSchema = (articleData) => ({
   publisher: {
     '@type': 'Organization',
     name: 'VMukti Solutions',
-    logo: { '@type': 'ImageObject', url: 'https://www.vmukti.com/logo.png' },
+    logo: { '@type': 'ImageObject', url: 'https://www.vmukti.com/logo.webp' },
   },
 });
 

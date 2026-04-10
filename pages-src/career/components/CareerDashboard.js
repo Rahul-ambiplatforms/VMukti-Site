@@ -66,7 +66,7 @@ const CareerDashboard = () => {
 
         <Box flex="1" w="100%">
           <Image loading="lazy"
-            src={`/assets/CareerDash.png`}
+            src={`/assets/CareerDash.webp`}
             alt="Meet the Team Behind Our Success"
             borderRadius="24px"
             objectFit="cover"

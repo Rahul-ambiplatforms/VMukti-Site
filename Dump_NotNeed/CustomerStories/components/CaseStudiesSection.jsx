@@ -15,7 +15,7 @@ export const caseStudies = [
       "Multi-national corporation deploys VMukti across 12 campus locations with 2,000+ cameras...",
     roi: "60% faster incident response",
     category: "Corporate",
-    image: "/assets/Enterprise-Campus.png",
+    image: "/assets/Enterprise-Campus.webp",
     href: "/customer-stories/",
   },
   {
@@ -26,7 +26,7 @@ export const caseStudies = [
       "Leading bank replaces legacy NVR with VMukti Cloud VMS across 500+ branches...",
     roi: "45% reduction in security incidents",
     category: "Banking",
-    image: "/assets/Banking-Branch.png",
+    image: "/assets/Banking-Branch.webp",
     href: "/customer-stories/",
   },
   {
@@ -37,19 +37,19 @@ export const caseStudies = [
       "Large enterprise deploys AI-powered perimeter surveillance across multiple high-security sites...",
     roi: "99.7% threat detection accuracy",
     category: "Manufacturing",
-    image: "/assets/Enterprise-Perimeter.png",
+    image: "/assets/Enterprise-Perimeter.webp",
     href: "/customer-stories/",
   },
   {
     id: 4,
     title: "Enterprise Command Center Deployment",
     industry: "Multi-site Enterprise",
-    image: "/assets/Enterprise-Command.png",
+    image: "/assets/Enterprise-Command.webp",
     description:
       "Global enterprise implements centralized command center managing 5,000+ cameras across 20 locations...",
     roi: "3x operational efficiency",
     category: "Corporate",
-    image: "/assets/Enterprise-Command.png",
+    image: "/assets/Enterprise-Command.webp",
     href: "/customer-stories/",
   },
 ];

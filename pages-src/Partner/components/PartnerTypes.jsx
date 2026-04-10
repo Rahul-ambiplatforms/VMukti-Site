@@ -19,7 +19,7 @@ const tabs = [
       "Ongoing technical support",
       "Customer success resources",
     ],
-    image: "/assets/AISurveillance_1.png",
+    image: "/assets/AISurveillance_1.webp",
   },
   {
     id: "tech",
@@ -32,7 +32,7 @@ const tabs = [
       "Joint solution testing lab",
       "Technology alliance benefits",
     ],
-    image: "/assets/Dashboard.png",
+    image: "/assets/Dashboard.webp",
   },
   {
     id: "resellers",
@@ -45,7 +45,7 @@ const tabs = [
       "Demo environment access",
       "Dedicated partner support",
     ],
-    image: "/assets/SolutionDash.png",
+    image: "/assets/SolutionDash.webp",
   },
 ];
 

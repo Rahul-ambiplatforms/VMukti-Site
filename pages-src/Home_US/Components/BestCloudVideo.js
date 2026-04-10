@@ -16,7 +16,7 @@ const BestCloudVideo = ({ introduction }) => {
       "Ideal for enterprise video surveillance systems, video surveillance solutions, and cloud video surveillance systems",
     ],
     bgColor: "white",
-    image: "../../assets/VMS_intro.png",
+    image: "../../assets/VMS_intro.webp",
     top: "-25%"
   };
 

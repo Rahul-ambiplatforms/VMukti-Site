@@ -8,7 +8,7 @@ const servingsData = {
       { text: 'Vision', color: '#db7b3a' },
     ],
     width: '80%',
-    image: './assets/enterdash.png',
+    image: './assets/enterdash.webp',
     description:
       'Modern enterprises generate vast visual data, but most remain untapped. AI transforms this data into actionable insights, enhancing efficiency, security, and decision-making.',
     keybenefits: [
@@ -106,13 +106,13 @@ const servingsData = {
       'Explore our AI-driven deployment models designed for real-time security, automation, and intelligence.',
     cards: [
       {
-        image: 'ents1.png',
+        image: 'ents1.webp',
         title: 'Enterprise Management System (EMS)',
         description:
           'Centralized AI-powered video management for surveillance and security.',
       },
       {
-        image: 'ents2.png',
+        image: 'ents2.webp',
         title: 'Flexible AI Deployment',
         description:
           'Choose from Capex, Opex, or rental models for cost-effective implementation.',
@@ -270,7 +270,7 @@ const servingsData = {
       { text: 'Visual Intelligence', color: '#db7b3a' },
     ],
     width: '75%',
-    image: './assets/govdash.png',
+    image: './assets/govdash.webp',
     description:
       'Governments manage vast surveillance data, but without AI, much of it goes unused. AI-driven visual intelligence transforms this data into actionable insights, enhancing national security, urban management, and public safety.',
     keybenefits: [
@@ -347,24 +347,24 @@ const servingsData = {
       'Explore our AI-driven deployment models designed for real-time security, automation, and intelligence.',
     cards: [
       {
-        image: 'govs1.png',
+        image: 'govs1.webp',
         title: 'Rental Model',
         description:
           'Short-term AI surveillance for events, rallies, and elections.',
       },
       {
-        image: 'govs2.png',
+        image: 'govs2.webp',
         title: 'Permanent Deployment',
         description:
           '24/7 monitoring for critical infrastructure and national security.',
       },
       {
-        image: 'govs3.png',
+        image: 'govs3.webp',
         title: 'Real-Time AI Streaming',
         description: 'SIM-based smart cameras ensure remote surveillance.',
       },
       {
-        image: 'govs4.png',
+        image: 'govs4.webp',
         title: 'AI-Integrated VMS',
         description: 'Advanced analytics optimize security operations.',
       },
@@ -497,7 +497,7 @@ const servingsData = {
       { text: 'Consumers', color: '#db7b3a' },
     ],
     width: '60%',
-    image: './assets/consumerdash.png',
+    image: './assets/consumerdash.webp',
     description:
       'AI is transforming everyday automation, security, and decision-making by bringing intelligent, real-time solutions to personal, small business, and creative applications.',
     keybenefits: [
@@ -592,13 +592,13 @@ const servingsData = {
       'Explore our AI-driven deployment models designed for real-time security, automation, and intelligence.',
     cards: [
       {
-        image: 'cons1.png',
+        image: 'cons1.webp',
         title: 'On-Device AI Processing',
         description:
           'Executes tasks locally for instant responses and enhanced data privacy.',
       },
       {
-        image: 'cons2.png',
+        image: 'cons2.webp',
         title: 'Cloud-Powered Intelligence',
         description:
           'Utilizes cloud resources for deep analytics and scalable storage.',

@@ -128,7 +128,7 @@ const Discover = () => {
         {/* order={1} flexGrow={1}*/}
         <Flex>
           <Image loading="lazy"
-            src="../assets/ambicam_logo.png"
+            src="../assets/ambicam_logo.webp"
             height={{ base: "30px", md: "45px" }}
             width="auto"
             objectFit="contain"

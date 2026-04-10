@@ -15,7 +15,7 @@ export const getOrganizationSchema = () => ({
   "name": "VMukti Solutions Pvt. Ltd.",
   "alternateName": "VMukti",
   "url": "https://www.vmukti.com",
-  "logo": "https://www.vmukti.com/logo.png",
+  "logo": "https://www.vmukti.com/logo.webp",
   "description": "VMukti Solutions is a leading AI-powered cloud video surveillance and video management system (VMS) provider with 18+ years of industry expertise. Serving 900+ deployments across 150,000+ locations in 15+ countries with cutting-edge AI video intelligence and cloud-native solutions.",
   "founded": "2007",
   "foundingDate": "2007",

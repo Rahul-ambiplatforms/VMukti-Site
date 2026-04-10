@@ -134,7 +134,7 @@ export const vmsMsVsUniviewComparison = {
     name: 'VMukti Cloud VMS',
     description: 'Pure software platform for video management and AI analytics, independent of camera hardware. STQC-certified, cloud-native, supporting 100,000+ cameras, 1B+ feeds annually, deployed in 50+ enterprise campuses.',
     url: 'https://www.vmukti.com/solution/cloud-vms',
-    image: 'https://www.vmukti.com/images/vmukti-logo.png',
+    image: 'https://www.vmukti.com/images/vmukti-logo.webp',
     category: 'Cloud Software Platform',
     features: [
       { name: 'Business Model', value: 'Pure Software' },

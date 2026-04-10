@@ -151,7 +151,7 @@ const HeroSection = () => {
           >
             <MotionImage
               mt="1%"
-              src="/assets/tablet.png"
+              src="/assets/tablet.webp"
               alt="Computer Vision Solution for Smart Surveillance"
               zIndex={1}
               w="100%"
@@ -274,7 +274,7 @@ const HeroSection = () => {
               >
                 <Image loading="lazy"
                   ref={imageRef}
-                  src="/assets/robohand.png"
+                  src="/assets/robohand.webp"
                   alt="Robotic Hand"
                   display={{ base: "none", md: "block" }}
                   width={["", "", "55%", "90%"]}
@@ -322,7 +322,7 @@ const HeroSection = () => {
 
             {!useBreakpointValue({ base: true, md: false }) && ( // Show on md and up
               <MotionImage
-                src={`/assets/Hero_US.png`}
+                src={`/assets/Hero_US.webp`}
                 position="absolute"
                 top={["", "", "44%", "25%"]}
                 right={["-10px", "-20px", "-30px", "-45px"]}

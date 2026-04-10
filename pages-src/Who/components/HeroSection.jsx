@@ -12,7 +12,7 @@ const HeroSection = () => {
       bgSize={{ base: "cover", md: "contain" }}
       bgPosition="center"
       bgRepeat="no-repeat"
-      backgroundImage="url('../assets/WhoDash.png')"
+      backgroundImage="url('../assets/WhoDash.webp')"
       width="100%"
       height="100%"
       // aspectRatio={{ base: "9/16", md: "16 / 9" }}

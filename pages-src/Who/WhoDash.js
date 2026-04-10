@@ -1,20 +1,19 @@
 'use client';
-import React from "react";
+import dynamic from "next/dynamic";
 import { Box } from "@chakra-ui/react";
 import PageContentWrapper from "../../components/PageContentWrapper";
 import HeroSection from "./components/HeroSection";
 import VisionMissionSection from "./components/VisionMissionSection";
-import VerticalTimeline from "../../components/VerticalTimeline";
-// import CertificationsSection from "./components/CertificationsSection";
-// import ReviewsSection from "./components/ReviewsSection";
-import AdvancedComputerVision from "../../components/AdvancedComputerVision";
-import { customData2 } from "../../data/AdvancedComputerVisionData";
-import CulturalSection from "../../components/CulturalSection";
 import StickySection from "../Home/Data/StickySection";
-import CertificationsSection from "../Solutions/Components/CertificationsSection";
-// import Reviews from "../Home/Components/Reviews";  // Removed: component does not exist
+import { customData2 } from "../../data/AdvancedComputerVisionData";
 import { Helmet } from "react-helmet-async";
-import CtaBanner from "../../components/CtaBanner";
+
+// Below-fold sections — code-split to reduce initial JS bundle & TBT
+const AdvancedComputerVision = dynamic(() => import("../../components/AdvancedComputerVision"));
+const VerticalTimeline = dynamic(() => import("../../components/VerticalTimeline"));
+const CulturalSection = dynamic(() => import("../../components/CulturalSection"));
+const CertificationsSection = dynamic(() => import("../Solutions/Components/CertificationsSection"));
+const CtaBanner = dynamic(() => import("../../components/CtaBanner"));
 
 const gridItems = [
   {
@@ -98,7 +97,7 @@ const WhoWeare = () => {
     <>
       <Helmet>
         <title>
-          India’s Leading AI & Cloud Video Intelligence Company | About VMukti
+          India's Leading AI & Cloud Video Intelligence Company | About VMukti
         </title>
         <meta
           name="description"
@@ -107,16 +106,12 @@ const WhoWeare = () => {
         <meta name="robots" content="index, follow" />
         <meta
           property="og:title"
-          content="India’s Leading AI & Cloud Video Intelligence Company | About VMukti"
+          content="India's Leading AI & Cloud Video Intelligence Company | About VMukti"
         />
         <meta
           property="og:description"
           content="Explore VMukti Solutions journey as an AI video intelligence and Cloud-based surveillance provider delivering surveillance solutions for enterprises and government projects."
         />
-        {/* <meta
-          property="og:image"
-          content="[YOUR_ABOUT_PAGE_IMAGE_LINK]" 
-        /> */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://vmukti.com/about-us" />
         <meta property="og:site_name" content="VMukti Solutions" />
@@ -124,26 +119,13 @@ const WhoWeare = () => {
         <meta name="twitter:site" content="@vmukti" />
         <meta
           name="twitter:title"
-          content="India’s Leading AI & Cloud Video Intelligence Company | About VMukti"
+          content="India's Leading AI & Cloud Video Intelligence Company | About VMukti"
         />
         <meta
           name="twitter:description"
           content="Explore VMukti Solutions journey as an AI video intelligence and Cloud-based surveillance provider delivering surveillance solutions for enterprises and government projects."
         />
-        {/* <meta
-          name="twitter:image"
-          content="[YOUR_ABOUT_PAGE_IMAGE_LINK]" 
-        /> */}
-        <link rel="canonical" href="https://www.vmukti.com/about-us" />{" "}
-        {/* {aboutPageSchemas.map((schema, index) => (
-          <script
-            key={`schema-${index}`}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(schema),
-            }}
-          />
-        ))} */}
+        <link rel="canonical" href="https://www.vmukti.com/about-us" />
       </Helmet>
       <PageContentWrapper>
         <HeroSection />

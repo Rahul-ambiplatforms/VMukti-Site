@@ -22,8 +22,8 @@
       <Box mt="3%" overflowX="hidden">
         <Box
           bgImage={{
-            base: "url('./assets/ambidash-mobile.png')",
-            md: "url('./assets/ambidash1.png')",
+            base: "url('./assets/ambidash-mobile.webp')",
+            md: "url('./assets/ambidash1.webp')",
           }}
           bgSize="cover"
           // overflow="hidden"
@@ -165,7 +165,7 @@
                         </Box>
                       </Button>
                       <Image loading="lazy"
-                        src="/assets/ambicam_logo.png"
+                        src="/assets/ambicam_logo.webp"
                         alt="Ambicam logo"
                         w="204px"
                         h="33px"
@@ -293,7 +293,7 @@
               </Box>
             </Button>
             <Image loading="lazy"
-              src="/assets/ambicam_logo.png"
+              src="/assets/ambicam_logo.webp"
               alt="Ambicam logo"
               w={{base:"180px",md:"204px"}}
               h={{base:"auto",md:"33px"}}

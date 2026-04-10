@@ -27,9 +27,9 @@ const TripleImageSection = ({
   ],
   description = 'Unlock smarter security with AI-driven surveillance solutions for real-time monitoring, proactive threat detection, and seamless video management. Enhance safety and efficiency with scalable, future-ready technology.',
   images = [
-    './assets/speech_image.png',
-    './assets/soldier_image.png',
-    './assets/patient_image.png',
+    './assets/speech_image.webp',
+    './assets/soldier_image.webp',
+    './assets/patient_image.webp',
   ],
 }) => {
   const ref = useRef(null)

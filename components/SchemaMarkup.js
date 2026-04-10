@@ -17,7 +17,7 @@ export const OrganizationSchema = () => {
     name: 'VMukti Solutions Pvt Ltd',
     legalName: 'VMukti Solutions Pvt. Ltd.',
     url: 'https://www.vmukti.com',
-    logo: 'https://www.vmukti.com/VMuktiLogo.png',
+    logo: 'https://www.vmukti.com/VMuktiLogo.webp',
     description: "VMukti is India's leading AI-powered video surveillance software company, providing Cloud VMS, Enterprise Management System (EMS), and Integrated Command & Control Center (Enterprise Command Center) solutions for enterprise campuses, enterprises, and government projects.",
     foundingDate: '2007',
     foundingLocation: 'Ahmedabad, Gujarat, India',
@@ -255,7 +255,7 @@ export const ArticleSchema = (props) => {
       name: 'VMukti Solutions',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.vmukti.com/VMuktiLogo.png',
+        url: 'https://www.vmukti.com/VMuktiLogo.webp',
       },
     },
     mainEntityOfPage: {

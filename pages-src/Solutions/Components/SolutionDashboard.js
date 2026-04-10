@@ -45,7 +45,7 @@ const SolutionDashboard = () => {
       >
         {/* <Box borderRadius="24px"> */}
         <Image loading="lazy"
-          src="../assets/solution_dash.png"
+          src="../assets/solution_dash.webp"
           alt="Cutting-Edge Visual Solutions for a Smarter World"
           position="absolute"
           top="0"
@@ -58,7 +58,7 @@ const SolutionDashboard = () => {
           display={{ base: "none", md: "block" }}
         />
         <Image loading="lazy"
-          src="../assets/solution_dash_mobile.png"
+          src="../assets/solution_dash_mobile.webp"
           alt="Cutting-Edge Visual Solutions for a Smarter World"
           position="absolute"
           top="0"
