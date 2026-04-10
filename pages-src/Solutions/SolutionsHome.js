@@ -1,19 +1,20 @@
 'use client';
+import dynamic from "next/dynamic";
 import { Box } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import SolutionEMS from "./Components/SolutionEMS";
-import TripleImageSection from "../../components/TripleImageSection";
 import PageContentWrapper from "../../components/PageContentWrapper";
 import SolutionDashboard from "./Components/SolutionDashboard";
-import Trusted from "../../components/Trusted.js";
-import AISurveillance from "./Components/AISurveillance.js";
-import Solutions from "../../components/Solutions.js";
 import { solutionSolutions } from "../../data/solutionsContent.js";
-import CertificationsSection from "./Components/CertificationsSection.jsx";
 import schemaData from "../../data/schemaData";
-import CtaBanner from "../../components/CtaBanner.js";
 import { Helmet } from "react-helmet-async";
+
+// Below-fold sections — code-split to reduce initial JS bundle & TBT
+const Trusted = dynamic(() => import("../../components/Trusted.js"));
+const AISurveillance = dynamic(() => import("./Components/AISurveillance.js"));
+const Solutions = dynamic(() => import("../../components/Solutions.js"));
+const CertificationsSection = dynamic(() => import("./Components/CertificationsSection.jsx"));
+const CtaBanner = dynamic(() => import("../../components/CtaBanner.js"));
 
 const Hero = () => {
   const location = useLocation();
@@ -36,69 +37,25 @@ const Hero = () => {
         <script
           key={`schema-${index}`}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schema),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       ))}
       <Helmet>
-        {/* SEO Tags */}
-        <title>
-          Enterprise Video Surveillance Products & Solutions in the USA | VMukti
-        </title>
-        <meta
-          name="description"
-          content="Explore VMukti’s enterprise video surveillance products and solutions for the USA market, designed for large-scale deployments, secure monitoring, and centralized video management."
-        />
+        <title>Enterprise Video Surveillance Products & Solutions in the USA | VMukti</title>
+        <meta name="description" content="Explore VMukti's enterprise video surveillance products and solutions for the USA market, designed for large-scale deployments, secure monitoring, and centralized video management." />
         <meta name="robots" content="index, follow" />
-
-        {/* Open Graph (OG) Tags for Social Media Sharing */}
-        <meta
-          property="og:title"
-          content="Enterprise Video Surveillance Products & Solutions in the USA | VMukti"
-        />
-        <meta
-          property="og:description"
-          content="Explore VMukti’s enterprise video surveillance products and solutions for the USA market, designed for large-scale deployments, secure monitoring, and centralized video management."
-        />
-        <meta
-          property="og:image"
-          content="https://www.vmukti.com/assets/solution_dash.webp"
-        />
+        <meta property="og:title" content="Enterprise Video Surveillance Products & Solutions in the USA | VMukti" />
+        <meta property="og:description" content="Explore VMukti's enterprise video surveillance products and solutions for the USA market, designed for large-scale deployments, secure monitoring, and centralized video management." />
+        <meta property="og:image" content="https://www.vmukti.com/assets/solution_dash.webp" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://vmukti.com/solution" />
         <meta property="og:site_name" content="VMukti Solutions" />
-
-        {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@vmukti" />
-        <meta
-          name="twitter:title"
-          content="Enterprise Video Surveillance Products & Solutions in the USA | VMukti"
-        />
-        <meta
-          name="twitter:description"
-          content="Explore VMukti’s enterprise video surveillance products and solutions for the USA market, designed for large-scale deployments, secure monitoring, and centralized video management."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.vmukti.com/assets/solution_dash.webp"
-        />
-
-        {/* Canonical Link */}
+        <meta name="twitter:title" content="Enterprise Video Surveillance Products & Solutions in the USA | VMukti" />
+        <meta name="twitter:description" content="Explore VMukti's enterprise video surveillance products and solutions for the USA market, designed for large-scale deployments, secure monitoring, and centralized video management." />
+        <meta name="twitter:image" content="https://www.vmukti.com/assets/solution_dash.webp" />
         <link rel="canonical" href="https://www.vmukti.com/solution" />
-
-        {/* 
-    Add structured data (JSON-LD schema) for the solutions page if you have it.
-    For example:
-    {solutionPageSchemas.map((schema, index) => (
-      <script
-        key={`schema-${index}`}
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-    ))}
-  */}
       </Helmet>
       <SolutionDashboard />
       <Box mt={{base:"5%",md:"0"}}>

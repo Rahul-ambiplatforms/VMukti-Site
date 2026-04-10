@@ -154,6 +154,7 @@ const HeroSection = ({ titleContent, description, buttonText, buttonHref }) => {
             direction="column"
             position="relative"
             width="auto"
+            aspectRatio="4/3"
           >
             <MotionImage
               mt="1%"

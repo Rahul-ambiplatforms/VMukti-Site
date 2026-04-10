@@ -215,11 +215,21 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
 
         {/* Issue #3 â Preload hero image to improve LCP */}
+        {/* Preload hero image for desktop */}
         <link
           rel="preload"
           as="image"
           href="/assets/tablet2.webp"
           fetchPriority="high"
+          media="(min-width: 768px)"
+        />
+        {/* Preload hero image for mobile */}
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/tablet.webp"
+          fetchPriority="high"
+          media="(max-width: 767px)"
         />
 
         {/* JSON-LD Structured Data */}

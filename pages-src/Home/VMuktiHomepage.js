@@ -1,31 +1,26 @@
 'use client';
 // src/pages/VMuktiHomepage/index.js
-import React from "react";
+import dynamic from "next/dynamic";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import PageContentWrapper from "../../components/PageContentWrapper";
-import AdvancedComputerVision from "../../components/AdvancedComputerVision";
-import VideoAnalytics from "./Components/VideoAnalytics";
-import Achieved from "./Components/Achieved";
-import Diagram from "./Components/Diagram";
-import Industries from "./Components/industriesData";
-import AdvancedSurveillance from "../../components/AdvancedSurveillance";
-import SurveillanceSoftware from "./Components/SurveillanceSoftware";
-import ObjectDescription from "../../components/ObjectDescription";
-import StickySection from "./Data/StickySection";
 import HeroSection from "./Components/HeroSection";
-import { customData, customData1 } from "../../data/AdvancedComputerVisionData";
-import ComputerVision from "./Components/ComputerVision";
-import Solutions from "../../components/Solutions";
-import Trusted from "../../components/Trusted";
-import Reviews from "./Components/Reviews";
-import Results from "./Components/Results";
-import CtaBanner from "../../components/CtaBanner";
 import { homeSolutions } from "../../data/solutionsContent";
-import FaqsSection from "../../components/faqsSection";
 import faqsData from "../../data/faqsData";
 import schemaData from "../../data/schemaData";
-import BlogView from "./Components/BlogView";
-import CertificationSection from "../Solutions/Components/CertificationsSection";
+
+// Below-fold sections — code-split to reduce initial JS bundle & TBT
+const Diagram = dynamic(() => import("./Components/Diagram"));
+const CertificationSection = dynamic(() => import("../Solutions/Components/CertificationsSection"));
+const ComputerVision = dynamic(() => import("./Components/ComputerVision"));
+const Trusted = dynamic(() => import("../../components/Trusted"));
+const Solutions = dynamic(() => import("../../components/Solutions"));
+const Reviews = dynamic(() => import("./Components/Reviews"));
+const Industries = dynamic(() => import("./Components/industriesData"));
+const Results = dynamic(() => import("./Components/Results"));
+const Achieved = dynamic(() => import("./Components/Achieved"));
+const BlogView = dynamic(() => import("./Components/BlogView"));
+const CtaBanner = dynamic(() => import("../../components/CtaBanner"));
+const FaqsSection = dynamic(() => import("../../components/faqsSection"));
 const VMuktiHomepage = () => {
   const homepageSchemas = schemaData.homepage;
 
