@@ -106,11 +106,11 @@ const nextConfig = {
     // For a stricter setup, migrate to nonce-based CSP via Next.js middleware (Issue #7).
     const ContentSecurityPolicy = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.clarity.ms https://connect.facebook.net",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.clarity.ms https://connect.facebook.net https://snap.licdn.com",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' data: https://fonts.gstatic.com",
-      "img-src 'self' data: blob: https://res.cloudinary.com https://*.clarity.ms https://www.googletagmanager.com https://www.vmukti.com https://vmukti.com",
-      "connect-src 'self' https://www.googletagmanager.com https://*.clarity.ms https://vmukti.com https://www.vmukti.com https://res.cloudinary.com http://localhost:5000",
+      "img-src 'self' data: blob: https://res.cloudinary.com https://*.clarity.ms https://www.googletagmanager.com https://www.vmukti.com https://vmukti.com https://www.google.com https://stats.g.doubleclick.net",
+      "connect-src 'self' https://www.googletagmanager.com https://*.clarity.ms https://vmukti.com https://www.vmukti.com https://res.cloudinary.com https://analytics.google.com https://www.google.com https://stats.g.doubleclick.net https://px.ads.linkedin.com",
       "frame-src 'self' https://www.googletagmanager.com",
       "object-src 'none'",
       "base-uri 'self'",
