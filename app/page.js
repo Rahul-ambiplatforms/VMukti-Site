@@ -9,5 +9,11 @@ export function generateMetadata() {
 }
 
 export default function HomePage() {
-  return <HomepageClient />;
+  return (
+    <>
+      <link rel="preload" as="image" href="/assets/tablet2.webp" fetchPriority="high" media="(min-width: 768px)" />
+      <link rel="preload" as="image" href="/assets/tablet.webp" fetchPriority="high" media="(max-width: 767px)" />
+      <HomepageClient />
+    </>
+  );
 }
