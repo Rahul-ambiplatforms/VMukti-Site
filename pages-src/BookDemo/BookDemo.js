@@ -345,7 +345,7 @@ export default function BookDemo() {
                         message: formData.requirements,
                         selectedDate: formattedDate,
                         selectedTime: selectedTime,
-                        formType: "Demo Booking",
+                        formType: "Vmukti Website-(Demo)",
                     }),
                 }
             );
